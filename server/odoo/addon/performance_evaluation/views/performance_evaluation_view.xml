@@ -1,0 +1,638 @@
+<odoo>
+    <data>
+        
+        <record id="performance_evaluation_program_view_form" model="ir.ui.view">
+            <field name="name">sperformance.evaluation.program.form</field>
+            <field name="model">performance.evaluation.program</field>
+            <field name="arch" type="xml">
+                <form delete="false">
+                      <header>
+                          <button string="Confirm Evaluation" name="confirm_program" type="object" class="btn-primary" states="draft" groups="performance_evaluation.group_performance_evaluation_admin,performance_evaluation.group_performance_evaluation_manager" confirm="Are you sure you want to Confirm Evaluation ? This request will go to Evaluator. You cannot Edit this request once you confirm."/>
+                          
+                          <button string="Send Evaluation" name="send_evaluation" type="object" class="btn-primary" states="employee_evaluation" groups="performance_evaluation.group_performance_evaluation_program_user" confirm="Are You Sure You Want To Send This Evaulation? This will send it for the last review by Hr?"/>
+
+                          <button string="Submit Evaluation" name="submit_evaluation_program" type="object" class="btn-primary" states="in_progress" groups="performance_evaluation.group_performance_evaluation_admin,performance_evaluation.group_performance_evaluation_manager" confirm="Are you sure you want to Submit Evaluation ? This request will go to Employee."/>
+                          
+                          <button string="Approve Evaluation" name="approve_hr_program" type="object" class="btn-primary" states="hr_evaluation" groups="performance_evaluation.group_performance_evaluation_admin" confirm="Are you sure you want to Approve this Evaluation ?"/>
+                          
+                          <button string="Reject Evaluation" name="reject_hr_program" type="object" class="btn-primary" states="hr_evaluation" groups="performance_evaluation.group_performance_evaluation_admin" confirm="Are you sure you want to Reject Evaluation ?" />
+                          
+                          <button string="Reset To Draft" name="reset_to_draft_program" type="object" states="in_progress,hr_evaluation,done,reject" groups="performance_evaluation.group_performance_evaluation_admin" confirm="Are you sure you want to Reset to Draft this Evaluation ?"/>
+                          
+                        <field name="state" widget="statusbar"/>
+                      </header>
+                      <sheet>
+                        <field name="x_css" invisible="1"/>
+                        <field name="on_trial" invisible="1"/>
+                          <!-- <div class="oe_button_box" name="button_box">
+                              <button class="oe_stat_button"
+                                  icon="fa-book"
+                                  name="open_all_evaluations"
+                                  type="object" string="History" groups="performance_evaluation.group_performance_evaluation_admin, performance_evaluation.group_performance_evaluation_manager">
+                              </button>
+                          </div> -->
+                          
+                        <widget name="web_ribbon" title="Archived" bg_color="bg-danger" attrs="{'invisible': [('active', '=', True)]}"/>
+
+                        
+                        <!-- <field name="image_1920" widget='image' class="oe_avatar" options='{"zoom": true}'/> -->
+                        <div>
+                            <group col="2">
+                                <group>
+                                    <field name="employee_id" string="Employee Name" options="{&quot;no_create&quot;: True}" attrs="{'readonly':[('state','!=','draft')]}" placeholder="Employee's Name" required="True"/>
+                                    <field name="job_id" string="Current Job Title" readonly="1" force_save="1"/>
+                                </group>
+                                <group>
+                                    <field name="department_id" string="Department" readonly="1" force_save="1"/>
+                                    <field name="manager_id" string="Manager" readonly="1" force_save="1"/>
+                                    <field name="user_id" invisible="1"/>
+                                </group>
+                            </group>
+                            <!-- <group col="3">
+                                <group>
+                                    <h4 class="d-flex">
+                                        <field name="employee_id" options="{&quot;no_create&quot;: True}" attrs="{'readonly':[('state','!=','draft')]}" placeholder="Employee's Name" required="True"/>
+                                    </h4>
+                                </group>
+                                <group>
+                                    <h4 class="d-flex">
+                                        <field name="job_id"  readonly="1" force_save="1"/>
+                                    </h4>
+                                </group>
+                                <group>
+                                    <h4>
+                                        <field name="department_id" readonly="1" force_save="1"/>
+                                    </h4>
+                                </group>
+                            </group> -->
+<!--                             
+                            <h3>
+                                <h4 class="d-flex">
+                                    Current Job Title
+                                </h4>
+                                <field name="job_id"  readonly="1" force_save="1"/>
+                                <br/>
+                                <h4 class="d-flex">
+                                    Department
+                                </h4>
+                                <field name="department_id" readonly="1" force_save="1"/>
+                            </h3> -->
+                            
+                        </div>
+                        
+                        
+                        <group>
+                              <group>
+                                  <field name="template_id" attrs="{'readonly':[('state','!=','draft')]}" options="{&quot;no_create&quot;: True}" required="1"/>
+                                  <field name="name" readonly="1" force_save="1"/>
+                                  <field name="company_id" readonly="1" force_save="1"/>
+                                  <field name="active" invisible="1"/>
+                              </group>
+                              <group>
+                          <!-- <field name="performance_period_id" attrs="{'readonly':[('state','!=','draft')]}" options="{&quot;no_open&quot;: True, &quot;no_create&quot;: True}" required="1"/> -->
+                                <field name="year" attrs="{'readonly':[('state','!=','draft')]}" options="{&quot;no_create&quot;: True}" string="Fiscal Year"/>
+                                <field name="date_from" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="date_to" attrs="{'readonly':[('state','!=','draft')]}"/>
+                              </group>
+                        </group>
+                        
+                        <group col="2">
+                              <group>
+                                  <field name="evaluator_relationship" readonly="1" string="Evaluator" force_save="1" attrs="{'invisible':[('template_id','=',False)]}"/>
+                                  <field name="evaluator_department_relationship" string="Evaluation Type" readonly="1" force_save="1" attrs="{'invisible':[('template_id','=',False)]}"/>
+                                  <field name="date_of_evaluation" readonly="1" force_save="1" string="Evaluation Date" attrs="{'invisible':[('template_id','=',False)]}"/>
+                              </group>
+                              <group>
+                                  <field name="evaluator_employee_id" string="Evaluator Employee" options="{&quot;no_create&quot;: True}" attrs="{'readonly':['|',('state','!=','draft'),('evaluator_relationship','in',['own','manager'])],'invisible':[('template_id','=',False)]}"/>
+                                  <field name="evaluator_department_id" string="Evaluator Department" readonly="1" force_save="1" attrs="{'invisible':[('template_id','=',False)]}"/>
+                                  <field name="evaluator_job_id" string="Evaluator Job Title" readonly="1" force_save="1" attrs="{'invisible':[('template_id','=',False)]}"/>
+                              </group>
+                              <!-- <group>
+                                  <field name="country_id" readonly="1" force_save="1"/>
+                                  <field name="birthday" readonly="1" force_save="1"/>
+                                  <field name="job_category" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                  <field name="location" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                  <field name="annual_leave_balance" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                  <field name="annual_leave_consumed_this_year" attrs="{'readonly':[('state','!=','draft')]}"/>
+                              </group>
+                              <group>
+                                  <field name="date_of_joining" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                  <field name="length_of_service" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                  <field name="visa_expire" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                  <field name="visa_days_to_expire" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                  <field name="labor_card_expiry" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                  <field name="labor_card_days_to_expire" attrs="{'readonly':[('state','!=','draft')]}"/>
+                              </group> -->
+                              
+                        </group>
+                        
+                        
+                        <group col="2">
+                              <group>
+                                  <field name="manager_remarks" attrs="{'readonly':[('state','!=','in_progress')], 'invisible': [('state', '=', 'draft')], 'required': [('state', '=', 'in_progress')]}" width="50%%"/>
+                                  <field name="employee_remarks" attrs="{'readonly':[('state','!=','employee_evaluation')], 'invisible': [('state', 'in', ['draft', 'in_progress'])], 'required': [('state', '=', 'employee_evaluation')]}" width="50%%"/>
+                                  <!-- <field name="hr_remarks" string="HR Remarks" attrs="{'readonly':[('state','!=','hr_evaluation')]}"/> -->
+                              </group>
+                              <group string="Hr Evaluation" attrs="{'invisible': ['|', ('on_trial', '=', True), ('state', 'in', ['draft', 'in_progress', 'employee_evaluation'])], 'readonly': [('state', '!=', 'hr_evaluation')]}">
+                                    <field name="needs_more_training" string="Needs More Training"/>
+                                    <field name="needs_to_improve" string="Needs To Improve His/Herself"/>
+                                    <field name="try_with_another_job" string="Try With Another Job Position"/>
+                                    <field name="lack_of_required_skills" string="Terminate Due to Lack Of Required Skills"/>
+                                    <field name="others"/>
+                                  <!-- <field name="positive_points" attrs="{'readonly':[('state','in',['draft','done','reject'])]}"/>
+                                  <field name="negative_points" attrs="{'readonly':[('state','in',['draft','done','reject'])]}"/> -->
+                                  <!-- <field name="disciplinary_action" attrs="{'readonly':[('state','!=','hr_evaluation')]}"/> -->
+                                  <!-- <field name="nature_of_disclipinary_action" attrs="{'readonly':[('state','!=','hr_evaluation')]}"/> -->
+                              </group>
+                              <group string="Hr Evaluation" attrs="{'invisible': ['|', ('on_trial', '=', False), ('state', 'in', ['draft', 'in_progress', 'employee_evaluation'])], 'readonly': [('state', '!=', 'hr_evaluation')]}">
+                                    <field name="keep" string="Keep as a Permanent Employee"/>
+                                    <field name="lack_of_required_skills" string="Terminate Due to Lack Of Required Skills"/>
+                                  <!-- <field name="positive_points" attrs="{'readonly':[('state','in',['draft','done','reject'])]}"/>
+                                  <field name="negative_points" attrs="{'readonly':[('state','in',['draft','done','reject'])]}"/> -->
+                                  <!-- <field name="disciplinary_action" attrs="{'readonly':[('state','!=','hr_evaluation')]}"/> -->
+                                  <!-- <field name="nature_of_disclipinary_action" attrs="{'readonly':[('state','!=','hr_evaluation')]}"/> -->
+                              </group>
+                              
+                        </group>
+                        
+                        
+                        <group col="2">
+                              <group string="Performance Standards">
+                                    <h5>
+                                        1.00 - 1.44 = Low <br/>
+                                        1.45 - 2.44 = Moderate <br/>
+                                        2.45 - 3.44 = Medium <br/>
+                                        3.45 - 4.44 = High <br/>
+                                        4.45 - 5.00 = Very High <br/>
+                                    </h5>
+                              </group>
+                              
+                              <group string="Overall Scores">
+                                  <h3>
+                                      <group>
+                                          <field name="overall_score" readonly="1" force_save="1"/>
+                                          <!-- <field name="overall_rating" readonly="1" force_save="1" string="Overall Average Rating" invisible="1"/> -->
+                                          <!-- <field name="overall_rating_value" readonly="1" force_save="1"/> -->
+                                          <field name="overall_rating_star" widget="priority" readonly="1" force_save="1"/>
+                                      </group>
+                                  </h3>
+                              </group>
+                        </group>
+                        
+                        <notebook>
+                            <page string="Details">
+                                <group>
+                                    <field name="total_points" force_save="1" readonly="1"/>
+                                </group>
+                                <h2>Evaluation Points
+                                    <field name="overall_evaluation_score" readonly="1" force_save="1" class="oe_right"/>
+                                </h2>
+                                  <field name="evaluation_point_ids" widget="section_and_note_one2many">
+                                      <tree create="false" delete="false" editable="bottom">
+                                        <!-- <control>
+                                            <create name="add_product_control" string="Add an Evaluation Point" context="{'default_display_type': 'line_point'}"/>
+                                            <create name="add_note_control" string="Add a Description" context="{'default_display_type': 'line_note'}"/>
+                                        </control> -->
+                                        <field name="display_type" invisible="1"/>
+                                        <button icon="fa-arrow-circle-right" attrs="{'invisible': [('display_type', '=', 'line_note')]}"/>
+                                        <field name="name" readonly="1" force_save="1" decoration-bf="1"/>
+                                        <field name="rating" readonly="1" force_save="1"/>
+                                        <field name="rating_value" readonly="1" force_save="1"/>
+                                        <field name="rating_star" widget="priority" force_save="1" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                        <field name="program_id" optional="hide" readonly="1" force_save="1"/>
+                                        <field name="state" optional="hide" readonly="1" force_save="1"/>
+                                      </tree>
+                                  </field>
+                                <!-- <h2>Workplace Competencies
+                                    <field name="overall_workplace_score" readonly="1" force_save="1" class="oe_right"/>
+                                </h2>
+                                <field name="workplace_ev_line_ids">
+                                    <tree editable="bottom" create="false" delete="false">
+                                        <field name="name" readonly="1" force_save="1"/>
+                                        <field name="rating" attrs="{'readonly':[('state','!=','in_progress')]}"/>
+                                        <field name="rating_value" readonly="1" force_save="1"/>
+                                        <field name="rating_star" widget="priority" readonly="1" force_save="1"/>
+                                        <field name="program_id" optional="hide" readonly="1" force_save="1"/>
+                                        <field name="state" optional="hide" readonly="1" force_save="1"/>
+                                    </tree>
+                                </field>
+                                <h2>Other Workplace Competencies
+                                    <field name="overall_workplace_tw_score" readonly="1" force_save="1" class="oe_right"/>
+                                </h2>
+                                <field name="workplace_tw_ev_line_ids">
+                                    <tree editable="bottom" create="false" delete="false">
+                                        <field name="name" readonly="1" force_save="1"/>
+                                        <field name="rating" attrs="{'readonly':[('state','!=','in_progress')]}"/>
+                                        <field name="rating_value" readonly="1" force_save="1"/>
+                                        <field name="rating_star" widget="priority" readonly="1" force_save="1"/>
+                                        <field name="program_id" optional="hide" readonly="1" force_save="1"/>
+                                        <field name="state" optional="hide" readonly="1" force_save="1"/>
+                                    </tree>
+                                </field>
+                                <h2>Technical Competencies
+                                    <field name="overall_technical_score" readonly="1" force_save="1" class="oe_right"/>
+                                </h2>
+                                <field name="technical_ev_line_ids">
+                                    <tree editable="bottom" create="false" delete="false">
+                                        <field name="name" readonly="1" force_save="1"/>
+                                        <field name="rating" attrs="{'readonly':[('state','!=','in_progress')]}"/>
+                                        <field name="rating_value" readonly="1" force_save="1"/>
+                                        <field name="rating_star" widget="priority" readonly="1" force_save="1"/>
+                                        <field name="program_id" optional="hide" readonly="1" force_save="1"/>
+                                        <field name="state" optional="hide" readonly="1" force_save="1"/>
+                                    </tree>
+                                </field>
+                                <h2>Other Competencies
+                                    <field name="overall_other_score" readonly="1" force_save="1" class="oe_right"/>
+                                </h2>
+                                <field name="other_ev_line_ids">
+                                    <tree editable="bottom" create="false" delete="false">
+                                        <field name="name" readonly="1" force_save="1"/>
+                                        <field name="rating" attrs="{'readonly':[('state','!=','in_progress')]}"/>
+                                        <field name="rating_value" readonly="1" force_save="1"/>
+                                        <field name="rating_star" widget="priority" readonly="1" force_save="1"/>
+                                        <field name="program_id" optional="hide" readonly="1" force_save="1"/>
+                                        <field name="state" optional="hide" readonly="1" force_save="1"/>
+                                    </tree>
+                                </field>
+                                
+                                <h2>
+                               
+                                <group>
+                                    <field name="extra_remarks"/>
+                                    </group>
+                                </h2> -->
+                            </page>
+                            <page string="Other Information">
+                                <group>
+                                    <field name="job_description" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                    
+                                    
+                                </group>
+                            </page>
+                            
+                            
+                        </notebook>
+                        
+                    </sheet>
+                    <div class="oe_chatter">
+                            <field name="message_follower_ids" widget="mail_followers"/>
+                            <field name="activity_ids" widget="mail_activity"/>
+                            <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                    
+                </form>
+            </field>
+        </record>
+
+
+        <record id="performance_evaluation_program_view_list" model="ir.ui.view">
+            <field name="name">performance.evaluation.program.list</field>
+            <field name="model">performance.evaluation.program</field>
+            <field name="arch" type="xml">
+                <tree delete="false">
+<!--                <tree>-->
+<!--                    <header>-->
+<!--                        <button string="Send Reminder Email" name="send_reminder_email" type="object"  class="btn-primary" groups="performance_evaluation.group_performance_evaluation_admin"/>-->
+<!--                    </header>-->
+<!--                    -->
+                    <field name="name"/>
+
+                    <field name="employee_id"/>
+
+                    <!-- <field name="template_id"/> -->
+                    <!-- <field name="performance_period_id"/> -->
+                    <field name="date_from"/>
+                    <field name="date_to"/>
+                    <field name="overall_score"/>
+                    <!-- <field name="overall_rating_value"/> -->
+                    <field name="overall_rating_star" widget="priority" readonly="1" force_save="1"/>
+
+                    <field name="department_id" optional="hide"/>
+                    <field name="job_id" optional="hide"/>
+
+                    <field name="evaluator_employee_id"/>
+
+                    <field name="manager_id" optional="hide"/>
+                    <field name="date_of_evaluation"/>
+
+                    <field name="company_id" optional="hide"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+        
+        
+        <record id="performance_evaluation_program_filter" model="ir.ui.view">
+            <field name="name">performance.evaluation.program.filter</field>
+            <field name="model">performance.evaluation.program</field>
+            <field name="arch" type="xml">
+                <search string="Driver Roster">
+                    <field name="name"/>
+                    <field name="template_id"/>
+                    <field name="performance_period_id"/>
+                    
+                    <field name="state"/>
+                    
+                    <field name="employee_id"/>
+                    <field name="department_id"/>
+                    <field name="job_id"/>
+                    <field name="evaluator_employee_id"/>
+                    <field name="evaluator_department_relationship"/>
+                    <field name="evaluator_relationship"/>
+                    <field name="overall_rating_value"/>
+                    
+                    <separator/>
+                    
+                    <group expand="0" string="Group By">
+                        <filter string="Template" name="template_id" domain="[]" context="{'group_by': 'template_id'}"/>
+                        <filter string="Performance Period" name="performance_period_id" domain="[]" context="{'group_by': 'performance_period_id'}"/>
+                        
+                        <filter string="State" name="state" domain="[]" context="{'group_by': 'state'}"/>
+                        
+                        <separator/>
+                        <filter string="Employee" name="employee_id" domain="[]" context="{'group_by': 'employee_id'}"/>
+                        <filter string="Department" name="department_id" domain="[]" context="{'group_by': 'department_id'}"/>
+                        <filter string="Job" name="job_id" domain="[]" context="{'group_by': 'job_id'}"/>
+                        
+                        <separator/>
+                        <filter string="Evaluator Employee" name="evaluator_employee_id" domain="[]" context="{'group_by': 'evaluator_employee_id'}"/>
+                        <filter string="Evaluator Department Relationship" name="evaluator_department_relationship" domain="[]" context="{'group_by': 'evaluator_department_relationship'}"/>
+                        <filter string="Evaluator Relationship" name="evaluator_relationship" domain="[]" context="{'group_by': 'evaluator_relationship'}"/>
+                        
+                        <separator/>
+                        <filter string="Overall Rating Value" name="overall_rating_value" domain="[]" context="{'group_by': 'overall_rating_value'}"/>
+                        
+                    </group>
+                </search>
+            </field>
+        </record>
+        
+        
+        <record id="performance_evaluation_program_action" model="ir.actions.act_window" >
+            <field name="name">Employee Performance Evaluation</field>
+            <field name="res_model">performance.evaluation.program</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{}</field>
+            
+        </record>
+        
+        
+        
+        <record id="view_performance_evaluation_program_user_access" model="ir.ui.view">
+             <field name="name">performance.evaluation.program.user</field>
+             <field name="model">performance.evaluation.program</field>
+             <field name="inherit_id" ref="performance_evaluation.performance_evaluation_program_view_form"/>
+             <field name="groups_id" eval="[(6, 0, [ref('performance_evaluation.group_performance_evaluation_program_user')])]" />
+             <field name="arch" type="xml">
+                <xpath expr="/form" position="attributes">
+                    <attribute name="create">false</attribute>
+                    <attribute name="delete">false</attribute>
+                </xpath>
+             </field>
+        </record>
+
+        <!-- <record id="view_performance_evaluation_program_manager_access" model="ir.ui.view">
+             <field name="name">performance.evaluation.program.manager</field>
+             <field name="model">performance.evaluation.program</field>
+             <field name="inherit_id" ref="performance_evaluation.performance_evaluation_program_view_form"/>
+             <field name="groups_id" eval="[(6, 0, [ref('performance_evaluation.group_performance_evaluation_manager')])]" />
+             <field name="arch" type="xml">
+                <xpath expr="/form" position="attributes">
+                    <attribute name="create">false</attribute>
+                    <attribute name="delete">false</attribute>
+                </xpath>
+             </field>
+        </record> -->
+        
+        <record id="view_performance_evaluation_program_user_access_list1" model="ir.ui.view">
+             <field name="name">performance.evaluation.program.user.list</field>
+             <field name="model">performance.evaluation.program</field>
+             <field name="inherit_id" ref="performance_evaluation.performance_evaluation_program_view_list"/>
+             <field name="groups_id" eval="[(6, 0, [ref('performance_evaluation.group_performance_evaluation_program_user')])]" />
+             <field name="arch" type="xml">
+                <xpath expr="/tree" position="attributes">
+                    <attribute name="create">false</attribute>
+                    <attribute name="delete">false</attribute>
+                </xpath>
+             </field>
+        </record>
+<!-- 
+        <record id="view_performance_evaluation_program_manager_access_list" model="ir.ui.view">
+             <field name="name">performance.evaluation.program.manager.list</field>
+             <field name="model">performance.evaluation.program</field>
+             <field name="inherit_id" ref="performance_evaluation.performance_evaluation_program_view_list"/>
+             <field name="groups_id" eval="[(6, 0, [ref('performance_evaluation.group_performance_evaluation_manager')])]" />
+             <field name="arch" type="xml">
+                <xpath expr="/tree" position="attributes">
+                    <attribute name="create">false</attribute>
+                    <attribute name="delete">false</attribute>
+                </xpath>
+             </field>
+        </record> -->
+        
+        
+
+        
+        <record id="performance_evaluation_in_progress_program_action" model="ir.actions.act_window" >
+            <field name="name">In Progress</field>
+            <field name="res_model">performance.evaluation.program</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('state','=','in_progress')]</field>
+            <field name="context">{}</field>
+        </record>
+        
+        <record id="performance_evaluation_hr_program_action" model="ir.actions.act_window" >
+            <field name="name">HR Evaluations</field>
+            <field name="res_model">performance.evaluation.program</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('state','=','hr_evaluation')]</field>
+            <field name="context">{}</field>
+        </record>
+        
+        <record id="performance_evaluation_all_program_action" model="ir.actions.act_window" >
+            <field name="name">All Completed Evaluations</field>
+            <field name="res_model">performance.evaluation.program</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('state','in',['reject','done'])]</field>
+            <field name="context">{}</field>
+            
+        </record>
+        
+        <record id="performance_evaluation_all_program_action_for_employees" model="ir.actions.act_window" >
+            <field name="name">All Completed Evaluations</field>
+            <field name="res_model">performance.evaluation.program</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">['&amp;', ('state','in',['employee_evaluation','reject','done']), ('employee_id', '=', active_id)]</field>
+            <field name="context">{}</field>
+            
+        </record>
+
+        <!--
+        <record id="snackat_driver_roster_server_action" model="ir.actions.server">
+            <field name="name">Confirm Roster</field>
+            <field name="model_id" ref="snackat_driver_roster.model_snackat_driver_roster"/>
+            <field name="binding_model_id" ref="snackat_driver_roster.model_snackat_driver_roster"/>
+            <field name="groups_id" eval="[(4,ref('snackat_driver_roster.group_snackat_driver_roster_manager'))]"/>
+            <field name="binding_view_types">form,list</field>
+            <field name="state">code</field>
+            <field name="code">
+              action = records.confirm_roster()
+            </field>
+        </record>
+        -->
+        
+        <record id="performance_evaluation_program_config_view_form" model="ir.ui.view">
+            <field name="name">performance.evaluation.program.config.form</field>
+            <field name="model">performance.evaluation.program.config</field>
+            <field name="arch" type="xml">
+                <form>
+                      <sheet>
+                              <group>
+                                  <group string="Details">
+                                    <field name="name" required="1"/>
+                                    <field name="performance_evaluator" required="1"/>
+                                    <field name="company_id" readonly="1" force_save="1"/>
+                                    
+                                    
+                                  </group>
+                                  
+                                  <group string="Notification">
+                                    <field name="email_notify_user_ids" widget="many2many_tags" options="{&quot;no_create&quot;: True}"/>
+                                    
+                                    <field name="hr_email_notify"/>
+                                  </group>
+                                  <!-- <group string="Add section for Rating Calculation">
+                                      <field name="personal_section"/>
+                                      <field name="workplace_section"/>
+                                      <field name="workplace_tw_section" string="Other Workplace Section"/>
+                                      <field name="technical_section"/>
+                                      <field name="other_section"/>
+                                  </group> -->
+                              </group>
+                              
+                              <group>
+                                  <field name="evaluation_points_ids" widget="section_and_note_one2many">
+                                      <tree editable="bottom">
+                                        <control>
+                                            <create name="add_product_control" string="Add an Evaluation Point" context="{'default_display_type': 'line_point'}"/>
+                                            <!-- <create name="add_section_control" string="Add a section" context="{'default_display_type': 'line_section'}"/> -->
+                                            <create name="add_note_control" string="Add a Description" context="{'default_display_type': 'line_note'}"/>
+                                        </control>
+                                        <field name="display_type" invisible="1"/>
+                                        <button icon="fa-arrow-circle-right" attrs="{'invisible': [('display_type', '=', 'line_note')]}"/>
+                                        <field name="name" decoration-bf="1"/>
+                                        <!-- <field name="description_ids"/> -->
+                                        <field name="rating_star" widget="priority" readonly="1" force_save="1"/>
+                                        <field name="config_id" optional="hide"/>
+                                      </tree>
+                                  </field>
+                                  
+                                  <!-- <field name="workplace_line_ids">
+                                      <tree editable="bottom">
+                                          <field name="name" required="1"/>
+                                          <field name="config_id" optional="hide"/>
+                                      </tree>
+                                  </field>
+                                  <field name="workplace_tw_line_ids">
+                                      <tree editable="bottom">
+                                          <field name="name" required="1"/>
+                                          <field name="config_id" optional="hide"/>
+                                      </tree>
+                                  </field>
+                                  <field name="technical_line_ids">
+                                      <tree editable="bottom">
+                                          <field name="name" required="1"/>
+                                          <field name="config_id" optional="hide"/>
+                                      </tree>
+                                  </field>
+                                  <field name="other_line_ids">
+                                      <tree editable="bottom">
+                                          <field name="name" required="1"/>
+                                          <field name="config_id" optional="hide"/>
+                                      </tree>
+                                  </field> -->
+                              </group>
+                              
+                       
+                    </sheet>
+                    <div class="oe_chatter">
+                            <field name="message_follower_ids" widget="mail_followers"/>
+                            <field name="activity_ids" widget="mail_activity"/>
+                            <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                    
+                </form>
+            </field>
+        </record>
+
+
+        <record id="performance_evaluation_program_config_view_list" model="ir.ui.view">
+            <field name="name">performance.evaluation.program.config.view.list</field>
+            <field name="model">performance.evaluation.program.config</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="company_id" optional="hide"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="performance_evaluation_program_config_action" model="ir.actions.act_window" >
+            <field name="name">Configuration</field>
+            <field name="res_model">performance.evaluation.program.config</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{}</field>
+            
+        </record>
+
+        <record id="performance_period_view_list" model="ir.ui.view">
+            <field name="name">performance.period.view.list</field>
+            <field name="model">performance.period</field>
+            <field name="arch" type="xml">
+                <tree editable="bottom">
+                    <field name="evaluate_before"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="performance_period_action" model="ir.actions.act_window" >
+            <field name="name">Performance Period</field>
+            <field name="res_model">performance.period</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{}</field>
+            
+        </record>
+        
+        
+        <!-- Top menu item -->
+        <menuitem id="employee_evaluation_program_menu_root"
+            name="Employee Evaluation"
+            web_icon="performance_evaluation,static/description/evaluation_prog.png"
+            sequence="11" groups="performance_evaluation.group_performance_evaluation_admin,performance_evaluation.group_performance_evaluation_manager"/>
+        
+        <menuitem id="menu_employee_evaluation_program_parent" parent="performance_evaluation.employee_evaluation_program_menu_root" name="Performance Evaluation" sequence="1"/>
+
+        <!-- <menuitem id="menu_employee_evaluation_program" parent="performance_evaluation.menu_employee_evaluation_program_parent" name="Employee Performance Evaluation" action="performance_evaluation.performance_evaluation_program_action" sequence="1"/> -->
+        
+        
+        
+        <menuitem id="menu_employee_evaluation_program" parent="performance_evaluation.menu_employee_evaluation_program_parent" name="Employee Performance Evaluation" action="performance_evaluation.performance_evaluation_program_action" sequence="1" groups="performance_evaluation.group_performance_evaluation_admin,performance_evaluation.group_performance_evaluation_manager"/>
+        
+        <menuitem id="menu_employee_evaluation_program_in_progress" parent="performance_evaluation.menu_employee_evaluation_program_parent" name="In Progress" action="performance_evaluation.performance_evaluation_in_progress_program_action" sequence="2" groups="performance_evaluation.group_performance_evaluation_admin,performance_evaluation.group_performance_evaluation_manager"/>
+        
+        <menuitem id="menu_employee_evaluation_program_hr1" parent="performance_evaluation.menu_employee_evaluation_program_parent" name="HR Evaluation" action="performance_evaluation.performance_evaluation_hr_program_action" sequence="3" groups="performance_evaluation.group_performance_evaluation_admin"/>
+        
+        <menuitem id="menu_employee_evaluation_program_all_completed" parent="performance_evaluation.menu_employee_evaluation_program_parent" name="Completed Evaluations" action="performance_evaluation.performance_evaluation_all_program_action" sequence="4" groups="performance_evaluation.group_performance_evaluation_admin,performance_evaluation.group_performance_evaluation_manager"/>
+        
+        
+        <menuitem id="menu_performance_evaluation_program_config_parent" parent="performance_evaluation.employee_evaluation_program_menu_root" name="Configuration" sequence="9" groups="performance_evaluation.group_performance_evaluation_admin"/>
+
+        <menuitem id="menu_snackat_referral_program_config" parent="performance_evaluation.menu_performance_evaluation_program_config_parent" name="Templates" action="performance_evaluation.performance_evaluation_program_config_action" sequence="1"/>
+    
+
+        <menuitem id="menu_performance_period" parent="performance_evaluation.menu_performance_evaluation_program_config_parent" name="Performance Period" action="performance_evaluation.performance_period_action" sequence="2"/>
+        
+        
+     </data>
+</odoo>

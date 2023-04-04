@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model='ir.ui.view' id='hr_lawsuit_form_view'>
+            <field name="name">hr.lawsuit.form</field>
+            <field name="model">hr.lawsuit</field>
+            <field name="arch" type="xml">
+                <form string="Legal Actions">
+                    <header>
+                        <button name="process" string="Process" type="object" states="draft"/>
+                        <button name="lounchWizard" string="Set Appointment" type="object" class="btn-primary" states="running,reopen"/>
+                        <button name="won" string="Won" type="object" states="running,reopen"/>
+                        <button name="reopen" string="Reopen" type="object" states="won"/>
+                        <button name="loss" string="Loss" type="object" states="running,reopen"/>
+                        <button name="cancel" string="Cancel" type="object" states="running,draft,reopen"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,running,won"/>
+                    </header>
+                    <sheet>
+
+                        <div class="oe_button_box" position="inside">
+                            <button class="oe_stat_button" name="lounchAppointment" type="object" icon="fa-calendar">
+                                <field string="Appointments" name="appointment_count" widget="statinfo"/>
+                            </button>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="ref_no"/>
+                                <field name="party1"/>
+                                <field name="party2_name" invisible="1"/>
+                                <field name="party2"/>
+                                <field name="employee_id" attrs="{'invisible': [('party2','!=','employee')],
+                                                                  'required': [('party2','=','employee')]}"/>
+                                <field name="partner_id" attrs="{'invisible': [('party2','!=','partner')],
+                                                                  'required': [('party2','=','partner')]}"/>
+                                <field name="other_name" attrs="{'invisible': [('party2','!=','other')],
+                                                                  'required': [('party2','=','other')]}"/>
+                                <field name="company_id" options="{'no_create': True}" groups="base.group_multi_company"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page name="case_desc" string="Case Details">
+                                <field name="case_details"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='hr_lawsuit_tree_view'>
+            <field name="name">hr.lawsuit.tree</field>
+            <field name="model">hr.lawsuit</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="ref_no"/>
+                    <field name="party1"/>
+                    <field name="party2"/>
+                    <field name="party2_name"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record  id='hr_lawsuit_search_view' model='ir.ui.view'>
+            <field name="name">hr.lawsuit.search</field>
+            <field name="model">hr.lawsuit</field>
+            <field name="arch" type="xml">
+                <search string="Legal Actions">
+                    <field name="ref_no"/>
+                    <field name="party1"/>
+                    <field name="party2"/>
+                    <field name="state"/>
+                    <group expand="0" string="Group By">
+                        <filter string="Status" name="Status" context="{'group_by':'state'}"/>
+                        <filter string="Employee" name="Employee"  context="{'group_by':'employee_id'}"/>
+                    </group>
+
+                    <group>
+                        <filter
+                            string="Draft"
+                            name="draft"
+                            domain="[('state','=','draft')]"
+                        />
+                        <filter
+                            string="Running"
+                            name="running"
+                            domain="[('state','=','running')]"
+                        />
+                         <filter
+                            string="Cancelled"
+                            name="cancel"
+                            domain="[('state','=','cancel')]"
+                        />
+                         <filter
+                            string="Failed"
+                            name="fail"
+                            domain="[('state','=','fail')]"
+                        />
+                        <filter
+                            string="Won"
+                            name="won"
+                            domain="[('state','=','won')]"
+                        />
+                         <filter
+                            string="Was Reopen"
+                            name="wasReopen"
+                            domain="[('was_reopen','=','True')]"
+                        />
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_hr_lawsuit" model="ir.actions.act_window">
+            <field name="name">Legal Management</field>
+            <field name="res_model">hr.lawsuit</field>
+            <field name="search_view_id" ref="hr_lawsuit_search_view"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to Create a New Record.
+                </p>
+            </field>
+        </record>
+
+        <record id="legal_hr_employee_inherit_form_view" model="ir.ui.view" >
+            <field name="name">hr.employee.form.legal</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <div class="oe_button_box" position="inside">
+                    <button class="oe_stat_button" name="legal_view" type="object" icon="fa-exclamation-circle">
+                        <field string="Legal Actions" name="legal_count" widget="statinfo"/>
+                    </button>
+                </div>
+            </field>
+        </record>
+
+        <menuitem 
+            id="hr_lawsuit_sub_menu" 
+            parent="hr_menu_organizer.hr_employee_activities_menu" 
+            action="action_hr_lawsuit"
+            name="Legal Actions" 
+            sequence="1"
+            groups="lawsuit_group_manager"/>
+    </data>
+</odoo>

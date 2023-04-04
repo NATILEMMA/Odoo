@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+   <data>
+
+   <record model="ir.ui.view" id="view_employee_position_request_form">
+         <field name="name">employee.position.request.form</field>
+         <field name="model">hr.employee.position.request</field>
+         <field name="arch" type="xml">
+            <form string="Test">
+               <header>
+                    <button name="manager_button_approve" states="hr_approval" string="Managerial Approve" type="object" class="oe_highlight" groups="hr_request_position.group_position_request_manager_approval"/>
+                    <button name="hr_button_approve" states="in_progress" string="Hr Approve" type="object" class="oe_highlight" groups="hr_request_position.group_request_hr_approval_request"/>
+                    <button name="button_reject" states="in_progress" string="Reject" type="object"  groups="hr_request_position.group_request_hr_approval_request,hr_request_position.group_position_request_manager_approval"/>
+                    <button name="button_set_draft" states="in_progress" string="Set To Draft" type="object" groups="hr_request_position.group_requester"/>
+                    <button name="button_set_draft" states="hr_approval" string="Set To Draft" type="object" groups="hr_request_position.group_request_hr_approval_request"/>
+                    <button name="button_set_draft" states="manager_approval" string="Set To Draft" type="object" groups="hr_request_position.group_position_request_manager_approval"/>
+                    <button name="button_request" states="draft" string="Request" class="oe_highlight" type="object" groups="hr_request_position.group_requester,hr_request_position.group_request_hr_approval_request"/>
+                    <field  name="state" widget="statusbar" statusbar_visible="draft,in_progress,hr_approval,manager_approval,rejected,closed" statusbar_colors='{"manager_approval":"blue"}'/>
+                </header>
+              
+               <sheet>
+            <div class="oe_title">
+              <h2>
+                <field name="name" readonly="1" />
+              </h2>
+            </div>
+               <group>
+                    <group String="Employee information">
+                        <field name="employee_id" />
+                        <field name="company_id"  /> 
+                        <field name="job_id" />
+                        <field name="job_title" attrs="{'invisible':True}" />
+                        <field name="current_grade_id"/>
+                        <field name="employee_parent_id"/>
+                        <field name="contract_id"/>
+                    </group>
+                    <group >
+                        <field name="salary_or_position" attrs = "{'readonly':[('state','!=','draft'),('state','!=','new')]}"/>
+                        <field name="requested_position_id"  attrs="{'invisible': [('salary_or_position','=','salary_request')], 'required':[('salary_or_position','=','position_request')],'readonly':[('state','!=','draft'),('state','!=','new')]}"/>
+                        <field name="requested_department_id" attrs="{'invisible': [('salary_or_position', '=', 'salary_request')], 'required':[('salary_or_position','=','position_request')],'readonly':[('state','!=','draft'),('state','!=','new')]}" />
+                        <field name="grade_id" attrs = "{'readonly':[('state','!=','draft'),('state','!=','new')],'invisible': [('salary_or_position','=','salary_request')]}"/> 
+                        <field name="hr_responsible_user_id" attrs = "{'readonly':[('state','!=','draft'),('state','!=','new')]}"/>
+                        <field name="wage" attrs="{'invisible': [('salary_or_position','=','position_request')],'readonly':[('state','!=','draft'),('state','!=','new')]}"/>
+                        <field name="previous_salary" attrs="{'invisible': [('salary_or_position','=','position_request')],'readonly':True}"/>
+                        <field name="estimated_salary" attrs="{'invisible': [('salary_or_position','=','position_request')],'readonly':[('state','!=','draft'),('state','!=','new')]}"/>
+                    </group>
+                  </group>
+                  <notebook>
+                     <page string="Attachment">
+                     <group>
+                        <field name="attachment" filename="attachment_name" attrs = "{'readonly':[('state','!=','draft'),('state','!=','new')]}" />
+                        <field name="attachment_name" invisible="1" attrs = "{'readonly':[('state','!=','draft'),('state','!=','new')]}"/>
+                        <field name="note" attrs = "{'readonly':[('state','!=','draft'),('state','!=','new')]}"/>
+                        </group>
+                     </page>
+                  </notebook>
+               </sheet>
+                <div class="oe_chatter">
+                     <field name="message_follower_ids" widget="mail_followers" />
+                    <field name="message_ids" widget="mail_thread" />
+                </div>
+            </form>
+         </field>
+      </record>
+
+     <record id="view_employee_request_filter" model="ir.ui.view">
+            <field name="name">employee.position.request.search</field>
+            <field name="model">hr.employee.position.request</field>
+            <field name="arch" type="xml">
+                <search string="Search Employee Request">
+                    <field name="employee_id" string="Employee Name" filter_domain="[('employee_id.name', 'ilike', self)]"/>
+                    <filter string="My Requests" name="my_agreements" domain="[('user_id', '=', uid)]"/>
+                    <separator/>
+                    <filter string="Draft" name="draft" domain="[('state', '=', 'draft')]" help="New Requests"/>
+                    <filter string="In Process For Approval" name="Ingrogress For Approval" domain="[('state', 'in', ('in_progress','hr_approval'))]" help="In negotiation"/>
+                    <filter string="Approved" name="manager_approval" domain="[('state', '=', 'manager_approval')]"/>
+                    <separator/>
+                    <group expand="0" string="Group By">
+                        <filter string="Status" name="status" domain="[]" context="{'group_by': 'state'}"/>
+                     </group>
+                </search>
+            </field>
+        </record>
+
+
+    <record id="view_employee_position_request_tree" model="ir.ui.view">
+    <field name="name">employee.position.request.tree</field>
+    <field name="model">hr.employee.position.request</field>
+    <field name="arch" type="xml">
+        <tree string="Employee Requests"  decoration-info="state=='draft'" decoration-muted="state=='rejected'"  decoration-success="state=='approved'">
+            <field name="reference_no" />
+            <field name="employee_id" />
+            <field name="work_phone" />
+            <field name="work_email" />
+            <field name="job_id" />
+            <field name="job_title" attrs="{'invisible':True}" />
+            <field name="salary_or_position" />
+            <field name="requested_position_id" attrs="{'invisible': [('salary_or_position','=','salary_request')]}"/>
+            <field name="requested_department_id" attrs="{'invisible': [('salary_or_position','=','salary_request')]}" />
+            <field name="state"/>
+        </tree>
+    </field>
+    </record>
+
+    <record id="view_employee_position_request_form3" model="ir.ui.view">
+        <field name="name">hr.employee.position.request.form2.inherit</field>
+        <field name="model">hr.employee.position.request</field>
+        <field name="inherit_id" ref="hr_request_position.view_employee_position_request_form"/>
+        <field name="groups_id" eval="[(4, ref('hr_request_position.group_request_hr_approval_request'))]"/>
+        <field name="arch" type="xml"> 
+            <field name="wage" position="attributes">
+                   <attribute name="readonly">1</attribute>                   
+            </field>  
+        </field>
+    </record>
+
+    <record id="view_employee_position_request_form2" model="ir.ui.view">
+        <field name="name">hr.employee.position.request.form.inherit</field>
+        <field name="model">hr.employee.position.request</field>
+        <field name="inherit_id" ref="hr_request_position.view_employee_position_request_form"/>
+        <field name="groups_id" eval="[(4, ref('hr_request_position.group_position_request_manager_approval'))]"/>
+        <field name="arch" type="xml">                               
+            <field name="estimated_salary" position="attributes">
+                   <attribute name="readonly">0</attribute>                   
+            </field>  
+            <field name="wage" position="attributes">
+                   <attribute name="readonly">1</attribute>                   
+            </field>  
+        </field>
+    </record>
+
+   <record id="view_employee_form" model="ir.ui.view">
+        <field name="name">hr.employee.form</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">  
+             <page name="personal_information" position="inside">                             
+                <field name="salary_request_ids" />        
+            </page>   
+        </field>
+    </record>
+
+     <record id="act_action_employee_requests" model="ir.actions.act_window">
+        <field name="res_model">hr.employee.position.request</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="name">Employee's Requests</field>
+        <field name="view_mode">tree,form</field>
+       <field name="domain">[('employee_id','=',active_id)]</field>
+    </record>
+
+
+    <record id="salary_request_hr_employee_view_form" model="ir.ui.view">
+        <field name="name">salary.request.hr.employee.view.form</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+                <xpath expr="//div[@name='button_box']" position="inside">
+                    <button name="%(hr_request_position.act_action_employee_requests)d"
+                        class="oe_stat_button"
+                        icon="fa-credit-card"
+                        type="action">
+                        <field name="request_count" widget="statinfo" string="Salary Requests"/>
+                    </button>
+                </xpath>
+        </field>
+    </record>
+
+
+    <record model="ir.actions.act_window" id="action_employee_requests">
+        <field name="name">Employee's Requests</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr.employee.position.request</field>
+        <field name="view_mode">tree,form,search</field>
+        <field name="domain">[('employee_id.user_id','=',uid)]</field>
+    </record>
+
+
+    <record model="ir.actions.act_window" id="hr_request_position_to_approve">
+        <field name="name">Employee's Requests for Approval</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr.employee.position.request</field>
+        <field name="view_mode">tree,form,search</field>
+        <field name="domain">[('state','!=','draft'),('state','!=','new')]</field>
+     </record>
+
+    
+    <!-- <menuitem 
+        name="Employee Status" 
+        id="hr_request_position.menu_root" 
+        parent="hr.menu_hr_root" 
+        groups="hr_request_position.group_request_hr_approval_request,hr_request_position.group_position_request_manager_approval,hr_request_position.group_requester"/> -->
+
+    <menuitem 
+        name="Employee's Requests" 
+        id="menu_employee_request" 
+        parent="hr_menu_organizer.hr_employee_status_menu" 
+        action="action_employee_requests" 
+        sequence="0" 
+        groups="hr_request_position.group_request_hr_approval_request,hr_request_position.group_position_request_manager_approval,hr_request_position.group_requester"/>
+    
+    <menuitem 
+        name="Approve position/salary Requests" 
+        id="menu_to_approve_postition_salary_request"   
+        sequence="100"
+        parent="hr_menu_organizer.hr_employee_status_menu" 
+        action="hr_request_position_to_approve"  
+        groups="hr_request_position.group_request_hr_approval_request,hr_request_position.group_position_request_manager_approval"/>
+  
+  </data>
+
+</odoo>
+

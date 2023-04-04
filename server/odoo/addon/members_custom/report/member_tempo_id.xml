@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="member_report_templates">
+      <t t-foreach="docs" t-as="member">
+        <t t-call="web.html_container">
+        <t t-lang="am_ET"/>
+          <t t-call="web.basic_layout">
+            <div class="page">
+              <div class="oe_structure">
+                <div class="row">
+                  <div class="col-xs-8">
+                    <table class="table table-condensed" style="border: 3px solid black;">
+                      <!-- <tr>
+                        <td>
+                          <p style="padding: 2px 2px 2px 2px;">
+                            <img t-if="not member.department_id.company_id.logo"
+                              t-att-src="'/web/static/src/img/placeholder.png'" height="60" border="1" width="60"/>
+                            <img t-if="member.department_id.company_id.logo"
+                              t-att-src="'data:image/jpg;base64,%s' % to_text(member.department_id.company_id.logo)" height="60" border="1" width="60"/>
+                          </p>
+                        </td>
+                      </tr> -->
+                      <tr>
+                        <td>
+                          <p style="text-align: center; padding-top: 10px;">
+                            <img t-if="not member.image_1920"
+                              t-att-src="'/web/static/src/img/placeholder.png'" height="140" border="1" width="120"/>
+                            <img t-if="member.image_1920"
+                              t-att-src="'data:image/jpg;base64,%s' % to_text(member.image_1920)" height="140" border="1" width="120"/>
+                          </p>
+                        </td>
+                        <td>
+                          <table class="table table-borderless">
+                            <t t-if="member.member_ids">
+                              <tr>
+                                <td>
+                                  <span>
+                                    <strong>Member ID: </strong>
+                                  </span>
+                                </td>
+                                <td>
+                                  <span t-field="member.member_ids"/>
+                                </td>
+                              </tr>
+                            </t>
+                            <tr>
+                              <td>
+                                <span>
+                                  <strong>Name: </strong>
+                                </span>
+                              </td>
+                              <td>
+                                <span t-field="member.name"/>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <span>
+                                  <strong>Subcity: </strong>
+                                </span>
+                              </td>
+                              <td>
+                                <span t-field="member.subcity_id"/>,<span t-field="member.wereda_id"/>
+                              </td>
+                            </tr>
+                            <t t-if="member.is_leader == True">
+                              <tr>
+                                <td>
+                                  <span>
+                                    <strong>Main Office: </strong>
+                                  </span>
+                                </td>
+                                <td>
+                                  <span t-field="member.main_office"/>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <span>
+                                    <strong>Cell: </strong>
+                                  </span>
+                                </td>
+                                <td>
+                                  <span t-field="member.member_cells"/>
+                                </td>
+                              </tr>
+                            </t>
+                            <t t-if="member.is_member == True">
+                              <tr>
+                                <td>
+                                  <span>
+                                    <strong>Main Office: </strong>
+                                  </span>
+                                </td>
+                                <td>
+                                  <span t-field="member.main_office"/>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <span>
+                                    <strong>Cell: </strong>
+                                  </span>
+                                </td>
+                                <td>
+                                  <span t-field="member.member_cells"/>
+                                </td>
+                              </tr>
+                            </t>
+                            <t t-if="member.is_league == True">
+                              <tr>
+                                <td>
+                                  <span>
+                                    <strong>League Main Office: </strong>
+                                  </span>
+                                </td>
+                                <td>
+                                  <span t-field="member.league_main_office"/>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <span>
+                                    <strong>League Cell: </strong>
+                                  </span>
+                                </td>
+                                <td>
+                                  <span t-field="member.league_member_cells"/>
+                                </td>
+                              </tr>
+                            </t>
+                            <t t-if="member.is_leader == True">
+                              <tr>
+                                <td>
+                                  <span>
+                                    <strong>Responsibility: </strong>
+                                  </span>
+                                </td>
+                                <td>
+                                  <span t-field="member.leader_responsibility"/>
+                                </td>
+                              </tr>
+                            </t>
+                            <t t-if="member.is_member == True">
+                              <tr>
+                                <td>
+                                  <span>
+                                    <strong>Responsibility: </strong>
+                                  </span>
+                                </td>
+                                <td>
+                                  <span t-field="member.member_responsibility"/>
+                                </td>
+                              </tr>
+                            </t>
+                            <t t-if="member.is_league == True">
+                              <tr>
+                                <td>
+                                  <span>
+                                    <strong>Responsibility: </strong>
+                                  </span>
+                                </td>
+                                <td>
+                                  <span t-field="member.league_status"/>
+                                </td>
+                              </tr>
+                            </t>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </t>
+        </t>
+      </t>
+    </template>
+</odoo>

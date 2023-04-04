@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="hr_leave_allocation_view_form_custom" model="ir.ui.view">
+        <field name="name">hr.leave.allocation.view.form</field>
+        <field name="model">hr.leave.allocation</field>
+        <field name="inherit_id" ref="hr_holidays.hr_leave_allocation_view_form"/>
+        <field name="priority">32</field>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='notes']" position="before">
+                <group>
+                    <group>
+                        <field name="end_of_year_reminder" readonly="1" force_save="1" attrs="{'invisible': ['|', ('for_annual_leave_allowed', '=', False), ('holiday_type', '!=', 'employee')]}"/>
+                        <field name="expired_date" force_save="1" attrs="{'invisible': ['|', ('for_annual_leave_allowed', '=', False), ('holiday_type', '!=', 'employee')]}"/>
+                    </group>
+                </group>
+            </xpath>
+            <xpath expr="//field[@name='department_id']" position="after">
+                <field name="for_annual_leave_allowed" invisible="1"/>
+                <field name="for_leave_type" string="Leave Type" required="1" attrs="{'readonly': [('state', '=', 'validate')]}"/>
+                <label for="total_working_years" attrs="{'required': [('holiday_type', '=', 'employee')], 'invisible': ['|', ('for_annual_leave_allowed', '=', False), ('holiday_type', '!=', 'employee')]}"/>
+                <div name="total_working_years">
+                    <field name="total_working_years"
+                        groups="hr_holidays.group_hr_holidays_user"
+                        attrs="{'required': [('holiday_type', '=', 'employee')], 'invisible': ['|', ('for_annual_leave_allowed', '=', False), ('holiday_type', '!=', 'employee')]}"
+                        force_save="1"/>
+                    <span attrs="{'required': [('holiday_type', '=', 'employee')], 'invisible': ['|', ('for_annual_leave_allowed', '=', False), ('holiday_type', '!=', 'employee')]}"> Years </span>
+                    <field name="total_working_months"
+                        groups="hr_holidays.group_hr_holidays_user"
+                        attrs="{'required': [('holiday_type', '=', 'employee')], 'invisible': ['|', ('for_annual_leave_allowed', '=', False), ('holiday_type', '!=', 'employee')]}"
+                        force_save="1"/>
+                    <span attrs="{'required': [('holiday_type', '=', 'employee')], 'invisible': ['|', ('for_annual_leave_allowed', '=', False), ('holiday_type', '!=', 'employee')]}"> Months </span>
+                    <field name="total_working_days"
+                        groups="hr_holidays.group_hr_holidays_user"
+                        attrs="{'required': [('holiday_type', '=', 'employee')], 'invisible': ['|', ('for_annual_leave_allowed', '=', False), ('holiday_type', '!=', 'employee')]}"
+                        force_save="1"/>
+                    <span attrs="{'required': [('holiday_type', '=', 'employee')], 'invisible': ['|', ('for_annual_leave_allowed', '=', False), ('holiday_type', '!=', 'employee')]}"> Days </span>
+                </div>
+                <div></div>
+                <button name="set_annual_leave" string="Set Annual Leave" type="object" class="oe_highlight" attrs="{'invisible': ['|', '|', ('state', '!=', 'confirm'), ('for_leave_type', '=', 'other'), ('holiday_type', '!=', 'employee')]}"/>
+            </xpath> 
+        </field>
+    </record>
+
+</odoo>

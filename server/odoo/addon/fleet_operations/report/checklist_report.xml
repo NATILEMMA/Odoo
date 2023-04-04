@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <report
+            string="Checklist report"
+            id="action_report_check_list"
+            model="fleet.vehicle.log.services"
+            report_type="qweb-pdf"
+            name="fleet_operations.report_checklist"
+            file="fleet_operations.report_checklist"
+            print_report_name="
+                'Checklist report'+str(object.id)"
+        />
+
+    </data>
+</odoo>

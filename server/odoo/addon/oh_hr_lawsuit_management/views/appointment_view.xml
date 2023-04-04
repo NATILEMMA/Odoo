@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2019 Creu Blanca
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record model="ir.ui.view" id="hr_employee_lawsuit_appointment_stack_form_view">
+        <field name="name">Appointment</field>
+        <field name="model">lawsuit.appointment_stack</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="ref_no"/>
+                            <field name="court_name" />
+                            <field name="judge" />
+                            <field name="lawyer" />
+                        </group>
+                        <group>
+                            <field name="law_suit_id" />
+                            <field name="hearing_date"/>
+                            <field name="requested_date"/>
+                        </group>
+                    </group>
+                     <notebook>
+                            <page name="case_desc" string="Details">
+                                <field name="details"/>
+                            </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="hr_employee_lawsuit_appointment_stack_search_view">
+        <field name="name">Appointment</field>
+        <field name="model">lawsuit.appointment_stack</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="court_name" />
+                <field name="judge" /> 
+                <group expand="0" string="Group By">
+                        <filter string="Court Name" name="Court"  context="{'group_by':'court_name'}"/>
+                        <filter string="Judge" name="Judge"  context="{'group_by':'judge'}"/>
+                        <filter string="Lawyer" name="Lawyer"  context="{'group_by':'lawyer'}"/>
+                </group>    
+            </search>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="hr_employee_lawsuit_appointment_stack_tree_view">
+        <field name="name">Appointment</field>
+        <field name="model">lawsuit.appointment_stack</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="ref_no" />
+                <field name="court_name" />
+                <field name="judge" />
+                <field name="lawyer" />
+            </tree>
+        </field>
+    </record>
+</odoo>

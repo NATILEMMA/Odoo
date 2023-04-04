@@ -1,0 +1,17 @@
+<odoo>
+
+    <record forcecreate="True" id="cron_generat_ethiopian_date" model="ir.cron">
+		<field name="name">Auto Generate Ethiopian Date on calaender View</field>
+		<field eval="True" name="active"/>
+		<field name="user_id" ref="base.user_admin"/>
+		<field name="interval_number">30</field>
+		<field name="interval_type">days</field>
+		<field name="numbercall">-1</field>
+		<field name="model_id" ref="CustomCalendar.model_calendar_event"/>
+		<field name="state">code</field>
+		<field name="code">model.auto_generate()</field>
+	</record>
+
+    
+
+</odoo>

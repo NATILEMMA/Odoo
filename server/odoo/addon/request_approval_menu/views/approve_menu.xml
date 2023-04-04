@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem name="Approve Requests" id="all_employee_Aprrove" web_icon="request_approval_menu,static/img/43716.png"
+    groups="hr.group_user_custom"/>
+    <record id="hr_expense.menu_hr_expense_report" model="ir.ui.menu">
+        <field name="parent_id" ref="request_approval_menu.all_employee_Aprrove"/>
+    </record>
+<!--    <record id="hr__ethiopian__ot.menu_ot_request_to_approve" model="ir.ui.menu">-->
+<!--        <field name="parent_id" ref="request_approval_menu.all_employee_Aprrove"/>-->
+<!--    </record>-->
+<!--    <menuitem name="Employee Requests" id="all_employee_req" action="hr_disciplinary_tracking.employee_complaint"-->
+<!--    parent="all_employee_requests"/>-->
+    <record id="hr_disciplinary_tracking.disciplinary_action_create" model="ir.ui.menu">
+        <field name="parent_id" ref="request_approval_menu.all_employee_Aprrove"/>
+    </record>
+
+    <record id="hr_disciplinary_tracking.department_complaint_assessor_menu" model="ir.ui.menu">
+        <field name="parent_id" ref="request_approval_menu.all_employee_Aprrove"/>
+    </record>
+
+    <record id="hr_disciplinary_tracking.company_complaint_assessor_menu" model="ir.ui.menu">
+        <field name="parent_id" ref="request_approval_menu.all_employee_Aprrove"/>
+    </record>
+    <record id="ohrms_salary_advance.menu_salary_advance" model="ir.ui.menu">
+        <field name="parent_id" ref="request_approval_menu.all_employee_Aprrove"/>
+    </record>
+
+    <record id="employee_orientation.menu_employee_orientation_child" model="ir.ui.menu">
+         <field name="active">False</field>
+    </record>
+
+    <!-- postition or salary request approval menu from module Hr_request_position  -->
+    <record id="hr_request_position.menu_to_approve_postition_salary_request" model="ir.ui.menu">    
+        <field name="parent_id" ref="request_approval_menu.all_employee_Aprrove"/>
+    </record>
+
+    <record id="hr_recruitment_request.menu_to_approve_recruitment_requests" model="ir.ui.menu">
+        <!-- recruitment request approval menu from hr_recruitment_request module for records with status not equal to draft  -->
+        <field name="parent_id" ref="request_approval_menu.all_employee_Aprrove"/>
+    </record>
+
+    <record id="hr_disciplinary_tracking.company_complaint_assessor_menu" model="ir.ui.menu">
+        <field name="parent_id" ref="request_approval_menu.all_employee_Aprrove"/>
+    </record>
+
+<!--    <record id="employee_orientation.menu_orientation_request" model="ir.ui.menu">-->
+<!--        <field name="active">False</field>-->
+<!--    </record>-->
+
+</odoo>
+
+
+
+
+

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+   <data>
+
+
+    <record id="view_budget_transfer_tree_view" model="ir.ui.view">
+        <field name="name">budget.transfer.tree</field>
+        <field name="model">budget.transfer</field>
+        <field name="arch" type="xml">
+            <tree string="Budget Transfer">
+                <field name="squ"/>
+                <field name="date" />
+            </tree>
+        </field>
+    </record>
+    <record id="view_budget_transfer_form" model="ir.ui.view">
+        <field name="name">budget.transfer.form</field>
+        <field name="model">budget.transfer</field>
+        <field name="arch" type="xml">
+        <form string="Budget Transfer">
+            <header>
+                <button name="action_request"  class="oe_highlight"       groups="Mestengido.mest_request_group"
+                type="object" states="draft" string="Request"/>
+                 <button name="action_approve" states="requested" string="Approved" class="oe_highlight" groups="Mestengido.mest_approval_group" type="object" />
+                <field name="state" widget="statusbar"/>
+              </header>
+           <sheet>
+            
+            <!-- <div class="container">
+                <div class="row">
+                  <div class="col-12">
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th rowspan="2">Number</th>
+                          <th rowspan="2">Budget Type</th>
+                           <th colspan="2" style="text-align:center;">Budget Code</th>
+                           <th colspan="2" style="text-align:center;">Transfer Amount</th>
+                           <th colspan="2" style="text-align:center;">Approved Amount</th>
+                          
+                        </tr>
+                     
+                         <tr>
+                          
+                          <th>From</th>
+                          <th>To</th>
+                           
+                          <th>Birr</th>
+                          <th>Cent</th>
+                           
+                            <th>Birr</th>
+                          <th>Cent</th>
+                        </tr>
+                      </thead>
+                      <tbody id="rows">
+                        <tr>
+                          <td>
+                            One
+                          </td>
+                          <td>
+                           <field name="name"/>
+                          </td>
+                       
+                          <td>
+                            <field name="from_budget_code"/>
+                          </td>
+                          <td>
+                            <field name="to_budget_code"/>
+                          </td>
+                          <td>
+                            <field name="transfer_amount"/>
+                          </td>
+                           <td>
+                            
+
+                          </td>
+                          <td>
+                            <field name="approved_amount"/>
+
+                          </td>
+                          <td>
+                            Seven
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div> -->
+              <!-- <group> -->
+                <div class="oe_title">
+                    <h1>
+                        <field name="squ" string="Reference"/>
+                    </h1>
+                </div>
+              <group class="col-6">
+                    <field name="date" />
+              </group>
+              <group class="col-6">
+                    <field name="journal_id"/>
+                 
+                    <field name="time_frame" />
+                  
+                    <field name="fiscal_year" />
+              </group>
+            <newline />
+                <notebook>
+                    <page>
+                   
+                    <separator string="Budget Transfer" colspan="4" />
+               
+                     <field name="budget_line">
+                         <tree
+                                editable="bottom"
+                            >
+                                <control>
+                                    <create name="add_product_control" string="Add Transfer"/>
+                                   
+                                </control>
+                                <field name="budget_type"/>
+                                <field name="from_budget_code" />
+                                <field name="account_from" />
+                                <field name="to_budget_code" />
+                                <field name="account_to"/>
+                                <field name="transfer_amount" string="Planed Amount"/>
+                                <field name="approved_amount" string="Approved Amount" groups="budget.group_financial_approval"/>
+                                
+
+                        </tree>
+
+                        <form>
+                            <group>
+                                <field name="budget_type"/>
+                                <field name="from_budget_code" />
+                                <field name="account_from" />
+                                <field name="to_budget_code" />
+                                <field name="account_to"/>
+                               
+                            </group>
+                            <group>
+                                <field name="transfer_amount" string="Planed Amount"/>
+                                <field name="approved_amount" string="Approved Amount" groups="budget.group_financial_approval"/>
+                            </group>
+                            
+                        </form>
+                    </field>
+                        <group  class="col-6" attrs="{'readonly': [('state', 'in', ['requested','approved'])]}">
+                            <field name="prepare_signed_by" string="Requested by" attrs="{'readonly': [('state', 'in', ['requested','approved'])]}"/>
+                            <field name="prepare_signed_on" attrs="{'readonly': [('state', 'in', ['requested','approved'])]}"/>
+                            <field name="prepare_signature" widget="image" width="100px" height="10px" attrs="{'readonly': [('state', 'in', ['requested','approved'])]}"/>
+                        </group>
+                        <group  class="col-6" attrs="{'readonly': [('state', '=', 'approved')],'invisible': [('state', 'in', ['draft'])]}">
+                        
+                            <field name="approver_signed_by" string="Approved by"/>
+                            <field name="approver_signed_on"/>
+                            <field name="approver_signature" widget="image" width="100px" height="10px"/>
+                        </group>
+                    
+                    </page>
+            </notebook> 
+           </sheet>
+           
+        </form>
+         </field>
+    </record>
+    <menuitem name="Budget Transfer"
+    id="budget_transfer.menu_root"
+    web_icon="budget_transfer,static/description/icon.png"
+    groups="budget.group_requester,budget.group_departmental_approval,budget.group_financial_approval"
+    sequence="25"/>
+   
+  </data>
+
+</odoo>

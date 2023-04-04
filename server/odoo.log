@@ -1,0 +1,1674 @@
+2023-04-01 16:16:14,788 20968 INFO ? odoo: Odoo version 13.0-20230401 
+2023-04-01 16:16:14,788 20968 INFO ? odoo: Using configuration file at D:\Odoo 13.0\server\odoo.conf 
+2023-04-01 16:16:14,788 20968 INFO ? odoo: addons paths: ['D:\\Odoo 13.0\\server\\odoo\\addons', 'c:\\users\\muluh\\appdata\\local\\openerp s.a\\odoo\\addons\\13.0', 'd:\\odoo 13.0\\server\\odoo\\addons'] 
+2023-04-01 16:16:14,788 20968 INFO ? odoo: database: openpg@localhost:5432 
+2023-04-01 16:16:15,515 20968 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe 
+2023-04-01 16:16:15,996 20968 INFO ? odoo.service.server: Initiating shutdown 
+2023-04-01 16:16:15,996 20968 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2023-04-01 16:16:17,980 25732 INFO ? odoo: Odoo version 13.0-20230401 
+2023-04-01 16:16:17,981 25732 INFO ? odoo: Using configuration file at D:\Odoo 13.0\server\odoo.conf 
+2023-04-01 16:16:17,981 25732 INFO ? odoo: addons paths: ['D:\\Odoo 13.0\\server\\odoo\\addons', 'c:\\users\\muluh\\appdata\\local\\openerp s.a\\odoo\\addons\\13.0', 'd:\\odoo 13.0\\server\\odoo\\addons'] 
+2023-04-01 16:16:17,981 25732 INFO ? odoo: database: openpg@localhost:5432 
+2023-04-01 16:16:18,217 25732 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe 
+2023-04-01 16:16:18,383 25732 INFO ? odoo.service.server: HTTP service (werkzeug) running on TriaPC-3:8069 
+2023-04-01 16:16:26,816 25732 INFO ? odoo.http: HTTP Configuring static files 
+2023-04-01 16:16:26,940 25732 INFO Main odoo.modules.loading: loading 1 modules... 
+2023-04-01 16:16:26,952 25732 INFO Main odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries 
+2023-04-01 16:16:26,958 25732 WARNING Main odoo.modules.graph: module muk_web_theme_mail: not installable, skipped 
+2023-04-01 16:16:26,959 25732 WARNING Main odoo.modules.graph: module hr_disciplinary_tracking: not installable, skipped 
+2023-04-01 16:16:26,963 25732 WARNING Main odoo.modules.graph: module employee_orientation: not installable, skipped 
+2023-04-01 16:16:26,964 25732 WARNING Main odoo.modules.graph: module hr_shift_management: not installable, skipped 
+2023-04-01 16:16:26,969 25732 WARNING Main odoo.modules.graph: module hr_menu_organizer: not installable, skipped 
+2023-04-01 16:16:26,978 25732 WARNING Main odoo.modules.graph: module date_range: not installable, skipped 
+2023-04-01 16:16:26,984 25732 WARNING Main odoo.modules.graph: module muk_utils: not installable, skipped 
+2023-04-01 16:16:26,987 25732 WARNING Main odoo.modules.graph: module muk_autovacuum: not installable, skipped 
+2023-04-01 16:16:26,999 25732 WARNING Main odoo.modules.graph: module reconciliation: not installable, skipped 
+2023-04-01 16:16:27,000 25732 WARNING Main odoo.modules.graph: module report_xlsx: not installable, skipped 
+2023-04-01 16:16:27,004 25732 WARNING Main odoo.modules.graph: module hr_job_wages: not installable, skipped 
+2023-04-01 16:16:27,007 25732 WARNING Main odoo.modules.graph: module ohrms_loan: not installable, skipped 
+2023-04-01 16:16:27,013 25732 WARNING Main odoo.modules.graph: module web_notify: not installable, skipped 
+2023-04-01 16:16:27,019 25732 WARNING Main odoo.modules.graph: module hr__ethiopian__ot: not installable, skipped 
+2023-04-01 16:16:27,047 25732 WARNING Main odoo.modules.graph: module hr_ethiopian_calandar: not installable, skipped 
+2023-04-01 16:16:27,061 25732 WARNING Main odoo.modules.graph: module muk_web_utils: not installable, skipped 
+2023-04-01 16:16:27,063 25732 WARNING Main odoo.modules.graph: module muk_web_theme: not installable, skipped 
+2023-04-01 16:16:27,075 25732 WARNING Main odoo.modules.graph: module hr_employee_medical_examination: not installable, skipped 
+2023-04-01 16:16:27,086 25732 WARNING Main odoo.modules.graph: module hr_payroll_community: not installable, skipped 
+2023-04-01 16:16:27,095 25732 WARNING Main odoo.modules.graph: module hr_contract_types: not installable, skipped 
+2023-04-01 16:16:27,101 25732 INFO Main odoo.modules.loading: loading 60 modules... 
+2023-04-01 16:16:30,833 25732 INFO Main odoo.modules.loading: 60 modules loaded in 3.73s, 0 queries 
+2023-04-01 16:16:30,836 25732 ERROR Main odoo.modules.loading: Some modules are not loaded, some dependencies or manifest may be missing: ['date_range', 'employee_orientation', 'hr__ethiopian__ot', 'hr_contract_types', 'hr_disciplinary_tracking', 'hr_employee_medical_examination', 'hr_ethiopian_calandar', 'hr_job_wages', 'hr_menu_organizer', 'hr_payroll_community', 'hr_shift_management', 'muk_autovacuum', 'muk_utils', 'muk_web_theme', 'muk_web_theme_mail', 'muk_web_utils', 'ohrms_loan', 'reconciliation', 'report_xlsx', 'web_notify'] 
+2023-04-01 16:16:32,468 25732 INFO Main odoo.modules.loading: Modules loaded. 
+2023-04-01 16:16:32,516 25732 INFO Main odoo.addons.base.models.ir_http: Generating routing map for key 1 
+2023-04-01 16:16:33,752 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:16:33,753 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:16:33,763 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:16:33,801 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:16:33,816 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:16:33,822 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:16:33,825 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:16:33,831 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:16:33,843 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:16:33,848 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:16:33,869 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:16:34,828 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:16:34,830 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:16:34,898 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:16:34,901 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:16:34,910 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:16:34,914 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:16:39,178 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:16:39,178 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:16:39,188 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:16:39,221 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:16:39,233 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:16:39,237 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:16:39,242 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:16:39,247 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:16:40,148 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:16:40,390 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:16:40,392 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:16:40,445 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:16:40,449 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:16:40,892 25732 INFO Main odoo.modules.registry: At least one model cache has been invalidated, signaling through the database. 
+2023-04-01 16:16:40,896 25732 INFO Main werkzeug: 127.0.0.1 - - [01/Apr/2023 16:16:40] "GET / HTTP/1.1" 200 - 591 1.447 12.594
+2023-04-01 16:16:40,968 25732 INFO Main werkzeug: 127.0.0.1 - - [01/Apr/2023 16:16:40] "GET /web/content/1504-24e399e/1/web.assets_frontend.css HTTP/1.1" 200 - 7 0.013 0.017
+2023-04-01 16:16:40,969 25732 INFO Main werkzeug: 127.0.0.1 - - [01/Apr/2023 16:16:40] "GET /web/content/1503-6c15949/1/web.assets_common.css HTTP/1.1" 200 - 7 0.008 0.024
+2023-04-01 16:16:41,344 25732 INFO Main werkzeug: 127.0.0.1 - - [01/Apr/2023 16:16:41] "GET /web/content/1535-e27e0e4/1/web.assets_frontend_minimal_js.js HTTP/1.1" 200 - 5 0.008 0.023
+2023-04-01 16:16:41,345 25732 INFO Main werkzeug: 127.0.0.1 - - [01/Apr/2023 16:16:41] "GET /web/content/1534-e6b611d/1/web.assets_common_minimal_js.js HTTP/1.1" 200 - 5 0.011 0.025
+2023-04-01 16:16:41,602 25732 INFO Main werkzeug: 127.0.0.1 - - [01/Apr/2023 16:16:41] "GET /web/image/website/1/logo/My%20Website?unique=954e96c HTTP/1.1" 200 - 9 0.010 0.026
+2023-04-01 16:16:41,667 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:16:41] "GET /web/static/src/img/odoo_logo_tiny.png HTTP/1.1" 200 - - - -
+2023-04-01 16:16:41,889 25732 INFO Main werkzeug: 127.0.0.1 - - [01/Apr/2023 16:16:41] "GET /muk_web_theme/static/src/fonts/Roboto/Roboto-Medium.woff HTTP/1.1" 404 - 2 0.001 0.007
+2023-04-01 16:16:41,934 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:16:41] "GET /web/static/lib/fontawesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 - - - -
+2023-04-01 16:16:41,950 25732 INFO Main werkzeug: 127.0.0.1 - - [01/Apr/2023 16:16:41] "GET /muk_web_theme/static/src/fonts/Roboto/Roboto-Medium.ttf HTTP/1.1" 404 - 2 0.002 0.007
+2023-04-01 16:16:42,343 25732 INFO Main werkzeug: 127.0.0.1 - - [01/Apr/2023 16:16:42] "GET /web/image/website/1/favicon?unique=954e96c HTTP/1.1" 200 - 6 0.006 0.025
+2023-04-01 16:16:42,386 25732 INFO Main werkzeug: 127.0.0.1 - - [01/Apr/2023 16:16:42] "GET /web/content/1536-ffc8187/1/web.assets_common_lazy.js HTTP/1.1" 200 - 5 0.005 0.020
+2023-04-01 16:16:42,626 25732 INFO Main werkzeug: 127.0.0.1 - - [01/Apr/2023 16:16:42] "GET /web/content/1537-149b831/1/web.assets_frontend_lazy.js HTTP/1.1" 200 - 5 0.005 0.015
+2023-04-01 16:16:42,975 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:16:42] "GET /web/static/src/xml/dialog.xml HTTP/1.1" 200 - - - -
+2023-04-01 16:16:42,987 25732 INFO Main werkzeug: 127.0.0.1 - - [01/Apr/2023 16:16:42] "GET /website/translations/63c39b9719623b23090242bff39258f3aa29fe2b?mods=&lang=en_US HTTP/1.1" 200 - 6 0.004 0.014
+2023-04-01 16:16:42,992 25732 INFO Main werkzeug: 127.0.0.1 - - [01/Apr/2023 16:16:42] "GET /web/webclient/locale/en_US HTTP/1.1" 200 - 1 0.002 0.018
+2023-04-01 16:16:43,271 25732 INFO Main werkzeug: 127.0.0.1 - - [01/Apr/2023 16:16:43] "POST /website/update_visitor_timezone HTTP/1.1" 200 - 9 0.012 0.033
+2023-04-01 16:17:01,908 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:01,909 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:01,918 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:01,947 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:01,962 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:01,967 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:01,970 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:01,977 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:01,987 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:01,992 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:02,005 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:02,947 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:02,948 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:02,969 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:02,971 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:02,977 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:02,980 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:06,682 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:06,684 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:06,705 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:06,755 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:06,767 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:06,771 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:06,774 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:06,779 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:06,813 25732 INFO Main werkzeug: 127.0.0.1 - - [01/Apr/2023 16:17:06] "GET /web/login HTTP/1.1" 200 - 370 0.410 5.165
+2023-04-01 16:17:06,916 25732 INFO Main werkzeug: 127.0.0.1 - - [01/Apr/2023 16:17:06] "GET /muk_web_theme/static/src/fonts/Roboto/Roboto-Medium.woff HTTP/1.1" 404 - 2 0.003 0.009
+2023-04-01 16:17:07,251 25732 INFO Main werkzeug: 127.0.0.1 - - [01/Apr/2023 16:17:07] "GET /muk_web_theme/static/src/fonts/Roboto/Roboto-Medium.ttf HTTP/1.1" 404 - 2 0.003 0.007
+2023-04-01 16:17:18,413 25732 INFO Main odoo.addons.base.models.ir_cron: Starting job `Digest Emails`. 
+2023-04-01 16:17:18,495 25732 INFO Main odoo.addons.base.models.ir_cron: Job `Digest Emails` done. 
+2023-04-01 16:17:18,498 25732 INFO Main odoo.addons.base.models.ir_cron: Starting job `Notification: Delete Notifications older than 6 Month`. 
+2023-04-01 16:17:18,534 25732 INFO Main odoo.addons.base.models.ir_cron: Job `Notification: Delete Notifications older than 6 Month` done. 
+2023-04-01 16:17:18,536 25732 INFO Main odoo.addons.base.models.ir_cron: Starting job `Partner Autocomplete : Sync with remote DB`. 
+2023-04-01 16:17:18,560 25732 INFO Main odoo.addons.base.models.ir_cron: Job `Partner Autocomplete : Sync with remote DB` done. 
+2023-04-01 16:17:18,562 25732 INFO Main odoo.addons.base.models.ir_cron: Starting job `Snailmail: process letters queue`. 
+2023-04-01 16:17:18,581 25732 INFO Main odoo.addons.base.models.ir_cron: Job `Snailmail: process letters queue` done. 
+2023-04-01 16:17:18,584 25732 INFO Main odoo.addons.base.models.ir_cron: Starting job `SMS: SMS Queue Manager`. 
+2023-04-01 16:17:18,606 25732 INFO Main odoo.addons.base.models.ir_cron: Job `SMS: SMS Queue Manager` done. 
+2023-04-01 16:17:18,609 25732 INFO Main odoo.addons.base.models.ir_cron: Starting job `HR Contract: update state`. 
+2023-04-01 16:17:18,693 25732 INFO Main odoo.addons.base.models.ir_cron: Job `HR Contract: update state` done. 
+2023-04-01 16:17:18,695 25732 INFO Main odoo.addons.base.models.ir_cron: Starting job `Mail: Email Queue Manager`. 
+2023-04-01 16:17:18,728 25732 INFO Main odoo.addons.base.models.ir_cron: Job `Mail: Email Queue Manager` done. 
+2023-04-01 16:17:18,730 25732 INFO Main odoo.addons.base.models.ir_cron: Starting job `Base: Auto-vacuum internal data`. 
+2023-04-01 16:17:18,803 25732 INFO Main odoo.models.unlink: User #1 deleted bus.bus records with IDs: [42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52] 
+2023-04-01 16:17:19,102 25732 INFO Main odoo.addons.base.models.ir_attachment: filestore gc 118 checked, 16 removed 
+2023-04-01 16:17:19,135 25732 INFO Main odoo.models.unlink: User #1 deleted ir.demo_failure records with IDs: [11] 
+2023-04-01 16:17:19,157 25732 INFO Main odoo.models.unlink: User #1 deleted ir.demo_failure.wizard records with IDs: [10] 
+2023-04-01 16:17:19,193 25732 INFO Main odoo.models.unlink: User #1 deleted res.config.settings records with IDs: [32, 31] 
+2023-04-01 16:17:19,231 25732 INFO Main odoo.models.unlink: User #1 deleted base.module.update records with IDs: [6, 7, 8, 9, 10, 11, 12] 
+2023-04-01 16:17:19,268 25732 INFO Main odoo.models.unlink: User #1 deleted base.module.uninstall records with IDs: [8, 9] 
+2023-04-01 16:17:19,404 25732 INFO Main odoo.addons.base.models.ir_cron: Starting job `Users: Notify About Unregistered Users`. 
+2023-04-01 16:17:19,498 25732 INFO Main odoo.addons.base.models.ir_autovacuum: GC'd 3 user log entries 
+2023-04-01 16:17:19,498 25732 INFO Main odoo.modules.registry: At least one model cache has been invalidated, signaling through the database. 
+2023-04-01 16:17:19,499 25732 INFO Main odoo.addons.base.models.ir_cron: Job `Users: Notify About Unregistered Users` done. 
+2023-04-01 16:17:19,502 25732 INFO Main odoo.addons.base.models.ir_cron: Job `Base: Auto-vacuum internal data` done. 
+2023-04-01 16:17:19,502 25732 INFO Main odoo.addons.base.models.ir_cron: Starting job `Calendar: Event Reminder`. 
+2023-04-01 16:17:19,514 25732 INFO Main odoo.addons.base.models.ir_cron: Starting job `Post process payment transactions`. 
+2023-04-01 16:17:19,540 25732 INFO Main odoo.addons.base.models.ir_cron: Job `Calendar: Event Reminder` done. 
+2023-04-01 16:17:19,544 25732 INFO Main odoo.addons.base.models.ir_cron: Job `Post process payment transactions` done. 
+2023-04-01 16:17:19,545 25732 INFO Main odoo.addons.base.models.ir_cron: Starting job `Mail: Notify channel moderators`. 
+2023-04-01 16:17:19,560 25732 INFO Main odoo.addons.base.models.ir_cron: Job `Mail: Notify channel moderators` done. 
+2023-04-01 16:17:28,577 25732 INFO Main odoo.addons.base.models.res_users: Login successful for db:Main login:admin from 127.0.0.1 
+2023-04-01 16:17:28,649 25732 INFO Main odoo.models.unlink: User #2 deleted website.visitor records with IDs: [3] 
+2023-04-01 16:17:28,686 25732 INFO Main odoo.modules.registry: At least one model cache has been invalidated, signaling through the database. 
+2023-04-01 16:17:28,692 25732 INFO Main werkzeug: 127.0.0.1 - - [01/Apr/2023 16:17:28] "POST /web/login HTTP/1.1" 303 - 82 0.113 0.260
+2023-04-01 16:17:28,859 25732 ERROR Main odoo.addons.base.models.ir_model: Missing model disciplinary.action 
+2023-04-01 16:17:28,862 25732 ERROR Main odoo.addons.base.models.ir_model: Missing model discipline.category 
+2023-04-01 16:17:28,865 25732 ERROR Main odoo.addons.base.models.ir_model: Missing model employee.complaint 
+2023-04-01 16:17:28,867 25732 ERROR Main odoo.addons.base.models.ir_model: Missing model hr.employee.medical.examination 
+2023-04-01 16:17:28,877 25732 ERROR Main odoo.addons.base.models.ir_model: Missing model employee.orientation 
+2023-04-01 16:17:28,923 25732 ERROR Main odoo.addons.base.models.ir_model: Missing model hr.payroll.structure 
+2023-04-01 16:17:28,933 25732 ERROR Main odoo.addons.base.models.ir_model: Missing model discipline.action 
+2023-04-01 16:17:28,971 25732 ERROR Main odoo.addons.base.models.ir_model: Missing model bank.reconciliation 
+2023-04-01 16:17:29,016 25732 ERROR Main odoo.addons.base.models.ir_model: Missing model reconciliation.time.fream 
+2023-04-01 16:17:29,021 25732 ERROR Main odoo.addons.base.models.ir_model: Missing model fiscal.year 
+2023-04-01 16:17:29,115 25732 ERROR Main odoo.addons.base.models.ir_model: Missing model hr.payslip 
+2023-04-01 16:17:29,118 25732 ERROR Main odoo.addons.base.models.ir_model: Missing model hr.payslip.run 
+2023-04-01 16:17:29,125 25732 ERROR Main odoo.addons.base.models.ir_model: Missing model hr.loan 
+2023-04-01 16:17:29,131 25732 ERROR Main odoo.addons.base.models.ir_model: Missing model hr_ethiopian_ot.rate 
+2023-04-01 16:17:29,134 25732 ERROR Main odoo.addons.base.models.ir_model: Missing model hr_ethiopian_ot.request 
+2023-04-01 16:17:29,141 25732 ERROR Main odoo.addons.base.models.ir_model: Missing model muk_autovacuum.rules 
+2023-04-01 16:17:29,144 25732 ERROR Main odoo.addons.base.models.ir_model: Missing model orientation.checklist 
+2023-04-01 16:17:29,147 25732 ERROR Main odoo.addons.base.models.ir_model: Missing model employee.training 
+2023-04-01 16:17:29,150 25732 ERROR Main odoo.addons.base.models.ir_model: Missing model employee.training.program 
+2023-04-01 16:17:29,152 25732 ERROR Main odoo.addons.base.models.ir_model: Missing model employee.training.program.round 
+2023-04-01 16:17:29,155 25732 ERROR Main odoo.addons.base.models.ir_model: Missing model date.range 
+2023-04-01 16:17:29,158 25732 ERROR Main odoo.addons.base.models.ir_model: Missing model date.range.type 
+2023-04-01 16:17:29,160 25732 ERROR Main odoo.addons.base.models.ir_model: Missing model date.range.generator 
+2023-04-01 16:17:29,164 25732 ERROR Main odoo.addons.base.models.ir_model: Missing model hr.salary.rule 
+2023-04-01 16:17:29,167 25732 ERROR Main odoo.addons.base.models.ir_model: Missing model hr.contribution.register 
+2023-04-01 16:17:29,186 25732 ERROR Main odoo.addons.base.models.ir_model: Missing model checklist.line 
+2023-04-01 16:17:29,196 25732 ERROR Main odoo.addons.base.models.ir_model: Missing model hr.contract.advantage.template 
+2023-04-01 16:17:29,210 25732 ERROR Main odoo.addons.base.models.ir_model: Missing model hr.job.dup 
+2023-04-01 16:17:29,213 25732 ERROR Main odoo.addons.base.models.ir_model: Missing model hr.shift.management 
+2023-04-01 16:17:29,680 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:29,680 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:29,691 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:29,756 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:29,778 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:29,782 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:29,785 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:29,792 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:29,799 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:29,802 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:29,820 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:30,976 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:30,977 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:30,982 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:30,984 25732 WARNING Main odoo.modules.module: module web_notify: module not found 
+2023-04-01 16:17:31,194 25732 WARNING Main odoo.modules.module: module web_notify: module not found 
+2023-04-01 16:17:31,195 25732 WARNING Main odoo.modules.module: module web_notify: module not found 
+2023-04-01 16:17:31,215 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:31,216 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:31,217 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:31,220 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:31,221 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:31,222 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:31,224 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:31,225 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:31,227 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:31,228 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:31,229 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:31,230 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:31,232 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:31,246 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,247 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,248 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,249 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,251 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,252 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,254 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,256 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,257 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,259 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,261 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,262 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,263 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,264 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,266 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,267 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,269 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,270 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,271 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,273 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,274 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,275 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,276 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,277 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,279 25732 WARNING Main odoo.modules.module: module muk_web_theme_mail: module not found 
+2023-04-01 16:17:31,285 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,287 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,288 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,290 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,292 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,293 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,294 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,296 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,297 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,298 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,299 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,301 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,302 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,303 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,304 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,306 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,307 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,308 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,309 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,310 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,312 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,313 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,314 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,316 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,317 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,319 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,320 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,322 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,323 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,325 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,326 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,327 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,329 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,331 25732 WARNING Main odoo.modules.module: module muk_web_theme_mail: module not found 
+2023-04-01 16:17:31,332 25732 WARNING Main odoo.modules.module: module muk_web_theme_mail: module not found 
+2023-04-01 16:17:31,334 25732 WARNING Main odoo.modules.module: module muk_web_theme_mail: module not found 
+2023-04-01 16:17:31,338 25732 WARNING Main odoo.modules.module: module date_range: module not found 
+2023-04-01 16:17:31,338 25732 WARNING Main odoo.modules.module: module report_xlsx: module not found 
+2023-04-01 16:17:31,366 25732 WARNING Main odoo.modules.module: module web_notify: module not found 
+2023-04-01 16:17:31,371 25732 WARNING Main odoo.modules.module: module web_notify: module not found 
+2023-04-01 16:17:31,374 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:31,377 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:31,379 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:31,381 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:31,384 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:31,386 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:31,390 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:31,395 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:31,397 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:31,400 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:31,403 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:31,408 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,411 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,414 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,417 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,419 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,423 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,426 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,429 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,431 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,434 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,437 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,441 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,444 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,447 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,450 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,453 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,457 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,461 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,464 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,466 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,469 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,472 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,475 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,478 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,480 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,482 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,486 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,490 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,494 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,497 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,500 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,502 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,504 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,509 25732 WARNING Main odoo.modules.module: module muk_web_theme_mail: module not found 
+2023-04-01 16:17:31,512 25732 WARNING Main odoo.modules.module: module muk_web_theme_mail: module not found 
+2023-04-01 16:17:31,514 25732 WARNING Main odoo.modules.module: module muk_web_theme_mail: module not found 
+2023-04-01 16:17:31,517 25732 WARNING Main odoo.modules.module: module date_range: module not found 
+2023-04-01 16:17:31,519 25732 WARNING Main odoo.modules.module: module report_xlsx: module not found 
+2023-04-01 16:17:31,522 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,524 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,528 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,532 25732 WARNING Main odoo.modules.module: module web_notify: module not found 
+2023-04-01 16:17:31,539 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:31,542 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:31,545 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,547 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,550 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,552 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,554 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,557 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,559 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,560 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,563 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,565 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,567 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,571 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,574 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,576 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,578 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,580 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,582 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,584 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,585 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,587 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,590 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,592 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,595 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,597 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,599 25732 WARNING Main odoo.modules.module: module muk_web_theme_mail: module not found 
+2023-04-01 16:17:31,604 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,607 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,614 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,618 25732 WARNING Main odoo.modules.module: module web_notify: module not found 
+2023-04-01 16:17:31,641 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,644 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,647 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,649 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,652 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,653 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,655 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,658 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,660 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,662 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,664 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:31,665 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,667 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,668 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,671 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,672 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,675 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,677 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,679 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,680 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,682 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,684 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,688 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:31,691 25732 WARNING Main odoo.modules.module: module muk_web_theme_mail: module not found 
+2023-04-01 16:17:36,621 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:36,626 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:36,631 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:36,645 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:36,650 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:36,653 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:36,657 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:37,699 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:38,149 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:38,149 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:38,153 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:38,156 25732 WARNING Main odoo.modules.module: module web_notify: module not found 
+2023-04-01 16:17:38,331 25732 WARNING Main odoo.modules.module: module web_notify: module not found 
+2023-04-01 16:17:38,332 25732 WARNING Main odoo.modules.module: module web_notify: module not found 
+2023-04-01 16:17:38,353 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:38,355 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:38,357 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:38,358 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:38,359 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:38,361 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:38,362 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:38,364 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:38,365 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:38,366 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:38,367 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:38,368 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:38,369 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:38,381 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,382 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,384 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,385 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,386 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,387 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,388 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,391 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,392 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,393 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,395 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,396 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,397 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:38,398 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:38,399 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:38,400 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:38,401 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:38,402 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:38,403 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:38,405 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:38,407 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:38,407 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:38,409 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:38,410 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:38,411 25732 WARNING Main odoo.modules.module: module muk_web_theme_mail: module not found 
+2023-04-01 16:17:38,415 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,415 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,416 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,417 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,418 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,419 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,419 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,421 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,423 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,425 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,426 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,427 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,428 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,429 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,430 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,431 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,432 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,434 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,435 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,436 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,437 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,440 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,442 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,443 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:38,445 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:38,446 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:38,447 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:38,448 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:38,450 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:38,451 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:38,452 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:38,453 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:38,455 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:38,456 25732 WARNING Main odoo.modules.module: module muk_web_theme_mail: module not found 
+2023-04-01 16:17:38,457 25732 WARNING Main odoo.modules.module: module muk_web_theme_mail: module not found 
+2023-04-01 16:17:38,458 25732 WARNING Main odoo.modules.module: module muk_web_theme_mail: module not found 
+2023-04-01 16:17:38,462 25732 WARNING Main odoo.modules.module: module date_range: module not found 
+2023-04-01 16:17:38,463 25732 WARNING Main odoo.modules.module: module report_xlsx: module not found 
+2023-04-01 16:17:38,498 25732 WARNING Main odoo.modules.module: module web_notify: module not found 
+2023-04-01 16:17:38,504 25732 WARNING Main odoo.modules.module: module web_notify: module not found 
+2023-04-01 16:17:38,510 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:38,513 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:38,516 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:38,520 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:38,524 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:38,528 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:38,531 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:38,534 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:38,537 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:38,541 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:38,544 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:38,549 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,552 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,555 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,560 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,563 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,567 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,569 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,574 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,579 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,582 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,585 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,588 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,591 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,594 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,597 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,600 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,603 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,605 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,609 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,612 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,614 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,617 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,619 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,622 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:38,626 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:38,628 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:38,631 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:38,633 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:38,636 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:38,640 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:38,644 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:38,647 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:38,649 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:38,652 25732 WARNING Main odoo.modules.module: module muk_web_theme_mail: module not found 
+2023-04-01 16:17:38,655 25732 WARNING Main odoo.modules.module: module muk_web_theme_mail: module not found 
+2023-04-01 16:17:38,658 25732 WARNING Main odoo.modules.module: module muk_web_theme_mail: module not found 
+2023-04-01 16:17:38,662 25732 WARNING Main odoo.modules.module: module date_range: module not found 
+2023-04-01 16:17:38,665 25732 WARNING Main odoo.modules.module: module report_xlsx: module not found 
+2023-04-01 16:17:38,668 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:38,670 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:38,674 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:38,677 25732 WARNING Main odoo.modules.module: module web_notify: module not found 
+2023-04-01 16:17:38,683 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:38,685 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:38,688 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,691 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,694 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,696 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,698 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,699 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,702 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,704 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,707 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,711 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,713 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,715 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:38,717 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:38,719 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:38,720 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:38,722 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:38,726 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:38,726 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:38,729 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:38,731 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:38,734 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:38,737 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:38,740 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:38,742 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:38,745 25732 WARNING Main odoo.modules.module: module muk_web_theme_mail: module not found 
+2023-04-01 16:17:39,881 25732 WARNING Main odoo.modules.module: module web_notify: module not found 
+2023-04-01 16:17:39,885 25732 WARNING Main odoo.modules.module: module web_notify: module not found 
+2023-04-01 16:17:39,954 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:39,957 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:39,961 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:39,964 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:39,967 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:39,971 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:39,974 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:39,979 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:39,983 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:39,985 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:39,988 25732 WARNING Main odoo.modules.module: module EthiopianCalendar: module not found 
+2023-04-01 16:17:40,027 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:40,030 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:40,034 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:40,037 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:40,041 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:40,045 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:40,048 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:40,051 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:40,053 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:40,056 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:40,060 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:40,063 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:40,065 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:40,068 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:40,069 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:40,071 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:40,073 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:40,076 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:40,079 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:40,081 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:40,083 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:40,085 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:40,087 25732 WARNING Main odoo.modules.module: module muk_web_utils: module not found 
+2023-04-01 16:17:40,090 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:40,093 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:40,096 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:40,098 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:40,101 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:40,103 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:40,105 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:40,108 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:40,111 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:40,113 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:17:40,115 25732 WARNING Main odoo.modules.module: module muk_web_theme_mail: module not found 
+2023-04-01 16:17:40,117 25732 WARNING Main odoo.modules.module: module muk_web_theme_mail: module not found 
+2023-04-01 16:17:40,119 25732 WARNING Main odoo.modules.module: module muk_web_theme_mail: module not found 
+2023-04-01 16:17:40,121 25732 WARNING Main odoo.modules.module: module date_range: module not found 
+2023-04-01 16:17:40,124 25732 WARNING Main odoo.modules.module: module report_xlsx: module not found 
+2023-04-01 16:17:40,411 25732 INFO Main werkzeug: 127.0.0.1 - - [01/Apr/2023 16:17:40] "GET /web HTTP/1.1" 500 - 956 0.993 10.717
+2023-04-01 16:17:40,436 25732 ERROR Main werkzeug: Error on request:
+Traceback (most recent call last):
+  File "D:\Odoo 13.0\server\odoo\addons\base\models\qweb.py", line 334, in _compiled_fn
+    return compiled(self, append, new, options, log)
+  File "<template>", line 1, in template_web_webclient_bootstrap_304
+    
+  File "<template>", line 2, in body_call_content_302
+    
+AttributeError: 'res.users' object has no attribute 'sidebar_type'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Odoo 13.0\python\lib\site-packages\werkzeug\serving.py", line 304, in run_wsgi
+    execute(self.server.app)
+  File "D:\Odoo 13.0\python\lib\site-packages\werkzeug\serving.py", line 292, in execute
+    application_iter = app(environ, start_response)
+  File "D:\Odoo 13.0\server\odoo\service\server.py", line 440, in app
+    return self.app(e, s)
+  File "D:\Odoo 13.0\server\odoo\service\wsgi_server.py", line 142, in application
+    return application_unproxied(environ, start_response)
+  File "D:\Odoo 13.0\server\odoo\service\wsgi_server.py", line 117, in application_unproxied
+    result = odoo.http.root(environ, start_response)
+  File "D:\Odoo 13.0\server\odoo\http.py", line 1314, in __call__
+    return self.dispatch(environ, start_response)
+  File "D:\Odoo 13.0\server\odoo\http.py", line 1284, in __call__
+    return self.app(environ, start_wrapped)
+  File "D:\Odoo 13.0\python\lib\site-packages\werkzeug\middleware\shared_data.py", line 220, in __call__
+    return self.app(environ, start_response)
+  File "D:\Odoo 13.0\server\odoo\http.py", line 1501, in dispatch
+    result = ir_http._dispatch()
+  File "D:\Odoo 13.0\server\odoo\addons\website\models\ir_http.py", line 172, in _dispatch
+    response = super(Http, cls)._dispatch()
+  File "D:\Odoo 13.0\server\odoo\addons\auth_signup\models\ir_http.py", line 19, in _dispatch
+    return super(Http, cls)._dispatch()
+  File "D:\Odoo 13.0\server\odoo\addons\web_editor\models\ir_http.py", line 21, in _dispatch
+    return super(IrHttp, cls)._dispatch()
+  File "D:\Odoo 13.0\server\odoo\addons\utm\models\ir_http.py", line 29, in _dispatch
+    response = super(IrHttp, cls)._dispatch()
+  File "D:\Odoo 13.0\server\odoo\addons\http_routing\models\ir_http.py", line 522, in _dispatch
+    result = super(IrHttp, cls)._dispatch()
+  File "D:\Odoo 13.0\server\odoo\addons\base\models\ir_http.py", line 238, in _dispatch
+    return cls._handle_exception(e)
+  File "D:\Odoo 13.0\server\odoo\addons\utm\models\ir_http.py", line 34, in _handle_exception
+    response = super(IrHttp, cls)._handle_exception(exc)
+  File "D:\Odoo 13.0\server\odoo\addons\http_routing\models\ir_http.py", line 613, in _handle_exception
+    return super(IrHttp, cls)._handle_exception(exception)
+  File "D:\Odoo 13.0\server\odoo\addons\base\models\ir_http.py", line 206, in _handle_exception
+    return request._handle_exception(exception)
+  File "D:\Odoo 13.0\server\odoo\http.py", line 750, in _handle_exception
+    return super(HttpRequest, self)._handle_exception(exception)
+  File "D:\Odoo 13.0\server\odoo\http.py", line 310, in _handle_exception
+    raise pycompat.reraise(type(exception), exception, sys.exc_info()[2])
+  File "D:\Odoo 13.0\server\odoo\tools\pycompat.py", line 14, in reraise
+    raise value
+  File "D:\Odoo 13.0\server\odoo\addons\base\models\ir_http.py", line 234, in _dispatch
+    result = request.dispatch()
+  File "D:\Odoo 13.0\server\odoo\http.py", line 809, in dispatch
+    r = self._call_function(**self.params)
+  File "D:\Odoo 13.0\server\odoo\http.py", line 350, in _call_function
+    return checked_call(self.db, *args, **kwargs)
+  File "D:\Odoo 13.0\server\odoo\service\model.py", line 94, in wrapper
+    return f(dbname, *args, **kwargs)
+  File "D:\Odoo 13.0\server\odoo\http.py", line 342, in checked_call
+    result.flatten()
+  File "D:\Odoo 13.0\server\odoo\http.py", line 1259, in flatten
+    self.response.append(self.render())
+  File "D:\Odoo 13.0\server\odoo\http.py", line 1252, in render
+    return env["ir.ui.view"].render_template(self.template, self.qcontext)
+  File "D:\Odoo 13.0\server\odoo\addons\base\models\ir_ui_view.py", line 1201, in render_template
+    return self.browse(self.get_view_id(template)).render(values, engine)
+  File "D:\Odoo 13.0\server\odoo\addons\website\models\ir_ui_view.py", line 347, in render
+    return super(View, self).render(values, engine=engine, minimal_qcontext=minimal_qcontext)
+  File "D:\Odoo 13.0\server\odoo\addons\web_editor\models\ir_ui_view.py", line 27, in render
+    return super(IrUiView, self).render(values=values, engine=engine, minimal_qcontext=minimal_qcontext)
+  File "D:\Odoo 13.0\server\odoo\addons\base\models\ir_ui_view.py", line 1209, in render
+    return self.env[engine].render(self.id, qcontext)
+  File "D:\Odoo 13.0\server\odoo\addons\base\models\ir_qweb.py", line 58, in render
+    result = super(IrQWeb, self).render(id_or_xml_id, values=values, **context)
+  File "D:\Odoo 13.0\server\odoo\addons\base\models\qweb.py", line 261, in render
+    self.compile(template, options)(self, body.append, values or {})
+  File "D:\Odoo 13.0\server\odoo\addons\base\models\qweb.py", line 341, in _compiled_fn
+    raise QWebException("Error to render compiling AST", e, path, node and etree.tostring(node[0], encoding='unicode'), name)
+odoo.addons.base.models.qweb.QWebException: 'res.users' object has no attribute 'sidebar_type'
+Traceback (most recent call last):
+  File "D:\Odoo 13.0\server\odoo\addons\base\models\qweb.py", line 334, in _compiled_fn
+    return compiled(self, append, new, options, log)
+  File "<template>", line 1, in template_web_webclient_bootstrap_304
+  File "<template>", line 2, in body_call_content_302
+AttributeError: 'res.users' object has no attribute 'sidebar_type'
+
+Error to render compiling AST
+AttributeError: 'res.users' object has no attribute 'sidebar_type'
+Template: web.webclient_bootstrap
+Path: /t/t/t[4]
+Node: <t t-set="body_classname" t-value="'o_web_client mk_sidebar_type_' + request.env.user.sidebar_type or 'large'"/> - - -
+2023-04-01 16:17:40,815 25732 INFO Main werkzeug: 127.0.0.1 - - [01/Apr/2023 16:17:40] "GET /favicon.ico HTTP/1.1" 200 - 20 0.016 0.020
+2023-04-01 16:18:34,434 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:34,435 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:34,453 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:34,512 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:34,527 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:34,531 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:34,534 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:34,538 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:34,545 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:34,549 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:34,565 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:35,471 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:35,473 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:35,514 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:35,576 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:35,585 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:35,590 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:39,418 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:39,419 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:39,430 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:39,432 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:39,438 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:39,443 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:39,462 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:39,464 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:39,863 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:39,869 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:40,393 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:40,398 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:40,434 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:40,439 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:40,459 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:40,492 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:40,572 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:40,597 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:40,612 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:40,618 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:40,621 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:40,625 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:40,631 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:40,633 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:40,635 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:40,643 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:40,710 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:40,714 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:40,779 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:40,783 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:40,851 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:40,856 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:40,877 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:40,881 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:40,911 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:40,928 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:40,971 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:40,977 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:41,264 25732 INFO Main odoo.modules.registry: At least one model cache has been invalidated, signaling through the database. 
+2023-04-01 16:18:41,264 25732 ERROR Main odoo.sql_db: bad query: DELETE FROM ir_attachment WHERE id IN (1510)
+ERROR: could not serialize access due to concurrent update
+ 
+2023-04-01 16:18:41,265 25732 INFO Main odoo.service.model: SERIALIZATION_FAILURE, retry 1/5 in 0.9226 sec... 
+2023-04-01 16:18:41,267 25732 INFO Main werkzeug: 127.0.0.1 - - [01/Apr/2023 16:18:41] "GET /web/login HTTP/1.1" 200 - 538 1.098 6.442
+2023-04-01 16:18:42,832 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:42,832 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:42,842 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:42,870 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:42,886 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:42,890 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:42,893 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:42,898 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:42,904 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:42,908 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:42,920 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:43,761 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:43,763 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:43,803 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:43,807 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:43,813 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:43,815 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:47,407 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:47,410 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:47,435 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:47,439 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:47,447 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:47,451 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:47,996 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:47,997 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:48,023 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:48,077 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:48,094 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:48,098 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:48,101 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:48,106 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:48,182 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:48,183 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:48,206 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:48,210 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:48,269 25732 INFO Main werkzeug: 127.0.0.1 - - [01/Apr/2023 16:18:48] "GET /web/login HTTP/1.1" 200 - 583 0.656 8.235
+2023-04-01 16:18:48,357 25732 INFO Main werkzeug: 127.0.0.1 - - [01/Apr/2023 16:18:48] "GET /web/content/1509-4573518/1/website.assets_editor.css HTTP/1.1" 200 - 7 0.010 0.017
+2023-04-01 16:18:49,167 25732 INFO Main werkzeug: 127.0.0.1 - - [01/Apr/2023 16:18:49] "GET /muk_web_theme/static/src/fonts/Roboto/Roboto-Medium.woff HTTP/1.1" 404 - 2 0.002 0.005
+2023-04-01 16:18:49,422 25732 INFO Main werkzeug: 127.0.0.1 - - [01/Apr/2023 16:18:49] "GET /muk_web_theme/static/src/fonts/Roboto/Roboto-Medium.ttf HTTP/1.1" 404 - 2 0.004 0.008
+2023-04-01 16:18:49,648 25732 INFO Main werkzeug: 127.0.0.1 - - [01/Apr/2023 16:18:49] "GET /website/translations/5227498d9df4b403b0244c75aac21e0c091e50ce?mods=&lang=en_US HTTP/1.1" 200 - 7 0.009 0.013
+2023-04-01 16:18:49,959 25732 INFO Main werkzeug: 127.0.0.1 - - [01/Apr/2023 16:18:49] "GET /web/content/1540-8f6cf84/1/website.assets_editor.js HTTP/1.1" 200 - 4 0.005 0.010
+2023-04-01 16:18:50,479 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:18:50] "GET /website/static/src/xml/website.xml HTTP/1.1" 200 - - - -
+2023-04-01 16:18:50,725 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:18:50] "GET /website/static/src/xml/website.editor.xml HTTP/1.1" 200 - - - -
+2023-04-01 16:18:51,369 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:51,369 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:51,404 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:51,410 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:51,415 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:51,418 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:52,401 25732 INFO Main odoo.modules.registry: At least one model cache has been invalidated, signaling through the database. 
+2023-04-01 16:18:52,403 25732 INFO Main werkzeug: 127.0.0.1 - - [01/Apr/2023 16:18:52] "POST /web/dataset/call_kw/ HTTP/1.1" 200 - 170 0.234 1.320
+2023-04-01 16:18:52,435 25732 INFO Main werkzeug: 127.0.0.1 - - [01/Apr/2023 16:18:52] "GET /web/content/1542-4ea1021/1/web_editor.summernote.css HTTP/1.1" 200 - 8 0.007 0.013
+2023-04-01 16:18:52,748 25732 INFO Main werkzeug: 127.0.0.1 - - [01/Apr/2023 16:18:52] "GET /web/content/1513-c53fe61/1/web_editor.assets_wysiwyg.css HTTP/1.1" 200 - 4 0.007 0.019
+2023-04-01 16:18:52,750 25732 INFO Main werkzeug: 127.0.0.1 - - [01/Apr/2023 16:18:52] "GET /web/content/1543-4ea1021/1/web_editor.summernote.js HTTP/1.1" 200 - 4 0.006 0.017
+2023-04-01 16:18:53,104 25732 INFO Main werkzeug: 127.0.0.1 - - [01/Apr/2023 16:18:53] "GET /web/content/1544-b421329/1/web_editor.assets_wysiwyg.js HTTP/1.1" 200 - 4 0.005 0.018
+2023-04-01 16:18:53,405 25732 INFO Main werkzeug: 127.0.0.1 - - [01/Apr/2023 16:18:53] "POST /web/dataset/call_kw HTTP/1.1" 200 - 16 0.023 0.036
+2023-04-01 16:18:53,449 25732 WARNING Main odoo.sql_db: Cursor not closed explicitly
+Please enable sql debugging to trace the caller. 
+2023-04-01 16:18:53,450 25732 INFO Main odoo.sql_db: ConnectionPool(used=0/count=5/max=64): Free leaked connection to 'user=openpg password=xxx dbname=Main host=localhost port=5432 sslmode=prefer' 
+2023-04-01 16:18:53,725 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:53,726 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:53,732 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:53,735 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:53,742 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:53,746 25732 WARNING Main odoo.modules.module: module muk_web_theme: module not found 
+2023-04-01 16:18:53,776 25732 INFO Main werkzeug: 127.0.0.1 - - [01/Apr/2023 16:18:53] "GET /web/database/selector HTTP/1.1" 200 - 8 0.028 0.311
+2023-04-01 16:18:54,253 25732 INFO Main odoo.modules.registry: At least one model cache has been invalidated, signaling through the database. 
+2023-04-01 16:18:54,255 25732 INFO Main werkzeug: 127.0.0.1 - - [01/Apr/2023 16:18:54] "POST /web/dataset/call_kw/ HTTP/1.1" 200 - 128 0.142 0.671
+2023-04-01 16:18:55,977 25732 WARNING Main odoo.sql_db: Cursor not closed explicitly
+Please enable sql debugging to trace the caller. 
+2023-04-01 16:18:56,105 25732 INFO Main odoo.sql_db: ConnectionPool(used=0/count=7/max=64): Free leaked connection to 'user=openpg password=xxx dbname=Main host=localhost port=5432 sslmode=prefer' 
+2023-04-01 16:18:56,163 25732 INFO Main werkzeug: 127.0.0.1 - - [01/Apr/2023 16:18:56] "GET /web/database/manager HTTP/1.1" 200 - 11 0.014 0.184
+2023-04-01 16:19:07,883 25732 INFO None odoo.service.db: Create database `AADBO`. 
+2023-04-01 16:19:10,431 25732 INFO AADBO odoo.modules.loading: loading 1 modules... 
+2023-04-01 16:19:10,686 25732 INFO AADBO odoo.modules.registry: module base: creating or updating database tables 
+2023-04-01 16:19:11,209 25732 INFO AADBO odoo.models: Computing parent_path for table ir_ui_menu... 
+2023-04-01 16:19:12,778 25732 INFO AADBO odoo.models: Computing parent_path for table res_partner_category... 
+2023-04-01 16:19:13,767 25732 INFO AADBO odoo.models: Storing computed values of ir.model.fields.relation_field_id 
+2023-04-01 16:19:13,767 25732 INFO AADBO odoo.models: Storing computed values of ir.model.fields.related_field_id 
+2023-04-01 16:19:14,819 25732 INFO AADBO odoo.models: Storing computed values of ir.module.module.menus_by_module 
+2023-04-01 16:19:14,819 25732 INFO AADBO odoo.models: Storing computed values of ir.module.module.reports_by_module 
+2023-04-01 16:19:14,819 25732 INFO AADBO odoo.models: Storing computed values of ir.module.module.views_by_module 
+2023-04-01 16:19:15,187 25732 INFO AADBO odoo.models: Storing computed values of res.partner.display_name 
+2023-04-01 16:19:15,187 25732 INFO AADBO odoo.models: Storing computed values of res.partner.partner_share 
+2023-04-01 16:19:15,187 25732 INFO AADBO odoo.models: Storing computed values of res.partner.commercial_partner_id 
+2023-04-01 16:19:15,187 25732 INFO AADBO odoo.models: Storing computed values of res.partner.commercial_company_name 
+2023-04-01 16:19:15,294 25732 INFO AADBO odoo.models: Storing computed values of res.currency.decimal_places 
+2023-04-01 16:19:15,366 25732 INFO AADBO odoo.models: Storing computed values of res.company.logo_web 
+2023-04-01 16:19:15,455 25732 INFO AADBO odoo.models: Storing computed values of res.users.share 
+2023-04-01 16:19:16,696 25732 INFO AADBO odoo.modules.loading: loading base/data/res.lang.csv 
+2023-04-01 16:19:16,884 25732 INFO AADBO odoo.modules.loading: loading base/data/res_lang_data.xml 
+2023-04-01 16:19:16,898 25732 INFO AADBO odoo.modules.loading: loading base/data/res_partner_data.xml 
+2023-04-01 16:19:17,004 25732 INFO AADBO odoo.modules.loading: loading base/data/res_company_data.xml 
+2023-04-01 16:19:17,037 25732 INFO AADBO odoo.modules.loading: loading base/data/res_users_data.xml 
+2023-04-01 16:19:17,379 25732 INFO AADBO odoo.modules.loading: loading base/data/report_paperformat_data.xml 
+2023-04-01 16:19:17,396 25732 INFO AADBO odoo.modules.loading: loading base/data/res_currency_data.xml 
+2023-04-01 16:19:18,256 25732 INFO AADBO odoo.modules.loading: loading base/data/res_country_data.xml 
+2023-04-01 16:19:20,200 25732 INFO AADBO odoo.modules.loading: loading base/data/ir_demo_data.xml 
+2023-04-01 16:19:20,372 25732 INFO AADBO odoo.modules.loading: loading base/security/base_groups.xml 
+2023-04-01 16:19:20,649 25732 INFO AADBO odoo.modules.loading: loading base/security/base_security.xml 
+2023-04-01 16:19:20,914 25732 INFO AADBO odoo.modules.loading: loading base/views/base_menus.xml 
+2023-04-01 16:19:21,147 25732 INFO AADBO odoo.modules.loading: loading base/views/decimal_precision_views.xml 
+2023-04-01 16:19:21,207 25732 INFO AADBO odoo.modules.loading: loading base/views/res_config_views.xml 
+2023-04-01 16:19:21,245 25732 INFO AADBO odoo.modules.loading: loading base/data/res.country.state.csv 
+2023-04-01 16:19:23,506 25732 INFO AADBO odoo.modules.loading: loading base/views/ir_actions_views.xml 
+2023-04-01 16:19:23,947 25732 INFO AADBO odoo.modules.loading: loading base/views/ir_config_parameter_views.xml 
+2023-04-01 16:19:24,012 25732 INFO AADBO odoo.modules.loading: loading base/views/ir_cron_views.xml 
+2023-04-01 16:19:24,125 25732 INFO AADBO odoo.modules.loading: loading base/views/ir_filters_views.xml 
+2023-04-01 16:19:24,198 25732 INFO AADBO odoo.modules.loading: loading base/views/ir_mail_server_views.xml 
+2023-04-01 16:19:24,265 25732 INFO AADBO odoo.modules.loading: loading base/views/ir_model_views.xml 
+2023-04-01 16:19:24,852 25732 INFO AADBO odoo.modules.loading: loading base/views/ir_attachment_views.xml 
+2023-04-01 16:19:24,942 25732 INFO AADBO odoo.modules.loading: loading base/views/ir_rule_views.xml 
+2023-04-01 16:19:25,016 25732 INFO AADBO odoo.modules.loading: loading base/views/ir_sequence_views.xml 
+2023-04-01 16:19:25,101 25732 INFO AADBO odoo.modules.loading: loading base/views/ir_translation_views.xml 
+2023-04-01 16:19:25,213 25732 INFO AADBO odoo.modules.loading: loading base/views/ir_ui_menu_views.xml 
+2023-04-01 16:19:25,324 25732 INFO AADBO odoo.modules.loading: loading base/views/ir_ui_view_views.xml 
+2023-04-01 16:19:25,496 25732 INFO AADBO odoo.modules.loading: loading base/views/ir_default_views.xml 
+2023-04-01 16:19:25,576 25732 INFO AADBO odoo.modules.loading: loading base/data/ir_cron_data.xml 
+2023-04-01 16:19:25,589 25732 INFO AADBO odoo.modules.loading: loading base/report/ir_model_report.xml 
+2023-04-01 16:19:25,599 25732 INFO AADBO odoo.modules.loading: loading base/report/ir_model_templates.xml 
+2023-04-01 16:19:25,626 25732 INFO AADBO odoo.modules.loading: loading base/views/ir_logging_views.xml 
+2023-04-01 16:19:25,704 25732 INFO AADBO odoo.modules.loading: loading base/views/ir_qweb_widget_templates.xml 
+2023-04-01 16:19:25,740 25732 INFO AADBO odoo.modules.loading: loading base/views/ir_module_views.xml 
+2023-04-01 16:19:25,986 25732 INFO AADBO odoo.modules.loading: loading base/data/ir_module_category_data.xml 
+2023-04-01 16:19:26,115 25732 INFO AADBO odoo.modules.loading: loading base/data/ir_module_module.xml 
+2023-04-01 16:19:26,305 25732 INFO AADBO odoo.modules.loading: loading base/report/ir_module_reports.xml 
+2023-04-01 16:19:26,314 25732 INFO AADBO odoo.modules.loading: loading base/report/ir_module_report_templates.xml 
+2023-04-01 16:19:26,357 25732 INFO AADBO odoo.modules.loading: loading base/wizard/base_module_update_views.xml 
+2023-04-01 16:19:26,397 25732 INFO AADBO odoo.modules.loading: loading base/wizard/base_language_install_views.xml 
+2023-04-01 16:19:26,437 25732 INFO AADBO odoo.modules.loading: loading base/wizard/base_import_language_views.xml 
+2023-04-01 16:19:26,481 25732 INFO AADBO odoo.modules.loading: loading base/wizard/base_module_upgrade_views.xml 
+2023-04-01 16:19:26,540 25732 INFO AADBO odoo.modules.loading: loading base/wizard/base_module_uninstall_views.xml 
+2023-04-01 16:19:26,571 25732 INFO AADBO odoo.modules.loading: loading base/wizard/base_export_language_views.xml 
+2023-04-01 16:19:26,606 25732 INFO AADBO odoo.modules.loading: loading base/wizard/base_update_translations_views.xml 
+2023-04-01 16:19:26,636 25732 INFO AADBO odoo.modules.loading: loading base/wizard/base_partner_merge_views.xml 
+2023-04-01 16:19:26,677 25732 INFO AADBO odoo.modules.loading: loading base/wizard/base_document_layout_views.xml 
+2023-04-01 16:19:26,724 25732 INFO AADBO odoo.modules.loading: loading base/data/ir_actions_data.xml 
+2023-04-01 16:19:26,731 25732 INFO AADBO odoo.modules.loading: loading base/data/ir_demo_failure_data.xml 
+2023-04-01 16:19:26,763 25732 INFO AADBO odoo.modules.loading: loading base/views/res_company_views.xml 
+2023-04-01 16:19:26,837 25732 INFO AADBO odoo.modules.loading: loading base/views/res_lang_views.xml 
+2023-04-01 16:19:26,904 25732 INFO AADBO odoo.modules.loading: loading base/views/res_partner_views.xml 
+2023-04-01 16:19:27,314 25732 INFO AADBO odoo.modules.loading: loading base/views/res_bank_views.xml 
+2023-04-01 16:19:27,444 25732 INFO AADBO odoo.modules.loading: loading base/views/res_country_views.xml 
+2023-04-01 16:19:27,581 25732 INFO AADBO odoo.modules.loading: loading base/views/res_currency_views.xml 
+2023-04-01 16:19:27,734 25732 INFO AADBO odoo.modules.loading: loading base/views/res_users_views.xml 
+2023-04-01 16:19:28,118 25732 INFO AADBO odoo.modules.loading: loading base/views/ir_property_views.xml 
+2023-04-01 16:19:28,197 25732 INFO AADBO odoo.modules.loading: loading base/views/res_config_settings_views.xml 
+2023-04-01 16:19:28,220 25732 INFO AADBO odoo.modules.loading: loading base/views/report_paperformat_views.xml 
+2023-04-01 16:19:28,311 25732 INFO AADBO odoo.modules.loading: loading base/views/onboarding_views.xml 
+2023-04-01 16:19:28,433 25732 INFO AADBO odoo.modules.loading: loading base/security/ir.model.access.csv 
+2023-04-01 16:19:28,976 25732 INFO AADBO odoo.modules.loading: 1 modules loaded in 18.54s, 6 queries 
+2023-04-01 16:19:29,065 25732 INFO AADBO odoo.modules.loading: updating modules list 
+2023-04-01 16:19:29,066 25732 INFO AADBO odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via 127.0.0.1 
+2023-04-01 16:19:30,235 25732 INFO AADBO odoo.modules.loading: loading 7 modules... 
+2023-04-01 16:19:30,537 25732 INFO AADBO odoo.modules.registry: module web: creating or updating database tables 
+2023-04-01 16:19:32,841 25732 INFO AADBO odoo.modules.loading: loading web/security/ir.model.access.csv 
+2023-04-01 16:19:32,843 25732 INFO AADBO odoo.modules.loading: loading web/views/webclient_templates.xml 
+2023-04-01 16:19:33,368 25732 INFO AADBO odoo.modules.loading: loading web/views/report_templates.xml 
+2023-04-01 16:19:33,642 25732 INFO AADBO odoo.modules.loading: loading web/data/report_layout.xml 
+2023-04-01 16:19:34,124 25732 INFO AADBO odoo.modules.registry: module base_import: creating or updating database tables 
+2023-04-01 16:19:37,133 25732 INFO AADBO odoo.modules.loading: loading base_import/security/ir.model.access.csv 
+2023-04-01 16:19:37,231 25732 INFO AADBO odoo.modules.loading: loading base_import/views/base_import_templates.xml 
+2023-04-01 16:19:37,560 25732 INFO AADBO odoo.modules.registry: module web_diagram: creating or updating database tables 
+2023-04-01 16:19:37,578 25732 INFO AADBO odoo.modules.loading: loading web_diagram/views/web_diagram_templates.xml 
+2023-04-01 16:19:37,888 25732 INFO AADBO odoo.modules.registry: module web_editor: creating or updating database tables 
+2023-04-01 16:19:38,199 25732 INFO AADBO odoo.modules.loading: loading web_editor/security/ir.model.access.csv 
+2023-04-01 16:19:38,217 25732 INFO AADBO odoo.modules.loading: loading web_editor/views/editor.xml 
+2023-04-01 16:19:38,495 25732 INFO AADBO odoo.modules.loading: loading web_editor/views/snippets.xml 
+2023-04-01 16:19:38,699 25732 INFO AADBO odoo.modules.registry: module web_kanban_gauge: creating or updating database tables 
+2023-04-01 16:19:38,717 25732 INFO AADBO odoo.modules.loading: loading web_kanban_gauge/views/web_kanban_gauge_templates.xml 
+2023-04-01 16:19:38,984 25732 INFO AADBO odoo.modules.registry: module web_tour: creating or updating database tables 
+2023-04-01 16:19:39,057 25732 INFO AADBO odoo.modules.loading: loading web_tour/security/ir.model.access.csv 
+2023-04-01 16:19:39,083 25732 INFO AADBO odoo.modules.loading: loading web_tour/security/ir.rule.csv 
+2023-04-01 16:19:39,106 25732 INFO AADBO odoo.modules.loading: loading web_tour/views/tour_templates.xml 
+2023-04-01 16:19:39,211 25732 INFO AADBO odoo.modules.loading: loading web_tour/views/tour_views.xml 
+2023-04-01 16:19:39,303 25732 INFO AADBO odoo.modules.loading: 7 modules loaded in 9.07s, 0 queries 
+2023-04-01 16:19:39,634 25732 INFO AADBO odoo.modules.loading: Modules loaded. 
+2023-04-01 16:19:39,970 25732 INFO AADBO odoo.addons.base.models.res_users: Login successful for db:AADBO login:admin from 127.0.0.1 
+2023-04-01 16:19:40,008 25732 INFO AADBO odoo.modules.registry: Registry changed, signaling through the database 
+2023-04-01 16:19:40,011 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:19:40] "POST /web/database/create HTTP/1.1" 303 - 24165 19.678 12.593
+2023-04-01 16:19:40,024 25732 INFO AADBO odoo.addons.base.models.ir_http: Generating routing map for key None 
+2023-04-01 16:19:40,144 25732 INFO AADBO odoo.modules.registry: At least one model cache has been invalidated, signaling through the database. 
+2023-04-01 16:19:40,190 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:19:40] "GET /web/ HTTP/1.1" 303 - 3 0.004 0.164
+2023-04-01 16:19:46,029 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:19:46] "GET /web/login HTTP/1.1" 200 - 253 0.242 5.276
+2023-04-01 16:19:46,103 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:19:46] "GET /web/content/252-19b9136/web.assets_common.css HTTP/1.1" 200 - 8 0.008 0.012
+2023-04-01 16:19:46,418 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:19:46] "GET /web/content/253-714ef9a/web.assets_frontend.css HTTP/1.1" 200 - 5 0.009 0.016
+2023-04-01 16:19:46,443 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:19:46] "GET /web/content/254-e6b611d/web.assets_common_minimal_js.js HTTP/1.1" 200 - 5 0.006 0.014
+2023-04-01 16:19:46,776 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:19:46] "GET /web/binary/company_logo HTTP/1.1" 200 - 2 0.007 0.009
+2023-04-01 16:19:46,782 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:19:46] "GET /web/content/255-e27e0e4/web.assets_frontend_minimal_js.js HTTP/1.1" 200 - 5 0.011 0.015
+2023-04-01 16:19:47,147 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:19:47] "GET /web/content/256-f1eb015/web.assets_common_lazy.js HTTP/1.1" 200 - 5 0.001 0.021
+2023-04-01 16:19:47,409 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:19:47] "GET /web/content/257-5f639af/web.assets_frontend_lazy.js HTTP/1.1" 200 - 5 0.003 0.013
+2023-04-01 16:19:47,703 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:19:47] "GET /web/webclient/translations/1680365987678?mods=&lang= HTTP/1.1" 200 - 9 0.012 0.007
+2023-04-01 16:20:19,591 25732 INFO Main odoo.addons.base.models.ir_cron: Starting job `Calendar: Event Reminder`. 
+2023-04-01 16:20:19,633 25732 INFO Main odoo.addons.base.models.ir_cron: Job `Calendar: Event Reminder` done. 
+2023-04-01 16:20:19,636 25732 INFO Main odoo.addons.base.models.ir_cron: Starting job `Post process payment transactions`. 
+2023-04-01 16:20:19,665 25732 INFO Main odoo.addons.base.models.ir_cron: Job `Post process payment transactions` done. 
+2023-04-01 16:20:19,676 25732 INFO AADBO odoo.addons.base.models.ir_cron: Starting job `Base: Auto-vacuum internal data`. 
+2023-04-01 16:20:19,843 25732 INFO AADBO odoo.addons.base.models.ir_attachment: filestore gc 251 checked, 0 removed 
+2023-04-01 16:20:19,877 25732 INFO AADBO odoo.addons.base.models.ir_autovacuum: GC'd 0 user log entries 
+2023-04-01 16:20:19,882 25732 INFO AADBO odoo.addons.base.models.ir_cron: Job `Base: Auto-vacuum internal data` done. 
+2023-04-01 16:20:38,296 25732 INFO AADBO odoo.addons.base.models.res_users: Login successful for db:AADBO login:admin from 127.0.0.1 
+2023-04-01 16:20:38,326 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:38] "POST /web/login HTTP/1.1" 303 - 31 0.039 0.181
+2023-04-01 16:20:44,583 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:44] "GET /web HTTP/1.1" 200 - 189 0.194 6.056
+2023-04-01 16:20:44,661 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:44] "GET /web/content/258-ea3d916/web.assets_backend.css HTTP/1.1" 200 - 4 0.006 0.014
+2023-04-01 16:20:44,985 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:44] "GET /web/webclient/load_menus/003f16ffa5db0f0bc3d7182bd34ca35055762784 HTTP/1.1" 200 - 1 0.002 0.017
+2023-04-01 16:20:45,016 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:45] "GET /web/content/259-19b9136/web.assets_common.js HTTP/1.1" 200 - 4 0.010 0.047
+2023-04-01 16:20:45,017 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:45] "GET /web/content/260-ea3d916/web.assets_backend.js HTTP/1.1" 200 - 4 0.009 0.046
+2023-04-01 16:20:45,445 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:45] "GET /web/webclient/qweb/8e582c5f96d4370cad809616b4d116242eab6d81?mods=base,web,base_import,web_diagram,web_editor,web_kanban_gauge,web_tour HTTP/1.1" 200 - 1 0.001 0.020
+2023-04-01 16:20:45,541 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:45] "GET /web/image/res.company/1/favicon/ HTTP/1.1" 200 - 12 0.017 0.016
+2023-04-01 16:20:45,700 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:45] "GET /web/webclient/translations/5227498d9df4b403b0244c75aac21e0c091e50ce?mods=base%2Cweb%2Cbase_import%2Cweb_diagram%2Cweb_editor%2Cweb_kanban_gauge%2Cweb_tour&lang=en_US HTTP/1.1" 200 - 3 0.003 0.005
+2023-04-01 16:20:45,897 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:45] "GET /web/static/src/img/user_menu_avatar.png HTTP/1.1" 200 - - - -
+2023-04-01 16:20:46,225 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:46] "POST /web/dataset/call_kw/res.users/read HTTP/1.1" 200 - 2 0.003 0.009
+2023-04-01 16:20:46,258 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:46] "GET /web/image?model=res.users&field=image_128&id=2 HTTP/1.1" 200 - 18 0.022 0.021
+2023-04-01 16:20:46,649 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:46] "POST /web/action/load HTTP/1.1" 200 - 39 0.060 0.045
+2023-04-01 16:20:47,154 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:47] "POST /web/dataset/call_kw/ir.module.module/load_views HTTP/1.1" 200 - 90 0.120 0.068
+2023-04-01 16:20:47,258 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:47] "POST /web/dataset/search_read HTTP/1.1" 200 - 5 0.008 0.015
+2023-04-01 16:20:47,496 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:47] "GET /hr/static/description/icon.png HTTP/1.1" 200 - - - -
+2023-04-01 16:20:47,642 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:47] "GET /base/static/img/icons/helpdesk.png HTTP/1.1" 200 - - - -
+2023-04-01 16:20:47,643 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:47] "GET /website_sale/static/description/icon.png HTTP/1.1" 200 - - - -
+2023-04-01 16:20:47,649 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:47] "GET /hr_recruitment/static/description/icon.png HTTP/1.1" 200 - - - -
+2023-04-01 16:20:47,651 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:47] "GET /account/static/description/icon.png HTTP/1.1" 200 - - - -
+2023-04-01 16:20:47,651 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:47] "GET /hr_attendance/static/description/icon.png HTTP/1.1" 200 - - - -
+2023-04-01 16:20:47,814 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:47] "GET /hr_skills/static/description/icon.png HTTP/1.1" 200 - - - -
+2023-04-01 16:20:47,955 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:47] "GET /board/static/description/icon.png HTTP/1.1" 200 - - - -
+2023-04-01 16:20:47,955 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:47] "GET /base/static/img/icons/mrp_plm.png HTTP/1.1" 200 - - - -
+2023-04-01 16:20:47,962 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:47] "GET /purchase/static/description/icon.png HTTP/1.1" 200 - - - -
+2023-04-01 16:20:47,963 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:47] "GET /base/static/img/icons/web_studio.png HTTP/1.1" 200 - - - -
+2023-04-01 16:20:47,965 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:47] "GET /base/static/img/icons/sale_ebay.png HTTP/1.1" 200 - - - -
+2023-04-01 16:20:48,128 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:48] "GET /base/static/img/icons/project_forecast.png HTTP/1.1" 200 - - - -
+2023-04-01 16:20:48,280 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:48] "GET /base/static/img/icons/mrp_workorder.png HTTP/1.1" 200 - - - -
+2023-04-01 16:20:48,283 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:48] "GET /hr_holidays/static/description/icon.png HTTP/1.1" 200 - - - -
+2023-04-01 16:20:48,287 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:48] "GET /note/static/description/icon.png HTTP/1.1" 200 - - - -
+2023-04-01 16:20:48,292 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:48] "GET /hr_expense/static/description/icon.png HTTP/1.1" 200 - - - -
+2023-04-01 16:20:48,294 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:48] "GET /sale_management/static/description/icon.png HTTP/1.1" 200 - - - -
+2023-04-01 16:20:48,445 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:48] "GET /base/static/img/icons/hr_appraisal.png HTTP/1.1" 200 - - - -
+2023-04-01 16:20:48,608 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:48] "GET /base/static/img/icons/account_accountant.png HTTP/1.1" 200 - - - -
+2023-04-01 16:20:48,614 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:48] "GET /point_of_sale/static/description/icon.png HTTP/1.1" 200 - - - -
+2023-04-01 16:20:48,615 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:48] "GET /mrp/static/description/icon.png HTTP/1.1" 200 - - - -
+2023-04-01 16:20:48,617 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:48] "GET /contacts/static/description/icon.png HTTP/1.1" 200 - - - -
+2023-04-01 16:20:48,628 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:48] "GET /base/static/img/icons/quality_control.png HTTP/1.1" 200 - - - -
+2023-04-01 16:20:48,768 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:48] "GET /mail/static/description/icon.png HTTP/1.1" 200 - - - -
+2023-04-01 16:20:48,935 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:48] "GET /crm/static/description/icon.png HTTP/1.1" 200 - - - -
+2023-04-01 16:20:48,936 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:48] "GET /mass_mailing_sms/static/description/icon.png HTTP/1.1" 200 - - - -
+2023-04-01 16:20:48,941 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:48] "GET /website/static/description/icon.png HTTP/1.1" 200 - - - -
+2023-04-01 16:20:48,945 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:48] "GET /project/static/description/icon.png HTTP/1.1" 200 - - - -
+2023-04-01 16:20:48,951 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:48] "GET /base/static/img/icons/timesheet_grid.png HTTP/1.1" 200 - - - -
+2023-04-01 16:20:49,084 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:49] "GET /stock/static/description/icon.png HTTP/1.1" 200 - - - -
+2023-04-01 16:20:49,255 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:49] "GET /base/static/img/icons/stock_barcode.png HTTP/1.1" 200 - - - -
+2023-04-01 16:20:49,261 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:49] "GET /base/static/img/icons/sign.png HTTP/1.1" 200 - - - -
+2023-04-01 16:20:49,262 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:49] "GET /base/static/img/icons/sale_subscription.png HTTP/1.1" 200 - - - -
+2023-04-01 16:20:49,406 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:49] "GET /survey/static/description/icon.png HTTP/1.1" 200 - - - -
+2023-04-01 16:20:49,407 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:49] "GET /base/static/img/icons/website_calendar.png HTTP/1.1" 200 - - - -
+2023-04-01 16:20:49,407 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:49] "GET /base/static/img/icons/voip.png HTTP/1.1" 200 - - - -
+2023-04-01 16:20:49,573 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:49] "GET /mass_mailing/static/description/icon.png HTTP/1.1" 200 - - - -
+2023-04-01 16:20:49,575 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:49] "GET /base/static/img/icons/marketing_automation.png HTTP/1.1" 200 - - - -
+2023-04-01 16:20:49,590 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:49] "GET /lunch/static/description/icon.png HTTP/1.1" 200 - - - -
+2023-04-01 16:20:49,743 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:49] "GET /maintenance/static/description/icon.png HTTP/1.1" 200 - - - -
+2023-04-01 16:20:49,746 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:49] "GET /calendar/static/description/icon.png HTTP/1.1" 200 - - - -
+2023-04-01 16:20:49,748 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:49] "GET /website_blog/static/description/icon.png HTTP/1.1" 200 - - - -
+2023-04-01 16:20:49,898 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:49] "GET /website_hr_recruitment/static/description/icon.png HTTP/1.1" 200 - - - -
+2023-04-01 16:20:49,900 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:49] "GET /website_slides/static/description/icon.png HTTP/1.1" 200 - - - -
+2023-04-01 16:20:49,908 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:49] "GET /website_forum/static/description/icon.png HTTP/1.1" 200 - - - -
+2023-04-01 16:20:50,084 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:50] "GET /fleet/static/description/icon.png HTTP/1.1" 200 - - - -
+2023-04-01 16:20:50,086 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:50] "GET /website_event/static/description/icon.png HTTP/1.1" 200 - - - -
+2023-04-01 16:20:50,088 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:50] "GET /im_livechat/static/description/icon.png HTTP/1.1" 200 - - - -
+2023-04-01 16:20:50,221 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:50] "GET /base/static/img/icons/web_mobile.png HTTP/1.1" 200 - - - -
+2023-04-01 16:20:50,222 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:50] "GET /repair/static/description/icon.png HTTP/1.1" 200 - - - -
+2023-04-01 16:20:55,412 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:55] "POST /web/dataset/search_read HTTP/1.1" 200 - 4 0.012 0.026
+2023-04-01 16:20:55,641 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:55] "GET /base/static/description/icon.png HTTP/1.1" 200 - - - -
+2023-04-01 16:20:55,830 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:55] "GET /hr_timesheet/static/description/icon.png HTTP/1.1" 200 - - - -
+2023-04-01 16:20:55,832 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:55] "GET /website_crm/static/description/icon.png HTTP/1.1" 200 - - - -
+2023-04-01 16:20:55,835 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:55] "GET /account_check_printing/static/description/icon.png HTTP/1.1" 200 - - - -
+2023-04-01 16:20:56,837 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:20:56] "POST /web/dataset/search_read HTTP/1.1" 200 - 8 0.018 0.021
+2023-04-01 16:20:59,762 25732 INFO AADBO odoo.addons.base.models.ir_module: ALLOW access to module.button_immediate_install on ['Employees'] to user admin #2 via 127.0.0.1 
+2023-04-01 16:20:59,762 25732 INFO AADBO odoo.addons.base.models.ir_module: User #2 triggered module installation 
+2023-04-01 16:20:59,765 25732 INFO AADBO odoo.addons.base.models.ir_module: ALLOW access to module.button_install on ['Employees'] to user admin #2 via 127.0.0.1 
+2023-04-01 16:20:59,959 25732 INFO AADBO odoo.modules.loading: loading 1 modules... 
+2023-04-01 16:20:59,973 25732 INFO AADBO odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries 
+2023-04-01 16:21:00,293 25732 INFO AADBO odoo.modules.loading: updating modules list 
+2023-04-01 16:21:00,294 25732 INFO AADBO odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via 127.0.0.1 
+2023-04-01 16:21:01,384 25732 INFO AADBO odoo.modules.loading: loading 7 modules... 
+2023-04-01 16:21:01,423 25732 INFO AADBO odoo.modules.loading: 7 modules loaded in 0.04s, 0 queries 
+2023-04-01 16:21:01,441 25732 INFO AADBO odoo.modules.loading: loading 22 modules... 
+2023-04-01 16:21:01,578 25732 INFO AADBO odoo.modules.registry: module base_setup: creating or updating database tables 
+2023-04-01 16:21:01,713 25732 INFO AADBO odoo.modules.loading: loading base_setup/data/base_setup_data.xml 
+2023-04-01 16:21:01,723 25732 INFO AADBO odoo.modules.loading: loading base_setup/views/res_config_settings_views.xml 
+2023-04-01 16:21:01,856 25732 INFO AADBO odoo.modules.loading: loading base_setup/views/res_partner_views.xml 
+2023-04-01 16:21:01,892 25732 INFO AADBO odoo.modules.loading: loading base_setup/views/assets.xml 
+2023-04-01 16:21:02,111 25732 INFO AADBO odoo.modules.registry: module bus: creating or updating database tables 
+2023-04-01 16:21:02,340 25732 INFO AADBO odoo.modules.loading: loading bus/views/bus.xml 
+2023-04-01 16:21:02,435 25732 INFO AADBO odoo.modules.loading: loading bus/security/ir.model.access.csv 
+2023-04-01 16:21:02,657 25732 INFO AADBO odoo.modules.registry: module resource: creating or updating database tables 
+2023-04-01 16:21:02,915 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:21:02] "GET /web/static/src/img/spin.png HTTP/1.1" 200 - - - -
+2023-04-01 16:21:03,262 25732 INFO AADBO odoo.modules.loading: loading resource/data/resource_data.xml 
+2023-04-01 16:21:03,335 25732 INFO AADBO odoo.modules.loading: loading resource/security/ir.model.access.csv 
+2023-04-01 16:21:03,382 25732 INFO AADBO odoo.modules.loading: loading resource/security/resource_security.xml 
+2023-04-01 16:21:03,432 25732 INFO AADBO odoo.modules.loading: loading resource/views/resource_views.xml 
+2023-04-01 16:21:03,842 25732 INFO AADBO odoo.modules.loading: loading resource/views/resource.xml 
+2023-04-01 16:21:04,075 25732 INFO AADBO odoo.modules.registry: module iap: creating or updating database tables 
+2023-04-01 16:21:04,198 25732 INFO AADBO odoo.modules.loading: loading iap/security/ir.model.access.csv 
+2023-04-01 16:21:04,229 25732 INFO AADBO odoo.modules.loading: loading iap/security/ir_rule.xml 
+2023-04-01 16:21:04,247 25732 INFO AADBO odoo.modules.loading: loading iap/views/assets.xml 
+2023-04-01 16:21:04,297 25732 INFO AADBO odoo.modules.loading: loading iap/views/iap_views.xml 
+2023-04-01 16:21:04,352 25732 INFO AADBO odoo.modules.loading: loading iap/views/res_config_settings.xml 
+2023-04-01 16:21:05,026 25732 INFO AADBO odoo.modules.registry: module mail: creating or updating database tables 
+2023-04-01 16:21:08,568 25732 INFO AADBO odoo.models: Storing computed values of res.partner.email_normalized 
+2023-04-01 16:21:10,656 25732 INFO AADBO odoo.modules.loading: loading mail/wizard/invite_view.xml 
+2023-04-01 16:21:10,683 25732 INFO AADBO odoo.modules.loading: loading mail/wizard/mail_compose_message_view.xml 
+2023-04-01 16:21:10,723 25732 INFO AADBO odoo.modules.loading: loading mail/wizard/mail_resend_cancel_views.xml 
+2023-04-01 16:21:10,746 25732 INFO AADBO odoo.modules.loading: loading mail/wizard/mail_resend_message_views.xml 
+2023-04-01 16:21:10,779 25732 INFO AADBO odoo.modules.loading: loading mail/views/mail_message_subtype_views.xml 
+2023-04-01 16:21:10,828 25732 INFO AADBO odoo.modules.loading: loading mail/views/mail_tracking_views.xml 
+2023-04-01 16:21:10,891 25732 INFO AADBO odoo.modules.loading: loading mail/views/mail_message_views.xml 
+2023-04-01 16:21:11,008 25732 INFO AADBO odoo.modules.loading: loading mail/views/mail_mail_views.xml 
+2023-04-01 16:21:11,095 25732 INFO AADBO odoo.modules.loading: loading mail/views/mail_followers_views.xml 
+2023-04-01 16:21:11,153 25732 INFO AADBO odoo.modules.loading: loading mail/views/mail_channel_views.xml 
+2023-04-01 16:21:11,389 25732 INFO AADBO odoo.modules.loading: loading mail/views/mail_shortcode_views.xml 
+2023-04-01 16:21:11,439 25732 INFO AADBO odoo.modules.loading: loading mail/views/mail_activity_views.xml 
+2023-04-01 16:21:11,634 25732 INFO AADBO odoo.modules.loading: loading mail/views/res_config_settings_views.xml 
+2023-04-01 16:21:11,741 25732 INFO AADBO odoo.modules.loading: loading mail/data/mail_data.xml 
+2023-04-01 16:21:11,965 25732 INFO AADBO odoo.modules.loading: loading mail/data/mail_channel_data.xml 
+2023-04-01 16:21:12,047 25732 INFO AADBO odoo.modules.loading: loading mail/data/mail_activity_data.xml 
+2023-04-01 16:21:12,072 25732 INFO AADBO odoo.modules.loading: loading mail/data/ir_cron_data.xml 
+2023-04-01 16:21:12,135 25732 INFO AADBO odoo.modules.loading: loading mail/security/mail_security.xml 
+2023-04-01 16:21:12,258 25732 INFO AADBO odoo.modules.loading: loading mail/security/ir.model.access.csv 
+2023-04-01 16:21:12,436 25732 INFO AADBO odoo.modules.loading: loading mail/views/mail_alias_views.xml 
+2023-04-01 16:21:12,529 25732 INFO AADBO odoo.modules.loading: loading mail/views/res_users_views.xml 
+2023-04-01 16:21:12,669 25732 INFO AADBO odoo.modules.loading: loading mail/views/mail_templates.xml 
+2023-04-01 16:21:12,882 25732 INFO AADBO odoo.modules.loading: loading mail/wizard/email_template_preview_view.xml 
+2023-04-01 16:21:12,918 25732 INFO AADBO odoo.modules.loading: loading mail/views/mail_template_views.xml 
+2023-04-01 16:21:13,013 25732 INFO AADBO odoo.modules.loading: loading mail/views/mail_moderation_views.xml 
+2023-04-01 16:21:13,072 25732 INFO AADBO odoo.modules.loading: loading mail/views/ir_actions_views.xml 
+2023-04-01 16:21:13,123 25732 INFO AADBO odoo.modules.loading: loading mail/views/ir_model_views.xml 
+2023-04-01 16:21:13,265 25732 INFO AADBO odoo.modules.loading: loading mail/views/res_partner_views.xml 
+2023-04-01 16:21:13,428 25732 INFO AADBO odoo.modules.loading: loading mail/views/mail_blacklist_views.xml 
+2023-04-01 16:21:13,510 25732 INFO AADBO odoo.modules.loading: loading mail/views/mail_channel_partner_views.xml 
+2023-04-01 16:21:13,851 25732 INFO AADBO odoo.modules.registry: module web_unsplash: creating or updating database tables 
+2023-04-01 16:21:13,979 25732 INFO AADBO odoo.modules.loading: loading web_unsplash/views/res_config_settings_view.xml 
+2023-04-01 16:21:14,075 25732 INFO AADBO odoo.modules.loading: loading web_unsplash/views/web_unsplash_templates.xml 
+2023-04-01 16:21:14,408 25732 INFO AADBO odoo.modules.registry: module auth_signup: creating or updating database tables 
+2023-04-01 16:21:14,700 25732 INFO AADBO odoo.modules.loading: loading auth_signup/data/auth_signup_data.xml 
+2023-04-01 16:21:14,735 25732 INFO AADBO odoo.modules.loading: loading auth_signup/data/ir_cron_data.xml 
+2023-04-01 16:21:14,754 25732 INFO AADBO odoo.modules.loading: loading auth_signup/views/res_config_settings_views.xml 
+2023-04-01 16:21:14,868 25732 INFO AADBO odoo.modules.loading: loading auth_signup/views/res_users_views.xml 
+2023-04-01 16:21:14,981 25732 INFO AADBO odoo.modules.loading: loading auth_signup/views/auth_signup_login_templates.xml 
+2023-04-01 16:21:15,048 25732 INFO AADBO odoo.modules.loading: loading auth_signup/views/auth_signup_assets.xml 
+2023-04-01 16:21:15,358 25732 INFO AADBO odoo.modules.registry: module fetchmail: creating or updating database tables 
+2023-04-01 16:21:15,516 25732 INFO AADBO odoo.modules.loading: loading fetchmail/data/fetchmail_data.xml 
+2023-04-01 16:21:15,537 25732 INFO AADBO odoo.modules.loading: loading fetchmail/security/ir.model.access.csv 
+2023-04-01 16:21:15,569 25732 INFO AADBO odoo.modules.loading: loading fetchmail/views/fetchmail_views.xml 
+2023-04-01 16:21:15,661 25732 INFO AADBO odoo.modules.loading: loading fetchmail/views/mail_mail_views.xml 
+2023-04-01 16:21:15,712 25732 INFO AADBO odoo.modules.loading: loading fetchmail/views/res_config_settings_views.xml 
+2023-04-01 16:21:16,230 25732 INFO AADBO odoo.modules.registry: module mail_bot: creating or updating database tables 
+2023-04-01 16:21:16,591 25732 INFO AADBO odoo.modules.loading: loading mail_bot/views/assets.xml 
+2023-04-01 16:21:16,734 25732 INFO AADBO odoo.modules.loading: loading mail_bot/views/res_users_views.xml 
+2023-04-01 16:21:16,946 25732 INFO AADBO odoo.modules.loading: loading mail_bot/data/mailbot_data.xml 
+2023-04-01 16:21:17,300 25732 INFO AADBO odoo.modules.registry: module partner_autocomplete: creating or updating database tables 
+2023-04-01 16:21:17,661 25732 INFO AADBO odoo.modules.loading: loading partner_autocomplete/security/ir.model.access.csv 
+2023-04-01 16:21:17,690 25732 INFO AADBO odoo.modules.loading: loading partner_autocomplete/views/partner_autocomplete_assets.xml 
+2023-04-01 16:21:17,827 25732 INFO AADBO odoo.modules.loading: loading partner_autocomplete/views/additional_info_template.xml 
+2023-04-01 16:21:17,852 25732 INFO AADBO odoo.modules.loading: loading partner_autocomplete/views/res_partner_views.xml 
+2023-04-01 16:21:18,062 25732 INFO AADBO odoo.modules.loading: loading partner_autocomplete/views/res_company_views.xml 
+2023-04-01 16:21:18,105 25732 INFO AADBO odoo.modules.loading: loading partner_autocomplete/views/res_config_settings_views.xml 
+2023-04-01 16:21:18,236 25732 INFO AADBO odoo.modules.loading: loading partner_autocomplete/data/cron.xml 
+2023-04-01 16:21:18,538 25732 INFO AADBO odoo.modules.registry: module phone_validation: creating or updating database tables 
+2023-04-01 16:21:18,775 25732 INFO AADBO odoo.modules.loading: loading phone_validation/security/ir.model.access.csv 
+2023-04-01 16:21:18,803 25732 INFO AADBO odoo.modules.loading: loading phone_validation/views/phone_blacklist_views.xml 
+2023-04-01 16:21:19,270 25732 INFO AADBO odoo.modules.registry: module snailmail: creating or updating database tables 
+2023-04-01 16:21:19,942 25732 INFO AADBO odoo.modules.loading: loading snailmail/data/snailmail_data.xml 
+2023-04-01 16:21:19,959 25732 INFO AADBO odoo.modules.loading: loading snailmail/views/report_assets.xml 
+2023-04-01 16:21:20,039 25732 INFO AADBO odoo.modules.loading: loading snailmail/views/snailmail_views.xml 
+2023-04-01 16:21:20,111 25732 INFO AADBO odoo.modules.loading: loading snailmail/views/assets.xml 
+2023-04-01 16:21:20,255 25732 INFO AADBO odoo.modules.loading: loading snailmail/wizard/snailmail_letter_cancel_views.xml 
+2023-04-01 16:21:20,287 25732 INFO AADBO odoo.modules.loading: loading snailmail/wizard/snailmail_letter_format_error_views.xml 
+2023-04-01 16:21:20,318 25732 INFO AADBO odoo.modules.loading: loading snailmail/wizard/snailmail_letter_missing_required_fields_views.xml 
+2023-04-01 16:21:20,349 25732 INFO AADBO odoo.modules.loading: loading snailmail/security/ir.model.access.csv 
+2023-04-01 16:21:20,789 25732 INFO AADBO odoo.modules.registry: module hr: creating or updating database tables 
+2023-04-01 16:21:22,114 25732 INFO AADBO odoo.modules.loading: loading hr/security/hr_security.xml 
+2023-04-01 16:21:22,565 25732 INFO AADBO odoo.modules.loading: loading hr/security/ir.model.access.csv 
+2023-04-01 16:21:22,641 25732 INFO AADBO odoo.modules.loading: loading hr/wizard/hr_plan_wizard_views.xml 
+2023-04-01 16:21:22,677 25732 INFO AADBO odoo.modules.loading: loading hr/wizard/hr_departure_wizard_views.xml 
+2023-04-01 16:21:22,701 25732 INFO AADBO odoo.modules.loading: loading hr/views/hr_job_views.xml 
+2023-04-01 16:21:22,810 25732 INFO AADBO odoo.modules.loading: loading hr/views/hr_plan_views.xml 
+2023-04-01 16:21:22,928 25732 INFO AADBO odoo.modules.loading: loading hr/views/hr_employee_category_views.xml 
+2023-04-01 16:21:22,972 25732 INFO AADBO odoo.modules.loading: loading hr/views/hr_employee_public_views.xml 
+2023-04-01 16:21:23,084 25732 INFO AADBO odoo.modules.loading: loading hr/report/hr_employee_badge.xml 
+2023-04-01 16:21:23,113 25732 INFO AADBO odoo.modules.loading: loading hr/views/hr_employee_views.xml 
+2023-04-01 16:21:23,340 25732 INFO AADBO odoo.modules.loading: loading hr/views/hr_department_views.xml 
+2023-04-01 16:21:23,452 25732 INFO AADBO odoo.modules.loading: loading hr/views/hr_views.xml 
+2023-04-01 16:21:23,620 25732 INFO AADBO odoo.modules.loading: loading hr/views/hr_templates.xml 
+2023-04-01 16:21:23,697 25732 INFO AADBO odoo.modules.loading: loading hr/views/res_config_settings_views.xml 
+2023-04-01 16:21:23,845 25732 INFO AADBO odoo.modules.loading: loading hr/views/mail_channel_views.xml 
+2023-04-01 16:21:23,890 25732 INFO AADBO odoo.modules.loading: loading hr/views/res_users.xml 
+2023-04-01 16:21:24,222 25732 INFO AADBO odoo.modules.loading: loading hr/data/hr_data.xml 
+2023-04-01 16:21:24,891 25732 INFO AADBO odoo.modules.registry: module sms: creating or updating database tables 
+2023-04-01 16:21:25,748 25732 INFO AADBO odoo.models: Storing computed values of res.partner.phone_sanitized 
+2023-04-01 16:21:26,330 25732 INFO AADBO odoo.modules.loading: loading sms/data/ir_cron_data.xml 
+2023-04-01 16:21:26,355 25732 INFO AADBO odoo.modules.loading: loading sms/wizard/sms_cancel_views.xml 
+2023-04-01 16:21:26,408 25732 INFO AADBO odoo.modules.loading: loading sms/wizard/sms_composer_views.xml 
+2023-04-01 16:21:26,445 25732 INFO AADBO odoo.modules.loading: loading sms/wizard/sms_template_preview_views.xml 
+2023-04-01 16:21:26,484 25732 INFO AADBO odoo.modules.loading: loading sms/wizard/sms_resend_views.xml 
+2023-04-01 16:21:26,518 25732 INFO AADBO odoo.modules.loading: loading sms/views/ir_actions_views.xml 
+2023-04-01 16:21:26,582 25732 INFO AADBO odoo.modules.loading: loading sms/views/res_config_settings_views.xml 
+2023-04-01 16:21:26,731 25732 INFO AADBO odoo.modules.loading: loading sms/views/res_partner_views.xml 
+2023-04-01 16:21:26,828 25732 INFO AADBO odoo.modules.loading: loading sms/views/assets.xml 
+2023-04-01 16:21:26,965 25732 INFO AADBO odoo.modules.loading: loading sms/views/sms_sms_views.xml 
+2023-04-01 16:21:27,037 25732 INFO AADBO odoo.modules.loading: loading sms/views/sms_template_views.xml 
+2023-04-01 16:21:27,125 25732 INFO AADBO odoo.modules.loading: loading sms/security/ir.model.access.csv 
+2023-04-01 16:21:27,160 25732 INFO AADBO odoo.modules.loading: loading sms/security/sms_security.xml 
+2023-04-01 16:21:27,502 25732 INFO AADBO odoo.modules.registry: module hr_org_chart: creating or updating database tables 
+2023-04-01 16:21:27,649 25732 INFO AADBO odoo.modules.loading: loading hr_org_chart/views/hr_templates.xml 
+2023-04-01 16:21:27,828 25732 INFO AADBO odoo.modules.loading: loading hr_org_chart/views/hr_views.xml 
+2023-04-01 16:21:28,073 25732 INFO AADBO odoo.modules.loading: 22 modules loaded in 26.63s, 6 queries 
+2023-04-01 16:21:28,698 25732 INFO AADBO odoo.modules.loading: Modules loaded. 
+2023-04-01 16:21:28,704 25732 INFO AADBO odoo.addons.base.models.ir_module: getting next ir.actions.todo() 
+2023-04-01 16:21:28,712 25732 INFO AADBO odoo.modules.registry: Registry changed, signaling through the database 
+2023-04-01 16:21:28,715 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:21:28] "POST /web/dataset/call_button HTTP/1.1" 200 - 19200 16.644 12.317
+2023-04-01 16:21:29,065 25732 INFO AADBO odoo.addons.base.models.ir_http: Generating routing map for key None 
+2023-04-01 16:21:37,956 25732 INFO AADBO odoo.modules.registry: At least one model cache has been invalidated, signaling through the database. 
+2023-04-01 16:21:37,959 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:21:37] "GET /web HTTP/1.1" 200 - 496 0.550 8.350
+2023-04-01 16:21:38,029 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:21:38] "GET /web/content/274-252829b/web.assets_common.css HTTP/1.1" 200 - 6 0.006 0.023
+2023-04-01 16:21:38,029 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:21:38] "GET /web/content/275-7431d66/web.assets_backend.css HTTP/1.1" 200 - 4 0.006 0.019
+2023-04-01 16:21:38,361 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:21:38] "GET /web/content/277-7431d66/web.assets_backend.js HTTP/1.1" 200 - 4 0.008 0.030
+2023-04-01 16:21:38,377 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:21:38] "GET /web/content/276-252829b/web.assets_common.js HTTP/1.1" 200 - 4 0.005 0.050
+2023-04-01 16:21:38,589 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:21:38] "GET /web/webclient/load_menus/8d96114fdde29a9c97ade46bf5198b0bee542494 HTTP/1.1" 200 - 134 0.150 0.115
+2023-04-01 16:21:38,818 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:21:38] "GET /web/webclient/qweb/e7fd5087c8aca8eb2580cedbe3891cda32484d3d?mods=base,web,base_setup,bus,web_tour,mail,resource,mail_bot,hr,auth_signup,base_import,hr_org_chart,iap,partner_autocomplete,sms,snailmail,web_diagram,web_editor,web_kanban_gauge,web_unsplash HTTP/1.1" 200 - 1 0.001 0.023
+2023-04-01 16:21:39,180 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:21:39] "GET /web/webclient/translations/5227498d9df4b403b0244c75aac21e0c091e50ce?mods=base%2Cweb%2Cbase_setup%2Cbus%2Cweb_tour%2Cmail%2Cresource%2Cmail_bot%2Chr%2Cauth_signup%2Cbase_import%2Chr_org_chart%2Ciap%2Cpartner_autocomplete%2Csms%2Csnailmail%2Cweb_diagram%2Cweb_editor%2Cweb_kanban_gauge%2Cweb_unsplash&lang=en_US HTTP/1.1" 200 - 3 0.004 0.005
+2023-04-01 16:21:39,544 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:21:39] "POST /web/dataset/call_kw/res.users/systray_get_activities HTTP/1.1" 200 - 4 0.009 0.021
+2023-04-01 16:21:39,563 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:21:39] "POST /web/dataset/call_kw/res.users/read HTTP/1.1" 200 - 2 0.009 0.014
+2023-04-01 16:21:39,570 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:21:39] "POST /mail/init_messaging HTTP/1.1" 200 - 60 0.098 0.049
+2023-04-01 16:21:39,594 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:21:39] "GET /web/image?model=res.users&field=image_128&id=2 HTTP/1.1" 304 - 15 0.027 0.035
+2023-04-01 16:21:39,611 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:21:39] "POST /web/action/load HTTP/1.1" 200 - 14 0.013 0.015
+2023-04-01 16:21:39,967 25732 INFO ? odoo.addons.bus.models.bus: Bus.loop listen imbus on db postgres 
+2023-04-01 16:21:40,011 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:21:40] "POST /web/dataset/call_kw/mail.message/load_views HTTP/1.1" 200 - 27 0.038 0.035
+2023-04-01 16:21:40,361 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:21:40] "POST /web/dataset/call_kw/ir.filters/get_filters HTTP/1.1" 200 - 11 0.014 0.017
+2023-04-01 16:21:40,720 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:21:40] "POST /web/dataset/call_kw/mail.message/message_fetch HTTP/1.1" 200 - 8 0.006 0.012
+2023-04-01 16:21:42,539 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:21:42] "GET /web_tour/static/src/xml/tip.xml HTTP/1.1" 200 - - - -
+2023-04-01 16:21:43,522 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:21:43] "POST /web/action/load HTTP/1.1" 200 - 37 0.038 0.025
+2023-04-01 16:21:44,019 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:21:44] "POST /web/dataset/call_kw/ir.module.module/load_views HTTP/1.1" 200 - 90 0.089 0.088
+2023-04-01 16:21:44,384 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:21:44] "POST /web/dataset/search_read HTTP/1.1" 200 - 5 0.012 0.014
+2023-04-01 16:21:46,451 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:21:46] "POST /web/dataset/search_read HTTP/1.1" 200 - 4 0.007 0.016
+2023-04-01 16:21:50,988 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:21:50] "POST /web/dataset/search_read HTTP/1.1" 200 - 8 0.010 0.011
+2023-04-01 16:21:51,317 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:21:51] "GET /website_sale_stock/static/description/icon.png HTTP/1.1" 200 - - - -
+2023-04-01 16:21:53,204 25732 INFO AADBO odoo.addons.base.models.ir_module: ALLOW access to module.button_immediate_install on ['Inventory'] to user admin #2 via 127.0.0.1 
+2023-04-01 16:21:53,204 25732 INFO AADBO odoo.addons.base.models.ir_module: User #2 triggered module installation 
+2023-04-01 16:21:53,210 25732 INFO AADBO odoo.addons.base.models.ir_module: ALLOW access to module.button_install on ['Inventory'] to user admin #2 via 127.0.0.1 
+2023-04-01 16:21:53,393 25732 INFO AADBO odoo.modules.loading: loading 1 modules... 
+2023-04-01 16:21:53,408 25732 INFO AADBO odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries 
+2023-04-01 16:21:53,610 25732 INFO AADBO odoo.modules.loading: updating modules list 
+2023-04-01 16:21:53,612 25732 INFO AADBO odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via 127.0.0.1 
+2023-04-01 16:21:54,693 25732 INFO AADBO odoo.modules.loading: loading 22 modules... 
+2023-04-01 16:21:54,774 25732 INFO AADBO odoo.modules.loading: 22 modules loaded in 0.08s, 0 queries 
+2023-04-01 16:21:54,782 25732 INFO AADBO odoo.modules.loading: loading 27 modules... 
+2023-04-01 16:21:55,171 25732 INFO AADBO odoo.modules.registry: module uom: creating or updating database tables 
+2023-04-01 16:21:55,374 25732 INFO AADBO odoo.modules.loading: loading uom/data/uom_data.xml 
+2023-04-01 16:21:55,486 25732 INFO AADBO odoo.modules.loading: loading uom/security/uom_security.xml 
+2023-04-01 16:21:55,606 25732 INFO AADBO odoo.modules.loading: loading uom/security/ir.model.access.csv 
+2023-04-01 16:21:55,634 25732 INFO AADBO odoo.modules.loading: loading uom/views/uom_uom_views.xml 
+2023-04-01 16:21:56,132 25732 INFO AADBO odoo.modules.registry: module barcodes: creating or updating database tables 
+2023-04-01 16:21:56,394 25732 INFO AADBO odoo.modules.loading: loading barcodes/data/barcodes_data.xml 
+2023-04-01 16:21:56,409 25732 INFO AADBO odoo.modules.loading: loading barcodes/views/barcodes_view.xml 
+2023-04-01 16:21:56,489 25732 INFO AADBO odoo.modules.loading: loading barcodes/security/ir.model.access.csv 
+2023-04-01 16:21:56,527 25732 INFO AADBO odoo.modules.loading: loading barcodes/views/barcodes_templates.xml 
+2023-04-01 16:21:57,208 25732 INFO AADBO odoo.modules.registry: module product: creating or updating database tables 
+2023-04-01 16:21:57,460 25732 INFO AADBO odoo.models: Computing parent_path for table product_category... 
+2023-04-01 16:21:58,929 25732 INFO AADBO odoo.modules.loading: loading product/data/product_data.xml 
+2023-04-01 16:21:58,975 25732 INFO AADBO odoo.modules.loading: loading product/security/product_security.xml 
+2023-04-01 16:21:59,480 25732 INFO AADBO odoo.modules.loading: loading product/security/ir.model.access.csv 
+2023-04-01 16:21:59,595 25732 INFO AADBO odoo.modules.loading: loading product/wizard/product_price_list_views.xml 
+2023-04-01 16:21:59,634 25732 INFO AADBO odoo.modules.loading: loading product/views/res_config_settings_views.xml 
+2023-04-01 16:21:59,795 25732 INFO AADBO odoo.modules.loading: loading product/views/product_attribute_views.xml 
+2023-04-01 16:21:59,955 25732 INFO AADBO odoo.modules.loading: loading product/views/product_views.xml 
+2023-04-01 16:22:00,671 25732 INFO AADBO odoo.modules.loading: loading product/views/product_template_views.xml 
+2023-04-01 16:22:00,848 25732 INFO AADBO odoo.modules.loading: loading product/views/product_pricelist_views.xml 
+2023-04-01 16:22:01,222 25732 INFO AADBO odoo.modules.loading: loading product/views/res_partner_views.xml 
+2023-04-01 16:22:01,333 25732 INFO AADBO odoo.modules.loading: loading product/report/product_reports.xml 
+2023-04-01 16:22:01,372 25732 INFO AADBO odoo.modules.loading: loading product/report/product_pricelist_templates.xml 
+2023-04-01 16:22:01,397 25732 INFO AADBO odoo.modules.loading: loading product/report/product_product_templates.xml 
+2023-04-01 16:22:01,471 25732 INFO AADBO odoo.modules.loading: loading product/report/product_template_templates.xml 
+2023-04-01 16:22:01,508 25732 INFO AADBO odoo.modules.loading: loading product/report/product_packaging.xml 
+2023-04-01 16:22:02,581 25732 INFO AADBO odoo.modules.registry: module stock: creating or updating database tables 
+2023-04-01 16:22:03,056 25732 INFO AADBO odoo.models: Computing parent_path for table stock_location... 
+2023-04-01 16:22:06,733 25732 INFO AADBO odoo.modules.loading: loading stock/security/stock_security.xml 
+2023-04-01 16:22:08,200 25732 INFO AADBO odoo.modules.loading: loading stock/security/ir.model.access.csv 
+2023-04-01 16:22:08,462 25732 INFO AADBO odoo.modules.loading: loading stock/views/stock_menu_views.xml 
+2023-04-01 16:22:08,624 25732 INFO AADBO odoo.modules.loading: loading stock/data/stock_traceability_report_data.xml 
+2023-04-01 16:22:08,632 25732 INFO AADBO odoo.modules.loading: loading stock/data/procurement_data.xml 
+2023-04-01 16:22:08,643 25732 INFO AADBO odoo.modules.loading: loading stock/report/report_stock_quantity.xml 
+2023-04-01 16:22:08,701 25732 INFO AADBO odoo.modules.loading: loading stock/report/stock_report_views.xml 
+2023-04-01 16:22:08,787 25732 INFO AADBO odoo.modules.loading: loading stock/report/report_package_barcode.xml 
+2023-04-01 16:22:08,821 25732 INFO AADBO odoo.modules.loading: loading stock/report/report_lot_barcode.xml 
+2023-04-01 16:22:08,835 25732 INFO AADBO odoo.modules.loading: loading stock/report/report_location_barcode.xml 
+2023-04-01 16:22:08,875 25732 INFO AADBO odoo.modules.loading: loading stock/report/report_stockpicking_operations.xml 
+2023-04-01 16:22:08,912 25732 INFO AADBO odoo.modules.loading: loading stock/report/report_deliveryslip.xml 
+2023-04-01 16:22:08,942 25732 INFO AADBO odoo.modules.loading: loading stock/report/report_stockinventory.xml 
+2023-04-01 16:22:08,960 25732 INFO AADBO odoo.modules.loading: loading stock/report/report_stock_rule.xml 
+2023-04-01 16:22:09,082 25732 INFO AADBO odoo.modules.loading: loading stock/report/package_templates.xml 
+2023-04-01 16:22:09,100 25732 INFO AADBO odoo.modules.loading: loading stock/report/picking_templates.xml 
+2023-04-01 16:22:09,147 25732 INFO AADBO odoo.modules.loading: loading stock/report/product_templates.xml 
+2023-04-01 16:22:09,227 25732 INFO AADBO odoo.modules.loading: loading stock/report/product_packaging.xml 
+2023-04-01 16:22:09,245 25732 INFO AADBO odoo.modules.loading: loading stock/data/mail_template_data.xml 
+2023-04-01 16:22:09,256 25732 INFO AADBO odoo.modules.loading: loading stock/wizard/stock_assign_serial_views.xml 
+2023-04-01 16:22:09,283 25732 INFO AADBO odoo.modules.loading: loading stock/wizard/stock_change_product_qty_views.xml 
+2023-04-01 16:22:09,312 25732 INFO AADBO odoo.modules.loading: loading stock/wizard/stock_picking_return_views.xml 
+2023-04-01 16:22:09,352 25732 INFO AADBO odoo.modules.loading: loading stock/wizard/stock_scheduler_compute_views.xml 
+2023-04-01 16:22:09,383 25732 INFO AADBO odoo.modules.loading: loading stock/wizard/stock_immediate_transfer_views.xml 
+2023-04-01 16:22:09,401 25732 INFO AADBO odoo.modules.loading: loading stock/wizard/stock_backorder_confirmation_views.xml 
+2023-04-01 16:22:09,422 25732 INFO AADBO odoo.modules.loading: loading stock/wizard/stock_overprocessed_transfer_views.xml 
+2023-04-01 16:22:09,443 25732 INFO AADBO odoo.modules.loading: loading stock/wizard/stock_quantity_history.xml 
+2023-04-01 16:22:09,466 25732 INFO AADBO odoo.modules.loading: loading stock/wizard/stock_rules_report_views.xml 
+2023-04-01 16:22:09,504 25732 INFO AADBO odoo.modules.loading: loading stock/wizard/stock_warn_insufficient_qty_views.xml 
+2023-04-01 16:22:09,573 25732 INFO AADBO odoo.modules.loading: loading stock/wizard/product_replenish_views.xml 
+2023-04-01 16:22:09,618 25732 INFO AADBO odoo.modules.loading: loading stock/wizard/stock_track_confirmation_views.xml 
+2023-04-01 16:22:09,644 25732 INFO AADBO odoo.modules.loading: loading stock/wizard/stock_package_destination_views.xml 
+2023-04-01 16:22:09,681 25732 INFO AADBO odoo.modules.loading: loading stock/views/res_partner_views.xml 
+2023-04-01 16:22:09,893 25732 INFO AADBO odoo.modules.loading: loading stock/views/product_strategy_views.xml 
+2023-04-01 16:22:09,982 25732 INFO AADBO odoo.modules.loading: loading stock/views/product_views.xml 
+2023-04-01 16:22:10,748 25732 INFO AADBO odoo.modules.loading: loading stock/views/stock_production_lot_views.xml 
+2023-04-01 16:22:10,854 25732 INFO AADBO odoo.modules.loading: loading stock/views/stock_picking_views.xml 
+2023-04-01 16:22:11,278 25732 INFO AADBO odoo.modules.loading: loading stock/views/stock_scrap_views.xml 
+2023-04-01 16:22:11,468 25732 INFO AADBO odoo.modules.loading: loading stock/views/stock_inventory_views.xml 
+2023-04-01 16:22:11,787 25732 INFO AADBO odoo.modules.loading: loading stock/views/stock_quant_views.xml 
+2023-04-01 16:22:12,138 25732 INFO AADBO odoo.modules.loading: loading stock/views/stock_location_views.xml 
+2023-04-01 16:22:12,476 25732 INFO AADBO odoo.modules.loading: loading stock/views/stock_warehouse_views.xml 
+2023-04-01 16:22:12,847 25732 INFO AADBO odoo.modules.loading: loading stock/views/stock_move_line_views.xml 
+2023-04-01 16:22:13,076 25732 INFO AADBO odoo.modules.loading: loading stock/views/stock_move_views.xml 
+2023-04-01 16:22:13,709 25732 INFO AADBO odoo.modules.loading: loading stock/views/res_config_settings_views.xml 
+2023-04-01 16:22:13,930 25732 INFO AADBO odoo.modules.loading: loading stock/views/report_stock_traceability.xml 
+2023-04-01 16:22:14,046 25732 INFO AADBO odoo.modules.loading: loading stock/views/stock_template.xml 
+2023-04-01 16:22:14,290 25732 INFO AADBO odoo.modules.loading: loading stock/views/stock_rule_views.xml 
+2023-04-01 16:22:14,483 25732 INFO AADBO odoo.modules.loading: loading stock/views/stock_package_level_views.xml 
+2023-04-01 16:22:14,570 25732 INFO AADBO odoo.modules.loading: loading stock/data/default_barcode_patterns.xml 
+2023-04-01 16:22:14,589 25732 INFO AADBO odoo.modules.loading: loading stock/data/stock_data.xml 
+2023-04-01 16:22:15,022 25732 INFO AADBO odoo.modules.loading: loading stock/data/stock_sequence_data.xml 
+2023-04-01 16:22:15,769 25732 INFO AADBO odoo.modules.registry: module stock_sms: creating or updating database tables 
+2023-04-01 16:22:16,107 25732 INFO AADBO odoo.modules.loading: loading stock_sms/data/sms_data.xml 
+2023-04-01 16:22:16,120 25732 INFO AADBO odoo.modules.loading: loading stock_sms/views/res_config_settings_views.xml 
+2023-04-01 16:22:16,346 25732 INFO AADBO odoo.modules.loading: loading stock_sms/wizard/confirm_stock_sms_views.xml 
+2023-04-01 16:22:16,373 25732 INFO AADBO odoo.modules.loading: loading stock_sms/security/ir.model.access.csv 
+2023-04-01 16:22:16,398 25732 INFO AADBO odoo.modules.loading: loading stock_sms/security/sms_security.xml 
+2023-04-01 16:22:16,490 25732 INFO AADBO odoo.modules.loading: 27 modules loaded in 21.71s, 0 queries 
+2023-04-01 16:22:17,261 25732 INFO AADBO odoo.modules.loading: Modules loaded. 
+2023-04-01 16:22:17,266 25732 INFO AADBO odoo.addons.base.models.ir_module: getting next ir.actions.todo() 
+2023-04-01 16:22:17,272 25732 INFO AADBO odoo.modules.registry: Registry changed, signaling through the database 
+2023-04-01 16:22:17,275 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:22:17] "POST /web/dataset/call_button HTTP/1.1" 200 - 15885 13.461 10.628
+2023-04-01 16:22:17,628 25732 INFO AADBO odoo.addons.base.models.ir_http: Generating routing map for key None 
+2023-04-01 16:22:23,778 25732 INFO AADBO odoo.addons.base.models.ir_cron: Starting job `Procurement: run scheduler`. 
+2023-04-01 16:22:23,880 25732 INFO AADBO odoo.addons.base.models.ir_cron: Job `Procurement: run scheduler` done. 
+2023-04-01 16:22:23,882 25732 INFO AADBO odoo.addons.base.models.ir_cron: Starting job `Mail: Email Queue Manager`. 
+2023-04-01 16:22:23,905 25732 INFO AADBO odoo.addons.base.models.ir_cron: Job `Mail: Email Queue Manager` done. 
+2023-04-01 16:22:23,907 25732 INFO AADBO odoo.addons.base.models.ir_cron: Starting job `Notification: Delete Notifications older than 6 Month`. 
+2023-04-01 16:22:23,926 25732 INFO AADBO odoo.addons.base.models.ir_cron: Job `Notification: Delete Notifications older than 6 Month` done. 
+2023-04-01 16:22:23,928 25732 INFO AADBO odoo.addons.base.models.ir_cron: Starting job `Users: Notify About Unregistered Users`. 
+2023-04-01 16:22:23,947 25732 INFO AADBO odoo.addons.base.models.ir_cron: Job `Users: Notify About Unregistered Users` done. 
+2023-04-01 16:22:23,948 25732 INFO AADBO odoo.addons.base.models.ir_cron: Starting job `Partner Autocomplete : Sync with remote DB`. 
+2023-04-01 16:22:23,966 25732 INFO AADBO odoo.addons.base.models.ir_cron: Job `Partner Autocomplete : Sync with remote DB` done. 
+2023-04-01 16:22:23,969 25732 INFO AADBO odoo.addons.base.models.ir_cron: Starting job `Snailmail: process letters queue`. 
+2023-04-01 16:22:23,988 25732 INFO AADBO odoo.addons.base.models.ir_cron: Job `Snailmail: process letters queue` done. 
+2023-04-01 16:22:23,990 25732 INFO AADBO odoo.addons.base.models.ir_cron: Starting job `SMS: SMS Queue Manager`. 
+2023-04-01 16:22:24,011 25732 INFO AADBO odoo.addons.base.models.ir_cron: Job `SMS: SMS Queue Manager` done. 
+2023-04-01 16:22:24,013 25732 INFO AADBO odoo.addons.base.models.ir_cron: Starting job `Mail: Notify channel moderators`. 
+2023-04-01 16:22:24,031 25732 INFO AADBO odoo.addons.base.models.ir_cron: Job `Mail: Notify channel moderators` done. 
+2023-04-01 16:22:26,558 25732 INFO AADBO odoo.modules.registry: At least one model cache has been invalidated, signaling through the database. 
+2023-04-01 16:22:26,561 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:22:26] "GET /web HTTP/1.1" 200 - 538 0.584 8.352
+2023-04-01 16:22:27,032 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:22:27] "GET /web/content/279-20ad6bf/web.assets_common.css HTTP/1.1" 200 - 6 0.020 0.087
+2023-04-01 16:22:27,049 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:22:27] "GET /web/content/280-aeee585/web.assets_backend.css HTTP/1.1" 200 - 6 0.015 0.105
+2023-04-01 16:22:27,050 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:22:27] "GET /web/content/281-20ad6bf/web.assets_common.js HTTP/1.1" 200 - 5 0.010 0.113
+2023-04-01 16:22:27,056 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:22:27] "GET /web/content/282-aeee585/web.assets_backend.js HTTP/1.1" 200 - 4 0.011 0.113
+2023-04-01 16:22:27,245 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:22:27] "GET /web/webclient/qweb/8ed557a833fd600071265b6e433112a93ffde591?mods=base,web,base_setup,bus,web_tour,mail,product,barcodes,stock,resource,mail_bot,hr,auth_signup,base_import,hr_org_chart,iap,partner_autocomplete,sms,snailmail,web_diagram,web_editor,web_kanban_gauge,web_unsplash HTTP/1.1" 200 - 1 0.001 0.059
+2023-04-01 16:22:27,319 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:22:27] "GET /web/webclient/load_menus/8e84663f61c327cbf63e1d788962efef928e14ba HTTP/1.1" 200 - 170 0.203 0.179
+2023-04-01 16:22:27,646 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:22:27] "GET /web/webclient/translations/5227498d9df4b403b0244c75aac21e0c091e50ce?mods=base%2Cweb%2Cbase_setup%2Cbus%2Cweb_tour%2Cmail%2Cproduct%2Cbarcodes%2Cstock%2Cresource%2Cmail_bot%2Chr%2Cauth_signup%2Cbase_import%2Chr_org_chart%2Ciap%2Cpartner_autocomplete%2Csms%2Csnailmail%2Cweb_diagram%2Cweb_editor%2Cweb_kanban_gauge%2Cweb_unsplash&lang=en_US HTTP/1.1" 200 - 3 0.009 0.011
+2023-04-01 16:22:28,029 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:22:28] "POST /web/dataset/call_kw/res.users/read HTTP/1.1" 200 - 2 0.004 0.018
+2023-04-01 16:22:28,039 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:22:28] "POST /web/dataset/call_kw/res.users/systray_get_activities HTTP/1.1" 200 - 5 0.018 0.017
+2023-04-01 16:22:28,089 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:22:28] "GET /web/image?model=res.users&field=image_128&id=2 HTTP/1.1" 304 - 18 0.035 0.031
+2023-04-01 16:22:28,124 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:22:28] "POST /mail/init_messaging HTTP/1.1" 200 - 56 0.087 0.049
+2023-04-01 16:22:28,280 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:22:28] "POST /web/action/load HTTP/1.1" 200 - 14 0.020 0.018
+2023-04-01 16:22:28,537 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:22:28] "POST /web/dataset/call_kw/mail.message/load_views HTTP/1.1" 200 - 26 0.039 0.037
+2023-04-01 16:22:28,637 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:22:28] "POST /web/dataset/call_kw/ir.filters/get_filters HTTP/1.1" 200 - 11 0.019 0.014
+2023-04-01 16:22:28,894 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:22:28] "POST /web/dataset/call_kw/mail.message/message_fetch HTTP/1.1" 200 - 8 0.013 0.015
+2023-04-01 16:22:29,974 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:22:29] "POST /longpolling/poll HTTP/1.1" 200 - 18 0.034 50.034
+2023-04-01 16:22:42,053 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:22:42] "POST /web/action/load HTTP/1.1" 200 - 66 0.069 0.073
+2023-04-01 16:22:42,637 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:22:42] "POST /web/dataset/call_kw/hr.employee/load_views HTTP/1.1" 200 - 76 0.122 0.130
+2023-04-01 16:22:43,015 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:22:43] "POST /web/dataset/call_kw/hr.employee/search_panel_select_range HTTP/1.1" 200 - 10 0.020 0.013
+2023-04-01 16:22:43,391 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:22:43] "POST /web/dataset/search_read HTTP/1.1" 200 - 16 0.026 0.022
+2023-04-01 16:22:43,740 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:22:43] "GET /web/image?model=hr.employee&id=1&field=image_128&unique=04012023192120 HTTP/1.1" 200 - 11 0.010 0.014
+2023-04-01 16:22:53,747 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:22:53] "POST /web/action/load HTTP/1.1" 200 - 35 0.032 0.032
+2023-04-01 16:22:54,193 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:22:54] "POST /web/dataset/call_kw/res.config.settings/load_views HTTP/1.1" 200 - 51 0.036 0.082
+2023-04-01 16:22:54,760 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:22:54] "POST /web/dataset/call_kw/res.config.settings/default_get HTTP/1.1" 200 - 141 0.148 0.082
+2023-04-01 16:22:55,396 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:22:55] "POST /web/dataset/call_kw/res.config.settings/onchange HTTP/1.1" 200 - 189 0.185 0.118
+2023-04-01 16:22:55,786 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:22:55] "POST /base_setup/data HTTP/1.1" 200 - 4 0.005 0.012
+2023-04-01 16:22:55,799 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:22:55] "POST /base_setup/demo_active HTTP/1.1" 200 - 4 0.015 0.013
+2023-04-01 16:22:56,109 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:22:56] "GET /base_setup/static/src/img/google_play.png HTTP/1.1" 200 - - - -
+2023-04-01 16:22:56,110 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:22:56] "GET /base_setup/static/src/img/app_store.png HTTP/1.1" 200 - - - -
+2023-04-01 16:22:56,158 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:22:56] "GET /base/static/description/settings.png HTTP/1.1" 200 - - - -
+2023-04-01 16:23:06,770 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:23:06] "GET /web?debug=1 HTTP/1.1" 200 - 302 0.280 0.774
+2023-04-01 16:23:07,134 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:23:07] "GET /web/webclient/load_menus/aec66e3a34d6f29488ad0314356b5b8cde664b17 HTTP/1.1" 200 - 1 0.001 0.006
+2023-04-01 16:23:07,386 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:23:07] "GET /web/static/src/xml/debug.xml?debug=1680366187161 HTTP/1.1" 200 - - - -
+2023-04-01 16:23:07,442 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:23:07] "POST /mail/init_messaging HTTP/1.1" 200 - 28 0.033 0.028
+2023-04-01 16:23:07,495 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:23:07] "POST /web/dataset/call_kw/ir.ui.view/check_access_rights HTTP/1.1" 200 - 1 0.003 0.011
+2023-04-01 16:23:07,501 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:23:07] "POST /web/dataset/call_kw/res.users/systray_get_activities HTTP/1.1" 200 - 4 0.008 0.016
+2023-04-01 16:23:07,764 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:23:07] "POST /web/action/load HTTP/1.1" 200 - 11 0.011 0.024
+2023-04-01 16:23:07,783 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:23:07] "GET /web/image?model=res.users&field=image_128&id=2 HTTP/1.1" 304 - 6 0.006 0.015
+2023-04-01 16:23:08,006 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:23:08] "POST /web/dataset/call_kw/res.config.settings/load_views HTTP/1.1" 200 - 42 0.040 0.140
+2023-04-01 16:23:08,288 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:23:08] "POST /web/dataset/call_kw/res.config.settings/default_get HTTP/1.1" 200 - 91 0.097 0.069
+2023-04-01 16:23:08,696 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:23:08] "POST /web/dataset/call_kw/res.config.settings/onchange HTTP/1.1" 200 - 189 0.205 0.116
+2023-04-01 16:23:08,755 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:23:08] "POST /base_setup/data HTTP/1.1" 200 - 4 0.003 0.006
+2023-04-01 16:23:09,078 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:23:09] "POST /base_setup/demo_active HTTP/1.1" 200 - 2 0.003 0.009
+2023-04-01 16:23:18,411 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:23:18] "POST /longpolling/poll HTTP/1.1" 200 - 18 0.019 50.027
+2023-04-01 16:23:21,916 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:23:21] "POST /web/action/load HTTP/1.1" 200 - 15 0.021 0.021
+2023-04-01 16:23:22,271 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:23:22] "POST /web/dataset/call_kw/ir.demo/load_views HTTP/1.1" 200 - 10 0.013 0.020
+2023-04-01 16:23:22,610 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:23:22] "POST /web/dataset/call_kw/ir.demo/default_get HTTP/1.1" 200 - 3 0.005 0.010
+2023-04-01 16:23:22,953 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:23:22] "GET /web/static/src/xml/dialog.xml?debug=1680366202626 HTTP/1.1" 200 - - - -
+2023-04-01 16:23:23,307 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:23:23] "POST /web/dataset/call_kw/ir.ui.view/check_access_rights HTTP/1.1" 200 - 1 0.002 0.008
+2023-04-01 16:23:40,531 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:23:40] "POST /web/action/load HTTP/1.1" 200 - 33 0.024 0.031
+2023-04-01 16:23:40,993 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:23:40] "POST /web/dataset/call_kw/ir.module.module/load_views HTTP/1.1" 200 - 82 0.067 0.074
+2023-04-01 16:23:41,363 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:23:41] "POST /web/dataset/search_read HTTP/1.1" 200 - 4 0.008 0.014
+2023-04-01 16:23:43,281 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:23:43] "POST /web/dataset/search_read HTTP/1.1" 200 - 4 0.007 0.018
+2023-04-01 16:23:45,559 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:23:45] "POST /web/dataset/search_read HTTP/1.1" 200 - 8 0.020 0.024
+2023-04-01 16:23:48,811 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:23:48] "POST /web/dataset/search_read HTTP/1.1" 200 - 4 0.008 0.014
+2023-04-01 16:23:50,970 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:23:50] "POST /web/dataset/search_read HTTP/1.1" 200 - 7 0.012 0.020
+2023-04-01 16:23:51,366 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:23:51] "GET /l10n_fi_sale/static/description/icon.png HTTP/1.1" 200 - - - -
+2023-04-01 16:23:51,368 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:23:51] "GET /l10n_fr_pos_cert/static/description/icon.png HTTP/1.1" 200 - - - -
+2023-04-01 16:23:51,371 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:23:51] "GET /sale/static/description/icon.png HTTP/1.1" 200 - - - -
+2023-04-01 16:23:51,373 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:23:51] "GET /website_event_sale/static/description/icon.png HTTP/1.1" 200 - - - -
+2023-04-01 16:23:51,377 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:23:51] "GET /website_sale_comparison/static/description/icon.png HTTP/1.1" 200 - - - -
+2023-04-01 16:23:51,691 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:23:51] "GET /website_sale_delivery/static/description/icon.png HTTP/1.1" 200 - - - -
+2023-04-01 16:23:51,693 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:23:51] "GET /website_sale_coupon/static/description/icon.png HTTP/1.1" 200 - - - -
+2023-04-01 16:23:51,697 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:23:51] "GET /website_sale_digital/static/description/icon.png HTTP/1.1" 200 - - - -
+2023-04-01 16:23:51,699 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:23:51] "GET /website_sale_wishlist/static/description/icon.png HTTP/1.1" 200 - - - -
+2023-04-01 16:23:53,835 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:23:53] "POST /web/dataset/search_read HTTP/1.1" 200 - 4 0.009 0.015
+2023-04-01 16:23:55,552 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:23:55] "POST /web/dataset/search_read HTTP/1.1" 200 - 7 0.015 0.022
+2023-04-01 16:23:55,896 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:23:55] "GET /sale/static/description/icon.png HTTP/1.1" 304 - - - -
+2023-04-01 16:23:55,898 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:23:55] "GET /website_sale_delivery/static/description/icon.png HTTP/1.1" 304 - - - -
+2023-04-01 16:23:57,735 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:23:57] "POST /longpolling/poll HTTP/1.1" 200 - 8 0.010 50.028
+2023-04-01 16:23:57,809 25732 INFO AADBO odoo.addons.base.models.ir_module: ALLOW access to module.button_immediate_install on ['Sales'] to user admin #2 via 127.0.0.1 
+2023-04-01 16:23:57,809 25732 INFO AADBO odoo.addons.base.models.ir_module: User #2 triggered module installation 
+2023-04-01 16:23:57,813 25732 INFO AADBO odoo.addons.base.models.ir_module: ALLOW access to module.button_install on ['Sales'] to user admin #2 via 127.0.0.1 
+2023-04-01 16:23:58,109 25732 INFO AADBO odoo.modules.loading: loading 1 modules... 
+2023-04-01 16:23:58,125 25732 INFO AADBO odoo.modules.loading: 1 modules loaded in 0.02s, 0 queries 
+2023-04-01 16:23:58,363 25732 INFO AADBO odoo.modules.loading: updating modules list 
+2023-04-01 16:23:58,365 25732 INFO AADBO odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via 127.0.0.1 
+2023-04-01 16:23:59,568 25732 INFO AADBO odoo.modules.loading: loading 27 modules... 
+2023-04-01 16:23:59,644 25732 INFO AADBO odoo.modules.loading: 27 modules loaded in 0.08s, 0 queries 
+2023-04-01 16:23:59,664 25732 INFO AADBO odoo.modules.loading: loading 43 modules... 
+2023-04-01 16:24:00,151 25732 INFO AADBO odoo.modules.registry: module http_routing: creating or updating database tables 
+2023-04-01 16:24:00,236 25732 INFO AADBO odoo.modules.loading: loading http_routing/views/http_routing_template.xml 
+2023-04-01 16:24:00,465 25732 INFO AADBO odoo.modules.loading: loading http_routing/views/res_lang_views.xml 
+2023-04-01 16:24:01,049 25732 INFO AADBO odoo.modules.registry: module utm: creating or updating database tables 
+2023-04-01 16:24:01,341 25732 INFO AADBO odoo.modules.loading: loading utm/data/utm_data.xml 
+2023-04-01 16:24:01,419 25732 INFO AADBO odoo.modules.loading: loading utm/views/assets.xml 
+2023-04-01 16:24:01,524 25732 INFO AADBO odoo.modules.loading: loading utm/views/utm_campaign_views.xml 
+2023-04-01 16:24:01,690 25732 INFO AADBO odoo.modules.loading: loading utm/views/utm_views.xml 
+2023-04-01 16:24:01,878 25732 INFO AADBO odoo.modules.loading: loading utm/security/ir.model.access.csv 
+2023-04-01 16:24:02,480 25732 INFO AADBO odoo.modules.registry: module analytic: creating or updating database tables 
+2023-04-01 16:24:02,604 25732 INFO AADBO odoo.models: Computing parent_path for table account_analytic_group... 
+2023-04-01 16:24:02,952 25732 INFO AADBO odoo.modules.loading: loading analytic/security/analytic_security.xml 
+2023-04-01 16:24:03,254 25732 INFO AADBO odoo.modules.loading: loading analytic/security/ir.model.access.csv 
+2023-04-01 16:24:03,293 25732 INFO AADBO odoo.modules.loading: loading analytic/views/analytic_account_views.xml 
+2023-04-01 16:24:04,315 25732 INFO AADBO odoo.modules.registry: module sales_team: creating or updating database tables 
+2023-04-01 16:24:04,659 25732 INFO AADBO odoo.modules.loading: loading sales_team/security/sales_team_security.xml 
+2023-04-01 16:24:05,313 25732 INFO AADBO odoo.modules.loading: loading sales_team/security/ir.model.access.csv 
+2023-04-01 16:24:05,360 25732 INFO AADBO odoo.modules.loading: loading sales_team/data/sales_team_data.xml 
+2023-04-01 16:24:05,463 25732 INFO AADBO odoo.modules.loading: loading sales_team/views/crm_team_views.xml 
+2023-04-01 16:24:05,751 25732 INFO AADBO odoo.modules.loading: loading sales_team/views/res_partner_views.xml 
+2023-04-01 16:24:05,873 25732 INFO AADBO odoo.modules.loading: loading sales_team/views/sales_team_dashboard.xml 
+2023-04-01 16:24:06,590 25732 INFO AADBO odoo.modules.registry: module portal: creating or updating database tables 
+2023-04-01 16:24:07,845 25732 INFO AADBO odoo.modules.loading: loading portal/data/portal_data.xml 
+2023-04-01 16:24:07,880 25732 INFO AADBO odoo.modules.loading: loading portal/views/assets.xml 
+2023-04-01 16:24:08,031 25732 INFO AADBO odoo.modules.loading: loading portal/views/portal_templates.xml 
+2023-04-01 16:24:08,452 25732 INFO AADBO odoo.modules.loading: loading portal/wizard/portal_share_views.xml 
+2023-04-01 16:24:08,487 25732 INFO AADBO odoo.modules.loading: loading portal/wizard/portal_wizard_views.xml 
+2023-04-01 16:24:09,065 25732 INFO AADBO odoo.modules.registry: module digest: creating or updating database tables 
+2023-04-01 16:24:09,529 25732 INFO AADBO odoo.modules.loading: loading digest/security/ir.model.access.csv 
+2023-04-01 16:24:09,576 25732 INFO AADBO odoo.modules.loading: loading digest/data/digest_template_data.xml 
+2023-04-01 16:24:09,589 25732 INFO AADBO odoo.modules.loading: loading digest/data/digest_data.xml 
+2023-04-01 16:24:09,630 25732 INFO AADBO odoo.modules.loading: loading digest/data/ir_cron_data.xml 
+2023-04-01 16:24:09,647 25732 INFO AADBO odoo.modules.loading: loading digest/data/res_config_settings_data.xml 
+2023-04-01 16:24:09,662 25732 INFO AADBO odoo.modules.loading: loading digest/views/digest_views.xml 
+2023-04-01 16:24:09,824 25732 INFO AADBO odoo.modules.loading: loading digest/views/digest_templates.xml 
+2023-04-01 16:24:09,843 25732 INFO AADBO odoo.modules.loading: loading digest/views/res_config_settings_views.xml 
+2023-04-01 16:24:11,008 25732 INFO AADBO odoo.modules.registry: module account: creating or updating database tables 
+2023-04-01 16:24:11,305 25732 INFO AADBO odoo.models: Computing parent_path for table account_tax_report_line... 
+2023-04-01 16:24:11,416 25732 INFO AADBO odoo.models: Computing parent_path for table account_group... 
+2023-04-01 16:24:18,231 25732 INFO AADBO odoo.modules.loading: loading account/security/account_security.xml 
+2023-04-01 16:24:20,278 25732 INFO AADBO odoo.modules.loading: loading account/security/ir.model.access.csv 
+2023-04-01 16:24:20,581 25732 INFO AADBO odoo.modules.loading: loading account/data/data_account_type.xml 
+2023-04-01 16:24:20,635 25732 INFO AADBO odoo.modules.loading: loading account/data/account_data.xml 
+2023-04-01 16:24:20,824 25732 INFO AADBO odoo.modules.loading: loading account/data/digest_data.xml 
+2023-04-01 16:24:20,833 25732 INFO AADBO odoo.modules.loading: loading account/views/account_menuitem.xml 
+2023-04-01 16:24:21,068 25732 INFO AADBO odoo.modules.loading: loading account/views/account_payment_view.xml 
+2023-04-01 16:24:21,390 25732 INFO AADBO odoo.modules.loading: loading account/wizard/account_accrual_accounting_view.xml 
+2023-04-01 16:24:21,427 25732 INFO AADBO odoo.modules.loading: loading account/wizard/account_unreconcile_view.xml 
+2023-04-01 16:24:21,449 25732 INFO AADBO odoo.modules.loading: loading account/wizard/account_move_reversal_view.xml 
+2023-04-01 16:24:21,476 25732 INFO AADBO odoo.modules.loading: loading account/views/account_move_views.xml 
+2023-04-01 16:24:22,825 25732 INFO AADBO odoo.modules.loading: loading account/wizard/setup_wizards_view.xml 
+2023-04-01 16:24:22,907 25732 INFO AADBO odoo.modules.loading: loading account/wizard/pos_box.xml 
+2023-04-01 16:24:22,937 25732 INFO AADBO odoo.modules.loading: loading account/views/partner_view.xml 
+2023-04-01 16:24:23,367 25732 INFO AADBO odoo.modules.loading: loading account/views/account_view.xml 
+2023-04-01 16:24:25,310 25732 INFO AADBO odoo.modules.loading: loading account/views/report_statement.xml 
+2023-04-01 16:24:25,331 25732 INFO AADBO odoo.modules.loading: loading account/views/account_report.xml 
+2023-04-01 16:24:25,381 25732 INFO AADBO odoo.modules.loading: loading account/data/mail_template_data.xml 
+2023-04-01 16:24:25,392 25732 INFO AADBO odoo.modules.loading: loading account/wizard/account_validate_move_view.xml 
+2023-04-01 16:24:25,424 25732 INFO AADBO odoo.modules.loading: loading account/views/account_end_fy.xml 
+2023-04-01 16:24:25,426 25732 INFO AADBO odoo.modules.loading: loading account/views/product_view.xml 
+2023-04-01 16:24:25,580 25732 INFO AADBO odoo.modules.loading: loading account/views/account_analytic_view.xml 
+2023-04-01 16:24:25,770 25732 INFO AADBO odoo.modules.loading: loading account/views/account_tip_data.xml 
+2023-04-01 16:24:25,772 25732 INFO AADBO odoo.modules.loading: loading account/views/account.xml 
+2023-04-01 16:24:26,127 25732 INFO AADBO odoo.modules.loading: loading account/views/report_invoice.xml 
+2023-04-01 16:24:26,230 25732 INFO AADBO odoo.modules.loading: loading account/report/account_invoice_report_view.xml 
+2023-04-01 16:24:26,411 25732 INFO AADBO odoo.modules.loading: loading account/views/account_cash_rounding_view.xml 
+2023-04-01 16:24:26,512 25732 INFO AADBO odoo.modules.loading: loading account/wizard/account_report_common_view.xml 
+2023-04-01 16:24:26,545 25732 INFO AADBO odoo.modules.loading: loading account/views/report_journal.xml 
+2023-04-01 16:24:26,567 25732 INFO AADBO odoo.modules.loading: loading account/views/tax_adjustments.xml 
+2023-04-01 16:24:26,591 25732 INFO AADBO odoo.modules.loading: loading account/wizard/wizard_tax_adjustments_view.xml 
+2023-04-01 16:24:26,616 25732 INFO AADBO odoo.modules.loading: loading account/views/res_config_settings_views.xml 
+2023-04-01 16:24:26,897 25732 INFO AADBO odoo.modules.loading: loading account/views/account_journal_dashboard_view.xml 
+2023-04-01 16:24:26,977 25732 INFO AADBO odoo.modules.loading: loading account/views/account_portal_templates.xml 
+2023-04-01 16:24:27,124 25732 INFO AADBO odoo.modules.loading: loading account/views/report_payment_receipt_templates.xml 
+2023-04-01 16:24:27,161 25732 INFO AADBO odoo.modules.loading: loading account/data/payment_receipt_data.xml 
+2023-04-01 16:24:27,189 25732 INFO AADBO odoo.modules.loading: loading account/views/account_onboarding_templates.xml 
+2023-04-01 16:24:27,461 25732 INFO AADBO odoo.modules.loading: loading account/data/service_cron.xml 
+2023-04-01 16:24:27,479 25732 INFO AADBO odoo.modules.loading: loading account/views/account_fiscal_year_view.xml 
+2023-04-01 16:24:27,549 25732 INFO AADBO odoo.modules.loading: loading account/views/account_incoterms_view.xml 
+2023-04-01 16:24:27,624 25732 INFO AADBO odoo.modules.loading: loading account/data/account_incoterms_data.xml 
+2023-04-01 16:24:27,674 25732 INFO AADBO odoo.modules.loading: loading account/views/digest_views.xml 
+2023-04-01 16:24:27,767 25732 INFO AADBO odoo.modules.loading: loading account/wizard/account_invoice_send_views.xml 
+2023-04-01 16:24:27,815 25732 INFO AADBO odoo.modules.loading: loading account/views/account_tax_report_views.xml 
+2023-04-01 16:24:27,900 25732 INFO AADBO odoo.modules.loading: loading account/views/report_statement.xml 
+2023-04-01 16:24:27,919 25732 INFO AADBO odoo.modules.loading: loading account/report/account_hash_integrity_templates.xml 
+2023-04-01 16:24:28,826 25732 INFO AADBO odoo.modules.registry: module account_bank_statement_import: creating or updating database tables 
+2023-04-01 16:24:29,190 25732 INFO AADBO odoo.modules.loading: loading account_bank_statement_import/account_bank_statement_import_view.xml 
+2023-04-01 16:24:29,299 25732 INFO AADBO odoo.modules.loading: loading account_bank_statement_import/account_import_tip_data.xml 
+2023-04-01 16:24:29,301 25732 INFO AADBO odoo.modules.loading: loading account_bank_statement_import/wizard/journal_creation.xml 
+2023-04-01 16:24:29,330 25732 INFO AADBO odoo.modules.loading: loading account_bank_statement_import/views/account_bank_statement_import_templates.xml 
+2023-04-01 16:24:30,306 25732 INFO AADBO odoo.modules.registry: module account_facturx: creating or updating database tables 
+2023-04-01 16:24:30,581 25732 INFO AADBO odoo.modules.loading: loading account_facturx/data/facturx_templates.xml 
+2023-04-01 16:24:31,443 25732 INFO AADBO odoo.modules.registry: module payment: creating or updating database tables 
+2023-04-01 16:24:32,818 25732 INFO AADBO odoo.modules.loading: loading payment/data/account_data.xml 
+2023-04-01 16:24:32,830 25732 INFO AADBO odoo.modules.loading: loading payment/data/payment_icon_data.xml 
+2023-04-01 16:24:33,177 25732 INFO AADBO odoo.modules.loading: loading payment/data/payment_acquirer_data.xml 
+2023-04-01 16:24:33,512 25732 INFO AADBO odoo.modules.loading: loading payment/data/payment_cron.xml 
+2023-04-01 16:24:33,534 25732 INFO AADBO odoo.modules.loading: loading payment/views/payment_views.xml 
+2023-04-01 16:24:33,929 25732 INFO AADBO odoo.modules.loading: loading payment/views/account_payment_views.xml 
+2023-04-01 16:24:33,989 25732 INFO AADBO odoo.modules.loading: loading payment/views/account_invoice_views.xml 
+2023-04-01 16:24:34,109 25732 INFO AADBO odoo.modules.loading: loading payment/views/payment_acquirer_onboarding_templates.xml 
+2023-04-01 16:24:34,179 25732 INFO AADBO odoo.modules.loading: loading payment/views/payment_templates.xml 
+2023-04-01 16:24:34,306 25732 INFO AADBO odoo.modules.loading: loading payment/views/payment_portal_templates.xml 
+2023-04-01 16:24:34,509 25732 INFO AADBO odoo.modules.loading: loading payment/views/assets.xml 
+2023-04-01 16:24:34,572 25732 INFO AADBO odoo.modules.loading: loading payment/views/res_partner_views.xml 
+2023-04-01 16:24:34,716 25732 INFO AADBO odoo.modules.loading: loading payment/security/ir.model.access.csv 
+2023-04-01 16:24:34,773 25732 INFO AADBO odoo.modules.loading: loading payment/security/payment_security.xml 
+2023-04-01 16:24:34,822 25732 INFO AADBO odoo.modules.loading: loading payment/wizards/payment_link_wizard_views.xml 
+2023-04-01 16:24:35,605 25732 INFO AADBO odoo.modules.registry: module snailmail_account: creating or updating database tables 
+2023-04-01 16:24:36,002 25732 INFO AADBO odoo.modules.loading: loading snailmail_account/views/res_config_settings_views.xml 
+2023-04-01 16:24:36,301 25732 INFO AADBO odoo.modules.loading: loading snailmail_account/views/assets.xml 
+2023-04-01 16:24:36,422 25732 INFO AADBO odoo.modules.loading: loading snailmail_account/wizard/account_invoice_send_views.xml 
+2023-04-01 16:24:37,512 25732 INFO AADBO odoo.modules.registry: module stock_account: creating or updating database tables 
+2023-04-01 16:24:38,853 25732 INFO AADBO odoo.modules.loading: loading stock_account/security/stock_account_security.xml 
+2023-04-01 16:24:39,050 25732 INFO AADBO odoo.modules.loading: loading stock_account/security/ir.model.access.csv 
+2023-04-01 16:24:39,098 25732 INFO AADBO odoo.modules.loading: loading stock_account/wizard/stock_change_standard_price_views.xml 
+2023-04-01 16:24:39,128 25732 INFO AADBO odoo.modules.loading: loading stock_account/data/stock_account_data.xml 
+2023-04-01 16:24:39,146 25732 INFO AADBO odoo.modules.loading: loading stock_account/views/stock_account_views.xml 
+2023-04-01 16:24:39,449 25732 INFO AADBO odoo.modules.loading: loading stock_account/views/res_config_settings_views.xml 
+2023-04-01 16:24:39,724 25732 INFO AADBO odoo.modules.loading: loading stock_account/data/product_data.xml 
+2023-04-01 16:24:39,744 25732 INFO AADBO odoo.modules.loading: loading stock_account/views/product_views.xml 
+2023-04-01 16:24:40,158 25732 INFO AADBO odoo.modules.loading: loading stock_account/views/stock_quant_views.xml 
+2023-04-01 16:24:40,286 25732 INFO AADBO odoo.modules.loading: loading stock_account/views/stock_valuation_layer_views.xml 
+2023-04-01 16:24:41,213 25732 INFO AADBO odoo.modules.registry: module payment_transfer: creating or updating database tables 
+2023-04-01 16:24:41,374 25732 INFO AADBO odoo.modules.loading: loading payment_transfer/views/payment_views.xml 
+2023-04-01 16:24:41,429 25732 INFO AADBO odoo.modules.loading: loading payment_transfer/views/payment_transfer_templates.xml 
+2023-04-01 16:24:41,448 25732 INFO AADBO odoo.modules.loading: loading payment_transfer/data/payment_acquirer_data.xml 
+2023-04-01 16:24:42,532 25732 INFO AADBO odoo.modules.registry: module sale: creating or updating database tables 
+2023-04-01 16:24:44,880 25732 INFO AADBO odoo.modules.loading: loading sale/security/sale_security.xml 
+2023-04-01 16:24:45,859 25732 INFO AADBO odoo.modules.loading: loading sale/security/ir.model.access.csv 
+2023-04-01 16:24:46,042 25732 INFO AADBO odoo.modules.loading: loading sale/report/sale_report.xml 
+2023-04-01 16:24:46,058 25732 INFO AADBO odoo.modules.loading: loading sale/report/sale_report_views.xml 
+2023-04-01 16:24:46,131 25732 INFO AADBO odoo.modules.loading: loading sale/report/sale_report_templates.xml 
+2023-04-01 16:24:46,189 25732 INFO AADBO odoo.modules.loading: loading sale/report/invoice_report_templates.xml 
+2023-04-01 16:24:46,217 25732 INFO AADBO odoo.modules.loading: loading sale/report/report_all_channels_sales_views.xml 
+2023-04-01 16:24:46,225 25732 INFO AADBO odoo.modules.loading: loading sale/data/ir_sequence_data.xml 
+2023-04-01 16:24:46,235 25732 INFO AADBO odoo.modules.loading: loading sale/data/mail_data.xml 
+2023-04-01 16:24:46,317 25732 INFO AADBO odoo.modules.loading: loading sale/data/sale_data.xml 
+2023-04-01 16:24:46,330 25732 INFO AADBO odoo.modules.loading: loading sale/wizard/sale_make_invoice_advance_views.xml 
+2023-04-01 16:24:46,380 25732 INFO AADBO odoo.modules.loading: loading sale/views/sale_views.xml 
+2023-04-01 16:24:48,455 25732 INFO AADBO odoo.modules.loading: loading sale/views/sales_team_views.xml 
+2023-04-01 16:24:48,654 25732 INFO AADBO odoo.modules.loading: loading sale/views/res_partner_views.xml 
+2023-04-01 16:24:49,162 25732 INFO AADBO odoo.modules.loading: loading sale/views/mail_activity_views.xml 
+2023-04-01 16:24:49,181 25732 INFO AADBO odoo.modules.loading: loading sale/views/assets.xml 
+2023-04-01 16:24:49,505 25732 INFO AADBO odoo.modules.loading: loading sale/views/variant_templates.xml 
+2023-04-01 16:24:49,521 25732 INFO AADBO odoo.modules.loading: loading sale/views/sale_portal_templates.xml 
+2023-04-01 16:24:49,711 25732 INFO AADBO odoo.modules.loading: loading sale/views/sale_onboarding_views.xml 
+2023-04-01 16:24:49,865 25732 INFO AADBO odoo.modules.loading: loading sale/views/res_config_settings_views.xml 
+2023-04-01 16:24:50,234 25732 INFO AADBO odoo.modules.loading: loading sale/views/payment_views.xml 
+2023-04-01 16:24:50,350 25732 INFO AADBO odoo.modules.loading: loading sale/views/product_attribute_views.xml 
+2023-04-01 16:24:50,549 25732 INFO AADBO odoo.modules.loading: loading sale/views/product_views.xml 
+2023-04-01 16:24:50,677 25732 INFO AADBO odoo.modules.loading: loading sale/views/utm_campaign_views.xml 
+2023-04-01 16:24:50,762 25732 INFO AADBO odoo.modules.loading: loading sale/wizard/sale_payment_link_views.xml 
+2023-04-01 16:24:51,860 25732 INFO AADBO odoo.modules.registry: module sale_stock: creating or updating database tables 
+2023-04-01 16:24:53,443 25732 INFO AADBO odoo.modules.loading: loading sale_stock/security/sale_stock_security.xml 
+2023-04-01 16:24:53,821 25732 INFO AADBO odoo.modules.loading: loading sale_stock/security/ir.model.access.csv 
+2023-04-01 16:24:53,905 25732 INFO AADBO odoo.modules.loading: loading sale_stock/views/sale_order_views.xml 
+2023-04-01 16:24:54,474 25732 INFO AADBO odoo.modules.loading: loading sale_stock/views/stock_views.xml 
+2023-04-01 16:24:54,909 25732 INFO AADBO odoo.modules.loading: loading sale_stock/views/res_config_settings_views.xml 
+2023-04-01 16:24:55,580 25732 INFO AADBO odoo.modules.loading: loading sale_stock/views/sale_stock_portal_template.xml 
+2023-04-01 16:24:55,611 25732 INFO AADBO odoo.modules.loading: loading sale_stock/views/stock_production_lot_views.xml 
+2023-04-01 16:24:55,672 25732 INFO AADBO odoo.modules.loading: loading sale_stock/views/report_invoice.xml 
+2023-04-01 16:24:55,717 25732 INFO AADBO odoo.modules.loading: loading sale_stock/report/sale_order_report_templates.xml 
+2023-04-01 16:24:55,788 25732 INFO AADBO odoo.modules.loading: loading sale_stock/report/stock_report_deliveryslip.xml 
+2023-04-01 16:24:55,819 25732 INFO AADBO odoo.modules.loading: loading sale_stock/data/sale_stock_data.xml 
+2023-04-01 16:24:55,828 25732 INFO AADBO odoo.modules.loading: loading sale_stock/wizard/stock_rules_report_views.xml 
+2023-04-01 16:24:56,689 25732 INFO AADBO odoo.modules.registry: module procurement_jit: creating or updating database tables 
+2023-04-01 16:24:56,951 25732 INFO AADBO odoo.modules.loading: 43 modules loaded in 57.29s, 6 queries 
+2023-04-01 16:24:58,154 25732 INFO AADBO odoo.modules.loading: Modules loaded. 
+2023-04-01 16:24:58,161 25732 INFO AADBO odoo.addons.base.models.ir_module: getting next ir.actions.todo() 
+2023-04-01 16:24:58,165 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:24:58] "POST /longpolling/poll HTTP/1.1" 200 - 8 0.013 60.093
+2023-04-01 16:24:58,169 25732 INFO AADBO odoo.modules.registry: Registry changed, signaling through the database 
+2023-04-01 16:24:58,173 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:24:58] "POST /web/dataset/call_button HTTP/1.1" 200 - 36538 30.869 29.510
+2023-04-01 16:24:58,565 25732 INFO AADBO odoo.addons.base.models.ir_http: Generating routing map for key None 
+2023-04-01 16:25:08,064 25732 INFO AADBO odoo.modules.registry: At least one model cache has been invalidated, signaling through the database. 
+2023-04-01 16:25:08,068 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:25:08] "GET /web HTTP/1.1" 200 - 664 0.659 8.851
+2023-04-01 16:25:08,190 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:25:08] "GET /web/content/332-7a8aa00/web.assets_common.css HTTP/1.1" 200 - 6 0.008 0.039
+2023-04-01 16:25:08,192 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:25:08] "POST /web/dataset/call_kw/mail.channel/init_odoobot HTTP/1.1" 200 - 90 0.127 0.126
+2023-04-01 16:25:08,495 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:25:08] "GET /web/content/333-33f6b02/web.assets_backend.css HTTP/1.1" 200 - 4 0.006 0.040
+2023-04-01 16:25:08,504 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:25:08] "GET /web/content/334-7a8aa00/web.assets_common.js HTTP/1.1" 200 - 4 0.004 0.050
+2023-04-01 16:25:08,505 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:25:08] "GET /web/content/335-33f6b02/web.assets_backend.js HTTP/1.1" 200 - 4 0.011 0.041
+2023-04-01 16:25:08,912 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:25:08] "GET /web/webclient/load_menus/42ace99fc1624fcb0aa3c14e8362af61acdd3e8f HTTP/1.1" 200 - 272 0.211 0.194
+2023-04-01 16:25:09,142 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:25:09] "GET /web/webclient/qweb/5884b9574423310af75bb043310c0a6574e79116?mods=base,web,base_setup,bus,web_tour,mail,product,barcodes,stock,web_editor,auth_signup,portal,resource,digest,account,mail_bot,hr,account_bank_statement_import,base_import,hr_org_chart,iap,partner_autocomplete,payment,payment_transfer,sales_team,utm,sale,sale_stock,sms,snailmail,snailmail_account,web_diagram,web_kanban_gauge,web_unsplash HTTP/1.1" 200 - 1 0.002 0.071
+2023-04-01 16:25:10,273 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:25:10] "GET /web/webclient/translations/5227498d9df4b403b0244c75aac21e0c091e50ce?mods=base%2Cweb%2Cbase_setup%2Cbus%2Cweb_tour%2Cmail%2Cproduct%2Cbarcodes%2Cstock%2Cweb_editor%2Cauth_signup%2Cportal%2Cresource%2Cdigest%2Caccount%2Cmail_bot%2Chr%2Caccount_bank_statement_import%2Cbase_import%2Chr_org_chart%2Ciap%2Cpartner_autocomplete%2Cpayment%2Cpayment_transfer%2Csales_team%2Cutm%2Csale%2Csale_stock%2Csms%2Csnailmail%2Csnailmail_account%2Cweb_diagram%2Cweb_kanban_gauge%2Cweb_unsplash&lang=en_US HTTP/1.1" 200 - 3 0.002 0.010
+2023-04-01 16:25:10,635 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:25:10] "POST /mail/init_messaging HTTP/1.1" 200 - 72 0.073 0.046
+2023-04-01 16:25:10,770 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:25:10] "GET /web/static/src/xml/debug.xml?debug=1680366310471 HTTP/1.1" 200 - - - -
+2023-04-01 16:25:10,810 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:25:10] "POST /web/dataset/call_kw/res.users/systray_get_activities HTTP/1.1" 200 - 4 0.014 0.014
+2023-04-01 16:25:10,857 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:25:10] "POST /longpolling/poll HTTP/1.1" 200 - 21 0.027 0.033
+2023-04-01 16:25:10,976 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:25:10] "POST /web/dataset/call_kw/ir.ui.view/check_access_rights HTTP/1.1" 200 - 2 0.006 0.013
+2023-04-01 16:25:11,156 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:25:11] "POST /web/dataset/call_kw/mail.message/message_fetch HTTP/1.1" 200 - 17 0.033 0.025
+2023-04-01 16:25:11,184 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:25:11] "POST /web/dataset/call_kw/res.users/read HTTP/1.1" 200 - 2 0.002 0.007
+2023-04-01 16:25:11,262 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:25:11] "POST /web/dataset/call_kw/mail.channel/channel_fetched HTTP/1.1" 200 - 13 0.013 0.060
+2023-04-01 16:25:11,273 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:25:11] "POST /longpolling/poll HTTP/1.1" 200 - 10 0.010 0.303
+2023-04-01 16:25:11,425 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:25:11] "POST /web/dataset/call_kw/mail.channel/channel_minimize HTTP/1.1" 200 - 20 0.021 0.057
+2023-04-01 16:25:11,505 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:25:11] "GET /web/image/res.partner/2/image_128 HTTP/1.1" 200 - 11 0.011 0.019
+2023-04-01 16:25:11,593 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:25:11] "POST /longpolling/poll HTTP/1.1" 200 - 10 0.015 0.022
+2023-04-01 16:25:11,593 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:25:11] "POST /web/action/load HTTP/1.1" 200 - 14 0.022 0.018
+2023-04-01 16:25:11,771 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:25:11] "POST /web/dataset/call_kw/mail.message/load_views HTTP/1.1" 200 - 26 0.033 0.042
+2023-04-01 16:25:11,966 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:25:11] "POST /web/dataset/call_kw/ir.filters/get_filters HTTP/1.1" 200 - 11 0.021 0.013
+2023-04-01 16:25:11,972 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:25:11] "GET /web/image?model=res.users&field=image_128&id=2 HTTP/1.1" 304 - 12 0.016 0.022
+2023-04-01 16:25:12,195 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:25:12] "POST /web/dataset/call_kw/mail.message/message_fetch HTTP/1.1" 200 - 4 0.006 0.013
+2023-04-01 16:25:12,937 25732 INFO ? werkzeug: 127.0.0.1 - - [01/Apr/2023 16:25:12] "GET /web_tour/static/src/xml/tip.xml?debug=1680366312918 HTTP/1.1" 200 - - - -
+2023-04-01 16:25:14,504 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:25:14] "POST /web/dataset/call_kw/mail.channel/channel_fetched HTTP/1.1" 200 - 8 0.007 0.015
+2023-04-01 16:25:24,072 25732 INFO AADBO odoo.addons.base.models.ir_cron: Starting job `Digest Emails`. 
+2023-04-01 16:25:24,104 25732 INFO AADBO odoo.addons.base.models.ir_cron: Job `Digest Emails` done. 
+2023-04-01 16:25:24,108 25732 INFO AADBO odoo.addons.base.models.ir_cron: Starting job `Post process payment transactions`. 
+2023-04-01 16:25:24,126 25732 INFO AADBO odoo.addons.base.models.ir_cron: Job `Post process payment transactions` done. 
+2023-04-01 16:26:01,694 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:26:01] "POST /longpolling/poll HTTP/1.1" 200 - 7 0.011 50.018
+2023-04-01 16:26:52,067 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:26:52] "POST /longpolling/poll HTTP/1.1" 200 - 8 0.004 50.021
+2023-04-01 16:27:09,246 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:27:09] "POST /web/dataset/call_kw/mail.channel/init_odoobot HTTP/1.1" 200 - 2 0.005 0.011
+2023-04-01 16:27:32,951 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:27:32] "POST /web/action/load HTTP/1.1" 200 - 37 0.043 0.033
+2023-04-01 16:27:33,421 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:27:33] "POST /web/dataset/call_kw/ir.module.module/load_views HTTP/1.1" 200 - 90 0.091 0.062
+2023-04-01 16:27:33,783 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:27:33] "POST /web/dataset/search_read HTTP/1.1" 200 - 5 0.012 0.014
+2023-04-01 16:27:42,126 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:27:42] "POST /longpolling/poll HTTP/1.1" 200 - 8 0.014 50.028
+2023-04-01 16:28:32,492 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:28:32] "POST /longpolling/poll HTTP/1.1" 200 - 8 0.010 50.031
+2023-04-01 16:29:22,540 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:29:22] "POST /longpolling/poll HTTP/1.1" 200 - 8 0.010 50.022
+2023-04-01 16:29:31,936 25732 INFO Main odoo.addons.base.models.ir_cron: Starting job `Post process payment transactions`. 
+2023-04-01 16:29:31,973 25732 INFO Main odoo.addons.base.models.ir_cron: Job `Post process payment transactions` done. 
+2023-04-01 16:30:12,902 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:30:12] "POST /longpolling/poll HTTP/1.1" 200 - 8 0.008 50.027
+2023-04-01 16:31:02,946 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:31:02] "POST /longpolling/poll HTTP/1.1" 200 - 8 0.005 50.029
+2023-04-01 16:31:53,313 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:31:53] "POST /longpolling/poll HTTP/1.1" 200 - 8 0.012 50.030
+2023-04-01 16:32:43,362 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:32:43] "POST /longpolling/poll HTTP/1.1" 200 - 8 0.009 50.022
+2023-04-01 16:33:33,731 25732 INFO AADBO werkzeug: 127.0.0.1 - - [01/Apr/2023 16:33:33] "POST /longpolling/poll HTTP/1.1" 200 - 8 0.012 50.035
+2023-04-01 16:34:06,540 20020 INFO ? odoo: Odoo version 13.0-20230401 
+2023-04-01 16:34:06,540 20020 INFO ? odoo: Using configuration file at D:\Odoo 13.0\server\odoo.conf 
+2023-04-01 16:34:06,540 20020 INFO ? odoo: addons paths: ['D:\\Odoo 13.0\\server\\odoo\\addons', 'c:\\users\\muluh\\appdata\\local\\openerp s.a\\odoo\\addons\\13.0', 'd:\\odoo 13.0\\server\\odoo\\addons', 'd:\\odoo 13.0\\server\\odoo\\addon'] 
+2023-04-01 16:34:06,540 20020 INFO ? odoo: database: openpg@localhost:5432 
+2023-04-01 16:34:06,779 20020 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe 
+2023-04-01 16:34:06,958 20020 INFO ? odoo.service.server: HTTP service (werkzeug) running on TriaPC-3:8069 
+2023-04-01 16:34:14,731 25732 INFO ? odoo.service.server: Initiating shutdown 
+2023-04-01 16:34:14,731 25732 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2023-04-01 16:34:15,168 25732 INFO ? odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 13 connections  
+2023-04-01 16:34:15,172 25732 ERROR ? odoo.addons.bus.models.bus: Bus.loop error, sleep and retry 
+Traceback (most recent call last):
+  File "D:\Odoo 13.0\server\odoo\addons\bus\models\bus.py", line 162, in loop
+    conn.poll()
+psycopg2.InterfaceError: connection already closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Odoo 13.0\server\odoo\addons\bus\models\bus.py", line 176, in run
+    self.loop()
+  File "D:\Odoo 13.0\server\odoo\addons\bus\models\bus.py", line 171, in loop
+    event.set()
+  File "D:\Odoo 13.0\server\odoo\sql_db.py", line 436, in __exit__
+    self.close()
+  File "D:\Odoo 13.0\server\odoo\sql_db.py", line 173, in wrapper
+    return f(self, *args, **kwargs)
+  File "D:\Odoo 13.0\server\odoo\sql_db.py", line 311, in close
+    return self._close(False)
+  File "D:\Odoo 13.0\server\odoo\sql_db.py", line 341, in _close
+    self._cnx.rollback()
+psycopg2.InterfaceError: connection already closed
+2023-04-01 16:34:18,572 20020 INFO ? odoo.http: HTTP Configuring static files 
+2023-04-01 16:34:18,666 20020 INFO AADBO odoo.modules.loading: loading 1 modules... 
+2023-04-01 16:34:18,695 20020 INFO AADBO odoo.modules.loading: 1 modules loaded in 0.03s, 0 queries 
+2023-04-01 16:34:18,803 20020 INFO AADBO odoo.modules.loading: loading 43 modules... 
+2023-04-01 16:34:19,929 20020 INFO AADBO odoo.modules.loading: 43 modules loaded in 1.13s, 0 queries 
+2023-04-01 16:34:21,418 20020 INFO AADBO odoo.modules.loading: Modules loaded. 
+2023-04-01 16:34:21,431 20020 INFO AADBO odoo.addons.base.models.ir_http: Generating routing map for key None 
+2023-04-01 16:34:21,786 20020 INFO ? odoo.addons.bus.models.bus: Bus.loop listen imbus on db postgres 

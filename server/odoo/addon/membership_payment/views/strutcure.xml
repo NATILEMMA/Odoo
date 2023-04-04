@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+
+<odoo>
+
+    <record id="membership_structure_tree" model="ir.ui.view">
+        <field name="name">membership structure</field>
+        <field name="model">membership.structure</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" force_save="1" readonly="1"/>
+                <field name="parent_id_2" force_save="1" readonly="1"/>
+                <field name="sub_city" force_save="1" readonly="1"/>
+                 <field name="wereda" force_save="1" readonly="1"/>
+                 <field name="main_office" force_save="1" readonly="1"/>
+                 <field name="cell" force_save="1" readonly="1"/>
+                 <field name="is_member" force_save="1" readonly="1"/>
+                 <field name="is_league" force_save="1" readonly="1"/>
+                 <field name="is_supporter" force_save="1" readonly="1"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="membership_structure_action_3" model="ir.actions.act_window">
+        <field name="name">membership structure</field>
+        <field name="res_model">membership.structure</field>
+        <field name="view_mode">tree</field>
+    </record>
+    <record model="ir.actions.server" id="action_upd_members_structure">
+        <field name="name">update structure</field>
+        <field name="model_id" ref="model_membership_structure"/>
+        <field name="type">ir.actions.server</field>
+        <field name="state">code</field>
+        <field name="code">model.give_structure()</field>
+    </record>
+     <record model="ir.actions.server" id="action_upd_league_structure">
+        <field name="name">update structure</field>
+        <field name="model_id" ref="model_league_structure"/>
+        <field name="type">ir.actions.server</field>
+        <field name="state">code</field>
+        <field name="code">model.give_structure()</field>
+    </record>
+    <record model="ir.actions.server" id="action_upd_supporter_structure">
+        <field name="name">update structure</field>
+        <field name="model_id" ref="model_supporter_structure"/>
+        <field name="type">ir.actions.server</field>
+        <field name="state">code</field>
+        <field name="code">model.give_structure()</field>
+    </record>
+
+    <!-- <menuitem id="membership_structure_action"
+              name="Membership Structure"
+              parent="membership.menu_marketing_config_association"
+              action="membership_structure_action_3"
+              sequence="70"
+              />
+     -->
+<!--    <menuitem id="action_upd_members_structure_8"-->
+<!--              name="give Membership Structure"-->
+<!--              parent="membership.menu_marketing_config_association"-->
+<!--              action="action_upd_members_structure"-->
+<!--              sequence="101"-->
+<!--              />-->
+<!--    <menuitem id="action_upd_members_structure_9"-->
+<!--              name="give league Structure"-->
+<!--              parent="membership.menu_marketing_config_association"-->
+<!--              action="action_upd_league_structure"-->
+<!--              sequence="102"-->
+<!--              />-->
+<!--    <menuitem id="action_upd_members_structure_11"-->
+<!--              name="give Candidate/supporter Structure"-->
+<!--              parent="membership.menu_marketing_config_association"-->
+<!--              action="action_upd_supporter_structure"-->
+<!--              sequence="103"-->
+<!--              />-->
+</odoo>

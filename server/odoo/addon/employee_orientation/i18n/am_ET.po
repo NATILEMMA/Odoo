@@ -1,0 +1,942 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* employee_orientation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20221005\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-23 05:31+0000\n"
+"PO-Revision-Date: 2023-03-23 05:31+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: employee_orientation
+#: model:mail.template,body_html:employee_orientation.orientation_request_mailer
+msgid ""
+"\n"
+"                <div style=\"font-family: 'Lucica Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: #FFF; \">\n"
+"                    <p>Hello ${object.partner_id.name},</p>\n"
+"                    <p>You are requested to conduct orientation program listed below.</p>\n"
+"                    <p>Check Line: ${object.request_name}</p>\n"
+"                    <p>Employee: ${object.employee_id.name}</p>\n"
+"                    %if object.request_expected_date:\n"
+"                        <p>Expected Date: ${object.request_expected_date}</p>\n"
+"                    % endif\n"
+"                    <br/>\n"
+"                    <p>Thank you!</p>\n"
+"                    <br/>\n"
+"                    <div style=\"width: 375px; margin: 0px; padding: 0px; background-color: #8E0000; border-top-left-radius: 5px 5px; border-top-right-radius: 5px 5px; background-repeat: repeat no-repeat;\">\n"
+"                    <h3 style=\"margin: 0px; padding: 2px 14px; font-size: 12px; color: #DDD;\">\n"
+"                    <strong style=\"text-transform:uppercase;\">${object.company_id.name}</strong></h3>\n"
+"                    </div>\n"
+"                    <div style=\"width: 347px; margin: 0px; padding: 5px 14px; line-height: 16px; background-color: #F2F2F2;\">\n"
+"                        <span style=\"color: #222; margin-bottom: 5px; display: block; \">\n"
+"                        ${object.company_id.partner_id.sudo().with_context(show_address=True, html_format=True).name_get()[0][1] | safe}\n"
+"                        </span>\n"
+"                        % if object.company_id.phone:\n"
+"                            <div style=\"margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; \">\n"
+"                                Phone:&nbsp; ${object.company_id.phone}\n"
+"                            </div>\n"
+"                        % endif\n"
+"                        % if object.company_id.website:\n"
+"                            <div>\n"
+"                                Web :&nbsp;<a href=\"${object.company_id.website}\">${object.company_id.website}</a>\n"
+"                            </div>\n"
+"                        %endif\n"
+"                        <p></p>\n"
+"                    </div>\n"
+"                </div>\n"
+"            \n"
+"            "
+msgstr ""
+"\n"
+"                <div style=\"font-family: 'Lucica Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: #FFF; \">\n"
+"                    <p> ሰላም ${object.partner_id.name},</p>\n"
+"                    <p>ከዚህ በታች የተዘረዘሩ የማስተላለፊያ መርሃግብር እንዲያካሂዱ ተጠየቁ.</p>\n"
+"                    <p>ምልክት ያድርጉ: ${object.request_name}</p>\n"
+"                    <p>ሠራተኛ: ${object.employee_id.name}</p>\n"
+"                    %if object.request_expected_date:\n"
+"                        <p>የሚጠበቀው ቀን: ${object.request_expected_date}</p>\n"
+"                    % endif\n"
+"                    <br/>\n"
+"                    <p>አመሰግናለሁ!</p>\n"
+"                    <br/>\n"
+"                    <div style=\"width: 375px; margin: 0px; padding: 0px; background-color: #8E0000; border-top-left-radius: 5px 5px; border-top-right-radius: 5px 5px; background-repeat: repeat no-repeat;\">\n"
+"                    <h3 style=\"margin: 0px; padding: 2px 14px; font-size: 12px; color: #DDD;\">\n"
+"                    <strong style=\"text-transform:uppercase;\">${object.company_id.name}</strong></h3>\n"
+"                    </div>\n"
+"                    <div style=\"width: 347px; margin: 0px; padding: 5px 14px; line-height: 16px; background-color: #F2F2F2;\">\n"
+"                        <span style=\"color: #222; margin-bottom: 5px; display: block; \">\n"
+"                        ${object.company_id.partner_id.sudo().with_context(show_address=True, html_format=True).name_get()[0][1] | safe}\n"
+"                        </span>\n"
+"                        % if object.company_id.phone:\n"
+"                            <div style=\"margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; \">\n"
+"                                ስልክ:&nbsp; ${object.company_id.phone}\n"
+"                            </div>\n"
+"                        % endif\n"
+"                        % if object.company_id.website:\n"
+"                            <div>\n"
+"                                ድር :&nbsp;<a href=\"${object.company_id.website}\">${object.company_id.website}</a>\n"
+"                            </div>\n"
+"                        %endif\n"
+"                        <p></p>\n"
+"                    </div>\n"
+"                </div>\n"
+"            \n"
+"            "
+
+#. module: employee_orientation
+#: model:mail.template,body_html:employee_orientation.orientation_training_mailer
+msgid ""
+"\n"
+"                <div style=\"font-family: 'Lucica Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: #FFF; \">\n"
+"                    <p>Hello ${object.program_convener.name},</p>\n"
+"                    <p>You are requested to conduct ${object.program_name} Training program for ${object.program_department.name} department\n"
+"                    % if object.from_date and object.to_date:\n"
+"                        from ${object.from_date} to ${object.to_date}\n"
+"                    % endif\n"
+"                    .</p>\n"
+"                    <br/>\n"
+"                    <p>Thank you!</p>\n"
+"                    <br/>\n"
+"                    <div style=\"width: 375px; margin: 0px; padding: 0px; background-color: #8E0000; border-top-left-radius: 5px 5px; border-top-right-radius: 5px 5px; background-repeat: repeat no-repeat;\">\n"
+"                    <h3 style=\"margin: 0px; padding: 2px 14px; font-size: 12px; color: #DDD;\">\n"
+"                    <strong style=\"text-transform:uppercase;\">${object.company_id.name}</strong></h3>\n"
+"                    </div>\n"
+"                    <div style=\"width: 347px; margin: 0px; padding: 5px 14px; line-height: 16px; background-color: #F2F2F2;\">\n"
+"                        <span style=\"color: #222; margin-bottom: 5px; display: block; \">\n"
+"                        ${object.company_id.partner_id.sudo().with_context(show_address=True, html_format=True).name_get()[0][1] | safe}\n"
+"                        </span>\n"
+"                        % if object.company_id.phone:\n"
+"                            <div style=\"margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; \">\n"
+"                                Phone:&nbsp; ${object.company_id.phone}\n"
+"                            </div>\n"
+"                        % endif\n"
+"                        % if object.company_id.website:\n"
+"                            <div>\n"
+"                                Web :&nbsp;<a href=\"${object.company_id.website}\">${object.company_id.website}</a>\n"
+"                            </div>\n"
+"                        %endif\n"
+"                        <p></p>\n"
+"                    </div>\n"
+"                </div>\n"
+"            \n"
+"            "
+msgstr ""
+"\n"
+"                <div style=\"font-family: 'Lucica Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: #FFF; \">\n"
+"                    <p>ሀሎ ${object.program_convener.name},</p>\n"
+"                    <p>የሥልጠና ፕሮግራም ${object.program_name} እንዲካፈሉ ተጠይቀዋል ለ ${object.program_department.name} ክፍል \n"
+"                    % if object.from_date and object.to_date:\n"
+"                        ከ ${object.from_date} ለ ${object.to_date}\n"
+"                    % endif\n"
+"                    .</p>\n"
+"                    <br/>\n"
+"                    <p>አመሰግናለሁ!</p>\n"
+"                    <br/>\n"
+"                    <div style=\"width: 375px; margin: 0px; padding: 0px; background-color: #8E0000; border-top-left-radius: 5px 5px; border-top-right-radius: 5px 5px; background-repeat: repeat no-repeat;\">\n"
+"                    <h3 style=\"margin: 0px; padding: 2px 14px; font-size: 12px; color: #DDD;\">\n"
+"                    <strong style=\"text-transform:uppercase;\">${object.company_id.name}</strong></h3>\n"
+"                    </div>\n"
+"                    <div style=\"width: 347px; margin: 0px; padding: 5px 14px; line-height: 16px; background-color: #F2F2F2;\">\n"
+"                        <span style=\"color: #222; margin-bottom: 5px; display: block; \">\n"
+"                        ${object.company_id.partner_id.sudo().with_context(show_address=True, html_format=True).name_get()[0][1] | safe}\n"
+"                        </span>\n"
+"                        % if object.company_id.phone:\n"
+"                            <div style=\"margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; \">\n"
+"                                ስልክ:&nbsp; ${object.company_id.phone}\n"
+"                            </div>\n"
+"                        % endif\n"
+"                        % if object.company_id.website:\n"
+"                            <div>\n"
+"                                ድር :&nbsp;<a href=\"${object.company_id.website}\">${object.company_id.website}</a>\n"
+"                            </div>\n"
+"                        %endif\n"
+"                        <p></p>\n"
+"                    </div>\n"
+"                </div>\n"
+"            \n"
+"            "
+
+#. module: employee_orientation
+#: model:ir.model.constraint,message:employee_orientation.constraint_employee_training_program_round_unique_name
+msgid " A property tag name  name must be unique"
+msgstr "የንብረት መለያ ስም ልዩ መሆን አለበት"
+
+#. module: employee_orientation
+#: model_terms:ir.ui.view,arch_db:employee_orientation.print_pack_template
+msgid ",with duration of"
+msgstr ",በ ቆይታ ጊዜ"
+
+#. module: employee_orientation
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_orientation__message_needaction
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_training__message_needaction
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_checklist__message_needaction
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_request__message_needaction
+msgid "Action Needed"
+msgstr "እርምጃ ያስፈልጋል"
+
+#. module: employee_orientation
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_checklist__active
+msgid "Active"
+msgstr "ንቁ"
+
+#. module: employee_orientation
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_request__attachment_id_1
+msgid "Attachment"
+msgstr "ተያያዥ"
+
+#. module: employee_orientation
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_orientation__message_attachment_count
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_training__message_attachment_count
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_checklist__message_attachment_count
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_request__message_attachment_count
+msgid "Attachment Count"
+msgstr "ተያያዥ ቆጠራ"
+
+#. module: employee_orientation
+#: model:ir.model.fields.selection,name:employee_orientation.selection__orientation_request__state__cancel
+#: model_terms:ir.ui.view,arch_db:employee_orientation.view_employee_orientation_form
+#: model_terms:ir.ui.view,arch_db:employee_orientation.view_orientation_request_form
+msgid "Cancel"
+msgstr "ይቅር"
+
+#. module: employee_orientation
+#: model_terms:ir.ui.view,arch_db:employee_orientation.view_employee_training_form
+msgid "Cancel Event"
+msgstr "ክስተት ሰርዝ"
+
+#. module: employee_orientation
+#: model:ir.model.fields.selection,name:employee_orientation.selection__employee_orientation__state__cancel
+#: model:ir.model.fields.selection,name:employee_orientation.selection__employee_training__state__cancel
+msgid "Canceled"
+msgstr "ተሰርዘዋል"
+
+#. module: employee_orientation
+#: model:ir.actions.report,name:employee_orientation.print_pack_certificates
+#: model:ir.model.fields,field_description:employee_orientation.field_hr_employee__certificates
+msgid "Certificates"
+msgstr "የምስክር ወረቀቶች"
+
+#. module: employee_orientation
+#: model:ir.model,name:employee_orientation.model_orientation_checklist
+msgid "Checklist"
+msgstr "የማረጋገጫ ዝርዝር"
+
+#. module: employee_orientation
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_checklist__checklist_line_id
+#: model_terms:ir.ui.view,arch_db:employee_orientation.view_orientation_checklist_form
+msgid "Checklist Line"
+msgstr "የማረጋገጫ ዝርዝር መስመር"
+
+#. module: employee_orientation
+#: model_terms:ir.ui.view,arch_db:employee_orientation.view_orientation_checklist_form
+msgid "Checklist Lines"
+msgstr "የማረጋገጫ ዝርዝር መስመሮች"
+
+#. module: employee_orientation
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_orientation__employee_company
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_training__company_id
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_request__company_id
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_request__employee_company
+msgid "Company"
+msgstr "ድርጅት"
+
+#. module: employee_orientation
+#: model_terms:ir.ui.view,arch_db:employee_orientation.print_pack_template
+msgid "Company Logo"
+msgstr "ድርጅት አርማ"
+
+#. module: employee_orientation
+#: model_terms:ir.ui.view,arch_db:employee_orientation.view_orientation_request_form
+msgid "Complete"
+msgstr "ተጠናቀቀ"
+
+#. module: employee_orientation
+#: model:ir.model.fields.selection,name:employee_orientation.selection__employee_orientation__state__complete
+#: model:ir.model.fields.selection,name:employee_orientation.selection__employee_training__state__complete
+#: model:ir.model.fields.selection,name:employee_orientation.selection__orientation_request__state__complete
+msgid "Completed"
+msgstr "ተጠናቅቋል"
+
+#. module: employee_orientation
+#: code:addons/employee_orientation/models/employee_training.py:0
+#: code:addons/employee_orientation/models/orientation_checklist_request.py:0
+#, python-format
+msgid "Compose Email"
+msgstr "የተጻፉ ኢሜይል"
+
+#. module: employee_orientation
+#: model_terms:ir.ui.view,arch_db:employee_orientation.view_employee_orientation_form
+msgid "Confirm"
+msgstr "አረጋግጥ"
+
+#. module: employee_orientation
+#: model_terms:ir.ui.view,arch_db:employee_orientation.view_employee_training_form
+msgid "Confirm Event"
+msgstr "ክስተት አረጋግጥ"
+
+#. module: employee_orientation
+#: model:ir.model.fields.selection,name:employee_orientation.selection__employee_orientation__state__confirm
+#: model:ir.model.fields.selection,name:employee_orientation.selection__employee_training__state__confirm
+msgid "Confirmed"
+msgstr "ተረጋግጧል"
+
+#. module: employee_orientation
+#: model_terms:ir.actions.act_window,help:employee_orientation.action_employee_orientation
+msgid "Create Employee Orientation."
+msgstr "የሰራተኛ ኦሪየንቴሽን ይፍጠሩ."
+
+#. module: employee_orientation
+#: model_terms:ir.actions.act_window,help:employee_orientation.action_employee_training_program_round
+msgid "Create Employee Training Program type round."
+msgstr "የሰራተኛ ስልጠና ፕሮግራም አይነት ዙር ይፍጠሩ."
+
+#. module: employee_orientation
+#: model_terms:ir.actions.act_window,help:employee_orientation.action_employee_training_program
+msgid "Create Employee Training Program type."
+msgstr "የሰራተኛ ስልጠና ፕሮግራም ዓይነት ይፍጠሩ."
+
+#. module: employee_orientation
+#: model_terms:ir.actions.act_window,help:employee_orientation.action_employee_training
+msgid "Create Employee Training Program."
+msgstr "የሰራተኛ ስልጠና ፕሮግራም ይፍጠሩ."
+
+#. module: employee_orientation
+#: model_terms:ir.actions.act_window,help:employee_orientation.action_checklist_line
+msgid "Create Orientation Checklists Lines."
+msgstr "ኦሪየንቴሽን ማረጋገጫ ዝርዝሮችን መስመሮች ይፍጠሩ"
+
+#. module: employee_orientation
+#: model_terms:ir.actions.act_window,help:employee_orientation.action_orientation_checklist
+msgid "Create Orientation Checklists."
+msgstr "ኦሪየንቴሽን ማረጋገጫ ዝርዝሮችን ይፍጠሩ. "
+
+#. module: employee_orientation
+#: model_terms:ir.actions.act_window,help:employee_orientation.action_orientation_request
+msgid "Create Orientation Requests."
+msgstr "ኦሪየንቴሽን ጥያቄዎችን ይፍጠሩ."
+
+#. module: employee_orientation
+#: model:ir.model.fields,field_description:employee_orientation.field_checklist_line__create_uid
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_orientation__create_uid
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_training__create_uid
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_training_program__create_uid
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_training_program_round__create_uid
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_checklist__create_uid
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_force_complete__create_uid
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_request__create_uid
+msgid "Created by"
+msgstr "የተፈጠረ በ"
+
+#. module: employee_orientation
+#: model:ir.model.fields,field_description:employee_orientation.field_checklist_line__create_date
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_orientation__create_date
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_training__create_date
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_training_program__create_date
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_training_program_round__create_date
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_checklist__create_date
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_force_complete__create_date
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_request__create_date
+msgid "Created on"
+msgstr "ተፈጠረ በ ቀን"
+
+#. module: employee_orientation
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_orientation__date
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_request__request_date
+msgid "Date"
+msgstr "ቀን"
+
+#. module: employee_orientation
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_training__date_from
+msgid "Date From"
+msgstr "ቀን ከ"
+
+#. module: employee_orientation
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_training__date_to
+msgid "Date To"
+msgstr "ቀን"
+
+#. module: employee_orientation
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_orientation__department
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_training__program_department
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_checklist__checklist_department
+msgid "Department"
+msgstr "ክፍል"
+
+#. module: employee_orientation
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_orientation__note_id
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_training__note_id
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_request__note_id
+msgid "Description"
+msgstr "መግለጫ"
+
+#. module: employee_orientation
+#: model:ir.model.fields,field_description:employee_orientation.field_checklist_line__display_name
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_orientation__display_name
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_training__display_name
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_training_program__display_name
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_training_program_round__display_name
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_checklist__display_name
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_force_complete__display_name
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_request__display_name
+#: model:ir.model.fields,field_description:employee_orientation.field_report_employee_orientation_print_pack_template__display_name
+msgid "Display Name"
+msgstr "መጠሪያው ስም"
+
+#. module: employee_orientation
+#: model_terms:ir.ui.view,arch_db:employee_orientation.view_orientation_request_form
+msgid "Documents"
+msgstr "ሰነዶች"
+
+#. module: employee_orientation
+#: model:ir.model.fields.selection,name:employee_orientation.selection__employee_orientation__state__draft
+msgid "Draft"
+msgstr "ረቂቅ"
+
+#. module: employee_orientation
+#: model:ir.model,name:employee_orientation.model_hr_employee
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_orientation__employee_name
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_request__employee_id
+msgid "Employee"
+msgstr "ሰራተኛ"
+
+#. module: employee_orientation
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_training__training_id
+msgid "Employee Details"
+msgstr "የሰራተኛ ዝርዝሮች"
+
+#. module: employee_orientation
+#: model:ir.actions.act_window,name:employee_orientation.action_employee_orientation
+#: model:ir.model,name:employee_orientation.model_employee_orientation
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_orientation__name
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_request__request_orientation
+#: model:ir.ui.menu,name:employee_orientation.menu_employee_orientation_child
+#: model_terms:ir.ui.view,arch_db:employee_orientation.view_employee_orientation_form
+#: model_terms:ir.ui.view,arch_db:employee_orientation.view_employee_orientation_search
+#: model_terms:ir.ui.view,arch_db:employee_orientation.view_employee_orientation_tree
+#: model_terms:ir.ui.view,arch_db:employee_orientation.view_orientation_request_form
+#: model_terms:ir.ui.view,arch_db:employee_orientation.view_orientation_request_search
+#: model_terms:ir.ui.view,arch_db:employee_orientation.view_orientation_request_tree
+msgid "Employee Orientation"
+msgstr "የሠራተኛ ኦሪየንቴሽን"
+
+#. module: employee_orientation
+#: model:ir.model,name:employee_orientation.model_orientation_request
+#: model:mail.template,subject:employee_orientation.orientation_request_mailer
+msgid "Employee Orientation Request"
+msgstr "የሰራተኛ ኦሪየንቴሽን ጥያቄ"
+
+#. module: employee_orientation
+#: model:ir.model,name:employee_orientation.model_employee_training
+msgid "Employee Training"
+msgstr "የሰራተኛ ስልጠና"
+
+#. module: employee_orientation
+#: model:ir.actions.act_window,name:employee_orientation.action_employee_training
+#: model_terms:ir.ui.view,arch_db:employee_orientation.view_employee_training_form
+#: model_terms:ir.ui.view,arch_db:employee_orientation.view_employee_training_search
+#: model_terms:ir.ui.view,arch_db:employee_orientation.view_employee_training_tree
+msgid "Employee Training Program"
+msgstr "የሰራተኛ ስልጠና ፕሮግራም"
+
+#. module: employee_orientation
+#: model:ir.actions.act_window,name:employee_orientation.action_employee_training_program
+msgid "Employee Training Program name"
+msgstr "የሰራተኛ ስልጠና ፕሮግራም ስም"
+
+#. module: employee_orientation
+#: model:ir.actions.act_window,name:employee_orientation.action_employee_training_program_round
+msgid "Employee Training Program round"
+msgstr "የሰራተኛ ስልጠና ፕሮግራም ዙር"
+
+#. module: employee_orientation
+#: model:mail.template,subject:employee_orientation.orientation_training_mailer
+msgid "Employee Training Request"
+msgstr "የሰራተኛ ስልጠና ጥያቄ"
+
+#. module: employee_orientation
+#: model_terms:ir.ui.view,arch_db:employee_orientation.view_employee_training_form
+msgid "Event Complete"
+msgstr "ክስተት ተጠናቅቋል"
+
+#. module: employee_orientation
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_request__request_expected_date
+msgid "Expected Date"
+msgstr "የሚጠበቀው ቀን"
+
+#. module: employee_orientation
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_orientation__message_follower_ids
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_training__message_follower_ids
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_checklist__message_follower_ids
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_request__message_follower_ids
+msgid "Followers"
+msgstr "ተከታዮች"
+
+#. module: employee_orientation
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_orientation__message_channel_ids
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_training__message_channel_ids
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_checklist__message_channel_ids
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_request__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "ተከታዮች (ሰርጦች)"
+
+#. module: employee_orientation
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_orientation__message_partner_ids
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_training__message_partner_ids
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_checklist__message_partner_ids
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_request__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "ተከታዮች (አጋሮች)"
+
+#. module: employee_orientation
+#: model_terms:ir.ui.view,arch_db:employee_orientation.print_pack_template
+msgid "Hours by company"
+msgstr "ሰዓታት በኩባንያዎች"
+
+#. module: employee_orientation
+#: model:ir.model.fields,field_description:employee_orientation.field_checklist_line__id
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_orientation__id
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_training__id
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_training_program__id
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_training_program_round__id
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_checklist__id
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_force_complete__id
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_request__id
+#: model:ir.model.fields,field_description:employee_orientation.field_report_employee_orientation_print_pack_template__id
+msgid "ID"
+msgstr "መታወቂያ"
+
+#. module: employee_orientation
+#: model:ir.model.fields,help:employee_orientation.field_employee_orientation__message_needaction
+#: model:ir.model.fields,help:employee_orientation.field_employee_orientation__message_unread
+#: model:ir.model.fields,help:employee_orientation.field_employee_training__message_needaction
+#: model:ir.model.fields,help:employee_orientation.field_employee_training__message_unread
+#: model:ir.model.fields,help:employee_orientation.field_orientation_checklist__message_needaction
+#: model:ir.model.fields,help:employee_orientation.field_orientation_checklist__message_unread
+#: model:ir.model.fields,help:employee_orientation.field_orientation_request__message_needaction
+#: model:ir.model.fields,help:employee_orientation.field_orientation_request__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "ከተመረጠ, አዳዲስ መልእክቶች ትኩረትዎን ይፈልጋሉ."
+
+#. module: employee_orientation
+#: model:ir.model.fields,help:employee_orientation.field_employee_orientation__message_has_error
+#: model:ir.model.fields,help:employee_orientation.field_employee_orientation__message_has_sms_error
+#: model:ir.model.fields,help:employee_orientation.field_employee_training__message_has_error
+#: model:ir.model.fields,help:employee_orientation.field_employee_training__message_has_sms_error
+#: model:ir.model.fields,help:employee_orientation.field_orientation_checklist__message_has_error
+#: model:ir.model.fields,help:employee_orientation.field_orientation_checklist__message_has_sms_error
+#: model:ir.model.fields,help:employee_orientation.field_orientation_request__message_has_error
+#: model:ir.model.fields,help:employee_orientation.field_orientation_request__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "ከተመረጠ, አንዳንድ መልእክቶች የመላኪያ ስህተት አላቸው."
+
+#. module: employee_orientation
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_training__instution_id
+msgid "Instution"
+msgstr "ተቋም"
+
+#. module: employee_orientation
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_training__instution_type_id
+msgid "Instution Type"
+msgstr "የተቋማት ዓይነት"
+
+#. module: employee_orientation
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_orientation__message_is_follower
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_training__message_is_follower
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_checklist__message_is_follower
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_request__message_is_follower
+msgid "Is Follower"
+msgstr "ተከታይ ነው"
+
+#. module: employee_orientation
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_orientation__job_id
+msgid "Job Title"
+msgstr "የስራ መደቡ መጠሪያ"
+
+#. module: employee_orientation
+#: model:ir.model.fields,field_description:employee_orientation.field_checklist_line____last_update
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_orientation____last_update
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_training____last_update
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_training_program____last_update
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_training_program_round____last_update
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_checklist____last_update
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_force_complete____last_update
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_request____last_update
+#: model:ir.model.fields,field_description:employee_orientation.field_report_employee_orientation_print_pack_template____last_update
+msgid "Last Modified on"
+msgstr "ለመጨረሻ ጊዜ ተሻሽሏል"
+
+#. module: employee_orientation
+#: model:ir.model.fields,field_description:employee_orientation.field_checklist_line__write_uid
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_orientation__write_uid
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_training__write_uid
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_training_program__write_uid
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_training_program_round__write_uid
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_checklist__write_uid
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_force_complete__write_uid
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_request__write_uid
+msgid "Last Updated by"
+msgstr "ለመጨረሻ ጊዜ የተዘመነ በ"
+
+#. module: employee_orientation
+#: model:ir.model.fields,field_description:employee_orientation.field_checklist_line__write_date
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_orientation__write_date
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_training__write_date
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_training_program__write_date
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_training_program_round__write_date
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_checklist__write_date
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_force_complete__write_date
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_request__write_date
+msgid "Last Updated on"
+msgstr "ለመጨረሻ ጊዜ የተዘመነ"
+
+#. module: employee_orientation
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_orientation__message_main_attachment_id
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_training__message_main_attachment_id
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_checklist__message_main_attachment_id
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_request__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "ዋና አባሪ"
+
+#. module: employee_orientation
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_orientation__parent_id
+msgid "Manager"
+msgstr "ሥራ አስኪያጅ"
+
+#. module: employee_orientation
+#: model_terms:ir.ui.view,arch_db:employee_orientation.view_employee_orientation_form
+msgid "Mark Done"
+msgstr "ተከናውኗል ምልክት አድርግ"
+
+#. module: employee_orientation
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_orientation__message_has_error
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_training__message_has_error
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_checklist__message_has_error
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_request__message_has_error
+msgid "Message Delivery error"
+msgstr "የመልእክት መላኪያ ስህተት"
+
+#. module: employee_orientation
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_orientation__message_ids
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_training__message_ids
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_checklist__message_ids
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_request__message_ids
+msgid "Messages"
+msgstr "መልእክቶች"
+
+#. module: employee_orientation
+#: model:ir.model.fields,field_description:employee_orientation.field_checklist_line__line_name
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_training__name
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_training_program__name
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_checklist__checklist_name
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_force_complete__name
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_request__request_name
+msgid "Name"
+msgstr "ስም"
+
+#. module: employee_orientation
+#: code:addons/employee_orientation/models/employee_orientation.py:0
+#: model:ir.model.fields.selection,name:employee_orientation.selection__employee_training__state__new
+#: model:ir.model.fields.selection,name:employee_orientation.selection__orientation_request__state__new
+#, python-format
+msgid "New"
+msgstr "አዲስ"
+
+#. module: employee_orientation
+#: model_terms:ir.ui.view,arch_db:employee_orientation.view_employee_orientation_form
+#: model_terms:ir.ui.view,arch_db:employee_orientation.view_employee_training_form
+#: model_terms:ir.ui.view,arch_db:employee_orientation.view_orientation_request_form
+msgid "Notes"
+msgstr "ማስታወሻዎች"
+
+#. module: employee_orientation
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_orientation__message_needaction_counter
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_training__message_needaction_counter
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_checklist__message_needaction_counter
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_request__message_needaction_counter
+msgid "Number of Actions"
+msgstr "የእርምጃዎች ብዛት"
+
+#. module: employee_orientation
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_orientation__message_has_error_counter
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_training__message_has_error_counter
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_checklist__message_has_error_counter
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_request__message_has_error_counter
+msgid "Number of errors"
+msgstr "ስህተቶች ብዛት"
+
+#. module: employee_orientation
+#: model:ir.model.fields,help:employee_orientation.field_employee_orientation__message_needaction_counter
+#: model:ir.model.fields,help:employee_orientation.field_employee_training__message_needaction_counter
+#: model:ir.model.fields,help:employee_orientation.field_orientation_checklist__message_needaction_counter
+#: model:ir.model.fields,help:employee_orientation.field_orientation_request__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "እርምጃ የሚጠይቁ የመልእክት ብዛት"
+
+#. module: employee_orientation
+#: model:ir.model.fields,help:employee_orientation.field_employee_orientation__message_has_error_counter
+#: model:ir.model.fields,help:employee_orientation.field_employee_training__message_has_error_counter
+#: model:ir.model.fields,help:employee_orientation.field_orientation_checklist__message_has_error_counter
+#: model:ir.model.fields,help:employee_orientation.field_orientation_request__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "የመላክ ስህተት ያለባቸው የመላእክት ብዛት"
+
+#. module: employee_orientation
+#: model:ir.model.fields,help:employee_orientation.field_employee_orientation__message_unread_counter
+#: model:ir.model.fields,help:employee_orientation.field_employee_training__message_unread_counter
+#: model:ir.model.fields,help:employee_orientation.field_orientation_checklist__message_unread_counter
+#: model:ir.model.fields,help:employee_orientation.field_orientation_request__message_unread_counter
+msgid "Number of unread messages"
+msgstr "ያልተነበቡ መልእክቶች ብዛት"
+
+#. module: employee_orientation
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_force_complete__orientation_id
+msgid "Orientation"
+msgstr "ኦሪየንቴሽን"
+
+#. module: employee_orientation
+#: model:ir.actions.act_window,name:employee_orientation.action_orientation_checklist
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_orientation__orientation_id
+#: model:ir.ui.menu,name:employee_orientation.menu_orientation_checklist_config
+msgid "Orientation Checklist"
+msgstr "ኦሪየንቴሽን የማረጋገጫ ዝርዝር"
+
+#. module: employee_orientation
+#: model:ir.actions.act_window,name:employee_orientation.action_checklist_line
+#: model:ir.ui.menu,name:employee_orientation.menu_employee_orientation_config_line
+msgid "Orientation Checklist Line"
+msgstr "ኦሪየንቴሽን የማረጋገጫ ዝርዝር መስመር"
+
+#. module: employee_orientation
+#: model_terms:ir.ui.view,arch_db:employee_orientation.view_orientation_checklist_form
+#: model_terms:ir.ui.view,arch_db:employee_orientation.view_orientation_checklist_search
+#: model_terms:ir.ui.view,arch_db:employee_orientation.view_orientation_checklist_tree
+msgid "Orientation Checklists"
+msgstr "ኦሪየንቴሽን የማረጋገጫ ዝርዝሮች"
+
+#. module: employee_orientation
+#: model_terms:ir.ui.view,arch_db:employee_orientation.checklist_line_search
+#: model_terms:ir.ui.view,arch_db:employee_orientation.view_checklist_line_form
+#: model_terms:ir.ui.view,arch_db:employee_orientation.view_checklist_line_tree
+#: model_terms:ir.ui.view,arch_db:employee_orientation.view_employee_orientation_form
+msgid "Orientation Checklists Lines"
+msgstr "ኦሪየንቴሽን ማረጋገጫዎች መስመሮችን"
+
+#. module: employee_orientation
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_force_complete__orientation_lines
+msgid "Orientation Lines"
+msgstr "ኦሪየንቴሽን መስመሮች"
+
+#. module: employee_orientation
+#: model:ir.ui.menu,name:employee_orientation.menu_employee_orientation_config
+msgid "Orientation Program"
+msgstr "ኦሪየንቴሽን ፕሮግራም"
+
+#. module: employee_orientation
+#: model:ir.actions.act_window,name:employee_orientation.action_orientation_request
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_orientation__orientation_request
+#: model:ir.ui.menu,name:employee_orientation.menu_orientation_request
+msgid "Orientation Request"
+msgstr "ኦሪየንቴሽን ጥያቄ"
+
+#. module: employee_orientation
+#: model:ir.ui.menu,name:employee_orientation.menu_employee_orientation
+msgid "Orientations"
+msgstr "ኦሪየንቴሽን"
+
+#. module: employee_orientation
+#: model:ir.model.fields.selection,name:employee_orientation.selection__employee_training__state__print
+msgid "Print"
+msgstr "ማተም"
+
+#. module: employee_orientation
+#: model:ir.model.fields,field_description:employee_orientation.field_hr_employee__program_id
+msgid "Program"
+msgstr "ፕሮግራም"
+
+#. module: employee_orientation
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_training__program_round_id
+msgid "Program Round"
+msgstr "የፕሮግራም ዙር"
+
+#. module: employee_orientation
+#: model:ir.ui.menu,name:employee_orientation.training_program
+msgid "Program name"
+msgstr "የፕሮግራም ስም"
+
+#. module: employee_orientation
+#: model:ir.ui.menu,name:employee_orientation.program_round_menu
+msgid "Program round"
+msgstr "ፕሮግራም ዙር"
+
+#. module: employee_orientation
+#: model:ir.model.fields,field_description:employee_orientation.field_checklist_line__responsible_user
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_orientation__responsible_user
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_training__program_convener
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_request__partner_id
+msgid "Responsible User"
+msgstr "ለማከናወን ኃላፊነት የወሰደው ተጠቃሚ"
+
+#. module: employee_orientation
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_orientation__message_has_sms_error
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_training__message_has_sms_error
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_checklist__message_has_sms_error
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_request__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "ኤስኤምኤስ ማድረሻ ስህተት"
+
+#. module: employee_orientation
+#: model_terms:ir.ui.view,arch_db:employee_orientation.view_employee_training_form
+#: model_terms:ir.ui.view,arch_db:employee_orientation.view_orientation_request_form
+msgid "Send by Email"
+msgstr "በኢሜይል ይላኩ"
+
+#. module: employee_orientation
+#: model:ir.model.fields,help:employee_orientation.field_orientation_checklist__active
+msgid ""
+"Set active to false to hide the Orientation Checklist without removing it."
+msgstr "የማስተዋወቂያ ማረጋገጫ ዝርዝሩን ሳይያስወግዙ ይሰራል(active) ወደ ሐሰት ያዘጋጁ."
+
+#. module: employee_orientation
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_orientation__state
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_training__state
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_request__state
+msgid "Status"
+msgstr "ሁኔታ"
+
+#. module: employee_orientation
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_training_program_round__training_id
+#: model:ir.ui.menu,name:employee_orientation.menu_employee_training_child
+msgid "Training"
+msgstr "ስልጠና"
+
+#. module: employee_orientation
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_training__program_id
+#: model:ir.ui.menu,name:employee_orientation.menu_employee_training_child_all
+msgid "Training Program"
+msgstr "የሥልጠና ፕሮግራም"
+
+#. module: employee_orientation
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_training_program__training_round_ids
+msgid "Training rounds"
+msgstr "የሥልጠና ዙር"
+
+#. module: employee_orientation
+#: model_terms:ir.ui.view,arch_db:employee_orientation.view_employee_training_form
+msgid "Training taking Employee Detail"
+msgstr "ስልጠና የሚውስዱ የሰራተኛ ዝርዝር"
+
+#. module: employee_orientation
+#: model:ir.model,name:employee_orientation.model_employee_training_program
+msgid "Type of training for employees"
+msgstr "የሥልጠና አይነት"
+
+#. module: employee_orientation
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_orientation__message_unread
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_training__message_unread
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_checklist__message_unread
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_request__message_unread
+msgid "Unread Messages"
+msgstr "ያልተነበቡ መልእክቶች"
+
+#. module: employee_orientation
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_orientation__message_unread_counter
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_training__message_unread_counter
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_checklist__message_unread_counter
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_request__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "ያልተነበቡ መልእክቶች ቆጣሪ"
+
+#. module: employee_orientation
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_orientation__website_message_ids
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_training__website_message_ids
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_checklist__website_message_ids
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_request__website_message_ids
+msgid "Website Messages"
+msgstr "የድርጣቢያ መልእክቶች"
+
+#. module: employee_orientation
+#: model:ir.model.fields,help:employee_orientation.field_employee_orientation__website_message_ids
+#: model:ir.model.fields,help:employee_orientation.field_employee_training__website_message_ids
+#: model:ir.model.fields,help:employee_orientation.field_orientation_checklist__website_message_ids
+#: model:ir.model.fields,help:employee_orientation.field_orientation_request__website_message_ids
+msgid "Website communication history"
+msgstr "የድርጣቢያ መግባባት ታሪክ"
+
+#. module: employee_orientation
+#: model_terms:ir.ui.view,arch_db:employee_orientation.print_pack_template
+msgid "at"
+msgstr "በ"
+
+#. module: employee_orientation
+#: model:ir.model,name:employee_orientation.model_checklist_line
+msgid "checklist.line"
+msgstr ""
+
+#. module: employee_orientation
+#: model_terms:ir.ui.view,arch_db:employee_orientation.print_pack_template
+msgid "conducted by"
+msgstr "የተካሄደው በ"
+
+#. module: employee_orientation
+#: model_terms:ir.ui.view,arch_db:employee_orientation.print_pack_template
+msgid "days,"
+msgstr "ቀናት ,"
+
+#. module: employee_orientation
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_training_program__description
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_training_program_round__description
+msgid "description"
+msgstr "መግለጫ"
+
+#. module: employee_orientation
+#: model_terms:ir.ui.view,arch_db:employee_orientation.print_pack_template
+msgid "for certifying his/her participation in the training program"
+msgstr "በስልጠና ፕሮግራሙ ውስጥ ያለውን ተሳትፎ ለማረጋገጥ"
+
+#. module: employee_orientation
+#: model_terms:ir.ui.view,arch_db:employee_orientation.print_pack_template
+msgid "from"
+msgstr "ከ"
+
+#. module: employee_orientation
+#: model_terms:ir.ui.view,arch_db:employee_orientation.print_pack_template
+msgid "in round"
+msgstr "ዙር"
+
+#. module: employee_orientation
+#: model_terms:ir.ui.view,arch_db:employee_orientation.view_employee_orientation_form
+msgid "lines"
+msgstr "መስመሮች"
+
+#. module: employee_orientation
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_training_program_round__name
+msgid "name"
+msgstr "ስም"
+
+#. module: employee_orientation
+#: model:ir.model,name:employee_orientation.model_orientation_force_complete
+msgid "orientation.force.complete"
+msgstr ""
+
+#. module: employee_orientation
+#: model:ir.model,name:employee_orientation.model_report_employee_orientation_print_pack_template
+msgid "report.employee_orientation.print_pack_template"
+msgstr ""
+
+#. module: employee_orientation
+#: model:ir.model,name:employee_orientation.model_employee_training_program_round
+msgid "rounds of training for employee"
+msgstr "ለሠራተኛ የሥልጠና ዙር"
+
+#. module: employee_orientation
+#: model:ir.model.fields,field_description:employee_orientation.field_employee_training__user_id
+#: model:ir.model.fields,field_description:employee_orientation.field_orientation_request__user_id
+msgid "users"
+msgstr "ተጠቃሚዎች"
