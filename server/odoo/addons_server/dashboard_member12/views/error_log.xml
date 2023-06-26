@@ -1,0 +1,772 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<!-- Error List  -->
+
+
+
+<template id="register_error" name="Error">
+    <t t-call="website.layout">
+    <t t-call="dashboard_member12.css_assets"/>    
+      <body>
+        <div class="loader"></div>
+        <div id="app">
+          <div class="main-wrapper main-wrapper-1">
+            <div class="navbar-bg"></div>
+            <nav class="navbar navbar-expand-lg main-navbar sticky">
+              <div class="form-inline mr-auto">
+                <ul class="navbar-nav mr-3">
+                  <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg
+                        collapse-btn"> <i data-feather="align-justify"></i></a></li>
+                  <li><a href="#" class="nav-link nav-link-lg fullscreen-btn">
+                      <i data-feather="maximize"></i>
+                    </a>
+                  </li>
+                  <li>
+                  
+                  </li>
+                </ul>
+              </div>
+            </nav>
+            <div class="main-sidebar sidebar-style-2">
+            <t t-call="dashboard_member12.asidebar"/>    
+            </div>
+            <!-- Main Content -->
+            <div class="main-content">
+              <div class="container">
+                <h1>Error!</h1>
+                <div class="row">
+                  <div class="col-lg-8">
+                    <div class="alert alert-warning">
+                      What would you like to be transfered as?
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        <t t-call="dashboard_member12.seeting_feature"/> 
+          </div>
+        </div>
+      
+      </body>
+    <t t-call="dashboard_member12.js_assets"/>    
+
+  </t>
+</template>
+
+<template id="register_error_1" name="Error">
+    <t t-call="website.layout">
+    <t t-call="dashboard_member12.css_assets"/>    
+      <body>
+        <div class="loader"></div>
+        <div id="app">
+          <div class="main-wrapper main-wrapper-1">
+            <div class="navbar-bg"></div>
+            <nav class="navbar navbar-expand-lg main-navbar sticky">
+              <div class="form-inline mr-auto">
+                <ul class="navbar-nav mr-3">
+                  <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg
+                        collapse-btn"> <i data-feather="align-justify"></i></a></li>
+                  <li><a href="#" class="nav-link nav-link-lg fullscreen-btn">
+                      <i data-feather="maximize"></i>
+                    </a>
+                  </li>
+                  <li>
+                  
+                  </li>
+                </ul>
+              </div>
+            </nav>
+            <div class="main-sidebar sidebar-style-2">
+            <t t-call="dashboard_member12.asidebar"/>    
+            </div>
+            <!-- Main Content -->
+            <div class="main-content">
+              <div class="container">
+                <h1>Error!</h1>
+                <div class="row">
+                  <div class="col-lg-8">
+                    <div class="alert alert-warning">
+                      Only Those Leaders Who Are Also Leagues are allowed to transfer as Leagues
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        <t t-call="dashboard_member12.seeting_feature"/> 
+          </div>
+        </div>
+      
+      </body>
+    <t t-call="dashboard_member12.js_assets"/>    
+
+  </t>
+</template>
+
+<template id="register_error_2" name="Error">
+    <t t-call="website.layout">
+    <t t-call="dashboard_member12.css_assets"/>    
+      <body>
+        <div class="loader"></div>
+        <div id="app">
+          <div class="main-wrapper main-wrapper-1">
+            <div class="navbar-bg"></div>
+            <nav class="navbar navbar-expand-lg main-navbar sticky">
+              <div class="form-inline mr-auto">
+                <ul class="navbar-nav mr-3">
+                  <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg
+                        collapse-btn"> <i data-feather="align-justify"></i></a></li>
+                  <li><a href="#" class="nav-link nav-link-lg fullscreen-btn">
+                      <i data-feather="maximize"></i>
+                    </a>
+                  </li>
+                  <li>
+                  
+                  </li>
+                </ul>
+              </div>
+            </nav>
+            <div class="main-sidebar sidebar-style-2">
+            <t t-call="dashboard_member12.asidebar"/>    
+            </div>
+            <!-- Main Content -->
+            <div class="main-content">
+              <div class="container">
+                  <h1>Error!</h1>
+                  <div class="row">
+                    <div class="col-lg-8">
+                      <div class="alert alert-warning">
+                        Only Those Members Who Are Also Leagues are allowed to transfer as Leagues
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        <t t-call="dashboard_member12.seeting_feature"/> 
+          </div>
+        </div>
+      
+      </body>
+    <t t-call="dashboard_member12.js_assets"/>    
+
+  </t>
+</template>
+
+<template id="register_error_4" name="Error">
+    <t t-call="website.layout">
+    <t t-call="dashboard_member12.css_assets"/>    
+      <body>
+        <div class="loader"></div>
+        <div id="app">
+          <div class="main-wrapper main-wrapper-1">
+            <div class="navbar-bg"></div>
+            <nav class="navbar navbar-expand-lg main-navbar sticky">
+              <div class="form-inline mr-auto">
+                <ul class="navbar-nav mr-3">
+                  <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg
+                        collapse-btn"> <i data-feather="align-justify"></i></a></li>
+                  <li><a href="#" class="nav-link nav-link-lg fullscreen-btn">
+                      <i data-feather="maximize"></i>
+                    </a>
+                  </li>
+                  <li>
+                  
+                  </li>
+                </ul>
+              </div>
+            </nav>
+            <div class="main-sidebar sidebar-style-2">
+            <t t-call="dashboard_member12.asidebar"/>    
+            </div>
+            <!-- Main Content -->
+            <div class="main-content">
+              <div class="container">
+                <h1>Error!</h1>
+                <div class="row">
+                  <div class="col-lg-8">
+                    <div class="alert alert-warning">
+                      Only Members, Leagues or Leaders are allowed to ask for a Transfer.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        <t t-call="dashboard_member12.seeting_feature"/> 
+          </div>
+        </div>
+      
+      </body>
+    <t t-call="dashboard_member12.js_assets"/>    
+
+  </t>
+</template>
+
+<template id="register_error_5" name="Error">
+    <t t-call="website.layout">
+    <t t-call="dashboard_member12.css_assets"/>    
+      <body>
+        <div class="loader"></div>
+        <div id="app">
+          <div class="main-wrapper main-wrapper-1">
+            <div class="navbar-bg"></div>
+            <nav class="navbar navbar-expand-lg main-navbar sticky">
+              <div class="form-inline mr-auto">
+                <ul class="navbar-nav mr-3">
+                  <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg
+                        collapse-btn"> <i data-feather="align-justify"></i></a></li>
+                  <li><a href="#" class="nav-link nav-link-lg fullscreen-btn">
+                      <i data-feather="maximize"></i>
+                    </a>
+                  </li>
+                  <li>
+                  
+                  </li>
+                </ul>
+              </div>
+            </nav>
+            <div class="main-sidebar sidebar-style-2">
+            <t t-call="dashboard_member12.asidebar"/>    
+            </div>
+            <!-- Main Content -->
+            <div class="main-content">
+              <div class="container">
+                <h1>Error!</h1>
+                <div class="row">
+                  <div class="col-lg-8">
+                    <div class="alert alert-warning">
+                        You Have A Transfer That Hasn't Been Reviewed Yet. Please Wait Until A Decision Is Made.
+                    </div>
+                  </div>
+                </div>
+              </div>        
+            </div>
+        <t t-call="dashboard_member12.seeting_feature"/> 
+          </div>
+        </div>
+      
+      </body>
+    <t t-call="dashboard_member12.js_assets"/>    
+
+  </t>
+</template>
+
+<template id="register_error_6" name="Error">
+    <t t-call="website.layout">
+    <t t-call="dashboard_member12.css_assets"/>    
+      <body>
+        <div class="loader"></div>
+        <div id="app">
+          <div class="main-wrapper main-wrapper-1">
+            <div class="navbar-bg"></div>
+            <nav class="navbar navbar-expand-lg main-navbar sticky">
+              <div class="form-inline mr-auto">
+                <ul class="navbar-nav mr-3">
+                  <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg
+                        collapse-btn"> <i data-feather="align-justify"></i></a></li>
+                  <li><a href="#" class="nav-link nav-link-lg fullscreen-btn">
+                      <i data-feather="maximize"></i>
+                    </a>
+                  </li>
+                  <li>
+                  
+                  </li>
+                </ul>
+              </div>
+            </nav>
+            <div class="main-sidebar sidebar-style-2">
+            <t t-call="dashboard_member12.asidebar"/>    
+            </div>
+            <!-- Main Content -->
+            <div class="main-content">
+              <div class="container">
+                        <h1>Error!</h1>
+                        <div class="row">
+                          <div class="col-lg-8">
+                            <div class="alert alert-warning">
+                              Only Members, Leagues or Leaders are allowed to Submit Complaints.
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+            </div>
+        <t t-call="dashboard_member12.seeting_feature"/> 
+          </div>
+        </div>
+      
+      </body>
+    <t t-call="dashboard_member12.js_assets"/>    
+
+  </t>
+</template>
+
+
+<template id="register_error_7" name="Error">
+    <t t-call="website.layout">
+    <t t-call="dashboard_member12.css_assets"/>    
+      <body>
+        <div class="loader"></div>
+        <div id="app">
+          <div class="main-wrapper main-wrapper-1">
+            <div class="navbar-bg"></div>
+            <nav class="navbar navbar-expand-lg main-navbar sticky">
+              <div class="form-inline mr-auto">
+                <ul class="navbar-nav mr-3">
+                  <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg
+                        collapse-btn"> <i data-feather="align-justify"></i></a></li>
+                  <li><a href="#" class="nav-link nav-link-lg fullscreen-btn">
+                      <i data-feather="maximize"></i>
+                    </a>
+                  </li>
+                  <li>
+                  
+                  </li>
+                </ul>
+              </div>
+            </nav>
+            <div class="main-sidebar sidebar-style-2">
+            <t t-call="dashboard_member12.asidebar"/>    
+            </div>
+            <!-- Main Content -->
+            <div class="main-content">
+                             <div class="container">
+                        <h1>Error!</h1>
+                        <div class="row">
+                          <div class="col-lg-8">
+                            <div class="alert alert-warning">
+                              Only Members, Leagues or Leaders are allowed to Add Attachments.
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+            </div>
+        <t t-call="dashboard_member12.seeting_feature"/> 
+          </div>
+        </div>
+      
+      </body>
+    <t t-call="dashboard_member12.js_assets"/>    
+
+  </t>
+</template>
+
+<template id="register_error_8" name="Error">
+    <t t-call="website.layout">
+    <t t-call="dashboard_member12.css_assets"/>    
+      <body>
+        <div class="loader"></div>
+        <div id="app">
+          <div class="main-wrapper main-wrapper-1">
+            <div class="navbar-bg"></div>
+            <nav class="navbar navbar-expand-lg main-navbar sticky">
+              <div class="form-inline mr-auto">
+                <ul class="navbar-nav mr-3">
+                  <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg
+                        collapse-btn"> <i data-feather="align-justify"></i></a></li>
+                  <li><a href="#" class="nav-link nav-link-lg fullscreen-btn">
+                      <i data-feather="maximize"></i>
+                    </a>
+                  </li>
+                  <li>
+                  
+                  </li>
+                </ul>
+              </div>
+            </nav>
+            <div class="main-sidebar sidebar-style-2">
+            <t t-call="dashboard_member12.asidebar"/>    
+            </div>
+            <!-- Main Content -->
+            <div class="main-content">
+        
+                <div class="container">
+                        <h1>Error!</h1>
+                        <div class="row">
+                          <div class="col-lg-8">
+                            <div class="alert alert-warning">
+                              Only Members, Leagues or Leaders are allowed to Edit Their Profile.
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+        
+            </div>
+        <t t-call="dashboard_member12.seeting_feature"/> 
+          </div>
+        </div>
+      
+      </body>
+    <t t-call="dashboard_member12.js_assets"/>    
+
+  </t>
+</template>
+
+<template id="complaint_end" name="Created Successfully">
+    <t t-call="website.layout">
+    <t t-call="dashboard_member12.css_assets"/>    
+      <body>
+        <div class="loader"></div>
+        <div id="app">
+          <div class="main-wrapper main-wrapper-1">
+            <div class="navbar-bg"></div>
+            <nav class="navbar navbar-expand-lg main-navbar sticky">
+              <div class="form-inline mr-auto">
+                <ul class="navbar-nav mr-3">
+                  <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg
+                        collapse-btn"> <i data-feather="align-justify"></i></a></li>
+                  <li><a href="#" class="nav-link nav-link-lg fullscreen-btn">
+                      <i data-feather="maximize"></i>
+                    </a>
+                  </li>
+                  <li>
+                  
+                  </li>
+                </ul>
+              </div>
+            </nav>
+            <div class="main-sidebar sidebar-style-2">
+            <t t-call="dashboard_member12.asidebar"/>    
+            </div>
+            <!-- Main Content -->
+            <div class="main-content">
+
+              <div class="container">
+                <h1>Thank you!</h1>
+                <div class="row">
+                  <div class="col-lg-8">
+                    <div class="alert alert-success">
+                      Complaint Has Been Created Successfully!
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+        
+            </div>
+        <t t-call="dashboard_member12.seeting_feature"/> 
+          </div>
+        </div>
+      
+      </body>
+    <t t-call="dashboard_member12.js_assets"/>    
+
+  </t>
+</template>
+
+<template id="delete_complaint_end" name="Deleted Successfully">
+    <t t-call="website.layout">
+    <t t-call="dashboard_member12.css_assets"/>    
+      <body>
+        <div class="loader"></div>
+        <div id="app">
+          <div class="main-wrapper main-wrapper-1">
+            <div class="navbar-bg"></div>
+            <nav class="navbar navbar-expand-lg main-navbar sticky">
+              <div class="form-inline mr-auto">
+                <ul class="navbar-nav mr-3">
+                  <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg
+                        collapse-btn"> <i data-feather="align-justify"></i></a></li>
+                  <li><a href="#" class="nav-link nav-link-lg fullscreen-btn">
+                      <i data-feather="maximize"></i>
+                    </a>
+                  </li>
+                  <li>
+                  
+                  </li>
+                </ul>
+              </div>
+            </nav>
+            <div class="main-sidebar sidebar-style-2">
+            <t t-call="dashboard_member12.asidebar"/>    
+            </div>
+            <!-- Main Content -->
+            <div class="main-content">
+              <div class="container">
+                <h1>Deleted!</h1>
+                <div class="row">
+                  <div class="col-lg-8">
+                    <div class="alert alert-success">
+                      Complaint Has Been Deleted!
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        <t t-call="dashboard_member12.seeting_feature"/> 
+          </div>
+        </div>
+      
+      </body>
+    <t t-call="dashboard_member12.js_assets"/>    
+
+  </t>
+</template>
+
+<template id="profile_end" name="Updated Successfully">
+    <t t-call="website.layout">
+    <t t-call="dashboard_member12.css_assets"/>    
+      <body>
+        <div class="loader"></div>
+        <div id="app">
+          <div class="main-wrapper main-wrapper-1">
+            <div class="navbar-bg"></div>
+            <nav class="navbar navbar-expand-lg main-navbar sticky">
+              <div class="form-inline mr-auto">
+                <ul class="navbar-nav mr-3">
+                  <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg
+                        collapse-btn"> <i data-feather="align-justify"></i></a></li>
+                  <li><a href="#" class="nav-link nav-link-lg fullscreen-btn">
+                      <i data-feather="maximize"></i>
+                    </a>
+                  </li>
+                  <li>
+                  
+                  </li>
+                </ul>
+              </div>
+            </nav>
+            <div class="main-sidebar sidebar-style-2">
+            <t t-call="dashboard_member12.asidebar"/>    
+            </div>
+            <!-- Main Content -->
+            <div class="main-content">
+              <div class="container">
+                <h1>Thank you!</h1>
+                <div class="row">
+                  <div class="col-lg-8">
+                    <div class="alert alert-success">
+                      Your Profile Has Been Successfully Updated!
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        <t t-call="dashboard_member12.seeting_feature"/> 
+          </div>
+        </div>
+      
+      </body>
+    <t t-call="dashboard_member12.js_assets"/>    
+
+  </t>
+</template>
+
+<template id="thanks" name="Thanks">
+    <t t-call="website.layout">
+    <t t-call="dashboard_member12.css_assets"/>    
+      <body>
+        <div class="loader"></div>
+        <div id="app">
+          <div class="main-wrapper main-wrapper-1">
+            <div class="navbar-bg"></div>
+            <nav class="navbar navbar-expand-lg main-navbar sticky">
+              <div class="form-inline mr-auto">
+                <ul class="navbar-nav mr-3">
+                  <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg
+                        collapse-btn"> <i data-feather="align-justify"></i></a></li>
+                  <li><a href="#" class="nav-link nav-link-lg fullscreen-btn">
+                      <i data-feather="maximize"></i>
+                    </a>
+                  </li>
+                  <li>
+                  
+                  </li>
+                </ul>
+              </div>
+            </nav>
+            <div class="main-sidebar sidebar-style-2">
+            <t t-call="dashboard_member12.asidebar"/>    
+            </div>
+            <!-- Main Content -->
+            <div class="main-content">
+              <div class="container">
+                  <div t-if="error_message" class="row">
+                      <div class="col-lg-12">
+                          <div class="alert alert-danger" role="alert">
+                              <t t-foreach="error_message" t-as="err"><t t-esc="err"/><br /></t>
+                          </div>
+                      </div>
+                  </div>
+                  <div t-else="" class="row">
+                      <div class="col-12">
+                          <div class="alert alert-success">
+                                <button type="button" class="close" data-dismiss="alert">&amp;times;</button>
+                                <h2>Appointment scheduled!</h2>
+                                <t t-if="appointment">
+                                    <p>Your Appointment <b><span t-field="appointment.name"/></b> has been scheduled for <b><span t-field="appointment.start"/></b>.</p>
+                                </t>
+                                <t t-else="">
+                                  <p>Your Appointment has been scheduled.</p>
+                                </t>
+                                <p>Thank You!</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+        <t t-call="dashboard_member12.seeting_feature"/> 
+          </div>
+        </div>
+      
+      </body>
+    <t t-call="dashboard_member12.js_assets"/>    
+
+  </t>
+</template>
+
+<template id="register_end" name="Created Successfully">
+    <t t-call="website.layout">
+    <t t-call="dashboard_member12.css_assets"/>    
+      <body>
+        <div class="loader"></div>
+        <div id="app">
+          <div class="main-wrapper main-wrapper-1">
+            <div class="navbar-bg"></div>
+            <nav class="navbar navbar-expand-lg main-navbar sticky">
+              <div class="form-inline mr-auto">
+                <ul class="navbar-nav mr-3">
+                  <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg
+                        collapse-btn"> <i data-feather="align-justify"></i></a></li>
+                  <li><a href="#" class="nav-link nav-link-lg fullscreen-btn">
+                      <i data-feather="maximize"></i>
+                    </a>
+                  </li>
+                  <li>
+                  
+                  </li>
+                </ul>
+              </div>
+            </nav>
+            <div class="main-sidebar sidebar-style-2">
+            <t t-call="dashboard_member12.asidebar"/>    
+            </div>
+            <!-- Main Content -->
+            <div class="main-content">
+              <div class="container">
+                <h1>Thank you!</h1>
+                <div class="row">
+                  <div class="col-lg-8">
+                    <div class="alert alert-success">
+                      Request Has Been Created Successfully!
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+           <t t-call="dashboard_member12.seeting_feature"/> 
+          </div>
+        </div>
+      
+      </body>
+    <t t-call="dashboard_member12.js_assets"/>    
+
+  </t>
+</template>
+
+
+<template id="register_error_3" name="Error">
+    <t t-call="website.layout">
+    <t t-call="dashboard_member12.css_assets"/>    
+      <body>
+        <div class="loader"></div>
+        <div id="app">
+          <div class="main-wrapper main-wrapper-1">
+            <div class="navbar-bg"></div>
+            <nav class="navbar navbar-expand-lg main-navbar sticky">
+              <div class="form-inline mr-auto">
+                <ul class="navbar-nav mr-3">
+                  <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg
+                        collapse-btn"> <i data-feather="align-justify"></i></a></li>
+                  <li><a href="#" class="nav-link nav-link-lg fullscreen-btn">
+                      <i data-feather="maximize"></i>
+                    </a>
+                  </li>
+                  <li>
+                  
+                  </li>
+                </ul>
+              </div>
+            </nav>
+            <div class="main-sidebar sidebar-style-2">
+            <t t-call="dashboard_member12.asidebar"/>    
+            </div>
+            <!-- Main Content -->
+            <div class="main-content">
+              <div class="container">
+                <h1>Error!</h1>
+                <div class="row">
+                  <div class="col-lg-8">
+                    <div class="alert alert-warning">
+                      Only Leagues, who are also Members or Leaders, are allowed to transfer as a Member.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        <t t-call="dashboard_member12.seeting_feature"/> 
+          </div>
+        </div>
+      
+      </body>
+    <t t-call="dashboard_member12.js_assets"/>    
+
+  </t>
+</template>
+
+
+<template id="only_registered_users" name="Only registered users">
+    <t t-call="website.layout">
+    <t t-call="dashboard_member12.css_assets"/>    
+      <body>
+        <div class="loader"></div>
+        <div id="app">
+          <div class="main-wrapper main-wrapper-1">
+            <div class="navbar-bg"></div>
+            <nav class="navbar navbar-expand-lg main-navbar sticky">
+              <div class="form-inline mr-auto">
+                <ul class="navbar-nav mr-3">
+                  <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg
+                        collapse-btn"> <i data-feather="align-justify"></i></a></li>
+                  <li><a href="#" class="nav-link nav-link-lg fullscreen-btn">
+                      <i data-feather="maximize"></i>
+                    </a>
+                  </li>
+                  <li>
+                  
+                  </li>
+                </ul>
+              </div>
+            </nav>
+            <div class="main-sidebar sidebar-style-2">
+            <t t-call="dashboard_member12.asidebar"/>    
+            </div>
+            <!-- Main Content -->
+            <div class="main-content">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-12">
+                          <div class="alert alert-danger">
+                              <button type="button" class="close" data-dismiss="alert">&amp;times;</button>
+                              <h2>Sorry, no access!</h2>
+                              <p>To schedule an appointment please,
+                                  <t t-if="request.env['res.users'].sudo()._get_signup_invitation_scope() == 'b2c'">
+                                      <a t-attf-href="/web/signup?redirect={{ quote_plus(request.httprequest.path) }}">Sign Up</a>
+                                      or
+                                  </t>
+                                  <a t-attf-href="/web/login?redirect={{ quote_plus(request.httprequest.path) }}">Sign In</a> to access this page.
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+            <t t-call="dashboard_member12.seeting_feature"/> 
+          </div>
+        </div>
+      
+      </body>
+    <t t-call="dashboard_member12.js_assets"/>    
+
+  </t>
+</template>
+
+</odoo>

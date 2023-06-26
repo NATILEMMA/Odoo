@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="register_payment_form" model="ir.ui.view">
+        <field name='name'>register.payment.form</field>
+        <field name='model'>register.payment</field>
+        <field name='arch' type='xml'>
+            <form string='Register Payment Wizard'>
+               <sheet>
+                   <group>
+                   <field name="journal_id"/>
+                   <field name="debit_account"/>
+                   <field name="credit_account"/>
+                   <field name="service" widget="many2many_tags"/>
+                   </group>
+                   <group>
+                   <field name="date"/>
+                   <field name="ref"/>
+                   <field name="amount" force_save="1" readonly="1"/>
+                   </group>
+                </sheet>
+                  <footer>
+                      <button string='Register' name="register" type="object" class="btn-primary"/>
+                       <button string='Have Differnce' name="have_differnce" type="object" class="btn-primary"/>
+                  </footer>
+            </form>
+        </field>
+    </record>
+    <act_window
+        id="action_register_payment"
+        res_model="register.payment"
+        binding_model="fleet.vehicle.log.services"
+        binding_views="list"
+        target="new"
+        view_mode="form"
+        name="Register Payment"
+    />
+
+</odoo>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="members_custom_extended_form" model="ir.ui.view">
+        <field name="name">Member's Cell extended</field>
+        <field name="model">member.cells</field>
+        <field name="inherit_id" ref="members_custom.member_cell_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="before">
+                <header>
+                    <field name="maximum_number_reached" invisible="1" />
+                    <button
+                            name="split_cell"
+                            string="Split cell"
+                            type="object"
+                            class="oe_highlight"
+                            confirm="Are you sure you want to split the cell?"
+                            attrs="{'invisible':[('maximum_number_reached', '=',False)]}"
+                            help="Split the cell when the cell reaches maximum amount and take some selected members to the new cell."
+                        />
+                </header>
+            </xpath>
+        </field>
+    </record>
+</odoo>

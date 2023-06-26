@@ -1,0 +1,935 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* membership_payment
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20221005\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-09 07:33+0000\n"
+"PO-Revision-Date: 2023-05-09 07:33+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_league_structure__users
+#: model:ir.model.fields,field_description:membership_payment.field_membership_structure__users
+#: model:ir.model.fields,field_description:membership_payment.field_supporter_structure__users
+msgid " Users"
+msgstr "ተጠቃሚዎች"
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_city_payment__access_warning
+#: model:ir.model.fields,field_description:membership_payment.field_main_branch__access_warning
+#: model:ir.model.fields,field_description:membership_payment.field_sub_payment__access_warning
+msgid "Access warning"
+msgstr ""
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_main_branch__account_move
+msgid "Account Move"
+msgstr "የመለያ እንቅስቃሴ"
+
+#. module: membership_payment
+#: model_terms:ir.ui.view,arch_db:membership_payment.main_branch_payment_form
+msgid "Accounting"
+msgstr "አካውንቲንግ"
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_city_payment__message_needaction
+#: model:ir.model.fields,field_description:membership_payment.field_main_branch__message_needaction
+#: model:ir.model.fields,field_description:membership_payment.field_sub_payment__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_city_payment__activity_ids
+#: model:ir.model.fields,field_description:membership_payment.field_main_branch__activity_ids
+#: model:ir.model.fields,field_description:membership_payment.field_sub_payment__activity_ids
+msgid "Activities"
+msgstr "ተግባራት"
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_city_payment__activity_exception_decoration
+#: model:ir.model.fields,field_description:membership_payment.field_main_branch__activity_exception_decoration
+#: model:ir.model.fields,field_description:membership_payment.field_sub_payment__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_city_payment__activity_state
+#: model:ir.model.fields,field_description:membership_payment.field_main_branch__activity_state
+#: model:ir.model.fields,field_description:membership_payment.field_sub_payment__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: membership_payment
+#: model:ir.ui.menu,name:membership_payment.membership_mai_city_payment_action
+msgid "All Membership Payment"
+msgstr "ሁሉም የአባልነት ክፍያ"
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_register_payment_woreda__amount
+#: model:ir.model.fields,field_description:membership_payment.field_sub_city_wizard__amount
+msgid "Amount"
+msgstr "መጠን"
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_city_payment__amount_2
+#: model:ir.model.fields,field_description:membership_payment.field_main_branch__amount_2
+#: model:ir.model.fields,field_description:membership_payment.field_register_payment_woreda__amount_2
+#: model:ir.model.fields,field_description:membership_payment.field_sub_city_wizard__amount_2
+#: model:ir.model.fields,field_description:membership_payment.field_sub_payment__amount_2
+msgid "Amount received"
+msgstr "የተቀበለ መጠን"
+
+#. module: membership_payment
+#: model_terms:ir.ui.view,arch_db:membership_payment.main_branch_payment_form
+msgid "Are you sure you want to post this payment?"
+msgstr "እርግጠኛ ነዎት ይህን ክፍያ መለጠፍ ይፈልጋሉ?"
+
+#. module: membership_payment
+#: model_terms:ir.ui.view,arch_db:membership_payment.main_branch_payment_form
+msgid "Are you sure you want to set draft this payment?"
+msgstr "እርግጠኛ ነዎት ይህን ክፍያ ረቂቅ መመለስ ይፈልጋሉ?"
+
+#. module: membership_payment
+#: model_terms:ir.ui.view,arch_db:membership_payment.city_payment_form
+#: model_terms:ir.ui.view,arch_db:membership_payment.sub_payment_form
+msgid "Are you sure you want to set to draft this payment?"
+msgstr "እርግጠኛ ነዎት ይህን ክፍያ ረቂቅ መመለስ ይፈልጋሉ?"
+
+#. module: membership_payment
+#: model_terms:ir.ui.view,arch_db:membership_payment.city_payment_form
+#: model_terms:ir.ui.view,arch_db:membership_payment.main_branch_payment_form
+#: model_terms:ir.ui.view,arch_db:membership_payment.sub_payment_form
+msgid "Are you sure you want to submit this payment?"
+msgstr "እርግጠኛ ነዎት ይህን ክፍያ አስረክብ ይፈልጋሉ?"
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_city_payment__message_attachment_count
+#: model:ir.model.fields,field_description:membership_payment.field_main_branch__message_attachment_count
+#: model:ir.model.fields,field_description:membership_payment.field_sub_payment__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_main_branch__cash_account_id
+msgid "Bank Account"
+msgstr "የባንክ ሒሳብ"
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_city_payment__campaign_id
+#: model:ir.model.fields,field_description:membership_payment.field_main_branch__campaign_id
+#: model:ir.model.fields,field_description:membership_payment.field_sub_payment__campaign_id
+msgid "Campaign"
+msgstr ""
+
+#. module: membership_payment
+#: model:ir.model,name:membership_payment.model_candidate_members
+msgid "Candidate Approval"
+msgstr "እጩ ማጽደቅያ"
+
+#. module: membership_payment
+#: model:ir.model,name:membership_payment.model_membership_city_handlers
+msgid "City Wide Handlers"
+msgstr "የከተማ ተቆጣጣሪ"
+
+#. module: membership_payment
+#: model:ir.model,name:membership_payment.model_res_partner
+msgid "Contact"
+msgstr "እውቂያ(ኮንታክት)"
+
+#. module: membership_payment
+#: model_terms:ir.actions.act_window,help:membership_payment.membership_sub_payment_action
+msgid "Create a new document"
+msgstr ""
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_city_payment__create_uid
+#: model:ir.model.fields,field_description:membership_payment.field_league_structure__create_uid
+#: model:ir.model.fields,field_description:membership_payment.field_main_branch__create_uid
+#: model:ir.model.fields,field_description:membership_payment.field_membership_structure__create_uid
+#: model:ir.model.fields,field_description:membership_payment.field_register_payment_woreda__create_uid
+#: model:ir.model.fields,field_description:membership_payment.field_sub_city_wizard__create_uid
+#: model:ir.model.fields,field_description:membership_payment.field_sub_payment__create_uid
+#: model:ir.model.fields,field_description:membership_payment.field_supporter_payment__create_uid
+#: model:ir.model.fields,field_description:membership_payment.field_supporter_structure__create_uid
+msgid "Created by"
+msgstr "የተፈጠረ በ"
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_city_payment__create_date
+#: model:ir.model.fields,field_description:membership_payment.field_league_structure__create_date
+#: model:ir.model.fields,field_description:membership_payment.field_main_branch__create_date
+#: model:ir.model.fields,field_description:membership_payment.field_membership_structure__create_date
+#: model:ir.model.fields,field_description:membership_payment.field_register_payment_woreda__create_date
+#: model:ir.model.fields,field_description:membership_payment.field_sub_city_wizard__create_date
+#: model:ir.model.fields,field_description:membership_payment.field_sub_payment__create_date
+#: model:ir.model.fields,field_description:membership_payment.field_supporter_payment__create_date
+#: model:ir.model.fields,field_description:membership_payment.field_supporter_structure__create_date
+msgid "Created on"
+msgstr "ተፈጠረ በ ቀን"
+
+#. module: membership_payment
+#: model:ir.model.fields,help:membership_payment.field_city_payment__access_url
+#: model:ir.model.fields,help:membership_payment.field_main_branch__access_url
+#: model:ir.model.fields,help:membership_payment.field_sub_payment__access_url
+msgid "Customer Portal URL"
+msgstr ""
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_main_branch__date
+msgid "Date"
+msgstr "ቀን"
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_register_payment_woreda__date
+#: model:ir.model.fields,field_description:membership_payment.field_sub_city_wizard__date
+msgid "Deposit Date"
+msgstr "ተቀማጭ ቀን"
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_city_payment__amount_3
+#: model:ir.model.fields,field_description:membership_payment.field_main_branch__amount_3
+#: model:ir.model.fields,field_description:membership_payment.field_register_payment_woreda__amount_3
+#: model:ir.model.fields,field_description:membership_payment.field_sub_city_wizard__amount_3
+#: model:ir.model.fields,field_description:membership_payment.field_sub_payment__amount_3
+msgid "Diffrence"
+msgstr "ልዩነት"
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_city_payment__display_name
+#: model:ir.model.fields,field_description:membership_payment.field_league_structure__display_name
+#: model:ir.model.fields,field_description:membership_payment.field_main_branch__display_name
+#: model:ir.model.fields,field_description:membership_payment.field_membership_structure__display_name
+#: model:ir.model.fields,field_description:membership_payment.field_register_payment_woreda__display_name
+#: model:ir.model.fields,field_description:membership_payment.field_sub_city_wizard__display_name
+#: model:ir.model.fields,field_description:membership_payment.field_sub_payment__display_name
+#: model:ir.model.fields,field_description:membership_payment.field_supporter_payment__display_name
+#: model:ir.model.fields,field_description:membership_payment.field_supporter_structure__display_name
+msgid "Display Name"
+msgstr "መጠሪያው ስም"
+
+#. module: membership_payment
+#: model:ir.model.fields.selection,name:membership_payment.selection__supporter_payment__type__donor
+msgid "Donors payment"
+msgstr ""
+
+#. module: membership_payment
+#: model:ir.model.fields.selection,name:membership_payment.selection__city_payment__state__draft
+#: model:ir.model.fields.selection,name:membership_payment.selection__main_branch__state__draft
+#: model:ir.model.fields.selection,name:membership_payment.selection__sub_payment__state__draft
+msgid "Draft"
+msgstr "ረቂቅ"
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_city_payment__fiscal_year
+#: model:ir.model.fields,field_description:membership_payment.field_city_payment__main
+#: model:ir.model.fields,field_description:membership_payment.field_main_branch__fiscal_year
+#: model:ir.model.fields,field_description:membership_payment.field_membership_payment__sub_city
+#: model:ir.model.fields,field_description:membership_payment.field_register_payment_woreda__fiscal_year
+#: model:ir.model.fields,field_description:membership_payment.field_sub_city_wizard__fiscal_year
+#: model:ir.model.fields,field_description:membership_payment.field_sub_payment__city
+#: model:ir.model.fields,field_description:membership_payment.field_sub_payment__fiscal_year
+msgid "Fiscal year"
+msgstr "የበጀት ዓመት"
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_city_payment__message_follower_ids
+#: model:ir.model.fields,field_description:membership_payment.field_main_branch__message_follower_ids
+#: model:ir.model.fields,field_description:membership_payment.field_sub_payment__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_city_payment__message_channel_ids
+#: model:ir.model.fields,field_description:membership_payment.field_main_branch__message_channel_ids
+#: model:ir.model.fields,field_description:membership_payment.field_sub_payment__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_city_payment__message_partner_ids
+#: model:ir.model.fields,field_description:membership_payment.field_main_branch__message_partner_ids
+#: model:ir.model.fields,field_description:membership_payment.field_sub_payment__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_register_payment_woreda__pull
+#: model:ir.model.fields,field_description:membership_payment.field_sub_city_wizard__pull
+msgid "Get all payment on this month"
+msgstr "በዚህ ወር ውስጥ ሁሉንም ክፍያ ያግኙ "
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_city_payment__id
+#: model:ir.model.fields,field_description:membership_payment.field_league_structure__id
+#: model:ir.model.fields,field_description:membership_payment.field_main_branch__id
+#: model:ir.model.fields,field_description:membership_payment.field_membership_structure__id
+#: model:ir.model.fields,field_description:membership_payment.field_register_payment_woreda__id
+#: model:ir.model.fields,field_description:membership_payment.field_sub_city_wizard__id
+#: model:ir.model.fields,field_description:membership_payment.field_sub_payment__id
+#: model:ir.model.fields,field_description:membership_payment.field_supporter_payment__id
+#: model:ir.model.fields,field_description:membership_payment.field_supporter_structure__id
+msgid "ID"
+msgstr "መታወቂያ"
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_city_payment__activity_exception_icon
+#: model:ir.model.fields,field_description:membership_payment.field_main_branch__activity_exception_icon
+#: model:ir.model.fields,field_description:membership_payment.field_sub_payment__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: membership_payment
+#: model:ir.model.fields,help:membership_payment.field_city_payment__activity_exception_icon
+#: model:ir.model.fields,help:membership_payment.field_main_branch__activity_exception_icon
+#: model:ir.model.fields,help:membership_payment.field_sub_payment__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: membership_payment
+#: model:ir.model.fields,help:membership_payment.field_city_payment__message_needaction
+#: model:ir.model.fields,help:membership_payment.field_city_payment__message_unread
+#: model:ir.model.fields,help:membership_payment.field_main_branch__message_needaction
+#: model:ir.model.fields,help:membership_payment.field_main_branch__message_unread
+#: model:ir.model.fields,help:membership_payment.field_sub_payment__message_needaction
+#: model:ir.model.fields,help:membership_payment.field_sub_payment__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: membership_payment
+#: model:ir.model.fields,help:membership_payment.field_city_payment__message_has_error
+#: model:ir.model.fields,help:membership_payment.field_city_payment__message_has_sms_error
+#: model:ir.model.fields,help:membership_payment.field_main_branch__message_has_error
+#: model:ir.model.fields,help:membership_payment.field_main_branch__message_has_sms_error
+#: model:ir.model.fields,help:membership_payment.field_sub_payment__message_has_error
+#: model:ir.model.fields,help:membership_payment.field_sub_payment__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_main_branch__income_account_id
+msgid "Income Account"
+msgstr "የገቢ አካውንት"
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_city_payment__message_is_follower
+#: model:ir.model.fields,field_description:membership_payment.field_main_branch__message_is_follower
+#: model:ir.model.fields,field_description:membership_payment.field_sub_payment__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_main_branch__journal_id
+msgid "Journal"
+msgstr "መዝገብ"
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_city_payment____last_update
+#: model:ir.model.fields,field_description:membership_payment.field_league_structure____last_update
+#: model:ir.model.fields,field_description:membership_payment.field_main_branch____last_update
+#: model:ir.model.fields,field_description:membership_payment.field_membership_structure____last_update
+#: model:ir.model.fields,field_description:membership_payment.field_register_payment_woreda____last_update
+#: model:ir.model.fields,field_description:membership_payment.field_sub_city_wizard____last_update
+#: model:ir.model.fields,field_description:membership_payment.field_sub_payment____last_update
+#: model:ir.model.fields,field_description:membership_payment.field_supporter_payment____last_update
+#: model:ir.model.fields,field_description:membership_payment.field_supporter_structure____last_update
+msgid "Last Modified on"
+msgstr "ለመጨረሻ ጊዜ ተሻሻለ በ ቀን"
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_city_payment__write_uid
+#: model:ir.model.fields,field_description:membership_payment.field_league_structure__write_uid
+#: model:ir.model.fields,field_description:membership_payment.field_main_branch__write_uid
+#: model:ir.model.fields,field_description:membership_payment.field_membership_structure__write_uid
+#: model:ir.model.fields,field_description:membership_payment.field_register_payment_woreda__write_uid
+#: model:ir.model.fields,field_description:membership_payment.field_sub_city_wizard__write_uid
+#: model:ir.model.fields,field_description:membership_payment.field_sub_payment__write_uid
+#: model:ir.model.fields,field_description:membership_payment.field_supporter_payment__write_uid
+#: model:ir.model.fields,field_description:membership_payment.field_supporter_structure__write_uid
+msgid "Last Updated by"
+msgstr "ለመጨረሻ ጊዜ ተዘምኗል በ"
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_city_payment__write_date
+#: model:ir.model.fields,field_description:membership_payment.field_league_structure__write_date
+#: model:ir.model.fields,field_description:membership_payment.field_main_branch__write_date
+#: model:ir.model.fields,field_description:membership_payment.field_membership_structure__write_date
+#: model:ir.model.fields,field_description:membership_payment.field_register_payment_woreda__write_date
+#: model:ir.model.fields,field_description:membership_payment.field_sub_city_wizard__write_date
+#: model:ir.model.fields,field_description:membership_payment.field_sub_payment__write_date
+#: model:ir.model.fields,field_description:membership_payment.field_supporter_payment__write_date
+#: model:ir.model.fields,field_description:membership_payment.field_supporter_structure__write_date
+msgid "Last Updated on"
+msgstr "ለመጨረሻ ጊዜ ተዘምኗል በ ቀን"
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_sub_payment__amount_5
+msgid "Leagues total payment"
+msgstr "የሊጎች ጠቅላላ ክፍያ"
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_city_payment__message_main_attachment_id
+#: model:ir.model.fields,field_description:membership_payment.field_main_branch__message_main_attachment_id
+#: model:ir.model.fields,field_description:membership_payment.field_sub_payment__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: membership_payment
+#: model:ir.actions.act_window,name:membership_payment.membership_main_city_payment_action
+msgid "Main City Payment Menu"
+msgstr ""
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_city_payment__medium_id
+#: model:ir.model.fields,field_description:membership_payment.field_main_branch__medium_id
+#: model:ir.model.fields,field_description:membership_payment.field_sub_payment__medium_id
+msgid "Medium"
+msgstr ""
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_sub_payment__amount_4
+msgid "Members total payment"
+msgstr "የአባላት ጠቅላላ ክፍያ"
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_city_payment__message_has_error
+#: model:ir.model.fields,field_description:membership_payment.field_main_branch__message_has_error
+#: model:ir.model.fields,field_description:membership_payment.field_sub_payment__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_city_payment__message_ids
+#: model:ir.model.fields,field_description:membership_payment.field_main_branch__message_ids
+#: model:ir.model.fields,field_description:membership_payment.field_sub_payment__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_league_structure__name
+#: model:ir.model.fields,field_description:membership_payment.field_membership_structure__name
+#: model:ir.model.fields,field_description:membership_payment.field_supporter_structure__name
+msgid "Name"
+msgstr ""
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_city_payment__activity_date_deadline
+#: model:ir.model.fields,field_description:membership_payment.field_main_branch__activity_date_deadline
+#: model:ir.model.fields,field_description:membership_payment.field_sub_payment__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_city_payment__activity_summary
+#: model:ir.model.fields,field_description:membership_payment.field_main_branch__activity_summary
+#: model:ir.model.fields,field_description:membership_payment.field_sub_payment__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_city_payment__activity_type_id
+#: model:ir.model.fields,field_description:membership_payment.field_main_branch__activity_type_id
+#: model:ir.model.fields,field_description:membership_payment.field_sub_payment__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_city_payment__message_needaction_counter
+#: model:ir.model.fields,field_description:membership_payment.field_main_branch__message_needaction_counter
+#: model:ir.model.fields,field_description:membership_payment.field_sub_payment__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_city_payment__message_has_error_counter
+#: model:ir.model.fields,field_description:membership_payment.field_main_branch__message_has_error_counter
+#: model:ir.model.fields,field_description:membership_payment.field_sub_payment__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: membership_payment
+#: model:ir.model.fields,help:membership_payment.field_city_payment__message_needaction_counter
+#: model:ir.model.fields,help:membership_payment.field_main_branch__message_needaction_counter
+#: model:ir.model.fields,help:membership_payment.field_sub_payment__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: membership_payment
+#: model:ir.model.fields,help:membership_payment.field_city_payment__message_has_error_counter
+#: model:ir.model.fields,help:membership_payment.field_main_branch__message_has_error_counter
+#: model:ir.model.fields,help:membership_payment.field_sub_payment__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: membership_payment
+#: model:ir.model.fields,help:membership_payment.field_city_payment__message_unread_counter
+#: model:ir.model.fields,help:membership_payment.field_main_branch__message_unread_counter
+#: model:ir.model.fields,help:membership_payment.field_sub_payment__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: membership_payment
+#: model_terms:ir.ui.view,arch_db:membership_payment.main_branch_payment_form
+msgid "Payment"
+msgstr "ክፍያ"
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_main_branch__payment_ref
+msgid "Payment Ref."
+msgstr "የክፍያ ማጣቀሻ"
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_city_payment__access_url
+#: model:ir.model.fields,field_description:membership_payment.field_main_branch__access_url
+#: model:ir.model.fields,field_description:membership_payment.field_sub_payment__access_url
+msgid "Portal Access URL"
+msgstr ""
+
+#. module: membership_payment
+#: model_terms:ir.ui.view,arch_db:membership_payment.main_branch_payment_form
+msgid "Post"
+msgstr "ልጥፍ"
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_register_payment_woreda__ref
+#: model:ir.model.fields,field_description:membership_payment.field_sub_city_wizard__ref
+msgid "Reference"
+msgstr "ማጣቀሻ"
+
+#. module: membership_payment
+#: model:ir.model.fields.selection,name:membership_payment.selection__city_payment__state__register
+#: model:ir.model.fields.selection,name:membership_payment.selection__main_branch__state__register
+#: model:ir.model.fields.selection,name:membership_payment.selection__sub_payment__state__register
+msgid "Register"
+msgstr "ይመዝገቡ"
+
+#. module: membership_payment
+#: model:ir.model,name:membership_payment.model_sub_city_wizard
+msgid "Register Payment sub city Wizard"
+msgstr "ይመዝገቡ የክፍያ ክፍለ ከተማ አዋቂ"
+
+#. module: membership_payment
+#: model:ir.model,name:membership_payment.model_register_payment_woreda
+msgid "Register Payment woreda Wizard"
+msgstr "የክፍያ ወረዳ ወረዳ አዋቂ"
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_city_payment__activity_user_id
+#: model:ir.model.fields,field_description:membership_payment.field_main_branch__activity_user_id
+#: model:ir.model.fields,field_description:membership_payment.field_sub_payment__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: membership_payment
+#: model_terms:ir.ui.view,arch_db:membership_payment.city_payment_form
+#: model_terms:ir.ui.view,arch_db:membership_payment.main_branch_payment_form
+#: model_terms:ir.ui.view,arch_db:membership_payment.sub_payment_form
+msgid "Rest to Draft"
+msgstr "ወደ ረቂቅ መልስ"
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_supporter_payment__rev
+msgid "Rev"
+msgstr ""
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_city_payment__message_has_sms_error
+#: model:ir.model.fields,field_description:membership_payment.field_main_branch__message_has_sms_error
+#: model:ir.model.fields,field_description:membership_payment.field_sub_payment__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_city_payment__access_token
+#: model:ir.model.fields,field_description:membership_payment.field_main_branch__access_token
+#: model:ir.model.fields,field_description:membership_payment.field_sub_payment__access_token
+msgid "Security Token"
+msgstr ""
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_city_payment__source_id
+#: model:ir.model.fields,field_description:membership_payment.field_main_branch__source_id
+#: model:ir.model.fields,field_description:membership_payment.field_sub_payment__source_id
+msgid "Source"
+msgstr ""
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_city_payment__state
+#: model:ir.model.fields,field_description:membership_payment.field_main_branch__state
+#: model:ir.model.fields,field_description:membership_payment.field_sub_payment__state
+msgid "Status"
+msgstr "ሁኔታ"
+
+#. module: membership_payment
+#: model:ir.model.fields,help:membership_payment.field_city_payment__activity_state
+#: model:ir.model.fields,help:membership_payment.field_main_branch__activity_state
+#: model:ir.model.fields,help:membership_payment.field_sub_payment__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_candidate_members__struc_3
+#: model:ir.model.fields,field_description:membership_payment.field_league_structure__parent_id_2
+#: model:ir.model.fields,field_description:membership_payment.field_main_office__struc
+#: model:ir.model.fields,field_description:membership_payment.field_main_office__struc_2
+#: model:ir.model.fields,field_description:membership_payment.field_member_cells__struc
+#: model:ir.model.fields,field_description:membership_payment.field_member_cells__struc_2
+#: model:ir.model.fields,field_description:membership_payment.field_membership_handlers_branch__struc
+#: model:ir.model.fields,field_description:membership_payment.field_membership_handlers_branch__struc_2
+#: model:ir.model.fields,field_description:membership_payment.field_membership_handlers_branch__struc_3
+#: model:ir.model.fields,field_description:membership_payment.field_membership_handlers_parent__struc
+#: model:ir.model.fields,field_description:membership_payment.field_membership_handlers_parent__struc_2
+#: model:ir.model.fields,field_description:membership_payment.field_membership_handlers_parent__struc_3
+#: model:ir.model.fields,field_description:membership_payment.field_membership_structure__parent_id_2
+#: model:ir.model.fields,field_description:membership_payment.field_res_partner__struc
+#: model:ir.model.fields,field_description:membership_payment.field_res_partner__struc_2
+#: model:ir.model.fields,field_description:membership_payment.field_res_users__struc
+#: model:ir.model.fields,field_description:membership_payment.field_res_users__struc_2
+#: model:ir.model.fields,field_description:membership_payment.field_supporter_members__struc_3
+#: model:ir.model.fields,field_description:membership_payment.field_supporter_structure__parent_id_2
+msgid "Structure"
+msgstr ""
+
+#. module: membership_payment
+#: model:ir.ui.menu,name:membership_payment.membership_city_payment_action_id
+msgid "Sub-city Membership Payment"
+msgstr "ክፍለ ከተማ የአባልነት ክፍያ"
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_city_payment__name
+#: model:ir.model.fields,field_description:membership_payment.field_city_payment__name_2
+#: model:ir.model.fields,field_description:membership_payment.field_main_branch__name
+#: model:ir.model.fields,field_description:membership_payment.field_register_payment_woreda__name
+#: model:ir.model.fields,field_description:membership_payment.field_sub_city_wizard__name
+#: model:ir.model.fields,field_description:membership_payment.field_sub_payment__name
+#: model:ir.model.fields,field_description:membership_payment.field_sub_payment__name_2
+msgid "Subcity"
+msgstr "ክፍለ ከተማ"
+
+#. module: membership_payment
+#: model:ir.model,name:membership_payment.model_membership_handlers_parent
+msgid "Subcity Handlers"
+msgstr "የክፍለ ከተማ ተቆጣጣሪዎች"
+
+#. module: membership_payment
+#: model:ir.actions.act_window,name:membership_payment.membership_city_payment_action
+msgid "Subcity Payment Menu"
+msgstr "ክፍለ ከተማ ክፍያ ሜኑ"
+
+#. module: membership_payment
+#: model:ir.model.fields.selection,name:membership_payment.selection__city_payment__state__submit
+#: model:ir.model.fields.selection,name:membership_payment.selection__main_branch__state__submit
+#: model:ir.model.fields.selection,name:membership_payment.selection__sub_payment__state__submit
+#: model_terms:ir.ui.view,arch_db:membership_payment.city_payment_form
+#: model_terms:ir.ui.view,arch_db:membership_payment.main_branch_payment_form
+#: model_terms:ir.ui.view,arch_db:membership_payment.sub_payment_form
+msgid "Submit"
+msgstr "ያስገቡ"
+
+#. module: membership_payment
+#: model:ir.model,name:membership_payment.model_supporter_members
+msgid "Supporter Approval"
+msgstr "ደጋፊ ማፅደቅ"
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_sub_payment__supporter
+msgid "Supporter/Donor payment"
+msgstr ""
+
+#. module: membership_payment
+#: model:ir.model.fields.selection,name:membership_payment.selection__supporter_payment__type__supporter
+msgid "Supporters payment"
+msgstr ""
+
+#. module: membership_payment
+#: code:addons/membership_payment/models/city.py:0
+#: code:addons/membership_payment/models/city.py:0
+#: code:addons/membership_payment/models/main_office.py:0
+#: code:addons/membership_payment/models/main_office.py:0
+#: code:addons/membership_payment/models/main_office.py:0
+#: code:addons/membership_payment/models/sub_payment.py:0
+#: code:addons/membership_payment/models/sub_payment.py:0
+#, python-format
+msgid "There is already existing payment that is not closed"
+msgstr ""
+
+#. module: membership_payment
+#: model:ir.model.fields,help:membership_payment.field_city_payment__campaign_id
+#: model:ir.model.fields,help:membership_payment.field_main_branch__campaign_id
+#: model:ir.model.fields,help:membership_payment.field_sub_payment__campaign_id
+msgid ""
+"This is a name that helps you keep track of your different campaign efforts,"
+" e.g. Fall_Drive, Christmas_Special"
+msgstr ""
+
+#. module: membership_payment
+#: model:ir.model.fields,help:membership_payment.field_city_payment__medium_id
+#: model:ir.model.fields,help:membership_payment.field_main_branch__medium_id
+#: model:ir.model.fields,help:membership_payment.field_sub_payment__medium_id
+msgid "This is the method of delivery, e.g. Postcard, Email, or Banner Ad"
+msgstr ""
+
+#. module: membership_payment
+#: model:ir.model.fields,help:membership_payment.field_city_payment__source_id
+#: model:ir.model.fields,help:membership_payment.field_main_branch__source_id
+#: model:ir.model.fields,help:membership_payment.field_sub_payment__source_id
+msgid ""
+"This is the source of the link, e.g. Search Engine, another domain, or name "
+"of email list"
+msgstr ""
+
+#. module: membership_payment
+#: model:ir.model,name:membership_payment.model_member_cells
+msgid "This model will contain the cells members will belong in"
+msgstr "ይህ ሞዴል የህዋሶች በውስጥ ይይዛል::"
+
+#. module: membership_payment
+#: model:ir.model,name:membership_payment.model_main_office
+msgid "This model will contain the main offices the cells bellong in"
+msgstr "ይህ ሞዴል መሰረታዊ ድርጅት ጽ/ቤቶችን ያቀፈ ነው::"
+
+#. module: membership_payment
+#: model:ir.model,name:membership_payment.model_membership_payment
+msgid "This model will handle with the payment of memberships"
+msgstr "ይህ ሞዴል በአባልነት ክፍያ ይይዛል::"
+
+#. module: membership_payment
+#: model:ir.model,name:membership_payment.model_city_payment
+#: model:ir.model,name:membership_payment.model_main_branch
+#: model:ir.model,name:membership_payment.model_sub_payment
+msgid "This model will help to handel subcity payment"
+msgstr "ይህ ሞዴል የክፍለ ከተማ  ውስጥ ክፍያ ይቆጣጠራል"
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_city_payment__time_frame
+#: model:ir.model.fields,field_description:membership_payment.field_main_branch__time_frame
+#: model:ir.model.fields,field_description:membership_payment.field_register_payment_woreda__time_frame
+#: model:ir.model.fields,field_description:membership_payment.field_sub_city_wizard__time_frame
+#: model:ir.model.fields,field_description:membership_payment.field_sub_payment__time_frame
+msgid "Time frame"
+msgstr "የጊዜ እርከን"
+
+#. module: membership_payment
+#: model:ir.model.fields,help:membership_payment.field_city_payment__activity_exception_decoration
+#: model:ir.model.fields,help:membership_payment.field_main_branch__activity_exception_decoration
+#: model:ir.model.fields,help:membership_payment.field_sub_payment__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_city_payment__message_unread
+#: model:ir.model.fields,field_description:membership_payment.field_main_branch__message_unread
+#: model:ir.model.fields,field_description:membership_payment.field_sub_payment__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_city_payment__message_unread_counter
+#: model:ir.model.fields,field_description:membership_payment.field_main_branch__message_unread_counter
+#: model:ir.model.fields,field_description:membership_payment.field_sub_payment__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: membership_payment
+#: model_terms:ir.ui.view,arch_db:membership_payment.member_cells_view
+#: model_terms:ir.ui.view,arch_db:membership_payment.membership_handlers_branch_view
+#: model_terms:ir.ui.view,arch_db:membership_payment.membership_handlers_parent_inherit
+#: model_terms:ir.ui.view,arch_db:membership_payment.membership_main_office_view
+msgid "Update Translation"
+msgstr ""
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_city_payment__user
+#: model:ir.model.fields,field_description:membership_payment.field_sub_payment__user
+msgid "User"
+msgstr "ተጠቃሚ"
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_city_payment__website_message_ids
+#: model:ir.model.fields,field_description:membership_payment.field_main_branch__website_message_ids
+#: model:ir.model.fields,field_description:membership_payment.field_sub_payment__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: membership_payment
+#: model:ir.model.fields,help:membership_payment.field_city_payment__website_message_ids
+#: model:ir.model.fields,help:membership_payment.field_main_branch__website_message_ids
+#: model:ir.model.fields,help:membership_payment.field_sub_payment__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_register_payment_woreda__woreda
+msgid "Wereda"
+msgstr "ወረዳ"
+
+#. module: membership_payment
+#: model:ir.ui.menu,name:membership_payment.membership_sub_payment_action_id
+msgid "Wereda Membership Payment"
+msgstr "የወረዳ የአባልነት ክፍያ"
+
+#. module: membership_payment
+#: model:ir.actions.act_window,name:membership_payment.membership_sub_payment_action
+#: model:ir.actions.act_window,name:membership_payment.membership_sub_payment_action_2
+msgid "Wereda Payment Menu"
+msgstr "ወረዳ የክፍያ ሜኑ"
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_sub_payment__woreda
+msgid "Woreda"
+msgstr "ወረዳ "
+
+#. module: membership_payment
+#: model:ir.model,name:membership_payment.model_membership_handlers_branch
+msgid "Woreda Handlers"
+msgstr "የወረዳ ተቆጣጣሪዎች"
+
+#. module: membership_payment
+#: model_terms:ir.ui.view,arch_db:membership_payment.city_payment_form
+msgid "Woreda Payment"
+msgstr "የወረዳ ክፍያ"
+
+#. module: membership_payment
+#: model_terms:ir.ui.view,arch_db:membership_payment.sub_payment_form
+msgid "Woreda members Payment"
+msgstr "የወረዳ አባላት ክፍያ"
+
+#. module: membership_payment
+#: model_terms:ir.ui.view,arch_db:membership_payment.sub_payment_form
+msgid "Woreda supporters/Donor Payment"
+msgstr "የወረዳ ደጋፊዎች/ለጋሽ ክፍያ"
+
+#. module: membership_payment
+#: code:addons/membership_payment/models/sub_payment.py:0
+#, python-format
+msgid "You can not submit zero receive amount "
+msgstr "ዜሮ የመቀበያ መጠን ማስገባት አይችሉም"
+
+#. module: membership_payment
+#: code:addons/membership_payment/models/city.py:0
+#: code:addons/membership_payment/models/main_office.py:0
+#: code:addons/membership_payment/models/sub_payment.py:0
+#, python-format
+msgid "You can only draft stage payment"
+msgstr "የሁኔታ ክፍያ ብቻ ነው ማርቀቅ የሚችሉት"
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_city_payment__amount
+#: model:ir.model.fields,field_description:membership_payment.field_main_branch__amount
+#: model:ir.model.fields,field_description:membership_payment.field_sub_payment__amount
+#: model:ir.model.fields,field_description:membership_payment.field_supporter_payment__amount
+msgid "amount"
+msgstr "መጠን"
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_league_structure__cell
+#: model:ir.model.fields,field_description:membership_payment.field_membership_structure__cell
+#: model:ir.model.fields,field_description:membership_payment.field_supporter_structure__cell
+msgid "cell"
+msgstr ""
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_supporter_payment__donors
+msgid "donors"
+msgstr ""
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_league_structure__is_league
+#: model:ir.model.fields,field_description:membership_payment.field_league_structure__is_supporter
+#: model:ir.model.fields,field_description:membership_payment.field_membership_structure__is_league
+#: model:ir.model.fields,field_description:membership_payment.field_membership_structure__is_supporter
+#: model:ir.model.fields,field_description:membership_payment.field_supporter_structure__is_league
+#: model:ir.model.fields,field_description:membership_payment.field_supporter_structure__is_supporter
+msgid "league structure"
+msgstr ""
+
+#. module: membership_payment
+#: model:ir.model,name:membership_payment.model_league_structure
+msgid "league.structure"
+msgstr ""
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_league_structure__main_office
+#: model:ir.model.fields,field_description:membership_payment.field_membership_structure__main_office
+#: model:ir.model.fields,field_description:membership_payment.field_supporter_structure__main_office
+msgid "main_office"
+msgstr ""
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_supporter_payment__sup
+msgid "members"
+msgstr "አባላት"
+
+#. module: membership_payment
+#: model:ir.actions.act_window,name:membership_payment.membership_structure_action_3
+#: model:ir.model.fields,field_description:membership_payment.field_league_structure__is_member
+#: model:ir.model.fields,field_description:membership_payment.field_membership_structure__is_member
+#: model:ir.model.fields,field_description:membership_payment.field_supporter_structure__is_member
+msgid "membership structure"
+msgstr ""
+
+#. module: membership_payment
+#: model:ir.model,name:membership_payment.model_membership_structure
+msgid "membership.structure"
+msgstr ""
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_city_payment__payments
+#: model:ir.model.fields,field_description:membership_payment.field_main_branch__payments
+#: model:ir.model.fields,field_description:membership_payment.field_register_payment_woreda__payments
+#: model:ir.model.fields,field_description:membership_payment.field_sub_city_wizard__payments
+#: model:ir.model.fields,field_description:membership_payment.field_sub_payment__payments
+msgid "payments"
+msgstr "ክፍያዎች"
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_league_structure__sub_city
+#: model:ir.model.fields,field_description:membership_payment.field_membership_structure__sub_city
+#: model:ir.model.fields,field_description:membership_payment.field_supporter_structure__sub_city
+msgid "sub city"
+msgstr ""
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_supporter_payment__type
+msgid "supporter"
+msgstr ""
+
+#. module: membership_payment
+#: model:ir.model,name:membership_payment.model_supporter_payment
+msgid "supporter.payment"
+msgstr ""
+
+#. module: membership_payment
+#: model:ir.model,name:membership_payment.model_supporter_structure
+msgid "supporter.structure"
+msgstr ""
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_sub_payment__amount_6
+msgid "supporters total payment"
+msgstr "የደጋፊዎች ጠቅላላ ክፍያ"
+
+#. module: membership_payment
+#: model:ir.actions.server,name:membership_payment.action_upd_league_structure
+#: model:ir.actions.server,name:membership_payment.action_upd_members_structure
+#: model:ir.actions.server,name:membership_payment.action_upd_supporter_structure
+msgid "update structure"
+msgstr ""
+
+#. module: membership_payment
+#: model:ir.model.fields,field_description:membership_payment.field_league_structure__wereda
+#: model:ir.model.fields,field_description:membership_payment.field_membership_structure__wereda
+#: model:ir.model.fields,field_description:membership_payment.field_supporter_structure__wereda
+msgid "wereda"
+msgstr ""

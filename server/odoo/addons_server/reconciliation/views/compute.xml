@@ -1,0 +1,14 @@
+<odoo>
+  <data>
+    <record id = "account_inherit_view_move_form_inherit_2" model = "ir.ui.view">
+      <field name = "name"> Account Move Inherit </field>
+      <field name = "model">account.move</field>
+      <field name = "inherit_id" ref = "account.view_move_form" />
+      <field name = "arch" type = "xml">
+         <button name = "button_draft" position = "after">
+            <button string='Compute' name="compute_tax" type="object" attrs="{'invisible': [('state', '!=', 'draft')]}"/>
+        </button>
+      </field>
+    </record>
+  </data>
+</odoo>

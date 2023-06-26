@@ -1,0 +1,561 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* custom_quality_control_stock
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-22 07:10+0000\n"
+"PO-Revision-Date: 2023-05-22 07:10+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: custom_quality_control_stock
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.stock_move_view_kanban
+msgid "<i class=\"fa fa-clock-o\" role=\"img\" aria-label=\"Date\" title=\"Date\"/>"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_stock_move_operations
+msgid "<span>Assign Serial Nnnnnnnnnnnnnumbers</span>"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_stock_move_operations
+msgid "<span>Clear Alllllllllllll</span>"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_stock_move_kanban
+msgid "<strong>Qty: </strong>"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_stock_move_operations
+msgid "Assign Serial Numbers"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.stock_picking_form_view_inherit_view
+msgid "Assign to inspections"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model:ir.model,name:custom_quality_control_stock.model_stock_backorder_confirmation
+msgid "Backorder Confirmation"
+msgstr "ተመለስ ትዕዛዝ ማረጋገጫ"
+
+#. module: custom_quality_control_stock
+#: code:addons/custom_quality_control_stock/models/stock_picking.py:0
+#, python-format
+msgid ""
+"Before Assign to Inspection, \n"
+"Add inspection(Quality control) questions to product"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: code:addons/custom_quality_control_stock/models/stock_picking.py:0
+#, python-format
+msgid ""
+"Before validating, \n"
+"assign it to inspection, and then validating based on the outcome of quality control! , \n"
+"\n"
+"Or uncheck Inspection needed box"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_stock_move_operations
+msgid "Clear Lines"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_stock_move_operations
+msgid "Confirm"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model_terms:ir.actions.act_window,help:custom_quality_control_stock.stock_move_action
+msgid "Create a new stock movement"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model:ir.model.fields,field_description:custom_quality_control_stock.field_stock_picking__created_inspections
+#: model:ir.model.fields,field_description:custom_quality_control_stock.field_stock_production_lot__created_inspections
+msgid "Created inspections"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_move_search
+msgid "Creation Date"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_move_tree_receipt_picking
+msgid "Creation date"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.stock_move_tree
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_move_search
+msgid "Date"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.stock_move_tree
+msgid "Date Expected"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_move_search
+msgid "Destination Location"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_move_form
+msgid "Destination Moves"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: code:addons/custom_quality_control_stock/models/stock_picking.py:0
+#: code:addons/custom_quality_control_stock/models/stock_picking.py:0
+#: code:addons/custom_quality_control_stock/models/stock_picking.py:0
+#: code:addons/custom_quality_control_stock/models/stock_picking.py:0
+#, python-format
+msgid "Detailed Operations"
+msgstr "ዝርዝር ስራዎች"
+
+#. module: custom_quality_control_stock
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_stock_move_operations
+msgid "Discard"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_move_search
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_picking_move_tree
+msgid "Done"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model:ir.model.fields,field_description:custom_quality_control_stock.field_stock_picking__done_inspections
+#: model:ir.model.fields,field_description:custom_quality_control_stock.field_stock_production_lot__done_inspections
+msgid "Done inspections"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_move_tree
+msgid "From"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_move_search
+msgid "Group By"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model_terms:ir.actions.act_window,help:custom_quality_control_stock.action_receipt_picking_move
+msgid ""
+"Here you can receive individual products, no matter what\n"
+"                purchase order or picking order they come from. You will find\n"
+"                the list of all products you are waiting for."
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_move_search
+msgid "Incoming"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model:ir.actions.act_window,name:custom_quality_control_stock.action_receipt_picking_move
+msgid "Incoming  Products"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_move_kandan
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_picking_move_tree
+msgid "Initial Demand"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_stock_move_operations_inherit
+msgid "Inspection Failed"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model:ir.model.fields,field_description:custom_quality_control_stock.field_stock_assign_serial__inspection_failed_qty
+#: model:ir.model.fields,field_description:custom_quality_control_stock.field_stock_move__inspection_failed_qty
+msgid "Inspection Failed Qty"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_stock_move_operations_inherit
+msgid "Inspection Success"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model:ir.model.fields,field_description:custom_quality_control_stock.field_stock_assign_serial__inspection_success_qty
+#: model:ir.model.fields,field_description:custom_quality_control_stock.field_stock_move__inspection_success_qty
+msgid "Inspection Success Qty"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model:ir.model.fields,field_description:custom_quality_control_stock.field_stock_picking__qc_inspections_ids
+#: model:ir.model.fields,field_description:custom_quality_control_stock.field_stock_production_lot__qc_inspections_ids
+msgid "Inspections"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model:ir.model.fields,field_description:custom_quality_control_stock.field_stock_picking__passed_inspections
+#: model:ir.model.fields,field_description:custom_quality_control_stock.field_stock_production_lot__passed_inspections
+msgid "Inspections OK"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model:ir.model.fields,field_description:custom_quality_control_stock.field_stock_picking__failed_inspections
+#: model:ir.model.fields,field_description:custom_quality_control_stock.field_stock_production_lot__failed_inspections
+msgid "Inspections failed"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model:ir.model.fields,help:custom_quality_control_stock.field_stock_production_lot__qc_inspections_ids
+msgid "Inspections related to this lot."
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model:ir.model.fields,help:custom_quality_control_stock.field_stock_picking__qc_inspections_ids
+msgid "Inspections related to this picking."
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model:ir.model.fields,field_description:custom_quality_control_stock.field_stock_picking__is_assigned
+msgid "Is Assigned"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model:ir.model.fields,field_description:custom_quality_control_stock.field_stock_move__is_insepction_needed
+#: model:ir.model.fields,field_description:custom_quality_control_stock.field_stock_picking__is_insepction_needed
+msgid "Is Insepction Needed"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_move_form
+msgid "Linked Moves"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_move_search
+msgid "Location"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model:ir.model.fields,field_description:custom_quality_control_stock.field_qc_inspection__lot_id
+#: model:ir.model.fields,field_description:custom_quality_control_stock.field_qc_inspection__lot_ids
+#: model:ir.model.fields,field_description:custom_quality_control_stock.field_qc_inspection_line__lot_id
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.qc_inspection_line_search_stock_view
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.qc_inspection_search_view_picking
+msgid "Lot"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model:ir.model,name:custom_quality_control_stock.model_stock_production_lot
+msgid "Lot/Serial"
+msgstr "ሎጥ / መለያ"
+
+#. module: custom_quality_control_stock
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_stock_move_operations
+msgid "Move Detail"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model:ir.actions.act_window,name:custom_quality_control_stock.act_product_stock_move_open
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.stock_move_tree
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_move_tree
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_move_tree_receipt_picking
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_move_tree_receipt_picking_board
+msgid "Moves"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.stock_picking_form_view_inherit_view
+msgid "Need for inspections"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model_terms:ir.actions.act_window,help:custom_quality_control_stock.action_receipt_picking_move
+msgid ""
+"Once you receive an order, you can filter based on the name of\n"
+"                the vendor or the purchase order reference. Then you can confirm\n"
+"                all products received using the buttons on the right of each line."
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_move_form
+msgid "Origin"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_move_form
+msgid "Origin Moves"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_move_search
+msgid "Outgoing"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_move_search
+msgid "Partner"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model:ir.model.fields,field_description:custom_quality_control_stock.field_qc_inspection__picking_id
+#: model:ir.model.fields,field_description:custom_quality_control_stock.field_qc_inspection_line__picking_id
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.qc_inspection_line_search_stock_view
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.qc_inspection_search_view_picking
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_move_search
+msgid "Picking"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model:ir.model,name:custom_quality_control_stock.model_stock_picking_type
+#: model:ir.model.fields,field_description:custom_quality_control_stock.field_qc_trigger__picking_type_id
+msgid "Picking Type"
+msgstr "የመልቀሚያ ዓይነት"
+
+#. module: custom_quality_control_stock
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_move_search
+msgid "Product"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model:ir.model,name:custom_quality_control_stock.model_stock_move_line
+msgid "Product Moves (Stock Move Line)"
+msgstr "የምርት እንቅስቃሴዎች (የአክሲዮን ማንቀሳቀስ መስመር)"
+
+#. module: custom_quality_control_stock
+#: model:ir.model.fields,field_description:custom_quality_control_stock.field_stock_move_line__purchase_ref
+#: model:ir.model.fields,field_description:custom_quality_control_stock.field_stock_production_lot__purchase_ref
+msgid "Purchase Reference"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model:ir.model,name:custom_quality_control_stock.model_qc_inspection
+msgid "Quality control inspection"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model:ir.model,name:custom_quality_control_stock.model_qc_inspection_line
+msgid "Quality control inspection line"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model:ir.model,name:custom_quality_control_stock.model_qc_trigger
+msgid "Quality control trigger"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model:ir.actions.act_window,name:custom_quality_control_stock.action_qc_inspection_per_lot_done
+msgid "Quality inspection from lot done"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model:ir.actions.act_window,name:custom_quality_control_stock.action_qc_inspection_per_lot_passed
+msgid "Quality inspection from lot passed"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model:ir.actions.act_window,name:custom_quality_control_stock.action_qc_inspection_per_picking_done
+msgid "Quality inspection from picking done"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model:ir.actions.act_window,name:custom_quality_control_stock.action_qc_inspection_per_picking_passed
+msgid "Quality inspection from picking passed"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model:ir.actions.act_window,name:custom_quality_control_stock.action_qc_inspection_per_lot
+msgid "Quality inspections from lot"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model:ir.actions.act_window,name:custom_quality_control_stock.action_qc_inspection_per_lot_failed
+msgid "Quality inspections from lot failed"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model:ir.actions.act_window,name:custom_quality_control_stock.action_qc_inspection_per_picking
+msgid "Quality inspections from picking"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model:ir.actions.act_window,name:custom_quality_control_stock.action_qc_inspection_per_picking_failed
+msgid "Quality inspections from picking failed"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_move_kandan
+msgid "Quantity Done"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_move_search
+msgid "Ready"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_move_search
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_move_tree_receipt_picking
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_move_tree_receipt_picking_board
+msgid "Reference"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model_terms:ir.actions.act_window,help:custom_quality_control_stock.action_receipt_picking_move
+msgid "Register a product receipt"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_move_kandan
+msgid "Register lots, packs, location"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_picking_move_tree
+msgid "Reserved"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_move_search
+msgid "Scheduled Date"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_move_search
+msgid "Scheduled or processing date"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_move_search
+msgid "Source Location"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_move_search
+msgid "Status"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model:ir.model,name:custom_quality_control_stock.model_stock_assign_serial
+msgid "Stock Assign Serial Numbers"
+msgstr "የክምችት መለያ ቁጥሮች ይመድቡ"
+
+#. module: custom_quality_control_stock
+#: model:ir.model,name:custom_quality_control_stock.model_stock_move
+msgid "Stock Move"
+msgstr "ወደ ግምጃ ቤት የሚገቡና የሚወጡ እቃዎች"
+
+#. module: custom_quality_control_stock
+#: model:ir.actions.act_window,name:custom_quality_control_stock.stock_move_action
+#: model:ir.ui.menu,name:custom_quality_control_stock.stock_move_menu
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_move_form
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_move_picking_tree
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_move_search
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_picking_move_tree
+msgid "Stock Moves"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_move_graph
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_move_pivot
+msgid "Stock Moves Analysis"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_move_search
+msgid "Stock moves that are Available (Ready to process)"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_move_search
+msgid "Stock moves that are Confirmed, Available or Waiting"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_move_search
+msgid "Stock moves that have been processed"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: code:addons/custom_quality_control_stock/models/stock_picking.py:0
+#, python-format
+msgid "The serial number must contain at least one digit."
+msgstr "የመለያ ቁጥሩ ቢያንስ አንድ አሃዝ መያዝ አለበት።"
+
+#. module: custom_quality_control_stock
+#: model_terms:ir.actions.act_window,help:custom_quality_control_stock.stock_move_action
+msgid ""
+"This menu gives you the full traceability of inventory\n"
+"                operations on a specific product. You can filter on the product\n"
+"                to see all the past or future movements for the product."
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_move_tree
+msgid "To"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_move_search
+msgid "To Do"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: code:addons/custom_quality_control_stock/models/stock_picking.py:0
+#: code:addons/custom_quality_control_stock/models/stock_picking.py:0
+#, python-format
+msgid ""
+"To assign a serial number, an inspection result is Inspection success and failed quantity required...! \n"
+"\n"
+" To Force assign uncheck the Inspection Required box."
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model:ir.model,name:custom_quality_control_stock.model_stock_picking
+msgid "Transfer"
+msgstr "ማስተላለፍ"
+
+#. module: custom_quality_control_stock
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.stock_move_tree
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_move_picking_tree
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_move_tree
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_move_tree_receipt_picking
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_move_tree_receipt_picking_board
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_picking_move_tree
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_stock_move_line_operation_tree
+msgid "Unit of Measure"
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.view_stock_move_line_operation_tree
+msgid "Write your SN/LN one by one or copy paste a list."
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: code:addons/custom_quality_control_stock/models/stock_picking.py:0
+#, python-format
+msgid ""
+"You must complete the inspection...! before validate\n"
+" There are still  inspections left to complete the total inspection."
+msgstr ""
+
+#. module: custom_quality_control_stock
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.stock_lot_qc_view
+#: model_terms:ir.ui.view,arch_db:custom_quality_control_stock.stock_picking_qc_view
+msgid "inspections"
+msgstr ""

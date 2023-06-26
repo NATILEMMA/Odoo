@@ -1,0 +1,919 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* purchase_request
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20221005\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-02 07:06+0000\n"
+"PO-Revision-Date: 2023-05-02 07:06+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_report
+msgid "<strong>Description:</strong>"
+msgstr "<strong>መግለጫ፡</strong>"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_report
+msgid "<strong>purchase reference:</strong>"
+msgstr "<strong>የግዢ ማጣቀሻ፡</strong>"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_report
+msgid "<strong>schedule date:</strong>"
+msgstr "<strong>የቀጠሮ ቀን፡</strong>"
+
+#. module: purchase_request
+#: model_terms:ir.actions.act_window,help:purchase_request.sprogroup_purchase_request_form_action
+msgid ""
+"A purchase request is an instruction to Purchasing to procure\n"
+"                a certain quantity of materials services, so that they are\n"
+"                available at a certain point in time."
+msgstr ""
+"የግዢ ጥያቄ በተወሰነ ጊዜ ውስጥ እንዲገኙ የተወሰነ መጠን ያለው \n"
+"የቁሳቁስ አገልግሎት ለመግዛት የግዢ መመሪያ ነው።"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_approval_limit__message_needaction
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request__message_needaction
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request_line__message_needaction
+msgid "Action Needed"
+msgstr "እርምጃ ያስፈልጋል"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_approval_limit__activity_ids
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request__activity_ids
+msgid "Activities"
+msgstr "እንቅስቃሴዎች"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_approval_limit__activity_exception_decoration
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "የእንቅስቃሴ ልዩ ማስጌጥ"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_approval_limit__activity_state
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request__activity_state
+msgid "Activity State"
+msgstr "የእንቅስቃሴ ሁኔታ"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request_line__analytic_acount
+msgid "Analytic Account"
+msgstr "የትንታኔ አካውንት"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request__assigned_to
+msgid "Approver"
+msgstr "አጽዳቂ"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_sprogroup_purchase_request_form
+msgid "Are you sure you want to approve this request?"
+msgstr "እርግጠኛ ነዎት ይህን ጥያቄ ማጽደቅ ይፈልጋሉ?"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_sprogroup_purchase_request_form
+msgid "Are you sure you want to reject this request?"
+msgstr "እርግጠኛ ነዎት ይህን ጥያቄ ውድቅ ማድረግ ይፈልጋሉ?"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_sprogroup_purchase_request_form
+msgid "Are you sure you want to reset this request?"
+msgstr "እርግጠኛ ነዎት ይህን ጥያቄ ዳግም ማስጀመር ይፈልጋሉ?"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_sprogroup_purchase_request_form
+msgid "Are you sure you want to submit this request?"
+msgstr "እርግጠኛ ነዎት ይህን ጥያቄ ማስገባት ይፈልጋሉ?"
+
+#. module: purchase_request
+#: model:ir.model,name:purchase_request.model_product_template
+msgid "Asset description line inherit"
+msgstr "የንብረት መግለጫ መስመር ይወርሳል"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request_line__assigned_to
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_sprogroup_purchase_request_search
+msgid "Assigned to"
+msgstr "ተመድቧል"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_sprogroup_purchase_request_search
+msgid "Assigned to me"
+msgstr "ለእኔ ተመድቧል"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_approval_limit__message_attachment_count
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request__message_attachment_count
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request_line__message_attachment_count
+msgid "Attachment Count"
+msgstr "የአባሪ ብዛት"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request__can_leader_approved
+msgid "Can Leader approved"
+msgstr "መሪ ጸድቋል"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request__can_manager_approved
+msgid "Can Manager approved"
+msgstr "ሥራ አስኪያጁ አጽድቆታል።"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request__can_reject
+msgid "Can reject"
+msgstr "አለመቀበል ይችላል።"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request_line__cancelled
+msgid "Cancelled"
+msgstr "ተሰርዟል።"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request_line__remaining_checked
+msgid "Checked"
+msgstr "ተረጋግጧል"
+
+#. module: purchase_request
+#: model_terms:ir.actions.act_window,help:purchase_request.sprogroup_purchase_request_form_action
+msgid "Click to start a new purchase request process."
+msgstr "አዲስ የግዢ ጥያቄ ሂደት ለመጀመር ጠቅ ያድርጉ።"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request__code
+msgid "Code"
+msgstr "ኮድ"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request__company_id
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request_line__company_id
+msgid "Company"
+msgstr "ድርጅት"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_approval_limit__create_uid
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request__create_uid
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request_line__create_uid
+msgid "Created by"
+msgstr "የተፈጠረ"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_approval_limit__create_date
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request__create_date
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request_line__create_date
+msgid "Created on"
+msgstr "ተፈጠረ በቀን"
+
+#. module: purchase_request
+#: model:ir.model.fields,help:purchase_request.field_sprogroup_purchase_request__date_start
+#: model:ir.model.fields,help:purchase_request.field_sprogroup_purchase_request_line__date_start
+msgid "Date when the user initiated the request."
+msgstr "ተጠቃሚው ጥያቄውን የጀመረበት ቀን።"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_report
+msgid "DeProduct_uom"
+msgstr "DeProduct_uom"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request__department_id
+msgid "Department"
+msgstr "መምሪያ"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request__description
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request_line__description
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request_line__name
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_report
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_sprogroup_purchase_request_form
+msgid "Description"
+msgstr "መግለጫ"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_approval_limit__display_name
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request__display_name
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request_line__display_name
+msgid "Display Name"
+msgstr "መጠሪያው ስም"
+
+#. module: purchase_request
+#: model:ir.model.fields.selection,name:purchase_request.selection__sprogroup_purchase_request__state__done
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_sprogroup_purchase_request_form
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_sprogroup_purchase_request_search
+msgid "Done"
+msgstr "ተከናውኗል"
+
+#. module: purchase_request
+#: model:ir.model.fields.selection,name:purchase_request.selection__sprogroup_purchase_request__state__draft
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_sprogroup_purchase_request_search
+msgid "Draft"
+msgstr "ረቂቅ"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request_line__end_start
+msgid "End Date"
+msgstr "የመጨረሻ ቀን"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request__end_start
+msgid "End date"
+msgstr "የመጨረሻ ቀን"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request_line__estimated_price
+msgid "Estimeted Price"
+msgstr "የተገመተው ዋጋ"
+
+#. module: purchase_request
+#: model:ir.model,name:purchase_request.model_hr_expense
+msgid "Expense"
+msgstr "ወጪ"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_approval_limit__message_follower_ids
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request__message_follower_ids
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request_line__message_follower_ids
+msgid "Followers"
+msgstr "ተከታዮች"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_approval_limit__message_channel_ids
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request__message_channel_ids
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request_line__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "ተከታዮች (ቻናሎች)"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_approval_limit__message_partner_ids
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request__message_partner_ids
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request_line__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "ተከታዮች (አጋሮች)"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_sprogroup_purchase_request_search
+msgid "Group By..."
+msgstr "ቡድን በ..."
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_approval_limit__id
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request__id
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request_line__id
+msgid "ID"
+msgstr "መታወቂያ"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_approval_limit__activity_exception_icon
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request__activity_exception_icon
+msgid "Icon"
+msgstr "አዶ"
+
+#. module: purchase_request
+#: model:ir.model.fields,help:purchase_request.field_purchase_approval_limit__activity_exception_icon
+#: model:ir.model.fields,help:purchase_request.field_sprogroup_purchase_request__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "ልዩ እንቅስቃሴን ለማመልከት አዶ።"
+
+#. module: purchase_request
+#: model:ir.model.fields,help:purchase_request.field_purchase_approval_limit__message_needaction
+#: model:ir.model.fields,help:purchase_request.field_purchase_approval_limit__message_unread
+#: model:ir.model.fields,help:purchase_request.field_sprogroup_purchase_request__message_needaction
+#: model:ir.model.fields,help:purchase_request.field_sprogroup_purchase_request__message_unread
+#: model:ir.model.fields,help:purchase_request.field_sprogroup_purchase_request_line__message_needaction
+#: model:ir.model.fields,help:purchase_request.field_sprogroup_purchase_request_line__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "ምልክት ካደረጉ፣ አዲስ መልዕክቶች የእርስዎን ትኩረት ይፈልጋሉ።"
+
+#. module: purchase_request
+#: model:ir.model.fields,help:purchase_request.field_purchase_approval_limit__message_has_error
+#: model:ir.model.fields,help:purchase_request.field_purchase_approval_limit__message_has_sms_error
+#: model:ir.model.fields,help:purchase_request.field_sprogroup_purchase_request__message_has_error
+#: model:ir.model.fields,help:purchase_request.field_sprogroup_purchase_request__message_has_sms_error
+#: model:ir.model.fields,help:purchase_request.field_sprogroup_purchase_request_line__message_has_error
+#: model:ir.model.fields,help:purchase_request.field_sprogroup_purchase_request_line__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "ምልክት ካደረጉ፣ አንዳንድ መልዕክቶች የማድረስ ስህተት አለባቸው።"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_approval_limit__message_is_follower
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request__message_is_follower
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request_line__message_is_follower
+msgid "Is Follower"
+msgstr "ተከታይ ነው።"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request__is_editable
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request_line__is_editable
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request_line__is_visible
+msgid "Is editable"
+msgstr "ሊስተካከል የሚችል ነው።"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request__current_label
+msgid "Label"
+msgstr "መለያ"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_approval_limit____last_update
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request____last_update
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request_line____last_update
+msgid "Last Modified on"
+msgstr "መጨረሻ የተሻሻለው በቀን"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_approval_limit__write_uid
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request__write_uid
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request_line__write_uid
+msgid "Last Updated by"
+msgstr "መጨረሻ የዘመነው በ"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_approval_limit__write_date
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request__write_date
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request_line__write_date
+msgid "Last Updated on"
+msgstr "መጨረሻ የዘመነው በቀን"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_sprogroup_purchase_request_form
+msgid "Leader Approve"
+msgstr "መሪ አጽድቋል"
+
+#. module: purchase_request
+#: model:ir.model.fields.selection,name:purchase_request.selection__sprogroup_purchase_request__state__leader_approved
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_sprogroup_purchase_request_search
+msgid "Leader Approved"
+msgstr "መሪ ጸድቋል"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_approval_limit__limit_by
+msgid "Limit By"
+msgstr "ገደብ በ"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_approval_limit__message_main_attachment_id
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request__message_main_attachment_id
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request_line__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "ዋና አባሪ"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_sprogroup_purchase_request_form
+msgid "Manager Approve"
+msgstr "አስተዳዳሪ አጽድቋል"
+
+#. module: purchase_request
+#: model:ir.model.fields.selection,name:purchase_request.selection__sprogroup_purchase_request__state__manager_approved
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_sprogroup_purchase_request_search
+msgid "Manager Approved"
+msgstr "አስተዳዳሪ ጸድቋል"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_approval_limit__max_amount
+msgid "Max Amount"
+msgstr "ከፍተኛ መጠን"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_approval_limit__max_amount_2
+msgid "Max Amount 2"
+msgstr "ከፍተኛ መጠን 2"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_approval_limit__message_has_error
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request__message_has_error
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request_line__message_has_error
+msgid "Message Delivery error"
+msgstr "የመልእክት ማቅረቢያ ስህተት"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_approval_limit__message_ids
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request__message_ids
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request_line__message_ids
+msgid "Messages"
+msgstr "መልዕክቶች"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_sprogroup_purchase_request_search
+msgid "My requests"
+msgstr "የእኔ ጥያቄዎች"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request__name
+msgid "Name"
+msgstr "ስም"
+
+#. module: purchase_request
+#: code:addons/purchase_request/models/purchase_request.py:0
+#, python-format
+msgid "New"
+msgstr "አዲስ"
+
+#. module: purchase_request
+#: code:addons/purchase_request/models/purchase_request.py:0
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_sprogroup_purchase_request_form
+#, python-format
+msgid "New Quotation"
+msgstr "አዲስ ጥቅስ"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_sprogroup_purchase_request_form
+msgid "New Tender"
+msgstr "አዲስ ጨረታ"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_approval_limit__activity_date_deadline
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "ቀጣይ የእንቅስቃሴ ገደብ"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_approval_limit__activity_summary
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request__activity_summary
+msgid "Next Activity Summary"
+msgstr "ቀጣይ የእንቅስቃሴ ማጠቃለያ"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_approval_limit__activity_type_id
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request__activity_type_id
+msgid "Next Activity Type"
+msgstr "ቀጣይ የእንቅስቃሴ አይነት"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_approval_limit__message_needaction_counter
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request__message_needaction_counter
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request_line__message_needaction_counter
+msgid "Number of Actions"
+msgstr "የተግባሮች ብዛት"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_approval_limit__message_has_error_counter
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request__message_has_error_counter
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request_line__message_has_error_counter
+msgid "Number of errors"
+msgstr "የስህተት ብዛት"
+
+#. module: purchase_request
+#: model:ir.model.fields,help:purchase_request.field_purchase_approval_limit__message_needaction_counter
+#: model:ir.model.fields,help:purchase_request.field_sprogroup_purchase_request__message_needaction_counter
+#: model:ir.model.fields,help:purchase_request.field_sprogroup_purchase_request_line__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "እርምጃ የሚያስፈልገው የመልእክት ብዛት"
+
+#. module: purchase_request
+#: model:ir.model.fields,help:purchase_request.field_purchase_approval_limit__message_has_error_counter
+#: model:ir.model.fields,help:purchase_request.field_sprogroup_purchase_request__message_has_error_counter
+#: model:ir.model.fields,help:purchase_request.field_sprogroup_purchase_request_line__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "የማድረስ ስህተት ያለባቸው መልዕክቶች ብዛት"
+
+#. module: purchase_request
+#: model:ir.model.fields,help:purchase_request.field_purchase_approval_limit__message_unread_counter
+#: model:ir.model.fields,help:purchase_request.field_sprogroup_purchase_request__message_unread_counter
+#: model:ir.model.fields,help:purchase_request.field_sprogroup_purchase_request_line__message_unread_counter
+msgid "Number of unread messages"
+msgstr "ያልተነበቡ መልዕክቶች ብዛት"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_sprogroup_purchase_request_form
+msgid "Other Information"
+msgstr "ሌላ መረጃ"
+
+#. module: purchase_request
+#: model:ir.model.fields.selection,name:purchase_request.selection__sprogroup_purchase_request_line__request_line_state__pr_request
+#: model:ir.model.fields.selection,name:purchase_request.selection__sprogroup_purchase_request_line__request_status__prrequest
+msgid "PR Request"
+msgstr "የPR ጥያቄ"
+
+#. module: purchase_request
+#: model:ir.model.fields.selection,name:purchase_request.selection__sprogroup_purchase_request_line__request_line_state__p_rfq
+msgid "Partial RFQ"
+msgstr "ከፊል RFQ"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request_line__po_number
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request_line__po_number_2
+msgid "Po Number"
+msgstr "ፖ ቁጥር"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request_line__supplier_id
+msgid "Preferred supplier"
+msgstr "ተመራጭ አቅራቢ"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_approval_limit__product
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request_line__product_id
+#: model:ir.model.fields.selection,name:purchase_request.selection__purchase_approval_limit__limit_by__product
+msgid "Product"
+msgstr "ምርት"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_approval_limit__product_catagory
+#: model:ir.model.fields.selection,name:purchase_request.selection__purchase_approval_limit__limit_by__product_catagory
+msgid "Product Catagory"
+msgstr "የምርት ምድብ"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request_line__product_uom_id
+msgid "Product UOM"
+msgstr "የምርት UOM"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_sprogroup_purchase_request_form
+msgid "Products"
+msgstr "ምርቶች"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request__line_ids
+msgid "Products to Purchase"
+msgstr "የሚገዙ ምርቶች"
+
+#. module: purchase_request
+#: model:ir.actions.act_window,name:purchase_request.sprogroup_approval_form_action
+#: model:ir.model,name:purchase_request.model_purchase_approval_limit
+#: model:ir.ui.menu,name:purchase_request.menu_approval_form_list
+msgid "Purchase Aproval Limit"
+msgstr "የግዢ ማረጋገጫ ገደብ"
+
+#. module: purchase_request
+#: model:ir.model,name:purchase_request.model_purchase_order
+#: model:ir.model.fields.selection,name:purchase_request.selection__sprogroup_purchase_request_line__request_line_state__purchase_order
+#: model:ir.model.fields.selection,name:purchase_request.selection__sprogroup_purchase_request_line__request_status__purchase_order
+msgid "Purchase Order"
+msgstr "ትእዛዝዎን ይግዙ"
+
+#. module: purchase_request
+#: model:ir.model,name:purchase_request.model_purchase_order_line
+msgid "Purchase Order Line"
+msgstr "የግዢ ትዕዛዝ መስመር"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_product_product__payment_flag
+#: model:ir.model.fields,field_description:purchase_request.field_product_template__payment_flag
+msgid "Purchase Payment"
+msgstr "የግዢ ክፍያ"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_hr_expense__purchase_request_id
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request_line__request_id
+#: model:ir.module.category,name:purchase_request.module_category_purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_order_line_field_hide_2
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_sprogroup_purchase_request_form
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_sprogroup_purchase_request_search
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_sprogroup_purchase_request_tree
+msgid "Purchase Request"
+msgstr "የግዢ ጥያቄ"
+
+#. module: purchase_request
+#: model:res.groups,name:purchase_request.group_purchase_request_leader
+msgid "Purchase Request Leader"
+msgstr "የግዢ ጥያቄ መሪ"
+
+#. module: purchase_request
+#: model:res.groups,name:purchase_request.group_purchase_request_manager
+msgid "Purchase Request Manager"
+msgstr "የግዢ ጥያቄ አስተዳዳሪ"
+
+#. module: purchase_request
+#: model:res.groups,name:purchase_request.group_purchase_request_user
+msgid "Purchase Request User"
+msgstr "የግዢ ጥያቄ ተጠቃሚ"
+
+#. module: purchase_request
+#: model:ir.actions.act_window,name:purchase_request.sprogroup_purchase_request_form_action
+#: model:ir.ui.menu,name:purchase_request.menu_sprogroup_purchase_request_act
+msgid "Purchase Requests"
+msgstr "የግዢ ጥያቄዎች"
+
+#. module: purchase_request
+#: model:ir.model,name:purchase_request.model_purchase_requisition_line
+msgid "Purchase Requisition Line"
+msgstr "የግዢ መስፈርት መስመር"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request_line__purchased_qty
+msgid "Purchased QTY"
+msgstr "QTY ተገዝቷል።"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_report
+msgid "QTY"
+msgstr "QTY"
+
+#. module: purchase_request
+#: model:ir.model.fields.selection,name:purchase_request.selection__sprogroup_purchase_request_line__request_line_state__rfq
+#: model:ir.model.fields.selection,name:purchase_request.selection__sprogroup_purchase_request_line__request_status__rfq
+msgid "RFQ"
+msgstr "RFQ"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_sprogroup_purchase_request_form
+msgid "Reject"
+msgstr "እምቢ"
+
+#. module: purchase_request
+#: model:ir.model.fields.selection,name:purchase_request.selection__sprogroup_purchase_request__state__rejected
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_sprogroup_purchase_request_search
+msgid "Rejected"
+msgstr "ውድቅ ተደርጓል"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request_line__date_required
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request_line__date_start
+msgid "Request Date"
+msgstr "የጥያቄ ቀን"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_sprogroup_purchase_request_form
+msgid "Request Payment"
+msgstr "ክፍያ ይጠይቁ"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_sprogroup_purchase_request_form
+msgid "Request approval"
+msgstr "ፍቃድ ጠይቅ"
+
+#. module: purchase_request
+#: model:ir.actions.act_window,name:purchase_request.action_purchase_all_list
+msgid "Request for Quotations"
+msgstr "የጥቅሶች ጥያቄ"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_sprogroup_purchase_request_search
+msgid "Request is approved"
+msgstr "ጥያቄ ጸድቋል"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_sprogroup_purchase_request_search
+msgid "Request is approved by leader"
+msgstr "ጥያቄ በመሪው ጸድቋል"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_sprogroup_purchase_request_search
+msgid "Request is done"
+msgstr "ጥያቄ ተፈጽሟል"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_sprogroup_purchase_request_search
+msgid "Request is rejected"
+msgstr "ጥያቄ ውድቅ ተደርጓል"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_sprogroup_purchase_request_search
+msgid "Request is to be approved"
+msgstr "ጥያቄው መጽደቅ ነው።"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request_line__request_state
+msgid "Request state"
+msgstr "ሁኔታን ይጠይቁ"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_order__request_id
+msgid "Requeste  Id"
+msgstr "የጥያቄ መታወቂያ"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_order_line__request_line_id
+msgid "Requeste Line Id"
+msgstr "የመስመር መታወቂያ ይጠይቁ"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request_line__product_qty
+msgid "Requested QTY"
+msgstr "QTY ጠይቋል"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request__requested_by
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request_line__requested_by
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_sprogroup_purchase_request_search
+msgid "Requested by"
+msgstr "የተጠየቀው በ"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_requisition__request_line_id
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_requisition_line__request_line_id
+msgid "Requsition Line Id"
+msgstr "የፍላጎት መስመር መታወቂያ"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_sprogroup_purchase_request_form
+msgid "Reset"
+msgstr "ዳግም አስጀምር"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_approval_limit__activity_user_id
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request__activity_user_id
+msgid "Responsible User"
+msgstr "የሚመለከተው ተጠቃሚ"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_approval_limit__message_has_sms_error
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request__message_has_sms_error
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request_line__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "የኤስኤምኤስ የማድረስ ስህተት"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_report
+msgid "Schedule Date"
+msgstr "የመርሃግብር ቀን"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_sprogroup_purchase_request_search
+msgid "Search Purchase Request"
+msgstr "የግዢ ጥያቄ ይፈልጉ"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request_line__specifications
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_sprogroup_purchase_request_form
+msgid "Specifications"
+msgstr "ዝርዝሮች"
+
+#. module: purchase_request
+#: model:ir.model,name:purchase_request.model_sprogroup_purchase_request
+msgid "Sprogroup Purchase Request"
+msgstr "የስፕሮግሩፕ ግዢ ጥያቄ"
+
+#. module: purchase_request
+#: model:ir.model,name:purchase_request.model_sprogroup_purchase_request_line
+msgid "Sprogroup Purchase Request Line"
+msgstr "የስፕሮግሩፕ ግዢ ጥያቄ መስመር"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_sprogroup_purchase_request_search
+msgid "Start Date"
+msgstr "የመጀመሪያ ቀን"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request__date_start
+msgid "Start date"
+msgstr "የመጀመሪያ ቀን"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request__state
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request_line__request_line_state
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request_line__request_status
+msgid "Status"
+msgstr "ሁኔታ"
+
+#. module: purchase_request
+#: model:ir.model.fields,help:purchase_request.field_purchase_approval_limit__activity_state
+#: model:ir.model.fields,help:purchase_request.field_sprogroup_purchase_request__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"በእንቅስቃሴ ላይ የተመሰረተ ሁኔታ\n"
+"አልፏል፡ የማለቂያ ቀን አስቀድሞ አልፏል\n"
+"ዛሬ፡ የተግባር ቀን ዛሬ ነው\n"
+"የታቀደው: የወደፊት እንቅስቃሴዎች."
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_order_line__tender
+msgid "Tender"
+msgstr "ጨረታ"
+
+#. module: purchase_request
+#: code:addons/purchase_request/models/purchase_request.py:0
+#, python-format
+msgid "The purchase request is empty"
+msgstr "የግዢ ጥያቄው ባዶ ነው።"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_sprogroup_purchase_request_search
+msgid "To Approve"
+msgstr "ለማጽደቅ"
+
+#. module: purchase_request
+#: model:ir.model.fields.selection,name:purchase_request.selection__sprogroup_purchase_request__state__to_approve
+msgid "To be approved"
+msgstr "ተቀባይነት ለማግኘት"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request__amount_total
+msgid "Total"
+msgstr "ጠቅላላ"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request_line__total_price
+msgid "Total Price"
+msgstr "ጠቅላላ ዋጋ"
+
+#. module: purchase_request
+#: model:ir.model.fields,help:purchase_request.field_purchase_approval_limit__activity_exception_decoration
+#: model:ir.model.fields,help:purchase_request.field_sprogroup_purchase_request__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "በመዝገብ ላይ ያለ ልዩ እንቅስቃሴ ዓይነት።"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_sprogroup_purchase_request_search
+msgid "Unassigned"
+msgstr "ያልተመደበ"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_sprogroup_purchase_request_search
+msgid "Unassigned Request"
+msgstr "ያልተመደበ ጥያቄ"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_approval_limit__message_unread
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request__message_unread
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request_line__message_unread
+#: model_terms:ir.ui.view,arch_db:purchase_request.view_sprogroup_purchase_request_search
+msgid "Unread Messages"
+msgstr "ያልተነበቡ መልዕክቶች"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_approval_limit__message_unread_counter
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request__message_unread_counter
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request_line__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "ያልተነበቡ መልዕክቶች ቆጣሪ"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_approval_limit__user_id
+msgid "User"
+msgstr "ተጠቃሚ"
+
+#. module: purchase_request
+#: code:addons/purchase_request/models/purchase_request.py:0
+#, python-format
+msgid "User Doesnt Have Approval limit For this Product"
+msgstr "ተጠቃሚ ለዚህ ምርት የፍቃድ ገደብ የለውም"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_approval_limit__website_message_ids
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request__website_message_ids
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request_line__website_message_ids
+msgid "Website Messages"
+msgstr "የድር ገጽ መልዕክቶች"
+
+#. module: purchase_request
+#: model:ir.model.fields,help:purchase_request.field_purchase_approval_limit__website_message_ids
+#: model:ir.model.fields,help:purchase_request.field_sprogroup_purchase_request__website_message_ids
+#: model:ir.model.fields,help:purchase_request.field_sprogroup_purchase_request_line__website_message_ids
+msgid "Website communication history"
+msgstr "የድር ገጽ የግንኙነት ታሪክ"
+
+#. module: purchase_request
+#: code:addons/purchase_request/models/purchase_request.py:0
+#, python-format
+msgid "You Exceeded Your Maximum Limit"
+msgstr "ከከፍተኛው ገደብ አልፈዋል"
+
+#. module: purchase_request
+#: code:addons/purchase_request/models/purchase_request.py:0
+#, python-format
+msgid "You can delete only draft state purchase"
+msgstr "ረቂቅ የመንግስት ግዢን ብቻ መሰረዝ ይችላሉ።"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_approval_view
+msgid "approver limit"
+msgstr "አጽዳቂ ገደብ"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request__max_qty
+msgid "max qty"
+msgstr "ከፍተኛው qty"
+
+#. module: purchase_request
+#: model_terms:ir.ui.view,arch_db:purchase_request.purchase_request_report
+msgid "purchase request"
+msgstr "የግዢ ጥያቄ"
+
+#. module: purchase_request
+#: model:ir.actions.report,name:purchase_request.purchase_request_report_view
+msgid "purchase request Report"
+msgstr "የግዢ ጥያቄ ሪፖርት"
+
+#. module: purchase_request
+#: model:ir.model,name:purchase_request.model_purchase_requisition
+msgid "purchase requisition Documents"
+msgstr "የግዢ አስፈላጊ ሰነዶች"
+
+#. module: purchase_request
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_order_line__quotation_flag
+#: model:ir.model.fields,field_description:purchase_request.field_purchase_requisition_line__quotation_flag
+#: model:ir.model.fields,field_description:purchase_request.field_sprogroup_purchase_request_line__invoice_flag
+msgid "quotation blag"
+msgstr "ጥቅስ blag"
+
+#. module: purchase_request
+#: code:addons/purchase_request/models/purchase_request.py:0
+#: code:addons/purchase_request/models/purchase_request.py:0
+#, python-format
+msgid "you can not increase quantity"
+msgstr "መጠን መጨመር አይችሉም"

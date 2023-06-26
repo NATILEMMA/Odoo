@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="product_template_inherit_view_form" model="ir.ui.view">
+        <field name="name">product.template.inherited.custom</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_only_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='options']" position="inside">
+              <div modifiers="{}">
+                <field name="is_asset" modifiers="{}"/>
+                <label for="is_asset" modifiers="{}"/>
+				      </div>
+    
+            </xpath>
+            <xpath expr="//field[@name='asset_category_id']" position="before">
+              <field name="asset_category_custom_id"  attrs = "{'required': [('is_asset', '=',True)]}"/>
+            </xpath>
+            <xpath expr="//field[@name='asset_category_id']" position="attributes">
+               <attribute name="invisible">1</attribute>
+            </xpath>
+            
+           
+        </field>
+    </record>
+    <record id="product_template_inherit_view_form" model="ir.ui.view">
+        <field name="name">product.product.inherited.custom</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_normal_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='options']" position="inside">
+              <div modifiers="{}">
+                <field name="is_asset" modifiers="{}"/>
+                <label for="is_asset" modifiers="{}"/>
+				      </div>
+    
+            </xpath>
+             <xpath expr="//field[@name='asset_category_id']" position="before">
+              <field name="asset_category_custom_id"  attrs = "{'required': [('is_asset', '=',True)]}"/>
+            </xpath>
+            <xpath expr="//field[@name='asset_category_id']" position="attributes">
+              <attribute name="invisible">1</attribute>
+            </xpath>
+           
+        </field>
+    </record>
+</odoo>

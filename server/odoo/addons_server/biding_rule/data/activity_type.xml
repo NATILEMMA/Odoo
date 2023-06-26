@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<odoo>
+
+    <data noupdate="1">
+
+        <record id="mail_act_purchase_appproval" model="mail.activity.type">
+            <field name="name">Purchase Approval</field>
+            <field name="icon">fa-sun-o</field>
+            <field name="res_model_id">295</field>
+        </record>
+
+    </data>
+</odoo>

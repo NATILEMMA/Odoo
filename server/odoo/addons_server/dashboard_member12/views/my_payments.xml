@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<!-- My Payments -->
+<template id="member_payments" name="Member Payments">
+    <t t-call="website.layout">
+    <t t-call="dashboard_member12.css_assets"/>    
+      <body>
+        <div class="loader"></div>
+        <div id="app">
+          <div class="main-wrapper main-wrapper-1">
+            <div class="navbar-bg"></div>
+            <nav class="navbar navbar-expand-lg main-navbar sticky">
+              <div class="form-inline mr-auto">
+                <ul class="navbar-nav mr-3">
+                  <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg
+                        collapse-btn"> <i data-feather="align-justify"></i></a></li>
+                  <li><a href="#" class="nav-link nav-link-lg fullscreen-btn">
+                      <i data-feather="maximize"></i>
+                    </a>
+                  </li>
+                  <li>
+                  
+                  </li>
+                </ul>
+              </div>
+            </nav>
+            <div class="main-sidebar sidebar-style-2">
+            <t t-call="dashboard_member12.asidebar"/>    
+            </div>
+            <!-- Main Content -->
+            <div class="main-content">
+             
+                     <div class="main-panel" id="payment_per_year" style="background-color: #eee;">
+
+                        <div t-attf-class="form-group col-xl-4" style="display:none">
+                            <label class="col-form-label" id="league" for="league">League</label>
+                            <input type="text" name="league" t-attf-class="form-control" t-att-value="league" />
+                        </div>
+                        <div t-attf-class="form-group col-xl-4" style="display:none">
+                            <label class="col-form-label" id="member" for="member">Member</label>
+                            <input type="text" name="member" t-attf-class="form-control" t-att-value="member" />
+                        </div>
+                        <div t-attf-class="form-group col-xl-4" style="display:none">
+                            <label class="col-form-label" id="leader" for="leader">Leader</label>
+                            <input type="text" name="leader" t-attf-class="form-control" t-att-value="leader"/>
+                        </div>
+
+                        <t t-if="not payments and not league_payments">
+                            <div class="alert alert-warning mt8" role="alert">
+                                There are no payments.
+                            </div>
+                        </t>
+                        <t t-else="">
+                          <br/>
+                          <br/>
+                          <h3>Payments</h3>
+                          <!-- <br/>
+                          <br/>
+                          <div t-attf-class="form-group col-xl-3">
+                            <label class="col-form-label" for="years">Year</label>
+                            <select name="years" id="payment_years" t-attf-class="form-control">
+                            <option value="">Years...</option>
+                              <t t-foreach="years" t-as="year">
+                                <option t-att-value="year.id">
+                                  <t t-esc="year.name"/>                                                                                  
+                              </option>
+                              </t>
+                            </select>
+                          </div> -->
+                          <br/>
+                          <br/>
+                          <thead id="thead">
+                            <tr><strong>
+                              <th>Member</th>
+                              <th>Year</th>
+                              <th>Month</th>
+                              <th>Membership Fee</th>
+                              <th>Amount Remaining</th>
+                              <th>Amount Paid</th>
+                              <th>Traced Payment</th>
+                              <th>ID payment</th>
+                              <th>State</th>
+                              <th></th>
+                            </strong></tr>
+                          </thead>
+                          <t t-if="payments" t-call="portal.portal_table">
+                            <!-- <table class="table table-striped"> -->
+                            <tbody>
+                              <!-- <tr id="payment_member_body"> -->
+                              <tr t-foreach="payments" t-as="payment">
+                                <td>
+                                    <span t-field="payment.member_id"/>
+                                </td>
+                                <td>
+                                    <span t-field="payment.year"/>
+                                </td>
+                                <td>
+                                    <span t-field="payment.month"/>
+                                </td>
+                                <td>
+                                    <span t-field="payment.fee_amount"/>
+                                </td>
+                                <td>
+                                    <span t-field="payment.amount_remaining"/>
+                                </td>
+                                <td>
+                                    <span t-field="payment.amount_paid"/>
+                                </td>
+                                <td>
+                                    <span t-field="payment.traced_member_payment"/>
+                                </td>  
+                                <td>
+                                    <span t-field="payment.id_payment"/>
+                                </td>                        
+                                <td>
+                                    <span t-field="payment.state"/>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </t>
+                          <br/>
+                          <br/>
+                          <thead id="thead">
+                            <tr><strong>
+                              <th>Member</th>
+                              <th>Year</th>
+                              <th>Month</th>
+                              <th>Membership Fee</th>
+                              <th>Amount Remaining</th>
+                              <th>Amount Paid</th>
+                              <th>Traced Payment</th>
+                              <th>ID payment</th>
+                              <th>State</th>
+                              <th></th>
+                            </strong></tr>
+                          </thead>
+                          <t t-if="league_payments" t-call="portal.portal_table">
+                            <tbody>
+                              <!-- <tr id="payment_league_body">  -->
+                              <tr t-foreach="league_payments" t-as="payment">
+                                <td>
+                                    <span t-field="payment.league_id"/>
+                                </td>
+                                <td>
+                                    <span t-field="payment.year"/>
+                                </td>
+                                <td>
+                                    <span t-field="payment.month"/>
+                                </td>
+                                <td>
+                                    <span t-field="payment.fee_amount"/>
+                                </td>
+                                <td>
+                                    <span t-field="payment.amount_remaining"/>
+                                </td>
+                                <td>
+                                    <span t-field="payment.amount_paid"/>
+                                </td>
+                                <td>
+                                    <span t-field="payment.traced_league_payment"/>
+                                </td>  
+                                <td>
+                                    <span t-field="payment.id_payment"/>
+                                </td>                        
+                                <td>
+                                    <span t-field="payment.state"/>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </t>
+                        </t>
+                </div>
+              
+            </div>
+             <t t-call="dashboard_member12.seeting_feature"/> 
+          </div>
+        </div>
+      
+      </body>
+    <t t-call="dashboard_member12.js_assets"/>    
+
+  </t>
+</template>
+
+
+</odoo>

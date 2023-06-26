@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<odoo>
+
+  <!-- This record holds the action for report -->
+  <report id="create_member_id"
+          string="Member ID"
+          model="res.partner" 
+          report_type="qweb-pdf"
+          file="members_custom.member_report_templates"
+          name="members_custom.member_report_templates"
+          menu="False"/>
+
+
+   <!-- This record will hold the action to the report of membership payment -->
+   <report id="create_member_payment_report"
+          string="Member Payment Report"
+          model="each.member.payment" 
+          report_type="qweb-pdf"
+          file="members_custom.member_payment_report"
+          name="members_custom.member_payment_report"
+          menu="False"/>
+
+
+   <!-- This record will hold the action to the report of league payment -->
+   <report id="create_league_payment_report"
+          string="League Payment Report"
+          model="each.league.payment" 
+          report_type="qweb-pdf"
+          file="members_custom.league_payment_report"
+          name="members_custom.league_payment_report"
+          menu="False"/>
+
+
+   <!-- This record will hold the action to the report of supporter payment -->
+   <report id="create_supporter_payment_report"
+          string="Supporter Payment Report"
+          model="membership.payment" 
+          report_type="qweb-pdf"
+          file="members_custom.supporter_payment_report"
+          name="members_custom.supporter_payment_report"
+          menu="False"/>
+
+   <!-- This record will hold the action to the report of supporter payment -->
+   <report id="create_supporter_payment_report_cell"
+          string="Supporter Payment Report"
+          model="membership.cell.payment" 
+          report_type="qweb-pdf"
+          file="members_custom.supporter_payment_report_cell"
+          name="members_custom.supporter_payment_report_cell"
+          menu="False"/>
+
+   <!-- This record will hold the action to the report of donor payment -->
+   <report id="create_donor_payment_report"
+          string="Donor Payment Report"
+          model="donation.payment" 
+          report_type="qweb-pdf"
+          file="members_custom.donor_payment_report"
+          name="members_custom.donor_payment_report"
+          menu="False"/>
+
+
+   <!-- This record will hold the action to create certificate for trainings details -->
+   <report id="create_training_certificate"
+           string="Certificate"
+           model="member.training"
+           report_type="qweb-pdf"
+           file="members_custom.training_certificate_template"
+           name="members_custom.training_certificate_template"
+           menu="False"/>
+
+   <!-- This record will hold the action to create certificate for participation details -->
+   <report id="create_participation_certificate"
+           string="Certificate"
+           model="assembly"
+           report_type="qweb-pdf"
+           file="members_custom.participation_certificate_template"
+           name="members_custom.participation_certificate_template"
+           menu="False"/>
+
+  <!-- This record will hold the action to create certificate details -->
+  <report id="create_certificate"
+          string="Certificate"
+          model="res.partner" 
+          report_type="qweb-pdf"
+          file="members_custom.certificate_template"
+          name="members_custom.certificate_template"
+          menu="False"/>
+
+   <!-- This record will hold the action to the report of subcity -->
+   <record id="report_for_subcity" model="ir.actions.report">
+     <field name="name">Subcity Report</field>
+     <field name="model">membership.handlers.parent</field>
+     <field name="report_type">qweb-pdf</field>
+     <field name="report_name">members_custom.subcity_report</field>
+     <field name="report_file">members_custom.subcity_report</field>
+     <field name="binding_model_id" ref="model_membership_handlers_parent"/>
+     <field name="binding_type">report</field>
+   </record>
+
+   <!-- This record will hold the action to the report of city -->
+   <record id="report_for_city" model="ir.actions.report">
+     <field name="name">City Report</field>
+     <field name="model">membership.city.handlers</field>
+     <field name="report_type">qweb-pdf</field>
+     <field name="report_name">members_custom.city_report</field>
+     <field name="report_file">members_custom.city_report</field>
+     <field name="binding_model_id" ref="model_membership_city_handlers"/>
+     <field name="binding_type">report</field>
+   </record>
+
+
+
+</odoo>

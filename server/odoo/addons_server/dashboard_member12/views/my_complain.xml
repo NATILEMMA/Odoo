@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<!-- My Compliant List -->
+<template id="complaint_list" name="My Compliant List">
+
+    <t t-call="website.layout">
+    <t t-call="dashboard_member12.css_assets"/>    
+      <body>
+        <div class="loader"></div>
+        <div id="app">
+          <div class="main-wrapper main-wrapper-1">
+            <div class="navbar-bg"></div>
+            <nav class="navbar navbar-expand-lg main-navbar sticky">
+              <div class="form-inline mr-auto">
+                <ul class="navbar-nav mr-3">
+                  <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg
+                        collapse-btn"> <i data-feather="align-justify"></i></a></li>
+                  <li><a href="#" class="nav-link nav-link-lg fullscreen-btn">
+                      <i data-feather="maximize"></i>
+                    </a>
+                  </li>
+                  <li>
+                  
+                  </li>
+                </ul>
+              </div>
+            </nav>
+            <div class="main-sidebar sidebar-style-2">
+            <t t-call="dashboard_member12.asidebar"/>    
+            </div>
+            <!-- Main Content -->
+            <div class="main-content">
+             
+                    <br/>
+                    <h3>Complaint List</h3>
+                  <br/>
+                   <div class="card-body p-0">
+                        <div class="table-responsive">
+                          <table class="table table-striped">
+                      <thead id="thead">
+                        <tr>
+                          <th>Name</th>
+                          <th>Date of Complaint</th>
+                          <th>Subject</th>
+                          <th>Date of Remedy</th>
+                          <th>Status</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <t t-foreach="record" t-as="complaint">
+                          <t t-if="complaint.transfer_1 == False and complaint.transfer_2 == False">
+                            <t t-if="complaint.state == 'resolved'">
+                              <tr style="color: green;">
+                                <td><span t-esc="complaint.name"/></td>
+                                <td><span t-esc="complaint.create_date.strftime('%b %d, %Y')"/></td>
+                                <td><span t-esc="complaint.subject"/></td>
+                                <td><span t-esc="complaint.date_of_remedy"/></td>
+                                <td><span t-esc="complaint.state"/></td>
+                                <td>
+                                  <a t-attf-href="/report/pdf/members_custom.complaint_reports/#{complaint.id}">
+                                    <button class="fa fa-edit btn btn-sm btn-primary">Download</button>
+                                  </a>
+                                  <a t-attf-href="/complaint/#{complaint.id}/transfer_subcity">
+                                    <button class="fa fa-edit btn btn-sm btn-primary">Transfer to Subcity</button>
+                                  </a>
+                                </td>
+                              </tr>
+                            </t>
+                            <t t-elif="complaint.state == 'rejected'">
+                              <tr style="color: red;">
+                                <td><span t-esc="complaint.name"/></td>
+                                <td><span t-esc="complaint.create_date.strftime('%b %d, %Y')"/></td>
+                                <td><span t-esc="complaint.subject"/></td>
+                                <td><span t-esc="complaint.date_of_remedy"/></td>
+                                <td><span t-esc="complaint.state"/></td>
+                                <td>
+                                  <a t-attf-href="/report/pdf/members_custom.complaint_reports/#{complaint.id}">
+                                    <button class="fa fa-edit btn btn-sm btn-primary">Download</button>
+                                  </a>
+                                  <a t-attf-href="/complaint/#{complaint.id}/transfer_subcity">
+                                    <button class="fa fa-edit btn btn-sm btn-primary">Transfer to Subity</button>
+                                  </a>
+                                </td>
+                              </tr>
+                            </t>
+                            <t t-elif="complaint.state == 'waiting for approval'">
+                              <tr style="color: blue;">
+                                <td><span t-esc="complaint.name"/></td>
+                                <td><span t-esc="complaint.create_date.strftime('%b %d, %Y')"/></td>
+                                <td><span t-esc="complaint.subject"/></td>
+                                <td><span t-esc="complaint.date_of_remedy"/></td>
+                                <td><span t-esc="complaint.state"/></td>
+                              </tr>
+                            </t>
+                            <t t-else="complaint.state == 'draft'">
+                              <tr>
+                                <td><span t-esc="complaint.name"/></td>
+                                <td><span t-esc="complaint.create_date.strftime('%b %d, %Y')"/></td>
+                                <td><span t-esc="complaint.subject"/></td>
+                                <td><span t-esc="complaint.date_of_remedy"/></td>
+                                <td><span t-esc="complaint.state"/></td>
+                                <td>
+                                  <a t-attf-href="/complaint/#{complaint.id}/edit">
+                                    <button type="submit" class="fa fa-edit btn btn-sm btn-primary">Edit</button>
+                                  </a>
+                                  <a t-attf-href="/complaint/#{complaint.id}/delete">
+                                    <button type="object" class="fa fa-trash-o btn btn-sm btn-primary">Delete</button>
+                                  </a>
+                                </td>
+                              </tr>
+                            </t>
+                          </t>
+                            <t t-if="complaint.transfer_1 == True and complaint.transfer_2 == False">
+                            <t t-if="complaint.state == 'resolved'">
+                              <tr style="color: green;">
+                                <td><span t-esc="complaint.name"/></td>
+                                <td><span t-esc="complaint.create_date.strftime('%b %d, %Y')"/></td>
+                                <td><span t-esc="complaint.subject"/></td>
+                                <td><span t-esc="complaint.date_of_remedy_subcity"/></td>
+                                <td><span t-esc="complaint.state"/></td>
+                                <td>
+                                  <a t-attf-href="/report/pdf/members_custom.complaint_reports/#{complaint.id}">
+                                    <button class="fa fa-edit btn btn-sm btn-primary">Download</button>
+                                  </a>
+                                  <a t-attf-href="/complaint/#{complaint.id}/transfer_city">
+                                    <button class="fa fa-edit btn btn-sm btn-primary">Transfer to City</button>
+                                  </a>
+                                </td>
+                              </tr>
+                            </t>
+                            <t t-elif="complaint.state == 'rejected'">
+                              <tr style="color: red;">
+                                <td><span t-esc="complaint.name"/></td>
+                                <td><span t-esc="complaint.create_date.strftime('%b %d, %Y')"/></td>
+                                <td><span t-esc="complaint.subject"/></td>
+                                <td><span t-esc="complaint.date_of_remedy_subcity"/></td>
+                                <td><span t-esc="complaint.state"/></td>
+                                <td>
+                                  <a t-attf-href="/report/pdf/members_custom.complaint_reports/#{complaint.id}">
+                                    <button class="fa fa-edit btn btn-sm btn-primary">Download</button>
+                                  </a>
+                                  <a t-attf-href="/complaint/#{complaint.id}/transfer_city">
+                                    <button class="fa fa-edit btn btn-sm btn-primary">Transfer to City</button>
+                                  </a>
+                                </td>
+                              </tr>
+                            </t>
+                            <t t-elif="complaint.state == 'transferred'">
+                              <tr style="color: blue;">
+                                <td><span t-esc="complaint.name"/></td>
+                                <td><span t-esc="complaint.create_date.strftime('%b %d, %Y')"/></td>
+                                <td><span t-esc="complaint.subject"/></td>
+                                <td><span t-esc="complaint.date_of_remedy_subcity"/></td>
+                                <td><span t-esc="complaint.state"/></td>
+                              </tr>
+                            </t>
+                          </t>
+                          <t t-if="complaint.transfer_2 == True and complaint.transfer_1 == False">
+                            <t t-if="complaint.state == 'resolved'">
+                              <tr style="color: green;">
+                                <td><span t-esc="complaint.name"/></td>
+                                <td><span t-esc="complaint.create_date.strftime('%b %d, %Y')"/></td>
+                                <td><span t-esc="complaint.subject"/></td>
+                                <td><span t-esc="complaint.date_of_remedy_city"/></td>
+                                <td><span t-esc="complaint.state"/></td>
+                                <td>
+                                  <a t-attf-href="/report/pdf/members_custom.complaint_reports/#{complaint.id}">
+                                    <button class="fa fa-edit btn btn-sm btn-primary">Download</button>
+                                  </a>
+                                </td>
+                              </tr>
+                            </t>
+                            <t t-elif="complaint.state == 'rejected'">
+                              <tr style="color: red;">
+                                <td><span t-esc="complaint.name"/></td>
+                                <td><span t-esc="complaint.create_date.strftime('%b %d, %Y')"/></td>
+                                <td><span t-esc="complaint.subject"/></td>
+                                <td><span t-esc="complaint.date_of_remedy_city"/></td>
+                                <td><span t-esc="complaint.state"/></td>
+                                <td>
+                                  <a t-attf-href="/report/pdf/members_custom.complaint_reports/#{complaint.id}">
+                                    <button class="fa fa-edit btn btn-sm btn-primary">Download</button>
+                                  </a>
+                                </td>
+                              </tr>
+                            </t>
+                            <t t-elif="complaint.state == 'transferred to city'">
+                              <tr style="color: blue;">
+                                <td><span t-esc="complaint.name"/></td>
+                                <td><span t-esc="complaint.create_date.strftime('%b %d, %Y')"/></td>
+                                <td><span t-esc="complaint.subject"/></td>
+                                <td><span t-esc="complaint.date_of_remedy_city"/></td>
+                                <td><span t-esc="complaint.state"/></td>
+                              </tr>
+                            </t>
+                          </t>
+                        </t>
+                      </tbody>
+                    </table>  
+                    </div>
+                    </div>
+            </div>
+            <div class="settingSidebar">
+                <a href="javascript:void(0)" class="settingPanelToggle"> <i class="fa fa-spin fa-cog"></i>
+                </a>
+                <div class="settingSidebar-body ps-container ps-theme-default">
+                  <div class=" fade show active">
+                    <div class="setting-panel-header">Setting Panel
+                    </div>
+                    <div class="p-15 border-bottom">
+                      <h6 class="font-medium m-b-10">Select Layout</h6>
+                      <div class="selectgroup layout-color w-50">
+                        <label class="selectgroup-item">
+                          <input type="radio" name="value" value="1" class="selectgroup-input-radio select-layout" />
+                          <span class="selectgroup-button">Light</span>
+                        </label>
+                        <label class="selectgroup-item">
+                          <input type="radio" name="value" value="2" class="selectgroup-input-radio select-layout"/>
+                          <span class="selectgroup-button">Dark</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="p-15 border-bottom">
+                      <h6 class="font-medium m-b-10">Sidebar Color</h6>
+                      <div class="selectgroup selectgroup-pills sidebar-color">
+                        <label class="selectgroup-item">
+                          <input type="radio" name="icon-input" value="1" class="selectgroup-input select-sidebar"/>
+                          <span class="selectgroup-button selectgroup-button-icon" data-toggle="tooltip"
+                            data-original-title="Light Sidebar"><i class="fas fa-sun"></i></span>
+                        </label>
+                        <label class="selectgroup-item">
+                          <input type="radio" name="icon-input" value="2" class="selectgroup-input select-sidebar" />
+                          <span class="selectgroup-button selectgroup-button-icon" data-toggle="tooltip"
+                            data-original-title="Dark Sidebar"><i class="fas fa-moon"></i></span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="p-15 border-bottom">
+                      <h6 class="font-medium m-b-10">Color Theme</h6>
+                      <div class="theme-setting-options">
+                        <ul class="choose-theme list-unstyled mb-0">
+                          <li title="white" class="active">
+                            <div class="white"></div>
+                          </li>
+                          <li title="cyan">
+                            <div class="cyan"></div>
+                          </li>
+                          <li title="black">
+                            <div class="black"></div>
+                          </li>
+                          <li title="purple">
+                            <div class="purple"></div>
+                          </li>
+                          <li title="orange">
+                            <div class="orange"></div>
+                          </li>
+                          <li title="green">
+                            <div class="green"></div>
+                          </li>
+                          <li title="red">
+                            <div class="red"></div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="p-15 border-bottom">
+                      <div class="theme-setting-options">
+                        <label class="m-b-0">
+                          <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input"
+                            id="mini_sidebar_setting"/>
+                          <span class="custom-switch-indicator"></span>
+                          <span class="control-label p-l-10">Mini Sidebar</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="p-15 border-bottom">
+                      <div class="theme-setting-options">
+                        <label class="m-b-0">
+                          <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input"
+                            id="sticky_header_setting"/>
+                          <span class="custom-switch-indicator"></span>
+                          <span class="control-label p-l-10">Sticky Header</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="mt-4 mb-4 p-3 align-center rt-sidebar-last-ele">
+                      <a href="#" class="btn btn-icon icon-left btn-primary btn-restore-theme">
+                        <i class="fas fa-undo"></i> Restore Default
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          <t t-call="dashboard_member12.seeting_feature"/>    
+          </div>
+        </div>
+      
+      </body>
+    <t t-call="dashboard_member12.js_assets"/>    
+
+  </t>
+</template>
+
+</odoo>

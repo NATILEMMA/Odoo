@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo noupdate="1">
+    
+    <record id="ir_cron_shipment_date_reminder" model="ir.cron">
+        <field name="name">Latest Inspection Date Reminder</field>
+        <field name="model_id" ref="model_vehicle_libre"/>
+        <field name="state">code</field>
+        <field name="code">model.action_notify_odoo()</field>
+        <field name="active" eval="False" />
+        <field name="interval_number">4</field>
+        <field name="interval_type">hours</field>
+        <field name="numbercall">-1</field>
+    </record>
+</odoo>

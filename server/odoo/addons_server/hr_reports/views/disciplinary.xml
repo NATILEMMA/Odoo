@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem id="disciplinary_action_dashboard_tab"
+                name="Disciplinary Report"
+                parent="hr_report_root"
+                sequence="7"
+                action="hr_disciplinary_tracking.disciplinary_action_graph_action"
+                groups="hr.group_hr_manager,hr_disciplinary_tracking.group_employee_disciplinary_committee"/>
+    </data>
+</odoo>

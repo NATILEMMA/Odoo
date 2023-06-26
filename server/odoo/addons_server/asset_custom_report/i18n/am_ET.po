@@ -1,0 +1,233 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* asset_custom_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20221005\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-07 18:03+0000\n"
+"PO-Revision-Date: 2023-05-07 18:03+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: asset_custom_report
+#: model_terms:ir.ui.view,arch_db:asset_custom_report.report_assets_template
+msgid "<b>Fixed Assets Register card(FAR)</b>"
+msgstr "<b>ቋሚ የንብረት ምዝገባ ካርድ </b>"
+
+#. module: asset_custom_report
+#: model_terms:ir.ui.view,arch_db:asset_custom_report.report_assets_template
+msgid "<strong>Asset location :</strong>"
+msgstr "<strong>የንብረት ቦታ:</strong>"
+
+#. module: asset_custom_report
+#: model_terms:ir.ui.view,arch_db:asset_custom_report.report_assets_template
+msgid "<strong>Date of depriciation start :</strong>"
+msgstr "<strong>የዋጋ ቅናሽ ቀን ይጀምራል በ :</strong>"
+
+#. module: asset_custom_report
+#: model_terms:ir.ui.view,arch_db:asset_custom_report.report_assets_template
+msgid "<strong>Date of purchase :</strong>"
+msgstr "<strong> የግዢ ቀን :</strong>"
+
+#. module: asset_custom_report
+#: model_terms:ir.ui.view,arch_db:asset_custom_report.report_assets_template
+msgid "<strong>Depriciation rate :</strong>"
+msgstr "<strong>የዋጋ ቅናሽ :</strong>"
+
+#. module: asset_custom_report
+#: model_terms:ir.ui.view,arch_db:asset_custom_report.report_assets_template
+msgid "<strong>Name :</strong>"
+msgstr "<strong>ስም :</strong>"
+
+#. module: asset_custom_report
+#: model_terms:ir.ui.view,arch_db:asset_custom_report.report_assets_template
+msgid "<strong>Vendor name :</strong>"
+msgstr "<strong>የአቅራቢ ስም :</strong>"
+
+#. module: asset_custom_report
+#: model_terms:ir.ui.view,arch_db:asset_custom_report.report_assets_template
+msgid "<strong>Year of service :</strong>"
+msgstr "<strong>የአገልግሎት ዓመት :</strong>"
+
+#. module: asset_custom_report
+#: model:ir.model.fields,field_description:asset_custom_report.field_account_asset__accounts_ref
+msgid "Account ref"
+msgstr "መለያ ምንጭ"
+
+#. module: asset_custom_report
+#: model_terms:ir.ui.view,arch_db:asset_custom_report.report_assets_template
+msgid "Accumulative depriciation"
+msgstr "የተከማቸ ቅናሽ"
+
+#. module: asset_custom_report
+#: model:ir.model.fields,field_description:asset_custom_report.field_special_asset_fields__asset_custom_id
+msgid "Asset Custom"
+msgstr "የንብረት ልዩ"
+
+#. module: asset_custom_report
+#: model:ir.model,name:asset_custom_report.model_account_asset_line
+msgid "Asset description line inherit"
+msgstr "የንብረት መግለጫ መስመር ውርስ"
+
+#. module: asset_custom_report
+#: model:ir.model,name:asset_custom_report.model_account_asset
+msgid "Asset inherit"
+msgstr "የንብረት ውርስ"
+
+#. module: asset_custom_report
+#: model:ir.actions.report,name:asset_custom_report.print_pack_certificates
+msgid "Asset report"
+msgstr "የንብረት ዘገባ"
+
+#. module: asset_custom_report
+#: model_terms:ir.ui.view,arch_db:asset_custom_report.report_assets_template
+msgid "Book value"
+msgstr "የመጽሐፉ እሴት"
+
+#. module: asset_custom_report
+#: model:ir.model.fields,field_description:asset_custom_report.field_account_asset_line__cost
+#: model_terms:ir.ui.view,arch_db:asset_custom_report.report_assets_template
+msgid "Cost"
+msgstr "ወጪ"
+
+#. module: asset_custom_report
+#: model:ir.model.fields,field_description:asset_custom_report.field_special_asset_fields__create_uid
+#: model:ir.model.fields,field_description:asset_custom_report.field_special_field_name__create_uid
+msgid "Created by"
+msgstr "የተፈጠረ በ"
+
+#. module: asset_custom_report
+#: model:ir.model.fields,field_description:asset_custom_report.field_special_asset_fields__create_date
+#: model:ir.model.fields,field_description:asset_custom_report.field_special_field_name__create_date
+msgid "Created on"
+msgstr "ተፈጠረ በ ቀን"
+
+#. module: asset_custom_report
+#: model:ir.model.fields,field_description:asset_custom_report.field_account_asset__date_of_purchase
+msgid "Date of purchase"
+msgstr "የግዢ ቀን"
+
+#. module: asset_custom_report
+#: model_terms:ir.ui.view,arch_db:asset_custom_report.report_assets_template
+msgid "Depriciation"
+msgstr "የዋጋ ቅናሽ"
+
+#. module: asset_custom_report
+#: model:ir.model.fields,field_description:asset_custom_report.field_account_asset__depriciation_rate
+msgid "Depriciation Rate percentage"
+msgstr "የዋጋ ቅናሽ ደረጃ መቶኛ"
+
+#. module: asset_custom_report
+#: model:ir.model.fields,field_description:asset_custom_report.field_account_asset_line__description
+#: model_terms:ir.ui.view,arch_db:asset_custom_report.report_assets_template
+msgid "Description"
+msgstr "መግለጫ"
+
+#. module: asset_custom_report
+#: model:ir.model.fields,field_description:asset_custom_report.field_account_asset__description
+msgid "Description of Asset"
+msgstr "የንብረት መግለጫ"
+
+#. module: asset_custom_report
+#: model:ir.model.fields,field_description:asset_custom_report.field_special_asset_fields__display_name
+#: model:ir.model.fields,field_description:asset_custom_report.field_special_field_name__display_name
+msgid "Display Name"
+msgstr "መጠሪያው ስም"
+
+#. module: asset_custom_report
+#: model:ir.model.fields,field_description:asset_custom_report.field_special_asset_fields__field_name
+#: model:ir.model.fields,field_description:asset_custom_report.field_special_field_name__name
+msgid "Field name"
+msgstr "የመስክ ስም"
+
+#. module: asset_custom_report
+#: model:ir.model.fields,field_description:asset_custom_report.field_special_asset_fields__id
+#: model:ir.model.fields,field_description:asset_custom_report.field_special_field_name__id
+msgid "ID"
+msgstr "መታወቂያ"
+
+#. module: asset_custom_report
+#: model:ir.model.fields,field_description:asset_custom_report.field_special_asset_fields____last_update
+#: model:ir.model.fields,field_description:asset_custom_report.field_special_field_name____last_update
+msgid "Last Modified on"
+msgstr "ለመጨረሻ ጊዜ ተሻሽሏል"
+
+#. module: asset_custom_report
+#: model:ir.model.fields,field_description:asset_custom_report.field_special_asset_fields__write_uid
+#: model:ir.model.fields,field_description:asset_custom_report.field_special_field_name__write_uid
+msgid "Last Updated by"
+msgstr "ለመጨረሻ ጊዜ የተዘመነ በ"
+
+#. module: asset_custom_report
+#: model:ir.model.fields,field_description:asset_custom_report.field_special_asset_fields__write_date
+#: model:ir.model.fields,field_description:asset_custom_report.field_special_field_name__write_date
+msgid "Last Updated on"
+msgstr "ለመጨረሻ ጊዜ የተዘመነ"
+
+#. module: asset_custom_report
+#: model:ir.model.fields,field_description:asset_custom_report.field_account_asset__location
+msgid "Location of Asset"
+msgstr "የንብረት ቦታ"
+
+#. module: asset_custom_report
+#: model:ir.model.fields,field_description:asset_custom_report.field_account_asset_line__remark
+msgid "Remark"
+msgstr "አስተያየት"
+
+#. module: asset_custom_report
+#: model:ir.model.fields,field_description:asset_custom_report.field_account_asset__special_fields_ids
+msgid "Special Fields"
+msgstr "ልዩ መረጃ ማስገቢያ "
+
+#. module: asset_custom_report
+#: model_terms:ir.ui.view,arch_db:asset_custom_report.account_asset_view_form
+msgid "Special fields"
+msgstr "ልዩ መረጃ ማስገቢያ "
+
+#. module: asset_custom_report
+#: model:ir.model.fields,field_description:asset_custom_report.field_account_asset__partner_id
+msgid "Supplier name"
+msgstr "የአቅራቢ ስም"
+
+#. module: asset_custom_report
+#: model:ir.model.fields,help:asset_custom_report.field_account_asset_line__cost
+msgid ""
+"This amount represent the initial value of the asset.\n"
+"The Depreciation Base is calculated as follows:\n"
+"Purchase Value - Salvage Value."
+msgstr ""
+"ይህ መጠን የንብረት የመጀመሪያ ዋጋን ይወክላል.\n"
+"የዋጋ ቅናሽ መሠረት እንደሚከተለው ይሰላል:\n"
+"የግዢ እሴት - Salvage እሴት."
+
+#. module: asset_custom_report
+#: model:ir.model.fields,field_description:asset_custom_report.field_special_asset_fields__field_value
+msgid "Value"
+msgstr "እሴት"
+
+#. module: asset_custom_report
+#: model_terms:ir.ui.view,arch_db:asset_custom_report.report_assets_template
+msgid "Year of depriciation"
+msgstr "የዋጋ ቅናሽ"
+
+#. module: asset_custom_report
+#: model:ir.model.fields,field_description:asset_custom_report.field_account_asset__year_of_service
+msgid "Year of service"
+msgstr "የአገልግሎት ዓመት"
+
+#. module: asset_custom_report
+#: model:ir.model,name:asset_custom_report.model_special_asset_fields
+#: model:ir.model,name:asset_custom_report.model_special_field_name
+msgid "custom dynamic special fields"
+msgstr "ብጁ ተለዋዋጭ ልዩ መረጃ ማስገቢያ "
+
+#. module: asset_custom_report
+#: model_terms:ir.ui.view,arch_db:asset_custom_report.report_assets_template
+msgid "remark"
+msgstr "አስተያየት"

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="meeting_minute_visitor_report">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+            <t t-lang="am_ET"/>
+                <t t-foreach="docs" t-as="o">
+                    <div class="page">
+                        <h4 style="margin-left:50px"><b>Meeting Minutes</b></h4>
+                        <br/>
+                        <br/>
+                        <span t-raw="o.meeting_minute" style="font-size:16px;"/>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

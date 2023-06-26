@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+    <record id="salary_summary_tree" model="ir.ui.view">
+      <field name="name">salary.summary.tree</field>
+      <field name="model">salary.summary</field>
+      <field name="priority" eval="8" />
+      <field name="arch" type="xml">
+        <tree string="Salary Summary ">
+          <field name="month" />
+          <field name="amount" />
+          <field name="salary_detail" />
+        </tree>
+      </field>
+    </record>
+
+    <record id="salary_summary_kanban" model="ir.ui.view">
+      <field name="name">salary.summary.kanban</field>
+      <field name="model">salary.summary</field>
+      <field name="priority">10</field>
+      <field name="arch" type="xml">
+        <kanban sample="1">
+          <field name="month" />
+          <field name="amount" />
+          <field name="salary_detail" />
+        </kanban>
+      </field>
+    </record>
+
+    <record id="salary_summary_form" model="ir.ui.view">
+      <field name="name">salary.summary.form</field>
+      <field name="model">salary.summary</field>
+      <field name="priority" eval="8" />
+      <field name="arch" type="xml">
+        <form string="Employee Retirement">
+          <sheet>
+            <group>
+              <group string="Batch Summary">
+                <field name="month" />
+                <field name="amount" />
+                <field name="salary_detail" />
+              </group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+    <record model="ir.actions.act_window" id="view_salary_summary">
+      <field name="name">Salary Summary</field>
+      <field name="res_model">salary.summary</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+        <p class="oe_view_nocontent_create">Salary Summary</p>
+      </field>
+    </record>
+
+    <record id="salary_summary_kanban_inherited_view" model="ir.ui.view">
+      <field name="name">salary.summary.kanban.inherit.test</field>
+      <field name="model">salary.summary</field>
+      <field name="inherit_id" ref="hr_salary_summary.salary_summary_kanban" />
+      <field name="arch" type="xml">
+        <!-- find field description and add the field
+                new_field after it -->
+        <xpath expr="//kanban" position="attributes">
+          <attribute name="create">false</attribute>
+          <attribute name="import">false</attribute>
+        </xpath>
+      </field>
+    </record>
+
+    <record id="salary_summary_tree_inherited_view" model="ir.ui.view">
+      <field name="name">salary.summary.tree.inherit.test</field>
+      <field name="model">salary.summary</field>
+      <field name="inherit_id" ref="hr_salary_summary.salary_summary_tree" />
+      <field name="arch" type="xml">
+        <!-- find field description and add the field
+                new_field after it -->
+        <xpath expr="//tree" position="attributes">
+          <attribute name="create">false</attribute>
+          <attribute name="import">false</attribute>
+        </xpath>
+      </field>
+    </record>
+
+    <record id="salary_summary_form_inherited_view" model="ir.ui.view">
+      <field name="name">salary.summary.form.inherit.test</field>
+      <field name="model">salary.summary</field>
+      <field name="inherit_id" ref="hr_salary_summary.salary_summary_form" />
+      <field name="arch" type="xml">
+        <!-- find field description and add the field
+                new_field after it -->
+        <xpath expr="//form" position="attributes">
+          <attribute name="create">false</attribute>
+          <attribute name="import">false</attribute>
+          <attribute name="edit">false</attribute>
+        </xpath>
+      </field>
+    </record>
+    <menuitem id="salary_summary_report" name="Batch Summary" parent="hr_payroll_community.menu_hr_payroll_community_configuration" action="view_salary_summary" />
+  </data>
+  </odoo>

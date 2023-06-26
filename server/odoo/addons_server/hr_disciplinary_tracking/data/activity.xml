@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+<odoo>
+
+    <data noupdate="1">
+
+        <record id="mail_activity_disciplinary_notification" model="mail.activity.type">
+            <field name="name">Employee Notification</field>
+            <field name="icon">fa-sun-o</field>
+            <field name="res_model_id" ref="hr_disciplinary_tracking.model_disciplinary_action"/>
+        </record>
+
+        <record id="mail_activity_committe_notification" model="mail.activity.type">
+            <field name="name">Committee Notification</field>
+            <field name="icon">fa-sun-o</field>
+            <field name="res_model_id" ref="hr_disciplinary_tracking.model_employee_complaint"/>
+        </record>
+
+    </data>
+
+</odoo>

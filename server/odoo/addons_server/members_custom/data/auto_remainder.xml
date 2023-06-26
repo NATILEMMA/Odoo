@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="autoreminder_meeting_each_other_main" model="ir.cron">
+            <field name="name">Main Office Meeting With Each Other</field>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="active" eval="True"/>
+            <field name="model_id" ref="model_meeting_each_other_main"/>
+            <field name="state">code</field>
+            <field name="code">model.remind_meeting_each_other_main()</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="doall">1</field>
+        </record>
+
+        <record id="autoreminder_meeting_each_other" model="ir.cron">
+            <field name="name">Cell Meeting With Each Other</field>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="active" eval="True"/>
+            <field name="model_id" ref="model_meeting_each_other"/>
+            <field name="state">code</field>
+            <field name="code">model.remind_meeting_each_other()</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="doall">1</field>
+        </record>
+
+        <record id="autoreminder_meeting_cells" model="ir.cron">
+            <field name="name">Meeting With Cells</field>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="active" eval="True"/>
+            <field name="model_id" ref="model_meeting_cells"/>
+            <field name="state">code</field>
+            <field name="code">model.remind_meeting_cells()</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="doall">1</field>
+        </record>
+
+        <record id="autoreminder_birth_date_setter_supporter" model="ir.cron">
+            <field name="name">Supporter Birth Day</field>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="active" eval="True"/>
+            <field name="model_id" ref="model_supporter_members"/>
+            <field name="state">code</field>
+            <field name="code">model.make_birthday_change_for_supporter()</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="doall">1</field>
+        </record>
+
+        <record id="autoreminder_birth_date_setter_candidate" model="ir.cron">
+            <field name="name">Candidate Birth Day</field>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="active" eval="True"/>
+            <field name="model_id" ref="model_candidate_members"/>
+            <field name="state">code</field>
+            <field name="code">model.make_birthday_change_for_candidate()</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="doall">1</field>
+        </record>
+
+        <record id="autoreminder_birth_date_setter_member" model="ir.cron">
+            <field name="name">Member Birth Day</field>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="active" eval="True"/>
+            <field name="model_id" ref="model_res_partner"/>
+            <field name="state">code</field>
+            <field name="code">model.make_birthday_change_for_member()</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="doall">1</field>
+        </record>
+
+        <record id="autoreminder_candidate_selection" model="ir.cron">
+            <field name="name">Auto Reminder Candidate Approval</field>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="active" eval="True"/>
+            <field name="model_id" ref="model_candidate_members"/>
+            <field name="state">code</field>
+            <field name="code">model.send_notification_to_woreda_manager()</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="doall">1</field>
+        </record>
+
+
+        <record id="autoreminder_supporter_selection" model="ir.cron">
+            <field name="name">Auto Reminder Supporter Approval</field>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="active" eval="True"/>
+            <field name="model_id" ref="model_supporter_members"/>
+            <field name="state">code</field>
+            <field name="code">model.send_notification_to_woreda_manager_for_supporter()</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="doall">1</field>
+        </record>
+
+        <record id="autoreminder_remind_complaint_hanlder" model="ir.cron">
+            <field name="name">Auto Reminder Complaint Handler</field>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="active" eval="True"/>
+            <field name="model_id" ref="model_member_complaint"/>
+            <field name="state">code</field>
+            <field name="code">model.send_notification_to_wereda_complaint_handler()</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="doall">1</field>
+        </record>
+
+        <record id="autoreminder_send_transfer_to_subcity" model="ir.cron">
+            <field name="name">Auto Reminder Transfer Complaint To Subcity</field>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="active" eval="True"/>
+            <field name="model_id" ref="model_member_complaint"/>
+            <field name="state">code</field>
+            <field name="code">model.send_to_subcity_complaint_handler()</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="doall">1</field>
+        </record>
+
+        <record id="autoreminder_notifiy_to_subcity" model="ir.cron">
+            <field name="name">Auto Reminder Subcity Complaint Handler</field>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="active" eval="True"/>
+            <field name="model_id" ref="model_member_complaint"/>
+            <field name="state">code</field>
+            <field name="code">model.send_notification_to_subcity_complaint_handler()</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="doall">1</field>
+        </record>
+
+        <record id="autoreminder_send_transfer_to_city" model="ir.cron">
+            <field name="name">Auto Reminder Transfer Complaint To City</field>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="active" eval="True"/>
+            <field name="model_id" ref="model_member_complaint"/>
+            <field name="state">code</field>
+            <field name="code">model.send_to_city_complaint_handler()</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="doall">1</field>
+        </record>
+
+    </data>
+</odoo>

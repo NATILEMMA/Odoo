@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model="ir.module.category" id="module_category_absent_specail_reason">
+        <field name="name">Hr Absent Specail Reason Setting</field>
+        <field name="description">specail Reason Setting</field>
+        <field name="sequence">60</field>
+    </record>
+
+    <record id="group_requester" model="res.groups">
+        <field name="name">Allow to request specail reason</field>
+        <field name="category_id" ref="module_category_absent_specail_reason" />
+    </record>
+
+    <record id="group_approval" model="res.groups">
+        <field name="name">Allow to approval</field>
+        <field name="category_id" ref="module_category_absent_specail_reason" />
+    </record>
+   
+</odoo>

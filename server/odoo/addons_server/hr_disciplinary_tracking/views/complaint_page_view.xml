@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!--This record will show the tree view for employees -->
+    <record id="employee_complaint_tree_view" model="ir.ui.view">
+        <field name="name">Department Complaints</field>
+        <field name="model">employee.complaint</field>
+        <field name="arch" type="xml">
+            <tree delete="false">
+                <field name="name"/>
+                <field name="create_date"/>
+                <field name="mode"/>
+                <field name="subject"/>
+                <field name="state"/>
+                <button name="in_progress" states="draft" string="Send For Approval" type="object" class="btn-primary"/>
+            </tree>
+        </field>
+    </record>
+
+    <!--This record will show the tree view for complaint assessors -->
+    <record id="complaint_assessor_tree_view" model="ir.ui.view">
+        <field name="name">Complaints</field>
+        <field name="model">employee.complaint</field>
+        <field name="arch" type="xml">
+            <tree delete="false" create="false">
+                <field name="name"/>
+                <field name="create_date"/>
+                <field name="mode"/>
+                <field name="subject"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <!-- This record will show the form view for complaint assessors -->
+    <!-- <record id="employee_complaint_form_view" model="ir.ui.view">
+        <field name="name">Department Complaints</field>
+        <field name="model">employee.complaint</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <field name="state" widget="statusbar" statusbar_visible="new,draft,waiting for approval,resolved"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="subject" attrs="{'readonly': [('state', 'in', ['waiting for approval', 'resolved'])]}"/>
+                            <field name="victim_id" readonly="1" options="{'no_create': True, 'no_create_edit': True}" force_save="1"/>
+                        </group>
+                        <group>
+                            <field name="mode" attrs="{'invisible': [('state', 'in', ['waiting for approval', 'resolved'])]}"/>
+                            <field name="employee_offendors_ids" widget="many2many_tags" attrs="{'invisible': ['|',('state', 'in', ['waiting for approval', 'resolved']), ('mode', '!=', 'by_employee')], 'required': [('mode', '=', 'by_employee')]}" options="{'no_create': True, 'no_create_edit': True}"/>
+                            <field name="department_offendors_ids" widget="many2many_tags" attrs="{'invisible': [('mode', '!=', 'by_department')], 'readonly': [('state', 'in', ['waiting for approval', 'resolved'])], 'required': [('mode', '=', 'by_department')]}" options="{'no_create': True, 'no_create_edit': True}"/>
+                            <field name="company_offendors_id" readonly="1" attrs="{'invisible': [('mode', '!=', 'by_company')], 'readonly': [('state', 'in', ['waiting for approval', 'resolved'])], 'required': [('mode', '=', 'by_company')]}"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="circumstances" attrs="{'readonly': [('state', 'in', ['waiting for approval', 'resolved'])]}"/>
+                    </group>
+                    <notebook>
+                        <page string="Complaint Report">
+                            <group>
+                                <group>
+                                    <field name="action" attrs="{'readonly': [('state', 'in', ['draft', 'new', 'resolved', 'waiting for approval'])]}"/>
+                                </group>
+                                <group>
+                                    <field name="action_details" attrs="{'readonly': [('state', 'in', ['draft', 'new', 'resolved', 'waiting for approval'])]}"/>
+                                </group>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record> -->
+
+
+    <!-- This record will show the form view for complaint assessors -->
+    <record id="complaint_assessors_form_view" model="ir.ui.view">
+        <field name="name">Department Complaints</field>
+        <field name="model">employee.complaint</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="complaint_reviewed" states="waiting for approval" string="Send Review" type="object" class="btn-primary" groups="hr_disciplinary_tracking.group_department_disciplinary_committee,hr_disciplinary_tracking.group_company_disciplinary_committee"/>
+                    <field name="state" widget="statusbar" statusbar_visible="new,draft,waiting for approval,resolved"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="subject" attrs="{'readonly': [('state', 'in', ['waiting for approval', 'resolved'])]}"/>
+                            <field name="victim_id" readonly="1" options="{'no_create': True, 'no_create_edit': True}"/>
+                            <field name="x_css" invisible="1"/>
+                        </group>
+                        <group>
+                            <field name="mode" attrs="{'invisible': [('state', 'in', ['waiting for approval', 'resolved'])]}"/>
+                            <field name="employee_offendors_ids" widget="many2many_tags" attrs="{'invisible': [('mode', '!=', 'by_employee')], 'readonly': [('state', 'in', ['waiting for approval', 'resolved'])], 'required': [('mode', '=', 'by_employee')]}" options="{'no_create': True, 'no_create_edit': True}"/>
+                            <field name="department_offendors_ids" widget="many2many_tags" attrs="{'invisible': [('mode', '!=', 'by_department')], 'readonly': [('state', 'in', ['waiting for approval', 'resolved'])], 'required': [('mode', '=', 'by_department')]}" options="{'no_create': True, 'no_create_edit': True}"/>
+                            <field name="company_offendors_id" readonly="1" attrs="{'invisible': [('mode', '!=', 'by_company')], 'readonly': [('state', 'in', ['waiting for approval', 'resolved'])], 'required': [('mode', '=', 'by_company')]}"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="circumstances" attrs="{'readonly': [('state', 'in', ['waiting for approval', 'resolved'])]}"/>
+                    </group>
+                    <notebook>
+                        <page string="Complaint Report">
+                            <group>
+                                <group>
+                                    <field name="action" attrs="{'readonly': [('state', 'in', ['draft', 'new', 'resolved'])]}"/>
+                                </group>
+                                <group>
+                                    <field name="action_details" attrs="{'readonly': [('state', 'in', ['draft', 'new', 'resolved'])]}"/>
+                                </group>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- This record will add complaint tab inside res.users profile-->
+    <!-- <record id="hr_employee_view_form_complaint" model="ir.ui.view">
+       <field name="name">hr.employee.complaint.form.inherit</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+             <notebook position="inside">
+                <page string="Complaint">
+                    <field name="employee_complaint_ids" context="{'form_view_ref': 'hr_disciplinary_tracking.employee_complaint_form_view', 'tree_view_ref': 'hr_disciplinary_tracking.employee_complaint_tree_view'}"/>
+                </page>
+            </notebook>
+        </field>
+    </record> -->
+
+
+    <!-- This record will add complaint tab inside res.users profile-->
+    <!-- <record id="res_users_view_form_complaint" model="ir.ui.view">
+       <field name="name">res.users.complaint.form.inherit</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="hr.res_users_view_form_simple_modif"/>
+        <field name="arch" type="xml">
+             <notebook position="inside">
+                <page string="Complaint">
+                    <field name="employee_complaint_ids" context="{'form_view_ref': 'hr_disciplinary_tracking.employee_complaint_form_view', 'tree_view_ref': 'hr_disciplinary_tracking.employee_complaint_tree_view'}"/>
+                </page>
+            </notebook>       
+        </field>
+    </record> -->
+
+    <!-- This record will modifiy the department view -->
+    <record id="view_department_form_inherit" model="ir.ui.view">
+        <field name="name">department_view_inherit</field>
+        <field name="model">hr.department</field>
+        <field name="inherit_id" ref="hr.view_department_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='parent_id']" position="after">
+                <field name="department_complaint_assessors" widget="many2many_tags"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- This record will modifiy the company view -->
+    <record id="view_company_form_inherit" model="ir.ui.view">
+        <field name="name">company_view_inherit</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="base.view_company_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@class='oe_title']" position="after">
+                <group>
+                    <group>
+                        <field name="company_complaint_assessors" widget="many2many_tags"/>
+                    </group>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="complaint_search_view" model="ir.ui.view">
+        <field name="name">complaint_search</field>
+        <field name="model">employee.complaint</field>
+        <field name="arch" type="xml">
+            <search string="Search complaint">
+                <field name="victim_id"/>
+                <filter string="Mode" name="by_department" domain="[('mode','=','by_department')]"/>
+                <filter string="Draft" name="draft" domain="[('state','=','draft')]"/>
+                <filter string="Waiting For Approval" name="waiting_for_approval" domain="[('state','=','waiting for approval')]"/>
+                <filter string="Resolved" name="resolved" domain="[('state','=','resolved')]"/>
+                <separator/>
+                <group expand="1" string="Group By">
+                    <filter string="Subject" name="subject" context="{'group_by': 'subject'}"/>
+                    <filter string="State" name="state" context="{'group_by':'state'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+
+    <!-- This record will create an action to employee complaints -->
+    <record id="employee_complaint" model="ir.actions.act_window">
+        <field name="name">Employee Complaints</field>
+        <field name="res_model">employee.complaint</field>
+        <field name="view_mode">tree,form,pivot,graph</field>
+        <field name="limit">20</field>
+        <field name="search_view_id" ref="complaint_search_view"/>
+        <field name="domain">[('victim_id', '=', active_id)]</field>
+    </record>
+
+    <record model="ir.actions.act_window.view" id="employee_complaint_view_partner_tree_id">
+        <field name="sequence" eval="1"/>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="employee_complaint_tree_view"/>
+        <field name="act_window_id" ref="employee_complaint"/>
+    </record>
+
+    <!-- <record model="ir.actions.act_window.view" id="employee_complaint_view_partner_form_id">
+        <field name="sequence" eval="2"/>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="employee_complaint_form_view"/>
+        <field name="act_window_id" ref="employee_complaint"/>
+    </record> -->
+
+
+    <!-- This record will create an action to employee complaints -->
+    <record id="employee_complaint_form_action" model="ir.actions.act_window">
+        <field name="name">Employee Complaints</field>
+        <field name="res_model">employee.complaint</field>
+        <field name="view_mode">tree,form,pivot,graph</field>
+        <field name="search_view_id" ref="complaint_search_view"/>
+        <field name="context">{'search_default_waiting_for_approval': 1}</field>
+        <field name="domain">['&amp;', ('mode', '=', 'by_department'), ('complaint_assessor_ids', 'in', [uid])]</field>
+    </record>
+
+
+    <record model="ir.actions.act_window.view" id="department_committee_view_partner_tree_id">
+        <field name="sequence" eval="1"/>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="complaint_assessor_tree_view"/>
+        <field name="act_window_id" ref="employee_complaint_form_action"/>
+    </record>
+
+    <!-- <record model="ir.actions.act_window.view" id="department_committee_view_partner_form_id">
+        <field name="sequence" eval="2"/>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="complaint_assessors_form_view"/>
+        <field name="act_window_id" ref="employee_complaint_form_action"/>
+    </record> -->
+
+    <!-- This record will create an action to employee complaints -->
+    <record id="employee_complaint_form_action_company" model="ir.actions.act_window">
+        <field name="name">Employee Complaints</field>
+        <field name="res_model">employee.complaint</field>
+        <field name="view_mode">tree,form,pivot,graph</field>
+        <field name="search_view_id" ref="complaint_search_view"/>
+        <field name="context">{'search_default_waiting_for_approval': 1}</field>
+        <field name="domain">['&amp;', ('mode', '=', 'by_company'), ('complaint_assessor_ids', 'in', [uid])]</field>
+    </record>
+
+    <record model="ir.actions.act_window.view" id="company_committee_view_partner_tree_id">
+        <field name="sequence" eval="1"/>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="complaint_assessor_tree_view"/>
+        <field name="act_window_id" ref="employee_complaint_form_action_company"/>
+    </record>
+
+    <!-- <record model="ir.actions.act_window.view" id="company_committee_view_partner_form_id">
+        <field name="sequence" eval="2"/>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="complaint_assessors_form_view"/>
+        <field name="act_window_id" ref="employee_complaint_form_action_company"/>
+    </record> -->
+
+    <record id="employee_form_inherit_complaint" model="ir.ui.view">
+        <field name="name">inherit.employee.form.view</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="hr.res_users_view_form_simple_modif"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button name="%(employee_complaint)d"
+                        class="oe_stat_button"
+                        icon="fa-list-ol"
+                        type="action"
+                >
+                    <field string="Complaints" name="complaint_counter" widget="statinfo"/>
+                </button>
+                <button name="%(hr_disciplinary_tracking.disciplinary_action_details)d"
+                        class="oe_stat_button"
+                        icon="fa-info-circle"
+                        type="action"
+                >
+                    <field string="Disciplinary Action" name="discipline_count" widget="statinfo"/>
+                </button>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="employee_form_inherit_complaint" model="ir.ui.view">
+        <field name="name">inherit.employee.form.view</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <!--Add Discipline button in the Employee Form-->
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button name="%(employee_complaint)d"
+                        class="oe_stat_button"
+                        icon="fa-list-ol"
+                        type="action"
+                >
+                    <field string="Complaints" name="complaint_counter" widget="statinfo"/>
+                </button>
+                <button name="%(hr_disciplinary_tracking.disciplinary_action_details)d"
+                        class="oe_stat_button"
+                        icon="fa-info-circle"
+                        type="action"
+                >
+                    <field string="Disciplinary Action" name="discipline_count" widget="statinfo"/>
+                </button>
+            </xpath>
+        </field>
+    </record>
+
+    <menuitem id="complaint_assessor_menu"
+              name="Complaints"
+              parent="hr_menu_organizer.hr_employee_activities_menu"
+              sequence="70"
+              groups="hr.group_hr_manager,hr_disciplinary_tracking.group_department_disciplinary_committee,hr_disciplinary_tracking.group_company_disciplinary_committee"/>
+
+
+    <menuitem id="department_complaint_assessor_menu"
+              name="Department Complaints"
+              parent="complaint_assessor_menu"
+              sequence="1"
+              groups="hr.group_hr_manager,hr_disciplinary_tracking.group_department_disciplinary_committee"
+              action="employee_complaint_form_action"/>
+
+
+    <menuitem id="company_complaint_assessor_menu"
+              name="Company Complaints"
+              parent="complaint_assessor_menu"
+              sequence="2"
+              groups="hr.group_hr_manager,hr_disciplinary_tracking.group_company_disciplinary_committee"
+              action="employee_complaint_form_action_company"/>
+</odoo>

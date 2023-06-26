@@ -1,0 +1,129 @@
+<odoo>
+    <data> 
+     
+                <!-- 
+                    
+                    Adding Ethiopian Calander Date to Time Fream 
+
+                    step 1: Inherit the View of the model to which you wish to add the Ethiopian calendar extension.
+
+                    step 2, xpath your exact location of converting date fields if your date fields are located within a form sheet, use col and colspan to adjust CSS
+                
+                    Ethiopian Date Picker Widget
+
+                    - ethiopian_calander_widget
+                    - ethiopian_calander_widget_two
+                    - ethiopian_calander_widget_three
+                    - ethiopian_calander_widget_four
+                
+                
+                -->
+
+        <record id="donor_form_view_inherited_view" model="ir.ui.view">
+            <field name="name">Donor</field>
+            <field name="model">donors</field>
+            <field name="inherit_id" ref="members_custom.donor_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='archive']" position="replace">
+                    <page name="archive" string="Archives" attrs="{'invisible': [('active', '=', True)]}">
+                        <field name="archive_ids" readonly="1">
+                            <tree>
+                                <field name="is_pagum_from" invisible="1"/>
+                                <field  name="ethiopian_from" attrs="{'invisible': [('is_pagum_from', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                                <field  name="pagum_from" attrs="{'invisible': [('is_pagum_from', '!=',False)]}"  groups="EthiopianCalendar.group_ethio_datepicker"/>
+                                <field name="date_from" string="Date From" groups="EthiopianCalendar.group_gregory"/>
+                                <field name="is_pagum_to" invisible="1"/>
+                                <field  name="ethiopian_to" attrs="{'invisible': [('is_pagum_to', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                                <field  name="pagum_to" attrs="{'invisible': [('is_pagum_to', '!=',False)]}"  groups="EthiopianCalendar.group_ethio_datepicker"/>
+                                <field name="date_to" string="Date To" groups="EthiopianCalendar.group_gregory"/>
+                                <field name="departure_reason" string="Reason"/>
+                                <field name="additional_information" string="Additional Information"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record> 
+        
+
+        <record id="supported_members_form_view_inherited_view" model="ir.ui.view">
+            <field name="name">Supporter Member Form</field>
+            <field name="model">supporter.members</field>
+            <field name="inherit_id" ref="members_custom.supported_members_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='archive']" position="replace">
+                    <page name="archive" string="Archives" attrs="{'invisible': [('active', '=', True)]}">
+                        <field name="archive_ids" readonly="1">
+                            <tree>
+                                <field name="is_pagum_from" invisible="1"/>
+                                <field  name="ethiopian_from" attrs="{'invisible': [('is_pagum_from', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                                <field  name="pagum_from" attrs="{'invisible': [('is_pagum_from', '!=',False)]}"  groups="EthiopianCalendar.group_ethio_datepicker"/>
+                                <field name="date_from" string="Date From" groups="EthiopianCalendar.group_gregory"/>
+                                <field name="is_pagum_to" invisible="1"/>
+                                <field  name="ethiopian_to" attrs="{'invisible': [('is_pagum_to', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                                <field  name="pagum_to" attrs="{'invisible': [('is_pagum_to', '!=',False)]}"  groups="EthiopianCalendar.group_ethio_datepicker"/>
+                                <field name="date_to" string="Date To" groups="EthiopianCalendar.group_gregory"/>
+                                <field name="departure_reason" string="Reason"/>
+                                <field name="additional_information" string="Additional Information"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record> 
+
+
+        <record id="candidate_members_form_view_inherited_view" model="ir.ui.view">
+            <field name="name">Candidate Member Form</field>
+            <field name="model">candidate.members</field>
+            <field name="inherit_id" ref="members_custom.candidate_members_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='archive']" position="replace">
+                    <page name="archive" string="Archives" attrs="{'invisible': [('active', '=', True)]}">
+                        <field name="archive_ids" readonly="1">
+                            <tree>
+                                <field name="is_pagum_from" invisible="1"/>
+                                <field  name="ethiopian_from" attrs="{'invisible': [('is_pagum_from', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                                <field  name="pagum_from" attrs="{'invisible': [('is_pagum_from', '!=',False)]}"  groups="EthiopianCalendar.group_ethio_datepicker"/>
+                                <field name="date_from" string="Date From" groups="EthiopianCalendar.group_gregory"/>
+                                <field name="is_pagum_to" invisible="1"/>
+                                <field  name="ethiopian_to" attrs="{'invisible': [('is_pagum_to', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                                <field  name="pagum_to" attrs="{'invisible': [('is_pagum_to', '!=',False)]}"  groups="EthiopianCalendar.group_ethio_datepicker"/>
+                                <field name="date_to" string="Date To" groups="EthiopianCalendar.group_gregory"/>
+                                <field name="departure_reason" string="Reason"/>
+                                <field name="additional_information" string="Additional Information"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record> 
+
+        <!-- <record id="membership_view_partner_form_inherited_view" model="ir.ui.view">
+            <field name="name">Member Form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="members_custom.membership_view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='archive']" position="replace">
+                    <page name="archive" string="Archives" attrs="{'invisible': [('active', '=', True)]}">
+                        <field name="archive_ids" readonly="1">
+                            <tree>
+                                <field name="is_pagum_from" invisible="1"/>
+                                <field  name="ethiopian_from" attrs="{'invisible': [('is_pagum_from', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                                <field  name="pagum_from" attrs="{'invisible': [('is_pagum_from', '!=',False)]}"  groups="EthiopianCalendar.group_ethio_datepicker"/>
+                                <field name="date_from" string="Date From" groups="EthiopianCalendar.group_gregory"/>
+                                <field name="is_pagum_to" invisible="1"/>
+                                <field  name="ethiopian_to" attrs="{'invisible': [('is_pagum_to', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                                <field  name="pagum_to" attrs="{'invisible': [('is_pagum_to', '!=',False)]}"  groups="EthiopianCalendar.group_ethio_datepicker"/>
+                                <field name="date_to" string="Date To" groups="EthiopianCalendar.group_gregory"/>
+                                <field name="departure_reason" string="Reason"/>
+                                <field name="additional_information" string="Additional Information"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>  -->
+
+    </data>
+</odoo>
