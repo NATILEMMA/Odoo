@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data >
+        <report
+            id="print_personal_equipment_request_report"
+            model="hr.personal.equipment.request"
+            string="Equipment report"
+            report_type="qweb-pdf"
+            name="hr_personal_equipment_request.report_equipment_request_template"
+            file="hr_personal_equipment_request.report_equipment_request_template"
+        />
+    </data>
+</odoo>
+
+
+

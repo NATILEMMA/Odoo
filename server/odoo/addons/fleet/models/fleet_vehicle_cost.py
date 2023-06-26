@@ -313,6 +313,7 @@ class FleetVehicleLogFuel(models.Model):
     _name = 'fleet.vehicle.log.fuel'
     _description = 'Fuel log for vehicles'
     _inherits = {'fleet.vehicle.cost': 'cost_id'}
+    _inherit =  ['mail.thread', 'mail.activity.mixin', 'utm.mixin']
 
     @api.model
     def default_get(self, default_fields):

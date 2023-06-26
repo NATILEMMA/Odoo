@@ -1,0 +1,5786 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* website
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20230401\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-06-15 14:20+0000\n"
+"PO-Revision-Date: 2023-06-15 14:20+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/editor/snippets.options.js:0
+#, python-format
+msgid " Add Images"
+msgstr "ምስሎችን አክል"
+
+#. module: website
+#: code:addons/website/models/website_rewrite.py:0
+#, python-format
+msgid "\"URL to\" can not be empty."
+msgstr "\" ዩአርኤል ወደ \" ባዶ ሊሆን አይችልም።"
+
+#. module: website
+#: code:addons/website/models/website_rewrite.py:0
+#, python-format
+msgid "\"URL to\" cannot contain parameter %s which is not used in \"URL from\"."
+msgstr "\" URL ወደ \" በ \"URL ከ\" ውስጥ ጥቅም ላይ ያልዋለ ግቤት %s ሊይዝ አይችልም።"
+
+#. module: website
+#: code:addons/website/models/website_rewrite.py:0
+#, python-format
+msgid "\"URL to\" is invalid: %s"
+msgstr "\" URL ወደ \" ልክ ያልሆነ ነው፡ %s"
+
+#. module: website
+#: code:addons/website/models/website_rewrite.py:0
+#, python-format
+msgid "\"URL to\" must contain parameter %s used in \"URL from\"."
+msgstr "\" ዩአርኤል ወደ \" በ \"URL ከ\" ውስጥ ጥቅም ላይ የሚውል %s ግቤት መያዝ አለበት።"
+
+#. module: website
+#: code:addons/website/models/website_rewrite.py:0
+#, python-format
+msgid "\"URL to\" must start with a leading slash."
+msgstr "\" ዩአርኤል ወደ \" በመሪ slash መጀመር አለበት።"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website_visitor__page_count
+msgid "# Visited Pages"
+msgstr "# የተጎበኙ ገጾች"
+
+#. module: website
+#: code:addons/website/models/website.py:0
+#: code:addons/website/models/website.py:0
+#, python-format
+msgid "%s (id:%s)"
+msgstr ""
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.show_website_info
+msgid "&amp;times;"
+msgstr ""
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.xml:0
+#, python-format
+msgid "&nbsp;"
+msgstr ""
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.gallery.xml:0
+#, python-format
+msgid "&times;"
+msgstr ""
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.list_website_pages
+msgid "' did not match any pages."
+msgstr "ከማንኛውም ገጽ ጋር አልተዛመደም።"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.pageProperties.xml:0
+#, python-format
+msgid "(could be used in"
+msgstr "(በ ውስጥ ጥቅም ላይ ሊውል ይችላል)"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.show_website_info
+msgid ", author:"
+msgstr ", ደራሲ:"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.pageProperties.xml:0
+#, python-format
+msgid ""
+".\n"
+"            Changing its name will break these calls."
+msgstr ""
+".\n"
+"ስሙን መቀየር እነዚህን ጥሪዎች ይሰብራል።"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "1/5"
+msgstr ""
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "100%"
+msgstr ""
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "10s"
+msgstr ""
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "12"
+msgstr ""
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "1s"
+msgstr ""
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "2/5"
+msgstr ""
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_comparisons
+msgid "24x7 toll-free support"
+msgstr "24x7 ከክፍያ ነጻ ድጋፍ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "25%"
+msgstr ""
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "2s"
+msgstr ""
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "3/5"
+msgstr ""
+
+#. module: website
+#: model:ir.model.fields.selection,name:website.selection__website_rewrite__redirect_type__301
+msgid "301 Moved permanently"
+msgstr ""
+
+#. module: website
+#: model:ir.model.fields.selection,name:website.selection__website_rewrite__redirect_type__302
+msgid "302 Moved temporarily"
+msgstr ""
+
+#. module: website
+#: model:ir.model.fields.selection,name:website.selection__website_rewrite__redirect_type__308
+msgid "308 Redirect / Rewrite"
+msgstr ""
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "3s"
+msgstr ""
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "4/5"
+msgstr ""
+
+#. module: website
+#: model:ir.model.fields.selection,name:website.selection__website_rewrite__redirect_type__404
+msgid "404 Not Found"
+msgstr ""
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "5/5"
+msgstr ""
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "50%"
+msgstr ""
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "5s"
+msgstr ""
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "75%"
+msgstr ""
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_call_to_action
+msgid "<b>50,000+ companies</b> run Odoo to grow their businesses."
+msgstr "<b>50,000+ ኩባንያዎች</b>ንግዶቻቸውን ለማሳደግ ኦዱኦን ያካሂዳሉ።"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/tours/banner.js:0
+#, python-format
+msgid "<b>Click Edit</b> to start designing your homepage."
+msgstr "የመነሻ ገጽዎን ዲዛይን ለመጀመር <b>አርትዕን ጠቅ ያድርጉ።"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/tours/banner.js:0
+#, python-format
+msgid ""
+"<b>Click on a text</b> to start editing it. <i>It's that easy to edit your "
+"content!</i>"
+msgstr "ማርትዕ ለመጀመር <b>ጽሑፍ</b>ን ጠቅ ያድርጉ። <i>የእርስዎን ማርትዕ በጣም ቀላል ነው።ይዘት!</i>"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_tabs
+#: model_terms:ir.ui.view,arch_db:website.s_text_block
+msgid ""
+"<b>Great stories are for everyone even when only written for just one "
+"person.</b> If you try to write with a wide general audience in mind, your "
+"story will ring false and be bland. No one will be interested. Write for one"
+" person. If it’s genuine for the one, it’s genuine for the rest."
+msgstr ""
+"<b>ታላላቅ ታሪኮች ለአንድ ብቻ ሲጻፉም ለሁሉም ነውሰው።</b> ሰፊ ተመልካቾችን ግምት ውስጥ በማስገባት ለመጻፍ "
+"ከሞከርክ የአንተ ታሪኩ የውሸት ይሆናል እናም ጨዋ ይሆናል ማንም ፍላጎት አይኖረውም። ለአንዱ ይፃፉሰው። ለአንዱ እውነተኛ"
+" ከሆነ ለቀሪው እውነት ነው።"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_tabs
+#: model_terms:ir.ui.view,arch_db:website.s_text_block
+msgid ""
+"<b>Great stories have personality.</b> Consider telling a great story that "
+"provides personality. Writing a story with personality for potential clients"
+" will assists with making a relationship connection. This shows up in small "
+"quirks like word choices or phrases. Write from your point of view, not from"
+" someone else's experience."
+msgstr ""
+"<b>ታላላቅ ታሪኮች ስብዕና አላቸው።ስብዕና ያቀርባል። ለደንበኛ ሊሆኑ ከሚችሉ ስብዕና ጋር ታሪክ መፃፍየግንኙነት "
+"ግንኙነት ለመፍጠር ይረዳል። ይህ በትንሹ ነው የሚያሳየውእንደ የቃላት ምርጫ ወይም ሀረጎች ያሉ ኳሶች። ከአንተ እይታ "
+"ሳይሆን ከአንተ እይታ ጻፍየሌላ ሰው ልምድ."
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/tours/banner.js:0
+#, python-format
+msgid "<b>Install a contact form</b> to improve this page."
+msgstr "ይህንን ገጽ ለማሻሻል <b>የእውቂያ ቅጽ ጫን</b>።"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/tours/banner.js:0
+#, python-format
+msgid ""
+"<b>Install new apps</b> to get more features. Let's install the <i>'Contact "
+"form'</i> app."
+msgstr ""
+"ተጨማሪ ባህሪያትን ለማግኘት <b>አዲስ መተግበሪያዎችን ጫን</b>። እስቲ <i>'እውቂያውን' እንጭነው።ቅጽ'</i> "
+"መተግበሪያ።"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/tours/banner.js:0
+#, python-format
+msgid ""
+"<b>That's it!</b><p>Your page is all set to go live. Click the "
+"<b>Publish</b> button to publish it on the website.</p>"
+msgstr ""
+"<b>ይሄ ነው!</b><p>ገጽህ በቀጥታ ለመለቀቅ ተዘጋጅቷል። የሚለውን ጠቅ አድርግ።በድረ-ገጹ ላይ ለማተም "
+"<b>አትም</b> አዝራር።</p>"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_carousel
+msgid ""
+"<font style=\"background-color: rgb(255, 255, 255);\">Good writing is "
+"simple, but not simplistic.</font>"
+msgstr ""
+"<font style=\"background-color: rgb(255, 255, 255);\">ጥሩ ጽሑፍ ነውቀላል፣ ግን ቀላል "
+"አይደለም።</font>"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_carousel
+msgid ""
+"<font style=\"font-size: 62px; background-color: rgb(255, 255, 255);\">Edit "
+"this title</font>"
+msgstr ""
+"<font style=\"font-size: 62px; background-color: rgb(255, 255, "
+"255);\">አርትዕthis title</font>"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_banner
+msgid "<font style=\"font-size: 62px;\"><b>Sell Online.</b> Easily.</font>"
+msgstr "<font style=\"font-size: 62px፤\"><b>በመስመር ላይ ይሽጡ።</b>በቀላሉ።</font>"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_picture
+msgid "<font style=\"font-size: 62px;\">A punchy Headline</font>"
+msgstr "<font style=\"font-size: 62px;\">የቂም ርዕስ</font>"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_faq_collapse
+msgid "<font style=\"font-size: 62px;\">FAQ</font>"
+msgstr "<font style=\"font-size: 62px;\">ተደጋጋሚ ጥያቄዎች</font>"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_comparisons
+msgid "<font style=\"font-size: 62px;\">Our offers</font>"
+msgstr "<font style=\"font-size: 62px;\">የእኛ ቅናሾች</font>"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_carousel
+msgid "<font style=\"font-size: 62px;\">Slide Title</font>"
+msgstr "<font style=\"font-size: 62px;\">የስላይድ ርዕስ</font>"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_parallax
+#: model_terms:ir.ui.view,arch_db:website.s_title
+msgid "<font style=\"font-size: 62px;\">Your Site Title</font>"
+msgstr "<font style=\"font-size: 62px;\">የእርስዎ ጣቢያ ርዕስ</font>"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_card
+msgid "<i class=\"fa fa-1x fa-clock-o mr8\"/><small>2 days ago</small>"
+msgstr "<i class=\"fa fa-1x fa-clock-o mr8\"/><small>ከ2 ቀናት በፊት</small>"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_picture
+msgid ""
+"<i class=\"fa fa-1x fa-picture-o mr-2\"/>Add a caption to enhance the "
+"meaning of this image."
+msgstr ""
+"<i class=\"fa fa-1x fa-picture-o mr-2\"/>የ የዚህ ምስል ትርጉምን ለማሻሻል መግለጫ ጽሁፍ አክል"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
+msgid ""
+"<i class=\"fa fa-arrow-right\"/>\n"
+"                                            Create a Google Project and Get a Key"
+msgstr ""
+"<i class=\"fa fa-arrow-right\"/>\n"
+"የጎግል ፕሮጀክት ይፍጠሩ እና ቁልፍ ያግኙ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
+msgid ""
+"<i class=\"fa fa-arrow-right\"/>\n"
+"                                            Enable billing on your Google Project"
+msgstr ""
+"<i class=\"fa fa-arrow-right\"/>\n"
+"በእርስዎ Google ፕሮጀክት ላይ የሂሳብ አከፋፈልን አንቃ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
+msgid ""
+"<i class=\"fa fa-arrow-right\"/>\n"
+"                                            How to get my Client ID"
+msgstr ""
+"<i class=\"fa fa-arrow-right\"/>\n"
+"የእኔን የደንበኛ መታወቂያ እንዴት ማግኘት እችላለሁ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
+msgid ""
+"<i class=\"fa fa-arrow-right\"/>\n"
+"                                            How to get my Tracking ID"
+msgstr ""
+"<i class=\"fa fa-arrow-right\"/>\n"
+"የእኔን የመከታተያ መታወቂያ እንዴት ማግኘት እችላለሁ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippets
+msgid "<i class=\"fa fa-diamond\"/> Features"
+msgstr "<i class=\"fa fa-diamond\"/> ባህሪያት"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "<i class=\"fa fa-fw fa-align-left\"/> Alignment"
+msgstr "<i class=\"fa fa-fw fa-align-left\"/> አሰላለፍ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "<i class=\"fa fa-fw fa-anchor\"/> Link Anchor"
+msgstr "<i class=\"fa fa-fw fa-anchor\"/> አገናኝ መልህቅ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "<i class=\"fa fa-fw fa-arrows\"/> Background Image Sizing"
+msgstr "<i class=\"fa fa-fw fa-arrows\"/> የበስተጀርባ ምስል መጠን"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "<i class=\"fa fa-fw fa-arrows\"/> Size"
+msgstr "<i class=\"fa fa-fw fa-arrows\"/>መጠን"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "<i class=\"fa fa-fw fa-arrows-h\"/> Images spacing"
+msgstr "<i class=\"fa fa-fw fa-arrows-h\"/> የምስሎች ክፍተት"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "<i class=\"fa fa-fw fa-arrows-h\"/> Size"
+msgstr "<i class=\"fa fa-fw fa-arrows-h\"/>መጠን"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "<i class=\"fa fa-fw fa-arrows-h\"/> Width"
+msgstr "<i class=\"fa fa-fw fa-arrows-h\"/> ስፋት"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "<i class=\"fa fa-fw fa-arrows-v\"/> Alignment"
+msgstr "<i class=\"fa fa-fw fa-arrows-v\"/> አሰላለፍ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "<i class=\"fa fa-fw fa-clock-o\"/> Scroll Speed"
+msgstr "<i class=\"fa fa-fw fa-clock-o\"/> የማሸብለል ፍጥነት"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "<i class=\"fa fa-fw fa-clock-o\"/> Slideshow speed"
+msgstr "<i class=\"fa fa-fw fa-clock-o\"/> የስላይድ ትዕይንት ፍጥነት"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "<i class=\"fa fa-fw fa-clock-o\"/> Speed"
+msgstr "<i class=\"fa fa-fw fa-clock-o\"/> ፍጥነት"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "<i class=\"fa fa-fw fa-clone\"/> Transition"
+msgstr "<i class=\"fa fa-fw fa-clone\"/> ሽግግር"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "<i class=\"fa fa-fw fa-columns\"/> Number of columns"
+msgstr "<i class=\"fa fa-fw fa-columns\"/> የአምዶች ብዛት"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "<i class=\"fa fa-fw fa-eye-slash\"/> Transparent"
+msgstr "<i class=\"fa fa-fw fa-eye-slash\"/> ግልጽ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "<i class=\"fa fa-fw fa-eyedropper\"/> Background Color"
+msgstr "<i class=\"fa fa-fw fa-eyedropper\"/> የጀርባ ቀለም"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "<i class=\"fa fa-fw fa-eyedropper\"/> Color"
+msgstr "<i class=\"fa fa-fw fa-eyedropper\"/> ቀለም"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "<i class=\"fa fa-fw fa-eyedropper\"/> Filter"
+msgstr "<i class=\"fa fa-fw fa-eyedropper\"/> ማጣሪያ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "<i class=\"fa fa-fw fa-facebook\"/> Options"
+msgstr "<i class=\"fa fa-fw fa-facebook\"/> አማራጮች"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "<i class=\"fa fa-fw fa-font\"/> Typography"
+msgstr "<i class=\"fa fa-fw fa-font\"/> የፊደል አጻጻፍ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "<i class=\"fa fa-fw fa-heart\"/> Hearts"
+msgstr "<i class=\"fa fa-fw fa-heart\"/> ልቦች"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "<i class=\"fa fa-fw fa-magic\"/> Mode"
+msgstr "<i class=\"fa fa-fw fa-magic\"/> ሁነታ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "<i class=\"fa fa-fw fa-magic\"/> Style"
+msgstr "<i class=\"fa fa-fw fa-magic\"/> ዘይቤ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "<i class=\"fa fa-fw fa-magic\"/> Styles"
+msgstr "<i class=\"fa fa-fw fa-magic\"/> ቅጦች"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "<i class=\"fa fa-fw fa-minus\"/> Remove Tab"
+msgstr "<i class=\"fa fa-fw fa-minus\"/> ትርን አስወግድ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "<i class=\"fa fa-fw fa-minus\"/> Thickness"
+msgstr "<i class=\"fa fa-fw fa-minus\"/> ውፍረት"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "<i class=\"fa fa-fw fa-paint-brush\"/> Styling"
+msgstr "<i class=\"fa fa-fw fa-paint-brush\"/> ስታይሊንግ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "<i class=\"fa fa-fw fa-pencil\"/> Style"
+msgstr "<i class=\"fa fa-fw fa-pencil\"/> ስታይል"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "<i class=\"fa fa-fw fa-picture-o\"/> Background"
+msgstr "<i class=\"fa fa-fw fa-picture-o\"/> ዳራ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "<i class=\"fa fa-fw fa-plus\"/> Add Tab"
+msgstr "<i class=\"fa fa-fw fa-plus\"/> ትር አክል"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "<i class=\"fa fa-fw fa-plus-circle\"/> Add Slide"
+msgstr "<i class=\"fa fa-fw fa-plus-circle\"/> ስላይድ አክል"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "<i class=\"fa fa-fw fa-plus-circle\"/> Add images"
+msgstr "<i class=\"fa fa-fw fa-plus-circle\"/> ምስል ጨምር"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "<i class=\"fa fa-fw fa-refresh\"/> Re-order"
+msgstr "<i class=\"fa fa-fw fa-refresh\"/> እንደገና ይዘዙ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "<i class=\"fa fa-fw fa-square\"/> Squares"
+msgstr "<i class=\"fa fa-fw fa-square\"/> ካሬዎች"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "<i class=\"fa fa-fw fa-star\"/> Stars"
+msgstr "<i class=\"fa fa-fw fa-star\"/> ኮከቦች"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "<i class=\"fa fa-fw fa-tasks\"/> Progress Bar"
+msgstr "<i class=\"fa fa-fw fa-tasks\"/> የሂደት አሞሌ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "<i class=\"fa fa-fw fa-th\"/> Columns"
+msgstr "<i class=\"fa fa-fw fa-th\"/> አምዶች"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "<i class=\"fa fa-fw fa-trash\"/> Remove all images"
+msgstr "<i class=\"fa fa-fw fa-trash\"/> ሁሉንም ምስሎች አስወግድ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "<i class=\"fa fa-fw fa-trash-o\"/> Remove Slide"
+msgstr "<i class=\"fa fa-fw fa-trash-o\"/> ስላይድ አስወግድ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.website_visitor_view_form
+msgid ""
+"<i class=\"fa fa-fw o_button_icon fa-circle text-danger\"/>\n"
+"                            <span>Offline</span>"
+msgstr ""
+"<i class=\"fa fa-fw o_button_icon fa-circle text-danger\"/>\n"
+" <span>ከመስመር ውጭ</span>"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.website_visitor_view_form
+msgid ""
+"<i class=\"fa fa-fw o_button_icon fa-circle text-success\"/>\n"
+"                            <span>Connected</span>"
+msgstr ""
+"<i class=\"fa fa-fw o_button_icon fa-circle text-success\"/>\n"
+" <span>ተገናኝቷል</span>"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippets
+msgid "<i class=\"fa fa-indent\"/> Inner content"
+msgstr "<i class=\"fa fa-indent\"/> የውስጥ ይዘት"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_three_columns
+msgid ""
+"<i class=\"fa fa-info-circle mr-1\"/> <small>Additional information</small>"
+msgstr "<i class=\"fa fa-info-circle mr-1\"/> <small>ተጨማሪ መረጃ</small>"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippets
+msgid "<i class=\"fa fa-magic icon-fix\"/> Effects"
+msgstr "<i class=\"fa fa-magic icon-fix\"/> ተፅዕኖዎች"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.language_selector
+msgid ""
+"<i class=\"fa fa-plus-circle\"/>\n"
+"                Add a language..."
+msgstr ""
+"<i class=\"fa fa-plus-circle\"/>\n"
+"ቋንቋ ጨምር..."
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippets
+msgid "<i class=\"fa fa-puzzle-piece\"/> Mega Menu"
+msgstr "<i class=\"fa fa-puzzle-piece\"/> ሜጋ ሜኑ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippets
+msgid "<i class=\"fa fa-th-large\"/> Structure"
+msgstr "<i class=\"fa fa-th-large\"/> መዋቅር"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.user_navbar
+msgid "<i class=\"fa fa-th-large\"/> WEBSITE"
+msgstr "<i class=\"fa fa-th-large\"/> ድረ-ገጽ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.list_website_pages
+msgid "<i title=\"Is the page SEO optimized?\" class=\"fa fa-search\"/>"
+msgstr ""
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.list_website_pages
+msgid ""
+"<i title=\"Is the page included in the main menu?\" class=\"fa fa-thumb-"
+"tack\"/>"
+msgstr "<i title=\"ገጹ በዋናው ሜኑ ውስጥ ተካትቷል?\" class=\"fa fa-thumb-ታክ\"/>"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.list_website_pages
+msgid "<i title=\"Is the page indexed by search engines?\" class=\"fa fa-globe\"/>"
+msgstr "<i title=\"ገጹ በፍለጋ ሞተሮች የተጠቆመ ነው?\" class=\"fa fa-globe\"/>"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.list_website_pages
+msgid "<i title=\"Is the page published?\" class=\"fa fa-eye\"/>"
+msgstr "<i title=\"ገጹ ታትሟል?\" class=\"fa fa-eye\"/>"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_comparisons
+msgid "<i>Instant setup, satisfied or reimbursed.</i>"
+msgstr "<i>ቅጽበት ማዋቀር፣ ረክቷል ወይም ተመልሷል።</i>"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.editor.xml:0
+#, python-format
+msgid ""
+"<link href='https://fonts.googleapis.com/css?family=Bonbon&display=swap' "
+"rel='stylesheet'>"
+msgstr ""
+"<link "
+"href='https://fonts.googleapis.com/css?family=Bonbon&display=swaprel='stylesheet'>"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/tours/banner.js:0
+#, python-format
+msgid "<p><b>Click here</b> to create a new page.</p>"
+msgstr "አዲስ ገጽ ለመፍጠር <p><b>እዚህ ይጫኑ</b>።</p>"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/tours/banner.js:0
+#, python-format
+msgid ""
+"<p><b>Your homepage is live.</b></p><p>Let's add a new page for your "
+"site.</p>"
+msgstr ""
+"<p><b>የእርስዎ መነሻ ገጽ በ ስርጭት ላይ ነው።</b></p><p>ለእርስዎ  አዲስ ገጽ እንጨምርልዎ በጣቢያ "
+"ላይ።</p>"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/tours/banner.js:0
+#, python-format
+msgid "<p>Enter a title for the page.</p>"
+msgstr "<p>ለገጹ ርዕስ አስገባ።</p>"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_comparisons
+msgid "<small>/ month</small>"
+msgstr "<ትንሽ>/ ወር</small>"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_carousel
+#: model_terms:ir.ui.view,arch_db:website.s_quotes_carousel
+msgid ""
+"<span class=\"carousel-control-next-icon\"/>\n"
+"            <span class=\"sr-only\">Next</span>"
+msgstr ""
+"<span class=\" carousel-control-next-icon\"/>\n"
+" <span class=\"sr-only\">ቀጣይ</span>"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_carousel
+#: model_terms:ir.ui.view,arch_db:website.s_quotes_carousel
+msgid ""
+"<span class=\"carousel-control-prev-icon\"/>\n"
+"            <span class=\"sr-only\">Previous</span>"
+msgstr ""
+"<span class=\" carousel-control-prev-icon\"/>\n"
+" <span class=\"sr-only\">የቀደመው</span>"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
+msgid ""
+"<span class=\"fa fa-lg fa-globe\" title=\"Values set here are website-"
+"specific.\" groups=\"website.group_multi_website\"/>"
+msgstr ""
+"<span class=\"fa fa-lg fa-globe\" title=\" እዚህ የተቀመጡት እሴቶች ድር ጣቢያ ናቸው-"
+"specific.\" groups=\"website.group_multi_website\"/>"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.company_description
+msgid ""
+"<span class=\"fa fa-map-marker fa-fw mt16\" role=\"img\" aria-"
+"label=\"Address\" title=\"Address\"/>"
+msgstr ""
+"<span class=\"fa fa-map-marker fa-fw mt16\" role=\"img\" aria-label=\"አድራሻ\""
+" title=\"አድራሻ\"/>"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.user_navbar
+msgid "<span class=\"fa fa-pencil mr-2\"/>Edit"
+msgstr "<span class=\"fa fa-pencil mr-2\"/>አርትዕ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.user_navbar
+msgid "<span class=\"fa fa-plus mr-2\"/>New"
+msgstr "<span class=\"fa fa-plus mr-2\"/>አዲስ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.list_website_pages
+msgid "<span class=\"fa fa-sort fa-lg\" role=\"img\" aria-label=\"Sort\" title=\"Sort\"/>"
+msgstr "<span class=\"fa fa-sort fa-lg\" role=\"img\" aria-label=\"ደርድር\" ርዕስ=\"ደርድር\"/>"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_facebook_page
+msgid ""
+"<span class=\"o_add_facebook_page\">\n"
+"                <i class=\"fa fa-plus-circle\"/> Add Facebook Page\n"
+"            </span>"
+msgstr ""
+"<span class=\"o_add_facebook_page\">\n"
+" <i class=\"fa fa-plus-circle\"/> የፌስቡክ ገጽ አክል\n"
+" </span>"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_image_gallery
+msgid ""
+"<span class=\"o_add_images\" style=\"cursor: pointer;\"><i class=\"fa fa-"
+"plus-circle\"/> Add Images</span>"
+msgstr ""
+"<span class=\"o_add_images\" style=\"ጠቋሚ፡ ጠቋሚ፤\"><i class=\"fa fa-ፕላስ-"
+"ክበብ\"/> ምስሎችን ያክሉ</span>"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_comparisons
+msgid ""
+"<span class=\"s_comparisons_currency\">$</span>\n"
+"                                <span class=\"s_comparisons_price\"><b>125</b></span>\n"
+"                                <span class=\"s_comparisons_decimal\">.00</span>"
+msgstr ""
+"<span class=\"s_comparisons_currency\">$</span>\n"
+"<span class=\"s_comparisons_decimal\">.00</span>"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_comparisons
+msgid ""
+"<span class=\"s_comparisons_currency\">$</span>\n"
+"                                <span class=\"s_comparisons_price\"><b>35</b></span>\n"
+"                                <span class=\"s_comparisons_decimal\">.00</span>"
+msgstr ""
+"<span class=\"s_comparisons_currency\">$</span>\n"
+" <span class=\"s_comparisons_price\"><b>35</b></span>\n"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_comparisons
+msgid ""
+"<span class=\"s_comparisons_currency\">$</span>\n"
+"                                <span class=\"s_comparisons_price\"><b>65</b></span>\n"
+"                                <span class=\"s_comparisons_decimal\">.00</span>"
+msgstr ""
+"<span class=\"s_comparisons_currency\">$</span>\n"
+" <span class=\"s_comparisons_decimal\">.00</span> <span class=\"s_comparisons_decimal\">.00</span>"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.user_navbar
+msgid "<span class=\"sr-only\">Toggle Dropdown</span>"
+msgstr ""
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.user_navbar
+msgid ""
+"<span title=\"Mobile preview\" role=\"img\" aria-label=\"Mobile preview\" "
+"class=\"fa fa-mobile\"/>"
+msgstr ""
+"<span title=\"የሞባይል ቅድመ እይታ\" role=\"img\" aria-label=\"የሞባይል ቅድመ እይታ\" "
+"class=\"fa fa-mobile\"/>"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.user_navbar
+msgid ""
+"<span/>\n"
+"                            <span class=\"css_publish\">Unpublished</span>\n"
+"                            <span class=\"css_unpublish\">Published</span>"
+msgstr ""
+"<span/>\n"
+" <span class=\"css_publish\">ያልታተመ</span>\n"
+" <span class=\"css_unpublish\">የታተመ</span>"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_call_to_action
+msgid ""
+"<span>Contact us</span>\n"
+"                        <i class=\"fa fa-1x fa-fw fa-arrow-circle-right ml-1\"/>"
+msgstr ""
+"<span>አግኙን</span>\n"
+" <i class=\"fa fa-1x fa-fw fa-ቀስት-ክበብ-ቀኝ ml-1\"/>"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_quotes_carousel
+msgid "<span>— Jane DOE, CEO of <b>MyCompany</b></span>"
+msgstr "<span>— ጄን DOE፣ የ<b>MyCompany</b></span> ዋና ሥራ አስፈፃሚ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_quotes_carousel
+msgid "<span>— John DOE, CEO of <b>MyCompany</b></span>"
+msgstr "<span>— ጆን DOE፣ የ<b>MyCompany</b></span> ዋና ሥራ አስፈፃሚ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
+msgid ""
+"A CDN helps you serve your website’s content with high availability and high"
+" performance to any visitor wherever they are located."
+msgstr ""
+"ሲዲኤን የድር ጣቢያዎን ይዘት በከፍተኛ ተደራሽነት እና ከፍተኛ አገልግሎት እንዲያቀርቡ ያግዝዎታልበየትኛውም ቦታ ለሚገኙ "
+"ጎብኝዎች አፈጻጸም."
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_text_image
+msgid "A Section Subtitle"
+msgstr "የክፍል ንዑስ ርዕስ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_card
+msgid ""
+"A card is a flexible and extensible content container. It includes options "
+"for headers and footers, a wide variety of content, contextual background "
+"colors, and powerful display options."
+msgstr ""
+"ካርድ ተለዋዋጭ እና ሊሰፋ የሚችል የይዘት መያዣ ነው። አማራጮችን ያካትታልለራስጌዎች እና ግርጌዎች፣ ብዙ አይነት ይዘት፣"
+" አውድ ዳራቀለሞች እና ኃይለኛ የማሳያ አማራጮች."
+
+#. module: website
+#: model:ir.model.fields,help:website.field_ir_actions_server__website_published
+#: model:ir.model.fields,help:website.field_ir_cron__website_published
+msgid ""
+"A code server action can be executed from the website, using a dedicated "
+"controller. The address is <base>/website/action/<website_path>. Set this "
+"field as True to allow users to run this action. If it is set to False the "
+"action cannot be run through the website."
+msgstr ""
+"የተወሰነ በመጠቀም የኮድ አገልጋይ እርምጃ ከድር ጣቢያው ላይ ሊከናወን ይችላልተቆጣጣሪ። አድራሻው <ቤዝ>/ድር "
+"ጣቢያ/ድርጊት/<website_path> ነው። ይህን ያዘጋጁመስክ እንደ እውነት ተጠቃሚዎች ይህን እርምጃ እንዲያሄዱ "
+"ለመፍቀድ። ወደ ውሸት ከተዋቀረ እርምጃ በድር ጣቢያው ውስጥ ሊካሄድ አይችልም."
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_text_block
+msgid ""
+"A great way to catch your reader's attention is to tell a story. "
+"<br/>Everything you consider writing can be told as a story."
+msgstr ""
+"የአንባቢዎን ትኩረት ለመሳብ ጥሩው መንገድ ታሪክን መናገር ነው።<br/>ለመጻፍ የሚያስቡት ነገር ሁሉ እንደ ታሪክ ሊነገር"
+" ይችላል።"
+
+#. module: website
+#: model:ir.model.fields,help:website.field_website_visitor__visit_count
+msgid ""
+"A new visit is considered if last connection was more than 8 hours ago."
+msgstr "የመጨረሻው ግንኙነት ከ8 ሰአታት በላይ ከሆነ አዲስ ጉብኝት ግምት ውስጥ ይገባል።"
+
+#. module: website
+#: model:ir.model.constraint,message:website.constraint_website_visitor_partner_uniq
+msgid "A partner is linked to only one visitor."
+msgstr "አንድ አጋር ከአንድ ጎብኝ ጋር ብቻ የተገናኘ ነው።"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_features
+msgid "A small explanation of this great <br/>feature, in clear words."
+msgstr "ስለዚህ ታላቅ <br/> ባህሪ ትንሽ ማብራሪያ፣ ግልጽ በሆነ ቃላት።"
+
+#. module: website
+#: model:ir.model.fields,help:website.field_website_visitor__is_connected
+msgid ""
+"A visitor is considered as connected if his last page view was within the "
+"last 5 minutes."
+msgstr "ጎብኚ የመጨረሻው ገጽ እይታው ውስጥ ከሆነ እንደተገናኘ ይቆጠራልባለፉት 5 ደቂቃዎች."
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_res_config_settings__module_website_version
+msgid "A/B Testing"
+msgstr "A/B ሙከራ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
+msgid "API Key"
+msgstr "ኤፒአይ ቁልፍ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.aboutus
+#: model_terms:ir.ui.view,arch_db:website.footer_custom
+#: model_terms:ir.ui.view,arch_db:website.s_carousel
+#: model_terms:ir.ui.view,arch_db:website.s_cover
+#: model_terms:website.page,arch_db:website.aboutus_page
+msgid "About us"
+msgstr "ስለ እኛ"
+
+#. module: website
+#: code:addons/website/controllers/backend.py:0
+#, python-format
+msgid "Access Error"
+msgstr "የመዳረሻ ስህተት"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website_visitor__access_token
+msgid "Access Token"
+msgstr "መዳረሻ ማስመሰያ"
+
+#. module: website
+#: model:ir.model.constraint,message:website.constraint_website_visitor_access_token_unique
+msgid "Access token should be unique."
+msgstr "የመዳረሻ ማስመሰያ ልዩ መሆን አለበት።"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_comparisons
+msgid "Account &amp; Sales management"
+msgstr "መለያ እና የሽያጭ አስተዳደር"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website_rewrite__redirect_type
+msgid "Action"
+msgstr "እርምጃ"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website_page__active
+#: model:ir.model.fields,field_description:website.field_website_rewrite__active
+#: model:ir.model.fields,field_description:website.field_website_visitor__active
+#: model_terms:ir.ui.view,arch_db:website.website_visitor_view_kanban
+msgid "Active"
+msgstr "ንቁ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_three_columns
+msgid ""
+"Adapt these three columns to fit your design need. To duplicate, delete or "
+"move columns, select the column and use the top icons to perform your "
+"action."
+msgstr ""
+"እነዚህን ሶስት ዓምዶች ከንድፍ ፍላጎትዎ ጋር እንዲጣጣሙ ያመቻቹ። ለማባዛት፣ ሰርዝ ወይምዓምዶችን አንቀሳቅስ ፣ ዓምዱን "
+"ምረጥ እና የአንተን ለማከናወን የላይኛውን አዶዎች ተጠቀምድርጊት."
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.seo.xml:0
+#, python-format
+msgid "Add"
+msgstr "አክል"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.user_navbar
+msgid "Add Features"
+msgstr "ባህሪዎችን አክል"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.contentMenu.xml:0
+#, python-format
+msgid "Add Mega Menu Item"
+msgstr "የሜጋ ምናሌ ንጥል ነገር አክል"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.contentMenu.xml:0
+#, python-format
+msgid "Add Menu Item"
+msgstr "ምናሌ ንጥል አክል"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/widgets/theme.js:0
+#: code:addons/website/static/src/xml/website.editor.xml:0
+#, python-format
+msgid "Add a Google Font"
+msgstr "ጉግል ፎንት አክል"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_features_grid
+msgid "Add a great slogan."
+msgstr "ታላቅ መፈክር ጨምር።"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/menu/content.js:0
+#, python-format
+msgid "Add a menu item"
+msgstr "ምናሌ ንጥል አክል"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
+msgid "Add features"
+msgstr "ባህሪዎችን አክል"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
+msgid "Add links to social media on your website"
+msgstr "ወደ ማህበራዊ ሚዲያ አገናኞች በድር ጣቢያዎ ላይ ያክሉ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/menu/new_content.js:0
+#, python-format
+msgid "Add to menu"
+msgstr "ወደ ምናሌ አክል"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/tours/banner.js:0
+#, python-format
+msgid "After having checked how it looks on mobile, <b>close the preview</b>."
+msgstr "በሞባይል ላይ እንዴት እንደሚታይ ካረጋገጥን በኋላ <b>ቅድመ-እይታን ዝጋ</b>።"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_company_team
+msgid "Aline Turner, CTO"
+msgstr "Aline Turner፣ CTO"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_company_team
+msgid ""
+"Aline is one of the iconic person in life who can say she loves what she does.\n"
+"                                She mentors 100+ in-house developers and looks after the community of over\n"
+"                                thousands developers."
+msgstr ""
+"አሊን የምታደርገውን ነገር እወዳለሁ ልትል የምትችል በህይወቷ ውስጥ ካሉት ታዋቂ ሰዎች አንዷ ነች።\n"
+" 100+ የቤት ውስጥ ገንቢዎችን ትመክራለች እና ማህበረሰብን ትጠብቃለች\n"
+"በሺህ የሚቆጠሩ ገንቢዎች."
+
+#. module: website
+#: model:ir.model,name:website.model_website_route
+msgid "All Website Route"
+msgstr "የሁሉም ድር ጣቢያ መስመር"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_features_grid
+msgid "All these icons are completely free for commercial use."
+msgstr "እነዚህ ሁሉ አዶዎች ለንግድ አገልግሎት ሙሉ በሙሉ ነፃ ናቸው።"
+
+#. module: website
+#: model:ir.model.fields,help:website.field_ir_ui_view__track
+#: model:ir.model.fields,help:website.field_website_page__track
+msgid "Allow to specify for one page of the website to be trackable or not"
+msgstr "የድረ-ገጹን አንድ ገጽ ለመከታተል ወይም ላለመፈለግ ይፍቀዱ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_faq_collapse
+msgid ""
+"Although this Website may be linked to other websites, we are not, directly "
+"or indirectly, implying any approval, association, sponsorship, endorsement,"
+" or affiliation with any linked website, unless specifically stated herein."
+msgstr ""
+"ምንም እንኳን ይህ ድህረ ገጽ ከሌሎች ድረ-ገጾች ጋር የተገናኘ ቢሆንም እኛ ግን በቀጥታ አይደለንምወይም በተዘዋዋሪ "
+"ማንኛውንም ማፅደቅ፣ ማህበር፣ ስፖንሰርሺፕ፣ ድጋፍ መስጠት፣ ወይም ከማንኛውም የተገናኘ ድህረ ገጽ ጋር ያለ ግንኙነት፣ "
+"እዚህ ውስጥ ተለይቶ ካልተገለጸ በስተቀር።"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.qweb_500
+msgid "An error occured while rendering the template"
+msgstr "አብነት ሲሰራ ስህተት ተፈጥሯል"
+
+#. module: website
+#: model:ir.actions.client,name:website.backend_dashboard
+#: model:ir.ui.menu,name:website.menu_website_google_analytics
+msgid "Analytics"
+msgstr "ትንታኔ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
+msgid ""
+"Analyze the efficiency of your marketing campaigns by using trackable UTM "
+"trackers (campaigns, medium, sources). Create trackers and follow clicks "
+"from the Promote menu of your website. Those trackers can be used in Google "
+"Analytics or in Odoo reports where you can see the opportunities and sales "
+"revenue generated thanks to your links."
+msgstr ""
+"ክትትል የሚችል ዩቲኤም በመጠቀም የግብይት ዘመቻዎችዎን ውጤታማነት ይተንትኑመከታተያዎች (ዘመቻዎች, መካከለኛ, ምንጮች)."
+" መከታተያ ይፍጠሩ እና ጠቅታዎችን ይከተሉከድር ጣቢያዎ ማስተዋወቅ ምናሌ። እነዚያን መከታተያዎች በGoogle ውስጥ "
+"መጠቀም ይቻላልየትንታኔዎች ወይም በኦዱ ሪፖርቶች ውስጥ እድሎችን እና ሽያጮችን ማየት ይችላሉለአገናኞችዎ ምስጋና ይግባው "
+"የመነጨ ገቢ።"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.editor.xml:0
+#, python-format
+msgid "Anchor name"
+msgstr "መልህቅ ስም"
+
+#. module: website
+#: model:ir.actions.act_window,name:website.action_website_add_features
+#: model:ir.ui.menu,name:website.menu_website_add_features
+msgid "Apps"
+msgstr "መተግበሪያዎች"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website_page__arch_db
+msgid "Arch Blob"
+msgstr "አርክ ብሎብ"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website_page__arch_fs
+msgid "Arch Filename"
+msgstr "የአርክ ፋይል ስም"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.view_rewrite_search
+#: model_terms:ir.ui.view,arch_db:website.website_visitor_view_search
+msgid "Archived"
+msgstr "በማህደር የተቀመጠ"
+
+#. module: website
+#: model:ir.model.fields,help:website.field_res_config_settings__specific_user_account
+msgid "Are newly created user accounts website specific"
+msgstr "አዲስ የተፈጠሩ የተጠቃሚ መለያዎች ድር ጣቢያ ልዩ ናቸው"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.xml:0
+#, python-format
+msgid "Are you sure you want to delete this page ?"
+msgstr "እርግጠኛ ነዎት ይህን ገጽ መሰረዝ ይፈልጋሉ?"
+
+#. module: website
+#: model:ir.model,name:website.model_web_editor_assets
+msgid "Assets Utils"
+msgstr "የንብረት እቃዎች"
+
+#. module: website
+#: model:ir.model,name:website.model_ir_attachment
+msgid "Attachment"
+msgstr "አባሪ"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website__auto_redirect_lang
+msgid "Autoredirect Language"
+msgstr "ራስ-ሰር ቀጥተኛ ቋንቋ"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_ir_actions_server__website_published
+#: model:ir.model.fields,field_description:website.field_ir_cron__website_published
+msgid "Available on the Website"
+msgstr "በድር ጣቢያው ላይ ይገኛል"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.theme_customize
+msgid "Background"
+msgstr "ዳራ"
+
+#. module: website
+#: model:ir.model,name:website.model_base
+msgid "Base"
+msgstr "መሰረት"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website_page__arch_base
+msgid "Base View Architecture"
+msgstr "የቤዝ እይታ አርክቴክቸር"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_comparisons
+msgid "Basic sales &amp; marketing for up to 2 users"
+msgstr "መሰረታዊ ሽያጭ እና ግብይት እስከ 2 ተጠቃሚዎች"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_comparisons
+msgid "Beginner"
+msgstr "ጀማሪ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Big"
+msgstr "ትልቅ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Black"
+msgstr "ጥቁር"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Blue"
+msgstr "ሰማያዊ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.theme_customize
+msgid "Body"
+msgstr "ሰውነት"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Border"
+msgstr "ድንበር"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Bordered"
+msgstr "ድንበር"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Bottom"
+msgstr "ታች"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+#: model_terms:ir.ui.view,arch_db:website.theme_customize
+msgid "Boxed"
+msgstr "በቦክስ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.theme_customize
+msgid "Button"
+msgstr "አዝራር"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_res_config_settings__cdn_url
+#: model:ir.model.fields,field_description:website.field_website__cdn_url
+msgid "CDN Base URL"
+msgstr ""
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_res_config_settings__cdn_filters
+#: model:ir.model.fields,field_description:website.field_website__cdn_filters
+msgid "CDN Filters"
+msgstr "CDN ማጣሪያዎች"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_res_partner__can_publish
+#: model:ir.model.fields,field_description:website.field_res_users__can_publish
+#: model:ir.model.fields,field_description:website.field_website_page__can_publish
+#: model:ir.model.fields,field_description:website.field_website_published_mixin__can_publish
+#: model:ir.model.fields,field_description:website.field_website_published_multi_mixin__can_publish
+msgid "Can Publish"
+msgstr "ማተም ይቻላል"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/backend/dashboard.js:0
+#: code:addons/website/static/src/js/menu/new_content.js:0
+#: code:addons/website/static/src/xml/website.xml:0
+#: model_terms:ir.ui.view,arch_db:website.qweb_500
+#, python-format
+msgid "Cancel"
+msgstr "መሰረዝ"
+
+#. module: website
+#: code:addons/website/models/res_lang.py:0
+#, python-format
+msgid "Cannot deactivate a language that is currently used on a website."
+msgstr "በአሁኑ ጊዜ በድር ጣቢያ ላይ ጥቅም ላይ የዋለውን ቋንቋ ማቦዘን አይቻልም።"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_cover
+msgid "Catchy Headline"
+msgstr "የሚስብ ርዕስ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Center"
+msgstr "መሃል"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Centered"
+msgstr "የተማከለ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Change Cover"
+msgstr "ሽፋን ቀይር"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_features_grid
+msgid "Change Icons"
+msgstr "አዶዎችን ቀይር"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/widgets/theme.js:0
+#, python-format
+msgid "Changing this color will regenerate the default theme color scheme"
+msgstr "ይህን ቀለም መቀየር ነባሪውን የገጽታ ቀለም ንድፍ ያድሳል"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website_page__field_parent
+msgid "Child Field"
+msgstr "የልጆች መስክ"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website_menu__child_id
+#: model_terms:ir.ui.view,arch_db:website.website_menus_form_view
+msgid "Child Menus"
+msgstr "የልጆች ምናሌዎች"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.theme_customize
+msgid "Choose a pattern"
+msgstr "ስርዓተ-ጥለት ምረጥ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_picture
+msgid ""
+"Choose a vibrant image and write an inspiring paragraph about it.<br/> It "
+"does not have to be long, but it should reinforce your image."
+msgstr ""
+"ደመቅ ያለ ምስል ምረጥ እና ስለሱ አነቃቂ አንቀጽ ጻፍ።<br/> እሱ ረጅም መሆን የለበትም, ነገር ግን የእርስዎን ምስል"
+" ማጠናከር አለበት."
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.editor.xml:0
+#, python-format
+msgid "Choose an anchor name"
+msgstr "የመልህቅ ስም ምረጥ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.theme_customize
+msgid "Choose an image"
+msgstr "ምስል ምረጥ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.theme_customize
+msgid "Choose the theme colors"
+msgstr "የገጽታ ቀለሞችን ይምረጡ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.theme_customize
+msgid "Choose your fonts"
+msgstr "የእርስዎን ቅርጸ-ቁምፊዎች ይምረጡ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.theme_customize
+msgid "Choose your layout"
+msgstr "አቀማመጥህን ምረጥ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.theme_customize
+msgid "Choose your navbar"
+msgstr "የናቭባርህን ምረጥ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Circle"
+msgstr "ክበብ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_carousel
+msgid "Clever Slogan"
+msgstr "ብልህ መፈክር"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/tours/customize.js:0
+#, python-format
+msgid ""
+"Click here to choose your main branding color.<br/>It will recompute the "
+"palette with suggested matching colors."
+msgstr ""
+"ዋናውን የብራንዲንግ ቀለም ለመምረጥ እዚህ ጠቅ ያድርጉ።<br/>ይህን እንደገና ያሰላልየተጠቆሙ ተዛማጅ ቀለሞች ያለው "
+"ቤተ-ስዕል።"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/tours/banner.js:0
+#, python-format
+msgid "Click on <b>Continue</b> to create the page."
+msgstr "ገጹን ለመፍጠር <b>ቀጥል</b>ን ጠቅ ያድርጉ።"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/tours/banner.js:0
+#: code:addons/website/static/src/js/tours/banner.js:0
+#, python-format
+msgid "Click the <b>Save</b> button."
+msgstr "የ<b>አስቀምጥ</b> ቁልፍን ጠቅ ያድርጉ።"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.seo.xml:0
+#, python-format
+msgid "Click to choose more images"
+msgstr "ተጨማሪ ምስሎችን ለመምረጥ ጠቅ ያድርጉ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
+msgid "Client ID"
+msgstr "የደንበኛ መታወቂያ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
+msgid "Client Secret"
+msgstr "የደንበኛ ሚስጥር"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.one_page_line
+msgid "Clone this page"
+msgstr "ይህን ገጽ ዝጋ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/editor/wysiwyg_multizone_translate.js:0
+#: code:addons/website/static/src/xml/website.gallery.xml:0
+#: code:addons/website/static/src/xml/website.xml:0
+#: model_terms:ir.ui.view,arch_db:website.qweb_500
+#: model_terms:ir.ui.view,arch_db:website.show_website_info
+#, python-format
+msgid "Close"
+msgstr "ዝጋ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.theme_customize
+msgid "Colors"
+msgstr "ቀለሞች"
+
+#. module: website
+#: model:ir.model,name:website.model_res_company
+msgid "Companies"
+msgstr "ድርጅት"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website__company_id
+#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
+msgid "Company"
+msgstr "ኩባንያ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_company_team
+msgid "Company team"
+msgstr "የኩባንያ ቡድን"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_comparisons
+msgid "Complete CRM for any size team"
+msgstr "ለማንኛውም መጠን ቡድን የተሟላ CRM"
+
+#. module: website
+#: code:addons/website/models/website_visitor.py:0
+#, python-format
+msgid "Compose Email"
+msgstr "የተጻፉ ኢሜይል"
+
+#. module: website
+#: model:ir.model,name:website.model_res_config_settings
+msgid "Config Settings"
+msgstr "የማስተካያዎች ማዋቀሪያ"
+
+#. module: website
+#: model:ir.ui.menu,name:website.menu_website_global_configuration
+msgid "Configuration"
+msgstr "ማዋቀር"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_res_config_settings__has_social_network
+msgid "Configure Social Network"
+msgstr "ማህበራዊ አውታረ መረብን አዋቅር"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/editor/snippets.options.js:0
+#, python-format
+msgid "Confirmation"
+msgstr "ማረጋገጫ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/backend/dashboard.js:0
+#: code:addons/website/static/src/xml/website.backend.xml:0
+#, python-format
+msgid "Connect Google Analytics"
+msgstr "ጉግል ትንታኔን ያገናኙ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.footer_custom
+msgid "Connect with us"
+msgstr "ከእኛ ጋር ተገናኝ"
+
+#. module: website
+#: model:ir.model,name:website.model_res_partner
+#: model_terms:ir.ui.view,arch_db:website.s_tabs
+msgid "Contact"
+msgstr "እውቂያ(ኮንታክት)"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
+msgid "Contact Us"
+msgstr "አግኙን"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.contactus
+#: model_terms:ir.ui.view,arch_db:website.footer_custom
+#: model_terms:ir.ui.view,arch_db:website.s_carousel
+#: model_terms:ir.ui.view,arch_db:website.s_comparisons
+#: model_terms:ir.ui.view,arch_db:website.s_cover
+#: model:website.menu,name:website.menu_contactus
+#: model_terms:website.page,arch_db:website.contactus_page
+msgid "Contact us"
+msgstr "አግኙን"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.contactus
+#: model_terms:website.page,arch_db:website.contactus_page
+msgid ""
+"Contact us about anything related to our company or services.<br/>\n"
+"                                                                We'll do our best to get back to you as soon as possible."
+msgstr ""
+"ከኩባንያችን ወይም አገልግሎታችን ጋር በተገናኘ ስለማንኛውም ነገር ያነጋግሩን።<br/>\n"
+"በተቻለ ፍጥነት ወደ እርስዎ ለመመለስ የተቻለንን ሁሉ እናደርጋለን።"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_res_config_settings__cdn_activated
+#: model:ir.model.fields,field_description:website.field_website__cdn_activated
+msgid "Content Delivery Network (CDN)"
+msgstr "የይዘት ማቅረቢያ አውታረ መረብ (ሲዲኤን)"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/translator.xml:0
+#, python-format
+msgid "Content to translate"
+msgstr "የመተርጎም ይዘት"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/menu/content.js:0
+#: code:addons/website/static/src/xml/website.xml:0
+#, python-format
+msgid "Continue"
+msgstr "ቀጥል"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website_visitor__country_id
+#: model_terms:ir.ui.view,arch_db:website.website_visitor_view_kanban
+#: model_terms:ir.ui.view,arch_db:website.website_visitor_view_search
+msgid "Country"
+msgstr "ሀገር"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website_visitor__country_flag
+msgid "Country Flag"
+msgstr "የአገር ባንዲራ"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_res_config_settings__website_country_group_ids
+#: model:ir.model.fields,field_description:website.field_website__country_group_ids
+msgid "Country Groups"
+msgstr "የአገር ቡድኖች"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.page_404
+msgid "Create Page"
+msgstr "ገጽ ፍጠር"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
+msgid "Create a New Website"
+msgstr "አዲስ ድር ጣቢያ ፍጠር"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website__create_uid
+#: model:ir.model.fields,field_description:website.field_website_menu__create_uid
+#: model:ir.model.fields,field_description:website.field_website_page__create_uid
+#: model:ir.model.fields,field_description:website.field_website_rewrite__create_uid
+#: model:ir.model.fields,field_description:website.field_website_route__create_uid
+#: model:ir.model.fields,field_description:website.field_website_visitor__create_uid
+msgid "Created by"
+msgstr "የተፈጠረ"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website__create_date
+#: model:ir.model.fields,field_description:website.field_website_menu__create_date
+#: model:ir.model.fields,field_description:website.field_website_page__create_date
+#: model:ir.model.fields,field_description:website.field_website_rewrite__create_date
+#: model:ir.model.fields,field_description:website.field_website_route__create_date
+msgid "Created on"
+msgstr "በላይ ተፈጠረ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.seo.xml:0
+#, python-format
+msgid "Custom"
+msgstr "ብጁ"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_res_config_settings__auth_signup_uninvited
+#: model:ir.model.fields,field_description:website.field_website__auth_signup_uninvited
+msgid "Customer Account"
+msgstr "የደንበኛ መለያ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.website_visitor_view_search
+msgid "Customers"
+msgstr "ደንበኞች"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.user_navbar
+msgid "Customize"
+msgstr "አብጁ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/widgets/theme.js:0
+#: model_terms:ir.ui.view,arch_db:website.user_navbar
+#, python-format
+msgid "Customize Theme"
+msgstr "ገጽታ አብጅ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/tours/banner.js:0
+#, python-format
+msgid ""
+"Customize any block through this menu. Try to change the background color of"
+" this block."
+msgstr "በዚህ ምናሌ ውስጥ ማንኛውንም ብሎክ ያብጁ። የጀርባውን ቀለም ለመቀየር ይሞክሩይህ ብሎክ."
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/menu/edit.js:0
+#, python-format
+msgid "DRAG BUILDING BLOCKS HERE"
+msgstr "የግንባታ ብሎኮችን እዚህ ይጎትቱ"
+
+#. module: website
+#: model:ir.ui.menu,name:website.menu_dashboard
+msgid "Dashboard"
+msgstr "ዳሽቦርድ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Dashed"
+msgstr "የተሰረዘ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.website_visitor_page_view_search
+msgid "Date"
+msgstr "ቀን"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Default"
+msgstr "ነባሪ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
+msgid "Default Access Rights"
+msgstr "ነባሪ የመዳረሻ መብቶች"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website__default_lang_id
+msgid "Default Language"
+msgstr "ነባሪ የመዳረሻ መብቶች"
+
+#. module: website
+#: model:website.menu,name:website.main_menu
+msgid "Default Main Menu"
+msgstr "ነባሪ ዋና ምናሌ"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_res_config_settings__social_default_image
+#: model:ir.model.fields,field_description:website.field_website__social_default_image
+#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
+msgid "Default Social Share Image"
+msgstr "ነባሪ ዋና ምናሌ"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_res_config_settings__website_default_lang_id
+msgid "Default language"
+msgstr "ነባሪ ቋንቋ"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_res_config_settings__website_default_lang_code
+msgid "Default language code"
+msgstr "ነባሪ የቋንቋ ኮድ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_features_grid
+msgid "Delete Blocks"
+msgstr "ብሎኮችን ሰርዝ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.contentMenu.xml:0
+#, python-format
+msgid "Delete Menu Item"
+msgstr "የምናሌ ንጥል ነገርን ሰርዝ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/menu/content.js:0
+#: code:addons/website/static/src/js/menu/content.js:0
+#, python-format
+msgid "Delete Page"
+msgstr "ገጽ ሰርዝ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_three_columns
+msgid ""
+"Delete the above image or replace it with a picture that illustrates your "
+"message. Click on the picture to change its <em>rounded corner</em> style."
+msgstr ""
+"Delete the above image or replace it with a picture that illustrates your "
+"መልእክት. የ<em>ክብ ጥግ</em> ዘይቤውን ለመቀየር በሥዕሉ ላይ ጠቅ ያድርጉ።"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.editor.xml:0
+#, python-format
+msgid "Delete this font"
+msgstr "ይህን ቅርጸ-ቁምፊ ሰርዝ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.one_page_line
+msgid "Delete this page"
+msgstr "ይህን ገጽ ሰርዝ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_references
+msgid "Demo Logo"
+msgstr "demo logo"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/menu/content.js:0
+#: code:addons/website/static/src/xml/website.pageProperties.xml:0
+#, python-format
+msgid "Dependencies"
+msgstr "ጥገኛዎች"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.seo.xml:0
+#, python-format
+msgid "Description"
+msgstr "ማብራርያ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_tabs
+msgid "Details"
+msgstr "ዝርዝሮች"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Disable autoplay"
+msgstr "ራስ-ማጫወትን አሰናክል"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/editor/snippets.options.js:0
+#: code:addons/website/static/src/js/menu/content.js:0
+#: code:addons/website/static/src/js/menu/seo.js:0
+#: code:addons/website/static/src/js/widgets/theme.js:0
+#: code:addons/website/static/src/xml/website.editor.xml:0
+#, python-format
+msgid "Discard"
+msgstr "አስወግድ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_image_text
+msgid "Discover more"
+msgstr "ተጨማሪ አግኝ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.external_snippets
+msgid "Discussion Group"
+msgstr "የውይይት ቡድን"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website__display_name
+#: model:ir.model.fields,field_description:website.field_website_menu__display_name
+#: model:ir.model.fields,field_description:website.field_website_multi_mixin__display_name
+#: model:ir.model.fields,field_description:website.field_website_page__display_name
+#: model:ir.model.fields,field_description:website.field_website_published_mixin__display_name
+#: model:ir.model.fields,field_description:website.field_website_published_multi_mixin__display_name
+#: model:ir.model.fields,field_description:website.field_website_rewrite__display_name
+#: model:ir.model.fields,field_description:website.field_website_route__display_name
+#: model:ir.model.fields,field_description:website.field_website_seo_metadata__display_name
+#: model:ir.model.fields,field_description:website.field_website_track__display_name
+#: model:ir.model.fields,field_description:website.field_website_visitor__display_name
+msgid "Display Name"
+msgstr "መጠሪያው ስም"
+
+#. module: website
+#: code:addons/website/models/ir_qweb_fields.py:0
+#, python-format
+msgid "Display the badges"
+msgstr "ባጃጆችን አሳይ"
+
+#. module: website
+#: code:addons/website/models/ir_qweb_fields.py:0
+#, python-format
+msgid "Display the biography"
+msgstr "የህይወት ታሪክን አሳይ"
+
+#. module: website
+#: code:addons/website/models/ir_qweb_fields.py:0
+#, python-format
+msgid "Display the website description"
+msgstr "የድር ጣቢያውን መግለጫ አሳይ"
+
+#. module: website
+#: model:ir.model.fields,help:website.field_res_config_settings__website_logo
+#: model:ir.model.fields,help:website.field_website__logo
+#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
+msgid "Display this logo on the website."
+msgstr "ይህን አርማ በድር ጣቢያው ላይ አሳይ።"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
+msgid "Display this website when users visit this domain"
+msgstr "ተጠቃሚዎች ይህን ጎራ ሲጎበኙ ይህን ድር ጣቢያ አሳይ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_banner
+msgid "Do something"
+msgstr "አንድ ነገር አድርግ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/editor/snippets.options.js:0
+#, python-format
+msgid "Do you want to edit the company data ?"
+msgstr "የኩባንያውን ውሂብ ማርትዕ ይፈልጋሉ?"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/menu/new_content.js:0
+#, python-format
+msgid "Do you want to install the \"%s\" App?"
+msgstr "የ \"%s\" መተግበሪያን መጫን ትፈልጋለህ?"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
+msgid "Domain"
+msgstr "ጎራ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.xml:0
+#, python-format
+msgid "Don't forget to update all links referring to this page."
+msgstr "ይህን ገጽ የሚመለከቱ ሁሉንም አገናኞች ማዘመንዎን አይርሱ።"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Dotted"
+msgstr "ነጠብጣብ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Double"
+msgstr "ድርብ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_features_grid
+msgid "Double click an icon to replace it with one of your choice."
+msgstr "አንድ አዶን በመረጡት ለመተካት ሁለቴ ጠቅ ያድርጉ።"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/tours/banner.js:0
+#, python-format
+msgid "Drag another block in your page, below the cover."
+msgstr "በገጽዎ ውስጥ ሌላ ብሎክ ከሽፋኑ ስር ይጎትቱ።"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/tours/banner.js:0
+#, python-format
+msgid "Drag the <i>Cover</i> block and drop it in your page."
+msgstr "የ<i>ሽፋን</i> እገዳውን ይጎትቱ እና ወደ ገጽዎ ይጣሉት."
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/tours/banner.js:0
+#, python-format
+msgid "Drag the block and drop it in your new page."
+msgstr "ማገጃውን ጎትተው ወደ አዲሱ ገጽዎ ይጣሉት።"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.contentMenu.xml:0
+#, python-format
+msgid "Drag to the right to get a submenu"
+msgstr "ንዑስ ሜኑ ለማግኘት ወደ ቀኝ ጎትት"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.contentMenu.xml:0
+#, python-format
+msgid "Dropdown menu"
+msgstr "ተቆልቋይ ምናሌ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_features_grid
+msgid "Duplicate"
+msgstr "የተባዛ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_features_grid
+msgid "Duplicate blocks and columns to add more features."
+msgstr "ተጨማሪ ባህሪያትን ለመጨመር ብሎኮችን እና አምዶችን ያባዙ።"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.publish_management
+msgid "Edit"
+msgstr "አርትዕ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/menu/content.js:0
+#: model_terms:ir.ui.view,arch_db:website.user_navbar
+#, python-format
+msgid "Edit Menu"
+msgstr "ምናሌ አርትዕ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.contentMenu.xml:0
+#, python-format
+msgid "Edit Menu Item"
+msgstr "ምናሌ ንጥልን አርትዕ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_features_grid
+msgid "Edit Styles"
+msgstr "ቅጦችን አርትዕ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.user_navbar
+msgid "Edit Top Menu"
+msgstr "ከፍተኛ ሜኑ አርትዕ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.one_page_line
+msgid "Edit code in backend"
+msgstr "ኮድ በጀርባ ውስጥ አርትዕ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.publish_management
+#: model_terms:ir.ui.view,arch_db:website.user_navbar
+msgid "Edit in backend"
+msgstr "በጀርባ አርትዕ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.backend.xml:0
+#, python-format
+msgid "Edit my Analytics Client ID"
+msgstr "የእኔን የትንታኔ ደንበኛ መታወቂያ አርትዕ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.page_404
+msgid ""
+"Edit the content below this line to adapt the default \"page not found\" "
+"page."
+msgstr "ነባሪውን ለማስማማት ከዚህ መስመር በታች ያለውን ይዘት ያርትዑ \" ገጽ አልተገኘም\" ገጽ."
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/editor/snippets.options.js:0
+#, python-format
+msgid "Edit the menu"
+msgstr "ምናሌውን አርትዕ"
+
+#. module: website
+#: model:res.groups,name:website.group_website_designer
+msgid "Editor and Designer"
+msgstr "አርታዒ እና ዲዛይነር"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website_visitor__email
+#: model_terms:ir.ui.view,arch_db:website.website_visitor_view_kanban
+msgid "Email"
+msgstr ""
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_comparisons
+msgid "Email support"
+msgstr "የኢሜል ድጋፍ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Equal height"
+msgstr "እኩል ቁመት"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.theme_customize
+msgid "Error"
+msgstr "ስህተት"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.facebook_page.xml:0
+#, python-format
+msgid "Events"
+msgstr "ክስተቶች"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_comparisons
+msgid "Expert"
+msgstr "ባለሙያ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_alert
+msgid ""
+"Explain the benefits you offer. <br/>Don't write about products or services "
+"here, write about solutions."
+msgstr "የሚሰጡትን ጥቅማጥቅሞች ያብራሩ። <br/>ስለ ምርቶች ወይም አገልግሎቶች አይጻፉእዚህ, ስለ መፍትሄዎች ጻፍ."
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_ir_actions_server__xml_id
+#: model:ir.model.fields,field_description:website.field_ir_cron__xml_id
+#: model:ir.model.fields,field_description:website.field_website_page__xml_id
+msgid "External ID"
+msgstr "የውጭ መታወቂያ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/widgets/theme.js:0
+#: code:addons/website/static/src/js/widgets/theme.js:0
+#: model_terms:ir.ui.view,arch_db:website.theme_customize
+#, python-format
+msgid "Extra Color"
+msgstr "ተጨማሪ ቀለም"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
+msgid "Facebook"
+msgstr ""
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_res_config_settings__social_facebook
+#: model:ir.model.fields,field_description:website.field_website__social_facebook
+msgid "Facebook Account"
+msgstr "የፌስቡክ መለያ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/editor/snippets.options.js:0
+#, python-format
+msgid "Facebook Page"
+msgstr "የፌስቡክ ገጽ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Fade"
+msgstr "ደብዝዝ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/menu/new_content.js:0
+#, python-format
+msgid "Failed to install \"%s\""
+msgstr "\"%s\" መጫን አልተሳካም"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Fast"
+msgstr "ፈጣን"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_res_config_settings__favicon
+msgid "Favicon"
+msgstr "ፋቪኮን"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_three_columns
+msgid "Feature One"
+msgstr "ባህሪ አንድ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_three_columns
+msgid "Feature Three"
+msgstr "ገጽታ ሶስት"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_card
+msgid "Feature Title"
+msgstr "የባህሪ ርዕስ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_three_columns
+msgid "Feature Two"
+msgstr "ገጽታ ሁለት"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
+msgid "Features"
+msgstr "ዋና መለያ ጸባያት"
+
+#. module: website
+#: model:ir.model.fields,help:website.field_website_page__arch_fs
+msgid ""
+"File from where the view originates.\n"
+"                                                          Useful to (hard) reset broken views or to read arch from file in dev-xml mode."
+msgstr ""
+"እይታው ከመጣበት ቦታ ፋይል።\n"
+" የተበላሹ እይታዎችን (በጠንካራ) ዳግም ለማስጀመር ወይም ቅስት ከፋይል በdev-xml ሁነታ ለማንበብ ይጠቅማል።"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Filter Color"
+msgstr "የማጣሪያ ቀለም"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Filter Intensity"
+msgstr "የማጣሪያ ጥንካሬ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_features
+msgid "First Feature"
+msgstr "የመጀመሪያው ባህሪ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_mega_menu_multi_menus
+msgid "First Menu"
+msgstr "የመጀመሪያው ምናሌ"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website_visitor__create_date
+msgid "First connection date"
+msgstr "የመጀመሪያ ግንኙነት ቀን"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_features_grid
+msgid "First list of Features"
+msgstr "የመጀመሪያዎቹ ባህሪዎች ዝርዝር"
+
+#. module: website
+#: model:ir.model.fields,help:website.field_ir_ui_view__first_page_id
+#: model:ir.model.fields,help:website.field_website_page__first_page_id
+msgid "First page linked to this view"
+msgstr "የመጀመሪያው ገጽ ከዚህ እይታ ጋር የተገናኘ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Fit text"
+msgstr "የተስማማ ጽሑፍ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Fixed"
+msgstr "ቋሚ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Float"
+msgstr "ተንሳፋፊ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Folded list"
+msgstr ""
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.editor.xml:0
+#, python-format
+msgid "Follow all the"
+msgstr "ሁሉንም ተከተል"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
+msgid "Follow your website traffic in Odoo."
+msgstr "የድር ጣቢያህን ትራፊክ በኦዱ ተከተል።"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.theme_customize
+msgid "Font Size"
+msgstr "የቅርጸ ቁምፊ መጠን"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.theme_customize
+msgid "Fonts"
+msgstr "ቅርጸ ቁምፊዎች"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.theme_customize
+msgid "Footer"
+msgstr "እግር"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
+msgid "Force your user to create an account per website"
+msgstr "ተጠቃሚዎን በየድር ጣቢያዎ መለያ እንዲፈጥር ያስገድዱት"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.external_snippets
+msgid "Form Builder"
+msgstr "ቅጽ ሰሪ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_company_team
+msgid ""
+"Founder and chief visionary, Tony is the driving force behind Company. He loves\n"
+"                                to keep his hands full by participating in the development of the software,\n"
+"                                marketing and the Customer Experience strategies."
+msgstr ""
+"መስራች እና ዋና ባለራዕይ፣ ቶኒ ከኩባንያው በስተጀርባ ያለው አንቀሳቃሽ ሀይል ነው። ይወዳል\n"
+"በሶፍትዌሩ ልማት ላይ በመሳተፍ እጆቹን መሙላት፣\n"
+"ግብይት እና የደንበኛ ልምድ ስትራቴጂዎች."
+
+#. module: website
+#: model:ir.model.fields.selection,name:website.selection__website__auth_signup_uninvited__b2c
+msgid "Free sign up"
+msgstr "ነጻ ይመዝገቡ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.theme_customize
+msgid "Full"
+msgstr "ሙሉ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Full Screen"
+msgstr "ሙሉ ማያ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Full-Width"
+msgstr "ሙሉ ስፋት"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_comparisons
+msgid "Get access to all modules"
+msgstr "የሁሉም ሞጁሎች መዳረሻ ያግኙ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_comparisons
+msgid "Get access to all modules and features"
+msgstr "የሁሉም ሞጁሎች እና ባህሪያት መዳረሻ ያግኙ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
+msgid "GitHub"
+msgstr "ጂትሃብ"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_res_config_settings__social_github
+#: model:ir.model.fields,field_description:website.field_website__social_github
+msgid "GitHub Account"
+msgstr "GitHub መለያ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/menu/content.js:0
+#, python-format
+msgid "Go To Page"
+msgstr "ወደ ገጽ ሂድ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/tours/banner.js:0
+#, python-format
+msgid "Go back to the blocks menu."
+msgstr "ወደ ብሎኮች ምናሌ ተመለስ።"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.backend.xml:0
+#, python-format
+msgid "Go to"
+msgstr "መሄድ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/editor/snippets.options.js:0
+#, python-format
+msgid "Go to Link"
+msgstr "ወደ ሊንክ ሂድ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.view_view_form_extend
+msgid "Go to Page Manager"
+msgstr "ወደ ገጽ አስተዳዳሪ ሂድ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.backend.xml:0
+#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
+#, python-format
+msgid "Go to Website"
+msgstr "ወደ ድር ጣቢያ ሂድ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/tours/banner.js:0
+#, python-format
+msgid ""
+"Good Job! You have designed your homepage. Let's check how this page looks "
+"like on <b>mobile devices</b>."
+msgstr ""
+"ጥሩ ስራ! የመነሻ ገጽዎን ነድፈዋል። ይህ ገጽ እንዴት እንደሚመስል እንፈትሽእንደ <b>ተንቀሳቃሽ መሳሪያዎች</b> ላይ።"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_carousel
+msgid ""
+"Good copy starts with understanding how your product or service helps your "
+"customers. Simple words communicate better than big words and pompous "
+"language."
+msgstr ""
+"ጥሩ ቅጂ የሚጀምረው የእርስዎ ምርት ወይም አገልግሎት እንዴት እንደሚረዳ በመረዳት ነውደንበኞች። ቀላል ቃላት ከትልቅ "
+"ቃላት እና ጨዋዎች በተሻለ ሁኔታ ይገናኛሉቋንቋ"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_res_config_settings__has_google_analytics
+msgid "Google Analytics"
+msgstr "ጉግል አናሌቲክስ"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_res_config_settings__has_google_analytics_dashboard
+msgid "Google Analytics Dashboard"
+msgstr "Google ትንታኔ ዳሽቦርድ"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_res_config_settings__google_analytics_key
+#: model:ir.model.fields,field_description:website.field_website__google_analytics_key
+msgid "Google Analytics Key"
+msgstr "የጉግል አናሌቲክስ ቁልፍ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.backend.xml:0
+#, python-format
+msgid ""
+"Google Analytics initialization failed. Maybe this domain is not whitelisted"
+" in your Google Analytics project for this client ID."
+msgstr ""
+"የጉግል አናሌቲክስ ማስጀመር አልተሳካም። ምናልባት ይህ ጎራ በተፈቀደ ዝርዝር ውስጥ ላይሆን ይችላልለዚህ የደንበኛ "
+"መታወቂያ በእርስዎ Google Analytics ፕሮጀክት ውስጥ።"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_res_config_settings__google_management_client_id
+#: model:ir.model.fields,field_description:website.field_website__google_management_client_id
+msgid "Google Client ID"
+msgstr "የጉግል ደንበኛ መታወቂያ"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_res_config_settings__google_management_client_secret
+#: model:ir.model.fields,field_description:website.field_website__google_management_client_secret
+msgid "Google Client Secret"
+msgstr "የጉግል ደንበኛ ሚስጥር"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.editor.xml:0
+#, python-format
+msgid "Google Font HTML"
+msgstr ""
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_res_config_settings__has_google_maps
+#: model_terms:ir.ui.view,arch_db:website.company_description
+msgid "Google Maps"
+msgstr "የጉግል ካርታዎች"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_res_config_settings__google_maps_api_key
+#: model:ir.model.fields,field_description:website.field_website__google_maps_api_key
+msgid "Google Maps API Key"
+msgstr "Google ካርታዎች ኤፒአይ ቁልፍ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.backend.xml:0
+#, python-format
+msgid ""
+"Google deprecated both its \"Universal Analytics\" and \"Google Sign-In\" "
+"API. It means that only accounts and keys created before 2020 will be able "
+"to integrate their Analytics dashboard in Odoo (or any other website). This "
+"will be possible only up to mid 2023. After that, those services won't work "
+"anymore, at all."
+msgstr ""
+"Google ሁለቱንም \"Universal Analytics\" እና \"Google መግቢያ\" ን አቋርጧል።ኤፒአይ. ከ2020 "
+"በፊት የተፈጠሩ መለያዎች እና ቁልፎች ብቻ ይችላሉ ማለት ነውየእነሱን የትንታኔ ዳሽቦርድ በኦዱ (ወይም በማንኛውም ሌላ "
+"ድረ-ገጽ) ለማዋሃድ።የሚቻለው እስከ 2023 አጋማሽ ድረስ ብቻ ነው። ከዚያ በኋላ እነዚያ አገልግሎቶች "
+"አይሰሩምከእንግዲህ, በጭራሽ."
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_features_grid
+msgid "Great Value"
+msgstr "ትልቅ ዋጋ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.aboutus
+#: model_terms:website.page,arch_db:website.aboutus_page
+msgid "Great products for great people"
+msgstr "ለታላቅ ሰዎች ምርጥ ምርቶች"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Green"
+msgstr "አረንጓዴ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Grid"
+msgstr "ፍርግርግ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.menu_search
+#: model_terms:ir.ui.view,arch_db:website.view_rewrite_search
+#: model_terms:ir.ui.view,arch_db:website.website_visitor_page_view_search
+#: model_terms:ir.ui.view,arch_db:website.website_visitor_view_search
+msgid "Group By"
+msgstr "ቡድን በ"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website_page__groups_id
+msgid "Groups"
+msgstr "ቡድኖች"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.seo.xml:0
+#, python-format
+msgid "H1"
+msgstr ""
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.seo.xml:0
+#, python-format
+msgid "H2"
+msgstr ""
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.user_navbar
+msgid "HTML/CSS/JS Editor"
+msgstr "HTML/CSS/JS አርታዒ"
+
+#. module: website
+#: model:ir.model,name:website.model_ir_http
+msgid "HTTP Routing"
+msgstr "HTTP ማዘዣ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Half Screen"
+msgstr "ግማሽ ማያ"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website_page__header_color
+msgid "Header Color"
+msgstr "የራስጌ ቀለም"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website_page__header_overlay
+msgid "Header Overlay"
+msgstr "ራስጌ ተደራቢ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.theme_customize
+msgid "Headings 1"
+msgstr "ርዕስ 1"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.theme_customize
+msgid "Headings 2"
+msgstr "ርዕስ 2"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.theme_customize
+msgid "Headings 3"
+msgstr "ርዕስ 3"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.theme_customize
+msgid "Headings 4"
+msgstr "አርእስት 4"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.theme_customize
+msgid "Headings 5"
+msgstr "አርእስት 5"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.theme_customize
+msgid "Headings 6"
+msgstr "አርእስት 6"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/translator.xml:0
+#, python-format
+msgid "Here are the visuals used to help you translate efficiently:"
+msgstr ""
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Hero"
+msgstr "ጀግና"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.facebook_page.xml:0
+#, python-format
+msgid "Hide Cover Photo"
+msgstr "የሽፋን ፎቶ ደብቅ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.pageProperties.xml:0
+#, python-format
+msgid "Hide this page from search results"
+msgstr "ይህን ገጽ ከፍለጋ ውጤቶች ደብቅ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "High"
+msgstr "ከፍተኛ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.editor.xml:0
+#, python-format
+msgid ""
+"Hint: Type '/' to search an existing page and '#' to link to an anchor."
+msgstr "ፍንጭ፡ ያለውን ገጽ ለመፈለግ '/' ብለው ይተይቡ እና ወደ መልህቅ ለማገናኘት '#'።"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.contentMenu.xml:0
+#: model_terms:ir.ui.view,arch_db:website.footer_custom
+#: model_terms:ir.ui.view,arch_db:website.one_page_line
+#: model_terms:ir.ui.view,arch_db:website.s_tabs
+#: model:website.menu,name:website.menu_home
+#, python-format
+msgid "Home"
+msgstr "ቤት"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.editor.xml:0
+#: model:ir.model.fields,field_description:website.field_website__homepage_id
+#: model:ir.model.fields,field_description:website.field_website_page__is_homepage
+#: model_terms:ir.ui.view,arch_db:website.portal_404
+#, python-format
+msgid "Homepage"
+msgstr "መነሻ ገጽ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.backend.xml:0
+#, python-format
+msgid "How to get my Client ID"
+msgstr "የእኔን የደንበኛ መታወቂያ እንዴት ማግኘት እችላለሁ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.backend.xml:0
+#, python-format
+msgid "How to get my Tracking ID"
+msgstr "የእኔን የመከታተያ መታወቂያ እንዴት ማግኘት እችላለሁ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Huge"
+msgstr "ትልቅ"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website__id
+#: model:ir.model.fields,field_description:website.field_website_menu__id
+#: model:ir.model.fields,field_description:website.field_website_multi_mixin__id
+#: model:ir.model.fields,field_description:website.field_website_page__id
+#: model:ir.model.fields,field_description:website.field_website_published_mixin__id
+#: model:ir.model.fields,field_description:website.field_website_published_multi_mixin__id
+#: model:ir.model.fields,field_description:website.field_website_rewrite__id
+#: model:ir.model.fields,field_description:website.field_website_route__id
+#: model:ir.model.fields,field_description:website.field_website_seo_metadata__id
+#: model:ir.model.fields,field_description:website.field_website_track__id
+#: model:ir.model.fields,field_description:website.field_website_visitor__id
+msgid "ID"
+msgstr "መታወቂያ"
+
+#. module: website
+#: model:ir.model.fields,help:website.field_website_page__xml_id
+msgid "ID of the view defined in xml file"
+msgstr "በ xml ፋይል ውስጥ የተገለጸው እይታ መታወቂያ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Icon"
+msgstr "አዶ"
+
+#. module: website
+#: model:ir.model.fields,help:website.field_website__specific_user_account
+msgid "If True, new accounts will be associated to the current website"
+msgstr "እውነት ከሆነ አዲስ መለያዎች ከአሁኑ ድህረ ገጽ ጋር ይገናኛሉ"
+
+#. module: website
+#: model:ir.model.fields,help:website.field_res_config_settings__social_default_image
+#: model:ir.model.fields,help:website.field_website__social_default_image
+#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
+msgid "If set, replaces the company logo as the default social share image."
+msgstr "ከተዋቀረ የኩባንያውን አርማ እንደ ነባሪ የማህበራዊ ድርሻ ምስል ይተካል።"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.qweb_500
+msgid ""
+"If this error is caused by a change of yours in the templates, you have the "
+"possibility to reset the template to its <strong>factory settings</strong>."
+msgstr ""
+"ይህ ስህተት በአብነት ውስጥ ባደረግከው ለውጥ የተከሰተ ከሆነ አላችሁአብነት ወደ <strong>ፋብሪካው "
+"ቅንጅቶች</strong> የመመለስ እድሉ።"
+
+#. module: website
+#: model:ir.model.fields,help:website.field_website_page__groups_id
+msgid ""
+"If this field is empty, the view applies to all users. Otherwise, the view "
+"applies to the users of those groups only."
+msgstr ""
+"ይህ መስክ ባዶ ከሆነ እይታው ሁሉንም ተጠቃሚዎች ይመለከታል። አለበለዚያ እይታውለእነዚያ ቡድኖች ተጠቃሚዎች ብቻ ነው "
+"የሚመለከተው።"
+
+#. module: website
+#: model:ir.model.fields,help:website.field_website_page__active
+msgid ""
+"If this view is inherited,\n"
+"* if True, the view always extends its parent\n"
+"* if False, the view currently does not extend its parent but can be enabled\n"
+"         "
+msgstr ""
+"ይህ አመለካከት ከተወረሰ\n"
+"* እውነት ከሆነ እይታው ሁል ጊዜ ወላጁን ያሰፋዋል\n"
+"* ውሸት ከሆነ እይታው በአሁኑ ጊዜ ወላጁን አያራዝምም ግን ሊነቃ ይችላል\n"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/editor/editor_menu.js:0
+#, python-format
+msgid ""
+"If you discard the current edition, all unsaved changes will be lost. You "
+"can cancel to return to the edition mode."
+msgstr "የአሁኑን እትም ካስወገዱ ሁሉም ያልተቀመጡ ለውጦች ይጠፋሉ. አንተ ወደ እትም ሁነታ ለመመለስ መሰረዝ ይችላል።"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website_visitor__partner_image
+msgid "Image"
+msgstr "ምስል"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.one_page_line
+msgid "In main menu"
+msgstr "በዋናው ምናሌ ውስጥ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/translator.xml:0
+#, python-format
+msgid ""
+"In this mode, you can only translate texts. To change the structure of the page, you must edit the master page.\n"
+"        Each modification on the master page is automatically applied to all translated versions."
+msgstr ""
+"በዚህ ሁነታ ጽሑፎችን ብቻ ነው መተርጎም የሚችሉት። የገጹን መዋቅር ለመቀየር ዋና ገጹን ማርትዕ አለብዎት።\n"
+"በዋናው ገጽ ላይ ያለው እያንዳንዱ ማሻሻያ በራስ ሰር በሁሉም የተተረጎሙ ስሪቶች ላይ ይተገበራል።"
+
+#. module: website
+#: code:addons/website/controllers/backend.py:0
+#, python-format
+msgid "Incorrect Client ID / Key"
+msgstr "የተሳሳተ የደንበኛ መታወቂያ / ቁልፍ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.pageProperties.xml:0
+#: model_terms:ir.ui.view,arch_db:website.index_management
+#: model_terms:ir.ui.view,arch_db:website.one_page_line
+#, python-format
+msgid "Indexed"
+msgstr "መረጃ ጠቋሚ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.pageProperties.xml:0
+#: model_terms:ir.ui.view,arch_db:website.theme_customize
+#, python-format
+msgid "Info"
+msgstr "መረጃ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.show_website_info
+msgid "Information about the"
+msgstr "ስለ መረጃው"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website_page__inherit_id
+msgid "Inherited View"
+msgstr "የተወረሰ እይታ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
+msgid "Instagram"
+msgstr ""
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_res_config_settings__social_instagram
+#: model:ir.model.fields,field_description:website.field_website__social_instagram
+msgid "Instagram Account"
+msgstr "የ Instagram መለያ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/menu/new_content.js:0
+#, python-format
+msgid "Install"
+msgstr "ጫን"
+
+#. module: website
+#: model:ir.model,name:website.model_base_language_install
+msgid "Install Language"
+msgstr "ቋንቋ ጫን"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
+msgid "Install new language"
+msgstr "አዲስ ቋንቋ ጫን"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.show_website_info
+msgid "Installed Applications"
+msgstr "የተጫኑ መተግበሪያዎች"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.show_website_info
+msgid "Installed Localizations / Account Charts"
+msgstr "የተጫኑ አከባቢዎች / የመለያ ገበታዎች"
+
+#. module: website
+#: model:ir.model.fields,help:website.field_website__theme_id
+msgid "Installed theme"
+msgstr "የተጫነ ጭብጥ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/menu/new_content.js:0
+#, python-format
+msgid "Installing \"%s\""
+msgstr "የተጫነ ጭብጥ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.facebook_page.xml:0
+#, python-format
+msgid "Invalid Facebook Page Url"
+msgstr "ልክ ያልሆነ የፌስቡክ ገጽ ዩአርኤል"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_company_team
+msgid "Iris Joe, CFO"
+msgstr "አይሪስ ጆ፣ ሲኤፍኦ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_company_team
+msgid ""
+"Iris, with her international experience, helps us easily understand the numbers and\n"
+"                                improves them. She is determined to drive success and delivers her professional\n"
+"                                acumen to bring Company at the next level."
+msgstr ""
+"አይሪስ በአለምአቀፍ ልምዷ ቁጥሮቹን በቀላሉ እንድንረዳ እና\n"
+" ታሻሽላቸዋለች። ስኬትን ለመንዳት ቆርጣለች እና ባለሙያዋን ታቀርባለች።\n"
+"ኩባንያውን ወደሚቀጥለው ደረጃ ለማምጣት ችሎታ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.website_visitor_view_search
+msgid "Is Connected"
+msgstr "ተገናኝቷል"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website_menu__is_mega_menu
+msgid "Is Mega Menu"
+msgstr "ሜጋ ሜኑ ነው"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_res_partner__is_published
+#: model:ir.model.fields,field_description:website.field_res_users__is_published
+#: model:ir.model.fields,field_description:website.field_website_page__is_published
+#: model:ir.model.fields,field_description:website.field_website_published_mixin__is_published
+#: model:ir.model.fields,field_description:website.field_website_published_multi_mixin__is_published
+msgid "Is Published"
+msgstr "የታተመ"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website_menu__is_visible
+#: model:ir.model.fields,field_description:website.field_website_page__is_visible
+msgid "Is Visible"
+msgstr "የሚታየው"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website_visitor__is_connected
+msgid "Is connected ?"
+msgstr "ተገናኝቷል?"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.pageProperties.xml:0
+#, python-format
+msgid "It looks like your file is being called by"
+msgstr "ፋይልዎ የተጠራው ይመስላል"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_call_to_action
+msgid "Join us and make your company a better place."
+msgstr "ከእኛ ጋር ተቀላቀል እና ኩባንያህን የተሻለ ቦታ አድርግ።"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.seo.xml:0
+#: code:addons/website/static/src/xml/website.seo.xml:0
+#, python-format
+msgid "Keep empty to use default value"
+msgstr "ነባሪ እሴት ለመጠቀም ባዶ አቆይ"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_ir_attachment__key
+#: model:ir.model.fields,field_description:website.field_website_page__key
+msgid "Key"
+msgstr "ቁልፍ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.seo.xml:0
+#: code:addons/website/static/src/xml/website.seo.xml:0
+#, python-format
+msgid "Keyword"
+msgstr "ቁልፍ ቃል"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.seo.xml:0
+#, python-format
+msgid "Keywords"
+msgstr "ቁልፍ ቃላት"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website_visitor__lang_id
+#: model_terms:ir.ui.view,arch_db:website.website_visitor_view_search
+msgid "Language"
+msgstr "ቋንቋ"
+
+#. module: website
+#: model:ir.model.fields,help:website.field_website_visitor__lang_id
+msgid "Language from the website when visitor has been created"
+msgstr "ጎብኚ ሲፈጠር ከድር ጣቢያው የመጣ ቋንቋ"
+
+#. module: website
+#: model:ir.model,name:website.model_res_lang
+#: model:ir.model.fields,field_description:website.field_res_config_settings__language_ids
+#: model:ir.model.fields,field_description:website.field_website__language_ids
+msgid "Languages"
+msgstr "ቋንቋዎች"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
+msgid "Languages available on your website"
+msgstr "ቋንቋዎች በድር ጣቢያዎ ላይ ይገኛሉ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Large"
+msgstr "ትልቅ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.website_visitor_view_kanban
+msgid "Last Action"
+msgstr "የመጨረሻው እርምጃ"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website_visitor__last_connection_datetime
+msgid "Last Connection"
+msgstr "የመጨረሻ ግንኙነት"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_mega_menu_multi_menus
+msgid "Last Menu"
+msgstr "የመጨረሻው ምናሌ"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website____last_update
+#: model:ir.model.fields,field_description:website.field_website_menu____last_update
+#: model:ir.model.fields,field_description:website.field_website_multi_mixin____last_update
+#: model:ir.model.fields,field_description:website.field_website_page____last_update
+#: model:ir.model.fields,field_description:website.field_website_published_mixin____last_update
+#: model:ir.model.fields,field_description:website.field_website_published_multi_mixin____last_update
+#: model:ir.model.fields,field_description:website.field_website_rewrite____last_update
+#: model:ir.model.fields,field_description:website.field_website_route____last_update
+#: model:ir.model.fields,field_description:website.field_website_seo_metadata____last_update
+#: model:ir.model.fields,field_description:website.field_website_track____last_update
+#: model:ir.model.fields,field_description:website.field_website_visitor____last_update
+msgid "Last Modified on"
+msgstr "በመጨረሻ የተሻሻለው በርቷል"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.backend.xml:0
+#, python-format
+msgid "Last Month"
+msgstr "ባለፈው ወር"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.website_visitor_view_kanban
+msgid "Last Page"
+msgstr "የመጨረሻ ገጽ"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website__write_uid
+#: model:ir.model.fields,field_description:website.field_website_menu__write_uid
+#: model:ir.model.fields,field_description:website.field_website_page__write_uid
+#: model:ir.model.fields,field_description:website.field_website_rewrite__write_uid
+#: model:ir.model.fields,field_description:website.field_website_route__write_uid
+#: model:ir.model.fields,field_description:website.field_website_visitor__write_uid
+msgid "Last Updated by"
+msgstr "መጨረሻ የዘመነው በ"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website__write_date
+#: model:ir.model.fields,field_description:website.field_website_menu__write_date
+#: model:ir.model.fields,field_description:website.field_website_page__write_date
+#: model:ir.model.fields,field_description:website.field_website_rewrite__write_date
+#: model:ir.model.fields,field_description:website.field_website_route__write_date
+#: model:ir.model.fields,field_description:website.field_website_visitor__write_date
+msgid "Last Updated on"
+msgstr "መጨረሻ የዘመነው በ"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website_visitor__last_visited_page_id
+msgid "Last Visited Page"
+msgstr "መጨረሻ የተጎበኘው ገጽ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.backend.xml:0
+#, python-format
+msgid "Last Week"
+msgstr "ባለፈው ሳምንት"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.backend.xml:0
+#, python-format
+msgid "Last Year"
+msgstr "ባለፈው ዓመት"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website_visitor__time_since_last_action
+msgid "Last action"
+msgstr "የመጨረሻው እርምጃ"
+
+#. module: website
+#: model:ir.model.fields,help:website.field_website_visitor__last_connection_datetime
+msgid "Last page view date"
+msgstr "የመጨረሻ ገጽ እይታ ቀን"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.theme_customize
+msgid "Layout"
+msgstr "አቀማመጥ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_text_image
+#: model_terms:ir.ui.view,arch_db:website.s_three_columns
+msgid "Learn more"
+msgstr "ተጨማሪ እወቅ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Left"
+msgstr "ግራ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_mega_menu_menu_image_menu
+msgid "Left Menu"
+msgstr "የግራ ምናሌ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
+msgid "Let your customers log in to see their documents"
+msgstr "ደንበኞችዎ ሰነዶቻቸውን ለማየት እንዲገቡ ያድርጉ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.editor.xml:0
+#, python-format
+msgid "Let's start designing."
+msgstr "ንድፍ ማዘጋጀት እንጀምር"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_comparisons
+msgid "Limited customization"
+msgstr "የተገደበ ማበጀት"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Line-On-Sides"
+msgstr "መስመር-በጎን"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/editor/snippets.options.js:0
+#, python-format
+msgid "Link Anchor"
+msgstr "አገናኝ መልህቅ"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_res_config_settings__module_website_links
+msgid "Link Trackers"
+msgstr "አገናኝ መከታተያዎች"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website_visitor__partner_id
+msgid "Linked Partner"
+msgstr "የተገናኘ አጋር"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
+msgid "LinkedIn"
+msgstr "linked ውስጥ"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_res_config_settings__social_linkedin
+#: model:ir.model.fields,field_description:website.field_website__social_linkedin
+msgid "LinkedIn Account"
+msgstr ""
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_faq_collapse
+msgid "Links to other Websites"
+msgstr "የሌሎች ድር ጣቢያዎች አገናኞች"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/menu/seo.js:0
+#: code:addons/website/static/src/xml/website.background.video.xml:0
+#: code:addons/website/static/src/xml/website.editor.xml:0
+#, python-format
+msgid "Loading..."
+msgstr "በመጫን ላይ..."
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.external_snippets
+msgid "Local Events"
+msgstr "አካባቢያዊ ክስተቶች"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.theme_customize
+msgid "Logo"
+msgstr "አርማ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.theme_customize
+msgid "Logo Height"
+msgstr "አርማ ቁመት"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Low"
+msgstr "ዝቅተኛ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.theme_customize
+msgid "Main"
+msgstr "ዋና"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.theme_customize
+msgid "Main Layout"
+msgstr "ዋና አቀማመጥ"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website__menu_id
+msgid "Main Menu"
+msgstr "ዋና ምናሌ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.user_navbar
+msgid "Manage Pages"
+msgstr "ገጾችን አስተዳድር"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.list_website_pages
+msgid "Manage Your Pages"
+msgstr "ገጽህን አስተዳድር"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.user_navbar
+msgid "Manage Your Website Pages"
+msgstr "የእርስዎን ድረ-ገጽ ያቀናብሩ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
+msgid "Manage multiple websites"
+msgstr "በርካታ ድር ጣቢያዎችን አስተዳድር"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.one_page_line
+msgid "Manage this page"
+msgstr "ይህን ገጽ አስተዳድር"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Masonry"
+msgstr "ሜሶነሪ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Medium"
+msgstr "መካከለኛ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_company_team
+msgid "Meet the Executive Team"
+msgstr "የስራ አስፈፃሚውን ቡድን ያግኙ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.contentMenu.xml:0
+#, python-format
+msgid "Mega Menu"
+msgstr ""
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website_menu__mega_menu_classes
+msgid "Mega Menu Classes"
+msgstr "ሜጋ ምናሌ ክፍሎች"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website_menu__mega_menu_content
+msgid "Mega Menu Content"
+msgstr "የሜጋ ምናሌ ይዘት"
+
+#. module: website
+#: code:addons/website/models/website.py:0
+#: model:ir.model.fields,field_description:website.field_website_menu__name
+#: model_terms:ir.ui.view,arch_db:website.user_navbar
+#, python-format
+msgid "Menu"
+msgstr "ምናሌ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_mega_menu_menu_image_menu
+#: model_terms:ir.ui.view,arch_db:website.s_mega_menu_multi_menus
+msgid "Menu Item %s"
+msgstr "ምናሌ ንጥል %s"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/menu/content.js:0
+#, python-format
+msgid "Menu Label"
+msgstr "ምናሌ መለያ"
+
+#. module: website
+#: code:addons/website/models/website.py:0
+#: model:ir.ui.menu,name:website.menu_website_menu_list
+#: model_terms:ir.ui.view,arch_db:website.theme_customize
+#, python-format
+msgid "Menus"
+msgstr "ምናሌዎች"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.facebook_page.xml:0
+#, python-format
+msgid "Messages"
+msgstr "መልእክቶች"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_company_team
+msgid "Mich Stark, COO"
+msgstr "ሚች ስታርክ፣ COO"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_company_team
+msgid ""
+"Mich loves taking on challenges. With his multi-year experience as Commercial\n"
+"                                Director in the software industry, Mich has helped Company to get where it\n"
+"                                is today. Mich is among the best minds."
+msgstr ""
+"ሚች ተግዳሮቶችን መቀበል ይወዳል። ከብዙ አመት ልምዱ እንደ ንግድ\n"
+"በሶፍትዌር ኢንዱስትሪ ውስጥ ዳይሬክተር ሚች ካምፓኒው ያለበት ቦታ እንዲደርስ ረድቷል\n"
+"ዛሬ ነው. ሚች ከምርጥ አእምሮዎች መካከል አንዱ ነው."
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Middle"
+msgstr "መካከለኛ"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website_visitor__mobile
+msgid "Mobile Phone"
+msgstr "ሞባይል"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/menu/mobile_view.js:0
+#, python-format
+msgid "Mobile preview"
+msgstr "የሞባይል ቅድመ እይታ"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website_page__model
+msgid "Model"
+msgstr "ሞዴል"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website_page__model_data_id
+msgid "Model Data"
+msgstr "የአምሳያ ውሂብ"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website_page__model_ids
+msgid "Models"
+msgstr "ሞዴሎች"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website_page__arch_updated
+msgid "Modified Architecture"
+msgstr "የተሻሻለው አርክቴክቸር"
+
+#. module: website
+#: model:ir.model,name:website.model_ir_module_module
+msgid "Module"
+msgstr "ሞዱል"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.seo.xml:0
+#, python-format
+msgid "Most searched topics related to your keyword, ordered by importance"
+msgstr "ከቁልፍ ቃልዎ ጋር የተያያዙ በጣም የተፈለጉ ርዕሰ ጉዳዮች፣ በአስፈላጊነት የታዘዙ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Move to first"
+msgstr "ወደ መጀመሪያ ሂድ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Move to last"
+msgstr "ወደ መጨረሻው አንቀሳቅስ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Move to next"
+msgstr "ወደሚቀጥለው ሂድ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Move to previous"
+msgstr "ወደ ቀዳሚው ውሰድ"
+
+#. module: website
+#: model:ir.model,name:website.model_website_multi_mixin
+msgid "Multi Website Mixin"
+msgstr "ባለብዙ ድር ጣቢያ ድብልቅ"
+
+#. module: website
+#: model:ir.model,name:website.model_website_published_multi_mixin
+msgid "Multi Website Published Mixin"
+msgstr "ባለብዙ ድር ጣቢያ ታትሟል Mixin"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
+msgid "Multi-Website"
+msgstr "ባለብዙ ድረ-ገጽ"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_res_config_settings__group_multi_website
+#: model:res.groups,name:website.group_multi_website
+msgid "Multi-website"
+msgstr "ባለብዙ ድረ-ገጽ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.layout
+msgid "My Website"
+msgstr "የእኔ ድር ጣቢያ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.pageProperties.xml:0
+#: model:ir.model.fields,field_description:website.field_website_rewrite__name
+#: model:ir.model.fields,field_description:website.field_website_visitor__name
+#: model_terms:ir.ui.view,arch_db:website.list_website_pages
+#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
+#, python-format
+msgid "Name"
+msgstr "ስም"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
+msgid "Name and favicon of your website"
+msgstr "የድር ጣቢያዎ ስም እና favicon"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Narrow"
+msgstr "ጠባብ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.theme_customize
+msgid "Navbar"
+msgstr "ናቭባር"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
+msgid "New"
+msgstr "አዲስ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.user_navbar
+msgid "New Blog Post"
+msgstr "አዲስ ብሎግ ፖስት"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.user_navbar
+msgid "New Course"
+msgstr "አዲስ ኮርስ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.user_navbar
+msgid "New Event"
+msgstr "አዲስ ክስተት"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.user_navbar
+msgid "New Forum"
+msgstr "አዲስ መድረክ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.backend.xml:0
+#, python-format
+msgid ""
+"New Google Analytics accounts and keys are now using Google Analytics 4 "
+"which, for now, can't be integrated/embed in external websites."
+msgstr ""
+"አዲስ የጉግል አናሌቲክስ መለያዎች እና ቁልፎች አሁን Google Analytics 4 እየተጠቀሙ ነውለአሁን በውጫዊ ድረ-"
+"ገጾች ውስጥ መካተት/መካተት አይቻልም"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.user_navbar
+msgid "New Job Offer"
+msgstr "አዲስ የሥራ ዕድል"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.user_navbar
+msgid "New Livechat Channel"
+msgstr "አዲስ የቀጥታ ውይይት ቻናል"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/menu/new_content.js:0
+#: model_terms:ir.ui.view,arch_db:website.user_navbar
+#, python-format
+msgid "New Page"
+msgstr "አዲስ ገጽ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.user_navbar
+msgid "New Product"
+msgstr "አዲስ ምርት"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website_menu__new_window
+msgid "New Window"
+msgstr "አዲስ መስኮት"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.user_navbar
+msgid "New page"
+msgstr "አዲስ ገጽ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.external_snippets
+msgid "Newsletter"
+msgstr "ጋዜጣ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.external_snippets
+msgid "Newsletter Block"
+msgstr "የጋዜጣ እገዳ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.external_snippets
+msgid "Newsletter Popup"
+msgstr "ጋዜጣ ብቅ ባይ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.gallery.xml:0
+#: code:addons/website/static/src/xml/website.gallery.xml:0
+#: model_terms:ir.ui.view,arch_db:website.kanban_contain
+#: model_terms:ir.ui.view,arch_db:website.s_carousel
+#: model_terms:ir.ui.view,arch_db:website.s_quotes_carousel
+#, python-format
+msgid "Next"
+msgstr "ቀጥሎ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_comparisons
+msgid "No customization"
+msgstr "ምንም ማበጀት የለም"
+
+#. module: website
+#: model_terms:ir.actions.act_window,help:website.website_visitor_page_action
+msgid "No page views yet for this visitor"
+msgstr "ለዚህ ጎብኚ እስካሁን ምንም የገጽ እይታ የለም"
+
+#. module: website
+#: model_terms:ir.actions.act_window,help:website.visitor_partner_action
+msgid "No partner linked for this visitor"
+msgstr "ለዚህ ጎብኚ የተገናኘ አጋር የለም"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_comparisons
+msgid "No support"
+msgstr "ምንም ድጋፍ የለም"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "No-scroll"
+msgstr "ምንም-ማሸብለል"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+#: model_terms:ir.ui.view,arch_db:website.theme_customize
+msgid "None"
+msgstr "ምንም"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.one_page_line
+msgid "Not SEO optimized"
+msgstr "SEO የተመቻቸ አይደለም"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.one_page_line
+msgid "Not in main menu"
+msgstr "በዋናው ምናሌ ውስጥ የለም"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.one_page_line
+msgid "Not indexed"
+msgstr "በመረጃ ጠቋሚ አልተዘጋጀም"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.website_pages_view_search
+msgid "Not published"
+msgstr "አልታተምም"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.website_pages_view_search
+msgid "Not tracked"
+msgstr "ክትትል አልተደረገም"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.one_page_line
+msgid "Not visible"
+msgstr "አይታይም"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.show_website_info
+msgid "Note: To hide this page, uncheck it from the top Customize menu."
+msgstr "ማስታወሻ፡ ይህን ገጽ ለመደበቅ ከላይ ካለው የአብጁ ምናሌ ላይ ምልክት ያንሱት።"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_res_config_settings__website_language_count
+msgid "Number of languages"
+msgstr "የቋንቋዎች ብዛት"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website_visitor__visit_count
+msgid "Number of visits"
+msgstr "የጉብኝቶች ብዛት"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_three_columns
+msgid "Odoo - Sample 1 for three columns"
+msgstr "ኦዱ - ናሙና 1 ለሶስት አምዶች"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_three_columns
+msgid "Odoo - Sample 2 for three columns"
+msgstr "ኦዱ - ናሙና 2 ለሶስት አምዶች"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_three_columns
+msgid "Odoo - Sample 3 for three columns"
+msgstr "ኦዱ - ናሙና 3 ለሶስት አምዶች"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.show_website_info
+msgid "Odoo Version"
+msgstr "ኦዱ ስሪት"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_quotes_carousel
+msgid ""
+"Odoo provides essential platform for our project management. Things are "
+"better organized and more visible with it."
+msgstr ""
+"ኦዱ ለፕሮጀክታችን አስተዳደር አስፈላጊ መድረክ ያቀርባል. ነገሮች ናቸው በተሻለ ሁኔታ የተደራጀ እና ከእሱ ጋር የበለጠ "
+"የሚታይ."
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_picture
+msgid "Odoo • A picture with a caption"
+msgstr "ኦዱ • መግለጫ መግለጫ ያለው ሥዕል"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_image_text
+msgid "Odoo • Image and Text"
+msgstr "ኦዱ • ምስል እና ጽሑፍ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_text_image
+msgid "Odoo • Text and Image"
+msgstr "ኦዱ • ጽሑፍ እና ምስል"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.website_visitor_view_kanban
+msgid "Offline"
+msgstr "ከመስመር ውጭ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/editor/editor_menu_translate.js:0
+#, python-format
+msgid "Ok"
+msgstr "እሺ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/editor/editor_menu_translate.js:0
+#, python-format
+msgid "Ok, never show me this again"
+msgstr "እሺ ይህን ዳግም አታሳየኝ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.backend.xml:0
+#, python-format
+msgid "On Website"
+msgstr "በድር ጣቢያ ላይ"
+
+#. module: website
+#: model:ir.model.fields.selection,name:website.selection__website__auth_signup_uninvited__b2b
+msgid "On invitation"
+msgstr "በድር ጣቢያ ላይ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
+msgid ""
+"Once the selection of available websites by domain is done, you can filter "
+"by country group."
+msgstr "አንዴ የሚገኙትን ድረ-ገጾች በጎራ መምረጥ ከተጠናቀቀ ማጣራት ትችላለህበአገር ቡድን"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.website_visitor_view_kanban
+msgid "Online"
+msgstr "በመስመር ላይ"
+
+#. module: website
+#: model:ir.model.fields,help:website.field_website_page__mode
+msgid ""
+"Only applies if this view inherits from an other one (inherit_id is not False/Null).\n"
+"\n"
+"* if extension (default), if this view is requested the closest primary view\n"
+"is looked up (via inherit_id), then all views inheriting from it with this\n"
+"view's model are applied\n"
+"* if primary, the closest primary view is fully resolved (even if it uses a\n"
+"different model than this one), then this view's inheritance specs\n"
+"(<xpath/>) are applied, and the result is used as if it were this view's\n"
+"actual arch.\n"
+msgstr ""
+"ይህ አመለካከት ከሌላው ከተወረሰ ብቻ ነው (ውርስ_መታወቂያ ሐሰት/ንፁህ አይደለም)።\n"
+"\n"
+"* ቅጥያ ከሆነ (ነባሪ) ይህ እይታ ከተጠየቀ የቅርብ ቀዳሚ እይታ\n"
+"ወደ ላይ ታይቷል (በወርስ_መታወቂያ)፣ ከዚያ ሁሉም እይታዎች ከዚህ ጋር ይወርሳሉ\n"
+"የእይታ ሞዴል ተተግብሯል* ዋና ከሆነ፣ በጣም ቅርብ የሆነው ቀዳሚ እይታ ሙሉ በሙሉ ተፈትቷል (ምንም እንኳን\n"
+" ቢጠቀምምከዚህ የተለየ ሞዴል)፣ ከዚያ የዚህ እይታ ውርስ ዝርዝሮች\n"
+"(<xpath/>) ተተግብረዋል፣ ውጤቱም የዚህ እይታ ይመስል ጥቅም ላይ ይውላል\n"
+"እውነተኛ ቅስት።\n"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.show_website_info
+msgid "Open Source ERP"
+msgstr "ክፍት ምንጭ ኢአርፒ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/menu/seo.js:0
+#: model_terms:ir.ui.view,arch_db:website.user_navbar
+#, python-format
+msgid "Optimize SEO"
+msgstr "SEO ን አሻሽል"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.one_page_line
+msgid "Optimize SEO of this page"
+msgstr "የዚህን ገጽ SEO አሻሽል"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.facebook_page.xml:0
+#, python-format
+msgid "Options"
+msgstr "አማራጮች"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_comparisons
+msgid "Order now"
+msgstr "አሁን እዘዝ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.footer_custom
+msgid "Our Products &amp; Services"
+msgstr "የእኛ ምርቶች እና አገልግሎቶች"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.aboutus
+#: model_terms:website.page,arch_db:website.aboutus_page
+msgid "Our Team"
+msgstr "የኛ ቡድን"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.aboutus
+#: model_terms:website.page,arch_db:website.aboutus_page
+msgid ""
+"Our products are designed for small to medium size companies willing to optimize\n"
+"                                                    their performance."
+msgstr ""
+"የእኛ ምርቶች የተነደፉት ለአነስተኛ እና መካከለኛ ኩባንያዎች ለማመቻቸት ፈቃደኛ ለሆኑ ኩባንያዎች ነው\n"
+"                                                     አፈጻጸማቸው"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.footer_custom
+msgid ""
+"Our products are designed for small to medium size companies willing to optimize\n"
+"                                their performance."
+msgstr ""
+"የእኛ ምርቶች የተነደፉት ለአነስተኛ እና መካከለኛ ኩባንያዎች ለማመቻቸት ፈቃደኛ ለሆኑ ኩባንያዎች ነው\n"
+"                                                     አፈጻጸማቸው"
+
+#. module: website
+#: code:addons/website/models/website.py:0
+#: code:addons/website/models/website.py:0
+#: model:ir.model,name:website.model_website_page
+#: model:ir.model.fields,field_description:website.field_ir_ui_view__page_ids
+#: model:ir.model.fields,field_description:website.field_website_page__page_ids
+#: model:ir.model.fields,field_description:website.field_website_track__page_id
+#: model_terms:ir.ui.view,arch_db:website.website_visitor_page_view_search
+#, python-format
+msgid "Page"
+msgstr "ገጽ"
+
+#. module: website
+#: code:addons/website/models/website.py:0
+#, python-format
+msgid "Page <b>%s</b> contains a link to this page"
+msgstr "ገጽ <b>%s</b> ወደዚህ ገጽ የሚወስድ አገናኝ ይዟል"
+
+#. module: website
+#: code:addons/website/models/website.py:0
+#, python-format
+msgid "Page <b>%s</b> is calling this file"
+msgstr "ገጽ <b>%s</b> ይህን ፋይል እየጠራው ነው"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.editor.xml:0
+#, python-format
+msgid "Page Anchor"
+msgstr "ገጽ መልህቅ"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website_page__website_indexed
+msgid "Page Indexed"
+msgstr "ገጽ መረጃ ጠቋሚ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.pageProperties.xml:0
+#, python-format
+msgid "Page Name"
+msgstr "የገጽ ስም"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/menu/content.js:0
+#: model_terms:ir.ui.view,arch_db:website.user_navbar
+#, python-format
+msgid "Page Properties"
+msgstr "የገጽ ባህሪያት"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.website_pages_tree_view
+msgid "Page Published"
+msgstr "ገጽ የታተመ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/menu/new_content.js:0
+#, python-format
+msgid "Page Title"
+msgstr "የገጽ ርዕስ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.facebook_page.xml:0
+#: code:addons/website/static/src/xml/website.pageProperties.xml:0
+#: model:ir.model.fields,field_description:website.field_website_page__url
+#, python-format
+msgid "Page URL"
+msgstr "ገጽ URL"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website_visitor__visitor_page_count
+msgid "Page Views"
+msgstr "የገጽ እይታዎች"
+
+#. module: website
+#: model:ir.actions.act_window,name:website.website_visitor_page_action
+msgid "Page Views History"
+msgstr "የገጽ እይታዎች ታሪክ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.website_visitor_view_form
+msgid "Page views"
+msgstr "የገጽ እይታዎች"
+
+#. module: website
+#: code:addons/website/models/website.py:0
+#: code:addons/website/models/website.py:0
+#: model:ir.ui.menu,name:website.menu_website_pages_list
+#: model_terms:ir.ui.view,arch_db:website.user_navbar
+#: model_terms:ir.ui.view,arch_db:website.website_visitor_page_view_search
+#, python-format
+msgid "Pages"
+msgstr "ገጾች"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website_menu__parent_id
+msgid "Parent Menu"
+msgstr "የወላጅ መንደር"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website_menu__parent_path
+msgid "Parent Path"
+msgstr "የወላጅ መንገድ"
+
+#. module: website
+#: model:ir.model.fields,help:website.field_website_visitor__partner_id
+msgid "Partner of the last logged in user."
+msgstr "የመጨረሻው የገባው ተጠቃሚ አጋር።"
+
+#. module: website
+#: model:ir.model.fields,help:website.field_website__partner_id
+msgid "Partner-related data of the user"
+msgstr "ከተጠቃሚው አጋር ጋር የተያያዘ ውሂብ"
+
+#. module: website
+#: model:ir.actions.act_window,name:website.visitor_partner_action
+msgid "Partners"
+msgstr "አጋሮች"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.facebook_page.xml:0
+#, python-format
+msgid "Please enter valid facebook page URL for preview"
+msgstr "እባክዎ ለቅድመ እይታ ትክክለኛ የፌስቡክ ገጽ URL ያስገቡ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.kanban_contain
+msgid "Prev"
+msgstr "የቀድሞ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.facebook_page.xml:0
+#: code:addons/website/static/src/xml/website.seo.xml:0
+#, python-format
+msgid "Preview"
+msgstr "ቅድመ እይታ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.gallery.xml:0
+#: code:addons/website/static/src/xml/website.gallery.xml:0
+#: model_terms:ir.ui.view,arch_db:website.s_carousel
+#: model_terms:ir.ui.view,arch_db:website.s_quotes_carousel
+#, python-format
+msgid "Previous"
+msgstr "ቀዳሚ"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website_page__arch_prev
+msgid "Previous View Architecture"
+msgstr "የቀድሞ እይታ አርክቴክቸር"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+#: model_terms:ir.ui.view,arch_db:website.theme_customize
+msgid "Primary"
+msgstr "ዋና"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.external_snippets
+msgid "Products Recently Viewed"
+msgstr "በቅርብ ጊዜ የታዩ ምርቶች"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.external_snippets
+msgid "Products Search"
+msgstr "ምርቶች ፍለጋ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.external_snippets
+msgid "Products Search Input"
+msgstr "የምርቶች ፍለጋ ግቤት"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_comparisons
+msgid "Professional"
+msgstr "ፕሮፌሽናል"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_tabs
+msgid "Profile"
+msgstr "መገለጫ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.user_navbar
+msgid "Promote"
+msgstr "አስተዋውቁ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.user_navbar
+msgid "Promote page on the web"
+msgstr "ገጽ በድር ላይ ያስተዋውቁ"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website__partner_id
+msgid "Public Partner"
+msgstr "የህዝብ አጋር"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website__user_id
+msgid "Public User"
+msgstr "የህዝብ ተጠቃሚ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/backend/button.js:0
+#: code:addons/website/static/src/xml/website.pageProperties.xml:0
+#: code:addons/website/static/src/xml/website.pageProperties.xml:0
+#, python-format
+msgid "Publish"
+msgstr "አትም"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/backend/button.js:0
+#: code:addons/website/static/src/js/backend/button.js:0
+#: model_terms:ir.ui.view,arch_db:website.publish_management
+#: model_terms:ir.ui.view,arch_db:website.publish_short
+#: model_terms:ir.ui.view,arch_db:website.website_pages_view_search
+#, python-format
+msgid "Published"
+msgstr "የታተመ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.pageProperties.xml:0
+#: model:ir.model.fields,field_description:website.field_website_page__date_publish
+#, python-format
+msgid "Publishing Date"
+msgstr "የህትመት ቀን"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Purple"
+msgstr "ሐምራዊ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_rating
+msgid "Quality"
+msgstr "ጥራት"
+
+#. module: website
+#: model:ir.model,name:website.model_ir_qweb
+msgid "Qweb"
+msgstr ""
+
+#. module: website
+#: model:ir.model,name:website.model_ir_qweb_field_contact
+msgid "Qweb Field Contact"
+msgstr "Qweb የመስክ ግንኙነት"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_btn
+msgid "Read more"
+msgstr "ተጨማሪ አንብብ"
+
+#. module: website
+#: model:ir.model,name:website.model_ir_rule
+msgid "Record Rule"
+msgstr "የመመዝገቢያ ደንብ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Red"
+msgstr "ቀይ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.pageProperties.xml:0
+#, python-format
+msgid "Redirect Old URL"
+msgstr "የድሮውን ዩአርኤል አዙር"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.view_rewrite_search
+msgid "Redirection Type"
+msgstr "የአቅጣጫ አይነት"
+
+#. module: website
+#: model:ir.ui.menu,name:website.menu_website_rewrite
+msgid "Redirects"
+msgstr "ማዞሪያዎች"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_references
+msgid "References"
+msgstr "ማጣቀሻዎች"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.view_website_rewrite_form
+msgid "Refresh route's list"
+msgstr "የመንገዱን ዝርዝር አድስ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Regular"
+msgstr "መደበኛ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.website_pages_form_view
+msgid "Related Menu Items"
+msgstr "ተዛማጅ ምናሌ እቃዎች"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website_page__menu_ids
+msgid "Related Menus"
+msgstr "ተዛማጅ ምናሌዎች"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website_menu__page_id
+msgid "Related Page"
+msgstr "ተዛማጅ ገጽ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.seo.xml:0
+#, python-format
+msgid "Related keywords"
+msgstr "ተዛማጅ ቁልፍ ቃላት"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/editor/snippets.options.js:0
+#, python-format
+msgid "Remove"
+msgstr "አስወግድ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Remove Cover"
+msgstr "ሽፋን አስወግድ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.xml:0
+#, python-format
+msgid "Rename Page To:"
+msgstr "ገጹን እንደገና ይሰይሙ:"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.editor.xml:0
+#, python-format
+msgid "Reset"
+msgstr "ዳግም አስጀምር"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.qweb_500
+msgid "Reset templates"
+msgstr "አብነቶችን ዳግም አስጀምር"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.qweb_500
+msgid "Reset to initial version (hard reset)."
+msgstr "ወደ መጀመሪያው ስሪት ዳግም አስጀምር (ጠንካራ ዳግም ማስጀመር)።"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.qweb_500
+msgid "Restore previous version (soft reset)."
+msgstr "የቀድሞውን ስሪት እነበረበት መልስ (ለስላሳ ዳግም ማስጀመር)።"
+
+#. module: website
+#: model:ir.model.fields,help:website.field_res_partner__website_id
+#: model:ir.model.fields,help:website.field_res_users__website_id
+#: model:ir.model.fields,help:website.field_website_multi_mixin__website_id
+#: model:ir.model.fields,help:website.field_website_page__website_id
+#: model:ir.model.fields,help:website.field_website_published_multi_mixin__website_id
+msgid "Restrict publishing to this website."
+msgstr "ለዚህ ድር ጣቢያ ማተምን ገድብ።"
+
+#. module: website
+#: model:res.groups,name:website.group_website_publisher
+msgid "Restricted Editor"
+msgstr "የተገደበ አርታኢ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_tabs
+msgid "Review"
+msgstr "ግምገማ"
+
+#. module: website
+#: model:ir.actions.act_window,name:website.action_website_rewrite_list
+msgid "Rewrite"
+msgstr "እንደገና ጻፍ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Right"
+msgstr "ቀኝ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_mega_menu_menu_image_menu
+msgid "Right Menu"
+msgstr "የቀኝ ምናሌ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Rounded"
+msgstr "የተከበበ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Rounded corners"
+msgstr "የተጠጋጉ ማዕዘኖች"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website_rewrite__route_id
+#: model:ir.model.fields,field_description:website.field_website_route__path
+msgid "Route"
+msgstr "መንገድ"
+
+#. module: website
+#: model:ir.model,name:website.model_website_seo_metadata
+msgid "SEO metadata"
+msgstr ""
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_ir_ui_view__is_seo_optimized
+#: model:ir.model.fields,field_description:website.field_website_page__is_seo_optimized
+#: model:ir.model.fields,field_description:website.field_website_seo_metadata__is_seo_optimized
+#: model_terms:ir.ui.view,arch_db:website.one_page_line
+msgid "SEO optimized"
+msgstr "SEO ተመቻችቷል"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_features_grid
+msgid "Sample Icons"
+msgstr "ናሙና አዶዎች"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/backend/dashboard.js:0
+#: code:addons/website/static/src/js/editor/snippets.options.js:0
+#: code:addons/website/static/src/js/menu/content.js:0
+#: code:addons/website/static/src/js/menu/seo.js:0
+#: code:addons/website/static/src/js/widgets/theme.js:0
+#: code:addons/website/static/src/xml/website.editor.xml:0
+#, python-format
+msgid "Save"
+msgstr "አስቀምጥ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.website_search_box
+msgid "Search"
+msgstr "ፈልግ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.menu_search
+msgid "Search Menus"
+msgstr "የፍለጋ ምናሌዎች"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.view_rewrite_search
+msgid "Search Redirect"
+msgstr "ማዞሪያ ፍለጋ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.website_visitor_page_view_search
+#: model_terms:ir.ui.view,arch_db:website.website_visitor_view_search
+msgid "Search Visitor"
+msgstr "ጎብኚን ፈልግ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.website_search_box
+msgid "Search..."
+msgstr "ፈልግ..."
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_features
+msgid "Second Feature"
+msgstr "ሁለተኛ ባህሪ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_mega_menu_multi_menus
+msgid "Second Menu"
+msgstr "ሁለተኛ ምናሌ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_features_grid
+msgid "Second list of Features"
+msgstr "ሁለተኛው የባህሪዎች ዝርዝር"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+#: model_terms:ir.ui.view,arch_db:website.theme_customize
+msgid "Secondary"
+msgstr "ሁለተኛ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_image_text
+msgid "Section Subtitle"
+msgstr "ክፍል ንዑስ ርዕስ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/menu/content.js:0
+#, python-format
+msgid "Select a Menu"
+msgstr "ምናሌ ምረጥ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
+msgid "Select a website to load its settings."
+msgstr " ቅንብሮቹን ለመጫን አንድ ድር ጣቢያ ይምረጡ።"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.seo.xml:0
+#, python-format
+msgid "Select an image for social share"
+msgstr "ለማህበራዊ መጋራት ምስል ምረጥ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_features_grid
+msgid "Select and delete blocks to remove some features."
+msgstr "አንዳንድ ባህሪያትን ለማስወገድ ብሎኮችን ይምረጡ እና ይሰርዙ።"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.editor.xml:0
+#, python-format
+msgid "Select one font on"
+msgstr "በላይ አንድ ቅርጸ-ቁምፊ ምረጥ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
+msgid "Select the Website to Configure"
+msgstr "ለማዋቀር ድህረ ገጹን ምረጥ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.website_visitor_view_form
+#: model_terms:ir.ui.view,arch_db:website.website_visitor_view_tree
+msgid "Send Email"
+msgstr "ኢሜል ላክ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.contactus
+#: model_terms:website.page,arch_db:website.contactus_page
+msgid "Send us an email"
+msgstr "ኢሜል ላኩልን"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website_menu__sequence
+#: model:ir.model.fields,field_description:website.field_website_page__priority
+#: model:ir.model.fields,field_description:website.field_website_rewrite__sequence
+msgid "Sequence"
+msgstr "ቅደም ተከተል"
+
+#. module: website
+#: model:ir.model,name:website.model_ir_actions_server
+msgid "Server Action"
+msgstr "የአገልጋይ እርምጃ"
+
+#. module: website
+#: model:ir.actions.act_window,name:website.action_website_configuration
+#: model:ir.ui.menu,name:website.menu_website_website_settings
+msgid "Settings"
+msgstr "ቅንብሮች"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
+msgid "Settings on this page will apply to this website"
+msgstr "በዚህ ገጽ ላይ ያሉ ቅንብሮች በዚህ ድህረ ገጽ ላይ ተፈጻሚ ይሆናሉ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Shadow"
+msgstr "ጥላ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Shadows"
+msgstr "ጥላዎች"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_share
+msgid "Share"
+msgstr "አጋራ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_tabs
+msgid "Shipping"
+msgstr "ማጓጓዣ"
+
+#. module: website
+#: model:ir.model.fields,help:website.field_website__auto_redirect_lang
+msgid "Should users be redirected to their browser's language"
+msgstr "ተጠቃሚዎች ወደ አሳሽ ቋንቋቸው መዞር አለባቸው"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_ir_ui_view__customize_show
+#: model:ir.model.fields,field_description:website.field_website_page__customize_show
+msgid "Show As Optional Inherit"
+msgstr "እንደ አማራጭ ውርስ አሳይ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.facebook_page.xml:0
+#, python-format
+msgid "Show Friend's Faces"
+msgstr "የጓደኛን ፊት አሳይ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.pageProperties.xml:0
+#, python-format
+msgid "Show in Top Menu"
+msgstr "በላይኛው ምናሌ ውስጥ አሳይ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Size"
+msgstr "መጠን"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Slide"
+msgstr "ስላይድ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.gallery.xml:0
+#, python-format
+msgid "Slide image"
+msgstr "የስላይድ ምስል"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Slideshow"
+msgstr "ስላይድ ትዕይንት"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Slow"
+msgstr "ቀስ በቀስ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Small"
+msgstr "ትንሽ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Small Caps"
+msgstr "ትናንሽ ኮፍያዎች"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
+msgid "Social Media"
+msgstr "ማህበራዊ ሚዲያ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.seo.xml:0
+#, python-format
+msgid "Social Preview"
+msgstr "ማህበራዊ ቅድመ እይታ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Solid"
+msgstr "ጠንካራ"
+
+#. module: website
+#: code:addons/website/controllers/main.py:0
+#, python-format
+msgid "Sort by Name"
+msgstr "በስም ደርድር"
+
+#. module: website
+#: code:addons/website/controllers/main.py:0
+#, python-format
+msgid "Sort by Url"
+msgstr "በዩአርኤል ደርድር"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_res_config_settings__specific_user_account
+#: model:ir.model.fields,field_description:website.field_website__specific_user_account
+msgid "Specific User Account"
+msgstr "የተወሰነ የተጠቃሚ መለያ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Square"
+msgstr "ካሬ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_comparisons
+msgid "Start now"
+msgstr "አሁን ጀምር"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_image_text
+#: model_terms:ir.ui.view,arch_db:website.s_text_image
+msgid "Start with the customer – find out what they want and give it to them."
+msgstr "ከደንበኛው ይጀምሩ - የሚፈልጉትን ይፈልጉ እና ይስጧቸው."
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_carousel
+msgid "Start your journey"
+msgstr "ጉዞህን ጀምር"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.theme_customize
+msgid "Status"
+msgstr "ሁኔታ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/editor/snippets.options.js:0
+#, python-format
+msgid "Stay on this page"
+msgstr "በዚህ ገጽ ላይ ቆይ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_carousel
+msgid "Storytelling is powerful.<br/> It draws readers in and engages them."
+msgstr "ተረት መተረክ ኃይለኛ ነው።<br/> አንባቢዎችን ይስባል እና ያሳተፈ ነው።"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.theme_customize
+msgid "Success"
+msgstr "ስኬት"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.user_navbar
+msgid "TRANSLATE"
+msgstr "ተርጉም"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.facebook_page.xml:0
+#, python-format
+msgid "Tabs"
+msgstr "ትሮች"
+
+#. module: website
+#: model:ir.model.fields,help:website.field_ir_attachment__key
+msgid ""
+"Technical field used to resolve multiple attachments in a multi-website "
+"environment."
+msgstr "በብዙ ድረ-ገጽ ውስጥ ብዙ አባሪዎችን ለመፍታት የሚያገለግል የቴክኒክ መስክአካባቢ."
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.show_website_info
+msgid "Technical name:"
+msgstr "ቴክኒካዊ ስም"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_features
+msgid "Tell what's the value for the <br/>customer for this feature."
+msgstr "ለዚህ ባህሪ ለ<br/>ደንበኛ ምን ዋጋ እንዳለው ይንገሩ።"
+
+#. module: website
+#: code:addons/website/models/website.py:0
+#: code:addons/website/models/website.py:0
+#, python-format
+msgid "Template"
+msgstr "አብነት"
+
+#. module: website
+#: code:addons/website/models/website.py:0
+#, python-format
+msgid "Template <b>%s (id:%s)</b> contains a link to this page"
+msgstr "አብነት <b>%s (id:%s)</b> ወደዚህ ገጽ የሚወስድ አገናኝ ይዟል"
+
+#. module: website
+#: code:addons/website/models/website.py:0
+#, python-format
+msgid "Template <b>%s (id:%s)</b> is calling this file"
+msgstr "አብነት <b>%s (id:%s)</b> ይህን ፋይል እየጠራው ነው"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.qweb_500
+msgid "Template fallback"
+msgstr "የአብነት ውድቀት"
+
+#. module: website
+#: code:addons/website/models/website.py:0
+#: code:addons/website/models/website.py:0
+#, python-format
+msgid "Templates"
+msgstr "አብነቶች"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_faq_collapse
+msgid "Terms of service"
+msgstr "የአገልግሎት ውል"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.theme_customize
+msgid "Text"
+msgstr "ጽሑፍ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Text Alignment"
+msgstr "የጽሑፍ አሰላለፍ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Text Size"
+msgstr "የጽሑፍ መጠን"
+
+#. module: website
+#: code:addons/website/controllers/backend.py:0
+#, python-format
+msgid "The Google Analytics Client ID or Key you entered seems incorrect."
+msgstr "ያስገቡት የጉግል አናሌቲክስ ደንበኛ መታወቂያ ወይም ቁልፍ የተሳሳተ ይመስላል።"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.editor.xml:0
+#, python-format
+msgid "The chosen name already exists"
+msgstr "የተመረጠው ስም አስቀድሞ አለ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.editor.xml:0
+#, python-format
+msgid "The chosen name is not valid (use only a-Z A-Z 0-9 - _)"
+msgstr "የተመረጠው ስም ልክ አይደለም (a-Z A-Z 0-9 - _ ብቻ ይጠቀሙ)"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
+msgid "The company this website belongs to"
+msgstr "የዚህ ድህረ ገጽ ባለቤት የሆነው ኩባንያ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/menu/seo.js:0
+#, python-format
+msgid ""
+"The description will be generated by search engines based on page content "
+"unless you specify one."
+msgstr "መግለጫው በገጽ ይዘት ላይ በመመስረት በፍለጋ ፕሮግራሞች ይፈጠራልአንዱን ካልገለጹ በቀር።"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/menu/seo.js:0
+#, python-format
+msgid ""
+"The description will be generated by social media based on page content "
+"unless you specify one."
+msgstr "መግለጫው በገጽ ይዘት ላይ በመመስረት በማህበራዊ ሚዲያ ይዘጋጃልአንዱን ካልገለጹ በቀር።"
+
+#. module: website
+#: model:ir.model.fields,help:website.field_res_partner__website_url
+#: model:ir.model.fields,help:website.field_res_users__website_url
+#: model:ir.model.fields,help:website.field_website_page__website_url
+#: model:ir.model.fields,help:website.field_website_published_mixin__website_url
+#: model:ir.model.fields,help:website.field_website_published_multi_mixin__website_url
+msgid "The full URL to access the document through the website."
+msgstr "ሰነዱን በድር ጣቢያው በኩል ለመድረስ ሙሉው ዩአርኤል።"
+
+#. module: website
+#: model:ir.model.fields,help:website.field_ir_actions_server__website_url
+#: model:ir.model.fields,help:website.field_ir_cron__website_url
+msgid "The full URL to access the server action through the website."
+msgstr "ሙሉ ዩአርኤል የአገልጋዩን እርምጃ በድር ጣቢያው በኩል ለመድረስ።"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/menu/new_content.js:0
+#, python-format
+msgid "The installation of an App is already in progress."
+msgstr "የመተግበሪያ መጫን አስቀድሞ በሂደት ላይ ነው።"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.seo.xml:0
+#, python-format
+msgid "The language of the keyword and related keywords."
+msgstr "የቁልፍ ቃሉ ቋንቋ እና ተዛማጅ ቁልፍ ቃላት።"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.qweb_500
+msgid "The selected templates will be reset to their factory settings."
+msgstr "የተመረጡት አብነቶች ወደ ፋብሪካ ቅንብሮቻቸው ይጀመራሉ።"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.seo.xml:0
+#, python-format
+msgid "The title will take a default value unless you specify one."
+msgstr "አንዱን ካልገለጹ በቀር ርዕሱ ነባሪ እሴት ይወስዳል።"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website__theme_id
+msgid "Theme"
+msgstr "ጭብጥ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.list_website_pages
+msgid "There are currently no pages for your website."
+msgstr "በአሁኑ ጊዜ ለድር ጣቢያዎ ምንም ገጾች የሉም።"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.backend.xml:0
+#, python-format
+msgid "There is no data currently available."
+msgstr "በአሁኑ ጊዜ ምንም ውሂብ የለም."
+
+#. module: website
+#: code:addons/website/models/website_visitor.py:0
+#, python-format
+msgid "There is no email linked this visitor."
+msgstr "ይህን ጎብኚ የተገናኘ ምንም ኢሜይል የለም።"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
+msgid ""
+"There is no website available for this company. You could create a new one."
+msgstr "ለዚህ ኩባንያ ምንም ድህረ ገጽ የለም። አዲስ መፍጠር ትችላለህ።"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_faq_collapse
+msgid ""
+"These terms of service (\"Terms\", \"Agreement\") are an agreement between "
+"the website (\"Website operator\", \"us\", \"we\" or \"our\") and you "
+"(\"User\", \"you\" or \"your\"). This Agreement sets forth the general terms"
+" and conditions of your use of this website and any of its products or "
+"services (collectively, \"Website\" or \"Services\")."
+msgstr ""
+"እነዚህ የአገልግሎት ውሎች (\"ውሎች\"\"ስምምነት\" በ ድህረ ገጹ (\"የድር ጣቢያ ኦፕሬተር \" እኛ \" እኛ \" "
+"ወይም \"የእኛ\") እና እርስዎ (\"ተጠቃሚ\"፣ \"እርስዎ\" ወይም \"የእርስዎ\")።  መካከል የሚደረግ ስምምነት "
+"ናቸው። ይህ ስምምነት አጠቃላይ ውሎችን ያዘጋጃልእና የዚህ ድህረ ገጽ አጠቃቀምዎ ሁኔታዎች እና ማንኛውም ምርቶቹ "
+"ወይምአገልግሎቶች (በጥቅል \"ድር ጣቢያ\" ወይም \"አገልግሎቶች\"."
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Thin"
+msgstr "ቀጭን"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_features
+msgid "Third Feature"
+msgstr "ሦስተኛው ባህሪ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_mega_menu_multi_menus
+msgid "Third Menu"
+msgstr "ሦስተኛ ምናሌ"
+
+#. module: website
+#: model:ir.model.fields,help:website.field_res_config_settings__favicon
+#: model:ir.model.fields,help:website.field_website__favicon
+msgid "This field holds the image used to display a favicon on the website."
+msgstr "ይህ መስክ በድር ጣቢያው ላይ ፋቪኮን ለማሳየት የሚያገለግል ምስል ይይዛል።"
+
+#. module: website
+#: model:ir.model.fields,help:website.field_website_page__arch_base
+msgid "This field is the same as `arch` field without translations"
+msgstr "ይህ መስክ ትርጉሞች ከሌለው የ'arch' መስክ ጋር ተመሳሳይ ነው"
+
+#. module: website
+#: model:ir.model.fields,help:website.field_res_config_settings__website_default_lang_code
+msgid "This field is used to set/get locales for user"
+msgstr "ይህ መስክ ለተጠቃሚ አከባቢዎችን ለማዘጋጀት/ለማግኝት ይጠቅማል"
+
+#. module: website
+#: model:ir.model.fields,help:website.field_website_page__arch
+msgid ""
+"This field should be used when accessing view arch. It will use translation.\n"
+"                               Note that it will read `arch_db` or `arch_fs` if in dev-xml mode."
+msgstr ""
+"ይህ መስክ የእይታ ቅስት ሲደርስ ጥቅም ላይ መዋል አለበት:: ትርጉምን ይጠቀማል::\n"
+"በdev-xml ሁነታ ላይ ከሆነ `arch_db` ወይም `arch_fs` እንደሚነበብ አስተውል።"
+
+#. module: website
+#: model:ir.model.fields,help:website.field_website_page__arch_db
+msgid "This field stores the view arch."
+msgstr "ይህ መስክ የእይታ ቅስት ያከማቻል።"
+
+#. module: website
+#: model:ir.model.fields,help:website.field_website_page__arch_prev
+msgid ""
+"This field will save the current `arch_db` before writing on it.\n"
+"                                                                         Useful to (soft) reset a broken view."
+msgstr ""
+"ይህ መስክ አሁን ያለውን 'arch_db' ከመጻፉ በፊት ያስቀምጣል።\n"
+"የተበላሸ እይታን (ለስላሳ) ዳግም ለማስጀመር ይጠቅማል።"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_banner
+msgid ""
+"This is a simple hero unit, a simple jumbotron-style component <br/>for "
+"calling extra attention to featured content or information."
+msgstr ""
+"ይህ ቀላል የጀግና አሃድ ነው፣ ቀላል የጃምቦሮን አይነት አካል <br/>ለለቀረቡ ይዘቶች ወይም መረጃዎች የበለጠ ትኩረት "
+"መስጠት።"
+
+#. module: website
+#: code:addons/website/models/website_visitor.py:0
+#, python-format
+msgid "This operator is not supported"
+msgstr "ይህ ኦፕሬተር አይደገፍም"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.page_404
+msgid ""
+"This page does not exist, but you can create it as you are administrator of "
+"this site."
+msgstr "ይህ ገጽ የለም፣ ነገር ግን እንደ አስተዳዳሪ ሆነው ሊፈጥሩት ይችላሉ።ይህ ጣቢያ."
+
+#. module: website
+#: code:addons/website/models/website.py:0
+#, python-format
+msgid "This page is in the menu <b>%s</b>"
+msgstr "ይህ ገጽ በምናሌው ውስጥ ነው <b>%s</b>"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.one_page_line
+msgid "This page will be visible on {{ date_formatted }}"
+msgstr "ይህ ገጽ በ{{ date_formated }} ላይ ይታያል"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.backend.xml:0
+#, python-format
+msgid ""
+"Those accounts should now check their Analytics dashboard in the Google "
+"platform directly."
+msgstr "እነዚያ መለያዎች አሁን የእነርሱን የትንታኔ ዳሽቦርድ በGoogle ውስጥ መፈተሽ አለባቸውቀጥታ መድረክ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Thumbnails"
+msgstr "ድንክዬዎች"
+
+#. module: website
+#: model:ir.model.fields,help:website.field_website_visitor__time_since_last_action
+msgid "Time since last page view. E.g.: 2 minutes ago"
+msgstr "ከመጨረሻው ገጽ እይታ ጀምሮ ያለው ጊዜ። ለምሳሌ፡ ከ2 ደቂቃ በፊት"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.facebook_page.xml:0
+#, python-format
+msgid "Timeline"
+msgstr "የጊዜ መስመር"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website_visitor__timezone
+msgid "Timezone"
+msgstr "የጊዜ ክልል"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Tiny"
+msgstr "ትንሽ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.seo.xml:0
+#: model_terms:ir.ui.view,arch_db:website.theme_customize
+#, python-format
+msgid "Title"
+msgstr "ርዕስ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_three_columns
+msgid ""
+"To add a fourth column, reduce the size of these three columns using the "
+"right icon of each block. Then, duplicate one of the columns to create a new"
+" one as a copy."
+msgstr ""
+"አራተኛውን አምድ ለመጨመር የነዚህን ሶስት ዓምዶች መጠን ይቀንሱየእያንዳንዱ ብሎክ የቀኝ አዶ። ከዚያ አዲስ ለመፍጠር "
+"ከአምዶች አንዱን ያባዙ።አንድ እንደ ቅጂ."
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
+msgid ""
+"To send invitations in B2B mode, open a contact or select several ones in "
+"list view and click on 'Portal Access Management' option in the dropdown "
+"menu *Action*."
+msgstr ""
+"ግብዣዎችን በB2B ሁነታ ለመላክ ኮንታክት ይክፈቱ ወይም ብዙ አማራጭ ውስጥ አንዱን ይምረጡዝርዝር እይታ እና በተቆልቋዩ "
+"ውስጥ 'የፖርታል መዳረሻ አስተዳደር' አማራጭን ጠቅ ያድርጉምናሌ *ድርጊት*"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_company_team
+msgid "Tony Fred, CEO"
+msgstr "ቶኒ ፍሬድ, ዋና ሥራ አስፈፃሚ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Top"
+msgstr "ላይ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/menu/content.js:0
+#, python-format
+msgid "Top Menu"
+msgstr "ከፍተኛ ምናሌ"
+
+#. module: website
+#: code:addons/website/models/website.py:0
+#, python-format
+msgid "Top Menu for Website %s"
+msgstr "ከፍተኛ ምናሌ ለድር ጣቢያ %s"
+
+#. module: website
+#: model:ir.model.fields,help:website.field_website_visitor__page_count
+msgid "Total number of tracked page visited"
+msgstr "የተጎበኙ ገጾች ጠቅላላ ቁጥር"
+
+#. module: website
+#: model:ir.model.fields,help:website.field_website_visitor__visitor_page_count
+msgid "Total number of visits on tracked pages"
+msgstr "በክትትል ገፆች ላይ ያሉ አጠቃላይ የጉብኝቶች ብዛት"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_ir_ui_view__track
+#: model:ir.model.fields,field_description:website.field_website_page__track
+msgid "Track"
+msgstr "ትራክ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
+msgid "Track clicks on UTM links"
+msgstr "በዩቲኤም ማገናኛዎች ላይ ጠቅ ማድረግን ይከታተሉ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/track_page.xml:0
+#, python-format
+msgid "Track visitor"
+msgstr "ጎብኝን ተከታተል"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
+msgid "Track visits in Google Analytics"
+msgstr "ጉግል አናሌቲክስ ውስጥ ጉብኝቶችን ይከታተሉ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.website_pages_view_search
+msgid "Tracked"
+msgstr "ክትትል ተደርጓል"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
+msgid "Tracking ID"
+msgstr "የክትትል መታወቂያ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Transform the picture (click twice to reset transformation)"
+msgstr "ምስሉን ቀይር (ለውጡን ዳግም ለማስጀመር ሁለት ጊዜ ጠቅ ያድርጉ)"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/editor/wysiwyg_multizone_translate.js:0
+#, python-format
+msgid "Translate Attribute"
+msgstr "ባህሪ ተርጉም"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/translator.xml:0
+#, python-format
+msgid "Translated content"
+msgstr "የተተረጎመ ይዘት"
+
+#. module: website
+#: model:ir.model,name:website.model_ir_translation
+msgid "Translation"
+msgstr "ትርጉም"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/editor/editor_menu_translate.js:0
+#, python-format
+msgid "Translation Info"
+msgstr "የትርጉም መረጃ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Transparent"
+msgstr "ግልጽ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_features_grid
+msgid "Turn every feature into a benefit for your reader."
+msgstr "እያንዳንዱን ባህሪ ለአንባቢህ ጥቅም ቀይር።"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
+msgid "Twitter"
+msgstr ""
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_res_config_settings__social_twitter
+#: model:ir.model.fields,field_description:website.field_website__social_twitter
+msgid "Twitter Account"
+msgstr ""
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.external_snippets
+msgid "Twitter Scroller"
+msgstr ""
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.pageProperties.xml:0
+#, python-format
+msgid "Type"
+msgstr "አይነት"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.qweb_500
+msgid ""
+"Type '<i class=\"confirm_word\">yes</i>' in the box below if you want to "
+"confirm."
+msgstr "ከፈለጉ ከታች ባለው ሳጥን ውስጥ '<i class=\"confirm_word\">አዎ</i> 'ን ይጻፉ አረጋግጥ"
+
+#. module: website
+#: model:ir.model.fields,help:website.field_website_rewrite__redirect_type
+msgid ""
+"Type of redirect/Rewrite:\n"
+"\n"
+"        301 Moved permanently: The browser will keep in cache the new url.\n"
+"        302 Moved temporarily: The browser will not keep in cache the new url and ask again the next time the new url.\n"
+"        404 Not Found: If you want remove a specific page/controller (e.g. Ecommerce is installed, but you don't want /shop on a specific website)\n"
+"        308 Redirect / Rewrite: If you want rename a controller with a new url. (Eg: /shop -> /garden - Both url will be accessible but /shop will automatically be redirected to /garden)\n"
+"    "
+msgstr ""
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.backend.xml:0
+#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
+#, python-format
+msgid "UA-XXXXXXXX-Y"
+msgstr "UA-XXXXXXX-Y"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website_rewrite__url_from
+#: model_terms:ir.ui.view,arch_db:website.view_website_rewrite_form
+msgid "URL from"
+msgstr ""
+
+#. module: website
+#: model:ir.model.fields,help:website.field_res_config_settings__cdn_filters
+#: model:ir.model.fields,help:website.field_website__cdn_filters
+msgid "URL matching those filters will be rewritten using the CDN Base URL"
+msgstr "ከእነዚያ ማጣሪያዎች ጋር የሚዛመድ ዩአርኤል የCDN Base URLን በመጠቀም እንደገና ይጻፋል"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website_rewrite__url_to
+msgid "URL to"
+msgstr ""
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Underlined"
+msgstr "የተሰመረ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.index_management
+msgid "Unindexed"
+msgstr "የማይታወቅ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_comparisons
+msgid "Unlimited CRM power and support"
+msgstr "ያልተገደበ CRM ኃይል እና ድጋፍ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_comparisons
+msgid "Unlimited customization"
+msgstr "ያልተገደበ ማበጀት"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/backend/button.js:0
+#, python-format
+msgid "Unpublish"
+msgstr "አትታተም"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/backend/button.js:0
+#: code:addons/website/static/src/js/backend/button.js:0
+#: model_terms:ir.ui.view,arch_db:website.publish_management
+#: model_terms:ir.ui.view,arch_db:website.publish_short
+#, python-format
+msgid "Unpublished"
+msgstr "ያልታተመ"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website_menu__url
+#: model:ir.model.fields,field_description:website.field_website_track__url
+#: model_terms:ir.ui.view,arch_db:website.list_website_pages
+#: model_terms:ir.ui.view,arch_db:website.website_visitor_page_view_search
+msgid "Url"
+msgstr ""
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.website_visitor_page_view_search
+msgid "Urls & Pages"
+msgstr ""
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
+msgid "Use Google Map on your website ("
+msgstr "Google ካርታን በድር ጣቢያህ ላይ ተጠቀም ("
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.facebook_page.xml:0
+#, python-format
+msgid "Use Small Header"
+msgstr "ትንሽ ራስጌ ተጠቀም"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
+msgid "Use a CDN to optimize the availability of your website's content"
+msgstr "የድር ጣቢያዎን ይዘት ተገኝነት ለማመቻቸት ሲዲኤን ይጠቀሙ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.pageProperties.xml:0
+#, python-format
+msgid "Use as Homepage"
+msgstr "እንደ መነሻ ገጽ ተጠቀም"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_faq_collapse
+msgid "Use of Cookies"
+msgstr "የኩኪዎችን አጠቃቀም"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_carousel
+msgid ""
+"Use this snippet to presents your content in a slideshow-like format.<br/> "
+"Don't write about products or services here, write about solutions."
+msgstr ""
+"ይዘትዎን በተንሸራታች ትዕይንት በሚመስል ቅርጸት ለማቅረብ ይህንን ቅንጣቢ ይጠቀሙ።<br/>ስለ ምርቶች ወይም አገልግሎቶች"
+" እዚህ አይጻፉ, ስለ መፍትሄዎች ይጻፉ."
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.seo.xml:0
+#, python-format
+msgid "Used in page content"
+msgstr "በገጽ ይዘት ውስጥ ጥቅም ላይ የዋለ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.seo.xml:0
+#, python-format
+msgid "Used in page description"
+msgstr "በገጽ መግለጫ ውስጥ ጥቅም ላይ የዋለ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.seo.xml:0
+#, python-format
+msgid "Used in page first level heading"
+msgstr "በገጽ የመጀመሪያ ደረጃ ርዕስ ላይ ጥቅም ላይ ውሏል"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.seo.xml:0
+#, python-format
+msgid "Used in page second level heading"
+msgstr "በገጽ ሁለተኛ ደረጃ ርዕስ ላይ ጥቅም ላይ ውሏል"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.seo.xml:0
+#, python-format
+msgid "Used in page title"
+msgstr "በገጽ ርዕስ ውስጥ ጥቅም ላይ ውሏል"
+
+#. module: website
+#: model:ir.model.fields,help:website.field_res_config_settings__website_country_group_ids
+#: model:ir.model.fields,help:website.field_website__country_group_ids
+msgid "Used when multiple websites have the same domain."
+msgstr "በርካታ ድር ጣቢያዎች ተመሳሳይ ጎራ ሲኖራቸው ጥቅም ላይ ይውላል።"
+
+#. module: website
+#: model:ir.model.fields,help:website.field_website_menu__group_ids
+msgid "User need to be at least in one of these groups to see the menu"
+msgstr "ተጠቃሚው ምናሌውን ለማየት ቢያንስ ከእነዚህ ቡድኖች ውስጥ በአንዱ መሆን አለበት"
+
+#. module: website
+#: model:ir.model,name:website.model_res_users
+msgid "Users"
+msgstr "ተጠቃሚዎች"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Value"
+msgstr "እሴት"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Very Fast"
+msgstr "በጣም ፈጣን"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Very Slow"
+msgstr "በጣም ቀርፋፋ"
+
+#. module: website
+#: model:ir.model,name:website.model_ir_ui_view
+#: model:ir.model.fields,field_description:website.field_website_page__view_id
+msgid "View"
+msgstr "ይመልከቱ"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website_page__arch
+msgid "View Architecture"
+msgstr "ሥነ ሕንፃ ይመልከቱ"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website_page__name
+msgid "View Name"
+msgstr "ስም ይመልከቱ"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website_page__type
+msgid "View Type"
+msgstr "የእይታ ዓይነት"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website_page__mode
+msgid "View inheritance mode"
+msgstr "የውርስ ሁነታን ይመልከቱ"
+
+#. module: website
+#: model:ir.actions.act_window,name:website.website_visitor_view_action
+#: model:ir.ui.menu,name:website.menu_visitor_view_menu
+msgid "Views"
+msgstr "እይታዎች"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website_page__inherit_children_ids
+msgid "Views which inherit from this one"
+msgstr "ከዚህ የሚወርሱ እይታዎች"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.one_page_line
+msgid "Visible"
+msgstr "የሚታይ"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website_menu__group_ids
+msgid "Visible Groups"
+msgstr "የሚታዩ ቡድኖች"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_res_partner__website_published
+#: model:ir.model.fields,field_description:website.field_res_users__website_published
+#: model:ir.model.fields,field_description:website.field_website_page__website_published
+#: model:ir.model.fields,field_description:website.field_website_published_mixin__website_published
+#: model:ir.model.fields,field_description:website.field_website_published_multi_mixin__website_published
+msgid "Visible on current website"
+msgstr "በአሁኑ ድህረ ገጽ ላይ የሚታይ"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website_track__visit_datetime
+msgid "Visit Date"
+msgstr "የጉብኝት ቀን"
+
+#. module: website
+#: model:ir.model,name:website.model_website_track
+#: model:ir.model.fields,field_description:website.field_website_visitor__page_ids
+#: model_terms:ir.ui.view,arch_db:website.website_visitor_view_kanban
+msgid "Visited Pages"
+msgstr "የተጎበኙ ገጾች"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website_visitor__website_track_ids
+msgid "Visited Pages History"
+msgstr "የተጎበኙ ገጾች ታሪክ"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website_track__visitor_id
+#: model_terms:ir.ui.view,arch_db:website.website_visitor_page_view_search
+#: model_terms:ir.ui.view,arch_db:website.website_visitor_view_kanban
+msgid "Visitor"
+msgstr "ጎብኚ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.website_visitor_view_form
+msgid "Visitor Informations"
+msgstr "የጎብኚ መረጃ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.website_visitor_page_view_graph
+msgid "Visitor Page Views"
+msgstr "የጎብኚ ገጽ እይታዎች"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.website_visitor_page_view_tree
+msgid "Visitor Page Views History"
+msgstr "የጎብኚ ገጽ ታሪክን ይመለከታል"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.website_visitor_track_view_graph
+msgid "Visitor Views"
+msgstr "የጎብኝ እይታዎች"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.website_visitor_track_view_tree
+msgid "Visitor Views History"
+msgstr "የጎብኚ እይታዎች ታሪክ"
+
+#. module: website
+#: model:ir.actions.act_window,name:website.website_visitors_action
+#: model:ir.model.fields,field_description:website.field_res_partner__visitor_ids
+#: model:ir.model.fields,field_description:website.field_res_users__visitor_ids
+#: model:ir.ui.menu,name:website.menu_visitor_sub_menu
+#: model:ir.ui.menu,name:website.website_visitor_menu
+#: model_terms:ir.ui.view,arch_db:website.website_visitor_view_graph
+#: model_terms:ir.ui.view,arch_db:website.website_visitor_view_search
+msgid "Visitors"
+msgstr "ጎብኚዎች"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.backend.xml:0
+#: model_terms:ir.ui.view,arch_db:website.website_visitor_view_form
+#: model_terms:ir.ui.view,arch_db:website.website_visitor_view_kanban
+#, python-format
+msgid "Visits"
+msgstr "ጉብኝቶች"
+
+#. module: website
+#: model_terms:ir.actions.act_window,help:website.website_visitor_view_action
+msgid ""
+"Wait for visitors to come to your website to see the pages they viewed."
+msgstr "ጎብኚዎች የተመለከቷቸውን ገፆች ለማየት ወደ ድር ጣቢያዎ እስኪመጡ ይጠብቁ።"
+
+#. module: website
+#: model_terms:ir.actions.act_window,help:website.website_visitors_action
+msgid "Wait for visitors to come to your website to see their history."
+msgstr "ጎብኚዎች ታሪካቸውን ለማየት ወደ ድር ጣቢያዎ እስኪመጡ ይጠብቁ።"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.facebook_page.xml:0
+#: model_terms:ir.ui.view,arch_db:website.theme_customize
+#, python-format
+msgid "Warning"
+msgstr "ማስጠንቀቂያ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.aboutus
+#: model_terms:website.page,arch_db:website.aboutus_page
+msgid ""
+"We are a team of passionate people whose goal is to improve everyone's\n"
+"                                                    life through disruptive products. We build great products to solve your\n"
+"                                                    business problems."
+msgstr ""
+"እኛ አላማው የሁሉንም ሰው ማሻሻል\n"
+" ስሜት የሚቀሰቅስ ቡድን ነንሕይወት በአስገራሚ ምርቶች በኩል። የእርስዎን\n"
+" የንግድ ችግሮች ለመፍታት ምርጥ ምርቶችን እንገነባለን"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.footer_custom
+msgid ""
+"We are a team of passionate people whose goal is to improve everyone's\n"
+"                                life through disruptive products. We build great products to solve your\n"
+"                                business problems."
+msgstr ""
+"እኛ አላማው የሁሉንም ሰው ማሻሻል\n"
+" ስሜት የሚቀሰቅስ ቡድን ነን ህይወት በሚረብሹ ምርቶች አማካኝነት። የእርስዎን\n"
+" ለመፍታት ምርጥ ምርቶችን እንገነባለን                                  የንግድ ችግሮች."
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.xml:0
+#, python-format
+msgid "We found these ones:"
+msgstr "እነዚህን አግኝተናል"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.website_visitor_view_tree
+msgid "Web Visitors"
+msgstr "የድር ጎብኝዎች"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.backend.xml:0
+#: model:ir.actions.act_url,name:website.action_website
+#: model:ir.model,name:website.model_website
+#: model:ir.model.fields,field_description:website.field_ir_attachment__website_id
+#: model:ir.model.fields,field_description:website.field_ir_ui_view__website_id
+#: model:ir.model.fields,field_description:website.field_res_partner__website_id
+#: model:ir.model.fields,field_description:website.field_res_users__website_id
+#: model:ir.model.fields,field_description:website.field_website_menu__website_id
+#: model:ir.model.fields,field_description:website.field_website_multi_mixin__website_id
+#: model:ir.model.fields,field_description:website.field_website_page__website_id
+#: model:ir.model.fields,field_description:website.field_website_published_multi_mixin__website_id
+#: model:ir.model.fields,field_description:website.field_website_rewrite__website_id
+#: model:ir.model.fields,field_description:website.field_website_visitor__website_id
+#: model:ir.ui.menu,name:website.menu_website_configuration
+#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
+#: model_terms:ir.ui.view,arch_db:website.view_server_action_search_website
+#, python-format
+msgid "Website"
+msgstr "ድህረገፅ"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_res_config_settings__website_company_id
+msgid "Website Company"
+msgstr "ድር ጣቢያ ኩባንያ"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_res_config_settings__website_domain
+#: model:ir.model.fields,field_description:website.field_website__domain
+msgid "Website Domain"
+msgstr "የድር ጣቢያ ጎራ"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_website__favicon
+msgid "Website Favicon"
+msgstr "የድር ጣቢያ ፋቪኮን"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_res_config_settings__website_logo
+#: model:ir.model.fields,field_description:website.field_website__logo
+msgid "Website Logo"
+msgstr "የድር ጣቢያ አርማ"
+
+#. module: website
+#: model:ir.actions.act_window,name:website.action_website_menu
+#: model:ir.model,name:website.model_website_menu
+msgid "Website Menu"
+msgstr "የድር ጣቢያ ምናሌ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.website_menus_form_view
+msgid "Website Menus Settings"
+msgstr "የድር ጣቢያ ምናሌዎች ቅንብሮች"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_res_config_settings__website_name
+#: model:ir.model.fields,field_description:website.field_website__name
+msgid "Website Name"
+msgstr "የድር ጣቢያ ስም"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_ir_ui_view__first_page_id
+#: model:ir.model.fields,field_description:website.field_website_page__first_page_id
+msgid "Website Page"
+msgstr "ድር ጣቢያ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.website_pages_form_view
+msgid "Website Page Settings"
+msgstr "የድረ-ገጽ ቅንብሮች"
+
+#. module: website
+#: model:ir.actions.act_window,name:website.action_website_pages_list
+#: model_terms:ir.ui.view,arch_db:website.website_pages_tree_view
+#: model_terms:ir.ui.view,arch_db:website.website_pages_view_search
+msgid "Website Pages"
+msgstr "የድር ጣቢያ ገጾች"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_ir_actions_server__website_path
+#: model:ir.model.fields,field_description:website.field_ir_cron__website_path
+msgid "Website Path"
+msgstr "የድር ጣቢያ መንገድ"
+
+#. module: website
+#: model:ir.model,name:website.model_website_published_mixin
+msgid "Website Published Mixin"
+msgstr "ድር ጣቢያ ታትሟል Mixin"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.view_website_form
+msgid "Website Settings"
+msgstr "የድር ጣቢያ ቅንብሮች"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
+msgid "Website Title"
+msgstr "የድር ጣቢያ ርዕስ"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_ir_attachment__website_url
+#: model:ir.model.fields,field_description:website.field_res_partner__website_url
+#: model:ir.model.fields,field_description:website.field_res_users__website_url
+#: model:ir.model.fields,field_description:website.field_website_page__website_url
+#: model:ir.model.fields,field_description:website.field_website_published_mixin__website_url
+#: model:ir.model.fields,field_description:website.field_website_published_multi_mixin__website_url
+msgid "Website URL"
+msgstr "የድር ጣቢያ URL"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_ir_actions_server__website_url
+#: model:ir.model.fields,field_description:website.field_ir_cron__website_url
+msgid "Website Url"
+msgstr "ድር ጣቢያ ዩአርኤል"
+
+#. module: website
+#: model:ir.model,name:website.model_website_visitor
+#: model_terms:ir.ui.view,arch_db:website.website_visitor_view_form
+msgid "Website Visitor"
+msgstr "የድር ጣቢያ ጎብኝ"
+
+#. module: website
+#: code:addons/website/models/website_visitor.py:0
+#, python-format
+msgid "Website Visitor #%s"
+msgstr "ድር ጣቢያ ጎብኝ #%s"
+
+#. module: website
+#: model:ir.actions.server,name:website.website_visitor_cron_ir_actions_server
+#: model:ir.cron,cron_name:website.website_visitor_cron
+#: model:ir.cron,name:website.website_visitor_cron
+msgid "Website Visitor : Archive old visitors"
+msgstr "ድር ጣቢያ ጎብኝ: የቆዩ ጎብኝዎችን በማህደር ያስቀምጡ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_faq_collapse
+msgid ""
+"Website may use cookies to personalize and facilitate maximum navigation of "
+"the User by this site. The User may configure his / her browser to notify "
+"and reject the installation of the cookies sent by us."
+msgstr ""
+"ድረ-ገጹ ከፍተኛውን ዳሰሳ ለግል ለማበጀት እና ለማመቻቸት ኩኪዎችን ሊጠቀም ይችላልተጠቃሚው በዚህ ጣቢያ። ተጠቃሚው "
+"አሳሹን ለማሳወቅ ሊያዋቅር ይችላል።እና በእኛ የተላኩ ኩኪዎችን መጫን ውድቅ ያድርጉ."
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.menu_tree
+msgid "Website menu"
+msgstr "የድር ጣቢያ ምናሌ"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_ir_ui_view__website_meta_description
+#: model:ir.model.fields,field_description:website.field_website_page__website_meta_description
+#: model:ir.model.fields,field_description:website.field_website_seo_metadata__website_meta_description
+msgid "Website meta description"
+msgstr "የድር ጣቢያ ሜታ መግለጫ"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_ir_ui_view__website_meta_keywords
+#: model:ir.model.fields,field_description:website.field_website_page__website_meta_keywords
+#: model:ir.model.fields,field_description:website.field_website_seo_metadata__website_meta_keywords
+msgid "Website meta keywords"
+msgstr "የድር ጣቢያ ሜታ ቁልፍ ቃላት"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_ir_ui_view__website_meta_title
+#: model:ir.model.fields,field_description:website.field_website_page__website_meta_title
+#: model:ir.model.fields,field_description:website.field_website_seo_metadata__website_meta_title
+msgid "Website meta title"
+msgstr "የድር ጣቢያ ሜታ ርዕስ"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_ir_ui_view__website_meta_og_img
+#: model:ir.model.fields,field_description:website.field_website_page__website_meta_og_img
+#: model:ir.model.fields,field_description:website.field_website_seo_metadata__website_meta_og_img
+msgid "Website opengraph image"
+msgstr "የድር ጣቢያ ክፍት ግራፍ ምስል"
+
+#. module: website
+#: model:ir.model,name:website.model_website_rewrite
+msgid "Website rewrite"
+msgstr "ድር ጣቢያ እንደገና ይፃፉ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.view_website_rewrite_form
+msgid "Website rewrite Settings"
+msgstr "የድር ጣቢያ ቅንብሮችን እንደገና ጻፍ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.action_website_rewrite_tree
+msgid "Website rewrites"
+msgstr "ድር ጣቢያው እንደገና ይጽፋል"
+
+#. module: website
+#: model:ir.actions.server,name:website.ir_actions_server_website_dashboard
+#: model:ir.actions.server,name:website.ir_actions_server_website_google_analytics
+msgid "Website: Dashboard"
+msgstr "ድር ጣቢያ: ዳሽቦርድ"
+
+#. module: website
+#: model:ir.actions.act_window,name:website.action_website_list
+#: model:ir.ui.menu,name:website.menu_website_websites_list
+#: model_terms:ir.ui.view,arch_db:website.view_website_tree
+msgid "Websites"
+msgstr "ድር ጣቢያዎች"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_base_language_install__website_ids
+msgid "Websites to translate"
+msgstr "የሚተረጎሙ ድረገጾች"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.editor.xml:0
+#, python-format
+msgid "Welcome to your"
+msgstr "እንኳን ደህና መጣህ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.editor.xml:0
+#, python-format
+msgid "What do you want to do?"
+msgstr "ምን ማድረግ ትፈልጋለህ?"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "White"
+msgstr "ነጭ"
+
+#. module: website
+#: model:ir.model.fields,help:website.field_res_config_settings__website_domain
+#: model:ir.model.fields,help:website.field_website__domain
+msgid "Will be prefixed by http in canonical URLs if no scheme is specified"
+msgstr "ምንም እቅድ ካልተገለጸ በ http ቅድመ ቅጥያ በቀኖናዊ ዩአርኤሎች ይቀመጣል"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_quotes_carousel
+#: model_terms:ir.ui.view,arch_db:website.s_tabs
+msgid ""
+"Write a quote here from one of your customers. Quotes are a great way to "
+"build confidence in your products or services."
+msgstr ""
+"እዚህ ከደንበኞችዎ የአንዱን ጥቅስ ይጻፉ። ጥቅሶች ጥሩ መንገድ ናቸውበምርቶችዎ ወይም በአገልግሎቶችዎ ላይ እምነት "
+"መገንባት."
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_image_text
+#: model_terms:ir.ui.view,arch_db:website.s_text_image
+msgid ""
+"Write one or two paragraphs describing your product or services. <br/>To be "
+"successful your content needs to be useful to your readers."
+msgstr ""
+"ምርትህን ወይም አገልግሎቶችህን የሚገልጹ አንድ ወይም ሁለት አንቀጾች ጻፍ። <br/>ለመሆንየተሳካ ይዘትህ ለአንባቢዎችህ "
+"ጠቃሚ መሆን አለበት።"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_cover
+msgid ""
+"Write one or two paragraphs describing your product, services or a specific "
+"feature.<br/> To be successful your content needs to be useful to your "
+"readers."
+msgstr ""
+"ምርትህን፣ አገልግሎቶችህን ወይም የተለየህን የሚገልጹ አንድ ወይም ሁለት አንቀጾች ጻፍባህሪ።<br/> ስኬታማ ለመሆን "
+"ይዘትዎ ለእርስዎ ጠቃሚ መሆን አለበትአንባቢዎች."
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_features
+msgid ""
+"Write what the customer would like to know, <br/>not what you want to show."
+msgstr "ደንበኛው ማወቅ የሚፈልገውን ይፃፉ እንጂ ማሳየት የሚፈልጉትን ሳይሆን <br/>"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "Yellow"
+msgstr "ቢጫ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/translator.xml:0
+#, python-format
+msgid "You are about to enter the translation mode."
+msgstr "ወደ የትርጉም ሁነታ ልትገባ ነው።"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_features_grid
+msgid "You can edit colors and background to highlight features."
+msgstr "ባህሪያትን ለማድመቅ ቀለሞችን እና ዳራዎችን ማርትዕ ይችላሉ።"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
+msgid ""
+"You can have 2 websites with same domain AND a condition on country group to"
+" select wich website use."
+msgstr ""
+"አንድ አይነት ጎራ ያላቸው 2 ድረ-ገጾች እና በአገር ቡድን ላይ ቅድመ ሁኔታ ሊኖርዎት ይችላል የትኛውን ድር ጣቢያ "
+"እንደሚጠቀም ይምረጡ።"
+
+#. module: website
+#: code:addons/website/models/res_users.py:0
+#: model:ir.model.constraint,message:website.constraint_res_users_login_key
+#, python-format
+msgid "You can not have two users with the same login!"
+msgstr "ተመሳሳይ መግቢያ ያላቸው ሁለት ተጠቃሚዎች ሊኖሩዎት አይችሉም!"
+
+#. module: website
+#: code:addons/website/controllers/backend.py:0
+#, python-format
+msgid "You do not have sufficient rights to perform that action."
+msgstr "ድርጊቱን ለመፈጸም በቂ መብቶች የሎትም."
+
+#. module: website
+#: code:addons/website/models/mixins.py:0
+#, python-format
+msgid "You do not have the rights to publish/unpublish"
+msgstr "የማተም/የማተም መብቶች የሎትም"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.backend.xml:0
+#, python-format
+msgid "You do not seem to have access to this Analytics Account."
+msgstr "ይህን የትንታኔ መለያ መዳረሻ ያለህ አይመስልም።"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/menu/seo.js:0
+#, python-format
+msgid ""
+"You have hidden this page from search results. It won't be indexed by search"
+" engines."
+msgstr "ይህን ገጽ ከፍለጋ ውጤቶች ደብቀውታል። በፍለጋ አይገለጽም።ሞተሮች."
+
+#. module: website
+#: code:addons/website/models/website.py:0
+#, python-format
+msgid "You must keep at least one website."
+msgstr "ቢያንስ አንድ ድር ጣቢያ መያዝ አለብህ።"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.backend.xml:0
+#, python-format
+msgid "You need to log in to your Google Account before:"
+msgstr "ከዚህ በፊት ወደ ጎግል መለያህ መግባት አለብህ፡"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_faq_collapse
+msgid ""
+"You should carefully review the legal statements and other conditions of use"
+" of any website which you access through a link from this Website. Your "
+"linking to any other off-site pages or other websites is at your own risk."
+msgstr ""
+"ህጋዊ መግለጫዎችን እና ሌሎች የአጠቃቀም ሁኔታዎችን በጥንቃቄ መመርመር አለብህከዚህ ድህረ ገጽ በተገኘ አገናኝ በኩል "
+"የምትደርሱበት ማንኛውም ድህረ ገጽ። ያንተከማንኛውም ከጣቢያ ውጭ ገፆች ወይም ሌሎች ድረ-ገጾች ማገናኘት በራስዎ ሃላፊነት"
+" ነው።"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
+msgid "YouTube"
+msgstr "ዩቲዩብ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.backend.xml:0
+#, python-format
+msgid "Your Client ID:"
+msgstr "የእርስዎ ደንበኛ መታወቂያ:"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.backend.xml:0
+#, python-format
+msgid "Your Tracking ID:"
+msgstr "የእርስዎ የመከታተያ መታወቂያ፡"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.editor.xml:0
+#, python-format
+msgid "Your current changes will be saved automatically."
+msgstr "አሁን ያደረጓቸው ለውጦች በራስ ሰር ይቀመጣሉ።"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/menu/seo.js:0
+#, python-format
+msgid "Your description looks too long."
+msgstr "ገለፃህ በጣም ረጅም ይመስላል።"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/menu/seo.js:0
+#, python-format
+msgid "Your description looks too short."
+msgstr "ገለፃህ በጣም አጭር ይመስላል።"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.list_website_pages
+msgid "Your search '"
+msgstr "የእርስዎ ፍለጋ"
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_res_config_settings__social_youtube
+#: model:ir.model.fields,field_description:website.field_website__social_youtube
+msgid "Youtube Account"
+msgstr ""
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.editor.xml:0
+#, python-format
+msgid "and copy paste the embed code here."
+msgstr "እና የተከተተውን ኮድ እዚህ ይለጥፉ።"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.xml:0
+#, python-format
+msgid "e.g. About Us"
+msgstr "ለምሳሌ ስለ እኛ"
+
+#. module: website
+#: model:ir.ui.menu,name:website.menu_website_dashboard
+msgid "eCommerce Dashboard"
+msgstr "ኢኮሜርስ ዳሽቦርድ"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.editor.xml:0
+#, python-format
+msgid "fonts.google.com"
+msgstr ""
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.xml:0
+#, python-format
+msgid "found(s)"
+msgstr "ተገኙ(ዎች)"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
+msgid "https://www.odoo.com"
+msgstr ""
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.show_website_info
+msgid "instance of Odoo, the"
+msgstr "የኦዱ ምሳሌ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.menu_search
+msgid "name"
+msgstr "ስም"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.user_navbar
+msgid "or Edit Master"
+msgstr "ወይም ማስተር አርትዕ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form
+msgid "page, snippets, ...)"
+msgstr "ገጽ፣ ቅንጥቦች፣..."
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.snippet_options
+msgid "px"
+msgstr ""
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.editor.xml:0
+#, python-format
+msgid "signs to get your website ready in no time."
+msgstr "ድር ጣቢያዎን በአጭር ጊዜ ውስጥ ለማዘጋጀት ምልክቶች."
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.menu_search
+msgid "url"
+msgstr ""
+
+#. module: website
+#: model:ir.model.fields,field_description:website.field_res_config_settings__website_id
+#: model_terms:ir.ui.view,arch_db:website.brand_promotion
+#: model_terms:ir.ui.view,arch_db:website.menu_search
+msgid "website"
+msgstr "ድህረገፅ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.qweb_500
+msgid "yes"
+msgstr "አዎ"
+
+#. module: website
+#: model_terms:ir.ui.view,arch_db:website.s_tabs
+msgid "— Jane DOE, CEO of <b>MyCompany</b>"
+msgstr "- ጄን ዶኢ፣ የ<b>MyCompany</b> ዋና ሥራ አስፈፃሚ"

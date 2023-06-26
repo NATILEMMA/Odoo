@@ -1,0 +1,1398 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* Mestengido
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-01 08:52+0000\n"
+"PO-Revision-Date: 2023-04-01 08:52+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: Mestengido
+#: model:ir.model.fields,help:Mestengido.field_mest_order_line__product_type
+#: model:ir.model.fields,help:Mestengido.field_mest_order_lines__product_type
+#: model:ir.model.fields,help:Mestengido.field_mest_order_lines_details__product_type
+msgid ""
+"A storable product is a product for which you manage stock. The Inventory app has to be installed.\n"
+"A consumable product is a product for which stock is not managed.\n"
+"A service is a non-material product you provide."
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_account_fund_post__access_warning
+#: model:ir.model.fields,field_description:Mestengido.field_fund_fund__access_warning
+#: model:ir.model.fields,field_description:Mestengido.field_fund_lines__access_warning
+#: model:ir.model.fields,field_description:Mestengido.field_mest_mest__access_warning
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__access_warning
+#: model:ir.model.fields,field_description:Mestengido.field_monthly_amount__access_warning
+msgid "Access warning"
+msgstr "ማስጠንቀቂያ"
+
+#. module: Mestengido
+#: model:ir.actions.act_window,name:Mestengido.action_get_mestengido_invoice_id
+msgid "Account Move"
+msgstr "Account Move"
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_account_fund_post__account_ids
+msgid "Accounts"
+msgstr "መለያዎች"
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_fund_lines__percentage
+msgid "Achievement"
+msgstr "ስኬት"
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_account_fund_post__message_needaction
+#: model:ir.model.fields,field_description:Mestengido.field_fund_fund__message_needaction
+#: model:ir.model.fields,field_description:Mestengido.field_fund_lines__message_needaction
+#: model:ir.model.fields,field_description:Mestengido.field_mest_mest__message_needaction
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__message_needaction
+#: model:ir.model.fields,field_description:Mestengido.field_monthly_amount__message_needaction
+msgid "Action Needed"
+msgstr "እርምጃ ያስፈልጋል"
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_account_fund_post__activity_ids
+#: model:ir.model.fields,field_description:Mestengido.field_fund_fund__activity_ids
+#: model:ir.model.fields,field_description:Mestengido.field_fund_lines__activity_ids
+#: model:ir.model.fields,field_description:Mestengido.field_mest_mest__activity_ids
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__activity_ids
+#: model:ir.model.fields,field_description:Mestengido.field_monthly_amount__activity_ids
+msgid "Activities"
+msgstr "እንቅስቃሴዎች"
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_account_fund_post__activity_exception_decoration
+#: model:ir.model.fields,field_description:Mestengido.field_fund_fund__activity_exception_decoration
+#: model:ir.model.fields,field_description:Mestengido.field_fund_lines__activity_exception_decoration
+#: model:ir.model.fields,field_description:Mestengido.field_mest_mest__activity_exception_decoration
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__activity_exception_decoration
+#: model:ir.model.fields,field_description:Mestengido.field_monthly_amount__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Activity Exception Decoration"
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_account_fund_post__activity_state
+#: model:ir.model.fields,field_description:Mestengido.field_fund_fund__activity_state
+#: model:ir.model.fields,field_description:Mestengido.field_fund_lines__activity_state
+#: model:ir.model.fields,field_description:Mestengido.field_mest_mest__activity_state
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__activity_state
+#: model:ir.model.fields,field_description:Mestengido.field_monthly_amount__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: Mestengido
+#: model_terms:ir.ui.view,arch_db:Mestengido.mestengido_form_view
+#: model_terms:ir.ui.view,arch_db:Mestengido.mestengido_order_form_view
+msgid "Add Product"
+msgstr "ምርት ያክሉ"
+
+#. module: Mestengido
+#: model:res.groups,name:Mestengido.mest_approval_group
+msgid "Allow to approval"
+msgstr "ለማፅደቅ ፍቀድ"
+
+#. module: Mestengido
+#: model:res.groups,name:Mestengido.mest_purchase_order_group
+msgid "Allow to push purchase order approval"
+msgstr "የግዢ ትዕዛዝ ማጽደቅን ይፍቀዱ"
+
+#. module: Mestengido
+#: model:res.groups,name:Mestengido.mest_request_group
+msgid "Allow to request"
+msgstr "ጥያቄ እንዲጠይቅ ይፍቀዱ
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_monthly_amount__amount
+msgid "Amount"
+msgstr "መጠን
+
+#. module: Mestengido
+#: model:ir.model,name:Mestengido.model_account_analytic_account
+#: model:ir.model.fields,field_description:Mestengido.field_fund_lines__fund_analytic_account_id
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__analytic_account_id
+msgid "Analytic Account"
+msgstr "የትንታኔ መለያ "
+
+#. module: Mestengido
+#: model_terms:ir.ui.view,arch_db:Mestengido.mestengido_form_view
+msgid "Approve"
+msgstr "ማጽደቅ"
+
+#. module: Mestengido
+#: model:ir.model.fields.selection,name:Mestengido.selection__mest_mest__state__approved
+msgid "Approved"
+msgstr "ጸድቋል"
+
+#. module: Mestengido
+#: model_terms:ir.ui.view,arch_db:Mestengido.mestengido_form_view
+msgid "Approved by"
+msgstr "ያረጋገጠው ሰው"
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_mest_mest__approver_comment
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__approver_comment
+msgid "Approver Comment"
+msgstr "በአጽርብ አስተያየት አስተያየት"
+
+#. module: Mestengido
+#: model:ir.model.fields.selection,name:Mestengido.selection__mest_mest__month__4
+#: model:ir.model.fields.selection,name:Mestengido.selection__mest_order__month__4
+msgid "April"
+msgstr "ሚያዚያ"
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_account_fund_post__message_attachment_count
+#: model:ir.model.fields,field_description:Mestengido.field_fund_fund__message_attachment_count
+#: model:ir.model.fields,field_description:Mestengido.field_fund_lines__message_attachment_count
+#: model:ir.model.fields,field_description:Mestengido.field_mest_mest__message_attachment_count
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__message_attachment_count
+#: model:ir.model.fields,field_description:Mestengido.field_monthly_amount__message_attachment_count
+msgid "Attachment Count"
+msgstr "የአባሪነት ቆጠራ"
+
+#. module: Mestengido
+#: model:ir.model.fields.selection,name:Mestengido.selection__mest_mest__month__8
+#: model:ir.model.fields.selection,name:Mestengido.selection__mest_order__month__8
+msgid "August"
+msgstr "ነሐሴ"
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_fund_lines__available_amount
+msgid "Available Amount"
+msgstr "የሚገኘው ገንዘብ"
+
+#. module: Mestengido
+#: model_terms:ir.ui.view,arch_db:Mestengido.mest_mest_calendar
+#: model_terms:ir.ui.view,arch_db:Mestengido.mest_order_calendar
+msgid "Calendar View"
+msgstr "የቀን መቁጠሪያ እይታ"
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_account_fund_post__campaign_id
+#: model:ir.model.fields,field_description:Mestengido.field_fund_fund__campaign_id
+#: model:ir.model.fields,field_description:Mestengido.field_fund_lines__campaign_id
+#: model:ir.model.fields,field_description:Mestengido.field_mest_mest__campaign_id
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__campaign_id
+#: model:ir.model.fields,field_description:Mestengido.field_monthly_amount__campaign_id
+msgid "Campaign"
+msgstr "ዘመቻ"
+
+#. module: Mestengido
+#: model:ir.model.fields.selection,name:Mestengido.selection__mest_mest__state__canceled
+#: model:ir.model.fields.selection,name:Mestengido.selection__mest_order__state__canceled
+msgid "Cancel"
+msgstr "ይቅር"
+
+#. module: Mestengido
+#: model:ir.model.fields.selection,name:Mestengido.selection__fund_fund__state__cancel
+msgid "Cancelled"
+msgstr "ተሰርዘዋል"
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_line__product_uom_category_id
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_lines__product_uom_category_id
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_lines_details__product_uom_category_id
+msgid "Category"
+msgstr "ምድብ"
+
+#. module: Mestengido
+#: model:ir.ui.menu,name:Mestengido.menu_order_request
+msgid "Collect Mestengido Requests"
+msgstr "የሜትጊዲዮ ጥያቄን ይሰብስቡs"
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_fund_lines__commitment
+msgid "Commitment"
+msgstr "ቃል ኪዳኑ"
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_account_fund_post__company_id
+#: model:ir.model.fields,field_description:Mestengido.field_fund_fund__company_id
+#: model:ir.model.fields,field_description:Mestengido.field_fund_lines__company_id
+msgid "Company"
+msgstr "ኩባንያ"
+
+#. module: Mestengido
+#: model:ir.ui.menu,name:Mestengido.menu_Mestengido_configuration
+msgid "Configuration"
+msgstr "ውቅር"
+
+#. module: Mestengido
+#: model:ir.model.fields.selection,name:Mestengido.selection__fund_fund__state__confirm
+msgid "Confirmed"
+msgstr "ተረጋግ .ል"
+
+#. module: Mestengido
+#: model:ir.model.fields,help:Mestengido.field_mest_order_line__product_uom_category_id
+#: model:ir.model.fields,help:Mestengido.field_mest_order_lines__product_uom_category_id
+#: model:ir.model.fields,help:Mestengido.field_mest_order_lines_details__product_uom_category_id
+msgid ""
+"Conversion between Units of Measure can only occur if they belong to the "
+"same category. The conversion will be made based on the ratios."
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_mest_mest__create_date
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__create_date
+msgid "Create Date"
+msgstr "ቀን ፍጠር"
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_account_fund_post__create_uid
+#: model:ir.model.fields,field_description:Mestengido.field_fund_fund__create_uid
+#: model:ir.model.fields,field_description:Mestengido.field_fund_lines__create_uid
+#: model:ir.model.fields,field_description:Mestengido.field_mest_mest__create_uid
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__create_uid
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_line__create_uid
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_lines__create_uid
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_lines_details__create_uid
+#: model:ir.model.fields,field_description:Mestengido.field_monthly_amount__create_uid
+msgid "Created by"
+msgstr "ተፈጠረy"
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_account_fund_post__create_date
+#: model:ir.model.fields,field_description:Mestengido.field_fund_fund__create_date
+#: model:ir.model.fields,field_description:Mestengido.field_fund_lines__create_date
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_line__create_date
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_lines__create_date
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_lines_details__create_date
+#: model:ir.model.fields,field_description:Mestengido.field_monthly_amount__create_date
+msgid "Created on"
+msgstr "ተፈጠረ"
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_current_balance_report__amount
+msgid "Current Balance"
+msgstr "የአሁኑ ሒሳብ"
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_mest_mest__partner_id
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__partner_id
+msgid "Customer"
+msgstr "ደንበኛ"
+
+#. module: Mestengido
+#: model:ir.model.fields,help:Mestengido.field_account_fund_post__access_url
+#: model:ir.model.fields,help:Mestengido.field_fund_fund__access_url
+#: model:ir.model.fields,help:Mestengido.field_fund_lines__access_url
+#: model:ir.model.fields,help:Mestengido.field_mest_mest__access_url
+#: model:ir.model.fields,help:Mestengido.field_mest_order__access_url
+#: model:ir.model.fields,help:Mestengido.field_monthly_amount__access_url
+msgid "Customer Portal URL"
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model.fields,help:Mestengido.field_mest_mest__approver_signed_on
+#: model:ir.model.fields,help:Mestengido.field_mest_mest__final_approver_signed_on
+#: model:ir.model.fields,help:Mestengido.field_mest_mest__requster_signed_on
+#: model:ir.model.fields,help:Mestengido.field_mest_order__approver_signed_on
+#: model:ir.model.fields,help:Mestengido.field_mest_order__final_approver_signed_on
+#: model:ir.model.fields,help:Mestengido.field_mest_order__requster_signed_on
+msgid "Date of the signature."
+msgstr "የምልክቱ ቀን"
+
+#. module: Mestengido
+#: model:ir.model.fields.selection,name:Mestengido.selection__mest_mest__month__12
+#: model:ir.model.fields.selection,name:Mestengido.selection__mest_order__month__12
+msgid "December"
+msgstr "ታህሳስ"
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_fund_lines__department_id
+#: model:ir.model.fields,field_description:Mestengido.field_mest_mest__department_id
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__department_id
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_lines_details__department_id
+msgid "Department"
+msgstr "መምሪያ ክፍል"
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_line__name
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_lines__name
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_lines_details__name
+msgid "Description"
+msgstr "መግለጫ"
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_account_fund_post__display_name
+#: model:ir.model.fields,field_description:Mestengido.field_current_balance_report__display_name
+#: model:ir.model.fields,field_description:Mestengido.field_fund_fund__display_name
+#: model:ir.model.fields,field_description:Mestengido.field_fund_lines__display_name
+#: model:ir.model.fields,field_description:Mestengido.field_mest_mest__display_name
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__display_name
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_line__display_name
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_lines__display_name
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_lines_details__display_name
+#: model:ir.model.fields,field_description:Mestengido.field_monthly_amount__display_name
+msgid "Display Name"
+msgstr "መጠሪያው ስም"
+
+#. module: Mestengido
+#: model:ir.model.fields.selection,name:Mestengido.selection__fund_fund__state__done
+#: model:ir.model.fields.selection,name:Mestengido.selection__mest_mest__state__done
+msgid "Done"
+msgstr "ተከናውኗል"
+
+#. module: Mestengido
+#: model:ir.model.fields.selection,name:Mestengido.selection__fund_fund__state__draft
+msgid "Draft"
+msgstr "ረቂቅ"
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_fund_fund__date_to
+#: model:ir.model.fields,field_description:Mestengido.field_fund_lines__date_to
+msgid "End Date"
+msgstr "ቀኑ ቀኑe"
+
+#. module: Mestengido
+#: model:ir.model.fields.selection,name:Mestengido.selection__mest_mest__month__2
+#: model:ir.model.fields.selection,name:Mestengido.selection__mest_order__month__2
+msgid "February"
+msgstr "የካቲት"
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_mest_mest__final_approver_comment
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__final_approver_comment
+msgid "Final Approver Comment"
+msgstr "የመጨረሻ መጽሔት አስተያየት"
+
+#. module: Mestengido
+#: model:ir.model.fields.selection,name:Mestengido.selection__mest_mest__quarter__1st
+#: model:ir.model.fields.selection,name:Mestengido.selection__mest_order__quarter__1st
+msgid "First Quartner"
+msgstr "የመጀመሪያ ሩብነር"
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_account_fund_post__message_follower_ids
+#: model:ir.model.fields,field_description:Mestengido.field_fund_fund__message_follower_ids
+#: model:ir.model.fields,field_description:Mestengido.field_fund_lines__message_follower_ids
+#: model:ir.model.fields,field_description:Mestengido.field_mest_mest__message_follower_ids
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__message_follower_ids
+#: model:ir.model.fields,field_description:Mestengido.field_monthly_amount__message_follower_ids
+msgid "Followers"
+msgstr "ተከታዮች"
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_account_fund_post__message_channel_ids
+#: model:ir.model.fields,field_description:Mestengido.field_fund_fund__message_channel_ids
+#: model:ir.model.fields,field_description:Mestengido.field_fund_lines__message_channel_ids
+#: model:ir.model.fields,field_description:Mestengido.field_mest_mest__message_channel_ids
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__message_channel_ids
+#: model:ir.model.fields,field_description:Mestengido.field_monthly_amount__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_account_fund_post__message_partner_ids
+#: model:ir.model.fields,field_description:Mestengido.field_fund_fund__message_partner_ids
+#: model:ir.model.fields,field_description:Mestengido.field_fund_lines__message_partner_ids
+#: model:ir.model.fields,field_description:Mestengido.field_mest_mest__message_partner_ids
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__message_partner_ids
+#: model:ir.model.fields,field_description:Mestengido.field_monthly_amount__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model.fields.selection,name:Mestengido.selection__mest_mest__quarter__4th
+#: model:ir.model.fields.selection,name:Mestengido.selection__mest_order__quarter__4th
+msgid "Fourth Quarter"
+msgstr "አራተኛ ሩብ"
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_fund_lines__fund_id
+msgid "Fund"
+msgstr "ፈንድ"
+
+#. module: Mestengido
+#: model:ir.model,name:Mestengido.model_fund_lines
+msgid "Fund Line"
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_account_analytic_account__fund_line
+#: model:ir.model.fields,field_description:Mestengido.field_account_fund_post__fund_line
+#: model:ir.model.fields,field_description:Mestengido.field_fund_fund__fund_line
+msgid "Fund Lines"
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_fund_fund__name
+msgid "Fund Name"
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_fund_fund__fund_usage
+#: model:ir.model.fields,field_description:Mestengido.field_fund_lines__fund_usage
+msgid "Fund Usage"
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model.fields,help:Mestengido.field_mest_order_lines__sequence
+#: model:ir.model.fields,help:Mestengido.field_mest_order_lines_details__sequence
+msgid ""
+"Gives the sequence of this line when displaying the Mestengido request."
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model.fields,help:Mestengido.field_mest_order_line__sequence
+msgid "Gives the sequence of this line when displaying."
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_account_fund_post__id
+#: model:ir.model.fields,field_description:Mestengido.field_current_balance_report__id
+#: model:ir.model.fields,field_description:Mestengido.field_fund_fund__id
+#: model:ir.model.fields,field_description:Mestengido.field_fund_lines__id
+#: model:ir.model.fields,field_description:Mestengido.field_mest_mest__id
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__id
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_line__id
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_lines__id
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_lines_details__id
+#: model:ir.model.fields,field_description:Mestengido.field_monthly_amount__id
+msgid "ID"
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_account_fund_post__activity_exception_icon
+#: model:ir.model.fields,field_description:Mestengido.field_fund_fund__activity_exception_icon
+#: model:ir.model.fields,field_description:Mestengido.field_fund_lines__activity_exception_icon
+#: model:ir.model.fields,field_description:Mestengido.field_mest_mest__activity_exception_icon
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__activity_exception_icon
+#: model:ir.model.fields,field_description:Mestengido.field_monthly_amount__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model.fields,help:Mestengido.field_account_fund_post__activity_exception_icon
+#: model:ir.model.fields,help:Mestengido.field_fund_fund__activity_exception_icon
+#: model:ir.model.fields,help:Mestengido.field_fund_lines__activity_exception_icon
+#: model:ir.model.fields,help:Mestengido.field_mest_mest__activity_exception_icon
+#: model:ir.model.fields,help:Mestengido.field_mest_order__activity_exception_icon
+#: model:ir.model.fields,help:Mestengido.field_monthly_amount__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model.fields,help:Mestengido.field_account_fund_post__message_needaction
+#: model:ir.model.fields,help:Mestengido.field_account_fund_post__message_unread
+#: model:ir.model.fields,help:Mestengido.field_fund_fund__message_needaction
+#: model:ir.model.fields,help:Mestengido.field_fund_fund__message_unread
+#: model:ir.model.fields,help:Mestengido.field_fund_lines__message_needaction
+#: model:ir.model.fields,help:Mestengido.field_fund_lines__message_unread
+#: model:ir.model.fields,help:Mestengido.field_mest_mest__message_needaction
+#: model:ir.model.fields,help:Mestengido.field_mest_mest__message_unread
+#: model:ir.model.fields,help:Mestengido.field_mest_order__message_needaction
+#: model:ir.model.fields,help:Mestengido.field_mest_order__message_unread
+#: model:ir.model.fields,help:Mestengido.field_monthly_amount__message_needaction
+#: model:ir.model.fields,help:Mestengido.field_monthly_amount__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model.fields,help:Mestengido.field_account_fund_post__message_has_error
+#: model:ir.model.fields,help:Mestengido.field_account_fund_post__message_has_sms_error
+#: model:ir.model.fields,help:Mestengido.field_fund_fund__message_has_error
+#: model:ir.model.fields,help:Mestengido.field_fund_fund__message_has_sms_error
+#: model:ir.model.fields,help:Mestengido.field_fund_lines__message_has_error
+#: model:ir.model.fields,help:Mestengido.field_fund_lines__message_has_sms_error
+#: model:ir.model.fields,help:Mestengido.field_mest_mest__message_has_error
+#: model:ir.model.fields,help:Mestengido.field_mest_mest__message_has_sms_error
+#: model:ir.model.fields,help:Mestengido.field_mest_order__message_has_error
+#: model:ir.model.fields,help:Mestengido.field_mest_order__message_has_sms_error
+#: model:ir.model.fields,help:Mestengido.field_monthly_amount__message_has_error
+#: model:ir.model.fields,help:Mestengido.field_monthly_amount__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_mest_mest__description
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__description
+msgid "Internal Note"
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_monthly_amount__is_active
+msgid "Is Active"
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_account_fund_post__message_is_follower
+#: model:ir.model.fields,field_description:Mestengido.field_fund_fund__message_is_follower
+#: model:ir.model.fields,field_description:Mestengido.field_fund_lines__message_is_follower
+#: model:ir.model.fields,field_description:Mestengido.field_mest_mest__message_is_follower
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__message_is_follower
+#: model:ir.model.fields,field_description:Mestengido.field_monthly_amount__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__is_ture
+msgid "Is Ture"
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model.fields.selection,name:Mestengido.selection__mest_mest__month__1
+#: model:ir.model.fields.selection,name:Mestengido.selection__mest_order__month__1
+msgid "January"
+msgstr "ጥር"
+
+#. module: Mestengido
+#: model:ir.model.fields.selection,name:Mestengido.selection__mest_mest__month__7
+#: model:ir.model.fields.selection,name:Mestengido.selection__mest_order__month__7
+msgid "July"
+msgstr "ሀምሌ"
+
+#. module: Mestengido
+#: model:ir.model.fields.selection,name:Mestengido.selection__mest_mest__month__6
+#: model:ir.model.fields.selection,name:Mestengido.selection__mest_order__month__6
+msgid "June"
+msgstr "ሰኔ"
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_account_fund_post____last_update
+#: model:ir.model.fields,field_description:Mestengido.field_current_balance_report____last_update
+#: model:ir.model.fields,field_description:Mestengido.field_fund_fund____last_update
+#: model:ir.model.fields,field_description:Mestengido.field_fund_lines____last_update
+#: model:ir.model.fields,field_description:Mestengido.field_mest_mest____last_update
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order____last_update
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_line____last_update
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_lines____last_update
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_lines_details____last_update
+#: model:ir.model.fields,field_description:Mestengido.field_monthly_amount____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_account_fund_post__write_uid
+#: model:ir.model.fields,field_description:Mestengido.field_fund_fund__write_uid
+#: model:ir.model.fields,field_description:Mestengido.field_fund_lines__write_uid
+#: model:ir.model.fields,field_description:Mestengido.field_mest_mest__write_uid
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__write_uid
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_line__write_uid
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_lines__write_uid
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_lines_details__write_uid
+#: model:ir.model.fields,field_description:Mestengido.field_monthly_amount__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_account_fund_post__write_date
+#: model:ir.model.fields,field_description:Mestengido.field_fund_fund__write_date
+#: model:ir.model.fields,field_description:Mestengido.field_fund_lines__write_date
+#: model:ir.model.fields,field_description:Mestengido.field_mest_mest__write_date
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__write_date
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_line__write_date
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_lines__write_date
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_lines_details__write_date
+#: model:ir.model.fields,field_description:Mestengido.field_monthly_amount__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_account_fund_post__message_main_attachment_id
+#: model:ir.model.fields,field_description:Mestengido.field_fund_fund__message_main_attachment_id
+#: model:ir.model.fields,field_description:Mestengido.field_fund_lines__message_main_attachment_id
+#: model:ir.model.fields,field_description:Mestengido.field_mest_mest__message_main_attachment_id
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__message_main_attachment_id
+#: model:ir.model.fields,field_description:Mestengido.field_monthly_amount__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_current_balance_report__receiver_id
+msgid "Manager"
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model,name:Mestengido.model_current_balance_report
+msgid "Manager Balance Report"
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model.fields.selection,name:Mestengido.selection__mest_mest__month__3
+#: model:ir.model.fields.selection,name:Mestengido.selection__mest_order__month__3
+msgid "March"
+msgstr "መጋቢት"
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_mest_mest__max_line_sequence
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__max_line_sequence
+msgid "Max sequence in lines"
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model.fields.selection,name:Mestengido.selection__mest_mest__month__5
+#: model:ir.model.fields.selection,name:Mestengido.selection__mest_order__month__5
+msgid "May"
+msgstr "ግንቦት"
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_account_fund_post__medium_id
+#: model:ir.model.fields,field_description:Mestengido.field_fund_fund__medium_id
+#: model:ir.model.fields,field_description:Mestengido.field_fund_lines__medium_id
+#: model:ir.model.fields,field_description:Mestengido.field_mest_mest__medium_id
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__medium_id
+#: model:ir.model.fields,field_description:Mestengido.field_monthly_amount__medium_id
+msgid "Medium"
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_account_fund_post__message_has_error
+#: model:ir.model.fields,field_description:Mestengido.field_fund_fund__message_has_error
+#: model:ir.model.fields,field_description:Mestengido.field_fund_lines__message_has_error
+#: model:ir.model.fields,field_description:Mestengido.field_mest_mest__message_has_error
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__message_has_error
+#: model:ir.model.fields,field_description:Mestengido.field_monthly_amount__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_account_fund_post__message_ids
+#: model:ir.model.fields,field_description:Mestengido.field_fund_fund__message_ids
+#: model:ir.model.fields,field_description:Mestengido.field_fund_lines__message_ids
+#: model:ir.model.fields,field_description:Mestengido.field_mest_mest__message_ids
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__message_ids
+#: model:ir.model.fields,field_description:Mestengido.field_monthly_amount__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.actions.act_window,name:Mestengido.action_get_mestengido_id2
+#: model:ir.actions.act_window,name:Mestengido.action_mest_request
+#: model:ir.model.fields,field_description:Mestengido.field_purchase_order__mestengido_id
+#: model:ir.ui.menu,name:Mestengido.menu_mest_request
+#: model:ir.ui.menu,name:Mestengido.menu_root
+msgid "Mestengido"
+msgstr "መስተንግዶ"
+
+#. module: Mestengido
+#: model:ir.ui.menu,name:Mestengido.menu_mest_approve
+msgid "Mestengido Approve"
+msgstr "የመስተንግዶ ጥያቄ ማጽደቂያ"
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__mestengido_count
+msgid "Mestengido Count"
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model,name:Mestengido.model_mest_order_line
+msgid "Mestengido Order Line"
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model,name:Mestengido.model_mest_order_lines
+#: model:ir.model,name:Mestengido.model_mest_order_lines_details
+msgid "Mestengido Order Lines"
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.actions.act_window,name:Mestengido.action_mest_request_approve
+msgid "Mestengido Order Request Approve"
+msgstr "የመስተንግዶ ትእዛዝ ጥያቄን ማጽደቂያ"
+
+#. module: Mestengido
+#: model:ir.actions.act_window,name:Mestengido.action_mest_request_collection
+msgid "Mestengido Request collection"
+msgstr "የመስተንግዶ ጥያቄ ስብስብ"
+
+#. module: Mestengido
+#: model:ir.module.category,description:Mestengido.module_category_mestengido
+#: model:ir.module.category,name:Mestengido.module_category_mestengido
+msgid "Mestengido Setting"
+msgstr "የመስተንግዶ ጥያቄ ማቀናበር"
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_mest_mest__month
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__month
+#: model_terms:ir.ui.view,arch_db:Mestengido.mestengido_form_view
+#: model_terms:ir.ui.view,arch_db:Mestengido.mestengido_order_form_view
+msgid "Month"
+msgstr "ወር"
+
+#. module: Mestengido
+#: model:ir.actions.act_window,name:Mestengido.action_monthly_amount
+#: model:ir.ui.menu,name:Mestengido.menu_monthly_amount
+msgid "Monthly Amonut"
+msgstr "ወርሃዊ መጠን"
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_account_fund_post__name
+#: model:ir.model.fields,field_description:Mestengido.field_mest_mest__name
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__name
+msgid "Name"
+msgstr "ስም"
+
+#. module: Mestengido
+#: model:ir.model.fields,help:Mestengido.field_mest_mest__approver_signed_by
+#: model:ir.model.fields,help:Mestengido.field_mest_mest__final_approver_signed_by
+#: model:ir.model.fields,help:Mestengido.field_mest_mest__requster_signed_by
+#: model:ir.model.fields,help:Mestengido.field_mest_order__approver_signed_by
+#: model:ir.model.fields,help:Mestengido.field_mest_order__final_approver_signed_by
+#: model:ir.model.fields,help:Mestengido.field_mest_order__requster_signed_by
+msgid "Name of the person that signed the SO."
+msgstr ""
+
+#. module: Mestengido
+#: code:addons/Mestengido/models/models.py:0
+#: code:addons/Mestengido/models/models.py:0
+#: code:addons/Mestengido/models/models.py:0
+#: code:addons/Mestengido/models/models.py:0
+#, python-format
+msgid "New"
+msgstr "አዲስ"
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_account_fund_post__activity_date_deadline
+#: model:ir.model.fields,field_description:Mestengido.field_fund_fund__activity_date_deadline
+#: model:ir.model.fields,field_description:Mestengido.field_fund_lines__activity_date_deadline
+#: model:ir.model.fields,field_description:Mestengido.field_mest_mest__activity_date_deadline
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__activity_date_deadline
+#: model:ir.model.fields,field_description:Mestengido.field_monthly_amount__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_account_fund_post__activity_summary
+#: model:ir.model.fields,field_description:Mestengido.field_fund_fund__activity_summary
+#: model:ir.model.fields,field_description:Mestengido.field_fund_lines__activity_summary
+#: model:ir.model.fields,field_description:Mestengido.field_mest_mest__activity_summary
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__activity_summary
+#: model:ir.model.fields,field_description:Mestengido.field_monthly_amount__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_account_fund_post__activity_type_id
+#: model:ir.model.fields,field_description:Mestengido.field_fund_fund__activity_type_id
+#: model:ir.model.fields,field_description:Mestengido.field_fund_lines__activity_type_id
+#: model:ir.model.fields,field_description:Mestengido.field_mest_mest__activity_type_id
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__activity_type_id
+#: model:ir.model.fields,field_description:Mestengido.field_monthly_amount__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_line__sequence2
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_lines__sequence2
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_lines_details__sequence2
+msgid "No"
+msgstr "ቅደም ተከተል"
+
+#. module: Mestengido
+#: model:ir.model.fields.selection,name:Mestengido.selection__mest_mest__month__11
+#: model:ir.model.fields.selection,name:Mestengido.selection__mest_order__month__11
+msgid "November"
+msgstr "ህዳር"
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_account_fund_post__message_needaction_counter
+#: model:ir.model.fields,field_description:Mestengido.field_fund_fund__message_needaction_counter
+#: model:ir.model.fields,field_description:Mestengido.field_fund_lines__message_needaction_counter
+#: model:ir.model.fields,field_description:Mestengido.field_mest_mest__message_needaction_counter
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__message_needaction_counter
+#: model:ir.model.fields,field_description:Mestengido.field_monthly_amount__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_account_fund_post__message_has_error_counter
+#: model:ir.model.fields,field_description:Mestengido.field_fund_fund__message_has_error_counter
+#: model:ir.model.fields,field_description:Mestengido.field_fund_lines__message_has_error_counter
+#: model:ir.model.fields,field_description:Mestengido.field_mest_mest__message_has_error_counter
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__message_has_error_counter
+#: model:ir.model.fields,field_description:Mestengido.field_monthly_amount__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model.fields,help:Mestengido.field_account_fund_post__message_needaction_counter
+#: model:ir.model.fields,help:Mestengido.field_fund_fund__message_needaction_counter
+#: model:ir.model.fields,help:Mestengido.field_fund_lines__message_needaction_counter
+#: model:ir.model.fields,help:Mestengido.field_mest_mest__message_needaction_counter
+#: model:ir.model.fields,help:Mestengido.field_mest_order__message_needaction_counter
+#: model:ir.model.fields,help:Mestengido.field_monthly_amount__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model.fields,help:Mestengido.field_account_fund_post__message_has_error_counter
+#: model:ir.model.fields,help:Mestengido.field_fund_fund__message_has_error_counter
+#: model:ir.model.fields,help:Mestengido.field_fund_lines__message_has_error_counter
+#: model:ir.model.fields,help:Mestengido.field_mest_mest__message_has_error_counter
+#: model:ir.model.fields,help:Mestengido.field_mest_order__message_has_error_counter
+#: model:ir.model.fields,help:Mestengido.field_monthly_amount__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model.fields,help:Mestengido.field_account_fund_post__message_unread_counter
+#: model:ir.model.fields,help:Mestengido.field_fund_fund__message_unread_counter
+#: model:ir.model.fields,help:Mestengido.field_fund_lines__message_unread_counter
+#: model:ir.model.fields,help:Mestengido.field_mest_mest__message_unread_counter
+#: model:ir.model.fields,help:Mestengido.field_mest_order__message_unread_counter
+#: model:ir.model.fields,help:Mestengido.field_monthly_amount__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model.fields.selection,name:Mestengido.selection__mest_mest__month__10
+#: model:ir.model.fields.selection,name:Mestengido.selection__mest_order__month__10
+msgid "October"
+msgstr "ጥቅምት"
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_mest_mest__order_line
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__order_line
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__order_line_details
+msgid "Order Lines"
+msgstr "የትእዛዝ መስመሮች"
+
+#. module: Mestengido
+#: model_terms:ir.ui.view,arch_db:Mestengido.mestengido_order_form_view
+msgid "Organize"
+msgstr "አደራጅ"
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_fund_lines__original_planned_amount
+msgid "Original Planned Amount"
+msgstr "ኦሪጅናል የታቀደ መጠን"
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_fund_lines__paid_date
+msgid "Paid Date"
+msgstr "የተከፈለበት ቀን"
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_fund_lines__planned_amount
+msgid "Planned Amount"
+msgstr "የታቀደ መጠን"
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_account_fund_post__access_url
+#: model:ir.model.fields,field_description:Mestengido.field_fund_fund__access_url
+#: model:ir.model.fields,field_description:Mestengido.field_fund_lines__access_url
+#: model:ir.model.fields,field_description:Mestengido.field_mest_mest__access_url
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__access_url
+#: model:ir.model.fields,field_description:Mestengido.field_monthly_amount__access_url
+msgid "Portal Access URL"
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_fund_lines__practical_amount
+msgid "Practical Amount"
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_line__product_id
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_lines__product_id
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_lines_details__product_id
+msgid "Product"
+msgstr "ምርት"
+
+#. module: Mestengido
+#: model_terms:ir.ui.view,arch_db:Mestengido.mestengido_form_view
+msgid "Product List"
+msgstr "የምርት ዝርዝር"
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_line__product_type
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_lines__product_type
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_lines_details__product_type
+msgid "Product Type"
+msgstr "የምርት አይነት"
+
+#. module: Mestengido
+#: model:ir.actions.act_window,name:Mestengido.action_get_mestengido_id
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__purchas_order
+#: model_terms:ir.ui.view,arch_db:Mestengido.mestengido_order_form_view
+msgid "Purchas Order"
+msgstr "ትእዛዝዎን ይግዙ"
+
+#. module: Mestengido
+#: model:ir.model,name:Mestengido.model_purchase_order
+msgid "Purchase Order"
+msgstr "ትእዛዝዎን ይግዙ"
+
+#. module: Mestengido
+#: model_terms:ir.ui.view,arch_db:Mestengido.mestengido_order_form_view
+msgid "Purchase Product Lists"
+msgstr "የምርት ምርቶች ዝርዝር"
+
+#. module: Mestengido
+#: model_terms:ir.ui.view,arch_db:Mestengido.mestengido_order_form_view
+msgid "Purchase order"
+msgstr "ትእዛዝዎን ይግዙ"
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_line__product_qty
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_lines__product_qty
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_lines_details__product_qty
+msgid "Quantity"
+msgstr "ብዛት"
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_mest_mest__quarter
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__quarter
+msgid "Quarter"
+msgstr "ሩብ"
+
+#. module: Mestengido
+#: model:ir.model.fields.selection,name:Mestengido.selection__mest_order__state__request
+msgid "REQ"
+msgstr "ረቂቅ"
+
+#. module: Mestengido
+#: model:ir.model.fields.selection,name:Mestengido.selection__mest_order__state__ready
+msgid "Ready"
+msgstr "ዝግጁ"
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__squ
+#: model_terms:ir.ui.view,arch_db:Mestengido.mestengido_form_view
+#: model_terms:ir.ui.view,arch_db:Mestengido.mestengido_order_form_view
+msgid "Reference"
+msgstr "ማጣቀሻ"
+
+#. module: Mestengido
+#: model_terms:ir.ui.view,arch_db:Mestengido.mestengido_form_view
+msgid "Reject"
+msgstr "አለመቀበል"
+
+#. module: Mestengido
+#: model_terms:ir.ui.view,arch_db:Mestengido.mestengido_form_view
+msgid "Request"
+msgstr "ጥያቄ"
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_line__order_id
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_lines__order_id
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_lines_details__order_id
+msgid "Request Reference"
+msgstr "የጥያቄ ማጣቀሻ"
+
+#. module: Mestengido
+#: model_terms:ir.ui.view,arch_db:Mestengido.mestengido_order_form_view
+msgid "Requested Detail Info"
+msgstr "የተጠየቀ ዝርዝር መረጃ"
+
+#. module: Mestengido
+#: model_terms:ir.ui.view,arch_db:Mestengido.mestengido_form_view
+msgid "Requested by"
+msgstr "ተጠይቋል በ"
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_mest_mest__requester_id
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__requester_id
+#: model_terms:ir.ui.view,arch_db:Mestengido.mestengido_form_view
+msgid "Requester"
+msgstr "ጠይቅ"
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__requests
+#: model_terms:ir.ui.view,arch_db:Mestengido.mestengido_order_form_view
+msgid "Requests"
+msgstr "ጥያቄዎች"
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_fund_lines__reserved_amount
+msgid "Reserved Amount"
+msgstr ""
+
+#. module: Mestengido
+#: model_terms:ir.ui.view,arch_db:Mestengido.mestengido_form_view
+msgid "Reset"
+msgstr "ዳግም አስጀምር"
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_fund_fund__creating_user_id
+msgid "Responsible"
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_account_fund_post__activity_user_id
+#: model:ir.model.fields,field_description:Mestengido.field_fund_fund__activity_user_id
+#: model:ir.model.fields,field_description:Mestengido.field_fund_lines__activity_user_id
+#: model:ir.model.fields,field_description:Mestengido.field_mest_mest__activity_user_id
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__activity_user_id
+#: model:ir.model.fields,field_description:Mestengido.field_monthly_amount__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_line__sequence
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_lines__sequence
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_lines_details__sequence
+msgid "S.No"
+msgstr "ቅደም ተከተል"
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_account_fund_post__message_has_sms_error
+#: model:ir.model.fields,field_description:Mestengido.field_fund_fund__message_has_sms_error
+#: model:ir.model.fields,field_description:Mestengido.field_fund_lines__message_has_sms_error
+#: model:ir.model.fields,field_description:Mestengido.field_mest_mest__message_has_sms_error
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__message_has_sms_error
+#: model:ir.model.fields,field_description:Mestengido.field_monthly_amount__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_mest_mest__date_planned
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__date_planned
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_line__date_planned
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_lines__date_planned
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_lines_details__date_planned
+msgid "Scheduled Date"
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model.fields.selection,name:Mestengido.selection__mest_mest__quarter__2nd
+#: model:ir.model.fields.selection,name:Mestengido.selection__mest_order__quarter__2nd
+msgid "Second Quarter"
+msgstr "ሁለተኛ ሩብ"
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_account_fund_post__access_token
+#: model:ir.model.fields,field_description:Mestengido.field_fund_fund__access_token
+#: model:ir.model.fields,field_description:Mestengido.field_fund_lines__access_token
+#: model:ir.model.fields,field_description:Mestengido.field_mest_mest__access_token
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__access_token
+#: model:ir.model.fields,field_description:Mestengido.field_monthly_amount__access_token
+msgid "Security Token"
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model.fields.selection,name:Mestengido.selection__mest_mest__month__9
+#: model:ir.model.fields.selection,name:Mestengido.selection__mest_order__month__9
+msgid "September"
+msgstr "መስከረም"
+
+#. module: Mestengido
+#: model:ir.model.fields,help:Mestengido.field_mest_order_lines__sequence2
+#: model:ir.model.fields,help:Mestengido.field_mest_order_lines_details__sequence2
+msgid "Shows the sequence of this line in the Mestengido order."
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model.fields,help:Mestengido.field_mest_order_line__sequence2
+msgid "Shows the sequence of this line."
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_mest_mest__approver_signature
+#: model:ir.model.fields,field_description:Mestengido.field_mest_mest__final_approver_signature
+#: model:ir.model.fields,field_description:Mestengido.field_mest_mest__requster_signature
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__approver_signature
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__final_approver_signature
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__requster_signature
+msgid "Signature"
+msgstr "ፊርማ"
+
+#. module: Mestengido
+#: model:ir.model.fields,help:Mestengido.field_mest_mest__approver_signature
+#: model:ir.model.fields,help:Mestengido.field_mest_mest__final_approver_signature
+#: model:ir.model.fields,help:Mestengido.field_mest_mest__requster_signature
+#: model:ir.model.fields,help:Mestengido.field_mest_order__approver_signature
+#: model:ir.model.fields,help:Mestengido.field_mest_order__final_approver_signature
+#: model:ir.model.fields,help:Mestengido.field_mest_order__requster_signature
+msgid "Signature received through the portal."
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_mest_mest__approver_signed_by
+#: model:ir.model.fields,field_description:Mestengido.field_mest_mest__final_approver_signed_by
+#: model:ir.model.fields,field_description:Mestengido.field_mest_mest__requster_signed_by
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__approver_signed_by
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__final_approver_signed_by
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__requster_signed_by
+msgid "Signed By"
+msgstr "Signed By"
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_mest_mest__approver_signed_on
+#: model:ir.model.fields,field_description:Mestengido.field_mest_mest__final_approver_signed_on
+#: model:ir.model.fields,field_description:Mestengido.field_mest_mest__requster_signed_on
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__approver_signed_on
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__final_approver_signed_on
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__requster_signed_on
+msgid "Signed On"
+msgstr "ተፈርሟል"
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_account_fund_post__source_id
+#: model:ir.model.fields,field_description:Mestengido.field_fund_fund__source_id
+#: model:ir.model.fields,field_description:Mestengido.field_fund_lines__source_id
+#: model:ir.model.fields,field_description:Mestengido.field_mest_mest__source_id
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__source_id
+#: model:ir.model.fields,field_description:Mestengido.field_monthly_amount__source_id
+msgid "Source"
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_fund_fund__date_from
+#: model:ir.model.fields,field_description:Mestengido.field_fund_lines__date_from
+msgid "Start Date"
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_fund_fund__state
+#: model:ir.model.fields,field_description:Mestengido.field_mest_mest__state
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__state
+msgid "Status"
+msgstr "ሁኔታ"
+
+#. module: Mestengido
+#: model:ir.model.fields,help:Mestengido.field_account_fund_post__activity_state
+#: model:ir.model.fields,help:Mestengido.field_fund_fund__activity_state
+#: model:ir.model.fields,help:Mestengido.field_fund_lines__activity_state
+#: model:ir.model.fields,help:Mestengido.field_mest_mest__activity_state
+#: model:ir.model.fields,help:Mestengido.field_mest_order__activity_state
+#: model:ir.model.fields,help:Mestengido.field_monthly_amount__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_lines__sub_total_price
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_lines_details__sub_total_price
+msgid "Sub Total Price"
+msgstr ""
+
+#. module: Mestengido
+#: model_terms:ir.ui.view,arch_db:Mestengido.mestengido_form_view
+msgid "Submit"
+msgstr "ያስገቡ"
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_line__taxes_id
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_lines__taxes_id
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_lines_details__taxes_id
+msgid "Taxes"
+msgstr "ግብሮች"
+
+#. module: Mestengido
+#: code:addons/Mestengido/models/account_fund.py:0
+#, python-format
+msgid "The Fund must have at least one account."
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_fund_lines__theoretical_amount
+msgid "Theoretical Amount"
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model.fields.selection,name:Mestengido.selection__mest_mest__quarter__3rd
+#: model:ir.model.fields.selection,name:Mestengido.selection__mest_order__quarter__3rd
+msgid "Third Quarter"
+msgstr "ሦስተኛው ሩብr"
+
+#. module: Mestengido
+#: model:ir.model.fields,help:Mestengido.field_account_fund_post__campaign_id
+#: model:ir.model.fields,help:Mestengido.field_fund_fund__campaign_id
+#: model:ir.model.fields,help:Mestengido.field_fund_lines__campaign_id
+#: model:ir.model.fields,help:Mestengido.field_mest_mest__campaign_id
+#: model:ir.model.fields,help:Mestengido.field_mest_order__campaign_id
+#: model:ir.model.fields,help:Mestengido.field_monthly_amount__campaign_id
+msgid ""
+"This is a name that helps you keep track of your different campaign efforts,"
+" e.g. Fall_Drive, Christmas_Special"
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model.fields,help:Mestengido.field_account_fund_post__medium_id
+#: model:ir.model.fields,help:Mestengido.field_fund_fund__medium_id
+#: model:ir.model.fields,help:Mestengido.field_fund_lines__medium_id
+#: model:ir.model.fields,help:Mestengido.field_mest_mest__medium_id
+#: model:ir.model.fields,help:Mestengido.field_mest_order__medium_id
+#: model:ir.model.fields,help:Mestengido.field_monthly_amount__medium_id
+msgid "This is the method of delivery, e.g. Postcard, Email, or Banner Ad"
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model.fields,help:Mestengido.field_account_fund_post__source_id
+#: model:ir.model.fields,help:Mestengido.field_fund_fund__source_id
+#: model:ir.model.fields,help:Mestengido.field_fund_lines__source_id
+#: model:ir.model.fields,help:Mestengido.field_mest_mest__source_id
+#: model:ir.model.fields,help:Mestengido.field_mest_order__source_id
+#: model:ir.model.fields,help:Mestengido.field_monthly_amount__source_id
+msgid ""
+"This is the source of the link, e.g. Search Engine, another domain, or name "
+"of email list"
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model.fields.selection,name:Mestengido.selection__mest_mest__state__submitted
+msgid "To be approve"
+msgstr "ማጽደቅ"
+
+#. module: Mestengido
+#: model_terms:ir.ui.view,arch_db:Mestengido.mestengido_order_form_view
+msgid "Total  Amount:"
+msgstr "አጠቃላይ ድምሩ"
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_fund_fund__planned_amount
+msgid "Total Amount"
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__total_price
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_lines__total_price
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_lines_details__total_price
+msgid "Total Price"
+msgstr "ጠቅላላ ዋጋ"
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_line__product_uom_qty
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_lines__product_uom_qty
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_lines_details__product_uom_qty
+msgid "Total Quantity"
+msgstr "ጠቅላላ ብዛት"
+
+#. module: Mestengido
+#: model:ir.model.fields,help:Mestengido.field_account_fund_post__activity_exception_decoration
+#: model:ir.model.fields,help:Mestengido.field_fund_fund__activity_exception_decoration
+#: model:ir.model.fields,help:Mestengido.field_fund_lines__activity_exception_decoration
+#: model:ir.model.fields,help:Mestengido.field_mest_mest__activity_exception_decoration
+#: model:ir.model.fields,help:Mestengido.field_mest_order__activity_exception_decoration
+#: model:ir.model.fields,help:Mestengido.field_monthly_amount__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_line__price_unit
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_lines__price_unit
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_lines_details__price_unit
+msgid "Unit Price"
+msgstr "ነጠላ ዋጋ"
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_line__product_uom
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_lines__product_uom
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order_lines_details__product_uom
+msgid "Unit of Measure"
+msgstr "የመለኪያ አሃድ"
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_account_fund_post__message_unread
+#: model:ir.model.fields,field_description:Mestengido.field_fund_fund__message_unread
+#: model:ir.model.fields,field_description:Mestengido.field_fund_lines__message_unread
+#: model:ir.model.fields,field_description:Mestengido.field_mest_mest__message_unread
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__message_unread
+#: model:ir.model.fields,field_description:Mestengido.field_monthly_amount__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_account_fund_post__message_unread_counter
+#: model:ir.model.fields,field_description:Mestengido.field_fund_fund__message_unread_counter
+#: model:ir.model.fields,field_description:Mestengido.field_fund_lines__message_unread_counter
+#: model:ir.model.fields,field_description:Mestengido.field_mest_mest__message_unread_counter
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__message_unread_counter
+#: model:ir.model.fields,field_description:Mestengido.field_monthly_amount__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_mest_mest__user_id
+msgid "User"
+msgstr "ተጠቃሚ"
+
+#. module: Mestengido
+#: model:ir.model.fields.selection,name:Mestengido.selection__fund_fund__state__validate
+msgid "Validated"
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_account_fund_post__website_message_ids
+#: model:ir.model.fields,field_description:Mestengido.field_fund_fund__website_message_ids
+#: model:ir.model.fields,field_description:Mestengido.field_fund_lines__website_message_ids
+#: model:ir.model.fields,field_description:Mestengido.field_mest_mest__website_message_ids
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__website_message_ids
+#: model:ir.model.fields,field_description:Mestengido.field_monthly_amount__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model.fields,help:Mestengido.field_account_fund_post__website_message_ids
+#: model:ir.model.fields,help:Mestengido.field_fund_fund__website_message_ids
+#: model:ir.model.fields,help:Mestengido.field_fund_lines__website_message_ids
+#: model:ir.model.fields,help:Mestengido.field_mest_mest__website_message_ids
+#: model:ir.model.fields,help:Mestengido.field_mest_order__website_message_ids
+#: model:ir.model.fields,help:Mestengido.field_monthly_amount__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_mest_mest__year
+#: model:ir.model.fields,field_description:Mestengido.field_mest_order__year
+#: model:ir.model.fields,field_description:Mestengido.field_monthly_amount__year
+#: model_terms:ir.ui.view,arch_db:Mestengido.mestengido_form_view
+#: model_terms:ir.ui.view,arch_db:Mestengido.mestengido_order_form_view
+msgid "Year"
+msgstr "አመት"
+
+#. module: Mestengido
+#: model:ir.model,name:Mestengido.model_fund_fund
+msgid "fund"
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model,name:Mestengido.model_account_fund_post
+#: model:ir.model.fields,field_description:Mestengido.field_fund_lines__general_fund_id
+msgid "fund Position"
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model,name:Mestengido.model_mest_mest
+msgid "mest.mest"
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model,name:Mestengido.model_mest_order
+msgid "mest.order"
+msgstr ""
+
+#. module: Mestengido
+#: model:ir.model,name:Mestengido.model_monthly_amount
+msgid "monthly.amount"
+msgstr ""
+
+#. module: Mestengido
+#: model_terms:ir.ui.view,arch_db:Mestengido.mestengido_order_form_view
+msgid "post to purchase order"
+msgstr "ትእዛዝን ለመግዛት ትእዛዝr"
+
+#. module: Mestengido
+#: model:ir.model.fields.selection,name:Mestengido.selection__mest_order__state__posted
+msgid "posted to Purchase order"
+msgstr "ወደ ግዥ ትእዛዝ ተለጠፈ"
+
+#. module: Mestengido
+#: model_terms:ir.ui.view,arch_db:Mestengido.mestengido_order_form_view
+msgid "push to Order"
+msgstr "ወደ ምርት ዝርዝር ይግፉት"
+
+#. module: Mestengido
+#: model:ir.model.fields,field_description:Mestengido.field_mest_mest__squ
+msgid "reference"
+msgstr "ማጣቀሻ"
+
+#. module: Mestengido
+#: model:ir.model.fields.selection,name:Mestengido.selection__mest_mest__state__draft
+msgid "requested"
+msgstr "ጠይቋል"

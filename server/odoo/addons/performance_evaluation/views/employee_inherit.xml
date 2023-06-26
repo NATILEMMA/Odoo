@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<odoo>
+        <record id="hr_hr_employee_view_evaluation" model="ir.ui.view">
+            <field name="name">hr.hr.employee.view.evaluation</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@name='button_box']" position="inside">
+                    <button class="oe_stat_button" string="Evaluation" name="%(performance_evaluation_all_program_action_for_employees)d" type="action" icon="fa-list-alt">
+                    <!-- <field name="attachment_amount" string="Attachments" widget="statinfo"/> -->
+                    </button>
+                </xpath>
+            </field>
+        </record>
+
+
+</odoo>

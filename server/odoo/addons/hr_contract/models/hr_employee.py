@@ -21,6 +21,9 @@ class Employee(models.Model):
     def _compute_contract_warning(self):
         for employee in self:
             employee.contract_warning = not employee.contract_id or employee.contract_id.kanban_state == 'blocked' or employee.contract_id.state != 'open'
+   
+    contract_count_non_computed = fields.Integer(String="contract count")
+
 
     def _compute_contracts_count(self):
         # read_group as sudo, since contract count is displayed on form view
@@ -28,6 +31,8 @@ class Employee(models.Model):
         result = dict((data['employee_id'][0], data['employee_id_count']) for data in contract_data)
         for employee in self:
             employee.contracts_count = result.get(employee.id, 0)
+            employee.contract_count_non_computed = employee.contracts_count
+        print("contracts coount",employee.contract_count_non_computed)
 
     def _get_contracts(self, date_from, date_to, states=['open'], kanban_state=False):
         """

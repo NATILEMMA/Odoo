@@ -62,12 +62,17 @@ class PurchaseRequisition(models.Model):
     line_ids = fields.One2many('purchase.requisition.line', 'requisition_id', string='Products to Purchase', states={'done': [('readonly', True)]}, copy=True)
     product_id = fields.Many2one('product.product', related='line_ids.product_id', string='Product', readonly=False)
     state = fields.Selection(PURCHASE_REQUISITION_STATES,
-                              'Status', tracking=True, required=True,
+                              'Status', tracking=True, 
                               copy=False, default='draft')
     state_blanket_order = fields.Selection(PURCHASE_REQUISITION_STATES, compute='_set_state')
     is_quantity_copy = fields.Selection(related='type_id.quantity_copy', readonly=True)
     currency_id = fields.Many2one('res.currency', 'Currency', required=True,
         default=lambda self: self.env.company.currency_id.id)
+    line_id_2 = fields.One2many('purchase.order.line.unlink', 'requisition_id_2', string='List of Product')
+    order_two = fields.Integer(compute='_compute_orders_number_two', string='Number of Orders')
+    is_merge = fields.Boolean(string="Is merge", default=False)
+    analysis_id = fields.Many2one('res.users', string='Purchase analysis', default=lambda self: self.env.user, check_company=True)
+    approver_id = fields.Many2one('res.users', string='Purchase approve', default=lambda self: self.env.user, check_company=True)
 
     @api.depends('state')
     def _set_state(self):
@@ -100,6 +105,11 @@ class PurchaseRequisition(models.Model):
         for requisition in self:
             requisition.order_count = len(requisition.purchase_ids)
 
+    @api.depends('purchase_ids')
+    def _compute_orders_number_two(self):
+        for requisition in self:
+            requisition.order_two = len(requisition.purchase_ids)
+
     def action_cancel(self):
         # try to set all associated quotations to cancel state
         for requisition in self:
@@ -130,6 +140,31 @@ class PurchaseRequisition(models.Model):
                 self.name = self.env['ir.sequence'].next_by_code('purchase.requisition.purchase.tender')
             else:
                 self.name = self.env['ir.sequence'].next_by_code('purchase.requisition.blanket.order')
+
+    def action_compute(self):
+        acc_3 = self.env['purchase.requisition.line'].search([('requisition_id', '=', self.id)])
+        print("acc_3", acc_3)
+        grouped_batches = acc_3.read_group([], fields=['product_id'], groupby=['product_id'])
+        print("grouped_batches", grouped_batches)
+        for product in grouped_batches:
+            print("product", product)
+            qty = 0.0
+            for line in self.line_ids:
+                print("line", line, line.product_id.id, line.product_id.id)
+                if product['product_id'][0] == line.product_id.id:
+                    qty = qty + line.product_qty
+                    line.product_qty = 0.0
+                    print("line.product_qty", line.product_qty)
+                    # line.unlink()
+                    print("line", line, line.product_id.name)
+                    print("acc_3.create")
+            if qty != 0:
+                acc_3.create({"requisition_id": self.id, "product_id": product['product_id'][0], "product_qty": qty,
+                              "product_uom_id": line.product_uom_id.id, "price_unit": 0.0})
+        for loop in self.line_ids:
+            if loop.product_qty == 0.0:
+                loop.unlink()
+        self.is_merge = True
 
     def action_open(self):
         self.write({'state': 'open'})
@@ -222,6 +257,7 @@ class PurchaseRequisitionLine(models.Model):
 
     def create_supplier_info(self):
         purchase_requisition = self.requisition_id
+        print("is_merg", self.is_merg)
         if purchase_requisition.type_id.quantity_copy == 'none' and purchase_requisition.vendor_id:
             # create a supplier_info only in case of blanket order
             self.env['product.supplierinfo'].create({
@@ -231,11 +267,11 @@ class PurchaseRequisitionLine(models.Model):
                 'price': self.price_unit,
                 'currency_id': self.requisition_id.currency_id.id,
                 'purchase_requisition_line_id': self.id,
+                'is_merge': self.is_merge,
             })
 
     @api.depends('requisition_id.purchase_ids.state')
     def _compute_ordered_qty(self):
-        line_found = set()
         for line in self:
             total = 0.0
             for po in line.requisition_id.purchase_ids.filtered(lambda purchase_order: purchase_order.state in ['purchase', 'done']):
@@ -244,11 +280,7 @@ class PurchaseRequisitionLine(models.Model):
                         total += po_line.product_uom._compute_quantity(po_line.product_qty, line.product_uom_id)
                     else:
                         total += po_line.product_qty
-            if line.product_id not in line_found :
-                line.qty_ordered = total
-                line_found.add(line.product_id)
-            else:
-                line.qty_ordered = 0
+            line.qty_ordered = total
 
     @api.onchange('product_id')
     def _onchange_product_id(self):
@@ -275,4 +307,5 @@ class PurchaseRequisitionLine(models.Model):
             'date_planned': date_planned,
             'account_analytic_id': self.account_analytic_id.id,
             'analytic_tag_ids': self.analytic_tag_ids.ids,
+            'tender': self.requisition_id.id,
         }

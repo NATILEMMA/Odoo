@@ -1,0 +1,131 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_menu
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20221005\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-22 08:47+0000\n"
+"PO-Revision-Date: 2023-05-22 08:47+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: account_menu
+#: model:ir.model,name:account_menu.model_account_group
+msgid "Account Group"
+msgstr " የቡድን አካውንት"
+
+#. module: account_menu
+#: model:ir.ui.menu,name:account_menu.account_group_menu
+msgid "Account Groups"
+msgstr "የቡድኖች አካውንት "
+
+#. module: account_menu
+#: model:ir.model,name:account_menu.model_account_account_tag
+msgid "Account Tag"
+msgstr "የአካውንት መለያ"
+
+#. module: account_menu
+#: model:ir.ui.menu,name:account_menu.account_tag_menu
+msgid "Account Tags"
+msgstr "የአካውንት መለያዎች"
+
+#. module: account_menu
+#: model_terms:ir.ui.view,arch_db:account_menu.view_account_tax_group_form
+#: model_terms:ir.ui.view,arch_db:account_menu.view_account_tax_group_search
+msgid "Account Tax Group"
+msgstr " የቡድን ግብር አካውንት "
+
+#. module: account_menu
+#: model:ir.actions.act_window,name:account_menu.action_account_tax_group_tree
+#: model:ir.ui.menu,name:account_menu.account_tax_group_menu
+#: model_terms:ir.ui.view,arch_db:account_menu.view_account_tax_group_search
+msgid "Account Tax Groups"
+msgstr "የቡድኖች ግብር አካውንት "
+
+#. module: account_menu
+#: model:ir.ui.menu,name:account_menu.menu_account_account_template
+msgid "Account Templates"
+msgstr "የአካውንት ንድፍ"
+
+#. module: account_menu
+#: model:ir.ui.menu,name:account_menu.account_type_menu
+msgid "Account Types"
+msgstr "የአካውንት አይነት"
+
+#. module: account_menu
+#: model:ir.model.fields,field_description:account_menu.field_account_account_tag__account_ids
+#: model:ir.model.fields,field_description:account_menu.field_account_group__account_ids
+msgid "Accounts"
+msgstr "አካውንት"
+
+#. module: account_menu
+#: model:ir.model.fields,help:account_menu.field_account_account_tag__account_ids
+msgid "Assigned accounts for custom reporting"
+msgstr "የተለመደ ሪፖርት ለማድረግ የተመደቡ አካውንቶች "
+
+#. module: account_menu
+#: model:ir.model.fields,help:account_menu.field_account_group__account_ids
+msgid "Assigned accounts."
+msgstr "የተመደቡ አካውንት"
+
+#. module: account_menu
+#: model:ir.model.fields,help:account_menu.field_account_account_tag__tax_ids
+msgid "Assigned taxes for custom reporting"
+msgstr "ለተለመደው ሪፖርት ግብር መመደብ"
+
+#. module: account_menu
+#: model:ir.model.fields,help:account_menu.field_account_tax_group__tax_ids
+msgid "Assigned taxes."
+msgstr "ቀረጥ መመደብ"
+
+#. module: account_menu
+#: model:ir.ui.menu,name:account_menu.menu_accounting_statement_bank
+msgid "Bank Statements"
+msgstr "የባንክ መግለጫዎች"
+
+#. module: account_menu
+#: model:ir.ui.menu,name:account_menu.menu_accounting_bank_and_cash
+msgid "Bank and Cash"
+msgstr "ባንክ እና ጥሬ ገንዘብ "
+
+#. module: account_menu
+#: model:ir.ui.menu,name:account_menu.menu_accounting_statement_cash
+msgid "Cash Registers"
+msgstr "ጥሬ ገንዘብ መመዝገብ"
+
+#. module: account_menu
+#: model:ir.ui.menu,name:account_menu.menu_account_chart_template
+msgid "Chart of Accounts Templates"
+msgstr "የአካውንት ሰንጠረዥ ንድፍ"
+
+#. module: account_menu
+#: model:ir.ui.menu,name:account_menu.menu_account_fiscal_position_template
+msgid "Fiscal Position Templates"
+msgstr "የገንዘብ አቀማመጥ ንድፍ"
+
+#. module: account_menu
+#: model:ir.model,name:account_menu.model_account_tax_group
+msgid "Tax Group"
+msgstr "የግብር ቡድን"
+
+#. module: account_menu
+#: model:ir.ui.menu,name:account_menu.menu_account_tax_template
+msgid "Tax Templates"
+msgstr "የግብር ንድፍ"
+
+#. module: account_menu
+#: model:ir.model.fields,field_description:account_menu.field_account_account_tag__tax_ids
+#: model:ir.model.fields,field_description:account_menu.field_account_tax_group__tax_ids
+msgid "Taxes"
+msgstr "ግብር"
+
+#. module: account_menu
+#: model:ir.ui.menu,name:account_menu.menu_account_coa_settings
+msgid "Templates"
+msgstr "ንድፍ"

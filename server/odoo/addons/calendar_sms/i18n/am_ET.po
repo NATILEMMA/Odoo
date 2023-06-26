@@ -1,0 +1,62 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* calendar_sms
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20221005\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-22 09:09+0000\n"
+"PO-Revision-Date: 2023-05-22 09:09+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: calendar_sms
+#: model:ir.model,name:calendar_sms.model_calendar_event
+msgid "Calendar Event"
+msgstr "የቀን መቁጠሪያ ክስተት"
+
+#. module: calendar_sms
+#: model:sms.template,name:calendar_sms.sms_template_data_calendar_reminder
+msgid "Calendar Event: Reminder"
+msgstr "የቀን መቁጠሪያ ክስተት፡ አስታዋሽ"
+
+#. module: calendar_sms
+#: model:ir.model,name:calendar_sms.model_calendar_alarm
+msgid "Event Alarm"
+msgstr "የክስተት ማንቂያ"
+
+#. module: calendar_sms
+#: model:ir.model,name:calendar_sms.model_calendar_alarm_manager
+msgid "Event Alarm Manager"
+msgstr "የክስተት ማንቂያ አስተዳዳሪ"
+
+#. module: calendar_sms
+#: model:sms.template,body:calendar_sms.sms_template_data_calendar_reminder
+msgid "Event reminder: ${object.name}, ${object.display_time}"
+msgstr "የክስተት አስታዋሽ፡ ${object.name}፣ ${object.display_time}"
+
+#. module: calendar_sms
+#: code:addons/calendar_sms/models/calendar.py:0
+#, python-format
+msgid "Event reminder: %s, %s."
+msgstr "የክስተት አስታዋሽ፡ %s፣ %s"
+
+#. module: calendar_sms
+#: model:ir.model.fields.selection,name:calendar_sms.selection__calendar_alarm__alarm_type__sms
+msgid "SMS Text Message"
+msgstr "SMS የጽሑፍ መልእክት"
+
+#. module: calendar_sms
+#: model:ir.actions.act_window,name:calendar_sms.calendar_event_act_window_sms_composer_single
+msgid "Send SMS to attendees"
+msgstr "ለተሳታፊዎች SMS ይላኩ።"
+
+#. module: calendar_sms
+#: model:ir.model.fields,field_description:calendar_sms.field_calendar_alarm__alarm_type
+msgid "Type"
+msgstr "ዓይነት"

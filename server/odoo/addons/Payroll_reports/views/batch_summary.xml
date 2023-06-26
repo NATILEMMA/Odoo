@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        
+         <record model="ir.ui.view" id="batch_summary_report_graph">
+            <field name="name">hr.report.salary.summary</field>
+            <field name="model">salary.summary</field>
+            <field name="arch" type="xml">
+                <graph string="salary summary analysis">
+                    <field name="salary_detail" type="row"/>
+                    <field name="amount" type="measure"/>
+                </graph>
+            </field>
+        </record>
+        
+        <record id="hr_salary_summary.view_salary_summary" model="ir.actions.act_window">
+            <field name="view_mode">tree,form,graph</field>   
+        </record>
+
+        <record id="batch_summary_report_graph_action" model="ir.actions.act_window">
+            <field name="name">Batch salary summary report</field>
+            <field name="res_model">salary.summary</field>
+            <field name="view_mode">graph</field>
+        </record>
+
+         <menuitem
+                id="payroll_report_menu"
+                name="Payroll"
+                parent="report.all_module_report"
+                sequence="1"
+                groups="hr.group_hr_user"
+        />
+        <menuitem
+                id="batch_summary_graph_menu"
+                name="Batch Summary Report"
+                parent="payroll_report_menu"
+                action="batch_summary_report_graph_action"
+                sequence="1"
+        />
+    </data>
+</odoo>

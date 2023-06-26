@@ -1,0 +1,2056 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* web_editor
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20221005\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-23 06:27+0000\n"
+"PO-Revision-Date: 2023-05-23 06:27+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/wysiwyg/widgets/image_optimize_dialog.js:0
+#, python-format
+msgid "%d (Original)"
+msgstr "%d (Original)"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/wysiwyg/widgets/image_optimize_dialog.js:0
+#, python-format
+msgid "%d (Suggested)"
+msgstr "%d (የተጠቆመ)"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/ace.xml:0
+#, python-format
+msgid "&times;"
+msgstr "&times;"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid ""
+"'Alt tag' specifies an alternate text for an image, if the image cannot be "
+"displayed (slow connection, missing image, screen reader ...)."
+msgstr ""
+"'Alt tag' ምስሉ ሊሆን የማይችል ከሆነ ለምስሉ ተለዋጭ ጽሑፍ ይገልጻል"
+"የሚታየው (ቀርፋፋ ግንኙነት፣ የጠፋ ምስል፣ ስክሪን አንባቢ ...)።"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "'Title tag' is shown as a tooltip when you hover the picture."
+msgstr "'Title tag' ምስሉን ሲያንዣብቡ እንደ መሳሪያ ጥቆማ ነው የሚታየው።"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "(ALT Tag)"
+msgstr "(ALT Tag)"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "(TITLE Tag)"
+msgstr "(TITLE Tag)"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "(URL or Embed)"
+msgstr "(URL or Embed)"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "(YouTube, Vimeo, Vine, Instagram, DailyMotion or Youku)"
+msgstr "(YouTube, Vimeo, Vine, Instagram, DailyMotion or Youku)"
+
+#. module: web_editor
+#: model_terms:ir.ui.view,arch_db:web_editor.snippets
+msgid "<i class=\"fa fa-th-large\"/> First Panel"
+msgstr "<i class=\"fa fa-th-large\"/> የመጀመሪያ ፓነል"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/common/ace.js:0
+#, python-format
+msgid ""
+"A server error occured. Please check you correctly signed in and that the "
+"file you are saving is correctly formatted."
+msgstr ""
+"የአገልጋይ ስህተት ተፈጥሯል። እባክዎ በትክክል እንደገቡ ያረጋግጡ እና "
+"የምያስቀምጡት ፋይል በትክክል ተቀርጿል።"
+
+#. module: 
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Accepts"
+msgstr "ተቀበለ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Action"
+msgstr "ድርጊት"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/wysiwyg/widgets/media_dialog.js:0
+#, python-format
+msgid "Add"
+msgstr "አክል"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/wysiwyg/widgets/media.js:0
+#, python-format
+msgid "Add as document"
+msgstr "እንደ ሰነድ አክል"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/wysiwyg/widgets/media.js:0
+#, python-format
+msgid "Add as image"
+msgstr "እንደ ምስል አክል"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/wysiwyg/widgets/media.js:0
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Add document"
+msgstr "ሰነድ አክል"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/wysiwyg/widgets/media.js:0
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Add image"
+msgstr "ምስል አክል"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Align center"
+msgstr "ማዕከል አሰልፍ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Align left"
+msgstr "ወደ ግራ አሰልፍ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Align right"
+msgstr "በቀኝ አሰልፍ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/ace.xml:0
+#, python-format
+msgid "All SCSS Files"
+msgstr "ሁሉም የ SCSS ፋይሎች"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "All images have been loaded"
+msgstr "ሁሉም ምስሎች ተጭነዋል"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/wysiwyg/widgets/media.js:0
+#, python-format
+msgid "Are you sure you want to delete this file ?"
+msgstr "እርግጠኛ ነዎት ይህን ፋይል መሰረዝ ይፈልጋሉ?"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Aspect Ratio"
+msgstr "ምጥጥነ ገጽታ"
+
+#. module: web_editor
+#: model:ir.model,name:web_editor.model_web_editor_assets
+msgid "Assets Utils"
+msgstr "የንብረት እቃዎች"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/editor.xml:0
+#, python-format
+msgid "Assign a focal point that will always be visible"
+msgstr "ሁልጊዜ የሚታይ የትኩረት ነጥብ መድቡ"
+
+#. module: web_editor
+#: model:ir.model,name:web_editor.model_ir_attachment
+msgid "Attachment"
+msgstr "አባሪ"
+
+#. module: web_editor
+#: model:ir.model.fields,field_description:web_editor.field_ir_attachment__local_url
+msgid "Attachment URL"
+msgstr "አባሪ ዩአርኤል"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Autoconvert to relative link"
+msgstr "ወደ አንጻራዊ አገናኝ በራስ ሰር ቀይር"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Autoplay"
+msgstr "በራስ - ተነሽ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Background Color"
+msgstr "የጀርባ ቀለም"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/snippets.options.js:0
+#, python-format
+msgid "Background Image Sizing"
+msgstr "የጀርባ ምስል መጠን"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/editor.xml:0
+#, python-format
+msgid "Background height"
+msgstr "የዳራ ቁመት"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/editor.xml:0
+#, python-format
+msgid "Background position"
+msgstr "የጀርባ አቀማመጥ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/editor.xml:0
+#, python-format
+msgid "Background repeat"
+msgstr "የጀርባ መድገም"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/editor.xml:0
+#, python-format
+msgid "Background size"
+msgstr "የዳራ መጠን"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/editor.xml:0
+#, python-format
+msgid "Background width"
+msgstr "የጀርባ ስፋት"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/snippets.editor.js:0
+#, python-format
+msgid "Block"
+msgstr "አግድ"
+
+#. module: web_editor
+#: model_terms:ir.ui.view,arch_db:web_editor.snippets
+msgid "Blocks"
+msgstr "ብሎኮች"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Bold"
+msgstr "ደፋር"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/common/ace.js:0
+#, python-format
+msgid "Careful !"
+msgstr "በተጠንቀቅ !"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Center"
+msgstr "መሃል"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/wysiwyg/widgets/alt_dialog.js:0
+#, python-format
+msgid "Change media description and tooltip"
+msgstr "የሚዲያ መግለጫ እና የመሳሪያ ምክሮችን ቀይር"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Changing the quality is not supported for images of type"
+msgstr "ጥራትን መቀየር ለዓይነት ምስሎች አይደገፍም"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/summernote.js:0
+#, python-format
+msgid "Checklist"
+msgstr "Checklist"
+
+#. module: web_editor
+#: model_terms:ir.ui.view,arch_db:web_editor.snippets
+msgid "Click in the page to customize"
+msgstr "ለማበጀት ገጹን ጠቅ ያድርጉ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#: code:addons/web_editor/static/src/js/wysiwyg/widgets/crop_dialog.js:0
+#: code:addons/web_editor/static/src/xml/ace.xml:0
+#: code:addons/web_editor/static/src/xml/ace.xml:0
+#, python-format
+msgid "Close"
+msgstr "ዝጋ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Code"
+msgstr "ኮድ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Code View"
+msgstr "የኮድ እይታ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Color"
+msgstr "ቀለም"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/snippets.editor.js:0
+#, python-format
+msgid "Column"
+msgstr "አምድ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#: code:addons/web_editor/static/src/xml/wysiwyg_colorpicker.xml:0
+#, python-format
+msgid "Common colors"
+msgstr "የተለመዱ ቀለሞች"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/editor.xml:0
+#, python-format
+msgid "Contain"
+msgstr "ይዘው"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Copy-paste your URL or embed code here"
+msgstr "የእርስዎን ዩአርኤል ይቅዱ ወይም ኮድ እዚህ ይክተቱ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/editor.xml:0
+#, python-format
+msgid "Cover"
+msgstr "ሽፋን"
+
+#. module: web_editor
+#: model:ir.model.fields,field_description:web_editor.field_web_editor_converter_test_sub__create_uid
+msgid "Created by"
+msgstr "የተፈጠረ"
+
+#. module: web_editor
+#: model:ir.model.fields,field_description:web_editor.field_web_editor_converter_test_sub__create_date
+msgid "Created on"
+msgstr "በላይ ተፈጠረ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#: code:addons/web_editor/static/src/js/wysiwyg/widgets/crop_dialog.js:0
+#, python-format
+msgid "Crop Image"
+msgstr "ምስል ከርክም"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/editor.xml:0
+#, python-format
+msgid "Custom"
+msgstr "ብጁ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Custom Color"
+msgstr "ብጁ ቀለም"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Dailymotion"
+msgstr "ዕለታዊ እንቅስቃሴ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/wysiwyg/root.js:0
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Default"
+msgstr "ነባሪ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/editor.xml:0
+#, python-format
+msgid "Define if/how the background image will be repeated"
+msgstr "የበስተጀርባ ምስሉ እንዴት እንደሚደጋገም ይግለጹ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Description"
+msgstr "ማብራርያ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/snippets.options.js:0
+#: code:addons/web_editor/static/src/js/wysiwyg/widgets/crop_dialog.js:0
+#: code:addons/web_editor/static/src/js/wysiwyg/widgets/dialog.js:0
+#, python-format
+msgid "Discard"
+msgstr "አስወግድ"
+
+#. module: web_editor
+#: model:ir.model.fields,field_description:web_editor.field_web_editor_assets__display_name
+#: model:ir.model.fields,field_description:web_editor.field_web_editor_converter_test_sub__display_name
+msgid "Display Name"
+msgstr "መጠሪያው ስም"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Document"
+msgstr "ሰነድ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Document Style"
+msgstr "የሰነድ ዘይቤ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Double-click to edit"
+msgstr "ለማርትዕ ሁለቴ ጠቅ ያድርጉ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Drag an image here"
+msgstr "ምስሉን ወደዚህ ጎትት"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/snippets.xml:0
+#, python-format
+msgid "Duplicate Container"
+msgstr "የተባዛ መያዣ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Edit"
+msgstr "አርትዕ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/common/ace.js:0
+#, python-format
+msgid "Expected "
+msgstr "የሚጠበቀው"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "File / Image"
+msgstr "ፋይል / ምስል"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/ace.xml:0
+#: code:addons/web_editor/static/src/xml/ace.xml:0
+#, python-format
+msgid "Filter"
+msgstr "አጣራ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Flat"
+msgstr "ጠፍጣፋ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Flip Horizontal"
+msgstr "አግድም ገልብጥ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Flip Vertical"
+msgstr "አቀባዊ ገልብጥ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Float Left"
+msgstr "በግራ ተንሳፈፍ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Float None"
+msgstr "ምንም አትንሳፈፍ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Float Right"
+msgstr "በቀኝ ተንሳፈፍ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Font Color"
+msgstr "የፊደል ቀለም"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Font Family"
+msgstr "የቅርጸ ቁምፊ ቤተሰብ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Font Size"
+msgstr "የቅርጸ ቁምፊ መጠን"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/snippets.editor.js:0
+#, python-format
+msgid "For technical reasons, this block cannot be dropped here"
+msgstr "በቴክኒካዊ ምክንያቶች ይህ እገዳ እዚህ መጣል አይቻልም"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/ace.xml:0
+#, python-format
+msgid "Format"
+msgstr "ቅርጸት"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/wysiwyg/widgets/crop_dialog.js:0
+#, python-format
+msgid "Free"
+msgstr "Free"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Full Screen"
+msgstr "ሙሉ ማያ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/backend.xml:0
+#, python-format
+msgid "Fullscreen"
+msgstr "ሙሉ ማያ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Give a relevant name to your file to optimize search engine results."
+msgstr "የፍለጋ ሞተር ውጤቶችን ለማመቻቸት ለፋይልዎ ተስማሚ የሆነ ስም ይስጡ።"
+
+#. module: web_editor
+#: model:ir.model,name:web_editor.model_ir_http
+msgid "HTTP Routing"
+msgstr "HTTP ማዘዣ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Header 1"
+msgstr "ራስጌ 1"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Header 2"
+msgstr "ራስጌ 2"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Header 3"
+msgstr "ራስጌ 3"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Header 4"
+msgstr "ራስጌ 4"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Header 5"
+msgstr "ራስጌ 5"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Header 6"
+msgstr "ራስጌ 6"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Height"
+msgstr "ቁመት"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Help"
+msgstr "እገዛ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Hide Dailymotion logo"
+msgstr "የዕለታዊ እንቅስቃሴ አርማ ደብቅ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Hide Youtube logo"
+msgstr "የዩቲዩብ አርማ ደብቅ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Hide fullscreen button"
+msgstr "የሙሉ ማያ ገጽ ቁልፍን ደብቅ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Hide player controls"
+msgstr "የተጫዋች መቆጣጠሪያዎችን ደብቅ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Hide sharing button"
+msgstr "የማጋሪያ ቁልፍ ደብቅ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/editor.xml:0
+#, python-format
+msgid "Horizontal"
+msgstr "አግድም"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/backend/field_html.js:0
+#, python-format
+msgid "Html"
+msgstr "Html"
+
+#. module: web_editor
+#: model:ir.model.fields,field_description:web_editor.field_web_editor_assets__id
+#: model:ir.model.fields,field_description:web_editor.field_web_editor_converter_test_sub__id
+msgid "ID"
+msgstr "መታወቂያ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/editor.js:0
+#, python-format
+msgid ""
+"If you discard the current edition, all unsaved changes will be lost. You "
+"can cancel to return to the edition mode."
+msgstr ""
+"አሁን ያለውን እትም ከጣሉት ሁሉም ያልተቀመጡ ለውጦች ይጠፋሉ:: እርስዎ"
+"ወደ እትም ሁነታ ለመመለስ መሰረዝ ይችላል።"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/ace.xml:0
+#, python-format
+msgid ""
+"If you edit and save this file, you will never receive updates from Odoo "
+"anymore unless you reset your customizations."
+msgstr ""
+"ይህን ፋይል አርትዖት ካደረጉት እና ካስቀመጡት ከኦዱ ዝማኔዎችን በጭራሽ አይቀበሉም"
+"ከእንግዲህ ማበጀትህን ዳግም ካላስጀመርክ በስተቀር።"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/common/ace.js:0
+#, python-format
+msgid ""
+"If you reset this file, all your customizations will be lost as it will be "
+"reverted to the default file."
+msgstr ""
+"ይህን ፋይል ዳግም ካስጀመርክ፣ ሁሉም ማበጀትህ እንደዚያው ይጠፋል"
+"ወደ ነባሪ ፋይል ተመልሷል።"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid ""
+"If you want to crop it, please first download it from the original source "
+"and upload it in Odoo."
+msgstr ""
+"መከርከም ከፈለጉ መጀመሪያ ከዋናው ምንጭ ያውርዱት"
+"እና በኦዱ ውስጥ ይስቀሉት."
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Image"
+msgstr "ምስል"
+
+#. module: web_editor
+#: model:ir.model.fields,field_description:web_editor.field_ir_attachment__image_height
+msgid "Image Height"
+msgstr "የምስል ቁመት"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Image Preview"
+msgstr "Image Preview"
+
+#. module: web_editor
+#: model:ir.model.fields,field_description:web_editor.field_ir_attachment__image_src
+msgid "Image Src"
+msgstr "ምስል Src"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Image URL"
+msgstr "የምስል URL"
+
+#. module: web_editor
+#: model:ir.model.fields,field_description:web_editor.field_ir_attachment__image_width
+msgid "Image Width"
+msgstr "የምስል ስፋት"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/wysiwyg/widgets/image_optimize_dialog.js:0
+#, python-format
+msgid "Improve your Image"
+msgstr "ምስልህን አሻሽል"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Indent"
+msgstr "ገብ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Insert Horizontal Rule"
+msgstr "አግድም ደንብ አስገባ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Insert Image"
+msgstr "ምስል አስገባ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Insert Link"
+msgstr "አገናኝ አስገባ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Insert Video"
+msgstr "ቪዲዮ አስገባ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/snippets.editor.js:0
+#, python-format
+msgid "Install"
+msgstr "ጫን"
+
+#. module: web_editor
+#: code:addons/web_editor/models/ir_ui_view.py:0
+#, python-format
+msgid "Invalid field value for %s: %s"
+msgstr "ልክ ያልሆነ የመስክ ዋጋ ለ%s: %s"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Italic"
+msgstr "Italic"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/ace.xml:0
+#, python-format
+msgid "JS"
+msgstr "JS"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/common/ace.js:0
+#, python-format
+msgid "JS file: %s"
+msgstr "JS file: %s"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Justify full"
+msgstr "ሙሉ አረጋግጡ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/wysiwyg/widgets/image_optimize_dialog.js:0
+#, python-format
+msgid "Keep Original"
+msgstr "ኦሪጅናል አቆይ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Keyboard shortcuts"
+msgstr "የቁልፍ ሰሌዳ አቋራጮች"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Large"
+msgstr "ትልቅ"
+
+#. module: web_editor
+#: model:ir.model.fields,field_description:web_editor.field_web_editor_assets____last_update
+#: model:ir.model.fields,field_description:web_editor.field_web_editor_converter_test_sub____last_update
+msgid "Last Modified on"
+msgstr "በመጨረሻ የተሻሻለው በርቷል"
+
+#. module: web_editor
+#: model:ir.model.fields,field_description:web_editor.field_web_editor_converter_test_sub__write_uid
+msgid "Last Updated by"
+msgstr "መጨረሻ የዘመነው በ"
+
+#. module: web_editor
+#: model:ir.model.fields,field_description:web_editor.field_web_editor_converter_test_sub__write_date
+msgid "Last Updated on"
+msgstr "መጨረሻ የዘመነው በ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Line Height"
+msgstr "የመስመር ቁመት"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Link"
+msgstr "አገናኝ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Link Label"
+msgstr "የአገናኝ መለያ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/wysiwyg/widgets/link_dialog.js:0
+#, python-format
+msgid "Link to"
+msgstr "አገናኝ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Load more..."
+msgstr "ተጨማሪ ይጫኑ..."
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Loop"
+msgstr "ሉፕ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Medium"
+msgstr "መካከለኛ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#: model:ir.model.fields,field_description:web_editor.field_web_editor_converter_test_sub__name
+#, python-format
+msgid "Name"
+msgstr "ስም"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/snippets.xml:0
+#, python-format
+msgid "No color"
+msgstr "ቀለም የለም"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "No documents found."
+msgstr "ምንም ሰነዶች አልተገኙም።"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "No images found."
+msgstr "ምንም ምስሎች አልተገኙም።"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/editor.xml:0
+#, python-format
+msgid "No repeat"
+msgstr "አይደገምም"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#: code:addons/web_editor/static/src/xml/snippets.xml:0
+#, python-format
+msgid "None"
+msgstr "ምንም"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Normal"
+msgstr "መደበኛ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/snippets.options.js:0
+#, python-format
+msgid "Ok"
+msgstr "እሺ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/ace.xml:0
+#, python-format
+msgid "Only Custom SCSS Files"
+msgstr "ብጁ SCSS ፋይሎች ብቻ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/ace.xml:0
+#, python-format
+msgid "Only Page SCSS Files"
+msgstr "ገጽ ብቻ SCSS ፋይሎች"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/ace.xml:0
+#, python-format
+msgid "Only Views"
+msgstr "እይታዎች ብቻ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Open in new window"
+msgstr "በአዲስ መስኮት ክፈት"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/wysiwyg/widgets/image_optimize_dialog.js:0
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Optimize"
+msgstr "አመቻች"
+
+#. module: web_editor
+#: model_terms:ir.ui.view,arch_db:web_editor.snippets
+msgid "Options"
+msgstr "አማራጮች"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Or choose a preset:"
+msgstr "ወይም ቅድመ ዝግጅት ምረጥ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Ordered list"
+msgstr "የታዘዘ ዝርዝር"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Outdent"
+msgstr "የወጣ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Outline"
+msgstr "Outline"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Outline-Rounded"
+msgstr "Outline-Rounded"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Padding"
+msgstr "ፓዲንግ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Paragraph"
+msgstr "አንቀጽ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Paragraph formatting"
+msgstr "አንቀጽ ቅርጸት"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Pictogram"
+msgstr "ሥዕል"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Preview"
+msgstr "ቅድመ እይታ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Quality"
+msgstr "ጥራት"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Quick Upload"
+msgstr "ፈጣን ጭነት"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Quote"
+msgstr "ጥቅስ"
+
+#. module: web_editor
+#: model:ir.model,name:web_editor.model_ir_qweb
+msgid "Qweb"
+msgstr "Qweb"
+
+#. module: web_editor
+#: model:ir.model,name:web_editor.model_ir_qweb_field
+msgid "Qweb Field"
+msgstr "Qweb መስክ"
+
+#. module: web_editor
+#: model:ir.model,name:web_editor.model_ir_qweb_field_contact
+msgid "Qweb Field Contact"
+msgstr "Qweb የመስክ ግንኙነት"
+
+#. module: web_editor
+#: model:ir.model,name:web_editor.model_ir_qweb_field_date
+msgid "Qweb Field Date"
+msgstr "Qweb የመስክ ቀን"
+
+#. module: web_editor
+#: model:ir.model,name:web_editor.model_ir_qweb_field_datetime
+msgid "Qweb Field Datetime"
+msgstr "Qweb የመስክ ቀን ጊዜ"
+
+#. module: web_editor
+#: model:ir.model,name:web_editor.model_ir_qweb_field_duration
+msgid "Qweb Field Duration"
+msgstr "Qweb የመስክ ቆይታ"
+
+#. module: web_editor
+#: model:ir.model,name:web_editor.model_ir_qweb_field_float
+msgid "Qweb Field Float"
+msgstr "Qweb የመስክ ተንሳፋፊ"
+
+#. module: web_editor
+#: model:ir.model,name:web_editor.model_ir_qweb_field_html
+msgid "Qweb Field HTML"
+msgstr "Qweb የመስክ HTML"
+
+#. module: web_editor
+#: model:ir.model,name:web_editor.model_ir_qweb_field_image
+msgid "Qweb Field Image"
+msgstr "Qweb የመስክ ምስል"
+
+#. module: web_editor
+#: model:ir.model,name:web_editor.model_ir_qweb_field_integer
+msgid "Qweb Field Integer"
+msgstr "Qweb የመስክ ኢንቲጀር"
+
+#. module: web_editor
+#: model:ir.model,name:web_editor.model_ir_qweb_field_many2one
+msgid "Qweb Field Many to One"
+msgstr "Qweb Field ከብዙ ለአንድ"
+
+#. module: web_editor
+#: model:ir.model,name:web_editor.model_ir_qweb_field_monetary
+msgid "Qweb Field Monetary"
+msgstr "Qweb  የመስክ ገንዘብ"
+
+#. module: web_editor
+#: model:ir.model,name:web_editor.model_ir_qweb_field_relative
+msgid "Qweb Field Relative"
+msgstr "Qweb የመስክ ዘመድ"
+
+#. module: web_editor
+#: model:ir.model,name:web_editor.model_ir_qweb_field_selection
+msgid "Qweb Field Selection"
+msgstr "Qweb የመስክ ምርጫ"
+
+#. module: web_editor
+#: model:ir.model,name:web_editor.model_ir_qweb_field_text
+msgid "Qweb Field Text"
+msgstr "Qweb የመስክ ጽሑፍ"
+
+#. module: web_editor
+#: model:ir.model,name:web_editor.model_ir_qweb_field_qweb
+msgid "Qweb Field qweb"
+msgstr "Qweb መስክ qweb"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.js:0
+#, python-format
+msgid "Readonly field"
+msgstr "ተነባቢ ብቻ መስክ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Redo"
+msgstr "ድገም"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Reduce the quality as much as possible to increase performance."
+msgstr "አፈፃፀምን ለመጨመር በተቻለ መጠን ጥራቱን ይቀንሱ."
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Reduce the size as much as possible to increase performance."
+msgstr "አፈፃፀምን ለመጨመር በተቻለ መጠን መጠኑን ይቀንሱ."
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Remove"
+msgstr "አስወግድ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/snippets.xml:0
+#, python-format
+msgid "Remove Block"
+msgstr "ብሎክን አስወግድ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Remove Font Style"
+msgstr "የቅርጸ ቁምፊ ዘይቤን አስወግድ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Remove Image"
+msgstr "ምስሉን አስወግድ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/editor.xml:0
+#, python-format
+msgid "Repeat"
+msgstr "ድገም"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/editor.xml:0
+#, python-format
+msgid "Repeat both"
+msgstr "ሁለቱንም ድገም"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/editor.xml:0
+#, python-format
+msgid "Repeat x"
+msgstr "ድገም x"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/editor.xml:0
+#, python-format
+msgid "Repeat y"
+msgstr " ድገም y"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/ace.xml:0
+#, python-format
+msgid "Reset"
+msgstr "ዳግም አስጀምር"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Reset Image"
+msgstr "ምስሉን ዳግም አስጀምር"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Reset to default"
+msgstr "ወደ ነባሪ ዳግም አስጀምር"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/common/ace.js:0
+#, python-format
+msgid "Reseting views is not supported yet"
+msgstr "እይታዎችን ዳግም ማስጀመር ገና አልተደገፈም"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Resize Full"
+msgstr "ሙሉ መጠን ቀይር"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Resize Half"
+msgstr "ግማሹን ቀይር"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Resize Quarter"
+msgstr "ሩብ ቀይር"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Resizing is not supported for images of type"
+msgstr "ለአይነት ምስሎች መጠን መቀየር አይደገፍም"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Rotate Left"
+msgstr "ወደ ግራ አሽከርክር"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Rotate Right"
+msgstr "በቀኝ አሽከርክር"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Rounded"
+msgstr "የተከበበ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/ace.xml:0
+#, python-format
+msgid "SCSS (CSS)"
+msgstr "SCSS (CSS)"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/common/ace.js:0
+#, python-format
+msgid "SCSS file: %s"
+msgstr "የSCSS ፋይል፡ %s"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/wysiwyg/widgets/crop_dialog.js:0
+#: code:addons/web_editor/static/src/js/wysiwyg/widgets/dialog.js:0
+#: code:addons/web_editor/static/src/xml/ace.xml:0
+#, python-format
+msgid "Save"
+msgstr "አስቀምጥ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/snippets.xml:0
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Search"
+msgstr "ፈልግ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/snippets.xml:0
+#, python-format
+msgid "Search Contact"
+msgstr "እውቂያን ፈልግ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Search a document"
+msgstr "ሰነድ ፈልግ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Search a pictogram"
+msgstr "ፎቶግራም ይፈልጉ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Search an image"
+msgstr "ምስል ፈልግ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/wysiwyg/widgets/media_dialog.js:0
+#, python-format
+msgid "Select a Media"
+msgstr "ሚዲያ ምረጥ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Select from files"
+msgstr "ከፋይሎች ምረጥ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/common/ace.js:0
+#, python-format
+msgid "Server error"
+msgstr "የአገልጋይ ስህተት"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/editor.xml:0
+#, python-format
+msgid "Set the starting position of the background image."
+msgstr "የበስተጀርባ ምስል መነሻ ቦታ አዘጋጅ።"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/editor.xml:0
+#, python-format
+msgid ""
+"Sets the width and height of the background image in percent of the parent "
+"element."
+msgstr ""
+"የጀርባ ምስልን ስፋት እና ቁመት በወላጅ በመቶ ያዘጋጃል"
+"ንጥረ ነገር."
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Shadow"
+msgstr "ጥላ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Size"
+msgstr "መጠን"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Small"
+msgstr "ትንሽ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Spin"
+msgstr "ማሽከርከር"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Strikethrough"
+msgstr "መታ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Style"
+msgstr "ቅጥ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Subscript"
+msgstr "የደንበኝነት ምዝገባ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Superscript"
+msgstr "ሱፐርስክሪፕት"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Table"
+msgstr "ጠረጴዛ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/common/ace.js:0
+#, python-format
+msgid "Template ID: %s"
+msgstr "የአብነት መታወቂያ፡%s"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Text formatting"
+msgstr "የጽሑፍ ቅርጸት"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Text to display"
+msgstr "የሚታየው ጽሑፍ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid ""
+"The URL contains an image. The file will be added in the image section."
+msgstr ""
+"ዩአርኤሉ ምስል ይዟል። ፋይሉ በምስል ክፍል ውስጥ ይታከላል።"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid ""
+"The URL does not contain any image. The file will be added in the document "
+"section."
+msgstr ""
+"ዩአርኤሉ ምንም ምስል አልያዘም። ፋይሉ በሰነዱ ውስጥ ይታከላል"
+"ክፍል."
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "The URL does not seem to work."
+msgstr "ዩአርኤሉ የሚሰራ አይመስልም።"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "The URL seems valid."
+msgstr "ዩአርኤሉ የሚሰራ ይመስላል።"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid ""
+"The image could not be deleted because it is used in the\n"
+"               following pages or views:"
+msgstr ""
+"ምስሉ ሊሰረዝ አልቻለም ምክንያቱም በ\n ውስጥ ጥቅም ላይ ይውላል."
+"የሚከተሉ ገጾች ወይም እይታዎች:"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/wysiwyg/widgets/media.js:0
+#, python-format
+msgid "The provided url does not reference any supported video"
+msgstr "የቀረበው ዩአርኤል ማንኛውንም የሚደገፍ ቪዲዮ አይጠቅስም"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/wysiwyg/widgets/media.js:0
+#, python-format
+msgid "The provided url is not valid"
+msgstr "የቀረበው ዩአርኤል ልክ አይደለም"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#: code:addons/web_editor/static/src/xml/wysiwyg_colorpicker.xml:0
+#, python-format
+msgid "Theme colors"
+msgstr "ገጽታ ቀለሞች"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/editor.js:0
+#, python-format
+msgid "This document is not saved!"
+msgstr "ይህ ሰነድ አልተቀመጠም!"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "This file is a public view attachment."
+msgstr "ይህ ፋይል የህዝብ እይታ ዓባሪ ነው።"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "This file is attached to the current record."
+msgstr "ይህ ፋይል አሁን ካለው መዝገብ ጋር ተያይዟል።"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "This image is an external image"
+msgstr "ይህ ምስል ውጫዊ ምስል ነው"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "This reduces the quality to increase performance."
+msgstr "ይህ አፈጻጸምን ለመጨመር ጥራቱን ይቀንሳል."
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "This type of image is not supported for cropping."
+msgstr "ይህ ዓይነቱ ምስል ለመከርከም አይደገፍም."
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "To what URL should this link go?"
+msgstr "ይህ አገናኝ ወደ የትኛው ዩአርኤል መሄድ አለበት?"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Tooltip"
+msgstr "የመሳሪያ ምክር"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/backend.xml:0
+#, python-format
+msgid "Translate"
+msgstr "ተርጉም"
+
+#. module: web_editor
+#: model:ir.model,name:web_editor.model_ir_translation
+msgid "Translation"
+msgstr "ትርጉም"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Transparent"
+msgstr "ግልጽ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg_colorpicker.xml:0
+#, python-format
+msgid "Transparent colors"
+msgstr "ግልጽ ቀለሞች"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "URL or Email"
+msgstr "ዩአርኤል ወይም ኢሜል"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Underline"
+msgstr "መስመር"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Undo"
+msgstr "ቀልብስ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/common/ace.js:0
+#, python-format
+msgid "Unexpected "
+msgstr "ያልተጠበቀ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Unlink"
+msgstr "ግንኙነት አቋርጥ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Unordered list"
+msgstr "ያልታዘዘ ዝርዝር"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Upload a document"
+msgstr "ሰነድ ስቀል"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Upload an image"
+msgstr "ምስል ስቀል"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/editor.xml:0
+#, python-format
+msgid "Vertical"
+msgstr "አቀባዊ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Video"
+msgstr "ቪዲዮ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Video Link"
+msgstr "የቪዲዮ አገናኝ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Video URL?"
+msgstr "የቪዲዮ URL?"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Video code"
+msgstr "የቪዲዮ ኮድ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Videos are muted when autoplay is enabled"
+msgstr "አውቶ ማጫወት ሲነቃ ቪዲዮዎች ድምጸ-ከል ይደረጋሉ"
+
+#. module: web_editor
+#: model:ir.model,name:web_editor.model_ir_ui_view
+msgid "View"
+msgstr "ይመልከቱ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/ace.xml:0
+#, python-format
+msgid "Views and Assets bundles"
+msgstr "ዕይታዎች እና የንብረት ቅርቅቦች"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Vimeo"
+msgstr "Vimeo"
+
+#. module: web_editor
+#: model:ir.model,name:web_editor.model_web_editor_converter_test_sub
+msgid "Web Editor Converter Subtest"
+msgstr "የድር አርታዒ መለወጫ ንዑስ ሙከራ"
+
+#. module: web_editor
+#: model:ir.model,name:web_editor.model_web_editor_converter_test
+msgid "Web Editor Converter Test"
+msgstr "የድር አርታዒ መለወጫ ሙከራ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Width"
+msgstr "ወርድ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/ace.xml:0
+#: code:addons/web_editor/static/src/xml/ace.xml:0
+#, python-format
+msgid "XML (HTML)"
+msgstr "XML (HTML)"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/js/editor/rte.summernote.js:0
+#, python-format
+msgid "Xl"
+msgstr "Xl"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid ""
+"You can upload documents with the button located in the top left of the "
+"screen."
+msgstr ""
+"ከላይ በግራ በኩል ባለው አዝራር ሰነዶችን መስቀል ይችላሉ"
+"screen."
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid ""
+"You can upload images with the button located in the top left of the screen."
+msgstr ""
+"በማያ ገጹ ላይኛው ግራ በኩል ባለው አዝራር ምስሎችን መስቀል ትችላለህ።"
+
+#. module: web_editor
+#: code:addons/web_editor/controllers/main.py:0
+#, python-format
+msgid ""
+"You cannot change the quality, the width or the name of an URL attachment."
+msgstr ""
+"የዩአርኤል ዓባሪውን ጥራት፣ ስፋት ወይም ስም መቀየር አይችሉም።"
+
+#. module: web_editor
+#: code:addons/web_editor/controllers/main.py:0
+#, python-format
+msgid "You need to specify either data or url to create an attachment."
+msgstr "አባሪ ለመፍጠር ሁለቱንም ውሂብ ወይም ዩአርኤል መግለጽ ያስፈልግዎታል።"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Youku"
+msgstr "Youku"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Youtube"
+msgstr "Youtube"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Zoom In"
+msgstr "አቅርብ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "Zoom Out"
+msgstr "አጉላ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "and"
+msgstr "እና"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/editor.xml:0
+#: code:addons/web_editor/static/src/xml/editor.xml:0
+#: code:addons/web_editor/static/src/xml/editor.xml:0
+#: code:addons/web_editor/static/src/xml/editor.xml:0
+#, python-format
+msgid "auto"
+msgstr "አውቶ"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "https://www.odoo.com/logo.png"
+msgstr "https://www.odoo.com/logo.png"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "https://www.odoo.com/mydocument"
+msgstr "https://www.odoo.com/mydocument"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "px"
+msgstr "px"
+
+#. module: web_editor
+#. openerp-web
+#: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
+#, python-format
+msgid "videos"
+msgstr "ቪዲዮዎች"

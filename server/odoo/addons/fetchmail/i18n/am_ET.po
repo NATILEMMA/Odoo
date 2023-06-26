@@ -1,0 +1,328 @@
+# Date created: 2023-06-16 19:40:39 by dichthuatphuongdong.com
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-06-16 03:13:39+0000"
+"MIME-Version: 1.0"
+"Content-Type: text/plain; charset=UTF-8"
+"Content-Transfer-Encoding: 8bit"
+"Plural-Forms: nplurals=1; plural=0;"
+"X-Generator: GlotPress/3.0.0-alpha.2"
+"Language: en_GB"
+"Project-Id-Version: PO File 5.8.1"
+
+#. module: fetchmail
+#: model_terms:ir.ui.view,arch_db:fetchmail.view_email_server_form
+msgid "Actions to Perform on Incoming Mails"
+msgstr "በመጪ ደብዳቤዎች ላይ የሚደረጉ እርምጃዎች"
+
+#. module: fetchmail
+#: model:ir.model.fields,field_description:fetchmail.field_fetchmail_server__active
+msgid "Active"
+msgstr "ንቁ"
+
+#. module: fetchmail
+#: model_terms:ir.ui.view,arch_db:fetchmail.view_email_server_form
+msgid "Advanced"
+msgstr "የላቀ"
+
+#. module: fetchmail
+#: model_terms:ir.ui.view,arch_db:fetchmail.view_email_server_form
+msgid "Advanced Options"
+msgstr "የላቁ አማራጮች"
+
+#. module: fetchmail
+#: model_terms:ir.ui.view,arch_db:fetchmail.view_email_server_search
+msgid "Archived"
+msgstr "በማህደር የተቀመጠ"
+
+#. module: fetchmail
+#: model:ir.model.fields,field_description:fetchmail.field_fetchmail_server__configuration
+#: model_terms:ir.ui.view,arch_db:fetchmail.view_email_server_form
+msgid "Configuration"
+msgstr "ማዋቀር"
+
+#. module: fetchmail
+#: model:ir.model.fields.selection,name:fetchmail.selection__fetchmail_server__state__done
+msgid "Confirmed"
+msgstr "ተረጋግጧል"
+
+#. module: fetchmail
+#: code:addons/fetchmail/models/fetchmail.py:0
+msgid "Connection test failed: %s"
+msgstr "የግንኙነት ሙከራ አልተሳካም፡ %s"
+
+#. module: fetchmail
+#: model:ir.model.fields,help:fetchmail.field_fetchmail_server__is_ssl
+msgid "Connections are encrypted with SSL/TLS through a dedicated port (default: IMAPS=993, POP3S=995)"
+msgstr "ግንኙነቶች በSSL/TLS የተመሰጠሩት በልዩ ወደብ በኩል ነው (ነባሪ፡ IMAPS=993፣ POP3S=995)"
+
+#. module: fetchmail
+#: model:ir.model.fields,field_description:fetchmail.field_fetchmail_server__object_id
+msgid "Create a New Record"
+msgstr "አዲስ መዝገብ ይፍጠሩ"
+
+#. module: fetchmail
+#: model:ir.model.fields,field_description:fetchmail.field_fetchmail_server__create_uid
+msgid "Created by"
+msgstr "የተፈጠረ"
+
+#. module: fetchmail
+#: model:ir.model.fields,field_description:fetchmail.field_fetchmail_server__create_date
+msgid "Created on"
+msgstr "ላይ ተፈጠረ"
+
+#. module: fetchmail
+#: model:ir.model.fields,help:fetchmail.field_fetchmail_server__priority
+msgid "Defines the order of processing, lower values mean higher priority"
+msgstr "የሂደቱን ቅደም ተከተል ይገልፃል, ዝቅተኛ ዋጋዎች ማለት ከፍተኛ ቅድሚያ ይሰጣል"
+
+#. module: fetchmail
+#: model:ir.model.fields,field_description:fetchmail.field_fetchmail_server__display_name
+msgid "Display Name"
+msgstr "መጠሪያው ስም"
+
+#. module: fetchmail
+#: model_terms:ir.ui.view,arch_db:fetchmail.view_email_server_tree
+msgid "Email Count"
+msgstr "የኢሜል ብዛት"
+
+#. module: fetchmail
+#: model_terms:ir.ui.view,arch_db:fetchmail.view_email_server_form
+msgid "Fetch Now"
+msgstr "አሁን አምጣ"
+
+#. module: fetchmail
+#: model:ir.model.fields,help:fetchmail.field_fetchmail_server__server
+msgid "Hostname or IP of the mail server"
+msgstr "የመልእክት አገልጋዩ የአስተናጋጅ ስም ወይም አይፒ"
+
+#. module: fetchmail
+#: model:ir.model.fields,field_description:fetchmail.field_fetchmail_server__id
+msgid "ID"
+msgstr "መታወቂያ"
+
+#. module: fetchmail
+#: model_terms:ir.ui.view,arch_db:fetchmail.view_email_server_search
+msgid "IMAP"
+msgstr "IMAP"
+
+#. module: fetchmail
+#: model:ir.model.fields.selection,name:fetchmail.selection__fetchmail_server__server_type__imap
+msgid "IMAP Server"
+msgstr "IMAP አገልጋይ"
+
+#. module: fetchmail
+#: model_terms:ir.ui.view,arch_db:fetchmail.view_email_server_search
+msgid "If SSL required."
+msgstr "SSL አስፈላጊ ከሆነ።"
+
+#. module: fetchmail
+#: model:ir.model.fields,field_description:fetchmail.field_mail_mail__fetchmail_server_id
+msgid "Inbound Mail Server"
+msgstr "የገቢ መልእክት አገልጋይ"
+
+#. module: fetchmail
+#: model_terms:ir.ui.view,arch_db:fetchmail.res_config_settings_view_form
+msgid "Incoming Email Servers"
+msgstr "ገቢ የኢሜይል አገልጋዮች"
+
+#. module: fetchmail
+#: model:ir.model,name:fetchmail.model_fetchmail_server
+#: model_terms:ir.ui.view,arch_db:fetchmail.view_email_server_form
+#: model_terms:ir.ui.view,arch_db:fetchmail.view_email_server_search
+msgid "Incoming Mail Server"
+msgstr "ገቢ መልእክት አገልጋይ"
+
+#. module: fetchmail
+#: model:ir.actions.act_window,name:fetchmail.action_email_server_tree
+#: model:ir.ui.menu,name:fetchmail.menu_action_fetchmail_server_tree
+msgid "Incoming Mail Servers"
+msgstr "ገቢ መልእክት አገልጋዮች"
+
+#. module: fetchmail
+#: model:ir.model.fields,field_description:fetchmail.field_fetchmail_server__attach
+msgid "Keep Attachments"
+msgstr "አባሪዎችን ያስቀምጡ"
+
+#. module: fetchmail
+#: model:ir.model.fields,field_description:fetchmail.field_fetchmail_server__original
+msgid "Keep Original"
+msgstr "ኦሪጅናል አቆይ"
+
+#. module: fetchmail
+#: model:ir.model.fields,field_description:fetchmail.field_fetchmail_server__date
+msgid "Last Fetch Date"
+msgstr "የመጨረሻው የማምጣት ቀን"
+
+#. module: fetchmail
+#: model:ir.model.fields,field_description:fetchmail.field_fetchmail_server____last_update
+msgid "Last Modified on"
+msgstr "መጨረሻ የተሻሻለው በርቷል።"
+
+#. module: fetchmail
+#: model:ir.model.fields,field_description:fetchmail.field_fetchmail_server__write_uid
+msgid "Last Updated by"
+msgstr "መጨረሻ የዘመነው በ"
+
+#. module: fetchmail
+#: model:ir.model.fields,field_description:fetchmail.field_fetchmail_server__write_date
+msgid "Last Updated on"
+msgstr "መጨረሻ የዘመነው በርቷል።"
+
+#. module: fetchmail
+#: model:ir.model.fields.selection,name:fetchmail.selection__fetchmail_server__server_type__local
+msgid "Local Server"
+msgstr "የአካባቢ አገልጋይ"
+
+#. module: fetchmail
+#: model_terms:ir.ui.view,arch_db:fetchmail.view_email_server_form
+msgid "Login Information"
+msgstr "የመግቢያ መረጃ"
+
+#. module: fetchmail
+#: model:ir.actions.server,name:fetchmail.ir_cron_mail_gateway_action_ir_actions_server
+#: model:ir.cron,cron_name:fetchmail.ir_cron_mail_gateway_action
+#: model:ir.cron,name:fetchmail.ir_cron_mail_gateway_action
+msgid "Mail: Fetchmail Service"
+msgstr "ደብዳቤ፡ የፌችሜል አገልግሎት"
+
+#. module: fetchmail
+#: model:ir.actions.act_window,name:fetchmail.act_server_history
+#: model:ir.model.fields,field_description:fetchmail.field_fetchmail_server__message_ids
+msgid "Messages"
+msgstr "መልዕክቶች"
+
+#. module: fetchmail
+#: model:ir.model.fields,field_description:fetchmail.field_fetchmail_server__name
+msgid "Name"
+msgstr "ስም"
+
+#. module: fetchmail
+#: model:ir.model.fields.selection,name:fetchmail.selection__fetchmail_server__state__draft
+msgid "Not Confirmed"
+msgstr "አልተረጋገጠም።"
+
+#. module: fetchmail
+#: model_terms:ir.ui.view,arch_db:fetchmail.res_config_settings_view_form
+msgid "Outgoing Email Servers"
+msgstr "ወጪ የኢሜይል አገልጋዮች"
+
+#. module: fetchmail
+#: model:ir.model,name:fetchmail.model_mail_mail
+msgid "Outgoing Mails"
+msgstr "የወጪ ደብዳቤዎች"
+
+#. module: fetchmail
+#: model_terms:ir.ui.view,arch_db:fetchmail.view_email_server_search
+msgid "POP"
+msgstr "POP"
+
+#. module: fetchmail
+#: model:ir.model.fields.selection,name:fetchmail.selection__fetchmail_server__server_type__pop
+msgid "POP Server"
+msgstr "POP አገልጋይ"
+
+#. module: fetchmail
+#: model_terms:ir.ui.view,arch_db:fetchmail.view_email_server_tree
+msgid "POP/IMAP Servers"
+msgstr "POP/IMAP አገልጋዮች"
+
+#. module: fetchmail
+#: model:ir.model.fields,field_description:fetchmail.field_fetchmail_server__password
+msgid "Password"
+msgstr "የይለፍ ቃል"
+
+#. module: fetchmail
+#: model:ir.model.fields,field_description:fetchmail.field_fetchmail_server__port
+msgid "Port"
+msgstr "ወደብ"
+
+#. module: fetchmail
+#: model:ir.model.fields,help:fetchmail.field_fetchmail_server__object_id
+msgid "Process each incoming mail as part of a conversation corresponding to this document type. This will create new documents for new conversations, or attach follow-up emails to the existing conversations (documents)."
+msgstr "ከዚህ የሰነድ አይነት ጋር የሚዛመድ የውይይት አካል እያንዳንዱን ገቢ መልዕክት ያስኬዱ። ይህ ለአዲስ ንግግሮች አዲስ ሰነዶችን ይፈጥራል ወይም የተከታታይ ኢሜይሎችን ከነባር ንግግሮች (ሰነዶች) ጋር ያያይዘዋል።"
+
+#. module: fetchmail
+#: model_terms:ir.ui.view,arch_db:fetchmail.view_email_server_form
+msgid "Reset Confirmation"
+msgstr "ማረጋገጫን ዳግም አስጀምር"
+
+#. module: fetchmail
+#: model_terms:ir.ui.view,arch_db:fetchmail.view_email_server_search
+msgid "SSL"
+msgstr "SSL"
+
+#. module: fetchmail
+#: model:ir.model.fields,field_description:fetchmail.field_fetchmail_server__is_ssl
+msgid "SSL/TLS"
+msgstr "SSL/TLS"
+
+#. module: fetchmail
+#: model:ir.model.fields,field_description:fetchmail.field_fetchmail_server__script
+msgid "Script"
+msgstr "ስክሪፕት"
+
+#. module: fetchmail
+#: model_terms:ir.ui.view,arch_db:fetchmail.view_email_server_search
+msgid "Search Incoming Mail Servers"
+msgstr "ገቢ መልእክት አገልጋዮችን ይፈልጉ"
+
+#. module: fetchmail
+#: model_terms:ir.ui.view,arch_db:fetchmail.view_email_server_form
+msgid "Server & Login"
+msgstr "አገልጋይ እና መግባት"
+
+#. module: fetchmail
+#: model_terms:ir.ui.view,arch_db:fetchmail.view_email_server_form
+msgid "Server Information"
+msgstr "የአገልጋይ መረጃ"
+
+#. module: fetchmail
+#: model:ir.model.fields,field_description:fetchmail.field_fetchmail_server__server
+msgid "Server Name"
+msgstr "የአገልጋይ ስም"
+
+#. module: fetchmail
+#: model:ir.model.fields,field_description:fetchmail.field_fetchmail_server__priority
+msgid "Server Priority"
+msgstr "የአገልጋይ ቅድሚያ"
+
+#. module: fetchmail
+#: model:ir.model.fields,field_description:fetchmail.field_fetchmail_server__server_type
+msgid "Server Type"
+msgstr "የአገልጋይ ዓይነት"
+
+#. module: fetchmail
+#: model_terms:ir.ui.view,arch_db:fetchmail.view_email_server_search
+msgid "Server type IMAP."
+msgstr "የአገልጋይ ዓይነት IMAP።"
+
+#. module: fetchmail
+#: model_terms:ir.ui.view,arch_db:fetchmail.view_email_server_search
+msgid "Server type POP."
+msgstr "የአገልጋይ ዓይነት POP."
+
+#. module: fetchmail
+#: model:ir.model.fields,field_description:fetchmail.field_fetchmail_server__state
+msgid "Status"
+msgstr "ሁኔታ"
+
+#. module: fetchmail
+#: model_terms:ir.ui.view,arch_db:fetchmail.view_email_server_form
+msgid "Test & Confirm"
+msgstr "ይሞክሩት እና ያረጋግጡ"
+
+#. module: fetchmail
+#: model:ir.model.fields,field_description:fetchmail.field_fetchmail_server__user
+msgid "Username"
+msgstr "የተጠቃሚ ስም"
+
+#. module: fetchmail
+#: model:ir.model.fields,help:fetchmail.field_fetchmail_server__original
+msgid "Whether a full original copy of each email should be kept for reference and attached to each processed message. This will usually double the size of your message database."
+msgstr "የእያንዳንዱ ኢሜይል ሙሉ ኦሪጅናል ቅጂ ለማጣቀሻ መቀመጥ እና ከእያንዳንዱ የተቀነባበረ መልእክት ጋር መያያዝ ካለበት። ይህ አብዛኛውን ጊዜ የመልእክት ዳታቤዝ መጠን በእጥፍ ይጨምራል።"
+
+#. module: fetchmail
+#: model:ir.model.fields,help:fetchmail.field_fetchmail_server__attach
+msgid "Whether attachments should be downloaded. If not enabled, incoming emails will be stripped of any attachments before being processed"
+msgstr "ዓባሪዎች መውረድ አለባቸው ወይ? ካልነቃ፣ ገቢ ኢሜይሎች ከመሰራታቸው በፊት ከማናቸውም ዓባሪዎች ይሰረዛሉ"

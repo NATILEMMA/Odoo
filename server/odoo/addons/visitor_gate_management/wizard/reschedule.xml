@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <!-- This record will hold the form for archive -->
+    <record id="reschedule_visits_form" model="ir.ui.view">
+        <field name="name">reschedule.visit.form</field>
+        <field name="model">reschedule.visit</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                        <field name="date" string="Rescheduled Date"/>
+                    </group>
+                    <group>
+                        <field name="check_in_float" string="Check In Time" widget="float_time"/>
+                        <field name="duration_in_float" string="Duration of the Meeting" widget="float_time"/>
+                        <!-- <field name="check_out_float" string="Check Out Time" widget="float_time" force_save="1"/> -->
+                    </group>
+                </group>
+                <footer>
+                    <button name="action_done" string="Reschedule" type="object" class="oe_highlight btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+
+    <!-- This record will hold the form for visitor id -->
+    <record id="visitor_id_form" model="ir.ui.view">
+        <field name="name">Visitor ID</field>
+        <field name="model">visitor.id.widget</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                        <field name="visitor_id"/>
+                    </group>
+                    <group>
+                        <field name="visitor_id_number"/>
+                    </group>
+                </group>
+                <footer>
+                    <button name="action_done" string="Save" type="object" class="oe_highlight btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,2283 @@
+# Date created: 2023-06-16 19:00:15 by dichthuatphuongdong.com
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-06-16 03:13:39+0000"
+"MIME-Version: 1.0"
+"Content-Type: text/plain; charset=UTF-8"
+"Content-Transfer-Encoding: 8bit"
+"Plural-Forms: nplurals=1; plural=0;"
+"X-Generator: GlotPress/3.0.0-alpha.2"
+"Language: en_GB"
+"Project-Id-Version: PO File 5.8.1"
+
+#. module: event
+#: model:mail.template,subject:event.event_reminder
+msgid "${object.event_id.name}: ${object.get_date_range_str()}"
+msgstr "${object.event_id.name}፡ ${object.get_date_range_str()}"
+
+#. module: event
+#: code:addons/event/models/event.py:0
+msgid "%s (copy)"
+msgstr "%s (ቅጂ)"
+
+#. module: event
+#: model:ir.actions.report,print_report_name:event.report_event_registration_badge
+msgid "Registration Event - %s\' % (object.name or \'Attendee\').replace(\'/\',\'\')"
+msgstr "የምዝገባ ክስተት - %s\' % (object.name or  \'ተሳታፊ\').replace(\'/\',\'\')"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.event_event_report_template_badge
+#: model_terms:ir.ui.view,arch_db:event.event_registration_report_template_badge
+msgid "( <i class=\"fa fa-clock-o\" aria-label=\"Period\" role=\"img\" title=\"Period\"/>"
+msgstr "( <i class=\"fa fa-clock-o\" aria-label=\"ጊዜ\" role=\"img\" title=\"ጊዜ\"/>"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.view_event_kanban
+msgid ""
+"<b><i class=\"fa fa-clock-o\"/>"
+"                                        To</b>"
+msgstr ""
+"<b><i class=\"fa fa-clock-o\"/>"
+" ለ</b>"
+#. module: event
+#: model:mail.template,body_html:event.event_registration_mail_template_badge
+msgid ""
+"<div>"
+"    Dear ${object.name},<br/>"
+"    Thank you for your inquiry.<br/>"
+"    Here is your badge for the event ${object.event_id.name}.<br/>"
+"    If you have any questions, please let us know."
+"    <br/><br/>"
+"    Thank you,<br/>"
+"    % if object.event_id.user_id and object.event_id.user_id.signature:"
+"        ${object.event_id.user_id.signature | safe}"
+"    % endif"
+"</div>"
+msgstr ""
+"<div>"
+" ውድ ${object.name}፣<br/>"
+" ለጥያቄዎ እናመሰግናለን።<br/>"
+" የዝግጅቱ ባጅ እነሆ ${object.event_id.name}።<br/>"
+" ማንኛውም ጥያቄ ካለዎት እባክዎ ያሳውቁን."
+" <br/><br/>"
+"እናመሰግናለን<br/>"
+" % object.event_id.user_id እና object.event_id.user_id.signature ከሆነ፡"
+"${object.event_id.user_id.signature | የተጠበቀ}"
+"% መጨረሻ"
+"</div>"
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.event_registration_view_kanban
+msgid "<i class=\"fa fa-check\" role=\"img\" aria-label=\"Confirm button\" title=\"Confirm Registration\"/>"
+msgstr "<i class=\"fa fa-check\" role=\"img\" aria-label=\"አረጋግጥ አዝራር\" title=\"ምዝገባ አረጋግጥ\"/>"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.event_registration_view_kanban
+msgid "<i class=\"fa fa-level-down\" role=\"img\" aria-label=\"Attended button\" title=\"Attended the Event\"/>"
+msgstr "<i class=\"fa fa-level-down\" role=\"img\" aria-label=\"የተከታተለ አዝራር\" title=\"በክስተቱ ላይ ተገኝቷል\"/>"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.view_event_form
+msgid "<i class=\"fa fa-long-arrow-right mx-2\" aria-label=\"Arrow icon\" title=\"Arrow\"/>"
+msgstr "<i class=\"fa fa-ረጅም-ቀስት-ቀኝ mx-2\" aria-label=\"የቀስት አዶ\" ርዕስ=\"ቀስት\"/>"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.event_registration_view_kanban
+msgid "<i class=\"fa fa-times\" role=\"img\" aria-label=\"Cancel button\" title=\"Cancel Registration\"/>"
+msgstr "<i class=\"fa fa-times\" role=\"img\" aria-label=\"አዝራር ሰርዝ\" title=\"ምዝገባ ሰርዝ\"/>"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.event_event_report_template_badge
+#: model_terms:ir.ui.view,arch_db:event.event_registration_report_template_badge
+msgid "<i>to</i>"
+msgstr "<i>ወደ</i>"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.view_event_form
+msgid ""
+"<span attrs=\"{\'invisible\': [(\'seats_availability\', \'=\', \'unlimited\')]}\" class=\"oe_read_only\">"
+"                                        to"
+"                                    </span>"
+msgstr ""
+"<span attrs=\"{\'የማይታይ\': [(\'የመቀመጫ_መገኘት\', \'=\', \'unlimited\')]}\" class=\"oe_read_only\">"
+"ወደ"
+" </span>"
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.res_config_settings_view_form
+msgid "<span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-specific.\" groups=\"base.group_multi_company\"/>"
+msgstr "<span class=\"fa fa-lg fa-building-o\" title=\"እዚህ የተቀመጡት እሴቶች ኩባንያ-ተኮር ናቸው።\" groups=\"base.group_multi_company\"/>"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.view_event_confirm
+msgid "<span class=\"o_form_label\">Warning: This Event has not reached its Minimum Registration Limit. Are you sure you want to confirm it?</span>"
+msgstr "<span class=\"o_form_label\">ማስጠንቀቂያ፡ ይህ ክስተት ዝቅተኛው የምዝገባ ገደብ ላይ አልደረሰም። እርግጠኛ ነህ ማረጋገጥ ትፈልጋለህ?</span>"
+
+#. module: event
+#: model:mail.template,body_html:event.event_subscription
+msgid ""
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"padding-top: 16px; background-color: #F1F1F1; font-family:Verdana, Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;\"><tr><td align=\"center\">"
+"% set date_begin = format_datetime(object.event_id.date_begin, tz=\'UTC\', dt_format=\"yyyyMMdd\'T\'HHmmss\'Z\'\")"
+"% set date_end = format_datetime(object.event_id.date_end, tz=\'UTC\', dt_format=\"yyyyMMdd\'T\'HHmmss\'Z\'\")"
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"padding: 16px; background-color: white; color: #454748; border-collapse:separate;\">"
+"<tbody>"
+"    <!-- HEADER -->"
+"    <tr>"
+"        <td align=\"center\" style=\"min-width: 590px;\">"
+"            <table width=\"590\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">"
+"                <tr><td valign=\"middle\">"
+"                    <span style=\"font-size: 10px;\">Your registration</span><br/>"
+"                    <span style=\"font-size: 20px; font-weight: bold;\">"
+"                        ${object.name}"
+"                    </span>"
+"                </td><td valign=\"middle\" align=\"right\">"
+"                    <img src=\"${\'/logo.png?company=%s\' % object.company_id.id}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${\'%s\' % object.company_id.name}\"/>"
+"                </td></tr>"
+"                <tr><td colspan=\"2\" style=\"text-align:center;\">"
+"                  <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin:16px 0px 16px 0px;\"/>"
+"                </td></tr>"
+"            </table>"
+"        </td>"
+"    </tr>"
+"    <!-- EVENT DESCRIPTION -->"
+"    <tr>"
+"        <td align=\"center\" style=\"min-width: 590px;\">"
+"            <table width=\"590\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">"
+"                <tr><td valign=\"top\" style=\"font-size: 14px;\">"
+"                    <div>"
+"                        Hello ${object.name or \'\'},<br/>"
+"                        We are happy to confirm your registration to the event"
+"                        % if \'website_published\' in object.event_id and object.event_id.website_published:"
+"                            <a href=\"${object.event_id.website_url}\" style=\"color:#875A7B;text-decoration:none;\">${object.event_id.name}</a>"
+"                        % else:"
+"                            <strong>${object.event_id.name}</strong>"
+"                        % endif"
+"                        for attendee ${object.name}."
+"                    </div>"
+"                    % if \'website_published\' in object.event_id and object.event_id.website_published:"
+"                    <div style=\"margin: 16px 0px 16px 0px;\">"
+"                        <a href=\"${object.event_id.website_url}\" style=\"background-color: #875A7B; padding: 8px 16px 8px 16px; text-decoration: none; color: #fff; border-radius: 5px; font-size:16px;\">View Event</a><br/>"
+"                    </div>"
+"                    % endif"
+"                    <div>"
+"                        See you soon,<br/>"
+"                        <span style=\"color: #454748;\">"
+"                        -- <br/>"
+"                        % if object.event_id.organizer_id:"
+"                            ${object.event_id.organizer_id.name}"
+"                        % else:"
+"                            The organizers."
+"                        % endif"
+"                        </span>"
+"                    </div>"
+"                </td></tr>"
+"                <tr><td style=\"text-align:center;\">"
+"                  <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>"
+"                </td></tr>"
+"            </table>"
+"        </td>"
+"    </tr>"
+"    <!-- DETAILS -->"
+"    <tr>"
+"        <td align=\"center\" style=\"min-width: 590px;\">"
+"            <table width=\"590\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">"
+"                <tr><td valign=\"top\" style=\"font-size: 14px;\">"
+"                    <table style=\"width:100%;\">"
+"                        <tr>"
+"                            <td style=\"vertical-align:top;\">"
+"                                <img src=\"/web_editor/font_to_img/61555/rgb(81,81,102)/34\" style=\"padding:4px;max-width:inherit;\" height=\"34\" alt=\"\"/>"
+"                            </td>"
+"                            <td style=\"padding: 0px 10px 0px 10px;width:50%;line-height:20px;vertical-align:top;\">"
+"                                <div><strong>From</strong> ${object.event_id.date_begin_located}</div>"
+"                                <div><strong>To</strong> ${object.event_id.date_end_located}</div>"
+"                                <div style=\"font-size:12px;color:#9e9e9e\"><i><strong>TZ</strong> ${object.event_id.date_tz}</i></div>"
+"                            </td>"
+"                            % if object.event_id.address_id.country_id.name:"
+"                                <td style=\"vertical-align:top;\">"
+"                                    <img src=\"/web_editor/font_to_img/61505/rgb(81,81,102)/34\" style=\"padding:4px;max-width:inherit;\" height=\"34\" alt=\"\"/>"
+"                                </td>"
+"                                <td style=\"padding: 0px 10px 0px 10px;width:50%;vertical-align:top;\">"
+"                                    % set location = \'\'"
+"                                    % if object.event_id.address_id.name:"
+"                                        <div>${object.event_id.address_id.name}</div>"
+"                                    % endif"
+"                                    % if object.event_id.address_id.street:"
+"                                        <div>${object.event_id.address_id.street}</div>"
+"                                        % set location = object.event_id.address_id.street"
+"                                    % endif"
+"                                    % if object.event_id.address_id.street2:"
+"                                        <div>${object.event_id.address_id.street2}</div>"
+"                                        % set location = \'%s, %s\' % (location, object.event_id.address_id.street2)"
+"                                    % endif"
+"                                    <div>"
+"                                    % if object.event_id.address_id.city:"
+"                                        ${object.event_id.address_id.city},"
+"                                        % set location = \'%s, %s\' % (location, object.event_id.address_id.city)"
+"                                    % endif"
+"                                    % if object.event_id.address_id.state_id.name:"
+"                                        ${object.event_id.address_id.state_id.name},"
+"                                        % set location = \'%s, %s\' % (location, object.event_id.address_id.state_id.name)"
+"                                    % endif"
+"                                    % if object.event_id.address_id.zip:"
+"                                        ${object.event_id.address_id.zip}"
+"                                        % set location = \'%s, %s\' % (location, object.event_id.address_id.zip)"
+"                                    % endif"
+"                                    </div>"
+"                                    % if object.event_id.address_id.country_id.name:"
+"                                        <div>${object.event_id.address_id.country_id.name}</div>"
+"                                        % set location = \'%s, %s\' % (location, object.event_id.address_id.country_id.name)"
+"                                    % endif"
+"                                </td>"
+"                            % endif"
+"                        </tr>"
+"                    </table>"
+"                </td></tr>"
+"                <tr><td style=\"text-align:center;\">"
+"                  <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>"
+"                </td></tr>"
+"                % if object.event_id.organizer_id:"
+"                <tr><td valign=\"top\" style=\"font-size: 14px;\">"
+"                    <div>"
+"                        <span style=\"font-weight:300;margin:10px 0px\">Questions about this event?</span>"
+"                        <div>Please contact the organizer:</div>"
+"                        <ul>"
+"                            <li>${object.event_id.organizer_id.name}</li>"
+"                            % if object.event_id.organizer_id.email"
+"                                <li>Mail: <a href=\"mailto:${object.event_id.organizer_id.email}\" style=\"text-decoration:none;color:#875A7B;\">${object.event_id.organizer_id.email}</a></li>"
+"                            % endif"
+"                            % if object.event_id.organizer_id.phone"
+"                                <li>Phone: ${object.event_id.organizer_id.phone}</li>"
+"                            % endif"
+"                        </ul>"
+"                    </div>"
+"                </td></tr>"
+"                % endif"
+"                <tr><td valign=\"top\" style=\"font-size: 14px;\">"
+"                    <table style=\"width:100%;border-top:1px solid #e1e1e1;\">"
+"                        <tr>"
+"                            <td style=\"padding:25px 0px;\">"
+"                                <strong>Add this event to your calendar</strong>"
+"                                <a href=\"https://www.google.com/calendar/render?action=TEMPLATE&amp;text=${object.event_id.name}&amp;dates=${date_begin}/${date_end}&amp;location=${location}\" style=\"padding:3px 5px;border:1px solid #875A7B;color:#875A7B;text-decoration:none;border-radius:3px;\" target=\"new\"><img src=\"/web_editor/font_to_img/61525/rgb(135,90,123)/16\" style=\"vertical-align:middle;\" height=\"16\" alt=\"\"/> Google</a>"
+"                                <a href=\"/event/${slug(object.event_id)}/ics\" style=\"padding:3px 5px;border:1px solid #875A7B;color:#875A7B;text-decoration:none;border-radius:3px;\"><img src=\"/web_editor/font_to_img/61525/rgb(135,90,123)/16\" style=\"vertical-align:middle;\" height=\"16\" alt=\"\"/> iCal/Outlook</a>"
+"                                <a href=\"https://calendar.yahoo.com/?v=60&amp;view=d&amp;type=20&amp;title=${object.event_id.name}&amp;in_loc=${location}&amp;st=${format_datetime(object.event_id.date_begin, tz=\'UTC\', dt_format=\'yyyyMMdd\\\'T\\\'HHmmss\')}&amp;et=${format_datetime(object.event_id.date_end, tz=\'UTC\', dt_format=\'yyyyMMdd\\\'T\\\'HHmmss\')}\" style=\"padding:3px 5px;border:1px solid #875A7B;color:#875A7B;text-decoration:none;border-radius:3px;\" target=\"new\">"
+"                                    <img src=\"/web_editor/font_to_img/61525/rgb(135,90,123)/16\" style=\"vertical-align:middle;\" height=\"16\" alt=\"\"/> Yahoo</a>"
+"                            </td>"
+"                        </tr>"
+"                    </table>"
+"                </td></tr>"
+"                <tr><td style=\"text-align:center;\">"
+"                  <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>"
+"                </td></tr>"
+"                % if object.event_id.address_id:"
+"                <tr><td valign=\"top\" style=\"font-size: 14px;\">"
+"                    <table style=\"width:100%;\"><tr><td>"
+"                        <div>"
+"                            <a href=\"https://maps.google.com/maps?q=${location}\" target=\"new\">"
+"                                <img src=\"http://maps.googleapis.com/maps/api/staticmap?autoscale=1&amp;size=598x200&amp;maptype=roadmap&amp;format=png&amp;visual_refresh=true&amp;markers=size:mid%7Ccolor:0xa5117d%7Clabel:%7C${location}\" style=\"vertical-align:bottom; width: 100%;\" alt=\"Google Maps\"/>"
+"                            </a>"
+"                        </div>"
+"                    </td></tr></table>"
+"                </td></tr>"
+"                % endif"
+"            </table>"
+"        </td>"
+"    </tr>"
+"</tbody>"
+"</table>"
+"</td></tr>"
+"<!-- FOOTER BY -->"
+"% if object.company_id"
+"<tr><td align=\"center\" style=\"min-width: 590px;\">"
+"    <table width=\"590\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"min-width: 590px; background-color: #F1F1F1; color: #454748; padding: 8px; border-collapse:separate;\">"
+"      <tr><td style=\"text-align: center; font-size: 14px;\">"
+"        Sent by <a target=\"_blank\" href=\"${object.company_id.website}\" style=\"color: #875A7B;\">${object.company_id.name}</a>"
+"        % if \'website_url\' in object.event_id and object.event_id.website_url:"
+"        <br/>"
+"        Discover <a href=\"/event\" style=\"text-decoration:none;color:#717188;\">all our events</a>."
+"        % endif"
+"      </td></tr>"
+"    </table>"
+"</td></tr>"
+"% endif"
+"</table>"
+"            "
+msgstr ""
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"padding-top: 16px; background-color: #F1F1F1; font-family:Verdana, Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;\"><tr><td align=\"center\">"
+"% set date_begin = format_datetime(object.event_id.date_begin, tz=\'UTC\', dt_format=\"yyyyMMdd\'T\'HHmmss\'Z\'\")"
+"% set date_end = format_datetime(object.event_id.date_end, tz=\'UTC\', dt_format=\"yyyyMMdd\'T\'HHmmss\'Z\'\")"
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"padding: 16px; background-color: white; color: #454748; border-collapse:separate;\">"
+"<tbody>"
+"    <!-- HEADER -->"
+"    <tr>"
+"        <td align=\"center\" style=\"min-width: 590px;\">"
+"            <table width=\"590\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">"
+"                <tr><td valign=\"middle\">"
+"                    <span style=\"font-size: 10px;\">Your registration</span><br/>"
+"                    <span style=\"font-size: 20px; font-weight: bold;\">"
+"                        ${object.name}"
+"                    </span>"
+"                </td><td valign=\"middle\" align=\"right\">"
+"                    <img src=\"${\'/logo.png?company=%s\' % object.company_id.id}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${\'%s\' % object.company_id.name}\"/>"
+"                </td></tr>"
+"                <tr><td colspan=\"2\" style=\"text-align:center;\">"
+"                  <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin:16px 0px 16px 0px;\"/>"
+"                </td></tr>"
+"            </table>"
+"        </td>"
+"    </tr>"
+"    <!-- EVENT DESCRIPTION -->"
+"    <tr>"
+"        <td align=\"center\" style=\"min-width: 590px;\">"
+"            <table width=\"590\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">"
+"                <tr><td valign=\"top\" style=\"font-size: 14px;\">"
+"                    <div>"
+"                        Hello ${object.name or \'\'},<br/>"
+"                        We are happy to confirm your registration to the event"
+"                        % if \'website_published\' in object.event_id and object.event_id.website_published:"
+"                            <a href=\"${object.event_id.website_url}\" style=\"color:#875A7B;text-decoration:none;\">${object.event_id.name}</a>"
+"                        % else:"
+"                            <strong>${object.event_id.name}</strong>"
+"                        % endif"
+"                        for attendee ${object.name}."
+"                    </div>"
+"                    % if \'website_published\' in object.event_id and object.event_id.website_published:"
+"                    <div style=\"margin: 16px 0px 16px 0px;\">"
+"                        <a href=\"${object.event_id.website_url}\" style=\"background-color: #875A7B; padding: 8px 16px 8px 16px; text-decoration: none; color: #fff; border-radius: 5px; font-size:16px;\">View Event</a><br/>"
+"                    </div>"
+"                    % endif"
+"                    <div>"
+"                        See you soon,<br/>"
+"                        <span style=\"color: #454748;\">"
+"                        -- <br/>"
+"                        % if object.event_id.organizer_id:"
+"                            ${object.event_id.organizer_id.name}"
+"                        % else:"
+"                            The organizers."
+"                        % endif"
+"                        </span>"
+"                    </div>"
+"                </td></tr>"
+"                <tr><td style=\"text-align:center;\">"
+"                  <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>"
+"                </td></tr>"
+"            </table>"
+"        </td>"
+"    </tr>"
+"    <!-- DETAILS -->"
+"    <tr>"
+"        <td align=\"center\" style=\"min-width: 590px;\">"
+"            <table width=\"590\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">"
+"                <tr><td valign=\"top\" style=\"font-size: 14px;\">"
+"                    <table style=\"width:100%;\">"
+"                        <tr>"
+"                            <td style=\"vertical-align:top;\">"
+"                                <img src=\"/web_editor/font_to_img/61555/rgb(81,81,102)/34\" style=\"padding:4px;max-width:inherit;\" height=\"34\" alt=\"\"/>"
+"                            </td>"
+"                            <td style=\"padding: 0px 10px 0px 10px;width:50%;line-height:20px;vertical-align:top;\">"
+"                                <div><strong>From</strong> ${object.event_id.date_begin_located}</div>"
+"                                <div><strong>To</strong> ${object.event_id.date_end_located}</div>"
+"                                <div style=\"font-size:12px;color:#9e9e9e\"><i><strong>TZ</strong> ${object.event_id.date_tz}</i></div>"
+"                            </td>"
+"                            % if object.event_id.address_id.country_id.name:"
+"                                <td style=\"vertical-align:top;\">"
+"                                    <img src=\"/web_editor/font_to_img/61505/rgb(81,81,102)/34\" style=\"padding:4px;max-width:inherit;\" height=\"34\" alt=\"\"/>"
+"                                </td>"
+"                                <td style=\"padding: 0px 10px 0px 10px;width:50%;vertical-align:top;\">"
+"                                    % set location = \'\'"
+"                                    % if object.event_id.address_id.name:"
+"                                        <div>${object.event_id.address_id.name}</div>"
+"                                    % endif"
+"                                    % if object.event_id.address_id.street:"
+"                                        <div>${object.event_id.address_id.street}</div>"
+"                                        % set location = object.event_id.address_id.street"
+"                                    % endif"
+"                                    % if object.event_id.address_id.street2:"
+"                                        <div>${object.event_id.address_id.street2}</div>"
+"                                        % set location = \'%s, %s\' % (location, object.event_id.address_id.street2)"
+"                                    % endif"
+"                                    <div>"
+" % object.event_id.address_id.city ከሆነ፡"
+"                                        ${object.event_id.address_id.city},"
+"                                        % set location = \'%s, %s\' % (location, object.event_id.address_id.city)"
+"                                    % endif"
+"                                    % if object.event_id.address_id.state_id.name:"
+"                                        ${object.event_id.address_id.state_id.name},"
+"                                        % set location = \'%s, %s\' % (location, object.event_id.address_id.state_id.name)"
+"                                    % endif"
+"                                    % if object.event_id.address_id.zip:"
+"                                        ${object.event_id.address_id.zip}"
+"                                        % set location = \'%s, %s\' % (location, object.event_id.address_id.zip)"
+"                                    % endif"
+"                                    </div>"
+"                                    % if object.event_id.address_id.country_id.name:"
+"                                        <div>${object.event_id.address_id.country_id.name}</div>"
+"                                        % set location = \'%s, %s\' % (location, object.event_id.address_id.country_id.name)"
+"                                    % endif"
+"                                </td>"
+"                            % endif"
+"                        </tr>"
+"                    </table>"
+"                </td></tr>"
+"                <tr><td style=\"text-align:center;\">"
+"                  <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>"
+"                </td></tr>"
+"                % if object.event_id.organizer_id:"
+"                <tr><td valign=\"top\" style=\"font-size: 14px;\">"
+"                    <div>"
+"                        <span style=\"font-weight:300;margin:10px 0px\">Questions about this event?</span>"
+"                        <div>Please contact the organizer:</div>"
+"                        <ul>"
+"                            <li>${object.event_id.organizer_id.name}</li>"
+"                            % if object.event_id.organizer_id.email"
+"                                <li>Mail: <a href=\"mailto:${object.event_id.organizer_id.email}\" style=\"text-decoration:none;color:#875A7B;\">${object.event_id.organizer_id.email}</a></li>"
+"                            % endif"
+"                            % if object.event_id.organizer_id.phone"
+"                                <li>Phone: ${object.event_id.organizer_id.phone}</li>"
+"                            % endif"
+"                        </ul>"
+"                    </div>"
+"                </td></tr>"
+"                % endif"
+"                <tr><td valign=\"top\" style=\"font-size: 14px;\">"
+"                    <table style=\"width:100%;border-top:1px solid #e1e1e1;\">"
+"                        <tr>"
+"                            <td style=\"padding:25px 0px;\">"
+"                                <strong>Add this event to your calendar</strong>"
+"                                <a href=\"https://www.google.com/calendar/render?action=TEMPLATE&amp;text=${object.event_id.name}&amp;dates=${date_begin}/${date_end}&amp;location=${location}\" style=\"padding:3px 5px;border:1px solid #875A7B;color:#875A7B;text-decoration:none;border-radius:3px;\" target=\"new\"><img src=\"/web_editor/font_to_img/61525/rgb(135,90,123)/16\" style=\"vertical-align:middle;\" height=\"16\" alt=\"\"/> Google</a>"
+"                                <a href=\"/event/${slug(object.event_id)}/ics\" style=\"padding:3px 5px;border:1px solid #875A7B;color:#875A7B;text-decoration:none;border-radius:3px;\"><img src=\"/web_editor/font_to_img/61525/rgb(135,90,123)/16\" style=\"vertical-align:middle;\" height=\"16\" alt=\"\"/> iCal/Outlook</a>"
+"                                <a href=\"https://calendar.yahoo.com/?v=60&amp;view=d&amp;type=20&amp;title=${object.event_id.name}&amp;in_loc=${location}&amp;st=${format_datetime(object.event_id.date_begin, tz=\'UTC\', dt_format=\'yyyyMMdd\\\'T\\\'HHmmss\')}&amp;et=${format_datetime(object.event_id.date_end, tz=\'UTC\', dt_format=\'yyyyMMdd\\\'T\\\'HHmmss\')}\" style=\"padding:3px 5px;border:1px solid #875A7B;color:#875A7B;text-decoration:none;border-radius:3px;\" target=\"new\">"
+"                                    <img src=\"/web_editor/font_to_img/61525/rgb(135,90,123)/16\" style=\"vertical-align:middle;\" height=\"16\" alt=\"\"/> Yahoo</a>"
+"                            </td>"
+"                        </tr>"
+"                    </table>"
+"                </td></tr>"
+"                <tr><td style=\"text-align:center;\">"
+"                  <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>"
+"                </td></tr>"
+"                % if object.event_id.address_id:"
+"                <tr><td valign=\"top\" style=\"font-size: 14px;\">"
+"                    <table style=\"width:100%;\"><tr><td>"
+"                        <div>"
+"                            <a href=\"https://maps.google.com/maps?q=${location}\" target=\"new\">"
+"                                <img src=\"http://maps.googleapis.com/maps/api/staticmap?autoscale=1&amp;size=598x200&amp;maptype=roadmap&amp;format=png&amp;visual_refresh=true&amp;markers=size:mid%7Ccolor:0xa5117d%7Clabel:%7C${location}\" style=\"vertical-align:bottom; width: 100%;\" alt=\"Google Maps\"/>"
+"                            </a>"
+"                        </div>"
+"                    </td></tr></table>"
+"                </td></tr>"
+"                % endif"
+"            </table>"
+"        </td>"
+"    </tr>"
+"</tbody>"
+"</table>"
+"</td></tr>"
+"<!-- FOOTER BY -->"
+"% if object.company_id"
+"<tr><td align=\"center\" style=\"min-width: 590px;\">"
+"    <table width=\"590\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"min-width: 590px; background-color: #F1F1F1; color: #454748; padding: 8px; border-collapse:separate;\">"
+"      <tr><td style=\"text-align: center; font-size: 14px;\">"
+"        Sent by <a target=\"_blank\" href=\"${object.company_id.website}\" style=\"color: #875A7B;\">${object.company_id.name}</a>"
+"        % if \'website_url\' in object.event_id and object.event_id.website_url:"
+"        <br/>"
+"        Discover <a href=\"/event\" style=\"text-decoration:none;color:#717188;\">all our events</a>."
+"        % endif"
+"      </td></tr>"
+"    </table>"
+"</td></tr>"
+"% endif"
+"</table>"
+"            "
+#. module: event
+#: model:mail.template,body_html:event.event_reminder
+msgid ""
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"padding-top: 16px; background-color: #F1F1F1; font-family:Verdana, Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;\"><tr><td align=\"center\">"
+"% set date_begin = format_datetime(object.event_id.date_begin, tz=\'UTC\', dt_format=\"yyyyMMdd\'T\'HHmmss\'Z\'\")"
+"% set date_end = format_datetime(object.event_id.date_end, tz=\'UTC\', dt_format=\"yyyyMMdd\'T\'HHmmss\'Z\'\")"
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"padding: 16px; background-color: white; color: #454748; border-collapse:separate;\">"
+"<tbody>"
+"    <!-- HEADER -->"
+"    <tr>"
+"        <td align=\"center\" style=\"min-width: 590px;\">"
+"            <table width=\"590\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">"
+"                <tr><td valign=\"middle\">"
+"                    <span style=\"font-size: 10px;\">Your registration</span><br/>"
+"                    <span style=\"font-size: 20px; font-weight: bold;\">"
+"                        ${object.name}"
+"                    </span>"
+"                </td><td valign=\"middle\" align=\"right\">"
+"                    <img src=\"${\'/logo.png?company=%s\' % object.company_id.id}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${\'%s\' % object.company_id.name}\"/>"
+"                </td></tr>"
+"                <tr><td colspan=\"2\" style=\"text-align:center;\">"
+"                  <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin:16px 0px 16px 0px;\"/>"
+"                </td></tr>"
+"            </table>"
+"        </td>"
+"    </tr>"
+"    <!-- EVENT DESCRIPTION -->"
+"    <tr>"
+"        <td align=\"center\" style=\"min-width: 590px;\">"
+"            <table width=\"590\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">"
+"                <tr><td valign=\"top\" style=\"font-size: 14px;\">"
+"                    <div>"
+"                        Hello ${object.name},<br/>"
+"                        We are excited to remind you that the event"
+"                        % if \'website_published\' in object.event_id and object.event_id.website_published:"
+"                            <a href=\"${object.event_id.website_url}\" style=\"color:#875A7B;text-decoration:none;\">${object.event_id.name}</a>"
+"                        % else:"
+"                            <strong>${object.event_id.name}</strong>"
+"                        % endif"
+"                        is starting <strong>${object.get_date_range_str()}</strong>."
+"                    </div>"
+"                    % if \'website_published\' in object.event_id and object.event_id.website_published:"
+"                    <div style=\"margin: 16px 0px 16px 0px;\">"
+"                        <a href=\"${object.event_id.website_url}\" style=\"background-color: #875A7B; padding: 8px 16px 8px 16px; text-decoration: none; color: #fff; border-radius: 5px; font-size:16px;\">View Event</a><br/>"
+"                    </div>"
+"                    % endif"
+"                    <div>"
+"                        We confirm your registration and hope to meet you there,<br/>"
+"                        <span style=\"color: #454748;\">"
+"                        -- <br/>"
+"                        % if object.event_id.organizer_id:"
+"                            ${object.event_id.organizer_id.name}"
+"                        % else:"
+"                            The organizers."
+"                        % endif"
+"                        </span>"
+"                    </div>"
+"                </td></tr>"
+"                <tr><td style=\"text-align:center;\">"
+"                  <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>"
+"                </td></tr>"
+"            </table>"
+"        </td>"
+"    </tr>"
+"    <!-- DETAILS -->"
+"    <tr>"
+"        <td align=\"center\" style=\"min-width: 590px;\">"
+"            <table width=\"590\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">"
+"                <tr><td valign=\"top\" style=\"font-size: 14px;\">"
+"                    <table style=\"width:100%;\">"
+"                        <tr>"
+"                            <td style=\"vertical-align:top;\">"
+"                                <img src=\"/web_editor/font_to_img/61555/rgb(81,81,102)/34\" style=\"padding:4px;max-width:inherit;\" height=\"34\" alt=\"\"/>"
+"                            </td>"
+"                            <td style=\"padding: 0px 10px 0px 10px;width:50%;line-height:20px;vertical-align:top;\">"
+"                                <div><strong>From</strong> ${object.event_id.date_begin_located}</div>"
+"                                <div><strong>To</strong> ${object.event_id.date_end_located}</div>"
+"                                <div style=\"font-size:12px;color:#9e9e9e\"><i><strong>TZ</strong> ${object.event_id.date_tz}</i></div>"
+"                            </td>"
+"                            % if object.event_id.address_id.country_id.name:"
+"                                <td style=\"vertical-align:top;\">"
+"                                    <img src=\"/web_editor/font_to_img/61505/rgb(81,81,102)/34\" style=\"padding:4px;max-width:inherit;\" height=\"34\" alt=\"\"/>"
+"                                </td>"
+"                                <td style=\"padding: 0px 10px 0px 10px;width:50%;vertical-align:top;\">"
+"                                    % set location = \'\'"
+"                                    % if object.event_id.address_id.name:"
+"                                        <div>${object.event_id.address_id.name}</div>"
+"                                    % endif"
+"                                    % if object.event_id.address_id.street:"
+"                                        <div>${object.event_id.address_id.street}</div>"
+"                                        % set location = object.event_id.address_id.street"
+"                                    % endif"
+"                                    % if object.event_id.address_id.street2:"
+"                                        <div>${object.event_id.address_id.street2}</div>"
+"                                        % set location = \'%s, %s\' % (location, object.event_id.address_id.street2)"
+"                                    % endif"
+"                                    <div>"
+"                                    % if object.event_id.address_id.city:"
+"                                        ${object.event_id.address_id.city},"
+"                                        % set location = \'%s, %s\' % (location, object.event_id.address_id.city)"
+"                                    % endif"
+"                                    % if object.event_id.address_id.state_id.name:"
+"                                        ${object.event_id.address_id.state_id.name},"
+"                                        % set location = \'%s, %s\' % (location, object.event_id.address_id.state_id.name)"
+"                                    % endif"
+"                                    % if object.event_id.address_id.zip:"
+"                                        ${object.event_id.address_id.zip}"
+"                                        % set location = \'%s, %s\' % (location, object.event_id.address_id.zip)"
+"                                    % endif"
+"                                    </div>"
+"                                    % if object.event_id.address_id.country_id.name:"
+"                                        <div>${object.event_id.address_id.country_id.name}</div>"
+"                                        % set location = \'%s, %s\' % (location, object.event_id.address_id.country_id.name)"
+"                                    % endif"
+"                                </td>"
+"                            % endif"
+"                        </tr>"
+"                    </table>"
+"                </td></tr>"
+"                <tr><td style=\"text-align:center;\">"
+"                  <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>"
+"                </td></tr>"
+"                % if object.event_id.organizer_id:"
+"                <tr><td valign=\"top\" style=\"font-size: 14px;\">"
+"                    <div>"
+"                        <span style=\"font-weight:300;margin:10px 0px\">Questions about this event?</span>"
+"                        <div>Please contact the organizer:</div>"
+"                        <ul>"
+"                            <li>${object.event_id.organizer_id.name}</li>"
+"                            % if object.event_id.organizer_id.email"
+"                                <li>Mail: <a href=\"mailto:${object.event_id.organizer_id.email}\" style=\"text-decoration:none;color:#875A7B;\">${object.event_id.organizer_id.email}</a></li>"
+"                            % endif"
+"                            % if object.event_id.organizer_id.phone"
+"                                <li>Phone: ${object.event_id.organizer_id.phone}</li>"
+"                            % endif"
+"                        </ul>"
+"                    </div>"
+"                </td></tr>"
+"                % endif"
+"                <tr><td valign=\"top\" style=\"font-size: 14px;\">"
+"                    <table style=\"width:100%;border-top:1px solid #e1e1e1;\">"
+"                        <tr>"
+"                            <td style=\"padding:25px 0px;\">"
+"                                <strong>Add this event to your calendar</strong>"
+"                                <a href=\"https://www.google.com/calendar/render?action=TEMPLATE&amp;text=${object.event_id.name}&amp;dates=${date_begin}/${date_end}&amp;location=${location}\" style=\"padding:3px 5px;border:1px solid #875A7B;color:#875A7B;text-decoration:none;border-radius:3px;\" target=\"new\"><img src=\"/web_editor/font_to_img/61525/rgb(135,90,123)/16\" style=\"vertical-align:middle;\" height=\"16\" alt=\"\"/> Google</a>"
+"                                <a href=\"/event/${slug(object.event_id)}/ics\" style=\"padding:3px 5px;border:1px solid #875A7B;color:#875A7B;text-decoration:none;border-radius:3px;\"><img src=\"/web_editor/font_to_img/61525/rgb(135,90,123)/16\" style=\"vertical-align:middle;\" height=\"16\" alt=\"\"/> iCal/Outlook</a>"
+"                                <a href=\"https://calendar.yahoo.com/?v=60&amp;view=d&amp;type=20&amp;title=${object.event_id.name}&amp;in_loc=${location}&amp;st=${format_datetime(object.event_id.date_begin, tz=\'UTC\', dt_format=\'yyyyMMdd\\\'T\\\'HHmmss\')}&amp;et=${format_datetime(object.event_id.date_end, tz=\'UTC\', dt_format=\'yyyyMMdd\\\'T\\\'HHmmss\')}\" style=\"padding:3px 5px;border:1px solid #875A7B;color:#875A7B;text-decoration:none;border-radius:3px;\" target=\"new\">"
+"                                    <img src=\"/web_editor/font_to_img/61525/rgb(135,90,123)/16\" style=\"vertical-align:middle;\" height=\"16\" alt=\"\"/> Yahoo</a>"
+"                            </td>"
+"                        </tr>"
+"                    </table>"
+"                </td></tr>"
+"                <tr><td style=\"text-align:center;\">"
+"                  <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>"
+"                </td></tr>"
+"                % if object.event_id.address_id:"
+"                <tr><td valign=\"top\" style=\"font-size: 14px;\">"
+"                    <table style=\"width:100%;\"><tr><td>"
+"                        <div>"
+"                            <a href=\"https://maps.google.com/maps?q=${location}\" target=\"new\">"
+"                                <img src=\"http://maps.googleapis.com/maps/api/staticmap?autoscale=1&amp;size=598x200&amp;maptype=roadmap&amp;format=png&amp;visual_refresh=true&amp;markers=size:mid%7Ccolor:0xa5117d%7Clabel:%7C${location}\" style=\"vertical-align:bottom; width: 100%;\" alt=\"Google Maps\"/>"
+"                            </a>"
+"                        </div>"
+"                    </td></tr></table>"
+"                </td></tr>"
+"                % endif"
+"            </table>"
+"        </td>"
+"    </tr>"
+"</tbody>"
+"</table>"
+"</td></tr>"
+"<!-- FOOTER BY -->"
+"% if object.company_id"
+"<tr><td align=\"center\" style=\"min-width: 590px;\">"
+"    <table width=\"590\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"min-width: 590px; background-color: #F1F1F1; color: #454748; padding: 8px; border-collapse:separate;\">"
+"      <tr><td style=\"text-align: center; font-size: 14px;\">"
+"        Sent by <a target=\"_blank\" href=\"${object.company_id.website}\" style=\"color: #875A7B;\">${object.company_id.name}</a>"
+"        % if \'website_url\' in object.event_id and object.event_id.website_url:"
+"        <br/>"
+"        Discover <a href=\"/event\" style=\"text-decoration:none;color:#717188;\">all our events</a>."
+"        % endif"
+"      </td></tr>"
+"    </table>"
+"</td></tr>"
+"% endif"
+"</table>"
+"            "
+msgstr ""
+"<ጠረጴዛ ድንበር=\"0\" cellpadding=\"0\" cellpacing=\"0\" style=\"padding-top: 16px; የበስተጀርባ ቀለም፡ # F1F1F1; የቅርጸ-ቁምፊ ቤተሰብ: ቨርዳና, አሪያል, ሳንስ-ሰሪፍ; ቀለም፡ # 454748; ስፋት: 100%; border-collapse:separate;\"><tr><td align=\"center\">"
+"% set date_begin = format_datetime(object.event_id.date_begin, tz=\'UTC\', dt_format=\"yyyyMMdd\'T\'HHmmss\'Z\'\")"
+"% set date_end = format_datetime(object.event_id.date_end, tz=\'UTC\', dt_format=\"yyyyMMdd\'T\'HHmmss\'Z\'\")"
+"<ሠንጠረዥ ድንበር=\"0\" cellpadding=\"0\" cellpacing=\"0\" width=\"590\" style=\" padding: 16px; ዳራ-ቀለም: ነጭ; ቀለም፡ # 454748; border-collapse:separate;\">"
+"<tbody>"
+" <!-- ራስጌ -->"
+" <tr>"
+" <td align=\"መሃል\" style=\"ደቂቃ ስፋት፡ 590px;\">"
+" <table width=\"590\" border=\"0\" cellpadding=\"0\" cellpacing=\"0\" style=\"ደቂቃ ስፋት፡ 590px; ዳራ-ቀለም: ነጭ; ንጣፍ: 0 ፒክስል 8 ፒክስል 0 ፒክስል 8 ፒክስል; border-collapse:separate;\">"
+" <tr><td valign=\"መካከለኛ\">"
+" <span style=\"font-size: 10px;\">የእርስዎ ምዝገባ</span><br/>"
+" <span style=\"የቅርጸ-ቁምፊ መጠን፡ 20px; የቅርጸ-ቁምፊ ክብደት፡ ደማቅ፤\">"
+"${object.name}"
+" </span>
+" </td><td valign=\"መካከለኛ\" align=\"right\">"
+" <img src=\"${\'/logo.png?company=%s\' % object.company_id.id}\" style=\"padding: 0px; ህዳግ፡ 0 ፒክስል; ቁመት፡ አውቶማቲክ; ስፋት፡ 80 ፒክስል፤\" alt=\"${\'%s\' % object.company_id.name}\"/>"
+" </td></tr>"
+" <tr><td colspan=\"2\" style=\"text-align:center;\">"
+" <hr width=\"100%\" style=\"ዳራ-ቀለም:rgb(204,204,204)፤ ድንበር: መካከለኛ የለም፤ ​​አጽዳ: ሁለቱም; ማሳያ: አግድ; የቅርጸ-ቁምፊ መጠን: 0px; ደቂቃ-ቁመት: 1 ፒክስል; መስመር ቁመት: 0; ህዳግ፡16 ፒክስል 0 ፒክስል 16 ፒክስል 0 ፒክስል፤ \"/>"
+" </td></tr>"
+" </ጠረጴዛ>"
+"</td>"
+" </tr>"
+" <!-- የክስተት መግለጫ -->"
+" <tr>"
+" <td align=\"መሃል\" style=\"ደቂቃ ስፋት፡ 590px;\">"
+" <table width=\"590\" border=\"0\" cellpadding=\"0\" cellpacing=\"0\" style=\"ደቂቃ ስፋት፡ 590px; ዳራ-ቀለም: ነጭ; ንጣፍ: 0 ፒክስል 8 ፒክስል 0 ፒክስል 8 ፒክስል; border-collapse:separate;\">"
+" <tr><td valign=\"ከላይ\" style=\"font-size: 14px;\">"
+" <div>"
+"ሰላም ${object.name}፣<br/>"
+"ዝግጅቱን ስናስታውስህ ደስ ብሎናል"
+" % \'ድረ-ገጽ_ከታተመ\' በነገር.event_id እና object.event_id.website_published:"
+" <a href=\"${object.event_id.website_url}\" style=\"color:#875A7B;text-decoration:none;\">${object.event_id.name}</a>"
+"% ሌላ:"
+" <strong>${object.event_id.name}</strong>"
+"% መጨረሻ"
+"<strong>${object.get_date_range_str()}</strong> እየጀመረ ነው።"
+" </div>"
+" % \'ድረ-ገጽ_ከታተመ\' በነገር.event_id እና object.event_id.website_published:"
+" <div style=\"ህዳግ፡ 16px 0px 16px 0px;\">"
+" <a href=\"${object.event_id.website_url}\" style=\"background-color: #875A7B; ንጣፍ: 8 ፒክስል 16 ፒክስል 8 ፒክስል 16 ፒክስል; ጽሑፍ-ማጌጫ: የለም; ቀለም፡ #fff; ድንበር-ራዲየስ: 5 ፒክስል; font-size:16px;\">ክስተት ይመልከቱ</a><br/>"
+" </div>"
+"% መጨረሻ"
+" <div>"
+" ምዝገባዎን አረጋግጠናል እና እዚያ እንደምናገኝ ተስፋ እናደርጋለን፣<br/>"
+" <span style=\"ቀለም: #454748;\">"
+" -- <br/>"
+" % object.event_id.organizer_id ከሆነ፡"
+"${object.event_id.organizer_id.name}"
+"% ሌላ:"
+"አዘጋጆቹ."
+"% መጨረሻ"
+" </span>"
+" </div>"
+" </td></tr>"
+" <tr><td style=\"text-align:center;\"
+" <hr width=\"100%\" style=\"ዳራ-ቀለም:rgb(204,204,204)፤ ድንበር: መካከለኛ የለም፤ ​​አጽዳ: ሁለቱም; ማሳያ: አግድ; የቅርጸ-ቁምፊ መጠን: 0px; ደቂቃ-ቁመት: 1 ፒክስል; መስመር ቁመት: 0; ህዳግ፡ 16 ፒክስል 0 ፒክስል 16 ፒክስል 0 ፒክስል፤ \"/>"
+" </td></tr>"
+" </ጠረጴዛ>"
+"</td>"
+" </tr>"
+" <!-- ዝርዝሮች -->"
+" <tr>"
+" <td align=\"መሃል\" style=\"ደቂቃ ስፋት፡ 590px;\">"
+" <table width=\"590\" border=\"0\" cellpadding=\"0\" cellpacing=\"0\" style=\"ደቂቃ ስፋት፡ 590px; ዳራ-ቀለም: ነጭ; ንጣፍ: 0 ፒክስል 8 ፒክስል 0 ፒክስል 8 ፒክስል; border-collapse:separate;\">"
+" <tr><td valign=\"ከላይ\" style=\"font-size: 14px;\">"
+" <table style=\"ወርድ:100%;\">"
+" <tr>"
+" <td style=\"vertical-align:top;\>"
+" <img src=\"/web_editor/font_to_img/61555/rgb(81,81,102)/34\" style=\"padding:4px;max-width:inherit;\" height=\"34\" alt=\" \"/>"
+"</td>"
+" <td style=\" padding: 0px 10px 0px 10px;width:50%;line-height:20px;vertical-align:top;\">"
+" <div><strong>ከ</strong>${object.event_id.date_begin_located}</div>"
+" <div><strong>ለ</strong>${object.event_id.date_end_located}</div>"
+" <div style=\"font-size:12px;color:#9e9e9e\"><i><strong>TZ</strong> ${object.event_id.date_tz}</i></div>"
+"</td>"
+" % object.event_id.address_id.country_id.ስም ከሆነ፡"
+" <td style=\"vertical-align:top;\>"
+" <img src=\"/web_editor/font_to_img/61505/rgb(81,81,102)/34\" style=\"padding:4px;max-width:inherit;\" height=\"34\" alt=\" \" />"
+"</td>"
+" <td style=\" padding: 0px 10px 0px 10px;width:50%;vertical-align:top;\">"
+" % ቦታ አዘጋጅ = \'\'"
+" % object.event_id.address_id.name ከሆነ፡"
+" <div>${object.event_id.address_id.name}</div>"
+"% መጨረሻ"
+" % object.event_id.address_id.street ከሆነ፡"
+" <div>${object.event_id.address_id.street}</div>"
+" % አቀማመጥ = object.event_id.address_id.street"
+"% መጨረሻ"
+" % object.event_id.address_id.street2 ከሆነ፡"
+" <div>${object.event_id.address_id.street2}</div>"
+" % አቀማመጥ = \'%s፣ %s\' % (ቦታ፣ object.event_id.address_id.street2)"
+"% መጨረሻ"
+" <div>"
+" % object.event_id.address_id.city ከሆነ፡"
+"${object.event_id.address_id.city}"
+" % አቀማመጥ = \'%s፣ %s\' % (ቦታ፣ object.event_id.address_id.city)"
+"% መጨረሻ"
+" % object.event_id.address_id.state_id.name ከሆነ፡"
+"${object.event_id.address_id.state_id.name}"
+" % አቀማመጥ = \'%s፣ %s\' % (ቦታ፣ object.event_id.address_id.state_id.name)"
+"% መጨረሻ"
+" % object.event_id.address_id.zip ከሆነ፡"
+"${object.event_id.address_id.zip}"
+" % አቀማመጥ = \'%s፣ %s\' % (ቦታ፣ object.event_id.address_id.zip)"
+"% መጨረሻ"
+" </div>"
+" % object.event_id.address_id.country_id.ስም ከሆነ፡"
+" <div>${object.event_id.address_id.country_id.name}</div>"
+" % አቀማመጥ = \'%s፣ %s\' % (ቦታ፣ object.event_id.address_id.country_id.name)"
+"% መጨረሻ"
+"</td>"
+"% መጨረሻ"
+" </tr>"
+" </ጠረጴዛ>"
+" </td></tr>"
+" <tr><td style=\"text-align:center;\>"
+" <hr width=\"100%\" style=\"ዳራ-ቀለም:rgb(204,204,204)፤ ድንበር: መካከለኛ የለም፤ ​​አጽዳ: ሁለቱም; ማሳያ: አግድ; የቅርጸ-ቁምፊ መጠን: 0px; ደቂቃ-ቁመት: 1 ፒክስል; መስመር ቁመት: 0; ህዳግ፡ 16 ፒክስል 0 ፒክስል 16 ፒክስል 0 ፒክስል፤ \"/>"
+" </td></tr>"
+" % object.event_id.organizer_id ከሆነ፡"
+" <tr><td valign=\"ከላይ\" style=\"font-size: 14px;\">"
+" <div>"
+" <span style=\"font-weight:300;margin:10px 0px\">ስለዚህ ክስተት ጥያቄዎች?</span>"
+" <div>እባክዎ አደራጁን ያግኙ፡</div>"
+" <ul>"
+" <li>${object.event_id.organizer_id.name}</li>"
+" % object.event_id.organizer_id.email ከሆነ"
+" <li>ሜይል፡ <a href=\"mailto፡${object.event_id.organizer_id.email}\" style=\"text-decoration:none;color:#875A7B;\">${object.event_id። አደራጅ_id.email}</a></li>"
+"% መጨረሻ"
+" % object.event_id.organizer_id.phone ከሆነ"
+" <li>ስልክ፡ ${object.event_id.organizer_id.phone}</li>"
+"% መጨረሻ"
+" </ul>"
+" </div>"
+" </td></tr>"
+"% መጨረሻ"
+" <tr><td valign=\"ከላይ\" style=\"font-size: 14px;\">"
+" <table style=\"ስፋት:100%; ድንበር-ከላይ:1 ፒክስል ጠንካራ #e1e1e1;\">"
+" <tr>"
+" <td style=\" padding:25px 0px;\>"
+"<strong>ይህን ክስተት ወደ ቀን መቁጠሪያዎ ያክሉ</strong>"
+" <a href=\"https://www.google.com/calendar/render?action=TEMPLATE&text=${object.event_id.name}&dates=${date_begin}/${date_end}&location=${location} \" style=\" padding:3px 5px; Border:1px solid #875A7B;color:#875A7B;text-decoration: none;border-radius:3px;\" target=\"new\"><img src=\" \" web_editor/font_to_img/61525/rgb(135,90,123)/16\" style=\"vertical-align:middle;\" height=\"16\" alt=\"\"/> Google</a> "
+" <a href=\"/event/${slug(object.event_id)}/ics\" style=\"padding:3px 5px; border:1px solid #875A7B;color:#875A7B;text-decoration: none; border-radius፡3 pixel\"> <img src=\"/web_editor/font_to_img/61525/rgb(135,90,123)/16\" style=\" vertical-align: middle;\" height=\"16\" \" alt=\" \"/> iCal/Outlook</a>"
+" <a href=\"https://calendar.yahoo.com/?v=60&view=d&type=20&title=${object.event_id.name}&in_loc=${location}&st=${ቅርጸት_ቀን_ጊዜ(object.event_id። date_begin፣ tz=\ 'UTC =\'yyyyMMdd\\\'T\\\'HHmmss\')}\" style=\" padding:3px 5px; border:1px solid #875A7B;ቀለም:#875A7B;ጽሑፍ-ማስጌጥ:ምንም;ድንበር-ራዲየስ :3px;\" target=\"አዲስ\">"
+" <img src=\"/web_editor/font_to_img/61525/rgb(135,90,123)/16\" style=\"vertical-align: middle;\" height=\"16\" alt=\"\"/ > ያሁ</a>"
+"</td>"
+" </tr>"
+" </ጠረጴዛ>"
+" </td></tr>"
+" <tr><td style=\"text-align:center;\>"
+" <hr width=\"100%\" style=\"ዳራ-ቀለም:rgb(204,204,204)፤ ድንበር: መካከለኛ የለም፤ ​​አጽዳ: ሁለቱም; ማሳያ: አግድ; የቅርጸ-ቁምፊ መጠን: 0px; ደቂቃ-ቁመት: 1 ፒክስል; መስመር ቁመት: 0; ህዳግ፡ 16 ፒክስል 0 ፒክስል 16 ፒክስል 0 ፒክስል፤ \"/>"
+" </td></tr>"
+" % object.event_id.address_id ከሆነ፡"
+" <tr><td valign=\"ከላይ\" style=\"font-size: 14px;\">"
+" <table style=\"ወርድ:100%;\"><tr><td>"
+" <div>"
+" <a href=\"https://maps.google.com/maps?q=${location}\" target=\"new\">"
+" <img src=\"http://maps.googleapis.com/maps/api/staticmap?autoscale=1&size=598x200&maptype=roadmap&format=png&visual_refresh=true&markers=size:mid%7Ccolor:0xa5117d%7Clabelcation }\" style=\"vertical-align:bottom; ስፋት፡ 100%፤\" alt=\"Google ካርታዎች\"/>"
+"</a>"
+" </div>"
+"</td></tr></table>"
+" </td></tr>"
+"% መጨረሻ"
+" </ጠረጴዛ>"
+"</td>"
+" </tr>"
+"</tbody>"
+"</table>"
+"</td></tr>"
+"<!-- እግር በ -->"
+"ነገር.company_id ከሆነ%"
+"<tr><td align=\"መሃል\" style=\"ደቂቃ ስፋት፡ 590px;\">"
+" <table width=\"590\" border=\"0\" cellpadding=\"0\" cellpacing=\"0\" style=\"ደቂቃ ስፋት፡ 590px; የበስተጀርባ ቀለም፡ # F1F1F1; ቀለም፡ # 454748; ንጣፍ: 8 ፒክስል; border-collapse:separate;\">"
+" <tr><td style=\"text-align: center; የቅርጸ-ቁምፊ መጠን፡ 14 ፒክስል;\">"
+" በ<a target=\"_blank\" href=\"${object.company_id.website}\" style=\"color: #875A7B;\">${object.company_id.name}</a> የተላከ "
+" % \'ድህረ-ገጽ_url\' በ object.event_id እና object.event_id.website_url ከሆነ፡"
+" <br/>"
+" <a href=\"/event\" style=\"text-decoration:none;color:#717188;\">ሁሉንም የእኛ ክስተቶች</a> አግኝ።"
+"% መጨረሻ"
+" </td></tr>"
+" </ጠረጴዛ>"
+"</td></tr>"
+"% መጨረሻ"
+"</table>"
+"            "
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__message_needaction
+#: model:ir.model.fields,field_description:event.field_event_registration__message_needaction
+msgid "Action Needed"
+msgstr "እርምጃ ያስፈልጋል"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__active
+msgid "Active"
+msgstr "ንቁ"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__activity_ids
+#: model:ir.model.fields,field_description:event.field_event_registration__activity_ids
+msgid "Activities"
+msgstr "ተግባራት"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__activity_exception_decoration
+#: model:ir.model.fields,field_description:event.field_event_registration__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "የእንቅስቃሴ ልዩ ማስጌጥ"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__activity_state
+#: model:ir.model.fields,field_description:event.field_event_registration__activity_state
+msgid "Activity State"
+msgstr "የእንቅስቃሴ ሁኔታ"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.res_config_settings_view_form
+msgid "Add a navigation menu to your event web pages with schedule, tracks, a track proposal form, etc."
+msgstr "በጊዜ መርሐግብር፣ ትራኮች፣ የትራክ ፕሮፖዛል ቅጽ፣ ወዘተ የክስተት ድረ-ገጾችዎ ላይ የአሰሳ ምናሌን ያክሉ።"
+
+#. module: event
+#: model_terms:ir.actions.act_window,help:event.act_event_registration_from_event
+msgid "Add a new attendee"
+msgstr "አዲስ ተሳታፊ ያክሉ"
+
+#. module: event
+#: model_terms:ir.actions.act_window,help:event.action_event_view
+msgid "Add a new event"
+msgstr "አዲስ ክስተት ያክሉ"
+
+#. module: event
+#: model:res.groups,name:event.group_event_manager
+msgid "Administrator"
+msgstr "አስተዳዳሪ"
+
+#. module: event
+#: model:ir.model.fields.selection,name:event.selection__event_mail__interval_type__after_sub
+#: model:ir.model.fields.selection,name:event.selection__event_type_mail__interval_type__after_sub
+msgid "After each registration"
+msgstr "ከእያንዳንዱ ምዝገባ በኋላ"
+
+#. module: event
+#: model:ir.model.fields.selection,name:event.selection__event_mail__interval_type__after_event
+#: model:ir.model.fields.selection,name:event.selection__event_type_mail__interval_type__after_event
+msgid "After the event"
+msgstr "ከዝግጅቱ በኋላ"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.view_event_form
+#: model_terms:ir.ui.view,arch_db:event.view_event_search
+msgid "Archived"
+msgstr "በማህደር የተቀመጠ"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.view_event_form
+msgid "Are you sure you want to cancel this event? All the linked attendees will be cancelled as well."
+msgstr "እርግጠኛ ነዎት ይህን ክስተት መሰረዝ ይፈልጋሉ? ሁሉም የተገናኙ ተሳታፊዎች እንዲሁ ይሰረዛሉ።"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__message_attachment_count
+#: model:ir.model.fields,field_description:event.field_event_registration__message_attachment_count
+msgid "Attachment Count"
+msgstr "የአባሪ ብዛት"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.res_config_settings_view_form
+msgid "Attendance"
+msgstr "መገኘት"
+
+#. module: event
+#: model:ir.model.fields.selection,name:event.selection__event_registration__state__done
+#: model_terms:ir.ui.view,arch_db:event.view_event_registration_form
+#: model_terms:ir.ui.view,arch_db:event.view_registration_search
+msgid "Attended"
+msgstr "ተገኝተዋል"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_registration__date_closed
+#: model_terms:ir.ui.view,arch_db:event.view_registration_search
+msgid "Attended Date"
+msgstr "የተሳተፈበት ቀን"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.event_registration_view_kanban
+#: model_terms:ir.ui.view,arch_db:event.view_event_registration_tree
+msgid "Attended the Event"
+msgstr "በዝግጅቱ ላይ ተገኝተዋል"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_mail_registration__registration_id
+#: model_terms:ir.ui.view,arch_db:event.view_event_registration_form
+msgid "Attendee"
+msgstr "ተሳታፊ"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_registration__name
+#: model_terms:ir.ui.view,arch_db:event.event_event_report_template_badge
+msgid "Attendee Name"
+msgstr "የተመልካች ስም"
+
+#. module: event
+#: model:ir.actions.act_window,name:event.act_event_registration_from_event
+#: model:ir.actions.act_window,name:event.action_registration
+#: model:ir.model.fields,field_description:event.field_event_event__registration_ids
+#: model:ir.ui.menu,name:event.menu_action_registration
+#: model_terms:ir.ui.view,arch_db:event.view_event_form
+#: model_terms:ir.ui.view,arch_db:event.view_event_type_form
+msgid "Attendees"
+msgstr "ተሳታፊዎች"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__auto_confirm
+msgid "Autoconfirm Registrations"
+msgstr "ምዝገባዎችን በራስ ሰር ያረጋግጡ"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_type__auto_confirm
+msgid "Automatically Confirm Registrations"
+msgstr "ምዝገባዎችን በራስ-ሰር ያረጋግጡ"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_type__use_mail_schedule
+msgid "Automatically Send Emails"
+msgstr "ኢሜይሎችን በራስ-ሰር ይላኩ።"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__seats_available
+msgid "Available Seats"
+msgstr "የሚገኙ መቀመጫዎች"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__badge_back
+msgid "Badge Back"
+msgstr "ባጅ ተመለስ"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__badge_front
+msgid "Badge Front"
+msgstr "ባጅ ግንባር"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__badge_innerleft
+msgid "Badge Inner Left"
+msgstr "ባጅ የውስጥ ግራ"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__badge_innerright
+msgid "Badge Inner Right"
+msgstr "ባጅ የውስጥ ቀኝ"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_res_config_settings__module_event_barcode
+msgid "Barcode"
+msgstr "የአሞሌ ኮድ"
+
+#. module: event
+#: model:ir.model.fields.selection,name:event.selection__event_mail__interval_type__before_event
+#: model:ir.model.fields.selection,name:event.selection__event_type_mail__interval_type__before_event
+msgid "Before the event"
+msgstr "ከዝግጅቱ በፊት"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.view_event_confirm
+msgid "Cancel"
+msgstr "ሰርዝ"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.view_event_form
+msgid "Cancel Event"
+msgstr "ክስተት ሰርዝ"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.event_registration_view_kanban
+#: model_terms:ir.ui.view,arch_db:event.view_event_registration_form
+#: model_terms:ir.ui.view,arch_db:event.view_event_registration_tree
+msgid "Cancel Registration"
+msgstr "ምዝገባን ሰርዝ"
+
+#. module: event
+#: model:ir.model.fields.selection,name:event.selection__event_event__state__cancel
+#: model:ir.model.fields.selection,name:event.selection__event_registration__state__cancel
+msgid "Cancelled"
+msgstr "ተሰርዟል።"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__event_type_id
+msgid "Category"
+msgstr "ምድብ"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.view_event_form
+#: model_terms:ir.ui.view,arch_db:event.view_event_type_form
+msgid "Communication"
+msgstr "ግንኙነት"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__company_id
+#: model:ir.model.fields,field_description:event.field_event_registration__company_id
+msgid "Company"
+msgstr "ኩባንያ"
+
+#. module: event
+#: code:addons/event/models/event.py:0
+msgid "Compose Email"
+msgstr "ኢሜል ይጻፉ"
+
+#. module: event
+#: model:ir.model,name:event.model_res_config_settings
+msgid "Config Settings"
+msgstr "ቅንብሮችን ያዋቅሩ"
+
+#. module: event
+#: model:ir.ui.menu,name:event.menu_event_configuration
+msgid "Configuration"
+msgstr "ማዋቀር"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.view_event_registration_form
+msgid "Confirm"
+msgstr "አረጋግጥ"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.view_event_confirm
+msgid "Confirm Anyway"
+msgstr "ለማንኛውም አረጋግጥ"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.view_event_form
+msgid "Confirm Event"
+msgstr "ክስተት አረጋግጥ"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.event_registration_view_kanban
+#: model_terms:ir.ui.view,arch_db:event.view_event_registration_tree
+msgid "Confirm Registration"
+msgstr "ምዝገባን ያረጋግጡ"
+
+#. module: event
+#: model:ir.model.fields.selection,name:event.selection__event_event__state__confirm
+#: model:ir.model.fields.selection,name:event.selection__event_registration__state__open
+#: model_terms:ir.ui.view,arch_db:event.view_event_search
+#: model_terms:ir.ui.view,arch_db:event.view_registration_search
+msgid "Confirmed"
+msgstr "ተረጋግጧል"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.view_event_kanban
+msgid "Confirmed attendees"
+msgstr "የተረጋገጡ ተሳታፊዎች"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.view_event_search
+msgid "Confirmed events"
+msgstr "የተረጋገጡ ክስተቶች"
+
+#. module: event
+#: model:ir.model,name:event.model_res_partner
+#: model:ir.model.fields,field_description:event.field_event_registration__partner_id
+msgid "Contact"
+msgstr "ተገናኝ"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__country_id
+msgid "Country"
+msgstr "ሀገር"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_confirm__create_uid
+#: model:ir.model.fields,field_description:event.field_event_event__create_uid
+#: model:ir.model.fields,field_description:event.field_event_mail__create_uid
+#: model:ir.model.fields,field_description:event.field_event_mail_registration__create_uid
+#: model:ir.model.fields,field_description:event.field_event_registration__create_uid
+#: model:ir.model.fields,field_description:event.field_event_type__create_uid
+#: model:ir.model.fields,field_description:event.field_event_type_mail__create_uid
+msgid "Created by"
+msgstr "የተፈጠረ"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_confirm__create_date
+#: model:ir.model.fields,field_description:event.field_event_event__create_date
+#: model:ir.model.fields,field_description:event.field_event_mail__create_date
+#: model:ir.model.fields,field_description:event.field_event_mail_registration__create_date
+#: model:ir.model.fields,field_description:event.field_event_registration__create_date
+#: model:ir.model.fields,field_description:event.field_event_type__create_date
+#: model:ir.model.fields,field_description:event.field_event_type_mail__create_date
+msgid "Created on"
+msgstr "ላይ ተፈጠረ"
+
+#. module: event
+#: code:addons/event/models/event.py:0
+msgid "Customer"
+msgstr "ደንበኛ"
+
+#. module: event
+#: code:addons/event/models/event.py:0
+msgid "Customer Email"
+msgstr "የደንበኛ ኢሜይል"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.view_event_form
+msgid "Date"
+msgstr "ቀን"
+
+#. module: event
+#: model:ir.model.fields.selection,name:event.selection__event_mail__interval_unit__days
+#: model:ir.model.fields.selection,name:event.selection__event_type_mail__interval_unit__days
+msgid "Days"
+msgstr "ቀናት"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.view_event_kanban
+msgid "Delete"
+msgstr "ሰርዝ"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__description
+msgid "Description"
+msgstr "መግለጫ"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_confirm__display_name
+#: model:ir.model.fields,field_description:event.field_event_event__display_name
+#: model:ir.model.fields,field_description:event.field_event_mail__display_name
+#: model:ir.model.fields,field_description:event.field_event_mail_registration__display_name
+#: model:ir.model.fields,field_description:event.field_event_registration__display_name
+#: model:ir.model.fields,field_description:event.field_event_type__display_name
+#: model:ir.model.fields,field_description:event.field_event_type_mail__display_name
+msgid "Display Name"
+msgstr "መጠሪያው ስም"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_mail__sequence
+msgid "Display order"
+msgstr "የማሳያ ቅደም ተከተል"
+
+#. module: event
+#: model:ir.model.fields.selection,name:event.selection__event_event__state__done
+msgid "Done"
+msgstr "ተከናውኗል"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.view_event_kanban
+msgid "Dropdown menu"
+msgstr "ተቆልቋይ ምናሌ"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_registration__email
+msgid "Email"
+msgstr "ኢሜይል"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_mail__template_id
+#: model:ir.model.fields,field_description:event.field_event_type_mail__template_id
+msgid "Email Template"
+msgstr "የኢሜል አብነት"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__date_end
+msgid "End Date"
+msgstr "የመጨረሻ ቀን"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__date_end_located
+msgid "End Date Located"
+msgstr "የመጨረሻ ቀን ተገኝቷል"
+
+#. module: event
+#: model:ir.model,name:event.model_event_event
+#: model:ir.model.fields,field_description:event.field_event_event__name
+#: model:ir.model.fields,field_description:event.field_event_mail__event_id
+#: model:ir.model.fields,field_description:event.field_event_registration__event_id
+#: model_terms:ir.ui.view,arch_db:event.event_event_view_pivot
+#: model_terms:ir.ui.view,arch_db:event.view_event_search
+#: model_terms:ir.ui.view,arch_db:event.view_registration_search
+msgid "Event"
+msgstr "ክስተት"
+
+#. module: event
+#: model:ir.model,name:event.model_event_mail
+msgid "Event Automated Mailing"
+msgstr "የክስተት አውቶማቲክ መልእክት መላኪያ"
+
+#. module: event
+#: model:ir.actions.report,name:event.report_event_event_badge
+msgid "Event Badge"
+msgstr "የክስተት ባጅ"
+
+#. module: event
+#: model:ir.actions.act_window,name:event.action_event_type
+#: model:ir.ui.menu,name:event.menu_event_type
+#: model_terms:ir.ui.view,arch_db:event.event_type_view_search
+msgid "Event Categories"
+msgstr "የክስተት ምድቦች"
+
+#. module: event
+#: model:ir.model,name:event.model_event_type
+#: model:ir.model.fields,field_description:event.field_event_type__name
+#: model_terms:ir.ui.view,arch_db:event.view_event_search
+#: model_terms:ir.ui.view,arch_db:event.view_event_type_form
+#: model_terms:ir.ui.view,arch_db:event.view_event_type_tree
+msgid "Event Category"
+msgstr "የክስተት ምድብ"
+
+#. module: event
+#: model:ir.actions.act_window,name:event.action_event_confirm
+#: model:ir.model,name:event.model_event_confirm
+#: model_terms:ir.ui.view,arch_db:event.view_event_confirm
+msgid "Event Confirmation"
+msgstr "የክስተት ማረጋገጫ"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_registration__event_end_date
+msgid "Event End Date"
+msgstr "የክስተት ማብቂያ ቀን"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.view_event_registration_form
+msgid "Event Information"
+msgstr "የክስተት መረጃ"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__event_logo
+msgid "Event Logo"
+msgstr "የክስተት አርማ"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.view_event_mail_form
+msgid "Event Mail Scheduler"
+msgstr "የክስተት ደብዳቤ መርሐግብር"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.view_event_mail_tree
+msgid "Event Mail Schedulers"
+msgstr "የክስተት ደብዳቤ መርሐ ግብሮች"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.view_event_form
+msgid "Event Name"
+msgstr "የክስተት ስም"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.view_event_calendar
+msgid "Event Organization"
+msgstr "የክስተት ድርጅት"
+
+#. module: event
+#: model:ir.model,name:event.model_event_registration
+#: model_terms:ir.ui.view,arch_db:event.view_event_registration_calendar
+#: model_terms:ir.ui.view,arch_db:event.view_event_registration_form
+#: model_terms:ir.ui.view,arch_db:event.view_registration_search
+msgid "Event Registration"
+msgstr "የክስተት ምዝገባ"
+
+#. module: event
+#: code:addons/event/models/event_mail.py:0
+msgid ""
+"Event Scheduler for:"
+"                              - Event: %s (%s)"
+"                              - Scheduled: %s"
+"                              - Template: %s (%s)"
+""
+"                            Failed with error:"
+"                              - %s"
+""
+"                            You receive this email because you are:"
+"                              - the organizer of the event,"
+"                              - or the responsible of the event,"
+"                              - or the last writer of the template."
+msgstr ""
+"የክስተት መርሐግብር አዘጋጅ ለ፡"
+"                               - ክስተት፡ %s (%s)"
+"                               - መርሐግብር የተያዘለት፡ %s"
+"                               - አብነት፡ %s (%s) በስህተት አልተሳካም።"
+"                               - %s ይህ ኢሜይል የተቀበሉት እርስዎ ስለሆኑ፡-"
+"                               - የዝግጅቱ አዘጋጅ;"
+"                               - ወይም የዝግጅቱ ኃላፊ ፣"
+"                               - ወይም የአብነት የመጨረሻው ጸሐፊ።"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_registration__event_begin_date
+#: model_terms:ir.ui.view,arch_db:event.view_registration_search
+msgid "Event Start Date"
+msgstr "የክስተት መጀመሪያ ቀን"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_type_mail__event_type_id
+msgid "Event Type"
+msgstr "የክስተት አይነት"
+
+#. module: event
+#: model:ir.actions.server,name:event.event_mail_scheduler_ir_actions_server
+#: model:ir.cron,cron_name:event.event_mail_scheduler
+#: model:ir.cron,name:event.event_mail_scheduler
+msgid "Event: Mail Scheduler"
+msgstr "ክስተት: የደብዳቤ መርሐግብር"
+
+#. module: event
+#: model:ir.actions.act_window,name:event.action_event_view
+#: model:ir.model.fields,field_description:event.field_res_partner__event_count
+#: model:ir.model.fields,field_description:event.field_res_users__event_count
+#: model:ir.ui.menu,name:event.event_event_menu_pivot_report
+#: model:ir.ui.menu,name:event.event_main_menu
+#: model:ir.ui.menu,name:event.menu_event_event
+#: model_terms:ir.ui.view,arch_db:event.res_config_settings_view_form
+#: model_terms:ir.ui.view,arch_db:event.res_partner_view_tree
+#: model_terms:ir.ui.view,arch_db:event.view_event_form
+#: model_terms:ir.ui.view,arch_db:event.view_event_search
+#: model_terms:ir.ui.view,arch_db:event.view_event_tree
+msgid "Events"
+msgstr "ክስተቶች"
+
+#. module: event
+#: model:ir.actions.act_window,name:event.event_event_action_pivot
+msgid "Events Analysis"
+msgstr "የክስተት ትንተና"
+
+#. module: event
+#: model:ir.actions.act_window,name:event.action_event_mail
+msgid "Events Mail Schedulers"
+msgstr "የክስተት ደብዳቤ መርሐ ግብሮች"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.view_event_type_form
+msgid ""
+"Events and registrations will automatically be confirmed"
+"                                            upon creation, easing the flow for simple events."
+msgstr "ክስተቶች እና ምዝገባዎች ሲፈጠሩ በራስ-ሰር ይረጋገጣሉ፣ ይህም ለቀላል ክስተቶች ፍሰቱን ያቃልላል።"
+
+#. module: event
+#: model:ir.model.fields,help:event.field_event_type__auto_confirm
+msgid "Events and registrations will automatically be confirmed upon creation, easing the flow for simple events."
+msgstr "ክስተቶች እና ምዝገባዎች ሲፈጠሩ በራስ-ሰር ይረጋገጣሉ፣ ይህም ለቀላል ክስተቶች ፍሰቱን ያቃልላል።"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.view_event_search
+msgid "Events in New state"
+msgstr "በኒው ግዛት ውስጥ ያሉ ክስተቶች"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.view_registration_search
+msgid "Expected"
+msgstr "የሚጠበቀው"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.view_event_kanban
+msgid "Expected attendees"
+msgstr "የሚጠበቁ ተሳታፊዎች"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.view_event_form
+msgid "Finish Event"
+msgstr "ክስተት ጨርስ"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__message_follower_ids
+#: model:ir.model.fields,field_description:event.field_event_registration__message_follower_ids
+msgid "Followers"
+msgstr "ተከታዮች"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__message_channel_ids
+#: model:ir.model.fields,field_description:event.field_event_registration__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "ተከታዮች (ሰርጦች)"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__message_partner_ids
+#: model:ir.model.fields,field_description:event.field_event_registration__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "ተከታዮች (አጋሮች)"
+
+#. module: event
+#: model:ir.model.fields,help:event.field_event_event__seats_max
+msgid "For each event you can define a maximum registration of seats(number of attendees), above this numbers the registrations are not accepted."
+msgstr "ለእያንዳንዱ ክስተት ከፍተኛውን የመቀመጫዎች ምዝገባ (የተመልካቾች ቁጥር) መግለጽ ይችላሉ, ከዚህ ቁጥሮች በላይ ምዝገባዎቹ ተቀባይነት የላቸውም."
+
+#. module: event
+#: model:ir.model.fields,help:event.field_event_event__seats_min
+msgid "For each event you can define a minimum reserved seats (number of attendees), if it does not reach the mentioned registrations the event can not be confirmed (keep 0 to ignore this rule)"
+msgstr "ለእያንዳንዱ ክስተት ዝቅተኛ የተያዙ መቀመጫዎች (የተመልካቾች ብዛት) መግለጽ ይችላሉ, በተጠቀሱት ምዝገባዎች ላይ ካልደረሰ ክስተቱ ሊረጋገጥ አይችልም (ይህንን ህግ ችላ ለማለት 0 ያቆዩ)"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.view_event_search
+#: model_terms:ir.ui.view,arch_db:event.view_registration_search
+msgid "Future Activities"
+msgstr "የወደፊት ተግባራት"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.view_event_search
+#: model_terms:ir.ui.view,arch_db:event.view_registration_search
+msgid "Group By"
+msgstr "ቡድን በ"
+
+#. module: event
+#: model:ir.model.fields.selection,name:event.selection__event_mail__interval_unit__hours
+#: model:ir.model.fields.selection,name:event.selection__event_type_mail__interval_unit__hours
+msgid "Hours"
+msgstr "ሰዓታት"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_confirm__id
+#: model:ir.model.fields,field_description:event.field_event_event__id
+#: model:ir.model.fields,field_description:event.field_event_mail__id
+#: model:ir.model.fields,field_description:event.field_event_mail_registration__id
+#: model:ir.model.fields,field_description:event.field_event_registration__id
+#: model:ir.model.fields,field_description:event.field_event_type__id
+#: model:ir.model.fields,field_description:event.field_event_type_mail__id
+msgid "ID"
+msgstr "መታወቂያ"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__activity_exception_icon
+#: model:ir.model.fields,field_description:event.field_event_registration__activity_exception_icon
+msgid "Icon"
+msgstr "አዶ"
+
+#. module: event
+#: model:ir.model.fields,help:event.field_event_event__activity_exception_icon
+#: model:ir.model.fields,help:event.field_event_registration__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "ልዩ እንቅስቃሴን ለማመልከት አዶ።"
+
+#. module: event
+#: model:ir.model.fields,help:event.field_event_event__message_needaction
+#: model:ir.model.fields,help:event.field_event_event__message_unread
+#: model:ir.model.fields,help:event.field_event_registration__message_needaction
+#: model:ir.model.fields,help:event.field_event_registration__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "ምልክት ካደረጉ፣ አዲስ መልዕክቶች የእርስዎን ትኩረት ይፈልጋሉ።"
+
+#. module: event
+#: model:ir.model.fields,help:event.field_event_event__message_has_error
+#: model:ir.model.fields,help:event.field_event_event__message_has_sms_error
+#: model:ir.model.fields,help:event.field_event_registration__message_has_error
+#: model:ir.model.fields,help:event.field_event_registration__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "ምልክት ካደረጉ፣ አንዳንድ መልዕክቶች የማድረስ ስህተት አለባቸው።"
+
+#. module: event
+#: model:ir.model.fields,help:event.field_event_event__state
+msgid "If event is created, the status is \'Draft\'. If event is confirmed for the particular dates the status is set to \'Confirmed\'. If the event is over, the status is set to \'Done\'. If event is cancelled the status is set to \'Cancelled\'."
+msgstr "ክስተቱ ከተፈጠረ፣ ሁኔታው \'ረቂቅ\' ነው። ክስተቱ ለተወሰኑ ቀናት ከተረጋገጠ ሁኔታው ወደ \'የተረጋገጠ\' ተቀናብሯል። ክስተቱ ካለቀ፣ ሁኔታው ወደ \'ተከናውኗል\' ተቀናብሯል። ክስተቱ ከተሰረዘ ሁኔታው ወደ \'ተሰርዟል\' ተቀናብሯል።"
+
+#. module: event
+#: model:ir.model.fields.selection,name:event.selection__event_mail__interval_unit__now
+#: model:ir.model.fields.selection,name:event.selection__event_type_mail__interval_unit__now
+msgid "Immediately"
+msgstr "ወድያው"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_mail__interval_nbr
+#: model:ir.model.fields,field_description:event.field_event_type_mail__interval_nbr
+msgid "Interval"
+msgstr "ክፍተት"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__message_is_follower
+#: model:ir.model.fields,field_description:event.field_event_registration__message_is_follower
+msgid "Is Follower"
+msgstr "ተከታይ ነው።"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__is_one_day
+msgid "Is One Day"
+msgstr "አንድ ቀን ነው።"
+
+#. module: event
+#: model:ir.model.fields,help:event.field_event_type__default_registration_max
+msgid "It will select this default maximum value when you choose this event"
+msgstr "ይህንን ክስተት ሲመርጡ ይህንን ነባሪ ከፍተኛ ዋጋ ይመርጣል"
+
+#. module: event
+#: model:ir.model.fields,help:event.field_event_type__default_registration_min
+msgid "It will select this default minimum value when you choose this event"
+msgstr "ይህንን ክስተት ሲመርጡ ይህንን ነባሪ ዝቅተኛ ዋጋ ይመርጣል"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__color
+msgid "Kanban Color Index"
+msgstr "የካንባን ቀለም መረጃ ጠቋሚ"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_confirm____last_update
+#: model:ir.model.fields,field_description:event.field_event_event____last_update
+#: model:ir.model.fields,field_description:event.field_event_mail____last_update
+#: model:ir.model.fields,field_description:event.field_event_mail_registration____last_update
+#: model:ir.model.fields,field_description:event.field_event_registration____last_update
+#: model:ir.model.fields,field_description:event.field_event_type____last_update
+#: model:ir.model.fields,field_description:event.field_event_type_mail____last_update
+msgid "Last Modified on"
+msgstr "መጨረሻ የተሻሻለው በ"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_confirm__write_uid
+#: model:ir.model.fields,field_description:event.field_event_event__write_uid
+#: model:ir.model.fields,field_description:event.field_event_mail__write_uid
+#: model:ir.model.fields,field_description:event.field_event_mail_registration__write_uid
+#: model:ir.model.fields,field_description:event.field_event_registration__write_uid
+#: model:ir.model.fields,field_description:event.field_event_type__write_uid
+#: model:ir.model.fields,field_description:event.field_event_type_mail__write_uid
+msgid "Last Updated by"
+msgstr "መጨረሻ የዘመነው በ"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_confirm__write_date
+#: model:ir.model.fields,field_description:event.field_event_event__write_date
+#: model:ir.model.fields,field_description:event.field_event_mail__write_date
+#: model:ir.model.fields,field_description:event.field_event_mail_registration__write_date
+#: model:ir.model.fields,field_description:event.field_event_registration__write_date
+#: model:ir.model.fields,field_description:event.field_event_type__write_date
+#: model:ir.model.fields,field_description:event.field_event_type_mail__write_date
+msgid "Last Updated on"
+msgstr "መጨረሻ የዘመነው በ"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.view_event_search
+#: model_terms:ir.ui.view,arch_db:event.view_registration_search
+msgid "Late Activities"
+msgstr "ዘግይተው የሚደረጉ እንቅስቃሴዎች"
+
+#. module: event
+#: model:ir.model.fields.selection,name:event.selection__event_event__seats_availability__limited
+msgid "Limited"
+msgstr "የተወሰነ"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_type__has_seats_limitation
+msgid "Limited Seats"
+msgstr "ውስን መቀመጫዎች"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__address_id
+#: model_terms:ir.ui.view,arch_db:event.view_event_type_form
+msgid "Location"
+msgstr "አካባቢ"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.event_event_report_template_badge
+#: model_terms:ir.ui.view,arch_db:event.event_registration_report_template_badge
+msgid "Logo"
+msgstr "አርማ"
+
+#. module: event
+#: model:ir.model.fields.selection,name:event.selection__event_mail__notification_type__mail
+#: model:ir.model.fields.selection,name:event.selection__event_type_mail__notification_type__mail
+msgid "Mail"
+msgstr "ደብዳቤ"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_mail__mail_registration_ids
+msgid "Mail Registration"
+msgstr "የፖስታ ምዝገባ"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__event_mail_ids
+#: model:ir.model.fields,field_description:event.field_event_type__event_type_mail_ids
+msgid "Mail Schedule"
+msgstr "የደብዳቤ መርሃ ግብር"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_mail_registration__scheduler_id
+msgid "Mail Scheduler"
+msgstr "የደብዳቤ መርሐግብር አዘጋጅ"
+
+#. module: event
+#: model:ir.ui.menu,name:event.menu_event_mail_schedulers
+msgid "Mail Schedulers"
+msgstr "የደብዳቤ መርሃ ግብሮች"
+
+#. module: event
+#: model:ir.model,name:event.model_event_type_mail
+msgid "Mail Scheduling on Event Category"
+msgstr "የደብዳቤ መርሐግብር በክስተት ምድብ ላይ"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_mail_registration__mail_sent
+msgid "Mail Sent"
+msgstr "ደብዳቤ ተልኳል።"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_mail__mail_sent
+msgid "Mail Sent on Event"
+msgstr "ደብዳቤ በዝግጅቱ ላይ ተልኳል።"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__message_main_attachment_id
+#: model:ir.model.fields,field_description:event.field_event_registration__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "ዋና አባሪ"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.res_config_settings_view_form
+msgid "Manage &amp; publish a schedule with tracks"
+msgstr "ያቀናብሩ & amp;; ከትራኮች ጋር መርሐግብር ያትሙ"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__seats_availability
+msgid "Maximum Attendees"
+msgstr "ከፍተኛ ተሳታፊዎች"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__seats_max
+msgid "Maximum Attendees Number"
+msgstr "ከፍተኛው የተሰብሳቢዎች ቁጥር"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_type__default_registration_max
+msgid "Maximum Registrations"
+msgstr "ከፍተኛው ምዝገባዎች"
+
+#. module: event
+#: code:addons/event/models/event.py:0
+msgid "Maximum attendees number should be greater than minimum attendees number."
+msgstr "ከፍተኛው የተሰብሳቢዎች ቁጥር ከዝቅተኛው የተሳታፊዎች ቁጥር የበለጠ መሆን አለበት።"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__message_has_error
+#: model:ir.model.fields,field_description:event.field_event_registration__message_has_error
+msgid "Message Delivery error"
+msgstr "የመልእክት ማቅረቢያ ስህተት"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__message_ids
+#: model:ir.model.fields,field_description:event.field_event_registration__message_ids
+msgid "Messages"
+msgstr "መልዕክቶች"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__seats_min
+msgid "Minimum Attendees"
+msgstr "አነስተኛ ተሳታፊዎች"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_type__default_registration_min
+msgid "Minimum Registrations"
+msgstr "ዝቅተኛ ምዝገባዎች"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_registration__mobile
+msgid "Mobile"
+msgstr "ሞባይል"
+
+#. module: event
+#: model:ir.model.fields.selection,name:event.selection__event_mail__interval_unit__months
+#: model:ir.model.fields.selection,name:event.selection__event_type_mail__interval_unit__months
+msgid "Months"
+msgstr "ወራት"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.view_event_search
+msgid "My Events"
+msgstr "የእኔ ክስተቶች"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__activity_date_deadline
+#: model:ir.model.fields,field_description:event.field_event_registration__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "ቀጣይ የእንቅስቃሴ ገደብ"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__activity_summary
+#: model:ir.model.fields,field_description:event.field_event_registration__activity_summary
+msgid "Next Activity Summary"
+msgstr "ቀጣይ የእንቅስቃሴ ማጠቃለያ"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__activity_type_id
+#: model:ir.model.fields,field_description:event.field_event_registration__activity_type_id
+msgid "Next Activity Type"
+msgstr "ቀጣይ የእንቅስቃሴ አይነት"
+
+#. module: event
+#: code:addons/event/models/event.py:0
+msgid "No more available seats."
+msgstr "ምንም ተጨማሪ መቀመጫዎች የሉም።"
+
+#. module: event
+#: code:addons/event/models/event.py:0
+msgid "No more seats available for this event."
+msgstr "ለዚህ ክስተት ምንም ተጨማሪ መቀመጫዎች የሉም።"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__message_needaction_counter
+#: model:ir.model.fields,field_description:event.field_event_registration__message_needaction_counter
+msgid "Number of Actions"
+msgstr "የተግባሮች ብዛት"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__seats_expected
+msgid "Number of Expected Attendees"
+msgstr "የሚጠበቁ ተሳታፊዎች ብዛት"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__seats_used
+msgid "Number of Participants"
+msgstr "የተሳታፊዎች ብዛት"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__message_has_error_counter
+#: model:ir.model.fields,field_description:event.field_event_registration__message_has_error_counter
+msgid "Number of errors"
+msgstr "የስህተት ብዛት"
+
+#. module: event
+#: model:ir.model.fields,help:event.field_res_partner__event_count
+#: model:ir.model.fields,help:event.field_res_users__event_count
+msgid "Number of events the partner has participated."
+msgstr "አጋር የተሳተፈባቸው የክስተቶች ብዛት።"
+
+#. module: event
+#: model:ir.model.fields,help:event.field_event_event__message_needaction_counter
+#: model:ir.model.fields,help:event.field_event_registration__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "እርምጃ የሚያስፈልገው የመልእክት ብዛት"
+
+#. module: event
+#: model:ir.model.fields,help:event.field_event_event__message_has_error_counter
+#: model:ir.model.fields,help:event.field_event_registration__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "የማድረስ ስህተት ያለባቸው መልዕክቶች ብዛት"
+
+#. module: event
+#: model:ir.model.fields,help:event.field_event_event__message_unread_counter
+#: model:ir.model.fields,help:event.field_event_registration__message_unread_counter
+msgid "Number of unread messages"
+msgstr "ያልተነበቡ መልዕክቶች ብዛት"
+
+#. module: event
+#: model:event.type,name:event.event_type_data_online
+#: model_terms:ir.ui.view,arch_db:event.view_event_form
+msgid "Online"
+msgstr "በመስመር ላይ"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__is_online
+#: model:ir.model.fields,field_description:event.field_event_type__is_online
+#: model_terms:ir.ui.view,arch_db:event.event_type_view_search
+msgid "Online Event"
+msgstr "የመስመር ላይ ክስተት"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.view_event_search
+msgid "Online Events"
+msgstr "የመስመር ላይ ክስተቶች"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_res_config_settings__module_website_event_sale
+msgid "Online Ticketing"
+msgstr "የመስመር ላይ ቲኬቶች"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.view_event_type_form
+msgid ""
+"Online events like webinars do not require a specific location"
+"                                            and are hosted online."
+msgstr "እንደ ዌብናር ያሉ የመስመር ላይ ክስተቶች የተወሰነ ቦታ አይፈልጉም እና በመስመር ላይ ይስተናገዳሉ።"
+
+#. module: event
+#: model:ir.model.fields,help:event.field_event_type__is_online
+msgid "Online events like webinars do not require a specific location and are hosted online."
+msgstr "እንደ ዌብናር ያሉ የመስመር ላይ ክስተቶች የተለየ ቦታ አይፈልጉም እና በመስመር ላይ ይስተናገዳሉ።"
+
+#. module: event
+#: code:addons/event/models/event.py:0
+msgid "Only event users or managers are allowed to create or update registrations."
+msgstr "የክስተት ተጠቃሚዎች ወይም አስተዳዳሪዎች ብቻ ምዝገባዎችን መፍጠር ወይም ማዘመን የተፈቀደላቸው።"
+
+#. module: event
+#: code:addons/event/models/event.py:0
+msgid "Only internal users are allowed to read registrations."
+msgstr "የውስጥ ተጠቃሚዎች ብቻ ምዝገባዎችን እንዲያነቡ ይፈቀድላቸዋል።"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__organizer_id
+msgid "Organizer"
+msgstr "አደራጅ"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.view_registration_search
+msgid "Participant"
+msgstr "ተሳታፊ"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.view_registration_search
+msgid "Partner"
+msgstr "አጋር"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_registration__phone
+msgid "Phone"
+msgstr "ስልክ ቁጥር"
+
+#. module: event
+#: model:event.type,name:event.event_type_data_physical
+msgid "Physical Event"
+msgstr "አካላዊ ክስተት"
+
+#. module: event
+#: model:ir.model.fields,help:event.field_event_registration__origin
+msgid "Reference of the document that created the registration, for example a sales order"
+msgstr "ምዝገባውን የፈጠረው ሰነድ ማጣቀሻ, ለምሳሌ የሽያጭ ማዘዣ"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.view_event_form
+msgid "Register with this event"
+msgstr "በዚህ ክስተት ይመዝገቡ"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.res_config_settings_view_form
+#: model_terms:ir.ui.view,arch_db:event.view_event_registration_form
+#: model_terms:ir.ui.view,arch_db:event.view_event_registration_graph
+#: model_terms:ir.ui.view,arch_db:event.view_event_registration_pivot
+#: model_terms:ir.ui.view,arch_db:event.view_event_registration_tree
+msgid "Registration"
+msgstr "ምዝገባ"
+
+#. module: event
+#: model:ir.actions.report,name:event.report_event_registration_badge
+msgid "Registration Badge"
+msgstr "የምዝገባ ባጅ"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_registration__date_open
+#: model_terms:ir.ui.view,arch_db:event.view_registration_search
+msgid "Registration Date"
+msgstr "የምዝገባ ቀን"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.view_registration_search
+msgid "Registration ID"
+msgstr "የምዝገባ መታወቂያ"
+
+#. module: event
+#: model:ir.model,name:event.model_event_mail_registration
+msgid "Registration Mail Scheduler"
+msgstr "የምዝገባ ደብዳቤ መርሐግብር"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.view_event_mail_form
+msgid "Registration Mails"
+msgstr "የምዝገባ ደብዳቤዎች"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_res_config_settings__module_website_event_questions
+msgid "Registration Survey"
+msgstr "የምዝገባ ዳሰሳ"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.view_event_mail_form
+msgid "Registration mail"
+msgstr "የምዝገባ ደብዳቤ"
+
+#. module: event
+#: model:ir.ui.menu,name:event.menu_reporting_events
+msgid "Reporting"
+msgstr "ሪፖርት ማድረግ"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__seats_reserved
+msgid "Reserved Seats"
+msgstr "የተጠበቁ መቀመጫዎች"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__user_id
+#: model_terms:ir.ui.view,arch_db:event.view_event_search
+msgid "Responsible"
+msgstr "ተጠያቂ"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__activity_user_id
+#: model:ir.model.fields,field_description:event.field_event_registration__activity_user_id
+msgid "Responsible User"
+msgstr "ኃላፊነት የሚሰማው ተጠቃሚ"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__message_has_sms_error
+#: model:ir.model.fields,field_description:event.field_event_registration__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "የኤስኤምኤስ አቅርቦት ስህተት"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.res_config_settings_view_form
+msgid "Scan badges to confirm attendances"
+msgstr "መገኘቶችን ለማረጋገጥ ባጆችን ይቃኙ"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.res_config_settings_view_form
+msgid "Schedule & Tracks"
+msgstr "መርሐግብር እና ትራኮች"
+
+#. module: event
+#: model_terms:ir.actions.act_window,help:event.action_event_view
+msgid ""
+"Schedule and organize your events efficiently:"
+"                track registrations and participations, automate the confirmation emails, sell tickets, etc."
+msgstr "ዝግጅቶችዎን በብቃት ያቅዱ እና ያደራጁ፡ ምዝገባዎችን እና ተሳትፎዎችን ይከታተሉ፣ የማረጋገጫ ኢሜይሎችን በራስ ሰር ያሰራጩ፣ ትኬቶችን ይሽጡ፣ ወዘተ."
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_mail__scheduled_date
+msgid "Scheduled Sent Mail"
+msgstr "የታቀደው የተላከ መልእክት"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_mail_registration__scheduled_date
+msgid "Scheduled Time"
+msgstr "የታቀደ ጊዜ"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.res_config_settings_view_form
+msgid "Sell tickets on your website"
+msgstr "በድር ጣቢያዎ ላይ ትኬቶችን ይሽጡ"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.res_config_settings_view_form
+msgid "Sell tickets with sales orders"
+msgstr "ትኬቶችን በሽያጭ ትዕዛዞች ይሽጡ"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_mail__notification_type
+#: model:ir.model.fields,field_description:event.field_event_type_mail__notification_type
+msgid "Send"
+msgstr "ላክ"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.view_event_registration_form
+msgid "Send by Email"
+msgstr "በኢሜል ላክ"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_mail__done
+msgid "Sent"
+msgstr "ተልኳል።"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_type__sequence
+msgid "Sequence"
+msgstr "ቅደም ተከተል"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.view_event_form
+msgid "Set To Draft"
+msgstr "ወደ ረቂቅ አዘጋጅ"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.view_event_registration_form
+msgid "Set To Unconfirmed"
+msgstr "ወደ አልተረጋገጠ አዘጋጅ"
+
+#. module: event
+#: model:ir.actions.act_window,name:event.action_event_configuration
+#: model:ir.ui.menu,name:event.menu_event_global_settings
+msgid "Settings"
+msgstr "ቅንብሮች"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.view_event_search
+#: model_terms:ir.ui.view,arch_db:event.view_registration_search
+msgid "Show all records which has next action date is before today"
+msgstr "የሚቀጥለው የድርጊት ቀን ከዛሬ በፊት ያለውን ሁሉንም መዝገቦች አሳይ"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_registration__origin
+msgid "Source Document"
+msgstr "ምንጭ ሰነድ"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__date_begin
+#: model_terms:ir.ui.view,arch_db:event.view_event_search
+msgid "Start Date"
+msgstr "የመጀመሪያ ቀን"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__date_begin_located
+msgid "Start Date Located"
+msgstr "የሚገኝበት ቀን"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__state
+#: model:ir.model.fields,field_description:event.field_event_registration__state
+#: model_terms:ir.ui.view,arch_db:event.view_event_search
+#: model_terms:ir.ui.view,arch_db:event.view_registration_search
+msgid "Status"
+msgstr "ሁኔታ"
+
+#. module: event
+#: model:ir.model.fields,help:event.field_event_event__activity_state
+#: model:ir.model.fields,help:event.field_event_registration__activity_state
+msgid ""
+"Status based on activities"
+"Overdue: Due date is already passed"
+"Today: Activity date is today"
+"Planned: Future activities."
+msgstr ""
+"በእንቅስቃሴዎች ላይ የተመሰረተ ሁኔታ"
+"ጊዜው ያለፈበት፡ የማብቂያ ቀን አስቀድሞ አልፏል"
+"ዛሬ፡ የእንቅስቃሴ ቀን ዛሬ ነው።"
+"የታቀደ: የወደፊት እንቅስቃሴዎች."
+
+#. module: event
+#: code:addons/event/models/event.py:0
+msgid "The closing date cannot be earlier than the beginning date."
+msgstr "የመዘጋቱ ቀን ከመጀመሪያው ቀን ቀደም ብሎ መሆን አይችልም."
+
+#. module: event
+#: code:addons/event/models/event.py:0
+msgid "There are already attendees who attended this event. Please reset it to draft if you want to cancel this event."
+msgstr "በዚህ ዝግጅት ላይ የተሳተፉ ታዳሚዎች አስቀድመው አሉ። ይህን ክስተት መሰረዝ ከፈለጉ እባክዎን ወደ ረቂቅ ዳግም ያስጀምሩት።"
+
+#. module: event
+#: model:ir.model.fields,help:event.field_event_mail__template_id
+#: model:ir.model.fields,help:event.field_event_type_mail__template_id
+msgid "This field contains the template of the mail that will be automatically sent"
+msgstr "ይህ መስክ በቀጥታ የሚላከው የደብዳቤ አብነት አለው።"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_res_config_settings__module_event_sale
+msgid "Tickets"
+msgstr "ቲኬቶች"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__date_tz
+#: model:ir.model.fields,field_description:event.field_event_type__default_timezone
+msgid "Timezone"
+msgstr "የጊዜ ክልል"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.view_event_search
+#: model_terms:ir.ui.view,arch_db:event.view_registration_search
+msgid "Today Activities"
+msgstr "የዛሬ ተግባራት"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.view_event_tree
+msgid "Total"
+msgstr "ጠቅላላ"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_res_config_settings__module_website_event_track
+msgid "Tracks and Agenda"
+msgstr "ትራኮች እና አጀንዳ"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_type_mail__interval_type
+msgid "Trigger"
+msgstr "ቀስቅሴ"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_mail__interval_type
+msgid "Trigger "
+msgstr "ቀስቅሴ"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__twitter_hashtag
+#: model:ir.model.fields,field_description:event.field_event_type__default_hashtag
+msgid "Twitter Hashtag"
+msgstr "ትዊተር ሃሽታግ"
+
+#. module: event
+#: model:ir.model.fields,help:event.field_event_event__activity_exception_decoration
+#: model:ir.model.fields,help:event.field_event_registration__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "በመዝገብ ላይ ያለ ልዩ እንቅስቃሴ ዓይነት።"
+
+#. module: event
+#: model:ir.model.fields.selection,name:event.selection__event_event__state__draft
+#: model:ir.model.fields.selection,name:event.selection__event_registration__state__draft
+#: model_terms:ir.ui.view,arch_db:event.view_event_search
+#: model_terms:ir.ui.view,arch_db:event.view_registration_search
+msgid "Unconfirmed"
+msgstr "ያልተረጋገጠ"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__seats_unconfirmed
+msgid "Unconfirmed Seat Reservations"
+msgstr "ያልተረጋገጠ የመቀመጫ ቦታ ማስያዝ"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_mail__interval_unit
+#: model:ir.model.fields,field_description:event.field_event_type_mail__interval_unit
+msgid "Unit"
+msgstr "ክፍል"
+
+#. module: event
+#: model:ir.model.fields.selection,name:event.selection__event_event__seats_availability__unlimited
+msgid "Unlimited"
+msgstr "ያልተገደበ"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__message_unread
+#: model:ir.model.fields,field_description:event.field_event_registration__message_unread
+#: model_terms:ir.ui.view,arch_db:event.view_event_search
+#: model_terms:ir.ui.view,arch_db:event.view_registration_search
+msgid "Unread Messages"
+msgstr "ያልተነበቡ መልእክቶች"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__message_unread_counter
+#: model:ir.model.fields,field_description:event.field_event_registration__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "ያልተነበቡ መልዕክቶች ቆጣሪ"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.view_event_search
+msgid "Upcoming events from today"
+msgstr "ከዛሬ የሚመጡ ክስተቶች"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.view_event_search
+msgid "Upcoming/Running"
+msgstr "መጪ/እየተካሄደ"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_type__use_hashtag
+msgid "Use Default Hashtag"
+msgstr "ነባሪ ሃሽታግ ተጠቀም"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_type__use_timezone
+msgid "Use Default Timezone"
+msgstr "ነባሪ የሰዓት ሰቅን ተጠቀም"
+
+#. module: event
+#: model:res.groups,name:event.group_event_user
+msgid "User"
+msgstr "ተጠቃሚ"
+
+#. module: event
+#: model_terms:ir.ui.view,arch_db:event.view_event_type_form
+msgid "Visibility"
+msgstr "ታይነት"
+
+#. module: event
+#: code:addons/event/models/event_mail.py:0
+msgid "WARNING: Event Scheduler Error for event: %s"
+msgstr "ማስጠንቀቂያ፡ የክስተት መርሐግብር አድራጊ ስህተት፡ %s"
+
+#. module: event
+#: model:ir.model.fields,field_description:event.field_event_event__website_message_ids
+#: model:ir.model.fields,field_description:event.field_event_registration__website_message_ids
+msgid "Website Messages"
+msgstr "የድር ጣቢያ መልዕክቶች"
+
+#. module: event
+#: model:ir.model.fields,help:event.field_event_event__website_message_ids
+#: model:ir.model.fields,help:event.field_event_registration__website_message_ids
+msgid "Website communication history"
+msgstr "የድር ጣቢያ የግንኙነት ታሪክ"
+
+#. module: event
+#: model:ir.model.fields.selection,name:event.selection__event_mail__interval_unit__weeks
+#: model:ir.model.fields.selection,name:event.selection__event_type_mail__interval_unit__weeks
+msgid "Weeks"
+msgstr "ሳምንታት"
+
+#. module: event
+#: code:addons/event/models/event.py:0
+msgid "You must wait the event confirmation before doing this action."
+msgstr "ይህን እርምጃ ከማድረግዎ በፊት የዝግጅቱን ማረጋገጫ መጠበቅ አለብዎት."
+
+#. module: event
+#: code:addons/event/models/event.py:0
+msgid "You must wait the event starting day before doing this action."
+msgstr "ይህን ድርጊት ከማድረግዎ በፊት ክስተቱን ከመጀመሪያው ቀን መጠበቅ አለብዎት."
+
+#. module: event
+#: model:mail.template,subject:event.event_registration_mail_template_badge
+msgid "Your badge for ${object.event_id.name}"
+msgstr "የእርስዎ ባጅ ለ${object.event_id.name}"
+
+#. module: event
+#: model:mail.template,subject:event.event_subscription
+msgid "Your registration at ${object.event_id.name}"
+msgstr "ምዝገባዎ በ${object.event_id.name}"
+
+#. module: event
+#: model:mail.template,report_name:event.event_registration_mail_template_badge
+msgid "badge_of_${(object.event_id.name or \'\').replace(\'/\',\'_\')}"
+msgstr "ባጅ_የ${(object.event_id.name or \'\') ተካ(\'/\',\'_\')}"
+
+#. module: event
+#: code:addons/event/models/event.py:0
+msgid "in %d days"
+msgstr "በ%d ቀናት ውስጥ"
+
+#. module: event
+#: code:addons/event/models/event.py:0
+msgid "next month"
+msgstr "በሚቀጥለው ወር"
+
+#. module: event
+#: code:addons/event/models/event.py:0
+msgid "next week"
+msgstr "በሚቀጥለው ሳምንት"
+
+#. module: event
+#: code:addons/event/models/event.py:0
+msgid "on "
+msgstr "ላይ"
+
+#. module: event
+#: code:addons/event/models/event.py:0
+msgid "today"
+msgstr "ዛሬ"
+
+#. module: event
+#: code:addons/event/models/event.py:0
+msgid "tomorrow"
+msgstr "ነገ"

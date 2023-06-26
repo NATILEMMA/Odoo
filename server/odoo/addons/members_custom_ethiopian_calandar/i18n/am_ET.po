@@ -1,0 +1,52 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* members_custom_ethiopian_calandar
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20221005\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-11 09:42+0000\n"
+"PO-Revision-Date: 2023-03-11 09:42+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: members_custom_ethiopian_calandar
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_candidate_members__ethiopian_date
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_candidate_members__ethiopian_date_of_becomes_member_on
+msgid "In Ethiopian date"
+msgstr "በኢትዮጵያ አቆጣጠር"
+
+#. module: members_custom_ethiopian_calandar
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_main_office__ethiopian_date_of_meeting_cells
+msgid "In Ethiopian date of meeting cells"
+msgstr "ከህዋስ አመራሮች ጋር የሚደረገው የግንኙነት ቀን በኢትዮጵያ አቆጣጠር"
+
+#. module: members_custom_ethiopian_calandar
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_main_office__ethiopian_date_of_meeting_eachother
+msgid "In Ethiopian date of meeting eachother"
+msgstr "በራሱ የሚያደርገው የግንኙነት ቀን በኢትዮጵያ አቆጣጠር"
+
+#. module: members_custom_ethiopian_calandar
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_member_complaint__ethiopian_date_of_remedy
+msgid "In Ethiopian date of remedy"
+msgstr "መፍትሄ የሚሰጥበት ቀን በኢትዮጵያ አቆጣጠር"
+
+#. module: members_custom_ethiopian_calandar
+#: model:ir.model,name:members_custom_ethiopian_calandar.model_main_office
+msgid "This model will contain the main offices the cells bellong in"
+msgstr "ይህ ሞዴል መሰረታዊ ድርጅት ጽ/ቤቶችን ያቀፈ ነው::"
+
+#. module: members_custom_ethiopian_calandar
+#: model:ir.model,name:members_custom_ethiopian_calandar.model_candidate_members
+msgid "This model will handle candidate members"
+msgstr "ይህ ሞዴል የእጩዎችን አባላት ይፈጥራል::"
+
+#. module: members_custom_ethiopian_calandar
+#: model:ir.model,name:members_custom_ethiopian_calandar.model_member_complaint
+msgid "This will contain the form for member complaint"
+msgstr "ለአባልነት ቅሬታ ቅጹን ይይዛል::"

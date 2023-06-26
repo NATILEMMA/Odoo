@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<!-- My request Transfer -->
+<template id="tranfer_member" name="Transfer Member">
+    <t t-call="website.layout">
+    <t t-call="dashboard_member12.css_assets"/>    
+      <body>
+        <div class="loader"></div>
+        <div id="app">
+          <div class="main-wrapper main-wrapper-1">
+            <div class="navbar-bg"></div>
+            <nav class="navbar navbar-expand-lg main-navbar sticky">
+              <div class="form-inline mr-auto">
+                <ul class="navbar-nav mr-3">
+                  <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg
+                        collapse-btn"> <i data-feather="align-justify"></i></a></li>
+                  <li><a href="#" class="nav-link nav-link-lg fullscreen-btn">
+                      <i data-feather="maximize"></i>
+                    </a>
+                  </li>
+                  <li>
+                  
+                  </li>
+                </ul>
+              </div>
+            </nav>
+            <div class="main-sidebar sidebar-style-2">
+            <t t-call="dashboard_member12.asidebar"/>    
+            </div>
+            <!-- Main Content -->
+            <div class="main-content">
+             <div class="card" >
+                <div class="card-body">
+                  <t t-set="additional_title">Transfer Details</t>
+                      <form action="/my/request_a_transfer" enctype="multipart/form-data" method="post"> 
+                      <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                       <input type="hidden" name="partner" t-att-value="partner['id']"/>
+                       <input type="hidden" name="transfers" t-att-value="transfers['id']"/>
+                         <div class="row o_transfer_details">
+                           <div class="col-lg-8">
+                             <!-- <div class="row"> -->
+                               <div t-attf-class="form-group col-xl-4" style="display:none">
+                                   <label class="col-form-label" for="is_league">League</label>
+                                   <input type="text" name="is_league" t-attf-class="form-control" t-att-value="transfers['is_league']" />
+                               </div>
+                               <div t-attf-class="form-group col-xl-4" style="display:none">
+                                   <label class="col-form-label" for="is_member">Member</label>
+                                   <input type="text" name="is_member" t-attf-class="form-control" t-att-value="transfers['is_member']" />
+                               </div>
+                               <div t-attf-class="form-group col-xl-4" style="display:none">
+                                   <label class="col-form-label" for="is_leader">Leader</label>
+                                   <input type="text" name="is_leader" t-attf-class="form-control" t-att-value="transfers['is_leader']"/>
+                               </div>
+                               <div t-attf-class="form-group col-xl-3" style="display:none">
+                                 <label class="col-form-label" for="partner_id">Member</label>
+                                 <select name="partner_id" t-attf-class="form-control">
+                                   <option value="">Member....</option>
+                                   <t t-foreach="partner" t-as="memb">
+                                     <option t-att-value="memb.id" t-att-selected="memb.id == partner.id">
+                                       <t t-esc="memb.name"/>
+                                     </option>
+                                   </t>
+                                 </select>
+                               </div>
+                               <t t-if="is_leader == True">
+                                <label class="col-form-label">Transfer As</label>
+                                  <div t-attf-class="form-group col-xl-3" id="member13" style="display: block;">
+                                    <label class="col-form-label" for="transfer_as_a_leader_or_member"></label>
+                                    <select name="transfer_as_a_leader_or_member" t-attf-class="form-control">
+                                      <option value="">Transfer ...</option>
+                                      <option t-att-selected="'league' == transfers['transfer_as_a_leader_or_member']">league</option>
+                                      <option t-att-selected="'member' == transfers['transfer_as_a_leader_or_member']">member</option>
+                                      <option t-att-selected="'leader' == transfers['transfer_as_a_leader_or_member']">leader</option>
+                                    </select>
+                                  </div>
+                               </t>
+                               <div class="clearfix" />
+                               <br/>
+                               <br/>
+                               <t t-if="is_leader == False">
+                                <label class="col-form-label">Transfer As</label>
+                                  <div t-attf-class="form-group col-xl-3">
+                                    <label class="col-form-label" for="transfer_as_a_league_or_member"></label>
+                                    <select name="transfer_as_a_league_or_member" t-attf-class="form-control">
+                                      <option value="">Transfer ...</option>
+                                      <option t-att-selected="'member' == transfers['transfer_as_a_league_or_member']">member</option>
+                                      <option t-att-selected="'league' == transfers['transfer_as_a_league_or_member']">league</option>
+                                    </select>
+                                  </div>
+                               </t>
+                               <div class="clearfix" />
+                               <div class="row">
+                                <label class="col-form-label">Transfer</label>
+                                <div t-attf-class="form-group col-xl-12" id="member6" style="display: none;">
+                                  <label class="col-form-label" for="transfer_responsibility_leader">New Leader Responsibility</label>
+                                  <select name="transfer_responsibility_leader" t-attf-class="form-control">
+                                    <option value="">Responsibility.....</option>
+                                    <t t-foreach="transfer_leader_responsibility" t-as="resp">
+                                      <option t-att-value="resp.id">
+                                        <t t-esc="resp.name" t-att-selected="resp.id == transfers['transfer_responsibility_leader']"/>
+                                      </option>
+                                    </t>
+                                  </select>
+                                </div>
+                               </div>
+                               <div class="row">
+                                <div t-attf-class="form-group col-xl-6" id="league2" style="display: none;">
+                                  <label class="col-form-label" for="transfer_league_responsibility">New League Responsibility</label>
+                                  <select name="transfer_league_responsibility" t-attf-class="form-control">
+                                    <option value="">Responsibility...</option>
+                                    <t t-foreach="transfer_league_responsibility" t-as="resp">
+                                      <option t-att-value="resp.id" t-att-selected="resp.id == transfers['transfer_league_responsibility']">
+                                        <t t-esc="resp.name"/>
+                                      </option>
+                                    </t>
+                                  </select>
+                                </div>
+                                <div t-attf-class="form-group col-xl-6" id="league3" style="display: none;">
+                                  <label class="col-form-label" for="transfer_league_org">New League Organization</label>
+                                  <select name="transfer_league_org" t-attf-class="form-control">
+                                    <option value="">Organization...</option>
+                                    <option t-att-selected="'labourer' == transfers['transfer_league_org']">labourer</option>
+                                    <option t-att-selected="'urban' == transfers['transfer_league_org']">urban</option>
+                                  </select>
+                                </div>
+                               </div>
+                               <div class="row">
+                                <div t-attf-class="form-group col-xl-6" id="member2" style="display: none;">
+                                  <label class="col-form-label" for="transfer_responsibility_member">Member Responsibility</label>
+                                  <select name="transfer_responsibility_member" t-attf-class="form-control">
+                                    <option value="">Responsibility.....</option>
+                                    <t t-foreach="transfer_member_responsibility" t-as="resp">
+                                      <option t-att-value="resp.id" t-att-selected="resp.id == transfers['transfer_responsibility_member']">
+                                        <t t-esc="resp.name"/>
+                                      </option>
+                                    </t>
+                                  </select>
+                                </div>
+                                <div t-attf-class="form-group col-xl-6" id="member3" style="display: none;">
+                                  <label class="col-form-label" for="transfer_membership_org">New Membership Organization</label>
+                                  <select name="transfer_membership_org" t-attf-class="form-control">
+                                    <option value="">Organization...</option>
+                                    <t t-foreach="new_organization" t-as="org">
+                                      <option t-att-value="org.id" t-att-selected="org.id == transfers['transfer_membership_org']">
+                                        <t t-esc="org.name"/>
+                                      </option>
+                                    </t>
+                                  </select>
+                                </div>
+                               </div>
+                               <div class="row">
+                                <div t-attf-class="form-group col-xl-3">
+                                  <label class="col-form-label" for="transfer_subcity_id">To Subcity</label>
+                                  <select name="transfer_subcity_id" t-attf-class="form-control">
+                                  <option value="">Subcity...</option>
+                                    <t t-foreach="transfer_subcities" t-as="sub">
+                                      <option t-att-value="sub.id" t-att-selected="sub.id == transfers['transfer_subcity_id']">
+                                        <t t-esc="sub.name"/>                                                                                  
+                                    </option>
+                                    </t>
+                                  </select>
+                                </div>
+                                <div t-attf-class="form-group col-xl-3">
+                                  <label class="col-form-label label-optional" for="transfer_wereda_id">To Woreda</label>
+                                  <select name="transfer_wereda_id" t-attf-class="form-control">
+                                  <option value="">Woreda..</option>
+                                    <t t-foreach="transfer_weredas" t-as="woreda">
+                                      <option t-att-value="woreda.id" t-att-data-parent_id="woreda.parent_id.id" t-att-selected="woreda.id == transfers['transfer_wereda_id']">
+                                        <t t-esc="woreda.name"/>
+                                      </option>
+                                    </t>
+                                  </select>
+                                </div>
+                                <div t-attf-class="form-group col-xl-3" id="member4" style="display: block;">
+                                  <label class="col-form-label label-optional" for="transfer_main_office">To Main Office</label>
+                                  <select name="transfer_main_office" t-attf-class="form-control">
+                                  <option value="">Main Office...</option>
+                                    <t t-foreach="transfer_main_office" t-as="main">
+                                      <option t-att-value="main.id" t-att-data-memb-org_id="main.member_main_type_id.id" t-att-data-wereda_id="main.wereda_id.id" t-att-selected="main.id == transfers['transfer_main_office']">
+                                        <t t-esc="main.name"/>
+                                      </option>
+                                    </t>
+                                  </select>
+                                </div>
+                                <div t-attf-class="form-group col-xl-3" id="member5" style="display: block;">
+                                  <label class="col-form-label label-optional" for="transfer_member_cells">To Cell</label>
+                                  <select name="transfer_member_cells" t-attf-class="form-control">
+                                  <option value="">Cells...</option>
+                                    <t t-foreach="transfer_cells" t-as="cell">
+                                      <option t-att-value="cell.id" t-att-data-main_office="cell.main_office.id" t-att-selected="cell.id == transfers['transfer_member_cells']">
+                                        <t t-esc="cell.name"/>
+                                      </option>
+                                    </t>
+                                  </select>
+                                </div>
+                                <div t-attf-class="form-group col-xl-3" id="league4" style="display: none;">
+                                  <label class="col-form-label label-optional" for="transfer_league_main_office">To League Main Office</label>
+                                  <select name="transfer_league_main_office" t-attf-class="form-control">
+                                  <option value="">Main Office...</option>
+                                    <t t-foreach="transfer_main_office" t-as="main">
+                                      <option t-att-value="main.id" t-att-data-org_id="main.league_main_type_id" t-att-data-wereda_id="main.wereda_id.id" t-att-selected="main.id == transfers['transfer_league_main_office']">
+                                        <t t-esc="main.name"/>
+                                      </option>
+                                    </t>
+                                  </select>
+                                </div>
+                                <div t-attf-class="form-group col-xl-3" id="league5" style="display: none;">
+                                  <label class="col-form-label label-optional" for="transfer_league_member_cells">To League Cell</label>
+                                  <select name="transfer_league_member_cells" t-attf-class="form-control">
+                                  <option value="">Cells...</option>
+                                    <t t-foreach="transfer_cells" t-as="cell">
+                                      <option t-att-value="cell.id" t-att-data-league-main_office="cell.main_office_league.id" t-att-selected="cell.id == transfers['transfer_league_member_cells']">
+                                        <t t-esc="cell.name"/>
+                                      </option>
+                                    </t>
+                                  </select>
+                                </div>
+                              </div>
+                            <!-- </div> -->
+                            <t t-if="transfers['id']">
+                                  <div class="clearfix">
+                                    <button type="submit" class="btn btn-primary">Update</button>
+                                  </div>
+                                </t>
+                                <t t-else="">
+                                  <div class="clearfix">
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                  </div>
+                                </t>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              
+            </div>
+          <t t-call="dashboard_member12.seeting_feature"/>    
+          </div>
+        </div>
+      
+      </body>
+    <t t-call="dashboard_member12.js_assets"/>    
+  </t>
+</template>
+
+</odoo>

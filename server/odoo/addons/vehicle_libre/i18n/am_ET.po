@@ -1,0 +1,802 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* vehicle_libre
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20221005\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-22 07:47+0000\n"
+"PO-Revision-Date: 2023-05-22 07:47+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__access_warning
+msgid "Access warning"
+msgstr "የመድረሻ ማስጠንቀቂያ"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__message_needaction
+msgid "Action Needed"
+msgstr "እርምጃ ያስፈልጋል"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__activity_ids
+msgid "Activities"
+msgstr "እንቅስቃሴዎች"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "ከእንቅስቃሴ የተለየ ማስጌጥ"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__activity_state
+msgid "Activity State"
+msgstr "የእንቅስቃሴ ሁኔታ"
+
+#. module: vehicle_libre
+#: model_terms:ir.ui.view,arch_db:vehicle_libre.view_account_libre_update_wizard
+msgid "Advance Payment"
+msgstr "የቅድሚያ ክፍያ"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__allowed_work_type
+msgid "Allowed Services Type"
+msgstr "የተፈቀዱ አገልግሎቶች አይነት"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_libre_history__sticker_number
+#: model:ir.model.fields,field_description:vehicle_libre.field_libre_update_wizard__sticker_number
+msgid "Annual Sticker Number"
+msgstr "ዓመታዊ ተለጣፊ ቁጥር"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_libre_history__approver
+msgid "Approver"
+msgstr "አጽዳቂ"
+
+#. module: vehicle_libre
+#: model_terms:ir.ui.view,arch_db:vehicle_libre.view_vehicle_libre_tree
+msgid "Are you sure to you want set draft?"
+msgstr "እርግጠኛ ነዎት ረቂቅ ማዘጋጀት ይፈልጋሉ?"
+
+#. module: vehicle_libre
+#: model_terms:ir.ui.view,arch_db:vehicle_libre.view_vehicle_libre_tree
+msgid "Are you sure you want to expired Libre?"
+msgstr "እርግጠኛ ኖት ጊዜው ያለፈበት ሊብር ይፈልጋሉ?"
+
+#. module: vehicle_libre
+#: model_terms:ir.ui.view,arch_db:vehicle_libre.view_vehicle_libre_tree
+msgid "Are you sure you want to register Information?"
+msgstr "እርግጠኛ ነህ መረጃ መመዝገብ ትፈልጋለህ?"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__message_attachment_count
+msgid "Attachment Count"
+msgstr "አባሪ ብዛት"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_libre_update_wizard__approver
+msgid "Autoresize Body"
+msgstr "የሰውነት መጠን በራስ-ሰር"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__cc
+msgid "CC"
+msgstr "CC"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__campaign_id
+msgid "Campaign"
+msgstr "ዘመቻ"
+
+#. module: vehicle_libre
+#: model_terms:ir.ui.view,arch_db:vehicle_libre.view_account_libre_update_wizard
+msgid "Cancel"
+msgstr "ሰርዝ"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__chassis_number
+msgid "Chassis Number"
+msgstr "የሻሲ ቁጥር"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__city
+msgid "City"
+msgstr "ከተማ"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__color
+msgid "Color"
+msgstr "ቀለም"
+
+#. module: vehicle_libre
+#: model_terms:ir.actions.act_window,help:vehicle_libre.action_fleet_libre_view
+msgid "Create Vehicles Libre"
+msgstr "ተሽከርካሪዎች ሊብሬ ፍጠር"
+
+#. module: vehicle_libre
+#: model_terms:ir.actions.act_window,help:vehicle_libre.action_fleet_service_expense_view_new
+msgid "Create a for this payment vehicle"
+msgstr "ለዚህ የክፍያ መኪና ፍጠር"
+
+#. module: vehicle_libre
+#: model_terms:ir.actions.act_window,help:vehicle_libre.action_fleet_service_expense_view_transfer
+msgid "Create a for this transfer vehicle"
+msgstr "ለዚህ የማስተላለፊያ መኪና ፍጠር"
+
+#. module: vehicle_libre
+#: model_terms:ir.actions.act_window,help:vehicle_libre.action_fleet_service_expense_view_pur
+msgid "Create a vehicle purchase"
+msgstr "የተሽከርካሪ ግዢ ፍጠር"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_libre_history__create_uid
+#: model:ir.model.fields,field_description:vehicle_libre.field_libre_update_wizard__create_uid
+#: model:ir.model.fields,field_description:vehicle_libre.field_maid_by__create_uid
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__create_uid
+msgid "Created by"
+msgstr "የተፈጠረ"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_libre_history__create_date
+#: model:ir.model.fields,field_description:vehicle_libre.field_libre_update_wizard__create_date
+#: model:ir.model.fields,field_description:vehicle_libre.field_maid_by__create_date
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__create_date
+msgid "Created on"
+msgstr "በላይ ተፈጠረ"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__creattion_date
+msgid "Creation Date"
+msgstr "የተፈጠረበት ቀን"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,help:vehicle_libre.field_vehicle_libre__access_url
+msgid "Customer Portal URL"
+msgstr "የደንበኛ ፖርታል ዩአርኤል"
+
+#. module: vehicle_libre
+#: model:ir.model.fields.selection,name:vehicle_libre.selection__vehicle_libre__fuel_type__diesel
+msgid "Diesel"
+msgstr "ናፍጣ"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_libre_history__display_name
+#: model:ir.model.fields,field_description:vehicle_libre.field_libre_update_wizard__display_name
+#: model:ir.model.fields,field_description:vehicle_libre.field_maid_by__display_name
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__display_name
+msgid "Display Name"
+msgstr "መጠሪያው ስም"
+
+#. module: vehicle_libre
+#: model:ir.model.fields.selection,name:vehicle_libre.selection__vehicle_libre__state__draft
+msgid "Draft"
+msgstr "ረቂቅ"
+
+#. module: vehicle_libre
+#: model_terms:ir.ui.view,arch_db:vehicle_libre.fleet_vehicle_model_form_extendeddd
+msgid "Drivers History"
+msgstr "የአሽከርካሪዎች ታሪክ"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__duty
+msgid "Duty"
+msgstr "ግዴታ"
+
+#. module: vehicle_libre
+#: model:ir.model.fields.selection,name:vehicle_libre.selection__vehicle_libre__duty__non
+msgid "Duty Paid"
+msgstr "ግዴታ የሚከፈልበት"
+
+#. module: vehicle_libre
+#: model:ir.model.fields.selection,name:vehicle_libre.selection__vehicle_libre__duty__free
+msgid "Duty free"
+msgstr "ከቀረጥ ነፃ"
+
+#. module: vehicle_libre
+#: model:ir.model.fields.selection,name:vehicle_libre.selection__vehicle_libre__fuel_type__electric
+msgid "Electric"
+msgstr "ኤሌክትሪክ"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__engine_horse_power
+msgid "Engine Horse Power"
+msgstr "የፈረስ ጉልበት ሞተር"
+
+#. module: vehicle_libre
+#: model_terms:ir.ui.view,arch_db:vehicle_libre.fleet_vehicle_model_form_extendeddd
+msgid "Expenses"
+msgstr "ወጪዎች"
+
+#. module: vehicle_libre
+#: model:ir.model.fields.selection,name:vehicle_libre.selection__vehicle_libre__state__expired
+msgid "Expired"
+msgstr "ጊዜው ያለፈበት"
+
+#. module: vehicle_libre
+#: model:ir.model.fields.selection,name:vehicle_libre.selection__vehicle_libre__gender__female
+msgid "Female"
+msgstr "ሴት"
+
+#. module: vehicle_libre
+#: model:ir.actions.act_window,name:vehicle_libre.action_fleet_libre_view
+msgid "Fleet Libre"
+msgstr "Fleet Libre"
+
+#. module: vehicle_libre
+#: model:ir.actions.act_window,name:vehicle_libre.action_fleet_service_expense_view_new
+msgid "Fleet Service Expenses"
+msgstr "የፍሊት አገልግሎት ወጪዎች"
+
+#. module: vehicle_libre
+#: model:ir.actions.act_window,name:vehicle_libre.action_fleet_service_expense_view_pur
+msgid "Fleet Service Purchase"
+msgstr "የፍሊት አገልግሎት ግዢ"
+
+#. module: vehicle_libre
+#: model:ir.actions.act_window,name:vehicle_libre.action_fleet_service_expense_view_transfer
+msgid "Fleet driver transfer"
+msgstr " ፍሊት ሹፌር ማስተላለፍ"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__message_follower_ids
+msgid "Followers"
+msgstr "ተከታዮች"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "ተከታዮች (ሰርጦች)"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "ተከታዮች (አጋሮች)"
+
+#. module: vehicle_libre
+#: model_terms:ir.ui.view,arch_db:vehicle_libre.fleet_vehicle_model_form_extendeddd
+msgid "Fuel"
+msgstr "ነዳጅ"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__fuel_type
+msgid "Fuel Type"
+msgstr "የነዳጅ ዓይነት"
+
+#. module: vehicle_libre
+#: model:ir.model.fields.selection,name:vehicle_libre.selection__vehicle_libre__fuel_type__gasoline
+msgid "Gasoline"
+msgstr "ቤንዚን"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__gender
+msgid "Gender"
+msgstr "ጾታ"
+
+#. module: vehicle_libre
+#: model_terms:ir.ui.view,arch_db:vehicle_libre.view_vehicle_libre_tree
+msgid "History"
+msgstr "ታሪክ"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__history
+msgid "History "
+msgstr "ታሪክ"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__house_number
+msgid "House Number"
+msgstr "የቤት ቁጥር"
+
+#. module: vehicle_libre
+#: model:ir.model.fields.selection,name:vehicle_libre.selection__vehicle_libre__fuel_type__hybrid
+msgid "Hybrid"
+msgstr "ድብልቅ"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_libre_history__id
+#: model:ir.model.fields,field_description:vehicle_libre.field_libre_update_wizard__id
+#: model:ir.model.fields,field_description:vehicle_libre.field_maid_by__id
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__id
+msgid "ID"
+msgstr "መታወቂያ"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__activity_exception_icon
+msgid "Icon"
+msgstr "አዶ"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,help:vehicle_libre.field_vehicle_libre__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "ልዩ እንቅስቃሴን ለማመልከት አዶ።"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,help:vehicle_libre.field_vehicle_libre__message_needaction
+#: model:ir.model.fields,help:vehicle_libre.field_vehicle_libre__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "ከተመረመሩ አዲስ መልዕክቶች የእርስዎን ትኩረት ይፈልጋሉ።"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,help:vehicle_libre.field_vehicle_libre__message_has_error
+#: model:ir.model.fields,help:vehicle_libre.field_vehicle_libre__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "ከተመረመሩ አንዳንድ መልዕክቶች የማድረስ ስህተት አለባቸው።"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_libre_history__issue_date
+#: model:ir.model.fields,field_description:vehicle_libre.field_libre_update_wizard__issue_date
+msgid "Inspection Date"
+msgstr "የፍተሻ ቀን"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__message_is_follower
+msgid "Is Follower"
+msgstr "ተከታይ ነው"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_libre_history____last_update
+#: model:ir.model.fields,field_description:vehicle_libre.field_libre_update_wizard____last_update
+#: model:ir.model.fields,field_description:vehicle_libre.field_maid_by____last_update
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre____last_update
+msgid "Last Modified on"
+msgstr "በመጨረሻ የተሻሻለው በርቷል"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_libre_history__write_uid
+#: model:ir.model.fields,field_description:vehicle_libre.field_libre_update_wizard__write_uid
+#: model:ir.model.fields,field_description:vehicle_libre.field_maid_by__write_uid
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__write_uid
+msgid "Last Updated by"
+msgstr "መጨረሻ የዘመነው በ"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_libre_history__write_date
+#: model:ir.model.fields,field_description:vehicle_libre.field_libre_update_wizard__write_date
+#: model:ir.model.fields,field_description:vehicle_libre.field_maid_by__write_date
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__write_date
+msgid "Last Updated on"
+msgstr "መጨረሻ የዘመነው በ"
+
+#. module: vehicle_libre
+#: model:mail.activity.type,name:vehicle_libre.mail_act_libra_remainder_mail
+msgid "Libray update mail"
+msgstr "የቤተ-መጽሐፍት ማሻሻያ ደብዳቤ"
+
+#. module: vehicle_libre
+#: model_terms:ir.ui.view,arch_db:vehicle_libre.fleet_libre_tree_view
+#: model_terms:ir.ui.view,arch_db:vehicle_libre.view_vehicle_libre_tree
+msgid "Libre"
+msgstr "ሊብሬ"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_fleet_vehicle__vehicle_libre_count
+#: model_terms:ir.ui.view,arch_db:vehicle_libre.fleet_vehicle_model_form_extendeddd
+msgid "Libre Count"
+msgstr "Libre Count"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__made_in
+msgid "Made In"
+msgstr "የተስራ"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "ዋና አባሪ"
+
+#. module: vehicle_libre
+#: model:ir.model.fields.selection,name:vehicle_libre.selection__vehicle_libre__gender__male
+msgid "Male"
+msgstr "ወንድ"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__medium_id
+msgid "Medium"
+msgstr "መካከለኛ"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__message_has_error
+msgid "Message Delivery error"
+msgstr "የመልእክት ማስተላለፍ ስህተት"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__message_ids
+msgid "Messages"
+msgstr "መልእክቶች"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__motor_number
+msgid "Motor Number"
+msgstr "የሞተር ቁጥር"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__first_name
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__name
+msgid "Name"
+msgstr "ስም"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__nationality
+msgid "Nationality"
+msgstr "ዜግነት"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "ቀጣይ የእንቅስቃሴ ገደብ"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__activity_summary
+msgid "Next Activity Summary"
+msgstr "ቀጣይ የእንቅስቃሴ ማጠቃለያ"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__activity_type_id
+msgid "Next Activity Type"
+msgstr "ቀጣይ የእንቅስቃሴ አይነት"
+
+#. module: vehicle_libre
+#: model_terms:ir.ui.view,arch_db:vehicle_libre.view_vehicle_libre_tree
+msgid "Notes"
+msgstr "ማስታወሻዎች"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_libre_history__notify_date
+#: model:ir.model.fields,field_description:vehicle_libre.field_libre_update_wizard__notify_date
+msgid "Notify Date"
+msgstr "የማሳወቂያ ቀን"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__message_needaction_counter
+msgid "Number of Actions"
+msgstr "የተግባር ብዛት"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__slender_amount
+msgid "Number of Cylinders"
+msgstr "የሲሊንደር ብዛት"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__message_has_error_counter
+msgid "Number of errors"
+msgstr "የስህተቶች ብዛት"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,help:vehicle_libre.field_vehicle_libre__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "አንድ እርምጃ የሚያስፈልገው የመልእክት ብዛት"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,help:vehicle_libre.field_vehicle_libre__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "ማድረስ ስህተት ያለባቸው መልዕክቶች ብዛት"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,help:vehicle_libre.field_vehicle_libre__message_unread_counter
+msgid "Number of unread messages"
+msgstr "ያልተነበቡ መልዕክቶች ብዛት"
+
+#. module: vehicle_libre
+#: model_terms:ir.ui.view,arch_db:vehicle_libre.fleet_vehicle_model_form_extendeddd
+msgid "Odometer"
+msgstr "Odometer"
+
+#. module: vehicle_libre
+#: model_terms:ir.ui.view,arch_db:vehicle_libre.view_vehicle_libre_tree
+msgid "Owner Description"
+msgstr "የባለቤት መግለጫ"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__parts_type
+msgid "Parts Type"
+msgstr "የባለቤት መግለጫ"
+
+#. module: vehicle_libre
+#: model:ir.model.fields.selection,name:vehicle_libre.selection__vehicle_libre__fuel_type__petrol
+msgid "Petrol"
+msgstr "Petrol"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__phone_number
+msgid "Phone Number"
+msgstr "ስልክ ቁጥር"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__plate_number
+msgid "Plate Number"
+msgstr "የሰሌዳ ቁጥር"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__access_url
+msgid "Portal Access URL"
+msgstr "ፖርታል መዳረሻ URL"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__previous_plate_number
+msgid "Previous Plate Number"
+msgstr "የቀድሞው የሰሌዳ ቁጥር"
+
+#. module: vehicle_libre
+#: model:ir.model,name:vehicle_libre.model_purchase_order_line
+msgid "Purchase Order Line"
+msgstr "የግዢ ትዕዛዝ መስመር"
+
+#. module: vehicle_libre
+#: model_terms:ir.ui.view,arch_db:vehicle_libre.fleet_vehicle_model_form_extendeddd
+msgid "Purchases"
+msgstr "ግዢዎች"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__region
+msgid "Region"
+msgstr "ክልል"
+
+#. module: vehicle_libre
+#: model:ir.model.fields.selection,name:vehicle_libre.selection__vehicle_libre__state__register
+#: model_terms:ir.ui.view,arch_db:vehicle_libre.view_vehicle_libre_tree
+msgid "Register"
+msgstr "ይመዝገቡ"
+
+#. module: vehicle_libre
+#: model_terms:ir.actions.act_window,help:vehicle_libre.action_fleet_libre_view
+msgid "Register Libre."
+msgstr "Libre ይመዝገቡ."
+
+#. module: vehicle_libre
+#: model_terms:ir.actions.act_window,help:vehicle_libre.action_fleet_service_expense_view_new
+msgid "Register payments and keep track of the discussions with your vehicle."
+msgstr "ክፍያዎችን ይመዝገቡ እና ከተሽከርካሪዎ ጋር የተደረጉ ውይይቶችን ይከታተሉ."
+
+#. module: vehicle_libre
+#: model_terms:ir.actions.act_window,help:vehicle_libre.action_fleet_service_expense_view_pur
+msgid "Register purchase and keep track of the discussions with your vehicle."
+msgstr "ግዢን ይመዝገቡ እና ከተሽከርካሪዎ ጋር የተደረጉ ውይይቶችን ይከታተሉ."
+
+#. module: vehicle_libre
+#: model_terms:ir.actions.act_window,help:vehicle_libre.action_fleet_service_expense_view_transfer
+msgid "Register transfer and keep track of the discussions with your vehicle."
+msgstr "ዝውውር ይመዝገቡ እና ከተሽከርካሪዎ ጋር የሚያደርጉትን ውይይት ይከታተሉ።"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__activity_user_id
+msgid "Responsible User"
+msgstr "ተጠያቂ ተጠቃሚ"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "ኤስኤምኤስ የማድረስ ስህተት"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__access_token
+msgid "Security Token"
+msgstr "የደህንነት ማስመሰያ"
+
+#. module: vehicle_libre
+#: model_terms:ir.ui.view,arch_db:vehicle_libre.fleet_vehicle_model_form_extendeddd
+msgid "Services"
+msgstr "አገልግሎቶች"
+
+#. module: vehicle_libre
+#: model_terms:ir.ui.view,arch_db:vehicle_libre.view_vehicle_libre_tree
+msgid "Set to draft"
+msgstr " ወደ ረቂቅ አዘጋጅ"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__items_weight
+msgid "Single Weight"
+msgstr "ነጠላ ክብደት"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__source_id
+msgid "Source"
+msgstr "ምንጭ"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__state
+msgid "Status"
+msgstr "ሁኔታ"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,help:vehicle_libre.field_vehicle_libre__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"በእንቅስቃሴ ላይ የተመሰረተ ሁኔታ\n"
+"አልፏል፡ የማለቂያ ቀን አስቀድሞ አልፏል\n"
+"ዛሬ፡ የተግባር ቀን ዛሬ ነው\n"
+"የታቀደው: የወደፊት እንቅስቃሴዎች."
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__subcity
+msgid "Sub City"
+msgstr "ክፍለ ከተማ"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,help:vehicle_libre.field_vehicle_libre__campaign_id
+msgid ""
+"This is a name that helps you keep track of your different campaign efforts,"
+" e.g. Fall_Drive, Christmas_Special"
+msgstr ""
+"ይህ የተለያዩ የዘመቻ ጥረቶችዎን ለመከታተል የሚረዳዎት ስም ነው"
+"ለምሳሌ ውድቀት_Drive፣ የገና_ልዩ"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,help:vehicle_libre.field_vehicle_libre__medium_id
+msgid "This is the method of delivery, e.g. Postcard, Email, or Banner Ad"
+msgstr "ይህ የማድረሻ ዘዴ ነው፣ ለምሳሌ ፖስትካርድ፣ ኢሜል ወይም ባነር ማስታወቂያ"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,help:vehicle_libre.field_vehicle_libre__source_id
+msgid ""
+"This is the source of the link, e.g. Search Engine, another domain, or name "
+"of email list"
+msgstr ""
+"ይህ የአገናኙ ምንጭ ነው፣ ለምሳሌ የፍለጋ ሞተር፣ ሌላ ጎራ ወይም ስም"
+"የኢሜል ዝርዝር"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__total_weight
+msgid "Total Weight"
+msgstr "ጠቅላላ ክብደት"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,help:vehicle_libre.field_vehicle_libre__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "በመዝገብ ላይ ያለ ልዩ እንቅስቃሴ አይነት።"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__message_unread
+msgid "Unread Messages"
+msgstr "ያልተነበቡ መልዕክቶች"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "ያልተነበቡ መልዕክቶች ቆጣሪ"
+
+#. module: vehicle_libre
+#: model_terms:ir.ui.view,arch_db:vehicle_libre.view_vehicle_libre_tree
+msgid "Update Information"
+msgstr "መረጃ አዘምን"
+
+#. module: vehicle_libre
+#: model_terms:ir.ui.view,arch_db:vehicle_libre.view_account_libre_update_wizard
+msgid "Update information"
+msgstr "መረጃ አዘምን"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_libre_history__user_id
+#: model:ir.model.fields,field_description:vehicle_libre.field_libre_update_wizard__user_id
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__user_id
+msgid "User"
+msgstr "ተጠቃሚ"
+
+#. module: vehicle_libre
+#: model:ir.model,name:vehicle_libre.model_fleet_vehicle
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__vehicle_id
+msgid "Vehicle"
+msgstr "ተሽከርካሪ"
+
+#. module: vehicle_libre
+#: model_terms:ir.ui.view,arch_db:vehicle_libre.view_vehicle_libre_tree
+msgid "Vehicle Description"
+msgstr "የተሽከርካሪ መግለጫ"
+
+#. module: vehicle_libre
+#: model:ir.actions.act_window,name:vehicle_libre.fleet_vehicle_libre
+#: model:ir.model,name:vehicle_libre.model_vehicle_libre
+#: model:ir.ui.menu,name:vehicle_libre.fleet_vehicle_libre_menu
+msgid "Vehicle Libre"
+msgstr "ተሽከርካሪ ሊብሬ"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__vehicle_model
+msgid "Vehicle Model"
+msgstr "የተሽከርካሪ ሞዴል"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__vehicle_type
+msgid "Vehicle Type"
+msgstr "የተሽከርካሪ አይነት"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__website_message_ids
+msgid "Website Messages"
+msgstr "የድር ጣቢያ መልዕክቶች"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,help:vehicle_libre.field_vehicle_libre__website_message_ids
+msgid "Website communication history"
+msgstr "የድር ጣቢያ ግንኙነት ታሪክ"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__woreda
+msgid "Woreda"
+msgstr "ወረዳ"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_fleet_vehicle__invoice_count_3
+msgid "expanse Count"
+msgstr "የተስፋፋ ቁጥር"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_libre_update_wizard__inspect_date
+msgid "last Inspection Date"
+msgstr "የመጨረሻው የፍተሻ ቀን"
+
+#. module: vehicle_libre
+#: model:ir.actions.act_window,name:vehicle_libre.action_view_libre_update_wizard
+msgid "libre action"
+msgstr "የነጻ ድርጊት"
+
+#. module: vehicle_libre
+#: model:ir.model,name:vehicle_libre.model_libre_history
+msgid "libre.history"
+msgstr "libre.ታሪክ"
+
+#. module: vehicle_libre
+#: model:ir.model,name:vehicle_libre.model_libre_update_wizard
+msgid "libre.update.wizard"
+msgstr "libre.update.wizard"
+
+#. module: vehicle_libre
+#: model:ir.model,name:vehicle_libre.model_maid_by
+msgid "maid.by"
+msgstr "ገረድ.በ"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_vehicle_libre__note
+msgid "note"
+msgstr "ማስታወሻ"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_fleet_vehicle__invoice_count_2
+msgid "purchase Count"
+msgstr "የግዢ ብዛት"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_libre_history__rev
+msgid "rev"
+msgstr "rev"
+
+#. module: vehicle_libre
+#: model_terms:ir.ui.view,arch_db:vehicle_libre.view_vehicle_libre_tree
+msgid "set expired"
+msgstr "ጥቅስ ጊዜው አልፎበታል"
+
+#. module: vehicle_libre
+#: model_terms:ir.ui.view,arch_db:vehicle_libre.fleet_vehicle_model_form_extendeddd
+msgid "show all the driver history"
+msgstr "ሁሉንም የአሽከርካሪዎች ታሪክ አሳይ"
+
+#. module: vehicle_libre
+#: model_terms:ir.ui.view,arch_db:vehicle_libre.fleet_vehicle_model_form_extendeddd
+msgid "show the fuel logs for this vehicle"
+msgstr "የዚህን ተሽከርካሪ የነዳጅ ምዝግብ ማስታወሻዎች አሳይ"
+
+#. module: vehicle_libre
+#: model_terms:ir.ui.view,arch_db:vehicle_libre.fleet_vehicle_model_form_extendeddd
+msgid "show the odometer logs for this vehicle"
+msgstr "ለዚህ ተሽከርካሪ የ odometer ምዝግብ ማስታወሻዎችን አሳይ"
+
+#. module: vehicle_libre
+#: model_terms:ir.ui.view,arch_db:vehicle_libre.fleet_vehicle_model_form_extendeddd
+msgid "show the services logs for this vehicle"
+msgstr "የዚህ ተሽከርካሪ የአገልግሎት ምዝግብ ማስታወሻዎችን አሳይ"
+
+#. module: vehicle_libre
+#: model:ir.model.fields,field_description:vehicle_libre.field_fleet_vehicle__invoice_count_1
+msgid "transfer Count"
+msgstr "የዝውውር ብዛት"

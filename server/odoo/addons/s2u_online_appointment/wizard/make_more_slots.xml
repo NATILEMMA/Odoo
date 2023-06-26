@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <!-- This record will hold the form for archive -->
+    <record id="make_more_slot_form" model="ir.ui.view">
+        <field name="name">make.more.slot.form</field>
+        <field name="model">make.more.slot</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="day" string="Days"/>
+                </group>
+                <group>
+                    <field name="slot_ids" widget="many2many_tags" string="I can be available on...?"/>
+                </group>
+                <footer>
+                    <button name="action_done" string="Create Slots" type="object" class="oe_highlight btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" name="special"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+</odoo>

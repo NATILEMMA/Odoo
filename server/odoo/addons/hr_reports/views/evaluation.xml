@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+    <menuitem id="evaluation_report_tab"
+              name="Evaluation Report"
+              parent="hr_report_root"
+              sequence="5"
+              action="performance_evaluation.performance_evaluation_dashboard_action"
+              groups="performance_evaluation.group_performance_evaluation_admin"/>
+    </data>
+</odoo>

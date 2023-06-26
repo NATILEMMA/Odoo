@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+   <!-- <record model="ir.module.category" id="module_category_datepicker">
+        <field name="name">Budget Planning Setting</field>
+        <field name="description">Budget Planning Setting</field>
+        <field name="sequence">160</field>
+    </record> -->
+
+    <record model="ir.module.category" id="module_category_datepicker">
+        <field name="name">Hidden Category</field>
+        <field name="visible" eval="0" />
+    </record>
+
+
+     <!-- <record id="group_requester" model="res.groups">
+        <field name="name">Allow to request budget planning</field>
+        <field name="category_id" ref="module_category_budget_planning_request" />
+    </record> -->
+
+    <record id="group_ethio_datepicker" model="res.groups">
+        <field name="name">Ethiopian Datepicker</field>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        <field name="category_id" ref="module_category_datepicker" />
+    </record>
+
+    <record id="group_gregory" model="res.groups">
+        <field name="name">Gregory Datepicker</field>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        <field name="category_id" ref="module_category_datepicker" />
+    </record>
+</odoo>

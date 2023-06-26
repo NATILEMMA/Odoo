@@ -21,8 +21,11 @@ are agreements you have with vendors to benefit from a predetermined pricing.
         'views/purchase_views.xml',
         'views/purchase_requisition_views.xml',
         'views/res_config_settings_views.xml',
+        'wizard/product_merge_view.xml',
         'report/purchase_requisition_report.xml',
+        'report/purchase_requisition_report_2.xml',
         'report/report_purchaserequisition.xml',
+        'report/report_purchaserequisition_2.xml',
+
     ],
-    'license': 'LGPL-3',
 }

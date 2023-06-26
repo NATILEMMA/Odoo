@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="batch_report_wizard_form" model="ir.ui.view">
+        <field name="name">batch.payroll.form</field>
+        <field name="model">batch.payroll</field>
+        <field name="arch" type="xml">
+            <form string="Batch Payroll Report">
+                <span style="color:blue;font-weight:bold;">Batch Payroll Report</span>
+                <footer>
+                    <button name="action_print" string="Print" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+    <record id="action_batch_report" model="ir.actions.act_window">
+        <field name="name">Batch Report</field>
+        <field name="res_model">batch.payroll</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem id="menu_action_bank_report"
+              name="Batch Report"
+              parent="hr_payroll_community.menu_hr_payroll_community_configuration"
+              action="action_batch_report"
+
+             />
+
+</odoo>
+
+

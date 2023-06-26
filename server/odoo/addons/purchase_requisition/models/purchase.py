@@ -2,6 +2,45 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from odoo import api, fields, models
+from odoo.exceptions import AccessError, UserError, ValidationError
+
+class PurchaseOrderLineUnlink(models.Model):
+    _name = 'purchase.order.line.unlink'
+
+    name = fields.Text(string='Description', required=True)
+    product_qty = fields.Float(string='Quantity', digits='Product Unit of Measure', required=True)
+    taxes_id = fields.Many2many('account.tax', string='Taxes',
+                                domain=['|', ('active', '=', False), ('active', '=', True)])
+    product_id = fields.Many2one('product.product', string='Product', domain=[('purchase_ok', '=', True)],
+                                 change_default=True)
+    price_unit = fields.Float(string='Unit Price', required=True, digits='Product Price')
+
+    price_subtotal = fields.Float(string='Subtotal', store=True)
+    price_total = fields.Float(string='Total', store=True)
+    price_tax = fields.Float(string='Tax', store=True)
+    par_id = fields.Many2one('purchase.requisition', string='Partner')
+    partner_id = fields.Many2one('res.partner', string='Partner', readonly=True,
+                                 store=True)
+    requisition_id_2 = fields.Many2one('purchase.requisition', string='Partner')
+    order_line = fields.Many2one('purchase.order', string='line')
+    selection = fields.Selection([
+        ("selected", "selected"),
+        ("failed", "failed"),
+         ], default='failed')
+    reason = fields.Char('Reason')
+
+    @api.onchange('selection')
+    def _onchange_requisition_id(self):
+        print("ord", self.order_line)
+        for line in self.order_line.order_line:
+            print("line.product_id.id == self.product_id.id", line.product_id.id , self.product_id.id)
+            if line.product_id.id == self.product_id.id:
+                if self.selection == "selected":
+                  print("line.selection", line.selection)
+                  line.selection = "selected"
+                  print("line.selection", line.selection)
+                elif self.selection == "failed":
+                    line.selection = "failed"
 
 
 class PurchaseOrder(models.Model):
@@ -12,7 +51,12 @@ class PurchaseOrder(models.Model):
 
     @api.onchange('requisition_id')
     def _onchange_requisition_id(self):
+        request = self.env['purchase.requisition'].search([('id', '=', self.requisition_id.id)])
+        self.request_id = request.request_line_id.id
         if not self.requisition_id:
+            active = self.env.context.get('active_ids', [])
+            print("active", active[0])
+            self.request_id = active[0]
             return
 
         requisition = self.requisition_id
@@ -112,6 +156,13 @@ class PurchaseOrder(models.Model):
 class PurchaseOrderLine(models.Model):
     _inherit = 'purchase.order.line'
 
+    selection = fields.Selection([
+        ("selected", "selected"),
+        ("failed", "failed"),
+        ("uncompered", "not compered")
+         ], default='uncompered')
+    reason = fields.Char('Reason')
+
     @api.onchange('product_qty', 'product_uom')
     def _onchange_quantity(self):
         res = super(PurchaseOrderLine, self)._onchange_quantity()
@@ -124,3 +175,33 @@ class PurchaseOrderLine(models.Model):
                     self.price_unit = line.price_unit
                 break
         return res
+
+    def create(self, vals):
+
+            account_ids = self.env.context.get('active_ids', [])
+            acc = self.env['purchase.requisition'].browse(account_ids[0])
+            pur = False
+            print("********************",vals)
+            if vals[0]['order_id'] != False:
+                pur = self.env['purchase.order'].browse(vals[0]['order_id'])
+                print("line", vals[0]['order_id'], acc.id, pur.requisition_id.id)
+            # if line.order_id.state in ['purchase', 'done']:
+            #     raise UserError(_('Cannot delete a purchase order line which is in state \'%s\'.') % (line.state,))
+            # print('line.tender.id == account_ids[0]', line.tender.id, account_ids[0])
+            terms = []
+            if pur.requisition_id.id == account_ids[0]:
+                values = {}
+                values['product_id'] = vals.get('product_id')
+                values['product_qty'] = vals.get('product_qty')
+                values['price_unit'] = vals.get('price_unit')
+                values['name'] = vals.get('name')
+                values['partner_id'] = pur.partner_id.id
+                values['price_subtotal'] = vals.get('price_subtotal')
+                values['price_total'] = vals.get('price_total')
+                values['taxes_id'] =  vals.get('taxes_id')
+                values['order_line'] = pur.id
+
+                terms.append((0, 0, values))
+                acc.line_id_2 = terms
+                print("terms", terms)
+            return super(PurchaseOrderLine, self).create(vals)

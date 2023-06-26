@@ -1,0 +1,433 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* website_form
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20221005\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-22 13:45+0000\n"
+"PO-Revision-Date: 2023-05-22 13:45+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: website_form
+#: model_terms:ir.ui.view,arch_db:website_form.contactus_thanks_ir_ui_view
+#: model_terms:website.page,arch_db:website_form.contactus_thanks
+msgid "&amp;times;"
+msgstr "&amp; ጊዜ;"
+
+#. module: website_form
+#. openerp-web
+#: code:addons/website_form/static/src/js/website_form.js:0
+#, python-format
+msgid "'%s' is not a correct date"
+msgstr "'%s' ትክክለኛ ቀን አይደለም።"
+
+#. module: website_form
+#. openerp-web
+#: code:addons/website_form/static/src/js/website_form.js:0
+#, python-format
+msgid "'%s' is not a correct datetime"
+msgstr "'%s' ትክክለኛ የቀን ሰዓት አይደለም።"
+
+#. module: website_form
+#: code:addons/website_form/controllers/main.py:0
+#, python-format
+msgid "<p>Attached files : </p>"
+msgstr "<p>የተያያዙ ፋይሎች : </p>"
+
+#. module: website_form
+#: model_terms:ir.ui.view,arch_db:website_form.res_config_settings_view_form
+msgid ""
+"<span class=\"fa fa-lg fa-globe\" title=\"Values set here are website-"
+"specific.\" groups=\"website.group_multi_website\"/>"
+msgstr ""
+"<span class=\"fa fa-lg fa-globe\" title=\" እዚህ የተቀመጡት እሴቶች ድር ጣቢያ ናቸው-"
+"specific.\" groups=\"website.group_multi_website\"/>"
+
+#. module: website_form
+#: model_terms:ir.ui.view,arch_db:website_form.snippet_options
+msgid "Add a custom field"
+msgstr "ብጁ መስክ አክል"
+
+#. module: website_form
+#: model_terms:ir.ui.view,arch_db:website_form.snippet_options
+msgid "Add an existing field"
+msgstr "ነባር መስክ አክል"
+
+#. module: website_form
+#: model:ir.model.fields,field_description:website_form.field_ir_model__website_form_access
+msgid "Allowed to use in forms"
+msgstr "በቅጾች ለመጠቀም ተፈቅዷል"
+
+#. module: website_form
+#. openerp-web
+#: code:addons/website_form/static/src/xml/website_form.xml:0
+#, python-format
+msgid "An error has occured, the form has not been sent."
+msgstr "ስህተት ተፈጥሯል፣ ቅጹ አልተላከም።"
+
+#. module: website_form
+#: model:ir.model.fields,help:website_form.field_ir_model_fields__website_form_blacklisted
+msgid "Blacklist this field for web forms"
+msgstr "ይህን መስክ ለድር ቅጾች ጥቁር መዝገብ"
+
+#. module: website_form
+#: model:ir.model.fields,field_description:website_form.field_ir_model_fields__website_form_blacklisted
+msgid "Blacklisted in web forms"
+msgstr "በድር ቅጾች የተከለከሉ"
+
+#. module: website_form
+#. openerp-web
+#: code:addons/website_form/static/src/js/website_form_editor.js:0
+#, python-format
+msgid "Cancel"
+msgstr "መሰረዝ"
+
+#. module: website_form
+#: model_terms:ir.ui.view,arch_db:website_form.snippet_options
+msgid "Change Form Parameters"
+msgstr "የቅጽ መለኪያዎችን ቀይር"
+
+#. module: website_form
+#: model_terms:ir.ui.view,arch_db:website_form.snippet_options
+msgid "Checkbox"
+msgstr "አመልካች ሳጥን"
+
+#. module: website_form
+#: model:ir.model,name:website_form.model_res_config_settings
+msgid "Config Settings"
+msgstr "የማስተካያዎች ማዋቀሪያ"
+
+#. module: website_form
+#: model_terms:ir.ui.view,arch_db:website_form.snippet_options
+msgid "Date"
+msgstr "Date"
+
+#. module: website_form
+#: model_terms:ir.ui.view,arch_db:website_form.snippet_options
+msgid "Date &amp; Time"
+msgstr "ቀን እና ሰዓት"
+
+#. module: website_form
+#: model_terms:ir.ui.view,arch_db:website_form.snippet_options
+msgid "Decimal Number"
+msgstr "የአስርዮሽ ቁጥር"
+
+#. module: website_form
+#. openerp-web
+#: code:addons/website_form/static/src/xml/website_form.xml:0
+#: model_terms:ir.ui.view,arch_db:website_form.contactus_form
+#, python-format
+msgid "Email"
+msgstr "ኢሜይል"
+
+#. module: website_form
+#: model_terms:ir.ui.view,arch_db:website_form.contactus_form
+msgid "Email To"
+msgstr "ኢሜል ወደ"
+
+#. module: website_form
+#: model:ir.model.fields,help:website_form.field_ir_model__website_form_access
+msgid "Enable the form builder feature for this model."
+msgstr "ለዚህ ሞዴል የቅጽ ገንቢ ባህሪን አንቃ።"
+
+#. module: website_form
+#. openerp-web
+#: code:addons/website_form/static/src/xml/website_form.xml:0
+#: code:addons/website_form/static/src/xml/website_form.xml:0
+#, python-format
+msgid "Error"
+msgstr "ስህተት"
+
+#. module: website_form
+#: model:ir.model.fields,field_description:website_form.field_ir_model__website_form_default_field_id
+msgid "Field for custom form data"
+msgstr "የብጁ ቅጽ ውሂብ መስክ"
+
+#. module: website_form
+#: model:ir.model,name:website_form.model_ir_model_fields
+msgid "Fields"
+msgstr "መስኮች"
+
+#. module: website_form
+#: model_terms:ir.ui.view,arch_db:website_form.snippet_options
+msgid "File Upload"
+msgstr "ፋይል ሰቀላ"
+
+#. module: website_form
+#: model:ir.model.fields,help:website_form.field_ir_model__website_form_label
+msgid ""
+"Form action label. Ex: crm.lead could be 'Send an e-mail' and project.issue "
+"could be 'Create an Issue'."
+msgstr ""
+"የድርጊት መለያ ቅጽ። ለምሳሌ crm.lead 'ኢ-ሜይል ላክ' እና project.issue ሊሆን ይችላል።"
+"ሊሆን ይችላል 'ኢሹ ፍጠር'."
+
+#. module: website_form
+#: model_terms:ir.ui.view,arch_db:website_form.snippet_options
+msgid "Hidden"
+msgstr "የተደበቀ"
+
+#. module: website_form
+#: model:ir.model.fields,field_description:website_form.field_ir_model__website_form_label
+msgid "Label for form action"
+msgstr "የቅጽ ድርጊት መለያ"
+
+#. module: website_form
+#: model_terms:ir.ui.view,arch_db:website_form.snippet_options
+msgid "Long Text"
+msgstr "ረጅም ጽሑፍ"
+
+#. module: website_form
+#: code:addons/website_form/controllers/main.py:0
+#, python-format
+msgid "Metadata"
+msgstr "አልፎ አልፎ ሌላ"
+
+#. module: website_form
+#: model:ir.model,name:website_form.model_ir_model
+msgid "Models"
+msgstr "ሞዴሎች"
+
+#. module: website_form
+#: model_terms:ir.ui.view,arch_db:website_form.snippet_options
+msgid "Multiple Checkboxes"
+msgstr "በርካታ አመልካች ሳጥኖች"
+
+#. module: website_form
+#. openerp-web
+#: code:addons/website_form/static/src/xml/website_form_editor.xml:0
+#, python-format
+msgid "No matching record !"
+msgstr "ምንም ተዛማጅ መዝገብ የለም!"
+
+#. module: website_form
+#: model_terms:ir.ui.view,arch_db:website_form.snippet_options
+msgid "Number"
+msgstr "ቁጥር"
+
+#. module: website_form
+#. openerp-web
+#: code:addons/website_form/static/src/js/website_form_editor.js:0
+#: code:addons/website_form/static/src/js/website_form_editor.js:0
+#, python-format
+msgid "Option 1"
+msgstr "አማራጭ 1"
+
+#. module: website_form
+#. openerp-web
+#: code:addons/website_form/static/src/js/website_form_editor.js:0
+#: code:addons/website_form/static/src/js/website_form_editor.js:0
+#, python-format
+msgid "Option 2"
+msgstr "አማራጭ 2"
+
+#. module: website_form
+#. openerp-web
+#: code:addons/website_form/static/src/js/website_form_editor.js:0
+#: code:addons/website_form/static/src/js/website_form_editor.js:0
+#, python-format
+msgid "Option 3"
+msgstr "አማራጭ 3"
+
+#. module: website_form
+#: code:addons/website_form/controllers/main.py:0
+#, python-format
+msgid "Other Information:"
+msgstr "ሌላ መረጃ:"
+
+#. module: website_form
+#. openerp-web
+#: code:addons/website_form/static/src/xml/website_form.xml:0
+#: model_terms:ir.ui.view,arch_db:website_form.contactus_form
+#, python-format
+msgid "Phone Number"
+msgstr "ስልክ ቁጥር"
+
+#. module: website_form
+#. openerp-web
+#: code:addons/website_form/static/src/xml/website_form.xml:0
+#, python-format
+msgid "Please fill in the form correctly."
+msgstr "እባክዎ ቅጹን በትክክል ይሙሉ።"
+
+#. module: website_form
+#: model_terms:ir.ui.view,arch_db:website_form.snippet_options
+msgid "Radio Buttons"
+msgstr "የሬዲዮ ቁልፎች"
+
+#. module: website_form
+#. openerp-web
+#: code:addons/website_form/static/src/js/website_form_editor_registry.js:0
+#, python-format
+msgid "Recipient Email"
+msgstr "የተቀባዩ ኢሜይል"
+
+#. module: website_form
+#: model_terms:ir.ui.view,arch_db:website_form.snippet_options
+msgid "Required"
+msgstr "የሚያስፈልግ"
+
+#. module: website_form
+#. openerp-web
+#: code:addons/website_form/static/src/js/website_form_editor.js:0
+#, python-format
+msgid "Save"
+msgstr "አስቀምጥ"
+
+#. module: website_form
+#: model_terms:ir.ui.view,arch_db:website_form.snippet_options
+msgid "Selection"
+msgstr "ምርጫ"
+
+#. module: website_form
+#: model_terms:ir.ui.view,arch_db:website_form.contactus_form
+#: model_terms:ir.ui.view,arch_db:website_form.s_website_form
+msgid "Send"
+msgstr "Send"
+
+#. module: website_form
+#: model:ir.model.fields,help:website_form.field_ir_model__website_form_default_field_id
+msgid ""
+"Specify the field which will contain meta and custom form fields datas."
+msgstr ""
+"ሜታ እና ብጁ የቅጽ መስኮች ውሂብን የሚያካትት መስክ ይግለጹ።"
+
+#. module: website_form
+#. openerp-web
+#: code:addons/website_form/static/src/xml/website_form.xml:0
+#: model_terms:ir.ui.view,arch_db:website_form.contactus_form
+#, python-format
+msgid "Subject"
+msgstr "ርዕሰ ጉዳይ"
+
+#. module: website_form
+#. openerp-web
+#: code:addons/website_form/static/src/xml/website_form.xml:0
+#, python-format
+msgid "Success"
+msgstr "ስኬት"
+
+#. module: website_form
+#: model:ir.model.fields,field_description:website_form.field_res_config_settings__website_form_enable_metadata
+#: model:ir.model.fields,field_description:website_form.field_website__website_form_enable_metadata
+msgid "Technical data on contact form"
+msgstr "በእውቂያ ቅጽ ላይ ቴክኒካዊ ውሂብ"
+
+#. module: website_form
+#: model_terms:ir.ui.view,arch_db:website_form.snippet_options
+msgid "Text"
+msgstr "ጽሑፍ"
+
+#. module: website_form
+#: model_terms:ir.ui.view,arch_db:website_form.contactus_thanks_ir_ui_view
+#: model_terms:website.page,arch_db:website_form.contactus_thanks
+msgid "Thanks!"
+msgstr "አመሰግናለሁ!"
+
+#. module: website_form
+#. openerp-web
+#: code:addons/website_form/static/src/xml/website_form.xml:0
+#, python-format
+msgid "The form has been sent successfully."
+msgstr "ቅጹ በተሳካ ሁኔታ ተልኳል።"
+
+#. module: website_form
+#: code:addons/website_form/controllers/main.py:0
+#, python-format
+msgid "This message has been posted on your website!"
+msgstr "ይህ መልእክት በድር ጣቢያዎ ላይ ተለጠፈ!"
+
+#. module: website_form
+#: model_terms:ir.ui.view,arch_db:website_form.res_config_settings_view_form
+msgid "Track metadata (IP, User Agent, ...) on your Website Forms"
+msgstr "ሜታዳታ (አይፒ፣ የተጠቃሚ ወኪል፣ ...) በድር ጣቢያዎ ቅጾች ላይ ይከታተሉ"
+
+#. module: website_form
+#: model:ir.model.fields,help:website_form.field_ir_model__website_form_key
+msgid "Used in FormBuilder Registry"
+msgstr "በ FormBuilder መዝገብ ቤት ውስጥ ጥቅም ላይ ይውላል"
+
+#. module: website_form
+#: model_terms:ir.ui.view,arch_db:website_form.contactus_thanks_ir_ui_view
+#: model_terms:website.page,arch_db:website_form.contactus_thanks
+msgid "We will get back to you shortly."
+msgstr "በቅርቡ ወደ እርስዎ እንመለሳለን."
+
+#. module: website_form
+#: model:ir.model,name:website_form.model_website
+msgid "Website"
+msgstr "ድህረገፅ"
+
+#. module: website_form
+#: model:ir.model.fields,field_description:website_form.field_ir_model__website_form_key
+msgid "Website Form Key"
+msgstr "የድር ጣቢያ ቅጽ ቁልፍ"
+
+#. module: website_form
+#: model_terms:ir.ui.view,arch_db:website_form.ir_model_view
+msgid "Website Forms"
+msgstr "Website Forms"
+
+#. module: website_form
+#: model:ir.model.fields,help:website_form.field_res_config_settings__website_form_enable_metadata
+#: model:ir.model.fields,help:website_form.field_website__website_form_enable_metadata
+msgid "You can choose to log technical data like IP, User Agent ,..."
+msgstr "እንደ አይፒ፣ የተጠቃሚ ወኪል፣... ያሉ ቴክኒካዊ መረጃዎችን ለማስገባት መምረጥ ትችላለህ።"
+
+#. module: website_form
+#. openerp-web
+#: code:addons/website_form/static/src/js/website_form_editor.js:0
+#, python-format
+msgid "You can't duplicate a model field."
+msgstr "የሞዴል መስክን ማባዛት አይችሉም."
+
+#. module: website_form
+#. openerp-web
+#: code:addons/website_form/static/src/js/website_form_editor.js:0
+#, python-format
+msgid "You can't duplicate an item which refers to an actual record."
+msgstr "እውነተኛ መዝገብን የሚያመለክት ንጥል ማባዛት አይችሉም።"
+
+#. module: website_form
+#. openerp-web
+#: code:addons/website_form/static/src/js/website_form_editor.js:0
+#, python-format
+msgid "You can't remove a field that is required by the model itself."
+msgstr "በአምሳያው በራሱ የሚፈለገውን መስክ ማስወገድ አይችሉም."
+
+#. module: website_form
+#. openerp-web
+#: code:addons/website_form/static/src/xml/website_form.xml:0
+#: model_terms:ir.ui.view,arch_db:website_form.contactus_form
+#, python-format
+msgid "Your Company"
+msgstr "የእርስዎ ኩባንያ"
+
+#. module: website_form
+#. openerp-web
+#: code:addons/website_form/static/src/xml/website_form.xml:0
+#: model_terms:ir.ui.view,arch_db:website_form.contactus_form
+#, python-format
+msgid "Your Name"
+msgstr "የአንተ ስም"
+
+#. module: website_form
+#. openerp-web
+#: code:addons/website_form/static/src/xml/website_form.xml:0
+#: model_terms:ir.ui.view,arch_db:website_form.contactus_form
+#, python-format
+msgid "Your Question"
+msgstr "Your Question"
+
+#. module: website_form
+#: model_terms:ir.ui.view,arch_db:website_form.contactus_thanks_ir_ui_view
+#: model_terms:website.page,arch_db:website_form.contactus_thanks
+msgid "Your message has been sent successfully."
+msgstr "መልእክትህ በተሳካ ሁኔታ ተልኳል።

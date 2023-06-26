@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<odoo>
+
+  <record id="base.action_attachment" model="ir.actions.act_window">
+    <field name="name">Attachments Modify</field>
+    <field name="res_model">ir.attachment</field>
+    <field name="domain">[('res_id', '=', active_id)]</field>
+  </record>
+
+  <record id="attachment_types" model="ir.actions.act_window">
+    <field name="name">Attachment Type</field>
+    <field name="res_model">attachment.type</field>
+    <field name="view_mode">tree, form</field>
+  </record>
+
+  <record id="attachment_types_tree" model="ir.ui.view">
+    <field name="name">attachment.type.tree</field>
+    <field name="model">attachment.type</field>
+    <field name="arch" type="xml">
+      <tree>
+        <field name="name"/>
+      </tree>
+    </field>
+  </record>
+
+  <record id="attachment_types_form" model="ir.ui.view">
+    <field name="name">attachment.type.form</field>
+    <field name="model">attachment.type</field>
+    <field name="arch" type="xml">
+      <form>
+        <group>
+          <field name="name"/>
+        </group>
+      </form>
+    </field>
+  </record>
+
+  <record id="attachment_view_modification" model="ir.ui.view">
+    <field name="name">attachment.view.modification</field>
+    <field name="model">ir.attachment</field>
+    <field name="inherit_id" ref="base.view_attachment_form"/>
+    <field name="arch" type="xml">
+      <xpath expr="//field[@name='mimetype']" position="after">
+        <field name="attachment_type" options="{'no_create': True, 'no_create_edit': True}" />
+      </xpath>
+    </field>
+  </record>
+
+  <!-- <menuitem name="Attachment Types" 
+            id="membership_attachment_types"
+            parent="membership.menu_marketing_config_association"
+            action="attachment_types"
+            groups="members_custom.member_group_manager"
+            sequence="3"/> -->
+
+</odoo>

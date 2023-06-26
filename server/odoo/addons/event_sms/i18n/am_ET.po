@@ -1,0 +1,93 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* event_sms
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20221005\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-22 09:17+0000\n"
+"PO-Revision-Date: 2023-05-22 09:17+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: event_sms
+#: model:sms.template,body:event_sms.sms_template_data_event_reminder
+msgid ""
+"${object.event_id.organizer_id.name or object.event_id.company_id.name or "
+"user.env.company.name}: We are excited to remind you that the "
+"${object.event_id.name} event is starting ${object.get_date_range_str()}. We"
+" confirm your registration and hope to meet you there."
+msgstr ""
+"${object.event_id.organizer_id.name or object.event_id.company_id.name ወይም"
+"user.env.company.name}: መሆኑን ለማስታወስ ጓጉተናል"
+"${object.event_id.name} ክስተት ${object.get_date_range_str()} እየጀመረ ነው። እኛ"
+"መመዝገቢያዎን ያረጋግጡ እና እዚያ እንደምናገኝ ተስፋ አደርጋለሁ።"
+#. module: event_sms
+#: model:sms.template,body:event_sms.sms_template_data_event_registration
+msgid ""
+"${object.event_id.organizer_id.name or object.event_id.company_id.name or "
+"user.env.company.name}: We are happy to confirm your registration for the "
+"${object.event_id.name} event."
+msgstr ""
+"${object.event_id.organizer_id.name or object.event_id.company_id.name ወይም"
+"user.env.company.name}: ለ ምዝገባዎን በማረጋገጥ ደስተኞች ነን"
+"${object.event_id.name} ክስተት።"
+#. module: event_sms
+#: model:ir.model,name:event_sms.model_event_mail
+msgid "Event Automated Mailing"
+msgstr "የክስተት አውቶማቲክ መልእክት መላኪያ"
+
+#. module: event_sms
+#: model:ir.model,name:event_sms.model_event_registration
+msgid "Event Registration"
+msgstr "የክስተት ምዝገባ"
+
+#. module: event_sms
+#: model:sms.template,name:event_sms.sms_template_data_event_registration
+msgid "Event: Registration"
+msgstr "ክስተት: ምዝገባ"
+
+#. module: event_sms
+#: model:sms.template,name:event_sms.sms_template_data_event_reminder
+msgid "Event: Reminder"
+msgstr "ክስተት፡ አስታዋሽ"
+
+#. module: event_sms
+#: model:ir.model,name:event_sms.model_event_type_mail
+msgid "Mail Scheduling on Event Category"
+msgstr "የደብዳቤ መርሐግብር በክስተት ምድብ ላይ"
+
+#. module: event_sms
+#: model:ir.model,name:event_sms.model_event_mail_registration
+msgid "Registration Mail Scheduler"
+msgstr "የምዝገባ ደብዳቤ መርሐግብር"
+
+#. module: event_sms
+#: model:ir.model.fields.selection,name:event_sms.selection__event_mail__notification_type__sms
+#: model:ir.model.fields.selection,name:event_sms.selection__event_type_mail__notification_type__sms
+msgid "SMS"
+msgstr "SMS"
+
+#. module: event_sms
+#: model:ir.model.fields,field_description:event_sms.field_event_mail__sms_template_id
+#: model:ir.model.fields,field_description:event_sms.field_event_type_mail__sms_template_id
+msgid "SMS Template"
+msgstr "SMS አብነት"
+
+#. module: event_sms
+#: model:ir.model.fields,field_description:event_sms.field_event_mail__notification_type
+#: model:ir.model.fields,field_description:event_sms.field_event_type_mail__notification_type
+msgid "Send"
+msgstr "ላክ"
+
+#. module: event_sms
+#: model:ir.model.fields,help:event_sms.field_event_mail__sms_template_id
+#: model:ir.model.fields,help:event_sms.field_event_type_mail__sms_template_id
+msgid ""
+"This field contains the template of the SMS that will be automatically sent"
+msgstr "ይህ መስክ በቀጥታ የሚላከው የSMS አብነት ይዟል"

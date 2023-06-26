@@ -709,7 +709,6 @@ class Picking(models.Model):
         return True
 
     def _prepare_stock_move_vals(self, line, picking):
-        print("I am overriden *************************************** prepare stock moves")
         return {
             'name': _('New Move:') + line.product_id.display_name,
             'product_id': line.product_id.id,
@@ -760,7 +759,6 @@ class Picking(models.Model):
                 moves = pick.move_lines.filtered(lambda x: x.product_id == ops.product_id)
                 moves = sorted(moves, key=lambda m: m.quantity_done < m.product_qty, reverse=True)
                 if moves:
-                    print("************there is move ", moves , moves[0].id)
                     ops.move_id = moves[0].id
                 else:
                     new_move = self.env['stock.move'].create(self._prepare_stock_move_vals(ops, pick))
@@ -1348,4 +1346,6 @@ class Picking(models.Model):
             (self.env.ref('stock.view_picking_move_tree').id, 'tree'),
         ]
         action['context'] = self.env.context
-        action['domain'] = [('pickin
+        action['domain'] = [('picking_id', 'in', self.ids)]
+        return action
+

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="report.paperformat" id="depreciation_report_paperreport">
+        <field name="name">paperformat.depreciation.report</field>
+        <field name="default" eval="True"/>
+        <field name="format">A4</field>
+        <field name="orientation">Landscape</field>
+        <field name="margin_right">10</field>
+        <field name="margin_bottom">10</field>
+        <field name="margin_top">20</field>
+        <field name="margin_left">20</field>
+        <field name="header_line" eval="False"/>
+        <field name="dpi">100</field>
+        <field name="header_spacing">0</field>
+    </record>
+
+    <report
+        string="Asset depreciation report"
+        id="depreciation_report"
+        model="asset.depreciation.report.wizard"
+        name="account_asset_depreciation.depreciation_report_pdf"
+        report_type="qweb-pdf"
+        paperformat="depreciation_report_paperreport"
+    />
+
+    <template id="depreciation_report_pdf">
+        <t t-call="web.basic_layout">
+            <t t-foreach="docs" t-as="o">
+                <div class="page">
+
+                    <style>
+                        * {font-family: Roboto, sans-serif; font-size= 13px}
+                        .th {tex-align: center; border: 1px solid black; padding:5px; vertical-align: middle; background-color: #DCDCDC; font-weight: bold}
+                        .td {tex-align: center; border: 1px solid black; padding:5px; vertical-align: middle}
+                    </style>
+
+                    <table border="1" cellpadding="1" cellspacing="1" style="width:100%">
+                        <tbody>
+                            <tr>
+                                <td style="width:50%">
+                                    <img src='/web/binary/company_logo' alt="Logo" height="85px" align="left"/>
+                                    <br/>
+                                </td>
+                                <td style="text-align:right">
+                                    <strong>
+                                        <span t-esc="res_company.partner_id.name" style="text-align:right"/>
+                                    </strong>
+                                    <br/>
+                                    <span t-esc="res_company.partner_id.vat" style="text-align:right"/>
+                                    <br/>
+                                    <span class="aslink" style="text-align:right" t-esc="res_company.partner_id.email" />
+                                    <br/>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                
+                    <h3 style="text-align:center">Assets depreciation report</h3>
+                    <p style="text-align:center">
+                        (<span t-esc="o.date_from" t-options='{"widget": "date","format": "dd MMMM Y"}'/> to <span t-esc="o.date_to" 
+                        t-options='{"widget": "date","format": "dd MMMM Y"}'/>)
+                        <br/>
+                        <strong>Asset categories:</strong> 
+                        <t t-foreach="o.category" t-as="c">  
+                            |<span t-field="c.name"/>
+                        </t>
+                    </p>
+                   
+                    <table>
+                        <thead>
+                            <tr style="text-align:center; vertical-align: middle">
+                                <th class="th" style="max-width: 5%">#</th>
+                                <th class="th" style="max-width: 10%">Reference</th>
+                                <th class="th" style="min-width: 20%">Asset</th>
+                                <th class="th" style="max-width: 10%">Date</th>
+                                <th class="th" style="max-width: 10%">Asset account</th>
+                                <th class="th" style="width: 5%">Term (months)</th>
+                                <th class="th" style="max-width: 10%">Annual percentage</th>
+                                <th class="th" style="max-width: 5%">Monthly depreciation</th>
+                                <th class="th" style="max-width: 10%">Gross Value</th>
+                                <th class="th" style="max-width: 10%">At starting year</th>
+                                <th class="th" style="max-width: 10%">Accumulated on last years</th>
+                                <th class="th" style="max-width: 10%">Value Residual</th>
+                                <th class="th" style="max-width: 10%">Selected period depreciation</th>
+                                <th class="th" style="max-width: 10%">Total depreciated</th>
+                            </tr>
+                        </thead>
+
+                        <tr t-foreach="names" t-as="n" style="text-align:center; vertical-align: middle">
+                            <td style="max-width: 5%" class='td'>
+                                <span t-esc="n_index+1"/>
+                            </td>
+                            <td style="max-width: 10%" class='td'>
+                                <span t-field="n.code"/>
+                            </td>
+                            <td style="max-width: 40%; min-width: 25%" class='td'>
+                                <span t-field="n.name"/>
+                            </td>
+                            <td style="max-width: 10%" class='td'>
+                                <span t-field="n.date"/>
+                            </td>
+                            <td style="max-width: 10%" class='td'>
+                                <span t-field="n.category_id.account_asset_id.code"/>
+                            </td>
+                            <td style="max-width: 5%" class='td'>
+                                <span t-field="n.months"/>
+                            </td>
+                            <td style="max-width: 10%" class='td'>
+                                <span t-field="n.peryear_depreciation"/>%
+                            </td>
+                            <td style="max-width: 5%" class='td'>
+                                <span t-field="n.monthly_depreciation" t-options='{"widget": "monetary", "display_currency": n.currency_id}'/>
+                            </td> 
+                            <td style="max-width: 10%" class='td'>
+                                <span t-field="n.value" t-options='{"widget": "monetary", "display_currency": n.currency_id}'/>
+                            </td>
+                            <td style="max-width: 10%" class='td'>
+                                <span t-field="n.c_year_amount" t-options='{"widget": "monetary", "display_currency": n.currency_id}'/>
+                            </td>
+                            <td style="max-width: 10%" class='td'>
+                                <span t-field="n.lst_year_amount" t-options='{"widget": "monetary", "display_currency": n.currency_id}'/>
+                            </td>
+                            <td style="max-width: 10%" class='td'>
+                                <span t-field="n.s_remaining_value" t-options='{"widget": "monetary", "display_currency": n.currency_id}'/>
+                            </td>   
+                            <td style="max-width: 10%" class='td'>
+                                <span t-field="n.s_period_amount" t-options='{"widget": "monetary", "display_currency": n.currency_id}'/>
+                            </td>          
+                            <td style="max-width: 10%" class='td'>
+                                <span t-field="n.s_depreciated_value" t-options='{"widget": "monetary", "display_currency": n.currency_id}'/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="max-width: 5%">                      
+                            </td>
+                            <td style="max-width: 10%; border-left: 0px; border-rigth: 0px">
+                            </td>
+                            <td style="max-width: 40%; ,min-width: 25%; border-left: 0px; border-rigth: 0px">
+                            </td>
+                            <td style="max-width: 10%; border-left; 0px; border-bottom: 0px">
+                            </td>
+                            <td style="max-width: 10%; border-left: 0px; border-bottom: 0px">
+                            </td>
+                            <td style="max-width: 5%, border-left: 0px; border-bottom: 0px">
+                            </td>
+                            <td style="max-width: 10%; border-left: 0px; border-bottom: 0px">
+                            </td>
+                            <td style="max-width: 5%; border-left: 0px; border-bottom: 0px">      
+                            </td>
+
+                            <td style="max-width: 10%" class='th'> 
+                                <span t-esc="total_value" t-options='{"widget": "monetary", "display_currency": currency_id}'/>      
+                            </td>
+                            
+                            <td style="max-width: 10%" class='th'>
+                                <span t-esc="total_cy_amount" t-options='{"widget": "monetary", "display_currency": currency_id}'/>      
+
+                            </td>
+                            <td style="max-width: 10%" class='th'>
+                                <span t-esc="total_ly_amount" t-options='{"widget": "monetary", "display_currency": currency_id}'/>      
+
+                            </td>
+                            <td style="max-width: 10%" class='th'>
+                                <span t-esc="total_remaining" t-options='{"widget": "monetary", "display_currency": currency_id}'/>
+                            </td>      
+                            <td style="max-width: 10%" class='th'>
+                               <span t-esc="total_sp_amount" t-options='{"widget": "monetary", "display_currency": currency_id}'/>
+                            </td>                           
+                            <td style="max-width: 10%" class='th'>
+                                <span t-esc="total_d_value" t-options='{"widget": "monetary", "display_currency": currency_id}'/>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <div class="footer">Page <span class="page" /> of <span class="topage" />
+                    </div>
+
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

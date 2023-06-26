@@ -114,7 +114,7 @@
         <field name="name">purchase.requisition.form</field>
         <field name="model">purchase.requisition</field>
         <field name="arch" type="xml">
-            <form string="Purchase Agreements">
+            <form string="Purchase Agreements" create="false">
             <header>
                 <button name="%(action_purchase_requisition_to_so)d" type="action"
                     string="New Quotation"
@@ -157,12 +157,15 @@
                         <field name="schedule_date" attrs="{'readonly': [('state','not in',('draft','in_progress','open','ongoing'))]}"/>
                         <field name="origin" placeholder="e.g. PO0025" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
                         <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}" attrs="{'readonly': [('state','not in',('draft'))]}"/>
+                        <field name="is_merge" invisible="1"/>
+                        <field name="analysis_id"/>
+                        <field name="approver_id"/>
                     </group>
                 </group>
                 <notebook>
                     <page string="Products">
                         <field name="line_ids">
-                            <tree string="Products" editable="bottom">
+                            <tree string="Products" editable="bottom" create="false">
                                 <field name="product_id" context="{'default_purchase_requisition': 'tenders'}"
                                        domain="[('purchase_ok', '=', True), '|', ('company_id', '=', False), ('company_id', '=', parent.company_id)]"/>
                                 <field name="product_qty"/>
@@ -191,6 +194,23 @@
                         <separator string="Terms and Conditions"/>
                         <field name="description" attrs="{'readonly': [('state','not in',('draft','in_progress','open'))]}"/>
                     </page>
+                       <page string="Products list">
+                        <field name="line_id_2">
+                            <tree string="Products List" editable="bottom" create="false">
+                                <field name="name" readonly="1"/>
+                                <field name="product_id" readonly="1"/>
+                                <field name="product_qty" readonly="1"/>
+                                <field name="price_unit" readonly="1"/>
+                                <field name="taxes_id" widget="many2many_tags" readonly="1"/>
+                                <field name="price_subtotal" readonly="1"/>
+                                <field name="partner_id" readonly="1"/>
+                                <field name="order_line" invisible="1"/>
+                                <field name="selection"/>
+                                <field name="reason"/>
+
+                            </tree>
+                        </field>
+                    </page>
                 </notebook>
             </sheet>
             <div class="oe_chatter">
@@ -205,7 +225,7 @@
         <field name="name">purchase.requisition.tree</field>
         <field name="model">purchase.requisition</field>
         <field name="arch" type="xml">
-            <tree decoration-bf="message_needaction==True" decoration-muted="state == 'cancel'" decoration-danger="date_end and date_end&lt;current_date" string="Purchase Agreements">
+            <tree decoration-bf="message_needaction==True" decoration-muted="state == 'cancel'" decoration-danger="date_end and date_end&lt;current_date" string="Purchase Agreements" create="false">
                 <field name="message_needaction" invisible="1"/>
                 <field name="name"/>
                 <field name="user_id" optional="show"/>

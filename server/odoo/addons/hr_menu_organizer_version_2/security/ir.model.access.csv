@@ -1,0 +1,18 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_custom_employee_category_user,hr.custom.employee.category.user,hr.model_hr_employee_category,hr.group_user_custom,1,0,0,0
+
+access_custom_employee_user,hr.custom.employee user,hr.model_hr_employee,hr.group_user_custom,1,0,0,0
+
+access_custom_employee_resource_user,custom.resource.resource.user,resource.model_resource_resource,hr.group_user_custom,1,0,0,0
+
+access_custom_employee_user,hr.custom.department.user,hr.model_hr_department,hr.group_user_custom,1,0,0,0
+
+access_custom_employee_job_user,hr.custom.job user,hr.model_hr_job,hr.group_user_custom,1,0,0,0
+
+access_custom_employee_ir_property_hr_user,custom.ir_property hr_user,base.model_ir_property,hr.group_user_custom,1,0,0,0
+
+access_custom_employee_base_custom,hr.base hr_user_custom,hr.model_hr_employee_base,hr.group_user_custom,1,0,0,0
+
+access_custom_employee_plan_activity_type_hr_user,custom.access_hr_plan_activity_type,hr.model_hr_plan_activity_type,hr.group_user_custom,1,0,0,0
+
+access_custom_employee_plan_hr_user,custom.access_hr_plan_hr_user,hr.model_hr_plan,hr.group_user_custom,1,0,0,0

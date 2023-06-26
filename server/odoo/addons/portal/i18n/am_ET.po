@@ -1,0 +1,1036 @@
+# Date created: 2023-06-20 20:12:55 by dichthuatphuኦngdong.com
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-06-20 03:13:39+0000"
+"MIME-Version: 1.0"
+"Content-Type: text/plain; charset=UTF-8"
+"Content-Transfer-Encoding: 8bit"
+"Plural-Forms: nplurals=1; plural=0;"
+"X-Generator: GlotPress/3.0.0-alpha.2"
+"Language: en_GB"
+"Project-Id-Version: PO File 5.8.1"
+
+#. module: portal
+#: code:addons/portal/wizard/portal_wizard.py:0
+msgid ""
+""
+"- Switch the internal users to portal manually"
+msgstr ""
+""
+"- የውስጥ ተጠቃሚዎችን በእጅ ወደ ፖርታል ይቀይሩ"
+
+#. module: portal
+#. openerp-web
+#: code:addons/portal/static/src/js/portal_sidebar.js:0
+msgid "%1d days overdue"
+msgstr "%1d ቀናት አልፈዋል"
+
+#. module: portal
+#: code:addons/portal/controllers/portal.py:0
+msgid "%s is not the reference of a report"
+msgstr "%s የሪፖርት ማመሳከሪያ አይደለም።"
+
+#. module: portal
+#: model_terms:ir.ui.view,arch_db:portal.portal_show_sign_in
+msgid "<b>Sign in</b>"
+msgstr "<b>ይግቡ</b>"
+
+#. module: portal
+#: model_terms:ir.ui.view,arch_db:portal.portal_back_in_edit_mode
+msgid "<i class=\"fa fa-arrow-right mr-1\"/>Back to edit mode"
+msgstr "<i class=\"fa fa-arrow-right mr-1\"/>ወደ የአርትዖት ሁነታ ተመለስ"
+
+#. module: portal
+#: model_terms:ir.ui.view,arch_db:portal.record_pager
+msgid "<i class=\"fa fa-chevron-left\" role=\"img\" aria-label=\"Previous\" title=\"Previous\"/>"
+msgstr "<i class=\"fa fa-chevron-left\" role=\"img\" aria-label=\"የቀድሞው\" title=\"ቀዳሚ\"/>"
+
+#. module: portal
+#: model_terms:ir.ui.view,arch_db:portal.record_pager
+msgid "<i class=\"fa fa-chevron-right\" role=\"img\" aria-label=\"Next\" title=\"Next\"/>"
+msgstr "<i class=\"fa fa-chevron-right\" role=\"img\" aria-label=\"Next\" title=\"ቀጣይ\"/>"
+
+#. module: portal
+#: model_terms:ir.ui.view,arch_db:portal.portal_layout
+msgid "<i class=\"fa fa-pencil\"/> Edit"
+msgstr "<i class=\"fa fa-pencil\"/> ያርትዑ"
+
+#. module: portal
+#: model_terms:ir.ui.view,arch_db:portal.portal_searchbar
+msgid "<span class=\"small mr-1 navbar-text\">Filter By:</span>"
+msgstr "<span class=\"small mr-1 navbar-text\">አጣራ በ</span>"
+
+#. module: portal
+#: model_terms:ir.ui.view,arch_db:portal.portal_searchbar
+msgid "<span class=\"small mr-1 navbar-text\">Group By:</span>"
+msgstr "<span class=\"small mr-1 navbar-text\">ቡድን በ</span>"
+
+#. module: portal
+#: model_terms:ir.ui.view,arch_db:portal.portal_searchbar
+msgid "<span class=\"small mr-1 navbar-text\">Sort By:</span>"
+msgstr "<span class=\"small mr-1 navbar-text\">ደርድር በ</span>"
+
+#. module: portal
+#: model_terms:ir.ui.view,arch_db:portal.portal_share_template
+msgid "<strong>Open </strong>"
+msgstr "<strong>ክፍት</strong>"
+
+#. module: portal
+#: model:mail.template,body_html:portal.mail_template_data_portal_welcome
+msgid ""
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"padding-top: 16px; background-color: #F1F1F1; font-family:Verdana, Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;\"><tr><td align=\"center\">"
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"padding: 16px; background-color: white; color: #454748; border-collapse:separate;\">"
+"<tbody>"
+"    <!-- HEADER -->"
+"    <tr>"
+"        <td align=\"center\" style=\"min-width: 590px;\">"
+"            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">"
+"                <tr><td valign=\"middle\">"
+"                    <span style=\"font-size: 10px;\">Your Account</span><br/>"
+"                    <span style=\"font-size: 20px; font-weight: bold;\">"
+"                        ${object.user_id.name}"
+"                    </span>"
+"                </td><td valign=\"middle\" align=\"right\">"
+"                    <img src=\"/logo.png?company=${object.user_id.company_id.id}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${object.user_id.company_id.name}\"/>"
+"                </td></tr>"
+"                <tr><td colspan=\"2\" style=\"text-align:center;\">"
+"                  <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin:16px 0px 16px 0px;\"/>"
+"                </td></tr>"
+"            </table>"
+"        </td>"
+"    </tr>"
+"    <!-- CONTENT -->"
+"    <tr>"
+"        <td align=\"center\" style=\"min-width: 590px;\">"
+"            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">"
+"                <tr><td valign=\"top\" style=\"font-size: 13px;\">"
+"                    <div>"
+"                        Dear ${object.user_id.name or \'\'},<br/> <br/>"
+"                        You have been given access to ${object.user_id.company_id.name}\'s portal.<br/>"
+"                        Your login account data is:"
+"                        <ul>"
+"                            <li>Username: ${object.user_id.login or \'\'}</li>"
+"                            <li>Portal: <a href=\"${\'portal_url\' in ctx and ctx[\'portal_url\'] or \'\'}\">${\'portal_url\' in ctx and ctx[\'portal_url\'] or \'\'}</a></li>"
+"                            <li>Database: ${\'dbname\' in ctx and ctx[\'dbname\'] or \'\'}</li>"
+"                        </ul>"
+"                        You can set or change your password via the following url:"
+"                        <ul>"
+"                            <li><a href=\"${object.user_id.signup_url}\">${object.user_id.signup_url}</a></li>"
+"                        </ul>"
+"                        ${object.wizard_id.welcome_message or \'\'}"
+"                    </div>"
+"                </td></tr>"
+"                <tr><td style=\"text-align:center;\">"
+"                  <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>"
+"                </td></tr>"
+"            </table>"
+"        </td>"
+"    </tr>"
+"    <!-- FOOTER -->"
+"    <tr>"
+"        <td align=\"center\" style=\"min-width: 590px;\">"
+"            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; font-size: 11px; padding: 0px 8px 0px 8px; border-collapse:separate;\">"
+"                <tr><td valign=\"middle\" align=\"left\">"
+"                    ${object.user_id.company_id.name}"
+"                </td></tr>"
+"                <tr><td valign=\"middle\" align=\"left\" style=\"opacity: 0.7;\">"
+"                    ${object.user_id.company_id.phone}"
+"                    % if object.user_id.company_id.email"
+"                        | <a href=\"\'mailto:%s\' % ${object.user_id.company_id.email}\" style=\"text-decoration:none; color: #454748;\">${object.user_id.company_id.email}</a>"
+"                    % endif"
+"                    % if object.user_id.company_id.website"
+"                        | <a href=\"\'%s\' % ${object.user_id.company_id.website}\" style=\"text-decoration:none; color: #454748;\">"
+"                        ${object.user_id.company_id.website}"
+"                    </a>"
+"                    % endif"
+"                </td></tr>"
+"            </table>"
+"        </td>"
+"    </tr>"
+"</tbody>"
+"</table>"
+"</td></tr>"
+"<!-- POWERED BY -->"
+"<tr><td align=\"center\" style=\"min-width: 590px;\">"
+"    <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: #F1F1F1; color: #454748; padding: 8px; border-collapse:separate;\">"
+"      <tr><td style=\"text-align: center; font-size: 13px;\">"
+"        Powered by <a target=\"_blank\" href=\"https://www.odoo.com?utm_source=db&amp;utm_medium=portalinvite\" style=\"color: #875A7B;\">Odoo</a>"
+"      </td></tr>"
+"    </table>"
+"</td></tr>"
+"</table>"
+"            "
+msgstr ""
+"\"<table border=\"\"0\"\" cellpadding=\"\"0\"\" cellpacing=\"\"0\" style=\"\"padding-top: 16px; background-color: #F1F1F1; font-family:Verdana, Arial,sans -ሰሪፍ፤ ቀለም፡ #454748፤ ስፋት፡ 100%፤ ድንበር-መፈራረስ፡የተለየ፤\"\"><tr><td align=\"\"center\"\">
+"
+"<table border=\"\"0\"\" cellpadding=\"\"0\"\" cellspacing=\"\"0\"\" width=\"\"590\" style=\"\"padding: 16px; ዳራ-ቀለም: ነጭ; ቀለም፡ # 454748; border-collapse:separate;\">
+"
+"<tbody>
+"
+"     <!-- ራስጌ -->
+"
+"     <tr>
+"
+"         <td align=\"\"center\"\" style=\"\"min-width: 590px;\"\">
+"
+"             <table border=\"\"0\"\" cellpadding=\"\"0\"\" cellpacing=\"\"0\"\" width=\"\"590\" style=\"\"ደቂቃ ስፋት፡ 590px; ዳራ-ቀለም: ነጭ; ንጣፍ: 0 ፒክስል 8 ፒክስል 0 ፒክስል 8 ፒክስል; border-collapse:separate;\">
+"
+"                 <tr><td valign=\"\"middle\"\">
+"
+"                     <span style=\"\"font-size: 10px;\"\">የእርስዎ መለያ</span><br/>
+"
+"                     <span style=\"\"የቅርጸ-ቁምፊ መጠን: 20px; font-weight: bold;\"\">
+"
+"                         ${object.user_id.name}
+"
+"                     </span>
+"
+"                 </td><td valign=\"\"middle\"\" align=\"\"right\"\">
+"
+"                     <img src=\"\"/logo.png?company=${object.user_id.company_id.id}\" style=\"\"padding: 0px; ህዳግ፡ 0 ፒክስል; ቁመት፡ auto; ስፋት፡ 80 ፒክስል፤\"\" alt=\"\"${object.user_id.company_id.name}\"\"/>
+"
+"                 </td></tr>
+"
+"                 <tr><td colspan=\"\"2\" style=\"\"text-align:center;\"\">
+"
+"                   <hr width=\"\"100%\"\" style=\"\"background-color:rgb(204,204,204);ድንበር:መካከለኛ ምንም;ግልጽ:ሁለቱም;ማሳያ:ብሎክ;font-size:0px;min-height:1px;line- ቁመት፡0; ህዳግ፡16 ፒክስል 0 ፒክስል 16 ፒክስል 0 ፒክስል፤\"\"/>
+"
+"                 </td></tr>
+"
+"             </ሠንጠረዥ>
+"
+"         </td>
+"
+"     </tr>
+"
+"     <!-- ይዘት -->
+"
+"     <tr>
+"
+"         <td align=\"\"center\"\" style=\"\"min-width: 590px;\"\">
+"
+"             <table border=\"\"0\"\" cellpadding=\"\"0\"\" cellpacing=\"\"0\"\" width=\"\"590\" style=\"\"ደቂቃ ስፋት፡ 590px; ዳራ-ቀለም: ነጭ; ንጣፍ: 0 ፒክስል 8 ፒክስል 0 ፒክስል 8 ፒክስል; border-collapse:separate;\">
+"
+"                 <tr><td valign=\"\"top\"\" style=\"\"font-size: 13px;\"\">
+"
+"                     <div>
+"
+"                         ውድ ${object.user_id.name ወይም \'\'}፣<br/> <br/>
+"
+"                         የ${object.user_id.company_id.name} ፖርታል መዳረሻ ተሰጥቶሃል።<br/>
+"
+"                         የመግቢያ መለያዎ ውሂብ የሚከተለው ነው-
+"
+"                         <ul>
+"
+"                             <li>የተጠቃሚ ስም፡${object.user_id.login ወይም \'\'}</li>
+"
+"                             <li>ፖርታል፡ <a href=\"\"${\'portal_url\' በctx እና ctx[\'portal_url\'] ወይም \'\'}\"\">${\'ፖርታል_url\' በctx እና ctx[\'portal_url\'] ወይም \'\'} </a></li>
+"
+"                             <li>ዳታቤዝ፡ ${\'dbname\' በctx እና ctx[\'dbname\'] ወይም \'\'}</li>
+"
+"                         </ul>
+"
+"                         በሚከተለው url በኩል የይለፍ ቃልዎን ማዘጋጀት ወይም መቀየር ይችላሉ፡
+"
+"                         <ul>
+"
+"                             <li><a href=\"\"${object.user_id.signup_url}\"\">${object.user_id.signup_url}</a></li>
+"
+"                         </ul>
+"
+"                         ${object.wizard_id.welcome_message ወይም \'\'}
+"
+"                     </div>
+"
+"                 </td></tr>
+"
+"                 <tr><td style=\"\"text-align:center;\">
+"
+"                   <hr width=\"\"100%\"\" style=\"\"background-color:rgb(204,204,204);ድንበር:መካከለኛ ምንም;ግልጽ:ሁለቱም;ማሳያ:ብሎክ;font-size:0px;min-height:1px;line- ቁመት፡0; ህዳግ፡ 16 ፒክስል 0 ፒክስል 16 ፒክስል 0 ፒክስል፤\"\"/>
+"
+"                 </td></tr>
+"
+"             </ሠንጠረዥ>
+"
+"         </td>
+"
+"     </tr>
+"
+"     <!-- እግር -->
+"
+"     <tr>
+"
+"         <td align=\"\"center\"\" style=\"\"min-width: 590px;\"\">
+"
+"             <table border=\"\"0\"\" cellpadding=\"\"0\"\" cellpacing=\"\"0\"\" width=\"\"590\" style=\"\"ደቂቃ ስፋት፡ 590px; ዳራ-ቀለም: ነጭ; የቅርጸ-ቁምፊ መጠን: 11 ፒክስል; ንጣፍ: 0 ፒክስል 8 ፒክስል 0 ፒክስል 8 ፒክስል; border-collapse:separate;\">
+"
+"                 <tr><td valign=\"\"middle\"\" align=\"\"ግራ\"\">
+"
+"                     ${object.user_id.company_id.name}
+"
+"                 </td></tr>
+"
+"                 <tr><td valign=\"\"middle\"\" align=\"\"ግራ\" style=\"\"opacity: 0.7;\"\">
+"
+"                     ${object.user_id.company_id.phone}
+"
+"                     % object.user_id.company_id.email ከሆነ
+"
+"                         | <a href=\"\"\'mailto:%s\' % ${object.user_id.company_id.email}\" style=\"\"text-decoration:none; ቀለም፡ #454748;\"\">${object.user_id.company_id.email}</a>
+"
+"                     % መጨረሻ
+"
+"                     % object.user_id.company_id.website ከሆነ
+"
+"                         | <a href=\"\"\'%s\' % ${object.user_id.company_id.website}\" style=\"\"text-decoration:none; ቀለም: # 454748;\"\">
+"
+"                         ${object.user_id.company_id.website}
+"
+"                     </a>
+"
+"                     % መጨረሻ
+"
+"                 </td></tr>
+"
+"             </ሠንጠረዥ>
+"
+"         </td>
+"
+"     </tr>
+"
+"</tbody>
+"
+"</ሠንጠረዥ>
+"
+"</td></tr>
+"
+"<!-- በ --> የተጎላበተ
+"
+"<tr><td align=\"\"center\"\" style=\"\"min-width: 590px;\"\">
+"
+"     <table border=\"\"0\"\" cellpadding=\"\"0\"\" cellpacing=\"\"0\"\" width=\"\"590\" style=\"\"ደቂቃ ስፋት፡ 590px; የበስተጀርባ ቀለም፡ # F1F1F1; ቀለም፡ # 454748; ንጣፍ: 8 ፒክስል; border-collapse:separate;\">
+"
+"       <tr><td style=\"\"text-align: center; የቅርጸ-ቁምፊ መጠን፡ 13 ፒክስል;\"\">
+"
+"         የተጎላበተ በ<a target=\"\"_blank\"\" href=\"\"https://www.odoo.com?utm_source=db&amp;utm_medium=portalinvite\"\" style=\"\"color: #875A7B;\"\">ኦዱ</a >
+"
+"       </td></tr>
+"
+"     </ሠንጠረዥ>
+"
+"</td></tr>
+"
+"</ሠንጠረዥ>\""
+
+#. module: portal
+#. openerp-web
+#: code:addons/portal/static/src/js/portal_signature.js:0
+msgid "Accept & Sign"
+msgstr "ተቀበል እና ይፈርሙ"
+
+#. module: portal
+#: model:ir.model.fields,field_description:portal.field_portal_mixin__access_warning
+#: model:ir.model.fields,field_description:portal.field_portal_share__access_warning
+msgid "Access warning"
+msgstr "የመዳረሻ ማስጠንቀቂያ"
+
+#. module: portal
+#: model_terms:ir.ui.view,arch_db:portal.portal_share_wizard
+msgid "Add a note"
+msgstr "ማስታወሻ ጨምር"
+
+#. module: portal
+#. openerp-web
+#: code:addons/portal/static/src/xml/portal_chatter.xml:0
+msgid "Add attachment"
+msgstr "አባሪ ጨምር"
+
+#. module: portal
+#: model_terms:ir.ui.view,arch_db:portal.portal_share_wizard
+msgid "Add contacts to share the document..."
+msgstr "ሰነዱን ለማጋራት እውቂያዎችን ያክሉ..."
+
+#. module: portal
+#: model:ir.model.fields,help:portal.field_portal_share__note
+msgid "Add extra content to display in the email"
+msgstr "በኢሜል ውስጥ የሚታይ ተጨማሪ ይዘት ያክሉ"
+
+#. module: portal
+#: code:addons/portal/controllers/mail.py:0
+msgid "An access token must be provided for each attachment."
+msgstr "ለእያንዳንዱ አባሪ የመዳረሻ ማስመሰያ መሰጠት አለበት።"
+
+#. module: portal
+#: model_terms:ir.ui.view,arch_db:portal.wizard_view
+msgid "Apply"
+msgstr "ያመልክቱ"
+
+#. module: portal
+#: model_terms:ir.ui.view,arch_db:portal.portal_archive_groups
+msgid "Archives"
+msgstr "ማህደሮች"
+
+#. module: portal
+#. openerp-web
+#: code:addons/portal/static/src/xml/portal_chatter.xml:0
+msgid "Avatar"
+msgstr "አምሳያ"
+
+#. module: portal
+#: model_terms:ir.ui.view,arch_db:portal.portal_share_wizard
+#: model_terms:ir.ui.view,arch_db:portal.wizard_view
+msgid "Cancel"
+msgstr "ሰርዝ"
+
+#. module: portal
+#: code:addons/portal/controllers/portal.py:0
+#: model_terms:ir.ui.view,arch_db:portal.portal_my_details
+msgid "Changing VAT number is not allowed once document(s) have been issued for your account. Please contact us directly for this operation."
+msgstr "ለመለያዎ ሰነድ(ዎች) ከተሰጡ በኋላ የተ.እ.ታ ቁጥር መቀየር አይፈቀድም። እባክዎን ለዚህ ተግባር በቀጥታ ያግኙን።"
+
+#. module: portal
+#: model_terms:ir.ui.view,arch_db:portal.portal_my_details
+msgid "Changing company name is not allowed once document(s) have been issued for your account. Please contact us directly for this operation."
+msgstr "ለመለያዎ ሰነድ(ዎች) ከተሰጡ በኋላ የድርጅት ስም መቀየር አይፈቀድም። እባክዎን ለዚህ ተግባር በቀጥታ ያግኙን።"
+
+#. module: portal
+#: model_terms:ir.ui.view,arch_db:portal.portal_my_details
+msgid "City"
+msgstr "ከተማ"
+
+#. module: portal
+#. openerp-web
+#: code:addons/portal/static/src/xml/portal_signature.xml:0
+msgid "Click here to see your document."
+msgstr "ሰነድዎን ለማየት እዚህ ጠቅ ያድርጉ።"
+
+#. module: portal
+#: model_terms:ir.ui.view,arch_db:portal.portal_back_in_edit_mode
+msgid "Close"
+msgstr "ገጠመ"
+
+#. module: portal
+#: model_terms:ir.ui.view,arch_db:portal.portal_my_details
+msgid "Company Name"
+msgstr "የድርጅት ስም"
+
+#. module: portal
+#: model_terms:ir.ui.view,arch_db:portal.portal_my_details
+msgid ""
+"Confirm"
+"                                <span class=\"fa fa-long-arrow-right\"/>"
+msgstr ""
+" አረጋግጥ"
+"                                 <span class=\"fa fa-ረጅም-ቀስት-ቀኝ\"/>"
+
+#. module: portal
+#: model:ir.model,name:portal.model_res_partner
+#: model:ir.model.fields,field_description:portal.field_portal_wizard_user__partner_id
+msgid "Contact"
+msgstr "ተገናኝ"
+
+#. module: portal
+#: model_terms:ir.ui.view,arch_db:portal.portal_my_details
+msgid "Contact Details"
+msgstr "የእውቂያ ዝርዝሮች"
+
+#. module: portal
+#: model_terms:ir.ui.view,arch_db:portal.wizard_view
+msgid "Contacts"
+msgstr "እውቂያዎች"
+
+#. module: portal
+#: model_terms:ir.ui.view,arch_db:portal.portal_my_details
+msgid "Country"
+msgstr "ሀገር"
+
+#. module: portal
+#: model_terms:ir.ui.view,arch_db:portal.portal_my_details
+msgid "Country..."
+msgstr "ሀገር..."
+
+#. module: portal
+#: model:ir.model.fields,field_description:portal.field_portal_share__create_uid
+#: model:ir.model.fields,field_description:portal.field_portal_wizard__create_uid
+#: model:ir.model.fields,field_description:portal.field_portal_wizard_user__create_uid
+msgid "Created by"
+msgstr "የተፈጠረ"
+
+#. module: portal
+#: model:ir.model.fields,field_description:portal.field_portal_share__create_date
+#: model:ir.model.fields,field_description:portal.field_portal_wizard__create_date
+#: model:ir.model.fields,field_description:portal.field_portal_wizard_user__create_date
+msgid "Created on"
+msgstr "ላይ ተፈጠረ"
+
+#. module: portal
+#: model:ir.model.fields,help:portal.field_portal_mixin__access_url
+msgid "Customer Portal URL"
+msgstr "የደንበኛ ፖርታል URL"
+
+#. module: portal
+#: model_terms:ir.ui.view,arch_db:portal.portal_share_template
+msgid "Dear"
+msgstr "ውድ"
+
+#. module: portal
+#. openerp-web
+#: code:addons/portal/static/src/xml/portal_chatter.xml:0
+msgid "Delete"
+msgstr "ሰርዝ"
+
+#. module: portal
+#: model_terms:ir.ui.view,arch_db:portal.portal_breadcrumbs
+#: model_terms:ir.ui.view,arch_db:portal.portal_layout
+msgid "Details"
+msgstr "ዝርዝሮች"
+
+#. module: portal
+#: model:ir.model.fields,field_description:portal.field_portal_mixin__display_name
+#: model:ir.model.fields,field_description:portal.field_portal_share__display_name
+#: model:ir.model.fields,field_description:portal.field_portal_wizard__display_name
+#: model:ir.model.fields,field_description:portal.field_portal_wizard_user__display_name
+msgid "Display Name"
+msgstr "መጠሪያው ስም"
+
+#. module: portal
+#: model_terms:ir.ui.view,arch_db:portal.portal_404
+#: model_terms:ir.ui.view,arch_db:portal.portal_my_home
+msgid "Documents"
+msgstr "ሰነዶች"
+
+#. module: portal
+#. openerp-web
+#: code:addons/portal/static/src/js/portal_sidebar.js:0
+msgid "Due in %1d days"
+msgstr "በ%1d ቀናት ውስጥ ያበቃል"
+
+#. module: portal
+#. openerp-web
+#: code:addons/portal/static/src/js/portal_sidebar.js:0
+msgid "Due today"
+msgstr "ዛሬ የሚጠናቀቅ"
+
+#. module: portal
+#: model:ir.model.fields,field_description:portal.field_portal_wizard_user__email
+#: model_terms:ir.ui.view,arch_db:portal.portal_my_details
+msgid "Email"
+msgstr "ኢሜይል"
+
+#. module: portal
+#: model:ir.model,name:portal.model_mail_thread
+msgid "Email Thread"
+msgstr "የኢሜል ክር"
+
+#. module: portal
+#: model:ir.model,name:portal.model_portal_wizard
+#: model_terms:ir.ui.view,arch_db:portal.wizard_view
+msgid "Grant Portal Access"
+msgstr "የግራንት ፖርታል መዳረሻ"
+
+#. module: portal
+#: model:ir.actions.act_window,name:portal.partner_wizard_action
+msgid "Grant portal access"
+msgstr "ፖርታል መዳረሻ ይስጡ"
+
+#. module: portal
+#: model:ir.model,name:portal.model_ir_http
+msgid "HTTP Routing"
+msgstr "HTTP ማዘዣ"
+
+#. module: portal
+#: model_terms:ir.ui.view,arch_db:portal.portal_breadcrumbs
+msgid "Home"
+msgstr "ቤት"
+
+#. module: portal
+#: model:ir.model.fields,field_description:portal.field_portal_mixin__id
+#: model:ir.model.fields,field_description:portal.field_portal_share__id
+#: model:ir.model.fields,field_description:portal.field_portal_wizard__id
+#: model:ir.model.fields,field_description:portal.field_portal_wizard_user__id
+msgid "ID"
+msgstr "መታወቂያ"
+
+#. module: portal
+#: model:ir.model.fields,field_description:portal.field_portal_wizard_user__in_portal
+msgid "In Portal"
+msgstr "በፖርታል ውስጥ"
+
+#. module: portal
+#: code:addons/portal/controllers/portal.py:0
+msgid "Invalid Email! Please enter a valid email address."
+msgstr "የማይሰራ ኢሜይል! እባክህን ትክክለኛ ኢሜል አስገባ"
+
+#. module: portal
+#: code:addons/portal/controllers/portal.py:0
+msgid "Invalid report type: %s"
+msgstr "ልክ ያልሆነ የሪፖርት አይነት፡ %s"
+
+#. module: portal
+#: model:ir.model.fields,field_description:portal.field_portal_wizard__welcome_message
+msgid "Invitation Message"
+msgstr "የግብዣ መልእክት"
+
+#. module: portal
+#: model:ir.model.fields,field_description:portal.field_portal_mixin____last_update
+#: model:ir.model.fields,field_description:portal.field_portal_share____last_update
+#: model:ir.model.fields,field_description:portal.field_portal_wizard____last_update
+#: model:ir.model.fields,field_description:portal.field_portal_wizard_user____last_update
+msgid "Last Modified on"
+msgstr "መጨረሻ የተሻሻለው በ"
+
+#. module: portal
+#: model:ir.model.fields,field_description:portal.field_portal_share__write_uid
+#: model:ir.model.fields,field_description:portal.field_portal_wizard__write_uid
+#: model:ir.model.fields,field_description:portal.field_portal_wizard_user__write_uid
+msgid "Last Updated by"
+msgstr "መጨረሻ የዘመነው በ"
+
+#. module: portal
+#: model:ir.model.fields,field_description:portal.field_portal_share__write_date
+#: model:ir.model.fields,field_description:portal.field_portal_wizard__write_date
+#: model:ir.model.fields,field_description:portal.field_portal_wizard_user__write_date
+msgid "Last Updated on"
+msgstr "መጨረሻ የዘመነው በ"
+
+#. module: portal
+#. openerp-web
+#: code:addons/portal/static/src/xml/portal_chatter.xml:0
+msgid "Leave a comment"
+msgstr "አስተያየት ይስጡ"
+
+#. module: portal
+#: model:ir.model.fields,field_description:portal.field_portal_share__share_link
+msgid "Link"
+msgstr "አገናኝ"
+
+#. module: portal
+#: model:ir.model.fields,field_description:portal.field_portal_wizard_user__user_id
+msgid "Login User"
+msgstr "የመግቢያ ተጠቃሚ"
+
+#. module: portal
+#: model_terms:ir.ui.view,arch_db:portal.frontend_layout
+msgid "Logout"
+msgstr "ውጣ"
+
+#. module: portal
+#: model_terms:ir.ui.view,arch_db:portal.portal_404
+msgid "Maybe you were looking for one of these popular pages ?"
+msgstr "ምናልባት ከእነዚህ ታዋቂ ገጾች ውስጥ አንዱን እየፈለጉ ሊሆን ይችላል?"
+
+#. module: portal
+#: model:ir.model,name:portal.model_mail_message
+msgid "Message"
+msgstr "መልእክት"
+
+#. module: portal
+#: code:addons/portal/models/mail_thread.py:0
+msgid "Model %s does not support token signature, as it does not have %s field."
+msgstr "ሞዴል %s የ%s መስክ ስለሌለው የማስመሰያ ፊርማን አይደግፍም።"
+
+#. module: portal
+#: model_terms:ir.ui.view,arch_db:portal.my_account_link
+msgid "My Account"
+msgstr "አካውንቴ"
+
+#. module: portal
+#: model_terms:ir.ui.view,arch_db:portal.portal_my_details
+msgid "Name"
+msgstr "ስም"
+
+#. module: portal
+#. openerp-web
+#: code:addons/portal/static/src/xml/portal_chatter.xml:0
+#: model_terms:ir.ui.view,arch_db:portal.pager
+msgid "Next"
+msgstr "ቀጥሎ"
+
+#. module: portal
+#: model:ir.model.fields,field_description:portal.field_portal_share__note
+msgid "Note"
+msgstr "ማስታወሻ"
+
+#. module: portal
+#: model_terms:ir.ui.view,arch_db:portal.portal_record_sidebar
+msgid "Odoo Logo"
+msgstr "ኦዱ አርማ"
+
+#. module: portal
+#. openerp-web
+#: code:addons/portal/static/src/xml/portal_chatter.xml:0
+msgid "Oops! Something went wrong. Try to reload the page and log in."
+msgstr "ውይ! የሆነ ስህተት ተከስቷል. ገጹን እንደገና ለመጫን እና ለመግባት ይሞክሩ።"
+
+#. module: portal
+#: model_terms:ir.ui.view,arch_db:portal.portal_my_details
+msgid "Phone"
+msgstr "ስልክ"
+
+#. module: portal
+#: model:ir.model.fields,field_description:portal.field_portal_mixin__access_url
+msgid "Portal Access URL"
+msgstr "ፖርታል መዳረሻ URL"
+
+#. module: portal
+#: model:ir.model,name:portal.model_portal_mixin
+msgid "Portal Mixin"
+msgstr "ፖርታል ሚክሲን"
+
+#. module: portal
+#: model:ir.model,name:portal.model_portal_share
+msgid "Portal Sharing"
+msgstr "ፖርታል ማጋራት"
+
+#. module: portal
+#: model:ir.model,name:portal.model_portal_wizard_user
+msgid "Portal User Config"
+msgstr "ፖርታል የተጠቃሚ ውቅር"
+
+#. module: portal
+#: model_terms:ir.ui.view,arch_db:portal.portal_record_sidebar
+msgid "Powered by"
+msgstr "የተጎላበተው በ"
+
+#. module: portal
+#: model_terms:ir.ui.view,arch_db:portal.pager
+msgid "Prev"
+msgstr "ቀዳሚ"
+
+#. module: portal
+#. openerp-web
+#: code:addons/portal/static/src/xml/portal_chatter.xml:0
+msgid "Previous"
+msgstr "ቀዳሚ"
+
+#. module: portal
+#. openerp-web
+#: code:addons/portal/static/src/js/portal_chatter.js:0
+msgid "Published on %s"
+msgstr "በ%s ላይ ታትሟል"
+
+#. module: portal
+#: model:ir.model.fields,field_description:portal.field_portal_share__partner_ids
+msgid "Recipients"
+msgstr "ተቀባዮች"
+
+#. module: portal
+#: model:ir.model.fields,field_description:portal.field_portal_share__res_id
+msgid "Related Document ID"
+msgstr "ተዛማጅ ሰነድ መታወቂያ"
+
+#. module: portal
+#: model:ir.model.fields,field_description:portal.field_portal_share__res_model
+msgid "Related Document Model"
+msgstr "ተዛማጅ ሰነድ ሞዴል"
+
+#. module: portal
+#: model_terms:ir.ui.view,arch_db:portal.portal_searchbar
+msgid "Search"
+msgstr "ፈልግ"
+
+#. module: portal
+#: model:ir.model.fields,field_description:portal.field_portal_mixin__access_token
+msgid "Security Token"
+msgstr "የደህንነት ማስመሰያ"
+
+#. module: portal
+#: model_terms:ir.ui.view,arch_db:portal.wizard_view
+msgid ""
+"Select which contacts should belong to the portal in the list below."
+"                        The email address of each selected contact must be valid and unique."
+"                        If necessary, you can fix any contact\'s email address directly in the list."
+msgstr ""
+"ከታች ባለው ዝርዝር ውስጥ የትኛዎቹ እውቂያዎች ወደ ፖርታል መሆን እንዳለባቸው ይምረጡ።"
+"                         የእያንዳንዱ የተመረጠ እውቂያ ኢሜይል አድራሻ ትክክለኛ እና ልዩ መሆን አለበት።"
+"                         አስፈላጊ ከሆነ የማንኛውም አድራሻ ኢሜይል አድራሻ በዝርዝሩ ውስጥ ማስተካከል ይችላሉ።"
+
+#. module: portal
+#. openerp-web
+#: code:addons/portal/static/src/xml/portal_chatter.xml:0
+#: model_terms:ir.ui.view,arch_db:portal.portal_share_wizard
+msgid "Send"
+msgstr "ላክ"
+
+#. module: portal
+#: code:addons/portal/wizard/portal_wizard.py:0
+msgid "Several contacts have the same email: "
+msgstr "በርካታ እውቂያዎች ተመሳሳይ ኢሜይል አላቸው፡-"
+
+#. module: portal
+#: model:ir.actions.act_window,name:portal.portal_share_action
+#: model_terms:ir.ui.view,arch_db:portal.portal_share_wizard
+msgid "Share Document"
+msgstr "ሰነድ አጋራ"
+
+#. module: portal
+#: code:addons/portal/wizard/portal_wizard.py:0
+msgid "Some contacts are already internal users:"
+msgstr "አንዳንድ እውቂያዎች ቀድሞውኑ የውስጥ ተጠቃሚዎች ናቸው፡-"
+
+#. module: portal
+#: code:addons/portal/wizard/portal_wizard.py:0
+msgid "Some contacts don\'t have a valid email: "
+msgstr "አንዳንድ እውቂያዎች ትክክለኛ ኢሜይል የላቸውም፡-"
+
+#. module: portal
+#: code:addons/portal/wizard/portal_wizard.py:0
+msgid "Some contacts have the same email as an existing portal user:"
+msgstr "አንዳንድ እውቂያዎች እንደ ፖርታል ተጠቃሚ ተመሳሳይ ኢሜይል አላቸው፡"
+
+#. module: portal
+#: code:addons/portal/controllers/portal.py:0
+msgid "Some required fields are empty."
+msgstr "አንዳንድ አስፈላጊ መስኮች ባዶ ናቸው።"
+
+#. module: portal
+#. openerp-web
+#: code:addons/portal/static/src/js/portal_composer.js:0
+msgid "Something went wrong."
+msgstr "የሆነ ስህተት ተከስቷል."
+
+#. module: portal
+#: model_terms:ir.ui.view,arch_db:portal.portal_my_details
+msgid "State / Province"
+msgstr "ግዛት / ክልል"
+
+#. module: portal
+#: model_terms:ir.ui.view,arch_db:portal.portal_my_details
+msgid "Street"
+msgstr "ጎዳና"
+
+#. module: portal
+#. openerp-web
+#: code:addons/portal/static/src/xml/portal_signature.xml:0
+msgid "Thank You!"
+msgstr "አመሰግናለሁ!"
+
+#. module: portal
+#: code:addons/portal/controllers/portal.py:0
+msgid "The attachment %s cannot be removed because it is linked to a message."
+msgstr "አባሪው %s ከመልዕክት ጋር የተገናኘ ስለሆነ ሊወገድ አይችልም።"
+
+#. module: portal
+#: code:addons/portal/controllers/portal.py:0
+msgid "The attachment %s cannot be removed because it is not in a pending state."
+msgstr "አባሪ %s ሊወገድ አይችልም ምክንያቱም በመጠባበቅ ላይ ያለ አይደለም።"
+
+#. module: portal
+#: code:addons/portal/controllers/mail.py:0
+msgid "The attachment %s does not exist or you do not have the rights to access it."
+msgstr "አባሪ %s የለም ወይም እሱን የመድረስ መብት የሎትም።"
+
+#. module: portal
+#: code:addons/portal/controllers/portal.py:0
+msgid "The attachment does not exist or you do not have the rights to access it."
+msgstr "ዓባሪው የለም ወይም እሱን የማግኘት መብቶች የሎትም።"
+
+#. module: portal
+#: code:addons/portal/controllers/portal.py:0
+msgid "The document does not exist or you do not have the rights to access it."
+msgstr "ሰነዱ የለም ወይም እሱን የማግኘት መብቶች የሉዎትም።"
+
+#. module: portal
+#. openerp-web
+#: code:addons/portal/static/src/js/portal_composer.js:0
+msgid "The file <strong>%s</strong> could not be saved."
+msgstr "ፋይሉ <strong>%s</strong> ሊቀመጥ አልቻለም።"
+
+#. module: portal
+#. openerp-web
+#: code:addons/portal/static/src/xml/portal_chatter.xml:0
+msgid "There are no comments for now."
+msgstr "ለአሁን ምንም አስተያየቶች የሉም።"
+
+#. module: portal
+#: code:addons/portal/controllers/portal.py:0
+msgid "This document does not exist."
+msgstr "ይህ ሰነድ የለም።"
+
+#. module: portal
+#: model_terms:ir.ui.view,arch_db:portal.portal_back_in_edit_mode
+msgid "This is a preview of the customer portal."
+msgstr "ይህ የደንበኛ ፖርታል ቅድመ እይታ ነው።"
+
+#. module: portal
+#: model_terms:ir.ui.view,arch_db:portal.wizard_view
+msgid "This text is included in the email sent to new portal users."
+msgstr "ይህ ጽሑፍ ለአዲስ ፖርታል ተጠቃሚዎች በተላከው ኢሜይል ውስጥ ተካትቷል።"
+
+#. module: portal
+#: model:ir.model.fields,help:portal.field_portal_wizard__welcome_message
+msgid "This text is included in the email sent to new users of the portal."
+msgstr "ይህ ጽሑፍ ለፖርታሉ አዲስ ተጠቃሚዎች በተላከው ኢሜይል ውስጥ ተካትቷል።"
+
+#. module: portal
+#: code:addons/portal/wizard/portal_wizard.py:0
+msgid ""
+"To resolve this error, you can: "
+"- Correct the emails of the relevant contacts"
+"- Grant access only to contacts with unique emails"
+msgstr ""
+"ይህን ስህተት ለመፍታት የሚከተሉትን ማድረግ ይችላሉ:"
+"- የሚመለከታቸውን እውቂያዎች ኢሜይሎች ያስተካክሉ"
+"- ልዩ ኢሜይሎች ላሏቸው ዕውቂያዎች ብቻ መዳረሻ ይስጡ"
+
+#. module: portal
+#: model_terms:ir.ui.view,arch_db:portal.portal_searchbar
+msgid "Toggle filters"
+msgstr "ማጣሪያዎችን ቀያይር"
+
+#. module: portal
+#: model:ir.model.fields,field_description:portal.field_portal_wizard__user_ids
+msgid "Users"
+msgstr "ተጠቃሚዎች"
+
+#. module: portal
+#: model_terms:ir.ui.view,arch_db:portal.portal_my_details
+msgid "VAT Number"
+msgstr "የግብር መለያ ቁጥር"
+
+#. module: portal
+#: model:ir.model.fields,field_description:portal.field_account_analytic_account__website_message_ids
+#: model:ir.model.fields,field_description:portal.field_calendar_event__website_message_ids
+#: model:ir.model.fields,field_description:portal.field_crm_team__website_message_ids
+#: model:ir.model.fields,field_description:portal.field_fleet_vehicle__website_message_ids
+#: model:ir.model.fields,field_description:portal.field_fleet_vehicle_log_contract__website_message_ids
+#: model:ir.model.fields,field_description:portal.field_fleet_vehicle_log_fuel__website_message_ids
+#: model:ir.model.fields,field_description:portal.field_gamification_badge__website_message_ids
+#: model:ir.model.fields,field_description:portal.field_gamification_challenge__website_message_ids
+#: model:ir.model.fields,field_description:portal.field_hr_department__website_message_ids
+#: model:ir.model.fields,field_description:portal.field_hr_employee__website_message_ids
+#: model:ir.model.fields,field_description:portal.field_hr_job__website_message_ids
+#: model:ir.model.fields,field_description:portal.field_mail_blacklist__website_message_ids
+#: model:ir.model.fields,field_description:portal.field_mail_channel__website_message_ids
+#: model:ir.model.fields,field_description:portal.field_mail_thread__website_message_ids
+#: model:ir.model.fields,field_description:portal.field_mail_thread_blacklist__website_message_ids
+#: model:ir.model.fields,field_description:portal.field_mail_thread_cc__website_message_ids
+#: model:ir.model.fields,field_description:portal.field_mail_thread_phone__website_message_ids
+#: model:ir.model.fields,field_description:portal.field_note_note__website_message_ids
+#: model:ir.model.fields,field_description:portal.field_phone_blacklist__website_message_ids
+#: model:ir.model.fields,field_description:portal.field_product_product__website_message_ids
+#: model:ir.model.fields,field_description:portal.field_product_template__website_message_ids
+#: model:ir.model.fields,field_description:portal.field_querydeluxe__website_message_ids
+#: model:ir.model.fields,field_description:portal.field_queue_job__website_message_ids
+#: model:ir.model.fields,field_description:portal.field_res_partner__website_message_ids
+#: model:ir.model.fields,field_description:portal.field_res_users__website_message_ids
+msgid "Website Messages"
+msgstr "የድር ጣቢያ መልዕክቶች"
+
+#. module: portal
+#: model:ir.model.fields,help:portal.field_account_analytic_account__website_message_ids
+#: model:ir.model.fields,help:portal.field_calendar_event__website_message_ids
+#: model:ir.model.fields,help:portal.field_crm_team__website_message_ids
+#: model:ir.model.fields,help:portal.field_fleet_vehicle__website_message_ids
+#: model:ir.model.fields,help:portal.field_fleet_vehicle_log_contract__website_message_ids
+#: model:ir.model.fields,help:portal.field_fleet_vehicle_log_fuel__website_message_ids
+#: model:ir.model.fields,help:portal.field_gamification_badge__website_message_ids
+#: model:ir.model.fields,help:portal.field_gamification_challenge__website_message_ids
+#: model:ir.model.fields,help:portal.field_hr_department__website_message_ids
+#: model:ir.model.fields,help:portal.field_hr_employee__website_message_ids
+#: model:ir.model.fields,help:portal.field_hr_job__website_message_ids
+#: model:ir.model.fields,help:portal.field_mail_blacklist__website_message_ids
+#: model:ir.model.fields,help:portal.field_mail_channel__website_message_ids
+#: model:ir.model.fields,help:portal.field_mail_thread__website_message_ids
+#: model:ir.model.fields,help:portal.field_mail_thread_blacklist__website_message_ids
+#: model:ir.model.fields,help:portal.field_mail_thread_cc__website_message_ids
+#: model:ir.model.fields,help:portal.field_mail_thread_phone__website_message_ids
+#: model:ir.model.fields,help:portal.field_note_note__website_message_ids
+#: model:ir.model.fields,help:portal.field_phone_blacklist__website_message_ids
+#: model:ir.model.fields,help:portal.field_product_product__website_message_ids
+#: model:ir.model.fields,help:portal.field_product_template__website_message_ids
+#: model:ir.model.fields,help:portal.field_querydeluxe__website_message_ids
+#: model:ir.model.fields,help:portal.field_queue_job__website_message_ids
+#: model:ir.model.fields,help:portal.field_res_partner__website_message_ids
+#: model:ir.model.fields,help:portal.field_res_users__website_message_ids
+msgid "Website communication history"
+msgstr "የድር ጣቢያ የግንኙነት ታሪክ"
+
+#. module: portal
+#: model:ir.model.fields,field_description:portal.field_portal_wizard_user__wizard_id
+msgid "Wizard"
+msgstr "ጠንቋይ"
+
+#. module: portal
+#. openerp-web
+#: code:addons/portal/static/src/xml/portal_chatter.xml:0
+msgid "Write a message..."
+msgstr "መልእክት ጻፍ..."
+
+#. module: portal
+#: code:addons/portal/wizard/portal_share.py:0
+#: code:addons/portal/wizard/portal_share.py:0
+msgid "You are invited to access %s"
+msgstr "%s እንዲደርሱ ተጋብዘዋል"
+
+#. module: portal
+#: model_terms:ir.ui.view,arch_db:portal.portal_share_template
+msgid "You have been invited to access the following document:"
+msgstr "የሚከተለውን ሰነድ እንዲደርሱ ተጋብዘዋል።"
+
+#. module: portal
+#. openerp-web
+#: code:addons/portal/static/src/xml/portal_chatter.xml:0
+msgid "You must be"
+msgstr "መሆን አለብህ"
+
+#. module: portal
+#: code:addons/portal/wizard/portal_wizard.py:0
+msgid "You must have an email address in your User Preferences to send emails."
+msgstr "ኢሜይሎችን ለመላክ በተጠቃሚ ምርጫዎችዎ ውስጥ የኢሜል አድራሻ ሊኖርዎት ይገባል ።"
+
+#. module: portal
+#: model:mail.template,subject:portal.mail_template_data_portal_welcome
+msgid "Your Odoo account at ${object.user_id.company_id.name}"
+msgstr "የእርስዎ Odoo መለያ በ${object.user_id.company_id.name}"
+
+#. module: portal
+#: model_terms:ir.ui.view,arch_db:portal.portal_contact
+msgid "Your contact"
+msgstr "እውቂያዎ"
+
+#. module: portal
+#: model_terms:ir.ui.view,arch_db:portal.portal_my_details
+msgid "Zip / Postal Code"
+msgstr "ዚፕ / የፖስታ ኮድ"
+
+#. module: portal
+#. openerp-web
+#: code:addons/portal/static/src/xml/portal_chatter.xml:0
+msgid "avatar"
+msgstr "አምሳያ"
+
+#. module: portal
+#. openerp-web
+#: code:addons/portal/static/src/xml/portal_chatter.xml:0
+msgid "comment"
+msgstr "አስተያየት"
+
+#. module: portal
+#. openerp-web
+#: code:addons/portal/static/src/xml/portal_chatter.xml:0
+msgid "comments"
+msgstr "አስተያየቶች"
+
+#. module: portal
+#. openerp-web
+#: code:addons/portal/static/src/xml/portal_chatter.xml:0
+msgid "logged in"
+msgstr "ገብቷል"
+
+#. module: portal
+#: model_terms:ir.ui.view,arch_db:portal.portal_record_sidebar
+msgid "odoo"
+msgstr "odoo"
+
+#. module: portal
+#: model_terms:ir.ui.view,arch_db:portal.portal_my_details
+msgid "select..."
+msgstr "ምረጥ..."
+
+#. module: portal
+#. openerp-web
+#: code:addons/portal/static/src/xml/portal_chatter.xml:0
+msgid "to post a comment."
+msgstr "አስተያየት ለመለጠፍ."

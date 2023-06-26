@@ -1,0 +1,349 @@
+<odoo>
+<!-- Payrol salery structure Parent child inherit -->
+        
+<record id="view_hr_payroll_structure_form_inherit" model="ir.ui.view">
+    <field name="name">hr.payroll.structure.form.inherit</field>
+    <field name="model">hr.payroll.structure</field>
+    <field name="inherit_id" ref="hr_payroll_community.view_hr_employee_grade_form"/>
+    <field name="arch" type="xml">
+       
+        <xpath expr="//field[@name='parent_id']" position="replace">
+                <field name="parent_name" />
+        </xpath>
+        </field>
+    </record>
+    <!-- Hr contract -->
+    <record id="hr_contract_view_form_inherit" model="ir.ui.view">
+        <field name="name">hr.contract.view.form.inherit</field>
+        <field name="model">hr.contract</field>
+        <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='hr_responsible_id']" position="before">
+                <label for="attendence_hours" /> 
+                <div class="o_address_format">
+                    <field name="attendence_hours" class="o_address_city"/>
+                    <field name="month" class="o_address_city"/>
+                  </div>  
+                  <field name="absentee_hours"/>
+
+            </xpath>
+           
+        </field>
+    </record>
+
+    <!-- HR Payrol workedhour -->
+    <!-- <record model="ir.ui.view" id="hr_payroll_view_inherit">
+        <field name="name">hr.payslip.view.inherit1</field>
+        <field name="model">hr.payslip</field>
+        <field name="inherit_id" ref="hr_payroll_community.view_hr_payslip_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="/form/sheet/notebook/page/field[@name='worked_days_line_ids']/tree/field[@name='number_of_days']" position="after">
+                <field name="paid_days"/>
+            </xpath>
+        </field>
+    </record> -->
+
+
+      <!-- Check Time views -->
+
+      <record id="view_check_time_tree" model="ir.ui.view">
+        <field name="name">check.time.tree</field>
+        <field name="model">check.time</field>
+        <field name="arch" type="xml">
+            <tree string="Check Times" edit="0">
+                <field name="name"/>
+                <field name="time_f"/>
+                <field name="time_t"/>
+               </tree>
+        </field>
+    </record>
+    <record id="view_check_time_form" model="ir.ui.view">
+        <field name="name">check.time.form</field>
+        <field name="model">check.time</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_actve" states="draft" string="Active" type="object" class="oe_highlight" />
+                    <field name="state" widget="statusbar" class="oe_highlight" statusbar_visible="draft,active"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="punching_type"/>
+
+                        </group>
+                        <group>
+                            <field name="time_from" widget="float_time"/>
+                            <field name="time_to" widget="float_time"/>
+                        </group>
+                    </group>
+                    
+                </sheet>
+            </form>
+         </field>
+    </record>
+
+
+       <!-- Specail Case Reason Category  views -->
+
+       <record id="view_reason_category_tree" model="ir.ui.view">
+        <field name="name">specail.reason.categories.tree</field>
+        <field name="model">specail.reason.categories</field>
+        <field name="arch" type="xml">
+            <tree string="Categories" edit="0">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+    <record id="view_reason_category_form" model="ir.ui.view">
+        <field name="name">specail.reason.categories.form</field>
+        <field name="model">specail.reason.categories</field>
+        <field name="arch" type="xml">
+            <form>
+             
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </group>
+                    
+                </sheet>
+            </form>
+         </field>
+    </record>
+
+
+       <!-- Absent  views -->
+
+       <record id="view_absent_tree" model="ir.ui.view">
+        <field name="name">hr.attendance.absent.tree</field>
+        <field name="model">hr.attendance.absent</field>
+        <field name="arch" type="xml">
+            <tree string="Absent Date" edit="0">
+                <field name="employee_id"/>
+                <field name="date"/>
+               </tree>
+        </field>
+    </record>
+    <record id="view_absent_form" model="ir.ui.view">
+        <field name="name">hr.attendance.absent.form</field>
+        <field name="model">hr.attendance.absent</field>
+        <field name="arch" type="xml">
+            <form>
+             
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="employee_id"/>
+                        </group>
+                        <group>
+                            <field name="date"/>
+                        </group>
+                    </group>
+                    
+                </sheet>
+            </form>
+         </field>
+    </record>
+       <!-- views -->
+
+        <!-- Specail case report  views -->
+
+        <record id="view_specail_case_report_tree" model="ir.ui.view">
+        <field name="name">specail.case.absent.tree</field>
+        <field name="model">specail.case.absent</field>
+        <field name="arch" type="xml">
+            <tree string="Specail Case Report" edit="0">
+                <field name="employee_id"/>
+                <field name="reason"/>
+                <field name="date_from" string="Date From"/>
+                <field name="date_to" string="Date To"/>
+                <field name="duration"/>
+
+
+                </tree>
+        </field>
+    </record>
+    <record id="view_specail_case_report_form" model="ir.ui.view">
+        <field name="name">specail.case.absent.form</field>
+        <field name="model">specail.case.absent</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_request" states="draft" string="Request" type="object" class="oe_highlight" groups="custom_attendance_integration.group_requester"/>
+                    <button name="action_approve" states="requested" string="Approve" class="oe_highlight" type="object" groups="custom_attendance_integration.group_approval"/>
+                    <button name="action_reject" states="requested" string="Reject" class="btn btn-danger" type="object" groups="custom_attendance_integration.group_approval"/>
+                    <field name="state" widget="statusbar" class="oe_highlight" statusbar_visible="requested,approved,rejected"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="employee_id"/>
+                            <field name="reason_cat"/>
+                            <field name="reason"/>
+                        </group>
+                        <group>
+                            <field name="date_from"/>
+                            <field name="date_to"/>
+                            <field name="duration" readonly="1"/>
+                        </group>
+                    </group>
+                    
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+           
+            </field>
+    </record>
+               <!-- views -->
+
+       <record id="view_filtered_attendance_tree" model="ir.ui.view">
+        <field name="name">hr.attendance.filtered.tree</field>
+        <field name="model">hr.attendance.filtered</field>
+        <field name="arch" type="xml">
+            <tree string="Employee Filtered attendances" edit="0">
+                <field name="employee_id"/>
+                <field name="check_in"/>
+                <field name="check_out"/>
+                
+                <field name="worked_hours" string="Work Hours" widget="float_time"/>
+            </tree>
+        </field>
+    </record>
+
+
+
+    <record id="view_filtered_hr_attendance_kanban" model="ir.ui.view">
+        <field name="name">hr.attendance.filtered.kanban</field>
+        <field name="model">hr.attendance.filtered</field>
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_mobile">
+                <field name="employee_id"/>
+                <field name="check_in"/>
+                <field name="check_out"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_global_click">
+                            <div>
+                                <img t-att-src="kanban_image('hr.employee', 'image_128', record.employee_id.raw_value)" t-att-title="record.employee_id.value" t-att-alt="record.employee_id.value" class="oe_kanban_avatar o_image_24_cover mr4"/>
+                                <span class="o_kanban_record_title">
+                                    <strong><t t-esc="record.employee_id.value"/></strong>
+                                </span>
+                            </div>
+                            <hr class="mt4 mb8"/>
+                            <div class="o_kanban_record_subtitle">
+                                <i class="fa fa-calendar" aria-label="Period" role="img" title="Period"></i>
+                                <t t-esc="record.check_in.value"/>
+                                - <t t-esc="record.check_out.value"/>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+    
+       <!-- actions  -->
+
+       <record id="filtered_attendance_action" model="ir.actions.act_window">
+        <field name="name">Filtered Attendance Logs</field>
+        <field name="res_model">hr.attendance.filtered</field>
+        <field name="view_mode">tree,kanban</field>
+        <field name="context">{"search_default_today":1}</field>
+        <field name="search_view_id" ref="hr_attendance.hr_attendance_view_filter" />
+        <field name="help" type="html">
+            <p class="o_view_nocontent_empty_folder">
+                No filtered attendance records found
+            </p><p>
+                The clear filtered attendance records of your employees will be displayed here.
+            </p>
+        </field>
+    </record>
+
+    <record id="attendance_check_time_action" model="ir.actions.act_window">
+        <field name="name">Check Time Control</field>
+        <field name="res_model">check.time</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_empty_folder">
+                No Check Time records found
+            </p>
+        </field>
+    </record>
+
+    <record id="attendance_absent_action" model="ir.actions.act_window">
+        <field name="name">Absent Date</field>
+        <field name="res_model">hr.attendance.absent</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_empty_folder">
+                No absent records found
+            </p>
+        </field>
+    </record>
+
+    <record id="specail_case_action" model="ir.actions.act_window">
+        <field name="name">Specail Case Report</field>
+        <field name="res_model">specail.case.absent</field>
+        <field name="view_mode">tree,form</field>
+        <!-- <field name="domain">[('employee_id.user_id','=',uid)]</field> -->
+        <field name="help" type="html">
+            <p class="o_view_nocontent_empty_folder">
+                No Specail case records found
+            </p>
+        </field>
+    </record>
+
+    <record id="specail_categories_action" model="ir.actions.act_window">
+        <field name="name">Reason Categories</field>
+        <field name="res_model">specail.reason.categories</field>
+        <field name="view_mode">tree,form</field>
+        <!-- <field name="domain">[('employee_id.user_id','=',uid)]</field> -->
+        <field name="help" type="html">
+            <p class="o_view_nocontent_empty_folder">
+                No Reason Category records found
+            </p>
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="filtering_action">
+        <field name="name">Filter Data</field>
+        <field name="model_id" ref="model_hr_attendance_filtered"/>
+        <field name="type">ir.actions.server</field>
+        <field name="state">code</field>
+        <field name="code">model.filtering_action()</field>
+    </record>
+
+    <record model="ir.actions.server" id="absent_action">
+        <field name="name">Absent Data</field>
+        <field name="model_id" ref="model_hr_attendance_absent"/>
+        <field name="type">ir.actions.server</field>
+        <field name="state">code</field>
+        <field name="code">model.action_absent_employee()</field>
+    </record>
+    <!-- <record id="action_hr_attendance_settings" model="ir.actions.act_window">
+        <field name="name">Settings</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.config.settings</field>
+        <field name="view_mode">form</field>
+        <field name="target">inline</field>
+        <field name="context">{'module' : 'hr_attendance', 'bin_size': False}</field>
+    </record> -->
+
+    <menuitem id="menu_attendance_configuration" parent="hr_attendance.menu_hr_attendance_settings"  name="Configuration"  action="hr_attendance.action_hr_attendance_settings" sequence="1" />
+    <menuitem id="menu_attendance_setting" parent="hr_attendance.menu_hr_attendance_settings"  name="Setting"  sequence="70" />
+    <menuitem id="menu_reason_category" parent="custom_attendance_integration.menu_attendance_setting"  name="Specail Reason Categories"  action="specail_categories_action" sequence="20" />
+    <menuitem id="custom_attendance_integration.action_absent" parent="custom_attendance_integration.menu_attendance_setting" sequence="3" name="Get Absent Log" action="absent_action"/>
+    
+    <menuitem id="custom_attendance_integration.zk_machine_filtered" parent="custom_attendance_integration.menu_attendance_setting" sequence="4" name="Filter Attendance log" action="filtering_action"/>
+    <menuitem id="menu_attendance_check_time" parent="custom_attendance_integration.menu_attendance_setting"  name="Check Time Control" action="attendance_check_time_action" sequence="10"/>
+    <menuitem id="menu_attendance_absent" parent="hr_attendance.menu_hr_attendance_root"  name="Absent Report"  action="attendance_absent_action" sequence="20" />
+    <menuitem id="menu_specail_case" parent="hr_attendance.menu_hr_attendance_root"  name="Specail Case Report"  action="specail_case_action" sequence="21" />
+    <menuitem id="custom_attendance_integration.zk_machine_filtered_attendance" parent="hr_attendance.menu_hr_attendance_manage_attendances" sequence="3" name="Filtered Attendance" action="custom_attendance_integration.filtered_attendance_action"/>
+</odoo>

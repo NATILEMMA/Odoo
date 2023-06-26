@@ -1,0 +1,2589 @@
+# Date created: 2023-06-16 20:27:10 by dichthuatphuongdong.com
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-06-16 03:13:39+0000"
+"MIME-Version: 1.0"
+"Content-Type: text/plain; charset=UTF-8"
+"Content-Transfer-Encoding: 8bit"
+"Plural-Forms: nplurals=1; plural=0;"
+"X-Generator: GlotPress/3.0.0-alpha.2"
+"Language: en_GB"
+"Project-Id-Version: PO File 5.8.1"
+
+#. module: gamification
+#: code:addons/gamification/models/challenge.py:0
+msgid "%s has joined the challenge"
+msgstr "%s ፈተናውን ተቀላቅሏል።"
+
+#. module: gamification
+#: code:addons/gamification/models/challenge.py:0
+msgid "%s has refused the challenge"
+msgstr "%s ፈተናውን አልተቀበለም።"
+
+#. module: gamification
+#: model:mail.template,body_html:gamification.email_template_badge_received
+msgid ""
+"<?xml version=\"1.0\"?>"
+"<table border=\"0\" cellpadding=\"0\" style=\"padding-top: 16px; background-color: #F1F1F1; color: #454748; width: 100%; border-collapse:separate;\"><tr><td align=\"center\">"
+"<table border=\"0\" width=\"590\" cellpadding=\"0\" style=\"padding: 16px; background-color: white; color: #454748; border-collapse:separate;\" summary=\"o_mail_notification\">"
+"<tbody>"
+"    <!-- HEADER -->"
+"    <tr>"
+"        <td align=\"center\" style=\"min-width: 590px;\">"
+"            <table width=\"590\" border=\"0\" cellpadding=\"0\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">"
+"                <tr><td valign=\"middle\">"
+"                    <span style=\"font-size: 10px;\">Your Badge</span><br/>"
+"                    <span style=\"font-size: 20px; font-weight: bold;\">"
+"                        ${object.badge_id.name}"
+"                    </span>"
+"                </td><td valign=\"middle\" align=\"right\">"
+"                    <img src=\"/logo.png?company=${object.user_id.company_id.id}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${object.user_id.company_id.name}\"/>"
+"                </td></tr>"
+"                <tr><td colspan=\"2\" style=\"text-align:center;\">"
+"                  <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>"
+"                </td></tr>"
+"            </table>"
+"        </td>"
+"    </tr>"
+"    <!-- CONTENT -->"
+"    <tr>"
+"        <td align=\"center\" style=\"min-width: 590px;\">"
+"            <table width=\"590\" border=\"0\" cellpadding=\"0\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">"
+"                <tr><td valign=\"top\" style=\"font-size: 14px;\">"
+"                    <div>"
+"                        Congratulations ${object.user_id.name} !<br/>"
+"                        You just received badge <strong>${object.badge_id.name}</strong> !<br/>"
+"                        % if object.badge_id.description"
+"                            <table cellspacing=\"0\" cellpadding=\"0\" border=\"0\" style=\"width: 560px; margin-top: 5px;\">"
+"                            <tbody><tr>"
+"                                <td valign=\"center\">"
+"                                    <img src=\"/web/image/gamification.badge/${object.badge_id.id}/image_128/80x80\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${user.company_id.name}\"/>"
+"                                </td>"
+"                                <td valign=\"center\">"
+"                                    <cite>${object.badge_id.description}</cite>"
+"                                </td>"
+"                            </tr></tbody>"
+"                            </table>"
+"                        % endif"
+"                        <br/>"
+"                        % if object.sender_id"
+"                            This badge was granted by <strong>${object.sender_id.name}</strong>."
+"                        % endif"
+"                        <br/>"
+"                        % if object.comment"
+"                            ${object.comment}"
+"                        % endif"
+"                        <br/><br/>"
+"                        Thank you,"
+"                        <br/>"
+"                        % if object.sender_id and object.sender_id.signature:"
+"                            ${object.sender_id.signature | safe}"
+"                        % endif"
+"                    </div>"
+"                </td></tr>"
+"                <tr><td style=\"text-align:center;\">"
+"                  <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>"
+"                </td></tr>"
+"            </table>"
+"        </td>"
+"    </tr>"
+"    <!-- FOOTER -->"
+"    <tr>"
+"        <td align=\"center\" style=\"min-width: 590px;\">"
+"            <table width=\"590\" border=\"0\" cellpadding=\"0\" style=\"min-width: 590px; background-color: white; font-size: 12px; padding: 0px 8px 0px 8px; border-collapse:separate;\">"
+"                <tr><td valign=\"middle\" align=\"left\">"
+"                    ${object.user_id.company_id.name}"
+"                </td></tr>"
+"                <tr><td valign=\"middle\" align=\"left\" style=\"opacity: 0.7;\">"
+"                    ${object.user_id.company_id.phone}"
+"                    % if object.user_id.company_id.email"
+"                        | <a href=\"\'mailto:%s\' % ${object.user_id.company_id.email}\" style=\"text-decoration:none; color: #454748;\">${object.user_id.company_id.email}</a>"
+"                    % endif"
+"                    % if object.user_id.company_id.website"
+"                        | <a href=\"\'%s\' % ${object.user_id.company_id.website}\" style=\"text-decoration:none; color: #454748;\">"
+"                        ${object.user_id.company_id.website}"
+"                    </a>"
+"                    % endif"
+"                </td></tr>"
+"            </table>"
+"        </td>"
+"    </tr>"
+"</tbody>"
+"</table>"
+"</td></tr>"
+"<!-- POWERED BY -->"
+"<tr><td align=\"center\" style=\"min-width: 590px;\">"
+"    <table width=\"590\" border=\"0\" cellpadding=\"0\" style=\"min-width: 590px; background-color: #F1F1F1; color: #454748; padding: 8px; border-collapse:separate;\">"
+"      <tr><td style=\"text-align: center; font-size: 14px;\">"
+"        Powered by <a target=\"_blank\" href=\"https://www.odoo.com?utm_source=db&amp;utm_medium=gamification\" style=\"color: #875A7B;\">Odoo</a>"
+"      </td></tr>"
+"    </table>"
+"</td></tr>"
+"</table>"
+msgstr ""
+"<?xml version=\"1.0\"?>"
+"<table border=\"0\" cellpadding=\"0\" style=\"padding-top: 16px; background-color: #F1F1F1; color: #454748; width: 100%; border-collapse:separate;\"><tr><td align=\"center\">"
+"<table border=\"0\" width=\"590\" cellpadding=\"0\" style=\"padding: 16px; background-color: white; color: #454748; border-collapse:separate;\" summary=\"o_mail_notification\">"
+"<tbody>"
+"    <!-- HEADER -->"
+"    <tr>"
+"        <td align=\"center\" style=\"min-width: 590px;\">"
+"            <table width=\"590\" border=\"0\" cellpadding=\"0\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">"
+"                <tr><td valign=\"middle\">"
+"                    <span style=\"font-size: 10px;\">Your Badge</span><br/>"
+"                    <span style=\"font-size: 20px; font-weight: bold;\">"
+"                        ${object.badge_id.name}"
+"                    </span>"
+"                </td><td valign=\"middle\" align=\"right\">"
+"                    <img src=\"/logo.png?company=${object.user_id.company_id.id}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${object.user_id.company_id.name}\"/>"
+"                </td></tr>"
+"                <tr><td colspan=\"2\" style=\"text-align:center;\">"
+"                  <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>"
+"                </td></tr>"
+"            </table>"
+"        </td>"
+"    </tr>"
+"    <!-- CONTENT -->"
+"    <tr>"
+"        <td align=\"center\" style=\"min-width: 590px;\">"
+"            <table width=\"590\" border=\"0\" cellpadding=\"0\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">"
+"                <tr><td valign=\"top\" style=\"font-size: 14px;\">"
+"                    <div>"
+"                        Congratulations ${object.user_id.name} !<br/>"
+"                        You just received badge <strong>${object.badge_id.name}</strong> !<br/>"
+"                        % if object.badge_id.description"
+"                            <table cellspacing=\"0\" cellpadding=\"0\" border=\"0\" style=\"width: 560px; margin-top: 5px;\">"
+"                            <tbody><tr>"
+"                                <td valign=\"center\">"
+"                                    <img src=\"/web/image/gamification.badge/${object.badge_id.id}/image_128/80x80\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${user.company_id.name}\"/>"
+"</td>"
+"                                <td valign=\"center\">"
+"                                    <cite>${object.badge_id.description}</cite>"
+"                                </td>"
+"                            </tr></tbody>"
+"                            </table>"
+"                        % endif"
+"                        <br/>"
+"                        % if object.sender_id"
+"                            This badge was granted by <strong>${object.sender_id.name}</strong>."
+"                        % endif"
+"                        <br/>"
+"                        % if object.comment"
+"                            ${object.comment}"
+"                        % endif"
+"                        <br/><br/>"
+"                        Thank you,"
+" <br/>"
+"                        % if object.sender_id and object.sender_id.signature:"
+"                            ${object.sender_id.signature | safe}"
+"                        % endif"
+"                    </div>"
+"                </td></tr>"
+"                <tr><td style=\"text-align:center;\">"
+"                  <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>"
+"                </td></tr>"
+"            </table>"
+"        </td>"
+"    </tr>"
+"    <!-- FOOTER -->"
+"    <tr>"
+"        <td align=\"center\" style=\"min-width: 590px;\">"
+"            <table width=\"590\" border=\"0\" cellpadding=\"0\" style=\"min-width: 590px; background-color: white; font-size: 12px; padding: 0px 8px 0px 8px; border-collapse:separate;\">"
+"                <tr><td valign=\"middle\" align=\"left\">"
+"                    ${object.user_id.company_id.name}"
+"                </td></tr>"
+"                <tr><td valign=\"middle\" align=\"left\" style=\"opacity: 0.7;\">"
+"                    ${object.user_id.company_id.phone}"
+"                    % if object.user_id.company_id.email"
+"                        | <a href=\"\'mailto:%s\' % ${object.user_id.company_id.email}\" style=\"text-decoration:none; color: #454748;\">${object.user_id.company_id.email}</a>"
+"% መጨረሻ"
+"                    % if object.user_id.company_id.website"
+"                        | <a href=\"\'%s\' % ${object.user_id.company_id.website}\" style=\"text-decoration:none; color: #454748;\">"
+"                        ${object.user_id.company_id.website}"
+"</a>"
+"                    % endif"
+"                </td></tr>"
+"            </table>"
+"        </td>"
+"    </tr>"
+"</tbody>"
+"</table>"
+"</td></tr>"
+"<!-- POWERED BY -->"
+"<tr><td align=\"center\" style=\"min-width: 590px;\">"
+"    <table width=\"590\" border=\"0\" cellpadding=\"0\" style=\"min-width: 590px; background-color: #F1F1F1; color: #454748; padding: 8px; border-collapse:separate;\">"
+"      <tr><td style=\"text-align: center; font-size: 14px;\">"
+"        Powered by <a target=\"_blank\" href=\"https://www.odoo.com?utm_source=db&amp;utm_medium=gamification\" style=\"color: #875A7B;\">Odoo</a>"
+" </td></tr>"
+"    </table>"
+"</td></tr>"
+"</table>"
+#. module: gamification
+#: code:addons/gamification/models/challenge.py:0
+msgid "<br/> %(rank)d. %(user_name)s - %(reward_name)s"
+msgstr "<br/> %(ደረጃ) መ. %(የተጠቃሚ_ስም)s - %(የሽልማት_ስም)s"
+
+#. module: gamification
+#: code:addons/gamification/models/challenge.py:0
+msgid "<br/>Nobody has succeeded to reach every goal, no badge is rewarded for this challenge."
+msgstr "ማንም ሰው ሁሉንም ግብ ላይ ለመድረስ የተሳካለት የለም፣ ለዚህ ​​ፈተና የሚሸልመው ባጅ የለም።"
+
+#. module: gamification
+#: code:addons/gamification/models/challenge.py:0
+msgid "<br/>Reward (badge %s) for every succeeding user was sent to %s."
+msgstr "<br/>ሽልማት (ባጅ %s) ለእያንዳንዱ ተከታይ ተጠቃሚ ወደ %s ተልኳል።"
+
+#. module: gamification
+#: code:addons/gamification/models/challenge.py:0
+msgid "<br/>Special rewards were sent to the top competing users. The ranking for this challenge is :"
+msgstr "<br/>ልዩ ሽልማቶች ለከፍተኛ ተወዳዳሪ ተጠቃሚዎች ተልከዋል። የዚህ ፈተና ደረጃው፡-"
+
+#. module: gamification
+#: model:mail.template,body_html:gamification.mail_template_data_new_rank_reached
+msgid ""
+"<div style=\"background:#F0F0F0;color:#515166;padding:10px 0px;font-family:Arial,Helvetica,sans-serif;font-size:14px;\">"
+"<table style=\"width:600px;margin:0px auto;background:white;border:1px solid #e1e1e1;\">"
+"    <tbody>"
+"        <tr>"
+"            <td style=\"padding:15px 20px 10px 20px;\">"
+"                <p>"
+"                    Congratulations"
+"                    <span>${object.name or \'\'}</span>!"
+"                </p>"
+"                <p>"
+"                    You just reached a new rank : <strong>${object.rank_id.name}</strong>"
+"                </p>"
+"                <p>Continue your work to become a <strong>${object.next_rank_id.name}</strong> !</p>"
+"                <div style=\"margin: 16px 0px 16px 0px;\">"
+"                    % set gamification_redirection_data = object.get_gamification_redirection_data()"
+"                    % for data in gamification_redirection_data"
+"                        % set url = data[\'url\']"
+"                        % set label = data[\'label\']"
+"                        <a href=\"${url}\" style=\"background-color: #875A7B; padding: 8px 16px 8px 16px; text-decoration: none; color: #fff; border-radius: 5px; font-size:13px;\">${label}</a>"
+"                    % endfor"
+"                </div>"
+"            </td>"
+"            <td style=\"padding:15px 20px 10px 20px;\">"
+"                <p style=\"text-align: center;\">"
+"                    <img src=\"/web/image/gamification.karma.rank/${object.rank_id.id}/image_128\"/>"
+"                </p>"
+"            </td>"
+"        </tr>"
+"    </tbody>"
+" </table>"
+"</div>"
+msgstr ""
+"<div style=\"background:#F0F0F0;color:#515166;padding:10px 0px;font-family:Arial,Helvetica,sans-serif;font-size:14px;\">"
+"<table style=\"width:600px;margin:0px auto;background:white;border:1px solid #e1e1e1;\">"
+"    <tbody>"
+"        <tr>"
+"            <td style=\"padding:15px 20px 10px 20px;\">"
+"                <p>"
+"                    Congratulations"
+"                    <span>${object.name or \'\'}</span>!"
+"                </p>"
+"                <p>"
+"                    You just reached a new rank : <strong>${object.rank_id.name}</strong>"
+"                </p>"
+"                <p>Continue your work to become a <strong>${object.next_rank_id.name}</strong> !</p>"
+"                <div style=\"margin: 16px 0px 16px 0px;\">"
+"% አዘጋጅ gamification_redirection_data = object.get_gamification_redirection_data()"
+"                    % for data in gamification_redirection_data"
+"                        % set url = data[\'url\']"
+"                        % set label = data[\'label\']"
+" <a href=\"${url}\" style=\"ዳራ-ቀለም፡ #875A7B; ንጣፍ: 8 ፒክስል 16 ፒክስል 8 ፒክስል 16 ፒክስል; ጽሑፍ-ማጌጫ: የለም; ቀለም፡ #fff; ድንበር-ራዲየስ: 5 ፒክስል; font-size:13px;\">${label}</a>"
+"                    % endfor"
+"                </div>"
+"            </td>"
+" <td style=\" padding:15px 20px 10px 20px;\">"
+"                <p style=\"text-align: center;\">"
+"                    <img src=\"/web/image/gamification.karma.rank/${object.rank_id.id}/image_128\"/>"
+"                </p>"
+"            </td>"
+"        </tr>"
+"    </tbody>"
+" </table>"
+"</div>"
+#. module: gamification
+#: model:mail.template,body_html:gamification.email_template_goal_reminder
+msgid ""
+"<div>"
+"    <strong>Reminder ${object.name}</strong><br/>"
+"You have not updated your progress for the goal ${object.definition_id.name} (currently reached at ${object.completeness}%) for at least ${object.remind_update_delay} days. Do not forget to do it."
+"<br/><br/>"
+"Thank you,"
+"    <br/>"
+"    % if object.challenge_id.manager_id and object.challenge_id.manager_id.signature:"
+"    ${object.challenge_id.manager_id.signature | safe}"
+"    % endif"
+"</div>"
+msgstr ""
+"<div>"
+" <strong>አስታዋሽ ${object.name}</strong><br/>"
+"ሂደትህን ለዓላማው ${object.definition_id.name} (በአሁኑ ጊዜ በ${object.completeness}%) ቢያንስ ለ${object.remind_update_delay} ቀናት አላዘመንከውም። ይህን ለማድረግ አትርሳ።"
+"<br/><br/>"
+"አመሰግናለሁ,"
+" <br/>"
+" % object.challenge_id.manager_id እና object.challenge_id.manager_id.signature ከሆነ፡"
+"${object.challenge_id.manager_id.signature | የተጠበቀ}"
+"% መጨረሻ"
+"</div>"
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.goal_kanban_view
+msgid "<i role=\"img\" class=\"fa fa-clock-o fa-3x\" title=\"Goal in Progress\" aria-label=\"Goal in Progress\"/>"
+msgstr "<i role=\"img\" class=\"fa fa-clock-o fa-3x\" title=\"በሂደት ላይ ያለ ግብ\" aria-label=\"በሂደት ላይ ያለ ግብ\"/>"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.goal_kanban_view
+msgid "<i role=\"img\" class=\"o_green fa fa-check fa-3x\" title=\"Goal Reached\" aria-label=\"Goal Reached\"/>"
+msgstr "<i role=\"img\" class=\"o_green fa fa-check fa-3x\" title=\"የደረሰው ግብ\" aria-label=\"ግብ ላይ ደርሷል\"/>"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.goal_kanban_view
+msgid "<i role=\"img\" class=\"o_red fa fa-times fa-3x\" title=\"Goal Failed\" aria-label=\"Goal Failed\"/>"
+msgstr "<i role=\"img\" class=\"o_red fa fa-times fa-3x\" title=\"ግብ አልተሳካም\" aria-label=\"ግብ አልተሳካም\"/>"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.challenge_form_view
+msgid ""
+"<span class=\"o_stat_text\">Related</span>"
+"                                <span class=\"o_stat_text\">Goals</span>"
+msgstr ""
+"<span class=\"o_stat_text\">ተዛማጅ</span>"
+" <span class=\"o_stat_text\">ግቦች</span>"
+#. module: gamification
+#: model:mail.template,body_html:gamification.simple_report_template
+msgid ""
+"<table cellspacing=\"0\" cellpadding=\"0\" width=\"100%\" style=\"background-color: #EEE; border-collapse: collapse;\">"
+"<tr>"
+"    <td valign=\"top\" align=\"center\">"
+"        % set record = ctx.get(\'record\')"
+"        % set company = record and record.company_id or user.company_id"
+"        % set challenge_lines = ctx.get(\'challenge_lines\', [])     "
+"        <table cellspacing=\"0\" cellpadding=\"0\" width=\"600\" style=\"margin: 0 auto; width: 570px;\">"
+"            <tr><td>"
+"                <table cellspacing=\"0\" cellpadding=\"0\" width=\"100%\">"
+"                    <tr>"
+"                        <div>"
+"                            % if object.visibility_mode == \'ranking\':"
+"                                <td style=\"padding:15px;\">"
+"                                    <p style=\"font-size:20px;color:#666666;\" align=\"center\">Leaderboard</p>"
+"                                </td>"
+"                            % endif"
+"                        </div>"
+"                    </tr>"
+"                </table>"
+"                <table cellspacing=\"0\" cellpadding=\"0\" width=\"100%\" bgcolor=\"#fff\" style=\"background-color:#fff;\">"
+"                    <tr><td style=\"padding: 15px;\">"
+"                        % if object.visibility_mode == \'personal\':"
+"                            <span style=\"color:#666666;font-size:13px;\">Here is your current progress in the challenge <strong>${object.name}</strong>.</span>"
+"                            <table cellspacing=\"0\" cellpadding=\"0\" width=\"100%\" style=\"margin-top:20px;\">"
+"                                <tr>"
+"                                    <td align=\"center\">"
+"                                        <div>Personal Performance</div>"
+"                                    </td>"
+"                                </tr>"
+"                            </table>"
+"                            <table cellspacing=\"0\" cellpadding=\"0\" width=\"100%\" style=\"margin-top:30px;color:#666666;\">"
+"                                <thead>"
+"                                    <tr style=\"color:#9A6C8E; font-size:12px;\">"
+"                                        <th align=\"left\" style=\"padding-bottom: 0px;width:40%;text-align:left;\">Goals</th>"
+"                                        <th style=\"width:20%;text-align:right;\" align=\"left\">Target</th>"
+"                                        <th style=\"width:20%;text-align:right;\" align=\"right\">Current</th>"
+"                                        <th style=\"width:20%;text-align:right;\" align=\"right\">Completeness</th>"
+"                                    </tr>"
+"                                    <tr>"
+"                                        <td colspan=\"5\" style=\"height:1px;background-color:#9A6C8E;\"/>"
+"                                    </tr>"
+"                                </thead>"
+"                                <tbody>"
+"                                % for line in challenge_lines:"
+"                                    <tr style=\"font-weight:bold;\">"
+"                                        <td style=\"padding: 20px 0;\" align=\"left\">"
+"                                            ${line[\'name\']}"
+"                                            % if line[\'suffix\'] or line[\'monetary\']:"
+"                                                (${line[\'full_suffix\']})"
+"                                            % endif"
+"                                        </td>"
+"                                        <td style=\"padding: 20px 0;\" align=\"right\">${\"%.2f\" % line[\'target\']}"
+"                                            % if line[\'suffix\']:"
+"                                                ${line[\'suffix\']}"
+"                                            % endif"
+"                                        </td>"
+"                                        <td style=\"padding: 20px 0;\" align=\"right\">${\"%.2f\" % line[\'current\']}"
+"                                            % if line[\'suffix\']:"
+"                                                ${line[\'suffix\']}"
+"                                            % endif"
+"                                        </td>"
+"                                        <td style=\"padding: 20px 0;font-size:25px;color:#9A6C8E;\" align=\"right\"><strong>${line[\'completeness\']| int}%</strong></td>"
+"                                    </tr>"
+"                                    <tr>"
+"                                        <td colspan=\"5\" style=\"height:1px;background-color:#e3e3e3;\"/>"
+"                                    </tr>"
+"                                % endfor        "
+"                                </tbody>"
+"                            </table>                   "
+"                        % else: "
+"                            <span style=\"color:#A8A8A8;font-size:13px;\">"
+"                                Challenge: <strong>${object.name}</strong>."
+"                            </span> "
+"                            % for line in challenge_lines:"
+"                                <!-- Header + Button table -->"
+"                                <table cellspacing=\"0\" cellpadding=\"0\" width=\"100%\" style=\"margin-top:35px;\">"
+"                                    <tr>"
+"                                        <td width=\"50%\">"
+"                                            <div>Top Achievers for goal <strong>${line[\'name\']}</strong></div>"
+"                                        </td>"
+"                                    </tr>"
+"                                </table>"
+"                                <!-- Podium -->"
+"                                % if len(line[\'goals\']) == 2:"
+"                                    <table cellspacing=\"0\" cellpadding=\"0\" width=\"100%\" style=\"margin-top:10px;\">"
+"                                        <tr><td style=\"padding:0 30px;\">"
+"                                            <table cellspacing=\"0\" cellpadding=\"0\" width=\"100%\" style=\"table-layout: fixed;\">"
+"                                                <tr>"
+"                                                    % set top_goals = line[\'goals\'][:3]"
+"                                                    % for goal in top_goals:"
+"                                                        <td align=\"center\" style=\"width:32%;\">"
+"                                                            % if loop.index == 1:"
+"                                                                % set extra_div = \'<div style=\"height:40px;\"/>\'"
+"                                                                % set heightA = 95"
+"                                                                % set heightB = 75"
+"                                                                % set bgColor = \'#b898b0\'"
+"                                                                % set fontSize = 50"
+"                                                                % set podiumPosition = \'2\'"
+"                                                            % elif loop.index == 2:"
+"                                                                % set extra_div = \'\'"
+"                                                                % set heightA = 55"
+"                                                                % set heightB = 115"
+"                                                                % set bgColor = \'#9A6C8E\'"
+"                                                                % set fontSize = 85"
+"                                                                % set podiumPosition = \'1\'"
+"                                                            % elif loop.index == 3:"
+"                                                                % set extra_div = \'<div style=\"height:60px;\"/>\'"
+"                                                                % set heightA = 115"
+"                                                                % set heightB = 55"
+"                                                                % set bgColor = \'#c8afc1\'"
+"                                                                % set fontSize = 35"
+"                                                                % set podiumPosition = \'3\'"
+"                                                            % endif"
+"                                                            <div style=\"margin:0 3px 0 3px;height:220px;\">"
+"                                                                <div style=\"height:${heightA}px;\">"
+"                                                                    ${extra_div | safe}   "
+"                                                                    <div style=\"height:55px;\">"
+"                                                                        <img style=\"margin-bottom:5px;width:50px;height:50px;border-radius:50%;object-fit:cover;\" t-att-src=\"image_data_uri(object.env[\'res.users\'].browse(goal[\'user_id\']).partner_id.image_128)\" alt=\"${goal[\'name\']}\"/>"
+"                                                                    </div>"
+"                                                                    <div align=\"center\" style=\"color:${bgColor};height:20px\">"
+"                                                                        ${goal[\'name\']}"
+"                                                                    </div>"
+"                                                                </div>"
+"                                                                <div style=\"background-color:${bgColor | safe};height:${heightB}px;\">"
+"                                                                    <strong><span style=\"color:#fff;font-size:${fontSize}px;\">${podiumPosition | safe}</span></strong>"
+"                                                                </div>"
+"                                                                <div style=\"height:30px;\">"
+"                                                                    ${\"%.2f\" % goal[\'current\']}"
+"                                                                    % if line[\'suffix\'] or line[\'monetary\']:"
+"                                                                        ${line[\'full_suffix\']}"
+"                                                                    % endif"
+"                                                                </div>"
+"                                                            </div>"
+"                                                        </td>"
+"                                                    % endfor"
+"                                                </tr>"
+"                                            </table>"
+"                                            </td>"
+"                                        </tr>"
+"                                    </table>"
+"                                % endif"
+"                                <!-- data table -->"
+"                                <table cellspacing=\"0\" cellpadding=\"0\" width=\"100%\" style=\"margin-bottom:5px\">"
+"                                    <tr>"
+"                                        <td>"
+"                                            <table cellspacing=\"0\" cellpadding=\"0\" width=\"100%\" style=\"margin-top:30px;margin-bottom:5px;color:#666666;\">"
+"                                                <thead>"
+"                                                    <tr style=\"color:#9A6C8E; font-size:12px;\">"
+"                                                        <th style=\"width:15%;text-align:center;\">Rank</th>"
+"                                                        <th style=\"width:25%;text-align:left;\">Name</th>"
+"                                                        <th style=\"width:30%;text-align:right;\">Performance "
+"                                                            % if line[\'suffix\']:"
+"                                                                (${line[\'suffix\']})"
+"                                                            % elif line[\'monetary\']:"
+"                                                                (${company.currency_id.symbol})"
+"                                                            % endif"
+"                                                        </th>"
+"                                                        <th style=\"width:30%;text-align:right;\">Completeness</th>"
+"                                                    </tr>"
+"                                                    <tr>"
+"                                                        <td colspan=\"5\" style=\"height:1px;background-color:#9A6C8E;\"/>"
+"                                                    </tr>"
+"                                                </thead>"
+"                                                <tbody>"
+"                                                    % for goal in line[\'goals\']:"
+"                                                        <tr>"
+"                                                            % set tdBgColor = \'#fff\'"
+"                                                            % set tdColor = \'gray\'"
+"                                                            % set mutedColor = \'#AAAAAA\'"
+"                                                            % set tdPercentageColor = \'#9A6C8E\'"
+"                                                            <td width=\"15%\" align=\"center\" valign=\"middle\" style=\"background-color:${tdBgColor};padding :5px 0;font-size:20px;\">${goal[\'rank\']+1}"
+"                                                            </td>"
+"                                                            <td width=\"25%\" align=\"left\" valign=\"middle\" style=\"background-color:${tdBgColor};padding :5px 0;font-size:13px;\">${goal[\'name\']}</td>"
+"                                                            <td width=\"30%\" align=\"right\" style=\"background-color:${tdBgColor};padding:5px 0;line-height:1;\">${\"%.2f\" % goal[\'current\']}<br/><span style=\"font-size:13px;color:${mutedColor};\">on ${\"%.2f\" % line[\'target\']}</span>"
+"                                                            </td>"
+"                                                            <td width=\"30%\" style=\"color:${tdPercentageColor};background-color:${tdBgColor};padding-right:15px;font-size:22px;\" align=\"right\"><strong>${goal[\'completeness\'] | int}%</strong></td>"
+"                                                        </tr>"
+"                                                        <tr>"
+"                                                            <td colspan=\"5\" style=\"height:1px;background-color:#DADADA;\"/>"
+"                                                        </tr>"
+"                                                    % endfor"
+"                                                </tbody>"
+"                                            </table>"
+"                                        </td>"
+"                                    </tr>"
+"                                </table> "
+"                            % endfor"
+"                        % endif"
+"                    </td></tr>"
+"                </table>"
+"            </td></tr>"
+"        </table>"
+"    </td>"
+"</tr>"
+"</table>"
+"            "
+msgstr ""
+
+#. module: gamification
+#: model_terms:ir.actions.act_window,help:gamification.badge_list_action
+msgid ""
+"A badge is a symbolic token granted to a user as a sign of reward."
+"                It can be deserved automatically when some conditions are met or manually by users."
+"                Some badges are harder than others to get with specific conditions."
+msgstr "ባጅ ለሽልማት ምልክት ሆኖ ለተጠቃሚ የሚሰጥ ተምሳሌታዊ ምልክት ነው። አንዳንድ ሁኔታዎች ሲሟሉ ወይም በተጠቃሚዎች በእጅ ሊገባ ይችላል። አንዳንድ ባጆች ከተወሰኑ ሁኔታዎች ጋር ለማግኘት ከሌሎች ይልቅ ከባድ ናቸው።"
+
+#. module: gamification
+#: model_terms:ir.actions.act_window,help:gamification.goal_definition_list_action
+msgid ""
+"A goal definition is a technical model of goal defining a condition to reach."
+"                The dates, values to reach or users are defined in goal instance."
+msgstr "የግብ ትርጉም ለመድረስ ሁኔታን የሚገልጽ የግብ ቴክኒካል ሞዴል ነው። የሚደረስባቸው ቀኖች፣ የሚደርሱ እሴቶች ወይም ተጠቃሚዎች በግብ ምሳሌ ውስጥ ተገልጸዋል።"
+
+#. module: gamification
+#: model:ir.model.fields,help:gamification.field_gamification_challenge_line__condition
+#: model:ir.model.fields,help:gamification.field_gamification_goal__definition_condition
+#: model:ir.model.fields,help:gamification.field_gamification_goal_definition__condition
+msgid "A goal is considered as completed when the current value is compared to the value to reach"
+msgstr "አንድ ግብ እንደ ተጠናቀቀ ይቆጠራል የአሁኑ ዋጋ ሊደረስበት ከሚችለው እሴት ጋር ሲወዳደር"
+
+#. module: gamification
+#: model_terms:ir.actions.act_window,help:gamification.goal_list_action
+msgid ""
+"A goal is defined by a user and a goal definition."
+"                Goals can be created automatically by using challenges."
+msgstr "አንድ ግብ በተጠቃሚ እና በግብ ፍቺ ይገለጻል። ተግዳሮቶችን በመጠቀም ግቦች በራስ-ሰር ሊፈጠሩ ይችላሉ።"
+
+#. module: gamification
+#: model_terms:ir.actions.act_window,help:gamification.gamification_karma_ranks_action
+msgid ""
+"A rank correspond to a fixed karma level. The more you have karma, the more your rank is high."
+"                    This is used to quickly know which user is new or old or highly or not active."
+msgstr "አንድ ደረጃ ከቋሚ የካርማ ደረጃ ጋር ይዛመዳል። ካርማ ባላችሁ መጠን፣ ደረጃዎ ከፍ ያለ ይሆናል። ይህ የትኛው ተጠቃሚ አዲስ ወይም አሮጌ እንደሆነ ወይም ከፍተኛ ወይም ንቁ እንዳልሆነ ለማወቅ ይጠቅማል።"
+
+#. module: gamification
+#: model:ir.model.fields.selection,name:gamification.selection__gamification_badge__rule_auth__users
+msgid "A selected list of users"
+msgstr "የተመረጡ የተጠቃሚዎች ዝርዝር"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_goal_definition__action_id
+msgid "Action"
+msgstr "ድርጊት"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge__message_needaction
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge__message_needaction
+msgid "Action Needed"
+msgstr "እርምጃ ያስፈልጋል"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge__active
+msgid "Active"
+msgstr "ንቁ"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.challenge_form_view
+msgid "Advanced Options"
+msgstr "የላቁ አማራጮች"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge__rule_auth
+msgid "Allowance to Grant"
+msgstr "ለግራንት አበል"
+
+#. module: gamification
+#: model:ir.model.fields,help:gamification.field_gamification_challenge__user_domain
+msgid "Alternative to a list of users"
+msgstr "ለተጠቃሚዎች ዝርዝር አማራጭ"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge__category
+msgid "Appears in"
+msgstr "ውስጥ ይታያል"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.badge_form_view
+#: model_terms:ir.ui.view,arch_db:gamification.gamification_badge_view_search
+msgid "Archived"
+msgstr "በማህደር የተቀመጠ"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.challenge_form_view
+msgid "Assign Challenge To"
+msgstr "ፈተናን ለ"
+
+#. module: gamification
+#: model_terms:ir.actions.act_window,help:gamification.challenge_list_action
+msgid ""
+"Assign a list of goals to chosen users to evaluate them."
+"                The challenge can use a period (weekly, monthly...) for automatic creation of goals."
+"                The goals are created for the specified users or member of the group."
+msgstr "የግቦችን ዝርዝር ለተመረጡ ተጠቃሚዎች እንዲገመግሟቸው መድቡ። ፈተናው ጊዜን (ሳምንታዊ፣ ወርሃዊ...) ግቦችን በራስ-ሰር ለመፍጠር ሊጠቀም ይችላል። ግቦቹ የተፈጠሩት ለተጠቀሱት ተጠቃሚዎች ወይም የቡድኑ አባል ነው።"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge__message_attachment_count
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge__message_attachment_count
+msgid "Attachment Count"
+msgstr "የአባሪ ብዛት"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge__rule_auth_user_ids
+msgid "Authorized Users"
+msgstr "የተፈቀዱ ተጠቃሚዎች"
+
+#. module: gamification
+#: model:ir.model.fields.selection,name:gamification.selection__gamification_goal_definition__computation_mode__python
+msgid "Automatic: execute a specific Python code"
+msgstr "ራስ-ሰር፡ የተወሰነ የፓይዘን ኮድ ያስፈጽሙ"
+
+#. module: gamification
+#: model:ir.model.fields.selection,name:gamification.selection__gamification_goal_definition__computation_mode__count
+msgid "Automatic: number of records"
+msgstr "ራስ-ሰር: የመዝገቦች ብዛት"
+
+#. module: gamification
+#: model:ir.model.fields.selection,name:gamification.selection__gamification_goal_definition__computation_mode__sum
+msgid "Automatic: sum on a field"
+msgstr "አውቶማቲክ፡ በአንድ መስክ ላይ ድምር"
+
+#. module: gamification
+#: model:gamification.karma.rank,name:gamification.rank_bachelor
+msgid "Bachelor"
+msgstr "ባችለር"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge__name
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge_user__badge_id
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge_user_wizard__badge_id
+#: model_terms:ir.ui.view,arch_db:gamification.badge_form_view
+msgid "Badge"
+msgstr "ባጅ"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.badge_form_view
+msgid "Badge Description"
+msgstr "ባጅ መግለጫ"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge_user__level
+msgid "Badge Level"
+msgstr "የባጅ ደረጃ"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.badge_list_view
+msgid "Badge List"
+msgstr "ባጅ ዝርዝር"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge_user__badge_name
+#: model_terms:ir.ui.view,arch_db:gamification.badge_form_view
+msgid "Badge Name"
+msgstr "ባጅ ስም"
+
+#. module: gamification
+#: model:ir.actions.act_window,name:gamification.badge_list_action
+#: model:ir.model.fields,field_description:gamification.field_res_users__badge_ids
+#: model:ir.ui.menu,name:gamification.gamification_badge_menu
+msgid "Badges"
+msgstr "ባጆች"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.challenge_form_view
+msgid "Badges are granted when a challenge is finished. This is either at the end of a running period (eg: end of the month for a monthly challenge), at the end date of a challenge (if no periodicity is set) or when the challenge is manually closed."
+msgstr "ባጅ የሚሰጠው ፈተና ሲጠናቀቅ ነው። ይህ በሩጫ ጊዜ መጨረሻ (ለምሳሌ፡ ለወርሃዊ ውድድር በወሩ መጨረሻ)፣ በውድድሩ ማብቂያ ቀን (ምንም ወቅታዊነት ካልተዘጋጀ) ወይም ፈተናው በእጅ ሲዘጋ ነው።"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_goal_definition__batch_mode
+msgid "Batch Mode"
+msgstr "ባች ሁነታ"
+
+#. module: gamification
+#: model:gamification.badge,name:gamification.badge_idea
+msgid "Brilliant"
+msgstr "ጎበዝ"
+
+#. module: gamification
+#: model:ir.model.fields.selection,name:gamification.selection__gamification_badge__level__bronze
+msgid "Bronze"
+msgstr "ነሐስ"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_res_users__bronze_badge
+msgid "Bronze badges count"
+msgstr "የነሐስ ባጆች ይቆጠራሉ።"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.badge_kanban_view
+msgid "Can not grant"
+msgstr "መስጠት አይቻልም"
+
+#. module: gamification
+#: code:addons/gamification/models/goal.py:0
+msgid "Can not modify the configuration of a started goal"
+msgstr "የጀመረውን ግብ ውቅር መቀየር አልተቻለም"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.view_badge_wizard_grant
+#: model_terms:ir.ui.view,arch_db:gamification.view_goal_wizard_update_current
+msgid "Cancel"
+msgstr "ሰርዝ"
+
+#. module: gamification
+#: model:ir.model.fields.selection,name:gamification.selection__gamification_goal__state__canceled
+msgid "Canceled"
+msgstr "ተሰርዟል።"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.challenge_form_view
+msgid "Category"
+msgstr "ምድብ"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge_line__challenge_id
+#: model:ir.model.fields,field_description:gamification.field_gamification_goal__challenge_id
+msgid "Challenge"
+msgstr "ፈተና"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_goal__line_id
+msgid "Challenge Line"
+msgstr "የግጥሚያ መስመር"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.challenge_line_list_view
+msgid "Challenge Lines"
+msgstr "ፈታኝ መስመሮች"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge__name
+msgid "Challenge Name"
+msgstr "የውድድር ስም"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge_user__challenge_id
+msgid "Challenge originating"
+msgstr "ፈታኝ መነሻ"
+
+#. module: gamification
+#: model:ir.model.fields,help:gamification.field_gamification_goal__challenge_id
+msgid "Challenge that generated the goal, assign challenge to users to generate goals with a value in this field."
+msgstr "ግቡን ያመነጨው ፈተና፣ በዚህ መስክ ዋጋ ያላቸውን ግቦች እንዲያመነጩ ለተጠቃሚዎች ፈተና መድቡ።"
+
+#. module: gamification
+#: model:ir.actions.act_window,name:gamification.challenge_list_action
+#: model:ir.ui.menu,name:gamification.gamification_challenge_menu
+#: model_terms:ir.ui.view,arch_db:gamification.view_challenge_kanban
+msgid "Challenges"
+msgstr "ተግዳሮቶች"
+
+#. module: gamification
+#: model:ir.model.fields,help:gamification.field_gamification_badge__rule_max
+msgid "Check to set a monthly limit per person of sending this badge"
+msgstr "ይህን ባጅ የሚላክ ሰው ወርሃዊ ገደብ ለማዘጋጀት ያረጋግጡ"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.goal_definition_form_view
+msgid "Clickable Goals"
+msgstr "ሊጫኑ የሚችሉ ግቦች"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_goal__closed
+msgid "Closed goal"
+msgstr "የተዘጋ ግብ"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge_user__comment
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge_user_wizard__comment
+msgid "Comment"
+msgstr "አስተያየት"
+
+#. module: gamification
+#: model:gamification.challenge,name:gamification.challenge_base_discover
+msgid "Complete your Profile"
+msgstr "መገለጫዎን ያጠናቅቁ"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_goal__completeness
+msgid "Completeness"
+msgstr "ሙሉነት"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_goal__computation_mode
+#: model:ir.model.fields,field_description:gamification.field_gamification_goal_definition__computation_mode
+#: model_terms:ir.ui.view,arch_db:gamification.goal_definition_search_view
+msgid "Computation Mode"
+msgstr "ስሌት ሁነታ"
+
+#. module: gamification
+#: model:ir.actions.act_window,name:gamification.action_new_simplified_res_users
+msgid "Create User"
+msgstr "ተጠቃሚ ፍጠር"
+
+#. module: gamification
+#: model_terms:ir.actions.act_window,help:gamification.badge_list_action
+msgid "Create a new badge"
+msgstr "አዲስ ባጅ ይፍጠሩ"
+
+#. module: gamification
+#: model_terms:ir.actions.act_window,help:gamification.challenge_list_action
+msgid "Create a new challenge"
+msgstr "አዲስ ፈተና ፍጠር"
+
+#. module: gamification
+#: model_terms:ir.actions.act_window,help:gamification.goal_list_action
+msgid "Create a new goal"
+msgstr "አዲስ ግብ ፍጠር"
+
+#. module: gamification
+#: model_terms:ir.actions.act_window,help:gamification.goal_definition_list_action
+msgid "Create a new goal definition"
+msgstr "አዲስ የግብ ትርጉም ይፍጠሩ"
+
+#. module: gamification
+#: model_terms:ir.actions.act_window,help:gamification.gamification_karma_ranks_action
+msgid "Create a new rank"
+msgstr "አዲስ ደረጃ ይፍጠሩ"
+
+#. module: gamification
+#: model_terms:ir.actions.act_window,help:gamification.action_new_simplified_res_users
+msgid "Create and manage users that will connect to the system. Users can be deactivated should there be a period of time during which they will/should not connect to the system. You can assign them groups in order to give them specific access to the applications they need to use in the system."
+msgstr "ከስርዓቱ ጋር የሚገናኙ ተጠቃሚዎችን ይፍጠሩ እና ያቀናብሩ። ተጠቃሚዎች ከሲስተሙ ጋር የማይገናኙበት/የማይገናኙበት ጊዜ ካለ ሊቦዝኑ ይችላሉ። በሲስተሙ ውስጥ ሊጠቀሙባቸው የሚገቡትን አፕሊኬሽኖች የተወሰነ መዳረሻ እንዲሰጡዋቸው ቡድኖችን መመደብ ይችላሉ።"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge__create_uid
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge_user__create_uid
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge_user_wizard__create_uid
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge__create_uid
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge_line__create_uid
+#: model:ir.model.fields,field_description:gamification.field_gamification_goal__create_uid
+#: model:ir.model.fields,field_description:gamification.field_gamification_goal_definition__create_uid
+#: model:ir.model.fields,field_description:gamification.field_gamification_goal_wizard__create_uid
+#: model:ir.model.fields,field_description:gamification.field_gamification_karma_rank__create_uid
+msgid "Created by"
+msgstr "የተፈጠረ"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge__create_date
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge_user__create_date
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge_user_wizard__create_date
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge__create_date
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge_line__create_date
+#: model:ir.model.fields,field_description:gamification.field_gamification_goal__create_date
+#: model:ir.model.fields,field_description:gamification.field_gamification_goal_definition__create_date
+#: model:ir.model.fields,field_description:gamification.field_gamification_goal_wizard__create_date
+#: model:ir.model.fields,field_description:gamification.field_gamification_karma_rank__create_date
+msgid "Created on"
+msgstr "ላይ ተፈጠረ"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_goal_wizard__current
+msgid "Current"
+msgstr "የአሁኑ"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_goal__current
+msgid "Current Value"
+msgstr "የአሁኑ ዋጋ"
+
+#. module: gamification
+#: model:ir.model.fields.selection,name:gamification.selection__gamification_challenge__period__daily
+#: model:ir.model.fields.selection,name:gamification.selection__gamification_challenge__report_message_frequency__daily
+msgid "Daily"
+msgstr "በየቀኑ"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.goal_form_view
+msgid "Data"
+msgstr "ውሂብ"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_goal_definition__field_date_id
+msgid "Date Field"
+msgstr "የቀን መስክ"
+
+#. module: gamification
+#: model:ir.model.fields,help:gamification.field_gamification_challenge__category
+msgid "Define the visibility of the challenge through menus"
+msgstr "የፈተናውን ታይነት በምናሌዎች ይግለጹ"
+
+#. module: gamification
+#: model:ir.model.fields,help:gamification.field_gamification_goal__computation_mode
+#: model:ir.model.fields,help:gamification.field_gamification_goal_definition__computation_mode
+msgid "Defined how will be computed the goals. The result of the operation will be stored in the field \'Current\'."
+msgstr "ግቦቹ እንዴት እንደሚሰሉ ይገለጻል። የክዋኔው ውጤት በመስክ \'አሁን\' ውስጥ ይከማቻል."
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_goal__definition_description
+msgid "Definition Description"
+msgstr "የፍቺ መግለጫ"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.challenge_form_view
+msgid "Depending on the Display mode, reports will be individual or shared."
+msgstr "በማሳያ ሁነታ ላይ በመመስረት ሪፖርቶች ግላዊ ወይም የተጋሩ ይሆናሉ።"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.challenge_form_view
+msgid "Describe the challenge: what is does, who it targets, why it matters..."
+msgstr "ፈተናውን ይግለጹ፡ ምን እንደሚሰራ፣ ማንን እንደሚያነጣጥር፣ ለምን እንደሚያስፈልግ..."
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.view_badge_wizard_grant
+msgid "Describe what they did and why it matters (will be public)"
+msgstr "ያደረጉትን እና ለምን አስፈላጊ እንደሆነ ያብራሩ (ይፋዊ ይሆናል)"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge__description
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge__description
+#: model:ir.model.fields,field_description:gamification.field_gamification_karma_rank__description
+msgid "Description"
+msgstr "መግለጫ"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge__visibility_mode
+msgid "Display Mode"
+msgstr "የማሳያ ሁነታ"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge__display_name
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge_user__display_name
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge_user_wizard__display_name
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge__display_name
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge_line__display_name
+#: model:ir.model.fields,field_description:gamification.field_gamification_goal__display_name
+#: model:ir.model.fields,field_description:gamification.field_gamification_goal_definition__display_name
+#: model:ir.model.fields,field_description:gamification.field_gamification_goal_wizard__display_name
+#: model:ir.model.fields,field_description:gamification.field_gamification_karma_rank__display_name
+msgid "Display Name"
+msgstr "መጠሪያው ስም"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_goal__definition_display
+#: model:ir.model.fields,field_description:gamification.field_gamification_goal_definition__display_mode
+msgid "Displayed as"
+msgstr "እንደ ሚታየው"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_goal_definition__batch_distinctive_field
+msgid "Distinctive field for batch user"
+msgstr "ለቡድን ተጠቃሚ ልዩ መስክ"
+
+#. module: gamification
+#: model:gamification.karma.rank,name:gamification.rank_doctor
+msgid "Doctor"
+msgstr "ዶክተር"
+
+#. module: gamification
+#: model:ir.model.fields,help:gamification.field_gamification_goal_definition__domain
+msgid "Domain for filtering records. General rule, not user depending, e.g. [(\'state\', \'=\', \'done\')]. The expression can contain reference to \'user\' which is a browse record of the current user if not in batch mode."
+msgstr "መዝገቦችን ለማጣራት ጎራ። አጠቃላይ ህግ፣ በተጠቃሚው ላይ የተመሰረተ አይደለም፣ ለምሳሌ [(\'ግዛት\'፣ \'=\'፣ \'ተከናውኗል\')]። አገላለጹ የ\'ተጠቃሚ\' ማጣቀሻን ሊይዝ ይችላል ይህም በቡድን ሁነታ ካልሆነ የአሁኑን ተጠቃሚ የማሰስ መዝገብ ነው።"
+
+#. module: gamification
+#: model:ir.model.fields.selection,name:gamification.selection__gamification_challenge__state__done
+#: model_terms:ir.ui.view,arch_db:gamification.goal_search_view
+msgid "Done"
+msgstr "ተከናውኗል"
+
+#. module: gamification
+#: model:ir.model.fields.selection,name:gamification.selection__gamification_challenge__state__draft
+#: model:ir.model.fields.selection,name:gamification.selection__gamification_goal__state__draft
+#: model_terms:ir.ui.view,arch_db:gamification.goal_search_view
+msgid "Draft"
+msgstr "ረቂቅ"
+
+#. module: gamification
+#: model_terms:gamification.karma.rank,description_motivational:gamification.rank_newbie
+msgid "Earn your first points and join the adventure !"
+msgstr "የመጀመሪያ ነጥቦችዎን ያግኙ እና ጀብዱውን ይቀላቀሉ!"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge__end_date
+#: model:ir.model.fields,field_description:gamification.field_gamification_goal__end_date
+#: model_terms:ir.ui.view,arch_db:gamification.goal_search_view
+msgid "End Date"
+msgstr "የመጨረሻ ቀን"
+
+#. module: gamification
+#: model:ir.model.fields,help:gamification.field_gamification_goal_definition__batch_mode
+msgid "Evaluate the expression in batch instead of once for each user"
+msgstr "ለእያንዳንዱ ተጠቃሚ አንድ ጊዜ ሳይሆን አገላለጹን በቡድን ይገምግሙ"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_goal_definition__batch_user_expression
+msgid "Evaluated expression for batch mode"
+msgstr "ለባች ሁነታ የተገመገመ አገላለጽ"
+
+#. module: gamification
+#: model:ir.model.fields.selection,name:gamification.selection__gamification_badge__rule_auth__everyone
+msgid "Everyone"
+msgstr "ሁሉም ሰው"
+
+#. module: gamification
+#: model:ir.model.fields.selection,name:gamification.selection__gamification_goal_definition__display_mode__boolean
+msgid "Exclusive (done or not-done)"
+msgstr "ልዩ (ተሰራ ወይም አልተሰራም)"
+
+#. module: gamification
+#: model:ir.model.fields.selection,name:gamification.selection__gamification_goal__state__failed
+msgid "Failed"
+msgstr "አልተሳካም።"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_goal_definition__field_id
+msgid "Field to Sum"
+msgstr "መስክ እስከ ድምር"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_goal_definition__domain
+msgid "Filter Domain"
+msgstr "ጎራ አጣራ"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge__message_follower_ids
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge__message_follower_ids
+msgid "Followers"
+msgstr "ተከታዮች"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge__message_channel_ids
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "ተከታዮች (ሰርጦች)"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge__message_partner_ids
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "ተከታዮች (አጋሮች)"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge__reward_first_id
+msgid "For 1st user"
+msgstr "ለ 1 ኛ ተጠቃሚ"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge__reward_second_id
+msgid "For 2nd user"
+msgstr "ለ 2 ኛ ተጠቃሚ"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge__reward_third_id
+msgid "For 3rd user"
+msgstr "ለ 3 ኛ ተጠቃሚ"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge__reward_id
+msgid "For Every Succeeding User"
+msgstr "ለእያንዳንዱ ስኬታማ ተጠቃሚ"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.goal_definition_form_view
+msgid "Formating Options"
+msgstr "የቅርጸት አማራጮች"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge__level
+msgid "Forum Badge Level"
+msgstr "የመድረክ ባጅ ደረጃ"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.goal_kanban_view
+msgid "From"
+msgstr "ከ"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_goal_definition__full_suffix
+msgid "Full Suffix"
+msgstr "ሙሉ ቅጥያ"
+
+#. module: gamification
+#: model:ir.model,name:gamification.model_gamification_badge
+msgid "Gamification Badge"
+msgstr "Gamification ባጅ"
+
+#. module: gamification
+#: model:ir.model,name:gamification.model_gamification_challenge
+msgid "Gamification Challenge"
+msgstr "የግማሽ ውድድር"
+
+#. module: gamification
+#: model:ir.model,name:gamification.model_gamification_goal
+msgid "Gamification Goal"
+msgstr "የጨዋታ ግብ"
+
+#. module: gamification
+#: model:ir.model,name:gamification.model_gamification_goal_definition
+msgid "Gamification Goal Definition"
+msgstr "የግማሽ ግብ ፍቺ"
+
+#. module: gamification
+#: model:ir.model,name:gamification.model_gamification_goal_wizard
+msgid "Gamification Goal Wizard"
+msgstr "Gamification ግብ ጠንቋይ"
+
+#. module: gamification
+#: model:ir.ui.menu,name:gamification.gamification_menu
+msgid "Gamification Tools"
+msgstr "የጨዋታ መሣሪያዎች"
+
+#. module: gamification
+#: model:ir.model,name:gamification.model_gamification_badge_user
+msgid "Gamification User Badge"
+msgstr "Gamification የተጠቃሚ ባጅ"
+
+#. module: gamification
+#: model:ir.model,name:gamification.model_gamification_badge_user_wizard
+msgid "Gamification User Badge Wizard"
+msgstr "Gamification የተጠቃሚ ባጅ አዋቂ"
+
+#. module: gamification
+#: model:ir.model,name:gamification.model_gamification_challenge_line
+msgid "Gamification generic goal for challenge"
+msgstr "የግማሽ አጠቃላይ ግብ ለውድድር"
+
+#. module: gamification
+#: model:ir.actions.server,name:gamification.ir_cron_check_challenge_ir_actions_server
+#: model:ir.cron,cron_name:gamification.ir_cron_check_challenge
+#: model:ir.cron,name:gamification.ir_cron_check_challenge
+msgid "Gamification: Goal Challenge Check"
+msgstr "Gamification፡ የግብ ፈተና ፍተሻ"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_goal_wizard__goal_id
+#: model_terms:ir.ui.view,arch_db:gamification.goal_form_view
+#: model_terms:ir.ui.view,arch_db:gamification.view_challenge_kanban
+msgid "Goal"
+msgstr "ግብ"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge_line__definition_id
+#: model:ir.model.fields,field_description:gamification.field_gamification_goal__definition_id
+#: model:ir.model.fields,field_description:gamification.field_gamification_goal_definition__name
+#: model_terms:ir.ui.view,arch_db:gamification.goal_search_view
+msgid "Goal Definition"
+msgstr "የግብ ፍቺ"
+
+#. module: gamification
+#: model:ir.actions.act_window,name:gamification.goal_definition_list_action
+#: model:ir.ui.menu,name:gamification.gamification_definition_menu
+#: model_terms:ir.ui.view,arch_db:gamification.goal_definition_list_view
+msgid "Goal Definitions"
+msgstr "የግብ ፍቺዎች"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_goal_definition__description
+msgid "Goal Description"
+msgstr "የግብ መግለጫ"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.goal_form_view
+msgid "Goal Failed"
+msgstr "ግብ አልተሳካም።"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.goal_list_view
+msgid "Goal List"
+msgstr "የግብ ዝርዝር"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge_line__condition
+#: model:ir.model.fields,field_description:gamification.field_gamification_goal__definition_condition
+#: model:ir.model.fields,field_description:gamification.field_gamification_goal_definition__condition
+msgid "Goal Performance"
+msgstr "የግብ አፈጻጸም"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.goal_form_view
+msgid "Goal Reached"
+msgstr "ግብ ተደረሰ"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.challenge_form_view
+#: model_terms:ir.ui.view,arch_db:gamification.challenge_list_view
+#: model_terms:ir.ui.view,arch_db:gamification.goal_definition_form_view
+msgid "Goal definitions"
+msgstr "የግብ ትርጓሜዎች"
+
+#. module: gamification
+#: model:ir.actions.act_window,name:gamification.goal_list_action
+#: model:ir.ui.menu,name:gamification.gamification_goal_menu
+#: model_terms:ir.ui.view,arch_db:gamification.challenge_form_view
+#: model_terms:ir.ui.view,arch_db:gamification.view_challenge_kanban
+msgid "Goals"
+msgstr "ግቦች"
+
+#. module: gamification
+#: model:ir.model.fields.selection,name:gamification.selection__gamification_badge__level__gold
+msgid "Gold"
+msgstr "ወርቅ"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_res_users__gold_badge
+msgid "Gold badges count"
+msgstr "የወርቅ ባጆች ብዛት"
+
+#. module: gamification
+#: model:gamification.badge,name:gamification.badge_good_job
+msgid "Good Job"
+msgstr "ጥሩ ስራ"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.badge_kanban_view
+msgid "Grant"
+msgstr "ግራንት"
+
+#. module: gamification
+#: model:ir.actions.act_window,name:gamification.action_grant_wizard
+#: model_terms:ir.ui.view,arch_db:gamification.view_badge_wizard_grant
+msgid "Grant Badge"
+msgstr "ግራንት ባጅ"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.view_badge_wizard_grant
+#: model_terms:ir.ui.view,arch_db:gamification.view_goal_wizard_update_current
+msgid "Grant Badge To"
+msgstr "ባጅ ስጥ"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.badge_form_view
+msgid "Grant this Badge"
+msgstr "ይህን ባጅ ይስጡት።"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.badge_user_kanban_view
+msgid "Granted by"
+msgstr "የተሰጠ በ"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.badge_form_view
+msgid "Granting"
+msgstr "መስጠት"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.challenge_search_view
+#: model_terms:ir.ui.view,arch_db:gamification.goal_definition_search_view
+#: model_terms:ir.ui.view,arch_db:gamification.goal_search_view
+msgid "Group By"
+msgstr "ቡድን በ"
+
+#. module: gamification
+#: model:ir.model.fields,help:gamification.field_gamification_challenge__report_message_group_id
+msgid "Group that will receive a copy of the report in addition to the user"
+msgstr "ከተጠቃሚው በተጨማሪ የሪፖርቱን ቅጂ የሚቀበል ቡድን"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.challenge_search_view
+msgid "HR Challenges"
+msgstr "የሰው ኃይል ተግዳሮቶች"
+
+#. module: gamification
+#: model:gamification.badge,name:gamification.badge_hidden
+msgid "Hidden"
+msgstr "ተደብቋል"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.goal_definition_form_view
+msgid "How to compute the goal?"
+msgstr "ግቡን እንዴት ማስላት ይቻላል?"
+
+#. module: gamification
+#: model:ir.model.fields.selection,name:gamification.selection__gamification_challenge__category__hr
+msgid "Human Resources / Engagement"
+msgstr "የሰው ኃይል / ተሳትፎ"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge__id
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge_user__id
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge_user_wizard__id
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge__id
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge_line__id
+#: model:ir.model.fields,field_description:gamification.field_gamification_goal__id
+#: model:ir.model.fields,field_description:gamification.field_gamification_goal_definition__id
+#: model:ir.model.fields,field_description:gamification.field_gamification_goal_wizard__id
+#: model:ir.model.fields,field_description:gamification.field_gamification_karma_rank__id
+msgid "ID"
+msgstr "መታወቂያ"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_goal_definition__res_id_field
+msgid "ID Field of user"
+msgstr "የተጠቃሚ መታወቂያ መስክ"
+
+#. module: gamification
+#: model:ir.model.fields,help:gamification.field_gamification_badge__remaining_sending
+msgid "If a maximum is set"
+msgstr "ከፍተኛው ከተዘጋጀ"
+
+#. module: gamification
+#: model:ir.model.fields,help:gamification.field_gamification_badge__message_needaction
+#: model:ir.model.fields,help:gamification.field_gamification_badge__message_unread
+#: model:ir.model.fields,help:gamification.field_gamification_challenge__message_needaction
+#: model:ir.model.fields,help:gamification.field_gamification_challenge__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "ምልክት ካደረጉ፣ አዲስ መልዕክቶች የእርስዎን ትኩረት ይፈልጋሉ።"
+
+#. module: gamification
+#: model:ir.model.fields,help:gamification.field_gamification_badge__message_has_error
+#: model:ir.model.fields,help:gamification.field_gamification_badge__message_has_sms_error
+#: model:ir.model.fields,help:gamification.field_gamification_challenge__message_has_error
+#: model:ir.model.fields,help:gamification.field_gamification_challenge__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "ምልክት ካደረጉ፣ አንዳንድ መልዕክቶች የማድረስ ስህተት አለባቸው።"
+
+#. module: gamification
+#: model:ir.model.fields,help:gamification.field_gamification_badge_user__challenge_id
+msgid "If this badge was rewarded through a challenge"
+msgstr "ይህ ባጅ በተጋጣሚ የተሸለመ ከሆነ"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge__image_1920
+#: model:ir.model.fields,field_description:gamification.field_gamification_karma_rank__image_1920
+msgid "Image"
+msgstr "ምስል"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge__image_1024
+#: model:ir.model.fields,field_description:gamification.field_gamification_karma_rank__image_1024
+msgid "Image 1024"
+msgstr "ምስል 1024"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge__image_128
+#: model:ir.model.fields,field_description:gamification.field_gamification_karma_rank__image_128
+msgid "Image 128"
+msgstr "ምስል 128"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge__image_256
+#: model:ir.model.fields,field_description:gamification.field_gamification_karma_rank__image_256
+msgid "Image 256"
+msgstr "ምስል 256"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge__image_512
+#: model:ir.model.fields,field_description:gamification.field_gamification_karma_rank__image_512
+msgid "Image 512"
+msgstr "ምስል 512"
+
+#. module: gamification
+#: model:ir.model.fields.selection,name:gamification.selection__gamification_challenge__state__inprogress
+msgid "In Progress"
+msgstr "በሂደት ላይ"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.goal_definition_form_view
+msgid "In batch mode, the domain is evaluated globally. If enabled, do not use keyword \'user\' in above filter domain."
+msgstr "በቡድን ሁነታ፣ ጎራው በአለም አቀፍ ደረጃ ይገመገማል። ከነቃ ከላይኛው የማጣሪያ ጎራ ውስጥ \'ተጠቃሚ\' የሚለውን ቁልፍ ቃል አይጠቀሙ።"
+
+#. module: gamification
+#: model:ir.model.fields,help:gamification.field_gamification_goal_definition__batch_distinctive_field
+msgid "In batch mode, this indicates which field distinct one user form the other, e.g. user_id, partner_id..."
+msgstr "በቡድን ሁነታ፣ ይህ የሚያሳየው የትኛው መስክ የተለየ ተጠቃሚ ሌላውን እንደሚፈጥር ነው፣ ለምሳሌ የተጠቃሚ_መታወቂያ፣ አጋር_መታወቂያ..."
+
+#. module: gamification
+#: model:ir.model.fields,help:gamification.field_gamification_goal__last_update
+msgid "In case of manual goal, reminders are sent if the goal as not been updated for a while (defined in challenge). Ignored in case of non-manual goal or goal not linked to a challenge."
+msgstr "በእጅ ግብ ከሆነ፣ ግቡ ለተወሰነ ጊዜ ካልተዘመነ (በግጥሚያ ውስጥ የተገለጸ) ከሆነ አስታዋሾች ይላካሉ። በእጅ ያልሆነ ግብ ወይም ግብ ካልተገናኘ ችላ ተብሏል።ed ወደ ፈተና."
+
+#. module: gamification
+#: model:ir.model.fields.selection,name:gamification.selection__gamification_goal__state__inprogress
+msgid "In progress"
+msgstr "በሂደት ላይ"
+
+#. module: gamification
+#: model:ir.model.fields.selection,name:gamification.selection__gamification_challenge__visibility_mode__personal
+msgid "Individual Goals"
+msgstr "የግለሰብ ግቦች"
+
+#. module: gamification
+#: model:gamification.challenge.line,name:gamification.line_base_admin3
+#: model:gamification.goal.definition,name:gamification.definition_base_invite
+msgid "Invite new Users"
+msgstr "አዲስ ተጠቃሚዎችን ይጋብዙ"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge__message_is_follower
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge__message_is_follower
+msgid "Is Follower"
+msgstr "ተከታይ ነው።"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_res_users__karma
+msgid "Karma"
+msgstr "ካርማ"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge____last_update
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge_user____last_update
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge_user_wizard____last_update
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge____last_update
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge_line____last_update
+#: model:ir.model.fields,field_description:gamification.field_gamification_goal____last_update
+#: model:ir.model.fields,field_description:gamification.field_gamification_goal_definition____last_update
+#: model:ir.model.fields,field_description:gamification.field_gamification_goal_wizard____last_update
+#: model:ir.model.fields,field_description:gamification.field_gamification_karma_rank____last_update
+msgid "Last Modified on"
+msgstr "መጨረሻ የተሻሻለው በርቷል።"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge__last_report_date
+msgid "Last Report Date"
+msgstr "የመጨረሻው ሪፖርት ቀን"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_goal__last_update
+msgid "Last Update"
+msgstr "የመጨረሻው ዝመና"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge__write_uid
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge_user__write_uid
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge_user_wizard__write_uid
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge__write_uid
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge_line__write_uid
+#: model:ir.model.fields,field_description:gamification.field_gamification_goal__write_uid
+#: model:ir.model.fields,field_description:gamification.field_gamification_goal_definition__write_uid
+#: model:ir.model.fields,field_description:gamification.field_gamification_goal_wizard__write_uid
+#: model:ir.model.fields,field_description:gamification.field_gamification_karma_rank__write_uid
+msgid "Last Updated by"
+msgstr "መጨረሻ የዘመነው በ"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge__write_date
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge_user__write_date
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge_user_wizard__write_date
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge__write_date
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge_line__write_date
+#: model:ir.model.fields,field_description:gamification.field_gamification_goal__write_date
+#: model:ir.model.fields,field_description:gamification.field_gamification_goal_definition__write_date
+#: model:ir.model.fields,field_description:gamification.field_gamification_goal_wizard__write_date
+#: model:ir.model.fields,field_description:gamification.field_gamification_karma_rank__write_date
+msgid "Last Updated on"
+msgstr "መጨረሻ የዘመነው በርቷል።"
+
+#. module: gamification
+#: model:ir.model.fields.selection,name:gamification.selection__gamification_challenge__visibility_mode__ranking
+msgid "Leader Board (Group Ranking)"
+msgstr "መሪ ቦርድ (የቡድን ደረጃ)"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge__rule_max_number
+msgid "Limitation Number"
+msgstr "ገደብ ቁጥር"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.challenge_form_view
+msgid "Line List"
+msgstr "የመስመር ዝርዝር"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge__line_ids
+msgid "Lines"
+msgstr "መስመሮች"
+
+#. module: gamification
+#: model:ir.model.fields,help:gamification.field_gamification_challenge__line_ids
+msgid "List of goals that will be set"
+msgstr "የሚዘጋጁ ግቦች ዝርዝር"
+
+#. module: gamification
+#: model:ir.model.fields,help:gamification.field_gamification_challenge__user_ids
+msgid "List of users participating to the challenge"
+msgstr "ለፈተናው የሚሳተፉ የተጠቃሚዎች ዝርዝር"
+
+#. module: gamification
+#: model:gamification.goal.definition,name:gamification.definition_nbr_following
+msgid "Mail Group Following"
+msgstr "የደብዳቤ ቡድን የሚከተለው"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge__message_main_attachment_id
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "ዋና አባሪ"
+
+#. module: gamification
+#: model:gamification.karma.rank,name:gamification.rank_master
+msgid "Master"
+msgstr "መምህር"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.view_challenge_kanban
+msgid "Member"
+msgstr "አባል"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge__message_has_error
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge__message_has_error
+msgid "Message Delivery error"
+msgstr "የመልእክት ማቅረቢያ ስህተት"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge__message_ids
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge__message_ids
+msgid "Messages"
+msgstr "መልዕክቶች"
+
+#. module: gamification
+#: model:ir.model.fields,help:gamification.field_gamification_karma_rank__karma_min
+msgid "Minimum karma needed to reach this rank"
+msgstr "ወደዚህ ደረጃ ለመድረስ ዝቅተኛው ካርማ ያስፈልጋል"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_goal_definition__model_id
+#: model_terms:ir.ui.view,arch_db:gamification.goal_definition_search_view
+msgid "Model"
+msgstr "ሞዴል"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge_line__definition_monetary
+msgid "Monetary"
+msgstr "የገንዘብ"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_goal_definition__monetary
+msgid "Monetary Value"
+msgstr "የገንዘብ ዋጋ"
+
+#. module: gamification
+#: model:ir.model.fields.selection,name:gamification.selection__gamification_challenge__period__monthly
+#: model:ir.model.fields.selection,name:gamification.selection__gamification_challenge__report_message_frequency__monthly
+msgid "Monthly"
+msgstr "ወርሃዊ"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge__rule_max
+msgid "Monthly Limited Sending"
+msgstr "ወርሃዊ የተወሰነ መላኪያ"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge__stat_this_month
+msgid "Monthly total"
+msgstr "ወርሃዊ ጠቅላላ"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_karma_rank__description_motivational
+msgid "Motivational"
+msgstr "ተነሳሽነት"
+
+#. module: gamification
+#: model:ir.model.fields,help:gamification.field_gamification_karma_rank__description_motivational
+msgid "Motivational phrase to reach this rank"
+msgstr "እዚህ ደረጃ ላይ ለመድረስ የሚያነሳሳ ሀረግ"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.goal_search_view
+msgid "My Goals"
+msgstr "የእኔ ግቦች"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge__stat_my_monthly_sending
+msgid "My Monthly Sending Total"
+msgstr "የእኔ ወርሃዊ መላኪያ ጠቅላላ"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge__stat_my_this_month
+msgid "My Monthly Total"
+msgstr "የእኔ ወርሃዊ ጠቅላላ"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge__stat_my
+msgid "My Total"
+msgstr "የእኔ ጠቅላላ"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge_line__name
+msgid "Name"
+msgstr "ስም"
+
+#. module: gamification
+#: model:ir.model.fields.selection,name:gamification.selection__gamification_challenge__report_message_frequency__never
+msgid "Never"
+msgstr "በጭራሽ"
+
+#. module: gamification
+#: model:ir.model.fields,help:gamification.field_gamification_challenge__remind_update_delay
+msgid "Never reminded if no value or zero is specified."
+msgstr "ምንም እሴት ወይም ዜሮ ካልተገለጸ በጭራሽ አታስታውስም።"
+
+#. module: gamification
+#: model:mail.template,subject:gamification.email_template_badge_received
+msgid "New badge ${object.badge_id.name} granted"
+msgstr "አዲስ ባጅ ${object.badge_id.name} ተሰጥቷል።"
+
+#. module: gamification
+#: model:mail.template,subject:gamification.mail_template_data_new_rank_reached
+msgid "New rank: ${object.rank_id.name}"
+msgstr "አዲስ ደረጃ፡ ${object.rank_id.name}"
+
+#. module: gamification
+#: model:gamification.karma.rank,name:gamification.rank_newbie
+msgid "Newbie"
+msgstr "አዲስ ሰው"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_res_users__next_rank_id
+msgid "Next Rank"
+msgstr "ቀጣይ ደረጃ"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge__next_report_date
+msgid "Next Report Date"
+msgstr "የሚቀጥለው የሪፖርት ቀን"
+
+#. module: gamification
+#: model_terms:ir.actions.act_window,help:gamification.goals_from_challenge_act
+msgid "No goal found"
+msgstr "ምንም ግብ አልተገኘም።"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.badge_form_view
+msgid "No monthly sending limit"
+msgstr "ምንም ወርሃዊ የመላክ ገደብ የለም።"
+
+#. module: gamification
+#: model:gamification.badge,description:gamification.badge_problem_solver
+msgid "No one can solve challenges like you do."
+msgstr "እንደ እርስዎ ያሉ ተግዳሮቶችን ማንም ሊፈታ አይችልም።"
+
+#. module: gamification
+#: model:ir.model.fields.selection,name:gamification.selection__gamification_badge__rule_auth__nobody
+msgid "No one, assigned through challenges"
+msgstr "በፈተናዎች የተመደበ ማንም የለም።"
+
+#. module: gamification
+#: code:addons/gamification/models/challenge.py:0
+msgid "Nobody reached the required conditions to receive special badges."
+msgstr "ማንም ሰው ልዩ ባጆችን ለመቀበል የሚያስፈልጉትን ቅድመ ሁኔታዎች ላይ አልደረሰም።"
+
+#. module: gamification
+#: model:ir.model.fields.selection,name:gamification.selection__gamification_challenge__period__once
+msgid "Non recurring"
+msgstr "የማይደጋገም"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge__remind_update_delay
+msgid "Non-updated manual goals will be reminded after"
+msgstr "ያልተዘመኑ በእጅ ግቦች በኋላ ያስታውሳሉ"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.challenge_form_view
+msgid "Notification Messages"
+msgstr "የማሳወቂያ መልዕክቶች"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge__message_needaction_counter
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge__message_needaction_counter
+msgid "Number of Actions"
+msgstr "የተግባሮች ብዛት"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge__message_has_error_counter
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge__message_has_error_counter
+msgid "Number of errors"
+msgstr "የስህተት ብዛት"
+
+#. module: gamification
+#: model:ir.model.fields,help:gamification.field_gamification_badge__message_needaction_counter
+#: model:ir.model.fields,help:gamification.field_gamification_challenge__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "እርምጃ የሚያስፈልገው የመልእክት ብዛት"
+
+#. module: gamification
+#: model:ir.model.fields,help:gamification.field_gamification_badge__message_has_error_counter
+#: model:ir.model.fields,help:gamification.field_gamification_challenge__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "የማድረስ ስህተት ያለባቸው መልዕክቶች ብዛት"
+
+#. module: gamification
+#: model:ir.model.fields,help:gamification.field_gamification_badge__message_unread_counter
+#: model:ir.model.fields,help:gamification.field_gamification_challenge__message_unread_counter
+msgid "Number of unread messages"
+msgstr "ያልተነበቡ መልዕክቶች ብዛት"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge__stat_count_distinct
+msgid "Number of users"
+msgstr "የተጠቃሚዎች ብዛት"
+
+#. module: gamification
+#: model:ir.model.fields.selection,name:gamification.selection__gamification_challenge__report_message_frequency__onchange
+msgid "On change"
+msgstr "በለውጥ ላይ"
+
+#. module: gamification
+#: model:ir.model.fields,help:gamification.field_gamification_badge__rule_auth_badge_ids
+msgid "Only the people having these badges can give this badge"
+msgstr "ይህን ባጅ መስጠት የሚችሉት እነዚህ ባጆች ያላቸው ሰዎች ብቻ ናቸው።"
+
+#. module: gamification
+#: model:ir.model.fields,help:gamification.field_gamification_badge__rule_auth_user_ids
+msgid "Only these people can give this badge"
+msgstr "ይህን ባጅ መስጠት የሚችሉት እነዚህ ሰዎች ብቻ ናቸው።"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.goal_definition_form_view
+msgid "Optimisation"
+msgstr "ማመቻቸት"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.badge_kanban_view
+msgid "Owner"
+msgstr "ባለቤት"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge__owner_ids
+msgid "Owners"
+msgstr "ባለቤቶች"
+
+#. module: gamification
+#: model:ir.model.fields.selection,name:gamification.selection__gamification_badge__rule_auth__having
+msgid "People having some badges"
+msgstr "አንዳንድ ባጅ ያላቸው ሰዎች"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.challenge_search_view
+msgid "Period"
+msgstr "ጊዜ"
+
+#. module: gamification
+#: model:ir.model.fields,help:gamification.field_gamification_challenge__period
+msgid "Period of automatic goal assigment. If none is selected, should be launched manually."
+msgstr "አውቶማቲክ ግብ ምደባ ጊዜ። ምንም ካልተመረጠ, በእጅ መጀመር አለበት."
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge__period
+msgid "Periodicity"
+msgstr "ወቅታዊነት"
+
+#. module: gamification
+#: model:gamification.badge,name:gamification.badge_problem_solver
+msgid "Problem Solver"
+msgstr "ችግር ፈቺ"
+
+#. module: gamification
+#: model:ir.model.fields.selection,name:gamification.selection__gamification_goal_definition__display_mode__progress
+msgid "Progressive (using numerical values)"
+msgstr "ተራማጅ (ቁጥራዊ እሴቶችን በመጠቀም)"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_goal_definition__compute_code
+msgid "Python Code"
+msgstr "Python ኮድ"
+
+#. module: gamification
+#: model:ir.model.fields,help:gamification.field_gamification_goal_definition__compute_code
+msgid "Python code to be executed for each user. \'result\' should contains the new current value. Evaluated user can be access through object.user_id."
+msgstr "የፓይዘን ኮድ ለእያንዳንዱ ተጠቃሚ ሊተገበር ነው። \'ውጤት\' አዲሱን የአሁኑ ዋጋ መያዝ አለበት። የተገመገመ ተጠቃሚ በ object.user_id በኩል መድረስ ይችላል።"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_res_users__rank_id
+#: model_terms:ir.ui.view,arch_db:gamification.gamification_karma_rank_view_form
+msgid "Rank"
+msgstr "ደረጃ"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_karma_rank__name
+msgid "Rank Name"
+msgstr "የደረጃ ስም"
+
+#. module: gamification
+#: model:ir.model,name:gamification.model_gamification_karma_rank
+msgid "Rank based on karma"
+msgstr "በካርማ ላይ የተመሰረተ ደረጃ"
+
+#. module: gamification
+#: model:ir.actions.act_window,name:gamification.gamification_karma_ranks_action
+#: model:ir.ui.menu,name:gamification.gamification_karma_ranks_menu
+msgid "Ranks"
+msgstr "ደረጃዎች"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.gamification_karma_ranks_view_tree
+msgid "Ranks List"
+msgstr "የደረጃዎች ዝርዝር"
+
+#. module: gamification
+#: model_terms:gamification.karma.rank,description_motivational:gamification.rank_master
+msgid "Reach the next rank and become a Master!"
+msgstr "ወደሚቀጥለው ደረጃ ይድረሱ እና መምህር ይሁኑ!"
+
+#. module: gamification
+#: model_terms:gamification.karma.rank,description_motivational:gamification.rank_doctor
+msgid "Reach the next rank and become a powerful user!"
+msgstr "ወደሚቀጥለው ደረጃ ይድረሱ እና ኃይለኛ ተጠቃሚ ይሁኑ!"
+
+#. module: gamification
+#: model_terms:gamification.karma.rank,description_motivational:gamification.rank_bachelor
+msgid "Reach the next rank to improve your status!"
+msgstr "ሁኔታዎን ለማሻሻል ወደሚቀጥለው ደረጃ ይድረሱ!"
+
+#. module: gamification
+#: model_terms:gamification.karma.rank,description_motivational:gamification.rank_student
+msgid "Reach the next rank to show the rest of the world you exist."
+msgstr "ለተቀረው አለም መኖርህን ለማሳየት ቀጣዩ ደረጃ ይድረስ።"
+
+#. module: gamification
+#: model:ir.model.fields.selection,name:gamification.selection__gamification_goal__state__reached
+msgid "Reached"
+msgstr "ደርሷል"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.goal_form_view
+msgid "Reached when current value is"
+msgstr "የአሁኑ ዋጋ ሲሆን ደርሷል"
+
+#. module: gamification
+#: model:ir.model.fields.selection,name:gamification.selection__gamification_goal_definition__computation_mode__manually
+msgid "Recorded manually"
+msgstr "በእጅ የተቀዳ"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.goal_form_view
+msgid "Reference"
+msgstr "ማጣቀሻ"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.challenge_form_view
+msgid "Refresh Challenge"
+msgstr "አድስ ፈተና"
+
+#. module: gamification
+#: model:ir.actions.act_window,name:gamification.goals_from_challenge_act
+msgid "Related Goals"
+msgstr "ተዛማጅ ግቦች"
+
+#. module: gamification
+#: model:ir.model.fields,help:gamification.field_gamification_badge_user_wizard__user_id
+msgid "Related user name for the resource to manage its access."
+msgstr "የሀብቱን መዳረሻ ለማስተዳደር ተዛማጅ የተጠቃሚ ስም።"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge__remaining_sending
+msgid "Remaining Sending Allowed"
+msgstr "ቀሪ መላክ ተፈቅዷል"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_goal__remind_update_delay
+msgid "Remind delay"
+msgstr "መዘግየትን አስታውስ"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.challenge_form_view
+msgid "Reminders for Manual Goals"
+msgstr "ለእጅ ግቦች ማሳሰቢያዎች"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge__report_message_frequency
+msgid "Report Frequency"
+msgstr "ድግግሞሽ ሪፖርት አድርግ"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge__report_template_id
+msgid "Report Template"
+msgstr "አብነት ሪፖርት አድርግ"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge__rule_auth_badge_ids
+msgid "Required Badges"
+msgstr "አስፈላጊ ባጆች"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_karma_rank__karma_min
+msgid "Required Karma"
+msgstr "የሚያስፈልግ ካርማ"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.goal_form_view
+msgid "Reset Completion"
+msgstr "ማጠናቀቅን ዳግም አስጀምር"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge__manager_id
+msgid "Responsible"
+msgstr "ተጠያቂ"
+
+#. module: gamification
+#: code:addons/gamification/models/challenge.py:0
+msgid "Retrieving progress for personal challenge without user information"
+msgstr "ያለተጠቃሚ መረጃ ግስጋሴን በማውጣት ላይ"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.challenge_form_view
+msgid "Reward"
+msgstr "ሽልማት"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge__reward_failure
+msgid "Reward Bests if not Succeeded?"
+msgstr "የሽልማት ምርጦች ካልተሳካ?"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge__reward_realtime
+msgid "Reward as soon as every goal is reached"
+msgstr "ሁሉም ግብ ላይ እንደደረሰ ይሸልሙ"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge__challenge_ids
+msgid "Reward of Challenges"
+msgstr "የፈተናዎች ሽልማት"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge__goal_definition_ids
+msgid "Rewarded by"
+msgstr "የተሸለመው በ"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.badge_form_view
+msgid "Rewards for challenges"
+msgstr "ለችግሮች ሽልማቶች"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.goal_search_view
+msgid "Running"
+msgstr "መሮጥ"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.challenge_search_view
+msgid "Running Challenges"
+msgstr "የሩጫ ፈተናዎች"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge__message_has_sms_error
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "የኤስኤምኤስ አቅርቦት ስህተት"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.goal_form_view
+msgid "Schedule"
+msgstr "መርሐግብር"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.gamification_badge_view_search
+msgid "Search Badge"
+msgstr "ባጅ ፈልግ"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.challenge_search_view
+msgid "Search Challenges"
+msgstr "የፍለጋ ፈተናዎች"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.goal_definition_search_view
+msgid "Search Goal Definitions"
+msgstr "የፍለጋ ግብ ፍቺዎች"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.goal_search_view
+msgid "Search Goals"
+msgstr "ግቦችን ፈልግ"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.gamification_karma_ranks_view_search
+msgid "Search Ranks"
+msgstr "ደረጃዎችን ይፈልጉ"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.badge_form_view
+msgid "Security rules to define who is allowed to manually grant badges. Not enforced for administrator."
+msgstr "ማን ባጆችን በእጅ መስጠት እንደተፈቀደ ለመወሰን የደህንነት ደንቦች። ለአስተዳዳሪ አልተተገበረም።"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.challenge_form_view
+msgid "Send Report"
+msgstr "ሪፖርት ላክ"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge__report_message_group_id
+msgid "Send a copy to"
+msgstr "ቅጂ ይላኩ።"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge_user__sender_id
+msgid "Sender"
+msgstr "ላኪ"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge_line__sequence
+msgid "Sequence"
+msgstr "ቅደም ተከተል"
+
+#. module: gamification
+#: model:ir.model.fields,help:gamification.field_gamification_challenge_line__sequence
+msgid "Sequence number for ordering"
+msgstr "ለማዘዝ ተከታታይ ቁጥር"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.view_goal_wizard_update_current
+msgid "Set the current value you have reached for this goal"
+msgstr "ለዚህ ግብ የደረሱበትን የአሁኑን ዋጋ ያዘጋጁ"
+
+#. module: gamification
+#: model:gamification.challenge.line,name:gamification.line_base_admin1
+#: model:gamification.goal.definition,name:gamification.definition_base_company_data
+msgid "Set your Company Data"
+msgstr "የኩባንያዎን ውሂብ ያዘጋጁ"
+
+#. module: gamification
+#: model:gamification.challenge.line,name:gamification.line_base_admin2
+#: model:gamification.goal.definition,name:gamification.definition_base_company_logo
+msgid "Set your Company Logo"
+msgstr "የኩባንያዎን አርማ ያዘጋጁ"
+
+#. module: gamification
+#: model:gamification.challenge.line,name:gamification.line_base_discover1
+#: model:gamification.goal.definition,name:gamification.definition_base_timezone
+msgid "Set your Timezone"
+msgstr "የሰዓት ሰቅዎን ያዘጋጁ"
+
+#. module: gamification
+#: model:ir.model.fields.selection,name:gamification.selection__gamification_challenge__category__other
+msgid "Settings / Gamification Tools"
+msgstr "ቅንብሮች / Gamification መሳሪያዎች"
+
+#. module: gamification
+#: model:gamification.challenge,name:gamification.challenge_base_configure
+msgid "Setup your Company"
+msgstr "ኩባንያዎን ያዋቅሩ"
+
+#. module: gamification
+#: model:ir.model.fields.selection,name:gamification.selection__gamification_badge__level__silver
+msgid "Silver"
+msgstr "ብር"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_res_users__silver_badge
+msgid "Silver badges count"
+msgstr "የብር ባጆች ብዛት"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.challenge_form_view
+msgid "Start Challenge"
+msgstr "ውድድር ጀምር"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge__start_date
+#: model:ir.model.fields,field_description:gamification.field_gamification_goal__start_date
+msgid "Start Date"
+msgstr "የመጀመሪያ ቀን"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.goal_form_view
+msgid "Start goal"
+msgstr "ግብ ጀምር"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge__state
+#: model:ir.model.fields,field_description:gamification.field_gamification_goal__state
+#: model_terms:ir.ui.view,arch_db:gamification.challenge_search_view
+#: model_terms:ir.ui.view,arch_db:gamification.goal_search_view
+msgid "State"
+msgstr "ግዛት"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.badge_form_view
+msgid "Statistics"
+msgstr "ስታትስቲክስ"
+
+#. module: gamification
+#: model:gamification.karma.rank,name:gamification.rank_student
+msgid "Student"
+msgstr "ተማሪ"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.challenge_form_view
+msgid "Subscriptions"
+msgstr "የደንበኝነት ምዝገባዎች"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge_line__definition_full_suffix
+#: model:ir.model.fields,field_description:gamification.field_gamification_goal__definition_suffix
+#: model:ir.model.fields,field_description:gamification.field_gamification_goal_definition__suffix
+msgid "Suffix"
+msgstr "ቅጥያ"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge__invited_user_ids
+msgid "Suggest to users"
+msgstr "ለተጠቃሚዎች ይጠቁሙ"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge_line__target_goal
+msgid "Target Value to Reach"
+msgstr "ለመድረስ ዒላማ እሴት"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.goal_kanban_view
+msgid "Target: less than"
+msgstr "ዒላማ: ያነሰ"
+
+#. module: gamification
+#: model:ir.model.fields,help:gamification.field_gamification_goal_definition__action_id
+msgid "The action that will be called to update the goal value."
+msgstr "የግብ እሴቱን ለማዘመን የሚጠራው እርምጃ።"
+
+#. module: gamification
+#: code:addons/gamification/models/challenge.py:0
+msgid "The challenge %s is finished."
+msgstr "ፈተናው %s አልቋል።"
+
+#. module: gamification
+#: model:ir.model.fields,help:gamification.field_gamification_challenge_line__definition_full_suffix
+#: model:ir.model.fields,help:gamification.field_gamification_goal__definition_suffix
+#: model:ir.model.fields,help:gamification.field_gamification_goal_definition__full_suffix
+msgid "The currency and suffix field"
+msgstr "የመገበያያ ገንዘብ እና ቅጥያ መስክ"
+
+#. module: gamification
+#: model:ir.model.fields,help:gamification.field_gamification_goal_definition__field_date_id
+msgid "The date to use for the time period evaluated"
+msgstr "ለተገመገመው ጊዜ ጥቅም ላይ የሚውልበት ቀን"
+
+#. module: gamification
+#: model:ir.model.fields,help:gamification.field_gamification_challenge__end_date
+msgid "The day a new challenge will be automatically closed. If no periodicity is set, will use this date as the goal end date."
+msgstr "አዲስ ፈተና የሚዘጋበት ቀን። ምንም ወቅታዊነት ካልተዋቀረ ይህንን ቀን እንደ የግብ ማብቂያ ቀን ይጠቀማል።"
+
+#. module: gamification
+#: model:ir.model.fields,help:gamification.field_gamification_challenge__start_date
+msgid "The day a new challenge will be automatically started. If no periodicity is set, will use this date as the goal start date."
+msgstr "አዲስ ፈተና በራስ ሰር የሚጀመርበት ቀን። ምንም ወቅታዊነት ካልተዋቀረ ይህንን ቀን እንደ የግብ መጀመሪያ ቀን ይጠቀማል።"
+
+#. module: gamification
+#: code:addons/gamification/models/goal.py:0
+msgid ""
+"The domain for the definition %s seems incorrect, please check it."
+""
+"%s"
+msgstr "የ%s ፍቺው ጎራ የተሳሳተ ይመስላል፣ እባክዎን ያረጋግጡ።%s"
+
+#. module: gamification
+#: model:ir.model.fields,help:gamification.field_gamification_goal_definition__field_id
+msgid "The field containing the value to evaluate"
+msgstr "ለመገምገም ዋጋ ያለው መስክ"
+
+#. module: gamification
+#: model:ir.model.fields,help:gamification.field_gamification_goal_definition__res_id_field
+msgid "The field name on the user profile (res.users) containing the value for res_id for action."
+msgstr "የመስክ ስም በተጠቃሚ መገለጫ (res.users) ላይ ለሬስ_id የድርጊት ዋጋ ያለው።"
+
+#. module: gamification
+#: model:ir.model.fields.selection,name:gamification.selection__gamification_goal_definition__condition__higher
+msgid "The higher the better"
+msgstr "ከፍ ባለ መጠን የተሻለ ነው።"
+
+#. module: gamification
+#: model:ir.model.fields,help:gamification.field_gamification_badge__owner_ids
+msgid "The list of instances of this badge granted to users"
+msgstr "የዚህ ባጅ ምሳሌዎች ለተጠቃሚዎች የተሰጠ"
+
+#. module: gamification
+#: model:ir.model.fields,help:gamification.field_gamification_badge__unique_owner_ids
+msgid "The list of unique users having received this badge."
+msgstr "ይህን ባጅ የተቀበሉ የልዩ ተጠቃሚዎች ዝርዝር።"
+
+#. module: gamification
+#: model:ir.model.fields.selection,name:gamification.selection__gamification_goal_definition__condition__lower
+msgid "The lower the better"
+msgstr "ዝቅተኛው የተሻለ ነው"
+
+#. module: gamification
+#: model:ir.model.fields,help:gamification.field_gamification_badge__rule_max_number
+msgid "The maximum number of time this badge can be sent per month per person."
+msgstr "ይህ ባጅ በወር የሚላክበት ከፍተኛው የጊዜ ብዛት ለአንድ ሰው።"
+
+#. module: gamification
+#: code:addons/gamification/models/goal.py:0
+msgid ""
+"The model configuration for the definition %s seems incorrect, please check it."
+""
+"%s not found"
+msgstr "%s ለትርጉሙ የሞዴል ውቅር የተሳሳተ ይመስላል፣ እባክዎን ያረጋግጡ።%s አልተገኘም"
+
+#. module: gamification
+#: code:addons/gamification/models/goal.py:0
+msgid ""
+"The model configuration for the definition %s seems incorrect, please check it."
+""
+"%s not stored"
+msgstr "%s ለትርጉሙ የሞዴል ውቅር የተሳሳተ ይመስላል፣ እባክዎን ያረጋግጡ። %s አልተቀመጠም"
+
+#. module: gamification
+#: model:ir.model.fields,help:gamification.field_gamification_goal_definition__model_id
+msgid "The model object for the field to evaluate"
+msgstr "ለመስኩ የሚገመገም ሞዴል ነገር"
+
+#. module: gamification
+#: model:ir.model.fields,help:gamification.field_gamification_goal__remind_update_delay
+msgid "The number of days after which the user assigned to a manual goal will be reminded. Never reminded if no value is specified."
+msgstr "ተጠቃሚው ለእጅ ግብ የተመደበበት የቀናት ብዛት ያስታውሳል። ምንም ዋጋ ካልተገለጸ በጭራሽ አላስታውስም።"
+
+#. module: gamification
+#: model:ir.model.fields,help:gamification.field_gamification_badge__stat_my_this_month
+msgid "The number of time the current user has received this badge this month."
+msgstr "የአሁኑ ተጠቃሚ በዚህ ወር ይህን ባጅ የተቀበለው ጊዜ ብዛት።"
+
+#. module: gamification
+#: model:ir.model.fields,help:gamification.field_gamification_badge__stat_my
+msgid "The number of time the current user has received this badge."
+msgstr "የአሁኑ ተጠቃሚ ይህን ባጅ የተቀበለበት ጊዜ ብዛት።"
+
+#. module: gamification
+#: model:ir.model.fields,help:gamification.field_gamification_badge__stat_my_monthly_sending
+msgid "The number of time the current user has sent this badge this month."
+msgstr "የአሁኑ ተጠቃሚ በዚህ ወር ይህን ባጅ የላከበት ጊዜ ብዛት።"
+
+#. module: gamification
+#: model:ir.model.fields,help:gamification.field_gamification_badge__stat_count_distinct
+msgid "The number of time this badge has been received by unique users."
+msgstr "ይህ ባጅ በልዩ ተጠቃሚዎች የተቀበለበት ጊዜ ብዛት።"
+
+#. module: gamification
+#: model:ir.model.fields,help:gamification.field_gamification_badge__stat_this_month
+msgid "The number of time this badge has been received this month."
+msgstr "ይህ ባጅ በዚህ ወር የተቀበለበት ጊዜ ብዛት።"
+
+#. module: gamification
+#: model:ir.model.fields,help:gamification.field_gamification_badge__stat_count
+msgid "The number of time this badge has been received."
+msgstr "ይህ ባጅ የተቀበለበት ጊዜ ብዛት።"
+
+#. module: gamification
+#: model:ir.model.fields,help:gamification.field_gamification_challenge_line__definition_monetary
+#: model:ir.model.fields,help:gamification.field_gamification_goal_definition__monetary
+msgid "The target and current value are defined in the company currency."
+msgstr "ዒላማው እና የአሁኑ ዋጋ በኩባንያው ምንዛሬ ይገለጻል."
+
+#. module: gamification
+#: model:ir.model.fields,help:gamification.field_gamification_challenge_line__definition_suffix
+#: model:ir.model.fields,help:gamification.field_gamification_goal_definition__suffix
+msgid "The unit of the target and current values"
+msgstr "የዒላማው አሃድ እና የአሁኑ ዋጋዎች"
+
+#. module: gamification
+#: model:ir.model.fields,help:gamification.field_gamification_challenge__manager_id
+msgid "The user responsible for the challenge."
+msgstr "ለችግሩ ተጠያቂው ተጠቃሚ።"
+
+#. module: gamification
+#: model:ir.model.fields,help:gamification.field_gamification_badge_user__sender_id
+msgid "The user who has send the badge"
+msgstr "ባጁን የላከው ተጠቃሚ"
+
+#. module: gamification
+#: model:ir.model.fields,help:gamification.field_gamification_badge__goal_definition_ids
+msgid "The users that have succeeded theses goals will receive automatically the badge."
+msgstr "እነዚህን ግቦች የተሳካላቸው ተጠቃሚዎች ባጁን በራስ-ሰር ይቀበላሉ።"
+
+#. module: gamification
+#: model:ir.model.fields,help:gamification.field_gamification_goal_definition__batch_user_expression
+msgid "The value to compare with the distinctive field. The expression can contain reference to \'user\' which is a browse record of the current user, e.g. user.id, user.partner_id.id..."
+msgstr "ከተለየ መስክ ጋር ለማነፃፀር ያለው ዋጋ። አገላለጹ የ\'አጠቃቀም ማጣቀሻን ሊይዝ ይችላል።r\' ይህም የአሁኑን ተጠቃሚ የማሰስ መዝገብ ነው፣ ለምሳሌ user.id፣ user.partner_id.id..."
+
+#. module: gamification
+#: model_terms:ir.actions.act_window,help:gamification.goals_from_challenge_act
+msgid ""
+"There is no goal associated to this challenge matching your search."
+"            Make sure that your challenge is active and assigned to at least one user."
+msgstr "ከዚህ ፈተና ጋር ከፍለጋህ ጋር የሚዛመድ ምንም ግብ የለም። ፈታኝህ ንቁ እና ቢያንስ ለአንድ ተጠቃሚ መመደብህን አረጋግጥ።"
+
+#. module: gamification
+#: model:ir.model.fields,help:gamification.field_gamification_goal__closed
+msgid "These goals will not be recomputed."
+msgstr "እነዚህ ግቦች እንደገና አይቆጠሩም።"
+
+#. module: gamification
+#: code:addons/gamification/models/badge.py:0
+msgid "This badge can not be sent by users."
+msgstr "ይህ ባጅ በተጠቃሚዎች መላክ አይቻልም።"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.goal_kanban_view
+msgid "To"
+msgstr "ለ"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_goal__target_goal
+msgid "To Reach"
+msgstr "ለመድረስ"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_goal__to_update
+msgid "To update"
+msgstr "ለማዘመን"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge__stat_count
+msgid "Total"
+msgstr "ጠቅላላ"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge__unique_owner_ids
+msgid "Unique Owners"
+msgstr "ልዩ ባለቤቶች"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge_line__definition_suffix
+msgid "Unit"
+msgstr "ክፍል"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge__message_unread
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge__message_unread
+msgid "Unread Messages"
+msgstr "ያልተነበቡ መልእክቶች"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge__message_unread_counter
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "ያልተነበቡ መልዕክቶች ቆጣሪ"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.view_goal_wizard_update_current
+msgid "Update"
+msgstr "አዘምን"
+
+#. module: gamification
+#: code:addons/gamification/models/goal.py:0
+msgid "Update %s"
+msgstr "%s አዘምን"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge_user__user_id
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge_user_wizard__user_id
+#: model:ir.model.fields,field_description:gamification.field_gamification_goal__user_id
+#: model_terms:ir.ui.view,arch_db:gamification.goal_search_view
+msgid "User"
+msgstr "ተጠቃሚ"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge__user_domain
+msgid "User domain"
+msgstr "የተጠቃሚ ጎራ"
+
+#. module: gamification
+#: model:ir.model,name:gamification.model_res_users
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge__user_ids
+#: model:ir.model.fields,field_description:gamification.field_gamification_karma_rank__user_ids
+msgid "Users"
+msgstr "ተጠቃሚዎች"
+
+#. module: gamification
+#: model:ir.model.fields,help:gamification.field_gamification_karma_rank__user_ids
+msgid "Users having this rank"
+msgstr "ይህ ደረጃ ያላቸው ተጠቃሚዎች"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.gamification_karma_rank_view_form
+msgid "Users to that rank"
+msgstr "ተጠቃሚዎች በዚያ ደረጃ"
+
+#. module: gamification
+#: model:ir.model.fields,field_description:gamification.field_gamification_badge__website_message_ids
+#: model:ir.model.fields,field_description:gamification.field_gamification_challenge__website_message_ids
+msgid "Website Messages"
+msgstr "የድር ጣቢያ መልዕክቶች"
+
+#. module: gamification
+#: model:ir.model.fields,help:gamification.field_gamification_badge__website_message_ids
+#: model:ir.model.fields,help:gamification.field_gamification_challenge__website_message_ids
+msgid "Website communication history"
+msgstr "የድር ጣቢያ የግንኙነት ታሪክ"
+
+#. module: gamification
+#: model:ir.model.fields.selection,name:gamification.selection__gamification_challenge__period__weekly
+#: model:ir.model.fields.selection,name:gamification.selection__gamification_challenge__report_message_frequency__weekly
+msgid "Weekly"
+msgstr "በየሳምንቱ"
+
+#. module: gamification
+#: model:ir.model.fields,help:gamification.field_gamification_badge__rule_auth
+msgid "Who can grant this badge"
+msgstr "ይህን ባጅ ማን ሊሰጥ ይችላል።"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.view_badge_wizard_grant
+msgid "Who would you like to reward?"
+msgstr "ማንን መሸለም ይፈልጋሉ?"
+
+#. module: gamification
+#: model:ir.model.fields,help:gamification.field_gamification_challenge__reward_realtime
+msgid "With this option enabled, a user can receive a badge only once. The top 3 badges are still rewarded only at the end of the challenge."
+msgstr "ይህ አማራጭ ከነቃ ተጠቃሚ አንድ ጊዜ ብቻ ባጅ መቀበል ይችላል። ከፍተኛዎቹ 3 ባጆች አሁንም የሚሸለሙት በፈተናው መጨረሻ ላይ ብቻ ነው።"
+
+#. module: gamification
+#: model:gamification.badge,description:gamification.badge_idea
+msgid "With your brilliant ideas, you are an inspiration to others."
+msgstr "በአስደናቂ ሀሳቦችዎ፣ እርስዎ ለሌሎች መነሳሻ ነዎት።"
+
+#. module: gamification
+#: model:ir.model.fields.selection,name:gamification.selection__gamification_challenge__period__yearly
+#: model:ir.model.fields.selection,name:gamification.selection__gamification_challenge__report_message_frequency__yearly
+msgid "Yearly"
+msgstr "በየአመቱ"
+
+#. module: gamification
+#: code:addons/gamification/models/badge.py:0
+msgid "You are not in the user allowed list."
+msgstr "በተጠቃሚ የተፈቀደ ዝርዝር ውስጥ የሉዎትም።"
+
+#. module: gamification
+#: code:addons/gamification/wizard/grant_badge.py:0
+msgid "You can not grant a badge to yourself."
+msgstr "ለራስህ ባጅ መስጠት አትችልም።"
+
+#. module: gamification
+#: code:addons/gamification/models/challenge.py:0
+msgid "You can not reset a challenge with unfinished goals."
+msgstr "ባልተጠናቀቁ ግቦች ፈተናን ዳግም ማስጀመር አይችሉም።"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.badge_form_view
+msgid "You can still grant"
+msgstr "አሁንም መስጠት ትችላለህ"
+
+#. module: gamification
+#: model:gamification.badge,description:gamification.badge_good_job
+msgid "You did great at your job."
+msgstr "በስራህ ጥሩ ሰርተሃል።"
+
+#. module: gamification
+#: code:addons/gamification/models/badge.py:0
+msgid "You do not have the required badges."
+msgstr "የሚፈለጉት ባጆች የለዎትም።"
+
+#. module: gamification
+#: code:addons/gamification/models/badge.py:0
+msgid "You have already sent this badge too many time this month."
+msgstr "ይህን ባጅ በዚህ ወር በጣም ብዙ ጊዜ ልከሃል።"
+
+#. module: gamification
+#: model:gamification.badge,description:gamification.badge_hidden
+msgid "You have found the hidden badge"
+msgstr "የተደበቀውን ባጅ አግኝተዋል"
+
+#. module: gamification
+#: model_terms:gamification.karma.rank,description:gamification.rank_doctor
+msgid "You have reached the last rank. Congratulations!"
+msgstr "የመጨረሻው ደረጃ ላይ ደርሰዋል። እንኳን ደስ አላችሁ!"
+
+#. module: gamification
+#: model_terms:gamification.karma.rank,description:gamification.rank_newbie
+msgid "You just began the adventure! Welcome!"
+msgstr "ጀብዱውን ገና ጀመርክ! እንኳን ደህና መጣህ!"
+
+#. module: gamification
+#: model_terms:gamification.karma.rank,description:gamification.rank_master
+msgid "You know what you are talking about. People learn from you."
+msgstr "የምትናገረውን ታውቃለህ። ሰዎች ከእርስዎ ይማራሉ."
+
+#. module: gamification
+#: model_terms:gamification.karma.rank,description:gamification.rank_bachelor
+msgid "You love learning things. Curiosity is a good way to progress."
+msgstr "ነገሮችን መማር ትወዳለህ። የማወቅ ጉጉት ጥሩ የእድገት መንገድ ነው።"
+
+#. module: gamification
+#: model_terms:gamification.karma.rank,description:gamification.rank_student
+msgid "You\'re a young padawan now. May the force be with you!"
+msgstr "አሁን ወጣት ፓዳዋን ነህ። ጉልበት ካንቺ ጋር ይሁን!"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.badge_form_view
+msgid "badges this month"
+msgstr "በዚህ ወር ባጆች"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.challenge_form_view
+#: model_terms:ir.ui.view,arch_db:gamification.goal_form_view
+msgid "days"
+msgstr "ቀናት"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.gamification_karma_rank_view_form
+msgid "e.g. A Master Chief knows quite everything on the forum! You cannot beat him!"
+msgstr "ለምሳሌ. አንድ ዋና አለቃ በመድረኩ ላይ ሁሉንም ነገር ያውቃል! እሱን ማሸነፍ አይችሉም!"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.gamification_karma_rank_view_form
+msgid "e.g. Master Chief"
+msgstr "ለምሳሌ. መምህር አለቃ"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.challenge_form_view
+msgid "e.g. Monthly Sales Objectives"
+msgstr "ለምሳሌ. ወርሃዊ የሽያጭ አላማዎች"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.gamification_karma_rank_view_form
+msgid "e.g. Reach this rank to gain a free mug !"
+msgstr "ለምሳሌ. ነፃ ማግ ለማግኘት እዚህ ደረጃ ይድረሱ!"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.goal_definition_form_view
+msgid "e.g. days"
+msgstr "ለምሳሌ. ቀናት"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.goal_definition_form_view
+msgid "e.g. result = env[\'mail.followers\'].search_count([(\'res_model\', \'=\', \'mail.channel\'), (\'partner_id\', \'=\', object.user_id.partner_id.id)])"
+msgstr "ለምሳሌ. ውጤት = env [\'mail.followers\']።የፍለጋ_ቁጥር([(\'res_model\'፣ \'=\'፣ \'mail.channel\')፣ (\'partner_id\'፣ \'=\'፣ object.user_id.partner_id.id)])"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.goal_definition_form_view
+msgid "e.g. user.partner_id.id"
+msgstr "ለምሳሌ. ተጠቃሚ.partner_id.id"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.badge_kanban_view
+msgid "granted,"
+msgstr "የተሰጠ፣"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.goal_form_view
+msgid "refresh"
+msgstr "ማደስ"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.goal_form_view
+msgid "than the target."
+msgstr "ከዒላማው ይልቅ."
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.badge_user_kanban_view
+msgid "the"
+msgstr "የ"
+
+#. module: gamification
+#: model_terms:ir.ui.view,arch_db:gamification.badge_kanban_view
+msgid "this month"
+msgstr "በዚህ ወር"
