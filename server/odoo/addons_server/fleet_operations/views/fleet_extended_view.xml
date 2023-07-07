@@ -1806,6 +1806,14 @@
             </field>
         </field>
     </record>
+<!-- removeing vehicle contract and vehicle service menu -->
+    <record id="fleet.fleet_vehicle_log_contract_menu" model="ir.ui.menu">
+        <field name="active">False</field>
+    </record>
+
+    <record id="fleet.fleet_vehicle_log_services_menu" model="ir.ui.menu">
+        <field name="active">False</field>
+    </record>
 
     <!-- Report Heading Menuitem -->
     <!-- <menuitem action="report_heading_act" id="report_heading_menu"
