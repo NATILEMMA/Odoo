@@ -25,10 +25,10 @@ class MaidBy(models.Model):
 class LibreHistory(models.Model):
     _name = 'libre.history'
 
-    issue_date = fields.Datetime(string="Inspection Date", required=True, store=True)
-    notify_date = fields.Datetime(string="Notify Date", readonly=True, store=True)
-    sticker_number = fields.Char(string="Annual Sticker Number")
-    approver = fields.Many2one('res.users', string="Approver")
+    issue_date = fields.Date(string="Inspection Date", required=True, store=True)
+    notify_date = fields.Date(string="Notify Date", readonly=True, store=True)
+    sticker_number = fields.Char(string="Annual Sticker Number",translate=True)
+    approver = fields.Many2one('res.partner', string="Approver")
     user_id = fields.Many2one('res.users', string="User")
     rev = fields.Many2one('vehicle.libre', string="rev")
 
@@ -82,48 +82,48 @@ class VehicleLibre(models.Model):
     _description = "Vehicle Libre"
     _inherit = ['portal.mixin', 'mail.thread', 'mail.activity.mixin', 'utm.mixin']
 
-    first_name = fields.Char('Name')
+    first_name = fields.Char('Name',translate=True)
     user_id = fields.Many2one('res.partner', string="User")
 
     name = fields.Char('Name', default='/',
-        copy=False, index=True , readonly=True)
-    note = fields.Text('Notes')
+        copy=False, index=True , readonly=True,translate=True)
+    note = fields.Text('Notes',translate=True)
     gender = fields.Selection([
         ('male', 'Male'),
         ('female', 'Female')
     ], string='Gender')
-    nationality = fields.Char("Nationality")
-    region = fields.Char("Region")
-    note = fields.Text("note")
-    city = fields.Char("City")
-    subcity = fields.Char("Sub City")
-    woreda = fields.Char("Woreda")
-    house_number = fields.Char("House Number")
-    phone_number = fields.Char("Phone Number")
-    plate_number = fields.Char("Plate Number")
-    previous_plate_number = fields.Char("Previous Plate Number")
+    nationality = fields.Char("Nationality",translate=True)
+    region = fields.Char("Region",translate=True)
+    note = fields.Text("note",translate=True)
+    city = fields.Char("City",translate=True)
+    subcity = fields.Char("Sub City",translate=True)
+    woreda = fields.Char("Woreda",translate=True)
+    house_number = fields.Char("House Number",translate=True)
+    phone_number = fields.Char("Phone Number",translate=True)
+    plate_number = fields.Char("Plate Number",translate=True)
+    previous_plate_number = fields.Char("Previous Plate Number",translate=True)
     vehicle_id = fields.Many2one('fleet.vehicle', string='Vehicle')
     vehicle_type = fields.Many2one('vehicle.type', string='Vehicle Type')
 
     made_in = fields.Many2one('maid.by', string="Made In")
     vehicle_model = fields.Many2one('fleet.vehicle.model', string='Vehicle Model')
 
-    creattion_date = fields.Datetime('Creation Date')
-    chassis_number = fields.Char('Chassis Number')
-    motor_number = fields.Char('Motor Number')
-    parts_type = fields.Char("Parts Type")
+    creation_date = fields.Date('Creation Date')
+    chassis_number = fields.Char('Chassis Number',translate=True)
+    motor_number = fields.Char('Motor Number',translate=True)
+    parts_type = fields.Char("Parts Type",translate=True)
     color = fields.Many2one('color.color', string='Color')
     fuel_type = fields.Selection([('gasoline', 'Gasoline'),
                                   ('diesel', 'Diesel'),
                                   ('petrol', 'Petrol'),
                                   ('electric', 'Electric'),
                                   ('hybrid', 'Hybrid')], string='Fuel Type')
-    engine_horse_power = fields.Char("Engine Horse Power")
-    total_weight = fields.Char("Total Weight")
-    items_weight = fields.Char('Single Weight')
-    cc = fields.Char("CC")
-    slender_amount = fields.Char("Number of Cylinders")
-    allowed_work_type = fields.Char("Allowed Services Type")
+    engine_horse_power = fields.Char("Engine Horse Power",translate=True)
+    total_weight = fields.Char("Total Weight",translate=True)
+    items_weight = fields.Char('Single Weight',translate=True)
+    cc = fields.Char("CC",translate=True)
+    slender_amount = fields.Char("Number of Cylinders",translate=True)
+    allowed_work_type = fields.Char("Allowed Services Type",translate=True)
     state = fields.Selection([
         ('draft', 'Draft'),
         ('register', 'Register'),

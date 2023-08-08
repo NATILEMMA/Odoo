@@ -126,7 +126,8 @@
                         class="oe_stat_button"
                         icon="fa-tachometer"
                         context="{'xml_id':'fleet_vehicle_odometer_action'}"
-                        help="show the odometer logs for this vehicle" >
+                        help="show the odometer logs for this vehicle" 
+                        groups="fleet.fleet_group_manager">
                         <field name="odometer_count" widget="statinfo" string="Odometer"/>
                     </button>
                </div>
@@ -175,7 +176,7 @@
                             <field name="vehicle_type" attrs="{'readonly': [('state','in',('register','expired'))]}"/>
                             <field name="made_in" attrs="{'readonly': [('state','in',('register','expired'))]}"/>
                             <field name="vehicle_model" attrs="{'readonly': [('state','in',('register','expired'))]}"/>
-                            <field name="creattion_date" attrs="{'readonly': [('state','in',('register','expired'))]}"/>
+                            <field name="creation_date" attrs="{'readonly': [('state','in',('register','expired'))]}"/>
                             <field name="chassis_number" attrs="{'readonly': [('state','in',('register','expired'))]}"/>
                             <field name="motor_number" attrs="{'readonly': [('state','in',('register','expired'))]}"/>
                             <field name="parts_type" attrs="{'readonly': [('state','in',('register','expired'))]}"/>
@@ -260,5 +261,7 @@
     <menuitem action="fleet_vehicle_libre" 
         string="Vehicle Libre"
         parent="fleet.fleet_vehicles"
-        id="fleet_vehicle_libre_menu" sequence="7"/>
+        id="fleet_vehicle_libre_menu"
+        groups="fleet.fleet_group_manager"
+         sequence="7"/>
 </odoo>

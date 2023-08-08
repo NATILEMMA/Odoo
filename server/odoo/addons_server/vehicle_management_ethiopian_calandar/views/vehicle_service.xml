@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- 
+                    
+                    Adding Ethiopian Calander Date to Time Fream 
+
+                    step 1: Inherit the View of the model to which you wish to add the Ethiopian calendar extension.
+
+                    step 2, xpath your exact location of converting date fields if your date fields are located within a form sheet, use col and colspan to adjust CSS
+                
+                    Ethiopian Date Picker Widget
+
+                    - ethiopian_calander_widget
+                    - ethiopian_calander_widget_two
+                    - ethiopian_calander_widget_three
+                    - ethiopian_calander_widget_four
+                -->
+
+       
+
+        <record id="fleet_vehicle_log_services_view_tree_inherited" model="ir.ui.view">
+            <field name="name">fleet.vehicle.log.services.tree</field>
+            <field name="model">fleet.vehicle.log.services</field>
+            <field name="inherit_id" ref="fleet.fleet_vehicle_log_services_view_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date']" position="replace">
+                </xpath>
+                
+            </field>
+        </record>
+
+        
+
+        <record id="fleet_vehicle_log_services_view_form_inherited" model="ir.ui.view">
+            <field name="name">fleet.vehicle.form.log.services</field>
+            <field name="model">fleet.vehicle.log.services</field>
+            <field name="inherit_id" ref="fleet.fleet_vehicle_log_services_view_form"/>
+            <field name="arch" type="xml">
+
+                <!-- <xpath expr="field[@name='date']" position="attribute">
+                </xpath> -->
+                <xpath expr="//field[@name='date']" position="attributes">
+                    <attribute name="attrs">{'invisible': True}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='priority']" position="replace">
+                </xpath>
+
+                <xpath expr="//field[@name='date_open']" position="replace">
+                    <field name="ethiopian_from" class="oe_read_only" string="Service Start Date" style=" float:left;" attrs="{'invisible': ['|', ('is_pagum_from', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    <field name="date_open" string="Service Start Date" groups="EthiopianCalendar.group_gregory"/>
+                    <field name="pagum_from" class="oe_read_only" string="Service Start Date" style=" float:left" attrs="{'invisible': ['|',('is_pagum_from', '!=',False)  ]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    <field name="is_pagum_from" invisible="1"/>
+                    <div>
+                    </div>
+                    <div style="margin-bottom:40px;margin-top:-22px; width: 50%;margin-left:10px;margin-right:0px">
+                        <widget name="ethiopian_calander_widget" style=" float:left;width:178px;margin-left:-3px;" class="oe_edit_only" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    </div>
+                </xpath>
+
+                <xpath expr="//field[@name='date_close']" position="replace">
+                    <field name="ethiopian_to" class="oe_read_only" string="Service Close Date" style=" float:left;" attrs="{'invisible': ['|', ('is_pagum_to', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    <field name="date_close" string="Service Close Date" groups="EthiopianCalendar.group_gregory"/>
+                    <field name="pagum_to" class="oe_read_only" string="Service Close Date" style=" float:left" attrs="{'invisible': ['|',('is_pagum_to', '!=',False)  ]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    <field name="is_pagum_to" invisible="1"/>
+                    <div>
+                    </div>
+                    <div style="margin-bottom:40px;margin-top:-22px; width: 50%;margin-left:10px;margin-right:0px">
+                        <widget name="ethiopian_calander_widget_two" style=" float:left;width:178px;margin-left:-3px;" class="oe_edit_only" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    </div>
+                </xpath>
+
+                <xpath expr="//field[@name='next_service_date']" position="replace">
+                    <field name="ethiopian_three" class="oe_read_only" string="Next Service Date" style=" float:left;" attrs="{'invisible': ['|', ('is_pagum_three', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    <field name="next_service_date" string="Next Service Date" groups="EthiopianCalendar.group_gregory"/>
+                    <field name="pagum_three" class="oe_read_only" string="Next Service Date" style=" float:left" attrs="{'invisible': ['|',('is_pagum_three', '!=',False)  ]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    <field name="is_pagum_three" invisible="1"/>
+                    <div>
+                    </div>
+                    <div style="margin-bottom:40px;margin-top:-22px; width: 50%;margin-left:10px;margin-right:0px">
+                        <widget name="ethiopian_calander_widget_three" style="float:left;width:178px;margin-left:-3px;" class="oe_edit_only" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    </div>
+                </xpath>
+                <xpath expr="//field[@name='date_complete']" position="replace">
+                    <field name="ethiopian_four" class="oe_read_only" string="Estimated Date" style=" float:left;" attrs="{'invisible': ['|', ('is_pagum_four', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    <field name="date_complete" string="Estimated Date" groups="EthiopianCalendar.group_gregory"/>
+                    <field name="pagum_four" class="oe_read_only" string="Date" style=" float:left" attrs="{'invisible': ['|',('is_pagum_four', '!=',False)  ]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    <field name="is_pagum_four" invisible="1"/>
+                    <div>
+                    </div>
+                    <div style="margin-bottom:40px;margin-top:-22px; width: 50%;margin-left:10px;margin-right:0px">
+                        <widget name="ethiopian_calander_widget_four" style=" float:left;width:178px;margin-left:-3px;" class="oe_edit_only" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
