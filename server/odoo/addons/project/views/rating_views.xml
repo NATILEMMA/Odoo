@@ -8,7 +8,7 @@
         <field name="mode">primary</field>
         <field name="arch" type="xml">
             <xpath expr="//filter[@name='resource']" position="after">
-                <filter string="Project" name="groupby_project" context="{'group_by': 'parent_res_name'}"/>
+                <filter string="Planning" name="groupby_project" context="{'group_by': 'parent_res_name'}"/>
             </xpath>
             <xpath expr="/search" position="inside">
                 <filter string="Last 30 Days" name="rating_last_30_days" domain="[

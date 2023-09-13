@@ -25,6 +25,10 @@ class ReconciliationTimeFream(models.Model):
 
 
     def activate(self):
+        if self.date_from or self.date_to:
+            raise ValidationError(_('Please select a date'))
+        if self.date_from >= self.date_to:
+            raise ValidationError(_('End date must be greater then start date'))
         years = self.env['fiscal.year'].search([])
         for year in years:
             if year.state == 'active':
@@ -35,7 +39,40 @@ class ReconciliationTimeFream(models.Model):
         self.state = 'locked'
 
     def close(self):
-        print("close")
+        self.state = 'closed'
 
     def set_new(self):
         self.state = 'draft'
+
+    def button_open_fiscal(self):
+        print(self.date_from, self.date_to)
+        if not self.date_from or  not self.date_to:
+            raise ValidationError(_('Please select a date'))
+        if self.date_from >= self.date_to:
+            raise ValidationError(_('End date must be greater then start date'))
+        years = self.env['fiscal.year'].search([])
+        for year in years:
+            if year.state == 'active':
+                raise ValidationError(_('There active fiscal year'))
+        return {
+            'name': 'object',
+            'res_model': 'financial.opening',
+            'type': 'ir.actions.act_window',
+            'view_mode': 'form',
+            'view_type': 'form',
+            'nodestroy': True,
+            'target': 'current',
+
+        }
+
+    def button_close_fiscal(self):
+        return {
+            'name': 'object',
+            'res_model': 'financial.closing',
+            'type': 'ir.actions.act_window',
+            'view_mode': 'form',
+            'view_type': 'form',
+            'nodestroy': True,
+            'target': 'current',
+
+        }

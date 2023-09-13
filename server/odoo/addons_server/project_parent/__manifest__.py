@@ -10,7 +10,10 @@
     "data": [
         # "security/project_security.xml",
         "security/ir.model.access.csv",
+        "views/report.xml",
         "views/project_parent_views.xml",
+       
+
         ],
     "demo": ["demo/project_project_demo.xml"],
 }

@@ -7,7 +7,7 @@ from odoo.exceptions import AccessError, UserError, ValidationError
 class PurchaseOrderLineUnlink(models.Model):
     _name = 'purchase.order.line.unlink'
 
-    name = fields.Text(string='Description', required=True)
+    name = fields.Text(string='Description', required=True, translate=True)
     product_qty = fields.Float(string='Quantity', digits='Product Unit of Measure', required=True)
     taxes_id = fields.Many2many('account.tax', string='Taxes',
                                 domain=['|', ('active', '=', False), ('active', '=', True)])
@@ -27,7 +27,7 @@ class PurchaseOrderLineUnlink(models.Model):
         ("selected", "selected"),
         ("failed", "failed"),
          ], default='failed')
-    reason = fields.Char('Reason')
+    reason = fields.Char('Reason', translate=True)
 
     @api.onchange('selection')
     def _onchange_requisition_id(self):
@@ -161,7 +161,7 @@ class PurchaseOrderLine(models.Model):
         ("failed", "failed"),
         ("uncompered", "not compered")
          ], default='uncompered')
-    reason = fields.Char('Reason')
+    reason = fields.Char('Reason', translate=True)
 
     @api.onchange('product_qty', 'product_uom')
     def _onchange_quantity(self):
@@ -176,32 +176,29 @@ class PurchaseOrderLine(models.Model):
                 break
         return res
 
-    def create(self, vals):
-
-            account_ids = self.env.context.get('active_ids', [])
-            acc = self.env['purchase.requisition'].browse(account_ids[0])
-            pur = False
-            print("********************",vals)
-            if vals[0]['order_id'] != False:
-                pur = self.env['purchase.order'].browse(vals[0]['order_id'])
-                print("line", vals[0]['order_id'], acc.id, pur.requisition_id.id)
-            # if line.order_id.state in ['purchase', 'done']:
-            #     raise UserError(_('Cannot delete a purchase order line which is in state \'%s\'.') % (line.state,))
-            # print('line.tender.id == account_ids[0]', line.tender.id, account_ids[0])
-            terms = []
-            if pur.requisition_id.id == account_ids[0]:
-                values = {}
-                values['product_id'] = vals.get('product_id')
-                values['product_qty'] = vals.get('product_qty')
-                values['price_unit'] = vals.get('price_unit')
-                values['name'] = vals.get('name')
-                values['partner_id'] = pur.partner_id.id
-                values['price_subtotal'] = vals.get('price_subtotal')
-                values['price_total'] = vals.get('price_total')
-                values['taxes_id'] =  vals.get('taxes_id')
-                values['order_line'] = pur.id
-
-                terms.append((0, 0, values))
-                acc.line_id_2 = terms
-                print("terms", terms)
-            return super(PurchaseOrderLine, self).create(vals)
+    # def create(self, vals):
+    #
+    #         account_ids = self.env.context.get('active_ids', [])
+    #         acc = self.env['purchase.requisition'].browse(account_ids[0])
+    #         pur = self.env['purchase.order'].browse(vals.get('order_id'))
+    #         print("line", vals.get('order_id'), acc.id, pur.requisition_id.id)
+    #         # if line.order_id.state in ['purchase', 'done']:
+    #         #     raise UserError(_('Cannot delete a purchase order line which is in state \'%s\'.') % (line.state,))
+    #         # print('line.tender.id == account_ids[0]', line.tender.id, account_ids[0])
+    #         terms = []
+    #         if pur.requisition_id.id == account_ids[0]:
+    #             values = {}
+    #             values['product_id'] = vals.get('product_id')
+    #             values['product_qty'] = vals.get('product_qty')
+    #             values['price_unit'] = vals.get('price_unit')
+    #             values['name'] = vals.get('name')
+    #             values['partner_id'] = pur.partner_id.id
+    #             values['price_subtotal'] = vals.get('price_subtotal')
+    #             values['price_total'] = vals.get('price_total')
+    #             values['taxes_id'] =  vals.get('taxes_id')
+    #             values['order_line'] = pur.id
+    #
+    #             terms.append((0, 0, values))
+    #             acc.line_id_2 = terms
+    #             print("terms", terms)
+    #         return super(PurchaseOrderLine, self).create(vals)

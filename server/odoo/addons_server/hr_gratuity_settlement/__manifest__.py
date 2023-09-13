@@ -8,8 +8,8 @@
     'maintainer': 'Cybrosys Techno Solutions',
     'category': 'Generic Modules/Human Resources',
     'website': "https://www.openhrms.com",
-    # 'depends': ['base', 'hr', 'hr_payroll_community', 'hr_payroll_account_community', 'account', 'budget', 'hr_expense'],
-    'depends': ['base', 'hr', 'hr_payroll_community', 'hr_payroll_account_community', 'account', 'hr_expense'],
+    'depends': ['base', 'hr', 'hr_payroll_community', 'hr_payroll_account_community', 'account', 'budget', 'hr_expense'],
+    # 'depends': ['base', 'hr', 'hr_payroll_community', 'hr_payroll_account_community', 'account', 'hr_expense'],
     'data': [
         'security/ir.model.access.csv',
         'data/sequence.xml',

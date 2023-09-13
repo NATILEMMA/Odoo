@@ -1,0 +1,438 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* rating
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20221005\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-22 11:09+0000\n"
+"PO-Revision-Date: 2023-05-22 11:09+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: rating
+#: model_terms:ir.ui.view,arch_db:rating.rating_external_page_submit
+msgid ""
+"<br/>\n"
+"                            on our services on \""
+msgstr ""
+"<br/>\n"
+"                            በአገልግሎታችን ላይ\""
+
+#. module: rating
+#: model_terms:ir.ui.view,arch_db:rating.rating_external_page_view
+msgid ""
+"<i class=\"fa fa-check-circle fa-5x text-success\" role=\"img\" aria-"
+"label=\"Thank you!\" title=\"Thank you!\"/>"
+msgstr ""
+"<i class=\"fa fa-check-circle fa-5x text-success\" role=\"img\" aria-"
+"label=\"አመሰግናለሁ!\" title=\"አመሰግናለሁ!\"/>"
+
+#. module: rating
+#: model_terms:ir.ui.view,arch_db:rating.rating_rating_view_form
+msgid "<span class=\"o_stat_text\">Resource</span>"
+msgstr "<span class=\"o_stat_text\">ምንጭ</span>"
+
+#. module: rating
+#: model:ir.model.fields,help:rating.field_rating_rating__access_token
+msgid "Access token to set the rating of the value"
+msgstr "የእሴቱን ደረጃ ለማዘጋጀት የመዳረሻ ማስመሰያ"
+
+#. module: rating
+#: model:ir.model.fields,help:rating.field_rating_rating__message_id
+msgid ""
+"Associated message when posting a review. Mainly used in website addons."
+msgstr ""
+"ግምገማ በሚለጥፉበት ጊዜ የተያያዘ መልእክት። በዋናነት በድር ጣቢያ addons ውስጥ ጥቅም ላይ ይውላል።"
+
+#. module: rating
+#: model:ir.model.fields,help:rating.field_rating_rating__partner_id
+msgid "Author of the rating"
+msgstr "የደረጃ አሰጣጡ ደራሲ"
+
+#. module: rating
+#: model:ir.model.fields,field_description:rating.field_rating_rating__feedback
+msgid "Comment"
+msgstr "አስተያየት"
+
+#. module: rating
+#: model:ir.model.fields,field_description:rating.field_rating_rating__create_uid
+msgid "Created by"
+msgstr "የተፈጠረዉ በ"
+
+#. module: rating
+#: model:ir.model.fields,field_description:rating.field_rating_rating__create_date
+msgid "Created on"
+msgstr "ላይ ተፈጠረ"
+
+#. module: rating
+#: model:ir.model.fields,field_description:rating.field_rating_rating__partner_id
+#: model_terms:ir.ui.view,arch_db:rating.rating_rating_view_search
+msgid "Customer"
+msgstr "ደንበኛ"
+
+#. module: rating
+#: model_terms:ir.ui.view,arch_db:rating.rating_rating_view_search
+msgid "Date"
+msgstr "ቀን"
+
+#. module: rating
+#: model:ir.model.fields,field_description:rating.field_rating_mixin__display_name
+#: model:ir.model.fields,field_description:rating.field_rating_parent_mixin__display_name
+#: model:ir.model.fields,field_description:rating.field_rating_rating__display_name
+msgid "Display Name"
+msgstr "መጠሪያው ስም"
+
+#. module: rating
+#: model:ir.model.fields,field_description:rating.field_rating_rating__res_id
+msgid "Document"
+msgstr "ሰነድ"
+
+#. module: rating
+#: model:ir.model.fields,field_description:rating.field_rating_rating__res_model
+msgid "Document Model"
+msgstr "የሰነድ ሞዴል"
+
+#. module: rating
+#: model:ir.model,name:rating.model_mail_thread
+msgid "Email Thread"
+msgstr "የኢሜል ጥቅል"
+
+#. module: rating
+#: model:ir.model.fields,help:rating.field_rating_rating__consumed
+msgid "Enabled if the rating has been filled."
+msgstr "ደረጃው ከተሞላ ነቅቷል።"
+
+#. module: rating
+#: model:ir.model.fields,field_description:rating.field_rating_rating__consumed
+msgid "Filled Rating"
+msgstr "የተሞላ ደረጃ"
+
+#. module: rating
+#: model_terms:ir.ui.view,arch_db:rating.rating_external_page_view
+msgid "Go to our website"
+msgstr "ወደ ድረ ገጻችን ይሂዱ"
+
+#. module: rating
+#: model_terms:ir.ui.view,arch_db:rating.rating_rating_view_search
+msgid "Group By"
+msgstr "ቡድን በ"
+
+#. module: rating
+#: model:ir.model.fields.selection,name:rating.selection__rating_rating__rating_text__highly_dissatisfied
+#: model_terms:ir.ui.view,arch_db:rating.rating_rating_view_search
+msgid "Highly dissatisfied"
+msgstr "በጣም አልረካም።"
+
+#. module: rating
+#: model:ir.model.fields,field_description:rating.field_rating_mixin__id
+#: model:ir.model.fields,field_description:rating.field_rating_parent_mixin__id
+#: model:ir.model.fields,field_description:rating.field_rating_rating__id
+msgid "ID"
+msgstr "መታወቂያ"
+
+#. module: rating
+#: model:ir.model.fields,help:rating.field_rating_rating__res_id
+msgid "Identifier of the rated object"
+msgstr "ደረጃ የተሰጠው ነገር መለያ"
+
+#. module: rating
+#: model:ir.model.fields,field_description:rating.field_rating_rating__rating_image
+msgid "Image"
+msgstr "ምስል"
+
+#. module: rating
+#: model:ir.model.fields,field_description:rating.field_rating_mixin____last_update
+#: model:ir.model.fields,field_description:rating.field_rating_parent_mixin____last_update
+#: model:ir.model.fields,field_description:rating.field_rating_rating____last_update
+msgid "Last Modified on"
+msgstr "ለመጨረሻ ጊዘ የተሻሻለዉ"
+
+#. module: rating
+#: model:ir.model.fields,field_description:rating.field_rating_rating__write_uid
+msgid "Last Updated by"
+msgstr "መጨረሻ የዘመነው በ"
+
+#. module: rating
+#: model:ir.model.fields,field_description:rating.field_rating_rating__write_date
+msgid "Last Updated on"
+msgstr "ለመጨረሻ ጊዘ የዘመነው"
+
+#. module: rating
+#: model:ir.model.fields,field_description:rating.field_rating_rating__message_id
+msgid "Linked message"
+msgstr "የተገናኘ መልእክት"
+
+#. module: rating
+#: model:ir.model,name:rating.model_mail_message
+msgid "Message"
+msgstr "መልእክት"
+
+#. module: rating
+#: model:ir.model.fields,help:rating.field_rating_rating__res_model_id
+msgid "Model of the followed resource"
+msgstr "የተከታዩ ሃብት ሞዴል"
+
+#. module: rating
+#: model_terms:ir.ui.view,arch_db:rating.rating_rating_view_search
+msgid "My Ratings"
+msgstr "የእኔ ደረጃ አሰጣጦች"
+
+#. module: rating
+#: model:ir.model.fields.selection,name:rating.selection__rating_rating__rating_text__no_rating
+msgid "No Rating yet"
+msgstr "እስካሁን ምንም ደረጃ የለም"
+
+#. module: rating
+#: model_terms:ir.actions.act_window,help:rating.action_view_rating
+msgid "No rating yet"
+msgstr "እስካሁን ምንም ደረጃ የለም።"
+
+#. module: rating
+#: model:ir.model.fields.selection,name:rating.selection__rating_rating__rating_text__not_satisfied
+#: model_terms:ir.ui.view,arch_db:rating.rating_rating_view_search
+msgid "Not satisfied"
+msgstr "አልረካም"
+
+#. module: rating
+#: model:ir.model.fields,help:rating.field_rating_rating__rated_partner_id
+msgid "Owner of the rated resource"
+msgstr "ደረጃ የተሰጠው ሃብት ባለቤት"
+
+#. module: rating
+#: model:ir.model.fields,field_description:rating.field_rating_rating__parent_res_id
+msgid "Parent Document"
+msgstr "ደረጃ የተሰጠው ሃብት ባለቤት"
+
+#. module: rating
+#: model:ir.model.fields,field_description:rating.field_rating_rating__parent_res_model
+msgid "Parent Document Model"
+msgstr "የወላጅ ሰነድ ሞዴል"
+
+#. module: rating
+#: model:ir.model.fields,field_description:rating.field_rating_rating__parent_res_name
+msgid "Parent Document Name"
+msgstr "የወላጅ ሰነድ ስም"
+
+#. module: rating
+#: model:ir.model.fields,field_description:rating.field_rating_rating__parent_res_model_id
+msgid "Parent Related Document Model"
+msgstr "ከወላጅ ጋር የተያያዘ ሰነድ ሞዴል"
+
+#. module: rating
+#: model:ir.model.fields,help:rating.field_rating_parent_mixin__rating_percentage_satisfaction
+msgid "Percentage of happy ratings"
+msgstr "የደስታ ደረጃዎች ፐርሰንተጅ"
+
+#. module: rating
+#: model_terms:ir.ui.view,arch_db:rating.rating_rating_view_search
+msgid "Rated User"
+msgstr "ደረጃ የተሰጠው ተጠቃሚ"
+
+#. module: rating
+#: model:ir.model.fields,field_description:rating.field_rating_rating__rated_partner_id
+msgid "Rated person"
+msgstr "ደረጃ የተሰጠው ሰው"
+
+#. module: rating
+#: model:ir.actions.act_window,name:rating.action_view_rating
+#: model:ir.model,name:rating.model_rating_rating
+#: model:ir.model.fields,field_description:rating.field_rating_mixin__rating_ids
+#: model:ir.model.fields,field_description:rating.field_rating_rating__rating_text
+#: model_terms:ir.ui.view,arch_db:rating.rating_rating_view_form
+#: model_terms:ir.ui.view,arch_db:rating.rating_rating_view_search
+#: model_terms:ir.ui.view,arch_db:rating.rating_rating_view_tree
+msgid "Rating"
+msgstr "ደረጃ መስጠት"
+
+#. module: rating
+#: model:ir.model.fields,field_description:rating.field_rating_mixin__rating_avg
+#: model_terms:ir.ui.view,arch_db:rating.rating_rating_view_graph
+#: model_terms:ir.ui.view,arch_db:rating.rating_rating_view_pivot
+msgid "Rating Average"
+msgstr "አማካኝ ደረጃ"
+
+#. module: rating
+#: model:ir.model.fields,field_description:rating.field_rating_mixin__rating_last_feedback
+msgid "Rating Last Feedback"
+msgstr "የመጨረሻው ግብረመልስ ደረጃ መስጠት"
+
+#. module: rating
+#: model:ir.model.fields,field_description:rating.field_rating_mixin__rating_last_image
+msgid "Rating Last Image"
+msgstr "የመጨረሻው ምስል ደረጃ መስጠት"
+
+#. module: rating
+#: model:ir.model.fields,field_description:rating.field_rating_mixin__rating_last_value
+msgid "Rating Last Value"
+msgstr "የመጨረሻው እሴት ደረጃ መስጠት"
+
+#. module: rating
+#: model:ir.model,name:rating.model_rating_mixin
+msgid "Rating Mixin"
+msgstr "ደረጃ መስጠት ሚክሲን"
+
+#. module: rating
+#: model:ir.model.fields,field_description:rating.field_rating_rating__rating
+msgid "Rating Number"
+msgstr "የደረጃ አሰጣጥ ቁጥር"
+
+#. module: rating
+#: model:ir.model,name:rating.model_rating_parent_mixin
+msgid "Rating Parent Mixin"
+msgstr "የወላጅ ሚክሲን ደረጃ አሰጣጥ"
+
+#. module: rating
+#: model:ir.model.fields,field_description:rating.field_rating_parent_mixin__rating_percentage_satisfaction
+msgid "Rating Satisfaction"
+msgstr "እርካታን ደረጃ መስጠት"
+
+#. module: rating
+#: model:ir.model.fields,field_description:rating.field_mail_mail__rating_value
+#: model:ir.model.fields,field_description:rating.field_mail_message__rating_value
+msgid "Rating Value"
+msgstr "የደረጃ አሰጣጥ ዋጋ"
+
+#. module: rating
+#: model:ir.model.fields,field_description:rating.field_rating_mixin__rating_count
+msgid "Rating count"
+msgstr "የደረጃ አሰጣጥ ብዛት"
+
+#. module: rating
+#: model:ir.model.constraint,message:rating.constraint_rating_rating_rating_range
+msgid "Rating should be between 0 to 10"
+msgstr "ደረጃው ከ 0 እስከ 10 መካከል መሆን አለበት"
+
+#. module: rating
+#: model:ir.model.fields,help:rating.field_rating_rating__rating
+msgid "Rating value: 0=Unhappy, 10=Happy"
+msgstr "የደረጃ አሰጣጥ ዋጋ፡ 0=ደስተኛ ያልሆነ፣ 10=ደስተኛ"
+
+#. module: rating
+#: model:ir.model.fields,field_description:rating.field_rating_parent_mixin__rating_ids
+#: model_terms:ir.ui.view,arch_db:rating.rating_rating_view_search
+msgid "Ratings"
+msgstr "ደረጃ አሰጣጦች"
+
+#. module: rating
+#: model:ir.model.fields,help:rating.field_rating_mixin__rating_last_feedback
+#: model:ir.model.fields,help:rating.field_rating_rating__feedback
+msgid "Reason of the rating"
+msgstr "የደረጃ አሰጣጡ ምክንያት"
+
+#. module: rating
+#: model:ir.model.fields,field_description:rating.field_rating_rating__res_model_id
+msgid "Related Document Model"
+msgstr "ተዛማጅ ሰነድ ሞዴል"
+
+#. module: rating
+#: model:ir.model.fields,field_description:rating.field_mail_mail__rating_ids
+#: model:ir.model.fields,field_description:rating.field_mail_message__rating_ids
+msgid "Related ratings"
+msgstr "ተዛማጅ ደረጃዎች"
+
+#. module: rating
+#: model_terms:ir.ui.view,arch_db:rating.rating_rating_view_search
+msgid "Resource"
+msgstr "ሃብት"
+
+#. module: rating
+#: model:ir.model.fields,field_description:rating.field_rating_rating__res_name
+msgid "Resource name"
+msgstr "የንብረት ስም"
+
+#. module: rating
+#: model:ir.model.fields.selection,name:rating.selection__rating_rating__rating_text__satisfied
+#: model_terms:ir.ui.view,arch_db:rating.rating_rating_view_search
+msgid "Satisfied"
+msgstr "ረክቻለሁ"
+
+#. module: rating
+#: model:ir.model.fields,field_description:rating.field_rating_rating__access_token
+msgid "Security Token"
+msgstr "የደህንነት ማስመሰያ"
+
+#. module: rating
+#: model_terms:ir.ui.view,arch_db:rating.rating_external_page_submit
+msgid "Send Feedback"
+msgstr "ግብረ-መልስ ላክ"
+
+#. module: rating
+#: model_terms:ir.ui.view,arch_db:rating.rating_rating_view_form
+#: model_terms:ir.ui.view,arch_db:rating.rating_rating_view_tree
+msgid "Submitted on"
+msgstr "ላይ ገብቷል።"
+
+#. module: rating
+#: model_terms:ir.ui.view,arch_db:rating.rating_external_page_submit
+msgid "Thanks! We appreciate your feedback."
+msgstr "አመሰግናለሁ! ግብረ መልስዎን እናደንቃለን።"
+
+#. module: rating
+#: model:ir.model.fields,help:rating.field_rating_rating__res_name
+msgid "The name of the rated resource."
+msgstr "ደረጃ የተሰጠው ሀብት ስም።"
+
+#. module: rating
+#: model_terms:ir.actions.act_window,help:rating.action_view_rating
+msgid "There is no rating for this object at the moment."
+msgstr "በአሁኑ ጊዜ ለዚህ ነገር ምንም ደረጃ የለም።"
+
+#. module: rating
+#: model_terms:ir.ui.view,arch_db:rating.rating_external_page_view
+msgid "We appreciate your feedback!"
+msgstr "የእርስዎን ግብረመልስ እናደንቃለን!"
+
+#. module: rating
+#: model_terms:ir.ui.view,arch_db:rating.rating_external_page_submit
+msgid "Would be great if you can provide more information:"
+msgstr "ተጨማሪ መረጃ መስጠት ከቻሉ ጥሩ ይሆናል፡-"
+
+#. module: rating
+#: model_terms:ir.ui.view,arch_db:rating.rating_external_page_submit
+msgid "Your rating has been submitted."
+msgstr "የእርስዎ ደረጃ ገብቷል።"
+
+#. module: rating
+#: model_terms:ir.ui.view,arch_db:rating.rating_external_page_submit
+#: model_terms:ir.ui.view,arch_db:rating.rating_rating_view_kanban
+msgid "by"
+msgstr "በ"
+
+#. module: rating
+#: model_terms:ir.ui.view,arch_db:rating.rating_rating_view_kanban
+msgid "for"
+msgstr ""
+
+#. module: rating
+#: code:addons/rating/controllers/main.py:0
+#, python-format
+msgid "highly dissatisfied"
+msgstr "በጣም አልረካም"
+
+#. module: rating
+#: code:addons/rating/controllers/main.py:0
+#, python-format
+msgid "not satisfied"
+msgstr "አልረካም"
+
+#. module: rating
+#: model_terms:ir.ui.view,arch_db:rating.rating_rating_view_kanban
+msgid "on"
+msgstr "ላይ"
+
+#. module: rating
+#: code:addons/rating/controllers/main.py:0
+#, python-format
+msgid "satisfied"
+msgstr "ረክቻለሁ"
+
+#. module: rating
+#: model_terms:ir.ui.view,arch_db:rating.rating_external_page_submit
+msgid "you are"
+msgstr "አንተ ነህ"

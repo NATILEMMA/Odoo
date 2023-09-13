@@ -10,7 +10,7 @@ _logger = logging.getLogger(__name__)
 class ResConfigSettings(models.TransientModel):
     _inherit = 'res.config.settings'
 
-    app_system_name = fields.Char('System Name', help="Setup System Name,which replace Odoo ERP")
+    app_system_name = fields.Char('System Name', help="Setup System Name,which replace Odoo ERP", translate=True)
     app_show_lang = fields.Boolean('Show Quick Language Switcher',
                                    help="When enable,User can quick switch language in user menu")
     app_show_debug = fields.Boolean('Show Quick Debug', help="When enable,everyone login can see the debug menu")
@@ -26,13 +26,13 @@ class ResConfigSettings(models.TransientModel):
                                                help="Uncheck to Hide Author and Website in Apps Dashboard")
     module_odoo_referral = fields.Boolean('Show Odoo ERP Referral', help="Uncheck to remove the Odoo ERP Referral")
 
-    app_documentation_url = fields.Char('Documentation Url')
-    app_documentation_dev_url = fields.Char('Developer Documentation Url')
-    app_support_url = fields.Char('Support Url')
-    app_account_title = fields.Char('My Odooech.com Account Title')
-    app_account_url = fields.Char('My Odooech.com Account Url')
-    app_enterprise_url = fields.Char('Customize Module Url(eg. Enterprise)')
-    app_ribbon_name = fields.Char('Show Demo Ribbon')
+    app_documentation_url = fields.Char('Documentation Url', translate=True)
+    app_documentation_dev_url = fields.Char('Developer Documentation Url', translate=True)
+    app_support_url = fields.Char('Support Url', translate=True)
+    app_account_title = fields.Char('My Odooech.com Account Title', translate=True)
+    app_account_url = fields.Char('My Odooech.com Account Url', translate=True)
+    app_enterprise_url = fields.Char('Customize Module Url(eg. Enterprise)', translate=True)
+    app_ribbon_name = fields.Char('Show Demo Ribbon', translate=True)
 
     @api.model
     def get_values(self):

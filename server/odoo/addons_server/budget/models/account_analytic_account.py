@@ -131,7 +131,7 @@ class HrEmployeePublic(models.Model):
 class HrExpense(models.Model):
 
     _inherit = "hr.expense"
-    # analytic_account_id = fields.Many2one('account.analytic.account', required=True)
+    analytic_account_id = fields.Many2one('account.analytic.account', required=True, domain="[('budget_analytic_account', '=', True)]")
 
     
 
@@ -186,11 +186,11 @@ class HrExpense(models.Model):
                                         pass
                                     else:
                                         # raise Warning("Your requested amount: is greater than the amount specified in the budget code.")
-                                        raise Warning("Your requested amount: " +str(total_request)+ " is greater than the amount specified in the budget code.")
+                                        raise Warning(_('Your requested amount:%s is greater than the amount specified in the budget code.')  %(str(total_request)))
 
                                     # raise Warning("passed")
                                 else:
-                                    raise Warning("Select the appropriate fiscal date for your Expense.")
+                                    raise Warning(_("Select the appropriate fiscal date for your Expense."))
                             else:
                                 raise UserError(_('Fiscal year of the system is not set.'))
 
@@ -216,6 +216,7 @@ class HrExpense(models.Model):
         return super(HrExpense, self).create(vals)
 
 
+
     def write(self, vals):
         _logger.info("############ Expensse vals:%s",vals)
         user = self.env['res.users'].search([('id','=',self.env.uid)])
@@ -235,12 +236,11 @@ class HrExpense(models.Model):
             pass
 
         if len(AccountAnalytics) <= 0:
-            AccountAnalytic = self.env['account.analytic.account'].search([('id','=',self.analytic_account_id.id)], limit=1)
-            AccountAnalytics.append(AccountAnalytic.id)
+            for AccountAnalytic in self.analytic_account_id:
+                AccountAnalytic = self.env['account.analytic.account'].search([('id','=',AccountAnalytic.id)])
+                
+                AccountAnalytics.append(AccountAnalytic.id)
 
-      
-
-    
        
         try:
             if  vals['product_id'] is not None:
@@ -261,24 +261,20 @@ class HrExpense(models.Model):
 
         if len(product_account_code) <= 0:
             _logger.info("not product value changed.....")
-            product_account = self.env['product.product'].search([('id','=',self.product_id.id)], limit=1)
+            for pro in self.product_id:
+                product_account = self.env['product.product'].search([('id','=',pro.id)], limit=1)
             budget = self.env['budget.planning'].search([('analytic_account_id','=',AccountAnalytics[0])], limit=1)
             to_budget = self.env['budget.budget'].search([('name','=',budget.name)], limit=1)
             for x in to_budget.budget_line:
-                for bline in x.general_budget_id.account_ids:
-                    if product_account.property_account_expense_id.id == bline.id:
-                        reserved_amounts.append(x.reserved_amount)
-                    budget_codes.append(bline.id)
+                    for bline in x.general_budget_id.account_ids:
+                        if product_account.property_account_expense_id.id == bline.id:
+                            reserved_amounts.append(x.reserved_amount)
+                        budget_codes.append(bline.id)
             product_account_code.append(product_account.property_account_expense_id.id)
-        
     
         fiscal_year = self.env['fiscal.year'].search([('state','=','active')],limit=1)
         search_mapping = self.env['hr.mapping.employee.account'].search([('employee_id','=',employee_id.id),('accountAnalytic','=',AccountAnalytics[0])], limit=1)
         
-
-        _logger.info("*********AccountAnalytic:%s",AccountAnalytics)
-        _logger.info("*********budget_codes:%s",budget_codes)
-        _logger.info("*********product_account_code:%s",product_account_code)
         # try:
         total_request = []
         if AccountAnalytic.budget_analytic_account == True:
@@ -304,15 +300,6 @@ class HrExpense(models.Model):
                     except:
                         pass
 
-                    _logger.info("TTTTTTTTTTTTTTTTTTT")
-                    _logger.info("TTTTTTTTTTTTTTTTTTT %s",product_account_code)
-
-                    _logger.info("TTTTTTTTTTTTTTTTTTT %s",budget_codes)
-                    _logger.info("TTTTTTTTTTTTTTTTTTT %s",reserved_amounts)
-                    _logger.info("TTTTTTTTTTTTTTTTTTT %s",total_request)
-
-
-                    
                     if product_account_code[0] in budget_codes:
                         reserved_amounts = reserved_amounts[0] 
                         if  search_mapping.is_allowed == True: #AccountAnalytic.department_id == employee_id.department_id and
@@ -336,4 +323,13 @@ class HrExpense(models.Model):
         #     pass
             
         return super(HrExpense, self).write(vals)
+    
+class CustomExpense(models.Model):
+    _inherit = 'hr.expense.sheet'
 
+    def action_sheet_move_create(self):
+        res = super(CustomExpense, self).action_sheet_move_create()
+        for sheet in self:
+            journal = self.env['account.move'].search([('id','=',sheet.account_move_id.id)], limit=1)
+            journal.write({'state': 'draft'})
+        return res

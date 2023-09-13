@@ -26,11 +26,29 @@ class AccountMove(models.Model):
     time_frame = fields.Many2one('reconciliation.time.fream', string='Time frame',
                                  domain="[('fiscal_year', '=', fiscal_year)]", required=True, )
     ethiopian_from = fields.Date(string="in ethiopian date")
-    pagum_from = fields.Char(string="in ethiopian date")
+    pagum_from = fields.Char(string="in ethiopian date",translate=True)
     is_pagum_from = fields.Boolean(default='True')
 
     @api.model
     def create(self, vals):
+        try:
+            if vals['date'] is not None:
+                    date1 = vals['date']
+                    date_time_obj = str(date1).split('-')
+                    Edate1 = EthiopianDateConverter.to_ethiopian(int(date_time_obj[0]), int(date_time_obj[1]),
+                                                                 int(date_time_obj[2]))
+                    print(type(Edate1))
+                    if type(Edate1) == date:
+                        print("type(Edate1) == date")
+                        vals['ethiopian_from'] = Edate1
+                    elif type(Edate1) == str:
+                        vals['pagum_from'] = Edate1
+                        vals['is_pagum_from'] = False
+
+                    else:
+                        pass
+        except:
+            pass
         for i in range(0, len(pick1)):
 
             if i == (len(pick1) - 1):
@@ -54,7 +72,9 @@ class AccountMove(models.Model):
                 date_time_obj = date1.split('-')
                 Edate1 = EthiopianDateConverter.to_ethiopian(int(date_time_obj[0]), int(date_time_obj[1]),
                                                              int(date_time_obj[2]))
+                print(type(Edate1))
                 if type(Edate1) == date:
+                    print("type(Edate1) == date")
                     vals['ethiopian_from'] = Edate1
                 elif type(Edate1) == str:
                     vals['pagum_from'] = Edate1
@@ -64,34 +84,16 @@ class AccountMove(models.Model):
                     pass
         except:
             pass
-        try:
-            if vals['time_frame']:
-                try:
-                    if vals['fiscal_year']:
-                        return super(AccountMove, self).create(vals)
-                    else:
-                        id = vals['time_frame']
-                        fy = self.env['reconciliation.time.fream'].search(['id', '=', id])
-                        vals['fiscal_year'] = fy.fiscal_year.id
-                except:
-                    return super(AccountMove, self).create(vals)
-
-        except:
-            print("except")
-            date = self.date
-            if not date:
-                date = datetime.now()
-            # print('date2', date)
-            active_time_frame = self.env['reconciliation.time.fream'].search(
-                [('date_from', '<=', date), ('date_to', '>=', date)], limit=1)
-            if not active_time_frame.id:
-                raise ValidationError(_(
-                    'please set Time frame for the journal'))
-            active_fiscal_year = active_time_frame.fiscal_year
+        active_time_frame = self.env['reconciliation.time.fream'].search(
+            [('date_from', '<=', vals['date']), ('date_to', '>=', vals['date'])], limit=1)
+        if not active_time_frame.id:
+            raise ValidationError(_(
+                'please set Time frame for the journal'))
+        else:
             vals['time_frame'] = active_time_frame.id
-            vals['fiscal_year'] = active_fiscal_year.id
-            print("expect vals", vals)
-            return super(AccountMove, self).create(vals)
+            vals['fiscal_year'] = active_time_frame.fiscal_year.id
+        print("vals",vals)
+        return super(AccountMove, self).create(vals)
 
     def compute_tax(self):
         if self.is_invoice(include_receipts=True):
@@ -105,35 +107,19 @@ class AccountMove(models.Model):
         else:
             self.line_ids._onchange_currency()
 
-        # self._recompute_dynamic_lines(recompute_tax_base_amount=True)
-        # self._move_autocomplete_invoice_lines_values()
-        # payments = self.env['account.payment'].search([('sale_id', '=', self.ref)])
-        # print("payments", payments)
-        # for payment in payments:
-        #     print("payment.sales_type", payment, payment.amount, payment.sales_type)
-        #     self.sales_type = payment.sales_type
-        # moves = self.env['account.move'].search([])
-        # for move in moves:
-        # if move.state == 'posted':
-        # for line in move.line_ids:
-        # line.partner_id = move.partner_id.id
         return
 
     @api.model
     def default_get(self, fields):
-        date = self.date
-        if not date:
-            date = datetime.now()
+        date_new = self.date
+        if not date_new:
+            date_new = datetime.now()
         # print('date2', date)
         active_time_frame = self.env['reconciliation.time.fream'].search(
-            [('date_from', '<=', date), ('date_to', '>=', date)], limit=1)
+            [('date_from', '<=', date_new), ('date_to', '>=', date_new)], limit=1)
         if not active_time_frame.id and not self.time_frame:
             raise ValidationError(_(
                 'please set Time frame for the journal'))
-        # active_fiscal_year = self.env['fiscal.year'].search([('state', '=', 'active')], limit=1)
-        # if not active_fiscal_year.id and not self.fiscal_year:
-        #     raise ValidationError(_(
-        #         'please set Active fiscal year for the journal'))
         if not self.time_frame:
             self.time_frame = active_time_frame.id
             self.fiscal_year = self.time_frame.fiscal_year.id
@@ -159,9 +145,21 @@ class AccountMove(models.Model):
         else:
             self.time_frame = active_time_frame
             self.fiscal_year = active_time_frame.fiscal_year.id
+    #
+    # @api.onchange('ethiopian_from')
+    # def onchange_ethiopian_from_field(self):
+    #     print("onchange_ethiopian_from_field")
+    #     active_time_frame = self.env['reconciliation.time.fream'].search(
+    #         [('date_from', '<=', self.date), ('date_to', '>=', self.date)], limit=1)
+    #     if not active_time_frame.id:
+    #         raise ValidationError(_(
+    #             'please set Time frame for the journal'))
+    #     else:
+    #         self.time_frame = active_time_frame
+    #         self.fiscal_year = active_time_frame.fiscal_year.id
+
 
     def post(self):
-        print("account post")
         for rec in self:
             flag = self.env['res.users'].has_group('account.group_account_manager')
             if not flag:
@@ -184,13 +182,25 @@ class AccountMove(models.Model):
 
     def write(self, vals):
         try:
+            print("write",vals)
             if vals['ethiopian_from'] is not None:
+                print("ethiopian from is not none")
                 date_str = vals['ethiopian_from']
                 date_time_obj = date_str.split('-')
                 date_gr = EthiopianDateConverter.to_gregorian(int(date_time_obj[0]), int(date_time_obj[1]),
                                                               int(date_time_obj[2]))
                 Edate1 = EthiopianDateConverter.to_ethiopian(date_gr.year, date_gr.month, date_gr.day)
                 vals['date'] = date_gr
+                active_time_frame = self.env['reconciliation.time.fream'].search(
+                    [('date_from', '<=', date_gr), ('date_to', '>=', date_gr)], limit=1)
+                print("active", active_time_frame.name)
+                if not active_time_frame.id:
+                    raise ValidationError(_(
+                        'please set Time frame for the journal'))
+                else:
+                    vals['time_frame'] = active_time_frame.id
+                    vals['fiscal_year'] = active_time_frame.fiscal_year.id
+
                 if type(Edate1) == str:
                     vals['ethiopian_from'] = None
                     vals['pagum_from'] = Edate1
@@ -218,57 +228,69 @@ class AccountMove(models.Model):
                     vals['pagum_from'] = ' '
         except:
             pass
+            print("fin", vals)
         return super(AccountMove, self).write(vals)
 
     @api.model
     def initial_date(self, data):
+        _logger.info("################# Initial DATA %s", data)
+
         dd = data['url'].split('id=')
         id = str(dd[1]).split('&')
         m = data['url'].split('model=')
         mm = m[1].split('&')
         if len(id[0]) <= 0:
+            _logger.info("################# not fund")
             date = datetime.now()
-            date = EthiopianDateConverter.to_ethiopian(date.year, date.month, date.day)
+            date = EthiopianDateConverter.to_ethiopian(date.year,date.month,date.day)
+            _logger.info("################# d: %s",date)
 
-            return date
+            return {'from': date, 'to': date}
         else:
-
+            
             models = mm[0]
-            search = self.env[models].search([('id', '=', id[0])])
+            search = self.env[models].search([('id','=',id[0])])
             if search.ethiopian_from != False and search.pagum_from == False:
+                _logger.info("################# T")
                 today = datetime.now()
-                today = EthiopianDateConverter.to_ethiopian(today.year, today.month, today.day)
+                today = EthiopianDateConverter.to_ethiopian(today.year,today.month,today.day)
                 return {'from': search.ethiopian_from, 'to': today}
             elif search.ethiopian_from == False and search.pagum_from != False:
+                _logger.info("#################  T pa")
                 date_from_str = str(search.pagum_from).split('/')
-                date_from = date_from_str[2] + '-' + date_from_str[0] + '-' + date_from_str[1]
+                date_from = date_from_str[2]+'-'+ date_from_str[0]+'-'+ date_from_str[1]
                 today = datetime.now()
-                today = EthiopianDateConverter.to_ethiopian(today.year, today.month, today.day)
+                today = EthiopianDateConverter.to_ethiopian(today.year,today.month,today.day)
                 return {'from': date_from, 'to': today}
             elif search.ethiopian_from == False and search.pagum_from == False:
+                _logger.info("#################  F")
                 today = datetime.now()
-                today = EthiopianDateConverter.to_ethiopian(today.year, today.month, today.day)
+                today = EthiopianDateConverter.to_ethiopian(today.year,today.month,today.day)
                 return {'from': today, 'to': today}
             else:
                 date = datetime.now()
-                date = EthiopianDateConverter.to_ethiopian(date.year, date.month, date.day)
+                date = EthiopianDateConverter.to_ethiopian(date.year,date.month,date.day)
+                _logger.info("################# d: %s",date)
 
                 return date
 
     @api.model
     def date_convert_and_set(self, picked_date):
+        print("date_convert_and_set")
+        dd = picked_date['url'].split('id=')
+        id = str(dd[1]).split('&')
         date_gr = EthiopianDateConverter.to_gregorian(picked_date['year'], picked_date['month'], picked_date['day'])
         date, time = str(datetime.now()).split(" ")
         dd, mm, yy = picked_date['day'], picked_date['month'], picked_date['year']
-        # date = str(date_et) + " " + str(f"{time}")
         date = EthiopianDateConverter.to_ethiopian(date_gr.year, date_gr.month, date_gr.day)
         date = {"data": f"d={picked_date['day']},m={picked_date['month']},y={picked_date['year']}", "date": date}
         data = {
-            'day': picked_date['day'],
-            'month': picked_date['month'],
-            'year': picked_date['year'],
-            'pick': picked_date['pick']
-        }
+                'day': picked_date['day'],
+                'month': picked_date['month'],
+                'year': picked_date['year'],
+                'pick': picked_date['pick']
+            }
+
         if picked_date['pick'] == 1:
             pick1.append(data)
         if picked_date['pick'] == 2:
@@ -277,6 +299,22 @@ class AccountMove(models.Model):
             pick3.append(data)
         if picked_date['pick'] == 4:
             pick3.append(data)
+
+        try:
+            rec = self.env['account.move'].search(
+                [('id', '=', id[0])], limit=1)
+            active_time_frame = self.env['reconciliation.time.fream'].search(
+                [('date_from', '<=', date_gr), ('date_to', '>=', date_gr)], limit=1)
+            print(" active_time_frame", active_time_frame)
+            if not active_time_frame.id:
+                raise ValidationError(_(
+                    'please set Time frame for the journal'))
+            else:
+                rec.write({'time_frame': active_time_frame.id,
+                           'fiscal_year': active_time_frame.fiscal_year.id,
+                           })
+        except:
+            pass
 
 
 class AccountMoveLine(models.Model):
@@ -316,9 +354,7 @@ class AccountMoveLine(models.Model):
 
     @api.model
     def default_get(self, fields):
-        print("default_get")
         self.time_frame = self.move_id.time_frame.id
-        print("this is move",self.move_id,"stock move id",self.stock_move_id)
         self.fiscal_year = self.move_id.fiscal_year.id
         # if self.fiscal_year and self.time_frame:
         #     date = self.date

@@ -4,15 +4,14 @@
 # 
 # Translators:
 # avinashnk94 <avinashnk94@gmail.com>, 2020
-# Niyas Raphy, 2023
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 13.0\n"
+"Planning-Id-Version: Odoo Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-27 09:21+0000\n"
 "PO-Revision-Date: 2019-08-26 09:13+0000\n"
-"Last-Translator: Niyas Raphy, 2023\n"
+"Last-Translator: avinashnk94 <avinashnk94@gmail.com>, 2020\n"
 "Language-Team: Malayalam (https://www.transifex.com/odoo/teams/41243/ml/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -411,7 +410,7 @@ msgstr ""
 
 #. module: project
 #: model:ir.model.fields.selection,name:project.selection__project_project__privacy_visibility__employees
-msgid "All internal users"
+msgid "All employees"
 msgstr ""
 
 #. module: project
@@ -893,23 +892,17 @@ msgstr ""
 #. module: project
 #: model:ir.model.fields,help:project.field_project_project__privacy_visibility
 msgid ""
-"People to whom this project and its tasks will be visible.\n"
-"\n"
-"- Invited internal users: when following a project, internal users will get access to all of its tasks without distinction. Otherwise, they will only get access to the specific tasks they are following.\n"
-" A user with the project > administrator access right level can still access this project and its tasks, even if they are not explicitly part of the followers.\n"
-"\n"
-"- All internal users: all internal users can access the project and all of its tasks without distinction.\n"
-"\n"
-"- Invited portal users and all internal users: all internal users can access the project and all of its tasks without distinction.\n"
-"When following a project, portal users will get access to all of its tasks without distinction. Otherwise, they will only get access to the specific tasks they are following.\n"
-"\n"
-"In any case, an internal user with no project access rights can still access a task, provided that they are given the corresponding URL (and that they are part of the followers if the project is private)."
+"Defines the visibility of the tasks of the project:\n"
+"- Invited employees: employees may only see the followed project and tasks.\n"
+"- All employees: employees may see all project and tasks.\n"
+"- Portal users and all employees: employees may see everything.   Portal users may see project and tasks followed by.\n"
+"   them or by someone of their company."
 msgstr ""
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.view_task_kanban
 msgid "Delete"
-msgstr "ഇല്ലാതാക്കുക"
+msgstr ""
 
 #. module: project
 #. openerp-web
@@ -955,7 +948,7 @@ msgstr ""
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.project_project_view_form_simplified_footer
 msgid "Discard"
-msgstr "നിരസിക്കുക"
+msgstr ""
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_project__display_name
@@ -1413,7 +1406,7 @@ msgstr ""
 
 #. module: project
 #: model:ir.model.fields.selection,name:project.selection__project_project__privacy_visibility__followers
-msgid "Invited internal users"
+msgid "Invited employees"
 msgstr ""
 
 #. module: project
@@ -1996,7 +1989,7 @@ msgstr "പോർട്ടൽ ആക്സസ് URL"
 
 #. module: project
 #: model:ir.model.fields.selection,name:project.selection__project_project__privacy_visibility__portal
-msgid "Invited portal users and all internal users"
+msgid "Portal users and all employees"
 msgstr ""
 
 #. module: project
@@ -2030,12 +2023,12 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:project.view_task_project_user_search
 #: model_terms:ir.ui.view,arch_db:project.view_task_search_form
 #, python-format
-msgid "Project"
+msgid "Planning"
 msgstr ""
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_account_analytic_account__project_count
-msgid "Project Count"
+msgid "Planning Count"
 msgstr ""
 
 #. module: project
@@ -2046,7 +2039,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:project.project_view_kanban
 #: model_terms:ir.ui.view,arch_db:project.view_project
 #: model_terms:ir.ui.view,arch_db:project.view_project_project_filter
-msgid "Project Manager"
+msgid "Planning Manager"
 msgstr ""
 
 #. module: project
@@ -2054,49 +2047,49 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:project.project_project_view_form_simplified
 #: model_terms:ir.ui.view,arch_db:project.project_view_kanban
 #: model_terms:ir.ui.view,arch_db:project.view_project
-msgid "Project Name"
+msgid "Planning Name"
 msgstr ""
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.rating_index
-msgid "Project Satisfaction"
+msgid "Planning Satisfaction"
 msgstr ""
 
 #. module: project
 #: model:ir.model,name:project.model_project_tags
-msgid "Project Tags"
+msgid "Planning Tags"
 msgstr ""
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.project_task_view_activity
 #: model_terms:ir.ui.view,arch_db:project.view_project_task_graph
 #: model_terms:ir.ui.view,arch_db:project.view_project_task_pivot
-msgid "Project Tasks"
+msgid "Planning Tasks"
 msgstr ""
 
 #. module: project
 #: model:ir.model.fields,help:project.field_project_project__subtask_project_id
 #: model:ir.model.fields,help:project.field_project_task__subtask_project_id
 msgid ""
-"Project in which sub-tasks of the current project will be created. It can be"
+"Planning in which sub-tasks of the current project will be created. It can be"
 " the current project itself."
 msgstr ""
 
 #. module: project
 #: model:ir.actions.act_window,name:project.dblc_proj
-msgid "Project's tasks"
+msgid "Planning's tasks"
 msgstr ""
 
 #. module: project
 #: model:ir.actions.server,name:project.ir_actions_server_project_sample
-msgid "Project: Activate Sample Project"
+msgid "Planning: Activate Sample Project"
 msgstr ""
 
 #. module: project
 #: model:ir.actions.server,name:project.ir_cron_rating_project_ir_actions_server
 #: model:ir.cron,cron_name:project.ir_cron_rating_project
 #: model:ir.cron,name:project.ir_cron_rating_project
-msgid "Project: Send rating"
+msgid "Planning: Send rating"
 msgstr ""
 
 #. module: project
@@ -2112,12 +2105,12 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:project.portal_my_projects
 #: model_terms:ir.ui.view,arch_db:project.rating_index
 #: model_terms:ir.ui.view,arch_db:project.view_project
-msgid "Projects"
+msgid "Plannings"
 msgstr ""
 
 #. module: project
 #: model:mail.channel,name:project.mail_channel_project_task
-msgid "Projects & Tasks"
+msgid "Plannings & Tasks"
 msgstr ""
 
 #. module: project

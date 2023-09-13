@@ -10,10 +10,7 @@
             <tree editable="bottom" create="false" duplicate="false">
                 <field name="partner_id" readonly="1"/>
                 <field name="wereda_id" readonly="1"/>
-                <field name="main_office_id" readonly="1"/>
-                <field name="cell_id" readonly="1"/>
-                <field name="cell_league_id" readonly="1"/>
-                <field name="assembly_presence" string="Presence"/>
+                <field name="assembly_presence" string="Presence" required="1"/>
             </tree>
         </field>
     </record>
@@ -45,7 +42,6 @@
                 <field name="year"/>
                 <field name="for_which_members" invisible="1"/>
                 <field name="cell_id"/>
-                <field name="cell_id_league" string="League Cell"/>
                 <field name="main_id"/>
                 <field name="date_of_meeting"/>
                 <field name="start_time" widget="float_time"/>
@@ -78,17 +74,16 @@
                     </h1>
                     <group>
                         <group>
-                            <field name="main_id" string="Main Office"/>
+                            <field name="main_id" string="Main Office" options="{'no_create': True, 'no_create_edit': True}"/>
                             <field name="for_which_members" invisible="1"/>
-                            <field name="cell_id" options="{'no_create': True, 'no_create_edit': True}" attrs="{'readonly': [('state', 'not in', ['new'])], 'invisible': [('for_which_members', '=', 'league')], 'required': [('for_which_members', '=', 'member')]}"/>
-                            <field name="cell_id_league" options="{'no_create': True, 'no_create_edit': True}" attrs="{'readonly': [('state', 'not in', ['new'])], 'invisible': [('for_which_members', '=', 'member')], 'required': [('for_which_members', '=', 'league')]}"/>
+                            <field name="cell_id" options="{'no_create': True, 'no_create_edit': True}" attrs="{'readonly': [('state', 'not in', ['new'])]}"/>
                             <field name="year" options="{'no_create': True, 'no_create_edit': True}" attrs="{'readonly': [('state', 'not in', ['new'])]}"/>
                             <field name="date_of_meeting" attrs="{'readonly': [('state', 'not in', ['new'])]}"/>
                             <field name="next_date_of_meeting" attrs="{'invisible': [('state', 'not in', ['started', 'finished'])], 'required': [('state', '=', 'started')]}"/>
                         </group>
                         <group>
                             <field name="x_css" force_save="1" nolabel="1" invisible="1"/>
-                            <field name="place_of_meeting" attrs="{'readonly': [('state', 'not in', ['new'])]}"/>
+                            <field name="place_of_meeting" attrs="{'readonly': [('state', 'not in', ['new'])]}" placeholder="Eg. Meeting Hall"/>
                             <label for="start_time" string="Start Time"/>
                             <div>
                                 <field name="start_time" widget="float_time" class="oe_inline" attrs="{'readonly': [('state', 'not in', ['new'])]}"/> till <field name="end_time" class="oe_inline" widget="float_time" attrs="{'readonly': [('state', 'not in', ['new'])]}"/>
@@ -99,8 +94,16 @@
                         <page string="Meeting Minute" attrs="{'invisible': [('state', 'in', ['new', 'pending', 'cancelled'])]}">
                             <field name="meeting_minute" widget="html" options="{'safe': True}"/>
                         </page>
+                        <page string="Notes"  attrs="{'invisible': [('state', '=', 'new')], 'readonly': [('state', '=', 'cancelled')]}">
+                            <field name="note_id"/>
+                        </page>
                     </notebook>
                 </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
             </form>
         </field>
     </record>
@@ -151,14 +154,14 @@
                     </h1>
                     <group>
                         <group>
-                            <field name="cell_id"/>
+                            <field name="cell_id" options="{'no_create': True, 'no_create_edit': True}"/>
                             <field name="year" options="{'no_create': True, 'no_create_edit': True}" attrs="{'readonly': [('state', 'not in', ['new'])]}"/>
                             <field name="date_of_meeting" attrs="{'readonly': [('state', 'not in', ['new'])]}"/>
                             <field name="next_date_of_meeting" attrs="{'invisible': [('state', 'not in', ['started', 'finished'])], 'required': [('state', '=', 'started')]}"/>
                         </group>
                         <group>
                             <field name="x_css" force_save="1" nolabel="1" invisible="1"/>
-                            <field name="place_of_meeting" attrs="{'readonly': [('state', 'not in', ['new'])]}"/>
+                            <field name="place_of_meeting" attrs="{'readonly': [('state', 'not in', ['new'])]}" placeholder="Eg. Meeting Hall"/>
                             <label for="start_time" string="Start Time"/>
                             <div>
                                 <field name="start_time" widget="float_time" class="oe_inline" attrs="{'readonly': [('state', 'not in', ['new'])]}"/> till <field name="end_time" widget="float_time" class="oe_inline" attrs="{'readonly': [('state', 'not in', ['new'])]}"/>
@@ -169,8 +172,16 @@
                         <page string="Meeting Minute" attrs="{'invisible': [('state', 'in', ['new', 'pending', 'cancelled'])]}">
                             <field name="meeting_minute" widget="html" options="{'safe': True}"/>
                         </page>
+                        <page string="Notes"  attrs="{'invisible': [('state', '=', 'new')], 'readonly': [('state', '=', 'cancelled')]}">
+                            <field name="note_id"/>
+                        </page>
                     </notebook>
                 </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
             </form>
         </field>
     </record>
@@ -231,14 +242,14 @@
                     </h1>
                     <group>
                         <group>
-                            <field name="main_id" string="Main Office"/>
+                            <field name="main_id" string="Main Office" options="{'no_create': True, 'no_create_edit': True}"/>
                             <field name="year" options="{'no_create': True, 'no_create_edit': True}" attrs="{'readonly': [('state', 'not in', ['new'])]}"/>
                             <field name="date_of_meeting" attrs="{'readonly': [('state', 'not in', ['new'])]}"/>
                             <field name="next_date_of_meeting" attrs="{'invisible': [('state', 'not in', ['started', 'finished'])], 'required': [('state', '=', 'started')]}"/>
                         </group>
                         <group>
                             <field name="x_css" force_save="1" nolabel="1" invisible="1"/>
-                            <field name="place_of_meeting" attrs="{'readonly': [('state', 'not in', ['new'])]}"/>
+                            <field name="place_of_meeting" attrs="{'readonly': [('state', 'not in', ['new'])]}" placeholder="Eg. Meeting Hall"/>
                             <label for="start_time" string="Start Time"/>
                             <div>
                                 <field name="start_time" widget="float_time" class="oe_inline" attrs="{'readonly': [('state', 'not in', ['new'])]}"/> till <field name="end_time" widget="float_time" class="oe_inline" attrs="{'readonly': [('state', 'not in', ['new'])]}"/>
@@ -249,8 +260,16 @@
                         <page string="Meeting Minute" attrs="{'invisible': [('state', 'in', ['new', 'pending', 'cancelled'])]}">
                             <field name="meeting_minute" widget="html" options="{'safe': True}"/>
                         </page>
+                        <page string="Notes"  attrs="{'invisible': [('state', '=', 'new')], 'readonly': [('state', '=', 'cancelled')]}">
+                            <field name="note_id"/>
+                        </page>
                     </notebook>
                 </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
             </form>
         </field>
     </record>
@@ -278,15 +297,15 @@
     </record>
 
     <record id="member_cell_action_search" model="ir.ui.view">
-        <field name="name">Member's Cell</field>
+        <field name="name">Cell Configuration</field>
         <field name="model">member.cells</field>
         <field name="arch" type="xml">
             <search string="Member's Cell">
+                <field name="name"/>
                 <group expand="0" string="Group By" colspan="10" col="8">
                     <filter string="Members" name="members" context="{'group_by': 'for_which_members'}"/>
                     <filter string="Member Organization" name="member_org" context="{'group_by': 'member_cell_type_id'}"/>
-                    <filter string="League Organization" name="league_org" context="{'group_by': 'league_cell_type_id'}"/>
-                    <filter string="Main Office" name="office" context="{'group_by': 'main_office'}"/>
+                    <filter string="Basic Organization" name="office" context="{'group_by': 'main_office'}"/>
                     <filter string="Woreda" name="woreda" context="{'group_by': 'wereda_id'}"/>
                     <filter string="Subcity" name="subcity" context="{'group_by': 'subcity_id'}"/>
                 </group>
@@ -295,50 +314,54 @@
     </record>
 
    <record id="member_cell_action" model="ir.actions.act_window">
-       <field name="name">Member's Cell</field>
+       <field name="name">Cell Configuration</field>
        <field name="res_model">member.cells</field>
        <field name="view_mode">tree,form,pivot,graph</field>
        <field name="search_view_id" ref="member_cell_action_search"/>
-       <field name="domain">['|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|',
+       <field name="domain">[]</field>
+       <field name="domain">['|', '|', '|', '|', '|', '|', '|', '|', '|', '|',
                             ('cell_admin', '=', uid),
                             ('cell_assembler', '=', uid),
                             ('cell_finance', '=', uid),
                             ('main_office.main_assembler', '=', uid),
-                            ('main_office_league.main_assembler', '=', uid),
                             ('main_office.main_admin', '=', uid),
-                            ('main_office_league.main_admin', '=', uid),
                             ('main_office.main_finance', '=', uid),
-                            ('main_office_league.main_finance', '=', uid),
                             ('wereda_id.branch_manager', '=', uid),
                             ('subcity_id.parent_manager', '=', uid),
                             ('subcity_id.city_id.city_manager', 'in', [uid]),
                             ('subcity_id.city_id.transfer_handler', '=', uid),
-                            ('subcity_id.city_id.responsible_id.system_admin', '=', uid)]</field>
+                            ('subcity_id.city_id.responsible_id.system_admin', 'in', [uid])]</field>
+         <field name="context">{'search_default_office': 1}</field>
    </record>
 
    <record id="member_cell_tree" model="ir.ui.view">
-       <field name="name">Member's Cell</field>
+       <field name="name">Cell Configuration</field>
        <field name="model">member.cells</field>
        <field name="arch" type="xml">
            <tree>
-                <field name="user_id" invisible="1"/>
-                <field name="for_which_members" invisible="1"/>
-                <field name="member_cell_type_id"/>
-                <field name="league_cell_type_id"/>
                 <field name="name"/>
-                <field name="main_office" string="Member Main Office"/>
-                <field name="main_office_league" string="League Main Office"/>
+                <field name="user_id" invisible="1"/>
+                <field name="for_which_members"/>
+                <field name="member_cell_type_id"/>
+                <field name="main_office" string="Main Office"/>
                 <field name="subcity_id"/>
                 <field name="wereda_id"/>
+                <field name="state"/>
            </tree>
        </field>
    </record>
 
    <record id="member_cell_form" model="ir.ui.view">
-       <field name="name">Member's Cell</field>
+       <field name="name">Cell Configuration Form</field>
        <field name="model">member.cells</field>
        <field name="arch" type="xml">
            <form duplicate="false">
+                <header>
+                    <field name="activate_cell" invisible="1"/>
+                    <field name="total" force_save="1" invisible="1"/>
+                    <button name="activate_cell_now" string="Activate" type="object" confirm="Are you sure you want to Activate the Cell?" class="btn btn-success" attrs="{'invisible': ['|', ('state', '=', 'active'), ('activate_cell', '=', False)]}" groups="members_custom.member_group_cell_manager"/>
+                    <field name="state" widget="statusbar"/>
+                </header>
                 <sheet>
                     <div class="oe_button_box" name="button_box">
                         <button class="oe_stat_button" name="%(meeting_eachother_action_cell)d" type="action" icon="fa-users">
@@ -346,24 +369,25 @@
                         </button>
                     </div>
                     <h1>
-                    <field name="name"/>
+                    <field name="name" placeholder="Eg. Selam Cell"/>
                     </h1>
                     <div>
                         <group col="3">
                             <group>
                                 <field name="members" invisible="1"/>
                                 <field name="user_id" invisible="1"/>
+                                <field name="duplicate" invisible="1"/>
+                                <field name="cell_id"/>
                                 <field name="subcity_id" attrs="{'readonly': [('members', '=', True)]}" force_save="1" options="{'no_create': True, 'no_create_edit': True}"/>
                                 <field name="wereda_id" attrs="{'readonly': [('members', '=', True)]}" force_save="1" options="{'no_create': True, 'no_create_edit': True}"/>
                                 <field name="total_membership_fee" widget="monetary"   readonly="1"/>
-                                <field name="is_mixed"/>
+                                <field name="is_mixed" force_save="1" attrs="{'readonly': [('members', '=', True)]}"/>
                             </group>
                             <group>
                                 <field name="for_which_members" attrs="{'readonly': [('members', '=', True)]}" force_save="1"/>
-                                <field name="member_cell_type_id" options="{'no_create': True, 'no_create_edit': True}" attrs="{'invisible': ['|', ('is_mixed', '=', True), ('for_which_members', '=', 'league')], 'required': ['&amp;', ('is_mixed', '=', False), ('for_which_members', '=', 'member')], 'readonly': [('members', '=', True)]}" force_save="1"/>
-                                <field name="league_cell_type_id" attrs="{'invisible': ['|', ('is_mixed', '=', True), ('for_which_members', '=', 'member')], 'required': ['&amp;', ('is_mixed', '=', False), ('for_which_members', '=', 'league')], 'readonly': [('members', '=', True)]}" force_save="1"/>
-                                <field name="main_office" options="{'no_create': True, 'no_create_edit': True}" string="Member Main Office" attrs="{'invisible': [('for_which_members', '=', 'league')], 'required': [('for_which_members', '=', 'member')]}" force_save="1"/>
-                                <field name="main_office_league" options="{'no_create': True, 'no_create_edit': True}" string="League Main Office" attrs="{'invisible': [('for_which_members', '=', 'member')], 'required': [('for_which_members', '=', 'league')]}" force_save="1"/>
+                                <field name="member_cell_type_id" options="{'no_create': True, 'no_create_edit': True}" attrs="{'invisible': [('is_mixed', '=', True)], 'required': [('is_mixed', '=', False)], 'readonly': [('members', '=', True)]}" force_save="1"/>
+                                <field name="main_office" options="{'no_create': True, 'no_create_edit': True}" string="Main Office" force_save="1" attrs="{'invisible': [('is_mixed', '=', True)], 'required': [('is_mixed', '=', False)]}"/>
+                                <field name="main_office_mixed" options="{'no_create': True, 'no_create_edit': True}" string="Main Office" force_save="1" attrs="{'invisible': [('is_mixed', '=', False)], 'required': [('is_mixed', '=', True)]}"/>
                             </group>
                             <group>
                                 <field name="cell_admin" force_save="1"/>
@@ -373,8 +397,8 @@
                         </group>
                     </div>
                     <notebook>
-                        <page string="Members" name="members_ids" attrs="{'invisible': [('for_which_members', '=', 'league')]}">
-                            <field name="members_ids" context="{'form_view_ref': 'members_custom.membership_view_partner_form'}" options="{'no_create_edit': True}" force_save="1">
+                        <page string="Mixed Members" name="members_ids_mixed" attrs="{'invisible': ['|', ('is_mixed', '=', False), ('for_which_members', '=', 'league')]}">
+                            <field name="members_ids_mixed" context="{'form_view_ref': 'members_custom.membership_view_partner_form'}" options="{'no_create': True, 'no_create_edit': True}" force_save="1">
                                 <tree>
                                     <field name="name"/>
                                     <field name="phone"/>
@@ -385,8 +409,8 @@
                                 <field name="total_member_fee" widget="monetary" force_save="1" readonly="1"/>
                             </group>
                         </page>
-                            <page string="Leaders" name="leaders_ids" attrs="{'invisible': [('for_which_members', '=', 'league')]}">
-                            <field name="leaders_ids" context="{'form_view_ref': 'members_custom.membership_view_partner_form'}" options="{'no_create_edit': True}" force_save="1">
+                            <page string="Mixed Leaders" name="leaders_ids_mixed" attrs="{'invisible': ['|', ('is_mixed', '=', False), ('for_which_members', '=', 'league')]}">
+                            <field name="leaders_ids_mixed" context="{'form_view_ref': 'members_custom.membership_view_partner_form'}" options="{'no_create': True, 'no_create_edit': True}" force_save="1">
                                 <tree>
                                     <field name="name"/>
                                     <field name="phone"/>
@@ -397,8 +421,8 @@
                                 <field name="total_leader_fee" widget="monetary" force_save="1" readonly="1"/>
                             </group>
                         </page>
-                        <page string="Leagues" name="leagues_ids" attrs="{'invisible': [('for_which_members', '=', 'member')]}">
-                            <field name="leagues_ids" context="{'form_view_ref': 'members_custom.membership_view_partner_form'}" options="{'no_create_edit': True}" force_save="1">
+                        <page string="Mixed Leagues" name="leagues_ids_mixed" attrs="{'invisible': ['|', ('is_mixed', '=', False), ('for_which_members', '=', 'member')]}">
+                            <field name="leagues_ids_mixed" context="{'form_view_ref': 'members_custom.membership_view_partner_form'}" options="{'no_create': True, 'no_create_edit': True}" force_save="1">
                                 <tree>
                                     <field name="name"/>
                                     <field name="phone"/>
@@ -409,8 +433,8 @@
                                 <field name="total_league_fee" widget="monetary" force_save="1" readonly="1"/>
                             </group>
                         </page>
-                        <page string="League Leaders" name="league_leaders_ids" attrs="{'invisible': [('for_which_members', '=', 'member')]}">
-                            <field name="league_leaders_ids" context="{'form_view_ref': 'members_custom.membership_view_partner_form'}" options="{'no_create_edit': True}" force_save="1">
+                        <page string="Mixed League Leaders" name="league_leaders_ids_mixed" attrs="{'invisible': ['|', ('is_mixed', '=', False), ('for_which_members', '=', 'member')]}">
+                            <field name="league_leaders_ids_mixed" context="{'form_view_ref': 'members_custom.membership_view_partner_form'}" options="{'no_create': True, 'no_create_edit': True}" force_save="1">
                                 <tree>
                                     <field name="name"/>
                                     <field name="phone"/>
@@ -419,6 +443,77 @@
                             </field>
                             <group class="oe_subtotal_footer oe_right">
                                 <field name="total_leader_league_fee" widget="monetary" force_save="1" readonly="1"/>
+                            </group>
+                        </page>
+
+                        <page string="Members" name="members_ids" attrs="{'invisible': ['|', ('is_mixed', '=', True), ('for_which_members', '=', 'league')]}">
+                            <field name="members_ids" context="{'form_view_ref': 'members_custom.membership_view_partner_form'}" options="{'no_create': True, 'no_create_edit': True}" force_save="1">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="phone"/>
+                                    <field name="email_address"/>
+                                </tree>
+                            </field>
+                            <group class="oe_subtotal_footer oe_right">
+                                <field name="total_member_fee" widget="monetary" force_save="1" readonly="1"/>
+                            </group>
+                        </page>
+                            <page string="Leaders" name="leaders_ids" attrs="{'invisible': ['|', ('is_mixed', '=', True), ('for_which_members', '=', 'league')]}">
+                            <field name="leaders_ids" context="{'form_view_ref': 'members_custom.membership_view_partner_form'}" options="{'no_create': True, 'no_create_edit': True}" force_save="1">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="phone"/>
+                                    <field name="email_address"/>
+                                </tree>
+                            </field>
+                            <group class="oe_subtotal_footer oe_right">
+                                <field name="total_leader_fee" widget="monetary" force_save="1" readonly="1"/>
+                            </group>
+                        </page>
+                        <page string="Leagues" name="leagues_ids" attrs="{'invisible': ['|', ('is_mixed', '=', True), ('for_which_members', '=', 'member')]}">
+                            <field name="leagues_ids" context="{'form_view_ref': 'members_custom.membership_view_partner_form'}" options="{'no_create': True, 'no_create_edit': True}" force_save="1">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="phone"/>
+                                    <field name="email_address"/>
+                                </tree>
+                            </field>
+                            <group class="oe_subtotal_footer oe_right">
+                                <field name="total_league_fee" widget="monetary" force_save="1" readonly="1"/>
+                            </group>
+                        </page>
+                        <page string="League Leaders" name="league_leaders_ids" attrs="{'invisible': ['|', ('is_mixed', '=', True), ('for_which_members', '=', 'member')]}">
+                            <field name="league_leaders_ids" context="{'form_view_ref': 'members_custom.membership_view_partner_form'}" options="{'no_create': True, 'no_create_edit': True}" force_save="1">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="phone"/>
+                                    <field name="email_address"/>
+                                </tree>
+                            </field>
+                            <group class="oe_subtotal_footer oe_right">
+                                <field name="total_leader_league_fee" widget="monetary" force_save="1" readonly="1"/>
+                            </group>
+                        </page>
+                        <page string="Supporters" name="supporter_ids">
+                            <field name="supporter_ids">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="phone"/>
+                                </tree>
+                            </field>
+                            <group class="oe_subtotal_footer oe_right">
+                                <field name="total_supporters" force_save="1" readonly="1"/>
+                            </group>
+                        </page>
+                        <page string="Candidates" name="candidate_ids">
+                            <field name="candidate_ids">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="phone"/>
+                                </tree>
+                            </field>
+                            <group class="oe_subtotal_footer oe_right">
+                                <field name="total_candidates" force_save="1" readonly="1"/>
                             </group>
                         </page>
                     </notebook>
@@ -470,14 +565,15 @@
 
 
     <record id="main_office_action_search" model="ir.ui.view">
-        <field name="name">Members' Main Office</field>
+        <field name="name">Basic Organization Configuration</field>
         <field name="model">main.office</field>
         <field name="arch" type="xml">
             <search string="Members' Main Office">
+                <field name="name"/>
                 <group expand="0" string="Group By" colspan="10" col="8">
                     <filter string="Members" name="members" context="{'group_by': 'for_which_members'}"/>
-                    <filter string="Member Organization" name="member_org" context="{'group_by': 'member_main_type_id'}"/>
-                    <filter string="League Organization" name="league_org" context="{'group_by': 'league_main_type_id'}"/>
+                    <filter string="Organization" name="member_org" context="{'group_by': 'member_main_type_id'}"/>
+                    <!-- <filter string="League Organization" name="league_org" context="{'group_by': 'league_main_type_id'}"/> -->
                     <filter string="Woreda" name="woreda" context="{'group_by': 'wereda_id'}"/>
                     <filter string="Subcity" name="subcity" context="{'group_by': 'subcity_id'}"/>
                 </group>
@@ -486,7 +582,7 @@
     </record>
 
    <record id="member_office_action" model="ir.actions.act_window">
-       <field name="name">Member's Main Office</field>
+       <field name="name">Basic Organization Configuration</field>
        <field name="res_model">main.office</field>
        <field name="view_mode">tree,form,pivot,graph</field>
        <field name="search_view_id" ref="main_office_action_search"/>
@@ -498,29 +594,30 @@
                             ('subcity_id.parent_manager.id', '=', uid),
                             ('subcity_id.city_id.city_manager', 'in', [uid]),
                             ('subcity_id.city_id.transfer_handler', '=', uid),
-                            ('subcity_id.city_id.responsible_id.system_admin', '=', uid)]</field>
+                            ('subcity_id.city_id.responsible_id.system_admin', 'in', [uid])]</field>
+        <field name="context">{'search_default_woreda': 1}</field>
    </record>
 
    <record id="member_office_tree" model="ir.ui.view">
-       <field name="name">Member's Main Office</field>
+       <field name="name">Basic Organization Configuration</field>
        <field name="model">main.office</field>
        <field name="arch" type="xml">
            <tree>
                 <field name="user_id" invisible="1"/>
-                <field name="for_which_members" invisible="1"/>
+                <field name="for_which_members"/>
                 <field name="name"/>
                 <field name="member_main_type_id"/>
-                <field name="league_main_type_id"/>
+                <!-- <field name="league_main_type_id"/> -->
                 <field name="subcity_id"/>
                 <field name="wereda_id"/>
                 <field name="total_cell"/>
-                <field name="total_cell_league"/>
+                <!-- <field name="total_cell_league"/> -->
            </tree>
        </field>
    </record>
 
    <record id="member_office_form" model="ir.ui.view">
-       <field name="name">Member's Office</field>
+       <field name="name">Basic Organization Configuration Form</field>
        <field name="model">main.office</field>
        <field name="arch" type="xml">
            <form duplicate="false">
@@ -534,22 +631,26 @@
                         </button>
                     </div>
                     <h1>
-                        <field name="name"/>
+                        <field name="name" placeholder="Eg. Medemer Main Office"/>
                     </h1>
                     <group col="3">
                         <group>
                             <field name="cells" invisible="1"/>
                             <field name="user_id" invisible="1"/>
+                            <field name="duplicate" invisible="1"/>
+                            <field name="main_office_id"/>
                             <field name="subcity_id" force_save="1" attrs="{'readonly': [('cells', '=', True)]}" options="{'no_create': True, 'no_create_edit': True}"/>
                             <field name="wereda_id" force_save="1" attrs="{'readonly': [('cells', '=', True)]}" options="{'no_create': True, 'no_create_edit': True}"/>
                             <field name="for_which_members" attrs="{'readonly': [('cells', '=', True)]}"/>
-                            <field name="member_main_type_id" options="{'no_create': True, 'no_create_edit': True}" attrs="{'invisible': [('for_which_members', '=', 'league')], 'required': [('for_which_members', '=', 'member')], 'readonly': [('cells', '=', True)]}"/>
-                            <field name="league_main_type_id" attrs="{'invisible': [('for_which_members', '=', 'member')], 'required': [('for_which_members', '=', 'league')], 'readonly': [('cells', '=', True)]}"/>                        
+                            <field name="member_main_type_id" options="{'no_create': True, 'no_create_edit': True}" attrs="{'readonly': [('cells', '=', True)]}"/>
+                            <!-- <field name="league_main_type_id" attrs="{'invisible': [('for_which_members', '=', 'member')], 'required': [('for_which_members', '=', 'league')], 'readonly': [('cells', '=', True)]}"/>                         -->
                         </group>
                         <group>
-                            <field name="total_cell_league" force_save="1" attrs="{'invisible': [('for_which_members', '=', 'member')]}"/>
-                            <field name="total_cell" force_save="1" attrs="{'invisible': [('for_which_members', '=', 'league')]}"/>
+                            <!-- <field name="total_cell_league" force_save="1" attrs="{'invisible': [('for_which_members', '=', 'member')]}"/> -->
+                            <field name="total_cell" force_save="1"/>
                             <field name="total_league" invisible="1"/>
+                            <field name="total_supporters" force_save="1"/>
+                            <field name="total_candidates" force_save="1"/>
                             <field name="total_leagues" force_save="1" attrs="{'invisible': [('for_which_members', '=', 'member')]}"/>
                             <field name="total_member" invisible="1"/>
                             <field name="total_members" force_save="1" attrs="{'invisible': [('for_which_members', '=', 'league')]}"/>
@@ -565,28 +666,30 @@
                         </group>
                     </group>
                     <notebook>
-                        <page string="Cells" name="cell_ids" attrs="{'invisible': [('for_which_members', '=', 'league')]}">
+                        <page string="Cells" name="cell_ids">
                             <field name="cell_ids">
                                 <tree>
                                     <field name="member_cell_type_id"/>
                                     <field name="name"/>
-                                    <field name="main_office" string="Member Main Office"/>
+                                    <field name="main_office" string="Main Office"/>
                                     <field name="subcity_id"/>
                                     <field name="wereda_id"/>
                                 </tree>
                             </field>
                         </page>
-                        <page string="League Cells" name="league_cell_ids" attrs="{'invisible': [('for_which_members', '=', 'member')]}">
+                        <!-- <page string="League Cells" name="league_cell_ids" attrs="{'invisible': [('for_which_members', '=', 'member')]}">
                             <field name="league_cell_ids">
                                 <tree>
                                     <field name="league_cell_type_id"/>
+                                    <field name="member_cell_type_id"/>
                                     <field name="name"/>
+                                    <field name="main_office" string="Main Office"/>
                                     <field name="main_office_league" string="League Main Office"/>
                                     <field name="subcity_id"/>
                                     <field name="wereda_id"/>
                                 </tree>
                             </field>
-                        </page>
+                        </page> -->
                         <page string="Leaders" name="leader_ids" attrs="{'invisible': [('for_which_members', '=', 'league')]}">
                             <field name="leader_ids" context="{'form_view_ref': 'members_custom.membership_view_partner_form'}" options="{'no_create_edit': True}">
                                 <tree>
@@ -611,19 +714,19 @@
    </record>
  
 
-   <menuitem name="Member Main Office"
+   <menuitem name="Basic Organization Configuration"
             id="member_office_menu"
             parent="membership_handlers_menu"
             action="member_office_action"
-            groups="members_custom.member_group_main_manager,members_custom.member_group_main_assembler,members_custom.member_group_main_finance"
-            sequence="5"/>
+            groups="members_custom.member_group_city_transfer_handler,members_custom.member_group_main_manager,members_custom.member_group_main_assembler,members_custom.member_group_main_finance"
+            sequence="4"/>
 
-   <menuitem name="Member Cells"
+   <menuitem name="Cell Configuration"
             id="member_cell_menu"
             parent="membership_handlers_menu"
             action="member_cell_action"
-            groups="members_custom.member_group_cell_manager,members_custom.member_group_assembler,members_custom.member_group_finance"
-            sequence="6"/>
+            groups="members_custom.member_group_city_transfer_handler,members_custom.member_group_cell_manager,members_custom.member_group_assembler,members_custom.member_group_finance"
+            sequence="5"/>
 
     <menuitem id="fee_reports"
             name="Members Total and Fee Report"

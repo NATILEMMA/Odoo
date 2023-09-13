@@ -63,11 +63,12 @@ var BoardController = FormController.extend({
         return this._rpc({
                 route: '/web/view/edit_custom',
                 params: {
-                    custom_id: this.customViewID,
+                    custom_id: this.customViewID ? this.customViewID : "",
                     arch: arch,
                 }
             }).then(dataManager.invalidate.bind(dataManager));
     },
+
 
     //--------------------------------------------------------------------------
     // Handlers
@@ -246,7 +247,7 @@ var BoardRenderer = FormRenderer.extend({
                     // the action does not exist anymore
                     return Promise.resolve();
                 }
-                var evalContext = new Context(session.user_context, params.context).eval();
+                var evalContext = new Context(params.context).eval();
                 if (evalContext.group_by && evalContext.group_by.length === 0) {
                     delete evalContext.group_by;
                 }

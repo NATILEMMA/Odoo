@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 13.0-20221005\n"
+"Project-Id-Version: Odoo Server 13.0-20220525\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-22 07:18+0000\n"
-"PO-Revision-Date: 2023-05-22 07:18+0000\n"
+"POT-Creation-Date: 2023-08-19 09:14+0000\n"
+"PO-Revision-Date: 2023-08-19 09:14+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -463,31 +463,13 @@ msgid "Appointment Denied"
 msgstr "ቀጠሮ ተከልክሏል"
 
 #. module: s2u_online_appointment
-#: model_terms:ir.ui.view,arch_db:s2u_online_appointment.appointment_option_form_view
-msgid "Appointment Option"
-msgstr "የቀጠሮ አማራጭ"
-
-#. module: s2u_online_appointment
-#: model:ir.actions.act_window,name:s2u_online_appointment.appointment_option_action
-#: model:ir.ui.menu,name:s2u_online_appointment.menu_appointment_option
-msgid "Appointment Options"
-msgstr "የቀጠሮ አማራጮች"
-
-#. module: s2u_online_appointment
 #: model:ir.model,name:s2u_online_appointment.model_s2u_appointment_registration
 msgid "Appointment Registration"
 msgstr "የቀጠሮ ምዝገባ"
 
 #. module: s2u_online_appointment
 #: model:ir.model,name:s2u_online_appointment.model_s2u_appointment_slot
-#: model_terms:ir.ui.view,arch_db:s2u_online_appointment.appointment_slot_form_view
 msgid "Appointment Slot"
-msgstr "የቀጠሮ ጊዜ ገደብ"
-
-#. module: s2u_online_appointment
-#: model:ir.actions.act_window,name:s2u_online_appointment.appointment_slot_action
-#: model:ir.ui.menu,name:s2u_online_appointment.menu_appointment_slot
-msgid "Appointment Slots"
 msgstr "የቀጠሮ ጊዜ ገደብ"
 
 #. module: s2u_online_appointment
@@ -504,24 +486,9 @@ msgid "Appointment option"
 msgstr "የቀጠሮ አማራጭ"
 
 #. module: s2u_online_appointment
-#: model_terms:ir.ui.view,arch_db:s2u_online_appointment.appointment_option_tree_view
-msgid "Appointment options"
-msgstr "የቀጠሮ አማራጮች"
-
-#. module: s2u_online_appointment
-#: model_terms:ir.ui.view,arch_db:s2u_online_appointment.appointment_slot_form_view
-msgid "Are You Sure You Want To Make More Slots"
-msgstr "እርግጠኛ ነዎት ተጨማሪ ጊዜ ገደብ መስራት ይፈልጋሉ"
-
-#. module: s2u_online_appointment
 #: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_registration__message_attachment_count
 msgid "Attachment Count"
 msgstr "ተያያዥ ብዛት"
-
-#. module: s2u_online_appointment
-#: model:ir.model,name:s2u_online_appointment.model_calendar_event
-msgid "Calendar Event"
-msgstr "የቀን መቁጠሪያ ክስተት"
 
 #. module: s2u_online_appointment
 #: model_terms:ir.ui.view,arch_db:s2u_online_appointment.make_more_slot_form
@@ -598,7 +565,6 @@ msgstr "ቀን ↓"
 #. module: s2u_online_appointment
 #: model:ir.model.fields,field_description:s2u_online_appointment.field_make_more_slot__day
 #: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_slot__day
-#: model_terms:ir.ui.view,arch_db:s2u_online_appointment.appointment_slot_search
 msgid "Day"
 msgstr "ቀን"
 
@@ -755,11 +721,6 @@ msgid "Main Attachment"
 msgstr "ዋና ተያያዥ"
 
 #. module: s2u_online_appointment
-#: model_terms:ir.ui.view,arch_db:s2u_online_appointment.appointment_slot_form_view
-msgid "Make More Slots"
-msgstr "ተጨማሪ የጊዜ ገደብ አስገባ"
-
-#. module: s2u_online_appointment
 #: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_registration__meeting_minute
 msgid "Meeting Minute"
 msgstr "አጀንዳ"
@@ -852,6 +813,18 @@ msgstr "እባክህን ትክክለኛ ኢሜል አስገባ"
 #. module: s2u_online_appointment
 #: code:addons/s2u_online_appointment/controllers/main.py:0
 #, python-format
+msgid "Please enter your City address."
+msgstr "እባክዎ የከተማዎን አድራሻ ያስገቡ።"
+
+#. module: s2u_online_appointment
+#: code:addons/s2u_online_appointment/controllers/main.py:0
+#, python-format
+msgid "Please enter your Sub City address."
+msgstr "እባክዎን የክፍለ ከተማ አድራሻዎን ያስገቡ"
+
+#. module: s2u_online_appointment
+#: code:addons/s2u_online_appointment/controllers/main.py:0
+#, python-format
 msgid "Please enter your email address."
 msgstr "እባክህን ኢሜል አስገባ"
 
@@ -938,11 +911,6 @@ msgid "Slot is already occupied, please choose another slot."
 msgstr "የጊዜ ገደብ አስቀድሞ ተይዟል, እባክዎ ሌላ ይምረጡ::"
 
 #. module: s2u_online_appointment
-#: model_terms:ir.ui.view,arch_db:s2u_online_appointment.appointment_slot_tree_view
-msgid "Slots"
-msgstr "የጊዜ ገደቦች"
-
-#. module: s2u_online_appointment
 #: model:ir.model.fields,help:s2u_online_appointment.field_s2u_appointment_registration__appointment_begin
 msgid "Start date of an event, without time for full days events"
 msgstr "የዝግጅቱ መጀመሪያ ቀን፣ ለሙሉ ቀናት ዝግጅቶች ጊዜ ሳይሰጥ"
@@ -976,6 +944,11 @@ msgstr "የአንድ ክስተት ማቆሚያ ቀን፣ ለሙሉ ቀናት ዝ
 #, python-format
 msgid "Sunday"
 msgstr "እሁድ"
+
+#. module: s2u_online_appointment
+#: model:website.menu,name:s2u_online_appointment.registration_menu
+msgid "Supporter Registation Form"
+msgstr "የደጋፊዎች ምዝገባ ቅጽ"
 
 #. module: s2u_online_appointment
 #: code:addons/s2u_online_appointment/models/appointment_option.py:0
@@ -1042,7 +1015,6 @@ msgstr "ያልተነበቡ መልዕክቶች ቆጣሪ"
 #. module: s2u_online_appointment
 #: model:ir.model.fields,field_description:s2u_online_appointment.field_make_more_slot__user_id
 #: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_slot__user_id
-#: model_terms:ir.ui.view,arch_db:s2u_online_appointment.appointment_slot_search
 msgid "User"
 msgstr "ተጠቃሚ"
 
@@ -1050,11 +1022,6 @@ msgstr "ተጠቃሚ"
 #: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_option__user_specific
 msgid "User specific"
 msgstr "ልዩ ተጠቃሚ"
-
-#. module: s2u_online_appointment
-#: model:ir.model,name:s2u_online_appointment.model_res_users
-msgid "Users"
-msgstr "ተጠቃሚዎች"
 
 #. module: s2u_online_appointment
 #: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_option__users_allowed
@@ -1079,6 +1046,7 @@ msgid "Wednesday"
 msgstr "እሮብ"
 
 #. module: s2u_online_appointment
-#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_slot__x_css
-msgid "X Css"
-msgstr ""
+#: code:addons/s2u_online_appointment/models/appointment_option.py:0
+#, python-format
+msgid "You Can't Have A Digit in Appointment Option"
+msgstr "በቀጠሮ ምርጫ ውስጥ አሃዝ ሊኖርዎት አይችልም።"

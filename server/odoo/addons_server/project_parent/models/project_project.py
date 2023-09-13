@@ -20,6 +20,7 @@ class Project(models.Model):
     is_parent = fields.Boolean(compute="_compute_child", store=True)
 
     child_ids_count = fields.Integer(compute="_compute_child_ids_count", store=True)
+
     
     @api.onchange('department_id')
     def _onchange_department(self):

@@ -376,7 +376,7 @@ class ProcurementGroup(models.Model):
     name = fields.Char(
         'Reference',
         default=lambda self: self.env['ir.sequence'].next_by_code('procurement.group') or '',
-        required=True)
+        required=True, translate=True)
     move_type = fields.Selection([
         ('direct', 'Partial'),
         ('one', 'All at once')], string='Delivery Type', default='direct',

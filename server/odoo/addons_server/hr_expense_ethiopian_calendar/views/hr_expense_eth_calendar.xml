@@ -1,0 +1,177 @@
+<?xml version="1.0"?>
+<odoo>
+
+        <record id="view_expenses_tree_inherited_view" model="ir.ui.view">
+            <field name="name">hr.expense.tree</field>
+            <field name="model">hr.expense</field>
+            <field name="inherit_id" ref="hr_expense.view_expenses_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date']" position="replace">
+                    <field name="is_pagum_from" invisible="1"/>
+                    <field  name="date" groups="EthiopianCalendar.group_gregory"/>
+                    <field  name="ethiopian_from" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="hr_expense_view_form_inherited_view" model="ir.ui.view">
+            <field name="name">hr.expense.view.form</field>
+            <field name="model">hr.expense</field>
+            <field name="inherit_id" ref="hr_expense.hr_expense_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date']" position="replace">
+                    <field name="is_pagum_from" invisible="1"/>
+                    <field  name="date" groups="EthiopianCalendar.group_gregory"/>
+                    <field  name="ethiopian_from" attrs="{'invisible': ['|', ('is_pagum_from', '=',False)]}"  groups="EthiopianCalendar.group_ethio_datepicker" force_save="1" class="oe_read_only"/>
+                    <field  name="pagum_from" attrs="{'invisible': ['|',('is_pagum_from', '!=',False)  ]}"  groups="EthiopianCalendar.group_ethio_datepicker" force_save="1" class="oe_read_only"/>
+                        <div>
+                        </div>
+                    <div style="margin-bottom:40px;margin-top:-15px;margin-left:10px;margin-right:0px">
+                    <widget name="ethiopian_calander_widget"  style="float:left;width:226px;" class="oe_edit_only" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- <record id="hr_expense_kanban_view_inherited_view" model="ir.ui.view">
+            <field name="name">hr.expense.kanban</field>
+            <field name="model">hr.expense</field>
+            <field name="inherit_id" ref="hr_expense.hr_expense_kanban_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date']" position="replace">
+                    <field name="is_pagum_from" invisible="1"/>
+                    <field  name="date" groups="EthiopianCalendar.group_gregory"/>
+                    <field  name="ethiopian_from" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                </xpath>
+                <xpath expr="//templates//t//div//div[2]//div" position="replace">
+                    <div class="col-6 text-muted">
+                        <span><t t-esc="record.employee_id.value"/> <t t-esc="record.date.value"/></span>
+                        <span><t t-esc="record.employee_id.value"/> <t t-esc="record.ethiopian_from.value"/></span>
+                    </div>
+                </xpath>
+            </field>
+        </record> -->
+
+        <!-- <record id="hr_expense_view_pivot_inherited_view" model="ir.ui.view">
+            <field name="name">hr.expense.pivot</field>
+            <field name="model">hr.expense</field>
+            <field name="inherit_id" ref="hr_expense.hr_expense_view_pivot"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date']" position="replace">
+                    <field name="is_pagum_from" invisible="1"/>
+                    <field  name="date" groups="EthiopianCalendar.group_gregory" interval="month" type="col"/>
+                    <field  name="ethiopian_from"  groups="EthiopianCalendar.group_ethio_datepicker" interval="month" type="col"/>
+                    <field  name="pagum_from" attrs="{'invisible': ['|',('is_pagum_from', '!=',False)  ]}"  groups="EthiopianCalendar.group_ethio_datepicker"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="hr_expense_view_graph_inherited_view" model="ir.ui.view">
+            <field name="name">hr.expense.graph</field>
+            <field name="model">hr.expense</field>
+            <field name="inherit_id" ref="hr_expense.hr_expense_view_graph"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date']" position="replace">
+                    <field name="is_pagum_from" invisible="1"/>
+                    <field  name="date" groups="EthiopianCalendar.group_gregory" type="col"/>
+                    <field  name="ethiopian_from"  groups="EthiopianCalendar.group_ethio_datepicker" type="col"/>
+                    <field  name="pagum_from" attrs="{'invisible': ['|',('is_pagum_from', '!=',False)  ]}"  groups="EthiopianCalendar.group_ethio_datepicker"/>
+                </xpath>
+            </field>
+        </record> -->
+
+        <record id="hr_expense_view_search_inherited_view" model="ir.ui.view">
+            <field name="name">hr.expense.view.search</field>
+            <field name="model">hr.expense</field>
+            <field name="inherit_id" ref="hr_expense.hr_expense_view_search"/>
+            <field name="arch" type="xml">
+                <xpath expr="//filter[@name='date']" position="after">
+                    <filter string="Ethiopian Date" name="ethiopian_from"/>
+                </xpath>
+                <xpath expr="//filter[@name='expensesmonth']" position="after">
+                    <filter string="Ethiopian Date" name="expensesmonthineth" domain="[]" context="{'group_by': 'ethiopian_from'}" help="Expense Date in Ethiopia"/>
+                </xpath>
+            </field>
+        </record>                
+
+        <record id="view_hr_expense_sheet_tree_inherited_view" model="ir.ui.view">
+            <field name="name">hr.expense.sheet.tree</field>
+            <field name="model">hr.expense.sheet</field>
+            <field name="inherit_id" ref="hr_expense.view_hr_expense_sheet_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='accounting_date']" position="replace">
+                    <field name="is_pagum_from" invisible="1"/>
+                    <field  name="accounting_date" groups="EthiopianCalendar.group_gregory"/>
+                    <field  name="ethiopian_from" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_hr_expense_sheet_form_inherited_view" model="ir.ui.view">
+            <field name="name">hr.expense.sheet.form</field>
+            <field name="model">hr.expense.sheet</field>
+            <field name="inherit_id" ref="hr_expense.view_hr_expense_sheet_form"/>
+            <field eval="25" name="priority"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='accounting_date']" position="replace">
+                    <field name="is_pagum_from" invisible="1"/>
+                    <field  name="accounting_date" groups="EthiopianCalendar.group_gregory"/>
+                    <field  name="ethiopian_from" attrs="{'invisible': ['|', ('is_pagum_from', '=',False)]}"  groups="EthiopianCalendar.group_ethio_datepicker" force_save="1" class="oe_read_only"/>
+                    <field  name="pagum_from" attrs="{'invisible': ['|',('is_pagum_from', '!=',False)  ]}"  groups="EthiopianCalendar.group_ethio_datepicker" force_save="1" class="oe_read_only"/>
+                        <div>
+                        </div>
+                    <div style="margin-bottom:40px;margin-top:-15px;margin-left:10px;margin-right:0px">
+                    <widget name="ethiopian_calander_widget"  style="float:left;width:226px;" class="oe_edit_only" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    </div>
+                </xpath>
+                <xpath expr="//field[@name='expense_line_ids']//field[@name='date']" position="replace">
+                    <field name="is_pagum_from" invisible="1"/>
+                    <field  name="date" groups="EthiopianCalendar.group_gregory"/>
+                    <field  name="ethiopian_from" attrs="{'invisible': ['|', ('is_pagum_from', '=',False)]}"  groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    <field  name="pagum_from" attrs="{'invisible': ['|',('is_pagum_from', '!=',False)  ]}"  groups="EthiopianCalendar.group_ethio_datepicker"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- <record id="view_hr_expense_sheet_pivot_inherited_view" model="ir.ui.view">
+            <field name="name">hr.expense.sheet.pivot</field>
+            <field name="model">hr.expense.sheet</field>
+            <field name="inherit_id" ref="hr_expense.view_hr_expense_sheet_pivot"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='accounting_date']" position="replace">
+                    <field name="accounting_date" groups="EthiopianCalendar.group_gregory" interval="month" type="col"/>
+                    <field  name="ethiopian_from"  groups="EthiopianCalendar.group_ethio_datepicker" interval="month" type="col"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_hr_expense_sheet_graph_inherited_view" model="ir.ui.view">
+            <field name="name">hr.expense.sheet.graph</field>
+            <field name="model">hr.expense.sheet</field>
+            <field name="inherit_id" ref="hr_expense.view_hr_expense_sheet_graph"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='accounting_date']" position="replace">
+                    <field name="accounting_date" groups="EthiopianCalendar.group_gregory" type="col"/>
+                    <field  name="ethiopian_from"  groups="EthiopianCalendar.group_ethio_datepicker" type="col"/>
+                </xpath>
+            </field>
+        </record> -->
+
+
+        <record id="hr_expense_sheet_view_search" model="ir.ui.view">
+            <field name="name">hr.expense.sheet.view.search</field>
+            <field name="model">hr.expense.sheet</field>
+            <field name="inherit_id" ref="hr_expense.hr_expense_sheet_view_search"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='accounting_date']" position="replace">
+                    <field name="accounting_date" groups="EthiopianCalendar.group_gregory" />
+                    <field  name="ethiopian_from"  groups="EthiopianCalendar.group_ethio_datepicker"/>
+                </xpath>
+                <xpath expr="//filter[@name='expenses_month']" position="after">
+                    <filter string="Ethiopian Date" name="expenses_month_ethiopian" domain="[]" context="{'group_by': 'ethiopian_from'}" help="Expenses by Ethiopian Date"/>
+                </xpath>
+            </field>
+        </record>
+
+
+</odoo>

@@ -2,7 +2,20 @@
 <!-- Copyright 2016 Eficent Business and IT Consulting Services S.L.
      License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl-3.0) -->
 <odoo>
-
+     <record id="action_request_pur_count" model="ir.actions.act_window">
+        <field name="name">Purchase request Purchase </field>
+        <field name="res_model">purchase.order</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('request_id','=',active_id)]</field>
+        <field name="search_view_id" ref="purchase.purchase_order_tree"/>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            Create a  purchase
+          </p><p>
+            Register purchase and keep track of the discussions with your Request.
+          </p>
+        </field>
+    </record>
     <record model="ir.ui.view" id="view_sprogroup_purchase_request_form">
         <field name="name">sprogroup.purchase.request.form</field>
         <field name="model">sprogroup.purchase.request</field>
@@ -21,14 +34,35 @@
                     confirm="Are you sure you want to reject this request?" />
                     <button name="button_rejected" string="Reject" type="object"
                     confirm="Are you sure you want to reject this request?"  states="leader_approved" groups="purchase_request.group_purchase_request_manager"/>
-                    <button string="New Quotation" states="done" name="make_purchase_quotation" type="object" groups="purchase_request.group_purchase_request_manager,purchase.group_purchase_manager" />
-                    <button string="New Tender" states="done" name="make_purchase_agreement" type="object" groups="purchase_agreement.group_purchase_request_manager,purchase.group_purchase_manager" />
-
+                    <button string="Direct Purchase"   name="make_purchase_quotation" type="object" groups="purchase_request.group_purchase_request_manager,purchase.group_purchase_manager"
+                                    attrs="{'invisible': ['|',('is_direct', '=', False),('state','not in', 'done')]}"
+                    />
+                    <button string="Proforma Purchase"  name="make_purchase_proforma" type="object" groups="purchase_request.group_purchase_request_manager,purchase.group_purchase_manager"
+                                    attrs="{'invisible': ['|',('is_proforma', '=', False),('state','not in', 'done')]}"
+                    />
+                    <button string="Open Tender"   name="make_purchase_agreement" type="object"
+                            groups="purchase_agreement.group_purchase_request_manager,purchase.group_purchase_manager"
+                            attrs="{'invisible': ['|',('is_open', '=', False),('state','not in', 'done')]}"
+                    />
+                    <button string="Limited Tender"   name="make_purchase_agreement" type="object"
+                            groups="purchase_agreement.group_purchase_request_manager,purchase.group_purchase_manager"
+                            attrs="{'invisible': ['|',('is_limited', '=', False),('state','not in', 'done')]}"
+                    />
+                    <field name="is_direct" invisible="1"/>
+                    <field name="is_proforma" invisible="1"/>
+                    <field name="is_limited" invisible="1"/>
+                    <field name="is_open" invisible="1"/>
                     <field name="state" widget="statusbar" statusbar_visible="draft,to_approve,leader_approved,manager_approved,done,rejected" statusbar_colors='{"manager_approved":"blue"}'/>
-
-
                 </header>
                 <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button icon="fa-usd" class="oe_stat_button"
+                                name="%(action_request_pur_count)d" type="action" groups="purchase_agreement.group_purchase_request_manager,purchase.group_purchase_manager">
+                            <field name="purchase_count" string="Purchases quotation"
+                                    widget="statinfo"/>
+                        </button>
+                    </div>
+
                     <field name="is_editable" invisible="1"/>
                     <!-- <div class="oe_edit_only">
                             <label for="name" class="oe_inline"/>
@@ -46,9 +80,9 @@
                             <!-- <label for="space" name="Space" string="-"/>     -->
                         </group>
                         <group>
-                            <!-- <field name="current_label"/> -->
                             <field name="description"/>
                         </group>
+
                     </group>
 
                     <group>
@@ -63,6 +97,8 @@
                             <field name="assigned_to" attrs="{'readonly': [('is_editable','=', False)]}"/>
                         </group>
                         <group>
+                            <field name="purchase_type" groups="purchase_request.group_purchase_request_manager"
+                                attrs="{'readonly': [('state', 'not in', 'leader_approved')]}"/>
                             <field name="date_start" attrs="{'readonly': [('is_editable','=', False)]}" invisible="1"/>
                             <field name="end_start" attrs="{'readonly': [('is_editable','=', False)]}" invisible="1"/>
                         </group>
@@ -105,8 +141,8 @@
                                                 <field name="total_price" />
                                                 <field name="po_number_2" force_save="1"/>
                                                 <field name="product_uom_id"/>
-                                                <field name="date_required"/>
-                                                <field name="cancelled"/>
+                                                <field name="date_required" invisible="1"/>
+                                                <field name="cancelled" invisible="1"/>
 
                                             </group>
                                         </group>

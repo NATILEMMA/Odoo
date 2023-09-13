@@ -14,7 +14,7 @@ class Contract(models.Model):
     _description = 'Contract'
     _inherit = ['mail.thread', 'mail.activity.mixin']
 
-    name = fields.Char('Contract Reference', required=True)
+    name = fields.Char('Contract Reference', required=True, translate=True)
     active = fields.Boolean(default=True)
     employee_id = fields.Many2one('hr.employee', string='Employee', tracking=True, domain="['|', ('company_id', '=', False), ('company_id', '=', company_id)]")
     department_id = fields.Many2one('hr.department', domain="['|', ('company_id', '=', False), ('company_id', '=', company_id)]", string="Department")
@@ -27,11 +27,11 @@ class Contract(models.Model):
         help="End date of the trial period (if there is one).")
     resource_calendar_id = fields.Many2one(
         'resource.calendar', 'Working Schedule',
-        default=lambda self: self.env.company.resource_calendar_id.id, copy=False,
+        default = lambda self: self.env.company.resource_calendar_id.id, copy=False,
         domain="['|', ('company_id', '=', False), ('company_id', '=', company_id)]")
     wage = fields.Monetary('Wage', required=True, tracking=True, help="Employee's monthly gross wage.")
-    advantages = fields.Text('Advantages')
-    notes = fields.Text('Notes')
+    advantages = fields.Text('Advantages', translate=True)
+    notes = fields.Text('Notes', translate=True)
     state = fields.Selection([
         ('draft', 'New'),
         ('open', 'Running'),
@@ -52,8 +52,8 @@ class Contract(models.Model):
         ('blocked', 'Red')
     ], string='Kanban State', default='normal', tracking=True, copy=False)
     currency_id = fields.Many2one(string="Currency", related='company_id.currency_id', readonly=True)
-    permit_no = fields.Char('Work Permit No', related="employee_id.permit_no", readonly=False)
-    visa_no = fields.Char('Visa No', related="employee_id.visa_no", readonly=False)
+    permit_no = fields.Char('Work Permit No', related="employee_id.permit_no", readonly=False, translate=True)
+    visa_no = fields.Char('Visa No', related="employee_id.visa_no", readonly=False, translate=True)
     visa_expire = fields.Date('Visa Expire Date', related="employee_id.visa_expire", readonly=False)
     hr_responsible_id = fields.Many2one('res.users', 'HR Responsible', tracking=True,
         help='Person responsible for validating the employee\'s contracts.')

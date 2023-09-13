@@ -17,7 +17,7 @@ class FleetVehicleInspection(models.Model):
     }
 
     name = fields.Char(
-        "Reference", required=True, index=True, copy=False, default="New"
+        "Reference", required=True, index=True, copy=False, default="New", translate=True
     )
 
     state = fields.Selection(

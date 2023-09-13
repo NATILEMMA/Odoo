@@ -96,19 +96,20 @@
     </record>
 
     <record id="open_view_project_all" model="ir.actions.act_window">
-        <field name="name">Planning</field>
+        <field name="name">All Plannings</field>
         <field name="res_model">project.project</field>
-        <field name="domain">[('is_parent','!=',True)]</field>
         <field name="view_mode">kanban,form</field>
+        <field name="domain">['&amp;',('task_count','!=',0),('parent_id','!=',False)]</field>
         <field name="view_id" ref="view_project_kanban"/>
         <field name="search_view_id" ref="view_project_project_filter"/>
         <field name="target">main</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
                 Create a new Planning
-            </p><p>
-                Or <a type="action" name="%(project.ir_actions_server_project_sample)d" tabindex="-1">activate a sample Planning</a> to play with.
             </p>
+            <!-- <p>
+                Or <a type="action" name="%(project.ir_actions_server_project_sample)d" tabindex="-1">activate a sample Planning</a> to play with.
+            </p> -->
         </field>
     </record>
 
@@ -129,9 +130,10 @@
             <field name="help" type="html">
                 <p class="o_view_nocontent_smiling_face">
                     Create a new Planning
-                </p><p>
-                    Or <a type="action" name="%(project.ir_actions_server_project_sample)d" tabindex="-1">activate a sample Planning</a> to play with.
                 </p>
+                <!-- <p>
+                    Or <a type="action" name="%(project.ir_actions_server_project_sample)d" tabindex="-1">activate a sample Planning</a> to play with.
+                </p> -->
             </field>
         </record>
 
@@ -142,7 +144,7 @@
                  'search_default_parent_id': [active_id],
                 'default_parent_id': active_id,
             }</field>
-            <field name="domain">[('parent_id','!=',False)]</field>
+            <field name="domain">['|',('parent_id','!=',False),('user_ids','=',uid)]</field>
             <field name="view_mode">kanban,form</field>
             <field name="view_id" ref="project.view_project_kanban"/>
             <field name="search_view_id" ref="view_project_project_filter"/>
@@ -156,7 +158,10 @@
             </field>
         </record>
 
-           
+
+    
+
+     
  <record model="ir.ui.view" id="view_parent_project_kanban">
             <field name="name">project.project.kanban</field>
             <field name="model">project.project</field>
@@ -176,6 +181,7 @@
                     <field name="analytic_account_id"/>
                     <field name="parent_id"/>
                     <field name="is_parent"/>
+                    
                     
                     <templates>
                         <t t-name="kanban-box">
@@ -233,6 +239,11 @@
                                 <span t-if="record.is_parent.raw_value">
                                      <a class="o_project_kanban_box" name="%(parent_middel_view_project_all)d" type="action">
                                         <div>
+                                              
+                                        <span>
+                                        <field name="parent_path2"/>
+                                            <!-- <t t-esc="record.parent_path2.value" /> -->
+                                        </span><br/>
                                             <span class="o_value"><t t-esc="record.task_count.value"/></span>
                                             <span class="o_label"><t t-esc="record.label_tasks.value"/></span>
                                         </div>
@@ -240,6 +251,10 @@
                                                
                                     </span>
                                     <span t-else="">
+                                                         <span>
+                                        <field name="parent_path2"/>
+                                            <!-- <t t-esc="record.parent_path2.value" /> -->
+                                        </span><br/>
                                         <a class="o_project_kanban_box" name="%(project.act_project_project_2_project_task_all)d" type="action">
                                                                             <div>
                                                                                 <span class="o_value"><t t-esc="record.task_count.value"/></span>
@@ -247,7 +262,9 @@
                                                                             </div>
                                                                         </a>
                                     </span>
-                                   
+                                     <span>
+                       
+                    </span>
                                     <a t-if="record.analytic_account_id.raw_value" class="o_project_kanban_box o_project_timesheet_box" name="action_view_account_analytic_line" type="object" groups="analytic.group_analytic_accounting">
                                         <div>
                                             <span class="o_label">Profitability</span>
@@ -255,21 +272,23 @@
                                     </a>
                                 </div>
                             </div>
+                            
                         </t>
                     </templates>
                 </kanban>
             </field>
         </record>
+    
 
-
-      <record id="parent_middel_view_project_all" model="ir.actions.act_window">
+  
+        <record id="parent_middel_view_project_all" model="ir.actions.act_window">
             <field name="name">Parent Planning</field>
             <field name="res_model">project.project</field>
             <field name="context">{
                  'search_default_parent_id': [active_id],
                 'default_parent_id': active_id,
             }</field>
-            <field name="domain">[('parent_id','!=',False)]</field>
+            <field name="domain">['|',('parent_id','!=',False),('user_ids','=',uid)]</field>
             <field name="view_mode">kanban,form</field>
             <field name="view_id" ref="view_parent_project_kanban"/>
             <field name="search_view_id" ref="view_project_project_filter"/>
@@ -277,12 +296,12 @@
             <field name="help" type="html">
                 <p class="o_view_nocontent_smiling_face">
                     Create a new Planning
-                </p><p>
-                    Or <a type="action" name="%(project.ir_actions_server_project_sample)d" tabindex="-1">activate a sample Planning</a> to play with.
                 </p>
+                <!-- <p>
+                    Or <a type="action" name="%(project.ir_actions_server_project_sample)d" tabindex="-1">activate a sample Planning</a> to play with.
+                </p> -->
             </field>
-        </record>
-  
+        </record>  
  
       
 
@@ -312,7 +331,8 @@
     <record id="open_view_project_all_user" model="ir.actions.act_window">
             <field name="name">My Planning</field>
             <field name="res_model">project.project</field>
-            <field name="domain">[('create_uid','=',uid)]</field>
+            <field name="domain">['&amp;',('create_uid','=',uid),('parent_path2','!=','/')]</field>
+
             <field name="view_mode">kanban,form</field>
             <field name="view_id" ref="view_project_kanban"/>
             <field name="search_view_id" ref="view_project_project_filter"/>
@@ -320,29 +340,55 @@
             <field name="help" type="html">
                 <p class="o_view_nocontent_smiling_face">
                     Create a new Planning
-                </p><p>
-                    Or <a type="action" name="%(project.ir_actions_server_project_sample)d" tabindex="-1">activate a sample Planning</a> to play with.
                 </p>
+                <!-- <p>
+                    Or <a type="action" name="%(project.ir_actions_server_project_sample)d" tabindex="-1">activate a sample Planning</a> to play with.
+                </p> -->
             </field>
         </record>
         <menuitem name="Planning"
             id="menu_main_project"
             groups="project.group_project_manager,project.group_project_user"
             web_icon="project,static/description/icon.png"
-            sequence="50"
+            sequence="0"
             parent="project.menu_main_pm"/>
         
         <menuitem action="open_view_project_all_user" id="menu_projects_user" 
         name="My Planning" 
         parent="menu_main_project" sequence="1" 
         groups="project.group_project_user"/>
-        <!-- <menuitem action="open_view_project_requested" id="menu_requested_planning" name="Requested Planning" parent="menu_main_project" sequence="2" groups="project.group_planning_manager_approval"/> -->
+
+        <record id="open_view_project_requested_view" model="ir.actions.act_window">
+            <field name="name">Requested Planning</field>
+            <field name="res_model">project.project</field>
+            <field name="domain">[]</field>
+            <field name="view_mode">kanban,form,tree</field>
+            <field name="domain">[('state','=','requested')]</field> <field name="view_ids" eval="[(5, 0, 0),
+            (0, 0, {'view_mode': 'tree', 'view_id': ref('view_project')}),
+            (0, 0, {'view_mode': 'kanban', 'view_id': ref('project.project_view_kanban')})]"/>
+        <field name="search_view_id" ref="view_project_project_filter"/>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_empty_folder">
+                Create a new Planning
+            </p><p>
+                Organize your activities (plan tasks, track issues, invoice timesheets) for internal, personal or customer projects.
+            </p>
+        </field>
+        </record>
+
+
+        <menuitem action="open_view_project_requested_view" id="menu_requested_planning_view" 
+            name="Requested Planning" 
+            parent="menu_main_project" sequence="6" 
+            groups="project.group_planning_manager_approval"/>
+            <!-- <menuitem action="open_view_project_requested" id="menu_requested_planning" name="Requested Planning" parent="project_parent.menu_main_project" sequence="2" groups="project.group_planning_manager_approval"/> -->
 
 
         <record id="open_view_project_all_user_assign" model="ir.actions.act_window">
             <field name="name">Assigned Planning</field>
             <field name="res_model">project.project</field>
-            <field name="domain">[('user_ids','in',[uid])]</field>
+            <field name="domain">['&amp;',('parent_path2','!=','/'),('user_ids','in',[uid])]</field>
             <field name="view_mode">kanban,form</field>
             <field name="view_id" ref="project.view_project_kanban"/>
             <field name="search_view_id" ref="project.view_project_project_filter"/>
@@ -350,9 +396,10 @@
             <field name="help" type="html">
                 <p class="o_view_nocontent_smiling_face">
                     Create a new Planning
-                </p><p>
-                    Or <a type="action" name="%(project.ir_actions_server_project_sample)d" tabindex="-1">activate a sample Planning</a> to play with.
                 </p>
+                <!-- <p>
+                    Or <a type="action" name="%(project.ir_actions_server_project_sample)d" tabindex="-1">activate a sample Planning</a> to play with.
+                </p> -->
             </field>
         </record>
         <menuitem action="open_view_project_all_user_assign" id="menu_projects_user_assign" 
@@ -372,9 +419,10 @@
             <field name="help" type="html">
                 <p class="o_view_nocontent_smiling_face">
                     Create a new Planning
-                </p><p>
-                    Or <a type="action" name="%(project.ir_actions_server_project_sample)d" tabindex="-1">activate a sample Planning</a> to play with.
                 </p>
+                <!-- <p>
+                    Or <a type="action" name="%(project.ir_actions_server_project_sample)d" tabindex="-1">activate a sample Planning</a> to play with.
+                </p> -->
             </field>
         </record>
         <!-- <menuitem action="open_view_project_department_head" 
@@ -384,10 +432,9 @@
         groups="group_project_department"/> -->
 
    <record id="parent_view_project_all" model="ir.actions.act_window">
-            <field name="name">All Child Planning</field>
+            <field name="name">Packages</field>
             <field name="res_model">project.project</field>
-            
-            <field name="domain">['&amp;',('task_count','=',0),('parent_id','=',False)]</field>
+            <field name="domain">['|',('user_ids','=',uid),('create_uid','=',uid),('task_count','=',0),('parent_id','=',False)]</field>
             <field name="view_mode">kanban,form</field>
             <field name="view_id" ref="view_parent_project_kanban"/>
             <field name="search_view_id" ref="view_project_project_filter"/>
@@ -395,9 +442,10 @@
             <field name="help" type="html">
                 <p class="o_view_nocontent_smiling_face">
                     Create a new Planning
-                </p><p>
-                    Or <a type="action" name="%(project.ir_actions_server_project_sample)d" tabindex="-1">activate a sample Planning</a> to play with.
                 </p>
+                <!-- <p>
+                    Or <a type="action" name="%(project.ir_actions_server_project_sample)d" tabindex="-1">activate a sample Planning</a> to play with.
+                </p> -->
             </field>
         </record>
           <menuitem name="Packages"
@@ -405,11 +453,14 @@
             parent ="project.menu_main_pm"
             groups="project.group_project_manager,project.group_Planning_requester"
             action="parent_view_project_all"
-            sequence="0"/>
+            sequence="-10"/>
 
         <menuitem action="open_view_project_all" id="all_child_projcet" 
-        name="All Planning" parent="menu_main_project" sequence="5"  
+        name="All Planning" parent="menu_main_project" sequence="55"  
         groups="project.group_project_manager"/>
+
+        <!-- <menuitem action="open_view_project_requested" id="menu_requested_planning" name="Requested Planning" parent="menu_main_project" sequence="2" groups="project.group_planning_manager_approval"/> -->
+
          
          
         <record id="action_view_my_task" model="ir.actions.act_window">

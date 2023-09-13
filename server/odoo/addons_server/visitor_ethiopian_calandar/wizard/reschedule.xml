@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data> 
+     
+                <!-- 
+                    
+                    Adding Ethiopian Calander Date to Time Fream 
+
+                    step 1: Inherit the View of the model to which you wish to add the Ethiopian calendar extension.
+
+                    step 2, xpath your exact location of converting date fields if your date fields are located within a form sheet, use col and colspan to adjust CSS
+                
+                    Ethiopian Date Picker Widget
+
+                    - ethiopian_calander_widget
+                    - ethiopian_calander_widget_two
+                    - ethiopian_calander_widget_three
+                    - ethiopian_calander_widget_four
+                
+                
+                -->
+
+        <record model="ir.ui.view" id="reschedule_visits_form_inherit_view">
+            <field name="name">reschedule.visit.form</field>
+            <field name="model">reschedule.visit</field>
+            <field name="inherit_id" ref="visitor_gate_management.reschedule_visits_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date']" position="replace">
+                    <!-- <field name="is_pagum_from" invisible="1"/>
+                    <field  name="ethiopian_from" style="float:left" attrs="{'invisible': ['|', ('is_pagum_from', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker" force_save="1" class="oe_read_only"/>
+                    <field  name="pagum_from" style="float:left"  attrs="{'invisible': ['|',('is_pagum_from', '!=',False)  ]}"  groups="EthiopianCalendar.group_ethio_datepicker" force_save="1" class="oe_read_only"/> -->
+                    <script>
+                        odoo.define(function(require) {
+                                    "use strict";
+                                    var rpc = require('web.rpc') 
+                                    var basicFields = require('web.basic_fields');
+                                    var current_url = window.location.href;
+                                    let pickeddate = {
+                                        "pick": 1,
+                                        "url": current_url,
+                                    }
+                                    try{
+                                        var dd,model;
+                                        dd = current_url.split('model=')
+                                        model = dd[1].toString()
+                                        var res = rpc.query({
+                                            model: "reschedule.visit",
+                                            method: 'initial_date',
+                                            args: [pickeddate],
+                                        }).then(function(data)
+                                        {
+                                        console.log("Response", data)
+                                        try{
+                                            var  date = data.toString()
+                                            date = date.split("-")
+                                            var dates = date[1] + "/" +  date[2] + "/" +  date[0]
+                                            $("#popupDatepickercustom4").val(dates);
+                                            }
+                                            catch (error) {
+                                                //console.log('There was an error:', error);
+                                        }
+                                            });
+                                
+                                    }catch (error) {
+                                            //console.log('There was an error:', error);
+                                        }
+                                    $(function() {
+                                        var calendar = $.calendars.instance('ethiopian','am');
+                                    $('#popupDatepickercustom4').calendarsPicker({calendar: calendar, onSelect: showDate});
+                                });
+                                function showDate(date) {
+                                    var rpc = require('web.rpc') 
+                                    var basicFields = require('web.basic_fields');
+                                    var current_url = window.location.href;
+                                    var myArray = current_url.split('model=');
+                                    var dd,models, model;
+                                    dd = current_url.split('model=')
+                                    models = dd[1].toString()
+                                    models = models.split('view_type')
+                                    model = models[0].substring(0, models[0].length - 1);
+                                    var dateObject = $(this).calendarsPicker("getDate")
+                                    console.log("dateObject", dateObject)
+                                    let pickeddate = {
+                                        "day" : dateObject[0]._day,
+                                        "month" : dateObject[0]._month,
+                                        "year":dateObject[0]._year,
+                                        "current_model": model,
+                                        "url": current_url,
+                                        "pick": 1,
+                                        }
+                                    var res = rpc.query({
+                                        model: "reschedule.visit",
+                                        method: 'date_convert_and_set',
+                                        args: [pickeddate],
+                                    }).then(function (data)
+                                    {
+                                }); 
+                            }
+                        }); 
+                    </script>
+                    <input style="margin-top: 0px; margin-left: 5px; margin-right:0px; width:180px; margin-bottom: -20px;" type="text" id="popupDatepickercustom4" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    <field  name="date" force_save="1" class="col-50" colspan="3" groups="EthiopianCalendar.group_gregory"/>
+                </xpath>
+            </field>
+        </record> 
+
+
+    </data>
+</odoo>

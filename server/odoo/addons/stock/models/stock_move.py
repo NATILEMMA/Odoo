@@ -26,7 +26,7 @@ class StockMove(models.Model):
             return self.env['stock.picking'].browse(self.env.context['default_picking_id']).group_id.id
         return False
 
-    name = fields.Char('Description', index=True, required=True)
+    name = fields.Char('Description', index=True, required=True, translate=True)
     sequence = fields.Integer('Sequence', default=10)
     priority = fields.Selection(PROCUREMENT_PRIORITIES, 'Priority', default='1')
     create_date = fields.Datetime('Creation Date', index=True, readonly=True)
@@ -47,7 +47,7 @@ class StockMove(models.Model):
         check_company=True,
         domain="[('type', 'in', ['product', 'consu']), '|', ('company_id', '=', False), ('company_id', '=', company_id)]", index=True, required=True,
         states={'done': [('readonly', True)]})
-    description_picking = fields.Text('Description of Picking')
+    description_picking = fields.Text('Description of Picking', translate=True)
     product_qty = fields.Float(
         'Real Quantity', compute='_compute_product_qty', inverse='_set_product_qty',
         digits=0, store=True, compute_sudo=True,
@@ -94,7 +94,7 @@ class StockMove(models.Model):
         help="Optional: previous stock move when chaining them")
     picking_id = fields.Many2one('stock.picking', 'Transfer Reference', index=True, states={'done': [('readonly', True)]}, check_company=True)
     picking_partner_id = fields.Many2one('res.partner', 'Transfer Destination Address', related='picking_id.partner_id', readonly=False)
-    note = fields.Text('Notes')
+    note = fields.Text('Notes', translate=True)
     state = fields.Selection([
         ('draft', 'New'), ('cancel', 'Cancelled'),
         ('waiting', 'Waiting Another Move'),
@@ -112,7 +112,7 @@ class StockMove(models.Model):
         'Unit Price', help="Technical field used to record the product cost set by the user during a picking confirmation (when costing "
                            "method used is 'average price' or 'real'). Value given in company currency and in product uom.", copy=False)  # as it's a technical field, we intentionally don't provide the digits attribute
     backorder_id = fields.Many2one('stock.picking', 'Back Order of', related='picking_id.backorder_id', index=True, readonly=False)
-    origin = fields.Char("Source Document")
+    origin = fields.Char("Source Document", translate=True)
     procure_method = fields.Selection([
         ('make_to_stock', 'Default: Take From Stock'),
         ('make_to_order', 'Advanced: Apply Procurement Rules')], string='Supply Method',
@@ -152,7 +152,7 @@ class StockMove(models.Model):
         readonly=True, help='Quantity in stock that can still be reserved for this move')
     string_availability_info = fields.Text(
         'Availability', compute='_compute_string_qty_information',
-        readonly=True, help='Show various information on stock availability for this move')
+        readonly=True, help='Show various information on stock availability for this move', translate=True)
     restrict_partner_id = fields.Many2one(
         'res.partner', 'Owner ', help="Technical field used to depict a restriction on the ownership of quants to consider when marking this move as 'done'",
         check_company=True)
@@ -171,12 +171,12 @@ class StockMove(models.Model):
     is_locked = fields.Boolean(compute='_compute_is_locked', readonly=True)
     is_initial_demand_editable = fields.Boolean('Is initial demand editable', compute='_compute_is_initial_demand_editable')
     is_quantity_done_editable = fields.Boolean('Is quantity done editable', compute='_compute_is_quantity_done_editable')
-    reference = fields.Char(compute='_compute_reference', string="Reference", store=True)
+    reference = fields.Char(compute='_compute_reference', string="Reference", store=True, translate=True)
     has_move_lines = fields.Boolean(compute='_compute_has_move_lines')
     package_level_id = fields.Many2one('stock.package_level', 'Package Level', check_company=True, copy=False)
     picking_type_entire_packs = fields.Boolean(related='picking_type_id.show_entire_packs', readonly=True)
     display_assign_serial = fields.Boolean(compute='_compute_display_assign_serial')
-    next_serial = fields.Char('First SN')
+    next_serial = fields.Char('First SN', translate=True)
     next_serial_count = fields.Integer('Number of SN')
 
     @api.onchange('product_id', 'picking_type_id')

@@ -15,7 +15,7 @@
     'category': 'Human Resources/Employees',
     'version': '14.0.1',
     'license': 'AGPL-3',
-    'depends': ['base', 'reconciliation', 'web_notify', 'hr'],
+    'depends': ['base', 'reconciliation', 'hr'],
     'data': [
         'security/performance_evaluation_security.xml',
         'security/ir.model.access.csv',

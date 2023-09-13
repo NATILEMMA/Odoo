@@ -5,6 +5,7 @@ import datetime
 
 from odoo import api, fields, models
 from odoo.exceptions import ValidationError
+import re
 
 class HrEmployeeMedicalExamination(models.Model):
 
@@ -12,16 +13,17 @@ class HrEmployeeMedicalExamination(models.Model):
     _description = "Hr Employee Medical Examination"
     _inherit = ["mail.thread", "mail.activity.mixin"]
 
-    name = fields.Char(required=True, track_visibility="onchange",)
+    name = fields.Char(required=True, track_visibility="onchange", translate=True)
 
     state = fields.Selection(
         selection=[
+            ("draft", "Draft"),
             ("pending", "Pending"),
             ("done", "Done"),
             ("cancelled", "Cancelled"),
             ("rejected", "Rejected"),
         ],
-        default="pending",
+        default="draft",
         readonly=True,
         track_visibility="onchange",
     )
@@ -36,14 +38,16 @@ class HrEmployeeMedicalExamination(models.Model):
     employee_id = fields.Many2one(
         "hr.employee", string="Employee", required=True, track_visibility="onchange",
     )
-    year = fields.Char("Year", default=lambda r: str(datetime.date.today().year))
-    note = fields.Text(track_visibility="onchange")
-
+    year = fields.Char("Year", default=lambda r: str(datetime.date.today().year), translate=True)
+    note = fields.Text(track_visibility="onchange", translate=True)
+   
 
     instution_type_id = fields.Many2one("hr.employee.instution.type", string="Instution Type",)
     instution_id = fields.Many2one("res.partner", string="Instution",)
     examination_type_id = fields.Many2one("hr.employee.medical.examination.type", string="Examination Type",)
     
+    
+   
 
     @api.onchange("date")
     def _onchange_date(self):
@@ -57,14 +61,13 @@ class HrEmployeeMedicalExamination(models.Model):
         for rec in self:
             return {'domain': {'instution_id': [('instution_type_id', '=', rec.instution_type_id.id)]}}
         
+    def back_to_draft(self):
+        self.write({"state": "draft"})
 
     def back_to_pending(self):
         self.write({"state": "pending"})
 
     def to_done(self):
-        for record in self:
-            if record.result == False:
-                raise ValidationError('The result filed should be selected')
 
         self.write({"state": "done"})
 
@@ -73,3 +76,6 @@ class HrEmployeeMedicalExamination(models.Model):
 
     def to_rejected(self):
         self.write({"state": "rejected"})
+    
+    def to_pending(self):
+        self.write({"state": "pending"})

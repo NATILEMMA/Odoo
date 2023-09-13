@@ -1462,13 +1462,13 @@ msgstr "Uid ፍጠር"
 #: code:addons/mail/models/mail_thread.py:0
 #, python-format
 msgid "Create a new %(document)s"
-msgstr "Create a new %(document)s"
+msgstr  ""
 
 #. module: mail
 #: code:addons/mail/models/mail_thread.py:0
 #, python-format
 msgid "Create a new %(document)s by sending an email to %(email_link)s"
-msgstr "Create a new %(document)s by sending an email to %(email_link)s"
+msgstr "ወደ %(email_link)s ኢሜይል በመላክ አዲስ %(ሰነድ) ፍጠር"
 
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.mail_activity_view_search
@@ -1949,12 +1949,12 @@ msgstr "ተለዋዋጭ ቦታ ያዥ ጀነሬተር"
 #: code:addons/mail/static/src/xml/activity.xml:0
 #, python-format
 msgid "Edit"
-msgstr "አርትዕ"
+msgstr "አስተካክል "
 
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.mail_resend_message_view_form
 msgid "Edit Partners"
-msgstr "አጋሮችን አርትዕ"
+msgstr "አጋሮችን አስተካክል "
 
 #. module: mail
 #. openerp-web
@@ -1968,7 +1968,7 @@ msgstr "የ ምዝገባን ያርትዑ"
 #: code:addons/mail/static/src/xml/followers.xml:0
 #, python-format
 msgid "Edit subscription"
-msgstr "የደንበኝነት ምዝገባን አርትዕ"
+msgstr "የደንበኝነት ምዝገባን አስተካክል "
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_channel_partner__partner_email
@@ -2530,7 +2530,7 @@ msgstr "ተሰርዟል"
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.view_message_search
 msgid "Has Mentions"
-msgstr "መጥቀስ አለው"
+msgstr "ጠቅሷል"
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_mail__has_error

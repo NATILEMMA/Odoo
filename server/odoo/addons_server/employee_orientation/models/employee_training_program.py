@@ -8,8 +8,8 @@ class Trianing(models.Model):
     
 
 
-    name = fields.Char( String ='Name',required=True)
+    name = fields.Char( String ='Name',required=True, translate=True)
     training_round_ids = fields.Many2many('employee.training.program.round', string="Training rounds")
-    description = fields.Char(string="description")
+    description = fields.Char(string="description", translate=True)
 
 

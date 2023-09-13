@@ -24,7 +24,7 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 13.0\n"
+"Planning-Id-Version: Odoo Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-27 09:21+0000\n"
 "PO-Revision-Date: 2019-08-26 09:13+0000\n"
@@ -2243,12 +2243,12 @@ msgstr "Prioridad"
 #: model_terms:ir.ui.view,arch_db:project.view_task_project_user_search
 #: model_terms:ir.ui.view,arch_db:project.view_task_search_form
 #, python-format
-msgid "Project"
+msgid "Planning"
 msgstr "Proyecto"
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_account_analytic_account__project_count
-msgid "Project Count"
+msgid "Planning Count"
 msgstr "Cuenta de proyecto"
 
 #. module: project
@@ -2259,7 +2259,7 @@ msgstr "Cuenta de proyecto"
 #: model_terms:ir.ui.view,arch_db:project.project_view_kanban
 #: model_terms:ir.ui.view,arch_db:project.view_project
 #: model_terms:ir.ui.view,arch_db:project.view_project_project_filter
-msgid "Project Manager"
+msgid "Planning Manager"
 msgstr "Responsable de proyecto"
 
 #. module: project
@@ -2267,31 +2267,31 @@ msgstr "Responsable de proyecto"
 #: model_terms:ir.ui.view,arch_db:project.project_project_view_form_simplified
 #: model_terms:ir.ui.view,arch_db:project.project_view_kanban
 #: model_terms:ir.ui.view,arch_db:project.view_project
-msgid "Project Name"
+msgid "Planning Name"
 msgstr "Nombre del proyecto"
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.rating_index
-msgid "Project Satisfaction"
+msgid "Planning Satisfaction"
 msgstr "Satisfacción del proyecto"
 
 #. module: project
 #: model:ir.model,name:project.model_project_tags
-msgid "Project Tags"
+msgid "Planning Tags"
 msgstr "Etiquetas del Proyecto"
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.project_task_view_activity
 #: model_terms:ir.ui.view,arch_db:project.view_project_task_graph
 #: model_terms:ir.ui.view,arch_db:project.view_project_task_pivot
-msgid "Project Tasks"
+msgid "Planning Tasks"
 msgstr "Tareas de proyecto"
 
 #. module: project
 #: model:ir.model.fields,help:project.field_project_project__subtask_project_id
 #: model:ir.model.fields,help:project.field_project_task__subtask_project_id
 msgid ""
-"Project in which sub-tasks of the current project will be created. It can be"
+"Planning in which sub-tasks of the current project will be created. It can be"
 " the current project itself."
 msgstr ""
 "Proyecto en el que se crearán las subtareas del proyecto actual. Puede ser "
@@ -2299,19 +2299,19 @@ msgstr ""
 
 #. module: project
 #: model:ir.actions.act_window,name:project.dblc_proj
-msgid "Project's tasks"
+msgid "Planning's tasks"
 msgstr "Tareas del proyecto"
 
 #. module: project
 #: model:ir.actions.server,name:project.ir_actions_server_project_sample
-msgid "Project: Activate Sample Project"
+msgid "Planning: Activate Sample Project"
 msgstr "Proyecto: activar proyecto de ejemplo"
 
 #. module: project
 #: model:ir.actions.server,name:project.ir_cron_rating_project_ir_actions_server
 #: model:ir.cron,cron_name:project.ir_cron_rating_project
 #: model:ir.cron,name:project.ir_cron_rating_project
-msgid "Project: Send rating"
+msgid "Planning: Send rating"
 msgstr "Proyecto: Enviar valoración"
 
 #. module: project
@@ -2327,12 +2327,12 @@ msgstr "Proyecto: Enviar valoración"
 #: model_terms:ir.ui.view,arch_db:project.portal_my_projects
 #: model_terms:ir.ui.view,arch_db:project.rating_index
 #: model_terms:ir.ui.view,arch_db:project.view_project
-msgid "Projects"
+msgid "Plannings"
 msgstr "Proyectos"
 
 #. module: project
 #: model:mail.channel,name:project.mail_channel_project_task
-msgid "Projects & Tasks"
+msgid "Plannings & Tasks"
 msgstr "Proyectos y tareas"
 
 #. module: project

@@ -12,7 +12,7 @@
              <field name="flag" invisible="True"/>
 		</xpath>
         <xpath expr="//button[@name='action_payslip_done']" position="before">
-		    <button string="Send By Email" name="action_my_payslip_sent" type="object" attrs="{'invisible':[('flag','=',True)]}"  class="oe_highlight"/>
+		    <button string="Send By Email" name="action_my_payslip_sent" type="object" invisible="1"  class="oe_highlight"/>
 		</xpath>
             </field>
         </record>

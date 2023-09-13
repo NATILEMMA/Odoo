@@ -12,7 +12,7 @@ class FleetVehicleCost(models.Model):
     _description = 'Cost related to a vehicle'
     _order = 'date desc, vehicle_id asc'
 
-    name = fields.Char(related='vehicle_id.name', string='Name', store=True, readonly=False)
+    name = fields.Char(related='vehicle_id.name', string='Name', store=True, readonly=False, translate=True)
     vehicle_id = fields.Many2one('fleet.vehicle', 'Vehicle', required=True, help='Vehicle concerned by this log')
     cost_subtype_id = fields.Many2one('fleet.service.type', 'Type', help='Cost type purchased with this cost')
     amount = fields.Float('Total Price')
@@ -31,7 +31,7 @@ class FleetVehicleCost(models.Model):
     date = fields.Date(help='Date when the cost has been executed')
     contract_id = fields.Many2one('fleet.vehicle.log.contract', 'Contract', help='Contract attached to this cost')
     auto_generated = fields.Boolean('Automatically Generated', readonly=True)
-    description = fields.Char("Cost Description")
+    description = fields.Char("Cost Description", translate=True)
     company_id = fields.Many2one('res.company', 'Company', default=lambda self: self.env.company)
     currency_id = fields.Many2one('res.currency', related='company_id.currency_id')
 
@@ -102,7 +102,7 @@ class FleetVehicleLogContract(models.Model):
         })
         return res
 
-    name = fields.Text(compute='_compute_contract_name', store=True)
+    name = fields.Text(compute='_compute_contract_name', store=True, translate=True)
     active = fields.Boolean(default=True)
     user_id = fields.Many2one('res.users', 'Responsible', default=lambda self: self.env.user, index=True)
     start_date = fields.Date('Contract Start Date', default=fields.Date.context_today,
@@ -114,7 +114,7 @@ class FleetVehicleLogContract(models.Model):
     insurer_id = fields.Many2one('res.partner', 'Vendor')
     purchaser_id = fields.Many2one('res.partner', 'Driver', default=lambda self: self.env.user.partner_id.id,
         help='Person to which the contract is signed for')
-    ins_ref = fields.Char('Contract Reference', size=64, copy=False)
+    ins_ref = fields.Char('Contract Reference', size=64, copy=False, translate=True)
     state = fields.Selection([
         ('futur', 'Incoming'),
         ('open', 'In Progress'),
@@ -125,7 +125,7 @@ class FleetVehicleLogContract(models.Model):
         help='Choose whether the contract is still valid or not',
         tracking=True,
         copy=False)
-    notes = fields.Text('Terms and Conditions', help='Write here all supplementary information relative to this contract', copy=False)
+    notes = fields.Text('Terms and Conditions', help='Write here all supplementary information relative to this contract', copy=False, translate=True)
     cost_generated = fields.Float('Recurring Cost Amount', tracking=True,
         help="Costs paid at regular intervals, depending on the cost frequency. "
         "If the cost frequency is set to unique, the cost will be logged at the start date")
@@ -329,9 +329,9 @@ class FleetVehicleLogFuel(models.Model):
     liter = fields.Float()
     price_per_liter = fields.Float()
     purchaser_id = fields.Many2one('res.partner', 'Purchaser')
-    inv_ref = fields.Char('Invoice Reference', size=64)
+    inv_ref = fields.Char('Invoice Reference', size=64, translate=True)
     vendor_id = fields.Many2one('res.partner', 'Vendor')
-    notes = fields.Text()
+    notes = fields.Text( translate=True)
     cost_id = fields.Many2one('fleet.vehicle.cost', 'Cost', required=True, ondelete='cascade')
     # we need to keep this field as a related with store=True because the graph view doesn't support
     # (1) to address fields from inherited table
@@ -381,12 +381,12 @@ class FleetVehicleLogServices(models.Model):
         return res
 
     purchaser_id = fields.Many2one('res.partner', 'Purchaser')
-    inv_ref = fields.Char('Invoice Reference')
+    inv_ref = fields.Char('Invoice Reference', translate=True)
     vendor_id = fields.Many2one('res.partner', 'Vendor')
     # we need to keep this field as a related with store=True because the graph view doesn't support
     # (1) to address fields from inherited table and (2) fields that aren't stored in database
     cost_amount = fields.Float(related='cost_id.amount', string='Amount', store=True, readonly=False)
-    notes = fields.Text()
+    notes = fields.Text(translate=True)
     cost_id = fields.Many2one('fleet.vehicle.cost', 'Cost', required=True, ondelete='cascade')
 
     @api.onchange('vehicle_id')

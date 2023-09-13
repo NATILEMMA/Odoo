@@ -54,14 +54,7 @@ class Expense_Update(models.Model):
 class Fleet_Service_Update(models.Model):
     _inherit = "fleet.vehicle.log.services"
 
-    # state = fields.Selection([
-    #     ('draft', 'New'),
-    #     ('requested', 'Requested'),
-    #     ('approved', 'Approved'),
-    #     ('confirm', 'Open'),
-    #     ('done', 'Done'),
-    #     ('cancel', 'Cancel')], string='Status',
-    #     default='draft', readonly=True, tracking=True)
+    
 
     payment_count = fields.Integer("Payment Count")
     analytic = fields.Many2one('account.analytic.account', string="Analytic Account", requied=True, options={'no_create': True, 'no_edit': True, 'no_open': True})
@@ -81,7 +74,9 @@ class Fleet_Service_Update(models.Model):
             serv.invoice_count_2 = obj.search_count([('services', '=', self.id)])
 
     def action_create_payment(self):
-        fleet = self.env['product.product'].search([('name', '=', 'Fleet product')])
+        fleet = self.env['product.product'].search([('default_code', '=', 'Fleet_product_1')],limit=1)
+        if not fleet: 
+           raise ValidationError("The fleet product is not found! Reinstall fleet_operation module!!! ")
         """Invoice for Deposit Receive."""
         if self.state == 'approved':
             for service in self:
@@ -90,7 +85,7 @@ class Fleet_Service_Update(models.Model):
                     'unit_amount': service.service_amount,
                     'date': service.date,
                     'product_id':fleet.id,
-                    'employee_id': 1,
+                    'employee_id': self.env.user.employee_id.id,
                     'quantity': 1,
                     'vehicle_select': self.vechical_type_id,
                     'analytic_account_id': self.analytic.id,
@@ -122,7 +117,7 @@ class Fleet_Service_Update(models.Model):
                         'unit_amount': service.additional_payment,
                         'date': service.date,
                         'product_id': fleet.id,
-                        'employee_id': 1,
+                        'employee_id': self.env.user.employee_id.id,
                         'analytic_account_id': 1,
                         'is_vehicle_service': True,
                         'is_services': True,

@@ -48,11 +48,11 @@
                         attrs="{'invisible': [('state', 'in', ('draft','requested','invoice','done','cancel','register'))]}"
                         groups="fleet.fleet_group_manager"
                         />
-                    <button name="set_approved" string="Set to approve"
+                    <!-- <button name="set_approved" string="Set to approve"
                         class="oe_highlight" type="object"
                         attrs="{'invisible': [('state', 'in', ('draft','requested','approved','cancel','register'))]}"
                         groups="fleet.fleet_group_manager"
-                        />
+                        /> -->
 <!--                    <button name="action_return_invoice" string="Return Invoice"-->
 <!--                        class="oe_highlight" type="object"-->
 <!--                        attrs="{'invisible':[('state','!=', 'approved')]}"-->
@@ -73,7 +73,7 @@
                     <button name="action_reopen"
                         attrs="{'invisible':['|',('from_migration','=',True),('state','!=','done')]}" groups="fleet.fleet_group_manager"
                         type="object" string="Re-Open"/>
-                    <field name="state" widget="statusbar" statusbar_visible="draft,requested,approved,invoice,confirm,done,register,cancel"
+                    <field name="state" widget="statusbar" statusbar_visible="draft,requested,invoice,confirm,done,register,cancel"
                         statusbar_colors='{"confirm":"blue","done":"blue", "cancel":"red"}'/>
                 </header>
             </xpath>
@@ -437,7 +437,7 @@
 
     <!-- Work Order Search Action. -->
     <record model='ir.actions.act_window' id='fleet.fleet_vehicle_log_services_action'>
-        <field name="name">Customer Services</field>
+        <field name="name">Vehicle Services</field>
         <field name="res_model">fleet.vehicle.log.services</field>
         <!-- <field name="view_type">form</field> -->
         <field name="view_mode">tree,form,graph</field>
@@ -538,11 +538,11 @@
 
 
     <!-- Work Order Menu. -->
-    <menuitem action="fleet.fleet_vehicle_log_services_action"
+    <!-- <menuitem action="fleet.fleet_vehicle_log_services_action"
         parent="fleet.fleet_vehicles" id="fleet.fleet_vehicle_log_services_menu"
         sequence="5" groups="fleet.fleet_group_manager"
         string="Vehicle Services"/>
-        
+         -->
 
     <!-- <record model='ir.actions.act_window' id='fleet_vehicle_log_services_action'>
         <field name="name">Service Request</field>

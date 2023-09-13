@@ -1,0 +1,110 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* visitor_ethiopian_calandar
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20220525\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-19 09:10+0000\n"
+"PO-Revision-Date: 2023-08-19 09:10+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: visitor_ethiopian_calandar
+#: model:ir.model.fields,field_description:visitor_ethiopian_calandar.field_fo_property_counter__ethiopian_from
+#: model:ir.model.fields,field_description:visitor_ethiopian_calandar.field_fo_property_counter__is_pagum_from
+#: model:ir.model.fields,field_description:visitor_ethiopian_calandar.field_fo_property_counter__pagum_from
+#: model:ir.model.fields,field_description:visitor_ethiopian_calandar.field_fo_visit__ethiopian_from
+#: model:ir.model.fields,field_description:visitor_ethiopian_calandar.field_fo_visit__is_pagum_from
+#: model:ir.model.fields,field_description:visitor_ethiopian_calandar.field_fo_visit__pagum_from
+#: model:ir.model.fields,field_description:visitor_ethiopian_calandar.field_reschedule_visit__ethiopian_from
+#: model:ir.model.fields,field_description:visitor_ethiopian_calandar.field_reschedule_visit__is_pagum_from
+#: model:ir.model.fields,field_description:visitor_ethiopian_calandar.field_reschedule_visit__pagum_from
+#: model:ir.model.fields,field_description:visitor_ethiopian_calandar.field_rescheduled_time__ethiopian_from
+#: model:ir.model.fields,field_description:visitor_ethiopian_calandar.field_rescheduled_time__is_pagum_from
+#: model:ir.model.fields,field_description:visitor_ethiopian_calandar.field_rescheduled_time__pagum_from
+msgid "Date"
+msgstr "ቀን"
+
+#. module: visitor_ethiopian_calandar
+#: code:addons/visitor_ethiopian_calandar/models/fo_property_counter.py:0
+#: code:addons/visitor_ethiopian_calandar/models/fo_property_counter.py:0
+#: code:addons/visitor_ethiopian_calandar/models/fo_property_counter.py:0
+#: code:addons/visitor_ethiopian_calandar/models/fo_property_counter.py:0
+#: code:addons/visitor_ethiopian_calandar/models/fo_visit.py:0
+#: code:addons/visitor_ethiopian_calandar/models/fo_visit.py:0
+#: code:addons/visitor_ethiopian_calandar/models/fo_visit.py:0
+#: code:addons/visitor_ethiopian_calandar/models/fo_visit.py:0
+#, python-format
+msgid "Please Add A Date After Today"
+msgstr "እባክዎ ከዛሬ ቀን በኋላ ቀን ይምረጡ"
+
+#. module: visitor_ethiopian_calandar
+#: code:addons/visitor_ethiopian_calandar/models/fo_property_counter.py:0
+#: code:addons/visitor_ethiopian_calandar/models/fo_property_counter.py:0
+#: code:addons/visitor_ethiopian_calandar/models/fo_visit.py:0
+#: code:addons/visitor_ethiopian_calandar/models/fo_visit.py:0
+#, python-format
+msgid "Please Add Working Days First"
+msgstr "እባክዎ መጀመሪያ የስራ ቀናትን ይጨምሩ"
+
+#. module: visitor_ethiopian_calandar
+#: code:addons/visitor_ethiopian_calandar/wizard/reschedule.py:0
+#, python-format
+msgid "Please Fill In The Required Fields"
+msgstr "እባክዎ የሚፈለጉትን መስኮች ይሙሉ"
+
+#. module: visitor_ethiopian_calandar
+#: model:ir.model,name:visitor_ethiopian_calandar.model_fo_property_counter
+msgid "Property Details"
+msgstr "የንብረት ዝርዝሮች"
+
+#. module: visitor_ethiopian_calandar
+#: code:addons/visitor_ethiopian_calandar/wizard/reschedule.py:0
+#, python-format
+msgid "Sorry, This Time is Out Of The Range of Regular Working Hours"
+msgstr "ይቅርታ፣ ይህ ጊዜ ከመደበኛ የስራ ሰዓታት ክልል ውጭ ነው።"
+
+#. module: visitor_ethiopian_calandar
+#: code:addons/visitor_ethiopian_calandar/models/fo_property_counter.py:0
+#: code:addons/visitor_ethiopian_calandar/models/fo_property_counter.py:0
+#: code:addons/visitor_ethiopian_calandar/models/fo_property_counter.py:0
+#: code:addons/visitor_ethiopian_calandar/models/fo_property_counter.py:0
+#: code:addons/visitor_ethiopian_calandar/models/fo_visit.py:0
+#: code:addons/visitor_ethiopian_calandar/models/fo_visit.py:0
+#: code:addons/visitor_ethiopian_calandar/models/fo_visit.py:0
+#: code:addons/visitor_ethiopian_calandar/models/fo_visit.py:0
+#: code:addons/visitor_ethiopian_calandar/wizard/reschedule.py:0
+#, python-format
+msgid "The Date You Picked Is A Holiday"
+msgstr "የመረጡት ቀን የበዓል ቀን ነው።"
+
+#. module: visitor_ethiopian_calandar
+#: code:addons/visitor_ethiopian_calandar/models/fo_property_counter.py:0
+#: code:addons/visitor_ethiopian_calandar/models/fo_property_counter.py:0
+#: code:addons/visitor_ethiopian_calandar/models/fo_visit.py:0
+#: code:addons/visitor_ethiopian_calandar/models/fo_visit.py:0
+#: code:addons/visitor_ethiopian_calandar/wizard/reschedule.py:0
+#, python-format
+msgid "The Date You Picked Isn't Apart of Your Working Days"
+msgstr "የመረጡት ቀን ከስራ ቀኖ የተለየ ነው።"
+
+#. module: visitor_ethiopian_calandar
+#: model:ir.model,name:visitor_ethiopian_calandar.model_reschedule_visit
+msgid "This model will handle the archiving members"
+msgstr "ይህ ሞዴል የማህደር አባላቱን ያስተናግዳል።"
+
+#. module: visitor_ethiopian_calandar
+#: model:ir.model,name:visitor_ethiopian_calandar.model_rescheduled_time
+msgid "This model will reschedule a visit"
+msgstr "ይህ ሞዴል ጉብኝትን እንደገና ያስቀምጣል።"
+
+#. module: visitor_ethiopian_calandar
+#: model:ir.model,name:visitor_ethiopian_calandar.model_fo_visit
+msgid "Visit record handler"
+msgstr "የመዝገብ ተቆጣጣሪን ይጎብኙ"

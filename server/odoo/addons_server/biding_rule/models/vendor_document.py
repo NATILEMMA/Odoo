@@ -9,7 +9,7 @@ class VendorSelected(models.Model):
     _description="This models will create selected option to vendor"
 
 
-    name = fields.Char()
+    name = fields.Char( translate=True)
     value = fields.Float()
     vendor_id = fields.Many2one('vendor.document')
 
@@ -17,7 +17,7 @@ class SelectionField(models.Model):
     _name = 'selection.field'
     _description = 'selection field'
 
-    name = fields.Char(string='selection name', required=True)
+    name = fields.Char(string='selection name', required=True, translate=True)
     value = fields.Float(string="selection value")
     vendor_document_id = fields.Many2one('vendor.document', readonly=True, string='vendor document')
 
@@ -27,8 +27,8 @@ class VendorDocument(models.Model):
     _description = 'vendor Documents'
 
     name = fields.Char(string='Rule name', required=True, copy=False, help='You can give your'
-                                                                                 'Document number.')
-    description = fields.Text(string='Description', copy=False, help="Description")
+                                                                                 'Document number.', translate=True)
+    description = fields.Text(string='Description', copy=False, help="Description", translate=True)
     issue_date = fields.Date(string='Issue Date', default=fields.datetime.now(), help="Date of issue", copy=False)
     is_pass = fields.Boolean('passed')
     input_type = fields.Selection(

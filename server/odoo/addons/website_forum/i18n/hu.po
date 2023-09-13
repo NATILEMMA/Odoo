@@ -10,7 +10,6 @@
 # Martin Trigaux, 2020
 # Ákos Nagy <akos.nagy@oregional.hu>, 2020
 # Tamás Németh <ntomasz81@gmail.com>, 2021
-# Tamás Dombos, 2022
 # 
 msgid ""
 msgstr ""
@@ -18,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-27 09:22+0000\n"
 "PO-Revision-Date: 2019-08-26 09:15+0000\n"
-"Last-Translator: Tamás Dombos, 2022\n"
+"Last-Translator: Tamás Németh <ntomasz81@gmail.com>, 2021\n"
 "Language-Team: Hungarian (https://www.transifex.com/odoo/teams/41243/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -72,7 +71,7 @@ msgstr ""
 #: code:addons/website_forum/models/forum.py:0
 #, python-format
 msgid "%d karma required to create a new Tag."
-msgstr "%d karma szükséges az új címke létrehozásához."
+msgstr ""
 
 #. module: website_forum
 #: code:addons/website_forum/models/forum.py:0
@@ -318,7 +317,7 @@ msgstr ""
 #. module: website_forum
 #: model_terms:ir.ui.view,arch_db:website_forum.forum_index
 msgid "<b>Tags</b> I Follow"
-msgstr "Általam követett <b>cimkék</b> "
+msgstr ""
 
 #. module: website_forum
 #: model_terms:ir.ui.view,arch_db:website_forum.forum_index
@@ -385,7 +384,7 @@ msgstr ""
 #. module: website_forum
 #: model_terms:ir.ui.view,arch_db:website_forum.user_sidebar
 msgid "<i class=\"fa fa-bell fa-fw\"/> Followed Posts"
-msgstr "Követett bejegyzések"
+msgstr ""
 
 #. module: website_forum
 #: model_terms:ir.ui.view,arch_db:website_forum.moderation_queue
@@ -423,7 +422,7 @@ msgstr ""
 #. module: website_forum
 #: model_terms:ir.ui.view,arch_db:website_forum.new_question
 msgid "<i class=\"fa fa-chevron-left mr-2\"/>Back to All Topics"
-msgstr "Összes téma"
+msgstr ""
 
 #. module: website_forum
 #: model_terms:ir.ui.view,arch_db:website_forum.user_profile_sub_nav
@@ -433,7 +432,7 @@ msgstr ""
 #. module: website_forum
 #: model_terms:ir.ui.view,arch_db:website_forum.user_sidebar
 msgid "<i class=\"fa fa-flag fa-fw\"/> Flagged"
-msgstr "Megjelölt"
+msgstr ""
 
 #. module: website_forum
 #: model_terms:ir.ui.view,arch_db:website_forum.moderation_queue
@@ -441,8 +440,6 @@ msgid ""
 "<i class=\"fa fa-flag ml-4 mr4\"/>\n"
 "                                    Flagged"
 msgstr ""
-"<i class=\"fa fa-flag ml-4 mr4\"/>\n"
-"                                    Megjelölt"
 
 #. module: website_forum
 #: model_terms:ir.ui.view,arch_db:website_forum.moderation_queue
@@ -486,7 +483,7 @@ msgstr ""
 #. module: website_forum
 #: model_terms:ir.ui.view,arch_db:website_forum.user_sidebar
 msgid "<i class=\"fa fa-tags fa-fw\"/> Followed Tags"
-msgstr "Követett címkék"
+msgstr ""
 
 #. module: website_forum
 #: model_terms:ir.ui.view,arch_db:website_forum.user_profile_content
@@ -710,13 +707,13 @@ msgstr ""
 #. module: website_forum
 #: model_terms:ir.ui.view,arch_db:website_forum.header
 msgid "All Tags"
-msgstr "Összes címke"
+msgstr ""
 
 #. module: website_forum
 #: model_terms:ir.ui.view,arch_db:website_forum.forum_nav_header
 #: model_terms:ir.ui.view,arch_db:website_forum.new_question
 msgid "All Topics"
-msgstr "Összes téma"
+msgstr ""
 
 #. module: website_forum
 #: model_terms:ir.ui.view,arch_db:website_forum.forum_nav_header
@@ -1126,7 +1123,7 @@ msgstr "Zárja le a saját bejegyzés közzétételt"
 #: model_terms:ir.ui.view,arch_db:website_forum.close_post
 #: model_terms:ir.ui.view,arch_db:website_forum.header
 msgid "Close post"
-msgstr "Bejegyzés lezárása"
+msgstr ""
 
 #. module: website_forum
 #: model:ir.model.fields,field_description:website_forum.field_forum_post__closed_uid
@@ -1254,7 +1251,7 @@ msgstr "Létrehozás dátuma"
 #. module: website_forum
 #: model_terms:ir.actions.act_window,help:website_forum.action_forum_post
 msgid "Create a new forum post"
-msgstr "Új fórum bejegyzés létrehozása"
+msgstr ""
 
 #. module: website_forum
 #: model_terms:ir.actions.act_window,help:website_forum.forum_tag_action
@@ -1770,7 +1767,7 @@ msgstr "Súgó"
 #. module: website_forum
 #: model_terms:forum.forum,welcome_message:website_forum.forum_help
 msgid "Hide Intro"
-msgstr "Bevezetés elrejtése"
+msgstr ""
 
 #. module: website_forum
 #: model_terms:ir.ui.view,arch_db:website_forum.forum_index
@@ -2057,7 +2054,7 @@ msgstr "Moderálás"
 #. module: website_forum
 #: model_terms:ir.ui.view,arch_db:website_forum.user_sidebar
 msgid "Moderation tools"
-msgstr "Moderálási eszközök"
+msgstr ""
 
 #. module: website_forum
 #: model_terms:ir.ui.view,arch_db:website_forum.post_answers
@@ -2200,7 +2197,7 @@ msgstr ""
 #. module: website_forum
 #: model_terms:ir.ui.view,arch_db:website_forum.moderation_queue
 msgid "No flagged posts"
-msgstr "Nincsenek megjelölt bejegyzések"
+msgstr ""
 
 #. module: website_forum
 #: model_terms:ir.ui.view,arch_db:website_forum.forum_all
@@ -2215,7 +2212,7 @@ msgstr ""
 #. module: website_forum
 #: model_terms:ir.ui.view,arch_db:website_forum.tag
 msgid "No tags"
-msgstr "Nincsenek címkék"
+msgstr ""
 
 #. module: website_forum
 #: model_terms:ir.ui.view,arch_db:website_forum.user_votes
@@ -2903,7 +2900,7 @@ msgstr "Címkék"
 #. module: website_forum
 #: model_terms:ir.ui.view,arch_db:website_forum.forum_nav_header
 msgid "Tags I Follow"
-msgstr "Általam követett címkék"
+msgstr ""
 
 #. module: website_forum
 #: model:gamification.badge,name:website_forum.badge_32
@@ -2967,8 +2964,6 @@ msgid ""
 "This community is for professional and enthusiast users, partners and "
 "programmers."
 msgstr ""
-"Ezt a közösséget szakemberek, lelkes felhasználók, partnerek és programozók "
-"számára hoztuk létre."
 
 #. module: website_forum
 #: model_terms:forum.forum,faq:website_forum.forum_help
@@ -2983,8 +2978,6 @@ msgid ""
 "This community is for professionals and enthusiasts of our products and services.\n"
 "                                        <br>Share and discuss the best content and new marketing ideas, build your professional profile and become a better marketer together."
 msgstr ""
-"Ezt a közösséget szakemberek, lelkes felhasználók, partnerek és programozók számára hoztuk létre.\n"
-"                                        <br>Ossza meg és vitassa meg a legjobb tartalmakat és marketing ötleteket, építse fel szakmai profilját és váljon jobb marketingessé."
 
 #. module: website_forum
 #: model:forum.forum,description:website_forum.forum_help
@@ -3070,8 +3063,6 @@ msgid ""
 "To prevent your question from being flagged and possibly removed, avoid "
 "asking subjective questions where …"
 msgstr ""
-"Hogy kérdését ne jelöljék meg és esetlegesen ne kerüljön törlésre, ne tegyen"
-" fel olyan szubjektív kérdéseket ...."
 
 #. module: website_forum
 #: model_terms:ir.ui.view,arch_db:website_forum.post_description_full
@@ -3086,7 +3077,7 @@ msgstr ""
 #. module: website_forum
 #: model_terms:ir.ui.view,arch_db:website_forum.forum_nav_header
 msgid "Topics"
-msgstr "Témák"
+msgstr ""
 
 #. module: website_forum
 #: model:ir.model.fields,field_description:website_forum.field_forum_post__vote_count
@@ -3355,7 +3346,7 @@ msgstr ""
 #. module: website_forum
 #: model_terms:ir.ui.view,arch_db:website_forum.edit_post
 msgid "You need to have sufficient karma to edit tags"
-msgstr "Nincs elég karmájaa címkék szerkesztéséhez"
+msgstr ""
 
 #. module: website_forum
 #: model_terms:forum.forum,faq:website_forum.forum_help
@@ -3663,7 +3654,7 @@ msgstr "sajátos kérdés az Odoo rendszer szolgáltatás ajánlatairól, stb."
 #. module: website_forum
 #: model_terms:ir.ui.view,arch_db:website_forum.forum_index
 msgid "tag"
-msgstr "címke"
+msgstr ""
 
 #. module: website_forum
 #: model_terms:forum.forum,faq:website_forum.forum_help
@@ -3768,7 +3759,7 @@ msgstr "az életrajza felugró ablakban jelenik meg"
 #. module: website_forum
 #: model_terms:ir.ui.view,arch_db:website_forum.display_post_question_block
 msgid "| Flagged"
-msgstr "| Megjelölve"
+msgstr ""
 
 #. module: website_forum
 #: model_terms:ir.ui.view,arch_db:website_forum.moderation_queue

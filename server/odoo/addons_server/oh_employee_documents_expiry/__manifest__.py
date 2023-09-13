@@ -36,6 +36,7 @@
         'views/employee_document_view.xml',
         'views/document_type_view.xml',
         'views/hr_document_template.xml',
+        'data/seq.xml'
     ],
     'demo': ['data/demo_data.xml'],
     'images': ['static/description/banner.png'],

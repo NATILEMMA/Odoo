@@ -164,17 +164,17 @@ msgstr ""
 #. module: website
 #: model:ir.model.fields.selection,name:website.selection__website_rewrite__redirect_type__301
 msgid "301 Moved permanently"
-msgstr ""
+msgstr "301 በቋሚነት ተንቀሳቅሷል"
 
 #. module: website
 #: model:ir.model.fields.selection,name:website.selection__website_rewrite__redirect_type__302
 msgid "302 Moved temporarily"
-msgstr ""
+msgstr "302 ለጊዜው ተንቀሳቅሷል"
 
 #. module: website
 #: model:ir.model.fields.selection,name:website.selection__website_rewrite__redirect_type__308
 msgid "308 Redirect / Rewrite"
-msgstr ""
+msgstr "308 ማዘዋወር / እንደገና መፃፍ"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.snippet_options
@@ -189,7 +189,7 @@ msgstr ""
 #. module: website
 #: model:ir.model.fields.selection,name:website.selection__website_rewrite__redirect_type__404
 msgid "404 Not Found"
-msgstr ""
+msgstr "404 አልተገኘም"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.snippet_options
@@ -221,7 +221,7 @@ msgstr "<b>50,000+ ኩባንያዎች</b>ንግዶቻቸውን ለማሳደግ �
 #: code:addons/website/static/src/js/tours/banner.js:0
 #, python-format
 msgid "<b>Click Edit</b> to start designing your homepage."
-msgstr "የመነሻ ገጽዎን ዲዛይን ለመጀመር <b>አርትዕን ጠቅ ያድርጉ።"
+msgstr "የመነሻ ገጽዎን ዲዛይን ለመጀመር <b>አስተካክል ን ጠቅ ያድርጉ።"
 
 #. module: website
 #. openerp-web
@@ -304,7 +304,7 @@ msgid ""
 "this title</font>"
 msgstr ""
 "<font style=\"font-size: 62px; background-color: rgb(255, 255, "
-"255);\">አርትዕthis title</font>"
+"255);\">አስተካክል this title</font>"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_banner
@@ -748,7 +748,7 @@ msgstr ""
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.user_navbar
 msgid "<span class=\"fa fa-pencil mr-2\"/>Edit"
-msgstr "<span class=\"fa fa-pencil mr-2\"/>አርትዕ"
+msgstr "<span class=\"fa fa-pencil mr-2\"/>አስተካክል "
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.user_navbar
@@ -974,7 +974,7 @@ msgstr "እርምጃ"
 #: model:ir.model.fields,field_description:website.field_website_visitor__active
 #: model_terms:ir.ui.view,arch_db:website.website_visitor_view_kanban
 msgid "Active"
-msgstr "ንቁ"
+msgstr "በስራ ላይ ያለ"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_three_columns
@@ -1950,7 +1950,7 @@ msgstr "ተጨማሪ ባህሪያትን ለመጨመር ብሎኮችን እና �
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.publish_management
 msgid "Edit"
-msgstr "አርትዕ"
+msgstr "አስተካክል "
 
 #. module: website
 #. openerp-web
@@ -1958,42 +1958,42 @@ msgstr "አርትዕ"
 #: model_terms:ir.ui.view,arch_db:website.user_navbar
 #, python-format
 msgid "Edit Menu"
-msgstr "ምናሌ አርትዕ"
+msgstr "ምናሌ አስተካክል "
 
 #. module: website
 #. openerp-web
 #: code:addons/website/static/src/xml/website.contentMenu.xml:0
 #, python-format
 msgid "Edit Menu Item"
-msgstr "ምናሌ ንጥልን አርትዕ"
+msgstr "ምናሌ ንጥልን አስተካክል "
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.s_features_grid
 msgid "Edit Styles"
-msgstr "ቅጦችን አርትዕ"
+msgstr "ቅጦችን አስተካክል "
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.user_navbar
 msgid "Edit Top Menu"
-msgstr "ከፍተኛ ሜኑ አርትዕ"
+msgstr "ከፍተኛ ሜኑ አስተካክል "
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.one_page_line
 msgid "Edit code in backend"
-msgstr "ኮድ በጀርባ ውስጥ አርትዕ"
+msgstr "ኮድ በጀርባ ውስጥ አስተካክል "
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.publish_management
 #: model_terms:ir.ui.view,arch_db:website.user_navbar
 msgid "Edit in backend"
-msgstr "በጀርባ አርትዕ"
+msgstr "በጀርባ አስተካክል "
 
 #. module: website
 #. openerp-web
 #: code:addons/website/static/src/xml/website.backend.xml:0
 #, python-format
 msgid "Edit my Analytics Client ID"
-msgstr "የእኔን የትንታኔ ደንበኛ መታወቂያ አርትዕ"
+msgstr "የእኔን የትንታኔ ደንበኛ መታወቂያ አስተካክል "
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.page_404
@@ -2007,7 +2007,7 @@ msgstr "ነባሪውን ለማስማማት ከዚህ መስመር በታች ያ�
 #: code:addons/website/static/src/js/editor/snippets.options.js:0
 #, python-format
 msgid "Edit the menu"
-msgstr "ምናሌውን አርትዕ"
+msgstr "ምናሌውን አስተካክል "
 
 #. module: website
 #: model:res.groups,name:website.group_website_designer
@@ -3321,7 +3321,7 @@ msgstr "ባለብዙ ድረ-ገጽ"
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.layout
 msgid "My Website"
-msgstr "የእኔ ድር ጣቢያ"
+msgstr "የእኔ ድህረገፅ"
 
 #. module: website
 #. openerp-web
@@ -4240,7 +4240,7 @@ msgstr "ኢሜል ላኩልን"
 #: model:ir.model.fields,field_description:website.field_website_page__priority
 #: model:ir.model.fields,field_description:website.field_website_rewrite__sequence
 msgid "Sequence"
-msgstr "ቅደም ተከተል"
+msgstr "ቅደመ ተከተል"
 
 #. module: website
 #: model:ir.model,name:website.model_ir_actions_server
@@ -4939,7 +4939,7 @@ msgstr "UA-XXXXXXX-Y"
 #: model:ir.model.fields,field_description:website.field_website_rewrite__url_from
 #: model_terms:ir.ui.view,arch_db:website.view_website_rewrite_form
 msgid "URL from"
-msgstr ""
+msgstr "URL ከ"
 
 #. module: website
 #: model:ir.model.fields,help:website.field_res_config_settings__cdn_filters
@@ -4950,7 +4950,7 @@ msgstr "ከእነዚያ ማጣሪያዎች ጋር የሚዛመድ ዩአርኤ�
 #. module: website
 #: model:ir.model.fields,field_description:website.field_website_rewrite__url_to
 msgid "URL to"
-msgstr ""
+msgstr "URL ወደ"
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.snippet_options
@@ -5607,7 +5607,7 @@ msgstr "የማተም/የማተም መብቶች የሎትም"
 #: code:addons/website/static/src/xml/website.backend.xml:0
 #, python-format
 msgid "You do not seem to have access to this Analytics Account."
-msgstr "ይህን የትንታኔ መለያ መዳረሻ ያለህ አይመስልም።"
+msgstr "ይህን የበጀት መለያ መዳረሻ ያለህ አይመስልም።"
 
 #. module: website
 #. openerp-web
@@ -5691,7 +5691,7 @@ msgstr "የእርስዎ ፍለጋ"
 #: model:ir.model.fields,field_description:website.field_res_config_settings__social_youtube
 #: model:ir.model.fields,field_description:website.field_website__social_youtube
 msgid "Youtube Account"
-msgstr ""
+msgstr "የዩቲዩብ መለያ"
 
 #. module: website
 #. openerp-web
@@ -5744,7 +5744,7 @@ msgstr "ስም"
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.user_navbar
 msgid "or Edit Master"
-msgstr "ወይም ማስተር አርትዕ"
+msgstr "ወይም ማስተር አስተካክል "
 
 #. module: website
 #: model_terms:ir.ui.view,arch_db:website.res_config_settings_view_form

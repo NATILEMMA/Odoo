@@ -12,7 +12,7 @@
             <div name="button_box" position="inside">
                 <button class="oe_stat_button" type="object" name="action_view_projects"
                     icon="fa-puzzle-piece" attrs="{'invisible': [('project_count', '=', 0)]}">
-                    <field string="Projects" name="project_count" widget="statinfo"/>
+                    <field string="Plannings" name="project_count" widget="statinfo"/>
                 </button>
             </div>
         </field>

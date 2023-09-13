@@ -17,13 +17,13 @@ class FleetVehicle(models.Model):
         state = self.env.ref('fleet.fleet_vehicle_state_registered', raise_if_not_found=False)
         return state if state and state.id else False
 
-    name = fields.Char(compute="_compute_vehicle_name", store=True)
+    name = fields.Char(compute="_compute_vehicle_name", store=True, translate=True)
     active = fields.Boolean('Active', default=True, tracking=True)
     company_id = fields.Many2one('res.company', 'Company', default=lambda self: self.env.company)
     currency_id = fields.Many2one('res.currency', related='company_id.currency_id')
-    license_plate = fields.Char(tracking=True,
+    license_plate = fields.Char(tracking=True, translate=True,
         help='License plate number of the vehicle (i = plate number for a car)')
-    vin_sn = fields.Char('Chassis Number', help='Unique number written on the vehicle motor (VIN/SN number)', copy=False)
+    vin_sn = fields.Char('Chassis Number', help='Unique number written on the vehicle motor (VIN/SN number)', copy=False, translate=True)
     driver_id = fields.Many2one('res.partner', 'Driver', tracking=True, help='Driver of the vehicle', copy=False)
     future_driver_id = fields.Many2one('res.partner', 'Future Driver', tracking=True, help='Next Driver of the vehicle', copy=False, domain="['|', ('company_id', '=', False), ('company_id', '=', company_id)]")
     model_id = fields.Many2one('fleet.vehicle.model', 'Model',
@@ -44,14 +44,14 @@ class FleetVehicle(models.Model):
     acquisition_date = fields.Date('Immatriculation Date', required=False,
         default=fields.Date.today, help='Date when the vehicle has been immatriculated')
     first_contract_date = fields.Date(string="First Contract Date", default=fields.Date.today)
-    color = fields.Char(help='Color of the vehicle')
+    color = fields.Char(help='Color of the vehicle', translate=True)
     state_id = fields.Many2one('fleet.vehicle.state', 'State',
         default=_get_default_state, group_expand='_read_group_stage_ids',
         tracking=True,
         help='Current state of the vehicle', ondelete="set null")
-    location = fields.Char(help='Location of the vehicle (garage, ...)')
+    location = fields.Char(help='Location of the vehicle (garage, ...)', translate=True)
     seats = fields.Integer('Seats Number', help='Number of seats of the vehicle')
-    model_year = fields.Char('Model Year', help='Year of the model')
+    model_year = fields.Char('Model Year', help='Year of the model', translate=True)
     doors = fields.Integer('Doors Number', help='Number of doors of the vehicle', default=5)
     tag_ids = fields.Many2many('fleet.vehicle.tag', 'fleet_vehicle_vehicle_tag_rel', 'vehicle_tag_id', 'tag_id', 'Tags', copy=False)
     odometer = fields.Float(compute='_get_odometer', inverse='_set_odometer', string='Last Odometer',
@@ -326,7 +326,7 @@ class FleetVehicleOdometer(models.Model):
     _description = 'Odometer log for a vehicle'
     _order = 'date desc'
 
-    name = fields.Char(compute='_compute_vehicle_log_name', store=True)
+    name = fields.Char(compute='_compute_vehicle_log_name', store=True, translate=True)
     date = fields.Date(default=fields.Date.context_today)
     value = fields.Float('Odometer Value', group_operator="max")
     vehicle_id = fields.Many2one('fleet.vehicle', 'Vehicle', required=True)

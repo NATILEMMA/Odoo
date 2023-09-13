@@ -13,3 +13,5 @@ from . import training
 from . import assembly
 from . import transfer
 from . import registration
+from . import importation_module
+from . import subcity_by_state

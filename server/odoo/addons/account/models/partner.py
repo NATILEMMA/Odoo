@@ -18,7 +18,7 @@ class AccountFiscalPosition(models.Model):
     _order = 'sequence'
 
     sequence = fields.Integer()
-    name = fields.Char(string='Fiscal Position', required=True)
+    name = fields.Char(string='Fiscal Position', required=True, translate=True)
     active = fields.Boolean(default=True,
         help="By unchecking the active field, you may hide a fiscal position without deleting it.")
     company_id = fields.Many2one('res.company', string='Company', default=lambda self: self.env.company, required=True)
@@ -32,8 +32,8 @@ class AccountFiscalPosition(models.Model):
     country_group_id = fields.Many2one('res.country.group', string='Country Group',
         help="Apply only if delivery or invoicing country match the group.")
     state_ids = fields.Many2many('res.country.state', string='Federal States')
-    zip_from = fields.Char(string='Zip Range From')
-    zip_to = fields.Char(string='Zip Range To')
+    zip_from = fields.Char(string='Zip Range From', translate=True)
+    zip_to = fields.Char(string='Zip Range To', translate=True)
     # To be used in hiding the 'Federal States' field('attrs' in view side) when selected 'Country' has 0 states.
     states_count = fields.Integer(compute='_compute_states_count')
 
@@ -434,7 +434,7 @@ class ResPartner(models.Model):
     bank_account_count = fields.Integer(compute='_compute_bank_count', string="Bank")
     trust = fields.Selection([('good', 'Good Debtor'), ('normal', 'Normal Debtor'), ('bad', 'Bad Debtor')], string='Degree of trust you have in this debtor', default='normal', company_dependent=True)
     invoice_warn = fields.Selection(WARNING_MESSAGE, 'Invoice', help=WARNING_HELP, default="no-message")
-    invoice_warn_msg = fields.Text('Message for Invoice')
+    invoice_warn_msg = fields.Text('Message for Invoice', translate=True)
     # Computed fields to order the partners as suppliers/customers according to the
     # amount of their generated incoming/outgoing account moves
     supplier_rank = fields.Integer(default=0, copy=False)

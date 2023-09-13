@@ -1,19 +1,14 @@
-# Translation of Odoo Server.
-# This file contains the translation of the following modules:
-# 	* project
-#
+# Date created: 2023-06-21 20:44:01 by dichthuatphuongdong.com
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 13.0\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-29 09:15+0000\n"
-"PO-Revision-Date: 2023-06-29 09:15+0000\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: \n"
-"Plural-Forms: \n"
+"PO-Revision-Date: 2023-06-21 03:13:39+0000"
+"MIME-Version: 1.0"
+"Content-Type: text/plain; charset=UTF-8"
+"Content-Transfer-Encoding: 8bit"
+"Plural-Forms: nplurals=1; plural=0;"
+"X-Generator: GlotPress/3.0.0-alpha.2"
+"Language: en_GB"
+"Project-Id-Version: PO File 5.8.1"
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_report_project_task_user__delay_endings_days
@@ -54,116 +49,238 @@ msgstr "% በርቷል"
 #. module: project
 #: code:addons/project/models/project.py:0
 #: code:addons/project/models/project.py:0
-#, python-format
 msgid "%s (copy)"
 msgstr "%s (ኮፒ)"
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_res_config_settings__group_project_rating
-msgid "'Planning"
-msgstr "እቅድ"
+msgid "Planning"
+msgstr "እቅድ ማውጣት"
 
 #. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/tours/project.js:0
-#, python-format
-msgid ""
-"<b>Assign the task</b> to someone. <i>You can create and invite a new user "
-"on the fly.</i>"
+msgid "<b>Assign the task</b> to someone. <i>You can create and invite a new user on the fly.</i>"
 msgstr "ለአንድ ሰው <b>ተግባሩን መድቡ</b>። <i>በበረራ ላይ አዲስ ተጠቃሚ መፍጠር እና መጋበዝ ትችላለህ።</i>"
 
 #. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/tours/project.js:0
-#, python-format
 msgid "<b>Click the save button</b> to apply your changes to the task."
 msgstr "ለውጦችዎን በስራው ላይ ለመተግበር <b>አስቀምጥ የሚለውን ቁልፍ ጠቅ ያድርጉ።"
 
 #. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/tours/project.js:0
-#, python-format
 msgid "<b>Star tasks</b> to mark team priorities."
 msgstr "የቡድን ቅድሚያ የሚሰጣቸውን ነገሮች ምልክት ለማድረግ <b>የኮከብ ተግባራት</b>።"
 
 #. module: project
 #: model:mail.template,body_html:project.rating_project_request_email_template
 msgid ""
-"<div>\n"
-"    % set access_token = object.rating_get_access_token()\n"
-"    % set partner = object.rating_get_partner_id()\n"
-"    <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"width:100%; margin:0px auto;\">\n"
-"    <tbody>\n"
-"        <tr><td valign=\"top\" style=\"font-size: 13px;\">\n"
-"            % if partner.name:\n"
-"                Hello ${partner.name},<br/><br/>\n"
-"            % else:\n"
-"                Hello,<br/><br/>\n"
-"            % endif\n"
-"            Please take a moment to rate our services related to the task \"<strong>${object.name}</strong>\"\n"
-"            % if object.rating_get_rated_partner_id().name:\n"
-"                assigned to <strong>${object.rating_get_rated_partner_id().name}</strong>.<br/>\n"
-"            % else:\n"
-"                .<br/>\n"
-"            % endif\n"
-"        </td></tr>\n"
-"        <tr><td style=\"text-align: center;\">\n"
-"            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" summary=\"o_mail_notification\" style=\"width:100%; margin: 32px 0px 32px 0px;\">\n"
-"                <tr><td style=\"font-size: 13px;\">\n"
-"                    <strong>Tell us how you feel about our service</strong><br/>\n"
-"                    <span style=\"text-color: #888888\">(click on one of these smileys)</span>\n"
-"                </td></tr>\n"
-"                <tr><td style=\"font-size: 13px;\">\n"
-"                    <table style=\"width:100%;text-align:center;\">\n"
-"                        <tr>\n"
-"                            <td>\n"
-"                                <a href=\"/rating/${access_token}/10\">\n"
-"                                    <img alt=\"Satisfied\" src=\"/rating/static/src/img/rating_10.png\" title=\"Satisfied\"/>\n"
-"                                </a>\n"
-"                            </td>\n"
-"                            <td>\n"
-"                                <a href=\"/rating/${access_token}/5\">\n"
-"                                    <img alt=\"Not satisfied\" src=\"/rating/static/src/img/rating_5.png\" title=\"Not satisfied\"/>\n"
-"                                </a>\n"
-"                            </td>\n"
-"                            <td>\n"
-"                                <a href=\"/rating/${access_token}/1\">\n"
-"                                    <img alt=\"Highly Dissatisfied\" src=\"/rating/static/src/img/rating_1.png\" title=\"Highly Dissatisfied\"/>\n"
-"                                </a>\n"
-"                            </td>\n"
-"                        </tr>\n"
-"                    </table>\n"
-"                </td></tr>\n"
-"            </table>\n"
-"        </td></tr>\n"
-"        <tr><td valign=\"top\" style=\"font-size: 13px;\">\n"
-"            We appreciate your feedback. It helps us to improve continuously.\n"
-"            % if object.project_id.rating_status == 'stage':\n"
-"                <br/><span style=\"margin: 0px 0px 0px 0px; font-size: 12px; opacity: 0.5; color: #454748;\">This customer survey has been sent because your task has been moved to the stage <b>${object.stage_id.name}</b></span>\n"
-"            % endif\n"
-"            % if object.project_id.rating_status == 'periodic':\n"
-"                <br/><span style=\"margin: 0px 0px 0px 0px; font-size: 12px; opacity: 0.5; color: #454748;\">This customer survey is sent <b>${object.project_id.rating_status_period}</b> as long as the task is in the <b>${object.stage_id.name}</b> stage.</span>\n"
-"            % endif\n"
-"        </td></tr>\n"
-"    </tbody>\n"
-"    </table>\n"
-"</div>\n"
+"<div>"
+"    % set access_token = object.rating_get_access_token()"
+"    % set partner = object.rating_get_partner_id()"
+"    <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"width:100%; margin:0px auto;\">"
+"    <tbody>"
+"        <tr><td valign=\"top\" style=\"font-size: 13px;\">"
+"            % if partner.name:"
+"                Hello ${partner.name},<br/><br/>"
+"            % else:"
+"                Hello,<br/><br/>"
+"            % endif"
+"            Please take a moment to rate our services related to the task \"<strong>${object.name}</strong>\""
+"            % if object.rating_get_rated_partner_id().name:"
+"                assigned to <strong>${object.rating_get_rated_partner_id().name}</strong>.<br/>"
+"            % else:"
+"                .<br/>"
+"            % endif"
+"        </td></tr>"
+"        <tr><td style=\"text-align: center;\">"
+"            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" summary=\"o_mail_notification\" style=\"width:100%; margin: 32px 0px 32px 0px;\">"
+"                <tr><td style=\"font-size: 13px;\">"
+"                    <strong>Tell us how you feel about our service</strong><br/>"
+"                    <span style=\"text-color: #888888\">(click on one of these smileys)</span>"
+"                </td></tr>"
+"                <tr><td style=\"font-size: 13px;\">"
+"                    <table style=\"width:100%;text-align:center;\">"
+"                        <tr>"
+"                            <td>"
+"                                <a href=\"/rating/${access_token}/10\">"
+"                                    <img alt=\"Satisfied\" src=\"/rating/static/src/img/rating_10.png\" title=\"Satisfied\"/>"
+"                                </a>"
+"                            </td>"
+"                            <td>"
+"                                <a href=\"/rating/${access_token}/5\">"
+"                                    <img alt=\"Not satisfied\" src=\"/rating/static/src/img/rating_5.png\" title=\"Not satisfied\"/>"
+"                                </a>"
+"                            </td>"
+"                            <td>"
+"                                <a href=\"/rating/${access_token}/1\">"
+"                                    <img alt=\"Highly Dissatisfied\" src=\"/rating/static/src/img/rating_1.png\" title=\"Highly Dissatisfied\"/>"
+"                                </a>"
+"                            </td>"
+"                        </tr>"
+"                    </table>"
+"                </td></tr>"
+"            </table>"
+"        </td></tr>"
+"        <tr><td valign=\"top\" style=\"font-size: 13px;\">"
+"            We appreciate your feedback. It helps us to improve continuously."
+"            % if object.project_id.rating_status == \'stage\':"
+"                <br/><span style=\"margin: 0px 0px 0px 0px; font-size: 12px; opacity: 0.5; color: #454748;\">This customer survey has been sent because your task has been moved to the stage <b>${object.stage_id.name}</b></span>"
+"            % endif"
+"            % if object.project_id.rating_status == \'periodic\':"
+"                <br/><span style=\"margin: 0px 0px 0px 0px; font-size: 12px; opacity: 0.5; color: #454748;\">This customer survey is sent <b>${object.project_id.rating_status_period}</b> as long as the task is in the <b>${object.stage_id.name}</b> stage.</span>"
+"            % endif"
+"        </td></tr>"
+"    </tbody>"
+"    </table>"
+"</div>"
 "            "
 msgstr ""
+"\"<div>
+"
+"     % አዘጋጅ access_token = object.rating_get_access_token()
+"
+"     % አጋር አዘጋጅ = object.rating_get_partner_id()
+"
+"     <table border=\"\"0\"\" cellpadding=\"\"0\"\" cellpacing=\"\"0\"\" width=\"\"590\" style=\"\"ወርድ:100%; ህዳግ:0 ፒክስል ራስ;\"\">
+"
+"     <tbody>
+"
+"         <tr><td valign=\"\"top\"\" style=\"\"font-size: 13px;\"\">
+"
+"             አጋር ከሆነ %፡
+"
+"                 ሰላም ${partner.name}፣<br/><br/>
+"
+"             % ሌላ፡
+"
+"                 ሰላም፣<br/><br/>
+"
+"             % መጨረሻ
+"
+"             እባክዎን ከ\"<strong>${object.name}</strong>\" ተግባር ጋር የተያያዙ አገልግሎቶቻችንን ደረጃ ለመስጠት ትንሽ ጊዜ ይውሰዱ።
+"
+"             % ከሆነ object.rating_get_rated_partner_id() ስም፡
+"
+"                 ለ<strong>${object.rating_get_rated_partner_id() ስም}</strong> ተመድቧል።<br/>
+"
+"             % ሌላ፡
+"
+"                 .<br/>
+"
+"             % መጨረሻ
+"
+"         </td></tr>
+"
+"         <tr><td style=\"\"text-align: center;\">
+"
+"             <table border=\"\"0\"\" cellpadding=\"\"0\"\" cellpacing=\"\"0\"\" width=\"\"590\"\" ማጠቃለያ=\"\"o_mail_notification\"\" style=\"\"ወርድ:100%; ህዳግ፡ 32 ፒክስል 0 ፒክስል 32 ፒክስል 0 ፒክስል፤\"\">
+"
+"                 <tr><td style=\"\"font-size: 13px;\"\">
+"
+"                     ስለአገልግሎታችን ያለዎትን ስሜት</strong><br/>ይንገሩን።
+"
+"                     <span style=\"\"text-color: #888888\"\">(ከእነዚህ ፈገግታዎች አንዱን ጠቅ ያድርጉ)</span>
+"
+"                 </td></tr>
+"
+"                 <tr><td style=\"\"font-size: 13px;\"\">
+"
+"                     <table style=\"\"width:100%;text-align:center;\"\">
+"
+"                         <tr>
+"
+"                             <td>
+"
+"                                 <a href=\"\"/rating/${access_token}/10\"\">
+"
+"                                     <img alt=\"\"ረክቻለሁ\"\" src=\"\"/rating/static/src/img/rating_10.png\"\" title=\"\"ረክቻለሁ\"/>
+"
+"                                 </a>
+"
+"                             </td>
+"
+"                             <td>
+"
+"                                 <a href=\"\"/rating/${access_token}/5\"\">
+"
+"                                     <img alt=\"\"አልረካም\"\" src=\"\"/rating/static/src/img/rating_5.png\"\" title=\"\"አልረካም\"/>
+"
+"                                 </a>
+"
+"                             </td>
+"
+"                             <td>
+"
+"                                 <a href=\"\"/rating/${access_token}/1\"\">
+"
+"                                     <img alt=\"\"በጣም አልረካሁም\"\" src=\"\"/rating/static/src/img/rating_1.png\"\" title=\"\"በጣም አልረካሁም\"\"/>
+"
+"                                 </a>
+"
+"                             </td>
+"
+"                         </tr>
+"
+"                     </ሠንጠረዥ>
+"
+"                 </td></tr>
+"
+"             </ሠንጠረዥ>
+"
+"         </td></tr>
+"
+"         <tr><td valign=\"\"top\"\" style=\"\"font-size: 13px;\"\">
+"
+"             የእርስዎን አስተያየት እናመሰግናለን። ያለማቋረጥ እንድንሻሻል ይረዳናል።
+"
+"             % object.project_id.rating_status == \'ደረጃ\' ከሆነ፡
+"
+"                 <br/><span style=\"\"ህዳግ: 0px 0px 0px 0px; የቅርጸ-ቁምፊ መጠን: 12 ፒክስል; ግልጽነት: 0.5; color: #454748;\"\">ይህ የደንበኛ ዳሰሳ የተላከው የእርስዎ ተግባር ወደ ደረጃ <b>${object.stage_id.name}</b></span> ስለተዘዋወረ ነው።
+"
+"             % መጨረሻ
+"
+"             % object.project_id.rating_status == \'በየጊዜው\' ከሆነ፡
+"
+"                 <br/><span style=\"\"ህዳግ: 0px 0px 0px 0px; የቅርጸ-ቁምፊ መጠን: 12 ፒክስል; ግልጽነት: 0.5; color: #454748;\"\">ይህ የደንበኛ ዳሰሳ ተልኳል <b>${object.project_id.rating_status_period}</b> ተግባሩ በ<b>${object.stage_id.name}</b ውስጥ እስካለ ድረስ > ደረጃ።</span>
+"
+"             % መጨረሻ
+"
+"         </td></tr>
+"
+"     </tbody>
+"
+"     </ሠንጠረዥ>
+"
+"</div>
+"
+"             \""
 
 #. module: project
 #: model:mail.template,body_html:project.mail_template_data_project_task
 msgid ""
-"<div>\n"
-"    Dear ${object.partner_id.name or 'customer'},<br/>\n"
-"    Thank you for your enquiry.<br/>\n"
-"    If you have any questions, please let us know.\n"
-"    <br/><br/>\n"
-"    Thank you,\n"
-"    <br/>\n"
-"</div>\n"
+"<div>"
+"    Dear ${object.partner_id.name or \'customer\'},<br/>"
+"    Thank you for your enquiry.<br/>"
+"    If you have any questions, please let us know."
+"    <br/><br/>"
+"    Thank you,"
+"    <br/>"
+"</div>"
 "        "
 msgstr ""
+"<div>"
+"     ውድ ${object.partner_id.name ወይም \'customer\'}፣<br/>"
+"     ለጥያቄዎ እናመሰግናለን።<br/>"
+"     ማንኛውም ጥያቄ ካለዎት እባክዎ ያሳውቁን."
+"     <br/><br/>"
+"     አመሰግናለሁ,"
+"     <br/>"
+"</div>"
+"         "
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.rating_index
@@ -187,12 +304,8 @@ msgstr "<i class=\"fa fa-ellipsis-v\" role=\"img\" aria-label=\"አስተዳድ�
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.view_project_kanban
-msgid ""
-"<i class=\"fa fa-envelope\" role=\"img\" aria-label=\"Domain Alias\" "
-"title=\"Domain Alias\"/>"
-msgstr ""
-"<i class=\"fa fa-envelope\" role=\"img\" aria-label=\"Domain Alias\" "
-"title=\"የጎራ ተለዋጭ ስም\"/>"
+msgid "<i class=\"fa fa-envelope\" role=\"img\" aria-label=\"Domain Alias\" title=\"Domain Alias\"/>"
+msgstr "<i class=\"fa fa-envelope\" role=\"img\" aria-label=\"Domain Alias\" title=\"የጎራ ተለዋጭ ስም\"/>"
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.rating_index
@@ -201,12 +314,8 @@ msgstr "<i class=\"fa fa-envelope\"/> ኢሜል፡-"
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.view_project_kanban
-msgid ""
-"<i class=\"fa fa-smile-o\" role=\"img\" aria-label=\"Percentage of "
-"satisfaction\" title=\"Percentage of satisfaction\"/>"
-msgstr ""
-"<i class=\"fa fa-smile-o\" role=\"img\" aria-label=\"የእርካታ መቶኛ\" "
-"title=\"የእርካታ መቶኛ\"/>"
+msgid "<i class=\"fa fa-smile-o\" role=\"img\" aria-label=\"Percentage of satisfaction\" title=\"Percentage of satisfaction\"/>"
+msgstr "<i class=\"fa fa-smile-o\" role=\"img\" aria-label=\"የእርካታ መቶኛ\" title=\"የእርካታ መቶኛ\"/>"
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.view_project_kanban
@@ -215,23 +324,23 @@ msgstr "<i class=\"fa fa-smile-o\"/> እስካሁን የተሰጠ ደረጃ የ�
 
 #. module: project
 #: code:addons/project/models/project.py:0
-#, python-format
 msgid ""
-"<p class=\"o_view_nocontent_smiling_face\">\n"
+"<p class=\"o_view_nocontent_smiling_face\">"
 "                    Create a new project</p>"
 msgstr ""
+"<p class=\"o_view_nocontent_smiling_face\">"
+"                     አዲስ ፕሮጀክት ይፍጠሩ</p>"
 
 #. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/tours/project.js:0
-#, python-format
 msgid "<p>Once your task is ready, you can save it.</p>"
 msgstr "<p>አንድ ጊዜ ተግባርዎ ዝግጁ ከሆነ፣ ማስቀመጥ ይችላሉ።</p>"
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.portal_my_project
 msgid "<small class=\"text-muted\">Project - </small>"
-msgstr "<small class=text-muted\">እቅድ - </small>"
+msgstr "<small class=\"text-muted\">ፕሮጀክት - </small>"
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.portal_my_task
@@ -241,7 +350,7 @@ msgstr "<small class=\"text-right\">ሁኔታ፡</small>"
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.portal_my_project
 msgid "<span class=\"fa fa-tasks\" role=\"img\" aria-label=\"Tasks\" title=\"Tasks\"/>"
-msgstr ""
+msgstr "<span class=\"fa fa-tasks\" role=\"img\" aria-label=\"Tasks\" title=\"Tasks\"/>"
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.view_project_kanban
@@ -261,7 +370,7 @@ msgstr "<strong class=\"d-block mb-2\">መግለጫ</strong>"
 #. module: project
 #: model_terms:digest.tip,tip_description:project.digest_tip_project_0
 msgid "<strong style=\"font-size: 16px;\">Try the mail gateway</strong>"
-msgstr "<strong style=\"font-size: 16px;\">የፖስታ መግቢያውን ሞክር</strong>"
+msgstr "<strong style=\"font-size: 16px;\">የደብዳቤ መግቢያ መንገዱን ይሞክሩ</strong>"
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.portal_my_task
@@ -286,7 +395,7 @@ msgstr "<strong>የመልእክት እና የግንኙነት ታሪክ</strong>"
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.portal_my_task
 msgid "<strong>Project:</strong>"
-msgstr "<strong>እቅድ፡</strong>"
+msgstr "<strong>ፕሮጀክት፡</strong>"
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.portal_project_rating_popover
@@ -300,9 +409,7 @@ msgstr "በ</strong> የተዘገበው"
 
 #. module: project
 #: model:ir.model.fields,help:project.field_project_project__alias_defaults
-msgid ""
-"A Python dictionary that will be evaluated to provide default values when "
-"creating new records for this alias."
+msgid "A Python dictionary that will be evaluated to provide default values when creating new records for this alias."
 msgstr "ለዚህ ተለዋጭ ስም አዳዲስ መዝገቦችን ሲፈጥሩ ነባሪ እሴቶችን ለማቅረብ የሚገመገም የፓይዘን መዝገበ ቃላት።"
 
 #. module: project
@@ -358,13 +465,8 @@ msgstr "ማብራሪያ ጨምር..."
 #. openerp-web
 #: code:addons/project/static/src/js/tours/project.js:0
 #: code:addons/project/static/src/js/tours/project.js:0
-#, python-format
-msgid ""
-"Add columns to configure <b>stages for your tasks</b>.<br/><i>e.g. New - In "
-"Progress - Done</i>"
-msgstr ""
-"ለተግባርህ <b>ደረጃዎች</b>ን ለማዋቀር ዓምዶችን ጨምር።<br/><i>ለምሳሌ፡ አዲስ - በሂደት ላይ - "
-"ተከናውኗል</i>"
+msgid "Add columns to configure <b>stages for your tasks</b>.<br/><i>e.g. New - In Progress - Done</i>"
+msgstr "ለተግባርህ <b>ደረጃዎች</b>ን ለማዋቀር ዓምዶችን ጨምር።<br/><i>ለምሳሌ፡ አዲስ - በሂደት ላይ - ተከናውኗል</i>"
 
 #. module: project
 #: model:res.groups,name:project.group_project_manager
@@ -379,7 +481,6 @@ msgstr "የላቀ"
 #. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/project_task_kanban_examples.js:0
-#, python-format
 msgid "Agile"
 msgstr "ቀልጣፋ"
 
@@ -410,12 +511,12 @@ msgstr "ተለዋጭ ሞዴል"
 
 #. module: project
 #: code:addons/project/controllers/portal.py:0
-#, python-format
 msgid "All"
 msgstr "ሁሉም"
 
 #. module: project
 #: model:ir.actions.act_window,name:project.action_view_task_all
+#: model:ir.ui.menu,name:project.menu_project_management_task
 #: model:ir.ui.menu,name:project.menu_project_management_tasks
 msgid "All Tasks"
 msgstr "ሁሉም ተግባራት"
@@ -438,7 +539,6 @@ msgstr "እቅድ ለመጠየቅ ፍቀድ"
 #. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/project_task_kanban_examples.js:0
-#, python-format
 msgid "Analysis"
 msgstr "ትንተና"
 
@@ -450,12 +550,8 @@ msgstr "የትንታኔ መለያ"
 
 #. module: project
 #: model:ir.model.fields,help:project.field_project_project__analytic_account_id
-msgid ""
-"Analytic account to which this project is linked for financial management. "
-"Use an analytic account to record cost and revenue on your project."
-msgstr ""
-"ይህ እቅድ ከፋይናንሺያል አስተዳደር ጋር የተገናኘበት የትንታኔ መለያ። በእቅድዎ ላይ ወጪን እና ገቢን ለመመዝገብ "
-"የትንታኔ መለያ ይጠቀሙ።"
+msgid "Analytic account to which this project is linked for financial management. Use an analytic account to record cost and revenue on your project."
+msgstr "ይህ ፕሮጀክት ከፋይናንሺያል አስተዳደር ጋር የተገናኘበት የትንታኔ መለያ። በፕሮጀክትዎ ላይ ወጪን እና ገቢን ለመመዝገብ የትንታኔ መለያ ይጠቀሙ።"
 
 #. module: project
 #: model:ir.model.fields.selection,name:project.selection__report_project_task_user__month__4
@@ -484,7 +580,6 @@ msgstr "የምደባ ቀን"
 #. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/project_task_kanban_examples.js:0
-#, python-format
 msgid "Assigned"
 msgstr "ተመድቧል"
 
@@ -509,18 +604,20 @@ msgstr "ተመድቧል"
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_task__date_assign
 msgid "Assigning Date"
-msgstr "የመመደብ ቀን"
+msgstr "የምደባ ቀን"
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.task_type_edit
 msgid ""
-"At each stage employees can block or make task/issue ready for next stage.\n"
-"                                You can define here labels that will be displayed for the state instead\n"
+"At each stage employees can block or make task/issue ready for next stage."
+"                                You can define here labels that will be displayed for the state instead"
 "                                of the default labels."
 msgstr ""
-"በእያንዳንዱ ደረጃ ሰራተኞች ማገድ ወይም ተግባር/ጉዳዩን ለቀጣይ ደረጃ ማዘጋጀት ይችላሉ።\n"
-"                                You can define here labels that will be displayed for the state instead\n"
-" የነባሪ መለያዎች።"
+"\"በእያንዳንዱ ደረጃ ላይ ሰራተኞች ማገድ ወይም ተግባር/ጉዳዩን ለቀጣይ ደረጃ ማዘጋጀት ይችላሉ።
+"
+"                                 በምትኩ ለግዛቱ የሚታዩ መለያዎችን እዚህ መግለፅ ትችላለህ
+"
+"                                 የነባሪ መለያዎች.\""
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_project__message_attachment_count
@@ -530,7 +627,7 @@ msgstr "የአባሪ ብዛት"
 
 #. module: project
 #: model:ir.model.fields,help:project.field_project_task__attachment_ids
-msgid "Attachment that don't come from message."
+msgid "Attachment that don\'t come from message."
 msgstr "ከመልእክት ያልመጣ አባሪ።"
 
 #. module: project
@@ -546,14 +643,18 @@ msgstr "ራስ-ሰር የካንባን ሁኔታ"
 #. module: project
 #: model:ir.model.fields,help:project.field_project_task_type__auto_validation_kanban_state
 msgid ""
-"Automatically modify the kanban state when the customer replies to the feedback for this stage.\n"
-" * A good feedback from the customer will update the kanban state to 'ready for the new stage' (green bullet).\n"
-" * A medium or a bad feedback will set the kanban state to 'blocked' (red bullet).\n"
+"Automatically modify the kanban state when the customer replies to the feedback for this stage."
+" * A good feedback from the customer will update the kanban state to \'ready for the new stage\' (green bullet)."
+" * A medium or a bad feedback will set the kanban state to \'blocked\' (red bullet)."
+""
 msgstr ""
-"Automatically modify the kanban state when the customer replies to the feedback for this stage.\n"
-" * A good feedback from the customer will update the kanban state to 'ready for the new stage' (green bullet).\n"
-" * A medium or a bad feedback will set the kanban state to 'blocked' (red bullet).\n"
-
+"\"ደንበኛው ለዚህ ደረጃ ግብረ መልስ ሲሰጥ የካንባን ሁኔታን በራስ-ሰር ያሻሽሉ።
+"
+"  * ከደንበኛው ጥሩ አስተያየት የካንባን ግዛትን \'ለአዲሱ ደረጃ ዝግጁ\' (አረንጓዴ ጥይት) ያዘምነዋል።
+"
+"  * መካከለኛ ወይም መጥፎ ግብረመልስ የካንባን ሁኔታ ወደ \'ታገደ\' (ቀይ ጥይት) ያዘጋጃል።
+"
+"\""
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.portal_project_rating_progressbar
@@ -564,7 +665,6 @@ msgstr "አማካኝ"
 #. openerp-web
 #: code:addons/project/static/src/js/project_task_kanban_examples.js:0
 #: code:addons/project/static/src/js/project_task_kanban_examples.js:0
-#, python-format
 msgid "Backlog"
 msgstr "የኋላ መዝገብ"
 
@@ -596,14 +696,12 @@ msgstr "መሰረታዊ"
 #: model:project.task.type,legend_blocked:project.project_stage_data_0
 #: model:project.task.type,legend_blocked:project.project_stage_data_1
 #: model:project.task.type,legend_blocked:project.project_stage_data_2
-#, python-format
 msgid "Blocked"
 msgstr "ታግዷል"
 
 #. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/project_task_kanban_examples.js:0
-#, python-format
 msgid "Brainstorm"
 msgstr "የአዕምሮ ማዕበል"
 
@@ -615,23 +713,19 @@ msgstr "በኃላፊነት"
 #. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/tours/project.js:0
-#, python-format
-msgid ""
-"Choose a <b>project name</b>. (e.g. Website Launch, Product Development, "
-"Office Party, etc.)"
-msgstr "<b>የእቅድ ስም</b>ን ይምረጡ። (ለምሳሌ የድር ጣቢያ ማስጀመሪያ፣ የምርት ልማት፣ የቢሮ ፓርቲ፣ ወዘተ.)"
+msgid "Choose a <b>project name</b>. (e.g. Website Launch, Product Development, Office Party, etc.)"
+msgstr "<b>የፕሮጀክት ስም</b>ን ይምረጡ። (ለምሳሌ የድር ጣቢያ ማስጀመሪያ፣ የምርት ልማት፣ የቢሮ ፓርቲ፣ ወዘተ.)"
 
 #. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/tours/project.js:0
-#, python-format
 msgid "Choose a <b>task name</b>. (e.g. Website Design, Purchase Goods etc.)"
 msgstr "<b>የተግባር ስም</b> ይምረጡ። (ለምሳሌ የድረ-ገጽ ንድፍ፣ ዕቃ ግዥ ወዘተ)"
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.project_project_view_form_simplified
 msgid "Choose a Project Email"
-msgstr "የእቅድ ኢሜል ይምረጡ"
+msgstr "የፕሮጀክት ኢሜል ይምረጡ"
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_task__partner_city
@@ -646,16 +740,12 @@ msgstr "አዲስ ተግባር ለመጀመር <i>ፍጠር</i>ን ጠቅ ያድ
 #. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/tours/project.js:0
-#, python-format
-msgid ""
-"Click on the card to write more information about it and collaborate with "
-"your coworkers."
+msgid "Click on the card to write more information about it and collaborate with your coworkers."
 msgstr "ስለሱ የበለጠ መረጃ ለመጻፍ እና ከስራ ባልደረቦችዎ ጋር ለመተባበር ካርዱ ላይ ጠቅ ያድርጉ።"
 
 #. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/tours/project.js:0
-#, python-format
 msgid "Click on this button to modify the task."
 msgstr "ተግባሩን ለመቀየር በዚህ ቁልፍ ላይ ጠቅ ያድርጉ።"
 
@@ -669,14 +759,8 @@ msgstr "የቀለም መረጃ ጠቋሚ"
 #. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/project_task_kanban_examples.js:0
-#, python-format
-msgid ""
-"Communicate with customers on the task using the email gateway. Attach logo "
-"designs to the task, so that information flow from designers to the workers "
-"who print the t-shirt. Organize priorities amongst orders %s using the icon."
-msgstr ""
-"የኢሜል መግቢያን በመጠቀም በስራው ላይ ከደንበኞች ጋር ይገናኙ ። ከዲዛይነሮች ቲሸርቱን ወደሚያትሙ ሰራተኞች መረጃ "
-"እንዲፈስስ የአርማ ንድፎችን ከተግባሩ ጋር አያይዝ። አዶውን በመጠቀም ከ%s መካከል ቅድሚያ የሚሰጣቸውን ነገሮች ያደራጁ።"
+msgid "Communicate with customers on the task using the email gateway. Attach logo designs to the task, so that information flow from designers to the workers who print the t-shirt. Organize priorities amongst orders %s using the icon."
+msgstr "የኢሜል መግቢያን በመጠቀም በስራው ላይ ከደንበኞች ጋር ይገናኙ ። ከዲዛይነሮች ቲሸርቱን ወደሚያትሙ ሰራተኞች መረጃ እንዲፈስስ የአርማ ንድፎችን ከተግባሩ ጋር አያይዝ። አዶውን በመጠቀም ከ%s መካከል ቅድሚያ የሚሰጣቸውን ነገሮች ያደራጁ።"
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_project__company_id
@@ -689,12 +773,8 @@ msgstr "ኩባንያ"
 
 #. module: project
 #: model:ir.model.fields,help:project.field_project_task__subtask_planned_hours
-msgid ""
-"Computed using sum of hours planned of all subtasks created from main task. "
-"Usually these hours are less or equal to the Planned Hours (of main task)."
-msgstr ""
-"ከዋና ሥራው የተፈጠሩትን ሁሉንም ንዑስ ተግባራት የታቀዱ የሰዓታት ድምርን በመጠቀም ይሰላል። አብዛኛውን ጊዜ እነዚህ "
-"ሰዓቶች ከታቀዱት ሰዓቶች (ዋና ሥራ) ያነሱ ወይም እኩል ናቸው."
+msgid "Computed using sum of hours planned of all subtasks created from main task. Usually these hours are less or equal to the Planned Hours (of main task)."
+msgstr "ከዋና ሥራው የተፈጠሩትን ሁሉንም ንዑስ ተግባራት የታቀዱ የሰዓታት ድምርን በመጠቀም ይሰላል። አብዛኛውን ጊዜ እነዚህ ሰዓቶች ከታቀዱት ሰዓቶች (ዋና ሥራ) ያነሱ ወይም እኩል ናቸው."
 
 #. module: project
 #: model:ir.model,name:project.model_res_config_settings
@@ -709,7 +789,6 @@ msgstr "ማዋቀር"
 #. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/project_task_kanban_examples.js:0
-#, python-format
 msgid "Consulting"
 msgstr "ማማከር"
 
@@ -725,7 +804,6 @@ msgstr "ተገናኝ"
 #. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/project_task_kanban_examples.js:0
-#, python-format
 msgid "Copywriting"
 msgstr "የቅጅ ጽሑፍ"
 
@@ -747,13 +825,18 @@ msgstr "እቅድ ፍጠር"
 #. module: project
 #: model_terms:ir.actions.act_window,help:project.open_view_project_all_packages
 msgid "Create a new Packages"
-msgstr "አዲስ ጥቅሎች ይፍጠሩ"
+msgstr "አዲስ ፓኬጆችን ይፍጠሩ"
+
+#. module: project
+#: model_terms:ir.actions.act_window,help:project.open_view_project_requested
+msgid "Create a new Planning"
+msgstr "አዲስ እቅድ ይፍጠሩ"
 
 #. module: project
 #: model_terms:ir.actions.act_window,help:project.open_view_project_all
 #: model_terms:ir.actions.act_window,help:project.open_view_project_all_config
 msgid "Create a new project"
-msgstr "አዲስ እቅድ ፍጠር"
+msgstr "አዲስ ፕሮጀክት ፍጠር"
 
 #. module: project
 #: model_terms:ir.actions.act_window,help:project.open_task_type_form
@@ -782,7 +865,7 @@ msgstr "ላይ ተፈጠረ"
 #: model:ir.model.fields,field_description:project.field_project_task__create_uid
 #: model:ir.model.fields,field_description:project.field_project_task_type__create_uid
 msgid "Created by"
-msgstr "የተፈጠረ"
+msgstr "የተፈጠረው"
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_project__create_date
@@ -824,21 +907,18 @@ msgstr "የዚህ ተግባር ወቅታዊ ደረጃ"
 #: model_terms:ir.ui.view,arch_db:project.edit_project
 #: model_terms:ir.ui.view,arch_db:project.portal_my_project
 #: model_terms:ir.ui.view,arch_db:project.view_project_project_filter
-#, python-format
 msgid "Customer"
 msgstr "ደንበኛ"
 
 #. module: project
 #: code:addons/project/models/project.py:0
 #: code:addons/project/models/project.py:0
-#, python-format
 msgid "Customer Email"
 msgstr "የደንበኛ ኢሜይል"
 
 #. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/project_task_kanban_examples.js:0
-#, python-format
 msgid "Customer Feedback"
 msgstr "የደንበኛ ግብረመልስ"
 
@@ -860,10 +940,8 @@ msgstr "የደንበኛ ደረጃዎች"
 #. module: project
 #: model_terms:ir.actions.act_window,help:project.rating_rating_action_project_report
 #: model_terms:ir.actions.act_window,help:project.rating_rating_action_task
-msgid ""
-"Customer ratings on tasks. If you have no rating, change your project "
-"Settings to activate it."
-msgstr "በተግባሮች ላይ የደንበኛ ደረጃዎች. ምንም ደረጃ ከሌልዎት እሱን ለማግበር የእቅድዎን ቅንብሮች ይለውጡ።"
+msgid "Customer ratings on tasks. If you have no rating, change your project Settings to activate it."
+msgstr "በተግባሮች ላይ የደንበኛ ደረጃዎች. ምንም ደረጃ ከሌልዎት እሱን ለማግበር የፕሮጀክትዎን ቅንብሮች ይለውጡ።"
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_project__rating_status
@@ -873,16 +951,8 @@ msgstr "የደንበኛ(ዎች) ደረጃዎች"
 #. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/project_task_kanban_examples.js:0
-#, python-format
-msgid ""
-"Customers propose feedbacks by email; Odoo creates tasks automatically, and "
-"you can communicate on the task directly. Your managers decide which "
-"feedback is accepted %s and which feedback is moved to the \"Refused\" "
-"column."
-msgstr ""
-"ደንበኞች አስተያየቶችን በኢሜል ያቀርባሉ; ኦዱ ስራዎችን በራስ ሰር ይፈጥራል, እና በተግባሩ ላይ በቀጥታ መገናኘት "
-"ይችላሉ. የእርስዎ አስተዳዳሪዎች የትኛው ግብረመልስ %s እንደሚቀበል እና የትኛው ግብረመልስ ወደ \"እምቢ\" አምድ "
-"እንደሚወሰድ ይወስናሉ።"
+msgid "Customers propose feedbacks by email; Odoo creates tasks automatically, and you can communicate on the task directly. Your managers decide which feedback is accepted %s and which feedback is moved to the \"Refused\" column."
+msgstr "ደንበኞች አስተያየቶችን በኢሜል ያቀርባሉ; ኦዱ ስራዎችን በራስ ሰር ይፈጥራል, እና በተግባሩ ላይ በቀጥታ መገናኘት ይችላሉ. የእርስዎ አስተዳዳሪዎች የትኛው ግብረመልስ %s እንደሚቀበል እና የትኛው ግብረመልስ ወደ \"እምቢ\" አምድ እንደሚወሰድ ይወስናሉ።"
 
 #. module: project
 #: model:ir.model.fields.selection,name:project.selection__project_project__rating_status_period__daily
@@ -918,11 +988,15 @@ msgstr "ነባሪ እሴቶች"
 #. module: project
 #: model_terms:ir.actions.act_window,help:project.open_task_type_form
 msgid ""
-"Define the steps that will be used in the project from the\n"
-"                creation of the task, up to the closing of the task or issue.\n"
-"                You will use these stages in order to track the progress in\n"
+"Define the steps that will be used in the project from the"
+"                creation of the task, up to the closing of the task or issue."
+"                You will use these stages in order to track the progress in"
 "                solving a task or an issue."
 msgstr ""
+"በፕሮጀክቱ ውስጥ ጥቅም ላይ የሚውሉትን ደረጃዎች ከ"
+"                 ተግባሩን መፍጠር, ተግባሩን ወይም ጉዳዩን እስኪዘጋ ድረስ."
+"                 የሂደቱን ሂደት ለመከታተል እነዚህን ደረጃዎች ይጠቀማሉ"
+"                 አንድን ሥራ ወይም ጉዳይ መፍታት."
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.view_task_kanban
@@ -932,7 +1006,6 @@ msgstr "ሰርዝ"
 #. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/project_task_kanban_examples.js:0
-#, python-format
 msgid "Delivered"
 msgstr "ደረሰ"
 
@@ -951,7 +1024,6 @@ msgstr "መግለጫ"
 #. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/project_task_kanban_examples.js:0
-#, python-format
 msgid "Design"
 msgstr "ንድፍ"
 
@@ -959,7 +1031,6 @@ msgstr "ንድፍ"
 #. openerp-web
 #: code:addons/project/static/src/js/project_task_kanban_examples.js:0
 #: code:addons/project/static/src/js/project_task_kanban_examples.js:0
-#, python-format
 msgid "Development"
 msgstr "ልማት"
 
@@ -971,7 +1042,6 @@ msgstr "መፍጨት"
 #. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/project_task_kanban_examples.js:0
-#, python-format
 msgid "Digital Marketing"
 msgstr "ዲጂታል ግብይት"
 
@@ -991,8 +1061,7 @@ msgstr "መጠሪያው ስም"
 
 #. module: project
 #: code:addons/project/models/digest.py:0
-#, python-format
-msgid "Do not have access, skip this data for user's digest email"
+msgid "Do not have access, skip this data for user\'s digest email"
 msgstr "መዳረሻ የለዎትም፣ ይህን ውሂብ ለተጠቃሚው ዳይጀስት ኢሜል ይዝለሉት።"
 
 #. module: project
@@ -1008,14 +1077,12 @@ msgstr "ሰነዶች"
 #: code:addons/project/static/src/js/project_task_kanban_examples.js:0
 #: code:addons/project/static/src/js/project_task_kanban_examples.js:0
 #: code:addons/project/static/src/js/project_task_kanban_examples.js:0
-#, python-format
 msgid "Done"
 msgstr "ተከናውኗል"
 
 #. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/project_task_kanban_examples.js:0
-#, python-format
 msgid "Draft"
 msgstr "ረቂቅ"
 
@@ -1036,17 +1103,12 @@ msgstr "ተግባር አርትዕ"
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.edit_project
-msgid ""
-"Edit project's stages and set an email template on the stages on which you "
-"want to activate the rating."
-msgstr ""
-"የፕሮጀክትን ደረጃዎች አርትዕ እና በሚያደርጉበት ደረጃዎች ላይ የኢሜል አብነት ያዘጋጁ"
-"ደረጃውን ማግበር ይፈልጋሉ።"
+msgid "Edit project\'s stages and set an email template on the stages on which you want to activate the rating."
+msgstr "የፕሮጀክት ደረጃዎችን ያርትዑ እና ደረጃውን ለማግበር በሚፈልጉት ደረጃዎች ላይ የኢሜል አብነት ያዘጋጁ።"
 
 #. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/project_task_kanban_examples.js:0
-#, python-format
 msgid "Editing"
 msgstr "ማረም"
 
@@ -1088,26 +1150,19 @@ msgstr "የሚያበቃበት ቀን"
 
 #. module: project
 #: code:addons/project/models/project.py:0
-#, python-format
 msgid "Error! You cannot create recursive hierarchy of task(s)."
 msgstr "ስህተት! ተደጋጋሚ የተግባር ተዋረድ መፍጠር አይችሉም።"
 
 #. module: project
 #: model:ir.model.constraint,message:project.constraint_project_project_project_date_greater
 msgid "Error! project start-date must be lower than project end-date."
-msgstr "ስህተት! የእቅድ መጀመሪያ ቀን ከእቅድ ማብቂያ ቀን ያነሰ መሆን አለበት።"
+msgstr "ስህተት! የፕሮጀክት ጅምር ቀን ከፕሮጀክት ማብቂያ ቀን ያነሰ መሆን አለበት።"
 
 #. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/project_task_kanban_examples.js:0
-#, python-format
-msgid ""
-"Everyone can propose ideas, and the Editor marks the best ones as %s. Attach"
-" all documents or links to the task directly, to have all information about "
-"a research centralized."
-msgstr ""
-"ሁሉም ሰው ሃሳቦችን ማቅረብ ይችላል፣ እና አርታዒው ምርጦቹን እንደ %s ምልክት ያደርጋል። ስለ ምርምር የተማከለ "
-"እንዲሆን ሁሉንም ሰነዶች ወይም አገናኞች በቀጥታ ወደ ተግባሩ ያያይዙ።"
+msgid "Everyone can propose ideas, and the Editor marks the best ones as %s. Attach all documents or links to the task directly, to have all information about a research centralized."
+msgstr "ሁሉም ሰው ሃሳቦችን ማቅረብ ይችላል፣ እና አርታዒው ምርጦቹን እንደ %s ምልክት ያደርጋል። ስለ ምርምር የተማከለ እንዲሆን ሁሉንም ሰነዶች ወይም አገናኞች በቀጥታ ወደ ተግባሩ ያያይዙ።"
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.view_task_project_user_search
@@ -1127,21 +1182,12 @@ msgstr "የካቲት"
 #. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/project_task_kanban_examples.js:0
-#, python-format
-msgid ""
-"Fill your Inbox easily with the email gateway. Periodically review your "
-"Inbox and schedule tasks by moving them to others columns. Every day, you "
-"review the \"This Week\" column to move important tasks \"Today\". Every "
-"Monday, you review the \"This Month\" column."
-msgstr ""
-"የገቢ መልእክት ሳጥንዎን በቀላሉ በኢሜል መግቢያ መንገድ ይሙሉ። የእርስዎን የገቢ መልእክት ሳጥን በየጊዜው ይገምግሙ እና"
-" ወደ ሌሎች አምዶች በመውሰድ ተግባሮችን ያቅዱ። በየቀኑ፣ አስፈላጊ ተግባራትን \"ዛሬ\" ለማንቀሳቀስ የ\"ይህ "
-"ሳምንት\" አምድ ይገመግማሉ። በየሳምንቱ ሰኞ፣ የ\"ይህ ወር\" አምድ ይገመግማሉ።"
+msgid "Fill your Inbox easily with the email gateway. Periodically review your Inbox and schedule tasks by moving them to others columns. Every day, you review the \"This Week\" column to move important tasks \"Today\". Every Monday, you review the \"This Month\" column."
+msgstr "የገቢ መልእክት ሳጥንዎን በቀላሉ በኢሜል መግቢያ መንገድ ይሙሉ። የእርስዎን የገቢ መልእክት ሳጥን በየጊዜው ይገምግሙ እና ወደ ሌሎች አምዶች በመውሰድ ተግባሮችን ያቅዱ። በየቀኑ፣ አስፈላጊ ተግባራትን \"ዛሬ\" ለማንቀሳቀስ የ\"ይህ ሳምንት\" አምድ ይገመግማሉ። በየሳምንቱ ሰኞ፣ የ\"ይህ ወር\" አምድ ይገመግማሉ።"
 
 #. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/project_task_kanban_examples.js:0
-#, python-format
 msgid "Final Document"
 msgstr "የመጨረሻ ሰነድ"
 
@@ -1152,15 +1198,13 @@ msgstr "በካንባን ውስጥ የታጠፈ"
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.edit_project
-msgid ""
-"Follow this project to automatically track the events associated to tasks "
-"and issues of this project."
-msgstr "ከዚህ እቅድ ተግባራት እና ጉዳዮች ጋር የተያያዙ ክስተቶችን በራስ ሰር ለመከታተል ይህን እቅድ ይከተሉ።"
+msgid "Follow this project to automatically track the events associated to tasks and issues of this project."
+msgstr "ከዚህ ፕሮጀክት ተግባራት እና ጉዳዮች ጋር የተያያዙ ክስተቶችን በራስ ሰር ለመከታተል ይህን ፕሮጀክት ይከተሉ።"
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.view_project_project_filter
 msgid "Followed"
-msgstr "ተከታትሏል"
+msgstr "ተከታትሏል።"
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.view_task_search_form
@@ -1208,7 +1252,6 @@ msgstr "የደንበኛ አስተያየት ያግኙ"
 #. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/project_task_kanban_examples.js:0
-#, python-format
 msgid "Getting Things Done (GTD)"
 msgstr "ነገሮችን በማግኘት ላይ (GTD)"
 
@@ -1253,14 +1296,8 @@ msgstr "ቡድን በ"
 #. openerp-web
 #: code:addons/project/static/src/js/project_task_kanban_examples.js:0
 #: code:addons/project/static/src/js/project_task_kanban_examples.js:0
-#, python-format
-msgid ""
-"Handle your idea gathering within Tasks of your new Project and discuss them"
-" in the chatter of the tasks. Use the %s and %s to signalize what is the "
-"current status of your Idea"
-msgstr ""
-"በአዲሱ እቅድዎ ተግባራት ውስጥ የሃሳብ መሰብሰብዎን ይያዙ እና በተግባሮቹ ውይይት ውስጥ ይወያዩዋቸው። የሃሳብዎ ወቅታዊ "
-"ሁኔታ ምን እንደሆነ ለማመልከት %s እና %s ይጠቀሙ"
+msgid "Handle your idea gathering within Tasks of your new Project and discuss them in the chatter of the tasks. Use the %s and %s to signalize what is the current status of your Idea"
+msgstr "በአዲሱ ፕሮጀክትዎ ተግባራት ውስጥ የሃሳብ መሰብሰብዎን ይያዙ እና በተግባሮቹ ውይይት ውስጥ ይወያዩዋቸው። የሃሳብዎ ወቅታዊ ሁኔታ ምን እንደሆነ ለማመልከት %s እና %s ይጠቀሙ"
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.portal_project_rating_progressbar
@@ -1272,6 +1309,11 @@ msgstr "ደስተኛ"
 #: model_terms:ir.ui.view,arch_db:project.view_task_kanban
 msgid "Happy face"
 msgstr "ደስተኛ ፊት"
+
+#. module: project
+#: model:ir.module.category,description:project.module_category_operations_planning
+msgid "Helps you manage your projects and tasks by tracking them, generating plannings, etc..."
+msgstr "ፕሮጀክቶችዎን እና ተግባሮችዎን በመከታተል፣ ዕቅዶችን በማመንጨት፣ ወዘተ... እንዲያስተዳድሩ ያግዝዎታል።"
 
 #. module: project
 #: model:ir.model.fields.selection,name:project.selection__report_project_task_user__priority__2
@@ -1286,16 +1328,24 @@ msgstr "ሰዓታት"
 #. module: project
 #: model:ir.model.fields,help:project.field_project_project__rating_status
 msgid ""
-"How to get customer feedback?\n"
-"- Rating when changing stage: an email will be sent when a task is pulled in another stage.\n"
-"- Periodical Rating: email will be sent periodically.\n"
-"\n"
-"Don't forget to set up the mail templates on the stages for which you want to get the customer's feedbacks."
+"How to get customer feedback?"
+"- Rating when changing stage: an email will be sent when a task is pulled in another stage."
+"- Periodical Rating: email will be sent periodically."
+""
+"Don\'t forget to set up the mail templates on the stages for which you want to get the customer\'s feedbacks."
 msgstr ""
+"\"የደንበኛ ግብረመልስ እንዴት ማግኘት ይቻላል?
+"
+"ደረጃን ሲቀይሩ ደረጃ መስጠት፡ አንድ ተግባር በሌላ ደረጃ ሲጎተት ኢሜይል ይላካል።
+"
+"- ወቅታዊ ደረጃ: ኢሜል በየጊዜው ይላካል.
+"
+"
+"
+"የደንበኛውን አስተያየት ለማግኘት በሚፈልጉበት ደረጃዎች ላይ የደብዳቤ አብነቶችን ማዘጋጀትዎን አይርሱ።"
 
 #. module: project
 #: code:addons/project/models/project.py:0
-#, python-format
 msgid "I take it"
 msgstr "እወስደዋለሁ"
 
@@ -1310,10 +1360,8 @@ msgstr "መታወቂያ"
 
 #. module: project
 #: model:ir.model.fields,help:project.field_project_project__alias_parent_thread_id
-msgid ""
-"ID of the parent record holding the alias (example: project holding the task"
-" creation alias)"
-msgstr "ተለዋጭ ስም የያዘው የወላጅ መዝገብ መታወቂያ (ለምሳሌ፡ የተግባር ፈጠራን ስም የያዘ እቅድ)"
+msgid "ID of the parent record holding the alias (example: project holding the task creation alias)"
+msgstr "ተለዋጭ ስም የያዘው የወላጅ መዝገብ መታወቂያ (ለምሳሌ፡ የተግባር ፈጠራን ስም የያዘ ፕሮጀክት)"
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_task__activity_exception_icon
@@ -1328,7 +1376,6 @@ msgstr "ልዩ እንቅስቃሴን ለማመልከት አዶ።"
 #. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/project_task_kanban_examples.js:0
-#, python-format
 msgid "Ideas"
 msgstr "ሀሳቦች"
 
@@ -1350,24 +1397,17 @@ msgstr "ምልክት ካደረጉ፣ አንዳንድ መልዕክቶች የማ�
 
 #. module: project
 #: model:ir.model.fields,help:project.field_project_task_type__mail_template_id
-msgid ""
-"If set an email will be sent to the customer when the task or issue reaches "
-"this step."
+msgid "If set an email will be sent to the customer when the task or issue reaches this step."
 msgstr "ከተዋቀረ ተግባር ወይም ጉዳይ እዚህ ደረጃ ላይ ሲደርስ ኢሜይል ለደንበኛው ይላካል።"
 
 #. module: project
 #: model:ir.model.fields,help:project.field_project_task_type__rating_template_id
-msgid ""
-"If set and if the project's rating configuration is 'Rating when changing "
-"stage', then an email will be sent to the customer when the task reaches "
-"this step."
+msgid "If set and if the project\'s rating configuration is \'Rating when changing stage\', then an email will be sent to the customer when the task reaches this step."
 msgstr ""
 
 #. module: project
 #: model:ir.model.fields,help:project.field_project_project__active
-msgid ""
-"If the active field is set to False, it will allow you to hide the project "
-"without removing it."
+msgid "If the active field is set to False, it will allow you to hide the project without removing it."
 msgstr "ንቁው መስክ ወደ ሐሰት ከተዋቀረ ፕሮጀክቱን ሳያስወግዱት እንዲደብቁ ያስችልዎታል."
 
 #. module: project
@@ -1396,33 +1436,25 @@ msgstr "አስፈላጊ"
 #: model:project.task.type,legend_normal:project.project_stage_data_0
 #: model:project.task.type,legend_normal:project.project_stage_data_1
 #: model:project.task.type,legend_normal:project.project_stage_data_2
-#, python-format
 msgid "In Progress"
 msgstr "በሂደት ላይ"
 
 #. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/project_task_kanban_examples.js:0
-#, python-format
 msgid "In development"
 msgstr "በልማት ውስጥ"
 
 #. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/project_task_kanban_examples.js:0
-#, python-format
 msgid "Inbox"
 msgstr "የገቢ መልእክት ሳጥን"
 
 #. module: project
 #: model:ir.model.fields,help:project.field_project_project__alias_id
-msgid ""
-"Internal email associated with this project. Incoming emails are "
-"automatically synchronized with Tasks (or optionally Issues if the Issue "
-"Tracker module is installed)."
-msgstr ""
-"ከዚህ እቅድ ጋር የተያያዘ የውስጥ ኢሜይል። ገቢ ኢሜይሎች በራስ-ሰር ከተግባሮች ጋር ይመሳሰላሉ (ወይም እንደ አማራጭ "
-"የችግር መከታተያ ሞጁል ከተጫነ ችግሮች)።"
+msgid "Internal email associated with this project. Incoming emails are automatically synchronized with Tasks (or optionally Issues if the Issue Tracker module is installed)."
+msgstr "ከዚህ ፕሮጀክት ጋር የተያያዘ የውስጥ ኢሜይል። ገቢ ኢሜይሎች በራስ-ሰር ከተግባሮች ጋር ይመሳሰላሉ (ወይም እንደ አማራጭ የችግር መከታተያ ሞጁል ከተጫነ ችግሮች)።"
 
 #. module: project
 #: model:ir.model.fields.selection,name:project.selection__project_project__privacy_visibility__followers
@@ -1447,12 +1479,8 @@ msgstr "እትም እትም"
 
 #. module: project
 #: model:ir.model.fields,help:project.field_project_task__planned_hours
-msgid ""
-"It is the time planned to achieve the task. If this document has sub-tasks, "
-"it means the time needed to achieve this tasks and its childs."
-msgstr ""
-"ስራውን ለማሳካት የታቀደው ጊዜ ነው. ይህ ሰነድ ንዑስ ተግባራት ካሉት, ይህንን ተግባራት እና ልጆቹን ለማሳካት "
-"የሚያስፈልገው ጊዜ ማለት ነው."
+msgid "It is the time planned to achieve the task. If this document has sub-tasks, it means the time needed to achieve this tasks and its childs."
+msgstr "ስራውን ለማሳካት የታቀደው ጊዜ ነው. ይህ ሰነድ ንዑስ ተግባራት ካሉት, ይህንን ተግባራት እና ልጆቹን ለማሳካት የሚያስፈልገው ጊዜ ማለት ነው."
 
 #. module: project
 #: model:ir.model.fields.selection,name:project.selection__report_project_task_user__month__1
@@ -1498,7 +1526,7 @@ msgstr "የካንባን ትክክለኛ ማብራሪያ"
 #. module: project
 #: model:ir.model.fields,field_description:project.field_digest_digest__kpi_project_task_opened_value
 msgid "Kpi Project Task Opened Value"
-msgstr "የKpi እቅድ ተግባር የተከፈተ እሴት"
+msgstr "የKpi ፕሮጀክት ተግባር የተከፈተ እሴት"
 
 #. module: project
 #: model:ir.model.fields,help:project.field_project_project__label_tasks
@@ -1532,20 +1560,19 @@ msgstr "ያለፉት 7 ቀናት"
 #: model:ir.model.fields,field_description:project.field_project_task_type____last_update
 #: model:ir.model.fields,field_description:project.field_report_project_task_user____last_update
 msgid "Last Modified on"
-msgstr "መጨረሻ የተሻሻለው በርቷል።"
+msgstr "መጨረሻ የተሻሻለው በ"
 
 #. module: project
 #: code:addons/project/controllers/portal.py:0
 #: model:ir.model.fields,field_description:project.field_project_task__date_last_stage_update
 #: model:ir.model.fields,field_description:project.field_report_project_task_user__date_last_stage_update
-#, python-format
 msgid "Last Stage Update"
 msgstr "የመጨረሻው ደረጃ ዝማኔ"
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_task__write_date
 msgid "Last Updated On"
-msgstr "ለመጨረሻ ጊዜ የዘመነው በርቷል።"
+msgstr "ለመጨረሻ ጊዜ የዘመነው በ"
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_project__write_uid
@@ -1560,7 +1587,7 @@ msgstr "መጨረሻ የዘመነው በ"
 #: model:ir.model.fields,field_description:project.field_project_tags__write_date
 #: model:ir.model.fields,field_description:project.field_project_task_type__write_date
 msgid "Last Updated on"
-msgstr "መጨረሻ የዘመነው በርቷል።"
+msgstr "መጨረሻ የዘመነው በ"
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.view_task_search_form
@@ -1585,25 +1612,19 @@ msgstr "የቅርብ ጊዜ ደረጃ፡ ረክቻለሁ"
 #. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/tours/project.js:0
-#, python-format
-msgid "Let's create your first project."
+msgid "Let\'s create your first project."
 msgstr "የመጀመሪያውን ፕሮጀክትህን እንፍጠር።"
 
 #. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/tours/project.js:0
-#, python-format
-msgid "Let's create your first task."
+msgid "Let\'s create your first task."
 msgstr "የመጀመሪያ ስራህን እንፍጠር።"
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.res_config_settings_view_form
-msgid ""
-"Lets the company customize which Pad installation should be used to link to "
-"new pads (for example: http://etherpad.com/)."
-msgstr ""
-"ኩባንያው ከአዲስ ፓድ ጋር ለማገናኘት የትኛውን የፔድ ጭነት መጠቀም እንዳለበት እንዲያስተካክል ያስችለዋል (ለምሳሌ፡ "
-"http://etherpad.com/)።"
+msgid "Lets the company customize which Pad installation should be used to link to new pads (for example: http://etherpad.com/)."
+msgstr "ኩባንያው ከአዲስ ፓድ ጋር ለማገናኘት የትኛውን የፔድ ጭነት መጠቀም እንዳለበት እንዲያስተካክል ያስችለዋል (ለምሳሌ፡ http://etherpad.com/)።"
 
 #. module: project
 #: model:ir.model.fields,help:project.field_project_task__email_cc
@@ -1613,7 +1634,6 @@ msgstr "ከገቢ ኢሜይሎች የሲሲ ዝርዝር።"
 #. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/project_task_kanban_examples.js:0
-#, python-format
 msgid "Live"
 msgstr "ቀጥታ"
 
@@ -1625,14 +1645,12 @@ msgstr "በተግባሮች ላይ ጊዜ ይመዝገቡ"
 #. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/project_task_kanban_examples.js:0
-#, python-format
 msgid "Logo Design"
 msgstr "አርማ ንድፍ"
 
 #. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/project_task_kanban_examples.js:0
-#, python-format
 msgid "Long Term"
 msgstr "ረዥም ጊዜ"
 
@@ -1655,14 +1673,8 @@ msgstr "ዋና ዓባሪዎች"
 #. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/project_task_kanban_examples.js:0
-#, python-format
-msgid ""
-"Manage the lifecycle of your project using the kanban view. Add newly "
-"acquired project, assign them and use the %s and %s to define if the project"
-" is ready for the next step."
-msgstr ""
-"የካንባን እይታን በመጠቀም የእቅድዎን የህይወት ኡደት ያስተዳድሩ። አዲስ የተገኘውን እቅድ ያክሉ፣ ይመድቧቸው እና "
-"ፕሮጀክቱ ለቀጣዩ ደረጃ ዝግጁ መሆኑን ለመወሰን %s እና %s ይጠቀሙ።"
+msgid "Manage the lifecycle of your project using the kanban view. Add newly acquired project, assign them and use the %s and %s to define if the project is ready for the next step."
+msgstr "የካንባን እይታን በመጠቀም የፕሮጀክትዎን የህይወት ኡደት ያስተዳድሩ። አዲስ የተገኘውን ፕሮጀክት ያክሉ፣ ይመድቧቸው እና ፕሮጀክቱ ለቀጣዩ ደረጃ ዝግጁ መሆኑን ለመወሰን %s እና %s ይጠቀሙ።"
 
 #. module: project
 #: model:ir.model.fields.selection,name:project.selection__report_project_task_user__month__3
@@ -1716,7 +1728,6 @@ msgstr "የእኔ ተግባራት"
 #: model:ir.model.fields,field_description:project.field_project_project__name
 #: model:ir.model.fields,field_description:project.field_project_task__name
 #: model_terms:ir.ui.view,arch_db:project.portal_my_tasks
-#, python-format
 msgid "Name"
 msgstr "ስም"
 
@@ -1737,37 +1748,29 @@ msgstr "ገለልተኛ ፊት"
 #: code:addons/project/static/src/js/project_task_kanban_examples.js:0
 #: model_terms:ir.ui.view,arch_db:project.view_task_project_user_search
 #: model:project.task.type,name:project.project_stage_data_0
-#, python-format
 msgid "New"
 msgstr "አዲስ"
 
 #. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/project_task_kanban_examples.js:0
-#, python-format
 msgid "New Orders"
 msgstr "አዲስ ትዕዛዞች"
 
 #. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/project_task_kanban_examples.js:0
-#, python-format
 msgid "New Projects"
 msgstr "አዳዲስ ፕሮጀክቶች"
 
 #. module: project
 #: model_terms:digest.tip,tip_description:project.digest_tip_project_0
-msgid ""
-"New tasks can be generated from incoming emails. You just need to set email "
-"aliases on your projects.<br>"
-msgstr ""
-"አዲስ ተግባራት ከገቢ ኢሜይሎች ሊፈጠሩ ይችላሉ። በፕሮጀክቶችዎ ላይ የኢሜይል ተለዋጭ ስሞችን ማዘጋጀት ብቻ "
-"ያስፈልግዎታል።<br>"
+msgid "New tasks can be generated from incoming emails. You just need to set email aliases on your projects.<br>"
+msgstr "አዲስ ተግባራት ከገቢ ኢሜይሎች ሊፈጠሩ ይችላሉ። በፕሮጀክቶችዎ ላይ የኢሜይል ተለዋጭ ስሞችን ማዘጋጀት ብቻ ያስፈልግዎታል።<br>"
 
 #. module: project
 #: code:addons/project/controllers/portal.py:0
 #: code:addons/project/controllers/portal.py:0
-#, python-format
 msgid "Newest"
 msgstr "አዲሱ"
 
@@ -1793,7 +1796,6 @@ msgstr "ቀጣይ የእንቅስቃሴ አይነት"
 
 #. module: project
 #: code:addons/project/models/project.py:0
-#, python-format
 msgid "No Subject"
 msgstr "ምንም እርሰ ጉዳይ"
 
@@ -1806,7 +1808,7 @@ msgstr "እስካሁን ምንም የደንበኛ ደረጃ የለም።"
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.rating_index
 msgid "No project rating published for now."
-msgstr "ለአሁን ምንም የእቅድ ደረጃ አልታተመም።"
+msgstr "ለአሁን ምንም የፕሮጀክት ደረጃ አልታተመም።"
 
 #. module: project
 #: model:ir.model.fields.selection,name:project.selection__project_project__rating_status__no
@@ -1815,7 +1817,6 @@ msgstr "ደረጃ የለውም"
 
 #. module: project
 #: code:addons/project/controllers/portal.py:0
-#, python-format
 msgid "None"
 msgstr "ምንም"
 
@@ -1884,11 +1885,9 @@ msgstr "ጥቅምት"
 #: model_terms:ir.actions.act_window,help:project.action_view_task
 #: model_terms:ir.actions.act_window,help:project.action_view_task_all
 msgid ""
-"Odoo's project management allows you to manage the pipeline of your tasks efficiently.<br>\n"
+"Odoo\'s project management allows you to manage the pipeline of your tasks efficiently.<br>"
 "                    You can track progress, discuss on tasks, attach documents, etc."
-msgstr ""
-"የኦዱ የፕሮጀክት አስተዳደር የተግባርዎን የቧንቧ መስመር በብቃት እንዲቆጣጠሩ ያስችልዎታል።<br>\n"
-"ሂደቱን መከታተል, በተግባሮች ላይ መወያየት, ሰነዶችን ማያያዝ, ወዘተ."
+msgstr "የኦዱ የፕሮጀክት አስተዳደር የተግባርዎን የቧንቧ መስመር በብቃት እንዲቆጣጠሩ ያስችልዎታል።<br>                     ሂደቱን መከታተል፣ በተግባሮች ላይ መወያየት፣ ሰነዶችን ማያያዝ፣ ወዘተ."
 
 #. module: project
 #: model:ir.model.fields.selection,name:project.selection__project_project__rating_status_period__monthly
@@ -1902,13 +1901,8 @@ msgstr "ተግባራትን ክፈት"
 
 #. module: project
 #: model:ir.model.fields,help:project.field_project_project__alias_force_thread_id
-msgid ""
-"Optional ID of a thread (record) to which all incoming messages will be "
-"attached, even if they did not reply to it. If set, this will disable the "
-"creation of new records completely."
-msgstr ""
-"ምንም እንኳን ምላሽ ባይሰጡም ሁሉም ገቢ መልዕክቶች የሚታሰሩበት የክር (መዝገብ) አማራጭ መታወቂያ። ከተዋቀረ ይህ አዲስ"
-" መዝገቦችን መፍጠርን ሙሉ በሙሉ ያሰናክላል።"
+msgid "Optional ID of a thread (record) to which all incoming messages will be attached, even if they did not reply to it. If set, this will disable the creation of new records completely."
+msgstr "ምንም እንኳን ምላሽ ባይሰጡም ሁሉም ገቢ መልዕክቶች የሚታሰሩበት የክር (መዝገብ) አማራጭ መታወቂያ። ከተዋቀረ ይህ አዲስ መዝገቦችን መፍጠርን ሙሉ በሙሉ ያሰናክላል።"
 
 #. module: project
 #: model_terms:ir.actions.act_window,help:project.open_view_project_all
@@ -1918,16 +1912,16 @@ msgstr "ወይም"
 
 #. module: project
 #: model_terms:ir.actions.act_window,help:project.open_view_project_all_config
-msgid ""
-"Organize your activities (plan tasks, track issues, invoice timesheets) for "
-"internal, personal or customer Plannings."
-msgstr ""
-"Organize your activities (plan tasks, track issues, invoice timesheets) for "
-"የውስጥ፣ የግል ወይም የደንበኛ ዕቅዶች።"
+msgid "Organize your activities (plan tasks, track issues, invoice timesheets) for internal, personal or customer Plannings."
+msgstr "ለውስጣዊ፣ ለግል ወይም ለደንበኛ ፕሮጀክቶች እንቅስቃሴዎችዎን ያደራጁ (ተግባራትን ያቅዱ፣ ጉዳዮችን ይከታተሉ፣ የክፍያ መጠየቂያ ጊዜ ሉሆች)።"
+
+#. module: project
+#: model_terms:ir.actions.act_window,help:project.open_view_project_requested
+msgid "Organize your activities (plan tasks, track issues, invoice timesheets) for internal, personal or customer projects."
+msgstr "ለውስጣዊ፣ ለግል ወይም ለደንበኛ ፕሮጀክቶች እንቅስቃሴዎችዎን ያደራጁ (ተግባራትን ያቅዱ፣ ጉዳዮችን ይከታተሉ፣ የክፍያ መጠየቂያ ጊዜ ሉሆች)።"
 
 #. module: project
 #: code:addons/project/controllers/portal.py:0
-#, python-format
 msgid "Others"
 msgstr "ሌሎች"
 
@@ -1939,25 +1933,19 @@ msgstr "ከመጠን ያለፈ ተግባራት"
 #. module: project
 #: model:ir.model.fields,help:project.field_project_task__legend_blocked
 #: model:ir.model.fields,help:project.field_project_task_type__legend_blocked
-msgid ""
-"Override the default value displayed for the blocked state for kanban "
-"selection, when the task or issue is in that stage."
+msgid "Override the default value displayed for the blocked state for kanban selection, when the task or issue is in that stage."
 msgstr "ለታገደው ግዛት ለካንባን ምርጫ የሚታየውን ነባሪ እሴት ይሽሩ፣ ተግባሩ ወይም ጉዳዩ በዚያ ደረጃ ላይ ሲሆን።"
 
 #. module: project
 #: model:ir.model.fields,help:project.field_project_task__legend_done
 #: model:ir.model.fields,help:project.field_project_task_type__legend_done
-msgid ""
-"Override the default value displayed for the done state for kanban "
-"selection, when the task or issue is in that stage."
+msgid "Override the default value displayed for the done state for kanban selection, when the task or issue is in that stage."
 msgstr "ስራው ወይም ጉዳዩ በዚያ ደረጃ ላይ ሲሆን ለካንባን ምርጫ የሚታየውን ነባሪ እሴት ይሽሩት።"
 
 #. module: project
 #: model:ir.model.fields,help:project.field_project_task__legend_normal
 #: model:ir.model.fields,help:project.field_project_task_type__legend_normal
-msgid ""
-"Override the default value displayed for the normal state for kanban "
-"selection, when the task or issue is in that stage."
+msgid "Override the default value displayed for the normal state for kanban selection, when the task or issue is in that stage."
 msgstr "ተግባሩ ወይም ጉዳዩ በዚያ ደረጃ ላይ ሲሆን ለካንባን ምርጫ ለመደበኛ ሁኔታ የሚታየውን ነባሪ እሴት ይሽሩ።"
 
 #. module: project
@@ -1974,7 +1962,6 @@ msgstr "ጥቅሎች"
 #. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/project_task_kanban_examples.js:0
-#, python-format
 msgid "Page Ideas"
 msgstr "የገጽ ሐሳቦች"
 
@@ -1992,35 +1979,50 @@ msgstr "የወላጅ መዝገብ ክር መታወቂያ"
 #: code:addons/project/models/project.py:0
 #: model:ir.model.fields,field_description:project.field_project_task__parent_id
 #: model_terms:ir.ui.view,arch_db:project.view_task_form2
-#, python-format
 msgid "Parent Task"
 msgstr "የወላጅ ተግባር"
 
 #. module: project
 #: model:ir.model.fields,help:project.field_project_project__alias_parent_model_id
-msgid ""
-"Parent model holding the alias. The model holding the alias reference is not"
-" necessarily the model given by alias_model_id (example: project "
-"(parent_model) and task (model))"
-msgstr ""
-"የወላጅ ሞዴል ተለዋጭ ስም የያዘ። ቅጽል ማመሳከሪያውን የያዘው ሞዴል የግድ በአሊያስ_ሞዴል_id የተሰጠው ሞዴል አይደለም"
-" (ለምሳሌ፡ እቅድ (የወላጅ_ሞዴል) እና ተግባር (ሞዴል))"
+msgid "Parent model holding the alias. The model holding the alias reference is not necessarily the model given by alias_model_id (example: project (parent_model) and task (model))"
+msgstr "የወላጅ ሞዴል ተለዋጭ ስም የያዘ። ቅጽል ማመሳከሪያውን የያዘው ሞዴል የግድ በአሊያስ_ሞዴል_id የተሰጠው ሞዴል አይደለም (ለምሳሌ፡ ፕሮጀክት (የወላጅ_ሞዴል) እና ተግባር (ሞዴል))"
 
 #. module: project
 #: model:ir.model.fields,help:project.field_project_project__privacy_visibility
 msgid ""
-"People to whom this project and its tasks will be visible.\n"
-"\n"
-"- Invited internal users: when following a project, internal users will get access to all of its tasks without distinction. Otherwise, they will only get access to the specific tasks they are following.\n"
-" A user with the project > administrator access right level can still access this project and its tasks, even if they are not explicitly part of the followers.\n"
-"\n"
-"- All internal users: all internal users can access the project and all of its tasks without distinction.\n"
-"\n"
-"- Invited portal users and all internal users: all internal users can access the project and all of its tasks without distinction.\n"
-"When following a project, portal users will get access to all of its tasks without distinction. Otherwise, they will only get access to the specific tasks they are following.\n"
-"\n"
+"People to whom this project and its tasks will be visible."
+""
+"- Invited internal users: when following a project, internal users will get access to all of its tasks without distinction. Otherwise, they will only get access to the specific tasks they are following."
+" A user with the project > administrator access right level can still access this project and its tasks, even if they are not explicitly part of the followers."
+""
+"- All internal users: all internal users can access the project and all of its tasks without distinction."
+""
+"- Invited portal users and all internal users: all internal users can access the project and all of its tasks without distinction."
+"When following a project, portal users will get access to all of its tasks without distinction. Otherwise, they will only get access to the specific tasks they are following."
+""
 "In any case, an internal user with no project access rights can still access a task, provided that they are given the corresponding URL (and that they are part of the followers if the project is private)."
 msgstr ""
+"\"ይህ ፕሮጀክት እና ተግባሮቹ የሚታዩባቸው ሰዎች።
+"
+"
+"
+"- የተጋበዙ የውስጥ ተጠቃሚዎች፡- አንድን ፕሮጀክት በሚከተሉበት ጊዜ የውስጥ ተጠቃሚዎች ያለ ልዩነት ሁሉንም ተግባራቶቹን ያገኛሉ። ያለበለዚያ እነሱ የሚከተሏቸውን ልዩ ተግባራት ብቻ ያገኛሉ ።
+"
+"  የፕሮጀክት> አስተዳዳሪ ያለው ትክክለኛ ደረጃ ያለው ተጠቃሚ አሁንም ይህንን ፕሮጀክት እና ተግባራቶቹን ማግኘት ይችላል፣ ምንም እንኳን በግልጽ የተከታዮቹ አካል ባይሆኑም።
+"
+"
+"
+"- ሁሉም የውስጥ ተጠቃሚዎች: ሁሉም የውስጥ ተጠቃሚዎች ፕሮጀክቱን እና ሁሉንም ተግባራቶቹን ያለ ልዩነት መድረስ ይችላሉ.
+"
+"
+"
+"- የተጋበዙ ፖርታል ተጠቃሚዎች እና ሁሉም የውስጥ ተጠቃሚዎች፡ ሁሉም የውስጥ ተጠቃሚዎች ፕሮጀክቱን እና ሁሉንም ተግባራቶቹን ያለ ልዩነት መድረስ ይችላሉ።
+"
+"አንድን ፕሮጀክት በሚከተሉበት ጊዜ የፖርታል ተጠቃሚዎች ያለምንም ልዩነት ሁሉንም ተግባሮቹን ያገኛሉ። ያለበለዚያ እነሱ የሚከተሏቸውን ልዩ ተግባራት ብቻ ያገኛሉ ።
+"
+"
+"
+"ለማንኛውም የፕሮጀክት መዳረሻ መብት የሌለው የውስጥ ተጠቃሚ ተጓዳኝ ዩአርኤል ከተሰጣቸው (እና ፕሮጀክቱ የግል ከሆነ የተከታዮቹ አካል ከሆኑ) አሁንም አንድን ተግባር ማግኘት ይችላል።"
 
 #. module: project
 #: model:ir.model.fields,help:project.field_project_project__rating_percentage_satisfaction
@@ -2029,9 +2031,7 @@ msgstr "የደስታ ደረጃዎች መቶኛ"
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.view_project_kanban
-msgid ""
-"Percentage of happy ratings over the past 30 days. Get rating details from "
-"the More menu."
+msgid "Percentage of happy ratings over the past 30 days. Get rating details from the More menu."
 msgstr "ላለፉት 30 ቀናት የደስታ ደረጃዎች መቶኛ። የደረጃ ዝርዝሮችን ከተጨማሪ ምናሌ ያግኙ።"
 
 #. module: project
@@ -2055,6 +2055,7 @@ msgstr "የታቀዱ ሰዓቶች"
 #: model:ir.model,name:project.model_project_project
 #: model:ir.model.fields,field_description:project.field_project_task__project_id
 #: model:ir.model.fields,field_description:project.field_report_project_task_user__project_id
+#: model:ir.module.category,name:project.module_category_operations_planning
 #: model:ir.ui.menu,name:project.menu_main_pm
 #: model_terms:ir.ui.view,arch_db:project.digest_digest_view_form
 #: model_terms:ir.ui.view,arch_db:project.edit_project
@@ -2064,7 +2065,6 @@ msgstr "የታቀዱ ሰዓቶች"
 #: model_terms:ir.ui.view,arch_db:project.view_project_project_filter
 #: model_terms:ir.ui.view,arch_db:project.view_task_project_user_search
 #: model_terms:ir.ui.view,arch_db:project.view_task_search_form
-#, python-format
 msgid "Planning"
 msgstr "እቅድ"
 
@@ -2117,12 +2117,8 @@ msgstr "የዕቅድ ተግባራት"
 #. module: project
 #: model:ir.model.fields,help:project.field_project_project__subtask_project_id
 #: model:ir.model.fields,help:project.field_project_task__subtask_project_id
-msgid ""
-"Planning in which sub-tasks of the current project will be created. It can "
-"be the current project itself."
-msgstr ""
-"Planning in which sub-tasks of the current project will be created. It can "
-"አሁን ያለው ፕሮጀክት ራሱ ይሁን"
+msgid "Planning in which sub-tasks of the current project will be created. It can be the current project itself."
+msgstr "የአሁኑ ፕሮጀክት የትኛዎቹ ንዑስ ተግባራት እንደሚፈጠሩ ማቀድ። የአሁኑ ፕሮጀክት ራሱ ሊሆን ይችላል."
 
 #. module: project
 #: model:ir.actions.act_window,name:project.open_view_project_all
@@ -2133,28 +2129,31 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:project.account_analytic_account_view_form_inherit
 #: model_terms:ir.ui.view,arch_db:project.view_project
 msgid "Plannings"
-msgstr "መርሃ ግብሮች"
+msgstr "እቅድ"
 
 #. module: project
 #: code:addons/project/models/analytic_account.py:0
-#, python-format
-msgid ""
-"Please remove existing tasks in the project linked to the accounts you want "
-"to delete."
+msgid "Please remove existing tasks in the project linked to the accounts you want to delete."
 msgstr "እባክዎን ሊሰርዟቸው ከሚፈልጉት መለያዎች ጋር በተገናኘ በፕሮጄክት ውስጥ ያሉትን ተግባራት ያስወግዱ።"
 
 #. module: project
 #: model:ir.model.fields,help:project.field_project_project__alias_contact
 msgid ""
-"Policy to post a message on the document using the mailgateway.\n"
-"- everyone: everyone can post\n"
-"- partners: only authenticated partners\n"
-"- followers: only followers of the related document or members of following channels\n"
+"Policy to post a message on the document using the mailgateway."
+"- everyone: everyone can post"
+"- partners: only authenticated partners"
+"- followers: only followers of the related document or members of following channels"
+""
 msgstr ""
-"Mailgatewayን በመጠቀም በሰነዱ ላይ መልእክት የመለጠፍ መመሪያ።\n"
-"- ሁሉም ሰው፡ ሁሉም ሰው መለጠፍ ይችላል\n"
-"- partners: only authenticated partners\n"
-"- followers: only followers of the related document or members of following channels\n"
+"\"የመልእክት ጌትዌይን በመጠቀም በሰነዱ ላይ መልእክት ለመለጠፍ መመሪያ።
+"
+"- ሁሉም: ሁሉም ሰው መለጠፍ ይችላል
+"
+"- አጋሮች: ብቻ የተረጋገጡ አጋሮች
+"
+"ተከታዮች: ተዛማጅ ሰነድ ተከታዮች ወይም የሚከተሉት ቻናሎች አባላት ብቻ
+"
+"\""
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_project__access_url
@@ -2165,14 +2164,8 @@ msgstr "ፖርታል መዳረሻ URL"
 #. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/project_task_kanban_examples.js:0
-#, python-format
-msgid ""
-"Prioritize Tasks by using the %s icon.%s Use the %s button to signalize to "
-"your colleagues that a task is ready for the next stage.%s Use the %s to "
-"signalize a problem or a need for discussion on a task."
-msgstr ""
-"የ%s አዶን በመጠቀም ለተግባራት ቅድሚያ ይስጧቸው።%s አንድ ተግባር ለቀጣይ ደረጃ ዝግጁ መሆኑን ለባልደረባዎችዎ "
-"ለማሳወቅ የ%s ቁልፍን ይጠቀሙ።"
+msgid "Prioritize Tasks by using the %s icon.%s Use the %s button to signalize to your colleagues that a task is ready for the next stage.%s Use the %s to signalize a problem or a need for discussion on a task."
+msgstr "የ%s አዶን በመጠቀም ለተግባራት ቅድሚያ ይስጧቸው።%s አንድ ተግባር ለቀጣይ ደረጃ ዝግጁ መሆኑን ለባልደረባዎችዎ ለማመልከት የ%s አዝራሩን ይጠቀሙ።"
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_task__priority
@@ -2183,29 +2176,29 @@ msgstr "ቅድሚያ"
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.portal_my_project
 msgid "Project Manager"
-msgstr "የእቅድ አስተዳዳሪ"
+msgstr "የፕሮጀክት አስተዳዳሪ"
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.rating_index
 msgid "Project Satisfaction"
-msgstr "የእቅድ እርካታ"
+msgstr "የፕሮጀክት እርካታ"
 
 #. module: project
 #: model:ir.actions.act_window,name:project.dblc_proj
-msgid "Project's tasks"
-msgstr "የፕሮጀክቱ ተግባራት"
+msgid "Project\'s tasks"
+msgstr "የዕቅድ ተግባራት"
 
 #. module: project
 #: model:ir.actions.server,name:project.ir_actions_server_project_sample
 msgid "Project: Activate Sample Project"
-msgstr "ዕቅድ፡ የናሙና ዕቅድን አግብር"
+msgstr "እቅድ ማውጣት፡ የናሙና እቅድ ማውጣትን ያንቁ"
 
 #. module: project
 #: model:ir.actions.server,name:project.ir_cron_rating_project_ir_actions_server
 #: model:ir.cron,cron_name:project.ir_cron_rating_project
 #: model:ir.cron,name:project.ir_cron_rating_project
 msgid "Project: Send rating"
-msgstr "ዕቅድ፡ ደረጃ አሰጣጥን ላክ"
+msgstr "ፕሮጀክት፡ ደረጃ አሰጣጥን ላክ"
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.portal_layout
@@ -2307,7 +2300,6 @@ msgstr "ደረጃ አሰጣጦች"
 
 #. module: project
 #: code:addons/project/models/project.py:0
-#, python-format
 msgid "Ratings of %s"
 msgstr "የ%s ደረጃዎች"
 
@@ -2328,7 +2320,6 @@ msgstr "የ%s ደረጃዎች"
 #: model:project.task.type,legend_done:project.project_stage_data_0
 #: model:project.task.type,legend_done:project.project_stage_data_1
 #: model:project.task.type,legend_done:project.project_stage_data_2
-#, python-format
 msgid "Ready for Next Stage"
 msgstr "ለቀጣይ ደረጃ ዝግጁ"
 
@@ -2370,7 +2361,6 @@ msgstr "ማጣቀሻ"
 #. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/project_task_kanban_examples.js:0
-#, python-format
 msgid "Refused"
 msgstr "እምቢ አለ።"
 
@@ -2380,30 +2370,31 @@ msgid "Reporting"
 msgstr "ሪፖርት ማድረግ"
 
 #. module: project
+#: model:ir.actions.act_window,name:project.open_view_project_requested
+msgid "Requested Planning"
+msgstr "የተጠየቀ እቅድ"
+
+#. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/project_task_kanban_examples.js:0
-#, python-format
 msgid "Research"
 msgstr "ምርምር"
 
 #. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/project_task_kanban_examples.js:0
-#, python-format
 msgid "Research Project"
-msgstr "የምርምር ዕቅድ"
+msgstr "የምርምር ፕሮጀክት"
 
 #. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/project_task_kanban_examples.js:0
-#, python-format
 msgid "Researching"
 msgstr "ምርምር ማድረግ"
 
 #. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/project_task_kanban_examples.js:0
-#, python-format
 msgid "Resources Allocation"
 msgstr "የሀብት ምደባ"
 
@@ -2416,7 +2407,7 @@ msgstr "ኃላፊነት የሚሰማው ተጠቃሚ"
 #: model:ir.model.fields,field_description:project.field_project_project__message_has_sms_error
 #: model:ir.model.fields,field_description:project.field_project_task__message_has_sms_error
 msgid "SMS Delivery error"
-msgstr "የኤስኤምኤስ አቅርቦት ስህተት"
+msgstr "የኤስኤምኤስ የማድረስ ስህተት"
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.portal_project_rating_partner_stat
@@ -2426,42 +2417,36 @@ msgstr "ያዘነ ፊት"
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.res_config_settings_view_form
-msgid ""
-"Schedule your teams across projects and estimate deadlines more accurately."
+msgid "Schedule your teams across projects and estimate deadlines more accurately."
 msgstr "ቡድኖችዎን በፕሮጀክቶች ውስጥ ያቅዱ እና የጊዜ ገደቦችን በበለጠ በትክክል ይገምቱ።"
 
 #. module: project
 #: code:addons/project/controllers/portal.py:0
-#, python-format
 msgid "Search <span class=\"nolabel\"> (in Content)</span>"
 msgstr "<span class=\"nolabel\">(በይዘት)</span> ይፈልጉ"
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.view_project_project_filter
 msgid "Search Planning"
-msgstr "እቅድ ፈልግ "
+msgstr "የፍለጋ እቅድ ማውጣት"
 
 #. module: project
 #: code:addons/project/controllers/portal.py:0
-#, python-format
 msgid "Search in All"
 msgstr "በሁሉም ውስጥ ይፈልጉ"
 
 #. module: project
 #: code:addons/project/controllers/portal.py:0
-#, python-format
 msgid "Search in Customer"
 msgstr "በደንበኛው ውስጥ ይፈልጉ"
 
 #. module: project
 #: code:addons/project/controllers/portal.py:0
-#, python-format
 msgid "Search in Messages"
 msgstr "በመልእክቶች ውስጥ ይፈልጉ"
 
 #. module: project
 #: code:addons/project/controllers/portal.py:0
-#, python-format
 msgid "Search in Stages"
 msgstr "በደረጃዎች ውስጥ ይፈልጉ"
 
@@ -2526,14 +2511,12 @@ msgstr "የሚቀጥለው የድርጊት ቀን ከዛሬ በፊት ያለው�
 #. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/project_task_kanban_examples.js:0
-#, python-format
 msgid "Software Development"
 msgstr "የሶፍትዌር ልማት"
 
 #. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/project_task_kanban_examples.js:0
-#, python-format
 msgid "Specifications"
 msgstr "ዝርዝሮች"
 
@@ -2549,7 +2532,6 @@ msgstr "ስራዎን በንዑስ ምእራፎች ለማደራጀት ተግባ�
 #: model_terms:ir.ui.view,arch_db:project.portal_my_tasks
 #: model_terms:ir.ui.view,arch_db:project.view_task_project_user_search
 #: model_terms:ir.ui.view,arch_db:project.view_task_search_form
-#, python-format
 msgid "Stage"
 msgstr "ደረጃ"
 
@@ -2592,21 +2574,21 @@ msgstr "የመጀመሪያ ቀን"
 #. module: project
 #: model:ir.model.fields,help:project.field_project_task__activity_state
 msgid ""
-"Status based on activities\n"
-"Overdue: Due date is already passed\n"
-"Today: Activity date is today\n"
+"Status based on activities"
+"Overdue: Due date is already passed"
+"Today: Activity date is today"
 "Planned: Future activities."
 msgstr ""
-"በእንቅስቃሴ ላይ የተመሰረተ ሁኔታ\n"
-"አልፏል፡ የማለቂያ ቀን አስቀድሞ አልፏል\n"
-"ዛሬ፡ የተግባር ቀን ዛሬ ነው\n"
-"የታቀደው: የወደፊት እንቅስቃሴዎች."
+"በእንቅስቃሴዎች ላይ የተመሰረተ ሁኔታ"
+"ጊዜው ያለፈበት፡ የማብቂያ ቀን አስቀድሞ አልፏል"
+"ዛሬ፡ የእንቅስቃሴ ቀን ዛሬ ነው።"
+"የታቀደ: የወደፊት እንቅስቃሴዎች."
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_project__subtask_project_id
 #: model:ir.model.fields,field_description:project.field_project_task__subtask_project_id
 msgid "Sub-task Project"
-msgstr "ንዑስ ተግባር ዕቅድ"
+msgstr "ንዑስ ተግባር ፕሮጀክት"
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_task__subtask_count
@@ -2629,7 +2611,6 @@ msgstr "ንዑስ ተግባራት"
 #. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/project_task_kanban_examples.js:0
-#, python-format
 msgid "T-shirt Printing"
 msgstr "ቲሸርት ማተም"
 
@@ -2661,7 +2642,6 @@ msgstr "ተግባር"
 
 #. module: project
 #: code:addons/project/models/project.py:0
-#, python-format
 msgid "Task %s cannot have several subtask levels."
 msgstr "ተግባር %s በርካታ ንዑስ ተግባር ደረጃዎች ሊኖሩት አይችልም።"
 
@@ -2798,68 +2778,39 @@ msgstr "የተግባር ደረጃዎች"
 #. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/project_task_kanban_examples.js:0
-#, python-format
 msgid "Testing"
-msgstr "መሞከር"
+msgstr "በመሞከር ላይ"
 
 #. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/project_task_kanban_examples.js:0
-#, python-format
 msgid "Tests"
 msgstr "ሙከራዎች"
 
 #. module: project
 #: model:ir.model.fields,help:project.field_project_project__alias_model_id
-msgid ""
-"The model (Odoo Document Kind) to which this alias corresponds. Any incoming"
-" email that does not reply to an existing record will cause the creation of "
-"a new record of this model (e.g. a Project Task)"
-msgstr ""
-"ይህ ተለዋጭ ስም የሚስማማበት ሞዴል (ኦዱ ሰነድ ዓይነት)። ለነባር መዝገብ የማይመልስ ማንኛውም ገቢ ኢሜይል የዚህ ሞዴል"
-" አዲስ መዝገብ እንዲፈጠር ያደርገዋል (ለምሳሌ የዕቅድ ተግባር)"
+msgid "The model (Odoo Document Kind) to which this alias corresponds. Any incoming email that does not reply to an existing record will cause the creation of a new record of this model (e.g. a Project Task)"
+msgstr " ይህ ተለዋጭ ስም የሚስማማበት ሞዴል (ኦዱ ሰነድ ዓይነት)። ለነባር መዝገብ የማይመልስ ማንኛውም ገቢ ኢሜይል የዚህ ሞዴል አዲስ መዝገብ እንዲፈጠር ያደርገዋል (ለምሳሌ የፕሮጀክት ተግባር)"
 
 #. module: project
 #: model:ir.model.fields,help:project.field_project_project__alias_name
-msgid ""
-"The name of the email alias, e.g. 'jobs' if you want to catch emails for "
-"<jobs@example.odoo.com>"
-msgstr ""
-"የኢሜል ተለዋጭ ስም፣ ለምሳሌ 'ስራዎች' ለ ኢሜይሎችን ማግኘት ከፈለጉ"
-"<jobs@example.odoo.com>"
+msgid "The name of the email alias, e.g. \'jobs\' if you want to catch emails for <jobs@example.odoo.com>"
+msgstr "የኢሜል ተለዋጭ ስም ፣ ለምሳሌ ለ<jobs@example.odoo.com> ኢሜይሎችን ማግኘት ከፈለጉ \'ስራዎች\'"
 
 #. module: project
 #: model:ir.model.fields,help:project.field_project_project__alias_user_id
-msgid ""
-"The owner of records created upon receiving emails on this alias. If this "
-"field is not set the system will attempt to find the right owner based on "
-"the sender (From) address, or will use the Administrator account if no "
-"system user is found for that address."
-msgstr ""
-"በዚህ ቅጽል ስም ኢሜይሎችን ሲቀበሉ የተፈጠሩ የመዝገቦች ባለቤት። ይህ መስክ ካልተዋቀረ ስርዓቱ በላኪው (ከ) አድራሻ "
-"ላይ በመመስረት ትክክለኛውን ባለቤት ለማግኘት ይሞክራል ወይም ለዚያ አድራሻ ምንም የስርዓት ተጠቃሚ ካልተገኘ የአስተዳዳሪ"
-" መለያውን ይጠቀማል።"
+msgid "The owner of records created upon receiving emails on this alias. If this field is not set the system will attempt to find the right owner based on the sender (From) address, or will use the Administrator account if no system user is found for that address."
+msgstr " በዚህ ቅጽል ስም ኢሜይሎችን ሲቀበሉ የተፈጠሩ የመዝገቦች ባለቤት። ይህ መስክ ካልተዋቀረ ስርዓቱ በላኪው (ከ) አድራሻ ላይ በመመስረት ትክክለኛውን ባለቤት ለማግኘት ይሞክራል ወይም ለዚያ አድራሻ ምንም የስርዓት ተጠቃሚ ካልተገኘ የአስተዳዳሪ መለያውን ይጠቀማል።"
 
 #. module: project
 #: code:addons/project/models/project.py:0
-#, python-format
-msgid ""
-"The project cannot be shared with the recipient(s) because the privacy of "
-"the project is too restricted. Set the privacy to 'Visible by following "
-"customers' in order to make it accessible by the recipient(s)."
-msgstr ""
+msgid "The project cannot be shared with the recipient(s) because the privacy of the project is too restricted. Set the privacy to \'Visible by following customers\' in order to make it accessible by the recipient(s)."
+msgstr "የፕሮጀክቱ ግላዊነት በጣም የተገደበ ስለሆነ ፕሮጀክቱ ለተቀባዩ(ዎች) መጋራት አይቻልም። ግላዊነትን በተቀባዩ(ዎች) ተደራሽ ለማድረግ \'ደንበኞችን በመከተል የሚታይ\' እንዲሆን ያቀናብሩት።"
 
 #. module: project
 #: code:addons/project/models/project.py:0
-#, python-format
-msgid ""
-"The task cannot be shared with the recipient(s) because the privacy of the "
-"project is too restricted. Set the privacy of the project to 'Visible by "
-"following customers' in order to make it accessible by the recipient(s)."
-msgstr ""
-"ተግባሩ ከተቀባዩ(ዎች) ጋር ሊጋራ አይችልም ምክንያቱም የ ፕሮጀክቱ ግላዊነት"
-"ፕሮጀክቱ በጣም የተገደበ ነው። በተቀባዩ(ዎች) ተደራሽ ለማድረግ የፕሮጀክቱን ግላዊነት ወደ 'የሚታይ በ' ለሚከተሉት ደንበኞችን ይቀይሩ"
-
+msgid "The task cannot be shared with the recipient(s) because the privacy of the project is too restricted. Set the privacy of the project to \'Visible by following customers\' in order to make it accessible by the recipient(s)."
+msgstr "የፕሮጀክቱ ግላዊነት በጣም የተገደበ ስለሆነ ስራውን ለተቀባዩ(ዎች) ማጋራት አይቻልም። የፕሮጀክቱን ግላዊነት በተቀባዩ(ዎች) ተደራሽ ለማድረግ \'ደንበኞችን በመከተል የሚታይ\' እንዲሆን ያድርጉት።"
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.portal_my_projects
@@ -2884,32 +2835,23 @@ msgstr "እነዚህ ሰዎች ኢሜይል ይደርሳቸዋል።"
 #. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/project_task_kanban_examples.js:0
-#, python-format
 msgid "This Month"
 msgstr "በዚህ ወር"
 
 #. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/project_task_kanban_examples.js:0
-#, python-format
 msgid "This Week"
 msgstr "በዚህ ሳምንት"
 
 #. module: project
 #: model_terms:ir.actions.act_window,help:project.action_project_task_user_tree
-msgid ""
-"This report allows you to analyse the performance of your projects and "
-"users. You can analyse the quantities of tasks, the hours spent compared to "
-"the planned hours, the average number of days to open or close a task, etc."
-msgstr ""
-"ይህ ሪፖርት የፕሮጀክቶችዎን እና የተጠቃሚዎችን አፈፃፀም እንዲተነትኑ ያስችልዎታል። የተግባሮችን ብዛት፣ከታቀዱት ሰዓቶች "
-"ጋር ሲነጻጸር ያሳለፉትን ሰዓቶች፣አንድን ተግባር ለመክፈት ወይም ለመዝጋት አማካይ የቀናት ብዛት፣ወዘተ መተንተን ይችላሉ።"
+msgid "This report allows you to analyse the performance of your projects and users. You can analyse the quantities of tasks, the hours spent compared to the planned hours, the average number of days to open or close a task, etc."
+msgstr "ይህ ሪፖርት የፕሮጀክቶችዎን እና የተጠቃሚዎችን አፈፃፀም እንዲተነትኑ ያስችልዎታል። የተግባሮችን ብዛት፣ከታቀዱት ሰዓቶች ጋር ሲነጻጸር ያሳለፉትን ሰዓቶች፣አንድን ተግባር ለመክፈት ወይም ለመዝጋት አማካይ የቀናት ብዛት፣ወዘተ መተንተን ይችላሉ።"
 
 #. module: project
 #: model:ir.model.fields,help:project.field_project_task_type__fold
-msgid ""
-"This stage is folded in the kanban view when there are no records in that "
-"stage to display."
+msgid "This stage is folded in the kanban view when there are no records in that stage to display."
 msgstr "ይህ ደረጃ በካንባን እይታ ውስጥ የሚታጠፈው በዚያ ደረጃ ላይ ምንም መዛግብት በማይኖርበት ጊዜ ነው።"
 
 #. module: project
@@ -2920,9 +2862,8 @@ msgstr "ይህ እርምጃ ተከናውኗል. ለማገድ ወይም በሂደ
 #. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/tours/project.js:0
-#, python-format
 msgid "This will create a new project and redirect us to its stages."
-msgstr "ይህ አዲስ ዕቅድ ይፈጥራል እና ወደ ደረጃው ይመራናል።"
+msgstr "ይህ አዲስ ፕሮጀክት ይፈጥራል እና ወደ ደረጃው ይመራናል።"
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.res_config_settings_view_form
@@ -2941,30 +2882,25 @@ msgstr "የጋንት ዲያግራም ዘገባን ለማስተካከል የጊ�
 
 #. module: project
 #: code:addons/project/controllers/portal.py:0
-#, python-format
 msgid "Title"
 msgstr "ርዕስ"
 
 #. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/project_task_kanban_examples.js:0
-#, python-format
 msgid "To Print"
 msgstr "ለማተም"
 
 #. module: project
 #: model_terms:ir.actions.act_window,help:project.act_project_project_2_project_task_all
 msgid ""
-"To get things done, use activities and status on tasks.<br>\n"
+"To get things done, use activities and status on tasks.<br>"
 "                    Chat in real time or by email to collaborate efficiently."
-msgstr ""
-"ነገሮችን ለማከናወን ተግባሮችን እና ሁኔታዎችን በተግባሮች ላይ ተጠቀም።<br>\n"
-"በቅልጥፍና ለመተባበር በእውነተኛ ሰዓት ወይም በኢሜል ተወያይ።"
+msgstr "ነገሮችን ለማከናወን ተግባሮችን እና ሁኔታዎችን በተግባሮች ላይ ተጠቀም።<br>                     በብቃት ለመተባበር በእውነተኛ ጊዜ ወይም በኢሜል ይወያዩ።"
 
 #. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/project_task_kanban_examples.js:0
-#, python-format
 msgid "Today"
 msgstr "ዛሬ"
 
@@ -2991,7 +2927,7 @@ msgstr "በወር ሁለት ጊዜ"
 #. module: project
 #: model:ir.model.fields,help:project.field_project_task__activity_exception_decoration
 msgid "Type of the exception activity on record."
-msgstr "በመዝገብ ላይ ያለ ልዩ እንቅስቃሴ ዓይነት።"
+msgstr "በመዝገብ ላይ ያለ ልዩ እንቅስቃሴ አይነት።"
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.view_task_project_user_search
@@ -3001,7 +2937,6 @@ msgstr "ያልተመደበ"
 
 #. module: project
 #: code:addons/project/models/project.py:0
-#, python-format
 msgid "Unknown Analytic Account"
 msgstr "ያልታወቀ የትንታኔ መለያ"
 
@@ -3022,7 +2957,7 @@ msgstr "ያልተነበቡ መልዕክቶች ቆጣሪ"
 #. module: project
 #: model:res.groups,name:project.group_project_rating
 msgid "Use Rating on Planning"
-msgstr "በእቅድ ላይ ደረጃ አሰጣጥን ተጠቀም"
+msgstr "በፕሮጀክት ላይ ደረጃ አሰጣጥን ተጠቀም"
 
 #. module: project
 #: model:res.groups,name:project.group_subtask_project
@@ -3042,7 +2977,6 @@ msgstr "በተግባሮች ላይ በትብብር የበለጸጉ የጽሑፍ �
 #. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/tours/project.js:0
-#, python-format
 msgid "Use the breadcrumbs to <b>go back to your tasks pipeline</b>."
 msgstr "<b>ወደ ተግባርህ ቧንቧ ለመመለስ</b>የዳቦ ፍርፋሪውን ተጠቀም።"
 
@@ -3064,7 +2998,6 @@ msgstr "ታይነት"
 #. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/project_task_kanban_examples.js:0
-#, python-format
 msgid "Waiting for the next stage: use %s and %s bullets."
 msgstr "የሚቀጥለውን ደረጃ በመጠበቅ ላይ፡ %s እና %s ጥይቶችን ይጠቀሙ።"
 
@@ -3072,9 +3005,7 @@ msgstr "የሚቀጥለውን ደረጃ በመጠበቅ ላይ፡ %s እና %s �
 #. openerp-web
 #: code:addons/project/static/src/js/tours/project.js:0
 #: code:addons/project/static/src/js/tours/project.js:0
-#, python-format
-msgid ""
-"Want a better way to <b>manage your projects</b>? <i>It starts here.</i>"
+msgid "Want a better way to <b>manage your projects</b>? <i>It starts here.</i>"
 msgstr "<b>ፕሮጀክቶችዎን ለማስተዳደር</b> የተሻለ መንገድ ይፈልጋሉ? <i>እዚህ ይጀምራል።</i>"
 
 #. module: project
@@ -3086,7 +3017,6 @@ msgstr "የድር ጣቢያ መልዕክቶች"
 #. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/project_task_kanban_examples.js:0
-#, python-format
 msgid "Website Redesign"
 msgstr "የድር ጣቢያ እንደገና ዲዛይን"
 
@@ -3104,7 +3034,7 @@ msgstr "በየሳምንቱ"
 #. module: project
 #: model:ir.model.fields,help:project.field_project_project__is_favorite
 msgid "Whether this project should be displayed on your dashboard."
-msgstr "ይህ ዕቅድ በእርስዎ ዳሽቦርድ ላይ መታየት አለበት ወይ?"
+msgstr "ይህ ፕሮጀክት በእርስዎ ዳሽቦርድ ላይ መታየት አለበት ወይ?"
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_project__resource_calendar_id
@@ -3149,7 +3079,6 @@ msgstr "የሥራ ጫና"
 #. module: project
 #. openerp-web
 #: code:addons/project/static/src/js/project_task_kanban_examples.js:0
-#, python-format
 msgid "Writing"
 msgstr "መጻፍ"
 
@@ -3160,27 +3089,18 @@ msgstr "በየአመቱ"
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.task_type_edit
-msgid ""
-"You can also add a description to help your coworkers understand the meaning"
-" and purpose of the stage."
+msgid "You can also add a description to help your coworkers understand the meaning and purpose of the stage."
 msgstr "እንዲሁም የስራ ባልደረቦችዎ የመድረኩን ትርጉም እና አላማ እንዲረዱ ለማገዝ መግለጫ ማከል ይችላሉ።"
 
 #. module: project
 #: code:addons/project/models/analytic_account.py:0
-#, python-format
-msgid ""
-"You cannot change the company of an analytical account if it is related to a"
-" project."
-msgstr "ከዕቅድ ጋር የተያያዘ ከሆነ የትንታኔ መለያውን ኩባንያ መቀየር አይችሉም።"
+msgid "You cannot change the company of an analytical account if it is related to a project."
+msgstr "ከፕሮጀክት ጋር የተያያዘ ከሆነ የትንታኔ መለያውን ኩባንያ መቀየር አይችሉም።"
 
 #. module: project
 #: code:addons/project/models/project.py:0
-#, python-format
-msgid ""
-"You cannot delete a project containing tasks. You can either archive it or "
-"first delete all of its tasks."
-msgstr ""
-"ተግባሮችን የያዘ ዕቅድ መሰረዝ አይችሉም። እሱን በማህደር ማስቀመጥ ወይም በመጀመሪያ ሁሉንም ተግባሮቹን መሰረዝ ይችላሉ።"
+msgid "You cannot delete a project containing tasks. You can either archive it or first delete all of its tasks."
+msgstr "ተግባራትን የያዘ ፕሮጀክት መሰረዝ አይችሉም። እሱን በማህደር ማስቀመጥ ወይም በመጀመሪያ ሁሉንም ተግባሮቹን መሰረዝ ይችላሉ።"
 
 #. module: project
 #: model_terms:ir.actions.act_window,help:project.open_view_project_all_packages
@@ -3190,7 +3110,7 @@ msgstr "የናሙና እቅድ ማውጣት"
 #. module: project
 #: model_terms:ir.actions.act_window,help:project.open_view_project_all
 msgid "activate a sample project"
-msgstr "የናሙና ዕቅድ ያግብሩ"
+msgstr "የናሙና ፕሮጀክት ማግበር"
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.portal_project_rating_partner_stat
@@ -3210,7 +3130,7 @@ msgstr "ለምሳሌ. የቢሮ ፓርቲ"
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.portal_my_tasks
 msgid "for project:"
-msgstr "ለዕቅድ፡-"
+msgstr "ለፕሮጀክት፡-"
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.portal_project_rating_partner_stat
@@ -3219,7 +3139,6 @@ msgstr "ደስተኛ"
 
 #. module: project
 #: code:addons/project/models/project.py:0
-#, python-format
 msgid "task"
 msgstr "ተግባር"
 

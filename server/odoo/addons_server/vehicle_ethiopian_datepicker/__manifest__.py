@@ -10,17 +10,15 @@
     "depends": ['fleet_operations','fleet',],
     "license": "LGPL-3",
     "data": [
-        # "wizard/stock_card_report_wizard_view.xml",
+     
       
         "wizard/inherit_fleet_vehicle_view.xml",
-        # "views/inherit_planning_tasks.xml",
-        # "views/inherit_planning.xml",
         
     ],
       'application': True,
 
   'installable': True,
   'auto_install': False,
-  'sequence': 1001
+  'sequence': 1003
 
 }

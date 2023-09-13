@@ -40,7 +40,7 @@ class HolidaysAllocation(models.Model):
             return [('valid', '=', True), ('allocation_type', '!=', 'no')]
         return [('valid', '=', True), ('allocation_type', '=', 'fixed_allocation')]
 
-    name = fields.Char('Description')
+    name = fields.Char('Description', translate=True)
     state = fields.Selection([
         ('draft', 'To Submit'),
         ('cancel', 'Cancelled'),
@@ -67,7 +67,7 @@ class HolidaysAllocation(models.Model):
         'hr.employee', string='Employee', index=True, readonly=True, ondelete="restrict",
         states={'draft': [('readonly', False)], 'confirm': [('readonly', False)]}, default=_default_employee, tracking=True)
     manager_id = fields.Many2one('hr.employee', string='Manager', readonly=True)
-    notes = fields.Text('Reasons', readonly=True, states={'draft': [('readonly', False)], 'confirm': [('readonly', False)]})
+    notes = fields.Text('Reasons', readonly=True, states={'draft': [('readonly', False)], 'confirm': [('readonly', False)]}, translate=True)
     # duration
     number_of_days = fields.Float(
         'Number of Days', tracking=True, default=1,
@@ -80,7 +80,7 @@ class HolidaysAllocation(models.Model):
         'Duration (hours)', compute='_compute_number_of_hours_display',
         help="If Accrual Allocation: Number of hours allocated in addition to the ones you will get via the accrual' system.")
     duration_display = fields.Char('Allocated (Days/Hours)', compute='_compute_duration_display',
-        help="Field allowing to see the allocation duration in days or hours depending on the type_request_unit")
+        help="Field allowing to see the allocation duration in days or hours depending on the type_request_unit", translate=True)
     # details
     parent_id = fields.Many2one('hr.leave.allocation', string='Parent')
     linked_request_ids = fields.One2many('hr.leave.allocation', 'parent_id', string='Linked Requests')

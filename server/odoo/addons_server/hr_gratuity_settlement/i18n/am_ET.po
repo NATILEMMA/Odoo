@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 13.0-20220525\n"
+"Project-Id-Version: Odoo Server 13.0-20221005\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-10 15:50+0000\n"
-"PO-Revision-Date: 2023-05-10 15:50+0000\n"
+"POT-Creation-Date: 2023-03-27 07:48+0000\n"
+"PO-Revision-Date: 2023-03-27 07:48+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -58,6 +58,11 @@ msgstr "<span> ወራት </span>"
 #: model_terms:ir.ui.view,arch_db:hr_gratuity_settlement.employee_gratuity_form
 msgid "<span> Years </span>"
 msgstr "<span> ዓመታት </span>"
+
+#. module: hr_gratuity_settlement
+#: model_terms:ir.ui.view,arch_db:hr_gratuity_settlement.employee_gratuity_form
+msgid "<span> years</span>"
+msgstr "<span> ዓመታት</span>"
 
 #. module: hr_gratuity_settlement
 #: model_terms:ir.ui.view,arch_db:hr_gratuity_settlement.hr_contract_form_inherit_wage
@@ -165,32 +170,6 @@ msgstr "ወደ ተሰረዙ ማህደር አስገባ"
 #: model_terms:ir.ui.view,arch_db:hr_gratuity_settlement.hr_gratuity_accounting_configuration_filter_view
 msgid "Archived Gratuity Configuration"
 msgstr "የተሰረዙ ስንብት ማቀዋርያ"
-
-#. module: hr_gratuity_settlement
-#: model_terms:ir.ui.view,arch_db:hr_gratuity_settlement.employee_gratuity_form
-#: model_terms:ir.ui.view,arch_db:hr_gratuity_settlement.view_priority
-msgid "Are you sure you want to Approve?"
-msgstr "እርግጠኛ ነዎት ማጽደቅ ይፈልጋሉ?"
-
-#. module: hr_gratuity_settlement
-#: model_terms:ir.ui.view,arch_db:hr_gratuity_settlement.employee_gratuity_form
-msgid "Are you sure you want to Cancel?"
-msgstr "እርግጠኛ ነዎት መሰረዝ ይፈልጋሉ?"
-
-#. module: hr_gratuity_settlement
-#: model_terms:ir.ui.view,arch_db:hr_gratuity_settlement.employee_gratuity_form
-msgid "Are you sure you want to Set to Draft?"
-msgstr "እርግጠኛ ነዎት ወደ ንድፍ መመለስ ይፈልጋሉ?"
-
-#. module: hr_gratuity_settlement
-#: model_terms:ir.ui.view,arch_db:hr_gratuity_settlement.employee_gratuity_form
-msgid "Are you sure you want to Submit?"
-msgstr "እርግጠኛ ነዎት ማስገባት ይፈልጋሉ?"
-
-#. module: hr_gratuity_settlement
-#: model_terms:ir.ui.view,arch_db:hr_gratuity_settlement.employee_gratuity_form
-msgid "Are you sure you want to create Expense?"
-msgstr "እርግጠኛ ነዎት ወጪ መፍጠር ይፈልጋሉ?"
 
 #. module: hr_gratuity_settlement
 #: model:ir.model.fields,field_description:hr_gratuity_settlement.field_gratuity_configuration__message_attachment_count
@@ -441,12 +420,6 @@ msgstr "የሰራተኛ ደመወዝ"
 #: model:ir.model.fields,help:hr_gratuity_settlement.field_hr_contract__hourly_wage
 msgid "Employee's hourly gross wage."
 msgstr "የሰራተኛው ጠቅላላ የሰዓት ደመወዝ።"
-
-#. module: hr_gratuity_settlement
-#: code:addons/hr_gratuity_settlement/models/hr_contract.py:0
-#, python-format
-msgid "End Date Can't Be Less Than End of Trial Period"
-msgstr "የሥራ ማብቂያ ቀን ከሙከራ ጊዜ ማብቂያ ያነሰ ሊሆን አይችልም።"
 
 #. module: hr_gratuity_settlement
 #: model:ir.ui.menu,name:hr_gratuity_settlement.main_menu_hr_resignation
@@ -832,12 +805,6 @@ msgid "Please Make This Configuration To Only Have 2 Rules"
 msgstr "እባክዎ ይህን ውቅር 2 ደንብ ብቻ እንዲኖረው ያድርጉ::"
 
 #. module: hr_gratuity_settlement
-#: code:addons/hr_gratuity_settlement/models/hr_gratuity.py:0
-#, python-format
-msgid "Please add a Joined Date(End of trial Period) on the contract."
-msgstr "እባኮትን የተቀላቀለበት ቀን(የሙከራ ጊዜ) በውሉ ላይ ይጨምሩ።"
-
-#. module: hr_gratuity_settlement
 #: model:ir.model.fields.selection,name:hr_gratuity_settlement.selection__hr_contract__state__probation
 msgid "Probation"
 msgstr "የሙከራ ጊዜ"
@@ -1094,17 +1061,6 @@ msgstr "የድረገጽ የግንኙነት ታሪክ"
 #: model:ir.model.fields,field_description:hr_gratuity_settlement.field_gratuity_configuration__employee_working_days
 msgid "Working Days"
 msgstr "የስራ ቀናት"
-
-#. module: hr_gratuity_settlement
-#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity__x_css
-msgid "X Css"
-msgstr ""
-
-#. module: hr_gratuity_settlement
-#: code:addons/hr_gratuity_settlement/models/hr_gratuity.py:0
-#, python-format
-msgid "You Can Only Delete a Gratuity That is in Draft State."
-msgstr "በንድፍ ሁኔታ ውስጥ ያለ የስንብት ስምምነት ብቻ መሰረዝ ይችላሉ።"
 
 #. module: hr_gratuity_settlement
 #: code:addons/hr_gratuity_settlement/models/hr_contract.py:0

@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<odoo>
+
+  <!-- This record will create a form for Supported Members -->
+  <record id="supported_members_form_view_inherit" model="ir.ui.view">
+    <field name="name">Supporter Form</field>
+    <field name="model">supporter.members</field>
+    <field name="inherit_id" ref="member_registration.supported_members_form_view"/>
+    <field name="arch" type="xml">
+        <xpath expr="//sheet/notebook" position="inside">
+            <page string="Educational History">
+                <field name="educational_history">
+                <tree editable="bottom">
+                    <field name="education_level"/>
+                    <field name="field_of_study_id"/>
+                </tree>
+                </field>
+            </page>
+            <page name="archive" string="Archives" attrs="{'invisible': [('active', '=', True)]}">
+                <field name="archive_ids" readonly="1">
+                    <tree>
+                        <field name="date_from" string="Date From"/>
+                        <field name="date_to" string="Date To"/>
+                        <field name="departure_reason" string="Reason"/>
+                        <field name="additional_information" string="Additional Information"/>
+                    </tree>
+                </field>
+            </page>
+            <page string="Donations" name="donation">
+              <group>
+                <field name="year_of_payment" options="{'no_create': True, 'no_create_edit': True}"/>
+              </group>
+              <field name="donation_ids">
+                  <tree delete="false" create="false">
+                    <field name="supporter_id"/>
+                    <field name="year"/>
+                    <field name="month"/>
+                    <field name="amount"/>
+                    <field name="state"/>
+                  </tree>
+              </field>
+            </page>
+        </xpath>
+    </field>
+  </record>
+
+    <!-- This record will handle the form view for Donors -->
+    <record id="donor_form_view_inherit" model="ir.ui.view">
+        <field name="name">Donor Form View</field>
+        <field name="model">donors</field>
+        <field name="inherit_id" ref="member_registration.donor_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet/notebook/page[@name='donation']/group" position="after">
+                <field name="donation_ids">
+                    <tree delete="false" create="false">
+                    <field name="donor_ids"/>
+                    <field name="year"/>
+                    <field name="month"/>
+                    <field name="amount"/>
+                    <field name="state"/>
+                    </tree>
+                </field>
+            </xpath>
+            <xpath expr="//sheet/notebook" position="inside">
+                <page name="archive" string="Archives" attrs="{'invisible': [('active', '=', True)]}">
+                    <field name="archive_ids" readonly="1">
+                        <tree>
+                            <field name="date_from" string="Date From"/>
+                            <field name="date_to" string="Date To"/>
+                            <field name="departure_reason" string="Reason"/>
+                            <field name="additional_information" string="Additional Information"/>
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+
+  <!-- This record will create a form for candidate Members -->
+  <record id="candidate_members_form_view_inherit" model="ir.ui.view">
+    <field name="name">Candidate Form</field>
+    <field name="model">candidate.members</field>
+    <field name="inherit_id" ref="member_registration.candidate_members_form_view"/>
+    <field name="arch" type="xml">
+        <xpath expr="//sheet/notebook/page[1]/group" position="after">
+            <field name="work_experience_ids">
+            <tree decoration-success="current_job == True" decoration-muted="current_job == False">
+                <field name="name"/>
+                <field name="place_of_work"/>
+                <field name="years_of_service"/>
+                <field name="current_job"/>
+            </tree>
+            <form>
+                <sheet>
+                <group>
+                    <group>
+                    <field name="name"/>
+                    <field name="place_of_work"/>
+                    </group>
+                    <group>
+                    <field name="years_of_service"/>
+                    <field name="current_job"/>
+                    </group>
+                </group>
+                </sheet>
+            </form>
+            </field>
+        </xpath>
+        <xpath expr="//sheet/notebook/page" position="after">
+            <page string="Educational History">
+              <field name="educational_history">
+                <tree editable="bottom">
+                  <field name="education_level"/>
+                  <field name="field_of_study_id"/>
+                </tree>
+              </field>
+            </page>
+            <page name="archive" string="Archives" attrs="{'invisible': [('active', '=', True)]}">
+                <field name="archive_ids" readonly="1">
+                    <tree>
+                        <field name="date_from" string="Date From"/>
+                        <field name="date_to" string="Date To"/>
+                        <field name="departure_reason" string="Reason"/>
+                        <field name="additional_information" string="Additional Information"/>
+                    </tree>
+                </field>
+            </page>
+        </xpath>
+    </field>
+  </record>
+
+</odoo>

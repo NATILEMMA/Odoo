@@ -26,8 +26,8 @@ class Location(models.Model):
             res['barcode'] = res['complete_name']
         return res
 
-    name = fields.Char('Location Name', required=True)
-    complete_name = fields.Char("Full Location Name", compute='_compute_complete_name', store=True)
+    name = fields.Char('Location Name', required=True, translate=True)
+    complete_name = fields.Char("Full Location Name", compute='_compute_complete_name', store=True, translate=True)
     active = fields.Boolean('Active', default=True, help="By unchecking the active field, you may hide a location without deleting it.")
     usage = fields.Selection([
         ('supplier', 'Vendor Location'),
@@ -49,11 +49,11 @@ class Location(models.Model):
         'stock.location', 'Parent Location', index=True, ondelete='cascade', check_company=True,
         help="The parent location that includes this location. Example : The 'Dispatch Zone' is the 'Gate 1' parent location.")
     child_ids = fields.One2many('stock.location', 'location_id', 'Contains')
-    comment = fields.Text('Additional Information')
+    comment = fields.Text('Additional Information', translate=True)
     posx = fields.Integer('Corridor (X)', default=0, help="Optional localization details, for information purpose only")
     posy = fields.Integer('Shelves (Y)', default=0, help="Optional localization details, for information purpose only")
     posz = fields.Integer('Height (Z)', default=0, help="Optional localization details, for information purpose only")
-    parent_path = fields.Char(index=True)
+    parent_path = fields.Char(index=True, translate=True)
     company_id = fields.Many2one(
         'res.company', 'Company',
         default=lambda self: self.env.company, index=True,
@@ -62,7 +62,7 @@ class Location(models.Model):
     return_location = fields.Boolean('Is a Return Location?', help='Check this box to allow using this location as a return location.')
     removal_strategy_id = fields.Many2one('product.removal', 'Removal Strategy', help="Defines the default method used for suggesting the exact location (shelf) where to take the products from, which lot etc. for this location. This method can be enforced at the product category level, and a fallback is made on the parent locations if none is set here.")
     putaway_rule_ids = fields.One2many('stock.putaway.rule', 'location_in_id', 'Putaway Rules')
-    barcode = fields.Char('Barcode', copy=False)
+    barcode = fields.Char('Barcode', copy=False, translate=True)
     quant_ids = fields.One2many('stock.quant', 'location_id')
 
     _sql_constraints = [('barcode_company_uniq', 'unique (barcode,company_id)', 'The barcode for a location must be unique per company !')]

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+         <!-- Planning milestone Form View  \ Date Widget Modification -->
+
+                <record id="view_project_milestone_setting_form_inherit_local" model="ir.ui.view">
+                    <field name="name">prpject.milestone.form.inherit.local</field>
+                    <field name="model">project.milestone</field>
+                    <field name="inherit_id" ref="project_milestone.project_milestone_view_form"/>
+                    <field name="arch" type="xml">
+        
+                    
+                        <xpath expr="//field[@name='start_date']" position="replace">
+                                <field name="is_pagum_from" invisible="1"/>
+                                <field name="is_pagum_to" invisible="1"/>
+                
+                                <field  name="start_date"  class="col-50" readonly="1" colspan="3" groups="EthiopianCalendar.group_gregory"/>
+                                <field  name="ethiopian_from" readonly="1" string="Start Date" style=" float:left" attrs="{'invisible': ['|', ('is_pagum_from', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                                <field  name="pagum_from" readonly="1"  string="Start Date" style=" float:left"  attrs="{'invisible': ['|',('is_pagum_from', '!=',False)  ]}"  groups="EthiopianCalendar.group_ethio_datepicker"/>
+<!--         
+                                 <div>
+                                 </div>
+                                <div style="margin-bottom:40px;margin-top:-22px;margin-left:10px;margin-right:0px">
+                                <widget name="ethiopian_calander_widget"  style=" float:left;width:226px;" class="oe_edit_only"  groups="EthiopianCalendar.group_ethio_datepicker"/>
+                                </div> -->
+                           
+                        </xpath>
+                        <xpath expr="//field[@name='end_date']" position="replace">
+                            <field  name="end_date"  class="col-50" readonly="1" colspan="3" groups="EthiopianCalendar.group_gregory"/>
+                            <field  name="ethiopian_to" readonly="1" string="End Date" style=" float:left"   attrs="{'invisible': ['|', ('is_pagum_to', '=',False) ]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                            <field  name="pagum_to" readonly="1" string="End Date" style=" float:left"  attrs="{'invisible': ['|',('is_pagum_to', '!=',False) ]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                            
+                            <!-- <div>
+                            </div>
+                            <div style="margin-bottom:40px;margin-top:-22px;margin-left:10px;margin-right:0px">
+                            <widget name="ethiopian_calander_widget_two"  style=" float:left;width:226px;" class="oe_edit_only" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                            </div> -->
+                    
+                        </xpath>
+                      
+                        
+                    </field>
+                </record>
+
+
+                 <!-- Planning Quarters Form View  \ Date Widget Modification -->
+
+                 <record id="view_planning_quarter_form_inherit_local" model="ir.ui.view">
+                    <field name="name">planning.quarter.form.inherit.local</field>
+                    <field name="model">planning.quarter</field>
+                    <field name="inherit_id" ref="project_milestone.quarter_type_view_form"/>
+                    <field name="arch" type="xml">
+        
+                    
+                        <xpath expr="//field[@name='start_date']" position="replace">
+                                <field name="is_pagum_from" invisible="1"/>
+                                <field name="is_pagum_to" invisible="1"/>
+                
+                                <field  name="start_date"  class="col-50" colspan="3" groups="EthiopianCalendar.group_gregory"/>
+                                <field  name="ethiopian_from" class="oe_read_only" string="Date From" style=" float:left" attrs="{'invisible': ['|', ('is_pagum_from', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                                <field  name="pagum_from" class="oe_read_only"  string="Date From" style=" float:left"  attrs="{'invisible': ['|',('is_pagum_from', '!=',False)  ]}"  groups="EthiopianCalendar.group_ethio_datepicker"/>
+        
+                                 <div>
+                                 </div>
+                                <div style="margin-bottom:40px;margin-top:-22px;margin-left:10px;margin-right:0px">
+                                <widget name="ethiopian_calander_widget"  style=" float:left;width:226px;" class="oe_edit_only"  groups="EthiopianCalendar.group_ethio_datepicker"/>
+                                </div>
+                           
+                        </xpath>
+                        <xpath expr="//field[@name='end_date']" position="replace">
+                            <field  name="end_date"  class="col-50" colspan="3" groups="EthiopianCalendar.group_gregory"/>
+                            <field  name="ethiopian_to" class="oe_read_only" string="Date TO" style=" float:left"   attrs="{'invisible': ['|', ('is_pagum_to', '=',False) ]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                            <field  name="pagum_to" class="oe_read_only" string="Date To" style=" float:left"  attrs="{'invisible': ['|',('is_pagum_to', '!=',False) ]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                            
+                            <div>
+                            </div>
+                            <div style="margin-bottom:40px;margin-top:-22px;margin-left:10px;margin-right:0px">
+                            <widget name="ethiopian_calander_widget_two"  style=" float:left;width:226px;" class="oe_edit_only" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                            </div>
+                    
+                        </xpath>
+                      
+                        
+                    </field>
+                </record>
+
+
+         <!-- Planning Goals Form View  \ Date Widget Modification -->
+
+
+                <record id="view_planning_goal_form_inherit_local" model="ir.ui.view">
+                    <field name="name">planning.goal.form.inherit.local</field>
+                    <field name="model">planning.goal</field>
+                    <field name="inherit_id" ref="project_milestone.planning_goal_view_form"/>
+                    <field name="arch" type="xml">
+        
+                    
+                        <xpath expr="//field[@name='start_date']" position="replace">
+                                <field name="is_pagum_from" invisible="1"/>
+                                <field name="is_pagum_to" invisible="1"/>
+                
+                                <field  name="start_date"  class="col-50" colspan="3" groups="EthiopianCalendar.group_gregory"/>
+                                <field  name="ethiopian_from" class="oe_read_only" string="Date From" style=" float:left" attrs="{'invisible': ['|', ('is_pagum_from', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                                <field  name="pagum_from" class="oe_read_only"  string="Date From" style=" float:left"  attrs="{'invisible': ['|',('is_pagum_from', '!=',False)  ]}"  groups="EthiopianCalendar.group_ethio_datepicker"/>
+        
+                                 <div>
+                                 </div>
+                                <div style="margin-bottom:40px;margin-top:-22px;margin-left:10px;margin-right:0px">
+                                <widget name="ethiopian_calander_widget"  style=" float:left;width:226px;" class="oe_edit_only"  groups="EthiopianCalendar.group_ethio_datepicker"/>
+                                </div>
+                           
+                        </xpath>
+                        <xpath expr="//field[@name='end_date']" position="replace">
+                            <field  name="end_date"  class="col-50" colspan="3" groups="EthiopianCalendar.group_gregory"/>
+                            <field  name="ethiopian_to" class="oe_read_only" string="Date TO" style=" float:left"   attrs="{'invisible': ['|', ('is_pagum_to', '=',False) ]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                            <field  name="pagum_to" class="oe_read_only" string="Date To" style=" float:left"  attrs="{'invisible': ['|',('is_pagum_to', '!=',False) ]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                            
+                            <div>
+                            </div>
+                            <div style="margin-bottom:40px;margin-top:-22px;margin-left:10px;margin-right:0px">
+                            <widget name="ethiopian_calander_widget_two"  style=" float:left;width:226px;" class="oe_edit_only" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                            </div>
+                    
+                        </xpath>
+                      
+                        
+                    </field>
+                </record>
+    </data>
+</odoo>

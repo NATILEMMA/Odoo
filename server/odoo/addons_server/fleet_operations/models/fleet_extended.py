@@ -88,23 +88,23 @@ class FleetOperations(models.Model):
             if context.get("history", False) == "color":
                 wizard_view = "update_color_info_form_view"
                 res_model = "update.color.info"
-                view_name = "Update Color Info"
+                view_name = (_("Update Color Info"))
             elif context.get("history", False) == "engine":
                 wizard_view = "update_engine_info_form_view"
                 res_model = "update.engine.info"
-                view_name = "Update Engine Info"
+                view_name =  (_("Update Engine Info"))
             elif context.get('history', False) == 'vin':
                 wizard_view = "update_vin_info_form_view"
                 res_model = "update.vin.info"
-                view_name = "Update Vin Info"
+                view_name =  (_("Update Vin Info"))
             elif context.get('history', False) == 'tire':
                 wizard_view = "update_tire_info_form_view"
                 res_model = "update.tire.info"
-                view_name = "Update Tire Info"
+                view_name =  (_("Update Tire Info"))
             elif context.get('history', False) == 'battery':
                 wizard_view = "update_battery_info_form_view"
                 res_model = "update.battery.info"
-                view_name = "Update Battery Info"
+                view_name =  (_("Update Battery Info"))
 
         model_data_ids = mod_obj.search([('model', '=', 'ir.ui.view'),
                                          ('name', '=', wizard_view)])
@@ -125,21 +125,20 @@ class FleetOperations(models.Model):
         """Method to set released state."""
         for vehicle in self:
           print(self.name)
-          stat = self.env['fleet.vehicle.log.services'].search([('fmp_id', '=', self.name)])
+          stat = self.env['fleet.vehicle.log.services'].search([('vehicle_id', '=', self.id)])
+          if vehicle.state != 'complete': 
+             raise Warning(_('Vehicle status will only set to released '
+                                            'if it is in completed state.'))
           for state in stat:
-              if state:
-                  if vehicle.state == 'complete' and state.state == 'done':
+                if state.state == 'done':
                         vehicle.write({
                                 'state': 'released',
                                 'last_change_status_date': fields.Date.today(),
                                 'released_date': fields.Date.today()
                             })
-                  else:
-                            raise Warning(_('Vehicle status will only set to released '
-                                            'if it is in completed state.'))
-              else:
-                  raise Warning(_('Vehicle status will only set to released '
-                                  'if it is in completed state.'))
+                     
+                else:
+                  raise Warning(_('There is a services that is not on done state.'))
         return True
 
     def name_get(self):
@@ -313,9 +312,9 @@ class FleetOperations(models.Model):
                                   record.model_id.name + '/' + lic_plate
 
     name = fields.Char(compute="_compute_vehicle_name", string="Vehicle-ID",
-                       store=True)
+                       store=True, translate=True)
     odometer_check = fields.Boolean('Odometer Change', default=True)
-    fuel_qty = fields.Char(string='Fuel Quality')
+    fuel_qty = fields.Char(string='Fuel Quality', translate=True)
     fuel_type = fields.Selection(selection_add=[('gasoline', 'Gasoline'),
                                                 ('diesel', 'Diesel'),
                                                 ('petrol', 'Petrol'),
@@ -324,8 +323,8 @@ class FleetOperations(models.Model):
                                  string='Fuel Type',
                                  default='diesel',
                                  help='Fuel Used by the vehicle')
-    oil_name = fields.Char(string='Oil Name')
-    oil_capacity = fields.Char(string='Oil Capacity')
+    oil_name = fields.Char(string='Oil Name', translate=True)
+    oil_capacity = fields.Char(string='Oil Capacity', translate=True)
     fleet_id = fields.Integer(string='Fleet ID',
                               help="Take this field for data migration")
     f_brand_id = fields.Many2one('fleet.vehicle.model.brand', string='Make')
@@ -333,12 +332,12 @@ class FleetOperations(models.Model):
     license_plate = fields.Char(string='License Plate',
                                 translate=True,
                                 help='License plate number of the vehicle.\
-                                (ie: plate number for a vehicle)')
+                                (ie: plate number for a vehicle)',)
     active = fields.Boolean(string='Active', default=True)
     dealer_id = fields.Many2one('res.partner', string='Dealer')
     mileage = fields.Integer(string='Mileage(K/H)')
     description = fields.Text(string='About Vehicle', translate=True)
-    engine_size = fields.Char(string='Engine Size')
+    engine_size = fields.Char(string='Engine Size', translate=True)
     cylinders = fields.Integer(string='No of Cylinders')
     front_tire_size = fields.Float(string='Front Tire Size')
     front_tire_pressure = fields.Integer(string='Front Tire Pressure')
@@ -356,8 +355,8 @@ class FleetOperations(models.Model):
                                           ('miles', 'Miles')],
                                          string='Due Odometer Units',
                                          help='Unit of the odometer ')
-    left_wiper_blade = fields.Char(string='Wiper Blade(L)')
-    right_wiper_blade = fields.Char(string='Wiper Blade(R)')
+    left_wiper_blade = fields.Char(string='Wiper Blade(L)', translate=True)
+    right_wiper_blade = fields.Char(string='Wiper Blade(R)', translate=True)
     rr_wiper_blade = fields.Char(string='Wiper Blade(RR)')
     vehicle_length = fields.Integer(string='Length(mm)')
     vehicle_width = fields.Integer(string='Width(mm)')
@@ -375,7 +374,7 @@ class FleetOperations(models.Model):
                                            domain=[('insurance', '=', True)])
     insurance_type_id = fields.Many2one('insurance.type',
                                         string='Insurance Type')
-    policy_number = fields.Char(string='Policy Number')
+    policy_number = fields.Char(string='Policy Number', translate=True)
     payment = fields.Float(string='Payment')
     start_date_insurance = fields.Date(string='Start Date')
     end_date_insurance = fields.Date(string='End Date')
@@ -394,13 +393,13 @@ class FleetOperations(models.Model):
                                           string='Registration State')
     vehical_division_id = fields.Many2one('vehicle.divison', string='Division')
     driver_id = fields.Many2one('res.partner', 'Driver')
-    driver_identification_no = fields.Char(string='Driver ID')
-    driver_contact_no = fields.Char(string='Driver Contact Number')
+    driver_identification_no = fields.Char(string='Driver ID', translate=True)
+    driver_contact_no = fields.Char(string='Driver Contact Number', translate=True)
     main_type = fields.Selection([('vehicle', 'Vehicle'),
                                   ('non-vehicle', 'Non-Vehicle')],
-                                 default='vehicle', string='Main Type')
+                                 default='vehicle', string='Main Type', translate=True)
     vechical_type_id = fields.Many2one('vehicle.type', string='Vehicle Type')
-    engine_no = fields.Char(string='Engine No', size=64)
+    engine_no = fields.Char(string='Engine No', size=64, translate=True)
     # multi_images = fields.One2many('multi.images', 'vehicle_template_id',
     #                                'Multi Images')
     multi_images = fields.Many2many('ir.attachment',
@@ -424,11 +423,11 @@ class FleetOperations(models.Model):
                                               string='Pending Repair Types',
                                               readonly=True)
     released_date = fields.Date(string='Released Date', readonly=True)
-    tire_size = fields.Char(string='Tire Size', size=64)
-    tire_srno = fields.Char(string='Tire S/N', size=64)
+    tire_size = fields.Char(string='Tire Size', size=64, translate=True)
+    tire_srno = fields.Char(string='Tire S/N', size=64, translate=True)
     tire_issuance_date = fields.Date(string='Tire Issuance Date')
-    battery_size = fields.Char(string='Battery Size', size=64)
-    battery_srno = fields.Char(string='Battery S/N', size=64)
+    battery_size = fields.Char(string='Battery Size', size=64, translate=True)
+    battery_srno = fields.Char(string='Battery S/N', size=64, translate=True)
     battery_issuance_date = fields.Date(string='Battery Issuance Date')
     color_history_ids = fields.One2many('color.history', 'vehicle_id',
                                         string="Color History", readonly=True)
@@ -465,6 +464,8 @@ class FleetOperations(models.Model):
 
     _sql_constraints = [('vehilce_unique', 'unique(vin_sn)',
                          'The vehicle is already exist with this vin no.!'),
+                        ('licence_unique', 'unique(license_plate)',
+                         'The vehicle is already exist with this Licence plate.!'),
                         ('fmp_unique', 'unique(name)',
                          'The vehicle is already exist with this Vehicle ID!')]
 
@@ -472,9 +473,16 @@ class FleetOperations(models.Model):
     expence_acc_id = fields.Many2one(related='model_id.expence_acc_id', readonly= False)
     invoice_count = fields.Integer(
         compute="_compute_count_invoice", string="Invoice Count")
-    cc = fields.Char("CC")
-    items_weight = fields.Char("Item weight")
-    total_weight = fields.Char("Total weight")
+    cc = fields.Char("CC", translate=True)
+    items_weight = fields.Char("Item weight", translate=True)
+    total_weight = fields.Char("Total weight", translate=True)
+    driver_status = fields.Selection([('occupied', 'Occupied'),
+                                     ('free', 'Free')],
+                                 string='Driver status',
+                                 default='free')
+
+
+
 
 
     def set_draft(self):
@@ -604,8 +612,8 @@ class EngineHistory(models.Model):
     _description = 'Engine History for Vehicle'
 
     vehicle_id = fields.Many2one('fleet.vehicle', string="Vehicle")
-    previous_engine_no = fields.Char(string='Previous Engine No')
-    new_engine_no = fields.Char(string='New Engine No')
+    previous_engine_no = fields.Char(string='Previous Engine No', translate=True)
+    new_engine_no = fields.Char(string='New Engine No', translate=True)
     changed_date = fields.Date(string='Change Date')
     note = fields.Text('Notes', translate=True)
     workorder_id = fields.Many2one('fleet.vehicle.log.services',
@@ -658,11 +666,11 @@ class BatteryHistory(models.Model):
 
     vehicle_id = fields.Many2one('fleet.vehicle', string="Vehicle")
     previous_battery_size = fields.Char(string='Previous Battery Size',
-                                        size=124)
-    new_battery_size = fields.Char(string="New Battery Size", size=124)
+                                        size=124, translate=True)
+    new_battery_size = fields.Char(string="New Battery Size", size=124, translate=True)
     previous_battery_sn = fields.Char(string='Previous Battery Serial',
-                                      size=124)
-    new_battery_sn = fields.Char(string="New Battery Serial", size=124)
+                                      size=124, translate=True)
+    new_battery_sn = fields.Char(string="New Battery Serial", size=124, translate=True)
     previous_battery_issue_date = fields.Date(
         string='Previous Battery Issuance Date')
     new_battery_issue_date = fields.Date(string='New Battery Issuance Date')
@@ -995,17 +1003,17 @@ class FleetVehicleAdvanceSearch(models.TransientModel):
                               ('released', 'Released'),
                               ('write-off', 'Write-Off')], string='Status')
     vehical_color_id = fields.Many2one('color.color', string='Color')
-    vin_no = fields.Char(string='Vin No', size=64)
-    engine_no = fields.Char(string='Engine No', size=64)
+    vin_no = fields.Char(string='Vin No', size=64, translate=True)
+    engine_no = fields.Char(string='Engine No', size=64, translate=True)
     last_service_date = fields.Date(string='Last Service From')
     last_service_date_to = fields.Date(string='Last Service To')
     next_service_date = fields.Date(string='Next Service From')
     next_service_date_to = fields.Date(string='Next Service To')
-    acquisition_date = fields.Date(string="Registration From")
+    acquisition_date = fields.Date(string="Registration From",default =fields.Date.today())
     acquisition_date_to = fields.Date(string="Registration To")
     release_date_from = fields.Date(string='Released From')
     release_date_to = fields.Date(string='Released To')
-    driver_identification_no = fields.Char(string='Driver ID', size=64)
+    driver_identification_no = fields.Char(string='Driver ID', size=64, translate=True)
     vechical_type_id = fields.Many2one('vehicle.type', string='Vechical Type')
     division_id = fields.Many2one('vehicle.divison', string="Division")
     make_id = fields.Many2one("fleet.vehicle.model.brand", string="Make")
@@ -1443,7 +1451,7 @@ class InsuranceType(models.Model):
     _name = 'insurance.type'
     _description = 'Vehicle Insurance Type'
 
-    name = fields.Char(string='Name')
+    name = fields.Char(string='Name', translate=True)
 
 
 class FleetVehicleLogServices(models.Model):
@@ -1451,4 +1459,4 @@ class FleetVehicleLogServices(models.Model):
 
     _inherit = 'fleet.vehicle.log.services'
 
-    explanation_note= fields.Text(string='Note')
+    explanation_note= fields.Text(string='Note', translate=True)

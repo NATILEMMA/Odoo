@@ -4,6 +4,405 @@
 <!-- Error List  -->
 
 
+<template id="delete_transfer_end" name="Deleted Successfully">
+        <t t-call="website.layout">
+            <div id="wrap">
+                <div class="oe_structure">
+                    <body>
+                          <div class="main-panel" style="background-color: #eee;">
+
+                            <div class="container">
+                              <div class="row">
+                               <h1>Deleted!</h1>
+                                <div class="col-lg-8">
+                                  <div class="alert alert-warning">
+                                    Transfer Has Been Deleted!
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                      </body>
+                </div>
+            </div>
+        </t>
+    </template>
+
+
+<template id="registration_end" name="Registration End">
+        <t t-call="website.layout">
+            <div id="wrap">
+                <div class="oe_structure">
+                    <body>
+                          <div class="main-panel" style="background-color: #eee;">
+
+                            <div class="container">
+                              <h1>Thank you!</h1>
+                              <div class="row">
+                                <div class="col-lg-8">
+                                  <div class="alert alert-success">
+                                    Your Supporter Registration Form Has Been Submitted!
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                      </body>
+                </div>
+            </div>
+        </t>
+    </template>
+
+<template id="year_error" name="Error">
+        <t t-call="website.layout">
+            <div id="wrap">
+                <div class="oe_structure">
+                    <body>
+                          <div class="main-panel" style="background-color: #eee;">
+
+                            <div class="container">
+                              <h1>Error!</h1>
+                              <div class="row">
+                                <div class="col-lg-8">
+                                  <div class="alert alert-warning">
+                                    An Active Budget Year With Approprite Dates Must Be Created Before Registration.
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                      </body>
+                </div>
+            </div>
+        </t>
+    </template>
+
+<template id="plan_city_error" name="Error">
+        <t t-call="website.layout">
+            <div id="wrap">
+                <div class="oe_structure">
+                    <body>
+                          <div class="main-panel" style="background-color: #eee;">
+
+                            <div class="container">
+                              <h1>Error!</h1>
+                              <div class="row">
+                                <div class="col-lg-8">
+                                  <div class="alert alert-warning">
+                                    An Approved City Plan For Supporter Must Be Created Before Registration.
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                      </body>
+                </div>
+            </div>
+        </t>
+    </template>
+
+<template id="plan_sub_city_error" name="Error">
+        <t t-call="website.layout">
+            <div id="wrap">
+                <div class="oe_structure">
+                    <body>
+                          <div class="main-panel" style="background-color: #eee;">
+
+                            <div class="container">
+                              <h1>Error!</h1>
+                              <div class="row">
+                                <div class="col-lg-8">
+                                  <div class="alert alert-warning">
+                                    An Approved Sub City Plan For Supporter Must Be Created Before Registration.
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                      </body>
+                </div>
+            </div>
+        </t>
+    </template>
+
+<template id="plan_wereda_error" name="Error">
+        <t t-call="website.layout">
+            <div id="wrap">
+                <div class="oe_structure">
+                    <body>
+                          <div class="main-panel" style="background-color: #eee;">
+
+                            <div class="container">
+                              <h1>Error!</h1>
+                              <div class="row">
+                                <div class="col-lg-8">
+                                  <div class="alert alert-warning">
+                                    An Approved Woreda Plan For Supporter Must Be Created Before Registration.
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                      </body>
+                </div>
+            </div>
+        </t>
+    </template>
+
+<template id="age_error" name="Age End">
+        <t t-call="website.layout">
+            <div id="wrap">
+                <div class="oe_structure">
+                    <body>
+                          <div class="main-panel" style="background-color: #eee;">
+
+                            <div class="container">
+                              <h1>Error!</h1>
+                              <div class="row">
+                                <div class="col-lg-8">
+                                  <div class="alert alert-warning">
+                                    The Supporter's Age Must Be Above 15
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                      </body>
+                </div>
+            </div>
+        </t>
+    </template>
+
+
+<template id="wrong_age_error" name="Age Error">
+        <t t-call="website.layout">
+            <div id="wrap">
+                <div class="oe_structure">
+                    <body>
+                          <div class="main-panel" style="background-color: #eee;">
+
+                            <div class="container">
+                              <h1>Error!</h1>
+                              <div class="row">
+                                <div class="col-lg-8">
+                                  <div class="alert alert-warning">
+                                    Please Add The Appropriate Age Of The Supporter
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                      </body>
+                </div>
+            </div>
+        </t>
+    </template>
+
+<template id="age_limit"  name="Age Error">
+        <t t-call="website.layout">
+            <div id="wrap">
+                <div class="oe_structure">
+                    <body>
+                          <div class="main-panel" style="background-color: #eee;">
+
+                            <div class="container">
+                              <h1>Error!</h1>
+                              <div class="row">
+                                <div class="col-lg-8">
+                                  <div class="alert alert-warning">
+                                    This Age isn't within the Age Limit Range given for Supporter
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                      </body>
+                </div>
+            </div>
+        </t>
+    </template>
+<template id="before_today" name="Wrong Date">
+        <t t-call="website.layout">
+            <div id="wrap">
+                <div class="oe_structure">
+                    <body>
+                          <div class="main-panel" style="background-color: #eee;">
+
+                            <div class="container">
+                              <h1>Error!</h1>
+                              <div class="row">
+                                <div class="col-lg-8">
+                                  <div class="alert alert-warning">
+                                    You Have To Pick A Date Before Today.
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                      </body>
+                </div>
+            </div>
+        </t>
+    </template>
+
+<template id="character_in_phone" name="Character in Phone">
+        <t t-call="website.layout">
+            <div id="wrap">
+                <div class="oe_structure">
+                    <body>
+                          <div class="main-panel" style="background-color: #eee;">
+
+                            <div class="container">
+                              <h1>Error!</h1>
+                              <div class="row">
+                                <div class="col-lg-8">
+                                  <div class="alert alert-warning">
+                                    You Can't Have Characters in a Phone Number
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                      </body>
+                </div>
+            </div>
+        </t>
+    </template>
+
+<template id="date_holiday" name="Date is a Holiday">
+        <t t-call="website.layout">
+            <div id="wrap">
+                <div class="oe_structure">
+                    <body>
+                          <div class="main-panel" style="background-color: #eee;">
+
+                            <div class="container">
+                              <h1>Error!</h1>
+                              <div class="row">
+                                <div class="col-lg-8">
+                                  <div class="alert alert-warning">
+                                    The Date You Picked Is A Holiday
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                      </body>
+                </div>
+            </div>
+        </t>
+    </template>
+
+<template id="zero_in_phone" name="Phone starts in Zero">
+        <t t-call="website.layout">
+            <div id="wrap">
+                <div class="oe_structure">
+                    <body>
+                          <div class="main-panel" style="background-color: #eee;">
+
+                            <div class="container">
+                              <h1>Error!</h1>
+                              <div class="row">
+                                <div class="col-lg-8">
+                                  <div class="alert alert-warning">
+                                    A Valid Phone Number Starts With 0
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                      </body>
+                </div>
+            </div>
+        </t>
+    </template>
+
+<template id="ten_digit_phone" name="Phone has 10 Digits">
+        <t t-call="website.layout">
+            <div id="wrap">
+                <div class="oe_structure">
+                    <body>
+                          <div class="main-panel" style="background-color: #eee;">
+
+                            <div class="container">
+                              <h1>Error!</h1>
+                              <div class="row">
+                                <div class="col-lg-8">
+                                  <div class="alert alert-warning">
+                                    A Valid Phone Number Has 10 Digits
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                      </body>
+                </div>
+            </div>
+        </t>
+    </template>
+
+<template id="duplicate" name="Duplicated Data">
+        <t t-call="website.layout">
+            <div id="wrap">
+                <div class="oe_structure">
+                    <body>
+                          <div class="main-panel" style="background-color: #eee;">
+
+                            <div class="container">
+                              <h1>Error!</h1>
+                              <div class="row">
+                                <div class="col-lg-8">
+                                  <div class="alert alert-warning">
+                                    A supporter with the same name, gender and phone already exists, Please make sure it isn't a duplicated data
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                      </body>
+                </div>
+            </div>
+        </t>
+    </template>
+
+
+<template id="phone_duplicate" name="Duplicated Phone">
+  <t t-call="website.layout">
+    <div id="wrap">
+      <div class="oe_structure">
+        <body>
+          <div class="main-panel" style="background-color: #eee;">
+            <div class="container">
+              <h1>Error!</h1>
+              <div class="row">
+                <div class="col-lg-8">
+                  <div class="alert alert-warning">
+                    A supporter with the same phone already exists, Please make sure it isn't a duplicated data
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </body>
+      </div>
+    </div>
+  </t>
+</template>
 
 <template id="register_error" name="Error">
     <t t-call="website.layout">

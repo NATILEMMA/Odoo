@@ -15,7 +15,9 @@
                         <button name="open_assignation_logs"
                             type="object"
                             class="oe_stat_button"
-                            icon="fa-history">
+                            icon="fa-history"
+                            invisible="1">
+
                             <field name="history_count" widget="statinfo" string="Drivers History"/>
                         </button>
                         <button name="return_action_to_open"
@@ -23,7 +25,9 @@
                             class="oe_stat_button"
                             icon="fa-book"
                             context="{'xml_id':'fleet_vehicle_log_contract_action'}"
-                            help="show the contract for this vehicle">
+                            help="show the contract for this vehicle"
+                            invisible="1"
+                            >
                             <field name="contract_count" widget="statinfo" string="Contracts"/>
                         </button>
                         <button name="act_show_log_cost"
@@ -55,7 +59,8 @@
                             class="oe_stat_button"
                             icon="fa-tachometer"
                             context="{'xml_id':'fleet_vehicle_odometer_action'}"
-                            help="show the odometer logs for this vehicle" >
+                            help="show the odometer logs for this vehicle" 
+                            groups="fleet.fleet_group_manager">
                             <field name="odometer_count" widget="statinfo" string="Odometer"/>
                         </button>
                     </div>

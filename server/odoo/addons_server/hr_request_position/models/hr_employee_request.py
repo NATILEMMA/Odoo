@@ -20,7 +20,6 @@ REQUEST_STATES = [
 ]
 
 REQUEST_TYPE = [
-    ('salary_request', 'Salary Request'),
     ('position_request', 'Job Position Request')
 ]
 
@@ -30,34 +29,34 @@ class HrEmployeeRequest(models.Model):
     _inherit = ['portal.mixin', 'mail.thread', 'mail.activity.mixin', 'utm.mixin']
 
     reference_no = fields.Char(string='Request Document Reference', required=True,
-                          readonly=True, default='New', index=True)
+                          readonly=True, default='New', index=True ,translate=True)
     
     def _get_employee_id(self):
         employee_rec = self.env['hr.employee'].search([('user_id', '=', self.env.uid)], limit=1)
         return employee_rec.id
     
-    name = fields.Char( required=True,readonly=True, default='New', index=True)
+    name = fields.Char( required=True,readonly=True, default='New', index=True,translate=True)
     employee_id = fields.Many2one('hr.employee', string="Requested By", default=_get_employee_id,readonly=True)
     job_id = fields.Many2one(related='employee_id.job_id', related_sudo=False, tracking=True,readonly=True)
     
-    work_phone = fields.Char(related='employee_id.work_phone', related_sudo=False, tracking=True,readonly=True)
-    work_email = fields.Char(related='employee_id.work_email', related_sudo=False, tracking=True,readonly=True)
+    work_phone = fields.Char(related='employee_id.work_phone', related_sudo=False, tracking=True,readonly=True,translate=True)
+    work_email = fields.Char(related='employee_id.work_email', related_sudo=False, tracking=True,readonly=True,translate=True)
     department_id = fields.Many2one(related='employee_id.department_id', readonly=False, related_sudo=False, tracking=True)
-    work_location = fields.Char(related='employee_id.work_location', related_sudo=False, tracking=True,readonly=True)
+    work_location = fields.Char(related='employee_id.work_location', related_sudo=False, tracking=True,readonly=True,translate=True)
     employee_parent_id = fields.Many2one('hr.employee',related='employee_id.parent_id', string='Manager', related_sudo=False, tracking=True)
     coach_id = fields.Many2one('hr.employee',related='employee_id.coach_id', string='Coach',related_sudo=False, tracking=True,readonly=True)
-    state = fields.Selection(REQUEST_STATES,'Status', tracking=True,copy=False,default = 'new')
+    state = fields.Selection(REQUEST_STATES,'Status', tracking=True,copy=False,default = 'draft')
     contract_id = fields.Many2one('hr.contract',string='Current Contract', compute ="_compute_contract", help='Current contract of the employee', related_sudo=False, tracking=True,readonly=True)
     current_grade_id = fields.Many2one('hr.job.grade',related='contract_id.grade_id',string = "Current job Grade")
     hr_responsible_user_id = fields.Many2one('res.users', related='contract_id.hr_responsible_id',tracking=True,help='Person responsible for validating the employee\'s contracts.',readonly=True)
     user_id = fields.Many2one('res.users')
     requested_position_id = fields.Many2one('hr.job','Requested Job Position')
-    job_title = fields.Char(related='requested_position_id.name',default ='job', related_sudo=False)
+    job_title = fields.Char(related='requested_position_id.name',default ='job', related_sudo=False,translate=True)
     requested_department_id = fields.Many2one('hr.department', 'Requested Department')
     attachment = fields.Binary(string="Upload Attachment file")
-    attachment_name = fields.Char(string='File Name')
-    note = fields.Text('Notes')
-    period = fields.Char('Period', compute="_compute_period")
+    attachment_name = fields.Char(string='File Name',translate=True)
+    note = fields.Text('Notes',translate=True)
+    period = fields.Char('Period', compute="_compute_period",translate=True)
     company_id = fields.Many2one('res.company', string=  'Company',default=lambda self: self.env.company, required=True,readonly=True)
     currency_id = fields.Many2one('res.currency', related='contract_id.currency_id', readonly=True)
     estimated_salary = fields.Monetary(string='Requested Salary', help="Employee's Requested salary.")
@@ -89,7 +88,6 @@ class HrEmployeeRequest(models.Model):
             raise UserError(("The recruitment requester should be an employee of company ")) 
 
        
-        vals['state'] = 'draft'
         vals['reference_no'] = self.env['ir.sequence'].next_by_code('hr.employee.position.request')
         vals['name'] = self.env['ir.sequence'].next_by_code('hr.employee.position.request')
         request = super(HrEmployeeRequest, self).create(vals)     
@@ -173,15 +171,9 @@ class HrEmployeeRequest(models.Model):
             if self.estimated_salary <= self.contract_id.wage:
                         raise UserError(('Please correct your estimation on provided salary to be greater than current wage of the employee.'))
             else:    
-                if(self.estimated_salary < self.contract_id.grade_id.minimum_wage):
-                      raise UserError(('Your estimated salary request is below your current job grade of Birr ',self.contract_id.grade_id.minimum_wage))
-                
-                elif (self.estimated_salary > self.contract_id.grade_id.maximum_wage):
-                         raise UserError(('Your estimated salary request is above your current job grade of Birr ' ,self.contract_id.grade_id.maximum_wage))     
-                else:
-                      self.state = 'in_progress'
-                      self.previous_salary = self.wage
-                      self.send_activity_notification_to_position_Approvers()
+                self.state = 'in_progress'
+                self.previous_salary = self.wage
+                self.send_activity_notification_to_position_Approvers()
 
     def write(self, vals):
         res = super(HrEmployeeRequest, self).write(vals)
@@ -258,11 +250,10 @@ class HrEmployeePrivate(models.Model):
     _inherit = "hr.employee"
     salary_request_ids = fields.One2many("hr.employee.position.request","employee_id",string="Salary Requests")
     request_count = fields.Integer(compute='_compute_equipment_count', string='Request Count')
-    employee_position_salary_request = fields.Integer(string='Request Count')
+
     @api.depends('salary_request_ids')
     def _compute_equipment_count(self):
         for request in self:
             request.request_count = len(request.salary_request_ids)
-            request.employee_position_salary_request = request.request_count
 
 

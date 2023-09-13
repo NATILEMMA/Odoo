@@ -8,6 +8,7 @@ access_budget,budget.lines manager,model_budget_lines,base.group_user,1,1,1,0
 access.budget.planning.planner,access_budget_planning,budget.model_budget_planning,budget.group_requester,1,1,1,1
 access.budget.planning.departmental.approval,access_budget_planning,budget.model_budget_planning,budget.group_departmental_approval,1,1,0,1
 access.budget.planning.finanical.approval,access_budget_planning,budget.model_budget_planning,budget.group_financial_approval,1,1,0,1
+access.budget.approver.finanical.approval,access_budget_approver,budget.model_budget_approver,budget.group_financial_approval,1,1,1,1
 
 access_work_activity_stream_request_user,work.activity.stream.request.user,model_work_activity_stream,budget.group_requester,1,1,1,1
 access_work_activity_stream_request_department,work.activity.stream.request.user,model_work_activity_stream,budget.group_departmental_approval,1,1,0,0

@@ -51,14 +51,14 @@ class QueueJob(models.Model):
         "kwargs",
     )
 
-    uuid = fields.Char(string="UUID", readonly=True, index=True, required=True)
+    uuid = fields.Char(string="UUID", readonly=True, index=True, required=True,translate=True)
     user_id = fields.Many2one(comodel_name="res.users", string="User ID")
     company_id = fields.Many2one(
         comodel_name="res.company", string="Company", index=True
     )
-    name = fields.Char(string="Description", readonly=True)
+    name = fields.Char(string="Description", readonly=True,translate=True)
 
-    model_name = fields.Char(string="Model", readonly=True)
+    model_name = fields.Char(string="Model", readonly=True,translate=True)
     method_name = fields.Char(readonly=True)
     # record_ids field is only for backward compatibility (e.g. used in related
     # actions), can be removed (replaced by "records") in 14.0
@@ -68,14 +68,14 @@ class QueueJob(models.Model):
     )
     args = JobSerialized(readonly=True, base_type=tuple)
     kwargs = JobSerialized(readonly=True, base_type=dict)
-    func_string = fields.Char(string="Task", readonly=True)
+    func_string = fields.Char(string="Task", readonly=True,translate=True)
 
     state = fields.Selection(STATES, readonly=True, required=True, index=True)
     priority = fields.Integer()
-    exc_name = fields.Char(string="Exception", readonly=True)
-    exc_message = fields.Char(string="Exception Message", readonly=True)
-    exc_info = fields.Text(string="Exception Info", readonly=True)
-    result = fields.Text(readonly=True)
+    exc_name = fields.Char(string="Exception", readonly=True,translate=True)
+    exc_message = fields.Char(string="Exception Message", readonly=True,translate=True)
+    exc_info = fields.Text(string="Exception Info", readonly=True,translate=True)
+    result = fields.Text(readonly=True,translate=True)
 
     date_created = fields.Datetime(string="Created Date", readonly=True)
     date_started = fields.Datetime(string="Start Date", readonly=True)
@@ -96,14 +96,14 @@ class QueueJob(models.Model):
         "Retries are infinite when empty.",
     )
     # FIXME the name of this field is very confusing
-    channel_method_name = fields.Char(readonly=True)
+    channel_method_name = fields.Char(readonly=True,translate=True)
     job_function_id = fields.Many2one(
         comodel_name="queue.job.function", string="Job Function", readonly=True,
     )
 
-    channel = fields.Char(index=True)
+    channel = fields.Char(index=True,translate=True)
 
-    identity_key = fields.Char(readonly=True)
+    identity_key = fields.Char(readonly=True,translate=True)
     worker_pid = fields.Integer(readonly=True)
 
     def init(self):
@@ -391,9 +391,9 @@ class JobChannel(models.Model):
     _name = "queue.job.channel"
     _description = "Job Channels"
 
-    name = fields.Char()
+    name = fields.Char(translate=True)
     complete_name = fields.Char(
-        compute="_compute_complete_name", store=True, readonly=True
+        compute="_compute_complete_name", store=True, readonly=True,translate=True
     )
     parent_id = fields.Many2one(
         comodel_name="queue.job.channel", string="Parent Channel", ondelete="restrict"
@@ -495,7 +495,7 @@ class JobFunction(models.Model):
         return self.env.ref("queue_job.channel_root")
 
     name = fields.Char(
-        compute="_compute_name", inverse="_inverse_name", index=True, store=True,
+        compute="_compute_name", inverse="_inverse_name", index=True, store=True,translate=True
     )
 
     # model and method should be required, but the required flag doesn't
@@ -503,7 +503,7 @@ class JobFunction(models.Model):
     model_id = fields.Many2one(
         comodel_name="ir.model", string="Model", ondelete="cascade"
     )
-    method = fields.Char()
+    method = fields.Char(translate=True)
 
     channel_id = fields.Many2one(
         comodel_name="queue.job.channel",
@@ -511,7 +511,7 @@ class JobFunction(models.Model):
         required=True,
         default=lambda r: r._default_channel(),
     )
-    channel = fields.Char(related="channel_id.complete_name", store=True, readonly=True)
+    channel = fields.Char(related="channel_id.complete_name", store=True, readonly=True,translate=True)
     retry_pattern = JobSerialized(string="Retry Pattern (serialized)", base_type=dict)
     edit_retry_pattern = fields.Text(
         string="Retry Pattern",
@@ -520,7 +520,7 @@ class JobFunction(models.Model):
         help="Pattern expressing from the count of retries on retryable errors,"
         " the number of of seconds to postpone the next execution.\n"
         "Example: {1: 10, 5: 20, 10: 30, 15: 300}.\n"
-        "See the module description for details.",
+        "See the module description for details.",translate=True,
     )
     related_action = JobSerialized(string="Related Action (serialized)", base_type=dict)
     edit_related_action = fields.Text(
@@ -531,7 +531,7 @@ class JobFunction(models.Model):
         "The default action is to open the view of the record related "
         "to the job. Configured as a dictionary with optional keys: "
         "enable, func_name, kwargs.\n"
-        "See the module description for details.",
+        "See the module description for details.",translate=True,
     )
 
     @api.depends("model_id.model", "method")

@@ -37,6 +37,8 @@
                                 <field name="credit"  attrs="{'invisible':['|','|','|',('state', '=', 'draft'), ('state', '=', 'submit'),('state', '=', 'waiting_approval')], 'readonly':[('state','in',['post','cancel','reject','post'])]}" groups="account.group_account_manager"/>
                                 <field name="debit" attrs="{'invisible':['|','|','|',('state', '=', 'draft'), ('state', '=', 'submit'),('state', '=', 'waiting_approval')], 'readonly':[('state','in',['post','cancel','reject','post'])]}" groups="account.group_account_manager"/>
                                 <field name="journal" attrs="{'invisible': ['|','|','|',('state', '=', 'draft'), ('state', '=', 'submit'),('state', '=', 'waiting_approval')], 'readonly':[('state','in',['post','cancel','reject','post'])]}" groups="account.group_account_manager"/>
+                                <field name="move_id"  attrs="{'invisible': ['|','|','|',('state', '=', 'draft'), ('state', '=', 'submit'),('state', '=', 'waiting_approval')]}" readonly="1" force_save="1"/>
+<!--                                <field name="move_id" attrs="{'invisible': ['|','|','|',('state', '=', 'draft'), ('state', '=', 'submit'),('state', '=', 'waiting_approval')], 'readonly':[('state','in',['post','cancel','reject','post'])]}" groups="account.group_account_manager"/>-->
                                 <field name="employee_contract_id"  readonly="1" force_save="1" groups="hr.group_hr_manager,hr.group_hr_user" domain="[('employee_id','=',employee_id)]"/>
 	                    	</group>
                     	</group>

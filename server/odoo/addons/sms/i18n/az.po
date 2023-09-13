@@ -3,8 +3,7 @@
 # 	* sms
 # 
 # Translators:
-# Jumshud Sultanov <cumshud@gmail.com>, 2022
-# erpgo translator <jumshud@erpgo.az>, 2022
+# Jumshud Sultanov <cumshud@gmail.com>, 2019
 # 
 msgid ""
 msgstr ""
@@ -12,7 +11,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-07 07:13+0000\n"
 "PO-Revision-Date: 2019-08-26 09:14+0000\n"
-"Last-Translator: erpgo translator <jumshud@erpgo.az>, 2022\n"
+"Last-Translator: Jumshud Sultanov <cumshud@gmail.com>, 2019\n"
 "Language-Team: Azerbaijani (https://www.transifex.com/odoo/teams/41243/az/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -81,12 +80,12 @@ msgstr ""
 #. module: sms
 #: model:ir.model.fields,field_description:sms.field_ir_actions_server__state
 msgid "Action To Do"
-msgstr "Görüləcək İş Fəaliyyəti"
+msgstr ""
 
 #. module: sms
 #: model:ir.model.fields,field_description:sms.field_sms_composer__active_domain
 msgid "Active domain"
-msgstr "Aktiv domen"
+msgstr ""
 
 #. module: sms
 #: model:ir.model.fields,field_description:sms.field_sms_composer__active_domain_count
@@ -131,26 +130,26 @@ msgstr ""
 #. module: sms
 #: model:ir.model.fields.selection,name:sms.selection__sms_sms__error_code__sms_blacklist
 msgid "Blacklisted"
-msgstr "Qara siyahıya salındı"
+msgstr ""
 
 #. module: sms
 #: model:ir.model.fields,field_description:sms.field_sms_sms__body
 #: model:ir.model.fields,field_description:sms.field_sms_template__body
 #: model:ir.model.fields,field_description:sms.field_sms_template_preview__body
 msgid "Body"
-msgstr "Korpus"
+msgstr ""
 
 #. module: sms
 #: model_terms:ir.ui.view,arch_db:sms.mail_resend_message_view_form
 msgid "Buy credits"
-msgstr "Kredit götürün"
+msgstr ""
 
 #. module: sms
 #: model_terms:ir.ui.view,arch_db:sms.mail_resend_message_view_form
 #: model_terms:ir.ui.view,arch_db:sms.sms_cancel
 #: model_terms:ir.ui.view,arch_db:sms.sms_tsms_view_form
 msgid "Cancel"
-msgstr "Ləğv edin"
+msgstr ""
 
 #. module: sms
 #: model_terms:ir.ui.view,arch_db:sms.sms_cancel
@@ -163,7 +162,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:sms.selection__sms_sms__state__canceled
 #, python-format
 msgid "Canceled"
-msgstr "Ləğv olundu"
+msgstr ""
 
 #. module: sms
 #: model_terms:ir.ui.view,arch_db:sms.sms_composer_view_form
@@ -183,7 +182,7 @@ msgstr ""
 #. module: sms
 #: model_terms:ir.ui.view,arch_db:sms.sms_composer_view_form
 msgid "Close"
-msgstr "Bağlayın"
+msgstr ""
 
 #. module: sms
 #: model:ir.model.fields,field_description:sms.field_sms_composer__composition_mode
@@ -193,12 +192,12 @@ msgstr ""
 #. module: sms
 #: model:ir.model,name:sms.model_res_partner
 msgid "Contact"
-msgstr "Kontakt"
+msgstr ""
 
 #. module: sms
 #: model_terms:ir.ui.view,arch_db:sms.sms_template_view_form
 msgid "Content"
-msgstr "Məzmun"
+msgstr ""
 
 #. module: sms
 #: model:ir.model.fields,field_description:sms.field_sms_cancel__create_uid
@@ -209,7 +208,7 @@ msgstr "Məzmun"
 #: model:ir.model.fields,field_description:sms.field_sms_template__create_uid
 #: model:ir.model.fields,field_description:sms.field_sms_template_preview__create_uid
 msgid "Created by"
-msgstr "Tərəfindən yaradılıb"
+msgstr ""
 
 #. module: sms
 #: model:ir.model.fields,field_description:sms.field_sms_cancel__create_date
@@ -220,12 +219,12 @@ msgstr "Tərəfindən yaradılıb"
 #: model:ir.model.fields,field_description:sms.field_sms_template__create_date
 #: model:ir.model.fields,field_description:sms.field_sms_template_preview__create_date
 msgid "Created on"
-msgstr "Tarixdə yaradıldı"
+msgstr ""
 
 #. module: sms
 #: model:ir.model.fields,field_description:sms.field_sms_sms__partner_id
 msgid "Customer"
-msgstr "Müştəri"
+msgstr ""
 
 #. module: sms
 #: model:sms.template,name:sms.sms_template_demo_0
@@ -241,12 +240,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:sms.field_sms_template__null_value
 #: model:ir.model.fields,field_description:sms.field_sms_template_preview__null_value
 msgid "Default Value"
-msgstr "Defolt Dəyər"
+msgstr ""
 
 #. module: sms
 #: model_terms:ir.ui.view,arch_db:sms.sms_template_preview_form
 msgid "Discard"
-msgstr "Ləğv edin"
+msgstr ""
 
 #. module: sms
 #: model:ir.actions.act_window,name:sms.sms_cancel_action
@@ -273,7 +272,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:sms.field_sms_template__display_name
 #: model:ir.model.fields,field_description:sms.field_sms_template_preview__display_name
 msgid "Display Name"
-msgstr "Ekran Adı"
+msgstr ""
 
 #. module: sms
 #: model:ir.model,name:sms.model_mail_followers
@@ -283,7 +282,7 @@ msgstr ""
 #. module: sms
 #: model:ir.model.fields,field_description:sms.field_sms_composer__res_id
 msgid "Document ID"
-msgstr "Sənədin ID-si"
+msgstr ""
 
 #. module: sms
 #: model:ir.model.fields,field_description:sms.field_sms_composer__res_ids
@@ -293,17 +292,17 @@ msgstr ""
 #. module: sms
 #: model:ir.model.fields,field_description:sms.field_sms_composer__res_model
 msgid "Document Model Name"
-msgstr "Sənəd Modelinin Adı"
+msgstr ""
 
 #. module: sms
 #: model:ir.model.fields.selection,name:sms.selection__sms_sms__error_code__sms_duplicate
 msgid "Duplicate"
-msgstr "Təkrar"
+msgstr ""
 
 #. module: sms
 #: model_terms:ir.ui.view,arch_db:sms.sms_template_view_form
 msgid "Dynamic Placeholder Generator"
-msgstr "Dinamik Placeholder (yer tutucu) Generatoru"
+msgstr ""
 
 #. module: sms
 #: model_terms:ir.ui.view,arch_db:sms.mail_resend_message_view_form
@@ -313,7 +312,7 @@ msgstr ""
 #. module: sms
 #: model:ir.model,name:sms.model_mail_thread
 msgid "Email Thread"
-msgstr "Email Zənciri"
+msgstr ""
 
 #. module: sms
 #. openerp-web
@@ -321,7 +320,7 @@ msgstr "Email Zənciri"
 #: model:ir.model.fields.selection,name:sms.selection__sms_sms__state__error
 #, python-format
 msgid "Error"
-msgstr "Xəta"
+msgstr ""
 
 #. module: sms
 #: model:ir.model.fields,field_description:sms.field_sms_sms__error_code
@@ -332,13 +331,13 @@ msgstr ""
 #: model:ir.model.fields,field_description:sms.field_mail_notification__failure_type
 #: model:ir.model.fields,field_description:sms.field_sms_resend_recipient__failure_type
 msgid "Failure type"
-msgstr "Uğursuzluq tipi"
+msgstr ""
 
 #. module: sms
 #: model:ir.model.fields,field_description:sms.field_sms_template__model_object_field
 #: model:ir.model.fields,field_description:sms.field_sms_template_preview__model_object_field
 msgid "Field"
-msgstr "Sahə"
+msgstr ""
 
 #. module: sms
 #: model:ir.model.fields,field_description:sms.field_sms_composer__number_field_name
@@ -352,8 +351,6 @@ msgid ""
 "Final placeholder expression, to be copy-pasted in the desired template "
 "field."
 msgstr ""
-"İstədiyiniz şablon sahəyə kopyalayıb yapışdıracağınız son placeholder "
-"ifadəsi."
 
 #. module: sms
 #: code:addons/sms/wizard/sms_composer.py:0
@@ -398,7 +395,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:sms.field_sms_template__id
 #: model:ir.model.fields,field_description:sms.field_sms_template_preview__id
 msgid "ID"
-msgstr "ID"
+msgstr ""
 
 #. module: sms
 #: model:ir.model.fields,help:sms.field_account_analytic_account__message_has_sms_error
@@ -430,7 +427,7 @@ msgstr "ID"
 #: model:ir.model.fields,help:sms.field_res_partner__message_has_sms_error
 #: model:ir.model.fields,help:sms.field_res_users__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
-msgstr "Yoxlanılıbsa, bəzi mesajların çatdırılmasında xəta var."
+msgstr ""
 
 #. module: sms
 #: model_terms:ir.ui.view,arch_db:sms.sms_cancel
@@ -448,7 +445,7 @@ msgstr ""
 #. module: sms
 #: model:ir.model.fields.selection,name:sms.selection__sms_sms__state__outgoing
 msgid "In Queue"
-msgstr "Növbədə"
+msgstr ""
 
 #. module: sms
 #: model:ir.model.fields.selection,name:sms.selection__mail_notification__failure_type__sms_credit
@@ -470,7 +467,7 @@ msgstr ""
 #. module: sms
 #: model:ir.model.fields,field_description:sms.field_sms_template__lang
 msgid "Language"
-msgstr "Dil"
+msgstr ""
 
 #. module: sms
 #: model:ir.model.fields,field_description:sms.field_sms_api____last_update
@@ -482,7 +479,7 @@ msgstr "Dil"
 #: model:ir.model.fields,field_description:sms.field_sms_template____last_update
 #: model:ir.model.fields,field_description:sms.field_sms_template_preview____last_update
 msgid "Last Modified on"
-msgstr "Son Dəyişdirilmə tarixi"
+msgstr ""
 
 #. module: sms
 #: model:ir.model.fields,field_description:sms.field_sms_cancel__write_uid
@@ -493,7 +490,7 @@ msgstr "Son Dəyişdirilmə tarixi"
 #: model:ir.model.fields,field_description:sms.field_sms_template__write_uid
 #: model:ir.model.fields,field_description:sms.field_sms_template_preview__write_uid
 msgid "Last Updated by"
-msgstr "Son Yeniləyən"
+msgstr ""
 
 #. module: sms
 #: model:ir.model.fields,field_description:sms.field_sms_cancel__write_date
@@ -504,7 +501,7 @@ msgstr "Son Yeniləyən"
 #: model:ir.model.fields,field_description:sms.field_sms_template__write_date
 #: model:ir.model.fields,field_description:sms.field_sms_template_preview__write_date
 msgid "Last Updated on"
-msgstr "Son Yenilənmə tarixi"
+msgstr ""
 
 #. module: sms
 #: model:ir.model.fields,field_description:sms.field_ir_actions_server__sms_mass_keep_log
@@ -526,7 +523,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:sms.field_sms_composer__body
 #: model:ir.model.fields,field_description:sms.field_sms_resend__mail_message_id
 msgid "Message"
-msgstr "Mesaj"
+msgstr ""
 
 #. module: sms
 #: model:ir.model,name:sms.model_mail_notification
@@ -540,8 +537,6 @@ msgid ""
 "Message type: email for email message, notification for system message, "
 "comment for other messages such as user replies"
 msgstr ""
-"Mesajın növü: email mesajı üçün elektron mail, sistem mesajı üçün bildiriş, "
-"istifadəçi cavabları kimi digər mesajlar üçün şərh bölməsi"
 
 #. module: sms
 #: model:ir.model.fields.selection,name:sms.selection__mail_notification__failure_type__sms_number_missing
@@ -563,18 +558,18 @@ msgstr ""
 #. module: sms
 #: model:ir.model,name:sms.model_ir_model
 msgid "Models"
-msgstr "Modellər"
+msgstr ""
 
 #. module: sms
 #: model:ir.model.fields,field_description:sms.field_sms_template__name
 #: model:ir.model.fields,field_description:sms.field_sms_template_preview__name
 msgid "Name"
-msgstr "Ad"
+msgstr ""
 
 #. module: sms
 #: model:ir.model.fields,field_description:sms.field_sms_resend_recipient__notification_id
 msgid "Notification"
-msgstr "Bildiriş"
+msgstr ""
 
 #. module: sms
 #: model:ir.model.fields,field_description:sms.field_mail_notification__notification_type
@@ -585,13 +580,13 @@ msgstr ""
 #: model:ir.model.fields,field_description:sms.field_sms_resend_recipient__sms_number
 #: model:ir.model.fields,field_description:sms.field_sms_sms__number
 msgid "Number"
-msgstr "Say"
+msgstr ""
 
 #. module: sms
 #: model:ir.model.fields,help:sms.field_sms_template__null_value
 #: model:ir.model.fields,help:sms.field_sms_template_preview__null_value
 msgid "Optional value to use if the target field is empty"
-msgstr "Hədəf sahə boş olduqda istifadə ediləcək istəyə bağlı dəyər"
+msgstr ""
 
 #. module: sms
 #: model:ir.model,name:sms.model_sms_sms
@@ -602,7 +597,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:sms.field_sms_composer__partner_ids
 #: model:ir.model.fields,field_description:sms.field_sms_resend_recipient__partner_id
 msgid "Partner"
-msgstr "Tərəfdaş"
+msgstr ""
 
 #. module: sms
 #: model:ir.model,name:sms.model_mail_thread_phone
@@ -613,7 +608,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:sms.field_sms_template__copyvalue
 #: model:ir.model.fields,field_description:sms.field_sms_template_preview__copyvalue
 msgid "Placeholder Expression"
-msgstr "Yertutucunun(placeholder) İfadəsi"
+msgstr ""
 
 #. module: sms
 #: model:ir.model.fields.selection,name:sms.selection__sms_composer__composition_mode__comment
@@ -623,7 +618,7 @@ msgstr ""
 #. module: sms
 #: model_terms:ir.ui.view,arch_db:sms.sms_template_view_form
 msgid "Preview"
-msgstr "İlkin Baxış"
+msgstr ""
 
 #. module: sms
 #: model_terms:ir.ui.view,arch_db:sms.sms_template_preview_form
@@ -638,19 +633,19 @@ msgstr ""
 #. module: sms
 #: model_terms:ir.ui.view,arch_db:sms.mail_resend_message_view_form
 msgid "Reason"
-msgstr "Səbəb"
+msgstr ""
 
 #. module: sms
 #: model:ir.model.fields,field_description:sms.field_sms_resend_recipient__partner_name
 #: model_terms:ir.ui.view,arch_db:sms.mail_resend_message_view_form
 msgid "Recipient"
-msgstr "Qəbuledici"
+msgstr ""
 
 #. module: sms
 #: model:ir.model.fields,field_description:sms.field_sms_resend__recipient_ids
 #: model_terms:ir.ui.view,arch_db:sms.sms_composer_view_form
 msgid "Recipients"
-msgstr "Qəbuledicilər"
+msgstr ""
 
 #. module: sms
 #: model:ir.model.fields,field_description:sms.field_sms_composer__numbers
@@ -665,7 +660,7 @@ msgstr ""
 #. module: sms
 #: model:ir.model.fields,field_description:sms.field_sms_template_preview__res_id
 msgid "Record ID"
-msgstr "ID qeyd et"
+msgstr ""
 
 #. module: sms
 #: model:ir.model.fields,field_description:sms.field_sms_template_preview__resource_ref
@@ -676,7 +671,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:sms.field_sms_template__model
 #: model:ir.model.fields,field_description:sms.field_sms_template_preview__model
 msgid "Related Document Model"
-msgstr "Əlaqədar Sənəd Modeli"
+msgstr ""
 
 #. module: sms
 #: model_terms:ir.ui.view,arch_db:sms.sms_template_view_form
@@ -742,7 +737,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:sms.field_res_partner__message_has_sms_error
 #: model:ir.model.fields,field_description:sms.field_res_users__message_has_sms_error
 msgid "SMS Delivery error"
-msgstr "SMS-in Çatdırılmasında xəta"
+msgstr ""
 
 #. module: sms
 #. openerp-web
@@ -783,7 +778,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:sms.field_ir_actions_server__sms_template_id
 #: model_terms:ir.ui.view,arch_db:sms.sms_template_view_form
 msgid "SMS Template"
-msgstr "SMS Şablonu"
+msgstr ""
 
 #. module: sms
 #: model:ir.model,name:sms.model_sms_template_preview
@@ -797,7 +792,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:sms.sms_template_view_form
 #: model_terms:ir.ui.view,arch_db:sms.sms_template_view_tree
 msgid "SMS Templates"
-msgstr "SMS Şablonları"
+msgstr ""
 
 #. module: sms
 #: model_terms:ir.ui.view,arch_db:sms.sms_template_preview_form
@@ -814,7 +809,7 @@ msgstr ""
 #. module: sms
 #: model:ir.model.fields,field_description:sms.field_sms_composer__sanitized_numbers
 msgid "Sanitized Number"
-msgstr " Filtlənmiş Nömrə"
+msgstr ""
 
 #. module: sms
 #: model_terms:ir.ui.view,arch_db:sms.sms_sms_view_search
@@ -829,19 +824,17 @@ msgid ""
 "Select target field from the related document model.\n"
 "If it is a relationship field you will be able to select a target field at the destination of the relationship."
 msgstr ""
-"Müvafiq sənəd modelindən hədəf sahəni seçin.\n"
-"Bu əlaqə sahəsidirsə, əlaqənin təyin olunduğu yerdə hədəf sahəsini seçə biləcəksiniz."
 
 #. module: sms
 #: model_terms:ir.ui.view,arch_db:sms.sms_composer_view_form
 #: model_terms:ir.ui.view,arch_db:sms.sms_tsms_view_form
 msgid "Send Now"
-msgstr "İndi Göndər"
+msgstr ""
 
 #. module: sms
 #: model_terms:ir.ui.view,arch_db:sms.sms_composer_view_form
 msgid "Send SMS"
-msgstr "SMS Göndər"
+msgstr ""
 
 #. module: sms
 #: code:addons/sms/models/sms_template.py:0
@@ -864,7 +857,7 @@ msgstr ""
 #. module: sms
 #: model:ir.model,name:sms.model_sms_composer
 msgid "Send SMS Wizard"
-msgstr "SMS Sehrbazını Göndərin"
+msgstr ""
 
 #. module: sms
 #: model:ir.model.fields.selection,name:sms.selection__sms_composer__composition_mode__mass
@@ -903,12 +896,12 @@ msgstr ""
 #: model:ir.model.fields.selection,name:sms.selection__sms_sms__state__sent
 #, python-format
 msgid "Sent"
-msgstr "Göndərildi"
+msgstr ""
 
 #. module: sms
 #: model:ir.model,name:sms.model_ir_actions_server
 msgid "Server Action"
-msgstr "Server Fəaliyyəti"
+msgstr ""
 
 #. module: sms
 #: model:ir.model.fields.selection,name:sms.selection__mail_notification__failure_type__sms_server
@@ -944,13 +937,13 @@ msgstr ""
 #: model:ir.model.fields,field_description:sms.field_sms_template__sub_model_object_field
 #: model:ir.model.fields,field_description:sms.field_sms_template_preview__sub_model_object_field
 msgid "Sub-field"
-msgstr "Alt sahələr"
+msgstr ""
 
 #. module: sms
 #: model:ir.model.fields,field_description:sms.field_sms_template__sub_object
 #: model:ir.model.fields,field_description:sms.field_sms_template_preview__sub_object
 msgid "Sub-model"
-msgstr "Alt model"
+msgstr ""
 
 #. module: sms
 #: model:ir.actions.act_window,name:sms.sms_template_preview_action
@@ -965,7 +958,7 @@ msgstr ""
 #. module: sms
 #: model:ir.actions.act_window,name:sms.sms_template_action
 msgid "Templates"
-msgstr "Şablonlar"
+msgstr ""
 
 #. module: sms
 #: model:ir.model.fields,help:sms.field_sms_template__model_id
@@ -977,7 +970,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:sms.field_mail_mail__message_type
 #: model:ir.model.fields,field_description:sms.field_mail_message__message_type
 msgid "Type"
-msgstr "Tip"
+msgstr ""
 
 #. module: sms
 #: model:ir.model.fields,help:sms.field_ir_actions_server__state
@@ -991,14 +984,6 @@ msgid ""
 "- 'Add Followers': add followers to a record (Discuss)\n"
 "- 'Create Next Activity': create an activity (Discuss)"
 msgstr ""
-"Server fəaliyyət növü. Aşağıdakı dəyərlər mövcuddur:\n"
-"- 'Python Kodunu İcra et': icra ediləcək bir python kodu bloku\n"
-"- 'Yarat': yeni dəyərlər ilə yeni qeyd yaradın\n"
-"- 'Qeydi Yeniləyin': qeydin dəyərlərini yeniləyin\n"
-"- 'Bir neçə əməliyyatı icra et': bir neçə digər server əməliyyatını başladan hərəkət təyin edin\n"
-"- 'E-poçt göndərin': avtomatik olaraq, email göndərin(Müzakirə)\n"
-"- 'İzləyicilər əlavə edin': hesabata izləyicilər əlavə edin (Müzakirə)\n"
-"- 'Növbəti Fəaliyyəti Yaradın': fəaliyyət yaradın (Müzakirə)"
 
 #. module: sms
 #: model:ir.model.fields,help:sms.field_sms_composer__active_domain_count
@@ -1022,7 +1007,7 @@ msgstr ""
 #. module: sms
 #: model:ir.model.fields,field_description:sms.field_sms_composer__use_active_domain
 msgid "Use active domain"
-msgstr "Aktiv domendən istifadə edin"
+msgstr ""
 
 #. module: sms
 #: model:ir.model.fields,field_description:sms.field_sms_composer__mass_use_blacklist
@@ -1049,8 +1034,6 @@ msgid ""
 "When a relationship field is selected as first field, this field lets you "
 "select the target field within the destination document model (sub-model)."
 msgstr ""
-"Əlaqə sahəsi ilk sahə olaraq seçildikdə, bu sahə hədəf sənəd modeli (alt "
-"model) daxilindəki hədəf sahəni seçməyə imkan verir."
 
 #. module: sms
 #: model:ir.model.fields,help:sms.field_sms_template__sub_object
@@ -1059,8 +1042,6 @@ msgid ""
 "When a relationship field is selected as first field, this field shows the "
 "document model the relationship goes to."
 msgstr ""
-"Əlaqə sahəsi ilk sahə olaraq seçildikdə, bu sahə əlaqənin bağlandığı sənəd "
-"modelini göstərir."
 
 #. module: sms
 #: model:ir.model.fields,help:sms.field_ir_model__is_mail_thread_sms

@@ -3,6 +3,7 @@
 import pytz
 from datetime import date, datetime
 import datetime
+import base64
 from odoo.addons.s2u_online_appointment.helpers import functions # This one is assumed from core module
 # from .helpers import functions
 
@@ -14,6 +15,7 @@ import math
 import re
 from odoo.addons.portal.controllers.portal import pager as portal_pager
 from werkzeug import urls
+from ethiopian_date import EthiopianDateConverter
 from collections import OrderedDict
 
 _logger = logging.getLogger(__name__)
@@ -66,7 +68,7 @@ class OnlineAppointment(http.Controller):
 
     def select_options(self, criteria='default'):
 
-        return request.env['s2u.appointment.option'].sudo().search([])
+        return request.env['s2u.appointment.option'].sudo().search([('state', '=', 'approved')])
 
     def prepare_values(self, form_data=False, default_appointee_id=False, criteria='default'):
 
@@ -96,7 +98,11 @@ class OnlineAppointment(http.Controller):
             'mode': 'public' if request.env.user._is_public() else 'registered',
             'name': request.env.user.partner_id.name if not request.env.user._is_public() else '',
             'email': request.env.user.partner_id.email if not request.env.user._is_public() else '',
+            'city_id': request.env.user.partner_id.city_id.id if not request.env.user._is_public() else '',
+            'subcity': request.env.user.partner_id.subcity.id if not request.env.user._is_public() else '',
             'phone': request.env.user.partner_id.phone if not request.env.user._is_public() else '',
+            'regions': request.env['res.country.state'].sudo().search([('country_id', '=', 69)]),
+            'subcities': request.env['res.state.subcity'].sudo().search([]),
             'remarks': '',
             'error': {},
             'error_message': [],
@@ -132,6 +138,8 @@ class OnlineAppointment(http.Controller):
                 'name': form_data.get('name', ''),
                 'email': form_data.get('email', ''),
                 'phone': form_data.get('phone', ''),
+                'city_id': int(form_data.get('city_id', 0)),
+                'subcity': int(form_data.get('subcity', 0)),
                 'appointee_id': appointee_id,
                 'appointment_option_id': appointment_option_id,
                 'appointment_date': appointment_date,
@@ -213,6 +221,12 @@ class OnlineAppointment(http.Controller):
             elif not functions.valid_email(post.get('email', '')):
                 error['email'] = True
                 error_message.append(_('Please enter a valid email address.'))
+            if not post.get('city_id', False):
+                error['city_id'] = True
+                error_message.append(_('Please enter your City address.'))
+            if not post.get('subcity', False):
+                error['subcity'] = True
+                error_message.append(_('Please enter your Sub City address.'))
             if not post.get('phone', False):
                 error['phone'] = True
                 error_message.append(_('Please enter your phonenumber.'))
@@ -236,9 +250,9 @@ class OnlineAppointment(http.Controller):
 
         try:
             date_start = datetime.datetime.strptime(post['appointment_date'], '%d/%m/%Y').strftime('%Y-%m-%d')
-            day_slot = date_start + ' ' + functions.float_to_time(slot.slot)
+            day_slot = date_start + ' ' + functions.float_to_time(slot.slot_start)
             start_datetime = self.ld_to_utc(day_slot, appointee_id)
-            floats = option.duration + slot.slot
+            floats = option.duration + slot.slot_start
             time_out = date_start + " " + functions.float_to_time(floats)
         except:
             error['appointment_date'] = True
@@ -259,15 +273,29 @@ class OnlineAppointment(http.Controller):
             partner = request.env['res.partner'].sudo().search(['|', ('phone', 'ilike', values['phone']),
                                                                      ('email', 'ilike', values['email'])])
             if partner:
-                partner_ids = [self.appointee_id_to_partner_id(appointee_id), partner.id]
-            else:
-                partner = request.env['res.partner'].sudo().create({
-                    'name': values['name'],
+                partner.write({
                     'phone': values['phone'],
-                    'email': values['email']
+                    'email': values['email'],
+                    'city_id': int(values['city_id']),
+                    'subcity': int(values['subcity']),
                 })
                 partner_ids = [self.appointee_id_to_partner_id(appointee_id), partner.id]
+            # else:
+            #     partner = request.env['res.partner'].sudo().create({
+            #         'name': values['name'],
+            #         'phone': values['phone'],
+            #         'email_address': values['email_address'],
+            #         'region': int(values['region']),
+            #         'subcity': int(values['subcity']),
+            #     })
+            #     partner_ids = [self.appointee_id_to_partner_id(appointee_id), partner.id]
         else:
+            request.env.user.partner_id.write({
+                    'phone': values['phone'],
+                    'email': values['email'],
+                    'city_id': int(values['city_id']),
+                    'subcity': int(values['subcity']),
+                })
             partner_ids = [self.appointee_id_to_partner_id(appointee_id), request.env.user.partner_id.id]
 
         # set detaching = True, we do not want to send a mail to the attendees
@@ -295,25 +323,41 @@ class OnlineAppointment(http.Controller):
 
             vals.update(
                 {
+                    'post': post,
                     'option': option,
                     'check_in_date': date_start,
-                    'check_in_time': functions.float_to_time(slot.slot),
+                    'check_in_time': functions.float_to_time(slot.slot_start),
                     'check_out_time': functions.float_to_time(floats),
                     'event_id': appointment.id,
                     'appointee_id': appointee_id
                 }
             )
+
+            if post['phone']:
+                for st in post['phone']:
+                    if not st.isdigit():
+                        return request.render('dashboard_member12.character_in_phone')
+                if post['phone'][0] != '0':
+                    return request.render('dashboard_member12.zero_in_phone')
+                if len(post['phone']) != 10:
+                    return request.render('dashboard_member12.ten_digit_phone')
+
+
+            date_now = datetime.datetime.strptime(vals['check_in_date'], '%Y-%m-%d')
+
+            leaves = request.env['resource.calendar'].search([('name', '=', 'Standard 40 hours/week')]).global_leave_ids
+            for leave in leaves:
+                if leave.date_from <= date_now <= leave.date_to:
+                    return request.render('dashboard_member12.date_holiday')
+
             self.sync_with_gate_visitor(vals)
+
         return request.redirect('/online-appointment/appointment-scheduled?appointment=%d' % appointment.id)
 
     def sync_with_gate_visitor(self, data=False):
         partner_info = request.env['res.partner'].sudo().search([('id', '=' ,data['partner_id'])], limit=1)
         _logger.info('\n  info: %s', str(partner_info['phone']))
         fo_visitor_user = None
-        if not partner_info['phone']:
-            fo_visitor_user = request.env['fo.visitor'].sudo().search([('name', '=', partner_info['name']), ('email', '=', partner_info['email'])], limit=1)
-        else:
-            fo_visitor_user = request.env['fo.visitor'].sudo().search([('phone', '=', partner_info['phone']), ('name', '=', partner_info['name']), ('email', '=', partner_info['email'])], limit=1)
 
         reason = request.env['fo.purpose'].sudo().search([('name', 'like', data['option'].name)], limit=1)
         if not reason:
@@ -321,23 +365,13 @@ class OnlineAppointment(http.Controller):
                 'name': data['option'].name
             })
 
-        if not fo_visitor_user:
-            fo_visitor_vals = {
-                'name': partner_info['name'],
-                'phone': partner_info['phone'],
-                'email': partner_info['email'],
-                'city': partner_info['city'],
-                'country_id': partner_info['country_id'].id
-            }
-            fo_visitor_user = request.env['fo.visitor'].sudo().create(fo_visitor_vals)
-
         check_in = functions.time_to_float(data['check_in_time'])
         check_out = functions.time_to_float(data['check_out_time'])
         date_now = datetime.datetime.strptime(data['check_in_date'], '%Y-%m-%d')
         fo_visit_vals = {
-            'visitor': [[6, 0, [fo_visitor_user.id]]],
-            'phone': partner_info['phone'],
-            'email':partner_info['email'],
+            'visitor': [[6, 0, [data['partner_id']]]],
+            'phone': data['post']['phone'],
+            'email':data['post']['email'],
             'reason': reason.id,
             'date': date_now,
             'visit_with': 'employee',
@@ -345,12 +379,15 @@ class OnlineAppointment(http.Controller):
             'check_in_float': check_in,
             'duration_in_float': data['option']['duration'],
             'check_out_float': check_out,
-            'visiting_person': [[6, 0, [data['appointee_id']]]],
+            'visiting_employee': [[6, 0, [data['appointee_id']]]],
             'state': 'draft',
-            'event_id': data['event_id']
+            'event_id': data['event_id'],
+            'from_portal': True
         }
-        fo_visit = request.env['fo.visit'].sudo().create(fo_visit_vals)
+
     
+        fo_visit = request.env['fo.visit'].sudo().create(fo_visit_vals)
+
     @http.route(['/online-appointment/appointment-scheduled'], auth="public", type='http', website=True)
     def confirmed(self, **post):
 
@@ -460,11 +497,11 @@ class OnlineAppointment(http.Controller):
         date_start = datetime.datetime.strptime(appointment_date, '%d/%m/%Y').strftime('%Y-%m-%d')
 
         # if today, then skip slots in te past (< current time)
-        if date_start == datetime.datetime.now().strftime('%Y-%m-%d') and self.ld_to_utc(date_start + ' ' + functions.float_to_time(slot.slot), appointee_id) < datetime.datetime.now(pytz.utc):
+        if date_start == datetime.datetime.now().strftime('%Y-%m-%d') and self.ld_to_utc(date_start + ' ' + functions.float_to_time(slot.slot_start), appointee_id) < datetime.datetime.now(pytz.utc):
             return False
 
-        event_start = self.ld_to_utc(date_start + ' ' + functions.float_to_time(slot.slot), appointee_id).strftime("%Y-%m-%d %H:%M:%S")
-        event_stop = self.ld_to_utc(date_start + ' ' + functions.float_to_time(slot.slot), appointee_id,
+        event_start = self.ld_to_utc(date_start + ' ' + functions.float_to_time(slot.slot_start), appointee_id).strftime("%Y-%m-%d %H:%M:%S")
+        event_stop = self.ld_to_utc(date_start + ' ' + functions.float_to_time(slot.slot_start), appointee_id,
                                     duration=option.duration).strftime("%Y-%m-%d %H:%M:%S")
 
         query = """
@@ -518,17 +555,40 @@ class OnlineAppointment(http.Controller):
 
         date_start = datetime.datetime.strptime(appointment_date, '%d/%m/%Y').strftime('%Y-%m-%d')
         free_slots = []
+
+
+        looped_slots = []
         for slot in slots:
+            current = slot.slot_start
+            looped_slots.append({
+                'id': slot.id,
+                'slot': current
+            })
+
+            while (current + option.duration) < slot.slot_end:
+                current += option.duration
+                looped_slots.append({
+                    'id': slot.id,
+                    'slot': current
+                })                
+
+        for i in range(len(looped_slots)): 
+            for j in range(i + 1, len(looped_slots)): 
+                if looped_slots[i]['slot'] > looped_slots[j]['slot']: 
+                    looped_slots[i], looped_slots[j] = looped_slots[j], looped_slots[i] 
+
+
+        for slot in looped_slots:
             # skip double slots
-            if slot_present(free_slots, slot.slot):
+            if slot_present(free_slots, slot['slot']):
                 continue
 
             # if today, then skip slots in te past (< current time)
-            if date_start == datetime.datetime.now().strftime('%Y-%m-%d') and self.ld_to_utc(date_start + ' ' + functions.float_to_time(slot.slot), appointee_id) < datetime.datetime.now(pytz.utc):
+            if date_start == datetime.datetime.now().strftime('%Y-%m-%d') and self.ld_to_utc(date_start + ' ' + functions.float_to_time(slot['slot']), appointee_id) < datetime.datetime.now(pytz.utc):
                 continue
 
-            event_start = self.ld_to_utc(date_start + ' ' + functions.float_to_time(slot.slot), appointee_id).strftime("%Y-%m-%d %H:%M:%S")
-            event_stop = self.ld_to_utc(date_start + ' ' + functions.float_to_time(slot.slot), appointee_id,
+            event_start = self.ld_to_utc(date_start + ' ' + functions.float_to_time(slot['slot']), appointee_id).strftime("%Y-%m-%d %H:%M:%S")
+            event_stop = self.ld_to_utc(date_start + ' ' + functions.float_to_time(slot['slot']), appointee_id,
                                         duration=option.duration).strftime("%Y-%m-%d %H:%M:%S")
 
             # check normal calendar events
@@ -550,8 +610,8 @@ class OnlineAppointment(http.Controller):
             if not res:
                 if not self.recurrent_events_overlapping(appointee_id, event_start, event_stop):
                     free_slots.append({
-                        'id': slot.id,
-                        'timeslot': functions.float_to_time(slot.slot)
+                        'id': slot['id'],
+                        'timeslot': functions.float_to_time(slot['slot'])
                     })
 
         return free_slots
@@ -591,14 +651,14 @@ class OnlineAppointment(http.Controller):
             for slot in slots:
                 for d in dates:
                     # if d == today, then skip slots in te past (< current time)
-                    if d == datetime.datetime.now().strftime('%Y-%m-%d') and self.ld_to_utc(d + ' ' + functions.float_to_time(slot.slot), appointee_id) < datetime.datetime.now(pytz.utc):
+                    if d == datetime.datetime.now().strftime('%Y-%m-%d') and self.ld_to_utc(d + ' ' + functions.float_to_time(slot.slot_start), appointee_id) < datetime.datetime.now(pytz.utc):
                         continue
 
                     day_slots.append({
-                        'timeslot': functions.float_to_time(slot.slot),
+                        'timeslot': functions.float_to_time(slot.slot_start),
                         'date': d,
-                        'start': self.ld_to_utc(d + ' ' + functions.float_to_time(slot.slot), appointee_id).strftime("%Y-%m-%d %H:%M:%S"),
-                        'stop': self.ld_to_utc(d + ' ' + functions.float_to_time(slot.slot), appointee_id, duration=option.duration).strftime("%Y-%m-%d %H:%M:%S")
+                        'start': self.ld_to_utc(d + ' ' + functions.float_to_time(slot.slot_start), appointee_id).strftime("%Y-%m-%d %H:%M:%S"),
+                        'stop': self.ld_to_utc(d + ' ' + functions.float_to_time(slot.slot_start), appointee_id, duration=option.duration).strftime("%Y-%m-%d %H:%M:%S")
                     })
         days_with_free_slots = {}
         for d in day_slots:
@@ -809,3 +869,135 @@ class OnlineAppointment(http.Controller):
                 self.online_appointment_state_change(appointment, previous_state)
 
         return request.redirect('/my/online-appointments')
+
+
+    @http.route('/registrations', type='http', auth='public', website=True)
+    def register(self, **post):
+        """This function will create supporters from portal"""
+        partner_id = request.env.user.partner_id
+        users = request.env['res.partner'].search([('id','=',partner_id.id)])
+        user = request.env['res.users'].sudo().browse(request.session.uid).partner_id
+        is_users = []
+        if not users:
+            is_users.append("False")
+        else:
+            is_users.append("True")
+        if post and request.httprequest.method == 'POST':
+            values = {}
+            values.update(post)
+            for field in set(['residential_subcity_id', 'residential_wereda_id', 'ethnic_group', 'education_level', 'field_of_study_id']) & set(values.keys()):
+                try:
+                    values[field] = int(values[field])
+                except:
+                    values[field] = False
+            values.pop('livelihood')
+
+            year = request.env['fiscal.year'].search([('state', '=', 'active')])
+            if not year:
+                return request.render('dashboard_member12.year_error', {'is_users': is_users})
+            plan_city = request.env['annual.plans'].search([('fiscal_year', '=', year.id), ('type_of_member', '=', 'supporter'), ('state', '=', 'approved')])
+            if not plan_city:
+                return request.render('dashboard_member12.plan_city_error', {'is_users': is_users})
+            plan_subcity = request.env['annual.plans.subcity'].search([('fiscal_year', '=', year.id), ('type_of_member', '=', 'supporter'), ('state', '=', 'approved'), ('subcity_id', '=', values['residential_subcity_id'])])
+            if not plan_subcity:
+                return request.render('dashboard_member12.plan_sub_city_error', {'is_users': is_users}) 
+            plan_woreda = request.env['annual.plans.wereda'].search([('fiscal_year', '=', year.id), ('type_of_member', '=', 'supporter'), ('state', '=', 'approved'), ('wereda_id', '=', values['residential_wereda_id'])])
+            if not plan_woreda:
+                return request.render('dashboard_member12.plan_wereda_error', {'is_users': is_users})
+
+            if values['user_input']:
+                request.env['user.input'].sudo().create({
+                    'model': "Field of Study",
+                    'user_input': values['user_input']
+                })
+                values['is_user_input'] = 'True'
+
+
+            dob_eth_str = values['ethiopian_from']
+            try:
+                values['ethiopian_from'] = datetime.datetime.strptime(dob_eth_str, '%Y/%m/%d').date()
+                values['date'] = EthiopianDateConverter.to_gregorian(values['ethiopian_from'].year, values['ethiopian_from'].month, values['ethiopian_from'].day)
+            except ValueError as err:
+                eth_str = dob_eth_str.split('/')
+                values['date'] = EthiopianDateConverter.to_gregorian(int(eth_str[2]), int(eth_str[0]),
+                                                              int(eth_str[1]))
+                values['ethiopian_from'] = EthiopianDateConverter.to_ethiopian(values['date'].year, values['date'].month, values['date'].day)
+                if type(values['ethiopian_from']) == date:
+                    values['pagum_from'] = False
+                    values['is_pagum_from'] = True
+                if type(values['ethiopian_from']) == str:
+                    values['pagum_from'] = values['ethiopian_from']
+                    values['ethiopian_from'] = False
+                    values['is_pagum_from'] = False
+
+
+            today = date.today()
+            dob = values['date']
+            if dob >= today:
+                return request.render('dashboard_member12.before_today', {'is_users': is_users})
+
+            age_limit = request.env['age.range'].search([('for_which_stage', '=', 'supporter')])
+
+            if today.month < dob.month:
+                values['age'] = (today.year - dob.year) - 1
+                if values['age'] < age_limit.minimum_age_allowed or values['age'] > age_limit.maximum_age_allowed:
+                    return request.render('dashboard_member12.age_limit', {'is_users': is_users})
+            else:
+                if today.month == dob.month and today.day < dob.day:
+                    values['age'] = (today.year - dob.year) - 1
+                    if values['age'] < age_limit.minimum_age_allowed or values['age'] > age_limit.maximum_age_allowed:
+                        return request.render('dashboard_member12.age_limit', {'is_users': is_users})
+                else:
+                    values['age']  = today.year - dob.year
+                    if values['age'] < age_limit.minimum_age_allowed or values['age'] > age_limit.maximum_age_allowed:
+                        return request.render('dashboard_member12.age_limit', {'is_users': is_users})
+
+            if values['phone']:
+                for st in values['phone']:
+                    if not st.isdigit():
+                        return request.render('dashboard_member12.character_in_phone', {'is_users': is_users})
+                if values['phone'][0] != '0':
+                    return request.render('dashboard_member12.zero_in_phone', {'is_users': is_users})
+                if len(values['phone']) != 10:
+                    return request.render('dashboard_member12.ten_digit_phone', {'is_users': is_users})
+
+            values['name'] = values['first_name'] + " " + values['father_name'] + " " + values['grand_father_name']
+
+            values['subcity_id'] = values['residential_subcity_id']
+            values['wereda_id'] = values['residential_wereda_id']
+            values['state'] = 'draft'
+
+
+            exists = request.env['supporter.members'].search([('name', '=', values['name']), ('gender', '=', values['gender']), ('phone', '=', values['phone']), ('date', '=', values['date'])])
+            if exists:
+                return request.render('dashboard_member12.duplicate', {'is_users': is_users})
+            phone_exists = request.env['supporter.members'].search([('phone', '=', values['phone'])])
+            if phone_exists:
+                return request.render('dashboard_member12.phone_duplicate', {'is_users': is_users})
+
+            if values['image_1920']:
+                values['image_1920'] = values['image_1920'].read()
+                values['image_1920'] = base64.b64encode(values['image_1920'])
+                values['work_place'] = values['company_name']
+                values.pop('company_name')
+                return request.render('dashboard_member12.registration_end')                                       
+            else:
+                values['work_place'] = values['company_name']
+                values.pop('company_name')
+                request.env['supporter.members'].sudo().create(values)
+                return request.render('dashboard_member12.registration_end')  
+        cities = request.env['res.country.state'].sudo().search([('country_id', '=', 69)])
+        ed_levels = request.env['res.edlevel'].sudo().search([])
+        studies = request.env['field.study'].sudo().search([])
+        ethnicity = request.env['ethnic.groups'].sudo().search([])
+        subcities = request.env['membership.handlers.parent'].sudo().search([])
+        weredas = request.env['membership.handlers.branch'].sudo().search([])
+        return request.render("dashboard_member12.registration_form", {
+                                                                    'ed_levels': ed_levels,
+                                                                    'cities': cities,
+                                                                    'subcities': subcities,
+                                                                    'weredas': weredas,
+                                                                    'ethnicity': ethnicity,
+                                                                    'is_users': is_users,
+                                                                    'studies': studies
+                                                                })

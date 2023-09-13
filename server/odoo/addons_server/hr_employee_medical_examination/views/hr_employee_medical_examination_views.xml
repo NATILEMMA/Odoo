@@ -10,12 +10,21 @@
         <field name="arch" type="xml">
             <form>
                 <header>
+                    <button name="back_to_draft" string="Back to draft" type="object" class="btn btn-primary" states="done,cancelled,rejected,pending" />
+
                     <button
                         name="back_to_pending"
                         string="Back To Pending"
                         type="object"
                         states="done,cancelled,rejected"
                     />
+                    <button 
+                        name="to_pending" 
+                        string="To Pending" 
+                        type="object" 
+                        states="draft" 
+                        class="btn btn-primary" />
+                    
                     <button
                         name="to_done"
                         string="Mark as Done"
@@ -43,25 +52,25 @@
                     <div class="oe_title">
                         <label for="name" class="oe_edit_only" />
                         <h1>
-                            <field name="name" placeholder="Examination Name" />
+                            <field name="name" placeholder="Examination Name" attrs="{'readonly': [('state', '!=', 'draft')]}" />
                         </h1>
                     </div>
                     <group>
                         <group>
-                            <field name="employee_id" />
-                            <field name="date" />
-                            <field name="year" />
+                            <field name="employee_id" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="date" attrs="{'readonly': [('state', '!=', 'draft')]}" />
+                            <field name="year" attrs="{'readonly': [('state', '!=', 'draft')]}" domain="[('year', '=', True)]" />
                         </group>
                         <group>
-                            <field name="result" />
-                            <field name="instution_type_id"/>
-                            <field name="instution_id"/>
-                            <field name="examination_type_id"/>
+                            <field name="result" attrs="{'readonly': [('state', '!=', 'pending')]}" />
+                            <field name="instution_type_id" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="instution_id" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="examination_type_id" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
                         </group>
                     </group>
                     <div>
-                        <separator string="Note" />
-                        <field name="note" placeholder="Add note..." />
+                        <separator string="Note" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                        <field name="note" placeholder="Add note..." attrs="{'readonly': [('state', '!=', 'draft')]}" />
                     </div>
                 </sheet>
                 <div class="oe_chatter">

@@ -14,6 +14,8 @@ from dateutil.relativedelta import relativedelta
 from odoo import _, api, fields, models
 from odoo.exceptions import UserError
 from odoo.osv import expression
+import datetime
+
 
 _logger = logging.getLogger(__name__)
 
@@ -50,8 +52,8 @@ class AccountAsset(models.Model):
     move_line_check = fields.Boolean(
         compute="_compute_move_line_check", string="Has accounting entries"
     )
-    name = fields.Char(string="Asset Name", required=True, states=READONLY_STATES,)
-    code = fields.Char(string="Reference", size=32, states=READONLY_STATES,)
+    name = fields.Char(string="Asset Name", required=True, states=READONLY_STATES , translate=True)
+    code = fields.Char(string="Reference", size=32, states=READONLY_STATES, translate=True)
     purchase_value = fields.Float(
         string="Purchase Value",
         required=True,
@@ -87,7 +89,7 @@ class AccountAsset(models.Model):
         string="Depreciated Value",
         store=True,
     )
-    note = fields.Text("Note")
+    note = fields.Text("Note", translate=True)
     profile_id = fields.Many2one(
         comodel_name="account.asset.profile",
         string="Asset Profile",
@@ -96,7 +98,7 @@ class AccountAsset(models.Model):
         states=READONLY_STATES,
         check_company=True,
     )
-    profile_name = fields.Char(related = "profile_id.name" , String = "Profile name")
+    profile_name = fields.Char(related = "profile_id.name" , String = "Profile name", translate=True)
     group_ids = fields.Many2many(
         comodel_name="account.asset.group",
         compute="_compute_group_ids",
@@ -141,7 +143,7 @@ class AccountAsset(models.Model):
     partner_id = fields.Many2one(
         comodel_name="res.partner", string="Partner", states=READONLY_STATES,
     )
-    partner_name = fields.Char(related='partner_id.name',String = "Partner name")
+    partner_name = fields.Char(related='partner_id.name',String = "Partner name", translate=True)
     method = fields.Selection(
         selection=lambda self: self.env["account.asset.profile"]._selection_method(),
         string="Computation Method",
@@ -718,6 +720,11 @@ class AccountAsset(models.Model):
                     if self.method in ["linear-limit", "degr-limit"]:
                         amount -= self.salvage_value
                 if amount or self.carry_forward_missed_depreciations:
+                    date = str(line["date"])
+                    date1 =date.split("-")
+                    if date1[1] == '12' and date1[2] == '31':
+                         holder = date1[0] + "-07-07"
+                         line["date"] = datetime.datetime.strptime(holder, "%Y-%m-%d").date()
                     vals = {
                         "previous_id": depr_line.id,
                         "amount": round(amount, digits),

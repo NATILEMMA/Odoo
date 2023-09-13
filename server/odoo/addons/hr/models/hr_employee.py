@@ -35,7 +35,7 @@ class HrEmployeePrivate(models.Model):
 
     # resource and user
     # required on the resource, make sure required="True" set in the view
-    name = fields.Char(string="Employee Name", related='resource_id.name', store=True, readonly=False, tracking=True)
+    name = fields.Char(string="Employee Name",  store=True, related='resource_id.name',readonly=False, tracking=True)
     user_id = fields.Many2one('res.users', 'User', related='resource_id.user_id', store=True, readonly=False)
     user_partner_id = fields.Many2one(related='user_id.partner_id', related_sudo=False, string="User's partner")
     active = fields.Boolean('Active', related='resource_id.active', default=True, store=True, readonly=False)
@@ -48,7 +48,7 @@ class HrEmployeePrivate(models.Model):
         'The employee address has a company linked',
         compute='_compute_is_address_home_a_company',
     )
-    private_email = fields.Char(related='address_home_id.email', string="Private Email", groups="hr.group_hr_user")
+    private_email = fields.Char(related='address_home_id.email', string="Private Email", groups="hr.group_hr_user", translate=False)
     country_id = fields.Many2one(
         'res.country', 'Nationality (Country)', groups="hr.group_hr_user", tracking=True)
     gender = fields.Selection([
@@ -63,37 +63,36 @@ class HrEmployeePrivate(models.Model):
         ('widower', 'Widower'),
         ('divorced', 'Divorced')
     ], string='Marital Status', groups="hr.group_hr_user", default='single', tracking=True)
-    spouse_complete_name = fields.Char(string="Spouse Complete Name", groups="hr.group_hr_user", tracking=True)
+    spouse_complete_name = fields.Char(string="Spouse Complete Name", groups="hr.group_hr_user", tracking=True, translate=False)
     spouse_birthdate = fields.Date(string="Spouse Birthdate", groups="hr.group_hr_user", tracking=True)
     children = fields.Integer(string='Number of Children', groups="hr.group_hr_user", tracking=True)
-    place_of_birth = fields.Char('Place of Birth', groups="hr.group_hr_user", tracking=True)
+    place_of_birth = fields.Char('Place of Birth', groups="hr.group_hr_user", tracking=True, translate=False)
     country_of_birth = fields.Many2one('res.country', string="Country of Birth", groups="hr.group_hr_user", tracking=True)
     birthday = fields.Date('Date of Birth', groups="hr.group_hr_user", tracking=True)
-    ssnid = fields.Char('SSN No', help='Social Security Number', groups="hr.group_hr_user", tracking=True)
-    sinid = fields.Char('SIN No', help='Social Insurance Number', groups="hr.group_hr_user", tracking=True)
-    identification_id = fields.Char(string='Identification No', groups="hr.group_hr_user", tracking=True)
-    passport_id = fields.Char('Passport No', groups="hr.group_hr_user", tracking=True)
+    ssnid = fields.Char('SSN No', help='Social Security Number', groups="hr.group_hr_user", tracking=True, translate=False)
+    sinid = fields.Char('SIN No', help='Social Insurance Number', groups="hr.group_hr_user", tracking=True, translate=False)
+    identification_id = fields.Char(string='Identification No', groups="hr.group_hr_user", tracking=True, translate=False)
+    passport_id = fields.Char('Passport No', groups="hr.group_hr_user", tracking=True, translate=False)
     bank_account_id = fields.Many2one(
         'res.partner.bank', 'Bank Account Number',
         domain="[('partner_id', '=', address_home_id), '|', ('company_id', '=', False), ('company_id', '=', company_id)]",
         groups="hr.group_hr_user",
         tracking=True,
         help='Employee bank salary account')
-    permit_no = fields.Char('Work Permit No', groups="hr.group_hr_user", tracking=True)
-    visa_no = fields.Char('Visa No', groups="hr.group_hr_user", tracking=True)
+    permit_no = fields.Char('Work Permit No', groups="hr.group_hr_user", tracking=True, translate=False)
+    visa_no = fields.Char('Visa No', groups="hr.group_hr_user", tracking=True, translate=False)
     visa_expire = fields.Date('Visa Expire Date', groups="hr.group_hr_user", tracking=True)
-    additional_note = fields.Text(string='Additional Note', groups="hr.group_hr_user", tracking=True)
+    additional_note = fields.Text(string='Additional Note', groups="hr.group_hr_user", tracking=True, translate=False)
     certificate = fields.Selection([
         ('bachelor', 'Bachelor'),
         ('master', 'Master'),
         ('other', 'Other'),
     ], 'Certificate Level', default='other', groups="hr.group_hr_user", tracking=True)
-    study_field = fields.Char("Field of Study", groups="hr.group_hr_user", tracking=True)
-    study_school = fields.Char("School", groups="hr.group_hr_user", tracking=True)
-    emergency_contact = fields.Char("Emergency Contact", groups="hr.group_hr_user", tracking=True)
-    emergency_phone = fields.Char("Emergency Phone", groups="hr.group_hr_user", tracking=True)
+    study_field = fields.Char("Field of Study", groups="hr.group_hr_user", tracking=True, translate=False)
+    study_school = fields.Char("School", groups="hr.group_hr_user", tracking=True, translate=False)
+    emergency_contact = fields.Char("Emergency Contact", groups="hr.group_hr_user", tracking=True, translate=False)
+    emergency_phone = fields.Char("Emergency Phone", groups="hr.group_hr_user", tracking=True, translate=False)
     km_home_work = fields.Integer(string="Km Home-Work", groups="hr.group_hr_user", tracking=True)
-
     image_1920 = fields.Image(default=_default_image)
     phone = fields.Char(related='address_home_id.phone', related_sudo=False, readonly=False, string="Private Phone", groups="hr.group_hr_user")
     # employee in company
@@ -103,7 +102,7 @@ class HrEmployeePrivate(models.Model):
         'emp_id', 'category_id', groups="hr.group_hr_manager",
         string='Tags')
     # misc
-    notes = fields.Text('Notes', groups="hr.group_hr_user")
+    notes = fields.Text('Notes', groups="hr.group_hr_user", translate=False)
     color = fields.Integer('Color Index', default=0)
     barcode = fields.Char(string="Badge ID", help="ID used for employee identification.", groups="hr.group_hr_user", copy=False)
     pin = fields.Char(string="PIN", groups="hr.group_hr_user", copy=False,
@@ -113,7 +112,7 @@ class HrEmployeePrivate(models.Model):
         ('resigned', 'Resigned'),
         ('retired', 'Retired')
     ], string="Departure Reason", groups="hr.group_hr_user", copy=False, tracking=True)
-    departure_description = fields.Text(string="Additional Information", groups="hr.group_hr_user", copy=False, tracking=True)
+    departure_description = fields.Text(string="Additional Information", groups="hr.group_hr_user", copy=False, tracking=True, translate=False)
     message_main_attachment_id = fields.Many2one(groups="hr.group_hr_user")
 
     _sql_constraints = [

@@ -8,7 +8,7 @@ class User(models.Model):
     _inherit = ['res.users']
 
     medic_exam = fields.Date(related="employee_id.medic_exam")
-    vehicle = fields.Char(related="employee_id.vehicle")
+    vehicle = fields.Char(related="employee_id.vehicle", translate=True)
     bank_account_id = fields.Many2one(related="employee_id.bank_account_id")
 
     def __init__(self, pool, cr):

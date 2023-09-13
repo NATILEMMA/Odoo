@@ -1,0 +1,198 @@
+<?xml version="1.0"?>
+
+<odoo>
+
+    <record id="each_member_payment_tree_inherit" model="ir.ui.view">
+        <field name="name">Members' Payment</field>
+        <field name="model">each.member.payment</field>
+        <field name="inherit_id" ref="members_features.each_member_payment_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='month']" position="after">
+                <field name="cell_id" readonly="1"/>
+            </xpath>
+            <xpath expr="//field[@name='traced_member_payment']" position="after">
+                <field name="type_of_payment" readonly="1" optional="hidden"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="each_member_payment_form_inherit" model="ir.ui.view">
+        <field name="name">Members' Payment</field>
+        <field name="model">each.member.payment</field>
+        <field name="inherit_id" ref="members_features.each_member_payment_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='fee_amount']" position="after">
+                <field name="type_of_payment" readonly="1"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="each_member_payment_search_inherit" model="ir.ui.view">
+        <field name="name">Members' Payment</field>
+        <field name="model">each.member.payment</field>
+        <field name="inherit_id" ref="members_features.each_member_payment_search"/>
+        <field name="arch" type="xml">
+            <xpath expr="//search/group" position="inside">
+                <filter string="Main Office" name="office" context="{'group_by': 'main_office_id'}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="each_member_payment_tree_report_inherit" model="ir.ui.view">
+        <field name="name">Members' Payment</field>
+        <field name="model">each.member.payment</field>
+        <field name="inherit_id" ref="members_features.each_member_payment_tree_report"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='month']" position="after">
+                <field name="cell_id"/>
+            </xpath>
+            <xpath expr="//field[@name='id_payment']" position="after">
+                <field name="type_of_payment"/>
+            </xpath>
+        </field>
+    </record>
+
+
+     <record id="each_league_payment_tree_inherit" model="ir.ui.view">
+        <field name="name">Leagues' Payments</field>
+        <field name="model">each.league.payment</field>
+        <field name="inherit_id" ref="members_features.each_league_payment_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='month']" position="after">
+                <field name="cell_id" readonly="1"/>
+            </xpath>
+            <xpath expr="//field[@name='cell_payment_id']" position="after">
+                <field name="league_type"/>
+            </xpath>
+            <xpath expr="//field[@name='traced_league_payment']" position="after">
+                <field name="type_of_payment" readonly="1" optional="hidden"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="each_league_payment_form_inherit" model="ir.ui.view">
+        <field name="name">Leagues' Payment</field>
+        <field name="model">each.league.payment</field>
+        <field name="inherit_id" ref="members_features.each_league_payment_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='fee_amount']" position="after">
+                <field name="type_of_payment" readonly="1"/>
+            </xpath>
+        </field>
+    </record>
+
+   <record id="each_league_payment_search_inherit" model="ir.ui.view">
+        <field name="name">Leagues' Payment</field>
+        <field name="model">each.league.payment</field>
+        <field name="inherit_id" ref="members_features.each_league_payment_search"/>
+        <field name="arch" type="xml">
+            <xpath expr="//search/group" position="after">
+                <filter string="Main Office" name="office" context="{'group_by': 'main_office_id'}"/>
+                <filter string="League Type" name="type" context="{'group_by': 'league_type'}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="each_league_payment_tree_report_inherit" model="ir.ui.view">
+        <field name="name">Leagues' Payment</field>
+        <field name="model">each.league.payment</field>
+        <field name="inherit_id" ref="members_features.each_league_payment_tree_report"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='month']" position="after">
+                <field name="league_type"/>
+            </xpath>
+            <xpath expr="//field[@name='id_payment']" position="after">
+                 <field name="type_of_payment"/>
+            </xpath>
+        </field>
+    </record>
+
+
+     <record id="donation_payment_tree_inherit" model="ir.ui.view">
+        <field name="name">Donors Payment</field>
+        <field name="model">donation.payment</field>
+        <field name="inherit_id" ref="members_features.donation_payment_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='amount']" position="after">
+                <field name="donor_ids"/>
+                <field name="supporter_id"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="donation_payment_form_inherit" model="ir.ui.view">
+        <field name="name">Donors Payment</field>
+        <field name="model">donation.payment</field>
+        <field name="inherit_id" ref="members_features.donation_payment_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet/group/group[1]/field[@name='for_donor_or_supporter']" position="after">
+                <field name="donor_ids" attrs="{'invisible': [('for_donor_or_supporter', '=', 'supporter')], 'required': [('for_donor_or_supporter', '=', 'donor')], 'readonly': [('state', 'not in', 'draft')]}" options="{'no_create': True, 'no_create_edit': True}"/>
+                <field name="supporter_id" attrs="{'invisible': [('for_donor_or_supporter', '=', 'donor')], 'required': [('for_donor_or_supporter', '=', 'supporter')], 'readonly': [('state', 'not in', 'draft')]}" options="{'no_create': True, 'no_create_edit': True}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="membership_cell_payment_form_inherit" model="ir.ui.view">
+        <field name="name">Members' Cell Payment</field>
+        <field name="model">membership.cell.payment</field>
+        <field name="inherit_id" ref="members_features.membership_cell_payment_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button name="start_button" string="Start Payments" states="draft" type="object" class="oe_highlight" confirm="Are you sure you want to Start Payments?"/>
+                <button name="submit_button" string="Submit" type="object" states="pending payments" class="oe_highlight" confirm="Are you sure you want to Submit Payments?"/>
+            </xpath>
+            <xpath expr="//sheet/notebook/page[@name='members_ids']/field[@name='member_ids']/tree/field[@name='month']" position="after">
+                <field name="cell_id" readonly="1" invisible="1"/>
+            </xpath>
+            <xpath expr="//sheet/notebook/page[@name='members_ids']/field[@name='member_ids']/tree/field[@name='traced_member_payment']" position="after">
+                <field name="type_of_payment" readonly="1" force_save="1"/>
+            </xpath>
+            <xpath expr="//sheet/notebook/page[@name='members_ids']/field[@name='member_ids']/tree/button[@name='print_payslip']" position="after">
+                <button name="add_attachment" string="Attachment" type="object" icon="fa-paperclip" attrs="{'invisible': [('type_of_payment', '=', 'in person')]}"/>
+            </xpath>
+            <xpath expr="//sheet/notebook/page[@name='league_ids']/field[@name='league_ids']/tree/field[@name='month']" position="after">
+                <field name="cell_id" readonly="1" invisible="1"/>
+                <field name="league_type"/>
+            </xpath>
+            <xpath expr="//sheet/notebook/page[@name='league_ids']/field[@name='league_ids']/tree/field[@name='traced_league_payment']" position="after">
+                <field name="type_of_payment" readonly="1" force_save="1"/>
+            </xpath>
+            <xpath expr="//sheet/notebook/page[@name='league_ids']/field[@name='league_ids']/tree/button[@name='print_league_payslip']" position="after">
+                <button name="add_attachment" string="Attachment" type="object" icon="fa-paperclip" attrs="{'invisible': [('type_of_payment', '=', 'in person')]}"/>
+            </xpath>
+        </field>
+    </record>
+
+
+   <record id="donation_payment_tree_report_inherit" model="ir.ui.view">
+        <field name="name">Donors Payment</field>
+        <field name="model">donation.payment</field>
+        <field name="inherit_id" ref="members_features.donation_payment_tree_report"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='amount']" position="after">
+                <field name="donor_ids" readonly="1"/>
+                <field name="supporter_id" readonly="1"/>
+            </xpath>
+        </field>
+    </record>
+
+
+    <record id="membership_view_partner_form_inherit" model="ir.ui.view">
+        <field name="name">Member From</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="member_registration.membership_view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet/notebook/page[5]/group/field[@name='membership_payments']" position="inside">
+                <field name="type_of_payment"/>
+            </xpath>
+            <xpath expr="//sheet/notebook/page[6]/group/field[@name='membership_payments']" position="inside">
+                <field name="type_of_payment"/>
+            </xpath>
+            <xpath expr="//sheet/notebook/page[7]/group/field[@name='league_payments']" position="inside">
+                <field name="type_of_payment"/>
+            </xpath>  
+        </field>
+    </record>
+
+
+</odoo>

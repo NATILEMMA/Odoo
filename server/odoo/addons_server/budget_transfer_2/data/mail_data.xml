@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+   
+        <!-- Email Templates -->
+        <template id="budget_transfer_template_refuse_reason">
+            <p>Your budget transfer request <t t-if="is_sheet"></t><t t-esc="name"/> has been refused</p>
+            <ul class="o_timeline_tracking_value_list">
+                <li>Reason : <t t-esc="reason"/></li>
+            </ul>
+        </template>
+
+    </data>
+</odoo>

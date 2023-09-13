@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<odoo>
+
+
+    <!-- This record will handle the member assembly -->
+    <record id="member_training_report_tree_inherit" model="ir.ui.view">
+        <field name="name">Leaders Training</field>
+        <field name="model">leaders.trainings</field>
+        <field name="inherit_id" ref="members_features.member_training_report_tree"/>
+        <field name="arch" type="xml">
+          <xpath expr="//field[@name='partner_id']" position="after">
+            <field name="leader_responsibility" readonly="1"/>
+          </xpath>
+        </field>
+    </record>
+
+
+    <!-- This record will handle the member assembly -->
+    <record id="member_training_report_form_inherit" model="ir.ui.view">
+        <field name="name">Leaders Training</field>
+        <field name="model">leaders.trainings</field>
+        <field name="inherit_id" ref="members_features.member_training_report_form"/>
+        <field name="arch" type="xml">
+          <xpath expr="//sheet/group/group/field[@name='partner_id']" position="after">
+            <field name="leader_responsibility" readonly="1"/>
+          </xpath>
+        </field>
+    </record>
+
+    <!-- This record will create a form view for training -->
+    <record id="member_training_form_inherit" model="ir.ui.view">
+        <field name="name">Leader Training</field>
+        <field name="model">member.training</field>
+        <field name="inherit_id" ref="members_features.member_training_form"/>
+        <field name="arch" type="xml">
+          <xpath expr="//sheet/notebook/page[1]/field[@name='leader_ids']/tree/field[@name='partner_id']" position="after">
+            <field name="leader_responsibility" readonly="1" string="Leader Responsibility"/>
+          </xpath>
+        </field>
+    </record>    
+
+    <record id="member_training_report_tree_inherit" model="ir.ui.view">
+        <field name="name">Leaders Training</field>
+        <field name="model">leaders.trainings</field>
+        <field name="inherit_id" ref="member_registration.member_training_report_tree"/>
+        <field name="arch" type="xml">
+          <xpath expr="//field[@name='partner_id']" position="after">
+            <field name="leader_responsibility" readonly="1"/>
+          </xpath> 
+        </field>
+    </record>
+
+
+
+</odoo>

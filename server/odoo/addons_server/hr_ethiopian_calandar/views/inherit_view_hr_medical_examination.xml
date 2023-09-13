@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- 
+                    
+                    Adding Ethiopian Calander Date to Time Fream 
+
+                    step 1: Inherit the View of the model to which you wish to add the Ethiopian calendar extension.
+
+                    step 2, xpath your exact location of converting date fields if your date fields are located within a form sheet, use col and colspan to adjust CSS
+                
+                    Ethiopian Date Picker Widget
+
+                    - ethiopian_calander_widget
+                    - ethiopian_calander_widget_two
+                    - ethiopian_calander_widget_three
+                    - ethiopian_calander_widget_four
+                
+                
+                -->
+
+        <record id="hr_employee_medical_examination_form_view_inherited" model="ir.ui.view">
+            <field name="name">hr.employee.medical.examination.form.inherited</field>
+            <field name="model">hr.employee.medical.examination</field>
+            <field name="inherit_id" ref="hr_employee_medical_examination.hr_employee_medical_examination_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date']" position="replace">
+                    <field name="ethiopian_from" class="oe_read_only" string="Examination date" style=" float:left;" attrs="{'invisible': ['|', ('is_pagum_from', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    <field name="date" string="Examination date" groups="EthiopianCalendar.group_gregory"/>
+                    <field name="pagum_from" class="oe_read_only" string="Examination date" style=" float:left" attrs="{'invisible': ['|',('is_pagum_from', '!=',False)  ]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    <field name="is_pagum_from" invisible="1"/>
+                    <div>
+                    </div>
+                    <div style="margin-bottom:40px;margin-top:-22px; width: 50%;margin-left:10px;margin-right:0px">
+                        <widget name="ethiopian_calander_widget" style="float:left;width:230px;margin-left:-3px;" class="oe_edit_only" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    </div>
+                </xpath>     
+            </field>
+        </record>
+    </data>
+</odoo>

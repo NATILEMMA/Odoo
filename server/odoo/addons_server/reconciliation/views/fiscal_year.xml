@@ -7,14 +7,14 @@
             <form string="Fiscal year">
                 <header>
                   <field name="state" widget="statusbar" statusbar_visible="draft,active,locked,closed"/>
-                   <button name="%(action_credit_payment_financial_opening)d" class="oe_highlight" states="draft"  groups="account.group_account_manager"
-                               string="Activate" type="action"/>
+                   <button name="button_open_fiscal" class="oe_highlight" states="draft"  groups="account.group_account_manager"
+                               string="Activate" type="object"/>
                     <button name="lock" class="oe_highlight" states="active"  groups="account.group_account_manager"
                                string="Locked" type="object"/>
 <!--                    <button name="close" class="oe_highlight" states="locked"  groups="account.group_account_manager"-->
 <!--                               string="close" type="object"/>-->
-                    <button name="%(action_credit_payment_financial_closing)d" string="close"
-                         type="action" groups="account.group_account_manager"  states="locked"/>
+                    <button name="button_close_fiscal" string="close"
+                         type="object" groups="account.group_account_manager"  states="locked"/>
 
                     <button name="set_new"  states="active"  groups="account.group_account_manager"
                                string="Set to new" type="object"/>
@@ -22,7 +22,7 @@
                 <sheet>
                 <group>
                     <group>
-                        <field name="name" required="1"/>
+                        <field name="name"/>
                         <field name="fiscal_year"/>
 
                     </group>

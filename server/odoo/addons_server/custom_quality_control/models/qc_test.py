@@ -77,7 +77,7 @@ class QcTestQuestion(models.Model):
         string="Qualitative values",
         copy=True,
     )
-    notes = fields.Text(string="Notes")
+    notes = fields.Text(string="Notes", translate=True)
     min_value = fields.Float(string="Min", digits="Quality Control")
     max_value = fields.Float(string="Max", digits="Quality Control")
     uom_id = fields.Many2one(comodel_name="uom.uom", string="Uom")

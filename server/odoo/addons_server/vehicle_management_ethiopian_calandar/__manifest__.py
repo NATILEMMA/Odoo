@@ -7,7 +7,7 @@
     "author": "Natnael lemma",
     "website": " ",
     "category": "",
-    "depends": ["fleet","fleet_operations","vehicle_transfer","vehicle_inspection_notify"],
+    "depends": ["fleet","fleet_operations","vehicle_transfer","vehicle_libre"],
     "license": "LGPL-3",
     "data": [
         "views/vehicle_registration.xml",
@@ -15,6 +15,7 @@
         "views/fuel_log.xml",  
         "views/employee_fleet_form_view.xml",
         "views/vehicle_libre.xml",
+        "views/writeoff_view.xml"
     ],
       'application': True,
 

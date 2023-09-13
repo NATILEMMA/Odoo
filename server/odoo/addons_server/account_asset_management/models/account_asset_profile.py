@@ -11,8 +11,8 @@ class AccountAssetProfile(models.Model):
     _description = "Asset profile"
     _order = "name"
 
-    name = fields.Char(string="Name", size=64, required=True, index=True)
-    note = fields.Text()
+    name = fields.Char(string="Name", size=64, required=True, index=True, translate=True)
+    note = fields.Text( translate=True)
     account_analytic_id = fields.Many2one(
         comodel_name="account.analytic.account", string="Analytic account"
     )

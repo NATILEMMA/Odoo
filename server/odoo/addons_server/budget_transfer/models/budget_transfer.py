@@ -37,7 +37,7 @@ class BudgetTransfer(models.Model):
     # _inherits = 'account.move'
     _description = 'Budget Transfer'
 
-    name = fields.Char()
+    name = fields.Char(translate=True)
     budget_line = fields.One2many('budget.transfer.line', 'budget_id', string='Budget Lines', default={})
     date = fields.Date()
     journal_id = fields.Many2one('account.journal')
@@ -47,14 +47,14 @@ class BudgetTransfer(models.Model):
                               'Status', required=True,
                               copy=False, default='draft',tracking=True)
     prepare_signature = fields.Image('Signature', help='Signature received through the portal.', copy=False, attachment=True, max_width=1024, max_height=1024)
-    prepare_signed_by = fields.Char('Signed By', help='Name of the person that signed the SO.', copy=False)
+    prepare_signed_by = fields.Char('Signed By', help='Name of the person that signed the SO.', copy=False, translate=True)
     prepare_signed_on = fields.Datetime('Signed On', help='Date of the signature.', copy=False)
 
     approver_signature = fields.Image('Signature', help='Signature received through the portal.', copy=False, attachment=True, max_width=1024, max_height=1024)
-    approver_signed_by = fields.Char('Signed By', help='Name of the person that signed the SO.', copy=False)
+    approver_signed_by = fields.Char('Signed By', help='Name of the person that signed the SO.', copy=False, translate=True)
     approver_signed_on = fields.Datetime('Signed On', help='Date of the signature.', copy=False)
     squ = fields.Char(string='Reference', required=True, copy=False, readonly=True,
-                       default=lambda self: _('New'))
+                       default=lambda self: _('New'), translate=True)
 
    
     def action_request(self):

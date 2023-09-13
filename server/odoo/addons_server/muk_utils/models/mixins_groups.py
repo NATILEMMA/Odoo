@@ -37,7 +37,7 @@ class Groups(models.AbstractModel):
 
     name = fields.Char(string="Group Name", required=True, translate=True)
 
-    parent_path = fields.Char(string="Parent Path", index=True)
+    parent_path = fields.Char(string="Parent Path", index=True,translate=True)
 
     count_users = fields.Integer(compute="_compute_users", string="Users", store=True)
 

@@ -17,8 +17,7 @@
 # marcescu, 2022
 # oscaryuu, 2022
 # CristianCruzParra, 2022
-# Josep Anton Belchi, 2022
-# Ivan Espinola, 2022
+# jabelchi, 2022
 # 
 msgid ""
 msgstr ""
@@ -26,7 +25,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-05 12:32+0000\n"
 "PO-Revision-Date: 2019-08-26 09:09+0000\n"
-"Last-Translator: Ivan Espinola, 2022\n"
+"Last-Translator: jabelchi, 2022\n"
 "Language-Team: Catalan (https://www.transifex.com/odoo/teams/41243/ca/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -705,8 +704,6 @@ msgstr "Crea oportunitat"
 #: model:ir.model.fields,field_description:crm.field_res_config_settings__lead_mining_in_pipeline
 msgid "Create a lead mining request directly from the opportunity pipeline."
 msgstr ""
-"Crea una sol·licitud de minería d'iniciatives directament des del flux "
-"d'oportunitats. "
 
 #. module: crm
 #: model:ir.model.fields.selection,name:crm.selection__crm_lead2opportunity_partner__action__create
@@ -954,10 +951,6 @@ msgid ""
 "Incoming emails can be automatically assigned to specific Sales Teams. To do"
 " so, set an email alias on the Sales Team."
 msgstr ""
-"Els mails rebuts en aquesta adreça generen iniciatives noves no assignades a"
-" cap equip de vendes. Això pot fer-se convertint-les a oportunitats. Els "
-"mails rebuts es poden assignar a un equip de vendes específic. Per a fer-ho,"
-" establiu un pseudònim de correu a l'equip de vendes."
 
 #. module: crm
 #: model:ir.model.fields.selection,name:crm.selection__res_config_settings__lead_enrich_auto__auto
@@ -1284,7 +1277,7 @@ msgstr "Kpi Crm Lead Created Value"
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_digest_digest__kpi_crm_opportunities_won_value
 msgid "Kpi Crm Opportunities Won Value"
-msgstr "Valor de les Oportunitats Crm del Kpi"
+msgstr ""
 
 #. module: crm
 #: model:crm.lead.scoring.frequency.field,name:crm.frequency_field_lang_id
@@ -1387,7 +1380,7 @@ msgstr "Generació d'iniciatives"
 #. module: crm
 #: model_terms:ir.ui.view,arch_db:crm.res_config_settings_view_form
 msgid "Lead Mining"
-msgstr "Mineria principal"
+msgstr ""
 
 #. module: crm
 #: model:ir.model,name:crm.model_crm_lead_scoring_frequency
@@ -1402,12 +1395,12 @@ msgstr "Camps de freqüència de puntuació de clients potencials"
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_res_config_settings__predictive_lead_scoring_fields_str
 msgid "Lead Scoring Frequency Fields in String"
-msgstr "Camps de freqüència de puntuació principal a la cadena"
+msgstr ""
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_res_config_settings__predictive_lead_scoring_start_date
 msgid "Lead Scoring Starting Date"
-msgstr "Data inicial de la puntuació principal"
+msgstr ""
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_res_config_settings__predictive_lead_scoring_start_date_str
@@ -1632,7 +1625,7 @@ msgstr "Mitja"
 #: code:addons/crm/models/crm_lead.py:0
 #, python-format
 msgid "Meeting scheduled at '%s'<br> Subject: %s <br> Duration: %s hours"
-msgstr "Reunió programada a les '%s'<br> Tema: %s <br> Durada: %s hores"
+msgstr ""
 
 #. module: crm
 #: model:ir.actions.act_window,name:crm.act_crm_opportunity_calendar_event_new
@@ -1910,11 +1903,6 @@ msgid ""
 "mainly used by the sales manager in order to do the periodic review with the"
 " channels of the sales pipeline."
 msgstr ""
-"L'anàlisi d'oportunitats us dóna un accés immediat a les vostres "
-"oportunitats amb informació com els ingressos esperats, el cost planificat, "
-"terminis incomplits o el nombre d'interaccions per oportunitat. Aquest "
-"informe és utilitzat principalment pel gestor de vendes per a fer la revisió"
-" periòdica amb els canals del gasoducte de vendes."
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_res_partner__opportunity_count_ids
@@ -2022,7 +2010,7 @@ msgstr "Oportunitats endarrerides"
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_team__overdue_opportunities_amount
 msgid "Overdue Opportunities Revenues"
-msgstr "Ingressos d'oportunitats endarrerits"
+msgstr ""
 
 #. module: crm
 #: model_terms:ir.ui.view,arch_db:crm.crm_team_salesteams_view_kanban
@@ -2085,7 +2073,7 @@ msgstr "Flux"
 #: model:ir.actions.act_window,name:crm.crm_activity_report_action
 #: model:ir.actions.act_window,name:crm.crm_activity_report_action_team
 msgid "Pipeline Activities"
-msgstr "Activitats del conducte"
+msgstr ""
 
 #. module: crm
 #: model:ir.actions.act_window,name:crm.action_report_crm_opportunity_salesteam
@@ -2534,8 +2522,6 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:crm.res_config_settings_view_form
 msgid "This can be used to compute statistical probability to close a lead"
 msgstr ""
-"Això es pot utilitzar per calcular la probabilitat estadística per tancar un"
-" plom"
 
 #. module: crm
 #: model:ir.model.fields,help:crm.field_crm_lead__email_normalized
@@ -2863,7 +2849,7 @@ msgstr "Sí! Oferta dels últims 7 dies per a l'equip."
 #: code:addons/crm/models/crm_lead.py:0
 #, python-format
 msgid "You don't have the access needed to run this cron."
-msgstr "No teniu l'accés necessari per executar aquest cron."
+msgstr ""
 
 #. module: crm
 #: code:addons/crm/models/crm_lead.py:0

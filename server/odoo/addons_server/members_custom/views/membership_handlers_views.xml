@@ -237,9 +237,10 @@
         <field name="total_estimated"/>
         <field name="total_registered"/>
         <field name="accomplished" force_save="1"/>
+        <field name="approved_date"/>
         <field name="colors" invisible="1"/>
         <field name="state"/>
-        <button name="change_state" type="object" string="Approve" states="draft" class="oe_highlight" confirm="Are you sure you want to approve annual plan?"/>
+        <button name="change_state" type="object" string="Approve" states="draft" class="oe_highlight" confirm="Are you sure you want to approve annual plan?" groups="members_custom.member_group_city_admin"/>
       </tree>
     </field>
   </record>
@@ -252,12 +253,12 @@
       <form duplicate="false">
         <sheet>
           <h1>
-            <field name="name" attrs="{'readonly': [('state', '=', 'approved')]}"/>
+            <field name="name" placeholder="Eg. Addis Ababa 2015 Annual Plan"/>
           </h1>
           <group>
             <group>
               <field name="state" invisible="1"/>
-              <field name="fiscal_year" attrs="{'readonly': [('state', '=', 'approved')]}" options="{'no_create': True, 'no_create_edit': True}"/>
+              <field name="fiscal_year" attrs="{'readonly': [('state', '=', 'approved')]}" options="{'no_create': True, 'no_create_edit': True}" force_save="1"/>
               <field name="type_of_member" attrs="{'readonly': [('state', '=', 'approved')]}"/>
               <field name="male" attrs="{'readonly': [('state', '=', 'approved')]}"/>
               <field name="female" attrs="{'readonly': [('state', '=', 'approved')]}"/>
@@ -265,11 +266,11 @@
             </group>
             <group>
               <field name="city_id"/>
-              <field name="registered_male" force_save="1"/>
-              <field name="registered_female" force_save="1"/>
-              <field name="total_registered" force_save="1"/>
-              <field name="accomplished" force_save="1"/>
-              <field name="approved_date"/>
+              <field name="registered_male" force_save="1" readonly="1"/>
+              <field name="registered_female" force_save="1" readonly="1"/>
+              <field name="total_registered" force_save="1" readonly="1"/>
+              <field name="accomplished" force_save="1" readonly="1"/>
+              <field name="approved_date" readonly="1"/>
               <field name="x_css" force_save="1" nolabel="1" invisible="1"/>
             </group>
           </group>
@@ -280,12 +281,11 @@
                   <field name="field_for_candidate_supporter" attrs="{'column_invisible': [('parent.type_of_member', 'not in', ['supporter', 'candidate'])], 'column_required': [('parent.type_of_member', 'in', ['supporter', 'candidate'])]}"/>
                   <field name="field_for_member" attrs="{'column_invisible': [('parent.type_of_member', 'not in', ['leader', 'member'])], 'column_required': [('parent.type_of_member', 'in', ['leader', 'member'])]}"/>
                   <field name="field_for_league" attrs="{'column_invisible': [('parent.type_of_member', 'not in', ['league'])], 'column_required': [('parent.type_of_member', 'in', ['league'])]}"/>
-                  <field name="ethnic_group" attrs="{'invisible': ['&amp;', '&amp;', ('field_for_league', '!=', 'ethnic'), ('field_for_member', '!=', 'ethnic'), ('field_for_candidate_supporter', '!=', 'ethnic')],'required': ['|', '|', ('field_for_league', '=', 'ethnic'), ('field_for_member', '=', 'ethnic'), ('field_for_candidate_supporter', '=', 'ethnic')]}"/>
-                  <field name="education_level" attrs="{'invisible': ['&amp;', '&amp;', ('field_for_league', '!=', 'education'), ('field_for_member', '!=', 'education'), ('field_for_candidate_supporter', '!=', 'education')], 'required': ['|', '|', ('field_for_league', '=', 'education'), ('field_for_member', '=', 'education'), ('field_for_candidate_supporter', '=', 'education')]}"/>
-                  <field name="field_of_study_id" attrs="{'invisible': ['&amp;', '&amp;', ('field_for_league', '!=', 'study field'), ('field_for_member', '!=', 'study field'), ('field_for_candidate_supporter', '!=', 'study field')], 'required': ['|', '|', ('field_for_league', '=', 'study field'), ('field_for_member', '=', 'study field'), ('field_for_candidate_supporter', '=', 'study field')]}"/>
-                  <field name="membership_org" attrs="{'invisible': [('field_for_member', '!=', 'membership organization')], 'column_invisible': [('parent.type_of_member', 'not in', ['leader', 'member'])], 'required': [('field_for_member', '=', 'membership organization')]}"/>
-                  <field name="league_type" attrs="{'invisible': [('field_for_league', '!=', 'league type')], 'column_invisible': [('parent.type_of_member', 'not in', ['league'])], 'required': [('field_for_league', '=', 'league type')]}"/>
-                  <field name="league_org" attrs="{'invisible': [('field_for_league', '!=', 'league org')], 'column_invisible': [('parent.type_of_member', 'not in', ['league'])], 'required': [('field_for_league', '=', 'league org')]}"/>
+                  <field name="education_level" options="{'no_create': True, 'no_create_edit': True}" attrs="{'invisible': ['&amp;', '&amp;', ('field_for_league', '!=', 'education'), ('field_for_member', '!=', 'education'), ('field_for_candidate_supporter', '!=', 'education')], 'required': ['|', '|', ('field_for_league', '=', 'education'), ('field_for_member', '=', 'education'), ('field_for_candidate_supporter', '=', 'education')]}"/>
+                  <field name="field_of_study_id" options="{'no_create': True, 'no_create_edit': True}" attrs="{'invisible': ['&amp;', '&amp;', ('field_for_league', '!=', 'study field'), ('field_for_member', '!=', 'study field'), ('field_for_candidate_supporter', '!=', 'study field')], 'required': ['|', '|', ('field_for_league', '=', 'study field'), ('field_for_member', '=', 'study field'), ('field_for_candidate_supporter', '=', 'study field')]}"/>
+                  <field name="membership_org" options="{'no_create': True, 'no_create_edit': True}" attrs="{'invisible': [('field_for_member', '!=', 'membership organization')], 'column_invisible': [('parent.type_of_member', 'not in', ['leader', 'member'])], 'required': [('field_for_member', '=', 'membership organization')]}"/>
+                  <field name="league_type" options="{'no_create': True, 'no_create_edit': True}"  attrs="{'invisible': [('field_for_league', '!=', 'league type')], 'column_invisible': [('parent.type_of_member', 'not in', ['league'])], 'required': [('field_for_league', '=', 'league type')]}"/>
+                  <field name="league_organization" attrs="{'invisible': [('field_for_league', '!=', 'league org')], 'column_invisible': [('parent.type_of_member', 'not in', ['league'])], 'required': [('field_for_league', '=', 'league org')]}"/>
                   <field name="annual_plan_city_id" invisible="1"/>
                   <field name="total_estimated"/>
                   <field name="total_registered"/>
@@ -359,7 +359,7 @@
     <field name="model">annual.plans</field>
     <field name="arch" type="xml">
       <graph string="Annual Planning for City">
-        <field name="city_id"/>
+        <field name="type_of_member"/>
         <field name="total_registered" type="measure"/>
       </graph>
     </field>
@@ -458,10 +458,10 @@
         <sheet>
           <group>
             <group>
-              <field name="name"/>
+              <field name="name" placeholder="Eg. A.A.D.B.O"/>
             </group>
             <group>
-              <field name="system_admin"/>
+              <field name="system_admin" options="{'no_create': True, 'no_create_edit': True}" widget="many2many_tags"/>
             </group>
           </group>
           <notebook>
@@ -493,7 +493,7 @@
 
   <!-- This record will create a tree view for membership handlers parent -->
   <record id="membership_handlers_city_tree_view" model="ir.ui.view">
-    <field name="name">Membership City Wide Handlers</field>
+    <field name="name">City Configuration</field>
     <field name="model">membership.city.handlers</field>
     <field name="arch" type="xml">
       <tree>
@@ -505,7 +505,7 @@
 
   <!-- This record will create the form of the membership handler parent -->
   <record id="membership_handlers_city_form_view" model="ir.ui.view">
-    <field name="name">Membership City Wide Handlers Form</field>
+    <field name="name">City Configuration Form</field>
     <field name="model">membership.city.handlers</field>
     <field name="arch" type="xml">
       <form duplicate="false">
@@ -519,12 +519,16 @@
           </div>
           <group>
             <group>
-              <field name="name"/>
+              <field name="make_readonly" invisible="1"/>
+              <field name="subcities" invisible="1"/>
+              <field name="total" invisible="1"/>
+              <field name="name" placeholder="Eg. Addis Ababa"/>
               <field name="transfer_handler"/>
+             <field name="ict_manager" options="{'no_create': True, 'no_create_edit': True}"/>
             </group>
             <group>
-              <field name="city_manager" widget="many2many_tags" string="City Administrators"/>
-              <field name="complaint_handler"/>
+              <field name="city_manager" widget="many2many_tags" attrs="{'readonly': ['&amp;', ('subcities', '=', True), ('make_readonly', '=', True)]}" options="{'no_create': True, 'no_create_edit': True}" force_save="1"/>
+              <field name="complaint_handler" options="{'no_create': True, 'no_create_edit': True}"/>
               <field name="responsible_id" string="Responsible Body"/>
               <field name="bypass_plannig" string="Bypass Annual Plans"/>
               <br/>
@@ -554,7 +558,7 @@
 
   <!-- This record will hold the kanban view for city -->
   <record id="city_view_kanban" model="ir.ui.view">
-      <field name="name">city.view.kanban</field>
+      <field name="name">City Configuration</field>
       <field name="model">membership.city.handlers</field>
       <field name="arch" type="xml">
           <kanban class="o_kanban_mobile" create="0" sample="1">
@@ -591,10 +595,10 @@
 
  <!-- This record will create an action for the membership handlers parent -->
   <record id="membership_handler_city_action" model="ir.actions.act_window">
-    <field name="name">Membership City Wide Handlers</field>
+    <field name="name">City Configuration</field>
     <field name="res_model">membership.city.handlers</field>
     <field name="view_mode">tree,form,pivot,graph</field>
-    <field name="domain">['|', '|', ('city_manager', 'in', [uid]), ('transfer_handler', '=', uid), ('responsible_id.system_admin', '=', uid)]</field>
+    <field name="domain">['|', '|', ('city_manager', 'in', [uid]), ('transfer_handler', '=', uid), ('responsible_id.system_admin', 'in', [uid])]</field>
   </record>
 
 
@@ -833,9 +837,10 @@
         <field name="total_estimated"/>
         <field name="total_registered"/>
         <field name="accomplished" force_save="1"/>
+        <field name="approved_date"/>
         <field name="colors" invisible="1"/>
         <field name="state"/>
-        <button name="change_state" type="object" string="Approve" states="draft" class="oe_highlight" confirm="Are you sure you want to approve annual plan?"/>
+        <button name="change_state" type="object" string="Approve" states="draft" class="oe_highlight" confirm="Are you sure you want to approve annual plan?" groups="members_custom.member_group_city_admin"/>
       </tree>
     </field>
   </record>
@@ -848,13 +853,13 @@
       <form duplicate="false">
         <sheet>
           <h1>
-            <field name="name" attrs="{'readonly': [('state', '=', 'approved')]}"/>
+            <field name="name" placeholder="Eg. Bole 2015 Annual Plan"/>
           </h1>
           <group>
             <group>
               <field name="state" invisible="1"/>
               <field name="type_of_member" attrs="{'readonly': [('state', '=', 'approved')]}"/>
-              <field name="fiscal_year" attrs="{'readonly': [('state', '=', 'approved')]}" options="{'no_create': True, 'no_create_edit': True}"/>
+              <field name="fiscal_year" options="{'no_create': True, 'no_create_edit': True}" attrs="{'readonly': [('state', '=', 'approved')]}" force_save="1"/>
               <field name="male" attrs="{'readonly': [('state', '=', 'approved')]}"/>
               <field name="female" attrs="{'readonly': [('state', '=', 'approved')]}"/>
               <field name="total_estimated" force_save="1"/>
@@ -862,10 +867,10 @@
             <group>
               <field name="subcity_id"/>
               <field name="from_city_plan" force_save="1"/>
-              <field name="registered_male" force_save="1"/>
-              <field name="registered_female" force_save="1"/>
-              <field name="total_registered" force_save="1"/>
-              <field name="approved_date"/>
+              <field name="registered_male" force_save="1" readonly="1"/>
+              <field name="registered_female" force_save="1" readonly="1" />
+              <field name="total_registered" force_save="1" readonly="1" />
+              <field name="approved_date" force_save="1" readonly="1"/>
               <field name="x_css" force_save="1" nolabel="1" invisible="1"/>
             </group>
           </group>
@@ -876,12 +881,11 @@
                   <field name="field_for_candidate_supporter" attrs="{'column_invisible': [('parent.type_of_member', 'not in', ['supporter', 'candidate'])], 'column_required': [('parent.type_of_member', 'in', ['supporter', 'candidate'])]}"/>
                   <field name="field_for_member" attrs="{'column_invisible': [('parent.type_of_member', 'not in', ['leader', 'member'])], 'column_required': [('parent.type_of_member', 'in', ['leader', 'member'])]}"/>
                   <field name="field_for_league" attrs="{'column_invisible': [('parent.type_of_member', 'not in', ['league'])], 'column_required': [('parent.type_of_member', 'in', ['league'])]}"/>
-                  <field name="ethnic_group" attrs="{'invisible': ['&amp;', '&amp;', ('field_for_league', '!=', 'ethnic'), ('field_for_member', '!=', 'ethnic'), ('field_for_candidate_supporter', '!=', 'ethnic')],'required': ['|', '|', ('field_for_league', '=', 'ethnic'), ('field_for_member', '=', 'ethnic'), ('field_for_candidate_supporter', '=', 'ethnic')]}"/>
-                  <field name="education_level" attrs="{'invisible': ['&amp;', '&amp;', ('field_for_league', '!=', 'education'), ('field_for_member', '!=', 'education'), ('field_for_candidate_supporter', '!=', 'education')], 'required': ['|', '|', ('field_for_league', '=', 'education'), ('field_for_member', '=', 'education'), ('field_for_candidate_supporter', '=', 'education')]}"/>
-                  <field name="field_of_study_id" attrs="{'invisible': ['&amp;', '&amp;', ('field_for_league', '!=', 'study field'), ('field_for_member', '!=', 'study field'), ('field_for_candidate_supporter', '!=', 'study field')], 'required': ['|', '|', ('field_for_league', '=', 'study field'), ('field_for_member', '=', 'study field'), ('field_for_candidate_supporter', '=', 'study field')]}"/>
-                  <field name="membership_org" attrs="{'invisible': [('field_for_member', '!=', 'membership organization')], 'column_invisible': [('parent.type_of_member', 'not in', ['leader', 'member'])], 'required': [('field_for_member', '=', 'membership organization')]}"/>
+                  <field name="education_level" options="{'no_create': True, 'no_create_edit': True}" attrs="{'invisible': ['&amp;', '&amp;', ('field_for_league', '!=', 'education'), ('field_for_member', '!=', 'education'), ('field_for_candidate_supporter', '!=', 'education')], 'required': ['|', '|', ('field_for_league', '=', 'education'), ('field_for_member', '=', 'education'), ('field_for_candidate_supporter', '=', 'education')]}"/>
+                  <field name="field_of_study_id" options="{'no_create': True, 'no_create_edit': True}" attrs="{'invisible': ['&amp;', '&amp;', ('field_for_league', '!=', 'study field'), ('field_for_member', '!=', 'study field'), ('field_for_candidate_supporter', '!=', 'study field')], 'required': ['|', '|', ('field_for_league', '=', 'study field'), ('field_for_member', '=', 'study field'), ('field_for_candidate_supporter', '=', 'study field')]}"/>
+                  <field name="membership_org" options="{'no_create': True, 'no_create_edit': True}" attrs="{'invisible': [('field_for_member', '!=', 'membership organization')], 'column_invisible': [('parent.type_of_member', 'not in', ['leader', 'member'])], 'required': [('field_for_member', '=', 'membership organization')]}"/>
                   <field name="league_type" attrs="{'invisible': [('field_for_league', '!=', 'league type')], 'column_invisible': [('parent.type_of_member', 'not in', ['league'])], 'required': [('field_for_league', '=', 'league type')]}"/>
-                  <field name="league_org" attrs="{'invisible': [('field_for_league', '!=', 'league org')], 'column_invisible': [('parent.type_of_member', 'not in', ['league'])], 'required': [('field_for_league', '=', 'league org')]}"/>
+                  <field name="league_organization" options="{'no_create': True, 'no_create_edit': True}" attrs="{'invisible': [('field_for_league', '!=', 'league org')], 'column_invisible': [('parent.type_of_member', 'not in', ['league'])], 'required': [('field_for_league', '=', 'league org')]}"/>
                   <field name="annual_plan_subcity_id" invisible="1"/>
                   <field name="total_estimated"/>
                   <field name="total_registered"/>
@@ -944,12 +948,13 @@
   </record>
 
 
-<!---  <record id="annual_planning_sub_city_graph" model="ir.ui.view">
+  <!-- <record id="annual_planning_sub_city_graph" model="ir.ui.view">
     <field name="name">Annual Planning Subcity</field>
     <field name="model">annual.plans.subcity</field>
     <field name="arch" type="xml">
       <graph string="Annual Planning for Sub City">
         <field name="subcity_id"/>
+        <field name="type_of_member"/>
         <field name="total_registered" type="measure"/>
       </graph>
     </field>
@@ -1030,19 +1035,19 @@
 
   <!-- This record will create a tree view for membership handlers parent -->
   <record id="membership_handlers_parent_tree_view" model="ir.ui.view">
-    <field name="name">Membership Sub City Handlers</field>
+    <field name="name">Sub City Configuration</field>
     <field name="model">membership.handlers.parent</field>
     <field name="arch" type="xml">
       <tree>
         <field name="name" string="Subcity"/>
-        <field name="parent_manager" string="Subcity Manager"/>
+        <field name="parent_manager"/>
       </tree>
     </field>
   </record>
 
   <!-- This record will create the form of the membership handler parent -->
   <record id="membership_handlers_parent_form_view" model="ir.ui.view">
-    <field name="name">Membership Handlers Form</field>
+    <field name="name">Sub City Configuration Form</field>
     <field name="model">membership.handlers.parent</field>
     <field name="arch" type="xml">
       <form duplicate="false">
@@ -1056,13 +1061,18 @@
           </div>
           <group>
             <group>
-              <field name="name"/>
+              <field name="make_readonly" invisible="1"/>
+              <field name="weredas" invisible="1"/>
+              <field name="total" invisible="1"/>
+              <field name="name" placeholder="Eg. Bole"/>
               <field name="state" invisible="1"/>
+              <field name="unique_representation_code" string="Unique Representation Code"/>
+              <field name="ict_manager" options="{'no_create': True, 'no_create_edit': True}"/>
               <field name="is_special_subcity" string="Is Special City?"/>
             </group>
             <group>
-              <field name="parent_manager"/>
-              <field name="complaint_handler"/>
+              <field name="parent_manager" widget="many2many_tags" attrs="{'readonly': ['&amp;', ('weredas', '=', True), ('make_readonly', '=', True)]}" options="{'no_create': True, 'no_create_edit': True}" force_save="1"/>
+              <field name="complaint_handler" options="{'no_create': True, 'no_create_edit': True}"/>
               <field name="city_id"/>
               <field name="bypass_plannig" string="Bypass Annual Plans"/>
               <br/>
@@ -1093,7 +1103,7 @@
 
   <!-- This record will hold the kanban view for subcity -->
   <record id="subcity_view_kanban" model="ir.ui.view">
-      <field name="name">subcity.view.kanban</field>
+      <field name="name">Sub City Configuration</field>
       <field name="model">membership.handlers.parent</field>
       <field name="arch" type="xml">
           <kanban class="o_kanban_mobile" create="0" sample="1">
@@ -1132,10 +1142,10 @@
 
  <!-- This record will create an action for the membership handlers parent model -->
   <record id="membership_handler_parent_action" model="ir.actions.act_window">
-    <field name="name">Membership Sub City Handlers</field>
+    <field name="name">Sub City Configuration</field>
     <field name="res_model">membership.handlers.parent</field>
     <field name="view_mode">tree,form,pivot,graph</field>
-    <field name="domain">['|', '|', '|', ('parent_manager.id', '=', uid), ('city_id.city_manager', 'in', [uid]), ('city_id.transfer_handler', '=', uid), ('city_id.responsible_id.system_admin', '=', uid)]</field>
+    <field name="domain">['|', '|', '|', ('parent_manager.id', '=', uid), ('city_id.city_manager', 'in', [uid]), ('city_id.transfer_handler', '=', uid), ('city_id.responsible_id.system_admin', 'in', [uid])]</field>
   </record>
 
   <!-- This record will create tree view for annual history revision -->
@@ -1373,9 +1383,10 @@
         <field name="total_estimated"/>
         <field name="total_registered"/>
         <field name="accomplished" force_save="1"/>
+        <field name="approved_date"/>
         <field name="colors" invisible="1"/>
         <field name="state"/>
-        <button name="change_state" type="object" string="Approve" states="draft" class="oe_highlight" confirm="Are you sure you want to approve annual plan?"/>
+        <button name="change_state" type="object" string="Approve" states="draft" class="oe_highlight" confirm="Are you sure you want to approve annual plan?" groups="members_custom.member_group_admin"/>
       </tree>
     </field>
   </record>
@@ -1388,13 +1399,13 @@
       <form duplicate="false">
         <sheet>
           <h1>
-            <field name="name" attrs="{'readonly': [('state', '=', 'approved')]}"/>
+            <field name="name" placeholder="Eg. Bole Woreda 1 2015 Annual Plan"/>
           </h1>
           <group>
             <group>
               <field name="state" invisible="1"/>
               <field name="type_of_member" attrs="{'readonly': [('state', '=', 'approved')]}"/>
-              <field name="fiscal_year" attrs="{'readonly': [('state', '=', 'approved')]}" options="{'no_create': True, 'no_create_edit': True}"/>
+              <field name="fiscal_year"  options="{'no_create': True, 'no_create_edit': True}" attrs="{'readonly': [('state', '=', 'approved')]}" force_save="1"/>
               <field name="male" attrs="{'readonly': [('state', '=', 'approved')]}"/>
               <field name="female" attrs="{'readonly': [('state', '=', 'approved')]}"/>
               <field name="total_estimated" force_save="1"/>
@@ -1402,10 +1413,10 @@
             <group>
               <field name="wereda_id"/>
               <field name="from_subcity_plan" force_save="1"/>
-              <field name="registered_male" force_save="1"/>
-              <field name="registered_female" force_save="1"/>
-              <field name="total_registered" force_save="1"/>
-              <field name="approved_date"/>
+              <field name="registered_male" force_save="1" readonly="1"/>
+              <field name="registered_female" force_save="1" readonly="1"/>
+              <field name="total_registered" force_save="1" readonly="1"/>
+              <field name="approved_date" force_save="1" readonly="1"/>
               <field name="x_css" force_save="1" nolabel="1" invisible="1"/>
             </group>
           </group>
@@ -1416,12 +1427,11 @@
                   <field name="field_for_candidate_supporter" attrs="{'column_invisible': [('parent.type_of_member', 'not in', ['supporter', 'candidate'])], 'column_required': [('parent.type_of_member', 'in', ['supporter', 'candidate'])]}"/>
                   <field name="field_for_member" attrs="{'column_invisible': [('parent.type_of_member', 'not in', ['leader', 'member'])], 'column_required': [('parent.type_of_member', 'in', ['leader', 'member'])]}"/>
                   <field name="field_for_league" attrs="{'column_invisible': [('parent.type_of_member', 'not in', ['league'])], 'column_required': [('parent.type_of_member', 'in', ['league'])]}"/>
-                  <field name="ethnic_group" attrs="{'invisible': ['&amp;', '&amp;', ('field_for_league', '!=', 'ethnic'), ('field_for_member', '!=', 'ethnic'), ('field_for_candidate_supporter', '!=', 'ethnic')],'required': ['|', '|', ('field_for_league', '=', 'ethnic'), ('field_for_member', '=', 'ethnic'), ('field_for_candidate_supporter', '=', 'ethnic')]}"/>
-                  <field name="education_level" attrs="{'invisible': ['&amp;', '&amp;', ('field_for_league', '!=', 'education'), ('field_for_member', '!=', 'education'), ('field_for_candidate_supporter', '!=', 'education')], 'required': ['|', '|', ('field_for_league', '=', 'education'), ('field_for_member', '=', 'education'), ('field_for_candidate_supporter', '=', 'education')]}"/>
-                  <field name="field_of_study_id" attrs="{'invisible': ['&amp;', '&amp;', ('field_for_league', '!=', 'study field'), ('field_for_member', '!=', 'study field'), ('field_for_candidate_supporter', '!=', 'study field')], 'required': ['|', '|', ('field_for_league', '=', 'study field'), ('field_for_member', '=', 'study field'), ('field_for_candidate_supporter', '=', 'study field')]}"/>
-                  <field name="membership_org" attrs="{'invisible': [('field_for_member', '!=', 'membership organization')], 'column_invisible': [('parent.type_of_member', 'not in', ['leader', 'member'])], 'required': [('field_for_member', '=', 'membership organization')]}"/>
+                  <field name="education_level" options="{'no_create': True, 'no_create_edit': True}" attrs="{'invisible': ['&amp;', '&amp;', ('field_for_league', '!=', 'education'), ('field_for_member', '!=', 'education'), ('field_for_candidate_supporter', '!=', 'education')], 'required': ['|', '|', ('field_for_league', '=', 'education'), ('field_for_member', '=', 'education'), ('field_for_candidate_supporter', '=', 'education')]}"/>
+                  <field name="field_of_study_id" options="{'no_create': True, 'no_create_edit': True}" attrs="{'invisible': ['&amp;', '&amp;', ('field_for_league', '!=', 'study field'), ('field_for_member', '!=', 'study field'), ('field_for_candidate_supporter', '!=', 'study field')], 'required': ['|', '|', ('field_for_league', '=', 'study field'), ('field_for_member', '=', 'study field'), ('field_for_candidate_supporter', '=', 'study field')]}"/>
+                  <field name="membership_org" options="{'no_create': True, 'no_create_edit': True}" attrs="{'invisible': [('field_for_member', '!=', 'membership organization')], 'column_invisible': [('parent.type_of_member', 'not in', ['leader', 'member'])], 'required': [('field_for_member', '=', 'membership organization')]}"/>
                   <field name="league_type" attrs="{'invisible': [('field_for_league', '!=', 'league type')], 'column_invisible': [('parent.type_of_member', 'not in', ['league'])], 'required': [('field_for_league', '=', 'league type')]}"/>
-                  <field name="league_org" attrs="{'invisible': [('field_for_league', '!=', 'league org')], 'column_invisible': [('parent.type_of_member', 'not in', ['league'])], 'required': [('field_for_league', '=', 'league org')]}"/>
+                  <field name="league_organization" options="{'no_create': True, 'no_create_edit': True}" attrs="{'invisible': [('field_for_league', '!=', 'league org')], 'column_invisible': [('parent.type_of_member', 'not in', ['league'])], 'required': [('field_for_league', '=', 'league org')]}"/>
                   <field name="annual_plan_wereda_id" invisible="1"/>
                   <field name="total_estimated"/>
                   <field name="total_registered"/>
@@ -1490,6 +1500,7 @@
     <field name="arch" type="xml">
       <graph string="Annual Planning for Woreda">
         <field name="wereda_id"/>
+        <field name="type_of_member"/>
         <field name="total_registered" type="measure"/>
       </graph>
     </field>
@@ -1550,7 +1561,7 @@
       <tree create="false" edit="false" decoration-danger="colors == 'red'" decoration-warning="colors == 'orange'" decoration-info="colors == 'blue'" decoration-success="colors == 'green'">
         <field name="name" readonly="1"/>
         <field name="type_of_member" readonly="1"/>
-        <field name="fiscal_year" readonly="1"/>
+        <field name="fiscal_year"/>
         <field name="wereda_id" readonly="1"/>
         <field name="total_estimated" readonly="1"/>
         <field name="total_registered" readonly="1"/>
@@ -1573,12 +1584,12 @@
 
   <!-- This record will create a tree view for membership handlers branch -->
   <record id="membership_handlers_branch_tree_view" model="ir.ui.view">
-    <field name="name">Membership Woreda Handlers</field>
+    <field name="name">Woreda Configuration</field>
     <field name="model">membership.handlers.branch</field>
     <field name="arch" type="xml">
       <tree>
         <field name="name" string="Woreda"/>
-        <field name="branch_manager" string="Woreda Manager"/>
+        <field name="branch_manager"/>
         <field name="complaint_handler" string="Complaint Handler"/>
       </tree>
     </field>
@@ -1586,7 +1597,7 @@
 
   <!-- This record will create the form of the membership handler branch -->
   <record id="membership_handlers_branch_form_view" model="ir.ui.view">
-    <field name="name">Membership Woreda Handlers Form</field>
+    <field name="name">Woreda Configuration</field>
     <field name="model">membership.handlers.branch</field>
     <field name="arch" type="xml">
       <form duplicate="false">
@@ -1600,15 +1611,18 @@
           </div>
           <group>
             <group>
+              <field name="make_readonly" invisible="1"/>
               <field name="main_office" invisible="1"/>
               <field name="total" invisible="1"/>
-              <field name="parent_id" string="Subcity" attrs="{'readonly': [('main_office', '=', True)]}"/>
-              <field name="name" string="Woreda"/>
+              <field name="parent_id" string="Subcity" attrs="{'readonly': [('main_office', '=', True)]}" options="{'no_create': True, 'no_create_edit': True}"/>
+              <field name="name" string="Woreda" placeholder="Eg. Bole Woreda 1"/>
+              <field name="unique_representation_code" string="Unique Representation Code"/>
+              <field name="ict_manager" options="{'no_create': True, 'no_create_edit': True}"/>
               <field name="is_special_woreda"/>
             </group>
             <group>
-              <field name="branch_manager"/>
-              <field name="complaint_handler"/>
+              <field name="branch_manager" widget="many2many_tags" attrs="{'readonly': ['&amp;', ('main_office', '=', True), ('make_readonly', '=', True)]}" options="{'no_create': True, 'no_create_edit': True}" force_save="1"/>
+              <field name="complaint_handler" options="{'no_create': True, 'no_create_edit': True}"/>
               <field name="bypass_plannig" string="Bypass Annual Plans"/>
               <br/>
               <br/>
@@ -1621,12 +1635,12 @@
                 <tree>
                   <field name="name"/>
                   <field name="for_which_members" invisible="1"/>
-                  <field name="member_main_type_id" attrs="{'invisible': [('for_which_members', '=', 'league')]}"/>
-                  <field name="league_main_type_id" attrs="{'invisible': [('for_which_members', '=', 'member')]}"/> 
+                  <field name="member_main_type_id"/>
+                  <!-- <field name="league_main_type_id" attrs="{'invisible': [('for_which_members', '=', 'member')]}"/>  -->
                   <field name="subcity_id"/>
                   <field name="wereda_id"/>
                   <field name="total_cell"/>
-                  <field name="total_cell_league"/>
+                  <!-- <field name="total_cell_league"/> -->
                 </tree>
               </field>
             </page>
@@ -1643,7 +1657,7 @@
 
  <!-- This record will hold the kanban view for woreda -->
   <record id="woreda_view_kanban" model="ir.ui.view">
-      <field name="name">woreda.view.kanban</field>
+      <field name="name">Woreda Configuration</field>
       <field name="model">membership.handlers.branch</field>
       <field name="arch" type="xml">
           <kanban class="o_kanban_mobile" create="0" sample="1">
@@ -1683,24 +1697,24 @@
 
   <!-- This record will handle the search options for Branches -->
   <record id="barnches_view_search" model="ir.ui.view">
-    <field name="name">branch.view.search</field>
+    <field name="name">Woreda Configuration</field>
     <field name="model">membership.handlers.branch</field>
     <field name="arch" type="xml">
       <search string="Membership Handlers Woreda">
           <field name="name" string="Names" filter_domain="[('name', 'ilike', self)]"/>
           <separator/>
-            <filter name="parent_id" string="Subcity Head" context="{'group_by': 'parent_id'}"/>
+            <filter name="parent" string="Subcity" context="{'group_by': 'parent_id'}"/>
       </search>
     </field>
   </record>
 
   <!-- This record will create an action for the membership handlers branch model -->
   <record id="membership_handler_branch_action" model="ir.actions.act_window">
-    <field name="name">Membership Woreda Handlers</field>
+    <field name="name">Woreda Configuration</field>
     <field name="res_model">membership.handlers.branch</field>
     <field name="view_mode">tree,form,pivot,graph</field>
-    <field name="domain">['|', '|', '|', '|', ('branch_manager.id', '=', uid), ('parent_id.parent_manager.id', '=', uid), ('parent_id.city_id.city_manager', 'in', [uid]), ('parent_id.city_id.transfer_handler', '=', uid), ('parent_id.city_id.responsible_id.system_admin', '=', uid)]</field>
-    <field name="groups_id" eval="[(6,0,[ref('members_custom.member_group_admin')])]"/>
+    <field name="domain">['|', '|', '|', '|', ('branch_manager.id', '=', uid), ('parent_id.parent_manager.id', '=', uid), ('parent_id.city_id.city_manager', 'in', [uid]), ('parent_id.city_id.transfer_handler', '=', uid), ('parent_id.city_id.responsible_id.system_admin', 'in', [uid])]</field>
+    <field name="context">{'search_default_parent': 1}</field>
   </record>
 
 
@@ -1708,42 +1722,42 @@
   <menuitem name="Membership Handlers"
             id="membership_handlers_menu"
             parent="menu_marketing_config_association"
-            groups="members_custom.member_group_cell_manager,members_custom.member_group_assembler,members_custom.member_group_finance"
+            groups="members_custom.member_group_city_transfer_handler,members_custom.member_group_cell_manager,members_custom.member_group_assembler,members_custom.member_group_finance"
             sequence="1"/>
 
-  <menuitem name="Responsible Bodies"
+  <menuitem name="Responsible Bodies Configuration"
             id="responsible_body_menu"
-            parent="membership_handlers_menu"
+            parent="system_admin_menus"
             action="responsible_body_action"
             groups="members_custom.member_group_user_admin"
             sequence="1"/>
 
-  <menuitem name="City Membership Handlers"
+  <menuitem name="City Configuration"
             id="city_membership_handler_menu"
             parent="membership_handlers_menu"
             action="membership_handler_city_action"
-            groups="members_custom.member_group_city_admin"
-            sequence="2"/>
+            groups="members_custom.member_group_city_transfer_handler,members_custom.member_group_city_admin"
+            sequence="1"/>
 
-  <menuitem name="Sub City Membership Handlers"
+  <menuitem name="Sub City Configuration"
             id="subcity_membership_handler_menu"
             parent="membership_handlers_menu"
             action="membership_handler_parent_action"
-            groups="members_custom.member_group_admin"
-            sequence="3"/>
+            groups="members_custom.member_group_city_transfer_handler,members_custom.member_group_admin"
+            sequence="2"/>
 
-  <menuitem name="Woreda Membership Handlers"
+  <menuitem name="Woreda Configuration"
             id="woreda_membership_handler_menu"
             parent="membership_handlers_menu"
             action="membership_handler_branch_action"
-            groups="members_custom.member_group_manager"
-            sequence="4"/>
+            groups="members_custom.member_group_city_transfer_handler,members_custom.member_group_manager"
+            sequence="3"/>
 
   <menuitem id="annual_reporting"
             name="All Planning Reporting"
             parent="menu_report_membership"
             groups="members_custom.member_group_admin"
-            sequence="5"/>
+            sequence="7"/>
 
   <menuitem id="annual_city_reporting"
             name="Annual City Planning Reporting"

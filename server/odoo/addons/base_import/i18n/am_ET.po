@@ -1,0 +1,919 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* base_import
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20221005\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-22 08:57+0000\n"
+"PO-Revision-Date: 2023-05-22 08:57+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/js/import_action.js:0
+#, python-format
+msgid "%d records successfully imported..."
+msgstr "%d መዝገቦች በተሳካ ሁኔታ መጥተዋል..."
+
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/js/import_action.js:0
+#, python-format
+msgid "%d records tested..."
+msgstr "%d መዝገቦች ተፈትነዋል..."
+
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/js/import_action.js:0
+#, python-format
+msgid "%d records were successfully imported"
+msgstr "%d መዝገቦች በተሳካ ሁኔታ መጥተዋል።"
+
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/js/import_action.js:0
+#, python-format
+msgid "(%d more)"
+msgstr "(%d ተጨማሪ)"
+
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/js/import_action.js:0
+#, python-format
+msgid ""
+"A single column was found in the file, this often means the file separator "
+"is incorrect"
+msgstr ""
+"በፋይሉ ውስጥ አንድ ነጠላ አምድ ተገኝቷል፣ ይህ ማለት ብዙውን ጊዜ የፋይል መለያው የተሳሳተ ነው ማለት ነው"
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/js/import_action.js:0
+#, python-format
+msgid ""
+"An unknown issue occurred during import (possibly lost connection, data "
+"limit exceeded or memory limits exceeded). Please retry in case the issue is"
+" transient. If the issue still occurs, try to split the file rather than "
+"import it at once."
+msgstr ""
+"በማስመጣት ጊዜ ያልታወቀ ችግር ተከስቷል (ምናልባት የጠፋ ግንኙነት፣ የውሂብ ገደብ አልፏል ወይም የማህደረ ትውስታ ገደቦች አልፏል)።"
+"እባክዎ ችግሩ ጊዜያዊ ከሆነ እንደገና ይሞክሩ።"
+"ችግሩ አሁንም ከተከሰተ ፋይሉን በአንድ ጊዜ ከማስመጣት ይልቅ ለመከፋፈል ይሞክሩ።"
+#. module: base_import
+#: model:ir.model,name:base_import.model_base
+msgid "Base"
+msgstr "መሰረት"
+
+#. module: base_import
+#: model:ir.model,name:base_import.model_base_import_import
+msgid "Base Import"
+msgstr "ቤዝ ማስመጣት።"
+
+#. module: base_import
+#: model:ir.model,name:base_import.model_base_import_mapping
+msgid "Base Import Mapping"
+msgstr "የካርታ መሠረት ማስመጣት "
+
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/xml/base_import.xml:0
+#, python-format
+msgid "Batch limit"
+msgstr "ባች ገደብ"
+
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/js/import_action.js:0
+#, python-format
+msgid "Between rows %d and %d"
+msgstr "ረድፎች %d እና %d መካከል"
+
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/xml/base_import.xml:0
+#, python-format
+msgid "Cancel"
+msgstr "መሰረዝ"
+
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/xml/base_import.xml:0
+#, python-format
+msgid "Click 'Resume' to proceed with the import, resuming at line"
+msgstr "ማስመጣቱን ለመቀጠል 'ከቆመበት ቀጥል' ን ጠቅ ያድርጉ፣ በመስመር ላይ ከቆመበት ይቀጥላል"
+
+#. module: base_import
+#: code:addons/base_import/models/base_import.py:0
+#, python-format
+msgid "Column %s contains incorrect values (value: %s)"
+msgstr "አምድ %s የተሳሳቱ እሴቶችን ይዟል (እሴት፡ %s)"
+
+#. module: base_import
+#: code:addons/base_import/models/base_import.py:0
+#, python-format
+msgid "Column %s contains incorrect values. Error in line %d: %s"
+msgstr "አምድ %s የተሳሳቱ እሴቶችን ይዟል። በመስመር ላይ ስህተት %d: %s"
+
+#. module: base_import
+#: model:ir.model.fields,field_description:base_import.field_base_import_mapping__column_name
+msgid "Column Name"
+msgstr "የአምድ ስም"
+
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/js/import_action.js:0
+#: code:addons/base_import/static/src/js/import_action.js:0
+#, python-format
+msgid "Comma"
+msgstr "ነጠላ ሰረዝ"
+
+#. module: base_import
+#: code:addons/base_import/models/base_import.py:0
+#, python-format
+msgid ""
+"Could not retrieve URL: %(url)s [%(field_name)s: L%(line_number)d]: "
+"%(error)s"
+msgstr ""
+"URL: %(url)s [%(field_name)s: L%(line_number) d]: ሰርስሮ ማውጣት አልተቻለም"
+"%(ስህተት)s"
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/xml/base_import.xml:0
+#, python-format
+msgid "Create if doesn't exist"
+msgstr "ከሌለ ይፍጠሩ"
+
+#. module: base_import
+#: model:ir.model.fields,field_description:base_import.field_base_import_import__create_uid
+#: model:ir.model.fields,field_description:base_import.field_base_import_mapping__create_uid
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_char__create_uid
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_char_noreadonly__create_uid
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_char_readonly__create_uid
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_char_required__create_uid
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_char_states__create_uid
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_char_stillreadonly__create_uid
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_complex__create_uid
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_float__create_uid
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_m2o__create_uid
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_m2o_related__create_uid
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_m2o_required__create_uid
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_m2o_required_related__create_uid
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_o2m__create_uid
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_o2m_child__create_uid
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_preview__create_uid
+msgid "Created by"
+msgstr "የተፈጠረው በ"
+
+#. module: base_import
+#: model:ir.model.fields,field_description:base_import.field_base_import_import__create_date
+#: model:ir.model.fields,field_description:base_import.field_base_import_mapping__create_date
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_char__create_date
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_char_noreadonly__create_date
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_char_readonly__create_date
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_char_required__create_date
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_char_states__create_date
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_char_stillreadonly__create_date
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_complex__create_date
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_float__create_date
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_m2o__create_date
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_m2o_related__create_date
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_m2o_required__create_date
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_m2o_required_related__create_date
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_o2m__create_date
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_o2m_child__create_date
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_preview__create_date
+msgid "Created on"
+msgstr "የተፈጠረው"
+
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/xml/base_import.xml:0
+#, python-format
+msgid ""
+"Creates new records if they can't be found (instead of failing to import). "
+"Note that the value in the column will be used as the new record's 'name', "
+"and assumes this is sufficient to create the record."
+msgstr ""
+"ሊገኙ ካልቻሉ (ከማስመጣት አለመቻል ይልቅ) አዲስ መዝገቦችን ይፈጥራል."
+"በአምዱ ውስጥ ያለው እሴት እንደ አዲሱ መዝገብ 'ስም' ጥቅም ላይ ይውላል፣"
+" እና መዝገቡን ለመፍጠር ይህ በቂ ነው ብለው ያስቡ።"
+#. module: base_import
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_complex__currency_id
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_float__currency_id
+msgid "Currency"
+msgstr "ምንዛሪ"
+
+#. module: base_import
+#: code:addons/base_import/models/base_import.py:0
+#: code:addons/base_import/models/base_import.py:0
+#, python-format
+msgid "Database ID"
+msgstr "የውሂብ ጎታ መታወቂያ"
+
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/js/import_action.js:0
+#, python-format
+msgid "Date Format:"
+msgstr "የቀን ቅርጸት፡-"
+
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/js/import_action.js:0
+#, python-format
+msgid "Datetime Format:"
+msgstr "የቀን ጊዜ ቅርጸት፡-"
+
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/js/import_action.js:0
+#, python-format
+msgid "Decimal Separator:"
+msgstr "የአስርዮሽ መለያያ"
+
+#. module: base_import
+#: model:ir.model.fields,field_description:base_import.field_base_import_import__display_name
+#: model:ir.model.fields,field_description:base_import.field_base_import_mapping__display_name
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_char__display_name
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_char_noreadonly__display_name
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_char_readonly__display_name
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_char_required__display_name
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_char_states__display_name
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_char_stillreadonly__display_name
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_complex__display_name
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_float__display_name
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_m2o__display_name
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_m2o_related__display_name
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_m2o_required__display_name
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_m2o_required_related__display_name
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_o2m__display_name
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_o2m_child__display_name
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_preview__display_name
+msgid "Display Name"
+msgstr "መጠሪያው ስም"
+
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/js/import_action.js:0
+#, python-format
+msgid "Don't import"
+msgstr "አታስመጣ"
+
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/js/import_action.js:0
+#, python-format
+msgid "Dot"
+msgstr "ነጥብ"
+
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/xml/base_import.xml:0
+#, python-format
+msgid "Download"
+msgstr "አውርድ"
+
+#. module: base_import
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_complex__dt
+msgid "Dt"
+msgstr ""
+
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/xml/base_import.xml:0
+#, python-format
+msgid "Due to its large size, the file will be imported by batches."
+msgstr "በትልቅነቱ ምክንያት ፋይሉ በቡድን ነው የሚመጣው።"
+
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/js/import_action.js:0
+#, python-format
+msgid "Encoding:"
+msgstr "ኢንኮዲንግ፡"
+
+#. module: base_import
+#: code:addons/base_import/models/base_import.py:0
+#, python-format
+msgid "Error Parsing Date [%s:L%d]: %s"
+msgstr "የመተንተን ቀን [%s:L%d]: %s ስህተት"
+
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/js/import_action.js:0
+#, python-format
+msgid "Everything seems valid."
+msgstr "ሁሉም ነገር ትክክል ይመስላል።"
+
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/xml/base_import.xml:0
+#, python-format
+msgid "Excel files are recommended as fields formatting is automatic."
+msgstr "የመስኮች ቅርጸት አውቶማቲክ ስለሆነ የ Excel ፋይሎችን ይመከራል።"
+
+#. module: base_import
+#: code:addons/base_import/models/base_import.py:0
+#: code:addons/base_import/models/base_import.py:0
+#, python-format
+msgid "External ID"
+msgstr "የውጭ መታወቂያ"
+
+#. module: base_import
+#: model:ir.model.fields,field_description:base_import.field_base_import_mapping__field_name
+msgid "Field Name"
+msgstr "የመስክ ስም"
+
+#. module: base_import
+#: model:ir.model.fields,field_description:base_import.field_base_import_import__file
+msgid "File"
+msgstr "መዝገብ"
+
+#. module: base_import
+#: model:ir.model.fields,field_description:base_import.field_base_import_import__file_name
+msgid "File Name"
+msgstr "የመዝገብ ስም"
+
+#. module: base_import
+#: model:ir.model.fields,field_description:base_import.field_base_import_import__file_type
+msgid "File Type"
+msgstr "የመዝገብ አይነት"
+
+#. module: base_import
+#: code:addons/base_import/models/base_import.py:0
+#: code:addons/base_import/models/base_import.py:0
+#, python-format
+msgid "File size exceeds configured maximum (%s bytes)"
+msgstr "የፋይል መጠን ከተዋቀረው ከፍተኛ (%s ባይት) ይበልጣል"
+
+#. module: base_import
+#: model:ir.model.fields,help:base_import.field_base_import_import__file
+msgid "File to check and/or import, raw binary (not base64)"
+msgstr "ለመፈተሽ እና/ወይም ለማስመጣት ፋይል፣ ጥሬ ሁለትዮሽ (base64 አይደለም)"
+
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/xml/base_import.xml:0
+#, python-format
+msgid "For CSV files, you may need to select the correct separator."
+msgstr "ለCSV ፋይሎች ትክክለኛውን መለያ መምረጥ ያስፈልግህ ይሆናል።"
+
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/xml/base_import.xml:0
+#, python-format
+msgid "Formatting Options…"
+msgstr "የቅርጸት አማራጮች…"
+
+#. module: base_import
+#: code:addons/base_import/models/base_import.py:0
+#, python-format
+msgid ""
+"Found invalid image data, images should be imported as either URLs or "
+"base64-encoded data."
+msgstr ""
+"ልክ ያልሆነ የምስል ውሂብ ሲገኝ ምስሎች እንደ ዩአርኤሎች "
+"ወይም ቤዝ64-የተመሰጠረ ውሂብ መግባት አለባቸው።"
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/xml/base_import.xml:0
+#, python-format
+msgid "Here is the start of the file we could not import:"
+msgstr "ማስመጣት ያልቻልነው የፋይሉ መጀመሪያ ይህ ነው።"
+
+#. module: base_import
+#: model:ir.model.fields,field_description:base_import.field_base_import_import__id
+#: model:ir.model.fields,field_description:base_import.field_base_import_mapping__id
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_char__id
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_char_noreadonly__id
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_char_readonly__id
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_char_required__id
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_char_states__id
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_char_stillreadonly__id
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_complex__id
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_float__id
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_m2o__id
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_m2o_related__id
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_m2o_required__id
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_m2o_required_related__id
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_o2m__id
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_o2m_child__id
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_preview__id
+msgid "ID"
+msgstr "መታወቂያ"
+
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/xml/base_import.xml:0
+#, python-format
+msgid ""
+"If the file contains\n"
+"                the column names, Odoo can try auto-detecting the\n"
+"                field corresponding to the column. This makes imports\n"
+"                simpler especially when the file has many columns."
+msgstr ""
+"ፋይሉ ከያዘ\n"
+"                የአምዱ ስሞች፣ ኦዱ በራስ-ሰር ለማግኘት መሞከር ይችላል\n"
+"                ከአምድ ጋር የሚዛመድ መስክ። ይህ ማስመጣትን ያደርጋል\n"
+"                ቀላል በተለይ ፋይሉ ብዙ ዓምዶች ሲኖሩት።"
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/xml/base_import.xml:0
+#, python-format
+msgid ""
+"If the model uses openchatter, history tracking will set up subscriptions "
+"and send notifications during the import, but lead to a slower import."
+msgstr ""
+"ሞዴሉ ክፍት ውይይት የሚጠቀም ከሆነ፣ የታሪክ ክትትል ምዝገባዎችን ያዘጋጃል እና በማስመጣት ጊዜ"
+" ማሳወቂያዎችን ይልካል፣ ነገር ግን ወደ ቀርፋፋ ማስመጣት ይመራል።"
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/xml/base_import.xml:0
+#: code:addons/base_import/static/src/xml/base_import.xml:0
+#, python-format
+msgid "Import"
+msgstr "አስገባ"
+
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/xml/base_import.xml:0
+#, python-format
+msgid "Import FAQ"
+msgstr "የሚጠየቁ ጥያቄዎች አስገባ"
+
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/js/import_action.js:0
+#, python-format
+msgid "Import a File"
+msgstr "ፋይል አስገባ"
+
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/js/import_action.js:0
+#, python-format
+msgid "Import completed"
+msgstr "ማስመጣት ተጠናቅቋል"
+
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/xml/base_import.xml:0
+#, python-format
+msgid "Import preview failed due to:"
+msgstr "Import preview failed due to:"
+
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/js/import_action.js:0
+#, python-format
+msgid ""
+"Import timed out. Please retry. If you still encounter this issue, the file "
+"may be too big for the system's configuration, try to split it (import less "
+"records per file)."
+msgstr ""
+"ማስመጣት ጊዜው አልፎበታል። እባክዎን እንደገና ይሞክሩ። አሁንም ይህ ችግር ካጋጠመዎት ፋይሉ"
+" ለስርዓቱ ውቅር በጣም ትልቅ ሊሆን ይችላል፣ ለመከፋፈል ይሞክሩ (በአንድ ፋይል ያነሱ መዝገቦችን ያስመጡ)።"
+#. module: base_import
+#: code:addons/base_import/models/base_import.py:0
+#, python-format
+msgid "Invalid cell value at row %(row)s, column %(col)s: %(cell_value)s"
+msgstr "ልክ ያልሆነ የሕዋስ ዋጋ በረድፍ %(ረድፍ) s ፣ አምድ %(col)s: %(cell_value)s"
+
+#. module: base_import
+#: model:ir.model.fields,field_description:base_import.field_base_import_import____last_update
+#: model:ir.model.fields,field_description:base_import.field_base_import_mapping____last_update
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_char____last_update
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_char_noreadonly____last_update
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_char_readonly____last_update
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_char_required____last_update
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_char_states____last_update
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_char_stillreadonly____last_update
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_complex____last_update
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_float____last_update
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_m2o____last_update
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_m2o_related____last_update
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_m2o_required____last_update
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_m2o_required_related____last_update
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_o2m____last_update
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_o2m_child____last_update
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_preview____last_update
+msgid "Last Modified on"
+msgstr "መጨረሻ የተሻሻለው በ"
+
+#. module: base_import
+#: model:ir.model.fields,field_description:base_import.field_base_import_import__write_uid
+#: model:ir.model.fields,field_description:base_import.field_base_import_mapping__write_uid
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_char__write_uid
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_char_noreadonly__write_uid
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_char_readonly__write_uid
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_char_required__write_uid
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_char_states__write_uid
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_char_stillreadonly__write_uid
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_complex__write_uid
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_float__write_uid
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_m2o__write_uid
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_m2o_related__write_uid
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_m2o_required__write_uid
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_m2o_required_related__write_uid
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_o2m__write_uid
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_o2m_child__write_uid
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_preview__write_uid
+msgid "Last Updated by"
+msgstr "መጨረሻ የዘመነው በ"
+
+#. module: base_import
+#: model:ir.model.fields,field_description:base_import.field_base_import_import__write_date
+#: model:ir.model.fields,field_description:base_import.field_base_import_mapping__write_date
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_char__write_date
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_char_noreadonly__write_date
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_char_readonly__write_date
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_char_required__write_date
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_char_states__write_date
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_char_stillreadonly__write_date
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_complex__write_date
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_float__write_date
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_m2o__write_date
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_m2o_related__write_date
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_m2o_required__write_date
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_m2o_required_related__write_date
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_o2m__write_date
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_o2m_child__write_date
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_preview__write_date
+msgid "Last Updated on"
+msgstr "መጨረሻ የዘመነው በ"
+
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/xml/base_import.xml:0
+#, python-format
+msgid "Load File"
+msgstr "ፋይል ጫን"
+
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/js/import_action.js:0
+#, python-format
+msgid "Load New File"
+msgstr "አዲስ ፋይል ጫን"
+
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/xml/base_import.xml:0
+#, python-format
+msgid "Map your columns to import"
+msgstr "ለማስመጣት ዓምዶችህን ካርታ አድርግ"
+
+#. module: base_import
+#: model:ir.model.fields,field_description:base_import.field_base_import_import__res_model
+msgid "Model"
+msgstr "ሞዴል"
+
+#. module: base_import
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_o2m__name
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_preview__name
+msgid "Name"
+msgstr "ስም"
+
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/xml/base_import.xml:0
+#, python-format
+msgid "Need Help?"
+msgstr "እርዳታ ያስፈልጋል?"
+
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/js/import_action.js:0
+#, python-format
+msgid "No Separator"
+msgstr "መለያየት የለም።"
+
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/js/import_action.js:0
+#, python-format
+msgid "Normal Fields"
+msgstr "Normal Fields"
+
+#. module: base_import
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_preview__othervalue
+msgid "Other Variable"
+msgstr "ሌላ ተለዋዋጭ"
+
+#. module: base_import
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_o2m_child__parent_id
+msgid "Parent"
+msgstr "ወላጅ"
+
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/js/import_action.js:0
+#, python-format
+msgid "Relation Fields"
+msgstr "የግንኙነት መስኮች"
+
+#. module: base_import
+#: model:ir.model.fields,field_description:base_import.field_base_import_mapping__res_model
+msgid "Res Model"
+msgstr "Res ሞዴል"
+
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/xml/base_import.xml:0
+#, python-format
+msgid "Resume"
+msgstr "Resume"
+
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/js/import_action.js:0
+#, python-format
+msgid "Row %d%s"
+msgstr "Row %d%s"
+
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/js/import_action.js:0
+#: code:addons/base_import/static/src/js/import_action.js:0
+#, python-format
+msgid "See possible values"
+msgstr "ሊሆኑ የሚችሉ እሴቶችን ይመልከቱ"
+
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/xml/base_import.xml:0
+#, python-format
+msgid "Select a CSV or Excel file to import."
+msgstr "ለማስመጣት የCSV ወይም Excel ፋይል ይምረጡ።"
+
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/js/import_action.js:0
+#, python-format
+msgid "Semicolon"
+msgstr "ሴሚኮሎን"
+
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/js/import_action.js:0
+#, python-format
+msgid "Separator:"
+msgstr "መለያየት"
+
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/xml/base_import.xml:0
+#, python-format
+msgid "Show fields of relation fields (advanced)"
+msgstr "የግንኙነት መስኮችን አሳይ (የላቀ)"
+
+#. module: base_import
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_preview__somevalue
+msgid "Some Value"
+msgstr "የተወሰነ እሴት"
+
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/js/import_action.js:0
+#, python-format
+msgid "Space"
+msgstr "ክፍተት"
+
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/xml/base_import.xml:0
+#, python-format
+msgid "Start at line"
+msgstr "በመስመር ይጀምሩ"
+
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/js/import_action.js:0
+#, python-format
+msgid "Tab"
+msgstr "ትር"
+
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/xml/base_import.xml:0
+#, python-format
+msgid "Test"
+msgstr "ሙከራ"
+
+#. module: base_import
+#: model:ir.model,name:base_import.model_base_import_tests_models_preview
+msgid "Tests : Base Import Model Preview"
+msgstr "ሙከራዎች፡ ቤዝ የማስመጣት ሞዴል ቅድመ እይታ"
+
+#. module: base_import
+#: model:ir.model,name:base_import.model_base_import_tests_models_char
+msgid "Tests : Base Import Model, Character"
+msgstr "ሙከራዎች፡ ቤዝ የማስመጣት ሞዴል፣ ቁምፊ"
+
+#. module: base_import
+#: model:ir.model,name:base_import.model_base_import_tests_models_char_noreadonly
+msgid "Tests : Base Import Model, Character No readonly"
+msgstr "ሙከራዎች፡ ቤዝ የማስመጣት ሞዴል፣ ቁምፊ ተነባቢ ብቻ አይደለም።"
+
+#. module: base_import
+#: model:ir.model,name:base_import.model_base_import_tests_models_char_readonly
+msgid "Tests : Base Import Model, Character readonly"
+msgstr "ሙከራዎች፡ ቤዝ የማስመጣት ሞዴል፣ ካራክተር ተነባቢ ብቻ"
+
+#. module: base_import
+#: model:ir.model,name:base_import.model_base_import_tests_models_char_required
+msgid "Tests : Base Import Model, Character required"
+msgstr "ሙከራዎች፡ ቤዝ የማስመጣት ሞዴል፣ ቁምፊ ያስፈልጋል"
+
+#. module: base_import
+#: model:ir.model,name:base_import.model_base_import_tests_models_char_states
+msgid "Tests : Base Import Model, Character states"
+msgstr "ሙከራዎች፡ ቤዝ የማስመጣት ሞዴል፣ የገጸ-ባህሪይ ግዛቶች"
+
+#. module: base_import
+#: model:ir.model,name:base_import.model_base_import_tests_models_char_stillreadonly
+msgid "Tests : Base Import Model, Character still readonly"
+msgstr "ሙከራዎች፡ ቤዝ የማስመጣት ሞዴል፣ ቁምፊ አሁንም ተነባቢ ብቻ ነው።"
+
+#. module: base_import
+#: model:ir.model,name:base_import.model_base_import_tests_models_m2o
+msgid "Tests : Base Import Model, Many to One"
+msgstr "ሙከራዎች፡ ቤዝ የማስመጣት ሞዴል፣ ብዙ ወደ አንድ"
+
+#. module: base_import
+#: model:ir.model,name:base_import.model_base_import_tests_models_m2o_related
+msgid "Tests : Base Import Model, Many to One related"
+msgstr "ሙከራዎች፡ ቤዝ የማስመጣት ሞዴል፣ ብዙ ለአንድ ተዛማጅ"
+
+#. module: base_import
+#: model:ir.model,name:base_import.model_base_import_tests_models_m2o_required
+msgid "Tests : Base Import Model, Many to One required"
+msgstr "ሙከራዎች፡ ቤዝ የማስመጣት ሞዴል፣ ብዙ ለአንድ ያስፈልጋል"
+
+#. module: base_import
+#: model:ir.model,name:base_import.model_base_import_tests_models_m2o_required_related
+msgid "Tests : Base Import Model, Many to One required related"
+msgstr "ሙከራዎች፡ ቤዝ የማስመጣት ሞዴል፣ ብዙ ለአንድ የሚፈለግ ተዛማጅ"
+
+#. module: base_import
+#: model:ir.model,name:base_import.model_base_import_tests_models_o2m
+msgid "Tests : Base Import Model, One to Many"
+msgstr "ሙከራዎች፡ ቤዝ የማስመጣት ሞዴል፣ ከአንድ እስከ ብዙ"
+
+#. module: base_import
+#: model:ir.model,name:base_import.model_base_import_tests_models_o2m_child
+msgid "Tests : Base Import Model, One to Many child"
+msgstr "ሙከራዎች፡ ቤዝ የማስመጣት ሞዴል፣ ከአንድ እስከ ብዙ ልጆች"
+
+#. module: base_import
+#: model:ir.model,name:base_import.model_base_import_tests_models_complex
+msgid "Tests: Base Import Model Complex"
+msgstr "ሙከራዎች፡ ቤዝ የማስመጣት ሞዴል ኮምፕሌክስ"
+
+#. module: base_import
+#: model:ir.model,name:base_import.model_base_import_tests_models_float
+msgid "Tests: Base Import Model Float"
+msgstr "ሙከራዎች፡ ቤዝ የማስመጣት ሞዴል ተንሳፋፊ"
+
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/js/import_action.js:0
+#, python-format
+msgid "Text Delimiter:"
+msgstr "የጽሑፍ ገዳቢ፡"
+
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/xml/base_import.xml:0
+#, python-format
+msgid ""
+"The first row\n"
+"                         contains the label of the column"
+msgstr ""
+"የመጀመሪያው ረድፍ\n"
+"                       የአምዱ መለያ ይዟል"
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/js/import_action.js:0
+#, python-format
+msgid "This file has been successfully imported up to line %d."
+msgstr "ይህ ፋይል በተሳካ ሁኔታ እስከ መስመር %d ድረስ መጥቷል።"
+
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/js/import_action.js:0
+#, python-format
+msgid "Thousands Separator:"
+msgstr "በሺዎች የሚቆጠሩ መለያዎች;"
+
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/xml/base_import.xml:0
+#, python-format
+msgid "Track history during import"
+msgstr "በማስመጣት ጊዜ ታሪክን ይከታተሉ"
+
+#. module: base_import
+#: code:addons/base_import/models/base_import.py:0
+#, python-format
+msgid "Unable to load \"{extension}\" file: requires Python module \"{modname}\""
+msgstr "\"{ቅጥያ}\" ፋይልን መጫን አልተቻለም፡ የፓይዘን ሞጁሉን \"{modname}\" ይፈልጋል።"
+
+#. module: base_import
+#: code:addons/base_import/models/base_import.py:0
+#, python-format
+msgid ""
+"Unsupported file format \"{}\", import only supports CSV, ODS, XLS and XLSX"
+msgstr "የማይደገፍ የፋይል ቅርጸት \"{}\"፣ ማስመጣት የሚደግፈው CSV፣ ODS፣ XLS እና XLSX ብቻ ነው።"
+
+#. module: base_import
+#: model:ir.model,name:base_import.model_res_users
+msgid "Users"
+msgstr "ተጠቃሚዎች"
+
+#. module: base_import
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_char__value
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_char_noreadonly__value
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_char_readonly__value
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_char_required__value
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_char_states__value
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_char_stillreadonly__value
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_float__value
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_m2o__value
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_m2o_related__value
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_m2o_required__value
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_m2o_required_related__value
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_o2m__value
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_o2m_child__value
+msgid "Value"
+msgstr "ዋጋ"
+
+#. module: base_import
+#: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_float__value2
+msgid "Value2"
+msgstr "ዋጋ2"
+
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/xml/base_import.xml:0
+#, python-format
+msgid ""
+"Warning: ignores the labels line, empty lines and"
+"                             lines composed only of empty cells"
+msgstr ""
+"ማስጠንቀቂያ: የመለያዎች መስመርን, ባዶ መስመሮችን ችላ ይላል እና"
+" ባዶ ሕዋሳት ብቻ የተዋቀሩ መስመሮች"
+#. module: base_import
+#: code:addons/base_import/models/base_import.py:0
+#, python-format
+msgid ""
+"You can not import images via URL, check with your administrator or support "
+"for the reason."
+msgstr ""
+"ምስሎችን በዩአርኤል ማስመጣት፣ ከአስተዳዳሪዎ ጋር ማረጋገጥ ወይም ድጋፍ ማድረግ አይችሉም።"
+"በምክንያት."
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/xml/base_import.xml:0
+#, python-format
+msgid "You can test or reload your file before resuming the import."
+msgstr "ማስመጣቱን ከመቀጠልዎ በፊት ፋይልዎን መሞከር ወይም እንደገና መጫን ይችላሉ።"
+
+#. module: base_import
+#: code:addons/base_import/models/base_import.py:0
+#, python-format
+msgid "You must configure at least one field to import"
+msgstr "ለማስመጣት ቢያንስ አንድ መስክ ማዋቀር አለብዎት"
+
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/js/import_action.js:0
+#, python-format
+msgid "at %d different rows:"
+msgstr "በ%d የተለያዩ ረድፎች:"
+
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/js/import_action.js:0
+#, python-format
+msgid "at row %d%s"
+msgstr በረድፍ %d%s
+
+#. module: base_import
+#. openerp-web
+#: code:addons/base_import/static/src/js/import_action.js:0
+#, python-format
+msgid "between rows %d and %d"
+msgstr "ረድፎች %d እና %d መካከል"
+
+#. module: base_import
+#: code:addons/base_import/models/base_import.py:0
+#, python-format
+msgid "unknown error code %s"
+msgstr "ያልታወቀ የስህተት ኮድ %s"

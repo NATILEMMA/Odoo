@@ -10,10 +10,8 @@
 # Marek Pontus, 2020
 # Martin Aavastik <martin@avalah.ee>, 2020
 # Algo Kärp <algokarp@gmail.com>, 2020
+# Eneli Õigus <enelioigus@gmail.com>, 2020
 # Triine Aavik <triine@avalah.ee>, 2021
-# Eneli Õigus <enelioigus@gmail.com>, 2022
-# Anna, 2023
-# Jana Jaakson, 2023
 # 
 msgid ""
 msgstr ""
@@ -21,7 +19,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-07 07:13+0000\n"
 "PO-Revision-Date: 2019-08-26 09:15+0000\n"
-"Last-Translator: Jana Jaakson, 2023\n"
+"Last-Translator: Triine Aavik <triine@avalah.ee>, 2021\n"
 "Language-Team: Estonian (https://www.transifex.com/odoo/teams/41243/et/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -77,14 +75,14 @@ msgstr ""
 #. module: website_form
 #: model:ir.model.fields,field_description:website_form.field_ir_model__website_form_access
 msgid "Allowed to use in forms"
-msgstr "Lubatud kasutada vormides"
+msgstr ""
 
 #. module: website_form
 #. openerp-web
 #: code:addons/website_form/static/src/xml/website_form.xml:0
 #, python-format
 msgid "An error has occured, the form has not been sent."
-msgstr "Ilmnes viga, vormi ei saadetud."
+msgstr ""
 
 #. module: website_form
 #: model:ir.model.fields,help:website_form.field_ir_model_fields__website_form_blacklisted
@@ -94,7 +92,7 @@ msgstr ""
 #. module: website_form
 #: model:ir.model.fields,field_description:website_form.field_ir_model_fields__website_form_blacklisted
 msgid "Blacklisted in web forms"
-msgstr "Veebivormide mustas nimekirjas"
+msgstr ""
 
 #. module: website_form
 #. openerp-web
@@ -126,12 +124,12 @@ msgstr "Kuupäev"
 #. module: website_form
 #: model_terms:ir.ui.view,arch_db:website_form.snippet_options
 msgid "Date &amp; Time"
-msgstr "Kuupäev &amp; kellaaeg"
+msgstr ""
 
 #. module: website_form
 #: model_terms:ir.ui.view,arch_db:website_form.snippet_options
 msgid "Decimal Number"
-msgstr "Kümnendarv"
+msgstr ""
 
 #. module: website_form
 #. openerp-web
@@ -144,7 +142,7 @@ msgstr "E-post"
 #. module: website_form
 #: model_terms:ir.ui.view,arch_db:website_form.contactus_form
 msgid "Email To"
-msgstr "Saada e-mailile"
+msgstr ""
 
 #. module: website_form
 #: model:ir.model.fields,help:website_form.field_ir_model__website_form_access
@@ -189,12 +187,12 @@ msgstr "Varjatud"
 #. module: website_form
 #: model:ir.model.fields,field_description:website_form.field_ir_model__website_form_label
 msgid "Label for form action"
-msgstr "Vormi toimingu silt"
+msgstr ""
 
 #. module: website_form
 #: model_terms:ir.ui.view,arch_db:website_form.snippet_options
 msgid "Long Text"
-msgstr "Pikk tekst"
+msgstr ""
 
 #. module: website_form
 #: code:addons/website_form/controllers/main.py:0
@@ -217,7 +215,7 @@ msgstr ""
 #: code:addons/website_form/static/src/xml/website_form_editor.xml:0
 #, python-format
 msgid "No matching record !"
-msgstr "Vastavat kirjet pole!"
+msgstr ""
 
 #. module: website_form
 #: model_terms:ir.ui.view,arch_db:website_form.snippet_options
@@ -230,7 +228,7 @@ msgstr "Number"
 #: code:addons/website_form/static/src/js/website_form_editor.js:0
 #, python-format
 msgid "Option 1"
-msgstr "Valik 1"
+msgstr ""
 
 #. module: website_form
 #. openerp-web
@@ -238,7 +236,7 @@ msgstr "Valik 1"
 #: code:addons/website_form/static/src/js/website_form_editor.js:0
 #, python-format
 msgid "Option 2"
-msgstr "Valik 2"
+msgstr ""
 
 #. module: website_form
 #. openerp-web
@@ -246,13 +244,13 @@ msgstr "Valik 2"
 #: code:addons/website_form/static/src/js/website_form_editor.js:0
 #, python-format
 msgid "Option 3"
-msgstr "Valik 3"
+msgstr ""
 
 #. module: website_form
 #: code:addons/website_form/controllers/main.py:0
 #, python-format
 msgid "Other Information:"
-msgstr "Muu info:"
+msgstr ""
 
 #. module: website_form
 #. openerp-web
@@ -267,7 +265,7 @@ msgstr "Telefoninumber"
 #: code:addons/website_form/static/src/xml/website_form.xml:0
 #, python-format
 msgid "Please fill in the form correctly."
-msgstr "Palun täida kõik nõutud väljad."
+msgstr ""
 
 #. module: website_form
 #: model_terms:ir.ui.view,arch_db:website_form.snippet_options
@@ -279,7 +277,7 @@ msgstr "Ringidega valikud"
 #: code:addons/website_form/static/src/js/website_form_editor_registry.js:0
 #, python-format
 msgid "Recipient Email"
-msgstr "Saaja e-post"
+msgstr ""
 
 #. module: website_form
 #: model_terms:ir.ui.view,arch_db:website_form.snippet_options
@@ -309,8 +307,6 @@ msgstr "Saada"
 msgid ""
 "Specify the field which will contain meta and custom form fields datas."
 msgstr ""
-"Palun määrake väli, mis peaks sisaldama meta- ja kohandatud vormiväljade "
-"andmeid."
 
 #. module: website_form
 #. openerp-web
@@ -349,13 +345,13 @@ msgstr "Aitäh!"
 #: code:addons/website_form/static/src/xml/website_form.xml:0
 #, python-format
 msgid "The form has been sent successfully."
-msgstr "Vorm on edukalt saadetud."
+msgstr ""
 
 #. module: website_form
 #: code:addons/website_form/controllers/main.py:0
 #, python-format
 msgid "This message has been posted on your website!"
-msgstr "Sõnum on postitatud teie veebilehele!"
+msgstr ""
 
 #. module: website_form
 #: model_terms:ir.ui.view,arch_db:website_form.res_config_settings_view_form
@@ -365,7 +361,7 @@ msgstr ""
 #. module: website_form
 #: model:ir.model.fields,help:website_form.field_ir_model__website_form_key
 msgid "Used in FormBuilder Registry"
-msgstr "Kasutatakse FormBuilderi registris"
+msgstr ""
 
 #. module: website_form
 #: model_terms:ir.ui.view,arch_db:website_form.contactus_thanks_ir_ui_view
@@ -381,12 +377,12 @@ msgstr "Veebileht"
 #. module: website_form
 #: model:ir.model.fields,field_description:website_form.field_ir_model__website_form_key
 msgid "Website Form Key"
-msgstr "Veebilehe vormivõti"
+msgstr ""
 
 #. module: website_form
 #: model_terms:ir.ui.view,arch_db:website_form.ir_model_view
 msgid "Website Forms"
-msgstr "Veebisaidi vormid"
+msgstr ""
 
 #. module: website_form
 #: model:ir.model.fields,help:website_form.field_res_config_settings__website_form_enable_metadata
@@ -399,7 +395,7 @@ msgstr ""
 #: code:addons/website_form/static/src/js/website_form_editor.js:0
 #, python-format
 msgid "You can't duplicate a model field."
-msgstr "Mudelivälja ei saa dubleerida."
+msgstr ""
 
 #. module: website_form
 #. openerp-web
@@ -413,7 +409,7 @@ msgstr ""
 #: code:addons/website_form/static/src/js/website_form_editor.js:0
 #, python-format
 msgid "You can't remove a field that is required by the model itself."
-msgstr "Ei saa eemaldada välja, mida mudel nõuab. "
+msgstr ""
 
 #. module: website_form
 #. openerp-web

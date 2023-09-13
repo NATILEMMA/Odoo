@@ -40,7 +40,7 @@
         'security/security.xml',
         'views/salary_structure.xml',
         'views/salary_advance.xml',
-        'views/advance_config.xml'
+        # 'views/advance_config.xml'
     ],
     'demo': [],
     'images': ['static/description/banner.png'],

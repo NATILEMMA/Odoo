@@ -11,7 +11,6 @@
                 'search_default_group_by_state': 1
             }</field>
         </record>
-
         <record id="hr_hr_employee_view_form2" model="ir.ui.view">
             <field name="name">hr.hr.employee.view.form2</field>
             <field name="model">hr.employee</field>
@@ -158,9 +157,10 @@
                             <group>
                                 <group name="duration_group" string="Contract Terms">
                                     <field name="date_start"/>
-                                    <label for="date_end"/>
+                                    <field name="date_end" nolabel="1"/>
+                                    
                                     <div class="o_row">
-                                        <field name="date_end" nolabel="1"/>
+                                       
                                         <span class="text-muted">(If fixed-term contract)</span>
                                     </div>
                                     <field name="trial_date_end"/>

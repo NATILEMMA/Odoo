@@ -86,7 +86,7 @@
                         </div>
                         <group>
                             <group>
-                                <field name="mobile_phone" widget="phone"/>
+                                <field name="mobile_phone" domain="[('mobile_phone', '=', True)]" widget="phone"/>
                                 <field name="work_phone" widget="phone"/>
                                 <field name="work_email" widget="email"/>
                                 <field name="work_location"/>

@@ -1,0 +1,133 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* bus
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20221005\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-22 09:09+0000\n"
+"PO-Revision-Date: 2023-05-22 09:09+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: bus
+#: model:ir.model.constraint,message:bus.constraint_bus_presence_bus_user_presence_unique
+msgid "A user can only have one IM status."
+msgstr "ተጠቃሚ አንድ የIM ሁኔታ ብቻ ነው ሊኖረው የሚችለው።"
+
+#. module: bus
+#: model:ir.model,name:bus.model_ir_autovacuum
+msgid "Automatic Vacuum"
+msgstr "ራስ-ሰር ቫክዩም"
+
+#. module: bus
+#: model:ir.model.fields.selection,name:bus.selection__bus_presence__status__away
+msgid "Away"
+msgstr "ራቅ"
+
+#. module: bus
+#: model:ir.model.fields,field_description:bus.field_bus_bus__channel
+msgid "Channel"
+msgstr "ቻናል"
+
+#. module: bus
+#: model:ir.model,name:bus.model_bus_bus
+msgid "Communication Bus"
+msgstr "የመገናኛ አውቶቡስ"
+
+#. module: bus
+#: model:ir.model,name:bus.model_res_partner
+msgid "Contact"
+msgstr "እውቂያ(ኮንታክት)"
+
+#. module: bus
+#: model:ir.model.fields,field_description:bus.field_bus_bus__create_uid
+msgid "Created by"
+msgstr "የተፈጠረው"
+
+#. module: bus
+#: model:ir.model.fields,field_description:bus.field_bus_bus__create_date
+msgid "Created on"
+msgstr " የተፈጠረው በ"
+
+#. module: bus
+#: model:ir.model.fields,field_description:bus.field_bus_bus__display_name
+#: model:ir.model.fields,field_description:bus.field_bus_presence__display_name
+msgid "Display Name"
+msgstr "መጠሪያው ስም"
+
+#. module: bus
+#: model:ir.model.fields,field_description:bus.field_bus_bus__id
+#: model:ir.model.fields,field_description:bus.field_bus_presence__id
+msgid "ID"
+msgstr "መታወቂያ"
+
+#. module: bus
+#: model:ir.model.fields,field_description:bus.field_bus_presence__status
+#: model:ir.model.fields,field_description:bus.field_res_partner__im_status
+#: model:ir.model.fields,field_description:bus.field_res_users__im_status
+msgid "IM Status"
+msgstr "የIM ሁኔታ"
+
+#. module: bus
+#: model:ir.model.fields,field_description:bus.field_bus_bus____last_update
+#: model:ir.model.fields,field_description:bus.field_bus_presence____last_update
+msgid "Last Modified on"
+msgstr "መጨረሻ የተሻሻለው በ"
+
+#. module: bus
+#: model:ir.model.fields,field_description:bus.field_bus_presence__last_poll
+msgid "Last Poll"
+msgstr "የመጨረሻው የሕዝብ አስተያየት መስጫ"
+
+#. module: bus
+#: model:ir.model.fields,field_description:bus.field_bus_presence__last_presence
+msgid "Last Presence"
+msgstr "የመጨረሻ መገኘት"
+
+#. module: bus
+#: model:ir.model.fields,field_description:bus.field_bus_bus__write_uid
+msgid "Last Updated by"
+msgstr "መጨረሻ የዘመነው በ"
+
+#. module: bus
+#: model:ir.model.fields,field_description:bus.field_bus_bus__write_date
+msgid "Last Updated on"
+msgstr "መጨረሻ የዘመነው በ"
+
+#. module: bus
+#: model:ir.model.fields,field_description:bus.field_bus_bus__message
+msgid "Message"
+msgstr "መልእክት"
+
+#. module: bus
+#: model:ir.model.fields.selection,name:bus.selection__bus_presence__status__offline
+msgid "Offline"
+msgstr "ከመስመር ውጭ"
+
+#. module: bus
+#: model:ir.model.fields.selection,name:bus.selection__bus_presence__status__online
+msgid "Online"
+msgstr "በመስመር ላይ"
+
+#. module: bus
+#: model:ir.model,name:bus.model_bus_presence
+msgid "User Presence"
+msgstr "የተጠቃሚ መገኘት"
+
+#. module: bus
+#: model:ir.model,name:bus.model_res_users
+#: model:ir.model.fields,field_description:bus.field_bus_presence__user_id
+msgid "Users"
+msgstr "ተጠቃሚዎች"
+
+#. module: bus
+#: code:addons/bus/controllers/main.py:0
+#, python-format
+msgid "bus.Bus not available in test mode"
+msgstr "bus.አውቶቡስ በሙከራ ሁነታ አይገኝም"

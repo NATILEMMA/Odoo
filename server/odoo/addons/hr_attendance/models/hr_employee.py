@@ -18,7 +18,7 @@ class HrEmployeeBase(models.AbstractModel):
     attendance_state = fields.Selection(string="Attendance Status", compute='_compute_attendance_state', selection=[('checked_out', "Checked out"), ('checked_in', "Checked in")])
     hours_last_month = fields.Float(compute='_compute_hours_last_month')
     hours_today = fields.Float(compute='_compute_hours_today')
-    hours_last_month_display = fields.Char(compute='_compute_hours_last_month')
+    hours_last_month_display = fields.Char(compute='_compute_hours_last_month', translate=True)
 
     def _compute_presence_state(self):
         """

@@ -1,0 +1,126 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* snailmail_account
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20221005\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-22 12:01+0000\n"
+"PO-Revision-Date: 2023-05-22 12:01+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: snailmail_account
+#: code:addons/snailmail_account/wizard/account_invoice_send.py:0
+#, python-format
+msgid "%s of the selected invoice(s) had an invalid address and were not sent"
+msgstr "የተመረጡት ደረሰኞች %s ልክ ያልሆነ አድራሻ ነበራቸው እና አልተላኩም"
+
+#. module: snailmail_account
+#: model_terms:ir.ui.view,arch_db:snailmail_account.account_invoice_send_inherit_account_wizard_form
+msgid ""
+"<i class=\"fa fa-info-circle\" role=\"img\" aria-label=\"Warning\" title=\"Make sure you have enough Stamps on your account.\"/>\n"
+"                                )"
+msgstr ""
+"<i class=\"fa fa-info-circle\" role=\"img\" aria-label=\"ማስጠንቀቂያ\" title=\"በመለያህ ላይ በቂ ማህተሞች እንዳሉህ አረጋግጥ።\"/> \n"
+"                                )"
+
+#. module: snailmail_account
+#: model_terms:ir.ui.view,arch_db:snailmail_account.res_config_settings_view_form
+msgid ""
+"<span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-"
+"specific.\"/>"
+msgstr ""
+"<span class=\"fa fa-lg fa-building-o\" title=\"እዚህ የተቀመጡት እሴቶች ኩባንያ ናቸው-"
+"ልዩ።\"/>"
+
+#. module: snailmail_account
+#: model_terms:ir.ui.view,arch_db:snailmail_account.account_invoice_send_inherit_account_wizard_form
+msgid ""
+"<span class=\"text-danger\">\n"
+"                                            The customer address is not complete.\n"
+"                                        </span>"
+msgstr ""
+"<span class=\"text-danger\">\n"
+" የደንበኛ አድራሻ አልተጠናቀቀም።\n"
+"                                        </span>"
+
+#. module: snailmail_account
+#: model_terms:ir.ui.view,arch_db:snailmail_account.account_invoice_send_inherit_account_wizard_form
+msgid ""
+"<span class=\"text-danger\">\n"
+"                                        Some customer addresses are not complete.\n"
+"                                    </span>"
+msgstr ""
+"<span class=\"text-danger\">\n"
+" አንዳንድ የደንበኛ አድራሻዎች አልተሟሉም።\n"
+" </span>"
+
+#. module: snailmail_account
+#: model_terms:ir.ui.view,arch_db:snailmail_account.account_invoice_send_inherit_account_wizard_form
+msgid "<span> to: </span>"
+msgstr "<span> ወደ: </span>"
+
+#. module: snailmail_account
+#: model:ir.model,name:snailmail_account.model_account_invoice_send
+msgid "Account Invoice Send"
+msgstr "የአካውንት ደረሰኝ ላክ"
+
+#. module: snailmail_account
+#: model:ir.model.fields,help:snailmail_account.field_account_invoice_send__snailmail_is_letter
+msgid ""
+"Allows to send the document by Snailmail (coventional posting delivery "
+"service)"
+msgstr ""
+"ሰነዱን በSnail Mail ለመላክ ይፈቅዳል(ተለምዷዊ የመለጠፍ መላኪያ"
+"አገልግሎት)"
+
+#. module: snailmail_account
+#: model:ir.model,name:snailmail_account.model_res_company
+msgid "Companies"
+msgstr "ድርጅት"
+
+#. module: snailmail_account
+#: model:ir.model,name:snailmail_account.model_res_config_settings
+msgid "Config Settings"
+msgstr "የማስተካያዎች ማዋቀሪያ"
+
+#. module: snailmail_account
+#: code:addons/snailmail_account/wizard/account_invoice_send.py:0
+#: code:addons/snailmail_account/wizard/account_invoice_send.py:0
+#: model:ir.model.fields,field_description:snailmail_account.field_account_invoice_send__invalid_invoice_ids
+#, python-format
+msgid "Invalid Addresses"
+msgstr "ልክ ያልሆኑ አድራሻዎች"
+
+#. module: snailmail_account
+#: model:ir.model.fields,field_description:snailmail_account.field_account_invoice_send__invalid_addresses
+msgid "Invalid Addresses Count"
+msgstr "ልክ ያልሆኑ አድራሻዎች ብዛት"
+
+#. module: snailmail_account
+#: model:ir.model.fields,field_description:snailmail_account.field_account_invoice_send__partner_id
+msgid "Partner"
+msgstr "አጋር"
+
+#. module: snailmail_account
+#: model:ir.model.fields,field_description:snailmail_account.field_account_invoice_send__snailmail_is_letter
+#: model:ir.model.fields,field_description:snailmail_account.field_res_company__invoice_is_snailmail
+#: model:ir.model.fields,field_description:snailmail_account.field_res_config_settings__invoice_is_snailmail
+msgid "Send by Post"
+msgstr "በፖስታ ላክ"
+
+#. module: snailmail_account
+#: model:ir.model.fields,field_description:snailmail_account.field_account_invoice_send__snailmail_cost
+msgid "Stamp(s)"
+msgstr "ስታምፕ(ዎች)"
+
+#. module: snailmail_account
+#: model_terms:ir.ui.view,arch_db:snailmail_account.account_invoice_send_inherit_account_wizard_form
+msgid "invoices"
+msgstr "ደረሰኞች"

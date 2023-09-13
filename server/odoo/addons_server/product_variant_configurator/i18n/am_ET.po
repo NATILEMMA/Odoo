@@ -1,0 +1,294 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* product_variant_configurator
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-11 09:40+0000\n"
+"PO-Revision-Date: 2023-07-11 09:40+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: product_variant_configurator
+#: model_terms:ir.ui.view,arch_db:product_variant_configurator.product_attribute_view_form
+msgid ""
+"<strong>Info:</strong> You can now manage the variant creation from the "
+"Product Template level"
+msgstr "<strong>መረጃ፡</strong> አሁን ተለዋጭ ፈጠራውን ከእቃ አብነት ደረጃ ማስተዳደር ይችላሉ።"
+
+#. module: product_variant_configurator
+#: model:ir.model,name:product_variant_configurator.model_product_product
+#: model:ir.model,name:product_variant_configurator.model_product_template
+msgid "Adding is asset field"
+msgstr "መጨመር የንብረት መስክ ነው።"
+
+#. module: product_variant_configurator
+#: model:ir.model.fields,field_description:product_variant_configurator.field_product_configurator_attribute__attribute_id
+msgid "Attribute"
+msgstr "ባህሪ"
+
+#. module: product_variant_configurator
+#: model:ir.model.fields,field_description:product_variant_configurator.field_product_configurator_attribute__price_extra
+msgid "Attribute Price Extra"
+msgstr "የባህሪ ዋጋ ተጨማሪ"
+
+#. module: product_variant_configurator
+#: model:ir.model,name:product_variant_configurator.model_product_attribute_value
+msgid "Attribute Value"
+msgstr "የባህሪ እሴት"
+
+#. module: product_variant_configurator
+#: model:ir.model.fields,field_description:product_variant_configurator.field_product_configurator__can_create_product
+#: model:ir.model.fields,field_description:product_variant_configurator.field_product_product__can_create_product
+msgid "Can Create Product"
+msgstr "እቃ መፍጠር ይችላል።"
+
+#. module: product_variant_configurator
+#: code:addons/product_variant_configurator/models/product_category.py:0
+#: code:addons/product_variant_configurator/models/product_template.py:0
+#, python-format
+msgid "Change warning!"
+msgstr "ማስጠንቀቂያ ቀይር!"
+
+#. module: product_variant_configurator
+#: code:addons/product_variant_configurator/models/product_category.py:0
+#: code:addons//models/product_template.py:0
+#, python-format
+msgid "Changing this parameter may cause automatic variants creation"
+msgstr "ይህን ግቤት መቀየር አውቶማቲክ ተለዋጮች መፍጠርን ሊያስከትል ይችላል።"
+
+#. module: product_variant_configurator
+#: model:ir.model.fields,field_description:product_variant_configurator.field_product_configurator__create_product_variant
+#: model:ir.model.fields,field_description:product_variant_configurator.field_product_product__create_product_variant
+msgid "Create product now!"
+msgstr "አሁን እቃ ይፍጠሩ!"
+
+#. module: product_variant_configurator
+#: model:ir.model.fields,field_description:product_variant_configurator.field_product_configurator_attribute__create_uid
+msgid "Created by"
+msgstr "የተፈጠረ"
+
+#. module: product_variant_configurator
+#: model:ir.model.fields,field_description:product_variant_configurator.field_product_configurator_attribute__create_date
+msgid "Created on"
+msgstr " የተፈጠረው"
+
+#. module: product_variant_configurator
+#: model:ir.model.fields,field_description:product_variant_configurator.field_product_configurator__display_name
+#: model:ir.model.fields,field_description:product_variant_configurator.field_product_configurator_attribute__display_name
+msgid "Display Name"
+msgstr "መጠሪያው ስም"
+
+#. module: product_variant_configurator
+#: model:ir.model.fields.selection,name:product_variant_configurator.selection__product_template__no_create_variants__yes
+msgid "Don't create them automatically"
+msgstr "በራስ-ሰር አትፍጠሯቸው"
+
+#. module: product_variant_configurator
+#: model:ir.model.fields,field_description:product_variant_configurator.field_product_category__no_create_variants
+msgid "Don't create variants automatically"
+msgstr "ተለዋጮችን በራስ-ሰር አይፍጠሩ"
+
+#. module: product_variant_configurator
+#: model:ir.model.fields,field_description:product_variant_configurator.field_product_configurator__id
+#: model:ir.model.fields,field_description:product_variant_configurator.field_product_configurator_attribute__id
+msgid "ID"
+msgstr "መታወቂያ"
+
+#. module: product_variant_configurator
+#: model:ir.model.fields,field_description:product_variant_configurator.field_product_configurator____last_update
+#: model:ir.model.fields,field_description:product_variant_configurator.field_product_configurator_attribute____last_update
+msgid "Last Modified on"
+msgstr "መጨረሻ የተሻሻለው በ"
+
+#. module: product_variant_configurator
+#: model:ir.model.fields,field_description:product_variant_configurator.field_product_configurator_attribute__write_uid
+msgid "Last Updated by"
+msgstr "መጨረሻ የዘመነው በ"
+
+#. module: product_variant_configurator
+#: model:ir.model.fields,field_description:product_variant_configurator.field_product_configurator_attribute__write_date
+msgid "Last Updated on"
+msgstr "መጨረሻ የዘመነው በ"
+
+#. module: product_variant_configurator
+#: model:ir.model.fields,field_description:product_variant_configurator.field_product_configurator_attribute__owner_id
+msgid "Owner"
+msgstr "ባለቤት"
+
+#. module: product_variant_configurator
+#: model:ir.model.fields,field_description:product_variant_configurator.field_product_configurator_attribute__owner_model
+msgid "Owner Model"
+msgstr "የባለቤት ሞዴል"
+
+#. module: product_variant_configurator
+#: model:ir.model.fields,field_description:product_variant_configurator.field_product_configurator_attribute__possible_value_ids
+msgid "Possible Value"
+msgstr "ሊሆን የሚችል እሴት"
+
+#. module: product_variant_configurator
+#: model:ir.model.fields,field_description:product_variant_configurator.field_product_configurator__price_extra
+msgid "Price Extra"
+msgstr "ተጨማሪ ዋጋ"
+
+#. module: product_variant_configurator
+#: model:ir.model.fields,help:product_variant_configurator.field_product_configurator__price_extra
+msgid ""
+"Price Extra: Extra price for the variant with the currently selected "
+"attributes values on sale price. eg. 200 price extra, 1000 + 200 = 1200."
+msgstr ""
+"የዋጋ ተጨማሪ፡ ለልዩነቱ ተጨማሪ ዋጋ በሽያጭ ዋጋ ላይ በአሁኑ ጊዜ ከተመረጡት የባህሪይ እሴቶች ጋር። ለምሳሌ. 200 "
+"ተጨማሪ ዋጋ፣ 1000 + 200 = 1200።"
+
+#. module: product_variant_configurator
+#: model:ir.model.fields,help:product_variant_configurator.field_product_configurator_attribute__price_extra
+msgid ""
+"Price Extra: Extra price for the variant with this attribute value on sale "
+"price. eg. 200 price extra, 1000 + 200 = 1200."
+msgstr ""
+"የዋጋ ተጨማሪ፡ ለልዩ ልዩ ተጨማሪ ዋጋ ከዚህ የባህሪ ዋጋ በሽያጭ ዋጋ። ለምሳሌ. 200 ተጨማሪ ዋጋ፣ 1000 + 200 "
+"= 1200።"
+
+#. module: product_variant_configurator
+#: model:ir.model,name:product_variant_configurator.model_product_pricelist
+msgid "Pricelist"
+msgstr "የዋጋ ዝርዝር"
+
+#. module: product_variant_configurator
+#: model:ir.model,name:product_variant_configurator.model_product_category
+msgid "Product Category"
+msgstr "የእቃ ምድብ"
+
+#. module: product_variant_configurator
+#: model:ir.model,name:product_variant_configurator.model_product_configurator
+msgid "Product Configurator"
+msgstr "የእቃ አዋቅር"
+
+#. module: product_variant_configurator
+#: model:ir.model,name:product_variant_configurator.model_product_configurator_attribute
+msgid "Product Configurator Attribute"
+msgstr "የእቃ ውቅር ባህሪ"
+
+#. module: product_variant_configurator
+#: model:ir.model.fields,field_description:product_variant_configurator.field_product_configurator__product_tmpl_id
+#: model:ir.model.fields,field_description:product_variant_configurator.field_product_configurator_attribute__product_tmpl_id
+#: model:ir.model.fields,field_description:product_variant_configurator.field_product_product__product_tmpl_id
+#: model_terms:ir.ui.view,arch_db:product_variant_configurator.product_variants_view
+msgid "Product Template"
+msgstr "የእቃ አብነት"
+
+#. module: product_variant_configurator
+#: model:ir.model,name:product_variant_configurator.model_product_template_attribute_line
+msgid "Product Template Attribute Line"
+msgstr "የእቃ አብነት አይነታ መስመር"
+
+#. module: product_variant_configurator
+#: model:ir.model.fields,field_description:product_variant_configurator.field_product_configurator__product_id
+#: model:ir.model.fields,field_description:product_variant_configurator.field_product_product__product_id
+msgid "Product Variant"
+msgstr "የእቃ ተለዋጭ"
+
+#. module: product_variant_configurator
+#: model:ir.model.fields,field_description:product_variant_configurator.field_product_configurator__product_attribute_ids
+#: model:ir.model.fields,field_description:product_variant_configurator.field_product_product__product_attribute_ids
+msgid "Product attributes"
+msgstr "የእቃ ባህሪያት"
+
+#. module: product_variant_configurator
+#: code:addons/product_variant_configurator/models/product_configurator.py:0
+#, python-format
+msgid "Product not created!"
+msgstr "እቃ አልተፈጠረም!"
+
+#. module: product_variant_configurator
+#: model:ir.model.fields,field_description:product_variant_configurator.field_product_template_attribute_line__required
+msgid "Required"
+msgstr "ያስፈልጋል"
+
+#. module: product_variant_configurator
+#: model_terms:ir.ui.view,arch_db:product_variant_configurator.product_variants_view
+msgid "Select a template for a variant. Keep empty for a new full product."
+msgstr "ለተለዋጭ አብነት ይምረጡ። ለአዲስ ሙሉ እቃ ባዶ ያስቀምጡ።"
+
+#. module: product_variant_configurator
+#: model:ir.model.constraint,message:product_variant_configurator.constraint_product_template_attribute_line_product_attribute_uniq
+msgid "The attribute already exists for this product"
+msgstr "ባህሪው አስቀድሞ ለዚህ እቃ አለ።"
+
+#. module: product_variant_configurator
+#: code:addons/product_variant_configurator/models/product_product.py:0
+#, python-format
+msgid "There's another product with the same attributes."
+msgstr "ተመሳሳይ ባህሪ ያለው ሌላ እቃ አለ።"
+
+#. module: product_variant_configurator
+#: model:ir.model.fields,help:product_variant_configurator.field_product_category__no_create_variants
+msgid ""
+"This check disables the automatic creation of product variants for all the "
+"products of this category."
+msgstr "ይህ ቼክ ለሁሉም የዚህ ምድብ ምርቶች የእቃ ልዩነቶችን በራስ ሰር መፍጠርን ያሰናክላል።"
+
+#. module: product_variant_configurator
+#: model:ir.model.fields,help:product_variant_configurator.field_product_product__price_extra
+msgid "This is the sum of the extra price of all attributes"
+msgstr "ይህ የሁሉም ባህሪያት ተጨማሪ ዋጋ ድምር ነው።"
+
+#. module: product_variant_configurator
+#: model_terms:ir.ui.view,arch_db:product_variant_configurator.product_variants_view_2
+msgid "This product already exists."
+msgstr "ይህ እቃ አስቀድሞ አለ።"
+
+#. module: product_variant_configurator
+#: model:ir.model.fields,help:product_variant_configurator.field_product_product__no_create_variants
+#: model:ir.model.fields,help:product_variant_configurator.field_product_template__no_create_variants
+msgid ""
+"This selection defines if variants for all attribute combinations are going "
+"to be created automatically at saving time."
+msgstr "ይህ ምርጫ የሁሉም የባህሪ ውህዶች ተለዋጮች ጊዜን በመቆጠብ በራስ-ሰር የሚፈጠሩ ከሆነ ይገልፃል።"
+
+#. module: product_variant_configurator
+#: model:ir.model.fields.selection,name:product_variant_configurator.selection__product_template__no_create_variants__no
+msgid "Use Odoo's default variant management"
+msgstr "የኦዱ ነባሪ ተለዋጭ አስተዳደርን ተጠቀም"
+
+#. module: product_variant_configurator
+#: model:res.groups,name:product_variant_configurator.group_product_variant_extended_description
+msgid "Use extended description when having product attributes"
+msgstr "የእቃ ባህሪያት ሲኖርዎት የተራዘመ መግለጫ ይጠቀሙ"
+
+#. module: product_variant_configurator
+#: model:ir.model.fields.selection,name:product_variant_configurator.selection__product_template__no_create_variants__empty
+msgid "Use the category value"
+msgstr "የምድብ ዋጋን ተጠቀም"
+
+#. module: product_variant_configurator
+#: model:ir.model.fields,field_description:product_variant_configurator.field_product_configurator_attribute__value_id
+msgid "Value"
+msgstr "ዋጋ"
+
+#. module: product_variant_configurator
+#: model:ir.model.fields,field_description:product_variant_configurator.field_product_product__price_extra
+msgid "Variant Price Extra"
+msgstr "ተለዋጭ ዋጋ ተጨማሪ"
+
+#. module: product_variant_configurator
+#: model:ir.model.fields,field_description:product_variant_configurator.field_product_product__no_create_variants
+#: model:ir.model.fields,field_description:product_variant_configurator.field_product_template__no_create_variants
+msgid "Variant creation"
+msgstr "ተለዋጭ ፈጠራ"
+
+#. module: product_variant_configurator
+#: code:addons/product_variant_configurator/models/product_product.py:0
+#, python-format
+msgid ""
+"You have to fill the following attributes:\n"
+"%s"
+msgstr ""
+"የሚከተሉትን ባህሪያት መሙላት አለብህ፡\n"
+"%s"

@@ -55,6 +55,13 @@ access.assembly.body,access_assembly,model_assembly,members_custom.member_group_
 access.planning.based.on.field.body,access_planning_based_on_field,model_planning_based_on_field,members_custom.member_group_user_admin,1,1,1,1
 access.stock.stock.move.body,access_stock_move,stock.model_stock_move,members_custom.member_group_user_admin,1,0,0,0
 access.register.members.body,access_register_members,model_register_members,members_custom.member_group_user_admin,1,1,1,1
+access.res.users.role.line.body,access_res_users_role_line,base_user_role.model_res_users_role_line,members_custom.member_group_user_admin,1,0,0,0
+access.leaders.sub.responsibility.body,access_leaders_sub_responsibility,model_leaders_sub_responsibility,members_custom.member_group_user_admin,1,1,1,1
+access_product.product.body,access_product_product,product.model_product_product,members_custom.member_group_user_admin,1,1,1,0
+access.age.range.body,access_age_range,model_age_range,members_custom.member_group_user_admin,1,1,1,1
+access.importation.module.body,access_importation_module,model_importation_module,members_custom.member_group_user_admin,1,1,1,1
+access.member.sub.responsibility.body,access_member_sub_responsibility,model_member_sub_responsibility,members_custom.member_group_user_admin,1,1,1,1
+
 
 access.responsible.bodies.city.admin,access_responsible_bodies,model_responsible_bodies,members_custom.member_group_city_admin,1,0,0,0
 access.members.transfer.city.admin,access_members_transfer,model_members_transfer,members_custom.member_group_city_admin,1,1,1,1
@@ -111,6 +118,13 @@ access.assembly.city.admin,access_assembly,model_assembly,members_custom.member_
 access.planning.based.on.field.city.admin,access_planning_based_on_field,model_planning_based_on_field,members_custom.member_group_city_admin,1,1,1,1
 access.stock.stock.move.city.admin,access_stock_move,stock.model_stock_move,members_custom.member_group_city_admin,1,0,0,0
 access.register.members.city.admin,access_register_members,model_register_members,members_custom.member_group_city_admin,1,1,1,1
+access.res.users.role.line.city.admin,access_res_users_role_line,base_user_role.model_res_users_role_line,members_custom.member_group_city_admin,1,0,0,0
+access.leaders.sub.responsibility.city.admin,access_leaders_sub_responsibility,model_leaders_sub_responsibility,members_custom.member_group_city_admin,1,1,1,1
+access_product.product.city.admin,access_product_product,product.model_product_product,members_custom.member_group_city_admin,1,1,1,0
+access.age.range.city.admin,access_age_range,model_age_range,members_custom.member_group_city_admin,1,0,0,0
+access.member.sub.responsibility.city.admin,access_member_sub_responsibility,model_member_sub_responsibility,members_custom.member_group_city_admin,1,1,1,0
+
+
 
 access.responsible.bodies.transfer,access_responsible_bodies,model_responsible_bodies,members_custom.member_group_city_transfer_handler,1,0,0,0
 access.members.transfer.city.transfer,access_members_transfer,model_members_transfer,members_custom.member_group_city_transfer_handler,1,1,0,0
@@ -121,7 +135,7 @@ access.interpersonal.skills.transfer,access_interpersonal_skills,model_interpers
 access.work.experience.transfer,access_work_experience,model_work_experience,members_custom.member_group_city_transfer_handler,1,0,0,0
 access.attachment.type.transfer,access_attachment_type,model_attachment_type,members_custom.member_group_city_transfer_handler,1,0,0,0
 access.payment.fee.configuration.transfer,access_payment_fee_configuration,model_payment_fee_configuration,members_custom.member_group_city_transfer_handler,1,0,0,0
-access.res.users.all.transfer,access_res_users_all,base.model_res_users,members_custom.member_group_city_transfer_handler,1,1,1,0
+access.res.users.all.transfer,access_res_users_all,base.model_res_users,members_custom.member_group_city_transfer_handler,1,0,0,0
 access.res.edlevel.transfer,access_res_edlevel,model_res_edlevel,members_custom.member_group_city_transfer_handler,1,0,0,0
 access_field_study.transfer,access_field_study,model_field_study,members_custom.member_group_city_transfer_handler,1,0,0,0
 access.member.complaint.transfer,access_member_complaint,model_member_complaint,members_custom.member_group_city_transfer_handler,1,0,0,0
@@ -167,6 +181,11 @@ access.assembly.transfer,access_assembly,model_assembly,members_custom.member_gr
 access.planning.based.on.field.transfer,access_planning_based_on_field,model_planning_based_on_field,members_custom.member_group_city_transfer_handler,1,0,0,0
 access.stock.stock.move.transfer,access_stock_move,stock.model_stock_move,members_custom.member_group_city_transfer_handler,1,0,0,0
 access.register.members.transfer,access_register_members,model_register_members,members_custom.member_group_city_transfer_handler,1,0,0,0
+access.res.users.role.line.transfer,access_res_users_role_line,base_user_role.model_res_users_role_line,members_custom.member_group_city_transfer_handler,1,0,0,0
+access.leaders.sub.responsibility.transfer,access_leaders_sub_responsibility,model_leaders_sub_responsibility,members_custom.member_group_city_transfer_handler,1,0,0,0
+access_product.product.transfer,access_product_product,product.model_product_product,members_custom.member_group_city_transfer_handler,1,0,0,0
+access.age.range.transfer,access_age_range,model_age_range,members_custom.member_group_city_transfer_handler,1,0,0,0
+access.member.sub.responsibility.transfer,access_member_sub_responsibility,model_member_sub_responsibility,members_custom.member_group_city_transfer_handler,1,0,0,0
 
 
 access.responsible.bodies.admin,access_responsible_bodies,model_responsible_bodies,members_custom.member_group_admin,1,0,0,0
@@ -183,7 +202,7 @@ access.payment.fee.configuration.admin,access_payment_fee_configuration,model_pa
 access.res.users.all.admin,access_res_users_all,base.model_res_users,members_custom.member_group_admin,1,1,1,0
 access.member.complaint.admin,access_member_complaint,model_member_complaint,members_custom.member_group_admin,1,0,0,0
 access.membership.city.handlers.admin,access_membership_city_handlers,model_membership_city_handlers,members_custom.member_group_admin,1,0,0,0
-access.membership.handlers.parent.admin,access_membership_handlers_parent,model_membership_handlers_parent,members_custom.member_group_admin,1,0,0,0
+access.membership.handlers.parent.admin,access_membership_handlers_parent,model_membership_handlers_parent,members_custom.member_group_admin,1,1,0,0
 access.membership.handlers.branch.admin,access_membership_handlers_branch,model_membership_handlers_branch,members_custom.member_group_admin,1,1,1,1
 access.members.responsibility.admin,access_members_responsibility,model_members_responsibility,members_custom.member_group_admin,1,0,0,0
 access.leaders.responsibility.admin,access_leaders_responsibility,model_leaders_responsibility,members_custom.member_group_admin,1,0,0,0
@@ -224,6 +243,12 @@ access.assembly.admin,access_assembly,model_assembly,members_custom.member_group
 access.planning.based.on.field.admin,access_planning_based_on_field,model_planning_based_on_field,members_custom.member_group_admin,1,1,1,1
 access.stock.stock.move.admin,access_stock_move,stock.model_stock_move,members_custom.member_group_admin,1,0,0,0
 access.register.members.admin,access_register_members,model_register_members,members_custom.member_group_admin,1,1,1,1
+access.res.users.role.line.admin,access_res_users_role_line,base_user_role.model_res_users_role_line,members_custom.member_group_admin,1,0,0,0
+access.leaders.sub.responsibility.admin,access_leaders_sub_responsibility,model_leaders_sub_responsibility,members_custom.member_group_admin,1,0,0,0
+access_product.product.admin,access_product_product,product.model_product_product,members_custom.member_group_admin,1,1,1,0
+access.age.range.admin,access_age_range,model_age_range,members_custom.member_group_admin,1,0,0,0
+access.member.sub.responsibility.admin,access_member_sub_responsibility,model_member_sub_responsibility,members_custom.member_group_admin,1,0,0,0
+
 
 access.responsible.bodies.manager,access_responsible_bodies,model_responsible_bodies,members_custom.member_group_manager,1,0,0,0
 access.members.transfer.manager,access_members_transfer,model_members_transfer,members_custom.member_group_manager,1,1,1,1
@@ -280,6 +305,11 @@ access.assembly.manager,access_assembly,model_assembly,members_custom.member_gro
 access.planning.based.on.field.manager,access_planning_based_on_field,model_planning_based_on_field,members_custom.member_group_manager,1,1,0,0
 access.stock.stock.move.manager,access_stock_move,stock.model_stock_move,members_custom.member_group_manager,1,0,0,0
 access.register.members.manager,access_register_members,model_register_members,members_custom.member_group_manager,1,1,1,1
+access.res.users.role.line.manager,access_res_users_role_line,base_user_role.model_res_users_role_line,members_custom.member_group_manager,1,0,0,0
+access.leaders.sub.responsibility.manager,access_leaders_sub_responsibility,model_leaders_sub_responsibility,members_custom.member_group_manager,1,0,0,0
+access_product.product.manager,access_product_product,product.model_product_product,members_custom.member_group_manager,1,1,1,0
+access.age.range.manager,access_age_range,model_age_range,members_custom.member_group_manager,1,0,0,0
+access.member.sub.responsibility.manager,access_member_sub_responsibility,model_member_sub_responsibility,members_custom.member_group_manager,1,0,0,0
 
 
 access.responsible.bodies.main.admin,access_responsible_bodies,model_responsible_bodies,members_custom.member_group_main_manager,1,0,0,0
@@ -337,6 +367,12 @@ access.assembly.main.admin,access_assembly,model_assembly,members_custom.member_
 access.planning.based.on.field.main.admin,access_planning_based_on_field,model_planning_based_on_field,members_custom.member_group_main_manager,1,1,0,0
 access.stock.stock.move.main.admin,access_stock_move,stock.model_stock_move,members_custom.member_group_main_manager,1,0,0,0
 access.register.members.main.admin,access_register_members,model_register_members,members_custom.member_group_main_manager,1,1,1,1
+access.res.users.role.line.main.admin,access_res_users_role_line,base_user_role.model_res_users_role_line,members_custom.member_group_main_manager,1,0,0,0
+access.leaders.sub.responsibility.main.admin,access_leaders_sub_responsibility,model_leaders_sub_responsibility,members_custom.member_group_main_manager,1,0,0,0
+access_product.product.main.admin,access_product_product,product.model_product_product,members_custom.member_group_main_manager,1,0,0,0
+access.age.range.main.admin,access_age_range,model_age_range,members_custom.member_group_main_manager,1,0,0,0
+access.member.sub.responsibility.main.admin,access_member_sub_responsibility,model_member_sub_responsibility,members_custom.member_group_main_manager,1,0,0,0
+
 
 access.responsible.bodies.main.finance,access_responsible_bodies,model_responsible_bodies,members_custom.member_group_main_finance,1,0,0,0
 access.members.transfer.main.finance,access_members_transfer,model_members_transfer,members_custom.member_group_main_finance,1,0,0,0
@@ -349,7 +385,7 @@ access.res.edlevel.main.finance,access_res_edlevel,model_res_edlevel,members_cus
 access_field_study.main.finance,access_field_study,model_field_study,members_custom.member_group_main_finance,1,0,0,0
 access.attachment.type.main.finance,access_attachment_type,model_attachment_type,members_custom.member_group_main_finance,1,1,1,1
 access.payment.fee.configuration.main.finance,access_payment_fee_configuration,model_payment_fee_configuration,members_custom.member_group_main_finance,1,0,0,0
-access.res.users.all.main.finance,access_res_users_all,base.model_res_users,members_custom.member_group_main_finance,1,0,0,0
+access.res.users.all.main.finance,access_res_users_all,base.model_res_users,members_custom.member_group_main_finance,1,,0,0
 access.member.complaint.main.finance,access_member_complaint,model_member_complaint,members_custom.member_group_main_finance,1,0,0,0
 access.membership.city.handlers.main.finance,access_membership_city_handlers,model_membership_city_handlers,members_custom.member_group_main_finance,1,0,0,0
 access.membership.handlers.parent.main.finance,access_membership_handlers_parent,model_membership_handlers_parent,members_custom.member_group_main_finance,1,0,0,0
@@ -393,6 +429,11 @@ access.assembly.main.finance,access_assembly,model_assembly,members_custom.membe
 access.planning.based.on.field.main.finance,access_planning_based_on_field,model_planning_based_on_field,members_custom.member_group_main_finance,1,0,0,0
 access.stock.stock.move.main.finance,access_stock_move,stock.model_stock_move,members_custom.member_group_main_finance,1,1,1,0
 access.register.members.main.finance,access_register_members,model_register_members,members_custom.member_group_main_finance,1,0,0,0
+access.res.users.role.line.main.finance,access_res_users_role_line,base_user_role.model_res_users_role_line,members_custom.member_group_main_finance,1,0,0,0
+access.leaders.sub.responsibility.main.finance,access_leaders_sub_responsibility,model_leaders_sub_responsibility,members_custom.member_group_main_finance,1,0,0,0
+access_product.product.main.finance,access_product_product,product.model_product_product,members_custom.member_group_main_finance,1,1,1,0
+access.age.range.main.finance,access_age_range,model_age_range,members_custom.member_group_main_finance,1,0,0,0
+access.member.sub.responsibility.main.finance,access_member_sub_responsibility,model_member_sub_responsibility,members_custom.member_group_main_finance,1,0,0,0
 
 
 access.responsible.bodies.main.assembler,access_responsible_bodies,model_responsible_bodies,members_custom.member_group_main_assembler,1,0,0,0
@@ -450,6 +491,11 @@ access.assembly.main.assembler,access_assembly,model_assembly,members_custom.mem
 access.planning.based.on.field.main.assembler,access_planning_based_on_field,model_planning_based_on_field,members_custom.member_group_main_assembler,1,0,0,0
 access.stock.stock.move.main.assembler,access_stock_move,stock.model_stock_move,members_custom.member_group_main_assembler,1,0,0,0
 access.register.members.main.assembler,access_register_members,model_register_members,members_custom.member_group_main_assembler,1,0,0,0
+access.res.users.role.line.main.assembler,access_res_users_role_line,base_user_role.model_res_users_role_line,members_custom.member_group_main_assembler,1,0,0,0
+access.leaders.sub.responsibility.main.assembler,access_leaders_sub_responsibility,model_leaders_sub_responsibility,members_custom.member_group_main_assembler,1,0,0,0
+access_product.product.main.assembler,access_product_product,product.model_product_product,members_custom.member_group_main_assembler,1,0,0,0
+access.age.range.main.assembler,access_age_range,model_age_range,members_custom.member_group_main_assembler,1,0,0,0
+access.member.sub.responsibility.main.assembler,access_member_sub_responsibility,model_member_sub_responsibility,members_custom.member_group_main_assembler,1,0,0,0
 
 
 access.responsible.bodies.cell.manager,access_responsible_bodies,model_responsible_bodies,members_custom.member_group_cell_manager,1,0,0,0
@@ -478,7 +524,7 @@ access.revised.plan.history.cell.manager,access_revised_plan_history,model_revis
 access.main.office.configuration.cell.manager,access_main_office_configuration,model_main_office_configuration,members_custom.member_group_cell_manager,1,0,0,0
 access.cell.configuration.cell.manager,access_cell_configuration,model_cell_configuration,members_custom.member_group_cell_manager,1,0,0,0
 access.member.cells.cell.manager,access_member_cells,model_member_cells,members_custom.member_group_cell_manager,1,1,0,0
-access_main_office.cell.manager,access_main_office,model_main_office,members_custom.member_group_cell_manager,1,0,0,0
+access_main_office.cell.manager,access_main_office,model_main_office,members_custom.member_group_cell_manager,1,1,0,0
 access.membership.payment.cell.manager,access_membership_payment,model_membership_payment,members_custom.member_group_cell_manager,1,0,0,0
 access.each.member.payment.cell.manager,access_each_member_payment,model_each_member_payment,members_custom.member_group_cell_manager,1,0,0,0
 access.each.league.payment.cell.manager,access_each_league_payment,model_each_league_payment,members_custom.member_group_cell_manager,1,0,0,0
@@ -507,6 +553,11 @@ access.assembly.cell.manager,access_assembly,model_assembly,members_custom.membe
 access.planning.based.on.field.cell.manager,access_planning_based_on_field,model_planning_based_on_field,members_custom.member_group_cell_manager,1,1,0,0
 access.stock.stock.move.cell.manager,access_stock_move,stock.model_stock_move,members_custom.member_group_cell_manager,1,1,0,0
 access.register.members.cell.manager,access_register_members,model_register_members,members_custom.member_group_cell_manager,1,1,1,1
+access.res.users.role.line.cell.manager,access_res_users_role_line,base_user_role.model_res_users_role_line,members_custom.member_group_cell_manager,1,0,0,0
+access.leaders.sub.responsibility.cell.manager,access_leaders_sub_responsibility,model_leaders_sub_responsibility,members_custom.member_group_cell_manager,1,0,0,0
+access_product.product.cell.manager,access_product_product,product.model_product_product,members_custom.member_group_cell_manager,1,0,0,0
+access.age.range.cell.manager,access_age_range,model_age_range,members_custom.member_group_cell_manager,1,0,0,0
+access.member.sub.responsibility.cell.manager,access_member_sub_responsibility,model_member_sub_responsibility,members_custom.member_group_cell_manager,1,0,0,0
 
 
 access.responsible.bodies.cell.finance,access_responsible_bodies,model_responsible_bodies,members_custom.member_group_finance,1,0,0,0
@@ -520,7 +571,7 @@ access.res.edlevel.cell.finance,access_res_edlevel,model_res_edlevel,members_cus
 access_field_study.cell.finance,access_field_study,model_field_study,members_custom.member_group_finance,1,0,0,0
 access.attachment.type.cell.finance,access_attachment_type,model_attachment_type,members_custom.member_group_finance,1,1,1,1
 access.payment.fee.configuration.cell.finance,access_payment_fee_configuration,model_payment_fee_configuration,members_custom.member_group_finance,1,0,0,0
-access.res.users.all.cell.finance,access_res_users_all,base.model_res_users,members_custom.member_group_finance,1,0,0,0
+access.res.users.all.cell.finance,access_res_users_all,base.model_res_users,members_custom.member_group_finance,1,1,0,0
 access.member.complaint.cell.finance,access_member_complaint,model_member_complaint,members_custom.member_group_finance,1,0,0,0
 access.membership.city.handlers.cell.finance,access_membership_city_handlers,model_membership_city_handlers,members_custom.member_group_finance,1,0,0,0
 access.membership.handlers.parent.cell.finance,access_membership_handlers_parent,model_membership_handlers_parent,members_custom.member_group_finance,1,0,0,0
@@ -564,6 +615,12 @@ access.assembly.cell.finance,access_assembly,model_assembly,members_custom.membe
 access.planning.based.on.field.cell.finance,access_planning_based_on_field,model_planning_based_on_field,members_custom.member_group_finance,1,0,0,0
 access.stock.stock.move.cell.finance,access_stock_move,stock.model_stock_move,members_custom.member_group_finance,1,1,1,0
 access.register.members.cell.finance,access_register_members,model_register_members,members_custom.member_group_finance,1,0,0,0
+access.res.users.role.line.cell.finance,access_res_users_role_line,base_user_role.model_res_users_role_line,members_custom.member_group_finance,1,0,0,0
+access.leaders.sub.responsibility.cell.finance,access_leaders_sub_responsibility,model_leaders_sub_responsibility,members_custom.member_group_finance,1,0,0,0
+access_product.product.cell.finance,access_product_product,product.model_product_product,members_custom.member_group_finance,1,1,1,0
+access.age.range.cell.finance,access_age_range,model_age_range,members_custom.member_group_finance,1,0,0,0
+access.member.sub.responsibility.cell.finance,access_member_sub_responsibility,model_member_sub_responsibility,members_custom.member_group_finance,1,0,0,0
+
 
 access.responsible.bodies.cell.assembler,access_responsible_bodies,model_responsible_bodies,members_custom.member_group_assembler,1,0,0,0
 access.members.transfer.cell.assembler,access_members_transfer,model_members_transfer,members_custom.member_group_assembler,1,0,0,0
@@ -619,7 +676,12 @@ access.member.assembly.cell.assembler,access_member_assembly,model_member_assemb
 access.assembly.cell.assembler,access_assembly,model_assembly,members_custom.member_group_assembler,1,0,0,0
 access.planning.based.on.field.cell.assembler,access_planning_based_on_field,model_planning_based_on_field,members_custom.member_group_assembler,1,0,0,0
 access.stock.stock.move.cell.assembler,access_stock_move,stock.model_stock_move,members_custom.member_group_assembler,1,0,0,0
-access.register.members.assembler,access_register_members,model_register_members,members_custom.member_group_assembler,1,0,0,0
+access.register.members.cell.assembler,access_register_members,model_register_members,members_custom.member_group_assembler,1,0,0,0
+access.res.users.role.line.cell.assembler,access_res_users_role_line,base_user_role.model_res_users_role_line,members_custom.member_group_assembler,1,0,0,0
+access.leaders.sub.responsibility.cell.assembler,access_leaders_sub_responsibility,model_leaders_sub_responsibility,members_custom.member_group_assembler,1,0,0,0
+access_product.product.cell.assembler,access_product_product,product.model_product_product,members_custom.member_group_assembler,1,0,0,0
+access.age.range.cell.assembler,access_age_range,model_age_range,members_custom.member_group_assembler,1,0,0,0
+access.member.sub.responsibility.cell.assembler,access_member_sub_responsibility,model_member_sub_responsibility,members_custom.member_group_assembler,1,0,0,0
 
 
 access.responsible.bodies.handler,access_responsible_bodies,model_responsible_bodies,members_custom.member_group_complaint_management,1,0,0,0
@@ -677,6 +739,12 @@ access.assembly.handler,access_assembly,model_assembly,members_custom.member_gro
 access.planning.based.on.field.handler,access_planning_based_on_field,model_planning_based_on_field,members_custom.member_group_complaint_management,1,0,0,0
 access.stock.stock.move.handler,access_stock_move,stock.model_stock_move,members_custom.member_group_complaint_management,1,0,0,0
 access.register.members.handler,access_register_members,model_register_members,members_custom.member_group_complaint_management,1,0,0,0
+access.res.users.role.line.handler,access_res_users_role_line,base_user_role.model_res_users_role_line,members_custom.member_group_complaint_management,1,0,0,0
+access.leaders.sub.responsibility.handler,access_leaders_sub_responsibility,model_leaders_sub_responsibility,members_custom.member_group_complaint_management,1,0,0,0
+access_product.product.handler,access_product_product,product.model_product_product,members_custom.member_group_complaint_management,1,0,0,0
+access.age.range.handler,access_age_range,model_age_range,members_custom.member_group_complaint_management,1,0,0,0
+access.member.sub.responsibility.handler,access_member_sub_responsibility,model_member_sub_responsibility,members_custom.member_group_complaint_management,1,0,0,0
+
 
 access.responsible.bodies.agent,access_responsible_bodies,model_responsible_bodies,members_custom.member_group_agent,1,0,0,0
 access.members.transfer.agent,access_members_transfer,model_members_transfer,members_custom.member_group_agent,1,1,1,1
@@ -733,6 +801,11 @@ access.assembly.agent,access_assembly,model_assembly,members_custom.member_group
 access.planning.based.on.field.agent,access_planning_based_on_field,model_planning_based_on_field,members_custom.member_group_agent,1,1,0,0
 access.stock.stock.move.agent,access_stock_move,stock.model_stock_move,members_custom.member_group_agent,1,0,0,0
 access.register.members.agent,access_register_members,model_register_members,members_custom.member_group_agent,1,1,1,1
+access.res.users.role.line.agent,access_res_users_role_line,base_user_role.model_res_users_role_line,members_custom.member_group_agent,1,0,0,0
+access.leaders.sub.responsibility.agent,access_leaders_sub_responsibility,model_leaders_sub_responsibility,members_custom.member_group_agent,1,0,0,0
+access_product.product.agent,access_product_product,product.model_product_product,members_custom.member_group_agent,1,0,0,0
+access.age.range.agent,access_age_range,model_age_range,members_custom.member_group_agent,1,0,0,0
+access.member.sub.responsibility.agent,access_member_sub_responsibility,model_member_sub_responsibility,members_custom.member_group_agent,1,0,0,0
 
 
 access.responsible.bodies.base,access_responsible_bodies,model_responsible_bodies,base.group_user,1,0,0,0
@@ -762,8 +835,8 @@ access.cell.configuration.base,access_cell_configuration,model_cell_configuratio
 access.member.cells.base,access_member_cells,model_member_cells,base.group_user,1,0,0,0
 access_main.office.base,access_main_office,model_main_office,base.group_user,1,0,0,0
 access.membership.payment.base,access_membership_payment,model_membership_payment,base.group_user,1,0,0,0
-access.each.member.payment.base,access_each_member_payment,model_each_member_payment,base.group_user,1,0,0,0
-access.each.league.payment.base,access_each_league_payment,model_each_league_payment,base.group_user,1,0,0,0
+access.each.member.payment.base,access_each_member_payment,model_each_member_payment,base.group_user,1,1,0,0
+access.each.league.payment.base,access_each_league_payment,model_each_league_payment,base.group_user,1,1,0,0
 access.supporter.members.base,access_supporter_members,model_supporter_members,base.group_user,1,0,0,0
 access.candidate.members.base,access_candidate_members,model_candidate_members,base.group_user,1,0,0,0
 access.donors.base,access_donors,model_donors,base.group_user,1,0,0,0
@@ -785,8 +858,12 @@ access.product.to.donate.base,access_product_to_donate,model_product_to_donate,b
 access.member.assembly.base,access_member_assembly,model_member_assembly,base.group_user,1,0,0,0
 access.assembly.base,access_assembly,model_assembly,base.group_user,1,0,0,0
 access.planning.based.on.field.base,access_planning_based_on_field,model_planning_based_on_field,base.group_user,1,0,0,0
-
-
+access.res.users.role.line.base,access_res_users_role_line,base_user_role.model_res_users_role_line,base.group_user,1,0,0,0
+access.leaders.sub.responsibility.base,access_leaders_sub_responsibility,model_leaders_sub_responsibility,base.group_user,1,0,0,0
+access.fiscal.year.base,fiscal.year,reconciliation.model_fiscal_year,base.group_user,1,0,0,0
+access.age.range.base,access_age_range,model_age_range,base.group_user,1,0,0,0
+access.member.sub.responsibility.base,access_member_sub_responsibility,model_member_sub_responsibility,base.group_user,1,0,0,0
+access.res.state.subcity,access_res_state_subcity,model_res_state_subcity,base.group_user,1,1,1,1
 
 
 access.complaint.category.manager,access_complaint_category,members_custom.model_complaint_category,members_custom.member_group_manager,1,1,1,1
@@ -803,6 +880,34 @@ access.each.member.payment.portal,access_each_member_payment,model_each_member_p
 access.each.league.payment.portal,access_each_league_payment,model_each_league_payment,base.group_portal,1,1,0,0
 access.fiscal.year.portal,fiscal.year,reconciliation.model_fiscal_year,base.group_portal,1,0,0,0
 access.user.input.portal,access_user_input,model_user_input,base.group_portal,1,1,1,0
+access.payment.fee.configuration.portal,access_payment_fee_configuration_portal,model_payment_fee_configuration,base.group_portal,1,1,1,0
+access.fiscal.year.portal,fiscal.year,reconciliation.model_fiscal_year,base.group_portal,1,0,0,0
+access.annual.plans.portal,access_annual_plans,model_annual_plans,base.group_portal,1,0,0,0
+access.annual.plans.subcity.portal,access_annual_plans_subcity,model_annual_plans_subcity,base.group_portal,1,0,0,0
+access.annual.plans.wereda.portal,access_annual_plans_wereda,model_annual_plans_wereda,base.group_portal,1,0,0,0
+access.user.input.portal,access_user_input,model_user_input,base.group_portal,1,1,1,0
+access.supporter.members.portal,access_supporter_members,model_supporter_members,base.group_portal,1,1,1,0
+access.res.edlevel.portal,access_res_edlevel,model_res_edlevel,base.group_portal,1,0,0,0
+access_field_study.portal,access_field_study,model_field_study,base.group_portal,1,0,0,0
+access.ethnic.groups.portal,access_ethnic_groups,model_ethnic_groups,base.group_portal,1,0,0,0
+access.membership.handlers.parent.portal,access_membership_handlers_parent,model_membership_handlers_parent,base.group_portal,1,0,0,0
+access.membership.handlers.branch.portal,access_membership_handlers_branch,model_membership_handlers_branch,base.group_portal,1,0,0,0
+access.age.range.portal,access_age_range,model_age_range,base.group_portal,1,0,0,0
+
+
+
+access.fiscal.year.public,fiscal.year,reconciliation.model_fiscal_year,base.group_public,1,0,0,0
+access.annual.plans.public,access_annual_plans,model_annual_plans,base.group_public,1,0,0,0
+access.annual.plans.subcity.public,access_annual_plans_subcity,model_annual_plans_subcity,base.group_public,1,0,0,0
+access.annual.plans.wereda.public,access_annual_plans_wereda,model_annual_plans_wereda,base.group_public,1,0,0,0
+access.user.input.public,access_user_input,model_user_input,base.group_public,1,1,1,0
+access.supporter.members.public,access_supporter_members,model_supporter_members,base.group_public,1,1,1,0
+access.res.edlevel.public,access_res_edlevel,model_res_edlevel,base.group_public,1,0,0,0
+access_field_study.public,access_field_study,model_field_study,base.group_public,1,0,0,0
+access.ethnic.groups.public,access_ethnic_groups,model_ethnic_groups,base.group_public,1,0,0,0
+access.membership.handlers.parent.public,access_membership_handlers_parent,model_membership_handlers_parent,base.group_public,1,0,0,0
+access.membership.handlers.branch.public,access_membership_handlers_branch,model_membership_handlers_branch,base.group_public,1,0,0,0
+access.age.range.public,access_age_range,model_age_range,base.group_public,1,0,0,0
 
 
 access.archive.candidate.wizard,access_archive_candidate_wizard,model_archive_candidate_wizard,base.group_user,1,1,1,1

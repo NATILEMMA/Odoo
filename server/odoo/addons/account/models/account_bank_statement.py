@@ -174,8 +174,8 @@ class AccountBankStatement(models.Model):
     _order = "date desc, id desc"
     _inherit = ['mail.thread']
 
-    name = fields.Char(string='Reference', states={'open': [('readonly', False)]}, copy=False, readonly=True)
-    reference = fields.Char(string='External Reference', states={'open': [('readonly', False)]}, copy=False, readonly=True, help="Used to hold the reference of the external mean that created this statement (name of imported file, reference of online synchronization...)")
+    name = fields.Char(string='Reference', states={'open': [('readonly', False)]}, copy=False, readonly=True, translate=True)
+    reference = fields.Char(string='External Reference', states={'open': [('readonly', False)]}, copy=False, readonly=True, help="Used to hold the reference of the external mean that created this statement (name of imported file, reference of online synchronization...)", translate=True)
     date = fields.Date(required=True, states={'confirm': [('readonly', True)]}, index=True, copy=False, default=fields.Date.context_today)
     date_done = fields.Datetime(string="Closed On")
     balance_start = fields.Monetary(string='Starting Balance', states={'confirm': [('readonly', True)]}, default=_default_opening_balance, tracking=True)
@@ -361,13 +361,13 @@ class AccountBankStatementLine(models.Model):
     _description = "Bank Statement Line"
     _order = "statement_id desc, date, sequence, id desc"
 
-    name = fields.Char(string='Label', required=True)
+    name = fields.Char(string='Label', required=True, translate=True)
     date = fields.Date(required=True, default=lambda self: self._context.get('date', fields.Date.context_today(self)))
     amount = fields.Monetary(currency_field='journal_currency_id')
     journal_currency_id = fields.Many2one('res.currency', string="Journal's Currency", related='statement_id.currency_id',
         help='Utility field to express amount currency', readonly=True)
     partner_id = fields.Many2one('res.partner', string='Partner')
-    account_number = fields.Char(string='Bank Account Number', help="Technical field used to store the bank account number before its creation, upon the line's processing")
+    account_number = fields.Char(string='Bank Account Number', help="Technical field used to store the bank account number before its creation, upon the line's processing", translate=True)
     bank_account_id = fields.Many2one('res.partner.bank', string='Bank Account', help="Bank account that was used in this transaction.")
     account_id = fields.Many2one('account.account', string='Counterpart Account', domain=[('deprecated', '=', False)],
         help="This technical field can be used at the statement line creation/import time in order to avoid the reconciliation"
@@ -375,17 +375,17 @@ class AccountBankStatementLine(models.Model):
     statement_id = fields.Many2one('account.bank.statement', string='Statement', index=True, required=True, ondelete='cascade')
     journal_id = fields.Many2one('account.journal', related='statement_id.journal_id', string='Journal', store=True, readonly=True)
     partner_name = fields.Char(help="This field is used to record the third party name when importing bank statement in electronic format,"
-             " when the partner doesn't exist yet in the database (or cannot be found).")
-    ref = fields.Char(string='Reference')
-    note = fields.Text(string='Notes')
-    transaction_type = fields.Char(string='Transaction Type')
+             " when the partner doesn't exist yet in the database (or cannot be found).", translate=True)
+    ref = fields.Char(string='Reference', translate=True)
+    note = fields.Text(string='Notes', translate=True)
+    transaction_type = fields.Char(string='Transaction Type', translate=True)
     sequence = fields.Integer(index=True, help="Gives the sequence order when displaying a list of bank statement lines.", default=1)
     company_id = fields.Many2one('res.company', related='statement_id.company_id', string='Company', store=True, readonly=True)
     journal_entry_ids = fields.One2many('account.move.line', 'statement_line_id', 'Journal Items', copy=False, readonly=True)
     amount_currency = fields.Monetary(help="The amount expressed in an optional other currency if it is a multi-currency entry.")
     currency_id = fields.Many2one('res.currency', string='Currency', help="The optional other currency if it is a multi-currency entry.")
     state = fields.Selection(related='statement_id.state', string='Status', readonly=True)
-    move_name = fields.Char(string='Journal Entry Name', readonly=True,
+    move_name = fields.Char(string='Journal Entry Name', readonly=True, translate=True,
         default=False, copy=False,
         help="Technical field holding the number given to the journal entry, automatically set when the statement line is reconciled then stored to set the same number again if the line is cancelled, set to draft and re-processed again.")
 

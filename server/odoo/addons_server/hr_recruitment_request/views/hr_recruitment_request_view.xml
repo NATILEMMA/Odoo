@@ -44,7 +44,7 @@
               </group>
               <group>
                 <field name="expected_employees" attrs="{'readonly':[('state','!=','draft')]}" />
-                <field name="requester_employee_id" attrs="{'readonly':True}" />
+                <field name="requester_employee_id" attrs="{'readonly':True}" options="{'no_open': True}" />
               </group>
             </group>
             <notebook colspan="4">
@@ -157,14 +157,15 @@
       </record>
 
 
-    <menuitem name="Internal/External Recruitment" id="recruitment_request_menu_root" parent="hr_menu_organizer.hr_employee_status_menu" groups="hr_recruitment_request.group_recruitment_hr_approval,hr_recruitment_request.group_request_recruitment,hr_recruitment_request.group_apply" />
+    <menuitem name="Internal/External Recruitment" id="recruitment_request_menu_root" parent="hr_menu_organizer.hr_employee_activities_menu" groups="hr_recruitment_request.group_recruitment_hr_approval,hr_recruitment_request.group_request_recruitment,hr_recruitment_request.group_apply" />
    
-    <menuitem name="Job Posts" id="menu_internal_recruitment_job_posts" sequence="100" parent="recruitment_request_menu_root" action="action_hr_recruitment_request_applier" groups="hr_recruitment_request.group_apply,hr_recruitment_request.group_recruitment_hr_approval,hr_recruitment_request.group_request_recruitment"/>
+    <menuitem name="Job Posts" id="job_posts_menu" sequence="0" parent="internal_recruitment_menu_root" action="action_hr_recruitment_request_applier" groups="hr_recruitment_request.group_apply,hr_recruitment_request.group_recruitment_hr_approval,hr_recruitment_request.group_request_recruitment"/>
 
     <menuitem name="Ongoing recruitment" id="menu_internal_recruitment_ongoing_recruitment" sequence="1" parent="recruitment_request_menu_root" action="action_hr_recruitment_request_applier" groups="hr_recruitment_request.group_apply,hr_recruitment_request.group_recruitment_hr_approval,hr_recruitment_request.group_request_recruitment"/>
 
-    <menuitem name="Recruitment request" id="menu_recruitment_requests"  sequence="0" parent="recruitment_request_menu_root" action="action_hr_recruitment_request" groups="hr_recruitment_request.group_recruitment_hr_approval,hr_recruitment_request.group_request_recruitment"/>
+    <menuitem name="Recruitment request" id="menu_recruitment_requests"  sequence="2" parent="internal_recruitment_menu_root" action="action_hr_recruitment_request" groups="hr_recruitment_request.group_recruitment_hr_approval,hr_recruitment_request.group_request_recruitment"/>
 
     <menuitem name="Approve Recruitment request" id="menu_to_approve_recruitment_requests" sequence="0" parent="recruitment_request_menu_root" action="action_to_approve_hr_recruitment_request" groups="hr_recruitment_request.group_recruitment_hr_approval,hr_recruitment_request.group_request_recruitment"/>
+    
   </data>
 </odoo>

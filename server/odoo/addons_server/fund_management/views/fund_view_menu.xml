@@ -33,10 +33,33 @@
         <field name="help"></field>
     </record>
 
+    <record id="fund_fund_view_search" model="ir.ui.view">
+    <field name="name">fund.collection.search</field>
+    <field name="model">fund.collection</field>
+    <field name="arch" type="xml">
+      <search>
+        <!-- <field name="name" string="Budget" filter_domain="[('name', 'ilike', self)]"/> -->
+        <field name="funder_id" string="Funders" filter_domain="[('funder_id', 'ilike', self)]"/>
+        <field name="amount" string="Funded Amount" filter_domain="[('amount', 'ilike', self)]"/>
+        <field name="state" string="State" filter_domain="[('state', 'ilike', self)]"/>
+        <field name="receiver_id" string="Received By" filter_domain="[('receiver_id', 'ilike', self)]"/>
+
+        <group expand="0" string="Group By" colspan="10" col="8">
+          <!-- <filter name="name" string="Budget" context="{'group_by': 'name'}"/> -->
+          <filter name="state" string="Status" context="{'group_by': 'state'}"/>
+          <filter name="amount" string="Funded Amount" context="{'group_by': 'amount'}"/>
+          <filter name="receiver_id" string="Receiver By" context="{'group_by': 'receiver_id'}"/>
+
+        </group>
+      </search>
+    </field>
+  </record>
+
     <record model="ir.actions.act_window" id="action_fund_collection">
         <field name="name">Fund Collection</field>
         <field name="res_model">fund.collection</field>
         <field name="view_mode">kanban,tree,form</field>
+        <field name="search_view_id" ref="fund_fund_view_search"/>
         <field name="domain">[ ('state', 'in', ['draft', 'paid','submitted','to_allocate','done'])]</field>
        
     </record>
@@ -44,6 +67,8 @@
         <field name="name">Fund Approveal</field>
         <field name="res_model">fund.collection</field>
         <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="fund_fund_view_search"/>
+
         <field name="domain">[ ('state', 'in', ['submitted','to_allocate','done'])]</field>
        
     </record>
@@ -51,6 +76,8 @@
         <field name="name">Fund Distribution</field>
         <field name="res_model">fund.collection</field>
         <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="fund_fund_view_search"/>
+
         <field name="domain">[ ('state', 'not in', ['draft', 'paid','submitted'])]</field>
        
     </record>
@@ -184,7 +211,8 @@
     </record>
 
 
-    <menuitem name="Fund Managment"
+
+    <menuitem name="Fund"
         id="fund_management.menu_root"
         web_icon="fund_management,static/description/icon.png"
         groups="fund_management.fund_collection_group,fund_management.fund_approval_group,fund_management.group_controller_group,fund_management.group_distribution_group"
@@ -255,7 +283,7 @@
         action="action_fund_grant_methods"  
         groups="fund_management.group_distribution_group,fund_management.group_controller_group"/>
 
-        <menuitem 
+        <!-- <menuitem 
         name="Application Stage" 
         id="fund_management.menu_application_stage"   
         sequence="4"
@@ -271,7 +299,7 @@
         parent="fund_management.menu_fund_configuration" 
         action="action_fund_application_stage"  
         groups="fund_management.group_distribution_group,fund_management.group_controller_group"/>
-    
+     -->
 
 </data>
 </odoo>

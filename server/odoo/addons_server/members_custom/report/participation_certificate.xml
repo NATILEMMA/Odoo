@@ -21,8 +21,9 @@
 
                           <div style="margin: 20px">
                               to certify his/her participation on the <strong> <t t-esc="o['program_round']" /></strong>th round
+                              for the year <strong> <t t-esc="o['year']"/></strong> 
                               <strong>General Assembly </strong>at <strong> <t t-esc="o['program_convener']" /></strong> from
-                              <strong> <t t-esc="o['date_from']"/></strong> to <strong> <t t-esc="o['date_from']" /></strong> for the year <strong> <t t-esc="o['year']"/></strong>.
+                              <strong> <t t-esc="o['date_from']"/></strong> to <strong> <t t-esc="o['date_from']" /></strong> .
                           </div>
                         </div>
                       </td>

@@ -7,6 +7,8 @@ from collections import defaultdict
 from datetime import datetime, date 
 from odoo import api, exceptions, fields, models, _
 from ethiopian_date import EthiopianDateConverter
+from odoo.exceptions import UserError, Warning, ValidationError
+
 import logging
 _logger = logging.getLogger(__name__)
 pick1 = []
@@ -14,11 +16,61 @@ pick2 = []
 pick3 = []
 pick4 = []
 
+class UsersRole(models.Model):
+    _inherit = "res.users.role"
+    
+    
+    def write(self,vals):
+    
+        search_val = self.env['res.users.role'].sudo().search([('id','=',self.id)],limit=1)
+        get_gergory_role = self.env['res.users.role'].sudo().search([('name','=','Gregorian datepicker role')], limit=1)
+        get_ethiopian_role = self.env['res.users.role'].sudo().search([('name','=','Ethiopian datepicker role')], limit=1)
+        if get_gergory_role.id == search_val.id:
+            raise ValidationError(_("You cannot edit/update this role because it is built into the system"))
+        if get_ethiopian_role.id == search_val.id:
+            raise ValidationError(_("You cannot edit/update this role because it is built into the system"))
+        res = super(UsersRole,self).write(vals)
+        return res
+    
+    
+    def unlink(self):
+       
+        search_val = self.env['res.users.role'].search([('id','=',self.id)],limit=1)
+        get_gergory_role = self.env['res.users.role'].sudo().search([('name','=','Gregorian datepicker role')], limit=1)
+        get_ethiopian_role = self.env['res.users.role'].sudo().search([('name','=','Ethiopian datepicker role')], limit=1)
+        if get_gergory_role.name == search_val.name:
+            raise ValidationError(_("You cannot delete/remove this role because it is built into the system."))
+        if get_ethiopian_role.name == search_val.name:
+            raise ValidationError(_("You cannot delete/remove this role because it is built into the system."))
+        res = super().unlink()
+        return res
+    
+
+class ResUsersRole(models.Model):
+    _inherit = "res.users.role.line"
+
+    is_active = fields.Boolean(default=False)
+
+
+
+
 class ResUsers(models.Model):
     _inherit = 'res.users'
 
 
     is_ethiopian_datepicker = fields.Boolean(string="Ethiopian Datepicker")
+
+    # def write(self,vals):
+    #     res = super(ResUsers, self).write(vals)
+    #     try:
+    #         search = self.env['res.users'].sudo().search([('id','in',self.ids)])
+    #         for line in search.role_line_ids:
+    #             if line.role_id.name == 'Ethiopian datepicker role':
+    #                 line.sudo().write({'is_enabled': False})
+    #     except:
+    #         pass
+        # return res
+
 
     def transfer_node_to_modifiers(node, modifiers, context=None, in_tree_view=False):
         if node.get('attrs'):
@@ -56,110 +108,110 @@ class ResUsers(models.Model):
            
     
 
-    @api.onchange('is_ethiopian_datepicker')
-    def onchange_ethiopiandatepicker(self):
-        """ 
-                    Duplicate Only The SQL Query and replace your model name
+    # @api.onchange('is_ethiopian_datepicker')
+    # def onchange_ethiopiandatepicker(self):
+    #     """ 
+    #                 Duplicate Only The SQL Query and replace your model name
 
-        """
-        if self.is_ethiopian_datepicker == True:
-            query = """
-                update  reconciliation_time_fream  set  is_ethiopian_datepicker=%s where id=id
-            """ %(True)
+    #     """
+    #     if self.is_ethiopian_datepicker == True:
+    #         query = """
+    #             update  reconciliation_time_fream  set  is_ethiopian_datepicker=%s where id=id
+    #         """ %(True)
             
 
-            cr = self._cr
-            # cr.execute(query)
-            ethio_groups = self.env['res.groups'].search([('name','=','Ethiopian Datepicker')], limit=1)
-            gro_groups = self.env['res.groups'].search([('name','=','Gregory Datepicker')], limit=1)
-            ethio_user_list = []
-            gro_user_list = []
+    #         cr = self._cr
+    #         # cr.execute(query)
+    #         ethio_groups = self.env['res.groups'].search([('name','=','Ethiopian Datepicker')], limit=1)
+    #         gro_groups = self.env['res.groups'].search([('name','=','Gregory Datepicker')], limit=1)
+    #         ethio_user_list = []
+    #         gro_user_list = []
 
-            _logger.info(" ###### ethio_groups %s",ethio_groups.users)
-            _logger.info(" ###### gro_groups %s",gro_groups.users)
+    #         _logger.info(" ###### ethio_groups %s",ethio_groups.users)
+    #         _logger.info(" ###### gro_groups %s",gro_groups.users)
 
-            if ethio_groups.users is not None:
-                if self.env.user in ethio_groups.users: 
-                    for user in gro_groups.users:
-                        if self.env.user.id == user.id:
-                            pass
-                        else:
-                            gro_user_list.append(user.id)
-                    for users in ethio_groups.users:
-                        ethio_user_list.append(users.id)
-                else:
-                    for users in ethio_groups.users:
-                        ethio_user_list.append(users.id)
-                    for user in gro_groups.users:
-                        _logger.info(" ###### gro_groups %s",user.name)
+    #         if ethio_groups.users is not None:
+    #             if self.env.user in ethio_groups.users: 
+    #                 for user in gro_groups.users:
+    #                     if self.env.user.id == user.id:
+    #                         pass
+    #                     else:
+    #                         gro_user_list.append(user.id)
+    #                 for users in ethio_groups.users:
+    #                     ethio_user_list.append(users.id)
+    #             else:
+    #                 for users in ethio_groups.users:
+    #                     ethio_user_list.append(users.id)
+    #                 for user in gro_groups.users:
+    #                     _logger.info(" ###### gro_groups %s",user.name)
 
-                        if self.env.user.id == user.id:
-                            _logger.info(" ###### TTT %s",user.name)
+    #                     if self.env.user.id == user.id:
+    #                         _logger.info(" ###### TTT %s",user.name)
 
-                            pass
-                        else:
-                            _logger.info(" ###### FF %s",user.name)
+    #                         pass
+    #                     else:
+    #                         _logger.info(" ###### FF %s",user.name)
 
-                            gro_user_list.append(user.id)
-                    ethio_user_list.append(self.env.user.id)
+    #                         gro_user_list.append(user.id)
+    #                 ethio_user_list.append(self.env.user.id)
 
-                _logger.info(" ###### ethio_user_list %s",ethio_user_list)
-                _logger.info(" ###### gro_user_list %s",gro_user_list)
+    #             _logger.info(" ###### ethio_user_list %s",ethio_user_list)
+    #             _logger.info(" ###### gro_user_list %s",gro_user_list)
                 
-                ethio_groups['users'] = [(6,0,ethio_user_list)]
-                gro_groups['users'] = [(6,0,gro_user_list)]
+    #             ethio_groups['users'] = [(6,0,ethio_user_list)]
+    #             gro_groups['users'] = [(6,0,gro_user_list)]
             
-            else:
-                pass
+    #         else:
+    #             pass
 
 
-            self.is_ethiopian_datepicker = True
+    #         self.is_ethiopian_datepicker = True
 
      
-        if self.is_ethiopian_datepicker == False:
-            query = """
-                update  reconciliation_time_fream  set is_ethiopian_datepicker = %s where id=id
-            """ %(False)
+    #     if self.is_ethiopian_datepicker == False:
+    #         query = """
+    #             update  reconciliation_time_fream  set is_ethiopian_datepicker = %s where id=id
+    #         """ %(False)
 
-            cr = self._cr
-            # cr.execute(query)
-            ethio_groups = self.env['res.groups'].search([('name','=','Ethiopian Datepicker')], limit=1)
-            gro_groups = self.env['res.groups'].search([('name','=','Gregory Datepicker')], limit=1)
-            ethio_user_list = []
-            gro_user_list = []
-            if gro_groups.users is not None:
+    #         cr = self._cr
+    #         # cr.execute(query)
+    #         ethio_groups = self.env['res.groups'].search([('name','=','Ethiopian Datepicker')], limit=1)
+    #         gro_groups = self.env['res.groups'].search([('name','=','Gregory Datepicker')], limit=1)
+    #         ethio_user_list = []
+    #         gro_user_list = []
+    #         if gro_groups.users is not None:
            
 
                 
-                if self.env.user in gro_groups.users: 
-                    for user in ethio_groups.users:
-                        if self.env.user.id == user.id:
-                            pass
-                        else:
-                            ethio_user_list.append(user.id)
-                    for users in gro_groups.users:
-                        gro_user_list.append(users.id)
-                else:
-                    for users in gro_groups.users:
-                        gro_user_list.append(users.id)
-                    for user in ethio_groups.users:
-                        _logger.info(" ###### gro_groups %s",user.name)
+    #             if self.env.user in gro_groups.users: 
+    #                 for user in ethio_groups.users:
+    #                     if self.env.user.id == user.id:
+    #                         pass
+    #                     else:
+    #                         ethio_user_list.append(user.id)
+    #                 for users in gro_groups.users:
+    #                     gro_user_list.append(users.id)
+    #             else:
+    #                 for users in gro_groups.users:
+    #                     gro_user_list.append(users.id)
+    #                 for user in ethio_groups.users:
+    #                     _logger.info(" ###### gro_groups %s",user.name)
 
-                        if self.env.user.id == user.id:
-                            _logger.info(" ###### TTT %s",user.name)
+    #                     if self.env.user.id == user.id:
+    #                         _logger.info(" ###### TTT %s",user.name)
 
-                            pass
-                        else:
-                            _logger.info(" ###### FF %s",user.name)
+    #                         pass
+    #                     else:
+    #                         _logger.info(" ###### FF %s",user.name)
 
-                            ethio_user_list.append(user.id)
-                    gro_user_list.append(self.env.user.id)
+    #                         ethio_user_list.append(user.id)
+    #                 gro_user_list.append(self.env.user.id)
 
-                _logger.info(" ###### ethio_user_list %s",ethio_user_list)
-                _logger.info(" ###### gro_user_list %s",gro_user_list)
+    #             _logger.info(" ###### ethio_user_list %s",ethio_user_list)
+    #             _logger.info(" ###### gro_user_list %s",gro_user_list)
                 
-                ethio_groups['users'] = [(6,0,ethio_user_list)]
-                gro_groups['users'] = [(6,0,gro_user_list)]
+    #             ethio_groups['users'] = [(6,0,ethio_user_list)]
+    #             gro_groups['users'] = [(6,0,gro_user_list)]
             
 
                 # if self.env.user in gro_groups.users: 
@@ -189,10 +241,182 @@ class ResUsers(models.Model):
 
                 # ethio_groups['users'] = [(6,0,ethio_user_list)]
                 # gro_groups['users'] = [(6,0,gro_user_list)]
-            else:
-                pass
+            # else:
+            #     pass
 
-            self.is_ethiopian_datepicker = False
+            # self.is_ethiopian_datepicker = False
+    # @api.model
+    # def initial_datepicker_value(self, data):
+    #     User = self.env['res.users']
+    #     current_user = User.browse(self.env.uid)
+    #     data = current_user.is_ethiopian_datepicker
+    #     _logger.info("################# Initial Datepicker Value %s", data)
+    #     return data
+
+
+    @api.model
+    def onchange_ethiopiandatepicker_from_checkbox(self,checkedvalue):
+        _logger.info("******* checkedvalue ******,%s",checkedvalue)
+
+        get_user = self.env.user
+        for role in get_user.role_line_ids:
+            if checkedvalue['value'] == 'True' and role.role_id.name == 'Ethiopian datepicker role':
+                _logger.info("Etho--------------")
+                
+                val = {}
+                val['id'] = get_user.id
+                val['role_id'] = role.role_id.id
+                val['value']= checkedvalue['value']
+                # get_user.role_line_ids.sudo().write(val)
+                # role._compute_is_enabled(val)
+                role.is_active = True
+                gregorian_role = self.env['res.users.role'].sudo().search([('name','=','Gregorian datepicker role')], limit=1)
+                get_ethiopia_role = self.env['res.users.role.line'].sudo().search([('user_id','=',get_user.id),('role_id','=',role.role_id.id)], limit=1)
+                get_gregory_role = self.env['res.users.role.line'].sudo().search([('user_id','=',get_user.id),('role_id','=',gregorian_role.id)], limit=1)
+                _logger.info("get_role gregorian_role#### %s",gregorian_role)
+
+                if val.get('value') == 'True': 
+                    _logger.info("*******TTTTT********")
+                    get_gregory_role.is_enabled = False
+                    get_ethiopia_role.is_enabled = True
+                    get_ethiopia_role.sudo().write({'is_enabled': True})
+                    get_gregory_role.sudo().write({'is_enabled': False})
+                    get_user.is_ethiopian_datepicker = True
+                    self.env.cr.commit()
+           
+
+            if checkedvalue['value'] == 'False' and role.role_id.name == 'Gregorian datepicker role':
+                _logger.info("Gregorrrrr--------------")
+                val = {}
+                val['id'] = get_user.id
+                val['role_id'] = role.role_id.id
+                val['value']= checkedvalue['value']
+                role.is_active = False
+                ethiopian_role = self.env['res.users.role'].sudo().search([('name','=','Ethiopian datepicker role')], limit=1)
+                get_gregory_role = self.env['res.users.role.line'].sudo().search([('user_id','=',get_user.id),('role_id','=',role.role_id.id)], limit=1)
+                get_ethiopia_role = self.env['res.users.role.line'].sudo().search([('user_id','=',get_user.id),('role_id','=',ethiopian_role.id)], limit=1)
+
+                _logger.info("get_role ethiopian_role#### %s",ethiopian_role)
+                if val.get('value') == 'False': 
+                    _logger.info("******TTTTTT****")
+                    get_gregory_role.is_enabled = True
+                    get_ethiopia_role.is_enabled = False
+                    get_gregory_role.sudo().write({'is_enabled': True})
+                    get_user.is_ethiopian_datepicker = False
+                    self.env.cr.commit()
+
+                    
+
+
+
+
+
+
+        
+        # if checkedvalue['value'] == 'True':
+
+        #     query = """
+        #         update  reconciliation_time_fream  set  is_ethiopian_datepicker=%s where id=id
+        #     """ %(True)
+            
+
+        #     cr = self._cr
+        #     # cr.execute(query)
+        #     ethio_groups = self.env['res.groups'].search([('name','=','Ethiopian Datepicker')], limit=1)
+        #     gro_groups = self.env['res.groups'].search([('name','=','Gregory Datepicker')], limit=1)
+        #     ethio_user_list = []
+        #     gro_user_list = []
+
+        #     _logger.info(" ###### ethio_groups %s",ethio_groups.users)
+        #     _logger.info(" ###### gro_groups %s",gro_groups.users)
+
+        #     if ethio_groups.users is not None:
+        #         if self.env.user in ethio_groups.users: 
+        #             for user in gro_groups.users:
+        #                 if self.env.user.id == user.id:
+        #                     pass
+        #                 else:
+        #                     gro_user_list.append(user.id)
+        #             for users in ethio_groups.users:
+        #                 ethio_user_list.append(users.id)
+        #         else:
+        #             for users in ethio_groups.users:
+        #                 ethio_user_list.append(users.id)
+        #             for user in gro_groups.users:
+        #                 _logger.info(" ###### gro_groups %s",user.name)
+
+        #                 if self.env.user.id == user.id:
+        #                     _logger.info(" ###### TTT %s",user.name)
+
+        #                     pass
+        #                 else:
+        #                     _logger.info(" ###### FF %s",user.name)
+
+        #                     gro_user_list.append(user.id)
+        #             ethio_user_list.append(self.env.user.id)
+
+        #         _logger.info(" ###### ethio_user_list %s",ethio_user_list)
+        #         _logger.info(" ###### gro_user_list %s",gro_user_list)
+                
+        #         ethio_groups['users'] = [(6,0,ethio_user_list)]
+        #         gro_groups['users'] = [(6,0,gro_user_list)]
+            
+        #     else:
+        #         pass
+
+
+        #     self.is_ethiopian_datepicker = True
+
+     
+        # if checkedvalue['value'] == 'False':
+        #     query = """
+        #         update  reconciliation_time_fream  set is_ethiopian_datepicker = %s where id=id
+        #     """ %(False)
+
+        #     cr = self._cr
+        #     # cr.execute(query)
+        #     ethio_groups = self.env['res.groups'].search([('name','=','Ethiopian Datepicker')], limit=1)
+        #     gro_groups = self.env['res.groups'].search([('name','=','Gregory Datepicker')], limit=1)
+        #     ethio_user_list = []
+        #     gro_user_list = []
+        #     if gro_groups.users is not None:
+           
+
+                
+        #         if self.env.user in gro_groups.users: 
+        #             for user in ethio_groups.users:
+        #                 if self.env.user.id == user.id:
+        #                     pass
+        #                 else:
+        #                     ethio_user_list.append(user.id)
+        #             for users in gro_groups.users:
+        #                 gro_user_list.append(users.id)
+        #         else:
+        #             for users in gro_groups.users:
+        #                 gro_user_list.append(users.id)
+        #             for user in ethio_groups.users:
+        #                 _logger.info(" ###### gro_groups %s",user.name)
+
+        #                 if self.env.user.id == user.id:
+        #                     _logger.info(" ###### TTT %s",user.name)
+
+        #                     pass
+        #                 else:
+        #                     _logger.info(" ###### FF %s",user.name)
+
+        #                     ethio_user_list.append(user.id)
+        #             gro_user_list.append(self.env.user.id)
+
+        #         _logger.info(" ###### ethio_user_list %s",ethio_user_list)
+        #         _logger.info(" ###### gro_user_list %s",gro_user_list)
+                
+        #         ethio_groups['users'] = [(6,0,ethio_user_list)]
+        #         gro_groups['users'] = [(6,0,gro_user_list)]
+        
+        #     else:
+        #         pass
+
+        #     self.is_ethiopian_datepicker = False
 
 
 
@@ -200,49 +424,49 @@ class ResConfigSettings(models.TransientModel):
 
     _inherit = "res.config.settings"
 
-    is_ethiopian_datepicker = fields.Boolean("Ethiopian Datepicker")
+    is_ethiopian_datepicker = fields.Boolean()
    
 
 
    
-    def set_values(self):
-        _logger.info("############################## %s",self.is_ethiopian_datepicker)
-        res = super(ResConfigSettings, self).set_values()
-        self.env['ir.config_parameter'].set_param('EthiopianCalendar.is_ethiopian_datepicker', self.is_ethiopian_datepicker)
-        return res
+    # def set_values(self):
+    #     _logger.info("############################## %s",self.is_ethiopian_datepicker)
+    #     res = super(ResConfigSettings, self).set_values()
+    #     self.env['ir.config_parameter'].set_param('EthiopianCalendar.is_ethiopian_datepicker', self.is_ethiopian_datepicker)
+    #     return res
 
-    @api.onchange('is_ethiopian_datepicker')
-    def onchange_ethiopiandatepicker(self):
-        """ 
-                    Duplicate Only The SQL Query and replace your model name
+    # @api.onchange('is_ethiopian_datepicker')
+    # def onchange_ethiopiandatepicker(self):
+    #     """ 
+    #                 Duplicate Only The SQL Query and replace your model name
 
-        """
+    #     """
 
-        # tools.drop_view_if_exists(self._cr, 'reconciliation_time_fream')
-        if self.is_ethiopian_datepicker == True:
-            query = """
-                update  reconciliation_time_fream  set ticked_user	= %s  where id=id
-            """ %(self.env.user.id)
+    #     # tools.drop_view_if_exists(self._cr, 'reconciliation_time_fream')
+    #     if self.is_ethiopian_datepicker == True:
+    #         query = """
+    #             update  reconciliation_time_fream  set ticked_user	= %s  where id=id
+    #         """ %(self.env.user.id)
 
-            cr = self._cr
-            cr.execute(query)
+    #         cr = self._cr
+    #         cr.execute(query)
 
-            users = self.env['res.partner'].search([('user_id','=',self.env.user.id)], limit=1)
-            _logger.info("############## %s",users)
-            _logger.info("############## %s", users.ticked_user)
+    #         users = self.env['res.partner'].search([('user_id','=',self.env.user.id)], limit=1)
+    #         _logger.info("############## %s",users)
+    #         _logger.info("############## %s", users.ticked_user)
 
-            # users = users.ticked_user
-            # line_value_2.account_ids = [(6,0,values)]
-            # self.env.cr.commit()
-        if self.is_ethiopian_datepicker == False:
-            query = """
-                update  reconciliation_time_fream  set is_ethiopian_datepicker	= %s  where id=id
-            """ %(False)
+    #         # users = users.ticked_user
+    #         # line_value_2.account_ids = [(6,0,values)]
+    #         # self.env.cr.commit()
+    #     if self.is_ethiopian_datepicker == False:
+    #         query = """
+    #             update  reconciliation_time_fream  set is_ethiopian_datepicker	= %s  where id=id
+    #         """ %(False)
 
-            cr = self._cr
-            cr.execute(query)
-            self.is_ethiopian_datepicker = False
-            # self.env.cr.commit()
+    #         cr = self._cr
+    #         cr.execute(query)
+    #         self.is_ethiopian_datepicker = False
+    #         # self.env.cr.commit()
 
 
         
@@ -475,7 +699,7 @@ class FiscalYear(models.Model):
             date = EthiopianDateConverter.to_ethiopian(date.year,date.month,date.day)
             _logger.info("################# d: %s",date)
 
-            return date
+            return {'from': date, 'to': date}
         else:
             
             models = mm[0]
@@ -782,7 +1006,7 @@ In budget Transfer, I have one date field that I substituted with one of the cat
         if len(id[0]) <= 0:
             date = datetime.now()
             date = EthiopianDateConverter.to_ethiopian(date.year,date.month,date.day)
-            return date
+            return {'from': date, 'to': date}
         else:
             
             models = mm[0]
@@ -842,13 +1066,18 @@ In budget Transfer, I have one date field that I substituted with one of the cat
             #     today = EthiopianDateConverter.to_ethiopian(today.year,today.month,today.day)
             #     four.append(today)
 
-
-            data = {
-                'from': From[0],
-                'to': to[0],
-                # 'three': three[0],
-            }
-
+            try:
+                data = {
+                    'from': From[0],
+                    'to': to[0],
+                    # 'three': three[0],
+                }
+            except:
+                   data = {
+                    'from': From,
+                    'to': to,
+                    'three': three,
+                }
             _logger.info("DDDDDDDDDDDDDDDDDDData %s",data)
            
             return data
@@ -877,135 +1106,6 @@ In budget Transfer, I have one date field that I substituted with one of the cat
         if picked_date['pick'] == 4:
             pick3.append(data)
 
-
-
-
-
-
-
-class Partner(models.Model):
-    _inherit = 'res.partner'
-    
-
-    # date = fields.Date(string=" Date")
-    ethiopian_date = fields.Date('Ethiopian Date |')
-    # ticked_user = fields.Many2one('res.users')
-
-    
-
-
-    @api.model
-    def create(self, vals):
-        for i in range(0, len(pick1)):
-  
-            if i == (len(pick1)-1):
-                date1 = EthiopianDateConverter.to_gregorian(pick1[i]['year'],pick1[i]['month'],pick1[i]['day'])
-                Edate1 = EthiopianDateConverter.to_ethiopian(date1.year,date1.month,date1.day)
-                if pick1[i]['pick'] == 1:
-                    vals['date'] = date1
-                    vals['ethiopian_date'] = Edate1
-                    pick1.clear()
-                
-        
-        try:
-            if vals['date']  is not None:
-                date1 = vals['date']
-                Edate1 = EthiopianDateConverter.to_ethiopian(date1.year,date1.month,date1.day)
-                vals['ethiopian_date'] = Edate1
-
-        except:
-            pass
-       
-        return super(Partner, self).create(vals)
-
-
-
-
-    def write(self, vals):
-        _logger.info("############# Write:%s",vals)
-        try:
-            if vals['date'] is not None:
-                date_str = vals['date']
-                date_time_obj = date_str.split('-')
-                Edate = EthiopianDateConverter.to_ethiopian(int(date_time_obj[0]),int(date_time_obj[1]),int(date_time_obj[2]))
-                vals['ethiopian_date'] = Edate
-        except:
-            pass
-        # self.action_reload_page()
-        return super(Partner, self).write(vals)
-
-
-
-
-    @api.model
-    def date_convert_and_set(self,picked_date):
-        try:
-            dd = picked_date['url'].split('id=')
-            id = str(dd[1]).split('&')
-            m = picked_date['url'].split('model=')
-            mm = m[1].split('&')
-            if len(id[0]) <= 0:
-                _logger.info("################# not fund")
-
-            else: 
-                    models = mm[0]
-                    search = self.env[models].search([('id','=',id[0])])
-                    date_gr = EthiopianDateConverter.to_gregorian(picked_date['year'], picked_date['month'], picked_date['day'])
-                    date = EthiopianDateConverter.to_ethiopian(date_gr.year,date_gr.month,date_gr.day)
-                    if models == "res.partner":
-                        if picked_date['pick'] == 1:
-                            search.update({
-                                'date': date_gr,
-                                'ethiopian_date': date
-                                })
-                            # return {
-                            #         'type': 'ir.actions.client',
-                            #         'tag': 'reload',
-                            #     }
-                            # self.env.cr.commit()
-                            # return search
-                            search.action_reload_page()
-                            
-                    return {
-                        'type': 'ir.actions.client',
-                        'tag': 'reload',
-                    }
-       
-
-        except:
-            pass
-        date_gr = EthiopianDateConverter.to_gregorian(picked_date['year'], picked_date['month'], picked_date['day'])
-        date,time = str(datetime.now()).split(" ")
-        _logger.info(str(date_gr) + " " + str(f"{time}"))
-        dd,mm,yy= picked_date['day'],picked_date['month'],picked_date['year']
-        # date = str(date_et) + " " + str(f"{time}")
-        date = EthiopianDateConverter.to_ethiopian(date_gr.year,date_gr.month,date_gr.day)
-        date = {"data":f"d={picked_date['day']},m={picked_date['month']},y={picked_date['year']}","date":date}
-        data = {
-            'day':   picked_date['day'],
-            'month': picked_date['month'],
-            'year': picked_date['year'],
-            'pick': picked_date['pick']
-        }
-        if picked_date['pick'] == 1:
-            pick1.append(data)
-        if picked_date['pick'] == 2:
-            pick2.append(data)
-        if picked_date['pick'] == 3:
-            pick3.append(data)
-        if picked_date['pick'] == 4:
-            pick3.append(data)
-
-
-
-
-
-                ####
-                # 
-                #        Here's an example of a single date field modification widget,  
-                #        that can be changed in the budget management module.
-                # 
-                # ###
 
 
 
@@ -1108,7 +1208,7 @@ class BudgetPlanning(models.Model):
         if len(id[0]) <= 0:
             date = datetime.now()
             date = EthiopianDateConverter.to_ethiopian(date.year,date.month,date.day)
-            return date
+            return {'from': date, 'to': date}
         else:
             
             models = mm[0]

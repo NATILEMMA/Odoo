@@ -35,8 +35,8 @@ class HrEmployeeBase(models.AbstractModel):
     allocation_used_count = fields.Float('Total number of days off used', compute='_compute_total_allocation_used')
     show_leaves = fields.Boolean('Able to see Remaining Time Off', compute='_compute_show_leaves')
     is_absent = fields.Boolean('Absent Today', compute='_compute_leave_status', search='_search_absent_employee')
-    allocation_display = fields.Char(compute='_compute_allocation_count')
-    allocation_used_display = fields.Char(compute='_compute_total_allocation_used')
+    allocation_display = fields.Char(compute='_compute_allocation_count', translate=True)
+    allocation_used_display = fields.Char(compute='_compute_total_allocation_used', translate=True)
 
     def _get_date_start_work(self):
         return self.create_date

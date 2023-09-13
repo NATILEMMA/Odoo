@@ -1,0 +1,308 @@
+<?xml version="1.0"?>
+<odoo>
+
+
+  <!-- This record will create a tree view for supported Members -->
+  <record id="importaion_module_tree_view" model="ir.ui.view">
+    <field name="name">Imports</field>
+    <field name="model">importation.module</field>
+    <field name="arch" type="xml">
+      <tree decoration-warning="is_supporter == True" decoration-danger="is_candidate == True" decoration-success="new_member == True">
+        <field name="first_name"/>
+        <field name="father_name"/>
+        <field name="grand_father_name"/>
+        <field name="age" string="Age"/>
+        <field name="gender" string="Gender"/>
+        <field name="ethnic_group" string="Ethnic Group"/>
+        <field name="subcity_id" string="Subcity"/>
+        <field name="wereda_id" string="Woreda"/>
+        <field name="is_supporter" invisible="1"/>
+        <field name="is_candidate" invisible="1"/>
+        <field name="is_league" invisible="1"/>
+        <field name="is_member" invisible="1"/>
+        <field name="new_member" invisible="1"/>
+        <field name="is_leader" invisible="1"/>
+      </tree>
+    </field>
+  </record>
+
+  <!-- This record will create a form for Supported Members -->
+  <record id="importaion_module_form_view" model="ir.ui.view">
+    <field name="name">Imports</field>
+    <field name="model">importation.module</field>
+    <field name="arch" type="xml">
+      <form duplicate="false">
+        <header>
+            <field name="is_user_input" invisible="1"/>
+            <field name="is_supporter" invisible="1"/>
+            <field name="is_candidate" invisible="1"/>
+            <field name="new_member" invisible="1"/>
+            <field name="is_league" invisible="1"/>
+            <field name="is_member" invisible="1"/>
+            <field name="is_leader" invisible="1"/>
+        </header>
+        <sheet>
+          <group>
+            <group>
+              <separator string="Information"/>
+              <field name="first_name" placeholder="Eg. John"/>
+              <field name="father_name" placeholder="Eg. Smith"/>
+              <field name="grand_father_name" placeholder="Eg. Willam"/>
+              <field name="date"/>
+              <field name="age" string="Age" force_save="1"/>
+              <field name="gender" string="Gender" force_save="1"/>
+              <field name="ethnic_group" string="Ethnic Group" force_save="1" options="{'no_create': True, 'no_create_edit': True}"/>
+              <separator string="Educational Status"/>
+              <field name="education_level" string="Education Level" options="{'no_create': True, 'no_create_edit': True}"/>
+              <field name="field_of_study_id" string="Field of Study" options="{'no_create': True, 'no_create_edit': True}"/>
+              <field name="user_input" attrs="{'invisible': [('is_user_input', '=', False)]}" string="Other Field"/>
+              <separator string="Supporter Working"/>
+              <field name="subcity_id" string="Working Subcity" options="{'no_create': True, 'no_create_edit': True}"/>
+              <field name="wereda_id" string="Working Woreda" options="{'no_create': True, 'no_create_edit': True}"/>
+              <field name="national_id" string="National ID"/>
+              <field name="supporter_id"/>
+              <field name="candidate_id"/>
+              <field name="partner_id" context="{'form_view_ref': 'members_custom.membership_view_partner_form'}"/>
+              <separator string="Supporter Status"/>
+              <field name="start_of_support" string="Start of Support Year" required="1"/>
+              <field name="status"/>
+              <field name="gov_responsibility" attrs="{'invisible': ['|', '|', ('is_league', '=', True), ('is_member', '=', True), ('is_leader', '=', True)]}"/>
+            </group>
+            <group>
+              <separator string="Place of Birth"/>
+              <field name="region_of_birth" options="{'no_create': True, 'no_create_edit': True}"/>
+              <field name="zone_city_of_birth"/>
+              <field name="wereda_of_birth" string="Birth Place Woreda"/>
+              <separator string="Current Address"/>
+              <field name="region" options="{'no_create': True, 'no_create_edit': True}"/>
+              <!-- <field name="residential_subcity_id" string="Residential Subcity"/>
+              <field name="residential_wereda_id" string="Residential Woreda"/> -->
+              <field name="residential_subcity" string="Residential Subcity"/>
+              <field name="residential_wereda" string="Residential Woreda"/>
+              <field name="kebele" string="Kebele"/>
+              <field name="house_number" string="House Number"/>
+              <field name="house_phone_number" string="Home Phone Number"/>
+              <field name="office_phone_number" string="Office Phone Number"/>
+              <field name="phone" string="Phone" required="1"/>
+              <field name="email_address" string="Email"/>
+              <separator string="Employment Status"/>
+              <field name="source_of_livelihood" string="Livelihood"/>
+              <field name="work_place" string="Place Of Work"/>
+              <field name="position" string="Job Position"/>
+              <field name="income" string="Monthly Income"/>
+            </group>
+          </group>
+          <notebook>
+            <page string="Membership Information" attrs="{'invisible': [('is_member', '=', False)]}">
+              <group>
+                <group>
+                  <separator string="Membership Organized Under"/>
+                  <field name="membership_org" string="Membership Organization" options="{'no_create': True, 'no_create_edit': True}" attrs="{'required': [('is_member', '=', True)]}"/>
+                  <field name="main_office" force_save="1" attrs="{'required': [('is_member', '=', True)]}" options="{'no_create': True, 'no_create_edit': True}"/>
+                  <field name="member_cells" force_save="1" attrs="{'required': [('is_member', '=', True)]}" options="{'no_create': True, 'no_create_edit': True}"/>
+                  <field name="member_responsibility" options="{'no_create': True, 'no_create_edit': True}" attrs="{'required': [('is_member', '=', True)]}"/>
+                  <field name="member_sub_responsibility" options="{'no_create': True, 'no_create_edit': True}" string="Member's Sub Responsibility"/>
+                  <field name="stock" attrs="{'invisible': [('is_member', '=', False)]}"/>
+                </group>
+                <group>
+                  <separator string="Membership"/>
+                  <field name="start_of_membership" string="Start of Membership" attrs="{'required': [('is_member', '=', True)]}"/>
+                  <field name="grade" string="Grade"/>
+                  <field name="key_strength" string="Key Strength" widget="many2many_tags" options="{'no_create': True, 'no_create_edit': True}" attrs="{'required': [('is_member', '=', True)]}"/>
+                  <field name="key_weakness" string="Key Weakness" widget="many2many_tags" options="{'no_create': True, 'no_create_edit': True}" attrs="{'required': [('is_member', '=', True)]}"/>
+                </group>
+              </group>
+            </page>
+
+            <page string="Membership Payments" name="membership_payment" attrs="{'invisible': [('is_member', '=', False)]}">
+              <group>
+                <group>
+                  <separator string="Membership Fee"/>
+                  <field name="payment_method" widget="radio" options="{'horizontal': true}"/>
+                  <field name="income" string="Monthly Income" force_save="1" attrs="{'invisible': [('payment_method', '=', 'cash')]}"/>
+                  <label for="membership_monthly_fee_percent" string="Monthly Fee Percent" attrs="{'invisible': [('payment_method', '=', 'cash')]}"/>
+                    <div>
+                      <field name="membership_monthly_fee_percent" class="oe_inline" string="Monthly Fee Percent" attrs="{'invisible': [('payment_method', '=', 'cash')]}" force_save="1"/>
+                      <span class="ml8" attrs="{'invisible': [('payment_method', '=', 'cash')]}"> %</span>
+                    </div>
+                  <field name="membership_monthly_fee_cash" string="Monthly Fee Cash" attrs="{'invisible': [('payment_method', '=', 'percentage')]}" force_save="1"/>
+                  <field name="membership_monthly_fee_cash_from_percent" string="Monthly Fee In Cash" attrs="{'invisible': [('payment_method', '=', 'cash')]}" force_save="1"/>
+                </group>
+                <group>
+                  <separator string="Payment Follow-Up"/>
+                  <field name="type_of_payment" string="Payment Methods" widget="radio" options="{'horizontal': true}"/>
+                  <field name="track_member_fee" force_save="1"/>
+                </group>
+              </group>
+            </page>
+
+            <page string="Leader Information" attrs="{'invisible': [('is_leader', '=', False)]}">
+              <group>
+                <group>
+                  <separator string="Leader Grouping"/>
+                  <field name="membership_org" string="Membership Organization" options="{'no_create': True, 'no_create_edit': True}" attrs="{'required': [('is_leader', '=', True)]}"/>
+                  <field name="main_office" force_save="1"  attrs="{'required': [('is_leader', '=', True)]}" options="{'no_create': True, 'no_create_edit': True}"/>
+                  <field name="member_cells" force_save="1" attrs="{'required': [('is_leader', '=', True)]}" options="{'no_create': True, 'no_create_edit': True}"/>              
+                  <field name="leader_responsibility" options="{'no_create': True, 'no_create_edit': True}" attrs="{'required': [('is_leader', '=', True)]}"/>
+                  <field name="leader_sub_responsibility" options="{'color_field': 'color', 'no_create_edit': True}" widget="many2many_tags" attrs="{'required': [('is_leader', '=', True)]}"/>
+                </group>
+                <group>
+                  <separator string="Leader"/>
+                  <field name="experience" string="Leader Experience"/>
+                  <field name="leadership_status" string="Leadership Status" attrs="{'required': [('is_leader', '=', True)]}"/>
+                  <field name="start_of_membership" string="Start of Membership" attrs="{'required': [('is_leader', '=', True)]}"/>
+                  <field name="gov_responsibility"/>
+                  <field name="leader_stock" attrs="{'required': [('is_leader', '=', True)]}"/>
+                </group>
+              </group>
+            </page>
+
+            <page string="Membership Payments" name="membership_payment" attrs="{'invisible': [('is_leader', '=', False)]}">
+              <group>
+                <group>
+                  <separator string="Membership Fee"/>
+                  <field name="payment_method" widget="radio" options="{'horizontal': true}"/>
+                  <field name="income" string="Monthly Income" force_save="1" attrs="{'invisible': [('payment_method', '=', 'cash')]}"/>
+                  <label for="membership_monthly_fee_percent" string="Monthly Fee Percent" attrs="{'invisible': [('payment_method', '=', 'cash')]}"/>
+                    <div>
+                      <field name="membership_monthly_fee_percent" class="oe_inline" string="Monthly Fee Percent" attrs="{'invisible': [('payment_method', '=', 'cash')]}" force_save="1"/>
+                      <span class="ml8" attrs="{'invisible': [('payment_method', '=', 'cash')]}"> %</span>
+                    </div>
+                  <field name="membership_monthly_fee_cash" string="Monthly Fee Cash" attrs="{'invisible': [('payment_method', '=', 'percentage')]}" force_save="1"/>
+                  <field name="membership_monthly_fee_cash_from_percent" string="Monthly Fee In Cash" attrs="{'invisible': [('payment_method', '=', 'cash')]}" force_save="1"/>
+                </group>
+                <group>
+                  <separator string="Payment Follow-Up"/>
+                  <field name="type_of_payment" string="Payment Methods" widget="radio" options="{'horizontal': true}"/>
+                  <field name="track_member_fee" force_save="1"/>
+                </group>
+              </group>
+            </page>
+
+            <page string="League Information" attrs="{'invisible': [('is_league', '=', False)]}">
+              <group>
+                <group>
+                  <separator string="League Grouping"/>
+                  <field name="league_organization" string="League Organization" attrs="{'required': [('is_league', '=', True)]}" options="{'no_create': True, 'no_create_edit': True}"/>
+                  <field name="league_main_office" force_save="1" attrs="{'required': [('is_league', '=', True)]}" options="{'no_create': True, 'no_create_edit': True}"/>
+                  <field name="league_member_cells" force_save="1" attrs="{'required': [('is_league', '=', True)]}" options="{'no_create': True, 'no_create_edit': True}"/>              
+                  <field name="league_type" string="League Type" attrs="{'required': [('is_league', '=', True)]}"/>
+                  <field name="league_responsibility" string="League Responsibility" options="{'no_create': True, 'no_create_edit': True}" attrs="{'required': [('is_league', '=', True)]}"/>
+                  <field name="league_sub_responsibility" options="{'no_create': True, 'no_create_edit': True}" string="League's Sub Responsibility"/>
+                </group>
+                <group>
+                  <separator string="League"/>
+                  <field name="start_of_league" string="Start of League" attrs="{'required': [('is_league', '=', True)]}"/>
+                  <field name="grade" string="Grade"/>
+                  <field name="key_strength" string="Key Strength" widget="many2many_tags" options="{'no_create': True, 'no_create_edit': True}" attrs="{'required': [('is_league', '=', True)]}"/>
+                  <field name="key_weakness" string="Key Weakness" widget="many2many_tags" options="{'no_create': True, 'no_create_edit': True}" attrs="{'required': [('is_league', '=', True)]}"/>
+                  <field name="gov_responsibility"/>
+                </group>
+              </group>
+            </page>
+
+
+            <page string="League Payments" name="league_payment" attrs="{'invisible': [('is_league', '=', False)]}">
+              <group>
+                <group>
+                  <field name="pay_for_league" attrs="{'required': [('is_league', '=', True)]}"/>
+                  <field name="league_payment" force_save="1" attrs="{'invisible': [('pay_for_league', '=', False)], 'required': [('pay_for_league', '=', True)]}"/>
+                </group>
+                <group>
+                  <separator string="Payment Follow-Up"/>
+                  <field name="type_of_payment" string="Payment Methods" widget="radio" options="{'horizontal': true}"/>
+                  <field name="track_league_fee" force_save="1" />
+                </group>  
+              </group>
+            </page>   
+
+
+            <page string="Work Experience">
+              <field name="work_experience_ids">
+                <tree decoration-success="current_job == True" decoration-muted="current_job == False">
+                  <field name="name"/>
+                  <field name="place_of_work"/>
+                  <field name="years_of_service"/>
+                  <field name="current_job"/>
+                </tree>
+                <form>
+                  <sheet>
+                    <group>
+                      <group>
+                        <field name="name"/>
+                        <field name="place_of_work"/>
+                      </group>
+                      <group>
+                        <field name="years_of_service"/>
+                        <field name="current_job"/>
+                      </group>
+                    </group>
+                  </sheet>
+                </form>
+              </field>
+            </page>
+            <page string="Educational History">
+              <field name="educational_history">
+                <tree editable="bottom">
+                  <field name="education_level" options="{'no_create': True, 'no_create_edit': True}"/>
+                  <field name="field_of_study_id" options="{'no_create': True, 'no_create_edit': True}"/>
+                </tree>
+              </field>
+            </page>
+          </notebook>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+
+
+<!-- This record will create the action for supported members -->
+<record id="importaion_module_action" model="ir.actions.act_window">
+    <field name="name">Imports</field>
+    <field name="res_model">importation.module</field>
+    <field name="view_mode">tree,form</field>
+    <field name="limit">20</field>
+</record>
+
+
+<record id="supporter_create_mass_action" model="ir.actions.server">
+    <field name="model_id" ref="model_importation_module" />
+    <field name="name">Create Supporter</field>
+    <field name="binding_model_id" ref="model_importation_module"/>
+    <field name="state">code</field>
+    <field name = "code">
+if records:
+        action = records.create_supporter()
+    </field>
+</record>
+
+<record id="candidate_create_mass_action" model="ir.actions.server">
+    <field name="model_id" ref="model_importation_module" />
+    <field name="name">Create Candidate</field>
+    <field name="binding_model_id" ref="model_importation_module"/>
+    <field name="state">code</field>
+    <field name = "code">
+if records:
+        action = records.create_candidate()
+    </field>
+</record>
+
+<record id="member_create_mass_action" model="ir.actions.server">
+    <field name="model_id" ref="model_importation_module" />
+    <field name="name">Create Members</field>
+    <field name="binding_model_id" ref="model_importation_module"/>
+    <field name="state">code</field>
+    <field name = "code">
+if records:
+        action = records.create_member()
+    </field>
+</record>
+
+  <menuitem id="importaion_module_menu"
+            name="Member Importation"
+            parent="members_custom.system_admin_menus"
+            sequence="0"           
+            action="importaion_module_action"/>
+
+</odoo>

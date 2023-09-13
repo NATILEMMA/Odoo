@@ -12,12 +12,12 @@ class AuditlogHTTPRequest(models.Model):
     _description = "Auditlog - HTTP request log"
     _order = "create_date DESC"
 
-    display_name = fields.Char("Name", compute="_compute_display_name", store=True)
-    name = fields.Char("Path")
-    root_url = fields.Char("Root URL")
+    display_name = fields.Char("Name", compute="_compute_display_name", store=True, translate=True)
+    name = fields.Char("Path", translate=True)
+    root_url = fields.Char("Root URL", translate=True)
     user_id = fields.Many2one("res.users", string="User")
     http_session_id = fields.Many2one("auditlog.http.session", string="Session")
-    user_context = fields.Char("Context")
+    user_context = fields.Char("Context", translate=True)
     log_ids = fields.One2many("auditlog.log", "http_request_id", string="Logs")
 
     @api.depends("create_date", "name")

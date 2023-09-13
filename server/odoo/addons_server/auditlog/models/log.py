@@ -8,11 +8,11 @@ class AuditlogLog(models.Model):
     _description = "Auditlog - Log"
     _order = "create_date desc"
 
-    name = fields.Char("Resource Name", size=64)
+    name = fields.Char("Resource Name", size=64, translate=True)
     model_id = fields.Many2one("ir.model", string="Model")
     res_id = fields.Integer("Resource ID")
     user_id = fields.Many2one("res.users", string="User")
-    method = fields.Char(size=64)
+    method = fields.Char(size=64, translate=True)
     line_ids = fields.One2many("auditlog.log.line", "log_id", string="Fields updated")
     http_session_id = fields.Many2one("auditlog.http.session", string="Session")
     http_request_id = fields.Many2one("auditlog.http.request", string="HTTP Request")
@@ -31,9 +31,9 @@ class AuditlogLogLine(models.Model):
     log_id = fields.Many2one(
         "auditlog.log", string="Log", ondelete="cascade", index=True
     )
-    old_value = fields.Text()
-    new_value = fields.Text()
-    old_value_text = fields.Text("Old value Text")
-    new_value_text = fields.Text("New value Text")
-    field_name = fields.Char("Technical name", related="field_id.name")
-    field_description = fields.Char("Description", related="field_id.field_description")
+    old_value = fields.Text(translate=True)
+    new_value = fields.Text(translate=True)
+    old_value_text = fields.Text("Old value Text", translate=True)
+    new_value_text = fields.Text("New value Text", translate=True)
+    field_name = fields.Char("Technical name", related="field_id.name", translate=True)
+    field_description = fields.Char("Description", related="field_id.field_description", translate=True)

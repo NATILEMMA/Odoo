@@ -30,7 +30,9 @@
         'portal','account','budget', 'base_accounting_kit','hr_expense','reconciliation'],
     'data': [
         'data/data.xml',
+        'data/mail_data.xml',
         'security/ir.model.access.csv',
+        'wizard/budget_transfer_refuse_reason_views.xml',
         'views/account_budget_views.xml',
         'views/budget_transfer.xml',
   

@@ -1,0 +1,246 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* member_custom_extended
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20220525\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-17 09:35+0000\n"
+"PO-Revision-Date: 2023-08-17 09:35+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: member_custom_extended
+#: code:addons/member_custom_extended/wizard/cell_split_wizard.py:0
+#: code:addons/member_custom_extended/wizard/cell_split_wizard.py:0
+#: code:addons/member_custom_extended/wizard/cell_split_wizard.py:0
+#: code:addons/member_custom_extended/wizard/cell_split_wizard.py:0
+#, python-format
+msgid "<h4>Maximum Numbers Of Members Are Exceeding.</h4>"
+msgstr "<h4>የአባላት ቁጥሮች ከመጠን በላይ ናቸው።</h4>"
+
+#. module: member_custom_extended
+#: model_terms:ir.ui.view,arch_db:member_custom_extended.members_custom_extended_form
+msgid "Are You Sure You Want To Split The Cell?"
+msgstr "እርግጠኛ ነዎት ሕዋስን መከፋፈል ይፈልጋሉ?"
+
+#. module: member_custom_extended
+#: model:ir.model.fields,field_description:member_custom_extended.field_cell_split_wizard__main_office
+msgid "Basic Organization"
+msgstr "መሰረታዊ ድርጅት"
+
+#. module: member_custom_extended
+#: model:ir.model.fields,field_description:member_custom_extended.field_cell_split_wizard__candidate_ids
+#: model_terms:ir.ui.view,arch_db:member_custom_extended.cell_split_wizard_wizard_form
+msgid "Candidates"
+msgstr "እጩዎች"
+
+#. module: member_custom_extended
+#: model:ir.model.fields,field_description:member_custom_extended.field_cell_split_wizard__cell_id
+#: model:ir.model.fields,field_description:member_custom_extended.field_league_cell_split_wizard__cell_id
+msgid "Cell"
+msgstr "ሕዋስ"
+
+#. module: member_custom_extended
+#: model:ir.model.fields,field_description:member_custom_extended.field_cell_split_wizard__cell_name
+#: model:ir.model.fields,field_description:member_custom_extended.field_league_cell_split_wizard__cell_name
+msgid "Cell Name"
+msgstr "የሕዋስ ስም"
+
+#. module: member_custom_extended
+#: model:ir.model.fields,field_description:member_custom_extended.field_cell_split_wizard__create_uid
+#: model:ir.model.fields,field_description:member_custom_extended.field_league_cell_split_wizard__create_uid
+msgid "Created by"
+msgstr "የተፈጠረው በ"
+
+#. module: member_custom_extended
+#: model:ir.model.fields,field_description:member_custom_extended.field_cell_split_wizard__create_date
+#: model:ir.model.fields,field_description:member_custom_extended.field_league_cell_split_wizard__create_date
+msgid "Created on"
+msgstr "ተፈጠረበት ቀን"
+
+#. module: member_custom_extended
+#: model:ir.model.fields,field_description:member_custom_extended.field_cell_split_wizard__display_name
+#: model:ir.model.fields,field_description:member_custom_extended.field_league_cell_split_wizard__display_name
+msgid "Display Name"
+msgstr "ስም"
+
+#. module: member_custom_extended
+#: model:ir.model.fields,field_description:member_custom_extended.field_cell_split_wizard__id
+#: model:ir.model.fields,field_description:member_custom_extended.field_league_cell_split_wizard__id
+msgid "ID"
+msgstr "መለያ ቁጥር"
+
+#. module: member_custom_extended
+#: model:ir.model.fields,field_description:member_custom_extended.field_cell_split_wizard__is_mixed
+msgid "Is Mixed"
+msgstr "የተቀላቀለ"
+
+#. module: member_custom_extended
+#: model:ir.model.fields,field_description:member_custom_extended.field_cell_split_wizard____last_update
+#: model:ir.model.fields,field_description:member_custom_extended.field_league_cell_split_wizard____last_update
+msgid "Last Modified on"
+msgstr "ለመጨረሻ ጊዜ የተሻሻለው"
+
+#. module: member_custom_extended
+#: model:ir.model.fields,field_description:member_custom_extended.field_cell_split_wizard__write_uid
+#: model:ir.model.fields,field_description:member_custom_extended.field_league_cell_split_wizard__write_uid
+msgid "Last Updated by"
+msgstr "ለመጨረሻ ጊዜ ያደሰው"
+
+#. module: member_custom_extended
+#: model:ir.model.fields,field_description:member_custom_extended.field_cell_split_wizard__write_date
+#: model:ir.model.fields,field_description:member_custom_extended.field_league_cell_split_wizard__write_date
+msgid "Last Updated on"
+msgstr "ለመጨረሻ ጊዜ የታደሰው"
+
+#. module: member_custom_extended
+#: model:ir.model.fields,field_description:member_custom_extended.field_cell_split_wizard__leaders_ids
+#: model_terms:ir.ui.view,arch_db:member_custom_extended.cell_split_wizard_wizard_form
+msgid "Leaders"
+msgstr "አመራሮች"
+
+#. module: member_custom_extended
+#: model:ir.model.fields,field_description:member_custom_extended.field_league_cell_split_wizard__main_office_league
+msgid "League Basic Organization"
+msgstr "የሊግ መሰረታዊ ድርጅት"
+
+#. module: member_custom_extended
+#: model:ir.model.fields,field_description:member_custom_extended.field_cell_split_wizard__league_leaders_ids
+#: model_terms:ir.ui.view,arch_db:member_custom_extended.cell_split_wizard_wizard_form
+msgid "League Leaders"
+msgstr "የሊግ አመራሮች"
+
+#. module: member_custom_extended
+#: model:ir.model.fields,field_description:member_custom_extended.field_cell_split_wizard__for_which_members
+#: model:ir.model.fields,field_description:member_custom_extended.field_league_cell_split_wizard__for_which_members
+msgid "League or Member"
+msgstr "ሊግ ወይም አባል"
+
+#. module: member_custom_extended
+#: model:ir.model.fields,field_description:member_custom_extended.field_cell_split_wizard__leagues_ids
+#: model:ir.model.fields,field_description:member_custom_extended.field_league_cell_split_wizard__leagues_ids
+#: model_terms:ir.ui.view,arch_db:member_custom_extended.cell_split_wizard_wizard_form
+msgid "Leagues"
+msgstr "ሊጎች"
+
+#. module: member_custom_extended
+#: model:ir.model.fields,field_description:member_custom_extended.field_member_cells__maximum_number_reached
+msgid "Maximum Number Reached"
+msgstr "ከፍተኛው ቁጥር ደርሷል"
+
+#. module: member_custom_extended
+#: model:ir.model.fields,field_description:member_custom_extended.field_cell_split_wizard__members_ids
+#: model_terms:ir.ui.view,arch_db:member_custom_extended.cell_split_wizard_wizard_form
+msgid "Members"
+msgstr  "
+
+#. module: member_custom_extended
+#: model:ir.model.fields,field_description:member_custom_extended.field_cell_split_wizard__leaders_ids_mixed
+#: model_terms:ir.ui.view,arch_db:member_custom_extended.cell_split_wizard_wizard_form
+msgid "Mixed Leaders"
+msgstr "የአመራር ቅልቅል"
+
+#. module: member_custom_extended
+#: model:ir.model.fields,field_description:member_custom_extended.field_cell_split_wizard__league_leaders_ids_mixed
+#: model_terms:ir.ui.view,arch_db:member_custom_extended.cell_split_wizard_wizard_form
+msgid "Mixed League Leaders"
+msgstr "የሊግ አመራር ቅልቅል"
+
+#. module: member_custom_extended
+#: model:ir.model.fields,field_description:member_custom_extended.field_cell_split_wizard__leagues_ids_mixed
+#: model_terms:ir.ui.view,arch_db:member_custom_extended.cell_split_wizard_wizard_form
+msgid "Mixed Leagues"
+msgstr "የሊግ ቅልቅል"
+
+#. module: member_custom_extended
+#: model:ir.model.fields,field_description:member_custom_extended.field_cell_split_wizard__members_ids_mixed
+#: model_terms:ir.ui.view,arch_db:member_custom_extended.cell_split_wizard_wizard_form
+msgid "Mixed Members"
+msgstr "የአባላት ቅልቅል"
+
+#. module: member_custom_extended
+#: model:ir.model.fields,field_description:member_custom_extended.field_cell_split_wizard__member_cell_type_id
+#: model:ir.model.fields,field_description:member_custom_extended.field_league_cell_split_wizard__league_cell_type_id
+msgid "Organization"
+msgstr "ማህበራዊ መሰረት"
+
+#. module: member_custom_extended
+#: code:addons/member_custom_extended/wizard/cell_split_wizard.py:0
+#: code:addons/member_custom_extended/wizard/cell_split_wizard.py:0
+#: code:addons/member_custom_extended/wizard/league_cell_split_wizard.py:0
+#, python-format
+msgid "Please Configure The Number of Cells Allowed In A Single Main Office"
+msgstr "እባክዎ በአንድ መሰረታዊ ድርጅት ውስጥ የሚፈቀዱትን የህዋሳት ብዛት ያዋቅሩ::"
+
+#. module: member_custom_extended
+#: code:addons/member_custom_extended/wizard/cell_split_wizard.py:0
+#, python-format
+msgid "Please Configure The Number of Members Allowed In A Single Cell"
+msgstr "እባክዎ በአንድ ሕዋስ ውስጥ የሚፈቀዱትን የአባላት ብዛት ያዋቅሩ::"
+
+#. module: member_custom_extended
+#: model_terms:ir.ui.view,arch_db:member_custom_extended.cell_split_wizard_wizard_form
+#: model_terms:ir.ui.view,arch_db:member_custom_extended.members_custom_extended_form
+msgid "Split cell"
+msgstr "ሕዋስ ይክፈሉ"
+
+#. module: member_custom_extended
+#: model_terms:ir.ui.view,arch_db:member_custom_extended.members_custom_extended_form
+msgid ""
+"Split the cell when the cell reaches maximum amount and take some selected "
+"members to the new cell."
+msgstr "ሕዋሱ ከፍተኛ መጠን ሲደርስ ሕዋሱ ን ይከፋፍሉት እና የተወሰኑ የተመረጡ አባላትን ወደ አዲሱ ሕዋስ ይውሰዱ።"
+
+#. module: member_custom_extended
+#: model:ir.model.fields,field_description:member_custom_extended.field_cell_split_wizard__supporter_ids
+#: model_terms:ir.ui.view,arch_db:member_custom_extended.cell_split_wizard_wizard_form
+msgid "Supporters"
+msgstr "ደጋፊዎች"
+
+#. module: member_custom_extended
+#: code:addons/member_custom_extended/wizard/cell_split_wizard.py:0
+#: code:addons/member_custom_extended/wizard/cell_split_wizard.py:0
+#: code:addons/member_custom_extended/wizard/cell_split_wizard.py:0
+#: code:addons/member_custom_extended/wizard/cell_split_wizard.py:0
+#: code:addons/member_custom_extended/wizard/cell_split_wizard.py:0
+#: code:addons/member_custom_extended/wizard/cell_split_wizard.py:0
+#: code:addons/member_custom_extended/wizard/cell_split_wizard.py:0
+#: code:addons/member_custom_extended/wizard/cell_split_wizard.py:0
+#, python-format
+msgid ""
+"The Number Of Members Added Is Going To Exceed The Maximum Number Given In "
+"The Rule."
+msgstr "የተጨመሩት አባላት ቁጥር ከተጠቀሰው ከፍተኛው ቁጥር ሊበልጥ ነው::"
+
+#. module: member_custom_extended
+#: model:ir.model,name:member_custom_extended.model_member_cells
+msgid "This model will contain the cells members will belong in"
+msgstr "ይህ ሞዴል የህዋሶች በውስጥ ይይዛል::"
+
+#. module: member_custom_extended
+#: model:ir.model.fields,field_description:member_custom_extended.field_cell_split_wizard__wereda_id
+#: model:ir.model.fields,field_description:member_custom_extended.field_league_cell_split_wizard__wereda_id
+msgid "Woreda"
+msgstr "ወረዳ"
+
+#. module: member_custom_extended
+#: code:addons/member_custom_extended/models/office_in_membership.py:0
+#, python-format
+msgid "You Can't Split A Cell That Is Not In Draft State"
+msgstr ""
+
+#. module: member_custom_extended
+#: model:ir.model,name:member_custom_extended.model_cell_split_wizard
+msgid "cell split wizard"
+msgstr "የሕዋስ ከፋይ"
+
+#. module: member_custom_extended
+#: model:ir.model,name:member_custom_extended.model_league_cell_split_wizard
+msgid "league cell split wizard"
+msgstr "የሊግ ሴል ስንጥቅ"

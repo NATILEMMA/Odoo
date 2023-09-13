@@ -8,13 +8,13 @@ class AccountAssetCategory(models.Model):
     _inherit = ['account.asset']
     _description = 'Asset inherit'
 
-    description = fields.Text('Description of Asset')
+    description = fields.Text('Description of Asset', translate=True)
    
     date_of_purchase = fields.Date('Date of purchase')
-    location = fields.Char('Location of Asset')
+    location = fields.Char('Location of Asset', translate=True)
     year_of_service = fields.Integer('Year of service')
     depriciation_rate = fields.Integer('Depriciation Rate percentage', compute = "_deperciation_rate_calculate")
-    accounts_ref = fields.Char('Account ref')
+    accounts_ref = fields.Char('Account ref', translate=True)
 
 
     partner_id = fields.Many2one('res.partner', string='Supplier name',
@@ -24,7 +24,7 @@ class AccountAssetCategory(models.Model):
 
     year_of_service = fields.Integer('Year of service')
     depriciation_rate = fields.Integer('Depriciation Rate percentage', compute = "_deperciation_rate_calculate")
-    accounts_ref = fields.Char('Account ref')
+    accounts_ref = fields.Char('Account ref', translate=True)
     special_fields_ids = fields.One2many('special.asset.fields','asset_custom_id')
    
     def _deperciation_rate_calculate(self):
@@ -42,8 +42,8 @@ class AccountAssetCategory(models.Model):
     _description = 'Asset description line inherit'
 
     cost = fields.Float(related="asset_id.purchase_value" ,string='Cost', readonly=True,)
-    description = fields.Text('Description')
-    remark = fields.Text('Remark')
+    description = fields.Text('Description', translate=True)
+    remark = fields.Text('Remark', translate=True)
 
 
    
@@ -54,13 +54,13 @@ class SpecialFieldType(models.Model):
 
     asset_custom_id = fields.Many2one('account.asset')
     field_name = fields.Many2one("special.field.name",string="Field name",required=True)
-    field_value = fields.Char(string="Value")
+    field_value = fields.Char(string="Value", translate=True)
   
 class SpecialFieldType(models.Model):
     _name = 'special.field.name'
     _description = 'custom dynamic special fields'
 
-    name = fields.Char('Field name')
+    name = fields.Char('Field name', translate=True)
 
 
 

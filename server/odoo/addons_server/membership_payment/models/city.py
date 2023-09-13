@@ -9,12 +9,12 @@ class CityPayment(models.Model):
     _description = "This model will help to handel subcity payment"
     _inherit = ['portal.mixin', 'mail.thread', 'mail.activity.mixin', 'utm.mixin']
 
-    name = fields.Char(string="Subcity", defualt='draft', readonly= True)
+    name = fields.Char(string="Subcity", defualt='draft', readonly= True,translate=True)
     name_2 = fields.Many2one('membership.handlers.parent', string="Subcity", required=True)
     amount = fields.Float(string='amount')
     main = fields.Many2one('main.branch', string="Fiscal year")
-    fiscal_year = fields.Many2one('fiscal.year', string="Fiscal year", required=True, )
-    time_frame = fields.Many2one('reconciliation.time.fream', string='Time frame',
+    fiscal_year = fields.Many2one('fiscal.year', string="Year", required=True, )
+    time_frame = fields.Many2one('reconciliation.time.fream', string='Payment Month',
                                  domain="[('fiscal_year', '=', fiscal_year)]", required=True, )
     payments = fields.One2many('sub.payment', 'city', string='payments')
     payments_2 = fields.One2many('supporter.payment.sub', 'rev', string='payments')

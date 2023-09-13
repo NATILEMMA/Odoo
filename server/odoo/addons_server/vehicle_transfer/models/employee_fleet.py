@@ -22,8 +22,8 @@ class FleetReservedTime(models.Model):
     _description = "Reserved Time"
 
     employee = fields.Many2one('res.partner', string='Employee')
-    date_from = fields.Datetime(string='Reserved Date From')
-    date_to = fields.Datetime(string='Reserved Date To')
+    date_from = fields.Date(string='Reserved Date From')
+    date_to = fields.Date(string='Reserved Date To')
     reserved_obj = fields.Many2one('fleet.vehicle')
 
 
@@ -43,12 +43,13 @@ class EmployeeFleet(models.Model):
     @api.model
     def create(self, vals):
         vals['name'] = self.env['ir.sequence'].next_by_code('employee.fleet')
+        
         return super(EmployeeFleet, self).create(vals)
 
-    # @api.multi
+
     def send(self):
         if self.date_from:
-            fleet_obj = self.env['fleet.vehicle'].search([])
+            # fleet_obj = self.env['fleet.vehicle'].search([])
             check_availability = 0
 #             for i in fleet_obj:
 #                 for each in i.reserved_time:
@@ -60,10 +61,14 @@ class EmployeeFleet(models.Model):
 #                                 check_availability = 1
 #                             elif self.date_to > each.date_to:
 #                                 check_availability = 1
-#                             else:
+#                             else:            self.checklist = checklist
+
 #                                 check_availability = 0
 #                         else:
 #                             check_availability = 0
+            if self.fleet:
+               if self.fleet.driver_id:
+                   raise Warning('The vehicle has Diver. please return from to submit request')
             if self.date_to:
                 date = self.date_to
             else:
@@ -89,12 +94,13 @@ class EmployeeFleet(models.Model):
                 checklist.append((0, 0, {'checklist_id': checklist_type.id}))
             print("checklist", checklist_type)
             self.checklist = checklist
+            self.checklist_2 = checklist
 
-    # @api.multi
     def approve(self):
         self.fleet.fleet_status = True
         self.state = 'confirm'
         self.fleet.driver_id = self.employee.id
+        self.fleet.driver_status = 'occupied'
         mail_content = _('Hi %s,<br>Your vehicle request for the reference %s is approved.') % \
                         (self.employee.name, self.name)
         main_content = {
@@ -139,10 +145,11 @@ class EmployeeFleet(models.Model):
     # @api.multi
     def returned(self):
         self.reserved_fleet_id.unlink()
-        self.returned_date = fields.datetime.now()
+        self.returned_date = fields.datetime.now().date()
         self.state = 'return'
         print("self.employee.driver_id", self.fleet.driver_id)
         self.fleet.driver_id = False
+        self.fleet.driver_status = 'free'
         print("self.employee.driver_id after false", self.fleet.driver_id)
 
     @api.constrains('date_from', 'date_to')
@@ -174,20 +181,20 @@ class EmployeeFleet(models.Model):
 
     reserved_fleet_id = fields.Many2one('fleet.reserved', invisible=1, copy=False)
     checklist_template = fields.Many2one('fleet.checklist.template', string='Checklist Template')
-    name = fields.Char(string='Request Number', copy=False)
+    name = fields.Char(string='Request Number', copy=False,translate=True)
     employee = fields.Many2one('res.partner', string='Driver', required=1, readonly=True,
                                states={'draft': [('readonly', False)]})
     req_date = fields.Date(string='Requested Date', default=fields.Date.context_today, required=1,
                            states={'draft': [('readonly', False)]}, help="Requested Date")
     fleet = fields.Many2one('fleet.vehicle', string='Vehicle', required=1, readonly=True,
                             states={'draft': [('readonly', False)]})
-    date_from = fields.Datetime(string='From',  readonly=True, required=1,
-                                states={'draft': [('readonly', False)]})
-    date_to = fields.Datetime(string='To',  readonly=True,
+    date_from = fields.Date(string='From',  readonly=True,
+                                states={'draft': [('readonly', False)]}, default =  fields.Date.today())
+    date_to = fields.Date(string='To',  readonly=True,
                               states={'draft': [('readonly', False)]})
-    returned_date = fields.Datetime(string='Returned Date', readonly=1)
+    returned_date = fields.Date(string='Returned Date', readonly=1)
     purpose = fields.Text(string='Additional Note', required=1, readonly=True,
-                          states={'draft': [('readonly', False)]}, help="Purpose")
+                          states={'draft': [('readonly', False)]}, help="Purpose",translate=True)
     state = fields.Selection([('draft', 'Draft'), ('waiting', 'Waiting for Approval'), ('cancel', 'Cancel'),
                               ('confirm', 'Approved'), ('reject', 'Rejected'), ('return', 'Returned')],
                              string="State", default="draft")

@@ -23,7 +23,7 @@ class AccountFundPost(models.Model):
     _inherit = ['portal.mixin', 'mail.thread', 'mail.activity.mixin', 'utm.mixin']
     _description = "fund Position"
 
-    name = fields.Char('Name', required=True)
+    name = fields.Char('Name', required=True, translate=True)
     account_ids = fields.Many2many('account.account', 'account_fund_rel', 'fund_id', 'account_id', 'Accounts',
                                    domain=[('deprecated', '=', False)])
     fund_line = fields.One2many('fund.lines', 'general_fund_id', 'Fund Lines')
@@ -56,11 +56,11 @@ class Fund(models.Model):
     _description = "fund"
     _inherit = ['portal.mixin', 'mail.thread', 'mail.activity.mixin', 'utm.mixin']
 
-    name = fields.Char('Fund Name', required=True, states={'done': [('readonly', True)]})
+    name = fields.Char('Fund Name', required=True, states={'done': [('readonly', True)]}, translate=True)
     creating_user_id = fields.Many2one('res.users', 'Responsible', default=lambda self: self.env.user)
     date_from = fields.Date('Start Date', required=True, states={'done': [('readonly', True)]})
     date_to = fields.Date('End Date', required=True, states={'done': [('readonly', True)]})
-    fund_usage = fields.Char('Fund Usage')
+    fund_usage = fields.Char('Fund Usage', translate=True)
     planned_amount = fields.Float('Total Amount', digits=0)
     state = fields.Selection([
         ('draft', 'Draft'),
@@ -105,7 +105,7 @@ class FundLines(models.Model):
     paid_date = fields.Date('Paid Date')
     original_planned_amount = fields.Float('Original Planned Amount', digits=0)
     reserved_amount = fields.Float('Reserved Amount', compute='_compute_reserved_amount', digits=0)
-    fund_usage = fields.Char('Fund Usage',compute='_compute_fund_percentage', default="0%")
+    fund_usage = fields.Char('Fund Usage',compute='_compute_fund_percentage', default="0%", translate=True)
     department_id = fields.Many2one('hr.department','Department')
     commitment = fields.Float('Commitment', digits=0)
     available_amount = fields.Float('Available Amount', digits=0)

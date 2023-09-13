@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="purchase_requisition_ethiopian_form" model="ir.ui.view">
+        <field name="name">purchase.requisition.form</field>
+        <field name="model">purchase.requisition</field>
+        <field name="inherit_id" ref="purchase_requisition.view_purchase_requisition_form"/>
+        <field name="arch" type="xml">
+              <xpath expr="//field[@name='date_end']" position="replace">
+                        <field name="is_pagum_from" invisible="1"/>
+                        <field  name="date_end"  class="col-50" colspan="3" groups="EthiopianCalendar.group_gregory"
+                         string="Start date"/>
+                        <field  name="ethiopian_from" readonly="1" string="Start date" style="float:left" attrs="{'invisible': ['|',('is_pagum_from', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                        <field  name="pagum_from" readonly="1"  string="Start date" style=" float:left"  attrs="{'invisible': ['|',('is_pagum_from', '!=',False)  ]}"  groups="EthiopianCalendar.group_ethio_datepicker"/>
+                         <div>
+                         </div>
+                        <div style="margin-bottom:40px;margin-top:-22px;margin-left:7px;margin-right:0px">
+                        <widget name="ethiopian_calander_widget"  style=" float:left;width:226px;" class="oe_edit_only"  groups="EthiopianCalendar.group_ethio_datepicker"/>
+                        </div>
+              </xpath>
+              <xpath expr="//field[@name='schedule_date']" position="replace">
+                        <field name="is_pagum_to" invisible="1"/>
+                        <field  name="schedule_date"  class="col-50" colspan="3" groups="EthiopianCalendar.group_gregory" string="End date"/>
+                        <field  name="ethiopian_to" readonly="1" string="End date" style="float:left" attrs="{'invisible': ['|',('is_pagum_from', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                        <field  name="pagum_to" readonly="1"  string="End date" style=" float:left"  attrs="{'invisible': ['|',('is_pagum_from', '!=',False)  ]}"  groups="EthiopianCalendar.group_ethio_datepicker"/>
+                         <div>
+                         </div>
+                        <div style="margin-bottom:40px;margin-top:-22px;margin-left:7px;margin-right:0px">
+                        <widget name="ethiopian_calander_widget_two"  style=" float:left;width:226px;" class="oe_edit_only"  groups="EthiopianCalendar.group_ethio_datepicker"/>
+                        </div>
+              </xpath>
+             <xpath expr="//field[@name='ordering_date']" position="replace">
+                  <field  name="ordering_date" invisible="1"/>
+            </xpath>
+            </field>
+    </record>
+
+</odoo>

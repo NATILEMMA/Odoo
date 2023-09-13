@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from datetime import datetime, date, timedelta
 from odoo import models, fields, api, _
-from odoo.exceptions import Warning
+from odoo.exceptions import Warning ,UserError
 
 
 class HrEmployeeDocument(models.Model):
@@ -89,9 +89,9 @@ class HrEmployeeDocument(models.Model):
                 if exp_date < date.today():
                     raise Warning('Your Document Is Expired.')
 
-    name = fields.Char(string='Document Number', required=True, copy=False, help='You can give your'
-                                                                                 'Document number.')
-    description = fields.Text(string='Description', copy=False, help="Description")
+    name = fields.Char(string='Document Number',readonly=True, required=True, copy=False, help='You can give your'
+                                                                                 'Document number.',default="New",translate=True)
+    description = fields.Text(string='Description', copy=False, help="Description",translate=True)
     expiry_date = fields.Date(string='Expiry Date', copy=False, help="Date of expiry")
     employee_ref = fields.Many2one('hr.employee', invisible=1, copy=False)
     doc_attachment_id = fields.Many2many('ir.attachment', 'doc_attach_rel', 'doc_id', 'attach_id3', string="Attachment",
@@ -111,19 +111,23 @@ class HrEmployeeDocument(models.Model):
         Everyday till expiry date: You will get notification from number of days till the expiry date of the document.
         Notification on and after expiry: You will get notification on the expiry date and continues upto Days.
         If you did't select any then you will get notification before 7 days of document expiry.""")
+    
+    @api.model
+    def create(self, vals):
 
+        vals['name'] = self.env['ir.sequence'].next_by_code('hr.employee.document.sequence')
+    
+        request = super(HrEmployeeDocument, self).create(vals)
+        return request
+        
 
 class HrEmployee(models.Model):
-
     _inherit = 'hr.employee'
-    employee_document_count = fields.Integer(String="document count")
-
 
     def _document_count(self):
         for each in self:
             document_ids = self.env['hr.employee.document'].sudo().search([('employee_ref', '=', each.id)])
             each.document_count = len(document_ids)
-            each.employee_document_count = each.document_count
 
     def document_view(self):
         self.ensure_one()

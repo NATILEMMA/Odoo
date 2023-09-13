@@ -48,10 +48,13 @@
               <field name="is_league" invisible="1"/>
               <field name="is_leader" invisible="1"/>
               <field name="is_member" invisible="1"/>
+              <field name="city_id" invisible="1"/>
+              <field name="subcity_id" invisible="1"/>
               <field name="wereda_id" invisible="1"/>
+              <field name="main_office_id" invisible="1"/>
+              <field name="cell_id" invisible="1"/>
               <field name="x_css" force_save="1" nolabel="1" invisible="1"/>
-              <field name="wereda_id"/>
-              <field name="partner_id" string="Member" context="{'form_view_ref': 'members_custom.membership_view_partner_form'}" required="1"/>
+              <field name="partner_id" string="Member" context="{'form_view_ref': 'members_custom.membership_view_partner_form'}" required="1" options="{'no_create': True, 'no_create_edit': True}"/>
               <field name="transfer_as_a_league_or_member" string="Transfer As" attrs="{'invisible': [('is_leader', '=', True)], 'required': [('is_member', '=', True)]}"/>
               <field name="transfer_as_a_leader_or_member" string="Transfer As" attrs="{'invisible': [('is_leader', '=', False)], 'required': [('is_leader', '=', True)]}"/>
               <separator string="Transfer From"/>
@@ -61,28 +64,25 @@
               <field name="from_member_cells" string="From Cell" force_save="1" attrs="{'invisible': ['|', ('transfer_as_a_leader_or_member', '=', 'league'), ('transfer_as_a_league_or_member', '=', 'league')]}"/>
               <field name="from_league_main_office" string="From League Main Office" force_save="1" attrs="{'invisible': ['|', '|', ('transfer_as_a_leader_or_member', '=', 'leader'), ('transfer_as_a_leader_or_member', '=', 'member'), ('transfer_as_a_league_or_member', '=', 'member')]}"/>
               <field name="from_league_member_cells" string="From League Cell" force_save="1" attrs="{'invisible': ['|', '|', ('transfer_as_a_leader_or_member', '=', 'leader'), ('transfer_as_a_leader_or_member', '=', 'member'), ('transfer_as_a_league_or_member', '=', 'member')]}"/>
-              <button name="add_attachment" string="Attachment" type="object" class="oe_highlight"/>
             </group>
             <group>
               <separator string="Experience and Work"/>
               <field name="place_of_work" force_save="1"/>
               <field name="responsibility_in_gov" force_save="1"/>
               <separator string="Tranfer To"/>
-              <field name="transfer_membership_org" attrs="{'required': ['|', ('transfer_as_a_leader_or_member', '=', 'member'), ('transfer_as_a_league_or_member', '=', 'member')], 'invisible': ['|', '|', ('transfer_as_a_league_or_member', '=', 'league'), ('transfer_as_a_leader_or_member', '=', 'league'), ('transfer_as_a_leader_or_member', '=', 'leader')]}"/>
-              <field name="transfer_league_org" attrs="{'required': ['|', ('transfer_as_a_leader_or_member', '=', 'league'), ('transfer_as_a_league_or_member', '=', 'league')], 'invisible': ['|', '|', ('transfer_as_a_leader_or_member', '=', 'leader'), ('transfer_as_a_leader_or_member', '=', 'member'), ('transfer_as_a_league_or_member', '=', 'member')]}"/>
-              <field name="transfer_league_responsibility" string="To League Responsibility" attrs="{'required': ['|', ('transfer_as_a_leader_or_member', '=', 'league'), ('transfer_as_a_league_or_member', '=', 'league')], 'invisible': ['|', '|', ('transfer_as_a_leader_or_member', '=', 'leader'), ('transfer_as_a_leader_or_member', '=', 'member'), ('transfer_as_a_league_or_member', '=', 'member')]}"/>
-              <field name="transfer_responsibility_member" string="To Member Responsibility" attrs="{'required': ['|', ('transfer_as_a_leader_or_member', '=', 'member'), ('transfer_as_a_league_or_member', '=', 'member')], 'invisible': ['|', '|', ('transfer_as_a_leader_or_member', '=', 'league'), ('transfer_as_a_league_or_member', '=', 'league'), ('is_member', '=', False)]}"/>
-              <field name="transfer_responsibility_leader" string="To Leader Responsibility" attrs="{'invisible': ['|', '|', '|', ('transfer_as_a_leader_or_member', '=', 'league'), ('transfer_as_a_leader_or_member', '=', 'member'), ('transfer_as_a_league_or_member', '=', 'league'), ('is_leader', '=', False)], 'required': [('transfer_as_a_leader_or_member', '=', 'leader')]}"/>
-              <field name="transfer_subcity_id" string="To Subcity" attrs="{'required': ['|', '|', '|', ('for_subcity', '=', True), ('for_woreda', '=', True), ('for_main', '=', True), ('for_cell', '=', True)],'invisible': ['&amp;', '&amp;', ('is_leader', '=', True), ('transfer_as_a_leader_or_member', '=', 'leader'), ('for_city', '=', True)]}"/>
-              <field name="transfer_wereda_id" string="To Woreda" attrs="{'required': ['|', '|', ('for_woreda', '=', True), ('for_main', '=', True), ('for_cell', '=', True)], 'invisible': ['&amp;', '&amp;', ('is_leader', '=', True), ('transfer_as_a_leader_or_member', '=', 'leader'), '|', ('for_city', '=', True), ('for_woreda', '=', False)]}"/>
-              <field name="transfer_main_office" string="To Main Office" attrs="{'invisible': ['|', '|', ('transfer_as_a_leader_or_member', '=', 'league'), ('transfer_as_a_league_or_member', '=', 'league'),  ('transfer_as_a_leader_or_member', '=', 'leader')]}"/>
-              <field name="transfer_member_cells" string="To Cell" attrs="{'invisible': ['|', '|', ('transfer_as_a_leader_or_member', '=', 'league'), ('transfer_as_a_league_or_member', '=', 'league'), ('transfer_as_a_leader_or_member', '=', 'leader')]}"/>
-              <field name="transfer_league_main_office" string="To League Main Office" attrs="{'invisible': ['|', '|', ('transfer_as_a_leader_or_member', '=', 'leader'), ('transfer_as_a_leader_or_member', '=', 'member'), ('transfer_as_a_league_or_member', '=', 'member')]}"/>
-              <field name="transfer_league_member_cells" string="To League Cell" attrs="{'invisible': ['|', '|', ('transfer_as_a_leader_or_member', '=', 'leader'), ('transfer_as_a_leader_or_member', '=', 'member'), ('transfer_as_a_league_or_member', '=', 'member')]}"/>  
+              <field name="transfer_membership_org" options="{'no_create': True, 'no_create_edit': True}" attrs="{'required': ['|', ('transfer_as_a_leader_or_member', '=', 'member'), ('transfer_as_a_league_or_member', '=', 'member')], 'invisible': ['|', '|', ('transfer_as_a_league_or_member', '=', 'league'), ('transfer_as_a_leader_or_member', '=', 'league'), ('transfer_as_a_leader_or_member', '=', 'leader')]}"/>
+              <field name="transfer_league_organization" options="{'no_create': True, 'no_create_edit': True}" attrs="{'required': ['|', ('transfer_as_a_leader_or_member', '=', 'league'), ('transfer_as_a_league_or_member', '=', 'league')], 'invisible': ['|', '|', ('transfer_as_a_leader_or_member', '=', 'leader'), ('transfer_as_a_leader_or_member', '=', 'member'), ('transfer_as_a_league_or_member', '=', 'member')]}"/>
+              <field name="transfer_league_responsibility" options="{'no_create': True, 'no_create_edit': True}" string="To League Responsibility" attrs="{'required': ['|', ('transfer_as_a_leader_or_member', '=', 'league'), ('transfer_as_a_league_or_member', '=', 'league')], 'invisible': ['|', '|', ('transfer_as_a_leader_or_member', '=', 'leader'), ('transfer_as_a_leader_or_member', '=', 'member'), ('transfer_as_a_league_or_member', '=', 'member')]}"/>
+              <field name="transfer_responsibility_member" options="{'no_create': True, 'no_create_edit': True}" string="To Member Responsibility" attrs="{'required': ['|', ('transfer_as_a_leader_or_member', '=', 'member'), ('transfer_as_a_league_or_member', '=', 'member')], 'invisible': ['|', '|', ('transfer_as_a_leader_or_member', '=', 'leader'), ('transfer_as_a_leader_or_member', '=', 'league'), ('transfer_as_a_league_or_member', '=', 'league')]}"/>
+              <field name="transfer_responsibility_leader" options="{'no_create': True, 'no_create_edit': True}" string="To Leader Responsibility" attrs="{'invisible': ['|', '|', '|', ('transfer_as_a_leader_or_member', '=', 'league'), ('transfer_as_a_leader_or_member', '=', 'member'), ('transfer_as_a_league_or_member', '=', 'league'), ('transfer_as_a_league_or_member', '=', 'member')], 'required': [('transfer_as_a_leader_or_member', '=', 'leader')]}"/>
+              <field name="transfer_subcity_id" options="{'no_create': True, 'no_create_edit': True}" string="To Subcity" attrs="{'required': ['|', '|', '|', ('for_subcity', '=', True), ('for_woreda', '=', True), ('for_main', '=', True), ('for_cell', '=', True)],'invisible': ['&amp;', '&amp;', ('is_leader', '=', True), ('transfer_as_a_leader_or_member', '=', 'leader'), ('for_city', '=', True)]}"/>
+              <field name="transfer_wereda_id" options="{'no_create': True, 'no_create_edit': True}" string="To Woreda" attrs="{'required': ['|', '|', ('for_woreda', '=', True), ('for_main', '=', True), ('for_cell', '=', True)], 'invisible': ['&amp;', '&amp;', ('is_leader', '=', True), ('transfer_as_a_leader_or_member', '=', 'leader'), '|', ('for_city', '=', True), ('for_woreda', '=', False)]}"/>
+              <field name="transfer_main_office" options="{'no_create': True, 'no_create_edit': True}" string="To Main Office" attrs="{'invisible': ['|', '|', ('transfer_as_a_leader_or_member', '=', 'league'), ('transfer_as_a_league_or_member', '=', 'league'),  ('transfer_as_a_leader_or_member', '=', 'leader')], 'required': ['|', ('transfer_as_a_leader_or_member', '=', 'member'), ('transfer_as_a_league_or_member', '=', 'member')]}"/>
+              <field name="transfer_member_cells" options="{'no_create': True, 'no_create_edit': True}" string="To Cell" attrs="{'invisible': ['|', '|', ('transfer_as_a_leader_or_member', '=', 'league'), ('transfer_as_a_league_or_member', '=', 'league'), ('transfer_as_a_leader_or_member', '=', 'leader')], 'required': ['|', ('transfer_as_a_leader_or_member', '=', 'member'), ('transfer_as_a_league_or_member', '=', 'member')]}"/>
+              <field name="transfer_league_main_office" options="{'no_create': True, 'no_create_edit': True}" string="To League Main Office" attrs="{'invisible': ['|', '|', ('transfer_as_a_leader_or_member', '=', 'leader'), ('transfer_as_a_leader_or_member', '=', 'member'), ('transfer_as_a_league_or_member', '=', 'member')], 'required': ['|', ('transfer_as_a_leader_or_member', '=', 'league'), ('transfer_as_a_league_or_member', '=', 'league')]}"/>
+              <field name="transfer_league_member_cells" options="{'no_create': True, 'no_create_edit': True}" string="To League Cell" attrs="{'invisible': ['|', '|', ('transfer_as_a_leader_or_member', '=', 'leader'), ('transfer_as_a_leader_or_member', '=', 'member'), ('transfer_as_a_league_or_member', '=', 'member')], 'required': ['|', ('transfer_as_a_leader_or_member', '=', 'league'), ('transfer_as_a_league_or_member', '=', 'league')]}"/>  
               <field name="responsibility_state"/>
-              <field name="receiving_manager" string="Receiving Manager" force_save="1"/>
-              <!-- <field name="receiving_manager" string="Receiving Manager" attrs="{'invisible': ['|', '&amp;', '&amp;', ('is_leader', '=', True), ('transfer_as_a_leader_or_member', '=', 'leader'), ('for_subcity', '=', True), '|', ('for_city', '=', True)]}" force_save="1"/> -->
-              <!-- <field name="receiving_manager_subcity" string="Receiving Manager" attrs="{'invisible': [('for_subcity', '=', False)]}" force_save="1"/> -->
+              <field name="receiving_manager" force_save="1" options="{'no_create': True, 'no_create_edit': True}"/>
             </group>
           </group>
           <notebook>
@@ -107,7 +107,7 @@
               <group>
                 <group>
                   <separator string="Current League Information"/>
-                    <field name="league_org" force_save="1"/>
+                    <field name="league_organization" force_save="1"/>
                     <field name="league_responsibility_in_org" string="Responsibility in Organization" force_save="1"/>
                     <field name="league_fee" force_save="1"/>
                 </group>
@@ -164,7 +164,7 @@
                           ('from_wereda_id.branch_manager', '=', uid),
                           ('from_subcity_id.parent_manager', '=', uid),
                           ('from_subcity_id.city_id.city_manager', 'in', [uid]),
-                          ('from_subcity_id.city_id.responsible_id.system_admin', '=', uid)]</field>
+                          ('from_subcity_id.city_id.responsible_id.system_admin', 'in', [uid])]</field>
   </record>
   
 
@@ -186,7 +186,7 @@
             name="Transfer"
             parent="menu_association"
             sequence="90"
-            groups="members_custom.member_group_cell_manager"
+            groups="members_custom.member_group_city_transfer_handler,members_custom.member_group_cell_manager"
             action="tranfer_member_menu"/>
 
 </odoo>

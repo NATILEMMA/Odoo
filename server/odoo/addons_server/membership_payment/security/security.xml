@@ -13,9 +13,6 @@
         <field name="model_id" ref="model_membership_structure" />
         <field name="global" eval="True" />
         <field name="perm_read" eval="1" />
-        <field name="perm_create" eval="1" />
-        <field name="perm_write" eval="1" />
-        <field name="perm_unlink" eval="1" />
         <field name="domain_force">[('users', 'in', user.id)]</field>
     </record>
     <record id="see_league_structure" model="ir.rule">
@@ -23,9 +20,6 @@
         <field name="model_id" ref="model_league_structure" />
         <field name="global" eval="True" />
         <field name="perm_read" eval="1" />
-        <field name="perm_create" eval="1" />
-        <field name="perm_write" eval="1" />
-        <field name="perm_unlink" eval="1" />
         <field name="domain_force">[('users', 'in', user.id)]</field>
     </record>
     <record id="see_supperter_structure" model="ir.rule">
@@ -33,9 +27,6 @@
         <field name="model_id" ref="model_supporter_structure" />
         <field name="global" eval="True" />
         <field name="perm_read" eval="1" />
-        <field name="perm_create" eval="1" />
-        <field name="perm_write" eval="1" />
-        <field name="perm_unlink" eval="1" />
         <field name="domain_force">[('users', 'in', user.id)]</field>
     </record>
 </odoo>

@@ -235,8 +235,7 @@ class StockQuant(models.Model):
     @api.constrains('quantity')
     def check_quantity(self):
         for quant in self:
-            if quant.location_id.usage != 'inventory' and quant.lot_id and quant.product_id.tracking == 'serial' \
-                    and float_compare(abs(quant.quantity), 1, precision_rounding=quant.product_uom_id.rounding) > 0:
+            if float_compare(quant.quantity, 1, precision_rounding=quant.product_uom_id.rounding) > 0 and quant.lot_id and quant.product_id.tracking == 'serial':
                 message_base = _('A serial number should only be linked to a single product.')
                 message_quant = _('Please check the following serial number (name, id): ')
                 message_sn = '(%s, %s)' % (quant.lot_id.name, quant.lot_id.id)
@@ -694,7 +693,7 @@ class QuantPackage(models.Model):
 
     name = fields.Char(
         'Package Reference', copy=False, index=True,
-        default=lambda self: self.env['ir.sequence'].next_by_code('stock.quant.package') or _('Unknown Pack'))
+        default=lambda self: self.env['ir.sequence'].next_by_code('stock.quant.package') or _('Unknown Pack'), translate=True)
     quant_ids = fields.One2many('stock.quant', 'package_id', 'Bulk Content', readonly=True,
         domain=['|', ('quantity', '!=', 0), ('reserved_quantity', '!=', 0)])
     packaging_id = fields.Many2one(

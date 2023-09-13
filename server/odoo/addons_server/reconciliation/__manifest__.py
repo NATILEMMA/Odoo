@@ -5,7 +5,7 @@
     'category': 'Accounting',
     'summary': 'Replacing default bank statement reconciliation method by traditional way',
     'description': """Replacing default bank statement reconciliation method by traditional way""",
-    'depends': ['account','report'],
+    'depends': ['account'],
     'data': [
         'security/ir.model.access.csv',
         'views/bank_reconciltion.xml',
@@ -17,7 +17,6 @@
         'views/fiscal_year.xml',
         'views/account.xml',
         'views/compute.xml',
-        'views/report.xml',
 
 
 

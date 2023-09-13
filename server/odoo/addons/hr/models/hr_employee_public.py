@@ -14,25 +14,30 @@ class HrEmployeePublic(models.Model):
 
     # Fields coming from hr.employee.base
     create_date = fields.Datetime(readonly=True)
-    name = fields.Char(readonly=True)
+    name = fields.Char(readonly=True, translate=False)
     active = fields.Boolean(readonly=True)
     department_id = fields.Many2one(readonly=True)
     job_id = fields.Many2one(readonly=True)
-    job_title = fields.Char(readonly=True)
+    job_title = fields.Char(readonly=True, translate=False)
     company_id = fields.Many2one(readonly=True)
     address_id = fields.Many2one(readonly=True)
-    mobile_phone = fields.Char(readonly=True)
-    work_phone = fields.Char(readonly=True)
-    work_email = fields.Char(readonly=True)
-    work_location = fields.Char(readonly=True)
+    mobile_phone = fields.Char(readonly=True, translate=False)
+    work_phone = fields.Char(readonly=True, translate=False)
+    work_email = fields.Char(readonly=True, translate=False)
+    work_location = fields.Char(readonly=True, translate=False)
     user_id = fields.Many2one(readonly=True)
     resource_id = fields.Many2one(readonly=True)
     resource_calendar_id = fields.Many2one(readonly=True)
     tz = fields.Selection(readonly=True)
     color = fields.Integer(readonly=True)
-
+    departure_reason = fields.Selection([
+        ('fired', 'Fired'),
+        ('resigned', 'Resigned'),
+        ('retired', 'Retired')
+    ], string="Departure Reason", groups="hr.group_hr_user", copy=False, tracking=True)
+    departure_description = fields.Text(string="Additional Information", groups="hr.group_hr_user", copy=False, tracking=True, translate=False)
     # hr.employee.public specific fields
-    child_ids = fields.One2many('hr.employee.public', 'parent_id', string='Direct subordinates', readonly=True)
+    child_ids = fields.One2many('hr.employee.public','parent_id', string='Direct subordinates', readonly=True)
     image_1920 = fields.Image("Original Image", compute='_compute_image', compute_sudo=True)
     image_1024 = fields.Image("Image 1024", compute='_compute_image', compute_sudo=True)
     image_512 = fields.Image("Image 512", compute='_compute_image', compute_sudo=True)

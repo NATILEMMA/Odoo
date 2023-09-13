@@ -58,9 +58,9 @@
                                   <td><span t-esc="transfer.transfer_member_cells.name"/></td>
                                   <td><span t-esc="transfer.state"/></td>
                                   <td>
-                                    <a t-attf-href="/transfer/#{transfer.id}/edit">
+                                    <!-- <a t-attf-href="/transfer/#{transfer.id}/edit">
                                       <button class="fa fa-edit btn btn-sm btn-primary">Edit</button>
-                                    </a>
+                                    </a> -->
                                     <a t-attf-href="/transfer/#{transfer.id}/delete">
                                       <button class="fa fa-trash-o btn btn-sm btn-primary">Delete</button>
                                     </a>
@@ -108,9 +108,9 @@
                                   <td><span t-esc="transfer.transfer_league_member_cells.name"/></td>
                                   <td><span t-esc="transfer.state"/></td>
                                   <td>
-                                    <a t-attf-href="/transfer/#{transfer.id}/edit">
+                                    <!-- <a t-attf-href="/transfer/#{transfer.id}/edit">
                                       <button class="fa fa-edit btn btn-sm btn-primary">Edit</button>
-                                    </a>
+                                    </a> -->
                                     <a t-attf-href="/transfer/#{transfer.id}/delete">
                                       <button class="fa fa-trash-o btn btn-sm btn-primary">Delete</button>
                                     </a>
@@ -160,9 +160,9 @@
                                   <td><span t-esc="transfer.transfer_member_cells.name"/></td>
                                   <td><span t-esc="transfer.state"/></td>
                                   <td>
-                                    <a t-attf-href="/transfer/#{transfer.id}/edit">
+                                    <!-- <a t-attf-href="/transfer/#{transfer.id}/edit">
                                       <button class="fa fa-edit btn btn-sm btn-primary">Edit</button>
-                                    </a>
+                                    </a> -->
                                     <a t-attf-href="/transfer/#{transfer.id}/delete">
                                       <button class="fa fa-trash-o btn btn-sm btn-primary">Delete</button>
                                     </a>
@@ -210,9 +210,9 @@
                                   <td><span t-esc="transfer.transfer_league_member_cells.name"/></td>
                                   <td><span t-esc="transfer.state"/></td>
                                   <td>
-                                    <a t-attf-href="/transfer/#{transfer.id}/edit">
+                                    <!-- <a t-attf-href="/transfer/#{transfer.id}/edit">
                                       <button class="fa fa-edit btn btn-sm btn-primary">Edit</button>
-                                    </a>
+                                    </a> -->
                                     <a t-attf-href="/transfer/#{transfer.id}/delete">
                                       <button class="fa fa-trash-o btn btn-sm btn-primary">Delete</button>
                                     </a>
@@ -262,9 +262,9 @@
                                   <td></td>
                                   <td><span t-esc="transfer.state"/></td>
                                   <td>
-                                    <a t-attf-href="/transfer/#{transfer.id}/edit">
+                                    <!-- <a t-attf-href="/transfer/#{transfer.id}/edit">
                                       <button class="fa fa-edit btn btn-sm btn-primary">Edit</button>
-                                    </a>
+                                    </a> -->
                                     <a t-attf-href="/transfer/#{transfer.id}/delete">
                                       <button class="fa fa-trash-o btn btn-sm btn-primary">Delete</button>
                                     </a>
@@ -312,9 +312,9 @@
                                   <td><span t-esc="transfer.transfer_member_cells.name"/></td>
                                   <td><span t-esc="transfer.state"/></td>
                                   <td>
-                                    <a t-attf-href="/transfer/#{transfer.id}/edit">
+                                    <!-- <a t-attf-href="/transfer/#{transfer.id}/edit">
                                       <button class="fa fa-edit btn btn-sm btn-primary">Edit</button>
-                                    </a>
+                                    </a> -->
                                     <a t-attf-href="/transfer/#{transfer.id}/delete">
                                       <button class="fa fa-trash-o btn btn-sm btn-primary">Delete</button>
                                     </a>
@@ -362,9 +362,9 @@
                                   <td><span t-esc="transfer.transfer_league_member_cells.name"/></td>
                                   <td><span t-esc="transfer.state"/></td>
                                   <td>
-                                    <a t-attf-href="/transfer/#{transfer.id}/edit">
+                                    <!-- <a t-attf-href="/transfer/#{transfer.id}/edit">
                                       <button class="fa fa-edit btn btn-sm btn-primary">Edit</button>
-                                    </a>
+                                    </a> -->
                                     <a t-attf-href="/transfer/#{transfer.id}/delete">
                                       <button class="fa fa-trash-o btn btn-sm btn-primary">Delete</button>
                                     </a>
@@ -418,7 +418,6 @@
 
   </t>
 </template>
-
 
 
 </odoo>

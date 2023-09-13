@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<odoo> 
+  
+  
+  <!-- This record tree_view will deal with transfering of members -->
+  <record id="transfer_members_tree_view" model="ir.ui.view">
+    <field name="name">Tranfer Members</field>
+    <field name="model">members.transfer</field>
+    <field name="arch" type="xml">
+      <tree>
+        <field name="wereda_id" invisible="1"/>
+        <field name="responsibility_state"/>
+        <field name="state"/>
+      </tree>
+    </field>
+  </record>
+
+  <!-- This record form view will deal with transfering of members -->
+  <record id="transfer_members_form_view" model="ir.ui.view">
+    <field name="name">Tranfer Members</field>
+    <field name="model">members.transfer</field>
+    <field name="arch" type="xml">
+      <form duplicate="false">
+        <header>
+          <field name="wereda_id" invisible="1"/>
+          <field name="correct_user" invisible="1"/>
+          <field name="for_woreda" invisible="1"/>
+          <field name="for_subcity" invisible="1"/>
+          <field name="for_city" invisible="1"/>
+          <field name="for_main" invisible="1"/>
+          <field name="for_cell" invisible="1"/>
+          <button name="review" states="waiting for approval" string="Review" type="object" class="oe_highlight" confirm="Are you sure you want to Review the transfer?"/>
+          <button name="waiting_for_approval" states="draft" string="Send For Approval" type="object" class="oe_highlight" confirm="Are you sure you want to send the transfer for approval?"/>
+          <button name="reject_transfer" string="Reject" type="object" class="oe_highlight" attrs="{'invisible': ['|', ('state', '!=', 'review'), ('correct_user', '=', False)]}" confirm="Are you sure you want to Reject the transfer?"/>
+          <field name="state" widget="statusbar" statusbar_visible="draft,waiting for approval,approved,rejected"/>
+        </header>
+        <sheet>
+          <h1>
+              <field name="name"/>
+          </h1>
+          <group>
+            <group>
+              <separator string="Member Current Place"/>
+              <field name="city_id" invisible="1"/>
+              <field name="subcity_id" invisible="1"/>
+              <field name="wereda_id" invisible="1"/>
+              <field name="main_office_id" invisible="1"/>
+              <field name="cell_id" invisible="1"/>
+              <field name="x_css" force_save="1" nolabel="1" invisible="1"/>
+            </group>
+            <group>
+              <field name="responsibility_state"/>
+              <field name="receiving_manager" force_save="1" options="{'no_create': True, 'no_create_edit': True}"/>
+            </group>
+          </group>
+        </sheet>
+        <div class="oe_chatter">
+            <field name="message_follower_ids" widget="mail_followers"/>
+            <field name="activity_ids" widget="mail_activity"/>
+            <field name="message_ids" widget="mail_thread"/>
+        </div>
+      </form>
+    </field>
+  </record>
+
+  <!-- This record will handle the transfer action -->
+  <record id="tranfer_member_menu" model="ir.actions.act_window">
+    <field name="name">Transfer Member</field>
+    <field name="res_model">members.transfer</field>
+    <field name="view_mode">tree,form,pivot,graph</field>
+  </record>
+  
+
+  <record model="ir.actions.act_window.view" id="tranfer_member_tree_id">
+      <field name="sequence" eval="1"/>
+      <field name="view_mode">tree</field>
+      <field name="view_id" ref="transfer_members_tree_view"/>
+      <field name="act_window_id" ref="tranfer_member_menu"/>
+  </record>
+
+  <record model="ir.actions.act_window.view" id="tranfer_member_form_id">
+      <field name="sequence" eval="2"/>
+      <field name="view_mode">form</field>
+      <field name="view_id" ref="transfer_members_form_view"/>
+      <field name="act_window_id" ref="tranfer_member_menu"/>
+  </record>
+
+  <menuitem id="tranfer_approval_menu"
+            name="Transfer"
+            parent="member_minor_configuration.menu_association"
+            sequence="90"
+            groups="member_minor_configuration.member_group_city_transfer_handler,member_minor_configuration.member_group_cell_manager"
+            action="tranfer_member_menu"/>
+
+</odoo>

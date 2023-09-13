@@ -43,6 +43,18 @@
         </field>
     </record>
 
+    <record id="view_transfer_requester_tree_2" model="ir.ui.view">
+        <field name="name">transfer.request.tree</field>
+        <field name="model">transfer.request</field>
+        <field name="arch" type="xml">
+           <tree string="Transfer">
+               <field name="received_id"/>
+               <field name="scheduled_date"/>
+               <field name="asset"/>
+               <field name="state"/>
+           </tree>
+        </field>
+    </record>
 
 
    <record id="view_transfer_requester_tree" model="ir.ui.view">
@@ -53,9 +65,11 @@
 
                 <header>
                     <button name="action_request" attrs="{'invisible': [('state', '!=', 'draft')]}" string="Request" type="object" class="oe_highlight"/>
-                    <button name="action_confirm" attrs="{'invisible': [('state', 'not in', ('waiting','approved','done'))]}" string="Create Transfer" type="object" class="oe_highlight"/>
+                    <button name="action_confirm" attrs="{'invisible': [('state', 'not in', ('waiting','approved','done'))]}" string="Create Transfer" type="object" class="oe_highlight"
+                       groups="stock_transfer.group_stock_transfer"
+                    />
 <!--                    <button name="action_return" attrs="{'invisible': [('state', '!=', 'approved')]}" string="Return" type="object" class="oe_highlight"/>-->
-                    <button name="action_cancel" attrs="{'invisible': [('state', 'in', ('cancel','done'))]}" string="Cancel" type="object"/>
+                    <button name="action_cancel" attrs="{'invisible': [('state', 'in', ('cancel','done'))]}" string="Cancel" type="object"  groups="stock_transfer.group_stock_transfer"/>
                     <button name="action_draft" attrs="{'invisible': [('state', '!=', 'waiting')]}" string="Set to draft" type="object"/>
 <!--                    <button name="action_print" attrs="{'invisible': [('state', '==', 'draft')]}" string="Print" type="object"/>-->
 
@@ -190,13 +204,13 @@
 <menuitem name="Stock  Transfer"
             id="menu_transfer_request_root"
             web_icon="stock_transfer,static/description/exchange.png"
-            sequence="25"/>
+            sequence="25" groups="hr.group_user_custom"/>
 
 <menuitem  action="action_transfer_requester"
               name="Internal Transfer"
               id="transfer_request_menu"
               parent="menu_transfer_request_root"
-              sequence="5"/>
+              sequence="5" groups="hr.group_user_custom"/>
 
 
 </odoo>

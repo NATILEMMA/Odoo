@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-
-        <!-- <report
-            string="Visitor Pass"
-            id="action_print_visit_card"
-            model="fo.visit"
-            report_type="qweb-pdf"
-            name="visitor_gate_management.report_visitor_label"
-            file="visitor_gate_management.report_visitor_label"
-        /> -->
+    
         <report
             string="Visitors Report"
             id="action_print_visit_report"

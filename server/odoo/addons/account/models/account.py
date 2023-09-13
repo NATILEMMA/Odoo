@@ -48,14 +48,14 @@ class AccountAccountType(models.Model):
     ], string="Internal Group",
         required=True,
         help="The 'Internal Group' is used to filter accounts based on the internal group set on the account type.")
-    note = fields.Text(string='Description')
+    note = fields.Text(string='Description', translate=True)
 
 
 class AccountAccountTag(models.Model):
     _name = 'account.account.tag'
     _description = 'Account Tag'
 
-    name = fields.Char('Tag Name', required=True)
+    name = fields.Char('Tag Name', required=True, translate=True)
     applicability = fields.Selection([('accounts', 'Accounts'), ('taxes', 'Taxes')], required=True, default='accounts')
     color = fields.Integer('Color Index')
     active = fields.Boolean(default=True, help="Set active to false to hide the Account Tag without removing it.")
@@ -76,7 +76,7 @@ class AccountTaxReportLine(models.Model):
     _order = 'sequence'
     _parent_store = True
 
-    name = fields.Char(string="Name", required=True, help="Complete name for this report line, to be used in report.")
+    name = fields.Char(string="Name", required=True, help="Complete name for this report line, to be used in report.", translate=True)
     tag_ids = fields.Many2many(string="Tags", comodel_name='account.account.tag', relation='account_tax_report_line_tags_rel', help="Tax tags populating this line")
     country_id = fields.Many2one(string="Country", comodel_name='res.country', required=True, default=lambda x: x.env.company.country_id.id, help="Country for which this line is available.")
     report_action_id = fields.Many2one(string="Report Action", comodel_name='ir.actions.act_window', help="The optional action to call when clicking on this line in accounting reports.")
@@ -84,14 +84,14 @@ class AccountTaxReportLine(models.Model):
     parent_id = fields.Many2one(string="Parent Line", comodel_name='account.tax.report.line')
     sequence = fields.Integer(string='Sequence', required=True,
         help="Sequence determining the order of the lines in the report (smaller ones come first). This order is applied locally per section (so, children of the same line are always rendered one after the other).")
-    parent_path = fields.Char(index=True)
+    parent_path = fields.Char(index=True, translate=True)
 
     #helper to create tags (positive and negative) on report line creation
-    tag_name = fields.Char(string="Tag Name", help="Short name for the tax grid corresponding to this report line. Leave empty if this report line should not correspond to any such grid.")
+    tag_name = fields.Char( translate=True, string="Tag Name", help="Short name for the tax grid corresponding to this report line. Leave empty if this report line should not correspond to any such grid.")
 
     #fields used in specific localization reports, where a report line isn't simply the given by the sum of account.move.line with selected tags
-    code = fields.Char(string="Code", help="Optional unique code to refer to this line in total formulas")
-    formula = fields.Char(string="Formula", help="Python expression used to compute the value of a total line. This field is mutually exclusive with tag_name, setting it turns the line to a total line. Tax report line codes can be used as variables in this expression to refer to the balance of the corresponding lines in the report. A formula cannot refer to another line using a formula.")
+    code = fields.Char(string="Code", help="Optional unique code to refer to this line in total formulas", translate=True)
+    formula = fields.Char( translate=True ,string="Formula", help="Python expression used to compute the value of a total line. This field is mutually exclusive with tag_name, setting it turns the line to a total line. Tax report line codes can be used as variables in this expression to refer to the balance of the corresponding lines in the report. A formula cannot refer to another line using a formula.")
 
     @api.model
     def create(self, vals):
@@ -247,10 +247,10 @@ class AccountAccount(models.Model):
                                                            ('user_type_id', '=', data_unaffected_earnings.id)])
                 raise ValidationError(_('You cannot have more than one account with "Current Year Earnings" as type. (accounts: %s)') % [a.code for a in account_unaffected_earnings])
 
-    name = fields.Char(required=True, index=True)
+    name = fields.Char(required=True, index=True, translate=True)
     currency_id = fields.Many2one('res.currency', string='Account Currency',
         help="Forces all moves for this account to have this account currency.")
-    code = fields.Char(size=64, required=True, index=True)
+    code = fields.Char(size=64, required=True, index=True, translate=True)
     deprecated = fields.Boolean(index=True, default=False)
     used = fields.Boolean(compute='_compute_used', search='_search_used')
     user_type_id = fields.Many2one('account.account.type', string='Type', required=True,
@@ -263,7 +263,7 @@ class AccountAccount(models.Model):
         help="Check this box if this account allows invoices & payments matching of journal items.")
     tax_ids = fields.Many2many('account.tax', 'account_account_tax_default_rel',
         'account_id', 'tax_id', string='Default Taxes', context={'append_type_to_tax_name': True})
-    note = fields.Text('Internal Notes')
+    note = fields.Text('Internal Notes', translate=True)
     company_id = fields.Many2one('res.company', string='Company', required=True,
         default=lambda self: self.env.company)
     tag_ids = fields.Many2many('account.account.tag', 'account_account_account_tag', string='Tags', help="Optional tags you may want to assign for custom reporting")
@@ -625,9 +625,9 @@ class AccountGroup(models.Model):
     _order = 'code_prefix'
 
     parent_id = fields.Many2one('account.group', index=True, ondelete='cascade')
-    parent_path = fields.Char(index=True)
-    name = fields.Char(required=True)
-    code_prefix = fields.Char()
+    parent_path = fields.Char(index=True, translate=True)
+    name = fields.Char(required=True, translate=True)
+    code_prefix = fields.Char( translate=True)
 
     def name_get(self):
         result = []
@@ -655,7 +655,7 @@ class AccountRoot(models.Model):
     _description = 'Account codes first 2 digits'
     _auto = False
 
-    name = fields.Char()
+    name = fields.Char( translate=True)
     parent_id = fields.Many2one('account.root')
     company_id = fields.Many2one('res.company')
 
@@ -706,8 +706,8 @@ class AccountJournal(models.Model):
     def _get_bank_statements_available_sources(self):
         return self.__get_bank_statements_available_sources()
 
-    name = fields.Char(string='Journal Name', required=True)
-    code = fields.Char(string='Short Code', size=5, required=True, help="The journal entries of this journal will be named using this prefix.")
+    name = fields.Char(string='Journal Name', required=True, translate=True)
+    code = fields.Char(string='Short Code', size=5, required=True, help="The journal entries of this journal will be named using this prefix.", translate=True)
     active = fields.Boolean(default=True, help="Set active to false to hide the Journal without removing it.")
     type = fields.Selection([
             ('sale', 'Sales'),
@@ -774,14 +774,14 @@ class AccountJournal(models.Model):
     company_partner_id = fields.Many2one('res.partner', related='company_id.partner_id', string='Account Holder', readonly=True, store=False)
     bank_account_id = fields.Many2one('res.partner.bank', string="Bank Account", ondelete='restrict', copy=False, domain="[('partner_id','=', company_partner_id), '|', ('company_id', '=', False), ('company_id', '=', company_id)]")
     bank_statements_source = fields.Selection(selection=_get_bank_statements_available_sources, string='Bank Feeds', default='undefined', help="Defines how the bank statements will be registered")
-    bank_acc_number = fields.Char(related='bank_account_id.acc_number', readonly=False)
+    bank_acc_number = fields.Char(related='bank_account_id.acc_number', readonly=False, translate=True)
     bank_id = fields.Many2one('res.bank', related='bank_account_id.bank_id', readonly=False)
     post_at = fields.Selection([('pay_val', 'Payment Validation'), ('bank_rec', 'Bank Reconciliation')], string="Post At", default='pay_val')
 
     # alias configuration for journals
     alias_id = fields.Many2one('mail.alias', string='Alias', copy=False)
-    alias_domain = fields.Char('Alias domain', compute='_compute_alias_domain', default=lambda self: self.env["ir.config_parameter"].sudo().get_param("mail.catchall.domain"))
-    alias_name = fields.Char('Alias Name', compute='_compute_alias_name', inverse='_inverse_alias_name', help="It creates draft invoices and bills by sending an email.", readonly=False)
+    alias_domain = fields.Char('Alias domain', compute='_compute_alias_domain', default=lambda self: self.env["ir.config_parameter"].sudo().get_param("mail.catchall.domain"), translate=True)
+    alias_name = fields.Char('Alias Name', compute='_compute_alias_name', inverse='_inverse_alias_name', help="It creates draft invoices and bills by sending an email.", readonly=False, translate=True)
 
     journal_group_ids = fields.Many2many('account.journal.group', domain="[('company_id', '=', company_id)]", string="Journal Groups")
 
@@ -1295,7 +1295,7 @@ class AccountTax(models.Model):
     def _default_tax_group(self):
         return self.env['account.tax.group'].search([], limit=1)
 
-    name = fields.Char(string='Tax Name', required=True)
+    name = fields.Char(string='Tax Name', required=True, translate=True)
     type_tax_use = fields.Selection(TYPE_TAX_USE, string='Tax Scope', required=True, default="sale",
         help="Determines where the tax is selectable. Note : 'None' means a tax can't be used by itself, however it can still be used in a group. 'adjustment' is used to perform tax adjustment.")
     amount_type = fields.Selection(default='percent', string="Tax Computation", required=True,
@@ -1316,7 +1316,7 @@ class AccountTax(models.Model):
     sequence = fields.Integer(required=True, default=1,
         help="The sequence field is used to define order in which the tax lines are applied.")
     amount = fields.Float(required=True, digits=(16, 4))
-    description = fields.Char(string='Label on Invoices')
+    description = fields.Char(string='Label on Invoices', translate=True)
     price_include = fields.Boolean(string='Included in Price', default=False,
         help="Check this if the price you use on the product and invoices includes this tax.")
     include_base_amount = fields.Boolean(string='Affect Base of Subsequent Taxes', default=False,

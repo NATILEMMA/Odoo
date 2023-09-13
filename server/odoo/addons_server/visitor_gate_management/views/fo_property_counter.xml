@@ -18,7 +18,7 @@
                                 attrs="{'invisible': [('state', '!=', 'revise')]}"/>
                         <group>
                             <group>
-                                <field name="employee" attrs="{'readonly': [('state', 'in', ['prop_in', 'prop_out', 'cancel', 'revise'])]}"/>
+                                <field name="employee" attrs="{'readonly': [('state', 'in', ['prop_in', 'prop_out', 'cancel', 'revise'])]}" force_save="1"/>
                                 <field name="resource_calendar_id" required="1" attrs="{'readonly': [('state', 'in', ['prop_in', 'prop_out', 'cancel', 'revise'])]}"/>
                                 <field name="date" attrs="{'readonly': [('state', 'in', ['prop_in', 'prop_out', 'cancel', 'revise'])]}"/>
                                 <field name="x_css" force_save="1" nolabel="1" invisible="1"/>

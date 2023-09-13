@@ -10,8 +10,8 @@ class AuditlogtHTTPSession(models.Model):
     _description = "Auditlog - HTTP User session log"
     _order = "create_date DESC"
 
-    display_name = fields.Char("Name", compute="_compute_display_name", store=True)
-    name = fields.Char("Session ID", index=True)
+    display_name = fields.Char("Name", compute="_compute_display_name", store=True, translate=True)
+    name = fields.Char("Session ID", index=True, translate=True)
     user_id = fields.Many2one("res.users", string="User", index=True)
     http_request_ids = fields.One2many(
         "auditlog.http.request", "http_session_id", string="HTTP Requests"

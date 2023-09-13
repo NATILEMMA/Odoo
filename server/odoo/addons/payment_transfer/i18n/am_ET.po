@@ -1,0 +1,75 @@
+# Date created: 2023-06-17 19:09:21 by dichthuatphuongdong.com
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-06-17 03:13:39+0000"
+"MIME-Version: 1.0"
+"Content-Type: text/plain; charset=UTF-8"
+"Content-Transfer-Encoding: 8bit"
+"Plural-Forms: nplurals=1; plural=0;"
+"X-Generator: GlotPress/3.0.0-alpha.2"
+"Language: en_GB"
+"Project-Id-Version: PO File 5.8.1"
+
+#. module: payment_transfer
+#: code:addons/payment_transfer/models/payment.py:0
+msgid "; multiple order found"
+msgstr "; ብዙ ትዕዛዝ ተገኝቷል"
+
+#. module: payment_transfer
+#: code:addons/payment_transfer/models/payment.py:0
+msgid "; no order found"
+msgstr "; ምንም ትዕዛዝ አልተገኘም"
+
+#. module: payment_transfer
+#: code:addons/payment_transfer/models/payment.py:0
+msgid ""
+"<div>"
+"<h3>Please use the following transfer details</h3>"
+"<h4>%(bank_title)s</h4>"
+"%(bank_accounts)s"
+"<h4>Communication</h4>"
+"<p>Please use the order name as communication reference.</p>"
+"</div>"
+msgstr ""
+"<div>"
+"<h3>እባክዎ የሚከተሉትን የዝውውር ዝርዝሮች ይጠቀሙ</h3>"
+"<h4>%(ባንክ_ርዕስ)s</h4>"
+"%(ባንክ_አካውንት)ስ"
+"<h4>ግንኙነት</h4>"
+"<p>እባክዎ የትዕዛዙን ስም እንደ የግንኙነት ማመሳከሪያ ይጠቀሙ።</p>"
+"</div>"
+
+#. module: payment_transfer
+#: code:addons/payment_transfer/models/payment.py:0
+msgid "Bank Account"
+msgstr "የባንክ ሒሳብ"
+
+#. module: payment_transfer
+#: code:addons/payment_transfer/models/payment.py:0
+msgid "Bank Accounts"
+msgstr "የባንክ ሂሳቦች"
+
+#. module: payment_transfer
+#: model:ir.model.fields.selection,name:payment_transfer.selection__payment_acquirer__provider__transfer
+msgid "Manual Payment"
+msgstr "በእጅ ክፍያ"
+
+#. module: payment_transfer
+#: model:ir.model,name:payment_transfer.model_payment_acquirer
+msgid "Payment Acquirer"
+msgstr "ክፍያ አድራጊ"
+
+#. module: payment_transfer
+#: model:ir.model,name:payment_transfer.model_payment_transaction
+msgid "Payment Transaction"
+msgstr "የክፍያ ግብይት"
+
+#. module: payment_transfer
+#: model:ir.model.fields,field_description:payment_transfer.field_payment_acquirer__provider
+msgid "Provider"
+msgstr "አቅራቢ"
+
+#. module: payment_transfer
+#: code:addons/payment_transfer/models/payment.py:0
+msgid "received data for reference %s"
+msgstr "ለማጣቀሻ %s ዳታ  ተቀብሏል"

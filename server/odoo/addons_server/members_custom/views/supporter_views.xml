@@ -10,7 +10,7 @@
 
   <!-- This record will create a tree view for supported Members -->
   <record id="supported_members_tree_view" model="ir.ui.view">
-    <field name="name">Supporter Members</field>
+    <field name="name">Supporter</field>
     <field name="model">supporter.members</field>
     <field name="arch" type="xml">
       <tree>
@@ -27,19 +27,24 @@
 
   <!-- This record will create a form for Supported Members -->
   <record id="supported_members_form_view" model="ir.ui.view">
-    <field name="name">Supporter Member Form</field>
+    <field name="name">Supporter Form</field>
     <field name="model">supporter.members</field>
     <field name="arch" type="xml">
       <form duplicate="false">
         <header>
           <field name="active" invisible="1"/>
           <field name="saved" invisible="1"/>
+          <field name="click_counter" invisible="1"/>
+          <field name="x_css" force_save="1" nolabel="1" invisible="1"/>
+          <field name="is_user_input" invisible="1"/>
           <button name="archive_record" string="Archive" type="object" groups="members_custom.member_group_cell_manager" attrs="{'invisible': [('active', '=', False)]}" confirm="Are you sure you want to archive this supporter?"/>
           <button name="un_archive_record" string="Unarchive" type="object" groups="members_custom.member_group_cell_manager" attrs="{'invisible': [('active', '=', True)]}" confirm="Are you sure you want to remove this supporter from archive list?"/>
-          <button type="object" name="send_approval" string="Send Approval" states="waiting for approval" class="btn btn-success" groups="members_custom.member_group_manager" confirm="Are you sure you want to Send Approval to Main Office and Cell?"/>
-          <button type="object" name="create_candidate" string="Create a Candidate" states="waiting for approval" class="btn btn-primary" groups="members_custom.member_group_cell_manager" confirm="Are you sure you want to make this supporter a candidate?"/>
-          <button type="object" name="deny_candidancy" string="Deny Candidacy" states="waiting for approval" class="btn btn-secondary" groups="members_custom.member_group_cell_manager" confirm="Are you sure you want to deny candidacy to this supporter?"/>
-          <button type="object" name="postpone_approval" string="Postpone Decision" states="waiting for approval" class="btn btn-warning" groups="members_custom.member_group_cell_manager" confirm="Are you sure you added the right due date?"/>
+          <button type="object" name="send_approval" string="Send Approval" states="waiting for approval" class="btn btn-success" groups="members_custom.member_group_cell_manager" confirm="Are you sure you want to Send Approval to Basic Organization?"/>
+          <button type="object" name="approve_supporter" string="Approve Supporter" states="draft" class="btn btn-primary" groups="members_custom.member_group_cell_manager" confirm="Are you sure you want to make this individual a Supporter?"/>
+          <button type="object" name="create_candidate" string="Create a Candidate" states="waiting for approval" class="btn btn-primary" groups="members_custom.member_group_main_manager" confirm="Are you sure you want to make this supporter a candidate?"/>
+          <button type="object" name="deny_candidancy" string="Deny Candidacy" states="waiting for approval" class="btn btn-secondary" groups="members_custom.member_group_main_manager" confirm="Are you sure you want to deny candidacy to this supporter?"/>
+          <button type="object" name="postpone_approval" string="Postpone Decision" states="waiting for approval" class="btn btn-warning" groups="members_custom.member_group_main_manager" confirm="Are you sure you added the right due date?"/>
+          <button type="object" name="back_to_new" string="Back to New" states="rejected" class="btn btn-success" groups="members_custom.member_group_cell_manager" confirm="Please Attach Justification for Returning Supporter Title!!"/>
 
           <button type="object" name="send_approval" string="Send Approval" class="btn btn-success" groups="members_custom.member_group_agent" confirm="Are you sure you want to Send Approval to Main Office and Cell?"/>
           <button type="object" name="create_candidate" string="Create a Candidate" class="btn btn-primary" groups="members_custom.member_group_agent" confirm="Are you sure you want to make this supporter a candidate?"/>
@@ -49,47 +54,52 @@
           <field name="state" widget="statusbar" statusbar_visible="new,waiting for approval,postponed,approved,rejected"/>
         </header>
         <sheet>
-          <div class="oe_button_box" name="button_box">
-            <button class="oe_stat_button" name="%(base.action_attachment)d" type="action" icon="fa-files-o" attrs="{'invisible': [('state', '=', 'new')], 'readonly': [('state', 'in', ['postponed', 'approved', 'rejected'])]}">
-              <field name="attachment_amount" string="Attachments" widget="statinfo"/>
-            </button>
-          </div>
           <separator/>
           <field name="image_1920" widget="image" class="oe_avatar" options='{"preview_image": "image_1920"}'/>
           <widget name="web_ribbon" title="Archived" bg_color="bg-danger" attrs="{'invisible': [('active', '=', True)]}"/>
+          <h1>
+            <field name="name" readonly="1" force_save="1" attrs="{'invisible': [('saved', '=', False)]}"/>
+          </h1>
           <group>
             <group>
               <separator string="Information"/>
-              <field name="name" placeholder="Eg. John Does Smith" attrs="{'readonly': [('saved', '=', True)]}" force_save="1"/>
-              <field name="date" attrs="{'readonly': [('saved', '=', True)]}" force_save="1"/>
+              <field name="first_name" placeholder="Eg. John" attrs="{'invisible': [('saved', '=', True)]}" force_save="1"/>
+              <field name="father_name" placeholder="Eg. Smith" attrs="{'invisible': [('saved', '=', True)]}" force_save="1"/>
+              <field name="grand_father_name" placeholder="Eg. Willam" attrs="{'invisible': [('saved', '=', True)]}" force_save="1"/>
+              <field name="date" attrs="{'readonly': [('saved', '=', True)]}"/>
               <field name="age" string="Age" force_save="1"/>
               <field name="gender" string="Gender" attrs="{'readonly': [('saved', '=', True)]}" force_save="1"/>
               <field name="ethnic_group" string="Ethnic Group" attrs="{'readonly': [('saved', '=', True)]}" force_save="1" options="{'no_create': True, 'no_create_edit': True}"/>
               <separator string="Educational Status"/>
               <field name="education_level" string="Education Level" options="{'no_create': True, 'no_create_edit': True}"/>
               <field name="field_of_study_id" string="Field of Study" options="{'no_create': True, 'no_create_edit': True}"/>
-              <field name="is_user_input" invisible="1"/>
               <field name="user_input" attrs="{'invisible': [('is_user_input', '=', False)]}" string="Other Field"/>
-              <separator string="Supporter Status"/>
-              <field name="start_of_support" string="Start of Support Year" attrs="{'readonly': [('saved', '=', True)]}"/>
-              <field name="status"/>
-              <field name="gov_responsibility"/>
-              <field name="becomes_a_candidate_on"/>
+              <separator string="Supporter Working"/>
+              <field name="subcity_id" string="Working Subcity" options="{'no_create': True, 'no_create_edit': True}" attrs="{'readonly': [('saved', '=', True)]}"/>
+              <field name="wereda_id" string="Working Woreda" options="{'no_create': True, 'no_create_edit': True}" attrs="{'readonly': [('saved', '=', True)]}"/>
+              <field name="main_office_id" string="Basic Organization" options="{'no_create': True, 'no_create_edit': True}" attrs="{'invisible': ['&amp;', ('state', '=', 'draft'), ('saved', '=', False)], 'required': ['|', ('state', '!=', 'draft'), ('saved', '=', True)], 'readonly': [('saved', '=', True)]}"/>
+              <field name="cell_id" string="Cell" options="{'no_create': True, 'no_create_edit': True}" attrs="{'invisible': ['&amp;', ('state', '=', 'draft'), ('saved', '=', False)], 'required': ['|', ('state', '!=', 'draft'), ('saved', '=', True)], 'readonly': [('saved', '=', True)]}"/>
+              <field name="becomes_a_candidate_on" attrs="{'invisible': [('saved', '=', False)]}"/>
             </group>
             <group>
               <separator string="Employment Status"/>
               <field name="work_place" string="Place Of Work"/>
               <field name="position" string="Job Position"/>
-              <field name="income" string="Income"/>
+              <field name="income" string="Monthly Income"/>
               <separator string="Address"/>
-              <field name="subcity_id" string="Subcity" options="{'no_create': True, 'no_create_edit': True}"/>
-              <field name="wereda_id" string="Woreda" options="{'no_create': True, 'no_create_edit': True}"/>
+              <!-- <field name="residential_subcity_id" string="Residential Subcity" options="{'no_create': True, 'no_create_edit': True}"/>
+              <field name="residential_wereda_id" string="Residential Woreda" options="{'no_create': True, 'no_create_edit': True}"/> -->
+              <field name="residential_subcity" string="Residential Subcity"/>
+              <field name="residential_wereda" string="Residential Woreda"/>
               <field name="house_number" string="House Number"/>
-              <field name="phone" string="Phone"/>
+              <field name="phone" string="Phone" required="1"/>
               <field name="email_address" string="Email"/>
               <field name="candidate_id"/>
-              <button name="add_attachment" string="Attachment" type="object" class="oe_highlight fa fa-paperclip" attrs="{'invisible': [('state', '=', 'new')], 'readonly': [('state', 'in', ['postponed', 'approved', 'rejected'])]}"/>
-              <field name="x_css" force_save="1" nolabel="1" invisible="1"/>
+              <separator/>
+              <separator string="Supporter Status"/>
+              <field name="start_of_support" string="Start of Support Year" required="1"/>
+              <field name="status"/>
+              <field name="gov_responsibility"/>
             </group>
           </group>
           <notebook>
@@ -102,7 +112,7 @@
               </field>
             </page>
             <page string="Notes">
-              <field name="note_id" attrs="{'readonly': [('state', '!=', 'waiting for approval')]}"/>
+              <field name="note_id"/>
             </page>
             <page name="archive" string="Archives" attrs="{'invisible': [('active', '=', True)]}">
                 <field name="archive_ids" readonly="1">
@@ -113,6 +123,20 @@
                         <field name="additional_information" string="Additional Information"/>
                     </tree>
                 </field>
+            </page>
+            <page string="Donations" name="donation">
+              <group>
+                <field name="year_of_payment" options="{'no_create': True, 'no_create_edit': True}"/>
+              </group>
+              <field name="donation_ids">
+                  <tree delete="false" create="false">
+                    <field name="supporter_id"/>
+                    <field name="year"/>
+                    <field name="month"/>
+                    <field name="amount"/>
+                    <field name="state"/>
+                  </tree>
+              </field>
             </page>
           </notebook>
         </sheet>
@@ -126,7 +150,7 @@
   </record>
 
   <record id="supporter_kanban_view" model="ir.ui.view">
-      <field name="name">Supporter Kanban</field>
+      <field name="name">Supporter</field>
       <field name="model">supporter.members</field>
       <field name="arch" type="xml">
           <kanban class="o_supporter_kanban" sample="1">
@@ -179,7 +203,7 @@
       <search>
           <field name="name" string="Names" filter_domain="[('name', 'ilike', self)]"/>
           <field name="phone" string="Phone" filter_domain="[('phone', 'ilike', self)]"/>
-          <filter name="state" string="State" domain="[('state', 'in', ['new', 'postponed'])]"/>
+          <filter name="state" string="State" domain="[('state', 'in', ['new', 'postponed', 'draft'])]"/>
           <group expand="0" string="Group By" colspan="10" col="8">
             <filter name="subcity" string="Subcity" context="{'group_by': 'subcity_id'}"/>
             <filter name="woreda" string="Woreda" context="{'group_by': 'wereda_id'}"/>
@@ -193,27 +217,26 @@
 
   <!-- This record will create the action for supported members -->
   <record id="supported_members_action" model="ir.actions.act_window">
-    <field name="name">Supporter Members</field>
+    <field name="name">Supporter</field>
     <field name="res_model">supporter.members</field>
     <field name="view_mode">tree,form,kanban,pivot,graph</field>
     <field name="limit">20</field>
     <field name="search_view_id" ref="supported_view_search"/>
     <field name="context">{'search_default_state': 1}</field>
-    <field name="domain">['|', '|', '|', '|', '|', '|', '|',
+    <field name="domain">['|', '|', '|', '|', '|', '|',
                           ('wereda_id.main_office_ids.cell_ids.cell_admin', '=', uid),
-                          ('wereda_id.main_office_ids.league_cell_ids.cell_admin', '=', uid),
                           ('wereda_id.main_office_ids.main_admin', '=', uid),
                           ('wereda_id.branch_manager.id', '=', uid),
                           ('subcity_id.parent_manager.id', '=', uid),
                           ('subcity_id.city_id.city_manager', 'in', [uid]),
                           ('subcity_id.city_id.transfer_handler', '=', uid),
-                          ('subcity_id.city_id.responsible_id.system_admin', '=', uid)]</field>  </record>
+                          ('subcity_id.city_id.responsible_id.system_admin', 'in', [uid])]</field>  </record>
 
   <menuitem id="supporter_members"
             name="Supporters"
             parent="menu_membership"
             sequence="6"           
             action="supported_members_action"
-            groups="members_custom.member_group_cell_manager,members_custom.member_group_agent"/>
+            groups="members_custom.member_group_city_transfer_handler,members_custom.member_group_cell_manager,members_custom.member_group_agent"/>
 
 </odoo>

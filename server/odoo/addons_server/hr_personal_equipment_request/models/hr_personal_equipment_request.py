@@ -10,7 +10,7 @@ class HrPersonalEquipmentRequest(models.Model):
     _description = "This model allows to create a personal equipment request"
     _inherit = ["mail.thread", "mail.activity.mixin"]
 
-    name = fields.Char(compute="_compute_name")
+    name = fields.Char(compute="_compute_name", translate=True)
     employee_id = fields.Many2one(
         comodel_name="hr.employee",
         string="Employee",
@@ -30,15 +30,15 @@ class HrPersonalEquipmentRequest(models.Model):
         default="draft",
         tracking=True,
     )
-    office_name= fields.Char(String="Office Name")
-    department = fields.Char(related ="employee_id.department_id.name")
-    building_number = fields.Char(String="Building number")
-    user_number = fields.Char(String="User Number")
-    premises = fields.Char(String="Premises")
-    room_number = fields.Char(String="Room number")
+    office_name= fields.Char(String="Office Name", translate=True)
+    department = fields.Char(related ="employee_id.department_id.name", translate=True)
+    building_number = fields.Char(String="Building number", translate=True)
+    user_number = fields.Char(String="User Number", translate=True)
+    premises = fields.Char(String="Premises", translate=True)
+    room_number = fields.Char(String="Room number", translate=True)
 
 
-    observations = fields.Text()
+    observations = fields.Text(translate=True)
 
     def _default_employee_id(self):
         return self.env.user.employee_ids[:1]

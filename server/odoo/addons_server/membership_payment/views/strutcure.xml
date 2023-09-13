@@ -145,24 +145,34 @@
         <field name="code">model.give_structure()</field>
     </record>
 
-<!--     <menuitem id="league_structure_action"-->
-<!--              name="league Structure"-->
-<!--              parent="members_custom.membership_payment_menu"-->
-<!--              action="league_structure_action_3"-->
-<!--              sequence="70"-->
-<!--              />-->
-<!--    <menuitem id="supporter_structure_action_action"-->
-<!--              name="Supporter Structure"-->
-<!--              parent="members_custom.membership_payment_menu"-->
-<!--              action="supporter_structure_action_3"-->
-<!--              sequence="70"-->
-<!--              />-->
-<!--    <menuitem id="membership_structure_action"-->
-<!--              name="Membership Structure"-->
-<!--              parent="members_custom.membership_payment_menu"-->
-<!--              action="membership_structure_action_3"-->
-<!--              sequence="70"-->
-<!--              />-->
+    <menuitem id="configuration_structure_action"
+              name="Structure configuration"
+              parent="member_minor_configuration.menu_marketing_config_association"
+              sequence="701"
+              groups="member_minor_configuration.member_group_user_admin"
+              />
+    <menuitem id="league_structure_action"
+              name="league Structure"
+              parent="configuration_structure_action"
+              action="league_structure_action_3"
+              sequence="71"
+              groups="member_minor_configuration.member_group_user_admin"
+              />
+
+    <menuitem id="supporter_structure_action_action"
+              name="Supporter Structure"
+              parent="configuration_structure_action"
+              action="supporter_structure_action_3"
+              sequence="72"
+              groups="member_minor_configuration.member_group_user_admin"
+              />
+    <menuitem id="membership_structure_action"
+              name="Membership Structure"
+              parent="configuration_structure_action"
+              action="membership_structure_action_3"
+              sequence="70"
+              groups="member_minor_configuration.member_group_user_admin"
+              />
 <!--    <menuitem id="action_upd_members_structure_8"-->
 <!--              name="give Membership Structure"-->
 <!--              parent="members_custom.membership_payment_menu"-->

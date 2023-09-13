@@ -142,31 +142,44 @@
     </field>
     </record> -->
 
-
-    <record id="view_product_lot_inherit" model="ir.ui.view">
-    <field name="name">stock.production.lot.form</field>
-    <field name="model">stock.production.lot</field>
-    <field name="inherit_id" ref="stock.view_production_lot_form" />
-    <field name="arch" type="xml">
-        <!-- <xpath expr="//field[@name='product_qty']" position="replace">
-            <field name="purchase_ref"/>
-
-        </xpath> -->
-        <field name="ref" position="after">
-            <field name="purchase_ref"/>
-        </field>
-    </field>
-    </record>
-
-    <record id="view_product_lot_tree_inherit" model="ir.ui.view">
+ <record id="view_product_lot_tree_inherit" model="ir.ui.view">
     <field name="name">stock.production.lot.tree</field>
     <field name="model">stock.production.lot</field>
     <field name="inherit_id" ref="stock.view_production_lot_tree" />
-    <field name="arch" type="xml">
-        <field name="ref" position="after">
-            <field name="purchase_ref"/>
-        </field>
+            <field name="arch" type="xml">
+                <xpath expr="//tree" position="replace">
+                    <tree decoration-success="product_qty == 0">
+                         <field name="name"/>
+                        <field name="ref" optional="show"/>
+                        <field name="product_qty" optional="show"/>
+
+                        <field name="purchase_ref" string="Purchase Referance"/>
+                        <field name="product_id" readonly="1"/>
+                        <field name="create_date" optional="show"/>
+                        <field name="company_id" groups="base.group_multi_company"/>
+                    </tree>
+                </xpath>
+            </field>
+        </record>
+
+
+    <record id="view_product_catgory_code_inherit" model="ir.ui.view">
+    <field name="name">product.category.form.inherit</field>
+    <field name="model">product.category</field>
+        <field name="inherit_id" ref="product.product_category_form_view" />
+        <field name="arch" type="xml">
+        <xpath expr = "//field[@name='parent_id']" position = "after" > 
+             <!-- <group col="2"> -->
+                 <field name="cat_code" placeholder="e.g. Fur001" style="width: 200px;"/>
+            <!-- </group> -->
+           
+       </xpath> 
+        
+  
     </field>
-    </record> 
+    </record>
+
+
+   
 
 </odoo>

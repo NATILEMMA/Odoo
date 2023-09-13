@@ -28,7 +28,7 @@ class TierDefinition(models.Model):
         string="Referenced Model",
         domain=lambda self: [("model", "in", self._get_tier_validation_model_names())],
     )
-    model = fields.Char(related="model_id.model", index=True, store=True)
+    model = fields.Char(related="model_id.model", index=True, store=True, translate=True)
     review_type = fields.Selection(
         string="Validated by",
         default="individual",
@@ -44,7 +44,7 @@ class TierDefinition(models.Model):
     definition_type = fields.Selection(
         string="Definition", selection=[("domain", "Domain")], default="domain"
     )
-    definition_domain = fields.Char()
+    definition_domain = fields.Char( translate=True)
     active = fields.Boolean(default=True)
     sequence = fields.Integer(default=30)
     company_id = fields.Many2one(

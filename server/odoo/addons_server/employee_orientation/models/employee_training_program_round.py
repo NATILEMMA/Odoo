@@ -7,7 +7,7 @@ class TrianingRound(models.Model):
     _description = "rounds of training for employee"
 
 
-    name = fields.Char(required=True,string="name")
+    name = fields.Char(required=True,string="name", translate=True)
 
     _sql_constraints = [('unique_name','unique(name)',' A property tag name  name must be unique')]
     _order = "name"

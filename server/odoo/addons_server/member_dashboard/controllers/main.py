@@ -305,7 +305,7 @@ class WebRegisteration(AuthSignupHome):
             is_member = True
 
         # perpertrators = request.env['res.partner'].sudo().search(['|', ('is_member', '=', True), ('is_leader', '=', True)])
-        return request.render("member_dashboard.complaint_form",
+        return request.render("member_dashboard.complaint_form_add",
         {
             'complaint': complaint,
 #            'perpertrators': perpertrators,
@@ -520,7 +520,7 @@ class WebRegisteration(AuthSignupHome):
             is_member = True
 
 #        perpertrators = request.env['res.partner'].sudo().search(['|', ('is_member', '=', True), ('is_leader', '=', True)])
-        return request.render("member_dashboard.complaint_form",
+        return request.render("member_dashboard.complaint_form_add",
         {
             'complaint': {'id': None, 'subject': None, 'circumstances': None, 'perpertrators': None},
 #            'perpertrators': perpertrators,

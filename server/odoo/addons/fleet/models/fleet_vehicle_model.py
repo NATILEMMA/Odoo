@@ -9,7 +9,7 @@ class FleetVehicleModel(models.Model):
     _description = 'Model of a vehicle'
     _order = 'name asc'
 
-    name = fields.Char('Model name', required=True)
+    name = fields.Char('Model name', required=True, translate=True)
     brand_id = fields.Many2one('fleet.vehicle.model.brand', 'Manufacturer', required=True, help='Manufacturer of the vehicle')
     vendors = fields.Many2many('res.partner', 'fleet_vehicle_model_vendors', 'model_id', 'partner_id', string='Vendors')
     manager_id = fields.Many2one('res.users', 'Fleet Manager', default=lambda self: self.env.uid,
@@ -32,5 +32,5 @@ class FleetVehicleModelBrand(models.Model):
     _description = 'Brand of the vehicle'
     _order = 'name asc'
 
-    name = fields.Char('Make', required=True)
+    name = fields.Char('Make', required=True, translate=True)
     image_128 = fields.Image("Logo", max_width=128, max_height=128)

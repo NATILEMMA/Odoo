@@ -99,7 +99,7 @@
                     </div>
                     <group>
                         <group>
-                            <field name="subject" attrs="{'readonly': [('state', 'in', ['waiting for approval', 'resolved'])]}"/>
+                            <field name="subject" attrs="{'readonly': [('state', 'in', ['waiting for approval', 'resolved'])]}" options="{'no_create': True, 'no_create_edit': True}"/>
                             <field name="victim_id" readonly="1" options="{'no_create': True, 'no_create_edit': True}"/>
                             <field name="x_css" invisible="1"/>
                         </group>
@@ -281,6 +281,17 @@
         <field name="act_window_id" ref="employee_complaint_form_action_company"/>
     </record> -->
 
+
+    <!-- This record will create an action to employee complaints -->
+    <record id="employee_complaint_form_action_employee" model="ir.actions.act_window">
+        <field name="name">Employee Complaints</field>
+        <field name="res_model">employee.complaint</field>
+        <field name="view_mode">tree,pivot,graph</field>
+        <field name="search_view_id" ref="complaint_search_view"/>
+        <field name="domain">[('mode', '=', 'by_employee')]</field>
+    </record>
+
+
     <record id="employee_form_inherit_complaint" model="ir.ui.view">
         <field name="name">inherit.employee.form.view</field>
         <field name="model">res.users</field>
@@ -334,7 +345,7 @@
               name="Complaints"
               parent="hr_menu_organizer.hr_employee_activities_menu"
               sequence="70"
-              groups="hr.group_hr_manager,hr_disciplinary_tracking.group_department_disciplinary_committee,hr_disciplinary_tracking.group_company_disciplinary_committee"/>
+              groups="hr.group_hr_manager,hr_disciplinary_tracking.group_department_disciplinary_committee,hr_disciplinary_tracking.group_company_disciplinary_committee,hr_disciplinary_tracking.group_employee_disciplinary_committee"/>
 
 
     <menuitem id="department_complaint_assessor_menu"
@@ -351,4 +362,13 @@
               sequence="2"
               groups="hr.group_hr_manager,hr_disciplinary_tracking.group_company_disciplinary_committee"
               action="employee_complaint_form_action_company"/>
+
+    <menuitem id="employee_complaint_assessor_menu"
+              name="Employee Complaints"
+              parent="complaint_assessor_menu"
+              sequence="3"
+              groups="hr.group_hr_manager,hr_disciplinary_tracking.group_employee_disciplinary_committee"
+              action="employee_complaint_form_action_employee"/>
+
+
 </odoo>

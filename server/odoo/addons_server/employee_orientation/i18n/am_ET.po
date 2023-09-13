@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 13.0-20221005\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-23 05:31+0000\n"
-"PO-Revision-Date: 2023-03-23 05:31+0000\n"
+"POT-Creation-Date: 2023-07-24 08:45+0000\n"
+"PO-Revision-Date: 2023-07-24 08:45+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -202,9 +202,8 @@ msgstr "ተያያዥ ቆጠራ"
 #. module: employee_orientation
 #: model:ir.model.fields.selection,name:employee_orientation.selection__orientation_request__state__cancel
 #: model_terms:ir.ui.view,arch_db:employee_orientation.view_employee_orientation_form
-#: model_terms:ir.ui.view,arch_db:employee_orientation.view_orientation_request_form
 msgid "Cancel"
-msgstr "ይቅር"
+msgstr "ሰርዝ"
 
 #. module: employee_orientation
 #: model_terms:ir.ui.view,arch_db:employee_orientation.view_employee_training_form
@@ -251,11 +250,6 @@ msgstr "ድርጅት"
 #: model_terms:ir.ui.view,arch_db:employee_orientation.print_pack_template
 msgid "Company Logo"
 msgstr "ድርጅት አርማ"
-
-#. module: employee_orientation
-#: model_terms:ir.ui.view,arch_db:employee_orientation.view_orientation_request_form
-msgid "Complete"
-msgstr "ተጠናቀቀ"
 
 #. module: employee_orientation
 #: model:ir.model.fields.selection,name:employee_orientation.selection__employee_orientation__state__complete
@@ -316,11 +310,6 @@ msgstr "ኦሪየንቴሽን ማረጋገጫ ዝርዝሮችን መስመሮች
 #: model_terms:ir.actions.act_window,help:employee_orientation.action_orientation_checklist
 msgid "Create Orientation Checklists."
 msgstr "ኦሪየንቴሽን ማረጋገጫ ዝርዝሮችን ይፍጠሩ. "
-
-#. module: employee_orientation
-#: model_terms:ir.actions.act_window,help:employee_orientation.action_orientation_request
-msgid "Create Orientation Requests."
-msgstr "ኦሪየንቴሽን ጥያቄዎችን ይፍጠሩ."
 
 #. module: employee_orientation
 #: model:ir.model.fields,field_description:employee_orientation.field_checklist_line__create_uid
@@ -390,11 +379,6 @@ msgid "Display Name"
 msgstr "መጠሪያው ስም"
 
 #. module: employee_orientation
-#: model_terms:ir.ui.view,arch_db:employee_orientation.view_orientation_request_form
-msgid "Documents"
-msgstr "ሰነዶች"
-
-#. module: employee_orientation
 #: model:ir.model.fields.selection,name:employee_orientation.selection__employee_orientation__state__draft
 msgid "Draft"
 msgstr "ረቂቅ"
@@ -416,13 +400,9 @@ msgstr "የሰራተኛ ዝርዝሮች"
 #: model:ir.model,name:employee_orientation.model_employee_orientation
 #: model:ir.model.fields,field_description:employee_orientation.field_employee_orientation__name
 #: model:ir.model.fields,field_description:employee_orientation.field_orientation_request__request_orientation
-#: model:ir.ui.menu,name:employee_orientation.menu_employee_orientation_child
 #: model_terms:ir.ui.view,arch_db:employee_orientation.view_employee_orientation_form
 #: model_terms:ir.ui.view,arch_db:employee_orientation.view_employee_orientation_search
 #: model_terms:ir.ui.view,arch_db:employee_orientation.view_employee_orientation_tree
-#: model_terms:ir.ui.view,arch_db:employee_orientation.view_orientation_request_form
-#: model_terms:ir.ui.view,arch_db:employee_orientation.view_orientation_request_search
-#: model_terms:ir.ui.view,arch_db:employee_orientation.view_orientation_request_tree
 msgid "Employee Orientation"
 msgstr "የሠራተኛ ኦሪየንቴሽን"
 
@@ -651,7 +631,6 @@ msgstr "አዲስ"
 #. module: employee_orientation
 #: model_terms:ir.ui.view,arch_db:employee_orientation.view_employee_orientation_form
 #: model_terms:ir.ui.view,arch_db:employee_orientation.view_employee_training_form
-#: model_terms:ir.ui.view,arch_db:employee_orientation.view_orientation_request_form
 msgid "Notes"
 msgstr "ማስታወሻዎች"
 
@@ -698,18 +677,16 @@ msgstr "ያልተነበቡ መልእክቶች ብዛት"
 #. module: employee_orientation
 #: model:ir.model.fields,field_description:employee_orientation.field_orientation_force_complete__orientation_id
 msgid "Orientation"
-msgstr "ኦሪየንቴሽን"
+msgstr "አቅጣጫ"
 
 #. module: employee_orientation
 #: model:ir.actions.act_window,name:employee_orientation.action_orientation_checklist
 #: model:ir.model.fields,field_description:employee_orientation.field_employee_orientation__orientation_id
-#: model:ir.ui.menu,name:employee_orientation.menu_orientation_checklist_config
 msgid "Orientation Checklist"
 msgstr "ኦሪየንቴሽን የማረጋገጫ ዝርዝር"
 
 #. module: employee_orientation
 #: model:ir.actions.act_window,name:employee_orientation.action_checklist_line
-#: model:ir.ui.menu,name:employee_orientation.menu_employee_orientation_config_line
 msgid "Orientation Checklist Line"
 msgstr "ኦሪየንቴሽን የማረጋገጫ ዝርዝር መስመር"
 
@@ -734,14 +711,7 @@ msgid "Orientation Lines"
 msgstr "ኦሪየንቴሽን መስመሮች"
 
 #. module: employee_orientation
-#: model:ir.ui.menu,name:employee_orientation.menu_employee_orientation_config
-msgid "Orientation Program"
-msgstr "ኦሪየንቴሽን ፕሮግራም"
-
-#. module: employee_orientation
-#: model:ir.actions.act_window,name:employee_orientation.action_orientation_request
 #: model:ir.model.fields,field_description:employee_orientation.field_employee_orientation__orientation_request
-#: model:ir.ui.menu,name:employee_orientation.menu_orientation_request
 msgid "Orientation Request"
 msgstr "ኦሪየንቴሽን ጥያቄ"
 
@@ -793,7 +763,6 @@ msgstr "ኤስኤምኤስ ማድረሻ ስህተት"
 
 #. module: employee_orientation
 #: model_terms:ir.ui.view,arch_db:employee_orientation.view_employee_training_form
-#: model_terms:ir.ui.view,arch_db:employee_orientation.view_orientation_request_form
 msgid "Send by Email"
 msgstr "በኢሜይል ይላኩ"
 
@@ -811,7 +780,6 @@ msgid "Status"
 msgstr "ሁኔታ"
 
 #. module: employee_orientation
-#: model:ir.model.fields,field_description:employee_orientation.field_employee_training_program_round__training_id
 #: model:ir.ui.menu,name:employee_orientation.menu_employee_training_child
 msgid "Training"
 msgstr "ስልጠና"
@@ -859,7 +827,7 @@ msgstr "ያልተነበቡ መልእክቶች ቆጣሪ"
 #: model:ir.model.fields,field_description:employee_orientation.field_orientation_checklist__website_message_ids
 #: model:ir.model.fields,field_description:employee_orientation.field_orientation_request__website_message_ids
 msgid "Website Messages"
-msgstr "የድርጣቢያ መልእክቶች"
+msgstr "የድህረገፅ መልእክቶች"
 
 #. module: employee_orientation
 #: model:ir.model.fields,help:employee_orientation.field_employee_orientation__website_message_ids
@@ -867,7 +835,7 @@ msgstr "የድርጣቢያ መልእክቶች"
 #: model:ir.model.fields,help:employee_orientation.field_orientation_checklist__website_message_ids
 #: model:ir.model.fields,help:employee_orientation.field_orientation_request__website_message_ids
 msgid "Website communication history"
-msgstr "የድርጣቢያ መግባባት ታሪክ"
+msgstr "የድህረገፅ መግባባት ታሪክ"
 
 #. module: employee_orientation
 #: model_terms:ir.ui.view,arch_db:employee_orientation.print_pack_template
@@ -887,11 +855,10 @@ msgstr "የተካሄደው በ"
 #. module: employee_orientation
 #: model_terms:ir.ui.view,arch_db:employee_orientation.print_pack_template
 msgid "days,"
-msgstr "ቀናት ,"
+msgstr "ቀናት,"
 
 #. module: employee_orientation
 #: model:ir.model.fields,field_description:employee_orientation.field_employee_training_program__description
-#: model:ir.model.fields,field_description:employee_orientation.field_employee_training_program_round__description
 msgid "description"
 msgstr "መግለጫ"
 

@@ -8,8 +8,7 @@
         <field name="inherit_id" ref="base.view_partner_form" />
         <field name="arch" type="xml">
             <xpath expr="//field[@name='email']" position="after">
-                <field name="insurance"
-                    attrs="{'invisible':['|',('is_company','=',False),('is_driver','=',True)]}" />
+                <field name="insurance" invisible='1'/>
                     <!-- <field name="is_workshop" /> -->
             
             </xpath>
@@ -30,7 +29,7 @@
         </field>
     </record>
     <record id="view_fleet_driver_tree" model="ir.ui.view">
-        <field name="name">Fleet Driver</field>
+        <field name="name">Vehicle Driver</field>
         <field name="model">res.partner</field>
         <field name="arch" type="xml">
             <tree string="Fleet driver">
@@ -41,7 +40,7 @@
         </field>
     </record>
     <record id="fleet_driver_search_view" model="ir.ui.view">
-        <field name="name">Fleet Driver</field>
+        <field name="name">Vehicle Driver</field>
         <field name="model">res.partner</field>
         <field name="arch" type="xml">
             <search string="Fleet Driver">
@@ -51,7 +50,7 @@
         </field>
     </record>
     <record id="action_res_partner_driver" model="ir.actions.act_window">
-        <field name="name">Fleet Driver</field>
+        <field name="name">Vehicle Driver</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">res.partner</field>
         <field name="context">{'default_is_driver': True}</field>
@@ -60,7 +59,7 @@
         <field name="view_mode">tree,form</field>
     </record>
     <menuitem id="fleet_driver_menu"
-        name="Fleet Driver"
+        name="Vehicle Driver"
         parent="fleet.fleet_vehicles"
         action="action_res_partner_driver"
         groups="fleet.fleet_group_manager"

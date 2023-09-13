@@ -13,6 +13,12 @@ import logging
 
 _logger = logging.getLogger(__name__)
 
+pick1 = []
+pick2 = []
+pick3 = []
+pick4 = []
+
+
 
 class PurchaseOrderLine(models.Model):
     _inherit = 'purchase.order.line'
@@ -20,6 +26,8 @@ class PurchaseOrderLine(models.Model):
 
 class MaidBy(models.Model):
     _name = 'maid.by'
+
+    name = fields.Char(string="name", translate=True)
 
 
 class LibreHistory(models.Model):
@@ -119,10 +127,10 @@ class VehicleLibre(models.Model):
                                   ('electric', 'Electric'),
                                   ('hybrid', 'Hybrid')], string='Fuel Type')
     engine_horse_power = fields.Char("Engine Horse Power",translate=True)
-    total_weight = fields.Char("Total Weight",translate=True)
-    items_weight = fields.Char('Single Weight',translate=True)
+    total_weight = fields.Integer("Total Weight",translate=True)
+    items_weight = fields.Integer('Single Weight',translate=True)
     cc = fields.Char("CC",translate=True)
-    slender_amount = fields.Char("Number of Cylinders",translate=True)
+    cylinder_amount = fields.Integer("Number of Cylinders",translate=True)
     allowed_work_type = fields.Char("Allowed Services Type",translate=True)
     state = fields.Selection([
         ('draft', 'Draft'),
@@ -134,6 +142,9 @@ class VehicleLibre(models.Model):
         ('non', 'Duty Paid')
     ], string='Duty')
     history = fields.One2many('libre.history', 'rev', string='History ')
+
+
+
 
     @api.model
     def create(self, vals):

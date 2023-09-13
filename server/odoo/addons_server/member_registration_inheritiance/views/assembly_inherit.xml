@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <!-- This record will handle the member assembly -->
+    <record id="member_assembly_tree_inherit" model="ir.ui.view">
+        <field name="name">Members in Assembly</field>
+        <field name="model">member.assembly</field>
+        <field name="inherit_id" ref="members_features.member_assembly_tree"/>
+        <field name="arch" type="xml">
+          <xpath expr="//field[@name = 'partner_id']" position="after">
+                <field name="wereda_id" readonly="1" force_save="1"/>
+                <field name="main_office_id" readonly="1" force_save="1" invisible="1"/>
+                <field name="main_office_league_id" readonly="1" force_save="1" invisible="1"/>
+                <field name="cell_id" readonly="1" force_save="1" invisible="1"/>
+                <field name="cell_league_id" readonly="1" force_save="1" invisible="1"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- This record will handle the member assembly -->
+    <record id="member_assembly_report_tree_inherit" model="ir.ui.view">
+        <field name="name">Members in Assembly</field>
+        <field name="model">member.assembly</field>
+        <field name="inherit_id" ref="members_features.member_assembly_report_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name = 'partner_id']" position="after">
+                <field name="wereda_id" readonly="1"/>
+                <field name="main_office_id" readonly="1"/>
+                <field name="main_office_league_id" readonly="1" force_save="1" invisible="1"/>
+                <field name="cell_id" readonly="1"/>
+                <field name="cell_league_id" readonly="1"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- This record will handle the member assembly -->
+    <record id="assembly_member_tree_inherit" model="ir.ui.view">
+        <field name="name">Members in Assembly</field>
+        <field name="model">member.assembly</field>
+        <field name="inherit_id" ref="member_registration.assembly_member_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name = 'assembly_id']" position="after">
+                <field name="wereda_id" readonly="1"/>
+                <field name="main_office_id" readonly="1"/>
+                <field name="cell_id" readonly="1"/>
+            </xpath>
+        </field>
+    </record>
+
+
+</odoo>

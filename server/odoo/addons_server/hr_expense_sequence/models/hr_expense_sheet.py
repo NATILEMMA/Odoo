@@ -9,7 +9,7 @@ class HrExpenseSheet(models.Model):
     _inherit = "hr.expense.sheet"
     _rec_name = "number"
 
-    number = fields.Char(required=True, default="/", readonly=True, copy=False)
+    number = fields.Char(required=True, default="/", readonly=True, copy=False, translate=True)
 
     @api.model
     def create(self, vals):

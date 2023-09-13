@@ -5,7 +5,7 @@ from odoo import models, fields, api, _
 class HrEmployee(models.Model):
     _inherit = 'hr.employee'
 
-    device_id = fields.Char(string='Biometric Device ID')
+    device_id = fields.Char(string='Biometric Device ID',translate=True)
 
 
 #class HrEmployeePublic(models.Model):
@@ -24,7 +24,7 @@ class ZkMachine(models.Model):
         """overriding the __check_validity function for employee attendance."""
         pass
 
-    device_id = fields.Char(string='Biometric Device ID')
+    device_id = fields.Char(string='Biometric Device ID',translate=True)
     punch_type = fields.Selection([('0', 'Check In'),
                                    ('1', 'Check Out'),
                                    ('2', 'Break Out'),

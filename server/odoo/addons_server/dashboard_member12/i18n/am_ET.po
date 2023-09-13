@@ -1,13 +1,13 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* AADBO_website
+# 	* dashboard_member12
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 13.0-20221005\n"
+"Project-Id-Version: Odoo Server 13.0-20220525\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-26 13:38+0000\n"
-"PO-Revision-Date: 2023-04-26 13:38+0000\n"
+"POT-Creation-Date: 2023-08-19 09:31+0000\n"
+"PO-Revision-Date: 2023-08-19 09:31+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -15,773 +15,2071 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-msgid "+251 000000000"
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid "$48,697"
 msgstr ""
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-msgid "2021 Ethiopian general election Winner"
-msgstr "የ2021 የኢትዮጵያ አጠቃላይ ምርጫ አሸናፊ"
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.only_registered_users
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.thanks
+msgid "&amp;times;"
+msgstr "X"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-#: model_terms:ir.ui.view,arch_db:AADBO_website.age_error
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_end
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_form
-#: model_terms:ir.ui.view,arch_db:AADBO_website.wrong_age_error
-msgid ""
-"<i class=\"bi bi-phone d-flex align-items-center ms-4\"><span>+251 "
-"123456789</span></i>"
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid "10"
 msgstr ""
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-msgid ""
-"<i class=\"bx bxs-quote-alt-left quote-icon-left\"/>\n"
-"                                      A politician is a person who has political power in the government of a state or a person active in party politics or a person holding or seeking an elected ... \n"
-"                                      <i class=\"bx bxs-quote-alt-right quote-icon-right\"/>"
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid "100,587 birr"
 msgstr ""
-"<i class=\"bx bxs-quote-alt-left quote-icon-left\"/>\n"
-"ፖለቲከኛ ማለት በክልል መንግስት ውስጥ የፖለቲካ ስልጣን ያለው ወይም በፖለቲካ ፓርቲ ውስጥ ንቁ ወይም የተመረጠ ሰው የሚይዝ ወይም የሚፈልግ ሰው ነው ... \n"
-"<i class=\"bx bxs-quote-alt-right quote-icon-right\"/>"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-msgid ""
-"<i class=\"bx bxs-quote-alt-left quote-icon-left\"/>\n"
-"                                      An economist is an expert who studies the relationship between a society's resources and its production or output.\n"
-"                                      <i class=\"bx bxs-quote-alt-right quote-icon-right\"/>"
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid "128"
 msgstr ""
-"<i class=\"bx bxs-quote-alt-left quote-icon-left\"/>\n"
-"ኢኮኖሚስት በህብረተሰቡ ሃብት እና በአመራረቱ ወይም በውጤቱ መካከል ያለውን ግንኙነት የሚያጠና ባለሙያ ነው።.\n"
-"<i class=\"bx bxs-quote-alt-right quote-icon-right\"/>"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_form
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid "14,575,965 birr"
+msgstr ""
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid "2017-02-24"
+msgstr ""
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid "2017-07-14"
+msgstr ""
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid "2018-01-20"
+msgstr ""
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid "2018-04-15"
+msgstr ""
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid "2018-07-21"
+msgstr ""
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid "2018-09-06"
+msgstr ""
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid "2019-05-28"
+msgstr ""
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid "2019-07-19"
+msgstr ""
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid "2019-07-25"
+msgstr ""
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid "2019-08-17"
+msgstr ""
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid "3,258,003"
+msgstr ""
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid "30%"
+msgstr ""
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid "40%"
+msgstr ""
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid "45%"
+msgstr ""
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid "50%"
+msgstr ""
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid "55%"
+msgstr ""
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid "63,432 birr"
+msgstr ""
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid "70%"
+msgstr ""
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.league_report
+msgid "<b><span>Monthly League Payment</span></b>"
+msgstr "<b><span>ወርሃዊ ሊግ ክፍያ</span></b>"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.member_report
+msgid "<b><span>Monthly Membership Payment</span></b>"
+msgstr "<b><span>ወርሃዊ የአባልነት ክፍያ</span></b>"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.events_list
+msgid "<i class=\"fa fa-ban mr-2\"/>Unpublished"
+msgstr "<i class=\"fa fa-ban mr-2\"/>ያልታተመ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.events_list
+msgid "<i class=\"fa fa-check mr-2\"/>Registered"
+msgstr "<i class=\"fa fa-check mr-2\"/>የተመዘገበ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.league_report
+msgid "<i class=\"fa fa-clock-o\"/><span>Payment started on </span>"
+msgstr "<i class=\"fa fa-clock-o\"/><span>ክፍያ ተጀምሯል </span> "
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.league_report
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.member_report
+msgid "<i class=\"fa fa-download\"/> Download"
+msgstr "<i class=\"fa fa-download\"/> አውርድ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.new_portal_my_details
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.registration_form
 msgid "<i class=\"fa fa-pencil fa-1g float-sm-none float-md-left\" title=\"Edit\"/>"
 msgstr ""
 "<i class=\"fa fa-pencil fa-1g float-sm-none float-md-left\" "
 "title=\"አስተካክል\"/>"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-msgid "<span>01</span>"
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid "<i class=\"far fa-edit\"/> Edit"
+msgstr "<i class=\"far fa-edit\"/> አስተካክል"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid ""
+"<i class=\"far fa-trash-alt\"/>\n"
+"                                Delete"
+msgstr ""
+"<i class=\"far fa-trash-alt\"/>\n"
+"                                ሰርዝ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid "<i class=\"fas fa-eye\"/> View"
+msgstr "<i class=\"fas fa-eye\"/> ተመልከት"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.complaint_list
+msgid "<i class=\"fas fa-undo\"/> Restore Default"
+msgstr "<i class=\"fas fa-undo\"/> ወደ ነበረበት መልስ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.asidebar
+msgid "<i data-feather=\"briefcase\"/><span>Complaint</span>"
+msgstr "<i data-feather=\"briefcase\"/><span>ቅሬታ</span>"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.asidebar
+msgid "<i data-feather=\"command\"/><span>My Transfer Histories</span>"
+msgstr "<i data-feather=\"command\"/><span>የዝውውር ታሪኮች</span>"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.asidebar
+msgid "<i data-feather=\"dollar-sign\"/><span>My Payments</span>"
+msgstr "<i data-feather=\"dollar-sign\"/><span>የእኔ ክፍያዎች</span>"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.asidebar
+msgid "<i data-feather=\"feather\"/><span>Appointments</span>"
+msgstr "<i data-feather=\"feather\"/><span>ቀጠሮዎች</span>"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.asidebar
+msgid "<i data-feather=\"flag\"/><span>Report FeedBack</span>"
+msgstr "<i data-feather=\"flag\"/><span>ግብረመልስን ሪፖርት አድርግ</span>"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.asidebar
+msgid "<i data-feather=\"mail\"/><span>Request a Transfer</span>"
+msgstr "<i data-feather=\"mail\"/><span>ዝውውር ጠይቅ</span>"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.asidebar
+msgid "<i data-feather=\"paperclip\"/><span>Add Attachment</span>"
+msgstr "<i data-feather=\"paperclip\"/><span>ተያያዥ አስገቡ</span>"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.asidebar
+msgid "<i data-feather=\"sunset\"/><span>Events</span>"
+msgstr "<i data-feather=\"sunset\"/><span>ክስተቶች</span>"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.asidebar
+msgid "<i data-feather=\"user-check\"/><span>Auth</span>"
+msgstr "<i data-feather=\"user-check\"/><span>ፍቃድ መስጠት</span>"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.portal_my_appointment
+msgid "<small class=\"text-muted\">Appointment - </small>"
+msgstr "<small class=\"text-muted\">ቀጠሮ - </small>"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.portal_my_appointment
+msgid "<span class=\"badge badge-pill badge-danger\">Pending ...</span>"
+msgstr "<span class=\"badge badge-pill badge-danger\">በመጠባበቅ ላይ ...</span>"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.portal_my_appointments
+msgid "<span class=\"badge badge-pill badge-danger\">Pending...</span>"
+msgstr "<span class=\"badge badge-pill badge-danger\">በመጠባበቅ ላይ...</span>"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.portal_my_appointment
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.portal_my_appointments
+msgid "<span class=\"badge badge-pill badge-info\">Confirmed</span>"
+msgstr "<span class=\"badge badge-pill badge-info\">የተረጋገጠ</span>"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.portal_my_appointment
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.portal_my_appointments
+msgid "<span class=\"badge badge-pill badge-secondary\">Canceled</span>"
+msgstr "<span class=\"badge badge-pill badge-secondary\">ተሰርዟል</span>"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.portal_my_appointment
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.portal_my_appointments
+msgid "<span class=\"badge badge-pill badge-success\">Ended</span>"
+msgstr "<span class=\"badge badge-pill badge-success\">የተጠናቀቀ</span>"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid "<span class=\"col-green\">10%</span> Increase"
+msgstr "<span class=\"col-green\">10%</span> ጨምር"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid ""
+"<span class=\"col-green\">18%</span>\n"
+"                                  Increase"
+msgstr ""
+"<span class=\"col-green\">18%</span>\n"
+"                                  ጨምር"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid "<span class=\"col-green\">42%</span> Increase"
+msgstr "<span class=\"col-green\">42%</span> ጨምር"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid "<span class=\"col-orange\">09%</span> Decrease"
+msgstr "<span class=\"col-orange\">09%</span> ቀንስ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.complaint_list
+msgid ""
+"<span class=\"custom-switch-indicator\"/>\n"
+"                          <span class=\"control-label p-l-10\">Mini Sidebar</span>"
+msgstr ""
+"<span class=\"custom-switch-indicator\"/>\n"
+"                          <span class=\"control-label p-l-10\">አነስተኛ የጎን አሞሌ</span>"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.complaint_list
+msgid ""
+"<span class=\"custom-switch-indicator\"/>\n"
+"                          <span class=\"control-label p-l-10\">Sticky Header</span>"
+msgstr ""
+"<span class=\"custom-switch-indicator\"/>\n"
+"                          <span class=\"control-label p-l-10\">ተለጣፊ</span>"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.complaint_list
+msgid "<span class=\"selectgroup-button\">Dark</span>"
+msgstr "<span class=\"selectgroup-button\">የጠቆረ</span>"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.complaint_list
+msgid "<span class=\"selectgroup-button\">Light</span>"
+msgstr "<span class=\"selectgroup-button\">ብርሃን</span>"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid ""
+"<span class=\"text-big\">128</span>\n"
+"                                <sup class=\"col-green\">+16%</sup>"
 msgstr ""
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-msgid "<span>02</span>"
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid ""
+"<span class=\"text-big\">23,300,857</span>\n"
+"                                <sup class=\"text-danger\">-18%</sup>"
 msgstr ""
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-msgid "<span>03</span>"
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid ""
+"<span class=\"text-big\">3,258,003</span>\n"
+"                                <sup class=\"col-green\">+09%</sup>"
 msgstr ""
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-#: model_terms:ir.ui.view,arch_db:AADBO_website.age_error
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_end
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_form
-#: model_terms:ir.ui.view,arch_db:AADBO_website.wrong_age_error
-msgid "<span>Account</span> <i class=\"bi bi-chevron-down\"/>"
-msgstr "<span>መለያ</span> <i class=\"bi bi-chevron-down\"/>"
-
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-msgid "A108 Adam Street, New York, NY 535022"
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid ""
+"<span class=\"text-big\">684</span>\n"
+"                                <sup class=\"col-green\">+22%</sup>"
 msgstr ""
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-#: model_terms:ir.ui.view,arch_db:AADBO_website.age_error
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_end
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_form
-#: model_terms:ir.ui.view,arch_db:AADBO_website.wrong_age_error
-msgid "AADBO"
-msgstr "አ.አ.ዲ.ግ.ቢ"
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.new_portal_my_details
+msgid "<span>Download</span>"
+msgstr "<span>አውርድ</span>"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-msgid "Abebeche Ke"
-msgstr "አበበች ከ"
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.portal_my_appointment
+msgid "<strong>Message and communication history</strong>"
+msgstr "<strong>የመልእክት እና የግንኙነት ታሪክ</strong>"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-#: model_terms:ir.ui.view,arch_db:AADBO_website.age_error
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_end
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_form
-#: model_terms:ir.ui.view,arch_db:AADBO_website.wrong_age_error
-msgid "About"
-msgstr "ስለ እኛ"
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.ten_digit_phone
+msgid "A Valid Phone Number Has 10 Digits"
+msgstr "ስልክ ቁጥር 10 አሃዞች አሉት"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-msgid "About us"
-msgstr "ስለ እኛ"
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.zero_in_phone
+msgid "A Valid Phone Number Starts With 0"
+msgstr "ስልክ ቁጥር በ0 ይጀምራል"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_form
-msgid "Age <span style=\"color: red;\">*</span>"
-msgstr "ዕድሜ <span style=\"color: red;\">*</span>"
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.duplicate
+msgid ""
+"A supporter with the same name, gender and phone already exists, Please make"
+" sure it isn't a duplicated data"
+msgstr "በዚ ስም ፣ ጾታ እና ስልክ ቁጥር የተመዘገበ ደጋፊ አለ:: የሚያስገቡት መረጃ እንዳይደጋገም ይጠንቀቁ::"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-msgid "Akalu A"
-msgstr "አካሉ አ"
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.phone_duplicate
+msgid ""
+"A supporter with the same phone already exists, Please make sure it isn't a "
+"duplicated data"
+msgstr "ተመሳሳይ ስልክ ያለው ደጋፊ አለ፣ እባክዎ የሚያስገቡት መረጃ እንዳይደጋገም ይጠንቀቁ::"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-msgid "Call To Action"
-msgstr "ወደ ተግባራዊነት"
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid "Action"
+msgstr "ድርጊት"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-msgid "Call:"
-msgstr "ይደውሉ"
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.attachment_form
+msgid "Add"
+msgstr "ጨምር"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-msgid "Check our <span>Contact</span> Details"
-msgstr "የእኛን <span>ኮንታክት</span> ዝርዝሮች ይመልከቱ"
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.asidebar
+msgid "Add Complaint"
+msgstr "ቅሬታ ያስገቡ"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_form
+#. module: dashboard_member12
+#: code:addons/dashboard_member12/controllers/main.py:0
+#: code:addons/dashboard_member12/controllers/portal.py:0
+#: code:addons/dashboard_member12/controllers/portal.py:0
+#, python-format
+msgid "All Categories"
+msgstr "ሁሉም ምድቦች"
+
+#. module: dashboard_member12
+#: code:addons/dashboard_member12/controllers/main.py:0
+#: code:addons/dashboard_member12/controllers/portal.py:0
+#: code:addons/dashboard_member12/controllers/portal.py:0
+#, python-format
+msgid "All Countries"
+msgstr "ሁሉም አገሮች"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.member_payments
+msgid "Amount Paid"
+msgstr "የተከፈለው መጠን"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.member_payments
+msgid "Amount Remaining"
+msgstr "የቀረው መጠን"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.year_error
+msgid ""
+"An Active Budget Year With Approprite Dates Must Be Created Before "
+"Registration."
+msgstr "ተገቢ ቀን ያለው እያገለገለ ያለ የበጀት ዓመት ከመፈጠሩ በፊት ደጋፊ መፈጠር የለበትም።"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.plan_city_error
+msgid ""
+"An Approved City Plan For Supporter Must Be Created Before Registration."
+msgstr "ለደጋፊ የጸደቀ የከተማ እቅድ ከመመዝገቡ በፊት ደጋፊ መፈጠር የለበትም።"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.plan_sub_city_error
+msgid ""
+"An Approved Sub City Plan For Supporter Must Be Created Before Registration."
+msgstr "ለደጋፊ የጸደቀ የክፍለ ከተማ እቅድ ከመመዝገቡ በፊት ደጋፊ መፈጠር የለበትም።"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.plan_wereda_error
+msgid ""
+"An Approved Woreda Plan For Supporter Must Be Created Before Registration."
+msgstr "ለደጋፊ የጸደቀ የወረዳ እቅድ ከመመዝገቡ በፊት ደጋፊ መፈጠር የለበትም።"
+
+#. module: dashboard_member12
+#: code:addons/dashboard_member12/controllers/main.py:0
+#, python-format
+msgid "An email has been sent with credentials to reset your password"
+msgstr "የይለፍ ቃልህን ዳግም ለማስጀመር ወደ ኢሜሎ ከመረጃዎች ጋር ተልኳል።"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid "Android App"
+msgstr "አንድሮይድ መተግበሪያ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.portal_my_appointment
+msgid "Appointee"
+msgstr "ተቀጣሪ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.make_appointment
+msgid "Appointment Date <span style=\"color: red;\">*</span>"
+msgstr "የቀጠሮ ቀን <span style=\"color: red;\">*</span>"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.thanks
+msgid "Appointment scheduled!"
+msgstr "ቀጠሮ ተይዞለታል!"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.attachment_form
+msgid "Attachments"
+msgstr "ተያያዦች"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid "Average"
+msgstr "መካከለኛ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.confirm_reset_password
+msgid "Back to Login"
+msgstr "ወደ መግብያ ተመለስ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid "Backup database"
+msgstr "የውሂብ ጎታ መጠባበቂያ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.registration_form
+msgid "Birth Date <span style=\"color: red;\">*</span>"
+msgstr "የትውልድ ቀን <span style=\"color: red;\">*</span>"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.complaint_form_add
+msgid "Brief Subject"
+msgstr "አጭር ርዕሰ ጉዳይ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.attachment_form
+msgid "Cancel"
+msgstr "ሰርዝ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.portal_my_appointment
+msgid "Cancel Appointment"
+msgstr "ቀጠሮ ሰርዝ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.portal_my_appointment
+msgid "Cancel appointment"
+msgstr "ቀጠሮ ሰርዝ"
+
+#. module: dashboard_member12
+#: model:ir.model.fields.selection,name:dashboard_member12.selection__report_report__state__canceled
+msgid "Cancelled"
+msgstr "ተሰርዟል"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.tranfer_member
+msgid "Cells..."
+msgstr "ህዋሳት..."
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.new_portal_my_details
+msgid "Certificate"
+msgstr "የምስክር ወረቀት"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.asidebar
+msgid "Change Password"
+msgstr "የሚስጥር ቁልፍ ይቀይሩ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid "Chart"
+msgstr "ሰንጠረዥ"
+
+#. module: dashboard_member12
+#: model:ir.model.fields.selection,name:dashboard_member12.selection__report_report__state__approved
+msgid "Checked"
+msgstr "ተረጋግጧል"
+
+#. module: dashboard_member12
+#: model:ir.model.fields,field_description:dashboard_member12.field_report_report__responsible_person
+msgid "Checked By"
+msgstr "የተረጋገጠው በ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.complaint_form_add
+msgid "Circumstance"
+msgstr "ሁኔታ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.complaint_form_add
+msgid "Circumstance <span style=\"color: red;\">*</span>"
+msgstr "ሁኔታ <span style=\"color: red;\">*</span>"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.new_portal_my_details
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.registration_form
 msgid "Clear"
-msgstr "ማጽዳት"
+msgstr "አስወግድ"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_form
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.portal_my_appointment
+msgid "Close"
+msgstr "የተዘጋ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.complaint_list
+msgid "Color Theme"
+msgstr "የቀለም ገጽታ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.new_portal_my_details
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.registration_form
 msgid "Company Name"
 msgstr "የድርጅት ስም"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-#: model_terms:ir.ui.view,arch_db:AADBO_website.age_error
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_end
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_form
-#: model_terms:ir.ui.view,arch_db:AADBO_website.wrong_age_error
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.complaint_form_add
+msgid "Complaint Form"
+msgstr "የቅሬታ ቅጽ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.complaint_end
+msgid "Complaint Has Been Created Successfully!"
+msgstr "ቅሬታ በተሳካ ሁኔታ ተፈጥሯል!"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.delete_complaint_end
+msgid "Complaint Has Been Deleted!"
+msgstr "ቅሬታ ተሰርዟል!"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.complaint_list
+msgid "Complaint List"
+msgstr "የቅሬታ ዝርዝር"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.confirm_reset_password
+msgid "Confirm"
+msgstr "አረጋግጥ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.confirm_reset_password
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.reset_password
+msgid "Confirm Password"
+msgstr "የይለፍ ቃል አረጋግጥ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.portal_my_appointment
+msgid "Confirm appointment"
+msgstr "ቀጠሮ አረጋግጥ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.portal_my_appointment
 msgid "Contact"
-msgstr "ያግኙን"
+msgstr "ማገናኛ"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-#: model_terms:ir.ui.view,arch_db:AADBO_website.age_error
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_end
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_form
-#: model_terms:ir.ui.view,arch_db:AADBO_website.wrong_age_error
-msgid ""
-"Copyright &amp;copy; <strong><span>AADBO</span></strong>. All Rights "
-"Reserved"
-msgstr ""
-"የቅጂ መብት &amp;copy; <strong><span>አ.አ.ዲ.ግ.ቢ</span></strong>. መብቱ በህግ የተጠበቀ ነው"
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.new_portal_my_details
+msgid "Contact Details"
+msgstr "የማገናኛ ዝርዝሮች"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-#: model_terms:ir.ui.view,arch_db:AADBO_website.age_error
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_end
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_form
-#: model_terms:ir.ui.view,arch_db:AADBO_website.wrong_age_error
-msgid "Designed by"
-msgstr "የተነደፈ በ"
+#. module: dashboard_member12
+#: code:addons/dashboard_member12/controllers/main.py:0
+#: code:addons/dashboard_member12/controllers/main.py:0
+#: code:addons/dashboard_member12/controllers/main.py:0
+#, python-format
+msgid "Could not reset your password"
+msgstr "የይለፍ ቃልህን ዳግም ማስጀመር አልተቻለም"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-msgid "Economist"
-msgstr "ኢኮኖሚስት"
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.asidebar
+msgid "Create Appointments"
+msgstr "ቀጠሮዎችን ይፍጠሩ"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_form
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid "Create a mobile app"
+msgstr "የሞባይል መተግበሪያ ይፍጠሩ"
+
+#. module: dashboard_member12
+#: model:ir.model.fields,field_description:dashboard_member12.field_report_report__create_uid
+msgid "Created by"
+msgstr "የተፈጠረው በ"
+
+#. module: dashboard_member12
+#: model:ir.model.fields,field_description:dashboard_member12.field_report_report__create_date
+msgid "Created on"
+msgstr "የተፈጠረው ቀን"
+
+#. module: dashboard_member12
+#: model:ir.model.fields,field_description:dashboard_member12.field_report_report__checked_date
+msgid "Date"
+msgstr "ቀን"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.registration_form
+msgid "Date <span style=\"color: red;\">*</span>"
+msgstr "የተወለደበት ቀን <span style=\"color: red;\">*</span>"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.complaint_list
+msgid "Date of Complaint"
+msgstr "ቅሬታው ተፈጠረው ቀን"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.complaint_list
+msgid "Date of Remedy"
+msgstr "የመፍትሄው የሚሰጥበት ቀን"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.all_tranfer_member
+msgid "Date of Request"
+msgstr "የዝውውር ጥያቄ የቀረበበት ቀን"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.all_tranfer_member
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.attachment_form
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.complaint_list
+msgid "Delete"
+msgstr "ሰርዝ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.delete_complaint_end
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.delete_transfer_end
+msgid "Deleted!"
+msgstr "ተሰርዟል!"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.attachment_form
+msgid "Description"
+msgstr "ማብራርያ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid "Detail"
+msgstr "ዝርዝር"
+
+#. module: dashboard_member12
+#: model:ir.model.fields,field_description:dashboard_member12.field_report_report__display_name
+msgid "Display Name"
+msgstr "ስም"
+
+#. module: dashboard_member12
+#: model:ir.model.fields,field_description:dashboard_member12.field_report_report__suggestions
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.my_report
+msgid "Do you have any suggestions to improve this activity?"
+msgstr "ይህን እንቅስቃሴ ለማሻሻል ጥቆማዎች አሉዎት?"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.complaint_list
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.league_report
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.member_report
+msgid "Download"
+msgstr "አውርድ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.portal_my_appointment
+msgid "Download Meeting Minutes"
+msgstr "የስብሰባ አጀንዳ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid "Due Date"
+msgstr "የመጨረሻ ቀን"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid "Ecommerce website"
+msgstr "የኢኮሜርስ ድር ጣቢያ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.attachment_form
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.complaint_list
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.new_portal_my_details
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.registration_form
 msgid "Edit"
 msgstr "አስተካክል"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_form
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.new_portal_my_details
+msgid "Education Level *"
+msgstr "የትምህርት ደረጃ *"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.registration_form
 msgid "Education Level <span style=\"color: red;\">*</span>"
 msgstr "የትምህርት ደረጃ <span style=\"color: red;\">*</span>"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_form
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.new_portal_my_details
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.registration_form
 msgid "Education Level...."
 msgstr "የትምህርት ደረጃ...."
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-msgid "Email:"
-msgstr "ኢሜይል፡-"
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.reset_password
+msgid "Email"
+msgstr "ኢሜይል"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-#: model_terms:ir.ui.view,arch_db:AADBO_website.age_error
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_end
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_form
-#: model_terms:ir.ui.view,arch_db:AADBO_website.wrong_age_error
-msgid "Enter your Email"
-msgstr "የእርስዎን ኢሜይል ያስገቡ"
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.reset_password
+msgid "Enter Your New Password"
+msgstr "አዲሱን የይለፍ ቃልዎን ያስገቡ"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.age_error
-#: model_terms:ir.ui.view,arch_db:AADBO_website.wrong_age_error
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.age_error
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.age_limit
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.before_today
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.character_in_phone
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.date_holiday
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.duplicate
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.phone_duplicate
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.plan_city_error
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.plan_sub_city_error
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.plan_wereda_error
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.register_error
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.register_error_1
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.register_error_2
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.register_error_3
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.register_error_4
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.register_error_5
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.register_error_6
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.register_error_7
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.register_error_8
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.ten_digit_phone
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.wrong_age_error
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.year_error
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.zero_in_phone
 msgid "Error!"
 msgstr "ስህተት!"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-msgid ""
-"Ethiopian voters will go to the polls for general elections. To help you "
-"understand this important electoral process, ..."
-msgstr ""
-"የኢትዮጵያ መራጮች ለጠቅላላ ምርጫ ወደ ምርጫ ሊገቡ ነው። ይህንን አስፈላጊ የምርጫ ሂደት ለመረዳት እንዲረዳዎት፣"
-
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_form
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.registration_form
 msgid "Ethnic Group <span style=\"color: red;\">*</span>"
 msgstr "ብሄር <span style=\"color: red;\">*</span>"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_form
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.registration_form
 msgid "Ethnic..."
-msgstr "ብሔር..."
+msgstr "ብሄር..."
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-msgid "F.A.Q"
-msgstr "ብዙ ጊዜ የሚጠየቁ ጥየቄዎች"
-
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_form
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.registration_form
 msgid "Father's Name <span style=\"color: red;\">*</span>"
 msgstr "የአባት ስም <span style=\"color: red;\">*</span>"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_form
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.my_report
+msgid "Feedback<br/>"
+msgstr "ግብረ መልስ<br/>"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.new_portal_my_details
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.registration_form
 msgid "Field of Study"
 msgstr "የጥናት መስክ"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_form
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.new_portal_my_details
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.registration_form
 msgid "Field of Study...."
 msgstr "የጥናት መስክ...."
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_form
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.attachment_form
+msgid "File"
+msgstr "ፋይል"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.attachment_form
+msgid "File description..."
+msgstr "የፋይል መግለጫ..."
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.registration_form
 msgid "First Name <span style=\"color: red;\">*</span>"
 msgstr "የመጀመሪያ ስም <span style=\"color: red;\">*</span>"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-msgid "Frequently Asked <span>Questions</span>"
-msgstr "ብዙ ጊዜ የሚጠየቁ <span>ጥየቄዎች</span>"
+#. module: dashboard_member12
+#: model:ir.model.fields,field_description:dashboard_member12.field_report_report__user_id
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.portal_my_appointment
+msgid "From"
+msgstr "ከ"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_form
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.registration_form
 msgid "Gender <span style=\"color: red;\">*</span>"
 msgstr "ጾታ <span style=\"color: red;\">*</span>"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-msgid "Get Started"
-msgstr "እንጀምር"
-
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_form
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.registration_form
 msgid "Governmental"
 msgstr "የመንግስት"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_form
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.registration_form
 msgid "Grand Father's Name <span style=\"color: red;\">*</span>"
 msgstr "የአያት ስም <span style=\"color: red;\">*</span>"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-#: model_terms:ir.ui.view,arch_db:AADBO_website.age_error
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_end
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_form
-#: model_terms:ir.ui.view,arch_db:AADBO_website.wrong_age_error
-msgid "Home"
-msgstr "ዋና ገፅ"
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid "High"
+msgstr "ከፍተኛ"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-msgid ""
-"How can international trade enhance sustainable development and "
-"environmental protection?? <i class=\"bx bx-chevron-down icon-show\"/><i "
-"class=\"bx bx-chevron-up icon-close\"/>"
-msgstr ""
-"ዓለም አቀፍ ንግድ ዘላቂ ልማትን እንዴት እንደሚያሳድግ እና <i class=\"bx bx-chevron-down icon-"
-"show\"/><i class=\"bx bx-chevron-up icon-close\"/>"
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.league_report
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.member_report
+msgid "History"
+msgstr "ታሪክ"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-msgid ""
-"How do you perceive the link between trade and investment? <i class=\"bx bx-"
-"chevron-down icon-show\"/><i class=\"bx bx-chevron-up icon-close\"/>"
-msgstr ""
-"በንግድ እና በኢንቨስትመንት መካከል ያለውን ግንኙነት እንዴት ተረዱ? <i class=\"bx bx-chevron-down "
-"icon-show\"/><i class=\"bx bx-chevron-up icon-close\"/>"
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.my_report
+msgid "How did you find out about As?"
+msgstr "ስለ እኛ እንዴት አወቁ?"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_form
+#. module: dashboard_member12
+#: model:ir.model.fields,field_description:dashboard_member12.field_report_report__how_did_you_find
+msgid "How did you find out about the Segar Scholarship project?"
+msgstr "ስለ ሴጋር ስኮላርሺፕ ፕሮጀክት እንዴት አወቁ?"
+
+#. module: dashboard_member12
+#: model:ir.model.fields,field_description:dashboard_member12.field_report_report__how_do_you_evaluate
+msgid "How do you evaluate the time you spent on this project?"
+msgstr "በዚህ ፕሮጀክት ላይ ያሳለፉትን ጊዜ እንዴት ይገመግማሉ?"
+
+#. module: dashboard_member12
+#: model:ir.model.fields,field_description:dashboard_member12.field_report_report__how_often_do_you
+msgid "How often do you use or access the scholarship portal?"
+msgstr "የስኮላርሺፕ መግቢያን ምን ያህል ጊዜ ይጠቀማሉ ወይም ይደርሳሉ?"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.my_report
+msgid "How often do you use or access the system?"
+msgstr "ስርዓቱን ምን ያህል ጊዜ ይጠቀማሉ ወይም ይደርሳሉ?"
+
+#. module: dashboard_member12
+#: model:ir.model.fields,field_description:dashboard_member12.field_report_report__id
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.attachment_form
+msgid "ID"
+msgstr "መታወቂያ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.member_payments
+msgid "ID payment"
+msgstr "የመታወቂያ ክፍያ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.new_portal_my_details
+msgid "Income"
+msgstr "ገቢ"
+
+#. module: dashboard_member12
+#: code:addons/dashboard_member12/controllers/main.py:0
+#, python-format
+msgid "Incorrect phone number"
+msgstr "የተሳሳተ ስልክ ቁጥር"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.registration_form
 msgid "Individual"
 msgstr "በግል"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_form
+#. module: dashboard_member12
+#: code:addons/dashboard_member12/controllers/main.py:0
+#, python-format
+msgid "Invalid phone number"
+msgstr "ልክ ያልሆነ ስልክ ቁጥር"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.new_portal_my_details
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.registration_form
 msgid "Job Position"
-msgstr "የስራ ዓይነት"
+msgstr "የስራ መደቡ"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-#: model_terms:ir.ui.view,arch_db:AADBO_website.age_error
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_end
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_form
-#: model_terms:ir.ui.view,arch_db:AADBO_website.wrong_age_error
-msgid "Jobs"
-msgstr "ስራዎች"
+#. module: dashboard_member12
+#: model:ir.model.fields,field_description:dashboard_member12.field_report_report____last_update
+msgid "Last Modified on"
+msgstr "መጨረሻ የተሻሻለው በ"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-msgid "Loading"
-msgstr "በመጫን ላይ"
+#. module: dashboard_member12
+#: model:ir.model.fields,field_description:dashboard_member12.field_report_report__write_uid
+msgid "Last Updated by"
+msgstr "መጨረሻ የተሻሻለው በ"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-msgid "Location:"
-msgstr "ቦታ፡"
+#. module: dashboard_member12
+#: model:ir.model.fields,field_description:dashboard_member12.field_report_report__write_date
+msgid "Last Updated on"
+msgstr "መጨረሻ የተሻሻለው ቀን"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-#: model_terms:ir.ui.view,arch_db:AADBO_website.age_error
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_end
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_form
-#: model_terms:ir.ui.view,arch_db:AADBO_website.wrong_age_error
-msgid "Login"
-msgstr "ግባ"
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.member_payments
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.tranfer_member
+msgid "Leader"
+msgstr "አመራር"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-#: model_terms:ir.ui.view,arch_db:AADBO_website.age_error
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_end
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_form
-#: model_terms:ir.ui.view,arch_db:AADBO_website.wrong_age_error
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid "Leaders"
+msgstr "አመራሮች"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.member_payments
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.tranfer_member
+msgid "League"
+msgstr "ሊግ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.member_payments
+msgid "League Fee"
+msgstr "ሊግ ክፍያ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.league_report
+msgid "League Fee Amount:"
+msgstr "ሊግ ክፍያ መጠን፡-"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.league_report
+msgid "League Name:"
+msgstr "ሊግ ስም፡"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid "Logo Design"
+msgstr "አርማ ዲዛይን"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.asidebar
 msgid "Logout"
 msgstr "ውጣ"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-msgid "Members"
-msgstr "አባላት"
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid "Low"
+msgstr "ዝቅተኛ"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-msgid "Message"
-msgstr "መልእክት"
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.registration_form
+msgid "MM/DD/YYY"
+msgstr "ወር/ቀን/ ዓ.ም"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-#: model_terms:ir.ui.view,arch_db:AADBO_website.age_error
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_end
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_form
-#: model_terms:ir.ui.view,arch_db:AADBO_website.wrong_age_error
-msgid "My Account"
-msgstr "የኔ መለያ"
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.asidebar
+msgid "Main"
+msgstr "ዋና"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_form
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.tranfer_member
+msgid "Main Office..."
+msgstr "መሰረታዊ አደረጃጀት..."
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.member_payments
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.tranfer_member
+msgid "Member"
+msgstr "አባል"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.member_report
+msgid "Member Name:"
+msgstr "የአባል ስም፡"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.tranfer_member
+msgid "Member Responsibility"
+msgstr "የአባላት ኃላፊነት"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.tranfer_member
+msgid "Member...."
+msgstr "አባል...."
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid "Members Name"
+msgstr "የአባላት ስም"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid "Members Statu"
+msgstr "የአባላት ሁኔታ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid "Members Table"
+msgstr "የአባላት ሰንጠረዥ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.member_payments
+msgid "Membership Fee"
+msgstr "የአባልነት ክፍያ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.member_report
+msgid "Membership Fee Amount:"
+msgstr "የአባልነት ክፍያ መጠን፡-"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid "Membership fee chart"
+msgstr "የአባልነት ክፍያ ሰንጠረዥ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid "Membership fees"
+msgstr "የአባልነት ክፍያዎች"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.league_report
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.member_report
+msgid "Method of Payment:"
+msgstr "የመክፈያ ዘዴ፡-"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.member_payments
+msgid "Month"
+msgstr "ወር"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid "Monthly Earnings"
+msgstr "ወርሃዊ ገቢዎች"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.asidebar
+msgid "My Appointments"
+msgstr "የእኔ ቀጠሮዎች"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.asidebar
+msgid "My Complaint"
+msgstr "የእኔ ቅሬታ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.asidebar
+msgid "My Profile"
+msgstr "የግል ማህደሬ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.attachment_form
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.complaint_list
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.new_portal_my_details
+msgid "Name"
+msgstr "ስም"
+
+#. module: dashboard_member12
+#: code:addons/dashboard_member12/models/report.py:0
+#: code:addons/dashboard_member12/models/report.py:0
+#: code:addons/dashboard_member12/models/report.py:0
+#: model:ir.model.fields.selection,name:dashboard_member12.selection__report_report__state__new
+#, python-format
+msgid "New"
+msgstr "አዲስ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.tranfer_member
+msgid "New Leader Responsibility"
+msgstr "አዲሱ የአመራር ኃላፊነት"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.tranfer_member
+msgid "New League Organization"
+msgstr "አዲስ የሊግ አደራጀጅት"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.tranfer_member
+msgid "New League Responsibility"
+msgstr "አዲስ የሊግ ኃላፊነት"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid "New Members"
+msgstr "አዲስ አባላት"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.tranfer_member
+msgid "New Membership Organization"
+msgstr "አዲስ የአባልነት አደራጀጅት"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.confirm_reset_password
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.reset_password
+msgid "New Password"
+msgstr "አዲስ የይለፍ ቃል"
+
+#. module: dashboard_member12
+#: code:addons/dashboard_member12/controllers/main.py:0
+#: code:addons/dashboard_member12/controllers/portal.py:0
+#: code:addons/dashboard_member12/controllers/portal.py:0
+#, python-format
+msgid "Next Events"
+msgstr "ቀጣይ ክስተቶች"
+
+#. module: dashboard_member12
+#: code:addons/dashboard_member12/controllers/main.py:0
+#: code:addons/dashboard_member12/controllers/portal.py:0
+#: code:addons/dashboard_member12/controllers/portal.py:0
+#, python-format
+msgid "Next Week"
+msgstr "በሚቀጥለው ሳምንት"
+
+#. module: dashboard_member12
+#: code:addons/dashboard_member12/controllers/main.py:0
+#: code:addons/dashboard_member12/controllers/portal.py:0
+#: code:addons/dashboard_member12/controllers/portal.py:0
+#, python-format
+msgid "Next month"
+msgstr "በሚቀጥለው ወር"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.events_list
+msgid "No events found."
+msgstr "ምንም ክስተቶች አልተገኙም"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.events_list
+msgid "Online"
+msgstr "በመስመር ላይ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.register_error_3
+msgid ""
+"Only Leagues, who are also Members or Leaders, are allowed to transfer as a "
+"Member."
+msgstr "አባላት ወይም አመራሮች የሆኑ ሊጎች ብቻ፣ እንደ አባል እንዲዘዋወሩ የተፈቀደላቸው።"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.register_error_7
+msgid "Only Members, Leagues or Leaders are allowed to Add Attachments."
+msgstr "አባሎች፣ ሊግ ወይም አመራሮች ብቻ ተያያዥ እንዲያስገቡ ተፈቅዶላቸዋል።"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.register_error_8
+msgid "Only Members, Leagues or Leaders are allowed to Edit Their Profile."
+msgstr "አባላት፣ ሊግ ወይም አመራሮች ብቻ የግል ማህደራቸውን እንድያድሱ ተፈቅዶላቸዋል።"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.register_error_6
+msgid "Only Members, Leagues or Leaders are allowed to Submit Complaints."
+msgstr "ቅሬታዎችን እንዲያቀርቡ የሚፈቀድላቸው አባላት፣ ሊግ ወይም አመራሮች ብቻ ናቸው።"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.register_error_4
+msgid "Only Members, Leagues or Leaders are allowed to ask for a Transfer."
+msgstr "አባላት፣ ሊግ ወይም አመራሮች ብቻ ዝውውር እንዲጠይቁ ተፈቅዶላቸዋል።"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.register_error_1
+msgid ""
+"Only Those Leaders Who Are Also Leagues are allowed to transfer as Leagues"
+msgstr "እንደ ሊግ እንዲዘዋወሩ የተፈቀደላቸው ሊጎች የሆኑት አመራሮች ብቻ ናቸው።"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.register_error_2
+msgid ""
+"Only Those Members Who Are Also Leagues are allowed to transfer as Leagues"
+msgstr "እንደ ሊግ እንዲዘዋወሩ የተፈቀደላቸው ሊግ የሆኑት አባላት ብቻ ናቸው።"
+
+#. module: dashboard_member12
+#: code:addons/dashboard_member12/controllers/main.py:0
+#, python-format
+msgid ""
+"Only employees can access this database. Please contact the administrator."
+msgstr "ይህንን የውሂብ ጎታ ማግኘት የሚችሉት ሰራተኞች ብቻ ናቸው። እባክዎ አስተዳዳሪውን ያግኙ።"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid "Options"
+msgstr "አማራጮች"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.tranfer_member
+msgid "Organization..."
+msgstr "አደራጀጅት..."
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.events_list
+msgid "Organizer:"
+msgstr "አዘጋጅ፡-"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.registration_form
 msgid "Other Type of Study"
 msgstr "ሌላ የጥናት መስክ"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_form
+#. module: dashboard_member12
+#: code:addons/dashboard_member12/controllers/main.py:0
+#, python-format
+msgid "Password Not Match"
+msgstr "የይለፍ ቃል አይዛመድም።"
+
+#. module: dashboard_member12
+#: code:addons/dashboard_member12/controllers/main.py:0
+#: code:addons/dashboard_member12/controllers/portal.py:0
+#: code:addons/dashboard_member12/controllers/portal.py:0
+#, python-format
+msgid "Past Events"
+msgstr "ያለፉ ክስተቶች"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.member_payments
+msgid "Payments"
+msgstr "ክፍያዎች"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.new_portal_my_details
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.registration_form
 msgid "Phone"
 msgstr "ስልክ"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.wrong_age_error
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.registration_form
+msgid "Phone <span style=\"color: red;\">*</span>"
+msgstr "ስልክ <span style=\"color: red;\">*</span>"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.wrong_age_error
 msgid "Please Add The Appropriate Age Of The Supporter"
 msgstr "እባክዎን የደጋፊውን ትክክለኛ ዕድሜ ይጨምሩ::"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_form
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.registration_form
 msgid "Please Fill In The Information And Submit."
 msgstr "እባክዎን መረጃውን ይሙሉ እና ያስገቡ።"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-msgid "Politician"
-msgstr "ፖለቲከኛ"
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.registration_more_studies
+msgid "Please Make Sure You Have Checked All The Field of Studies"
+msgstr "እባክዎ ሁሉንም የጥናት መስክ መፈተሽዎን ያረጋግጡ"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_form
+#. module: dashboard_member12
+#: code:addons/dashboard_member12/models/report.py:0
+#: code:addons/dashboard_member12/models/report.py:0
+#: code:addons/dashboard_member12/models/report.py:0
+#, python-format
+msgid "Please fill in the responsible person for feedback view"
+msgstr "እባክዎ ለአስተያየት እይታ ሀላፊነቱን የሚወስደውን ሰው ይሙሉ"
+
+#. module: dashboard_member12
+#: model:ir.model.fields,field_description:dashboard_member12.field_report_report__rate_your_level
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.my_report
+msgid "Please rate your level of satisfaction with the project"
+msgstr "እባክዎን በፕሮጀክቱ ያለዎትን እርካታ ደረጃ ይስጡ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.registration_form
 msgid "Private"
 msgstr "የግል መስርያ ቤት"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-msgid "Projects"
-msgstr "ፕሮጀክቶች"
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid "Profile"
+msgstr "ማህደር"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-msgid "Prosperity Party"
-msgstr "የብልጽግና ፓርቲ"
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.league_report
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.member_report
+msgid "Reason For Payment:"
+msgstr "የሚከፈልበት ምክንያት፡-"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-msgid "Prosperity Party  Prosperity Party"
-msgstr "የብልጽግና ፓርቲ የብልጽግና ፓርቲ"
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid "Redesign homepage"
+msgstr "መነሻ ገጽን እንደገና ይንደፉ"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-#: model_terms:ir.ui.view,arch_db:AADBO_website.age_error
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_end
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_form
-#: model_terms:ir.ui.view,arch_db:AADBO_website.wrong_age_error
-msgid ""
-"Prosperity Party is committed to strengthening  applying a true Federal "
-"system which recognizes the diversity and contributions of all Ethiopians."
-msgstr ""
-"የብልጽግና ፓርቲ የሁሉም ኢትዮጵያዊያን ብዝሃነትና አስተዋፅዖ እውቅና የሚሰጥ እውነተኛ ፌዴራላዊ ሥርዓትን ተግባራዊ "
-"ለማድረግ ቁርጠኛ ነው።"
+#. module: dashboard_member12
+#: model:ir.model.fields,field_description:dashboard_member12.field_report_report__seq
+msgid "Reference"
+msgstr "ማጣቀሻ"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_form
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.make_appointment
+msgid "Region..."
+msgstr "ክልል/ከተማ አስተዳደር..."
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid "Register Date"
+msgstr "የምዝገባ ቀን"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.registration_form
 msgid "Registration Form"
 msgstr "የምዝገባ ቅጽ"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_form
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.make_appointment
+msgid "Remarks"
+msgstr "አስተያየቶች"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.portal_my_appointment
+msgid "Remarks:"
+msgstr "አስተያየቶች:-"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.register_end
+msgid "Request Has Been Created Successfully!"
+msgstr "የዝውውር ጥያቄው በተሳካ ሁኔታ ተፈጥሯል!"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.reset_password
+msgid "Reset Password"
+msgstr "የይለፍ ቃል ዳግም አስጀምር"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.confirm_reset_password
+msgid "Reset Your Password"
+msgstr "የይለፍ ቃል ዳግም አስጀምር"
+
+#. module: dashboard_member12
+#: code:addons/dashboard_member12/models/res_users.py:0
+#, python-format
+msgid "Reset password: invalid password"
+msgstr "ልክ ያልሆነ የይለፍ ቃል: የይለፍ ቃል ዳግም አስጀምር"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.tranfer_member
+msgid "Responsibility..."
+msgstr "ኃላፊነት..."
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.tranfer_member
+msgid "Responsibility....."
+msgstr "ኃላፊነት....."
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid "Search"
+msgstr "ፈልግ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.make_appointment
+msgid "Select"
+msgstr "ይምረጡ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.complaint_list
+msgid "Select Layout"
+msgstr "አቀማመጥን ይምረጡ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.registration_form
 msgid "Select a gender"
 msgstr "ጾታ ይምረጡ"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_form
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.registration_form
 msgid "Select a livelihood"
 msgstr "መተዳደሪያን ይምረጡ"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_form
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.attachment_form
+msgid "Select an Attachment Type"
+msgstr "የተያያዥ አይነት ይምረጡ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.make_appointment
+msgid "Select your Sub City...."
+msgstr "ክፍለ ከተማዎን ይምረጡ...."
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.registration_form
 msgid "Select your Woreda.."
 msgstr "ወረዳዎን ይምረጡ.."
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-msgid "Send Message"
-msgstr "መልዕክት ላክ"
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.complaint_list
+msgid "Setting Panel"
+msgstr "ቅንብር ፓነል"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-msgid ""
-"Should I form my company as C corporation, an S corporation, an LLC, a "
-"partnership or a sole proprietorship?"
-msgstr "ኩባንያዬን እንደ C ኮርፖሬሽን፣ S ኮርፖሬሽን፣ LLC፣ አጋርነት ወይም ብቸኛ ባለቤትነት መመስረት አለብኝ?"
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.complaint_list
+msgid "Sidebar Color"
+msgstr "የጎን አሞሌ ቀለም"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_form
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.only_registered_users
+msgid "Sign In"
+msgstr "ግባ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.only_registered_users
+msgid "Sign Up"
+msgstr "ተመዝገቡ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.only_registered_users
+msgid "Sorry, no access!"
+msgstr "ይቅርታ፣ ምንም መዳረሻ የለም!"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.registration_form
 msgid "Source of Livelihood <span style=\"color: red;\">*</span>"
 msgstr "የኑሮ ምንጭ <span style=\"color: red;\">*</span>"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_form
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.all_tranfer_member
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.member_payments
+msgid "State"
+msgstr "ሁኔታ"
+
+#. module: dashboard_member12
+#: model:ir.model.fields,field_description:dashboard_member12.field_report_report__state
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.complaint_list
+msgid "Status"
+msgstr "ሁኔታ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.registration_form
 msgid "Stay At Home"
 msgstr "የቤት እመቤት/አባት"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_form
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.registration_form
 msgid "Subcity <span style=\"color: red;\">*</span>"
 msgstr "ክፍለ ከተማ <span style=\"color: red;\">*</span>"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_form
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.registration_form
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.tranfer_member
 msgid "Subcity..."
 msgstr "ክፍለ ከተማ..."
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid "Subcitys"
+msgstr "ክፍለ ከተሞች..."
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.complaint_list
 msgid "Subject"
 msgstr "ርዕሰ ጉዳይ"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_form
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.complaint_form_add
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.make_appointment
+msgid "Subject <span style=\"color: red;\">*</span>"
+msgstr "ርዕሰ ጉዳይ <span style=\"color: red;\">*</span>"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.complaint_form_add
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.make_appointment
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.my_report
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.registration_form
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.tranfer_member
 msgid "Submit"
 msgstr "አስገባ"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-msgid "Supporers"
-msgstr "ደጋፊዎች"
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.thanks
+msgid "Thank You!"
+msgstr "አመሰግናለሁ!"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-#: model_terms:ir.ui.view,arch_db:AADBO_website.age_error
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_end
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_form
-#: model_terms:ir.ui.view,arch_db:AADBO_website.wrong_age_error
-msgid "Supporter Registration Form"
-msgstr "የደጋፊ ምዝገባ ቅጽ"
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.my_report
+msgid "Thank you for your time."
+msgstr "ለጊዜዎት አመሰግናለሁ."
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_end
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.complaint_end
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.profile_end
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.register_end
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.registration_end
 msgid "Thank you!"
 msgstr "አመሰግናለሁ!"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-msgid ""
-"The 2021 Ethiopian general election to elect members of the House of "
-"Peoples' Representatives was held on 21 June 2021 and 30 September 2021."
-msgstr ""
-"እ.ኤ.አ. በ2021 የኢትዮጵያ የህዝብ ተወካዮች ምክር ቤት አባላትን ለመምረጥ የሚካሄደው ሀገር አቀፍ ምርጫ ሰኔ 21 "
-"ቀን 2021 እና መስከረም 30 ቀን 2021 ተካሂዷል።"
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.date_holiday
+msgid "The Date You Picked Is A Holiday"
+msgstr "የመረጡት ቀን የበዓል ቀን ነው"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_form
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.registration_form
 msgid "The Fields With Asterisk Are Mandatory."
-msgstr "የኮከብ ምልክት ያላቸው መስኮች የግዴታ ናቸው።"
+msgstr "የኮከብ ምልክት ያላቸው መስኮች መሞላት አለባቸው።"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-msgid ""
-"The Prosperity Party was formed and formally recognised by the National "
-"Electoral Board of Ethiopia (NEBE) in December 2019 through the merging of "
-"three former EPRDF member parties,"
-msgstr ""
-"የብልጽግና ፓርቲ በታህሳስ 2010 ዓ.ም በኢትዮጵያ ብሔራዊ ምርጫ ቦርድ ሕጋዊ እውቅና ያገኘው ሶስት የቀድሞ የኢህአዴግ "
-"አባል ፓርቲዎችን በማዋሃድ ነው።"
-
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-msgid ""
-"The Prosperity Party was formed and formally recognised by the National "
-"Electoral Board of Ethiopia (NEBE) in December 2019 through the merging of "
-"three former EPRDF member parties, the Amhara Democratic Party (ADP), the "
-"Oromo Democratic Party (ODP) and the Southern Ethiopian People's Democratic "
-"Movement (SEPDM)."
-msgstr ""
-"የብልጽግና ፓርቲ በታህሳስ 2010 ዓ.ም የኢትዮጵያ ብሔራዊ ምርጫ ቦርድ ሕጋዊ እውቅና ያገኘው ሶስት የቀድሞ የኢህአዴግ "
-"አባል ፓርቲዎች፣ የአማራ ዴሞክራሲያዊ ፓርቲ (አዴፓ)፣ የኦሮሞ ዴሞክራሲያዊ ፓርቲ (ኦዴፓ) እና የደቡብ ኢትዮጵያ "
-"ፓርቲዎች ውህደት በማድረግ ነው። "
-
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.age_error
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.age_error
 msgid "The Supporter's Age Must Be Above 15"
 msgstr "የደጋፊው እድሜ ከ15 በላይ መሆን አለበት።"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-msgid ""
-"The context of improvement, of adapting to something new, is always enriched"
-" by the idea of ​​prosperity."
-msgstr "የማሻሻያ አውድ ፣ ከአዲስ ነገር ጋር መላመድ ፣ ሁል ጊዜ በብልጽግና ሀሳብ የበለፀገ ነው።"
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.portal_my_appointment
+msgid "The selected appointment will be canceled."
+msgstr "የተመረጠው ቀጠሮ ይሰረዛል።"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-msgid ""
-"The key to fostering a mutually conducive relationship between trade and environment is policy coherence, including the elimination of tariff and non-tariff barriers for environmental goods and ancillary services, the reform of environmentally harmful subsidies, the cost internalization of environmental externalities from production and consumption, and appropriate incentive schemes (e.g. feed-in-tariff for renewable energy). Policy analysis and advise, as well as technical assistance and capacity building, are therefore key areas of UNEP`s Trade work, foremost delivered through the UNEP Environment and Trade Hub.\n"
-"\n"
-"In practical terms, trade offers opportunities for greening international supply chains, diffusing green technology and innovation, and re-allocating unevenly distributed natural resources in an efficient way across the globe. In the same vein, sustainable development offers trade opportunities, including by opening new export markets for environmental goods and services and enhancing trade in sustainable goods through product certification."
-msgstr ""
-"በንግድ እና በአካባቢ መካከል እርስ በርስ የሚስማማ ግንኙነት ለመፍጠር ቁልፉ የፖሊሲ ቅንጅት ነው, ይህም ለአካባቢያዊ "
-"እቃዎች እና ረዳት አገልግሎቶች ታሪፍ እና ታሪፍ ያልሆኑ እንቅፋቶችን ማስወገድ, የአካባቢን ጎጂ ድጎማዎች ማሻሻያ, "
-"የአካባቢ ውጫዊ ሁኔታዎችን ከምርት እና ፍጆታ ወጪን ያካትታል. እና ተገቢ የማበረታቻ መርሃ ግብሮች (ለምሳሌ ለታዳሽ "
-"ሃይል መኖ-ውስጥ ታሪፍ)። የፖሊሲ ትንተና እና ምክር እንዲሁም ቴክኒካል ድጋፍ እና አቅምን ማሳደግ የ UNEP የንግድ "
-"ሥራ ዋና ዘርፎች ሲሆኑ በ UNEP የአካባቢ እና የንግድ ማዕከል በኩል የሚቀርቡ ናቸው። በተግባራዊ አነጋገር፣ ንግድ "
-"ዓለም አቀፍ የአቅርቦት ሰንሰለቶችን አረንጓዴ ለማድረግ፣ አረንጓዴ ቴክኖሎጂን እና ፈጠራን ለማስፋፋት እና ያልተመጣጠነ "
-"ያልተከፋፈለ የተፈጥሮ ሀብትን በአለም አቀፍ ደረጃ ውጤታማ በሆነ መንገድ እንደገና ለመመደብ ዕድሎችን ይሰጣል። በተመሣሣይ"
-" ሁኔታ ቀጣይነት ያለው ልማት ለአካባቢ ጥበቃ ዕቃዎች እና አገልግሎቶች አዲስ የኤክስፖርት ገበያዎችን በመክፈት እና "
-"በዘላቂነት የሸቀጥ ንግድን በምርት ማረጋገጫ ማሳደግን ጨምሮ የንግድ እድሎችን ይሰጣል።"
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.portal_my_appointments
+msgid "There are no appointments."
+msgstr "ምንም ቀጠሮዎች የሉም::"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-msgid ""
-"The mandate of UNEP is “to be the leading global environmental authority "
-"that sets the global environmental agenda, that promotes the coherent "
-"implementation of the environmental dimensions of sustainable development "
-"within the UN system and that serves as an authoritative advocate for the "
-"global environment.” (Nairobi Declaration, adopted in 1997)."
-msgstr ""
-"የዩኤንኢፒ ተልእኮ “ዓለም አቀፉን የአካባቢ አጀንዳ የሚያወጣ፣ በተባበሩት መንግስታት ድርጅት ውስጥ ዘላቂ ልማት የአካባቢ"
-" ጥበቃ ልኬቶች ወጥነት ያለው ትግበራን የሚያበረታታ እና ለአለም አቀፍ አካባቢ ስልጣን ያለው ተሟጋች ሆኖ የሚያገለግል "
-"መሪ የአለም የአካባቢ ባለስልጣን መሆን ነው። (የናይሮቢ መግለጫ፣ በ1997 ተቀባይነት አግኝቷል)።"
+#. module: dashboard_member12
+#: model:ir.model,name:dashboard_member12.model_report_report
+msgid "These will hold a list of membership report"
+msgstr "እነዚህ የአባልነት ሪፖርት ዝርዝር ይይዛሉ"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-msgid ""
-"The report “Green Economy and Trade  Trends, Challenges and Opportunities” "
-"(UNEP, 2013) finds that developing countries are especially well-placed to "
-"benefit from market liberalization and trade in environmental goods as they "
-"often have a comparative advantage in these segments and a rich endowment in"
-" natural resources. For example, Latin American countries feature rich "
-"biodiversity, while"
-msgstr ""
-"ሪፖርቱ \"አረንጓዴ ኢኮኖሚ እና የንግድ አዝማሚያዎች, ተግዳሮቶች እና እድሎች\" (UNEP, 2013) በተለይ በማደግ "
-"ላይ ያሉ ሀገሮች በገበያ ነፃነት እና በአካባቢያዊ እቃዎች ንግድ ውስጥ ብዙ ጊዜ በንፅፅር ጥቅም ላይ ስለሚውሉ እና "
-"ሀብታም ለመሆን ጥሩ ቦታ ላይ ይገኛሉ. በተፈጥሮ ሀብቶች ውስጥ ስጦታ. ለምሳሌ፣ የላቲን አሜሪካ አገሮች የበለፀገ የብዝሃ"
-" ሕይወት ባህሪ አላቸው።"
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.age_limit
+msgid "This Age isn't within the Age Limit Range given for Supporter"
+msgstr "ይህ ዕድሜ ለደጋፊ በተሰጠው የዕድሜ ገደብ ውስጥ አይደለም"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_form
+#. module: dashboard_member12
+#: code:addons/dashboard_member12/controllers/main.py:0
+#: code:addons/dashboard_member12/controllers/portal.py:0
+#: code:addons/dashboard_member12/controllers/portal.py:0
+#, python-format
+msgid "This Week"
+msgstr "በዚህ ሳምንት"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.registration_form
 msgid "This Will Help People Register For Supporter For Prosperity Party."
 msgstr "ይህ ቅጽ ሰዎች ለብልጽግና ፓርቲ ደጋፊ እንዲመዘገቡ ይረዳቸዋል።"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-msgid ""
-"This bylaw is called the bylaw of the Prosperity Party. The logo depicts the"
-" idea of multi nationalism, national unity, national pride, peace, democracy"
-" and  ..."
-msgstr ""
-"ይህ መተዳደሪያ ደንብ የብልጽግና ፓርቲ መተዳደሪያ ደንብ ይባላል። አርማው የመድብለ ብሔርተኝነት፣ የሀገር አንድነት፣ "
-"የሀገር ኩራት፣ ሰላም፣ ዲሞክራሲ እና..."
+#. module: dashboard_member12
+#: code:addons/dashboard_member12/controllers/main.py:0
+#: code:addons/dashboard_member12/controllers/portal.py:0
+#: code:addons/dashboard_member12/controllers/portal.py:0
+#, python-format
+msgid "This month"
+msgstr "በዚህ ወር"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-msgid ""
-"To make tomorrow better than today, we will reach our goal accompanied by an"
-" optimistic journey"
-msgstr "ነገን ከዛሬ የተሻለ ለማድረግ በብሩህ ጉዞ ታጅበን ግባችን ላይ እናደርሳለን።"
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.portal_my_appointment
+msgid "Till"
+msgstr "እስከ"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-msgid "Total Employees"
-msgstr "ጠቅላላ ሰራተኞች"
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.make_appointment
+msgid "Timeslot <span style=\"color: red;\">*</span>"
+msgstr "ሰዓት <span style=\"color: red;\">*</span>"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-msgid ""
-"Trade policy affects market access for exports and imports of goods and "
-"services, generating higher earnings in some sectors and lower earnings in "
-"others. Thus, it has a direct impact on the basket of goods and services "
-"that each country produces. With around 30 percent of global GDP accounted "
-"for by exports, trade policy drives a significant portion of domestic "
-"production. As a result, trade policy also strongly impacts public and "
-"private investment, which tends to flow into the most productive sectors of "
-"the economy. International investment in particular may tend to target "
-"sectors with a high volume of international trade. The World Bank has "
-"estimated that around 55-60 percent of global trade volume is now intra-firm"
-" trade, that is, based on companies' direct investment abroad."
-msgstr ""
-"የንግድ ፖሊሲ ወደ ውጭ የሚላኩ ምርቶች እና አገልግሎቶችን ወደ ውጭ የሚላኩ እና ወደ ሀገር ውስጥ የሚገቡትን የገበያ "
-"ተደራሽነት ላይ ተጽእኖ ስለሚያሳድር በአንዳንድ ዘርፎች ከፍተኛ ገቢ ያስገኛል እና በሌሎች ዝቅተኛ ገቢ ያስገኛል። "
-"ስለዚህም እያንዳንዱ አገር በሚያመርተው የዕቃና የአገልግሎት ቅርጫት ላይ ቀጥተኛ ተጽእኖ ይኖረዋል። 30 በመቶ የሚሆነው "
-"የአለም አቀፉ የሀገር ውስጥ ምርት (GDP) በኤክስፖርት ሲካተት፣ የንግድ ፖሊሲ ከፍተኛ የሀገር ውስጥ ምርትን ይመራል። "
-"በውጤቱም የንግድ ፖሊሲው በመንግስት እና በግሉ ኢንቨስትመንት ላይ ከፍተኛ ተጽዕኖ ያሳድራል, ይህም በኢኮኖሚው ውስጥ "
-"ምርታማ ወደሆኑት ዘርፎች ይጎርፋል። በተለይም ዓለም አቀፍ ኢንቨስትመንት ከፍተኛ መጠን ያለው ዓለም አቀፍ ንግድ ያላቸውን"
-" ዘርፎች ላይ ያነጣጠረ ሊሆን ይችላል። የዓለም ባንክ ከ55-60 በመቶ የሚሆነው የአለም ንግድ መጠን አሁን ውስጠ-ተቃርኖ"
-" ንግድ ነው ሲል ገምቷል፣ ይህም ማለት ኩባንያዎች ወደ ውጭ በሚያደርጉት ቀጥተኛ ኢንቨስትመንት ላይ የተመሰረተ ነው።"
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.all_tranfer_member
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.tranfer_member
+msgid "To Cell"
+msgstr "ወደ ሕዋስ"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-#: model_terms:ir.ui.view,arch_db:AADBO_website.age_error
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_end
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_form
-#: model_terms:ir.ui.view,arch_db:AADBO_website.wrong_age_error
-msgid "TriaTrading Plc"
-msgstr "ትሪያ ትራዲንግ ፒኤልሲ"
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.tranfer_member
+msgid "To League Cell"
+msgstr "ወደ ሊግ ሕዋስ"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-msgid "We are committed to strengthening , applying a true Federal system"
-msgstr "እውነተኛ ፌዴራላዊ ሥርዓትን ለማጠናከር፣ ተግባራዊ ለማድረግ ቆርጠን ተነስተናል"
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.tranfer_member
+msgid "To League Main Office"
+msgstr "ወደ ሊግ መሰረታዊ ድርጅት"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-msgid ""
-"We don't stop when we start, we don't fail when we plan, our goals are "
-"always out of the way."
-msgstr "ስንጀምር አናቆምም ፣ ስናቅድ አንወድቅም ፣ ግባችን ሁል ጊዜ ከመንገድ ላይ ነው።"
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.all_tranfer_member
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.tranfer_member
+msgid "To Main Office"
+msgstr "ወደ መሰረታዊ ድርጅት"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-msgid "Welcome to AADBO"
-msgstr "እንኳን ወደ አ.አ.ዲ.ግ.ቢ በደህና መጡ::"
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.all_tranfer_member
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.tranfer_member
+msgid "To Subcity"
+msgstr "ወደ ክፍለ ከተማ"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-msgid ""
-"What about developing countries can they also benefit? <i class=\"bx bx-"
-"chevron-down icon-show\"/><i class=\"bx bx-chevron-up icon-close\"/>"
-msgstr ""
-"በማደግ ላይ ያሉ አገሮችስ ሊጠቅሙ የሚችሉትስ? <i class=\"bx bx-chevron-down icon-show\"/><i "
-"class=\"bx bx-chevron-up icon-close\"/>"
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.all_tranfer_member
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.tranfer_member
+msgid "To Woreda"
+msgstr "ወደ ወረዳ"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-msgid ""
-"What is the mandate and mission of your work? <i class=\"bx bx-chevron-down "
-"icon-show\"/><i class=\"bx bx-chevron-up icon-close\"/>"
-msgstr ""
-"የስራህ ተልእኮ እና ተልዕኮ ምንድን ነው? <i class=\"bx bx-chevron-down icon-show\"/><i "
-"class=\"bx bx-chevron-up icon-close\"/>"
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.only_registered_users
+msgid "To schedule an appointment please,"
+msgstr "እባክዎን ቀጠሮ ለመያዝ፣"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-msgid "Why Us"
-msgstr "ለምን እኛ"
+#. module: dashboard_member12
+#: code:addons/dashboard_member12/controllers/main.py:0
+#: code:addons/dashboard_member12/controllers/portal.py:0
+#: code:addons/dashboard_member12/controllers/portal.py:0
+#, python-format
+msgid "Today"
+msgstr "ዛሬ"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-msgid "Why you shoud <span>choose us</span>?"
-msgstr "ለምን እኛን <span>መምረጥ አለብዎት</span>?"
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid "Total Members"
+msgstr "ጠቅላላ አባላት"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_form
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid "Total Memebrs"
+msgstr "ጠቅላላ አባላት"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid "Total fee"
+msgstr "ጠቅላላ ክፍያ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.member_payments
+msgid "Traced Payment"
+msgstr "የክፍያ ክትትል"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.tranfer_member
+msgid "Transfer"
+msgstr "ዝውውር"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.tranfer_member
+msgid "Transfer ..."
+msgstr "ዝውውር  .."
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.tranfer_member
+msgid "Transfer As"
+msgstr "የሚዘዋወሩት እንደ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.tranfer_member
+msgid "Transfer Details"
+msgstr "የዝውውር ማብራሪያ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.delete_transfer_end
+msgid "Transfer Has Been Deleted!"
+msgstr "ዝውውር ተሰርዟል!"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.complaint_list
+msgid "Transfer to City"
+msgstr "ወደ ከተማ አዘዋውር"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.complaint_list
+msgid "Transfer to Subcity"
+msgstr "ወደ ክፍለ ከተማ አዘዋውር"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.complaint_list
+msgid "Transfer to Subity"
+msgstr "ወደ ክፍለ ከተማ አዘዋውር"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.attachment_form
+msgid "Type"
+msgstr "ዓይነት"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.attachment_form
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.complaint_form_add
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.new_portal_my_details
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.tranfer_member
+msgid "Update"
+msgstr "አስተካክል"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.events_list
+msgid "Use the top button '<b>+ New</b>' to create an event."
+msgstr "አንድ ክስተት ለመፍጠር የላይኛውን አዝራር '<b>+ አዲስ</b>' ይጠቀሙ።"
+
+#. module: dashboard_member12
+#: model:ir.model,name:dashboard_member12.model_res_users
+msgid "Users"
+msgstr "ተጠቃሚዎች"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid "View All"
+msgstr "ሁሉንም ይመልከቱ"
+
+#. module: dashboard_member12
+#: model:ir.model.fields.selection,name:dashboard_member12.selection__report_report__state__waiting
+msgid "Waiting "
+msgstr "በመጠበቅ ላይ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.registration_more_studies
+msgid "Warning"
+msgstr "ማስጠንቀቂያ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid "Weekly Earnings"
+msgstr "ሳምንታዊ ገቢዎች"
+
+#. module: dashboard_member12
+#: model:ir.model.fields,field_description:dashboard_member12.field_report_report__your_participation
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.my_report
+msgid "What was your participation?"
+msgstr "የእርስዎ ተሳትፎ ምን ነበር?"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.register_error
+msgid "What would you like to be transfered as?"
+msgstr "እንደ ምን እንዲዛወሩ ይፈልጋሉ?"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.portal_my_appointment
+msgid "With"
+msgstr "ከ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.make_appointment
+msgid "With <span style=\"color: red;\">*</span>"
+msgstr "ከ <span style=\"color: red;\">*</span>"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.portal_my_appointments
+msgid "With:"
+msgstr "ከ:"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.registration_form
 msgid "Woreda <span style=\"color: red;\">*</span>"
 msgstr "ወረዳ <span style=\"color: red;\">*</span>"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.tranfer_member
+msgid "Woreda.."
+msgstr "ወረዳ.."
+
+#. module: dashboard_member12
+#: code:addons/dashboard_member12/controllers/main.py:0
+#, python-format
+msgid "Wrong login/password"
+msgstr "የተሳሳተ መግቢያ/የይለፍ ቃል"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.member_payments
+msgid "Year"
+msgstr "አመት"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.new_portal_my_details
+msgid "Year of Service"
+msgstr "የአገልግሎት ዓመት"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid "Yearly Earnings"
+msgstr "ዓመታዊ ገቢዎች"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.member_payments
+msgid "Years..."
+msgstr "ዓመታት..."
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.portal_my_appointment
+msgid "You"
+msgstr "እርሶዎ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.character_in_phone
+msgid "You Can't Have Characters in a Phone Number"
+msgstr "በስልክ ቁጥር ውስጥ ፊደላት ሊኖሩዎት አይችሉም"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.register_error_5
+msgid ""
+"You Have A Transfer That Hasn't Been Reviewed Yet. Please Wait Until A "
+"Decision Is Made."
+msgstr "እስካሁን ያልተገመገመ ዝውውር አሎት። እባክዎ ውሳኔ እስኪደረግ ድረስ ይጠብቁ።"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.before_today
+msgid "You Have To Pick A Date Before Today."
+msgstr "ከዛሬ ቀን በፊት መምረጥ አለቦት።"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.portal_my_appointment
+msgid "You are going to confirm this appointment."
+msgstr "ይህን ቀጠሮ ማረጋገጥ ይችላሉ::"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.thanks
+msgid "Your Appointment"
+msgstr "የእርስዎ ቀጠሮ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.thanks
+msgid "Your Appointment has been scheduled."
+msgstr "ቀጠሮዎ ተይዞለታል።"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.confirm_reset_password
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.make_appointment
 msgid "Your Email"
-msgstr "የእርስዎ ኢሜይል"
+msgstr "ኢሜይልዎ"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.make_appointment
 msgid "Your Name"
-msgstr "የአንተ ስም"
+msgstr "ስምዎ"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_end
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.make_appointment
+msgid "Your Phone"
+msgstr "ስልክዎ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.make_appointment
+msgid "Your Phone <span style=\"color: red;\">*</span>"
+msgstr "ስልክዎ <span style=\"color: red;\">*</span>"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.profile_end
+msgid "Your Profile Has Been Successfully Updated!"
+msgstr "ማህደሮ በተሳካ ሁኔታ ዘምኗል!"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.make_appointment
+msgid "Your Region/City Administration <span style=\"color: red;\">*</span>"
+msgstr "ክልል/ከተማ አስተዳደርዎ <span style=\"color: red;\">*</span>"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.make_appointment
+msgid "Your Sub City <span style=\"color: red;\">*</span>"
+msgstr "ክፍለ ከተማዎ <span style=\"color: red;\">*</span>"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.registration_end
 msgid "Your Supporter Registration Form Has Been Submitted!"
 msgstr "የደጋፊዎ መመዝገቢያ ቅጽ ገብቷል!"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-msgid "Your message has been sent. Thank you!"
-msgstr "መልእክት ተላኳል. አመሰግናለሁ!"
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.complaint_list
+msgid "black"
+msgstr "ጥቁር"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-#: model_terms:ir.ui.view,arch_db:AADBO_website.age_error
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_end
-#: model_terms:ir.ui.view,arch_db:AADBO_website.registration_form
-#: model_terms:ir.ui.view,arch_db:AADBO_website.wrong_age_error
-msgid "contact@example.com"
-msgstr ""
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.my_report
+msgid "breadcrumb"
+msgstr "የዳቦ ፍርፋሪ"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-msgid "info@example.com"
-msgstr ""
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.complaint_list
+msgid "cyan"
+msgstr "ሳያን"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-msgid "prosperity party by-laws introduction"
-msgstr "የብልጽግና ፓርቲ መተዳደሪያ ደንብ መግቢያ"
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.make_appointment
+msgid "dd/mm/yyyy"
+msgstr "ቀን/ወር/ዓ.ም"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-msgid "👉 We will change!!"
-msgstr "👉 እንቀይራለን!!"
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.complaint_list
+msgid "green"
+msgstr "አረንጓዴ"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-msgid "👉 We will get there!!"
-msgstr "👉 እዚያ እንደርሳለን!!"
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.thanks
+msgid "has been scheduled for"
+msgstr "ቀጠሮ ተይዞለታል"
 
-#. module: AADBO_website
-#: model_terms:ir.ui.view,arch_db:AADBO_website.Home
-msgid "👉 We will succeed!!"
-msgstr "👉 ይሳካልን!!"
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.tranfer_member
+msgid "leader"
+msgstr "አመራር"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.tranfer_member
+msgid "league"
+msgstr "ሊግ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.tranfer_member
+msgid "member"
+msgstr "አባል"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.only_registered_users
+msgid "or"
+msgstr "ወይም"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.complaint_list
+msgid "orange"
+msgstr "ብርቱካናማ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.complaint_list
+msgid "purple"
+msgstr "ሐምራዊ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.complaint_list
+msgid "red"
+msgstr "ቀይ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.only_registered_users
+msgid "to access this page."
+msgstr "ይህን ገጽ ለመድረስ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.Home
+msgid "user"
+msgstr "ተጠቃሚ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.complaint_list
+msgid "white"
+msgstr "ነጭ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.my_report
+msgid "🖵As a Volunter"
+msgstr "🖵እንደ በጎ ፈቃደኝነት"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.my_report
+msgid "🖵As a constant donor"
+msgstr "🖵እንደ ቋሚ ለጋሽ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.my_report
+msgid "🖵As a membership"
+msgstr "🖵እንደ አባልነት"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.my_report
+msgid "🖵As a one-time donor"
+msgstr "🖵እንደ አንድ ጊዜ ለጋሽ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.my_report
+msgid "🖵Dissatisfied"
+msgstr "🖵አልረካም።"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.my_report
+msgid "🖵Email"
+msgstr "🖵ኢሜል"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.my_report
+msgid "🖵Internet/search engine"
+msgstr "🖵በይነመረብ/የፍለጋ ሞተር"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.my_report
+msgid "🖵More than once a week"
+msgstr "🖵በሳምንት ከአንድ ጊዜ በላይ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.my_report
+msgid "🖵Neutral"
+msgstr "🖵 ገለልተኛ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.my_report
+msgid "🖵None"
+msgstr "🖵ምንም"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.my_report
+msgid "🖵Once a month"
+msgstr "🖵በወር አንድ ጊዜ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.my_report
+msgid "🖵Once a week"
+msgstr "🖵በሳምንት አንድ ጊዜ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.my_report
+msgid "🖵Others"
+msgstr "🖵ሌሎችም"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.my_report
+msgid "🖵Our website"
+msgstr "🖵ድህረ ገፃችን"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.my_report
+msgid "🖵Promotional events"
+msgstr "🖵የማስተዋወቂያ ዝግጅቶች"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.my_report
+msgid "🖵Satisfied"
+msgstr "🖵ረክቻለሁ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.my_report
+msgid "🖵Social media"
+msgstr "🖵ማህበራዊ ሚዲያ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.my_report
+msgid "🖵TV and radio ad"
+msgstr "🖵የቲቪ እና የሬዲዮ ማስታወቂያ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.my_report
+msgid "🖵Very satisfied"
+msgstr "🖵በጣም ረክቻለሁ"
+
+#. module: dashboard_member12
+#: model_terms:ir.ui.view,arch_db:dashboard_member12.my_report
+msgid "🖵Word of mouth"
+msgstr "🖵የአፍ ቃል"

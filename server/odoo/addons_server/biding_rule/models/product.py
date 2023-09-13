@@ -16,7 +16,7 @@ class BidingProduct(models.Model):
     _name = 'biding.product'
     _description = 'biding product'
     #
-    name = fields.Char(string='Rule name')
+    name = fields.Char(string='Rule name', translate=True)
     doc_attachment_id = fields.Many2many('ir.attachment', 'doc_attach_rel_3', string="Attachment",
                                          help='You can attach the copy of your document', copy=False)
     is_pass = fields.Boolean('passed')
@@ -43,6 +43,7 @@ class PurchaseOrder(models.Model):
     state_of_requisition = fields.Selection(related='requisition_id.state')
     status = fields.Selection([('failed', 'Failed'), ('passed', 'Passed')])
     from_tendor = fields.Boolean(default=False)
+    finanical = fields.Float(string='Financial point')
 
     @api.onchange('requisition_id')
     def _onchange_requisition_id(self):
@@ -74,8 +75,8 @@ class PurchaseOrder(models.Model):
                 })
                 self.requisition_id.approver_id.notify_warning(message, '<h4>Purchase Tender Approval Approval</h4>',
                                                                True)
-            else:
-                raise UserError(_("The Biding is not in selection process"))
+            # else:
+            #     raise UserError(_("The Biding is not in selection process"))
 
     def button_approved(self):
         orders = self.env['purchase.order'].search([('requisition_id', '=', self.requisition_id.id)])

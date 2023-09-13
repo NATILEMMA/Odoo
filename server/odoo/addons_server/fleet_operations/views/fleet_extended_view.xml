@@ -229,6 +229,7 @@
                         class="oe_stat_button oe_highlight"
                         domain="[('state','in',('inspection','released'))]"
                         context="{'default_vehicle_id': active_id}"
+                        groups="fleet.fleet_group_manager"
                         />
                 <field name="state" widget="statusbar"
                     statusbar_visible="inspection,'active_new',in_progress,complete" />
@@ -285,7 +286,9 @@
                         class="oe_stat_button"
                         icon="fa-tachometer"
                         context="{'xml_id':'fleet_vehicle_odometer_action'}"
-                        help="show the odometer logs for this vehicle" >
+                        help="show the odometer logs for this vehicle" 
+                        groups="fleet.fleet_group_manager">
+
                         <field name="odometer_count" widget="statinfo" string="Odometer"/>
                     </button>
                </div>
@@ -357,8 +360,12 @@
                 <field name="vechical_type_id"
                        attrs="{'readonly':[('state','in',('write-off'))]}"/>
             </xpath>
+            <xpath expr="//field[@name='driver_id']" position="after">
+                <field name="driver_status" readonly="1" force_save="1"/>
+            </xpath>
             <xpath expr="//field[@name='driver_id']" position="attributes" >
-                 <attribute name="attrs">{'readonly':[('state','in',('write-off'))]}</attribute>
+                 <attribute name="readonly">1</attribute>
+                 <attribute name="force_save">1</attribute>
                  <attribute name="domain">[('is_driver','=',True)]</attribute>
                  <attribute name="options">{'no_quick_create': True}</attribute>
                  <attribute name="context">{'default_is_driver':True}</attribute>
@@ -367,7 +374,7 @@
                 <field name="driver_identification_no"
                     attrs="{'readonly':[('state','in',('write-off'))]}"/>
                 <field name="driver_contact_no" string="Driver Contact Number"
-                    attrs="{'readonly':[('state','in',('write-off'))]}"/>
+                    attrs="{'readonly':[('state','in',('write-off'))]}" invisible="1"/>
             </xpath>
             <xpath expr="//field[@name='vechical_type_id']" position="after">
                 <field name="vehical_color_id"
@@ -485,15 +492,23 @@
                                 <field name="fuel_type" required="1"
                                     attrs="{'readonly':[('state','in',('write-off'))]}"/>
                                 <field name="fuel_qty"
-                                    attrs="{'readonly':[('state','in',('write-off'))]}"/>
+                                    attrs="{'readonly':[('state','in',('write-off'))],
+                                    'invisible':[('fuel_type','=','electric')]
+                                     }"/>
                                 <field name="fuel_capacity"
-                                    attrs="{'readonly':[('state','in',('write-off'))]}"/>
+                                    attrs="{'readonly':[('state','in',('write-off'))],
+                                      'invisible':[('fuel_type','=','electric')]
+                                    }"/>
                             </group>
-                            <group colspan="2" col="4" string="Oil">
+                            <group colspan="2" col="4" string="Oil"
+                               attrs="{'invisible':[('fuel_type','=','electric')]}">
                                 <field name="oil_name"
-                                    attrs="{'readonly':[('state','in',('write-off'))]}"/>
+                                    attrs="{'readonly':[('state','in',('write-off'))],
+                                    'invisible':[('fuel_type','=','electric')]}"/>
                                 <field name="oil_capacity"
-                                    attrs="{'readonly':[('state','in',('write-off'))]}"/>
+                                    attrs="{'readonly':[('state','in',('write-off'))],
+                                    'invisible':[('fuel_type','=','electric')]
+                                    }"/>
                             </group>
                         </group>
                     </page>
@@ -528,32 +543,32 @@
                                 <field name="state" />
                             </tree>
                         </field>
-                         <separator string="Pending Repair Types" colspan="4" />
-                         <field name="pending_repair_type_ids" >
-                            <tree>
-                                <field name="vehicle_rep_type_id" invisible="1"/>
-                                <field name="name" />
-                                <field name="repair_type_id" />
-                                <field name="categ_id"/>
-                                <field name="issue_date" />
-                                <field name="state" />
-                                <field name="user_id"/>
-                            </tree>
-                            <form>
-                                <group colspan="4" col="4">
-                                    <field name="vehicle_rep_type_id" invisible="1"
-                                        options="{'no_open': True, 'create': false, 'create_edit': false}"/>
-                                    <field name="name" />
-                                    <field name="repair_type_id" readonly="1"
-                                        options="{'no_open': True, 'create': false, 'create_edit': false}"/>
-                                    <field name="categ_id" readonly="1" />
-                                    <field name="issue_date" readonly="1" />
-                                    <field name="state" readonly="1"/>
-                                    <field name="user_id" readonly="1"
-                                        options="{'no_open': True, 'create': false, 'create_edit': false}" />
-                                </group>
-                            </form>
-                         </field>
+<!--                         <separator string="Pending Repair Types" colspan="4" />-->
+<!--                         <field name="pending_repair_type_ids" >-->
+<!--                            <tree>-->
+<!--                                <field name="vehicle_rep_type_id" invisible="1"/>-->
+<!--                                <field name="name" />-->
+<!--                                <field name="repair_type_id" />-->
+<!--                                <field name="categ_id"/>-->
+<!--                                <field name="issue_date" />-->
+<!--                                <field name="state" />-->
+<!--                                <field name="user_id"/>-->
+<!--                            </tree>-->
+<!--                            <form>-->
+<!--                                <group colspan="4" col="4">-->
+<!--                                    <field name="vehicle_rep_type_id" invisible="1"-->
+<!--                                        options="{'no_open': True, 'create': false, 'create_edit': false}"/>-->
+<!--                                    <field name="name" />-->
+<!--                                    <field name="repair_type_id" readonly="1"-->
+<!--                                        options="{'no_open': True, 'create': false, 'create_edit': false}"/>-->
+<!--                                    <field name="categ_id" readonly="1" />-->
+<!--                                    <field name="issue_date" readonly="1" />-->
+<!--                                    <field name="state" readonly="1"/>-->
+<!--                                    <field name="user_id" readonly="1"-->
+<!--                                        options="{'no_open': True, 'create': false, 'create_edit': false}" />-->
+<!--                                </group>-->
+<!--                            </form>-->
+<!--                         </field>-->
                     </page>
                     <page string="Sales &amp; Purchases" invisible="1">
                         <group col="2">
@@ -1118,7 +1133,7 @@
 <!--                <attribute name="help">Quantity(Liter) Of The Fuel.</attribute>-->
             </xpath>
             <xpath expr="//field[@name='amount']" position="replace">
-                 <field name="product"/>
+                 <field name="product" required="1"/>
                  <field name="remaing" readonly="1" force_save="1"/>
                 <!--                <attribute name="required">1</attribute>-->
                <!--  <attribute name="readonly">1</attribute> -->
@@ -1129,8 +1144,8 @@
 <!--                 <attribute name="help">Price Per Quantity(Liter) Of The Fuel.</attribute>-->
                 </xpath>
             <xpath expr="//field[@name='inv_ref']" position="replace">
-                        <field name="time_frame" />
-                        <field name="fiscal_year" />
+                        <field name="time_frame" required="1"/>
+                        <field name="fiscal_year" required="1"/>
 <!--                <attribute name="string">Price Per Quantity</attribute>-->
 <!--                 <attribute name="help">Price Per Quantity(Liter) Of The Fuel.</attribute>-->
                 </xpath>
@@ -1188,7 +1203,7 @@
     <!-- Menuitem for fuel log -->
     <menuitem action="fleet.fleet_vehicle_log_fuel_action" parent="fleet.fleet_vehicles"
         id="fleet.fleet_vehicle_log_fuel_menu"
-        groups="fleet.fleet_group_manager,fleet.fleet_group_user"/>
+        groups="fleet.fleet_group_manager"/>
 
     <!-- Search view of vehicle odometer -->
     <record model='ir.ui.view' id='fleet_vehicle_odometer_search_view'>
@@ -1312,11 +1327,21 @@
         active="False"/>
 
         
-    <menuitem id="fleet.fleet_config_settings_menu" active="False"/>
+    <!-- <menuitem id="fleet.fleet_config_settings_menu" active="False"/> -->
+
+    <!-- <menuitem id="fleet.fleet_vehicle_contract_types_action" active="False"/> -->
+
+
+    
 
     <record id="fleet.res_config_settings_view_form" model="ir.ui.view">
             <field name="active" eval="False"/>
     </record>
+
+    <menuitem id="fleet.fleet_vehicle_tag_menu" active="False"/>
+
+   
+    
 
     <!-- portal.group_anonymous -->
     <menuitem action="fleet.fleet_vehicle_costs_action" parent="fleet.fleet_vehicles"
@@ -1330,11 +1355,8 @@
         id="fleet.fleet_vehicle_state_menu"
         groups="fleet.fleet_group_manager" />
 
-    <!-- Menu for tag -->
-    <menuitem id="fleet.fleet_vehicle_tag_menu" parent="fleet.fleet_configuration"
-        action="fleet.fleet_vehicle_tag_action" 
-        sequence="112"
-        groups="fleet.fleet_group_manager"/>
+    
+        
 
     <!--  Action for creating work order from vehicle registration -->
     <!-- <act_windows
@@ -1522,9 +1544,9 @@
         groups="fleet.fleet_group_manager" />
 
     <!-- Change the groups of main configuration menu from manager to Admin user. -->
-    <!-- <menuitem name="Configuration" parent="fleet.menu_root"
+    <menuitem name="Configuration" parent="fleet.menu_root"
         id="fleet.fleet_configuration" sequence="4"
-        groups="fleet.fleet_group_manager" /> -->
+        groups="fleet.fleet_group_manager" />
 
     <!-- Form view of Damage Type -->
     <record id='damage_type_form_view' model='ir.ui.view'>
@@ -1574,7 +1596,12 @@
         groups="fleet.fleet_group_manager,fleet.fleet_group_user" />
 
     
-    <menuitem  id="fleet.fleet_vehicle_odometer_menu" sequence="99" parent= "fleet.fleet_vehicles" groups="fleet.fleet_group_manager"/>
+     <!-- <menuitem name="Vehicles Odometer" id="fleet.fleet_vehicle_odometer_menu" sequence="99" parent= "fleet.fleet_vehicles" groups="fleet.fleet_group_manager"/> -->
+    <record model="ir.ui.menu" id="fleet.fleet_vehicle_odometer_menu">
+        <field name="name">Vehicles Odometer</field>
+        <field name="groups_id" eval="[(6, 0, [ref('fleet.fleet_group_manager')])]"/>
+        <field name="parent_id" ref="fleet.fleet_vehicles"/>
+    </record>
 
      <!-- Form view of next service days -->
     <record id='next_service_days_form' model='ir.ui.view'>
@@ -1805,14 +1832,6 @@
 
             </field>
         </field>
-    </record>
-<!-- removeing vehicle contract and vehicle service menu -->
-    <record id="fleet.fleet_vehicle_log_contract_menu" model="ir.ui.menu">
-        <field name="active">False</field>
-    </record>
-
-    <record id="fleet.fleet_vehicle_log_services_menu" model="ir.ui.menu">
-        <field name="active">False</field>
     </record>
 
     <!-- Report Heading Menuitem -->

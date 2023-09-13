@@ -1,0 +1,648 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* base_setup
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20221005\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-22 09:01+0000\n"
+"PO-Revision-Date: 2023-05-22 09:01+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: base_setup
+#. openerp-web
+#: code:addons/base_setup/static/src/xml/res_config_edition.xml:0
+#, python-format
+msgid "(Community Edition)"
+msgstr "(የማህበረሰብ እትም)"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid ""
+"<span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-"
+"specific.\" aria-label=\"Values set here are company-specific.\" "
+"groups=\"base.group_multi_company\" role=\"img\"/>"
+msgstr ""
+"<span class=\"fa fa-lg fa-building-o\" title=\"እዚህ የተቀመጡት እሴቶች ኩባንያ ናቸው-"
+"specific.\" aria-label=\" እዚህ የተቀመጡት እሴቶች ኩባንያ-ተኮር ናቸው።\" "
+"ቡድኖች=\"base.group_multi_company\" role=\"img\"/>"
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid ""
+"<span class=\"o_form_label\" attrs=\"{'invisible':[('active_user_count', '&gt;', '1')]}\">\n"
+"                                            Active User\n"
+"                                        </span>\n"
+"                                        <span class=\"o_form_label\" attrs=\"{'invisible':[('active_user_count', '&lt;=', '1')]}\">\n"
+"                                            Active Users\n"
+"                                        </span>\n"
+"\n"
+"                                        <br/>"
+msgstr ""
+"<span class=\"o_form_label\" attrs=\"{'invisible':[('active_user_count', '&gt;', '1')]}\">\n"
+"                                            Active User\n"
+"                                        </span>\n"
+"                                        <span class=\"o_form_label\" attrs=\"{'invisible':[('active_user_count', '&lt;=', '1')]}\">\n"
+"                                            Active Users\n"
+"                                        </span>\n"
+"\n"
+"                                        <br/>"
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid ""
+"<span class=\"o_form_label\">\n"
+"                                                Languages\n"
+"                                            </span>"
+msgstr ""
+"<span class=\"o_form_label\">\n"
+"                                           ቋንቋዎች\n"
+"                                            </span>"
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid ""
+"<span class=\"o_form_label\">\n"
+"                                            Companies\n"
+"                                        </span>\n"
+"                                        <br/>"
+msgstr ""
+"<span class=\"o_form_label\">\n"
+"                                      ኩባንያዎች\n"
+"                                       </span>\n"
+"                                       <br/>"
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid ""
+"<span class=\"o_form_label\">Document Layout</span>\n"
+"                                        <span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-specific.\" aria-label=\"Values set here are company-specific.\" groups=\"base.group_multi_company\" role=\"img\"/>"
+msgstr ""
+"<span class=\"o_form_label\">የሰነድ አቀማመጥ</span>\n"
+" <span class=\"fa fa-lg fa-building-o\" title=\"እዚህ የተቀመጡት እሴቶች ኩባንያ-ተኮር ናቸው።\" aria-label=\"እዚህ የተቀመጡት እሴቶች ኩባንያ-ተኮር ናቸው።\" groups= \"base.group_multi_company\" role=\"img\"/>"
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid ""
+"<span class=\"o_form_label\">Format</span>\n"
+"                                        <span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-specific.\" aria-label=\"Values set here are company-specific.\" groups=\"base.group_multi_company\" role=\"img\"/>"
+msgstr ""
+"<span class=\"o_form_label\">ቅርጸት</span>\n"
+" <span class=\"fa fa-lg fa-building-o\" title=\"እዚህ የተቀመጡት እሴቶች ኩባንያ-ተኮር ናቸው።\" aria-label=\"እዚህ የተቀመጡት እሴቶች ኩባንያ-ተኮር ናቸው።\" groups= \"base.group_multi_company\" role=\"img\"/>"
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid ""
+"<strong>Save</strong> this page and come back here to choose your Geo "
+"Provider."
+msgstr ""
+"ይህን ገጽ<strong>አስቀምጥ</strong>እና የአንተን ጂኦ ለመምረጥ ወደዚህ ተመለስ"
+"አቅራቢ"
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid ""
+"<strong>Save</strong> this page and come back here to set up the feature."
+msgstr ""
+"ይህን ገጽ<strong>አስቀምጥ</strong>እና ባህሪውን ለማዘጋጀት ወደዚህ ይመለሱ።"
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "About"
+msgstr "ስለ"
+
+#. module: base_setup
+#: code:addons/base_setup/controllers/main.py:0
+#, python-format
+msgid "Access Denied"
+msgstr "መዳረሻ ተከልክሏል።"
+
+#. module: base_setup
+#. openerp-web
+#: code:addons/base_setup/static/src/xml/res_config_dev_tool.xml:0
+#, python-format
+msgid "Activate the developer mode"
+msgstr "የገንቢ ሁነታን ያግብሩ"
+
+#. module: base_setup
+#. openerp-web
+#: code:addons/base_setup/static/src/xml/res_config_dev_tool.xml:0
+#, python-format
+msgid "Activate the developer mode (with assets)"
+msgstr "የገንቢ ሁነታን ያግብሩ (ከንብረቶች ጋር)"
+
+#. module: base_setup
+#. openerp-web
+#: code:addons/base_setup/static/src/xml/res_config_dev_tool.xml:0
+#, python-format
+msgid "Activate the developer mode (with tests assets)"
+msgstr "የገንቢ ሁነታን ያግብሩ (ከሙከራ ንብረቶች ጋር)"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Add fun feedback and motivate your employees"
+msgstr "አስደሳች ግብረመልስ ያክሉ እና ሰራተኞችዎን ያነሳሱ"
+
+#. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_res_config_settings__module_google_calendar
+msgid "Allow the users to synchronize their calendar  with Google Calendar"
+msgstr "ተጠቃሚዎቹ የቀን መቁጠሪያቸውን ከGoogle Calendar ጋር እንዲያመሳስሉ ይፍቀዱላቸው"
+
+#. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_res_config_settings__module_base_import
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Allow users to import data from CSV/XLS/XLSX/ODS files"
+msgstr "ተጠቃሚዎች ከCSV/XLS/XLSX/ODS ፋይሎች እንዲያመጡ ፍቀድላቸው"
+
+#. module: base_setup
+#: model:ir.model.fields,help:base_setup.field_res_config_settings__group_multi_currency
+msgid "Allows to work in a multi currency environment"
+msgstr "በብዙ ምንዛሪ አካባቢ ለመስራት ይፈቅዳል"
+
+#. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_res_config_settings__module_voip
+msgid "Asterisk (VoIP)"
+msgstr "ኮከብ ምልክት (VoIP)"
+
+#. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_res_config_settings__module_google_drive
+msgid "Attach Google documents to any record"
+msgstr "Google ሰነዶችን ከማንኛውም መዝገብ ጋር ያያይዙ"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Automatically enrich your contact base with company data"
+msgstr "የእውቂያ መሰረትዎን በኩባንያ ውሂብ በራስ-ሰር ያበልጽጉ"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid ""
+"Automatically generate counterpart documents for orders/invoices between "
+"companies"
+msgstr ""
+"በኩባንያዎች መካከል ለትዕዛዝ/ደረሰኞች ተጓዳኝ ሰነዶችን በራስ-ሰር ያመንጩ"
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Business Documents"
+msgstr "የንግድ ሰነዶች"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid ""
+"By default, new users get highest access rights for all installed apps."
+msgstr ""
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Choose the layout of your documents"
+msgstr "የሰነዶችዎን አቀማመጥ ይምረጡ"
+
+#. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_res_config_settings__module_pad
+msgid "Collaborative Pads"
+msgstr "የትብብር ፓድስ"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Companies"
+msgstr "ኩባንያዎች"
+
+#. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_res_config_settings__company_id
+msgid "Company"
+msgstr "ድርጅት"
+
+#. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_res_config_settings__company_informations
+msgid "Company Informations"
+msgstr "የኩባንያ መረጃ"
+
+#. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_res_config_settings__company_name
+msgid "Company Name"
+msgstr "የድርጅት ስም"
+
+#. module: base_setup
+#: model:ir.model,name:base_setup.model_res_config_settings
+msgid "Config Settings"
+msgstr "የማስተካያዎች ማዋቀሪያ"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Configure Document Layout"
+msgstr "የሰነድ አቀማመጥን ያዋቅሩ"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid ""
+"Configure company rules to automatically create SO/PO when one of your "
+"company sells/buys to another of your company."
+msgstr ""
+"ከድርጅትዎ አንዱ ለድርጅትዎ ሲሸጥ/ሲገዛ በራስ-ሰር SO/PO እንዲፈጥር የኩባንያ ደንቦችን ያዋቅሩ።"
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Contacts"
+msgstr "እውቂያዎች"
+
+#. module: base_setup
+#. openerp-web
+#: code:addons/base_setup/static/src/xml/res_config_edition.xml:0
+#, python-format
+msgid "Copyright © 2004"
+msgstr "የቅጂ መብት © 2004"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Create and attach Google Drive documents to any record"
+msgstr "የGoogle Drive ሰነዶችን ከማንኛውም መዝገብ ጋር ይፍጠሩ እና ያያይዙ"
+
+#. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_res_config_settings__report_footer
+msgid "Custom Report Footer"
+msgstr "ብጁ ሪፖርት ግርጌ"
+
+#. module: base_setup
+#. openerp-web
+#: code:addons/base_setup/static/src/xml/res_config_dev_tool.xml:0
+#, python-format
+msgid "Deactivate the developer mode"
+msgstr "የገንቢ ሁነታን አቦዝን"
+
+#. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_res_config_settings__user_default_rights
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Default Access Rights"
+msgstr "ነባሪ የመዳረሻ መብቶች"
+
+#. module: base_setup
+#: code:addons/base_setup/models/res_config_settings.py:0
+#, python-format
+msgid "Default User Template not found."
+msgstr "ነባሪ የተጠቃሚ አብነት አልተገኘም።"
+
+#. module: base_setup
+#. openerp-web
+#: code:addons/base_setup/static/src/xml/res_config_dev_tool.xml:0
+#, python-format
+msgid "Developer Tools"
+msgstr "የገንቢ መሳሪያዎች"
+
+#. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_res_config_settings__external_report_layout_id
+msgid "Document Template"
+msgstr "የሰነድ አብነት"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Edit Layout"
+msgstr "አቀማመጥን ያርትዑ"
+
+#. module: base_setup
+#. openerp-web
+#: code:addons/base_setup/static/src/xml/res_config_invite_users.xml:0
+#, python-format
+msgid "Enter e-mail address"
+msgstr "የኢሜል አድራሻ ያስገቡ"
+
+#. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_res_config_settings__external_email_server_default
+msgid "External Email Servers"
+msgstr "የውጭ ኢሜል አገልጋዮች"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Extract and analyze Odoo data from Google Spreadsheet"
+msgstr "የኦዱ መረጃን ከGoogle የተመን ሉህ ያውጡ እና ይተንትኑ"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Find free high-resolution images from Unsplash"
+msgstr "ከ Unsplash ነፃ ባለከፍተኛ ጥራት ምስሎችን ያግኙ"
+
+#. module: base_setup
+#: model:ir.model.fields,help:base_setup.field_res_config_settings__report_footer
+msgid "Footer text displayed at the bottom of all reports."
+msgstr "የግርጌ ጽሑፍ በሁሉም ሪፖርቶች ግርጌ ላይ ይታያል።"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Format"
+msgstr "ቅርጸት"
+
+#. module: base_setup
+#. openerp-web
+#: code:addons/base_setup/static/src/xml/res_config_edition.xml:0
+#, python-format
+msgid "GNU LGPL Licensed"
+msgstr "GNU LGPL ፍቃድ ተሰጥቶታል።"
+
+#. module: base_setup
+#: model:ir.ui.menu,name:base_setup.menu_config
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "General Settings"
+msgstr "አጠቃላይ ቅንብሮች"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Gengo Translations"
+msgstr "የጄንጎ ትርጉሞች"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Geo Localization"
+msgstr "Geo አካባቢያዊነት"
+
+#. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_res_config_settings__module_base_geolocalize
+msgid "GeoLocalize"
+msgstr "ጂኦሎካል አድርግ"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "GeoLocalize your partners"
+msgstr "አጋሮቻችሁን ጂኦሎካል አድርጉ"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Google Calendar"
+msgstr "ጉግል የቀን መቁጠሪያ"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Google Drive"
+msgstr "ጎግል ድራይቭ"
+
+#. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_res_config_settings__module_google_spreadsheet
+msgid "Google Spreadsheet"
+msgstr "ጎግል የተመን ሉህ"
+
+#. module: base_setup
+#: model:ir.model,name:base_setup.model_ir_http
+msgid "HTTP Routing"
+msgstr "HTTP ማዘዣ"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Import & Export"
+msgstr "አስመጣ እና ወደ ውጪ ላክ"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Integrations"
+msgstr "ውህደቶች"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Inter-Company Transactions"
+msgstr "የኢንተር-ኩባንያ ግብይቶች"
+
+#. module: base_setup
+#. openerp-web
+#: code:addons/base_setup/static/src/xml/res_config_invite_users.xml:0
+#, python-format
+msgid "Invite"
+msgstr "ጋብዝ"
+
+#. module: base_setup
+#. openerp-web
+#: code:addons/base_setup/static/src/xml/res_config_invite_users.xml:0
+#, python-format
+msgid "Invite New Users"
+msgstr "አዲስ ተጠቃሚዎችን ይጋብዙ"
+
+#. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_res_config_settings__module_auth_ldap
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "LDAP Authentication"
+msgstr "የLDAP ማረጋገጫ"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Languages"
+msgstr "ቋንቋዎች"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Layout"
+msgstr "አቀማመጥ"
+
+#. module: base_setup
+#. openerp-web
+#: code:addons/base_setup/static/src/xml/res_config_dev_tool.xml:0
+#, python-format
+msgid "Load demo data"
+msgstr "የማሳያ ውሂብን ጫን"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Manage Companies"
+msgstr "ኩባንያዎችን ያስተዳድሩ"
+
+#. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_res_config_settings__module_inter_company_rules
+msgid "Manage Inter Company"
+msgstr "የኢንተር ኩባንያ ያስተዳድሩ"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Manage Languages"
+msgstr "ቋንቋዎችን ያስተዳድሩ"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Manage Users"
+msgstr "ተጠቃሚዎችን አስተዳድር"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Multi-Company"
+msgstr "ባለብዙ ኩባንያ"
+
+#. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_res_config_settings__group_multi_currency
+msgid "Multi-Currencies"
+msgstr "ባለብዙ-ገንዘቦች"
+
+#. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_res_config_settings__active_user_count
+msgid "Number of Active Users"
+msgstr "የንቁ ተጠቃሚዎች ብዛት"
+
+#. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_res_config_settings__company_count
+msgid "Number of Companies"
+msgstr "የኩባንያዎች ብዛት"
+
+#. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_res_config_settings__language_count
+msgid "Number of Languages"
+msgstr "የቋንቋዎች ብዛት"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "OAuth Authentication"
+msgstr "የOAuth ማረጋገጫ"
+
+#. module: base_setup
+#. openerp-web
+#: code:addons/base_setup/static/src/xml/res_config_edition.xml:0
+#, python-format
+msgid "Odoo"
+msgstr "ኦዱ"
+
+#. module: base_setup
+#. openerp-web
+#: code:addons/base_setup/static/src/xml/res_config_edition.xml:0
+#, python-format
+msgid "Odoo S.A."
+msgstr "Odoo S.A."
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "On Apple Store"
+msgstr "በአፕል መደብር ላይ"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "On Google Play"
+msgstr "Google Play ላይ"
+
+#. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_res_config_settings__paperformat_id
+msgid "Paper format"
+msgstr "የወረቀት ቅርጸት"
+
+#. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_res_config_settings__module_partner_autocomplete
+msgid "Partner Autocomplete"
+msgstr "አጋር ራስ-አጠናቅቅ"
+
+#. module: base_setup
+#. openerp-web
+#: code:addons/base_setup/static/src/xml/res_config_invite_users.xml:0
+#, python-format
+msgid "Pending Invitations:"
+msgstr "በመጠባበቅ ላይ ያሉ ግብዣዎች፡-"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Preview Document"
+msgstr "ሰነድ ቅድመ እይታ"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Send SMS"
+msgstr "SMS ላክ"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Send texts to your contacts"
+msgstr "ወደ እውቂያዎችዎ ጽሑፎችን ይላኩ።"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Set custom access rights for new users"
+msgstr "ለአዲስ ተጠቃሚዎች ብጁ የመዳረሻ መብቶችን ያዘጋጁ"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Set the paper format of printed documents"
+msgstr "የታተሙ ሰነዶችን የወረቀት ቅርጸት ያዘጋጁ"
+
+#. module: base_setup
+#: model:ir.actions.act_window,name:base_setup.action_general_configuration
+msgid "Settings"
+msgstr "ቅንብሮች"
+
+#. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_res_config_settings__show_effect
+msgid "Show Effect"
+msgstr "ውጤት አሳይ"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Statistics"
+msgstr "ስታትስቲክስ"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Synchronize your calendar with Google Calendar"
+msgstr "የቀን መቁጠሪያዎን ከ Google Calendar ጋር ያመሳስሉ"
+
+#. module: base_setup
+#. openerp-web
+#: code:addons/base_setup/static/src/js/res_config_invite_users.js:0
+#, python-format
+msgid "The following email addresses already exist: %s."
+msgstr "የሚከተሉት የኢሜይል አድራሻዎች ቀድሞውኑ አሉ፡ %s።"
+
+#. module: base_setup
+#. openerp-web
+#: code:addons/base_setup/static/src/js/res_config_invite_users.js:0
+#, python-format
+msgid "The following email addresses are invalid: %s."
+msgstr "የሚከተሉት የኢሜይል አድራሻዎች ልክ ያልሆኑ ናቸው፡ %s።"
+
+#. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_res_config_settings__module_base_gengo
+msgid "Translate Your Website with Gengo"
+msgstr "ድር ጣቢያዎን በGengo ይተርጉሙ"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Translate your website with Gengo"
+msgstr "ድር ጣቢያዎን በGengo ይተርጉሙ"
+
+#. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_res_config_settings__module_web_unsplash
+msgid "Unsplash Image Library"
+msgstr "የምስል ቤተ-መጽሐፍትን ያንቀቁ"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Update Info"
+msgstr "መረጃን አዘምን"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Use LDAP credentials to log in"
+msgstr "ለመግባት የLDAP ምስክርነቶችን ይጠቀሙ"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Use external accounts to log in (Google, Facebook, etc.)"
+msgstr "ለመግባት ውጫዊ መለያዎችን ተጠቀም (Google፣ Facebook፣ ወዘተ.)"
+
+#. module: base_setup
+#: model:ir.model.fields,field_description:base_setup.field_res_config_settings__module_auth_oauth
+msgid "Use external authentication providers (OAuth)"
+msgstr "የውጭ ማረጋገጫ አቅራቢዎችን ተጠቀም (OAuth)"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid "Use external pads in Odoo Notes"
+msgstr "በኦዱ ማስታወሻዎች ውስጥ የውጭ ፓድን ይጠቀሙ"
+
+#. module: base_setup
+#. openerp-web
+#: code:addons/base_setup/static/src/js/res_config_invite_users.js:0
+#: model:ir.model,name:base_setup.model_res_users
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+#, python-format
+msgid "Users"
+msgstr "ተጠቃሚዎች"
+
+#. module: base_setup
+#: model_terms:ir.ui.view,arch_db:base_setup.res_config_settings_view_form
+msgid ""
+"When populating your address book, Odoo provides a list of matching "
+"companies. When selecting one item, the company data and logo are auto-"
+"filled."
+msgstr ""
+"የአድራሻ ደብተርዎን በሚሞሉበት ጊዜ ኦዱ ተዛማጅ ኩባንያዎችን ዝርዝር ያቀርባል. "
+"አንድ ንጥል ሲመርጡ የኩባንያው ውሂብ እና አርማ በራስ-ሰር ይሞላሉ."
+#. module: base_setup
+#. openerp-web
+#: code:addons/base_setup/static/src/xml/res_config_invite_users.xml:0
+#, python-format
+msgid "more"
+msgstr "ተጨማሪ"

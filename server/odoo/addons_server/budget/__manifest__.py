@@ -27,15 +27,19 @@
     'company': 'mes',
     'maintainer': 'mes',
     'depends': ['base',  'mail',
-        'portal','account','project', 'base_accounting_kit','hr_expense','reconciliation'],
+        'portal','account','project',"fund_management",'base_accounting_kit','hr_expense','reconciliation'],
     'data': [
         'data/data.xml',
+        'data/mail_data.xml',
         'security/budget_group_rules.xml',
         'security/account_budget_security.xml',
         'security/ir.model.access.csv',
+        'wizard/budget_refuse_reason_views.xml',
         'views/account_analytic_account_views.xml',
         'views/account_budget_views.xml',
         'views/budget_planning.xml',
+        'views/report.xml',
+
 
         
         

@@ -38,14 +38,14 @@
             <field name="inherit_id" ref="fleet.fleet_vehicle_view_form"/>
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='released_date']" position="replace">
-                        <field name="ethiopian_from" class="oe_read_only" string="Released Date" style=" float:left;" attrs="{'invisible': ['|', ('is_pagum_from', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                        <field name="ethiopian_from" class="oe_read_only" string="Released Date" style=" float:left;" attrs="{'invisible': ['|', ('is_pagum_from', '=',False)]}" readonly="True" groups="EthiopianCalendar.group_ethio_datepicker"/>
                         <field name="released_date" string="Released Date" groups="EthiopianCalendar.group_gregory"/>
                         <field name="pagum_from" class="oe_read_only" string="Released Date" style=" float:left" attrs="{'invisible': ['|',('is_pagum_from', '!=',False)  ]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
                         <field name="is_pagum_from" invisible="1"/>
                         <div>
                         </div>
                         <div style="margin-bottom:40px;margin-top:-22px; width: 50%;margin-left:10px;margin-right:0px">
-                            <widget name="ethiopian_calander_widget" style=" float:left;width:178px;margin-left:-3px;" class="oe_edit_only" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                            <widget name="ethiopian_calander_widget" style="float:left;width:230px;margin-left:-3px;" class="oe_edit_only" groups="EthiopianCalendar.group_ethio_datepicker"/>
                         </div>
                 </xpath>
                
@@ -57,7 +57,7 @@
                     <div>
                     </div>
                     <div style="margin-bottom:40px;margin-top:-22px; width: 50%;margin-left:10px;margin-right:0px">
-                        <widget name="ethiopian_calander_widget_two" style=" float:left;width:178px;margin-left:-3px" class="oe_edit_only" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                        <widget name="ethiopian_calander_widget_two" style="float:left;width:230px;margin-left:-3px;" class="oe_edit_only" groups="EthiopianCalendar.group_ethio_datepicker"/>
                     </div>
                 </xpath>
                 

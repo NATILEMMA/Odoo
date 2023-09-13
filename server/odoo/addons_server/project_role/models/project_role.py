@@ -15,7 +15,7 @@ class ProjectRole(models.Model):
     _order = "complete_name"
 
     active = fields.Boolean(default=True,)
-    parent_path = fields.Char(index=True,)
+    parent_path = fields.Char(index=True,translate=True)
     parent_id = fields.Many2one(
         string="Parent Role",
         comodel_name="project.role",
@@ -29,7 +29,7 @@ class ProjectRole(models.Model):
         copy=True,
     )
     complete_name = fields.Char(
-        string="Complete Name", compute="_compute_complete_name", store=True,
+        string="Complete Name", compute="_compute_complete_name", store=True,translate=True
     )
     name = fields.Char("Name", translate=True, required=True,)
     description = fields.Html(string="Description", translate=html_translate,)

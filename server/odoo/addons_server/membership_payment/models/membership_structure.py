@@ -29,9 +29,9 @@ class MembershipStructure(models.Model):
 
     def give_structure(self):
 
-        sub_city = self.env['membership.handlers.parent'].search([])
+        sub_city = self.env['membership.handlers.parent'].sudo().search([])
         for sub in sub_city:
-            par = self.env['membership.structure'].search([('name', '=', sub.name)])
+            par = self.env['membership.structure'].sudo().search([('name', '=', sub.name)])
             user = []
             user.append(sub.parent_manager.id)
             for line in sub.city_id.city_manager:
@@ -48,12 +48,12 @@ class MembershipStructure(models.Model):
                 res = self.env['membership.structure'].sudo().create(vals)
                 sub.struc = res.id
 
-        wereda = self.env['membership.handlers.branch'].search([])
+        wereda = self.env['membership.handlers.branch'].sudo().search([])
         for wor in wereda:
-            par_1 = self.env['membership.structure'].search(
+            par_1 = self.env['membership.structure'].sudo().search(
                 [('name', '=', wor.name), ('sub_city', '=', wor.parent_id.id)])
             if not par_1:
-                par = self.env['membership.structure'].search([('name', '=', wor.parent_id.name)], limit=1)
+                par = self.env['membership.structure'].sudo().search([('name', '=', wor.parent_id.name)], limit=1)
                 user = []
                 for line in wor.parent_id.city_id.city_manager:
                     user.append(line.id)
@@ -73,13 +73,13 @@ class MembershipStructure(models.Model):
                 res = self.env['membership.structure'].sudo().create(vals)
                 wor.struc = res.id
 
-        main_office = self.env['main.office'].search([])
+        main_office = self.env['main.office'].sudo().search([])
         for main in main_office:
-            par_2 = self.env['membership.structure'].search(
+            par_2 = self.env['membership.structure'].sudo().search(
                 [('name', '=', main.name), ('wereda', '=', main.wereda_id.id),
                  ('sub_city', '=', main.wereda_id.parent_id.id)])
             if not par_2:
-                par = self.env['membership.structure'].search(
+                par = self.env['membership.structure'].sudo().search(
                     [('sub_city', '=', main.wereda_id.parent_id.id), ('wereda', '=', main.wereda_id.id),
                      ('name', '=', main.wereda_id.name)])
                 user = []
@@ -101,16 +101,16 @@ class MembershipStructure(models.Model):
                     }
                     res = self.env['membership.structure'].sudo().create(vals)
                     main.struc = res.id
-        cells = self.env['member.cells'].search([])
+        cells = self.env['member.cells'].sudo().search([])
         for cell in cells:
             if cell.main_office:
                 cell_main_office = cell.main_office
 
-            par_2 = self.env['membership.structure'].search(
+            par_2 = self.env['membership.structure'].sudo().search(
                 [('name', '=', cell.name), ('main_office', '=', cell_main_office.id),
                  ('wereda', '=', cell.wereda_id.id), ('sub_city', '=', cell.wereda_id.parent_id.id)])
             if not par_2:
-                par = self.env['membership.structure'].search(
+                par = self.env['membership.structure'].sudo().search(
                     [('name', '=', cell_main_office.name), ('main_office', '=', cell.main_office.id),
                      ('wereda', '=', cell.wereda_id.id), ('sub_city', '=', cell.wereda_id.parent_id.id)])
                 if cell.main_office:
@@ -133,28 +133,28 @@ class MembershipStructure(models.Model):
                     res = self.env['membership.structure'].sudo().create(vals)
                     cell.struc = res.id
 
-            partner = self.env['res.partner'].search([])
-            candidate = self.env['candidate.members'].search([])
-            supporter = self.env['supporter.members'].search([])
+            partner = self.env['res.partner'].sudo().search([])
+            candidate = self.env['candidate.members'].sudo().search([])
+            supporter = self.env['supporter.members'].sudo().search([])
             for part in partner:
                 if part.member_cells:
-                    par_2 = self.env['membership.structure'].search([('cell', '=', part.member_cells.id)])
+                    par_2 = self.env['membership.structure'].sudo().search([('cell', '=', part.member_cells.id)])
                     for line_2 in par_2:
                         part.struc = line_2.id
                 if part.wereda_id and not part.member_cells and not part.struc:
-                    par_3 = self.env['membership.structure'].search(
+                    par_3 = self.env['membership.structure'].sudo().search(
                         [('wereda', '=', part.wereda_id.id), ('name', '=', part.wereda_id.name)])
                     for line in par_3:
                         part.struc = par_3.id
             for cand in candidate:
                 if cand.wereda_id:
-                    par_2 = self.env['membership.structure'].search(
+                    par_2 = self.env['membership.structure'].sudo().search(
                         [('wereda', '=', part.wereda_id.id), ('name', '=', part.wereda_id.name)])
                     cand.struc = par_2.id
 
             for supp in supporter:
                 if supp.wereda_id:
-                    par_2 = self.env['membership.structure'].search(
+                    par_2 = self.env['membership.structure'].sudo().search(
                         [('wereda', '=', part.wereda_id.id), ('name', '=', part.wereda_id.name)])
                     supp.struc = par_2.id
 
@@ -170,10 +170,10 @@ class Partner(models.Model):
         res = super(Partner, self).create(vals)
         try:
             if vals['wereda_id']:
-                woreda_ia = self.env['membership.handlers.branch'].search([('id', '=', vals['wereda_id'])])
-                par = self.env['membership.structure'].search(
+                woreda_ia = self.env['membership.handlers.branch'].sudo().search([('id', '=', vals['wereda_id'])])
+                par = self.env['membership.structure'].sudo().search(
                     [('wereda', '=', woreda_ia.id), ('name', '=', woreda_ia.name)])
-                par_2 = self.env['league.structure'].search(
+                par_2 = self.env['league.structure'].sudo().search(
                     [('wereda', '=', woreda_ia.id), ('name', '=', woreda_ia.name)])
                 res.struc = par.id
                 res.struc_2 = par_2.id
@@ -183,22 +183,22 @@ class Partner(models.Model):
 
     def write(self, vals):
         try:
-            print("try", vals)
-            if vals['member_cells']:
-                print("vals['member_cell']", vals['member_cells'])
-                cell = self.env['membership.structure'].search([('cell', '=', vals['member_cells'])])
-                cell_2 = self.env['league.structure'].search([('cell', '=', vals['member_cells'])])
-                self.struc = cell.id
-                self.struc_2 = cell_2.id
-                print("self.struc", self.struc, "self.struc_2", self.struc)
+            print("vals in partner" , vals['member_cells'])
+            # if vals['member_cells']:
+            print("if val")
+            cell = self.env['membership.structure'].sudo().search([('cell', '=', vals['member_cells'])])
+            cell_2 = self.env['league.structure'].sudo().search([('cell', '=', vals['member_cells'])])
+            self.struc = cell.id
+            self.struc_2 = cell_2.id
+            print("self.struc", self.struc, "self.struc_2", self.struc)
         except:
             try:
                 if vals['wereda_id']:
-                    woreda_ia = self.env['membership.handlers.branch'].search([('id', '=', vals['wereda_id'])])
+                    woreda_ia = self.env['membership.handlers.branch'].sudo().search([('id', '=', vals['wereda_id'])])
                     print("woreda_ia", woreda_ia.id, woreda_ia.name)
-                    par = self.env['membership.structure'].search(
+                    par = self.env['membership.structure'].sudo().search(
                         [('wereda', '=', woreda_ia.id), ('name', '=', woreda_ia.name)])
-                    par_2 = self.env['league.structure'].search(
+                    par_2 = self.env['league.structure'].sudo().search(
                         [('wereda', '=', woreda_ia.id), ('name', '=', woreda_ia.name)])
                     print("par", par, par_2)
                     self.struc = par.id
@@ -214,6 +214,7 @@ class Cells(models.Model):
     struc = fields.Many2one('membership.structure', string="Structure", store=True)
     struc_2 = fields.Many2one('league.structure', string="Structure", store=True)
 
+
     def update_translation_member_cells(self):
         current_lang = self.env.context.get('lang')
         self = self.with_context(lang='en_US')
@@ -228,23 +229,25 @@ class Cells(models.Model):
 
     @api.model
     def create(self, vals):
-        print("create")
-        try:
-           try:
-             sub = self.env['main.office'].search([('id', '=', vals['main_office'])], limit=1)
-             sub_2 = self.env['main.office'].search([('id', '=', vals['main_office_league'])], limit=1)
-           except:
-             sub_2 = False
-             sub = self.env['main.office'].search([('id', '=', vals['main_office'])], limit=1)
-        except:
-            sub = True
-            sub_2 = self.env['main.office'].search([('id', '=', vals['main_office_league'])], limit=1)
-
-        par_1 = self.env['membership.structure'].search([('name', '=', vals['name']), ('main_office', '=', sub.id)])
+        test =self.env['member.cells'].sudo().search([('name', '=', vals['name'])])
+        if test:
+             raise UserError(_("Please change cell name there a name duplication"))                                 
+        if vals['for_which_members'] == 'member':
+            sub = self.env['main.office'].sudo().search([('id', '=', vals['main_office'])], limit=1)
+            sub_2 = False
+        else:
+            sub_2 = self.env['main.office'].sudo().search([('id', '=', vals['main_office'])], limit=1)
+            sub = False
+        name = self.env['main.office'].sudo().search([('name', '=', vals['name'])])
+        if name:
+            raise UserError(_("There is main office called " + str(vals['name'])))
+        if sub:
+            par_1 = self.env['membership.structure'].sudo().search([('name', '=', vals['name']), ('main_office', '=', sub.id)])
+        if sub_2:
+            par_1 = self.env['membership.structure'].sudo().search([('name', '=', vals['name']), ('main_office', '=', sub_2.id)])
         wereda = super(Cells, self).create(vals)
-        print("par", par_1)
         user = self.env.user
-        config = self.env['cell.configuration'].search([('for_members_or_leagues', '=', wereda.for_which_members)])
+        config = self.env['cell.configuration'].sudo().search([('for_members_or_leagues', '=', wereda.for_which_members)])
         if config:
             if wereda.total < config.minimum_number:
                 warning_message = "The Added Numbers Of Members Is " + str(wereda.total) + " Which Is Less Than " + str(
@@ -263,32 +266,54 @@ class Cells(models.Model):
                     user.notify_warning(message, '<h4>Maximum Numbers Of Members Are Exceeding.</h4>', True)
         else:
             raise UserError(_("Please Configure The Number of Members Allowed In A Single Cell"))
-
         if wereda.for_which_members == 'member':
             user = []
-            user.append(wereda.main_office.wereda_id.branch_manager.id)
-            user.append(wereda.main_office.wereda_id.parent_id.parent_manager.id)
+            if wereda.wereda_id.branch_manager.ids:
+                for line in wereda.wereda_id.branch_manager.ids:
+                    user.append(line)
+            if wereda.wereda_id.ict_manager.id:
+                user.append(wereda.wereda_id.ict_manager.id)
+            if wereda.wereda_id.parent_id.parent_manager.ids:
+                for line in wereda.wereda_id.parent_id.parent_manager.ids:
+                    user.append(line)
+            if wereda.wereda_id.parent_id.ict_manager.id:
+                user.append(wereda.wereda_id.parent_id.ict_manager.id)
             for line in wereda.main_office.wereda_id.parent_id.city_id.city_manager:
                 user.append(line.id)
+            res = self.env['responsible.bodies'].sudo().search([])
+            for name in res:
+                for line in name.system_admin:
+                    user.append(line.id)
             mo = wereda.main_office
             print('mo', mo)
 
         else:
             user = []
-            user.append(wereda.main_office_league.wereda_id.branch_manager.id)
-            user.append(wereda.main_office_league.wereda_id.parent_id.parent_manager.id)
-            for line in wereda.main_office_league.wereda_id.parent_id.city_id.city_manager:
+            if wereda.wereda_id.branch_manager.ids:
+                for line in wereda.wereda_id.branch_manager.ids:
+                    user.append(line)
+            if wereda.wereda_id.ict_manager.id:
+                user.append(wereda.wereda_id.ict_manager.id)
+            if wereda.wereda_id.parent_id.parent_manager.ids:
+                for line in wereda.wereda_id.parent_id.parent_manager.ids:
+                    user.append(line)
+            if wereda.wereda_id.parent_id.ict_manager.id:
+                user.append(wereda.wereda_id.parent_id.ict_manager.id)
+            for line in wereda.main_office.wereda_id.parent_id.city_id.city_manager:
                 user.append(line.id)
-            mo = wereda.main_office_league
-        print("par_1", par_1.id)
+            res = self.env['responsible.bodies'].sudo().search([])
+            for name in res:
+                for line in name.system_admin:
+                    user.append(line.id)
+            mo = wereda.main_office
         if not par_1:
-            print("is not part", sub.id, sub.name)
             if sub:
-                par = self.env['membership.structure'].search([('main_office', '=', sub.id),('name','=', sub.name)], limit=1)
+                par = self.env['membership.structure'].sudo().search([('main_office', '=', sub.id),('name','=', sub.name)], limit=1)
                 val = {
                     'name': wereda.name,
                     'parent_id_2': par.id,
                     'main_office': mo.id,
+                    'sub_city': vals['subcity_id'],
                     'cell': wereda.id,
                     'is_member': True,
                     'is_league': True,
@@ -297,12 +322,12 @@ class Cells(models.Model):
 
                 }
             if sub_2:
-                print()
-                par_2 = self.env['league.structure'].search([('main_office', '=', sub_2.id),('name','=', sub_2.name)], limit=1)
+                par_2 = self.env['league.structure'].sudo().search([('main_office', '=', sub_2.id),('name','=', sub_2.name)], limit=1)
                 val_3 = {
                     'name': wereda.name,
                     'parent_id_2': par_2.id,
                     'main_office': mo.id,
+                    'sub_city': vals['subcity_id'],
                     'cell': wereda.id,
                     'is_member': True,
                     'is_league': True,
@@ -312,33 +337,51 @@ class Cells(models.Model):
                 }
 
             if wereda.for_which_members == 'member':
-                print("324")
                 res = self.env['membership.structure'].sudo().create(val)
-                print("res", res)
+                for line in wereda.members_ids:
+                    line.struc = res.id
+                    res.name = res.sub_city.unique_representation_code + '/' + res.wereda.unique_representation_code + '/' + res.main_office.member_main_type_id.name + '/' + res.name
                 wereda.struc = res.id
 
             else:
-                print("vals_3", val_3)
                 res_3 = self.env['league.structure'].sudo().create(val_3)
+                for line in wereda.members_ids:
+                    line.struc = res_3.id
+
                 wereda.struc_2 = res_3.id
+
         return wereda
 
     def write(self, vals):
+        print("write cells",vals)
+        try:
+            old_set = set(vals['members_ids'][0][2])
+            new_set = set(self.members_ids.ids)
+            removed_elements = new_set - old_set
+            records = self.env['res.partner'].search([('id', 'in', list(removed_elements))])
+            for i in records:
+                i.member_cells = False
+                print("i.woreda_id.struc.id", i.wereda_id.struc.id, i.struc)
+                i.struc = i.wereda_id.struc.id
+                i.struc_2 = i.wereda_id.struc_2.id
+        except:
+            pass
         try:
             if vals['name']:
                 self.struc.write({'name': vals['name']})
                 self.struc_2.write({'name': vals['name']})
         except:
-            try:
-                if vals['woreda_id']:
-                    sun = self.env['main.office'].search([('id', '=', vals['main_office'])])
-                    par = self.env['membership.structure'].search([('name', '=', sun.name)])
-                    par_2 = self.env['league.structure'].search([('name', '=', sun.name)])
-                    self.struc.write({'parent_id_2': par})
-                    self.struc_2.write({'parent_id_2': par_2})
+            pass
+        try:
+            if vals['woreda_id']:
+                sun = self.env['main.office'].sudo().search([('id', '=', vals['main_office'])])
+                par = self.env['membership.structure'].sudo().search([('name', '=', sun.name)])
+                par_2 = self.env['league.structure'].sudo().search([('name', '=', sun.name)])
+                self.struc.write({'parent_id_2': par})
+                self.struc_2.write({'parent_id_2': par_2})
+        except:
+            pass
 
-            except:
-                return super(Cells, self).write(vals)
 
         return super(Cells, self).write(vals)
 
@@ -346,11 +389,11 @@ class Cells(models.Model):
         for rec in self:
             if rec.for_which_members == 'member':
                 if rec.struc:
-                    par = self.env['membership.structure'].search([('id', '=', rec.struc.id)])
+                    par = self.env['membership.structure'].sudo().search([('id', '=', rec.struc.id)])
                     par.unlink()
                 else:
                     if rec.struc_2:
-                        par = self.env['league.structure'].search([('id', '=', rec.struc_2.id)])
+                        par = self.env['league.structure'].sudo().search([('id', '=', rec.struc_2.id)])
                         par.unlink()
         return super(Cells, self).unlink()
 
@@ -381,10 +424,19 @@ class MembershipHandlersParent(models.Model):
 
     @api.model
     def create(self, vals):
-        par_1 = self.env['membership.structure'].search([('name', '=', vals['name'])])
+        test =self.env['membership.handlers.parent'].sudo().search([('name', '=', vals['name'])])
+        res = self.env['responsible.bodies'].sudo().search([])
+        if test:
+             raise UserError(_("Please change your Subcity name there a name duplication."))
+        par_1 = self.env['membership.structure'].sudo().search([('name', '=', vals['name'])])
         wereda = super(MembershipHandlersParent, self).create(vals)
         user = []
-        user.append(wereda.parent_manager.id)
+        user.append(wereda.ict_manager.id)
+        for line in wereda.parent_manager:
+            user.append(line.id)
+        if res:
+            for line in res.system_admin:
+                user.append(line.id)
         for line in wereda.city_id.city_manager:
             user.append(line.id)
         if not par_1:
@@ -415,7 +467,6 @@ class MembershipHandlersParent(models.Model):
                 'users': [(6, 0, user)],
 
             }
-
             res = self.env['membership.structure'].sudo().create(val)
             res_2 = self.env['supporter.structure'].sudo().create(val_2)
             res_3 = self.env['league.structure'].sudo().create(val_3)
@@ -425,133 +476,86 @@ class MembershipHandlersParent(models.Model):
         return wereda
 
     def write(self, vals):
-        print("sub run")
-        try:
-            try:
-                try:
-                    if vals['name']:
-                        self.struc.write({'name': vals['name']})
-                        self.struc_2.write({'name': vals['name']})
-                        self.struc_3.write({'name': vals['name']})
-                    if vals['parent_manager']:
-                        flag = False
-                        for mananager in self.city_id.city_manager:
-                            if mananager.id == self.parent_manager.id:
-                                flag = True
-                        if not flag:
-                            par = self.env['membership.structure'].search([('sub_city', '=', self.id)])
-                            par_2 = self.env['league.structure'].search([('sub_city', '=', self.id)])
-                            par_3 = self.env['supporter.structure'].search([('sub_city', '=', self.id)])
-                            for str in par:
-                                user = []
-                                user.append(vals['parent_manager'])
-                                for id in str.users:
-                                    if id.id != self.parent_manager.id:
-                                        user.append(id.id)
-                                str.users = [(6, 0, user)]
-                            for str in par_2:
-                                user = []
-                                user.append(vals['parent_manager'])
-                                for id in str.users:
-                                    if id.id != self.parent_manager.id:
-                                        user.append(id.id)
-                                str.users = [(6, 0, user)]
-                            for str in par_3:
-                                user = []
-                                user.append(vals['parent_manager'])
-                                for id in str.users:
-                                    if id.id != self.parent_manager.id:
-                                        user.append(id.id)
-                                str.users = [(6, 0, user)]
-                        else:
-                            par = self.env['membership.structure'].search([('sub_city', '=', self.id)])
-                            par_2 = self.env['league.structure'].search([('sub_city', '=', self.id)])
-                            par_3 = self.env['supporter.structure'].search([('sub_city', '=', self.id)])
-                            for str in par:
-                                user = []
-                                user.append(vals['parent_manager'])
-                            str.users = [(6, 0, user)]
-                            for str in par_2:
-                                user = []
-                                user.append(vals['parent_manager'])
-                            str.users = [(6, 0, user)]
-                            for str in par_3:
-                                user = []
-                                user.append(vals['parent_manager'])
-                            str.users = [(6, 0, user)]
-                    return super(MembershipHandlersParent, self).write(vals)
+        if vals.get("name"):
+            self.struc.write({'name': vals['name']})
+            self.struc_2.write({'name': vals['name']})
+            self.struc_3.write({'name': vals['name']})
+        if vals.get("parent_manager"):
+            parent_manager = []
+            for line in self.parent_manager:
+                parent_manager.append(line.id)
+            set_a = set(parent_manager)
+            set_b = set(vals['parent_manager'][0][2])
+            difference = set_a - set_b
+            par = self.env['membership.structure'].sudo().search([('sub_city', '=', self.id)])
+            par_2 = self.env['league.structure'].sudo().search([('sub_city', '=', self.id)])
+            par_3 = self.env['supporter.structure'].sudo().search([('sub_city', '=', self.id)])
+            for str in par:
+                user = []
+                for man in vals['parent_manager'][0][2]:
+                    user.append(man)
+                for id in str.users:
+                    if id.id not in list(difference):
+                        user.append(id.id)
+                print(user)
+                str.users = [(6, 0, user)]
+            for str in par_2:
+                user = []
+                for man in vals['parent_manager'][0][2]:
+                    user.append(man)
+                for id in str.users:
+                    if id.id not in list(difference):
+                        user.append(id.id)
+                str.users = [(6, 0, user)]
+            for str in par_3:
+                user = []
+                for man in vals['parent_manager'][0][2]:
+                    user.append(man)
+                for id in str.users:
+                    if id.id not in list(difference):
+                        user.append(id.id)
+                str.users = [(6, 0, user)]
+        if vals.get("ict_manager"):
+            par = self.env['membership.structure'].sudo().search([('sub_city', '=', self.id)])
+            par_2 = self.env['league.structure'].sudo().search([('sub_city', '=', self.id)])
+            par_3 = self.env['supporter.structure'].sudo().search([('sub_city', '=', self.id)])
+            for str in par:
+                user = []
+                user.append(vals['ict_manager'])
+                for id in str.users:
+                    if id.id != self.ict_manager.id:
+                        user.append(id.id)
+                print(user)
+                str.users = [(6, 0, user)]
+            for str in par_2:
+                user = []
+                user.append(vals['ict_manager'])
+                for id in str.users:
+                    if id.id != self.ict_manager.id:
+                        user.append(id.id)
+                str.users = [(6, 0, user)]
+            for str in par_3:
+                user = []
+                user.append(vals['ict_manager'])
+                for id in str.users:
+                    if id.id != self.ict_manager.id:
+                        user.append(id.id)
+                str.users = [(6, 0, user)]
+        return super(MembershipHandlersParent, self).write(vals)
 
-                except:
-                    print("try expect")
-                    if vals['name']:
-                        self.struc.write({'name': vals['name']})
-                        self.struc_2.write({'name': vals['name']})
-                        self.struc_3.write({'name': vals['name']})
-                        return super(MembershipHandlersParent, self).write(vals)
-            except:
-                if vals['parent_manager']:
-                    flag = False
-                    for mananager in self.city_id.city_manager:
-                        if mananager.id == self.parent_manager.id:
-                            flag = True
-                    if not flag:
-                        par = self.env['membership.structure'].search([('sub_city', '=', self.id)])
-                        par_2 = self.env['league.structure'].search([('sub_city', '=', self.id)])
-                        par_3 = self.env['supporter.structure'].search([('sub_city', '=', self.id)])
-                        for str in par:
-                            user = []
-                            user.append(vals['parent_manager'])
-                            for id in str.users:
-                                if id.id != self.parent_manager.id:
-                                    user.append(id.id)
-                            str.users = [(6, 0, user)]
-                        for str in par_2:
-                            user = []
-                            user.append(vals['parent_manager'])
-                            for id in str.users:
-                                if id.id != self.parent_manager.id:
-                                    user.append(id.id)
-                            str.users = [(6, 0, user)]
-                        for str in par_3:
-                            user = []
-                            user.append(vals['parent_manager'])
-                            for id in str.users:
-                                if id.id != self.parent_manager.id:
-                                    user.append(id.id)
-                            str.users = [(6, 0, user)]
-                    else:
-                        par = self.env['membership.structure'].search([('sub_city', '=', self.id)])
-                        par_2 = self.env['league.structure'].search([('sub_city', '=', self.id)])
-                        par_3 = self.env['supporter.structure'].search([('sub_city', '=', self.id)])
-                        for str in par:
-                            user = []
-                            user.append(vals['parent_manager'])
-                        str.users = [(6, 0, user)]
-                        for str in par_2:
-                            user = []
-                            user.append(vals['parent_manager'])
-                        str.users = [(6, 0, user)]
-                        for str in par_3:
-                            user = []
-                            user.append(vals['parent_manager'])
-                        str.users = [(6, 0, user)]
-                return super(MembershipHandlersParent, self).write(vals)
-
-        except:
-            return super(MembershipHandlersParent, self).write(vals)
 
     def unlink(self):
         for rec in self:
             if rec.struc:
-                par = self.env['membership.structure'].search([('id', '=', rec.struc.id)])
+                par = self.env['membership.structure'].sudo().search([('id', '=', rec.struc.id)])
                 par.unlink()
             if rec.struc_2:
                 if rec.struc_2:
-                    par = self.env['league.structure'].search([('id', '=', rec.struc_2.id)])
+                    par = self.env['league.structure'].sudo().search([('id', '=', rec.struc_2.id)])
                     par.unlink()
             if rec.struc_3:
                 if rec.struc_3:
-                    par = rec.env['supporter.structure'].search([('id', '=', rec.struc_3.id)])
+                    par = rec.env['supporter.structure'].sudo().search([('id', '=', rec.struc_3.id)])
                     par.unlink()
         return super(MembershipHandlersParent, self).unlink()
 
@@ -575,30 +579,40 @@ class MembershipHandlersChild(models.Model):
 
     @api.model
     def create(self, vals):
-        sub = self.env['membership.handlers.parent'].search([('id', '=', vals['parent_id'])], limit=1)
-        par_1 = self.env['membership.structure'].search([('name', '=', vals['name']), ('sub_city', '=', sub.id)])
+        test =self.env['membership.handlers.branch'].sudo().search([('name', '=', vals['name'])])
+        if test:
+             raise UserError(_("Please change your Wereda name there a name duplication"))
+        name = self.env['membership.handlers.parent'].sudo().search([('name', '=', vals['name'])], limit=1)
+        if name:
+            raise UserError(_("There is subcity called "+ str(vals['name'])))
+        sub = self.env['membership.handlers.parent'].sudo().search([('id', '=', vals['parent_id'])], limit=1)
+        par_1 = self.env['membership.structure'].sudo().search([('name', '=', vals['name']), ('sub_city', '=', sub.id)])
         wereda = super(MembershipHandlersChild, self).create(vals)
         user = []
-        user.append(wereda.branch_manager.id)
-        user.append(wereda.parent_id.parent_manager.id)
+        res = self.env['responsible.bodies'].sudo().search([])
+        for name in res:
+            for line in name.system_admin:
+                user.append(line.id)
+        for line in wereda.branch_manager.ids:
+            user.append(line)
+        user.append(wereda.ict_manager.id)
+        user.append(wereda.parent_id.ict_manager.id)
+        for line in wereda.parent_id.parent_manager.ids:
+            user.append(line)
         for line in wereda.parent_id.city_id.city_manager:
             user.append(line.id)
         if not par_1:
-            par = self.env['membership.structure'].search([('name', '=', sub.name)], limit=1)
-            par_3 = self.env['supporter.structure'].search([('name', '=', sub.name)], limit=1)
-            par_2 = self.env['league.structure'].search([('name', '=', sub.name)], limit=1)
-            print("before", par.users, wereda.branch_manager.id)
+            par = self.env['membership.structure'].sudo().search([('name', '=', sub.name)], limit=1)
+            par_3 = self.env['supporter.structure'].sudo().search([('name', '=', sub.name)], limit=1)
+            par_2 = self.env['league.structure'].sudo().search([('name', '=', sub.name)], limit=1)
             arr = par.users.ids
-            arr.append(wereda.branch_manager.id)
+            for line in wereda.branch_manager.ids:
+                arr.append(line)
+            arr.append(wereda.ict_manager.id)
+            print("arr",arr)
             par.users = [(6, 0, arr)]
             par_2.users = [(6, 0, arr)]
             par_3.users = [(6, 0, arr)]
-            # par.write({'users' : [(6, 0, arr)]})
-            # par_2.write({'users' : [(6, 0, arr)]})
-            # par_3.write({'users' : [(6, 0, arr)]})
-            print("after", par.users)
-            # par_2.users = [(6, 0, wereda.branch_manager.ids)]
-            # par_3.users = [(6, 0, wereda.branch_manager.ids)]
             val = {
                 'name': vals['name'],
                 'sub_city': vals['parent_id'],
@@ -642,291 +656,147 @@ class MembershipHandlersChild(models.Model):
         return wereda
 
     def write(self, vals):
-        try:
-            try:
-                if vals['name']:
-                    self.struc.write({'name': vals['name']})
-                    self.struc_2.write({'name': vals['name']})
-                    self.struc_3.write({'name': vals['name']})
-                if vals['parent_id']:
-                    sun = self.env['membership.handlers.parent'].search([('id', '=', vals['parent_id'])])
-                    par = self.env['membership.structure'].search([('name', '=', sun.name)])
-                    par_2 = self.env['supporter.structure'].search([('name', '=', sun.name)])
-                    par_3 = self.env['league.structure'].search([('name', '=', sun.name)])
-                    self.struc.write({'parent_id_2': par})
-                    self.struc_2.write({'parent_id_2': par_2})
-                    self.struc_3.write({'parent_id_2': par_3})
-                if vals['branch_manager']:
-                    par = self.env['membership.structure'].search([('wereda', '=', self.id)])
-                    par_2 = self.env['supporter.structure'].search([('wereda', '=', self.id)])
-                    par_3 = self.env['league.structure'].search([('wereda', '=', self.id)])
-                    for str in par:
-                        user = []
-                        user.append(vals['branch_manager'])
-                        for id in str.users:
-                            if id.id != self.branch_manager.id:
-                                user.append(id.id)
-                        str.users = [(6, 0, user)]
-                    for str in par_2:
-                        user = []
-                        user.append(vals['branch_manager'])
-                        for id in str.users:
-                            if id.id != self.branch_manager.id:
-                                user.append(id.id)
-                        str.users = [(6, 0, user)]
-                    for str in par_3:
-                        user = []
-                        user.append(vals['branch_manager'])
-                        for id in str.users:
-                            if id.id != self.branch_manager.id:
-                                user.append(id.id)
-                        str.users = [(6, 0, user)]
-                    print("before the magic happen", self.parent_id.struc.users.ids)
-                    if self.parent_id.parent_manager.id != self.branch_manager.id:
-                        if self.branch_manager.id not in self.parent_id.city_id.city_manager.ids:
-                            arr = []
-                            arr_2 = []
-                            arr_3 = []
-                            arr.append(vals['branch_manager'])
-                            arr_2.append(vals['branch_manager'])
-                            arr_3.append(vals['branch_manager'])
-                            for usr in self.parent_id.struc.users.ids:
-                                if usr != self.branch_manager.id:
-                                    arr.append(usr)
-                            for usr in self.parent_id.struc_2.users.ids:
-                                if usr != self.branch_manager.id:
-                                    arr_2.append(usr)
-                            for usr in self.parent_id.struc_3.users.ids:
-                                if usr != self.branch_manager.id:
-                                    arr_3.append(usr)
-                            self.parent_id.struc.users = [(6, 0, arr)]
-                            self.parent_id.struc_2.users = [(6, 0, arr_2)]
-                            self.parent_id.struc_3.users = [(6, 0, arr_3)]
-                    print("after the magic happen", self.parent_id.struc.users.ids, vals['branch_manager'],
-                          self.struc.users.ids)
-
-                return super(MembershipHandlersChild, self).write(vals)
-            except:
-                try:
-                    if vals['name']:
-                        self.struc.write({'name': vals['name']})
-                        self.struc_2.write({'name': vals['name']})
-                        self.struc_3.write({'name': vals['name']})
-                    if vals['parent_id']:
-                        sun = self.env['membership.handlers.parent'].search([('id', '=', vals['parent_id'])])
-                        par = self.env['membership.structure'].search([('name', '=', sun.name)])
-                        par_2 = self.env['membership.structure'].search([('name', '=', sun.name)])
-                        par_3 = self.env['league.structure'].search([('name', '=', sun.name)])
-                        self.struc.write({'parent_id_2': par})
-                        self.struc_2.write({'parent_id_2': par_2})
-                        self.struc_3.write({'parent_id_2': par_3})
-                    return super(MembershipHandlersChild, self).write(vals)
-                except:
-                    try:
-                        if vals['name']:
-                            self.struc.write({'name': vals['name']})
-                            self.struc_2.write({'name': vals['name']})
-                            self.struc_3.write({'name': vals['name']})
-                        if vals['branch_manager']:
-                            par = self.env['membership.structure'].search([('wereda', '=', self.id)])
-                            par_2 = self.env['supporter.structure'].search([('wereda', '=', self.id)])
-                            par_3 = self.env['league.structure'].search([('wereda', '=', self.id)])
-                            for str in par:
-                                user = []
-                                user.append(vals['branch_manager'])
-                                for id in str.users:
-                                    if id.id != self.branch_manager.id:
-                                        user.append(id.id)
-                                str.users = [(6, 0, user)]
-                            for str in par_2:
-                                user = []
-                                user.append(vals['branch_manager'])
-                                for id in str.users:
-                                    if id.id != self.branch_manager.id:
-                                        user.append(id.id)
-                                str.users = [(6, 0, user)]
-                            for str in par_3:
-                                user = []
-                                user.append(vals['branch_manager'])
-                                for id in str.users:
-                                    if id.id != self.branch_manager.id:
-                                        user.append(id.id)
-                                str.users = [(6, 0, user)]
-                            print("before the magic happen", self.parent_id.struc.users.ids)
-                            if self.parent_id.parent_manager.id != self.branch_manager.id:
-                                if self.branch_manager.id not in self.parent_id.city_id.city_manager.ids:
-                                    arr = []
-                                    arr_2 = []
-                                    arr_3 = []
-                                    arr.append(vals['branch_manager'])
-                                    arr_2.append(vals['branch_manager'])
-                                    arr_3.append(vals['branch_manager'])
-                                    for usr in self.parent_id.struc.users.ids:
-                                        if usr != self.branch_manager.id:
-                                            arr.append(usr)
-                                    for usr in self.parent_id.struc_2.users.ids:
-                                        if usr != self.branch_manager.id:
-                                            arr_2.append(usr)
-                                    for usr in self.parent_id.struc_3.users.ids:
-                                        if usr != self.branch_manager.id:
-                                            arr_3.append(usr)
-                                    self.parent_id.struc.users = [(6, 0, arr)]
-                                    self.parent_id.struc_2.users = [(6, 0, arr_2)]
-                                    self.parent_id.struc_3.users = [(6, 0, arr_3)]
-
-                            print("after the magic happen", self.parent_id.struc.users.ids, vals['branch_manager'])
-
-                        return super(MembershipHandlersChild, self).write(vals)
-                    except:
-                        if vals['name']:
-                            self.struc.write({'name': vals['name']})
-                            self.struc_2.write({'name': vals['name']})
-                            self.struc_3.write({'name': vals['name']})
-                        return super(MembershipHandlersChild, self).write(vals)
-        except:
-            print("except 1")
-            try:
-                print("except try")
-                try:
-                    if vals['parent_id']:
-                        sun = self.env['membership.handlers.parent'].search([('id', '=', vals['parent_id'])])
-                        par = self.env['membership.structure'].search([('name', '=', sun.name)])
-                        par_2 = self.env['supporter.structure'].search([('name', '=', sun.name)])
-                        par_3 = self.env['league.structure'].search([('name', '=', sun.name)])
-                        self.struc.write({'parent_id_2': par})
-                        self.struc_2.write({'parent_id_2': par_2})
-                        self.struc_3.write({'parent_id_2': par_3})
-                    if vals['branch_manager']:
-                        par = self.env['membership.structure'].search([('wereda', '=', self.id)])
-                        par_2 = self.env['supporter.structure'].search([('wereda', '=', self.id)])
-                        par_3 = self.env['league.structure'].search([('wereda', '=', self.id)])
-                        for str in par:
-                            user = []
-                            user.append(vals['branch_manager'])
-                            for id in str.users:
-                                if id.id != self.branch_manager.id:
-                                    user.append(id.id)
-                            str.users = [(6, 0, user)]
-                        for str in par_2:
-                            user = []
-                            user.append(vals['branch_manager'])
-                            for id in str.users:
-                                if id.id != self.branch_manager.id:
-                                    user.append(id.id)
-                            str.users = [(6, 0, user)]
-                        for str in par_3:
-                            user = []
-                            user.append(vals['branch_manager'])
-                            for id in str.users:
-                                if id.id != self.branch_manager.id:
-                                    user.append(id.id)
-                            str.users = [(6, 0, user)]
-                        print("before the magic happen", self.parent_id.struc.users.ids)
-                        if self.parent_id.parent_manager.id != self.branch_manager.id:
-                            if self.branch_manager.id not in self.parent_id.city_id.city_manager.ids:
-                                arr = []
-                                arr_2 = []
-                                arr_3 = []
-                                arr.append(vals['branch_manager'])
-                                arr_2.append(vals['branch_manager'])
-                                arr_3.append(vals['branch_manager'])
-                                for usr in self.parent_id.struc.users.ids:
-                                    if usr != self.branch_manager.id:
-                                        arr.append(usr)
-                                for usr in self.parent_id.struc_2.users.ids:
-                                    if usr != self.branch_manager.id:
-                                        arr_2.append(usr)
-                                for usr in self.parent_id.struc_3.users.ids:
-                                    if usr != self.branch_manager.id:
-                                        arr_3.append(usr)
-                                self.parent_id.struc.users = [(6, 0, arr)]
-                                self.parent_id.struc_2.users = [(6, 0, arr_2)]
-                                self.parent_id.struc_3.users = [(6, 0, arr_3)]
-                        print("after the magic happen", self.parent_id.struc.users.ids, vals['branch_manager'])
-
-                    return super(MembershipHandlersChild, self).write(vals)
-                except:
-                    print("except except")
-                    try:
-                        print("except except try")
-                        if vals['parent_id']:
-                            sun = self.env['membership.handlers.parent'].search([('id', '=', vals['parent_id'])])
-                            par = self.env['membership.structure'].search([('name', '=', sun.name)])
-                            par_2 = self.env['supporter.structure'].search([('name', '=', sun.name)])
-                            par_3 = self.env['league.structure'].search([('name', '=', sun.name)])
-                            self.struc.write({'parent_id_2': par})
-                            self.struc_2.write({'parent_id_2': par_2})
-                            self.struc_3.write({'parent_id_2': par_3})
-                        return super(MembershipHandlersChild, self).write(vals)
-                    except:
-                        print("except except except")
-                        if vals['branch_manager']:
-                            par = self.env['membership.structure'].search([('wereda', '=', self.id)])
-                            par_2 = self.env['supporter.structure'].search([('wereda', '=', self.id)])
-                            par_3 = self.env['league.structure'].search([('wereda', '=', self.id)])
-                            for str in par:
-                                user = []
-                                user.append(vals['branch_manager'])
-                                for id in str.users:
-                                    if id.id != self.branch_manager.id:
-                                        user.append(id.id)
-                                str.users = [(6, 0, user)]
-                            for str in par_2:
-                                user = []
-                                user.append(vals['branch_manager'])
-                                for id in str.users:
-                                    if id.id != self.branch_manager.id:
-                                        user.append(id.id)
-                                str.users = [(6, 0, user)]
-                            for str in par_3:
-                                user = []
-                                user.append(vals['branch_manager'])
-                                for id in str.users:
-                                    if id.id != self.branch_manager.id:
-                                        user.append(id.id)
-                                str.users = [(6, 0, user)]
-                            print("before the magic happen", self.parent_id.struc.users.ids)
-                            if self.parent_id.parent_manager.id != self.branch_manager.id:
-                                if self.branch_manager.id not in self.parent_id.city_id.city_manager.ids:
-                                    arr = []
-                                    arr_2 = []
-                                    arr_3 = []
-                                    arr.append(vals['branch_manager'])
-                                    arr_2.append(vals['branch_manager'])
-                                    arr_3.append(vals['branch_manager'])
-                                    for usr in self.parent_id.struc.users.ids:
-                                        if usr != self.branch_manager.id:
-                                            arr.append(usr)
-                                    for usr in self.parent_id.struc_2.users.ids:
-                                        if usr != self.branch_manager.id:
-                                            arr_2.append(usr)
-                                    for usr in self.parent_id.struc_3.users.ids:
-                                        if usr != self.branch_manager.id:
-                                            arr_3.append(usr)
-                                    self.parent_id.struc.users = [(6, 0, arr)]
-                                    self.parent_id.struc_2.users = [(6, 0, arr_2)]
-                                    self.parent_id.struc_3.users = [(6, 0, arr_3)]
-                            print("after the magic happen", self.parent_id.struc.users.ids, vals['branch_manager'])
-
-                        return super(MembershipHandlersChild, self).write(vals)
-            except:
-                print("except except except except")
-                return super(MembershipHandlersChild, self).write(vals)
-
+        if vals.get("parent_id"):
+            sun = self.env['membership.handlers.parent'].sudo().search([('id', '=', vals['parent_id'])])
+            par = self.env['membership.structure'].sudo().search([('name', '=', sun.name)])
+            par_2 = self.env['supporter.structure'].sudo().search([('name', '=', sun.name)])
+            par_3 = self.env['league.structure'].sudo().search([('name', '=', sun.name)])
+            self.struc.write({'parent_id_2': par})
+            self.struc_2.write({'parent_id_2': par_2})
+            self.struc_3.write({'parent_id_2': par_3})
+        if vals.get("name"):
+            self.struc.write({'name': vals['name']})
+            self.struc_2.write({'name': vals['name']})
+            self.struc_3.write({'name': vals['name']})
+        if vals.get("ict_manager"):
+            arr = self.struc.sub_city.struc.users.ids
+            arr.append(vals['ict_manager'])
+            self.struc.sub_city.struc.users = [(6, 0, arr)]
+            self.struc.sub_city.struc.users = [(6, 0, arr)]
+            self.struc.sub_city.struc.users = [(6, 0, arr)]
+            par = self.env['membership.structure'].sudo().search([('wereda', '=', self.id)])
+            par_2 = self.env['supporter.structure'].sudo().search([('wereda', '=', self.id)])
+            par_3 = self.env['league.structure'].sudo().search([('wereda', '=', self.id)])
+            for str in par:
+                user = []
+                user.append(vals['ict_manager'])
+                for id in str.users:
+                    print("od",id.id, self.ict_manager)
+                    if id.id not in self.branch_manager.ids and id.id != self.ict_manager.id:
+                        user.append(id.id)
+                str.users = [(6, 0, user)]
+            for str in par_2:
+                user = []
+                user.append(vals['ict_manager'])
+                for id in str.users:
+                    if id.id not in self.branch_manager.ids and id.id != self.ict_manager.id:
+                        user.append(id.id)
+                str.users = [(6, 0, user)]
+            for str in par_3:
+                user = []
+                user.append(vals['ict_manager'])
+                for id in str.users:
+                    if id.id not in self.branch_manager.ids and id.id != self.ict_manager.id:
+                        user.append(id.id)
+                str.users = [(6, 0, user)]
+            if self.ict_manager.id not in self.branch_manager.ids:
+                if self.ict_manager.id not in self.parent_id.city_id.city_manager.ids:
+                    arr = []
+                    arr_2 = []
+                    arr_3 = []
+                    arr.append(vals[''])
+                    arr_2.append(vals['ict_manager'])
+                    arr_3.append(vals['ict_manager'])
+                    for usr in self.parent_id.struc.users.ids:
+                        if usr not in self.branch_manager.ids and usr != self.ict_manager.id:
+                            arr.append(usr)
+                    for usr in self.parent_id.struc_2.users.ids:
+                        if usr not in self.branch_manager.ids and usr != self.ict_manager.id:
+                            arr_2.append(usr)
+                    for usr in self.parent_id.struc_3.users.ids :
+                        if usr not in self.branch_manager.ids and usr != self.ict_manager.id:
+                            arr_3.append(usr)
+                    self.parent_id.struc.users = [(6, 0, arr)]
+                    self.parent_id.struc_2.users = [(6, 0, arr_2)]
+                    self.parent_id.struc_3.users = [(6, 0, arr_3)]
+        if vals.get("branch_manager"):
+            branch_manager = []
+            for br in self.branch_manager.ids:
+                branch_manager.append(br)
+            set_a = set(branch_manager)
+            set_b = set(vals['branch_manager'][0][2])
+            difference = set_a - set_b
+            arr = self.struc.sub_city.struc.users.ids
+            for line in vals['branch_manager'][0][2]:
+                arr.append(line)
+            print("arr", arr)
+            self.struc.sub_city.struc.users = [(6, 0, arr)]
+            self.struc.sub_city.struc.users = [(6, 0, arr)]
+            self.struc.sub_city.struc.users = [(6, 0, arr)]
+            par = self.env['membership.structure'].sudo().search([('wereda', '=', self.id)])
+            par_2 = self.env['supporter.structure'].sudo().search([('wereda', '=', self.id)])
+            par_3 = self.env['league.structure'].sudo().search([('wereda', '=', self.id)])
+            for str in par:
+                user = []
+                for line in vals['branch_manager'][0][2]:
+                    user.append(line)
+                for id in str.users:
+                    if id.id not in difference:
+                        user.append(id.id)
+                str.users = [(6, 0, user)]
+            for str in par_2:
+                user = []
+                for line in vals['branch_manager'][0][2]:
+                    user.append(line)
+                for id in str.users:
+                    if id.id not in difference:
+                        user.append(id.id)
+                str.users = [(6, 0, user)]
+            for str in par_3:
+                user = []
+                for line in vals['branch_manager'][0][2]:
+                    user.append(line)
+                for id in str.users:
+                    if id.id not in difference:
+                        user.append(id.id)
+                str.users = [(6, 0, user)]
+            if difference not in self.parent_id.city_id.city_manager.ids:
+                    arr = []
+                    arr_2 = []
+                    arr_3 = []
+                    for line in vals['branch_manager'][0][2]:
+                        arr.append(line)
+                        arr_2.append(line)
+                        arr_3.append(line)
+                    for usr in self.parent_id.struc.users.ids:
+                        print("usr", usr)
+                        print("difference", difference)
+                        if usr not in difference:
+                            print("True")
+                            arr.append(usr)
+                    for usr in self.parent_id.struc_2.users.ids:
+                        if usr not in difference:
+                            arr_2.append(usr)
+                    for usr in self.parent_id.struc_3.users.ids:
+                        if usr not in difference:
+                            arr_3.append(usr)
+                    self.parent_id.struc.users = [(6, 0, arr)]
+                    self.parent_id.struc_2.users = [(6, 0, arr_2)]
+                    self.parent_id.struc_3.users = [(6, 0, arr_3)]
         return super(MembershipHandlersChild, self).write(vals)
 
     def unlink(self):
         for rec in self:
             if rec.struc:
-                par = self.env['membership.structure'].search([('id', '=', rec.struc.id)])
+                par = self.env['membership.structure'].sudo().search([('id', '=', rec.struc.id)])
                 par.unlink()
             if rec.struc_2:
                 if rec.struc_2:
-                    par = rec.env['league.structure'].search([('id', '=', rec.struc_2.id)])
+                    par = rec.env['league.structure'].sudo().search([('id', '=', rec.struc_2.id)])
                     par.unlink()
             if rec.struc_3:
                 if rec.struc_3:
-                    par = rec.env['supporter.structure'].search([('id', '=', rec.struc_3.id)])
+                    par = rec.env['supporter.structure'].sudo().search([('id', '=', rec.struc_3.id)])
                     par.unlink()
         return super(MembershipHandlersChild, rec).unlink()
 
@@ -953,31 +823,57 @@ class MainOffice(models.Model):
         for rec in self:
             if rec.for_which_members == 'member':
                 if rec.struc:
-                    par = self.env['membership.structure'].search([('id', '=', rec.struc.id)])
+                    par = self.env['membership.structure'].sudo().search([('id', '=', rec.struc.id)])
                     par.unlink()
                 else:
                     if rec.struc_2:
-                        par = self.env['league.structure'].search([('id', '=', rec.struc_2.id)])
+                        par = self.env['league.structure'].sudo().search([('id', '=', rec.struc_2.id)])
                         par.unlink()
         return super(MainOffice, self).unlink()
 
     @api.model
     def create(self, vals):
-        sub = self.env['membership.handlers.branch'].search([('id', '=', vals['wereda_id'])], limit=1)
-        par_1 = self.env['membership.structure'].search([('name', '=', vals['name']), ('wereda', '=', sub.id)])
+        print("str create", vals)
+        test =self.env['main.office'].sudo().search([('name', '=', vals['name'])])
+        if test:
+             raise UserError(_("Please change your basic organization name there a name duplication"))
+        sub = self.env['membership.handlers.branch'].sudo().search([('id', '=', vals['wereda_id'])], limit=1)
+        par_1 = self.env['membership.structure'].sudo().search([('name', '=', vals['name']), ('wereda', '=', sub.id)])
         wereda = super(MainOffice, self).create(vals)
+        print("worda", sub.id, vals['wereda_id'])
         user = []
-        user.append(wereda.wereda_id.branch_manager.id)
-        user.append(wereda.wereda_id.parent_id.parent_manager.id)
+        res = self.env['responsible.bodies'].sudo().search([])
+        for name in res:
+            for line in name.system_admin:
+                user.append(line.id)
+        for line in wereda.wereda_id.branch_manager.ids:
+            user.append(line)
+        user.append(wereda.wereda_id.ict_manager.id)
+        user.append(wereda.wereda_id.parent_id.ict_manager.id)
+        for line in wereda.wereda_id.parent_id.parent_manager.ids:
+            user.append(line)
         for line in wereda.wereda_id.parent_id.city_id.city_manager:
             user.append(line.id)
         if not par_1:
-            par = self.env['membership.structure'].search([('name', '=', sub.name)], limit=1)
-            par_2 = self.env['league.structure'].search([('name', '=', sub.name)], limit=1)
+            par = self.env['membership.structure'].sudo().search([('name', '=', sub.name)], limit=1)
+            par_3 = self.env['supporter.structure'].sudo().search([('name', '=', sub.name)], limit=1)
+            par_2 = self.env['league.structure'].sudo().search([('name', '=', sub.name)], limit=1)
+            arr = par.users.ids
+            for line in wereda.wereda_id.branch_manager.ids:
+                arr.append(line)
+            arr.append(wereda.wereda_id.ict_manager.id)
+            print("arr", arr)
+            par.users = [(6, 0, arr)]
+            par_2.users = [(6, 0, arr)]
+            par_3.users = [(6, 0, arr)]
+        if not par_1:
+            par = self.env['membership.structure'].sudo().search([('name', '=', sub.name)], limit=1)
+            par_2 = self.env['league.structure'].sudo().search([('name', '=', sub.name)], limit=1)
             val = {
                 'name': vals['name'],
                 'parent_id_2': par.id,
                 'wereda': vals['wereda_id'],
+                'sub_city': vals['subcity_id'],
                 'main_office': wereda.id,
                 'is_member': True,
                 'is_league': True,
@@ -990,52 +886,48 @@ class MainOffice(models.Model):
                 'parent_id_2': par_2.id,
                 'main_office': wereda.id,
                 'wereda': vals['wereda_id'],
+                'sub_city': vals['subcity_id'],
                 'is_member': True,
                 'is_league': True,
                 'is_supporter': True,
                 'users': [(6, 0, user)],
 
             }
+            print("vals['for_which_members']", vals['for_which_members'])
             if vals['for_which_members'] == 'member':
+                print("val", val)
                 res = self.env['membership.structure'].sudo().create(val)
+                res.name = res.sub_city.unique_representation_code + '/' + res.wereda.unique_representation_code + '/' + res.main_office.member_main_type_id.name + '/' + res.name
                 wereda.struc = res.id
             else:
+                print("val_3", val_3)
                 res_3 = self.env['league.structure'].sudo().create(val_3)
+                res_3.name = res_3.sub_city.unique_representation_code + '/' + res_3.wereda.unique_representation_code + '/' + res_3.main_office.member_main_type_id.name + '/League/' + res_3.name
                 wereda.struc_2 = res_3.id
 
         return wereda
 
     def write(self, vals):
-        try:
-            if vals['name']:
+        if vals.get("name"):
                 self.struc.write({'name': vals['name']})
                 self.struc_2.write({'name': vals['name']})
-        except:
-            try:
-                try:
-                    if vals['woreda_id']:
-                        sun = self.env['membership.handlers.branch'].search([('id', '=', vals['woreda_id'])])
-                        par = self.env['membership.structure'].search([('name', '=', sun.name)])
-                        par_2 = self.env['league.structure'].search([('name', '=', sun.name)])
-                        if self.struc:
-                            self.struc.write({'parent_id_2': par})
-                        if self.struc_2:
-                            self.struc_2.write({'parent_id_2': par_2})
-                except:
-                    if vals['for_which_members']:
-                        if vals['for_which_members'] == 'member':
-                            sun = self.env['membership.handlers.branch'].search([('id', '=', vals['woreda_id'])])
-                            par = self.env['membership.structure'].search([('name', '=', sun.name)])
-                            self.struc.write({'parent_id_2': par})
-
-                        else:
-                            sun = self.env['membership.handlers.branch'].search([('id', '=', vals['woreda_id'])])
-                            par = self.env['league.structure'].search([('name', '=', sun.name)])
-                            self.struc.write({'parent_id_2': par})
-
-
-            except:
-                return super(MainOffice, self).write(vals)
+        if vals.get("woreda_id"):
+                sun = self.env['membership.handlers.branch'].sudo().search([('id', '=', vals['woreda_id'])])
+                par = self.env['membership.structure'].sudo().search([('name', '=', sun.name)])
+                par_2 = self.env['league.structure'].sudo().search([('name', '=', sun.name)])
+                if self.struc:
+                    self.struc.write({'parent_id_2': par})
+                if self.struc_2:
+                    self.struc_2.write({'parent_id_2': par_2})
+        if vals.get("for_which_members"):
+                if vals['for_which_members'] == 'member':
+                        sun = self.env['membership.handlers.branch'].sudo().search([('id', '=', vals['woreda_id'])])
+                        par = self.env['membership.structure'].sudo().search([('name', '=', sun.name)])
+                        self.struc.write({'parent_id_2': par})
+                else:
+                        sun = self.env['membership.handlers.branch'].sudo().search([('id', '=', vals['woreda_id'])])
+                        par = self.env['league.structure'].sudo().search([('name', '=', sun.name)])
+                        self.struc.write({'parent_id_2': par})
 
         return super(MainOffice, self).write(vals)
 
@@ -1050,12 +942,10 @@ class MembershipCityHandlers(models.Model):
                 after = set(vals['city_manager'][0][2])
                 diff1 = after.difference(before)
                 diff2 = before.difference(after)
-                print("diff1", diff1)
-                print("diff2", diff2)
                 if diff2:
-                    memb = self.env['membership.structure'].search([])
-                    legues = self.env['league.structure'].search([])
-                    suppo = self.env['supporter.structure'].search([])
+                    memb = self.env['membership.structure'].sudo().search([])
+                    legues = self.env['league.structure'].sudo().search([])
+                    suppo = self.env['supporter.structure'].sudo().search([])
                     for line in memb:
                         for id in diff2:
                             if id == line.sub_city.parent_manager.id or id == line.wereda.branch_manager.id:
@@ -1092,9 +982,9 @@ class MembershipCityHandlers(models.Model):
                                 # line.users = [(6,0,[])]
                                 line.users = [(6, 0, arr)]
                 if diff1:
-                    memb = self.env['membership.structure'].search([])
-                    legues = self.env['league.structure'].search([])
-                    suppo = self.env['supporter.structure'].search([])
+                    memb = self.env['membership.structure'].sudo().search([])
+                    legues = self.env['league.structure'].sudo().search([])
+                    suppo = self.env['supporter.structure'].sudo().search([])
                 for id in diff1:
                     for line in memb:
                         new_arr = line.users.ids
@@ -1114,3 +1004,74 @@ class MembershipCityHandlers(models.Model):
 
         except:
             return super(MembershipCityHandlers, self).write(vals)
+
+
+class ResponsibleBodies(models.Model):
+   _inherit ="responsible.bodies"
+
+   def write(self, vals):
+       if vals['system_admin']:
+           before = set(self.system_admin.ids)
+           after = set(vals['system_admin'][0][2])
+           diff1 = after.difference(before)
+           diff2 = before.difference(after)
+           if diff2:
+               memb = self.env['membership.structure'].sudo().search([])
+               legues = self.env['league.structure'].sudo().search([])
+               suppo = self.env['supporter.structure'].sudo().search([])
+               for line in memb:
+                   for id in diff2:
+                       if id in line.sub_city.parent_manager.ids or id in line.wereda.branch_manager.ids:
+                           print("ok")
+                       else:
+                           arr = []
+                           for us in line.users:
+                               if id != us.id:
+                                   arr.append(us.id)
+                           # line.users = [(6,0,[])]
+                           print("before", line.users)
+                           line.users = [(6, 0, arr)]
+                           print("after", line.users)
+               for line in legues:
+                   for id in diff2:
+                       if id in line.sub_city.parent_manager.ids or id in line.wereda.branch_manager.ids:
+                           print("ok")
+                       else:
+                           arr = []
+                           for us in line.users:
+                               if id != us.id:
+                                   arr.append(us.id)
+                           # line.users = [(6,0,[])]
+                           line.users = [(6, 0, arr)]
+               for line in suppo:
+                   for id in diff2:
+                       if id in line.sub_city.parent_manager.ids or id in line.wereda.branch_manager.ids:
+                           print("ok")
+                       else:
+                           arr = []
+                           for us in line.users:
+                               if id != us.id:
+                                   arr.append(us.id)
+                           # line.users = [(6,0,[])]
+                           line.users = [(6, 0, arr)]
+           if diff1:
+               memb = self.env['membership.structure'].sudo().search([])
+               legues = self.env['league.structure'].sudo().search([])
+               suppo = self.env['supporter.structure'].sudo().search([])
+           for id in diff1:
+               for line in memb:
+                   new_arr = line.users.ids
+                   print("new_arr", type(new_arr), id)
+                   new_arr.append(id)
+                   print("new_arr_2", new_arr)
+                   line.users = [(6, 0, new_arr)]
+               for line in legues:
+                   new_arr = line.users.ids
+                   new_arr.append(id)
+                   line.users = [(6, 0, new_arr)]
+               for line in suppo:
+                   new_arr = line.users.ids
+                   new_arr.append(id)
+                   line.users = [(6, 0, new_arr)]
+
+       return super(ResponsibleBodies, self).write(vals)

@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<odoo> 
+
+  <menuitem name="Members"
+            id="menu_association"
+            sequence="15"
+            web_icon="member_minor_configuration,static/description/icon1.png"
+            groups="member_group_city_transfer_handler,member_group_complaint_management,member_group_cell_manager,member_group_assembler,member_group_finance,member_group_agent"/>
+
+  <menuitem name="Member Information"
+            id="menu_membership"
+            sequence="0"
+            parent="menu_association"/>
+
+  <menuitem name="Reporting"
+            id="menu_report_membership"
+            parent="menu_association"
+            sequence="99"
+            groups="member_group_manager"/>
+
+  <menuitem name="Configuration"
+            id="menu_marketing_config_association"
+            parent="menu_association"
+            sequence="100"
+            groups="member_group_city_transfer_handler,member_group_cell_manager,member_group_assembler,member_group_finance"/>
+
+
+  <menuitem id="system_admin_menus"
+            name="System Configurations"
+            parent="menu_association"
+            sequence="110"
+            groups="member_group_user_admin"/>
+
+
+    <menuitem id="membership_all_module_report_tab"
+              name="Membership"
+              parent="report.all_module_report"
+              sequence="6"
+              groups="member_minor_configuration.member_group_cell_manager,member_minor_configuration.member_group_finance,member_minor_configuration.member_group_assembler"/>
+
+</odoo>

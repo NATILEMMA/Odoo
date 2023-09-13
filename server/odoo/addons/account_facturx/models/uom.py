@@ -8,7 +8,8 @@ class UoM(models.Model):
 
     def _get_unece_code(self):
         """ Returns the UNECE code used for international trading for corresponding to the UoM as per
-        https://unece.org/fileadmin/DAM/cefact/recommendations/rec20/rec20_rev3_Annex2e.pdf"""
+        https://unece.org/fileadmin/DAM/cefact/recommendations/bkup_htm/add2d.htm.
+        """
         mapping = {
             'uom.product_uom_unit': 'C62',
             'uom.product_uom_dozen': 'DZN',

@@ -12,7 +12,7 @@ class AccountIncoterms(models.Model):
         'Name', required=True, translate=True,
         help="Incoterms are series of sales terms. They are used to divide transaction costs and responsibilities between buyer and seller and reflect state-of-the-art transportation practices.")
     code = fields.Char(
-        'Code', size=3, required=True,
+        'Code', size=3, required=True, translate=True,
         help="Incoterm Standard Code")
     active = fields.Boolean(
         'Active', default=True,

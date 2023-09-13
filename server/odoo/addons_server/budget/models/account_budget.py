@@ -8,6 +8,7 @@ from dateutil.relativedelta import relativedelta
 from tokenize import group
 from odoo.exceptions import UserError
 import os
+from ethiopian_date import EthiopianDateConverter
 from odoo.exceptions import UserError, Warning, ValidationError
 import re
 import base64
@@ -76,6 +77,29 @@ class Budget(models.Model):
 
     def action_budget_confirm(self):
         self.write({'state': 'confirm'})
+        vall = {}
+        date = datetime.now()
+        date_str = str(date).split(' ')
+        date_time_obj = date_str[0].split('-')
+        Edate1 = EthiopianDateConverter.to_ethiopian(int(date_time_obj[0]),int(date_time_obj[1]),int(date_time_obj[2]))
+        for line in self.budget_line:
+            lenght = str(type(Edate1))
+            _logger.info(lenght)
+            _logger.info(len(lenght))
+
+            if len(lenght) ==  13:
+                vall['paid_date'] = date
+                vall['ethiopian_three'] =  None
+                vall['pagum_three'] =  Edate1
+                vall['is_pagum_three'] =  False
+                self.budget_line.sudo().write(vall)
+
+            if len(lenght) == 23:
+                vall['paid_date'] = date
+                vall['ethiopian_three'] =  Edate1
+                self.budget_line.sudo().write(vall)
+
+
 
     def action_budget_draft(self):
         self.write({'state': 'draft'})

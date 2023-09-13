@@ -111,13 +111,13 @@ msgstr "ሌላ መልካም ቀን ስራ! አንግናኛለን!"
 #: model_terms:ir.ui.view,arch_db:hr_attendance.hr_attendance_view_graph
 #: model_terms:ir.ui.view,arch_db:hr_attendance.hr_attendance_view_pivot
 msgid "Attendance"
-msgstr "መገኘት"
+msgstr "የስራ ጊዜ መቆጣጥሪያ"
 
 #. module: hr_attendance
 #: model:ir.actions.act_window,name:hr_attendance.hr_attendance_action_graph
 #: model:ir.actions.act_window,name:hr_attendance.hr_attendance_action_graph_filtered
 msgid "Attendance Analysis"
-msgstr "የመገኘት ትንተና"
+msgstr "የስራ ጊዜ መቆጣጥሪያ ትንተና"
 
 #. module: hr_attendance
 #: model:ir.model.fields,field_description:hr_attendance.field_hr_employee__attendance_state
@@ -125,7 +125,7 @@ msgstr "የመገኘት ትንተና"
 #: model:ir.model.fields,field_description:hr_attendance.field_hr_employee_public__attendance_state
 #: model:ir.model.fields,field_description:hr_attendance.field_res_users__attendance_state
 msgid "Attendance Status"
-msgstr "የመገኘት ሁኔታ"
+msgstr "የስራ ጊዜ መቆጣጥሪያ ሁኔታ"
 
 #. module: hr_attendance
 #: model:ir.actions.act_window,name:hr_attendance.hr_attendance_action
@@ -136,7 +136,7 @@ msgstr "የመገኘት ሁኔታ"
 #: model_terms:ir.ui.view,arch_db:hr_attendance.hr_department_view_kanban
 #: model_terms:ir.ui.view,arch_db:hr_attendance.res_config_settings_view_form
 msgid "Attendances"
-msgstr "ተሰብሳቢዎች"
+msgstr "የስራ ጊዜ መቆጣጥሪያ"
 
 #. module: hr_attendance
 #. openerp-web
@@ -368,7 +368,7 @@ msgstr "ደህና እደር"
 #: code:addons/hr_attendance/static/src/xml/attendance.xml:0
 #: code:addons/hr_attendance/static/src/xml/attendance.xml:0
 msgid "Goodbye"
-msgstr "በህና ሁን"
+msgstr "ደህና ሁን"
 
 #. module: hr_attendance
 #: model_terms:ir.ui.view,arch_db:hr_attendance.hr_attendance_view_filter
@@ -431,7 +431,7 @@ msgstr "ዛሬ ሰዓቶች"
 #. module: hr_attendance
 #: model_terms:ir.ui.view,arch_db:hr_attendance.hr_attendance_view_filter
 msgid "Hr Attendance Search"
-msgstr "Hr የመገኘት ፍለጋ"
+msgstr "የሰው ሃይል የስራ ጊዜ መቆጣጥሪያ ፍለጋ"
 
 #. module: hr_attendance
 #: model:ir.model.fields,field_description:hr_attendance.field_hr_attendance__id
@@ -471,7 +471,7 @@ msgstr "የመጨረሻ መገኘት"
 #. module: hr_attendance
 #: model:ir.model.fields,field_description:hr_attendance.field_hr_attendance____last_update
 msgid "Last Modified on"
-msgstr "መጨረሻ የተሻሻለው በርቷል።"
+msgstr "መጨረሻ የተሻሻለው በ"
 
 #. module: hr_attendance
 #: model:ir.model.fields,field_description:hr_attendance.field_hr_attendance__write_uid
@@ -481,7 +481,7 @@ msgstr "መጨረሻ የዘመነው በ"
 #. module: hr_attendance
 #: model:ir.model.fields,field_description:hr_attendance.field_hr_attendance__write_date
 msgid "Last Updated on"
-msgstr "መጨረሻ የዘመነው በርቷል።"
+msgstr "መጨረሻ የዘመነው በ"
 
 #. module: hr_attendance
 #: model:ir.ui.menu,name:hr_attendance.menu_hr_attendance_manage_attendances
@@ -584,7 +584,7 @@ msgstr "ቅንብሮች"
 #: code:addons/hr_attendance/static/src/xml/attendance.xml:0
 #: code:addons/hr_attendance/static/src/xml/attendance.xml:0
 msgid "Sign in"
-msgstr "ስግን እን"
+msgstr "ይግቡ"
 
 #. module: hr_attendance
 #. openerp-web
@@ -661,7 +661,7 @@ msgstr "እንኳን ደህና መጣህ"
 #. openerp-web
 #: code:addons/hr_attendance/static/src/xml/attendance.xml:0
 msgid "Welcome to"
-msgstr "እንኩአን ደህና መጡ"
+msgstr "እንኳን ደህና መጡ"
 
 #. module: hr_attendance
 #. openerp-web

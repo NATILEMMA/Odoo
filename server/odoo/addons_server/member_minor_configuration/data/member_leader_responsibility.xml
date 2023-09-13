@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+
+<odoo>
+
+    <record id="cell_finance" model="member.sub.responsibility">
+        <field name="name">Cell Finance</field>
+    </record>
+
+    <record id="cell_assembler" model="member.sub.responsibility">
+        <field name="name">Cell Assembler</field>
+    </record>
+
+    <record id="main_finance" model="member.sub.responsibility">
+        <field name="name">Basic Organization Finance</field>
+    </record>
+
+    <record id="main_assembler" model="member.sub.responsibility">
+        <field name="name">Basic Organization Assembler</field>
+    </record>
+
+    <record id="mem" model="members.responsibility">
+        <field name="name">Member</field>
+    </record>
+
+    <record id="cam" model="members.responsibility">
+        <field name="name">Cell Leader</field>
+    </record>
+
+    <record id="moa" model="members.responsibility">
+        <field name="name">Basic Organization Leader</field>
+    </record>
+
+    <record id="wra" model="leaders.responsibility">
+        <field name="name">Woreda Leader</field>
+    </record>
+
+    <record id="sca" model="leaders.responsibility">
+        <field name="name">Sub City Leader</field>
+    </record>
+
+    <record id="fca" model="leaders.responsibility">
+        <field name="name">City Leader</field>
+    </record>
+
+    <record id="lm" model="league.responsibility">
+        <field name="name">League</field>
+    </record>
+
+    <record id="lca" model="league.responsibility">
+        <field name="name">League Cell Leader</field>
+    </record>
+
+    <record id="lma" model="league.responsibility">
+        <field name="name">League Basic Organization Leader</field>
+    </record>
+</odoo>

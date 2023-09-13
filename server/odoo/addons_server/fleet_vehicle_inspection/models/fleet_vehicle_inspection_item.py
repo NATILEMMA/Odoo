@@ -9,5 +9,5 @@ class FleetVehicleInspectionItem(models.Model):
     _name = "fleet.vehicle.inspection.item"
     _description = "Fleet Vehicle Inspection Item"
 
-    name = fields.Char(required=True)
-    instruction = fields.Text(string="Instruction")
+    name = fields.Char(required=True, translate=True)
+    instruction = fields.Text(string="Instruction", translate=True)

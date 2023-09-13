@@ -2,7 +2,7 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 
 access_hr_employee_position_request_user,hr.employee.position.request.user,model_hr_employee_position_request,base.group_user,1,1,1,0
 access_hr_employee_position_request_hr_approver,hr.employee.position.request.hr,model_hr_employee_position_request,hr_request_position.group_position_request_manager_approval,1,1,1,0
-access_hr_employee_position_request_manager_approver,hr.employee.position.request.manager,model_hr_employee_position_request,hr_request_position.group_request_hr_approval_request,1,1,0,0
+access_hr_employee_position_request_manager_approver,hr.employee.position.request.manager,model_hr_employee_position_request,hr_request_position.group_request_hr_approval_request,1,1,1,1
 access_hr_position_request_requester,hr.employee.position.request.requester,model_hr_employee_position_request,hr_request_position.group_requester,1,1,1,0
 
 access_hr_contract_request_user,hr.employee.position.request.user,model_hr_contract,hr_request_position.group_requester,1,0,0,0

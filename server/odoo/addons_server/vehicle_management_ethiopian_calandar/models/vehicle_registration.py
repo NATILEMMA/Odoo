@@ -32,10 +32,7 @@ class VehicleRegistration(models.Model):
     is_pagum_to =  fields.Boolean(default='True')
     is_pagum_three = fields.Boolean(default='True',string="in ethiopian date")
  
-    _sql_constraints = [
-    ('date_check', 'CHECK ( (ethiopian_from <= ethiopian_three) )', 'The start date must be before to the end date.')
-]
-
+  
 
     @api.model
     def create(self, vals):
@@ -103,17 +100,18 @@ class VehicleRegistration(models.Model):
                 
                 pick3.clear()
         
-        try:
 
-            if vals['ethiopian_to'] is not None:
+        try:
+            if vals.get('ethiopian_to') is not None:
                 date1 = vals['ethiopian_to']
+                print(date1,"date 1")
                 date_time_obj = date1.split('-')
-              
+                
                 date_gr_from = EthiopianDateConverter.to_gregorian(int(date_time_obj[0]),int(date_time_obj[1]),int(date_time_obj[2]))
                 Edate1 = EthiopianDateConverter.to_ethiopian(date_gr_from.year,date_gr_from.month,date_gr_from.day)
 
                 vals['acquisition_date'] = date_gr_from
-              
+                
                 if type(Edate1) == date :
                     vals['ethiopian_to'] = Edate1
                     vals['is_pagum_to'] = False
@@ -126,19 +124,18 @@ class VehicleRegistration(models.Model):
                     pass
         except:
             pass
-
-
+        
         try:
-
-            if vals['ethiopian_from'] is not None:
+ 
+            if vals.get('ethiopian_from') is not None:
                 date1 = vals['ethiopian_from']
                 date_time_obj = date1.split('-')
-              
+                
                 date_gr_from = EthiopianDateConverter.to_gregorian(int(date_time_obj[0]),int(date_time_obj[1]),int(date_time_obj[2]))
                 Edate1 = EthiopianDateConverter.to_ethiopian(date_gr_from.year,date_gr_from.month,date_gr_from.day)
 
                 vals['released_date'] = date_gr_from
-              
+                
                 if type(Edate1) == date :
                     vals['ethiopian_from'] = Edate1
                     vals['is_pagum_to'] = False
@@ -153,8 +150,7 @@ class VehicleRegistration(models.Model):
             pass
 
         try:
-            
-            if vals['ethiopian_three'] is not None:
+            if vals('ethiopian_three') is not None:
                 date1 = vals['ethiopian_three']
                 date_time_obj = date1.split('-')
               
@@ -173,11 +169,13 @@ class VehicleRegistration(models.Model):
                     pick3.clear()
                 else:
                     pass
-
         except:
             pass
+
+
+
         try:
-            if vals['released_date'] is not None :
+            if vals.get('released_date') is not None :
                 date1 = vals['released_date']
                 
                 date_time_obj = date1.split('-')
@@ -186,40 +184,33 @@ class VehicleRegistration(models.Model):
                 
                 if type(Edate1) ==   date :
                     vals['ethiopian_from'] = Edate1
-                 
+                    
                 elif type(Edate1) ==   str :
                     vals['pagum_from'] = Edate1       
                     vals['is_pagum_from'] = False
-
-                else:
-                    pass
         except:
             pass
-
+        
+     
         try:
-            if vals['requested_date'] is not None :
-                date1 = vals['requested_date']
+            if vals.get('acquisition_date') is not None :
+                date1 = vals['acquisition_date']
                 
                 date_time_obj = date1.split('-')
 
                 Edate1 = EthiopianDateConverter.to_ethiopian(int(date_time_obj[0]),int(date_time_obj[1]),int(date_time_obj[2]))
                 
-                if type(Edate1) ==   date :
+                if type(Edate1) ==  date :
                     vals['ethiopian_to'] = Edate1
-                 
-                elif type(Edate1) ==   str :
+                    
+                elif type(Edate1) ==  str :
                     vals['pagum_to'] = Edate1       
                     vals['is_pagum_to'] = False
-
-                else:
-                    pass
         except:
             pass
-
-       
-    
+        
         try:
-            if vals['first_contract_date'] is not None :
+            if vals('ethiopian_three'):
                 date1 = vals['first_contract_date']
                 
                 date_time_obj = date1.split('-')
@@ -228,7 +219,7 @@ class VehicleRegistration(models.Model):
                 
                 if type(Edate1) ==   date :
                     vals['ethiopian_three'] = Edate1
-                 
+                    
                 elif type(Edate1) ==   str :
                     vals['pagum_three'] = Edate1
                     vals['is_pagum_three'] = False
@@ -283,6 +274,7 @@ class VehicleRegistration(models.Model):
         try:
             if vals['ethiopian_three'] is not None:
                 date_str = vals['ethiopian_three']
+                
                 date_time_obj = date_str.split('-')
                 date_gr = EthiopianDateConverter.to_gregorian(int(date_time_obj[0]),int(date_time_obj[1]),int(date_time_obj[2]))
                 Edate1 = EthiopianDateConverter.to_ethiopian(date_gr.year,date_gr.month,date_gr.day)
@@ -317,9 +309,10 @@ class VehicleRegistration(models.Model):
             pass
        
         try:
-            if vals['acquisition_date'] is not None:
-                
+            if  vals.get('acquisition_date') is not None:
+                    
                 date_str = vals['acquisition_date']
+                print(date_str,"date string split")
                 date_time_obj = date_str.split('-')
                 Edate = EthiopianDateConverter.to_ethiopian(int(date_time_obj[0]),int(date_time_obj[1]),int(date_time_obj[2]))
                 if type(Edate) ==   str:
@@ -332,7 +325,7 @@ class VehicleRegistration(models.Model):
                     vals['pagum_to'] = ' '
         except:
             pass
-
+        
         try:
             if vals['first_contract_date'] is not None:
                 
@@ -355,16 +348,20 @@ class VehicleRegistration(models.Model):
 
     @api.model
     def initial_date(self, data):
-        
+        _logger.info("################# Initial DATA %s", data)
 
         dd = data['url'].split('id=')
         id = str(dd[1]).split('&')
         m = data['url'].split('model=')
         mm = m[1].split('&')
+        print("this is initial date ****************************")
+        print("dd",dd)
+        print(id,"id")
+        print(mm,"mm")
         if len(id[0]) <= 0:
             date = datetime.now()
             date = EthiopianDateConverter.to_ethiopian(date.year,date.month,date.day)
-            return date
+            return {'from': date, 'to': date}
         else:
             
             models = mm[0]
@@ -398,18 +395,18 @@ class VehicleRegistration(models.Model):
                 today = EthiopianDateConverter.to_ethiopian(today.year,today.month,today.day)
                 to.append(today)
 
-            # For initial date to widget Three
+            # # For initial date to widget Three
 
-            if search.ethiopian_three != False and search.pagum_three == False:
-                three.append(search.ethiopian_three)
-            if search.ethiopian_three == False and search.pagum_three != False:
-                date_to_str = str(search.pagum_three).split('/')
-                date_to = date_to_str[2] +'-'+date_to_str[0]+'-'+date_to_str[1]
-                three.append(date_to)
-            if search.ethiopian_three == False and search.pagum_three == False:
-                today = datetime.now()
-                today = EthiopianDateConverter.to_ethiopian(today.year,today.month,today.day)
-                three.append(today)
+            # if search.ethiopian_three != False and search.pagum_three == False:
+            #     three.append(search.ethiopian_three)
+            # if search.ethiopian_three == False and search.pagum_three != False:
+            #     date_to_str = str(search.pagum_three).split('/')
+            #     date_to = date_to_str[2] +'-'+date_to_str[0]+'-'+date_to_str[1]
+            #     three.append(date_to)
+            # if search.ethiopian_three == False and search.pagum_three == False:
+            #     today = datetime.now()
+            #     today = EthiopianDateConverter.to_ethiopian(today.year,today.month,today.day)
+            #     three.append(today)
 
             # # For initial date to widget Four
 
@@ -424,23 +421,22 @@ class VehicleRegistration(models.Model):
             #     today = EthiopianDateConverter.to_ethiopian(today.year,today.month,today.day)
             #     four.append(today)
 
-
             try:
                 data = {
                     'from': From[0],
                     'to': to[0],
-                    'three': three[0],
+                    # 'three': three[0],
                 }
             except:
-                data = {
+                   data = {
                     'from': From,
                     'to': to,
                     'three': three,
-                }     
-
+                }
+            _logger.info("DDDDDDDDDDDDDDDDDDData %s",data)
            
             return data
-    
+        
 
     @api.model
     def date_convert_and_set(self, picked_date):

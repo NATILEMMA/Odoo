@@ -36,7 +36,7 @@ class AccountJournal(models.Model):
     check_sequence_id = fields.Many2one('ir.sequence', 'Check Sequence', readonly=True, copy=False,
         help="Checks numbering sequence.")
     check_next_number = fields.Char('Next Check Number', compute='_get_check_next_number', inverse='_set_check_next_number',
-        help="Sequence number of the next printed check.")
+        help="Sequence number of the next printed check.", translate=True)
     check_printing_payment_method_selected = fields.Boolean(compute='_compute_check_printing_payment_method_selected',
         help="Technical feature used to know whether check printing was enabled as payment method.")
 

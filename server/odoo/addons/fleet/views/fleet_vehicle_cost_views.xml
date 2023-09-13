@@ -526,7 +526,7 @@
         </field>
     </record>
 
-    <menuitem action="fleet_vehicle_log_fuel_action" parent="fleet_vehicles" id="fleet_vehicle_log_fuel_menu" groups="fleet_group_user"/>
+    <menuitem action="fleet_vehicle_log_fuel_action" parent="fleet_vehicles" id="fleet_vehicle_log_fuel_menu" groups="fleet_group_manager"/>
 
     <record id='fleet_vehicle_log_services_view_form' model='ir.ui.view'>
         <field name="name">fleet.vehicle.log.services.form</field>
@@ -657,6 +657,6 @@
         </field>
     </record>
 
-    <menuitem action="fleet_vehicle_log_services_action" parent="fleet_vehicles" id="fleet_vehicle_log_services_menu" groups="fleet_group_user"/>
+    <menuitem action="fleet_vehicle_log_services_action" parent="fleet_vehicles" id="fleet_vehicle_log_services_menu" groups="fleet_group_manager"/>
 
 </odoo>

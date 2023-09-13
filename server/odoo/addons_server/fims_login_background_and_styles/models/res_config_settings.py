@@ -8,7 +8,7 @@ class ResConfigSettings(models.TransientModel):
     style = fields.Selection([('default', 'Default'), ('left', 'Left'), ('right', 'Right'), ('middle', 'Middle')], help='Select Background Theme')
     background = fields.Selection([('image', 'Image'), ('color', 'Color')], default='color', help='Select Background Theme')
     background_image = fields.Many2one('login.image', string="Day Image", help='Select Background Image For Login Page')
-    color = fields.Char(string="Color", help="Choose your Background color")
+    color = fields.Char(string="Color", help="Choose your Background color", translate=True)
 
     @api.onchange('background')
     def onchange_background(self):

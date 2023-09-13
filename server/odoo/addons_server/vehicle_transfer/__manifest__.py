@@ -4,7 +4,7 @@
        'category': "Generic Modules/Human Resources",
     'depends': ['base', 'hr', 'fleet','hr_fleet', 'fleet_operations'],
     'data': [
-        'data/data.xml',
+        # 'data/data.xml',
         'security/security.xml',
         'security/ir.model.access.csv',
         'views/employee_fleet_view.xml',

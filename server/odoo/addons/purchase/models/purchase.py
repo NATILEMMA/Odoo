@@ -84,7 +84,7 @@ class PurchaseOrder(models.Model):
         'cancel': [('readonly', True)],
     }
 
-    name = fields.Char('Order Reference', required=True, index=True, copy=False, default='New')
+    name = fields.Char('Order Reference', required=True, index=True, copy=False, default='New', translate=True)
     origin = fields.Char('Source Document', copy=False,
         help="Reference of the document that generated this purchase order "
              "request (e.g. a sales order)")
@@ -92,7 +92,7 @@ class PurchaseOrder(models.Model):
         help="Reference of the sales order or bid sent by the vendor. "
              "It's used to do the matching when you receive the "
              "products as this reference is usually written on the "
-             "delivery order sent by your vendor.")
+             "delivery order sent by your vendor.", translate=True)
     date_order = fields.Datetime('Order Date', required=True, states=READONLY_STATES, index=True, copy=False, default=fields.Datetime.now,\
         help="Depicts the date where the Quotation should be validated and converted into a purchase order.")
     date_approve = fields.Datetime('Confirmation Date', readonly=1, index=True, copy=False)
@@ -111,7 +111,7 @@ class PurchaseOrder(models.Model):
         ('cancel', 'Cancelled')
     ], string='Status', readonly=True, index=True, copy=False, default='draft', tracking=True)
     order_line = fields.One2many('purchase.order.line', 'order_id', string='Order Lines', states={'cancel': [('readonly', True)], 'done': [('readonly', True)]}, copy=True)
-    notes = fields.Text('Terms and Conditions')
+    notes = fields.Text('Terms and Conditions', translate=True)
 
     invoice_count = fields.Integer(compute="_compute_invoice", string='Bill Count', copy=False, default=0, store=True)
     invoice_ids = fields.Many2many('account.move', compute="_compute_invoice", string='Bills', copy=False, store=True)
@@ -469,7 +469,7 @@ class PurchaseOrderLine(models.Model):
     _description = 'Purchase Order Line'
     _order = 'order_id, sequence, id'
 
-    name = fields.Text(string='Description', required=True)
+    name = fields.Text(string='Description', required=True, translate=True)
     sequence = fields.Integer(string='Sequence', default=10)
     product_qty = fields.Float(string='Quantity', digits='Product Unit of Measure', required=True)
     product_uom_qty = fields.Float(string='Total Quantity', compute='_compute_product_uom_qty', store=True)

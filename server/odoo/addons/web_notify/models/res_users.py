@@ -55,6 +55,7 @@ class ResUsers(models.Model):
     def _notify_channel(
         self, type_message=DEFAULT, message=DEFAULT_MESSAGE, title=None, sticky=False
     ):
+       
         channel_name_field = "notify_{}_channel_name".format(type_message)
         bus_message = {
             "type": type_message,

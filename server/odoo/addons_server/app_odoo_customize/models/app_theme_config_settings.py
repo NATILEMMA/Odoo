@@ -12,7 +12,7 @@ class AppThemeConfigSettings(models.TransientModel):
     _name = 'app.theme.config.settings'
 
     _description = u"App Odoo Customize settings"
-    app_system_name = fields.Char('System Name', help=u"Setup System Name,which replace Odoo")
+    app_system_name = fields.Char('System Name', help=u"Setup System Name,which replace Odoo", translate=True)
     app_show_lang = fields.Boolean('Show Quick Language Switcher',
                                    help=u"When enable,User can quick switch language in user menu")
     app_show_debug = fields.Boolean('Show Quick Debug', help=u"When enable,everyone login can see the debug menu")
@@ -26,11 +26,11 @@ class AppThemeConfigSettings(models.TransientModel):
     app_show_poweredby = fields.Boolean('Show Powered by Odoo', help=u"Uncheck to hide the Powered by text")
     app_stop_subscribe = fields.Boolean('Stop Odoo Subscribe(Performance Improve)', help=u"Check to stop Odoo Subscribe function")
 
-    app_documentation_url = fields.Char('Documentation Url')
-    app_documentation_dev_url = fields.Char('Developer Documentation Url')
-    app_support_url = fields.Char('Support Url')
-    app_account_title = fields.Char('My Odoo.com Account Title')
-    app_account_url = fields.Char('My Odoo.com Account Url')
+    app_documentation_url = fields.Char('Documentation Url', translate=True)
+    app_documentation_dev_url = fields.Char('Developer Documentation Url', translate=True)
+    app_support_url = fields.Char('Support Url', translate=True)
+    app_account_title = fields.Char('My Odoo.com Account Title', translate=True)
+    app_account_url = fields.Char('My Odoo.com Account Url', translate=True)
 
     company_id = fields.Many2one(
         'res.company', 'Company',

@@ -60,7 +60,7 @@ class AutoVacuumRules(models.Model):
     
     name = fields.Char(
         string='Name',
-        required=True)
+        required=True,translate=True)
     
     active = fields.Boolean(
         string='Active',
@@ -92,7 +92,7 @@ class AutoVacuumRules(models.Model):
         related='model.model',
         string="Model Name",
         readonly=True,
-        store=True)
+        store=True,translate=True)
     
     time_field = fields.Many2one(
         comodel_name='ir.model.fields',
@@ -164,7 +164,7 @@ class AutoVacuumRules(models.Model):
         help="Delete records with am index greater than x.")
     
     size_order = fields.Char(
-        string='Size Order',
+        string='Size Order',translate=True,
         default='create_date desc',
         states={
             'time': [('invisible', True)], 
@@ -184,7 +184,7 @@ class AutoVacuumRules(models.Model):
         help="Delete records with am index greater than x.")
     
     domain = fields.Char(
-        string='Domain',
+        string='Domain',translate=True,
         states={
             'time': [('invisible', True)], 
             'size': [('invisible', True)], 
@@ -193,7 +193,7 @@ class AutoVacuumRules(models.Model):
         help="Delete all records which match the domain.")
     
     code = fields.Text(
-        string='Code',
+        string='Code',translate=True,
         states={
             'time': [('invisible', True)], 
             'size': [('invisible', True)], 

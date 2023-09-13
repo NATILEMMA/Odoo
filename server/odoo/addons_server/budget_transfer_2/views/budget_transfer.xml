@@ -38,19 +38,19 @@
           <field name ="budget_line_code" invisible="context.get('is_budget_transfer_journal', True)"  attrs="{'invisible': [('is_budget_transfer_journal', '=', True)]}"/> 
       </xpath>  -->
         <xpath expr = "//field[@name='ref']" position = "after" > 
-          <field name="is_budget_transfer_journal"/>
+          <field name="is_budget_transfer_journal" invisible="1"/>
         </xpath> 
         <xpath expr = "//field[@name ='line_ids']/tree/field[@name='credit']" position = "replace" > 
-          <field name="credit" attrs="{'column_invisible': [('parent.is_budget_transfer_journal', '!=', False)]}" />
+          <field name="credit" sum="Balance"  attrs="{'column_invisible': [('parent.is_budget_transfer_journal', '!=', False)]}" />
        </xpath> 
       <xpath expr = "//field[@name ='line_ids']/tree/field[@name='debit']" position = "replace" > 
-        <field name="debit" attrs="{'column_invisible': [('parent.is_budget_transfer_journal', '!=', False)]}" />
+        <field name="debit" sum="Balance"  attrs="{'column_invisible': [('parent.is_budget_transfer_journal', '!=', False)]}" />
       </xpath>
       <xpath expr = "//field[@name ='line_ids']/tree/field[@name='analytic_account_id']" position = "after" > 
         <field name ="budget_line_code" string="Budget Line" attrs="{'column_invisible': [('parent.is_budget_transfer_journal', '=', False)]}"/> 
       </xpath>  
         <xpath expr = "//field[@name ='line_ids']/tree/field[@name='credit']" position = "after" > 
-          <field name="amount" string="Balance"   attrs="{'column_invisible': [('parent.is_budget_transfer_journal', '=', False)]}"/>
+          <field name="amount" string="Balance"  attrs="{'column_invisible': [('parent.is_budget_transfer_journal', '=', False)]}"/>
       </xpath>  
       </field>
     </record>
@@ -75,14 +75,17 @@
         <field name="model">budget.transfer</field>
         <field name="arch" type="xml">
         <form string="Budget Transfer">
-          <div style="background:#f2f2f2; width:100%;height:950px;">
+          <div style="background:#f2f2f2; width:100%;height:650px;">
+          <sheet>
+
             <header>
                 <button name="action_request"  class="oe_highlight"       groups="budget.group_requester"
                 type="object" states="draft" string="Request"/>
                 <button name="action_reset" states="canceled" string="Reset" class="btn btn-primary" groups="budget.group_financial_approval" type="object" confirm="Are you sure you want to do this?"/>
                 <button name="action_transfer_cancel" states="request" string="Cancel" class="btn btn-danger" groups="budget.group_financial_approval" type="object" confirm="Are you sure you want to do this?"/>
                  <button name="action_approve" states="requested" string="Approved" class="oe_highlight" groups="budget.group_financial_approval" type="object" />
-                 <button name="action_reject" states="requested" string="Reject Request" class="btn btn-danger" groups="budget.group_financial_approval" type="object"/>
+                 <!-- <button name="action_reject" states="requested" string="Reject Request" class="btn btn-danger" groups="budget.group_financial_approval" type="object"/> -->
+                 <button name="%(budget_transfer_2.budget_transfer_refuse_wizard_action)d" states="requested"  class="btn btn-danger" string="Reject Request" type="action" groups="budget.group_financial_approval,budget.group_departmental_approval" />
 
                  <field name="state" widget="statusbar"/>
               </header>
@@ -157,8 +160,8 @@
                     </h1>
                 </div>
               <group class="col-6">
-                    <!-- <field name="date" attrs="{'readonly': [('state', 'in', ['requested','approved'])]}"/> -->
-                     <field  name="date"   groups="EthiopianCalendar.group_gregory"/>
+                    <field name="date" attrs="{'readonly': [('state', 'in', ['requested','approved'])]}"/>
+                     <!-- <field  name="date"   groups="EthiopianCalendar.group_gregory"/>
                         <field  name="ethiopian_from" class="oe_read_only" string="Date From" style=" float:left" attrs="{'invisible': ['|', ('is_pagum_from', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
                         <field  name="pagum_from" class="oe_read_only"  string="Date From" style=" float:left"  attrs="{'invisible': ['|',('is_pagum_from', '!=',False)  ]}"  groups="EthiopianCalendar.group_ethio_datepicker"/>
                         <field name="is_pagum_from" invisible="1"/>
@@ -166,7 +169,7 @@
                          </div>
                         <div style="margin-bottom:40px;margin-top:-22px; width: 50%;margin-left:10px;margin-right:0px">
                         <widget name="ethiopian_calander_widget"  style=" float:left;width:226px;" class="oe_edit_only"  groups="EthiopianCalendar.group_ethio_datepicker"/>
-                        </div>
+                        </div> -->
                         
                     <field name="move_id" readonly="1"/>
 
@@ -238,8 +241,15 @@
             </notebook> 
             </div>
             </div>
+          </sheet>
           </div>
-           <!-- </sheet> -->
+          
+          <div class="oe_chatter">
+            <field name="message_follower_ids" widget="mail_followers"/>
+            <field name="activity_ids" widget="mail_activity"/>
+            <field name="message_ids" widget="mail_thread"/>
+        </div>
+        
         </form>
          </field>
         

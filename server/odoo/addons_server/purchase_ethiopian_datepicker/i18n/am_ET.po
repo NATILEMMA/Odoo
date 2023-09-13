@@ -1,0 +1,141 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* purchase_ethiopian_datepicker
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20221005\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-09 08:02+0000\n"
+"PO-Revision-Date: 2023-08-09 08:02+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: purchase_ethiopian_datepicker
+#: model:ir.model.fields,field_description:purchase_ethiopian_datepicker.field_sprogroup_purchase_request__date
+#: model_terms:ir.ui.view,arch_db:purchase_ethiopian_datepicker.purchase_order_form_inherited
+#: model_terms:ir.ui.view,arch_db:purchase_ethiopian_datepicker.purchase_order_tree_inherited_13
+#: model_terms:ir.ui.view,arch_db:purchase_ethiopian_datepicker.purchase_requisition_form_inherited
+#: model_terms:ir.ui.view,arch_db:purchase_ethiopian_datepicker.sprogroup_purchase_request_datepicker
+msgid "Date"
+msgstr "ቀን"
+
+#. module: purchase_ethiopian_datepicker
+#: model_terms:ir.ui.view,arch_db:purchase_ethiopian_datepicker.purchase_order_form_inherited
+msgid "Expiery date"
+msgstr "የመጠቀሚያ ግዜ"
+
+#. module: purchase_ethiopian_datepicker
+#: model:ir.model.fields,field_description:purchase_ethiopian_datepicker.field_purchase_order__is_pagum_from
+#: model:ir.model.fields,field_description:purchase_ethiopian_datepicker.field_purchase_requisition__is_pagum_from
+#: model:ir.model.fields,field_description:purchase_ethiopian_datepicker.field_sprogroup_purchase_request__is_pagum_from
+msgid "Is Pagum From"
+msgstr "ከመንደር"
+
+#. module: purchase_ethiopian_datepicker
+#: model_terms:ir.ui.view,arch_db:purchase_ethiopian_datepicker.purchase_order_form_inherited
+msgid "Issue date"
+msgstr "የተለቀቀበት ቀን"
+
+#. module: purchase_ethiopian_datepicker
+#: model_terms:ir.ui.view,arch_db:purchase_ethiopian_datepicker.purchase_order_form_inherited
+msgid "Order Date"
+msgstr "የታዘዘበት ቀን"
+
+#. module: purchase_ethiopian_datepicker
+#: model:ir.model,name:purchase_ethiopian_datepicker.model_purchase_approval_limit
+msgid "Purchase Aproval Limit"
+msgstr "የግዢ ማረጋገጫ ገደብ"
+
+#. module: purchase_ethiopian_datepicker
+#: model:ir.model,name:purchase_ethiopian_datepicker.model_purchase_order
+msgid "Purchase Order"
+msgstr "ትእዛዝዎን ይግዙ"
+
+#. module: purchase_ethiopian_datepicker
+#: model:ir.model,name:purchase_ethiopian_datepicker.model_purchase_order_line
+msgid "Purchase Order Line"
+msgstr "የግዢ ትዕዛዝ መስመር"
+
+#. module: purchase_ethiopian_datepicker
+#: model:ir.model,name:purchase_ethiopian_datepicker.model_purchase_requisition_line
+msgid "Purchase Requisition Line"
+msgstr "የግዢ መስፈርት መስመር"
+
+#. module: purchase_ethiopian_datepicker
+#: model:ir.model,name:purchase_ethiopian_datepicker.model_sprogroup_purchase_request
+msgid "Sprogroup Purchase Request"
+msgstr "የስፕሮግሩፕ ግዢ ጥያቄ"
+
+#. module: purchase_ethiopian_datepicker
+#: model:ir.model,name:purchase_ethiopian_datepicker.model_sprogroup_purchase_request_line
+msgid "Sprogroup Purchase Request Line"
+msgstr "የስፕሮግሩፕ ግዢ ጥያቄ መስመር"
+
+#. module: purchase_ethiopian_datepicker
+#: model:ir.model,name:purchase_ethiopian_datepicker.model_tender_limit
+msgid "Tender Limit"
+msgstr "የጨረታ ገደብ"
+
+#. module: purchase_ethiopian_datepicker
+#: model_terms:ir.ui.view,arch_db:purchase_ethiopian_datepicker.purchase_requisition_form_inherited
+msgid "Tender end date"
+msgstr "የጨረታ ማብቂያ ቀን"
+
+#. module: purchase_ethiopian_datepicker
+#: model_terms:ir.ui.view,arch_db:purchase_ethiopian_datepicker.purchase_requisition_form_inherited
+msgid "Tender start"
+msgstr "የጨረታ ጅምር"
+
+#. module: purchase_ethiopian_datepicker
+#: model:ir.model.fields,field_description:purchase_ethiopian_datepicker.field_purchase_order__ethiopian_from
+#: model:ir.model.fields,field_description:purchase_ethiopian_datepicker.field_purchase_order__ethiopian_to
+#: model:ir.model.fields,field_description:purchase_ethiopian_datepicker.field_purchase_order__is_pagum_to
+#: model:ir.model.fields,field_description:purchase_ethiopian_datepicker.field_purchase_order__pagum_from
+#: model:ir.model.fields,field_description:purchase_ethiopian_datepicker.field_purchase_order__pagum_to
+#: model:ir.model.fields,field_description:purchase_ethiopian_datepicker.field_purchase_requisition__ethiopian_from
+#: model:ir.model.fields,field_description:purchase_ethiopian_datepicker.field_purchase_requisition__ethiopian_to
+#: model:ir.model.fields,field_description:purchase_ethiopian_datepicker.field_purchase_requisition__is_pagum_to
+#: model:ir.model.fields,field_description:purchase_ethiopian_datepicker.field_purchase_requisition__pagum_from
+#: model:ir.model.fields,field_description:purchase_ethiopian_datepicker.field_purchase_requisition__pagum_to
+#: model:ir.model.fields,field_description:purchase_ethiopian_datepicker.field_sprogroup_purchase_request__ethiopian_from
+#: model:ir.model.fields,field_description:purchase_ethiopian_datepicker.field_sprogroup_purchase_request__pagum_from
+msgid "in ethiopian date"
+msgstr "በኢትዮጵያ ቀን"
+
+#. module: purchase_ethiopian_datepicker
+#: code:addons/purchase_ethiopian_datepicker/models/purchase_requistion.py:0
+#, python-format
+msgid "please select start date and end date for the tender"
+msgstr "እባክዎን ለጨረታው የመጀመሪያ ቀን እና የመጨረሻ ቀን ይምረጡ"
+
+#. module: purchase_ethiopian_datepicker
+#: model:ir.model,name:purchase_ethiopian_datepicker.model_product_document
+msgid "product Documents"
+msgstr "የምርት ሰነዶች"
+
+#. module: purchase_ethiopian_datepicker
+#: model:ir.model,name:purchase_ethiopian_datepicker.model_purchase_requisition
+msgid "purchase requisition Documents"
+msgstr "የግዢ አስፈላጊ ሰነዶች"
+
+#. module: purchase_ethiopian_datepicker
+#: code:addons/purchase_ethiopian_datepicker/models/purchase_requistion.py:0
+#, python-format
+msgid "start date must be less than end date"
+msgstr "የመጀመሪያ ቀን ከማብቂያ ቀን ያነሰ መሆን አለበት።"
+
+#. module: purchase_ethiopian_datepicker
+#: model:ir.model,name:purchase_ethiopian_datepicker.model_vendor_document
+msgid "vendor Documents"
+msgstr "የአቅራቢ ሰነዶች"
+
+#. module: purchase_ethiopian_datepicker
+#: code:addons/purchase_ethiopian_datepicker/models/purchase_requistion.py:0
+#, python-format
+msgid "you stat date should be less than end date"
+msgstr "የእርስዎ ስታቲስቲክስ ቀን ከማብቂያ ቀን ያነሰ መሆን አለበት።"

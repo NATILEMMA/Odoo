@@ -75,7 +75,7 @@
                                 <field name="warning" invisible="True"/>
                             </group>
                             <group>
-                                <field name="complaint_id" string="Complaint"/>
+                                <field name="complaint_id" string="Complaint" options="{'no_open': True}"/>
                             </group>
                         </group>
 

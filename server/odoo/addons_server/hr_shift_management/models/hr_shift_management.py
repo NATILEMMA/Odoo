@@ -8,7 +8,7 @@ class HrEmployeeShifts(models.Model):
     _name="hr.employee.shift"
     _description="This class will create shifts for each employees"
 
-    name = fields.Char(required=True)
+    name = fields.Char(required=True, translate=True)
     employee_id = fields.Many2one('hr.employee', string="Employee", readonly=True)
     resource_calendar_id = fields.Many2one('resource.calendar', string="Working Schedule", readonly=True)
     start_date = fields.Date(string="Shift Start Date", readonly=True)
@@ -27,7 +27,7 @@ class HrShiftManagement(models.Model):
     _description="This class will handle the shift managements"
 
 
-    name = fields.Char(string='Reference', required=True, copy=False, readonly=True, default='New')
+    name = fields.Char(string='Reference', required=True, copy=False, readonly=True, default='New',translate=True)
     start_date = fields.Date()
     resource_calendar_id = fields.Many2one('resource.calendar', string='Working Schedule', store=True, required=True)
 

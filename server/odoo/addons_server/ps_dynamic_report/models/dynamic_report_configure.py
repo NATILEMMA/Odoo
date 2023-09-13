@@ -12,7 +12,7 @@ class DynamicReportConfigure(models.Model):
     _name = 'dynamic.report.configure'
     _rec_name = 'name'
 
-    name = fields.Char('Name')
+    name = fields.Char('Name',translate=True)
     model_id = fields.Many2one('ir.model', 'Model', domain="[('transient', '=', False)]")
     dynamic_field_id = fields.One2many('dynamic.report.field', 'dynamic_configure_id', 'Dynamic Field')
     is_action_created = fields.Boolean('Is Created?', default=False)
@@ -154,7 +154,7 @@ class DynamicReportField(models.Model):
 
     field_id = fields.Many2one('ir.model.fields', 'Field')
     sequence = fields.Integer('..', help="Gives the sequence order when displaying a list O2m.")
-    field_name_id = fields.Char(related='field_id.name', string='Target Model Name', readonly=True)
+    field_name_id = fields.Char(related='field_id.name', string='Target Model Name', readonly=True,translate=True)
     field_type = fields.Selection(related='field_id.ttype', string='Field Type')
     dynamic_configure_id = fields.Many2one('dynamic.report.configure', 'Reference')
     is_sum_calc = fields.Boolean("Sum")

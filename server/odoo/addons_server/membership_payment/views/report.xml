@@ -18,12 +18,25 @@
         <field name="view_mode">graph</field>
     </record>
 
-    <menuitem name="Wereda payment report" id="membership_all_module_report" parent="members_custom.membership_payment_all_module_report"
-               action="membership_sub_payment_report_action" groups="members_custom.member_group_manager"/>
-    <menuitem name="Subcity payment report" id="subcity_membership_all_module_report" parent="members_custom.membership_payment_all_module_report"
-               action="membership_subcity_payment_report_action" groups="members_custom.member_group_admin"/>
-    <menuitem name="City payment report" id="city_membership_all_module_report" parent="members_custom.membership_payment_all_module_report"
-               action="report_membership_main_city_payment_action" groups="members_custom.member_group_city_admin"/>
+    <menuitem name="Wereda payment report"
+	      id="woreda_membership_all_module_report"
+	      parent="members_features.membership_payment_all_module_report"
+	      sequence="4"
+	      action="membership_sub_payment_report_action"
+	      groups="member_minor_configuration.member_group_manager"/>
 
+    <menuitem name="Subcity payment report"
+	      id="subcity_membership_all_module_report"
+	      parent="members_features.membership_payment_all_module_report"
+	      sequence="5"
+	      action="membership_subcity_payment_report_action"
+	      groups="member_minor_configuration.member_group_admin"/>
+
+    <menuitem name="City payment report"
+	      id="city_membership_all_module_report"
+	      parent="members_features.membership_payment_all_module_report"
+	      sequence="6"
+	      action="report_membership_main_city_payment_action"
+	      groups="member_minor_configuration.member_group_city_admin"/>
 
 </odoo>

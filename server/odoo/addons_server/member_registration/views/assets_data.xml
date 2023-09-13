@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Author => Albertus Restiyanto Pramayudha
+     email  => xabre0010@gmail.com
+     linkedin => https://www.linkedin.com/in/albertus-restiyanto-pramayudha-470261a8/
+     youtube => https://www.youtube.com/channel/UCCtgLDIfqehJ1R8cohMeTXA
+-->
+<odoo>
+
+<template id="hide_button_members_js_assets" inherit_id="web.assets_backend" name="Hide Button in Members JS Assets">
+    <xpath expr="." position="inside">
+        <script type="text/javascript" src="/member_registration/static/js/hide_button_member_kanban.js"></script>
+        <script type="text/javascript" src="/member_registration/static/js/hide_button_member_list_view.js"></script>
+    </xpath>
+</template>
+</odoo>

@@ -49,6 +49,7 @@ class EmployeeGratuity(models.Model):
         return gratuity_pay_per_year
 
 
+
     state = fields.Selection([
         ('draft', 'Draft'),
         ('submit', 'Submitted'),
@@ -60,7 +61,7 @@ class EmployeeGratuity(models.Model):
                        readonly=True,
                        default=lambda self: _('New'))
     employee_id = fields.Many2one('hr.employee', string='Employee',
-                                  required=True, help="Employee")
+                                  required=True, help="Employee", domain="[('contract_id.state', '=', 'close'), ('contract_id', '!=', False)]")
     employee_contract_type = fields.Selection([
         ('limited', 'Limited'),
         ('unlimited', 'Unlimited')], string='Contract Type', readonly=True,
@@ -152,9 +153,9 @@ class EmployeeGratuity(models.Model):
             if not self.employee_joining_date or not joining_date:
                 raise UserError(_("Please add a Joined Date(End of trial Period) on the contract."))
             hr_contract_id = self.env['hr.contract'].search(
-                [('employee_id', '=', self.employee_id.id), ('state', '=', 'open')])
+                [('employee_id', '=', self.employee_id.id), ('state', '=', 'close')])
             if len(hr_contract_id) > 1 or not hr_contract_id:
-                raise Warning(_('Selected employee have multiple or no running contracts!'))
+                raise Warning(_('Selected employee have multiple or no Closed contracts!'))
 
             self.wage_type = hr_contract_id.wage_type
             if self.wage_type == 'hourly':

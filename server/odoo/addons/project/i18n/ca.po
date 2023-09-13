@@ -25,7 +25,7 @@
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 13.0\n"
+"Planning-Id-Version: Odoo Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-27 09:21+0000\n"
 "PO-Revision-Date: 2019-08-26 09:13+0000\n"
@@ -1834,7 +1834,7 @@ msgstr "Ordres noves"
 #: code:addons/project/static/src/js/project_task_kanban_examples.js:0
 #, python-format
 msgid "New Projects"
-msgstr "Projectes nous"
+msgstr "Planninges nous"
 
 #. module: project
 #: model_terms:digest.tip,tip_description:project.digest_tip_project_0
@@ -2180,12 +2180,12 @@ msgstr "Prioritat"
 #: model_terms:ir.ui.view,arch_db:project.view_task_project_user_search
 #: model_terms:ir.ui.view,arch_db:project.view_task_search_form
 #, python-format
-msgid "Project"
-msgstr "Projecte"
+msgid "Planning"
+msgstr "Planninge"
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_account_analytic_account__project_count
-msgid "Project Count"
+msgid "Planning Count"
 msgstr "Comte de projecte"
 
 #. module: project
@@ -2196,7 +2196,7 @@ msgstr "Comte de projecte"
 #: model_terms:ir.ui.view,arch_db:project.project_view_kanban
 #: model_terms:ir.ui.view,arch_db:project.view_project
 #: model_terms:ir.ui.view,arch_db:project.view_project_project_filter
-msgid "Project Manager"
+msgid "Planning Manager"
 msgstr "Responsable de projecte"
 
 #. module: project
@@ -2204,50 +2204,50 @@ msgstr "Responsable de projecte"
 #: model_terms:ir.ui.view,arch_db:project.project_project_view_form_simplified
 #: model_terms:ir.ui.view,arch_db:project.project_view_kanban
 #: model_terms:ir.ui.view,arch_db:project.view_project
-msgid "Project Name"
+msgid "Planning Name"
 msgstr "Nom del projecte"
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.rating_index
-msgid "Project Satisfaction"
+msgid "Planning Satisfaction"
 msgstr ""
 
 #. module: project
 #: model:ir.model,name:project.model_project_tags
-msgid "Project Tags"
+msgid "Planning Tags"
 msgstr "Etiquetes del projecte"
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.project_task_view_activity
 #: model_terms:ir.ui.view,arch_db:project.view_project_task_graph
 #: model_terms:ir.ui.view,arch_db:project.view_project_task_pivot
-msgid "Project Tasks"
+msgid "Planning Tasks"
 msgstr "Tasques de projecte"
 
 #. module: project
 #: model:ir.model.fields,help:project.field_project_project__subtask_project_id
 #: model:ir.model.fields,help:project.field_project_task__subtask_project_id
 msgid ""
-"Project in which sub-tasks of the current project will be created. It can be"
+"Planning in which sub-tasks of the current project will be created. It can be"
 " the current project itself."
 msgstr ""
 
 #. module: project
 #: model:ir.actions.act_window,name:project.dblc_proj
-msgid "Project's tasks"
+msgid "Planning's tasks"
 msgstr "Tasques de projecte"
 
 #. module: project
 #: model:ir.actions.server,name:project.ir_actions_server_project_sample
-msgid "Project: Activate Sample Project"
-msgstr "Projecte: Activar projecte d'exemple"
+msgid "Planning: Activate Sample Project"
+msgstr "Planninge: Activar projecte d'exemple"
 
 #. module: project
 #: model:ir.actions.server,name:project.ir_cron_rating_project_ir_actions_server
 #: model:ir.cron,cron_name:project.ir_cron_rating_project
 #: model:ir.cron,name:project.ir_cron_rating_project
-msgid "Project: Send rating"
-msgstr "Projecte: Enviar qualificació"
+msgid "Planning: Send rating"
+msgstr "Planninge: Enviar qualificació"
 
 #. module: project
 #: model:ir.actions.act_window,name:project.open_view_project_all
@@ -2262,13 +2262,13 @@ msgstr "Projecte: Enviar qualificació"
 #: model_terms:ir.ui.view,arch_db:project.portal_my_projects
 #: model_terms:ir.ui.view,arch_db:project.rating_index
 #: model_terms:ir.ui.view,arch_db:project.view_project
-msgid "Projects"
-msgstr "Projectes"
+msgid "Plannings"
+msgstr "Planninges"
 
 #. module: project
 #: model:mail.channel,name:project.mail_channel_project_task
-msgid "Projects & Tasks"
-msgstr "Projectes & tasques"
+msgid "Plannings & Tasks"
+msgstr "Planninges & tasques"
 
 #. module: project
 #: model:ir.model.fields.selection,name:project.selection__project_project__rating_status_period__quarterly
@@ -2457,7 +2457,7 @@ msgstr "Recerca"
 #: code:addons/project/static/src/js/project_task_kanban_examples.js:0
 #, python-format
 msgid "Research Project"
-msgstr "Projecte de recerca"
+msgstr "Planninge de recerca"
 
 #. module: project
 #. openerp-web

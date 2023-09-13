@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record id="hr_employee_shift_tree_inherit_view" model="ir.ui.view">
+        <field name="name">Employee Shift</field>
+        <field name="model">hr.employee.shift</field>
+        <field name="inherit_id" ref="hr_shift_management.hr_employee_shift_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='start_date']" position="replace">
+                <field  name="start_date" groups="EthiopianCalendar.group_gregory"/>
+                <field name="is_pagum_from" invisible="1"/>
+                <field  name="ethiopian_from" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                <field  name="pagum_from" groups="EthiopianCalendar.group_ethio_datepicker" optional="hidden"/>
+            </xpath>
+            <xpath expr="//field[@name='end_date']" position="replace">
+                <field name="is_pagum_to" invisible="1"/>
+                <field  name="end_date" groups="EthiopianCalendar.group_gregory"/>
+                <field  name="ethiopian_to" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                <field  name="pagum_to" groups="EthiopianCalendar.group_ethio_datepicker" optional="hidden"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="hr_shift_management_tree_inherit_view" model="ir.ui.view">
+        <field name="name">Shift Management Tree</field>
+        <field name="model">hr.shift.management</field>
+        <field name="inherit_id" ref="hr_shift_management.hr_shift_management_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='end_date']" position="replace">
+                <field name="is_pagum_to" invisible="1"/>
+                <field  name="end_date" groups="EthiopianCalendar.group_gregory"/>
+                <field  name="ethiopian_to" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                <field  name="pagum_to" groups="EthiopianCalendar.group_ethio_datepicker" optional="hidden"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="hr_shift_management_form_inherit_view" model="ir.ui.view">
+        <field name="name">Shift Management Form</field>
+        <field name="model">hr.shift.management</field>
+        <field name="inherit_id" ref="hr_shift_management.hr_shift_management_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='start_date']" position="replace">
+                <field name="is_pagum_from" invisible="1" force_save="1"/>
+                <field  name="start_date"  class="col-50" colspan="3" groups="EthiopianCalendar.group_gregory" force_save="1" attrs="{'readonly': [('state', '=', 'closed')]}"/>
+                <field  name="ethiopian_from" class="oe_read_only" id="ethiopianCalendar_1" style="float:left" attrs="{'invisible': ['|', ('is_pagum_to', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker" force_save="1"/>
+                <field  name="pagum_from" class="oe_read_only" style="float:left"  attrs="{'invisible': ['|',('is_pagum_to', '!=',False)  ]}"  groups="EthiopianCalendar.group_ethio_datepicker" force_save="1"/>
+                <div>
+                </div>
+                <div style="margin-bottom:40px;margin-top:-15px;margin-left:10px;margin-right:0px">
+                <widget name="ethiopian_calander_widget"  style=" float:left;width:226px;" class="oe_edit_only" groups="EthiopianCalendar.group_ethio_datepicker" attrs="{'invisible': [('state', '=', 'closed')]}"/>
+                </div>
+            </xpath>
+            <xpath expr="//field[@name='end_date']" position="replace">
+                <field name="is_pagum_to" invisible="1" force_save="1"/>
+                <field  name="end_date"  class="col-50" colspan="3" groups="EthiopianCalendar.group_gregory" force_save="1" attrs="{'invisible': [('state', '=', 'open')], 'readonly': [('state', '=', 'closed')]}"/>
+                <field  name="ethiopian_to" class="oe_read_only" attrs="{'invisible': ['|',('is_pagum_to', '=',False),  ('state', '=', 'open')], 'readonly': [('state', '=', 'closed')]}" id="ethiopianCalendar_1" style="float:left" groups="EthiopianCalendar.group_ethio_datepicker" force_save="1"/>
+                <field  name="pagum_to" class="oe_read_only" attrs="{'invisible': ['|',('is_pagum_to', '!=',False), ('state', '=', 'open')], 'readonly': [('state', '=', 'closed')]}" style="float:left" groups="EthiopianCalendar.group_ethio_datepicker" force_save="1"/>
+                <div>
+                </div>
+                <div style="margin-bottom:40px;margin-top:-15px;margin-left:10px;margin-right:0px">
+                <widget name="ethiopian_calander_widget_two"  style=" float:left;width:226px;" class="oe_edit_only" groups="EthiopianCalendar.group_ethio_datepicker" attrs="{'invisible': ['|', ('state', '=', 'open'), ('state', '=', 'closed')]}"/>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

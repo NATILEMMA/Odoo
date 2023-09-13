@@ -74,39 +74,46 @@
       <form duplicate="false">
         <field name="saved" invisible="1"/>
         <header>
-          <button type="object" name="create_leader" string="Create a Leader" class="oe_highlight float-left" attrs="{'invisible': [('saved', '=', True)]}" confirm="Are you sure you want to create a leader?"/>
-          <button type="object" name="create_league" string="Create League" class="oe_highlight float-left" attrs="{'invisible': [('saved', '=', True)]}" confirm="Are you sure you want to create a league?"/>
+          <button type="object" name="create_leader" string="Create a Leader" class="oe_highlight float-left" confirm="Are you sure you want to create a leader?"/>
+          <!-- <button type="object" name="create_league" string="Create League" class="oe_highlight float-left" confirm="Are you sure you want to create a league?"/> -->
 
         </header>   
         <sheet>
           <field name="image_1920" widget="image" class="oe_avatar" options="{'preview_image': 'image_128'}"/>     
 
           <h1>
-            <field name="name" placeholder="Eg. John Does Smith" force_save="1"/>
+            <field name="name" force_save="1" readonly="1"/>
           </h1>
 
           <group>
             <group>
               <separator string="Personal Informations"/>
-                <field name="gender" string="Gender" force_save="1"/>
-                <field name="date" force_save="1"/>
+                <field name="created" invisible="1"/>
+                <field name="first_name" placeholder="Eg. John" attrs="{'invisible': [('saved', '=', True)]}" force_save="1"/>
+                <field name="father_name" placeholder="Eg. Smith" attrs="{'invisible': [('saved', '=', True)]}" force_save="1"/>
+                <field name="grand_father_name" placeholder="Eg. Willam" attrs="{'invisible': [('saved', '=', True)]}" force_save="1"/>
+                <field name="gender" string="Gender" force_save="1" attrs="{'readonly': [('saved', '=', True)]}"/>
+                <field name="date" force_save="1" string="Date of Birth" attrs="{'readonly': [('saved', '=', True)]}"/>
                 <field name="age" force_save="1"/>
-                <field name="ethnic_group" string="Ethnic Group" force_save="1"/>
+                <field name="ethnic_group" string="Ethnic Group" force_save="1" options="{'no_create': True, 'no_create_edit': True}" attrs="{'readonly': [('saved', '=', True)]}"/>
               <separator string="Educational Background"/>
-                <field name="education_level" string="Education Level"/>
+                <field name="education_level" string="Education Level" options="{'no_create': True, 'no_create_edit': True}"/>
                 <field name="field_of_study_id" string="Field of Study" options="{'no_create': True, 'no_create_edit': True}"/>
                 <field name="is_user_input" invisible="1"/>
                 <field name="user_input" attrs="{'invisible': [('is_user_input', '=', False)]}" string="Other Field"/>
+              <separator string="Working Address"/>
+              <field name="subcity_id" string="Working Subcity" options="{'no_create': True, 'no_create_edit': True}"/>
+              <field name="wereda_id" string="Working Woreda" options="{'no_create': True, 'no_create_edit': True}"/>   
             </group>
             <group>
               <separator string="Place of Birth"/>
-                <field name="region_of_birth" string="Birth Place Region" required="1"/>
+                <field name="region_of_birth"  required="1" options="{'no_create': True, 'no_create_edit': True}"/>
                 <field name="zone_city_of_birth" required="1"/>
                 <field name="wereda_of_birth" string="Birth Place Woreda" required="1"/>
               <separator string="Current Address"/>
-                <field name="region" string="Region" options="{'no_create': True, 'no_create_edit': True}"/>
-                <field name="subcity_id" string="Subcity" options="{'no_create': True, 'no_create_edit': True}" force_save="1"/>
-                <field name="wereda_id" string="Woreda" options="{'no_create': True, 'no_create_edit': True}" force_save="1"/>
+                <field name="region" options="{'no_create': True, 'no_create_edit': True}"/>
+                <field name="residential_subcity_id" string="Residential Subcity" options="{'no_create': True, 'no_create_edit': True}"/>
+                <field name="residential_wereda_id" string="Residential Woreda" options="{'no_create': True, 'no_create_edit': True}"/>
                 <field name="kebele" string="Kebele"/>
                 <field name="phone"/>
                 <field name="email_address"/>
@@ -123,7 +130,7 @@
         <field name="arch" type="xml">
             <search string="Registered List">
                 <separator/>
-                <filter name="date" string="Today" domain="[('create_date','=',current_date)]"/>
+                <filter name="date" string="Today" domain="[('created','=',current_date)]"/>
             </search>
         </field>
     </record>
@@ -135,14 +142,20 @@
     <field name="limit">20</field>
     <field name="view_mode">tree,form,kanban,pivot,graph</field>
     <field name="search_view_id" ref="registered_search"/>
-    <!-- <field name="context">{'search_default_date': 1}</field> -->
+    <field name="context">{'search_default_date': 1}</field>
+    <field name="domain">['|', '|', '|', '|',
+                          ('wereda_id.branch_manager.id', '=', uid),
+                          ('subcity_id.parent_manager.id', '=', uid),
+                          ('subcity_id.city_id.city_manager', 'in', [uid]),
+                          ('subcity_id.city_id.transfer_handler', '=', uid),
+                          ('subcity_id.city_id.responsible_id.system_admin', 'in', [uid])]</field>
   </record>
 
 
   <menuitem id="registred_views"
-            name="Registered"
+            name="Transfer Registration"
             parent="menu_membership"
             sequence="8"
-            groups="members_custom.member_group_cell_manager,members_custom.member_group_agent"
+            groups="members_custom.member_group_city_transfer_handler,members_custom.member_group_manager,members_custom.member_group_agent"
             action="registered_action"/>
 </odoo>

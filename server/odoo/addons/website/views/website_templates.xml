@@ -325,7 +325,7 @@
     <xpath expr="//t[@t-call='web.brand_promotion_message']" position="replace">
         <t t-call="web.brand_promotion_message">
             <t t-set="_message">
-                Create a <a target="_blank" href="http://www.odoo.com/page/website-builder?utm_source=db&amp;utm_medium=website">free website</a>
+                <!-- Create a <a target="_blank" href="http://www.odoo.com/page/website-builder?utm_source=db&amp;utm_medium=website">free website</a> -->
             </t>
             <t t-set="_utm_medium">website</t>
         </t>
@@ -409,7 +409,7 @@
             </section>
         </div>
     </xpath>
-</template>
+</template> 
 
 <template id="language_selector">
     <ul class="js_language_selector mb0 list-inline" t-if="(request and request.is_frontend_multilang and len(languages) &gt; 1) or (website and (editable or translatable))">

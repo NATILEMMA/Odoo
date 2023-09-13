@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="account_asset_form_inherited" model="ir.ui.view">
+            <field name="name">account.asset.form.inherit</field>
+            <field name="model">account.asset</field>
+            <field name="inherit_id" ref="account_asset_management.account_asset_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date_start']" position="replace">
+                    <field name="ethiopian_from" string="Asset Start Date" class="oe_read_only"  style=" float:left;" attrs="{'invisible': ['|', ('is_pagum_from', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    <field name="date_start" string="Asset Start Date" groups="EthiopianCalendar.group_gregory"/>
+                    <field name="pagum_from" class="oe_read_only" string="Asset Start Date" style=" float:left" attrs="{'invisible': [('is_pagum_from', '!=',False) ]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    <field name="is_pagum_from" invisible="1"/>
+                    <div>
+                    </div>
+                    <div style="margin-bottom:40px;margin-top:-22px; width: 50%;margin-left:10px;margin-right:0px">
+                        <widget name="ethiopian_calander_widget" style=" float:left;width:226px;" class="oe_edit_only"
+                                groups="EthiopianCalendar.group_ethio_datepicker" attrs="{'invisible': [('state', '!=','draft')]}"/>
+                    </div>
+                </xpath>
+                <xpath expr="//field[@name='method_end']" position="replace">
+                    <field name="ethiopian_to" class="oe_read_only" string="Ending Date"
+                           style=" float:left;" attrs="{'invisible': ['|','|',('is_pagum_to', '=',False),('method_time','=','number')],'required': [('method_time','=','end')]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    <field name="method_end" attrs="{'required': [('method_time','=','end')], 'invisible':[('method_time','=','number')]}" groups="EthiopianCalendar.group_gregory"/>
+                    <field name="pagum_to" class="oe_read_only" string="Ending Date" style=" float:left" attrs="{'invisible': ['|','|',('is_pagum_to', '!=',False),('method_time','=','number')],'required': [('method_time','=','end')]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    <field name="is_pagum_to" invisible="1"/>
+                    <div>
+                    </div>
+                    <div style="margin-bottom:40px;margin-top:-22px; width: 50%;margin-left:10px;margin-right:0px">
+                        <widget name="ethiopian_calander_widget_two" style=" float:left;width:226px;" class="oe_edit_only"
+                                groups="EthiopianCalendar.group_ethio_datepicker" attrs="{'invisible':[('method_time','=','number')]}"/>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

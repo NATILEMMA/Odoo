@@ -9,8 +9,8 @@ class AccountAnalyticAccount(models.Model):
     _inherit = 'account.analytic.account'
     _description = 'Analytic Account'
 
-    project_ids = fields.One2many('project.project', 'analytic_account_id', string='Projects')
-    project_count = fields.Integer("Project Count", compute='_compute_project_count')
+    project_ids = fields.One2many('project.project', 'analytic_account_id', string='Plannings')
+    project_count = fields.Integer("Planning Count", compute='_compute_project_count')
 
     @api.depends('project_ids')
     def _compute_project_count(self):
@@ -40,7 +40,7 @@ class AccountAnalyticAccount(models.Model):
             "views": [[kanban_view_id, "kanban"], [False, "form"]],
             "domain": [['analytic_account_id', '=', self.id]],
             "context": {"create": False},
-            "name": "Projects",
+            "name": "Plannings",
         }
         if len(self.project_ids) == 1:
             result['views'] = [(False, "form")]

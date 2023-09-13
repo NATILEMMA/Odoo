@@ -44,19 +44,6 @@
                 <field name="time_frame" options="{'no_create': True, 'no_create_edit':True}" force_save="1" readonly="1"/>
                 <field name="fiscal_year"  options="{'no_create': True, 'no_create_edit':True}" force_save="True" readonly="1"/>
             </field>
-            <xpath expr="//field[@name='date']" position="replace">
-                        <field name="is_pagum_from" invisible="1"/>
-                        <field  name="date"  class="col-50" colspan="3" groups="EthiopianCalendar.group_gregory"/>
-                        <field  name="ethiopian_from" class="oe_read_only" string="Date From" style=" float:left" attrs="{'invisible': ['|', ('is_pagum_from', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
-                        <field  name="pagum_from" class="oe_read_only"  string="Date From" style=" float:left"  attrs="{'invisible': ['|',('is_pagum_from', '!=',False)  ]}"  groups="EthiopianCalendar.group_ethio_datepicker"/>
-
-                         <div>
-                         </div>
-                        <div style="margin-bottom:40px;margin-top:-15px;margin-left:10px;margin-right:0px">
-                        <widget name="ethiopian_calander_widget"  style=" float:left;width:226px;" class="oe_edit_only"  groups="EthiopianCalendar.group_ethio_datepicker"/>
-                        </div>
-
-            </xpath>
 
         </field>
     </record>

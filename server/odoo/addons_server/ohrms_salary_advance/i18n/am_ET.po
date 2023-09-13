@@ -28,12 +28,12 @@ msgstr "ተግባራት"
 #. module: ohrms_salary_advance
 #: model:ir.model.fields,field_description:ohrms_salary_advance.field_salary_advance__activity_exception_decoration
 msgid "Activity Exception Decoration"
-msgstr "የእንቅስቃሴ ልዩ ማስጌጥ"
+msgstr "የክንውን ልዩ ማስጌጥ"
 
 #. module: ohrms_salary_advance
 #: model:ir.model.fields,field_description:ohrms_salary_advance.field_salary_advance__activity_state
 msgid "Activity State"
-msgstr "የእንቅስቃሴ ሁኔታ"
+msgstr "የክንውን ሁኔታ"
 
 #. module: ohrms_salary_advance
 #: model:ir.model.fields,field_description:ohrms_salary_advance.field_salary_advance__advance
@@ -50,6 +50,11 @@ msgstr "ቅድሚያ ደመወዝ"
 #: model_terms:ir.ui.view,arch_db:ohrms_salary_advance.view_salary_advance_form
 msgid "Approve"
 msgstr "አጽድቅ"
+
+#. module: ohrms_salary_advance
+#: model:ir.actions.act_window,name:ohrms_salary_advance.action_salary_advance_to_approve_rule
+msgid "Salary rule Advance"
+msgstr "ቅድመ የደመወዝ ደንብ"
 
 #. module: ohrms_salary_advance
 #: model:ir.model.fields.selection,name:ohrms_salary_advance.selection__salary_advance__state__approve
@@ -180,7 +185,7 @@ msgstr "አዶ"
 #. module: ohrms_salary_advance
 #: model:ir.model.fields,help:ohrms_salary_advance.field_salary_advance__activity_exception_icon
 msgid "Icon to indicate an exception activity."
-msgstr "ልዩ እንቅስቃሴን ለማመልከት አዶ።"
+msgstr "ልዩ ክንውንን ለማመልከት አዶ።"
 
 #. module: ohrms_salary_advance
 #: model:ir.model.fields,help:ohrms_salary_advance.field_salary_advance__message_needaction
@@ -257,17 +262,17 @@ msgstr "አዲስ ጥያቄዎች"
 #. module: ohrms_salary_advance
 #: model:ir.model.fields,field_description:ohrms_salary_advance.field_salary_advance__activity_date_deadline
 msgid "Next Activity Deadline"
-msgstr "የቀጣይ እንቅስቃሴ ገደብ"
+msgstr "የቀጣይ ክንውን ገደብ"
 
 #. module: ohrms_salary_advance
 #: model:ir.model.fields,field_description:ohrms_salary_advance.field_salary_advance__activity_summary
 msgid "Next Activity Summary"
-msgstr "የቀጣይ እንቅስቃሴ ማጠቃለያ"
+msgstr "የቀጣይ ክንውን ማጠቃለያ"
 
 #. module: ohrms_salary_advance
 #: model:ir.model.fields,field_description:ohrms_salary_advance.field_salary_advance__activity_type_id
 msgid "Next Activity Type"
-msgstr "የቀጣይ እንቅስቃሴ አይነት"
+msgstr "የቀጣይ ክንውን አይነት"
 
 #. module: ohrms_salary_advance
 #: model:ir.model.fields,field_description:ohrms_salary_advance.field_salary_advance__message_needaction_counter
@@ -313,7 +318,7 @@ msgstr "ምክንያት"
 #. module: ohrms_salary_advance
 #: model_terms:ir.ui.view,arch_db:ohrms_salary_advance.view_salary_advance_form
 msgid "Reject"
-msgstr "እምቢ"
+msgstr "ከልክል"
 
 #. module: ohrms_salary_advance
 #: model:ir.model.fields.selection,name:ohrms_salary_advance.selection__salary_advance__state__reject
@@ -418,7 +423,7 @@ msgstr "ለማስገባት"
 #. module: ohrms_salary_advance
 #: model:ir.model.fields,help:ohrms_salary_advance.field_salary_advance__activity_exception_decoration
 msgid "Type of the exception activity on record."
-msgstr "በመዝገብ ላይ ያለ ልዩ እንቅስቃሴ ዓይነት።"
+msgstr "በመዝገብ ላይ ያለ ልዩ ክንውን ዓይነት።"
 
 #. module: ohrms_salary_advance
 #: model:ir.model.fields,field_description:ohrms_salary_advance.field_salary_advance__message_unread

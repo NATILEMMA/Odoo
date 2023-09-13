@@ -1,0 +1,336 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* project_status_tags
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20221005\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-22 08:24+0000\n"
+"PO-Revision-Date: 2023-05-22 08:24+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: project_status_tags
+#: model:ir.model.fields,field_description:project_status_tags.field_project_project__actual_date_end
+#: model:ir.model.fields,field_description:project_status_tags.field_project_task__actual_date_end
+msgid "Actual Ending Date"
+msgstr "ትክክለኛው የማለቂያ ቀን"
+
+#. module: project_status_tags
+#: model:ir.model.fields,field_description:project_status_tags.field_project_project__actual_date_start
+#: model:ir.model.fields,field_description:project_status_tags.field_project_task__actual_date_start
+msgid "Actual Starting Date"
+msgstr "ትክክለኛው የመጨረሻ ቀን"
+
+#. module: project_status_tags
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_project_project_form
+msgid "Approve Planning"
+msgstr "እቅድ ማውጣትን ማጽደቅ"
+
+#. module: project_status_tags
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_project__state__approved
+msgid "Approved"
+msgstr "ጸድቋል"
+
+#. module: project_status_tags
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_project__project_status__at_risk
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_task__task_status__at_risk
+msgid "At Risk"
+msgstr "አደጋ ላይ"
+
+#. module: project_status_tags
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_project_project_form
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_task_form_inherit
+msgid "At-Risk"
+msgstr "አደጋ ላይ"
+
+#. module: project_status_tags
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_task_form_inherit
+msgid "Back to Inprogress"
+msgstr "ወደ በሂደት-ላይ ተመለስ"
+
+#. module: project_status_tags
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_project_project_form
+msgid "Cancel Project"
+msgstr "ፕሮጀክቱን አጥፋ"
+
+#. module: project_status_tags
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_task_form_inherit
+msgid "Cancel Task"
+msgstr "ተግባሩን አጥፋ"
+
+#. module: project_status_tags
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_project__project_status__cancelled
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_project__state__cancelled
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_task__state__cancelled
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_task__task_status__cancelled
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_task_type__state__cancelled
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_project_project_form
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_task_form_inherit
+msgid "Cancelled"
+msgstr "ጠፍቷል"
+
+#. module: project_status_tags
+#: model:ir.model.fields,field_description:project_status_tags.field_project_project__status_color
+#: model:ir.model.fields,field_description:project_status_tags.field_project_task__status_color
+msgid "Colour"
+msgstr "ቀለም"
+
+#. module: project_status_tags
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_project_project_form
+msgid "Complete Project"
+msgstr "ፕሮጀክቱን አጠናቅ"
+
+#. module: project_status_tags
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_task_form_inherit
+msgid "Complete Task"
+msgstr "ተግባሩን አጠናቅ"
+
+#. module: project_status_tags
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_project__project_status__done
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_project__state__close
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_task__state__done
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_task__task_status__done
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_project_project_form
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_task_form_inherit
+msgid "Completed"
+msgstr "ተጠናቋል"
+
+#. module: project_status_tags
+#: model:ir.model.fields,field_description:project_status_tags.field_project_task__date_deadline
+msgid "Deadline"
+msgstr "ቀነ-ቀጠሮ"
+
+#. module: project_status_tags
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_project__project_status__off_track
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_task__task_status__off_track
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_project_project_form
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_task_form_inherit
+msgid "Delayed"
+msgstr "ቆሟል"
+
+#. module: project_status_tags
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_task_type__state__done
+msgid "Done"
+msgstr "ተሰርቷል"
+
+#. module: project_status_tags
+#: model:ir.model.fields,field_description:project_status_tags.field_project_project__date
+msgid "End Date"
+msgstr "የማልቅያ ቀን"
+
+#. module: project_status_tags
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_task__task_status__future
+msgid "Future"
+msgstr "ወደፊት"
+
+#. module: project_status_tags
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_project__state__open
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_task__state__open
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_task_type__state__open
+msgid "In Progress"
+msgstr "በሂደት ላይ"
+
+#. module: project_status_tags
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_project__state__draft
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_task__state__draft
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_task__task_status__new
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_task_type__state__draft
+msgid "New"
+msgstr "አዲስ"
+
+#. module: project_status_tags
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_project__project_status__not_active
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_task__task_status__not_active
+msgid "Not Active"
+msgstr "ንቁ ያልሆነ"
+
+#. module: project_status_tags
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_project_project_form
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_task_form_inherit
+msgid "Not-Active"
+msgstr "ንቁ ያልሆ"
+
+#. module: project_status_tags
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_project__project_status__onhold
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_task__task_status__onhold
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_project_project_form
+msgid "On Hold"
+msgstr "በተጠንቀቅ"
+
+#. module: project_status_tags
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_project__project_status__on_track
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_task__task_status__on_track
+msgid "On Track"
+msgstr "በክትትል ላይ"
+
+#. module: project_status_tags
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_task_form_inherit
+msgid "On-Hold"
+msgstr "በተጠንቀቅ"
+
+#. module: project_status_tags
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_project_project_form
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_task_form_inherit
+msgid "On-Track"
+msgstr "በክትትል ላይ"
+
+#. module: project_status_tags
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_project_project_form
+msgid "Other Info"
+msgstr "ሌላ መረጃ"
+
+#. module: project_status_tags
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_project__state__pending
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_task__state__pending
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_task_type__state__pending
+msgid "Pending"
+msgstr "በመጠባበቅ ላይ"
+
+#. module: project_status_tags
+#: model:ir.model.fields,field_description:project_status_tags.field_project_project__planned_hours
+msgid "Planned Time"
+msgstr "የታቀደ ጊዜ"
+
+#. module: project_status_tags
+#: model:ir.model,name:project_status_tags.model_project_project
+msgid "Planning"
+msgstr "እቅድ"
+
+#. module: project_status_tags
+#: model:ir.model.fields,field_description:project_status_tags.field_project_project__progress_rate
+msgid "Progress"
+msgstr "ሂደት"
+
+#. module: project_status_tags
+#: model:ir.model.fields,field_description:project_status_tags.field_project_task__progress_status
+msgid "Progress Status"
+msgstr "የሂደት ሁኔታ"
+
+#. module: project_status_tags
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_project_project_form
+msgid "Project Stages"
+msgstr "የፕሮጀክት ደረጃዎች"
+
+#. module: project_status_tags
+#: model:ir.model.fields,field_description:project_status_tags.field_project_project__project_status
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_project_search_inherit
+msgid "Project Status"
+msgstr "የፕሮጀክት ሁኔታ"
+
+#. module: project_status_tags
+#: model:ir.model.fields,field_description:project_status_tags.field_project_project__projected_date_end
+#: model:ir.model.fields,field_description:project_status_tags.field_project_task__projected_date_end
+msgid "Projected End Date"
+msgstr "የታቀደ የመጨረሻ ቀን"
+
+#. module: project_status_tags
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_project_project_form
+msgid "Reject"
+msgstr "አለመቀበል"
+
+#. module: project_status_tags
+#: model:ir.model.fields,field_description:project_status_tags.field_project_task_type__state
+msgid "Related Status"
+msgstr "ተዛማጅ ሁኔታ"
+
+#. module: project_status_tags
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_project_project_form
+msgid "Request Planning"
+msgstr "እቅድ ማውጣትን ይጠይቁ"
+
+#. module: project_status_tags
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_project__project_status__requested
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_project__state__requested
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_task__task_status__requested
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_project_project_form
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_task_form_inherit
+msgid "Requested"
+msgstr "ተጠይቋል"
+
+#. module: project_status_tags
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_project_project_form
+msgid "Resume"
+msgstr "ካቆመበት ማስቀጠል"
+
+#. module: project_status_tags
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_project_project_form
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_task_form_inherit
+msgid "Set To Pending"
+msgstr "በመጠባበቅ ላይ ያሉት ውስጥ አስገባው"
+
+#. module: project_status_tags
+#: model:ir.model.fields,field_description:project_status_tags.field_project_task__stage_id
+msgid "Stage"
+msgstr "ደረጃ"
+
+#. module: project_status_tags
+#: model:ir.model.fields,field_description:project_status_tags.field_project_project__date_start
+msgid "Start Date"
+msgstr "የመጀመርያ ቀን"
+
+#. module: project_status_tags
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_project_project_form
+msgid "Start Project"
+msgstr "ፕሮጀክት ጀምር"
+
+#. module: project_status_tags
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_task_form_inherit
+msgid "Start Task"
+msgstr "ተግባር ጀምር"
+
+#. module: project_status_tags
+#: model:ir.model.fields,field_description:project_status_tags.field_project_task__date_start
+msgid "Starting Date"
+msgstr "መነሻ ቀን"
+
+#. module: project_status_tags
+#: model:ir.model.fields,field_description:project_status_tags.field_project_project__state
+#: model:ir.model.fields,field_description:project_status_tags.field_project_task__state
+msgid "Status"
+msgstr "ሁኔታ"
+
+#. module: project_status_tags
+#: model:ir.model,name:project_status_tags.model_project_task
+msgid "Task"
+msgstr "ተግባር"
+
+#. module: project_status_tags
+#: model:ir.model,name:project_status_tags.model_project_task_type
+msgid "Task Stage"
+msgstr "የተግባር ደረጃ"
+
+#. module: project_status_tags
+#: model:ir.model.fields,field_description:project_status_tags.field_project_task__task_status
+msgid "Task Status"
+msgstr "የተግባር ሁኔታ"
+
+#. module: project_status_tags
+#: model:ir.model.fields,help:project_status_tags.field_project_task__state
+msgid ""
+"The status is set to 'Draft', when a case is created.                      "
+"If the case is in progress the status is set to 'Open'."
+"                      When the case is over, the status is set to 'Done'."
+"                      If the case needs to be reviewed then the status is"
+"                       set to 'Pending'."
+msgstr ""
+"ጉዳዩ ሲፈጠር ሁኔታው ​​ወደ 'ረቂቅ' ተቀናብሯል።"
+"ጉዳዩ በሂደት ላይ ከሆነ ሁኔታው ​​ወደ 'ክፍት' ተቀናብሯል."
+"           ሲያልቅ ሁኔታው ​​ወደ 'ተከናውኗል' ተቀናብሯል."
+"           ጉዳዩ መከለስ ካለበት ሁኔታው"
+"           ወደ 'በመጠባበቅ ላይ' ተቀናብሯል."
+
+#. module: project_status_tags
+#: model:ir.model.fields,field_description:project_status_tags.field_project_project__effective_hours
+msgid "Time Spent"
+msgstr "ያሳለፈው ጊዜ"
+
+#. module: project_status_tags
+#: model:ir.model.fields,field_description:project_status_tags.field_project_project__total_hours
+msgid "Total Time"
+msgstr "አጠቃላይ ጊዜ"

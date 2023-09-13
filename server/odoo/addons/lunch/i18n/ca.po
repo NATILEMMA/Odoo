@@ -14,10 +14,9 @@
 # Arnau Ros, 2020
 # Susanna Pujol, 2020
 # Harcogourmet, 2022
+# jabelchi, 2022
 # Jonatan Gk, 2022
 # marcescu, 2022
-# Josep Anton Belchi, 2022
-# Ivan Espinola, 2022
 # 
 msgid ""
 msgstr ""
@@ -25,7 +24,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-05 12:34+0000\n"
 "PO-Revision-Date: 2019-08-26 09:11+0000\n"
-"Last-Translator: Ivan Espinola, 2022\n"
+"Last-Translator: marcescu, 2022\n"
 "Language-Team: Catalan (https://www.transifex.com/odoo/teams/41243/ca/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -767,9 +766,6 @@ msgid ""
 "Helps you handle your lunch needs, if you are a manager you will be able to "
 "create new products, cashmoves and to confirm or cancel orders."
 msgstr ""
-"Us ajuda a gestionar les vostres necessitats de dinar, si sou un gestor "
-"podreu crear nous productes, caixers automàtics i confirmar o cancel·lar "
-"comandes."
 
 #. module: lunch
 #: model_terms:ir.actions.act_window,help:lunch.lunch_product_category_action
@@ -878,7 +874,7 @@ msgstr "És seguidor"
 #. module: lunch
 #: model:ir.model.fields,field_description:lunch.field_res_users__last_lunch_location_id
 msgid "Last Lunch Location"
-msgstr "Darrera ubicació de la lonxa"
+msgstr ""
 
 #. module: lunch
 #: model:ir.model.fields,field_description:lunch.field_lunch_alert____last_update
@@ -965,12 +961,12 @@ msgstr "Alertes per a l'esmorzar"
 #: model:ir.model,name:lunch.model_lunch_cashmove
 #, python-format
 msgid "Lunch Cashmove"
-msgstr "Lunch Cashmove"
+msgstr ""
 
 #. module: lunch
 #: model:ir.model,name:lunch.model_lunch_topping
 msgid "Lunch Extras"
-msgstr "Extres de menjar"
+msgstr ""
 
 #. module: lunch
 #. openerp-web
@@ -983,12 +979,12 @@ msgstr ""
 #: model:ir.actions.act_window,name:lunch.lunch_location_action
 #: model:ir.model,name:lunch.model_lunch_location
 msgid "Lunch Locations"
-msgstr "Ubicacions d'ancoratge"
+msgstr ""
 
 #. module: lunch
 #: model:ir.model.fields,field_description:lunch.field_res_company__lunch_minimum_threshold
 msgid "Lunch Minimum Threshold"
-msgstr "Llindar mínim de menjar"
+msgstr ""
 
 #. module: lunch
 #: model:ir.model,name:lunch.model_lunch_order
@@ -1003,27 +999,27 @@ msgstr ""
 #. module: lunch
 #: model:ir.model,name:lunch.model_lunch_product
 msgid "Lunch Product"
-msgstr "Producte de menjar"
+msgstr ""
 
 #. module: lunch
 #: model:ir.model,name:lunch.model_lunch_product_category
 msgid "Lunch Product Category"
-msgstr "Categoria del producte d'anul·lació"
+msgstr ""
 
 #. module: lunch
 #: model:ir.model,name:lunch.model_lunch_supplier
 msgid "Lunch Supplier"
-msgstr "Proveïdor de menjar"
+msgstr ""
 
 #. module: lunch
 #: model:ir.actions.server,name:lunch.lunch_order_action_cancel
 msgid "Lunch: Cancel meals"
-msgstr "Lunch: cancel·la els àpats"
+msgstr ""
 
 #. module: lunch
 #: model:ir.actions.server,name:lunch.lunch_order_action_confirm
 msgid "Lunch: Receive meals"
-msgstr "Lunch: rep els àpats"
+msgstr ""
 
 #. module: lunch
 #: model:ir.actions.server,name:lunch.ir_cron_lunch_alerts_ir_actions_server
@@ -1172,7 +1168,7 @@ msgstr "Encara no hi ha cap moviment en efectiu"
 #. module: lunch
 #: model_terms:ir.actions.act_window,help:lunch.lunch_order_action_control_suppliers
 msgid "No lunch order yet"
-msgstr "Encara no s'ha demanat menjar"
+msgstr ""
 
 #. module: lunch
 #: model_terms:ir.actions.act_window,help:lunch.lunch_order_action
@@ -1211,7 +1207,7 @@ msgstr "Notes"
 #. module: lunch
 #: model_terms:ir.actions.act_window,help:lunch.lunch_order_action_by_supplier
 msgid "Nothing to order today"
-msgstr "Avui no hi ha res per a demanar"
+msgstr ""
 
 #. module: lunch
 #: model:ir.model.fields,field_description:lunch.field_lunch_alert__notification_moment
@@ -1291,7 +1287,7 @@ msgstr "Demani el seu esmorzar"
 #. module: lunch
 #: model_terms:ir.ui.view,arch_db:lunch.lunch_order_view_tree
 msgid "Order lines Tree"
-msgstr "Arbre de línies de comandes"
+msgstr ""
 
 #. module: lunch
 #. openerp-web
@@ -1587,8 +1583,6 @@ msgid ""
 "The responsible is the person that will order lunch for everyone. It will be"
 " used as the 'from' when sending the automatic email."
 msgstr ""
-"El responsable és la persona que demanarà menjar per tothom. S'utilitzarà "
-"per a omplir el \"de:\" quan s'enviï el correu electrònic automàtic."
 
 #. module: lunch
 #: model_terms:ir.actions.act_window,help:lunch.lunch_order_action
@@ -1596,8 +1590,6 @@ msgid ""
 "There is no previous order recorded. Click on \"My Lunch\" and then create a"
 " new lunch order."
 msgstr ""
-"No hi ha cap comanda anterior enregistrada. Feu clic a \"El meu dinar\" i "
-"després creeu una nova comanda de dinar."
 
 #. module: lunch
 #: model_terms:ir.actions.act_window,help:lunch.lunch_product_action_order
@@ -1657,7 +1649,6 @@ msgstr ""
 #: model_terms:ir.actions.act_window,help:lunch.lunch_location_action
 msgid "To see some locations, create one using the create button"
 msgstr ""
-"Per a veure algunes ubicacions, creeu-ne una utilitzant el botó de creació"
 
 #. module: lunch
 #: model_terms:ir.actions.act_window,help:lunch.lunch_product_action_order
@@ -1665,8 +1656,6 @@ msgid ""
 "To see some products, check if your vendors are available today and that you"
 " have configured some products"
 msgstr ""
-"Per a veure alguns productes, comproveu si els proveïdors estan disponibles "
-"avui i que heu configurat alguns productes."
 
 #. module: lunch
 #: model_terms:ir.ui.view,arch_db:lunch.lunch_order_view_search
@@ -1682,22 +1671,22 @@ msgstr "Ordres d'avui"
 #. module: lunch
 #: model:ir.model.fields,field_description:lunch.field_lunch_topping__topping_category
 msgid "Topping Category"
-msgstr "Categoria superior"
+msgstr ""
 
 #. module: lunch
 #: model:ir.model.fields,field_description:lunch.field_lunch_product_category__topping_ids_1
 msgid "Topping Ids 1"
-msgstr "Id. superior 1"
+msgstr ""
 
 #. module: lunch
 #: model:ir.model.fields,field_description:lunch.field_lunch_product_category__topping_ids_2
 msgid "Topping Ids 2"
-msgstr "Id. superior 2"
+msgstr ""
 
 #. module: lunch
 #: model:ir.model.fields,field_description:lunch.field_lunch_product_category__topping_ids_3
 msgid "Topping Ids 3"
-msgstr "Ids superiors 3"
+msgstr ""
 
 #. module: lunch
 #. openerp-web
@@ -1772,7 +1761,7 @@ msgstr "Proveïdor "
 #. module: lunch
 #: model_terms:ir.ui.view,arch_db:lunch.lunch_order_view_search
 msgid "Vendor Orders by Date"
-msgstr "Comandes del proveïdor per data"
+msgstr ""
 
 #. module: lunch
 #: model:ir.actions.act_window,name:lunch.lunch_vendors_action
@@ -1876,15 +1865,15 @@ msgstr "formulari de moviment"
 #: model_terms:ir.ui.view,arch_db:lunch.lunch_cashmove_report_view_tree_2
 #: model_terms:ir.ui.view,arch_db:lunch.lunch_cashmove_view_tree
 msgid "cashmove tree"
-msgstr "arbre de caixers"
+msgstr ""
 
 #. module: lunch
 #: model_terms:ir.ui.view,arch_db:lunch.lunch_cashmove_report_view_search_2
 msgid "lunch cashmove"
-msgstr "dinar en efectiu"
+msgstr ""
 
 #. module: lunch
 #: model_terms:ir.ui.view,arch_db:lunch.lunch_cashmove_report_view_search
 #: model_terms:ir.ui.view,arch_db:lunch.lunch_cashmove_view_search
 msgid "lunch employee payment"
-msgstr "dinar el pagament dels empleats"
+msgstr ""

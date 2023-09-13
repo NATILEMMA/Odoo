@@ -19,7 +19,7 @@ var qweb = core.qweb;
 // in the arch)
 var defaultViewTypes = ['kanban', 'tree'];
 
-const SEARCH_PANEL_LIMIT = 200;
+const SEARCH_PANEL_LIMIT = 2100;
 
 /**
  * Given a <searchpanel> arch node, iterate over its children to generate the

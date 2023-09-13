@@ -2,7 +2,7 @@
 <odoo>
 
         <!-- Top menu item -->
-        <menuitem name="Project"
+        <menuitem name="Planning"
             id="menu_main_pm"
             groups="group_project_manager,group_project_user"
             web_icon="project,static/description/icon.png"
@@ -10,6 +10,10 @@
 
         <menuitem id="menu_project_config" name="Configuration" parent="menu_main_pm"
             sequence="100" groups="project.group_project_manager"/>
+
+
+        
+
 
         <record id="view_task_search_form" model="ir.ui.view">
             <field name="name">project.task.search.form</field>
@@ -45,7 +49,7 @@
                     <group expand="0" string="Group By">
                         <filter string="Stage" name="stage" context="{'group_by': 'stage_id'}"/>
                         <filter string="Assigned to" name="user" context="{'group_by': 'user_id'}"/>
-                        <filter string="Project" name="project" context="{'group_by': 'project_id'}"/>
+                        <filter string="Planning" name="project" context="{'group_by': 'project_id'}"/>
                         <filter string="Creation Date" name="group_create_date" context="{'group_by': 'create_date'}"/>
                         <filter string="Company" name="company" context="{'group_by': 'company_id'}" groups="base.group_multi_company"/>
                     </group>
@@ -56,6 +60,7 @@
         <record id="act_project_project_2_project_task_all" model="ir.actions.act_window">
             <field name="name">Tasks</field>
             <field name="res_model">project.task</field>
+            <field name="domain">['|',('user_id','=',uid),('create_uid','=',uid)]</field>
             <field name="view_mode">kanban,tree,form,calendar,pivot,graph,activity</field>
             <field name="context">{
                 'pivot_row_groupby': ['user_id'],
@@ -85,11 +90,11 @@
             <field name="name">project.project.form</field>
             <field name="model">project.project</field>
             <field name="arch" type="xml">
-                <form string="Project">
+                <form string="Planning">
                     <header>
                         <button name="%(portal.portal_share_action)d" string="Share" type="action" class="oe_highlight oe_read_only"/>
                     </header>
-                <sheet string="Project">
+                <sheet string="Planning">
                     <div class="oe_button_box" name="button_box" groups="base.group_user">
                         <button  class="oe_stat_button" name="attachment_tree_view" type="object" icon="fa-file-text-o">
                             <field string="Documents" name="doc_count" widget="statinfo"/>
@@ -112,7 +117,7 @@
                     <widget name="web_ribbon" title="Archived" bg_color="bg-danger" attrs="{'invisible': [('active', '=', True)]}"/>
                     <div class="oe_title">
                         <h1>
-                            <field name="name" placeholder="Project Name"/>
+                            <field name="name" placeholder="Planning Name"/>
                         </h1>
                         <div name="options_active">
                             <div>
@@ -126,8 +131,11 @@
                             <group>
                                 <group>
                                     <field name="active" invisible="1"/>
-                                    <field name="user_id" string="Project Manager" attrs="{'readonly':[('active','=',False)]}"/>
+                                    <field name="user_id" string="Planning Manager" attrs="{'readonly':[('active','=',False)]}"/>
+                                     <field name="department_id"/>
                                     <field name="partner_id" string="Customer"/>
+                                    <field name="user_ids" string="Planning Members" widget="many2many_tags"/>
+
                                 </group>
                                 <group>
                                     <field name="analytic_account_id" domain="['|', ('company_id', '=', company_id), ('company_id', '=', False)]" context="{'default_partner_id': partner_id}" groups="analytic.group_analytic_accounting"/>
@@ -196,9 +204,9 @@
             <field name="name">project.project.select</field>
             <field name="model">project.project</field>
             <field name="arch" type="xml">
-                <search string="Search Project">
-                    <field name="name" string="Project"/>
-                    <field name="user_id" string="Project Manager"/>
+                <search string="Search Planning">
+                    <field name="name" string="Planning"/>
+                    <field name="user_id" string="Planning Manager"/>
                     <field name="partner_id" string="Customer" filter_domain="[('partner_id', 'child_of', self)]"/>
                     <filter string="My Favorites" name="my_projects" domain="[('favorite_user_ids', 'in', uid)]"/>
                     <separator/>
@@ -206,7 +214,7 @@
                     <separator/>
                     <filter string="Archived" name="inactive" domain="[('active', '=', False)]"/>
                     <group expand="0" string="Group By">
-                        <filter string="Project Manager" name="Manager" context="{'group_by': 'user_id'}"/>
+                        <filter string="Planning Manager" name="Manager" context="{'group_by': 'user_id'}"/>
                         <filter string="Customer" name="Partner" context="{'group_by': 'partner_id'}"/>
                     </group>
                 </search>
@@ -217,12 +225,12 @@
             <field name="name">project.project.tree</field>
             <field name="model">project.project</field>
             <field name="arch" type="xml">
-                <tree decoration-bf="message_needaction==True" decoration-muted="active == False" string="Projects">
+                <tree decoration-bf="message_needaction==True" decoration-muted="active == False" string="Plannings">
                     <field name="sequence" widget="handle"/>
                     <field name="message_needaction" invisible="1"/>
                     <field name="active" invisible="1"/>
-                    <field name="name" string="Project Name"/>
-                    <field name="user_id" string="Project Manager"/>
+                    <field name="name" string="Planning Name"/>
+                    <field name="user_id" string="Planning Manager"/>
                     <field name="partner_id" string="Contact"/>
                     <field name="company_id" groups="base.group_multi_company"/>
                 </tree>
@@ -234,13 +242,13 @@
             <field name="model">project.project</field>
             <field name="arch" type="xml">
                 <kanban class="o_kanban_mobile">
-                    <field name="user_id" string="Project Manager"/>
+                    <field name="user_id" string="Planning Manager"/>
                     <templates>
                         <t t-name="kanban-box">
                             <div t-attf-class="oe_kanban_content oe_kanban_global_click o_kanban_get_form">
                                 <div class="row">
                                     <div class="col-12">
-                                        <strong><field name="name" string="Project Name"/></strong>
+                                        <strong><field name="name" string="Planning Name"/></strong>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -264,11 +272,11 @@
             <field name="name">project.project.view.form.simplified</field>
             <field name="model">project.project</field>
             <field name="arch" type="xml">
-                <form string="Project">
+                <form string="Planning">
                     <group>
                         <group>
                             <field name="name" class="o_project_name oe_inline"
-                                string="Project Name" placeholder="e.g. Office Party"/>
+                                string="Planning Name" placeholder="e.g. Office Party"/>
                             <field name="user_id" invisible="1"/>
                             <label for="alias_name" string="Choose a Project Email" attrs="{'invisible': [('alias_domain', '=', False)]}"/>
                             <div name="alias_def" attrs="{'invisible': [('alias_domain', '=', False)]}">
@@ -397,7 +405,7 @@
         </record>
 
         <record id="open_view_project_all" model="ir.actions.act_window">
-            <field name="name">Projects</field>
+            <field name="name">Plannings</field>
             <field name="res_model">project.project</field>
             <field name="domain">[]</field>
             <field name="view_mode">kanban,form</field>
@@ -414,7 +422,7 @@
         </record>
 
         <record id="open_view_project_all_config" model="ir.actions.act_window">
-            <field name="name">Projects</field>
+            <field name="name">Plannings</field>
             <field name="res_model">project.project</field>
             <field name="domain">[]</field>
             <field name="view_mode">tree,kanban,form</field>
@@ -427,7 +435,7 @@
                 <p class="o_view_nocontent_empty_folder">
                     Create a new project
                 </p><p>
-                    Organize your activities (plan tasks, track issues, invoice timesheets) for internal, personal or customer projects.
+                    Organize your activities (plan tasks, track issues, invoice timesheets) for internal, personal or customer Plannings.
                 </p>
             </field>
         </record>
@@ -707,7 +715,7 @@
             <field name="name">project.task.pivot</field>
             <field name="model">project.task</field>
             <field name="arch" type="xml">
-                <pivot string="Project Tasks">
+                <pivot string="Planning Tasks">
                     <field name="project_id" type="row"/>
                     <field name="stage_id" type="col"/>
                 </pivot>
@@ -718,7 +726,7 @@
             <field name="name">project.task.graph</field>
             <field name="model">project.task</field>
             <field name="arch" type="xml">
-                <graph string="Project Tasks">
+                <graph string="Planning Tasks">
                     <field name="project_id"/>
                     <field name="stage_id"/>
                 </graph>
@@ -729,7 +737,7 @@
             <field name="name">project.task.activity</field>
             <field name="model">project.task</field>
             <field name="arch" type="xml">
-                <activity string="Project Tasks">
+                <activity string="Planning Tasks">
                     <field name="user_id"/>
                     <templates>
                         <div t-name="activity-box">
@@ -747,6 +755,24 @@
         <record id="action_view_task" model="ir.actions.act_window">
             <field name="name">Tasks</field>
             <field name="res_model">project.task</field>
+            <field name="domain">[('user_id','=',uid)]</field>
+            <field name="view_mode">kanban,tree,form,calendar,pivot,graph,activity</field>
+            <field name="context">{'search_default_my_tasks': 1}</field>
+            <field name="search_view_id" ref="view_task_search_form"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new task
+                </p><p>
+                    Odoo's project management allows you to manage the pipeline of your tasks efficiently.<br/>
+                    You can track progress, discuss on tasks, attach documents, etc.
+                </p>
+            </field>
+        </record>
+
+          <record id="action_view_task_all" model="ir.actions.act_window">
+            <field name="name">All Tasks</field>
+            <field name="res_model">project.task</field>
+             <field name="domain">[]</field>
             <field name="view_mode">kanban,tree,form,calendar,pivot,graph,activity</field>
             <field name="context">{'search_default_my_tasks': 1}</field>
             <field name="search_view_id" ref="view_task_search_form"/>
@@ -762,6 +788,7 @@
         <record id="open_view_task_list_kanban" model="ir.actions.act_window.view">
             <field name="sequence" eval="0"/>
             <field name="view_mode">kanban</field>
+            
             <field name="act_window_id" ref="action_view_task"/>
         </record>
         <record id="open_view_task_list_tree" model="ir.actions.act_window.view">
@@ -769,9 +796,11 @@
             <field name="view_mode">tree</field>
             <field name="act_window_id" ref="action_view_task"/>
         </record>
-
-        <menuitem name="All Tasks" id="menu_project_management" parent="menu_main_pm"
+        <menuitem name="Tasks" id="menu_project_tasks" parent="menu_main_pm"
             action="action_view_task" sequence="2" groups="base.group_no_one,group_project_user"/>
+
+        <menuitem name="All Tasks" id="menu_project_management_tasks" parent="menu_project_tasks"
+            action="action_view_task_all" sequence="20"   groups="group_project_manager"/>
 
         <record id="project_task_action_from_partner" model="ir.actions.act_window">
             <field name="name">Tasks</field>
@@ -914,12 +943,30 @@
             </field>
         </record>
 
+            <record id="open_view_project_all_packages" model="ir.actions.act_window">
+        <field name="name">Packages</field>
+        <field name="res_model">project.project</field>
+        <field name="domain">[('parent_path2','=','/')]</field>
+        <field name="view_mode">kanban,form</field>
+        <field name="view_id" ref="view_project_kanban"/>
+        <field name="search_view_id" ref="view_project_project_filter"/>
+        <field name="target">main</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new Packages
+            </p><p>
+                Or <a type="action" name="%(project.ir_actions_server_project_sample)d" tabindex="-1">activate a sample Planning</a> to play with.
+            </p>
+        </field>
+    </record>
+
         <menuitem id="menu_tasks_config" name="GTD" parent="menu_project_config" sequence="2"/>
 
         <menuitem action="open_task_type_form" id="menu_project_config_project" name="Stages" parent="menu_project_config" sequence="3" groups="base.group_no_one"/>
 
-        <menuitem action="open_view_project_all" id="menu_projects" name="Projects" parent="menu_main_pm" sequence="1"/>
-        <menuitem action="open_view_project_all_config" id="menu_projects_config" name="Projects" parent="menu_project_config" sequence="10"/>
+        <!-- <menuitem action="open_view_project_all" id="menu_projects" name="Plannings" parent="menu_main_pm" sequence="1"/> -->
+        <menuitem action="open_view_project_all_config" id="menu_projects_config" name="Plannings" parent="menu_project_config" sequence="10"/>
+        <menuitem action="open_view_project_all_packages" id="menu_projects_packages" name="Packages" parent="menu_project_config" sequence="100"/>
 
         <!-- User Form -->
         <act_window context="{'search_default_user_id': [active_id], 'default_user_id': active_id}"

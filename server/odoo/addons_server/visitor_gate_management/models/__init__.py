@@ -24,6 +24,9 @@ from . import fo_property_counter
 from . import fo_visit
 from . import calendar_event_inherit
 from . import department_inherit
+from . import appointment_slot
+from . import appointment_option
+# from . import subcity_by_state
 
 
 

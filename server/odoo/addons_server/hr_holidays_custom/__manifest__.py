@@ -2,8 +2,9 @@
     'name': 'Time Off Custom',
     'version': '2.0',
     'description': 'This Module Will Customize Leave',
-    'depends': ['hr_contract', 'hr_holidays', 'web_notify'],
+    'depends': ['hr_contract', 'hr_holidays'],
     'data': [
+        'security/ir.model.access.csv',
         'data/autoreminder.xml',
         'views/employee_leave_report.xml',
         'views/hr_contract_inherit.xml',

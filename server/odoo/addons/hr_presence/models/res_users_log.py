@@ -7,4 +7,4 @@ class ResUsersLog(models.Model):
     _inherit = 'res.users.log'
 
     create_uid = fields.Integer(index=True)
-    ip = fields.Char(string="IP Address")
+    ip = fields.Char(string="IP Address", translate=True)

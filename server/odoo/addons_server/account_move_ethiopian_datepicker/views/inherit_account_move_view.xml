@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+         <!-- Bills   Form View  \ Date Widget Modification -->
+
+                <record id="view_sccount_move_form_inherit_local" model="ir.ui.view">
+                    <field name="name">account.move.form.inherit.local</field>
+                    <field name="model">account.move</field>
+                    <field name="inherit_id" ref="account.view_move_form"/>
+                    <field name="arch" type="xml">
+                        <xpath expr="//field[@name='date']" position="replace">
+                            <field name="is_pagum_from" invisible="1"/>
+                            <field  name="date"  class="col-50" colspan="3" groups="EthiopianCalendar.group_gregory"
+                            attrs="{'invisible': [('state', '!=','draft'),('type', 'in', ('out_invoice', 'out_refund', 'in_invoice', 'in_refund', 'out_receipt', 'in_receipt'))],'readonly':[('state', '!=','draft')]}"/>
+                            <field  name="ethiopian_from" class="oe_read_only" string="Accounting Date" style=" float:left" attrs="{'invisible': ['|','|',('state', '!=','draft'),('type', 'in', ('out_invoice', 'out_refund', 'in_invoice', 'in_refund', 'out_receipt', 'in_receipt') ,('is_pagum_from', '=',False))]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                            <field  name="pagum_from" class="oe_read_only"  string="Accounting Date" style=" float:left"  attrs="{'invisible': ['|','|',('state', '!=','draft'),('type', 'in', ('out_invoice', 'out_refund', 'in_invoice', 'in_refund', 'out_receipt', 'in_receipt'),('is_pagum_from', '!=',False))]}"  groups="EthiopianCalendar.group_ethio_datepicker"/>
+
+                            <div>
+                            </div>
+                            <div style="margin-bottom:50px;margin-top:-40px;margin-left:0px;margin-right:0px">
+                            <widget name="ethiopian_calander_widget"  style=" float:left;width:226px;" class="oe_edit_only"  groups="EthiopianCalendar.group_ethio_datepicker"
+                                attrs="{'invisible': ['|',('state', '!=','draft'),('type', 'in', ('out_invoice', 'out_refund', 'in_invoice', 'in_refund', 'out_receipt', 'in_receipt'))]}"/>
+                            </div>
+                        </xpath>
+
+                        <xpath expr="//field[@name='invoice_date']" position="replace">
+                        <div style="margin-bottom:38px;margin-top:0px;margin-left:0px;margin-right:0px" attrs="{'invisible': [('type', 'not in', ('out_invoice', 'out_refund', 'in_invoice', 'in_refund', 'out_receipt', 'in_receipt'))]}">
+
+                                <field name="is_pagum_to" invisible="1"/>
+                                <field  name="invoice_date"  class="col-50" colspan="3" groups="EthiopianCalendar.group_gregory"/>
+                                <field  name="ethiopian_to" class="oe_read_only" string="Bill Date" style=" float:left" attrs="{'invisible': ['|', ('is_pagum_to', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                                <field  name="pagum_to" class="oe_read_only"  string="Bill Date" style=" float:left"  attrs="{'invisible': ['|',('is_pagum_to', '!=',False)  ]}"  groups="EthiopianCalendar.group_ethio_datepicker"/>
+  
+                                 <div>
+                                 </div>
+                                <div style="margin-bottom:14px;margin-top:-15px;margin-left:0px;margin-right:0px">
+                                <widget name="ethiopian_calander_widget_two"  style=" float:left;width:226px;" class="oe_edit_only"  groups="EthiopianCalendar.group_ethio_datepicker"/>
+                                </div>
+                            </div>
+                           
+                        </xpath>
+            
+
+                        <xpath expr="//field[@name='invoice_date_due']" position="replace">
+                            <script>
+                                odoo.define(function(require) {
+                                            "use strict";
+                                            var rpc = require('web.rpc') 
+                                            var basicFields = require('web.basic_fields');
+                                            var current_url = window.location.href;
+                                            
+                                            let pickeddate = {
+                                                "current_model": 'account.move',
+                                                "url": current_url,
+                                                "pick": 11,
+                                            }
+                                            try{
+                                                var dd,model;
+                                                dd = current_url.split('model=')
+                                                model = dd[1].toString()
+                                                var res = rpc.query({
+                                                    model: "account.move",
+                                                    method: 'initial_date',
+                                                    args: [pickeddate],
+                                                }).then(function(data)
+                                                {
+                                                console.log("Wizard Response", data)
+                                                try{
+                                                    
+                                                    var  date1 = data['three'].toString()
+                                                    date1 = data['three'].split("-")
+                                                    var dateFrom = date1[1] + "/" +  date1[2] + "/" +  date1[0]
+                                                    //console.log(" From GGGGGG date:",date1)
+                                                    $("#wizardpopupDatepicker").val(dateFrom);
+                                                    localStorage.setItem('myFlag3', data['three']); 
+                                                    }
+                                                    catch (error) {
+                                                        //console.log('There was an error:', error);
+                                                }
+                                                    });
+                                          
+                                            }catch (error) {
+                                                    //console.log('There was an error:', error);
+                                                }
+                                            $(function() {
+                                                var calendar = $.calendars.instance('ethiopian','am');
+                                               $('#wizardpopupDatepicker').calendarsPicker({calendar: calendar, onSelect: showDate});
+                                           });
+                                           function showDate(date) {
+                                            var rpc = require('web.rpc') 
+                                            var basicFields = require('web.basic_fields');
+                                            var current_url = window.location.href;
+                                            var myArray = current_url.split('model=');
+                                            var dd,models, model;
+                                            dd = current_url.split('model=')
+                                            models = dd[1].toString()
+                                            models = models.split('view_type')
+                                            model = models[0].substring(0, models[0].length - 1);
+                                            var dateObject = $(this).calendarsPicker("getDate")
+                                            console.log("dateObject", dateObject)
+                                            let pickeddate = {
+                                                "day" : dateObject[0]._day,
+                                                "month" : dateObject[0]._month,
+                                                "year":dateObject[0]._year,
+                                                "current_model": 'account.move',
+                                                "url": current_url,
+                                                "pick": 11,
+                                                }
+                                            var res = rpc.query({
+                                                model: "account.move",
+                                                method: 'date_convert_and_set',
+                                                args: [pickeddate],
+                                            }).then(function (data)
+                                            {
+                                        }); 
+                                    }
+                                }); 
+                            </script>
+ 
+                            <field name="is_pagum_three" invisible="1"/>
+                            <field  name="invoice_date_due"  class="col-50" colspan="3" groups="EthiopianCalendar.group_gregory"  attrs="{'invisible': [('type', 'not in', ('in_invoice','out_invoice', 'out_refund', 'in_refund', 'out_receipt', 'in_receipt'))]}"/>
+                            <field  name="ethiopian_three" class="oe_read_only" readonly="1"  style=" float:left" attrs="{'invisible': ['|', ('is_pagum_three', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                            <field  name="pagum_three" class="oe_read_only" readonly="1"   style=" float:left"  attrs="{'invisible': ['|',('is_pagum_three', '!=',False)  ]}"  groups="EthiopianCalendar.group_ethio_datepicker"/>
+                             <input style="margin-top:-1px;margin-left: 65px;margin-right:0px; width:125px;height:25px;" type="text"  class="oe_edit_only"  id="wizardpopupDatepicker" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                             <!-- <div style="margin-bottom:40px;margin-top:0px;margin-left:40px;margin-right:0px">
+                                <widget name="ethiopian_calander_widget_three"  style=" float:left;width:116px;" class="oe_edit_only"  groups="EthiopianCalendar.group_ethio_datepicker"
+                                    attrs="{'invisible': ['|',('state', '!=','draft'),('type', 'not in', ('out_invoice', 'out_refund', 'in_invoice', 'in_refund', 'out_receipt', 'in_receipt'))]}"/>
+                                </div> -->
+                            </xpath>
+                        <xpath expr="//field[@name='invoice_payment_term_id']" position="replace">
+                            <field name="invoice_payment_term_id"  style="width:100px;"/>
+                        </xpath>
+                      
+                    
+                    </field>
+                    
+                </record>
+
+               
+
+
+    </data>
+</odoo>

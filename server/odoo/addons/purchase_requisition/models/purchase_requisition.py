@@ -11,6 +11,7 @@ PURCHASE_REQUISITION_STATES = [
     ('ongoing', 'Ongoing'),
     ('in_progress', 'Confirmed'),
     ('open', 'Bid Selection'),
+    ('financial', 'Financial approve'),
     ('done', 'Closed'),
     ('cancel', 'Cancelled')
 ]
@@ -45,24 +46,24 @@ class PurchaseRequisition(models.Model):
     def _get_type_id(self):
         return self.env['purchase.requisition.type'].search([], limit=1)
 
-    name = fields.Char(string='Reference', required=True, copy=False, default='New', readonly=True)
-    origin = fields.Char(string='Source Document')
+    name = fields.Char(string='Reference', required=True, copy=False, default='New', readonly=True, translate=True)
+    origin = fields.Char(string='Source Document', translate=True)
     order_count = fields.Integer(compute='_compute_orders_number', string='Number of Orders')
     vendor_id = fields.Many2one('res.partner', string="Vendor", domain="['|', ('company_id', '=', False), ('company_id', '=', company_id)]")
     type_id = fields.Many2one('purchase.requisition.type', string="Agreement Type", required=True, default=_get_type_id)
-    ordering_date = fields.Date(string="Ordering Date", tracking=True)
-    date_end = fields.Datetime(string='Agreement Deadline', tracking=True)
-    schedule_date = fields.Date(string='Delivery Date', index=True, help="The expected and scheduled delivery date where all the products are received", tracking=True)
+    ordering_date = fields.Date(string="Ordering Date", tracking=True, default=lambda self: fields.Date.today())
+    date_end = fields.Datetime(string='Agreement Deadline', tracking=True, default=lambda self: fields.Date.today())
+    schedule_date = fields.Date(string='Delivery Date', index=True, help="The expected and scheduled delivery date where all the products are received", tracking=True, default=lambda self: fields.Date.today())
     user_id = fields.Many2one(
         'res.users', string='Purchase Representative',
         default=lambda self: self.env.user, check_company=True)
-    description = fields.Text()
+    description = fields.Text(translate=True)
     company_id = fields.Many2one('res.company', string='Company', required=True, default=lambda self: self.env.company)
     purchase_ids = fields.One2many('purchase.order', 'requisition_id', string='Purchase Orders', states={'done': [('readonly', True)]})
     line_ids = fields.One2many('purchase.requisition.line', 'requisition_id', string='Products to Purchase', states={'done': [('readonly', True)]}, copy=True)
     product_id = fields.Many2one('product.product', related='line_ids.product_id', string='Product', readonly=False)
     state = fields.Selection(PURCHASE_REQUISITION_STATES,
-                              'Status', tracking=True, 
+                              'Status', tracking=True, required=True,
                               copy=False, default='draft')
     state_blanket_order = fields.Selection(PURCHASE_REQUISITION_STATES, compute='_set_state')
     is_quantity_copy = fields.Selection(related='type_id.quantity_copy', readonly=True)

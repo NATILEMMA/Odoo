@@ -1,8 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_ethio_calander,ethio_calander,model_ethio_calander,,1,1,1,1
-access_calendar_event_user,calendar.event_user,model_calendar_event,CustomCalendar.group_calendar_user,1,0,0,1
-access_calendar_event_admin,calendar.event_admin,model_calendar_event,CustomCalendar.group_calendar_manager,1,1,1,1
-access_holiday_interval_admin,calendar.holiday_interval,model_holiday_interval,CustomCalendar.group_calendar_manager,1,1,1,1
-access_year_interval_admin,calendar.year_interval,model_year_interval,CustomCalendar.group_calendar_manager,1,1,1,1
-access_month_interval_admin,calendar.month_interval,model_month_interval,CustomCalendar.group_calendar_manager,1,1,1,1
-

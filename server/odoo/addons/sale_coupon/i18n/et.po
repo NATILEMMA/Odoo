@@ -16,8 +16,6 @@
 # Algo Kärp <algokarp@gmail.com>, 2021
 # Eneli Õigus <enelioigus@gmail.com>, 2021
 # Triine Aavik <triine@avalah.ee>, 2021
-# Oliver Ernest, 2022
-# Leaanika Randmets, 2022
 # 
 msgid ""
 msgstr ""
@@ -25,7 +23,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-05 09:02+0000\n"
 "PO-Revision-Date: 2019-08-26 09:13+0000\n"
-"Last-Translator: Leaanika Randmets, 2022\n"
+"Last-Translator: Triine Aavik <triine@avalah.ee>, 2021\n"
 "Language-Team: Estonian (https://www.transifex.com/odoo/teams/41243/et/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -240,7 +238,7 @@ msgstr ""
 #. module: sale_coupon
 #: model:ir.model.fields,help:sale_coupon.field_sale_coupon_program__active
 msgid "A program is available for the customers when active"
-msgstr "Kui on aktiivne, on programm klientidele saadaval. "
+msgstr ""
 
 #. module: sale_coupon
 #: model:ir.model.fields,help:sale_coupon.field_sale_coupon_program__promo_code
@@ -452,7 +450,7 @@ msgstr "Kupong"
 #. module: sale_coupon
 #: model:ir.actions.report,name:sale_coupon.report_coupon_code
 msgid "Coupon Code"
-msgstr "Kupongikood"
+msgstr ""
 
 #. module: sale_coupon
 #: model:ir.model.fields,field_description:sale_coupon.field_sale_coupon_program__coupon_count
@@ -505,7 +503,7 @@ msgstr ""
 #: model:ir.model.fields,help:sale_coupon.field_sale_coupon_program__rule_partners_domain
 #: model:ir.model.fields,help:sale_coupon.field_sale_coupon_rule__rule_partners_domain
 msgid "Coupon program will work for selected customers only"
-msgstr "Kampaaniaprogramm töötab ainult valitud klientidele"
+msgstr ""
 
 #. module: sale_coupon
 #: model:ir.actions.act_window,name:sale_coupon.sale_coupon_action
@@ -773,7 +771,7 @@ msgstr "Kehtetu partner."
 #. module: sale_coupon
 #: model:ir.model.fields,field_description:sale_coupon.field_sale_order_line__is_reward_line
 msgid "Is a program reward line"
-msgstr "Programmi preemiarida"
+msgstr ""
 
 #. module: sale_coupon
 #: model:ir.model.fields,field_description:sale_coupon.field_report_sale_coupon_report_coupon____last_update
@@ -819,7 +817,7 @@ msgstr "Maksimaalne allahindluse summa"
 #. module: sale_coupon
 #: model:ir.model.fields,field_description:sale_coupon.field_sale_coupon_program__maximum_use_number
 msgid "Maximum Use Number"
-msgstr "Maksimaalne kasutusarv"
+msgstr ""
 
 #. module: sale_coupon
 #: model:ir.model.fields,help:sale_coupon.field_sale_coupon_program__discount_max_amount
@@ -830,12 +828,12 @@ msgstr "Maksimaalne allahindluse summa, mida saab võimaldada"
 #. module: sale_coupon
 #: model:ir.model.fields,help:sale_coupon.field_sale_coupon_program__maximum_use_number
 msgid "Maximum number of sales orders in which reward can be provided"
-msgstr "Maksimaalne müügitellimuste arv, mille puhul autasu antakse"
+msgstr ""
 
 #. module: sale_coupon
 #: model_terms:ir.ui.view,arch_db:sale_coupon.sale_coupon_program_view_form_common
 msgid "Minimum Purchase Of"
-msgstr "Minimaalne ostusumma"
+msgstr ""
 
 #. module: sale_coupon
 #: model:ir.model.fields,field_description:sale_coupon.field_sale_coupon_program__rule_min_quantity
@@ -852,7 +850,7 @@ msgstr ""
 #: code:addons/sale_coupon/models/sale_coupon_rules.py:0
 #, python-format
 msgid "Minimum purchased amount should be greater than 0"
-msgstr "Minimaalne ostetud summa peab olema suurem kui 0"
+msgstr ""
 
 #. module: sale_coupon
 #: code:addons/sale_coupon/models/sale_coupon_rules.py:0
@@ -886,12 +884,12 @@ msgstr "Kupongide arv"
 #. module: sale_coupon
 #: model:ir.actions.act_window,name:sale_coupon.sale_coupon_generate_action
 msgid "Number of Coupons To Generate"
-msgstr "Loomiseks vajalike kupongide arv"
+msgstr ""
 
 #. module: sale_coupon
 #: model:ir.model.fields.selection,name:sale_coupon.selection__sale_coupon_generate__generation_type__nbr_customer
 msgid "Number of Selected Customers"
-msgstr "Valitud klientide arv"
+msgstr ""
 
 #. module: sale_coupon
 #: model:ir.model.fields,help:sale_coupon.field_sale_coupon_generate__nbr_coupons
@@ -949,7 +947,7 @@ msgstr ""
 #: model:ir.model.fields,help:sale_coupon.field_sale_coupon_program__rule_products_domain
 #: model:ir.model.fields,help:sale_coupon.field_sale_coupon_rule__rule_products_domain
 msgid "On Purchase of selected product, reward will be given"
-msgstr "Valitud toote ostmisel antakse preemia"
+msgstr ""
 
 #. module: sale_coupon
 #: model:ir.model.fields.selection,name:sale_coupon.selection__sale_coupon_reward__discount_apply_on__specific_products
@@ -1002,7 +1000,7 @@ msgstr ""
 #. module: sale_coupon
 #: model:ir.model.fields,help:sale_coupon.field_sale_coupon__discount_line_product_id
 msgid "Product used in the sales order to apply the discount."
-msgstr "Müügitellimusel soodustuse rakendamiseks kasutatud toode."
+msgstr ""
 
 #. module: sale_coupon
 #: model:ir.model.fields,help:sale_coupon.field_sale_coupon_program__discount_line_product_id
@@ -1011,8 +1009,6 @@ msgid ""
 "Product used in the sales order to apply the discount. Each coupon program "
 "has its own reward product for reporting purpose"
 msgstr ""
-"Müügitellimusel soodustuse rakendamiseks kasutatud toode. Igal "
-"kupongiprogrammil on aruandluse eesmärgil oma preemiatoode."
 
 #. module: sale_coupon
 #: model:ir.model.fields,field_description:sale_coupon.field_sale_coupon_program__discount_specific_product_ids
@@ -1031,7 +1027,7 @@ msgstr ""
 #. module: sale_coupon
 #: model:ir.model.fields,field_description:sale_coupon.field_sale_coupon__program_id
 msgid "Program"
-msgstr "Programm"
+msgstr ""
 
 #. module: sale_coupon
 #: model_terms:ir.ui.view,arch_db:sale_coupon.sale_coupon_program_view_form_common
@@ -1134,13 +1130,13 @@ msgstr ""
 #: model:ir.model.fields,field_description:sale_coupon.field_sale_coupon_program__discount_line_product_id
 #: model:ir.model.fields,field_description:sale_coupon.field_sale_coupon_reward__discount_line_product_id
 msgid "Reward Line Product"
-msgstr "Allahindluse toode"
+msgstr ""
 
 #. module: sale_coupon
 #: model:ir.model.fields,help:sale_coupon.field_sale_coupon_program__reward_product_id
 #: model:ir.model.fields,help:sale_coupon.field_sale_coupon_reward__reward_product_id
 msgid "Reward Product"
-msgstr "Preemiatoode"
+msgstr ""
 
 #. module: sale_coupon
 #: model:ir.model.fields,field_description:sale_coupon.field_sale_coupon_program__reward_type
@@ -1152,7 +1148,7 @@ msgstr "Tasu tüüp"
 #: model:ir.model.fields,help:sale_coupon.field_sale_coupon_program__reward_product_quantity
 #: model:ir.model.fields,help:sale_coupon.field_sale_coupon_reward__reward_product_quantity
 msgid "Reward product quantity"
-msgstr "Preemiatoote kogus"
+msgstr ""
 
 #. module: sale_coupon
 #: model_terms:ir.ui.view,arch_db:sale_coupon.sale_coupon_program_view_form_common
@@ -1163,13 +1159,13 @@ msgstr "Tasud"
 #: model:ir.model.fields,field_description:sale_coupon.field_sale_coupon_program__rule_minimum_amount
 #: model:ir.model.fields,field_description:sale_coupon.field_sale_coupon_rule__rule_minimum_amount
 msgid "Rule Minimum Amount"
-msgstr "Minimaalse ostusumma reegel"
+msgstr ""
 
 #. module: sale_coupon
 #: model:ir.model.fields,field_description:sale_coupon.field_sale_coupon_program__rule_minimum_amount_tax_inclusion
 #: model:ir.model.fields,field_description:sale_coupon.field_sale_coupon_rule__rule_minimum_amount_tax_inclusion
 msgid "Rule Minimum Amount Tax Inclusion"
-msgstr "Reegli \"Minimaalne ostusumma\" maksude kaasamine"
+msgstr ""
 
 #. module: sale_coupon
 #: model_terms:ir.ui.view,arch_db:sale_coupon.sale_coupon_program_view_form_common
@@ -1419,7 +1415,7 @@ msgstr "Validity Duration"
 #. module: sale_coupon
 #: model:ir.model.fields,help:sale_coupon.field_sale_coupon_program__validity_duration
 msgid "Validity duration for a coupon after its generation"
-msgstr "Kupongi kehtivusaeg pärast selle genereerimist"
+msgstr ""
 
 #. module: sale_coupon
 #: model_terms:ir.ui.view,arch_db:sale_coupon.sale_order_view_form
@@ -1444,9 +1440,6 @@ msgid ""
 "products should be recorded on the sales order. (Example: You need to have 3"
 " T-shirts on your sales order if the promotion is 'Buy 2, Get 1 Free')."
 msgstr ""
-"Teie müügitellimusel pole nõutavaid tootekoguseid. Kõik tooted tuleb "
-"müügitellimusel registreerida. (Näide: teil peab müügitellimusel olema 3 "
-"T-särki, kui kampaania on „Osta 2, saad 1 tasuta”)."
 
 #. module: sale_coupon
 #: code:addons/sale_coupon/models/sale_coupon_program.py:0
@@ -1457,9 +1450,6 @@ msgid ""
 "recorded on the sales order (Example: You need to have 3 T-shirts on your "
 "sales order if the promotion is 'Buy 2, Get 1 Free'."
 msgstr ""
-"Teie müügitellimusel pole nõutavaid tootekoguseid. Kõik tooted tuleb "
-"müügitellimusel registreerida. (Näide: teil peab müügitellimusel olema 3 "
-"T-särki, kui kampaania on „Osta 2, saad 1 tasuta”)."
 
 #. module: sale_coupon
 #: model:mail.template,report_name:sale_coupon.mail_template_sale_coupon

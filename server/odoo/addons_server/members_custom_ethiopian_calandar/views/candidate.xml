@@ -47,6 +47,19 @@
                     <widget name="ethiopian_calander_widget_two"  style=" float:left;width:226px;" class="oe_edit_only" groups="EthiopianCalendar.group_ethio_datepicker"/>
                     </div>
                 </xpath>
+                <xpath expr="//page[3]/field[@name='archive_ids']/tree/field[@name='date_from']" position="replace">
+                    <field name="is_pagum_from" invisible="1"/>
+                    <field  name="ethiopian_from" attrs="{'invisible': [('is_pagum_from', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    <field  name="pagum_from" attrs="{'invisible': [('is_pagum_from', '!=',False)]}"  groups="EthiopianCalendar.group_ethio_datepicker" optional="hidden"/>
+                    <field name="date_from" string="Date From" groups="EthiopianCalendar.group_gregory"/>
+                </xpath>
+                <xpath expr="//page[3]/field[@name='archive_ids']/tree/field[@name='date_to']" position="replace">
+                    <field name="is_pagum_to" invisible="1"/>
+                    <field  name="ethiopian_to" attrs="{'invisible': [('is_pagum_to', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    <field  name="pagum_to" attrs="{'invisible': [('is_pagum_to', '!=',False)]}"  groups="EthiopianCalendar.group_ethio_datepicker" optional="hidden"/>
+                    <field name="date_to" string="Date To" groups="EthiopianCalendar.group_gregory"/>
+                </xpath>
+
             </field>
         </record> 
         

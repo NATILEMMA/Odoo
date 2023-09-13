@@ -5,7 +5,7 @@
 # Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo 9.0\n"
+"Planning-Id-Version: Odoo 9.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-08-18 14:06+0000\n"
 "PO-Revision-Date: 2016-05-19 06:07+0000\n"
@@ -3228,17 +3228,17 @@ msgstr "Producto o versión de software"
 #: model_terms:ir.ui.view,arch_db:project.view_task_project_user_search
 #: model_terms:ir.ui.view,arch_db:project.view_task_search_form
 #: model:res.request.link,name:project.req_link_project
-msgid "Project"
+msgid "Planning"
 msgstr "Proyecto"
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_config_settings_generate_project_alias
-msgid "Project Alias"
+msgid "Planning Alias"
 msgstr "Alias del Proyecto"
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.view_config_settings
-msgid "Project Management"
+msgid "Planning Management"
 msgstr "Gestión de proyectos"
 
 #. module: project
@@ -3247,24 +3247,24 @@ msgstr "Gestión de proyectos"
 #: model_terms:ir.ui.view,arch_db:project.edit_project
 #: model_terms:ir.ui.view,arch_db:project.view_project
 #: model_terms:ir.ui.view,arch_db:project.view_project_project_filter
-msgid "Project Manager"
+msgid "Planning Manager"
 msgstr "Gerente de Proyecto"
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.edit_project
 #: model_terms:ir.ui.view,arch_db:project.view_project
 #: model_terms:ir.ui.view,arch_db:project.view_project_project_filter
-msgid "Project Name"
+msgid "Planning Name"
 msgstr "Nombre del Proyecto"
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.project_planner
-msgid "Project Settings"
+msgid "Planning Settings"
 msgstr "Configuración del Proyecto"
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.project_planner
-msgid "Project Settings."
+msgid "Planning Settings."
 msgstr "Configuración del Proyecto."
 
 #. module: project
@@ -3272,17 +3272,17 @@ msgstr "Configuración del Proyecto."
 #: model_terms:ir.ui.view,arch_db:project.view_project_task_pivot
 #: model_terms:ir.ui.view,arch_db:project.view_task_history_graph
 #: model_terms:ir.ui.view,arch_db:project.view_task_history_pivot
-msgid "Project Tasks"
+msgid "Planning Tasks"
 msgstr "Tareas del Proyecto"
 
 #. module: project
 #: model:res.request.link,name:project.req_link_task
-msgid "Project task"
+msgid "Planning task"
 msgstr "Tarea del proyecto"
 
 #. module: project
 #: model:ir.actions.act_window,name:project.dblc_proj
-msgid "Project's tasks"
+msgid "Planning's tasks"
 msgstr "Tareas del proyecto"
 
 #. module: project
@@ -3298,12 +3298,12 @@ msgstr "Tareas del proyecto"
 #: model_terms:ir.ui.view,arch_db:project.task_company
 #: model_terms:ir.ui.view,arch_db:project.view_project
 #, python-format
-msgid "Projects"
+msgid "Plannings"
 msgstr "Proyectos"
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.task_type_edit
-msgid "Projects using this stage"
+msgid "Plannings using this stage"
 msgstr "Proyectos usando esta etapa"
 
 #. module: project
@@ -4127,8 +4127,8 @@ msgstr "Por hacer"
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.project_planner
 msgid ""
-"To configure these Kanban Statuses, go to the 'Project Stages' tab of a "
-"Project."
+"To configure these Kanban Statuses, go to the 'Planning Stages' tab of a "
+"Planning."
 msgstr ""
 "Para configurar estos estados Kanban, vaya a la pestaña ' etapas del "
 "proyecto."
@@ -4616,7 +4616,7 @@ msgstr "Usted enumeró en el paso anterior"
 #~ msgid "Open Project Menu"
 #~ msgstr "Abrir Menú Proyecto"
 
-#~ msgid "Project Time Unit"
+#~ msgid "Planning Time Unit"
 #~ msgstr "Unidad de tiempo del proyecto"
 
 #~ msgid "Record timesheet lines per tasks"

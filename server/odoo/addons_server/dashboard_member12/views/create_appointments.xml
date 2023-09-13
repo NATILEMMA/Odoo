@@ -56,14 +56,37 @@
                                        <div class="form-group col-xl-6">
                                            <label class="control-label" for="name">Your Email</label>
                                            <div>
-                                               <input type="text" class="form-control" name="email" readonly="True" t-att-value="email"/>
+                                               <input type="text" class="form-control" name="email" t-att-value="email"/>
                                            </div>
                                        </div>
                                        <div class="form-group col-xl-6">
-                                           <label class="control-label" for="name">Your Phone</label>
+                                           <label class="control-label" for="name">Your Phone <span style="color: red;">*</span></label>
                                            <div>
-                                               <input type="text" class="form-control" name="phone" readonly="True" t-att-value="phone"/>
+                                               <input type="text" class="form-control" name="phone" t-att-value="phone" required="required"/>
                                            </div>
+                                       </div>
+                                       <div class="clearfix"/>
+                                       <div class="form-group col-xl-6">
+                                           <label class="control-label" for="name">Your Region/City Administration <span style="color: red;">*</span></label>
+                                            <select name="city_id" t-attf-class="form-control" required="required">
+                                                <option value="">Region...</option>
+                                                <t t-foreach="regions" t-as="reg">
+                                                <option t-att-value="reg.id" t-att-selected="reg.id == city_id">
+                                                    <t t-esc="reg.name"/>
+                                                </option>
+                                                </t>
+                                            </select>
+                                       </div>
+                                       <div class="form-group col-xl-6">
+                                           <label class="control-label" for="name">Your Sub City <span style="color: red;">*</span></label>
+                                            <select name="subcity" t-attf-class="form-control" required="required">
+                                                <option value="">Select your Sub City....</option>
+                                                <t t-foreach="subcities" t-as="sub">
+                                                    <option t-att-value="sub.id" t-att-data-parent_id="sub.state_id.id" t-att-selected="sub.id == subcity">
+                                                        <t t-esc="sub.name"/>
+                                                    </option>
+                                                </t>
+                                            </select>
                                        </div>
                                    </t>
                                    <t t-else="">
@@ -85,8 +108,31 @@
                                                <input type="text" name="phone" t-attf-class="form-control #{error.get('phone') and 'is-invalid' or ''}" t-att-value="phone" required="True" />
                                            </div>
                                        </div>
+                                       <div class="clearfix"/>
+                                       <div t-attf-class="form-group #{error.get('city_id') and 'o_has_error' or ''} col-xl-6">
+                                           <label class="control-label" for="name">Your Region/City Administration <span style="color: red;">*</span></label>
+                                            <select name="city_id" t-attf-class="form-control #{error.get('region') and 'is-invalid' or ''}">
+                                                <option value="">Region...</option>
+                                                <t t-foreach="regions" t-as="reg">
+                                                <option t-att-value="reg.id" t-att-selected="reg.id == city_id">
+                                                    <t t-esc="reg.name"/>
+                                                </option>
+                                                </t>
+                                            </select>
+                                       </div>
+                                       <div t-attf-class="form-group #{error.get('subcity') and 'o_has_error' or ''} col-xl-6">
+                                           <label class="control-label" for="name">Your Sub City <span style="color: red;">*</span></label>
+                                            <select name="subcity" t-attf-class="form-control #{error.get('subcity') and 'is-invalid' or ''}">
+                                                <option value="">Select your Sub City....</option>
+                                                <t t-foreach="subcities" t-as="sub">
+                                                    <option t-att-value="sub.id" style="display:none;" t-att-data-parent_id="sub.state_id.id" t-att-selected="sub.id == subcity">
+                                                        <t t-esc="sub.name"/>
+                                                    </option>
+                                                </t>
+                                            </select>
+                                       </div>
+
                                    </t>
-                                   <div class="form-group col-xl-6"></div>
                                    <div class="form-group col-xl-6">
                                        <label class="control-label" for="appointment_option">Subject <span style="color: red;">*</span></label>
                                        <div>
@@ -113,6 +159,7 @@
                                            </select>
                                        </div>
                                    </div>
+                                   <div class="clearfix"/>
                                    <div t-attf-class="form-group #{error and 'appointment_date' in error and 'has-error' or ''} col-xl-6">
                                        <label class="control-label" for="appointment_date">Appointment Date <span style="color: red;">*</span></label>
                                        <div>
@@ -134,6 +181,7 @@
                                            </select>
                                        </div>
                                    </div>
+                                   <div class="clearfix"/>
                                    <div class="form-group col-lg-12">
                                        <label class="control-label" for="remarks">Remarks</label>
                                        <div>
@@ -163,9 +211,9 @@
 </template>
 
 
-<template id="assets_frontend" name="website_date_info_assets" inherit_id="website.assets_frontend">
+<template id="assets_frontend_create_appointment" name="website_date_info_assets" inherit_id="website.assets_frontend">
   <xpath expr="." position="inside">
-      <script type="text/javascript" src="/s2u_online_appointment/static/src/js/main.js"></script>
+      <script type="text/javascript" src="/dashboard_member12/static/src/js/main_appointment.js"></script>
   </xpath>
 </template>
 

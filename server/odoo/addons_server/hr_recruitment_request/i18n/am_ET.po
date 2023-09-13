@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 13.0-20221005\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-04 05:47+0000\n"
-"PO-Revision-Date: 2023-04-04 05:47+0000\n"
+"POT-Creation-Date: 2023-08-10 07:21+0000\n"
+"PO-Revision-Date: 2023-08-10 07:21+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -438,7 +438,7 @@ msgstr "የስራ ቦታ ጥያቄን ያስጀምሩ"
 #. module: hr_recruitment_request
 #: model:ir.actions.act_window,name:hr_recruitment_request.action_custom_job
 msgid "Internal job posts"
-msgstr "የውስጥ የሥራዎች ልጥፎች"
+msgstr "የውስጥ የሥራዎች ማስታዎቂያዎች"
 
 #. module: hr_recruitment_request
 #: model:ir.ui.menu,name:hr_recruitment_request.internal_recruitment_menu_root
@@ -488,9 +488,9 @@ msgstr "የሥራ አይነት"
 
 #. module: hr_recruitment_request
 #: model:ir.actions.act_window,name:hr_recruitment_request.action_hr_recruitment_request_applier
-#: model:ir.ui.menu,name:hr_recruitment_request.menu_internal_recruitment_job_posts
+#: model:ir.ui.menu,name:hr_recruitment_request.job_posts_menu
 msgid "Job Posts"
-msgstr "የሥራ ልጥፎች"
+msgstr "የሥራ ማስታዎቂያ"
 
 #. module: hr_recruitment_request
 #: model:ir.actions.act_window,name:hr_recruitment_request.action_custom_job_personal
@@ -686,7 +686,6 @@ msgid "Poster entity"
 msgstr "የፖስተር አካል"
 
 #. module: hr_recruitment_request
-#: model:ir.model,name:hr_recruitment_request.model_hr_recruitment_request
 #: model:ir.model.fields,field_description:hr_recruitment_request.field_custom_job__recruitment_request_id
 msgid "Recruitment Request"
 msgstr "የቅጥር ጥያቄ"
@@ -758,7 +757,7 @@ msgstr "ኤስኤምኤስ መላኪያ ስህተት"
 #. module: hr_recruitment_request
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_request.view_recruitment_filter
 msgid "Search Hr recruitment Request"
-msgstr "የ HR ምልመላ ጥያቄን ይፈልጉ"
+msgstr "የ የሰው ሃይል ምልመላ ጥያቄን ይፈልጉ"
 
 #. module: hr_recruitment_request
 #: model:ir.model.fields.selection,name:hr_recruitment_request.selection__custom_job__state__second_interview
@@ -838,6 +837,11 @@ msgstr "ለ ስራ እድገቱ ላሳዩት ፍላጎት እናመሰግናለ�
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_request.report_application_request
 msgid "Thanking you in anticipation."
 msgstr "በተጠበቀው ነገር ከማመስገን."
+
+#. module: hr_recruitment_request
+#: model:ir.model,name:hr_recruitment_request.model_hr_recruitment_request
+msgid "This class will add field validation for recruitment request"
+msgstr "ይህ ክፍል ለቅጥር ጥያቄ የመስክ ማረጋገጫን ይጨምራል"
 
 #. module: hr_recruitment_request
 #: model:ir.model.fields,help:hr_recruitment_request.field_custom_job__campaign_id

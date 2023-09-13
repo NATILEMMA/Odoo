@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="budget_refuse_wizard_view_form" model="ir.ui.view">
+        <field name="name">budget.refuse.wizard.form</field>
+        <field name="model">budget.refuse.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Budget planning refuse reason">
+                <separator string="Reason to refuse Budget planning"/>
+                <!-- <field name="hr_expense_ids" invisible="1"/>
+                <field name="hr_expense_sheet_id" invisible="1"/> -->
+                <field name="reason"/>
+                <footer>
+                    <button string='Refuse' name="budget_refuse_reason" type="object" class="oe_highlight"/>
+                    <button string="Cancel" class="oe_link" special="cancel"/>
+                </footer>
+           </form>
+        </field>
+    </record>
+
+    <record id="budget_refuse_wizard_action" model="ir.actions.act_window">
+        <field name="name">Refuse Budget</field>
+        <field name="res_model">budget.refuse.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="budget_refuse_wizard_view_form"/>
+        <field name="target">new</field>
+    </record>
+</odoo>

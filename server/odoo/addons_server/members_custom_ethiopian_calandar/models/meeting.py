@@ -6,6 +6,7 @@ from collections import defaultdict
 from datetime import datetime, date 
 from odoo import api, exceptions, fields, models, _
 from ethiopian_date import EthiopianDateConverter
+from odoo.exceptions import UserError, ValidationError
 import logging
 _logger = logging.getLogger(__name__)
 pick1 = []
@@ -49,24 +50,6 @@ class MeetingEachOtherMain(models.Model):
                         vals['ethiopian_from'] = Edate1
                         pick1.clear()
 
-        for i in range(0, len(pick2)):
-
-            if i == (len(pick2) - 1):
-                date2 = EthiopianDateConverter.to_gregorian(pick2[i]['year'], pick2[i]['month'], pick2[i]['day'])
-                Edate2 = EthiopianDateConverter.to_ethiopian(date2.year, date2.month, date2.day)
-
-                if pick2[i]['pick'] == 2:
-                    if type(Edate2) == str:
-                        vals['ethiopian_to'] = None
-                        vals['next_date_of_meeting'] = date2
-                        vals['pagum_to'] = Edate2
-                        vals['is_pagum_to'] = False
-                        pick2.clear()
-                    if type(Edate2) == date:
-                        vals['next_date_of_meeting'] = date2
-                        vals['ethiopian_to'] = Edate2
-                        pick2.clear()
-
         try:
             if vals['date_of_meeting'] is not None:
                 date1 = vals['date_of_meeting']
@@ -81,110 +64,89 @@ class MeetingEachOtherMain(models.Model):
                     vals['is_pagum_from'] = False
 
                 else:
-                    pass
-
-            if vals['next_date_of_meeting'] is not None:
-                date2 = vals['next_date_of_meeting']
-                date_time_obj2 = date2.split('-')   
-                Edate2 = EthiopianDateConverter.to_ethiopian(int(date_time_obj2[0]), int(date_time_obj2[1]),
-                                                             int(date_time_obj2[2]))
-                if type(Edate2) == date:
-                    vals['ethiopian_to'] = Edate2
-                
-                elif type(Edate2) == str:
-                    vals['pagum_to'] = Edate2
-                    vals['is_pagum_to'] = False   
-                else:
-                    pass                 
+                    pass                
         except:
             pass
+
+        date_new = False
+        today = date.today()
+
+        if type(vals.get('date_of_meeting')) == str:
+            date_new = datetime.strptime(vals.get('date_of_meeting'), '%Y-%m-%d').date()
+            if date_new < date.today():
+                raise UserError(_("Please A Date After Today"))
+        elif type(vals.get('date_of_meeting')) == date:
+            date_new = vals.get('date_of_meeting')
+            if date_new < date.today():
+                raise UserError(_("Please A Date After Today"))
+        else:
+            raise UserError(_("You Have To Pick A Date for Meeting"))
+
 
         return super(MeetingEachOtherMain, self).create(vals)
 
 
     def write(self, vals):
-        _logger.info("################# Write %s", vals)
+        for record in self:
+            _logger.info("################# Write %s", vals)
 
-        try:
-            if vals['ethiopian_from'] is not None:
-                date_str = vals['ethiopian_from']
-                date_time_obj = date_str.split('-')
-                date_gr = EthiopianDateConverter.to_gregorian(int(date_time_obj[0]), int(date_time_obj[1]),
-                                                              int(date_time_obj[2]))
-                Edate1 = EthiopianDateConverter.to_ethiopian(date_gr.year, date_gr.month, date_gr.day)
-                vals['date_of_meeting'] = date_gr
-                if type(Edate1) == str:
-                    vals['ethiopian_from'] = None
-                    vals['pagum_from'] = Edate1
-                    vals['is_pagum_from'] = False
-                if type(Edate1) == date:
-                    vals['ethiopian_from'] = Edate1
-                    vals['pagum_from'] = None
-                    vals['is_pagum_from'] = True
+            try:
 
-        except:
-            pass
+                if vals['ethiopian_to'] is not None:
+                    date_str = vals['ethiopian_to']
+                    date_time_obj = date_str.split('-')
+                    date_gr = EthiopianDateConverter.to_gregorian(int(date_time_obj[0]), int(date_time_obj[1]),
+                                                                int(date_time_obj[2]))
+                    Edate1 = EthiopianDateConverter.to_ethiopian(date_gr.year, date_gr.month, date_gr.day)
+                    vals['next_date_of_meeting'] = date_gr
 
-        try:
+                    if date_gr <= record.date_of_meeting:
+                        raise UserError(_("Please A Date After The Current Meeting Date"))
 
-            if vals['ndate_of_meeting'] is not None:
-                date_str = vals['next_date_of_meeting']
-                date_time_obj = date_str.split('-')
-                Edate = EthiopianDateConverter.to_ethiopian(int(date_time_obj[0]), int(date_time_obj[1]),
-                                                            int(date_time_obj[2]))
-                _logger.info("######     ############# %s", Edate)
-                _logger.info("######     ############# %s", type(Edate))
+                    if type(Edate1) == str:
+                        vals['ethiopian_to'] = None
+                        vals['pagum_to'] = Edate1
+                        vals['is_pagum_to'] = False
+                    if type(Edate1) == date:
+                        vals['ethiopian_to'] = Edate1
+                        vals['pagum_to'] = None
+                        vals['is_pagum_to'] = True
+            except:
+                pass
 
-                if type(Edate) == str:
-                    vals['ethiopian_from'] = None
-                    vals['is_pagum_from'] = False
-                    vals['pagum_from'] = Edate
-                elif type(Edate) == date:
-                    vals['ethiopian_from'] = Edate
-                    vals['is_pagum_from'] = True
-                    vals['pagum_from'] = ' '
+            try:
+                if vals['next_date_of_meeting'] is not None:
 
-        except:
-            pass
+                    date_str = vals['next_date_of_meeting']
+                    date_time_obj = date_str.split('-')
+                    Edate = EthiopianDateConverter.to_ethiopian(int(date_time_obj[0]), int(date_time_obj[1]),
+                                                                int(date_time_obj[2]))
+                    if type(Edate) == str:
+                        vals['ethiopian_to'] = None
+                        vals['is_pagum_to'] = False
+                        vals['pagum_to'] = Edate
+                    elif type(Edate) == date:
+                        vals['ethiopian_to'] = Edate
+                        vals['is_pagum_to'] = True
+                        vals['pagum_to'] = ' '
+                        
+            except:
+                pass
 
-        try:
+        date_new = False
+        today = date.today()
 
-            if vals['ethiopian_to'] is not None:
-                date_str = vals['ethiopian_to']
-                date_time_obj = date_str.split('-')
-                date_gr = EthiopianDateConverter.to_gregorian(int(date_time_obj[0]), int(date_time_obj[1]),
-                                                              int(date_time_obj[2]))
-                Edate1 = EthiopianDateConverter.to_ethiopian(date_gr.year, date_gr.month, date_gr.day)
-                vals['next_date_of_meeting'] = date_gr
-                if type(Edate1) == str:
-                    vals['ethiopian_to'] = None
-                    vals['pagum_to'] = Edate1
-                    vals['is_pagum_to'] = False
-                if type(Edate1) == date:
-                    vals['ethiopian_to'] = Edate1
-                    vals['pagum_to'] = None
-                    vals['is_pagum_to'] = True
-        except:
-            pass
+        if type(vals.get('next_date_of_meeting')) == str:
+            date_new = datetime.strptime(vals.get('next_date_of_meeting'), '%Y-%m-%d').date()
+            if date_new <= self.date_of_meeting:
+                raise UserError(_("Please A Date After The Current Meeting Date"))
+        elif type(vals.get('next_date_of_meeting')) == date:
+            date_new = vals.get('next_date_of_meeting')
+            if date_new <= self.date_of_meeting:
+                raise UserError(_("Please A Date After The Current Meeting Date"))
+        elif not vals.get('next_date_of_meeting'):
+            raise UserError(_("You Have To Pick A Date for Next Meeting"))
 
-        try:
-            if vals['next_date_of_meeting'] is not None:
-
-                date_str = vals['next_date_of_meeting']
-                date_time_obj = date_str.split('-')
-                Edate = EthiopianDateConverter.to_ethiopian(int(date_time_obj[0]), int(date_time_obj[1]),
-                                                            int(date_time_obj[2]))
-                if type(Edate) == str:
-                    vals['ethiopian_to'] = None
-                    vals['is_pagum_to'] = False
-                    vals['pagum_to'] = Edate
-                elif type(Edate) == date:
-                    vals['ethiopian_to'] = Edate
-                    vals['is_pagum_to'] = True
-                    vals['pagum_to'] = ' '
-                    
-        except:
-            pass
         return super(MeetingEachOtherMain, self).write(vals)
 
 
@@ -327,23 +289,6 @@ class MeetingEachOther(models.Model):
                         vals['ethiopian_from'] = Edate1
                         pick1.clear()
 
-        for i in range(0, len(pick2)):
-
-            if i == (len(pick2) - 1):
-                date2 = EthiopianDateConverter.to_gregorian(pick2[i]['year'], pick2[i]['month'], pick2[i]['day'])
-                Edate2 = EthiopianDateConverter.to_ethiopian(date2.year, date2.month, date2.day)
-
-                if pick2[i]['pick'] == 2:
-                    if type(Edate2) == str:
-                        vals['ethiopian_to'] = None
-                        vals['next_date_of_meeting'] = date2
-                        vals['pagum_to'] = Edate2
-                        vals['is_pagum_to'] = False
-                        pick2.clear()
-                    if type(Edate2) == date:
-                        vals['next_date_of_meeting'] = date2
-                        vals['ethiopian_to'] = Edate2
-                        pick2.clear()
 
         try:
             if vals['date_of_meeting'] is not None:
@@ -360,108 +305,90 @@ class MeetingEachOther(models.Model):
 
                 else:
                     pass
-
-            if vals['next_date_of_meeting'] is not None:
-                date2 = vals['next_date_of_meeting']
-                date_time_obj2 = date2.split('-')   
-                Edate2 = EthiopianDateConverter.to_ethiopian(int(date_time_obj2[0]), int(date_time_obj2[1]),
-                                                             int(date_time_obj2[2]))
-                if type(Edate2) == date:
-                    vals['ethiopian_to'] = Edate2
-                
-                elif type(Edate2) == str:
-                    vals['pagum_to'] = Edate2
-                    vals['is_pagum_to'] = False   
-                else:
-                    pass                 
         except:
             pass
+
+
+        date_new = False
+        today = date.today()
+
+        if type(vals.get('date_of_meeting')) == str:
+            date_new = datetime.strptime(vals.get('date_of_meeting'), '%Y-%m-%d').date()
+            if date_new < date.today():
+                raise UserError(_("Please A Date After Today"))
+        elif type(vals.get('date_of_meeting')) == date:
+            date_new = vals.get('date_of_meeting')
+            if date_new < date.today():
+                raise UserError(_("Please A Date After Today"))
+        else:
+            raise UserError(_("You Have To Pick A Date for Meeting"))
+
+
 
         return super(MeetingEachOther, self).create(vals)
 
 
     def write(self, vals):
         _logger.info("################# Write %s", vals)
+        for record in self:
 
-        try:
-            if vals['ethiopian_from'] is not None:
-                date_str = vals['ethiopian_from']
-                date_time_obj = date_str.split('-')
-                date_gr = EthiopianDateConverter.to_gregorian(int(date_time_obj[0]), int(date_time_obj[1]),
-                                                              int(date_time_obj[2]))
-                Edate1 = EthiopianDateConverter.to_ethiopian(date_gr.year, date_gr.month, date_gr.day)
-                vals['date_of_meeting'] = date_gr
-                if type(Edate1) == str:
-                    vals['ethiopian_from'] = None
-                    vals['pagum_from'] = Edate1
-                    vals['is_pagum_from'] = False
-                if type(Edate1) == date:
-                    vals['ethiopian_from'] = Edate1
-                    vals['pagum_from'] = None
-                    vals['is_pagum_from'] = True
+            try:
 
-        except:
-            pass
+                if vals['ethiopian_to'] is not None:
+                    date_str = vals['ethiopian_to']
+                    date_time_obj = date_str.split('-')
+                    date_gr = EthiopianDateConverter.to_gregorian(int(date_time_obj[0]), int(date_time_obj[1]),
+                                                                int(date_time_obj[2]))
+                    Edate1 = EthiopianDateConverter.to_ethiopian(date_gr.year, date_gr.month, date_gr.day)
+                    vals['next_date_of_meeting'] = date_gr
 
-        try:
+                    if date_gr <= record.date_of_meeting:
+                        raise UserError(_("Please A Date After The Current Meeting Date"))
+                        
+                    if type(Edate1) == str:
+                        vals['ethiopian_to'] = None
+                        vals['pagum_to'] = Edate1
+                        vals['is_pagum_to'] = False
+                    if type(Edate1) == date:
+                        vals['ethiopian_to'] = Edate1
+                        vals['pagum_to'] = None
+                        vals['is_pagum_to'] = True
+            except:
+                pass
 
-            if vals['ndate_of_meeting'] is not None:
-                date_str = vals['next_date_of_meeting']
-                date_time_obj = date_str.split('-')
-                Edate = EthiopianDateConverter.to_ethiopian(int(date_time_obj[0]), int(date_time_obj[1]),
-                                                            int(date_time_obj[2]))
-                _logger.info("######     ############# %s", Edate)
-                _logger.info("######     ############# %s", type(Edate))
+            try:
+                if vals['next_date_of_meeting'] is not None:
 
-                if type(Edate) == str:
-                    vals['ethiopian_from'] = None
-                    vals['is_pagum_from'] = False
-                    vals['pagum_from'] = Edate
-                elif type(Edate) == date:
-                    vals['ethiopian_from'] = Edate
-                    vals['is_pagum_from'] = True
-                    vals['pagum_from'] = ' '
+                    date_str = vals['next_date_of_meeting']
+                    date_time_obj = date_str.split('-')
+                    Edate = EthiopianDateConverter.to_ethiopian(int(date_time_obj[0]), int(date_time_obj[1]),
+                                                                int(date_time_obj[2]))
+                    if type(Edate) == str:
+                        vals['ethiopian_to'] = None
+                        vals['is_pagum_to'] = False
+                        vals['pagum_to'] = Edate
+                    elif type(Edate) == date:
+                        vals['ethiopian_to'] = Edate
+                        vals['is_pagum_to'] = True
+                        vals['pagum_to'] = ' '
+            except:
+                pass
 
-        except:
-            pass
+        date_new = False
+        today = date.today()
 
-        try:
+        if type(vals.get('next_date_of_meeting')) == str:
+            date_new = datetime.strptime(vals.get('next_date_of_meeting'), '%Y-%m-%d').date()
+            if date_new <= self.date_of_meeting:
+                raise UserError(_("Please A Date After The Current Meeting Date"))
+        elif type(vals.get('next_date_of_meeting')) == date:
+            date_new = vals.get('next_date_of_meeting')
+            if date_new <= self.date_of_meeting:
+                raise UserError(_("Please A Date After The Current Meeting Date"))
+        elif not vals.get('next_date_of_meeting'):
+            raise UserError(_("You Have To Pick A Date for Next Meeting"))
 
-            if vals['ethiopian_to'] is not None:
-                date_str = vals['ethiopian_to']
-                date_time_obj = date_str.split('-')
-                date_gr = EthiopianDateConverter.to_gregorian(int(date_time_obj[0]), int(date_time_obj[1]),
-                                                              int(date_time_obj[2]))
-                Edate1 = EthiopianDateConverter.to_ethiopian(date_gr.year, date_gr.month, date_gr.day)
-                vals['next_date_of_meeting'] = date_gr
-                if type(Edate1) == str:
-                    vals['ethiopian_to'] = None
-                    vals['pagum_to'] = Edate1
-                    vals['is_pagum_to'] = False
-                if type(Edate1) == date:
-                    vals['ethiopian_to'] = Edate1
-                    vals['pagum_to'] = None
-                    vals['is_pagum_to'] = True
-        except:
-            pass
 
-        try:
-            if vals['next_date_of_meeting'] is not None:
-
-                date_str = vals['next_date_of_meeting']
-                date_time_obj = date_str.split('-')
-                Edate = EthiopianDateConverter.to_ethiopian(int(date_time_obj[0]), int(date_time_obj[1]),
-                                                            int(date_time_obj[2]))
-                if type(Edate) == str:
-                    vals['ethiopian_to'] = None
-                    vals['is_pagum_to'] = False
-                    vals['pagum_to'] = Edate
-                elif type(Edate) == date:
-                    vals['ethiopian_to'] = Edate
-                    vals['is_pagum_to'] = True
-                    vals['pagum_to'] = ' '
-        except:
-            pass
         return super(MeetingEachOther, self).write(vals)
 
 
@@ -604,24 +531,6 @@ class MeetingCells(models.Model):
                         vals['ethiopian_from'] = Edate1
                         pick1.clear()
 
-        for i in range(0, len(pick2)):
-
-            if i == (len(pick2) - 1):
-                date2 = EthiopianDateConverter.to_gregorian(pick2[i]['year'], pick2[i]['month'], pick2[i]['day'])
-                Edate2 = EthiopianDateConverter.to_ethiopian(date2.year, date2.month, date2.day)
-
-                if pick2[i]['pick'] == 2:
-                    if type(Edate2) == str:
-                        vals['ethiopian_to'] = None
-                        vals['next_date_of_meeting'] = date2
-                        vals['pagum_to'] = Edate2
-                        vals['is_pagum_to'] = False
-                        pick2.clear()
-                    if type(Edate2) == date:
-                        vals['next_date_of_meeting'] = date2
-                        vals['ethiopian_to'] = Edate2
-                        pick2.clear()
-
         try:
             if vals['date_of_meeting'] is not None:
                 date1 = vals['date_of_meeting']
@@ -635,109 +544,87 @@ class MeetingCells(models.Model):
                     vals['pagum_from'] = Edate1
                     vals['is_pagum_from'] = False
                 else:
-                    pass
-
-            if vals['next_date_of_meeting'] is not None:
-                date2 = vals['next_date_of_meeting']
-                date_time_obj2 = date2.split('-')   
-                Edate2 = EthiopianDateConverter.to_ethiopian(int(date_time_obj2[0]), int(date_time_obj2[1]),
-                                                             int(date_time_obj2[2]))
-                if type(Edate2) == date:
-                    vals['ethiopian_to'] = Edate2
-                
-                elif type(Edate2) == str:
-                    vals['pagum_to'] = Edate2
-                    vals['is_pagum_to'] = False  
-                else:
-                    pass                  
+                    pass                 
         except:
             pass
+
+        date_new = False
+        today = date.today()
+
+        if type(vals.get('date_of_meeting')) == str:
+            date_new = datetime.strptime(vals.get('date_of_meeting'), '%Y-%m-%d').date()
+            if date_new < date.today():
+                raise UserError(_("Please A Date After Today"))
+        elif type(vals.get('date_of_meeting')) == date:
+            date_new = vals.get('date_of_meeting')
+            if date_new < date.today():
+                raise UserError(_("Please A Date After Today"))
+        else:
+            raise UserError(_("You Have To Pick A Date for Meeting"))
 
         return super(MeetingCells, self).create(vals)
 
 
     def write(self, vals):
         _logger.info("################# Write %s", vals)
+        for record in self:
 
-        try:
-            if vals['ethiopian_from'] is not None:
-                date_str = vals['ethiopian_from']
-                date_time_obj = date_str.split('-')
-                date_gr = EthiopianDateConverter.to_gregorian(int(date_time_obj[0]), int(date_time_obj[1]),
-                                                              int(date_time_obj[2]))
-                Edate1 = EthiopianDateConverter.to_ethiopian(date_gr.year, date_gr.month, date_gr.day)
-                vals['date_of_meeting'] = date_gr
-                if type(Edate1) == str:
-                    vals['ethiopian_from'] = None
-                    vals['pagum_from'] = Edate1
-                    vals['is_pagum_from'] = False
-                if type(Edate1) == date:
-                    vals['ethiopian_from'] = Edate1
-                    vals['pagum_from'] = None
-                    vals['is_pagum_from'] = True
+            try:
 
-        except:
-            pass
+                if vals['ethiopian_to'] is not None:
+                    date_str = vals['ethiopian_to']
+                    date_time_obj = date_str.split('-')
+                    date_gr = EthiopianDateConverter.to_gregorian(int(date_time_obj[0]), int(date_time_obj[1]),
+                                                                int(date_time_obj[2]))
+                    Edate1 = EthiopianDateConverter.to_ethiopian(date_gr.year, date_gr.month, date_gr.day)
+                    vals['next_date_of_meeting'] = date_gr
 
-        try:
+                    if date_gr <= record.date_of_meeting:
+                        raise UserError(_("Please A Date After The Current Meeting Date"))
 
-            if vals['ndate_of_meeting'] is not None:
-                date_str = vals['next_date_of_meeting']
-                date_time_obj = date_str.split('-')
-                Edate = EthiopianDateConverter.to_ethiopian(int(date_time_obj[0]), int(date_time_obj[1]),
-                                                            int(date_time_obj[2]))
-                _logger.info("######     ############# %s", Edate)
-                _logger.info("######     ############# %s", type(Edate))
+                    if type(Edate1) == str:
+                        vals['ethiopian_to'] = None
+                        vals['pagum_to'] = Edate1
+                        vals['is_pagum_to'] = False
+                    if type(Edate1) == date:
+                        vals['ethiopian_to'] = Edate1
+                        vals['pagum_to'] = None
+                        vals['is_pagum_to'] = True
+            except:
+                pass
 
-                if type(Edate) == str:
-                    vals['ethiopian_from'] = None
-                    vals['is_pagum_from'] = False
-                    vals['pagum_from'] = Edate
-                elif type(Edate) == date:
-                    vals['ethiopian_from'] = Edate
-                    vals['is_pagum_from'] = True
-                    vals['pagum_from'] = ' '
+            try:
+                if vals['next_date_of_meeting'] is not None:
 
-        except:
-            pass
+                    date_str = vals['next_date_of_meeting']
+                    date_time_obj = date_str.split('-')
+                    Edate = EthiopianDateConverter.to_ethiopian(int(date_time_obj[0]), int(date_time_obj[1]),
+                                                                int(date_time_obj[2]))
+                    if type(Edate) == str:
+                        vals['ethiopian_to'] = None
+                        vals['is_pagum_to'] = False
+                        vals['pagum_to'] = Edate
+                    elif type(Edate) == date:
+                        vals['ethiopian_to'] = Edate
+                        vals['is_pagum_to'] = True
+                        vals['pagum_to'] = ' '
+            except:
+                pass
 
-        try:
+        date_new = False
+        today = date.today()
 
-            if vals['ethiopian_to'] is not None:
-                date_str = vals['ethiopian_to']
-                date_time_obj = date_str.split('-')
-                date_gr = EthiopianDateConverter.to_gregorian(int(date_time_obj[0]), int(date_time_obj[1]),
-                                                              int(date_time_obj[2]))
-                Edate1 = EthiopianDateConverter.to_ethiopian(date_gr.year, date_gr.month, date_gr.day)
-                vals['next_date_of_meeting'] = date_gr
-                if type(Edate1) == str:
-                    vals['ethiopian_to'] = None
-                    vals['pagum_to'] = Edate1
-                    vals['is_pagum_to'] = False
-                if type(Edate1) == date:
-                    vals['ethiopian_to'] = Edate1
-                    vals['pagum_to'] = None
-                    vals['is_pagum_to'] = True
-        except:
-            pass
+        if type(vals.get('next_date_of_meeting')) == str:
+            date_new = datetime.strptime(vals.get('next_date_of_meeting'), '%Y-%m-%d').date()
+            if date_new <= self.date_of_meeting:
+                raise UserError(_("Please A Date After The Current Meeting Date"))
+        elif type(vals.get('next_date_of_meeting')) == date:
+            date_new = vals.get('next_date_of_meeting')
+            if date_new <= self.date_of_meeting:
+                raise UserError(_("Please A Date After The Current Meeting Date"))
+        elif not vals.get('next_date_of_meeting'):
+            raise UserError(_("You Have To Pick A Date for Next Meeting"))
 
-        try:
-            if vals['next_date_of_meeting'] is not None:
-
-                date_str = vals['next_date_of_meeting']
-                date_time_obj = date_str.split('-')
-                Edate = EthiopianDateConverter.to_ethiopian(int(date_time_obj[0]), int(date_time_obj[1]),
-                                                            int(date_time_obj[2]))
-                if type(Edate) == str:
-                    vals['ethiopian_to'] = None
-                    vals['is_pagum_to'] = False
-                    vals['pagum_to'] = Edate
-                elif type(Edate) == date:
-                    vals['ethiopian_to'] = Edate
-                    vals['is_pagum_to'] = True
-                    vals['pagum_to'] = ' '
-        except:
-            pass
         return super(MeetingCells, self).write(vals)
 
 

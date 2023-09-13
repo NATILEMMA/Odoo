@@ -7,11 +7,11 @@
     "author": "Tria trading -  Natnael Lemma ,Software developer",
     "sequence": 0,
     "application": True,
-    "depends": ["members_custom"],
+    "depends": ["member_registration"],
     "data": [
         'security/ir.model.access.csv',
         "wizard/cell_split_wizard_view.xml",
-        "wizard/league_cell_split_wizard_view.xml",
+        # "wizard/league_cell_split_wizard_view.xml",
         "views/office_in_membership.xml",
     ],
     "installable": True,

@@ -100,13 +100,15 @@
                         </div>
                         <h1>
                             <field name="name" placeholder="e.g. Business Lunch"/>
+                            <field name="is_generated_date" invisible="1"/>
+
                         </h1>
-                        <label for="partner_ids" string="Attendees" class="oe_edit_only"/>
+                        <label for="partner_ids" string="Attendees" class="oe_edit_only" attrs="{'invisible': [('is_generated_date', '!=',False)]}"/>
                         <h2>
                             <field name="partner_ids" widget="many2manyattendee"
                                 placeholder="Select attendees..."
                                 context="{'force_email':True}"
-                                class="oe_inline"/>
+                                class="oe_inline" attrs="{'invisible': [('is_generated_date', '!=',False)]}"/>
                         </h2>
                     </div>
                     <notebook>
@@ -200,9 +202,9 @@
                             </group>
                         </page>
 
-                        <page name="page_invitations" string="Invitations" groups="base.group_no_one">
+                        <page name="page_invitations" string="Invitations" groups="base.group_no_one" attrs="{'invisible': [('is_generated_date', '!=',False)]}">
                             <button name="action_sendmail" type="object" string="Send mail" icon="fa-envelope" class="oe_link"/>
-                            <field name="attendee_ids" widget="one2many" mode="tree,kanban">
+                            <field name="attendee_ids" widget="one2many" mode="tree,kanban" attrs="{'invisible': [('is_generated_date', '!=',False)]}">
                                 <tree string="Invitation details" editable="top" create="false" delete="false">
                                     <field name="partner_id" />
                                     <field name="state" />
@@ -259,6 +261,7 @@
             <calendar js_class="attendee_calendar" string="Meetings" date_start="start" date_stop="stop" date_delay="duration" all_day="allday"
                 event_open_popup="true"
                 event_limit="5"
+                mode="month"
                 color="partner_id">
                 <field name="attendee_status"/>
                 <field name="partner_id"/>
@@ -295,7 +298,7 @@
     <record id="action_calendar_event" model="ir.actions.act_window">
         <field name="name">Meetings</field>
         <field name="res_model">calendar.event</field>
-        <field name="view_mode">calendar,tree,form</field>
+        <field name="view_mode">calendar,form</field>
         <field name="view_id" ref="view_calendar_event_calendar"/>
         <field name="search_view_id" ref="view_calendar_event_search"/>
         <field name="help" type="html">
@@ -316,12 +319,12 @@
         <field name="view_id" ref="view_calendar_event_calendar"/>
     </record>
 
-    <record id="action_view_calendar_event_tree" model="ir.actions.act_window.view">
+    <!-- <record id="action_view_calendar_event_tree" model="ir.actions.act_window.view">
         <field name="act_window_id" ref="action_calendar_event"/>
         <field name="sequence" eval="2"/>
         <field name="view_mode">tree</field>
         <field name="view_id" ref="view_calendar_event_tree"/>
-    </record>
+    </record> -->
 
     <record id="action_view_calendar_event_form" model="ir.actions.act_window.view">
         <field name="act_window_id" ref="action_calendar_event"/>
@@ -337,25 +340,25 @@
         sequence="2"
         action="action_calendar_event"
         web_icon="calendar,static/description/icon.png"
-        groups="base.group_user"/>
+        groups="calendar.group_calendar_user,calendar.group_calendar_manager"/>
 
     <menuitem
         id="menu_calendar_configuration"
         name="Calendar"
         parent="base.menu_custom"
-        groups="base.group_no_one"/>
+        groups="calendar.group_calendar_user,calendar.group_calendar_manager"/>
 
     <menuitem
         id="menu_calendar_event_type"
         parent="menu_calendar_configuration"
         action="action_calendar_event_type"
-        groups="base.group_no_one"/>
+        groups="calendar.group_calendar_user,calendar.group_calendar_manager"/>
 
     <menuitem
         id="menu_calendar_alarm"
         parent="menu_calendar_configuration"
         action="action_calendar_alarm"
-        groups="base.group_no_one"/>
+        groups="calendar.group_calendar_user,calendar.group_calendar_manager"/>
 
     <!-- called in js from '/js/base_calendar.js' -->
     <record id="action_calendar_event_notify" model="ir.actions.act_window">

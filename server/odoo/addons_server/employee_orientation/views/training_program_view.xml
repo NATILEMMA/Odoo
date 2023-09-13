@@ -40,11 +40,10 @@
                 </field>
              </field>
         </record>
-        
         <menuitem
             id="training_program"
             action="action_employee_training_program"
-            parent="employee_orientation.menu_employee_training_child_in_hr_maintain"
+            parent="employee_orientation.menu_employee_training_child"
             name = "Program name"
         /> 
     </data>

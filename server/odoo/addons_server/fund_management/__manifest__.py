@@ -1,6 +1,6 @@
 
 {
-    'name': "Fund Management",
+    'name': "Fund",
     'summary': """
        Fund Management.
        """,
@@ -20,14 +20,14 @@
     'category': 'Uncategorized',
     'version': '0.1',
     'depends': ['base_accounting_kit','hr',  'mail',
-        'portal','budget','base','project'],
+        'portal','base','project'],
     'data': [
         'data/data.xml',
         'security/fund_group_rules.xml',
         'security/ir.model.access.csv',
         'views/views.xml',
-        # 'views/templates.xml',
-        'views/inherit_employee_view.xml',
+        'views/report.xml',
+        # 'views/inherit_employee_view.xml',
         'views/fund_view_menu.xml',
         'views/account_analytic_account_views.xml',
         'views/account_fund_views.xml',

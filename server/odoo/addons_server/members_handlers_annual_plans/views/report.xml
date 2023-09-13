@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <!-- This record will create tree view for annual planning -->
+    <record id="annual_planning_city_graph_action" model="ir.actions.act_window">
+        <field name="name">Annual Planning</field>
+        <field name="res_model">annual.plans</field>
+        <field name="view_mode">graph,pivot,tree</field>
+        <field name="domain">['|', 
+                            ('city_id.ict_manager', '=', uid),
+                            ('city_id.city_manager', 'in', [uid])]</field>
+    </record>
+
+    <!-- This record will create tree view for annual planning -->
+    <record id="annual_planning_sub_city_graph_action" model="ir.actions.act_window">
+        <field name="name">Annual Planning Subcity</field>
+        <field name="res_model">annual.plans.subcity</field>
+        <field name="view_mode">graph,pivot,tree</field>
+        <field name="domain">['|', '|', '|',
+                            ('subcity_id.parent_manager', 'in', [uid]),
+                            ('subcity_id.ict_manager', '=', uid),
+                            ('subcity_id.city_id.city_manager', 'in', [uid]),
+                            ('subcity_id.city_id.ict_manager', '=', uid),]</field>
+    </record>
+
+    <!-- This record will create tree view for annual planning -->
+    <record id="annual_planning_wereda_graph_action" model="ir.actions.act_window">
+        <field name="name">Annual Planning Woreda</field>
+        <field name="res_model">annual.plans.wereda</field>
+        <field name="view_mode">graph,pivot,tree</field>
+        <field name="domain">['|', '|', '|', '|', '|',
+                                ('wereda_id.branch_manager', '=', uid),
+                                ('wereda_id.ict_manager', '=', uid),
+                                ('wereda_id.parent_id.parent_manager', '=', uid),
+                                ('wereda_id.parent_id.ict_manager', '=', uid),
+                                ('wereda_id.parent_id.city_id.ict_manager', '=', uid),
+                                ('wereda_id.parent_id.city_id.city_manager', 'in', [uid])]</field>
+    </record>
+
+
+    <!-- This record will create tree view for annual planning -->
+    <record id="annual_planning_sub_city_graph" model="ir.actions.act_window">
+        <field name="name">Annual Planning Subcity</field>
+        <field name="res_model">annual.plans.subcity</field>
+        <field name="view_mode">graph,pivot,tree</field>
+        <field name="domain">['|', '|', '|',
+                            ('subcity_id.parent_manager', 'in', [uid]), 
+                            ('subcity_id.ict_manager', '=', uid),
+                            ('city_id.city_manager', 'in', [uid]),
+                            ('city_id.ict_manager', '=', uid)]</field>
+    </record>
+
+    <!-- This record will create tree view for annual planning -->
+    <record id="annual_planning_wereda_graph" model="ir.actions.act_window">
+        <field name="name">Annual Planning Woreda</field>
+        <field name="res_model">annual.plans.wereda</field>
+        <field name="view_mode">graph,pivot,tree</field>
+        <field name="domain">['|', '|', '|', '|', '|',
+                            ('wereda_id.branch_manager', 'in', [uid]),
+                            ('wereda_id.ict_manager', '=', uid),
+                            ('subcity_id.parent_manager', 'in', [uid]),
+                            ('subcity_id.ict_manager', '=', uid),
+                            ('city_id.city_manager', 'in', [uid]),
+                            ('city_id.ict_manager', '=', uid)]</field>
+    </record>
+
+
+    <!-- This record will create an action for the membership handlers parent model reporting -->
+    <record id="cell_dashboard_reporting_action" model="ir.actions.act_window">
+        <field name="name">Cell Reporting</field>
+        <field name="res_model">member.cells</field>
+        <field name="view_mode">graph,pivot,tree</field>
+        <field name="domain">['|', '|', '|', '|', '|', '|', '|', '|', '|', '|',
+                            ('cell_admin', '=', uid),
+                            ('cell_assembler', '=', uid),
+                            ('cell_finance', '=', uid),
+                            ('main_office.main_assembler', '=', uid),
+                            ('main_office.main_admin', '=', uid),
+                            ('main_office.main_finance', '=', uid),
+                            ('wereda_id.branch_manager', '=', uid),
+                            ('subcity_id.parent_manager', '=', uid),
+                            ('subcity_id.city_id.city_manager', 'in', [uid]),
+                            ('subcity_id.city_id.transfer_handler', '=', uid),
+                            ('subcity_id.city_id.responsible_id.system_admin', 'in', [uid])]</field>
+    </record>
+
+
+    <menuitem name="Annual Planning"
+              id="annual_plan_menu"
+              parent="member_minor_configuration.membership_all_module_report_tab"
+              groups="member_minor_configuration.member_group_manager"
+              sequence="2"/>
+
+    <menuitem id="annual_city_plan_report_menu"
+              name="Annual City Plan Report"
+              parent="annual_plan_menu"
+              action="annual_planning_city_graph_action"
+              groups="member_minor_configuration.member_group_city_admin"
+              sequence="1"/> 
+
+    <menuitem id="annual_sub_city_plan_report_menu"
+              name="Annual Sub City Plan Report"
+              parent="annual_plan_menu"
+              action="annual_planning_sub_city_graph_action"
+              groups="member_minor_configuration.member_group_admin"
+              sequence="2"/> 
+
+    <menuitem id="annual_wereda_plan_report_menu"
+              name="Annual Woreda Plan Report"
+              parent="annual_plan_menu"
+              action="annual_planning_wereda_graph_action"
+              groups="member_minor_configuration.member_group_manager"
+              sequence="3"/> 
+
+    <menuitem name="Membership Organization"
+              id="membership_organization_menu"
+              parent="member_minor_configuration.membership_all_module_report_tab"
+              sequence="3"
+              groups="member_minor_configuration.member_group_cell_manager,member_minor_configuration.member_group_finance,member_minor_configuration.member_group_assembler"/>
+
+    <menuitem id="cell_report_menu"
+              name="Cell Report"
+              parent="membership_organization_menu"
+              action="cell_dashboard_reporting_action"
+              groups="member_minor_configuration.member_group_cell_manager,member_minor_configuration.member_group_finance,member_minor_configuration.member_group_assembler"
+              sequence="1"/> 
+ 
+
+
+
+</odoo>

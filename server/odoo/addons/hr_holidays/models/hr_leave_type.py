@@ -28,7 +28,7 @@ class HolidaysType(models.Model):
         return leave_type.allocation_type == 'fixed' and remaining, leave_type.allocation_type == 'fixed_allocation' and remaining, taken
 
     name = fields.Char('Time Off Type', required=True, translate=True)
-    code = fields.Char('Code')
+    code = fields.Char('Code', translate=True)
     sequence = fields.Integer(default=100,
                               help='The type with the smallest sequence is the default value in time off request')
     create_calendar_meeting = fields.Boolean(string="Display Time Off in Calendar", default=True)

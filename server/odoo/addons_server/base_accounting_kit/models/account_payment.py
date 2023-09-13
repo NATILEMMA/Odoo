@@ -26,8 +26,8 @@ from odoo.exceptions import UserError
 class AccountRegisterPayments(models.TransientModel):
     _inherit = "account.payment.register"
 
-    bank_reference = fields.Char(copy=False)
-    cheque_reference = fields.Char(copy=False)
+    bank_reference = fields.Char(copy=False, translate=True)
+    cheque_reference = fields.Char(copy=False, translate=True)
     effective_date = fields.Date('Effective Date',
                                  help='Effective date of PDC', copy=False,
                                  default=False)
@@ -53,8 +53,8 @@ class AccountRegisterPayments(models.TransientModel):
 class AccountPayment(models.Model):
     _inherit = "account.payment"
 
-    bank_reference = fields.Char(copy=False)
-    cheque_reference = fields.Char(copy=False)
+    bank_reference = fields.Char(copy=False, translate=True)
+    cheque_reference = fields.Char(copy=False, translate=True)
     effective_date = fields.Date('Effective Date',
                                  help='Effective date of PDC', copy=False,
                                  default=False)

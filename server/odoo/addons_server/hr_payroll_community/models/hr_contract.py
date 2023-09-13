@@ -60,8 +60,8 @@ class HrContractAdvandageTemplate(models.Model):
     _name = 'hr.contract.advantage.template'
     _description = "Employee's Advantage on Contract"
 
-    name = fields.Char('Name', required=True)
-    code = fields.Char('Code', required=True)
+    name = fields.Char('Name', required=True, translate=True)
+    code = fields.Char('Code', required=True, translate=True)
     lower_bound = fields.Float('Lower Bound', help="Lower bound authorized by the employer for this advantage")
     upper_bound = fields.Float('Upper Bound', help="Upper bound authorized by the employer for this advantage")
     default_value = fields.Float('Default value for this advantage')

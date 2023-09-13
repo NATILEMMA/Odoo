@@ -29,19 +29,15 @@
             <field name="model">vehicle.libre</field>
             <field name="inherit_id" ref="vehicle_libre.view_vehicle_libre_tree"/>
             <field name="arch" type="xml">
-
-            
-            
-
                 <xpath expr="//field[@name='creation_date']" position="replace">
-                    <field name="ethiopian_three" class="oe_read_only" string="Creation date" style=" float:left; width: 192px; margin-left: -3px;" attrs="{'invisible': ['|', ('is_pagum_three', '=',False)],'readonly': [('state','in',('register','expired'))]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    <field name="ethiopian_from" class="oe_read_only" string="Creation date" style=" float:left; width: 192px; margin-left: -3px;" attrs="{'invisible': ['|', ('is_pagum_from', '=',False)],'readonly': [('state','in',('register','expired'))]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
                     <field name="creation_date" attrs="{'readonly': [('state','in',('register','expired'))]}" groups="EthiopianCalendar.group_gregory"/>
-                    <field name="pagum_three" class="oe_read_only" string="Creation date" style=" float:left;width: 192px; margin-left: -3px;" attrs="{'invisible': ['|',('is_pagum_three', '!=',False)], 'readonly': [('state','in',('register','expired'))]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
-                    <field name="is_pagum_three" invisible="1"/>
+                    <field name="pagum_from" class="oe_read_only" string="Creation date" style=" float:left;width: 192px; margin-left: -3px;" attrs="{'invisible': ['|',('is_pagum_from', '!=',False)], 'readonly': [('state','in',('register','expired'))]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    <field name="is_pagum_from" invisible="1"/>
                     <div>
                     </div>
                     <div style="margin-bottom:40px;margin-top:-22px; width: 60px !important;margin-left:7px;margin-right:0px">
-                        <widget name="ethiopian_calander_widget_three" style="float:left;width:178px;" class="oe_edit_only" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                        <widget name="ethiopian_calander_widget" style="float:left;width:230px;margin-left:-3px;" class="oe_edit_only" groups="EthiopianCalendar.group_ethio_datepicker"/>
                     </div>
                 </xpath>
             </field>

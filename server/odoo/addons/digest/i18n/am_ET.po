@@ -1,0 +1,708 @@
+# Date created: 2023-06-16 18:41:05 by dichthuatphuongdong.com
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-06-16 03:13:39+0000"
+"MIME-Version: 1.0"
+"Content-Type: text/plain; charset=UTF-8"
+"Content-Transfer-Encoding: 8bit"
+"Plural-Forms: nplurals=1; plural=0;"
+"X-Generator: GlotPress/3.0.0-alpha.2"
+"Language: en_GB"
+"Project-Id-Version: PO File 5.8.1"
+
+#. module: digest
+#: model:mail.template,subject:digest.digest_mail_template
+msgid "${\'%s: %s\' % (ctx.get(\'user\', user).company_id.name, object.name)}"
+msgstr "${\'%s፡ %s\' % (ctx.get(\'user\', user).company_id.name, object.name)}"
+
+#. module: digest
+#: model_terms:digest.tip,tip_description:digest.digest_tip_mail_0
+msgid "${\', \'.join(users.mapped(\'name\'))} signed up. Say hello in the"
+msgstr "${\'፣ \'.መቀላቀል(ተጠቃሚዎች ካርታ የተደረገባቸው(\'ስም\'))} ተመዝግበዋል። በ ውስጥ ሰላም ይበሉ"
+
+#. module: digest
+#: model_terms:digest.tip,tip_description:digest.digest_tip_mail_0
+msgid ""
+"% set users = object.env[\'res.users\'].search([(\'share\', \'=\' , False)], limit=10, order=\'id desc\')"
+"    % set channel_id = object.env.ref(\'mail.channel_all_employees\').id"
+"    <strong style=\"font-size: 16px;\">Did you know...?</strong>"
+msgstr ""
+"% ተጠቃሚዎችን ያዘጋጃሉ = object.env [\'res.users \'] ፈልግ ([(\'share \', \'=\', ውሸት)], limit=10, order=\'id desc\' )"
+" % አዘጋጅ channel_id = object.env.ref(\'mail.channel_all_employees \')) መታወቂያ"
+" <strong style=\font-size: 16px;\">ያውቁ ኖሯል...?</strong>"
+#. module: digest
+#: model_terms:digest.tip,tip_description:digest.digest_tip_mail_1
+msgid "<strong style=\"font-size: 16px;\">Get things done with activities</strong>"
+msgstr "<strong style=\"font-size: 16px;\">በእንቅስቃሴዎች ተከናውኗል</strong>"
+
+#. module: digest
+#: model:mail.template,body_html:digest.digest_mail_template
+msgid ""
+"<table style=\"width: 100%; border-spacing: 0; font-family: Helvetica,Arial,Verdana,sans-serif;\">"
+"    <tr>"
+"        <td align=\"center\" valign=\"top\" style=\"border-collapse: collapse; padding: 0\">"
+"            % set user = ctx.get(\'user\', user)"
+"            % set company = user.company_id"
+"            % set data = object.compute_kpis(company, user)"
+"            % set tips = object.compute_tips(company, user)"
+"            % set kpi_actions = object.compute_kpis_actions(company, user)"
+"            % set kpis = data.yesterday.keys()"
+"            <table style=\"width: 100%; max-width: 600px; border-spacing: 0; border: 1px solid #e7e7e7; border-bottom: none; color: #6e7172; line-height: 23px; text-align: left;\">"
+"                <tr>"
+"                    <td style=\"border-collapse: collapse; padding: 10px 20px; text-align: left;\">"
+"                        <strong style=\"color: #000000; font-size: 22px; line-height: 32px;\">${object.name}</strong>"
+"                        <div style=\"color: #000000; font-size: 15px;\">${datetime.date.today().strftime(\'%B %d, %Y\')}</div>"
+"                    </td>"
+"                    <td style=\"text-align: right; padding: 10px 20px\">"
+"                        <img style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" src=\"/logo.png?company=${company.id}\"/>"
+"                        <div style=\"padding-top: 5px;\">"
+"                            <a href=\"/web/login\" style=\"background-color: #875A7B; margin-left: 5px; padding: 8px 16px 8px 16px; text-decoration: none; color: #fff; border-radius: 5px; font-size:13px;\">Connect</a>"
+"                        </div>"
+"                    </td>"
+"                </tr>"
+"                <tr><td colspan=\"2\" style=\"text-align: center;\">"
+"                    <hr width=\"95%\" style=\"background-color: rgb(204,204,204); border: medium none; clear: both; display: block; font-size: 0px; min-height: 1px; line-height: 0; margin: 16px 0px 16px 14px;\"/>"
+"                </td></tr>"
+"            </table>"
+"            % for kpi in kpis:"
+"                <table style=\"border-spacing: 0; width: 100%; max-width: 600px;\">"
+"                    <tr>"
+"                        <td style=\"border-collapse: collapse; background-color: #ffffff; border-left: 1px solid #e7e7e7; border-right: 1px solid #e7e7e7; line-height: 21px; padding: 0 20px 10px 20px; text-align: left;\"><br/>"
+"                            <span style=\"color: #3d466e; font-size: 18px; font-weight: 500; line-height: 23px;\">${object.fields_get()[kpi][\'string\']}</span>"
+"                            %if kpi in kpi_actions:"
+"                                <span style=\"float: right;\">"
+"                                    <a href=\"/web#action=${kpi_actions[kpi]}\">View more</a>"
+"                                </span>"
+"                            %endif"
+"                        </td>"
+"                    </tr>"
+"                    <tr>"
+"                        <td style=\"border-collapse: collapse; margin: 0; padding:0;\">"
+"                            <table style=\"width: 100%; border-spacing: 0; background-color: #f9f9f9; border: 1px solid #e7e7e7; border-top: none;\">"
+"                                <tr>"
+"                                    <td style=\"border-collapse: collapse; margin: 0; padding: 0; display: block; border-top: 2px solid #56b3b5;\">"
+"                                        <table style=\"width: 100%; max-width: 199px; border-spacing: 0;\">"
+"                                            <tr>"
+"                                                <td style=\"border-collapse: collapse; padding: 20px; text-align: center;\">"
+"                                                    <span style=\"color: #56b3b5; font-size: 35px; font-weight: bold; text-decoration: none; line-height: 36px;\">${data[\'yesterday\'][kpi][kpi]}</span><br/>"
+"                                                    <span style=\"color: #888888; display: inline-block; font-size: 12px; line-height: 18px; text-transform: uppercase;\">Yesterday</span>"
+"                                                    % if data[\'yesterday\'][kpi][\'margin\'] != 0.0:"
+"                                                        <span style=\"color: #888888; display: block; font-size: 12px; line-height: 18px; text-transform: uppercase;\">"
+"                                                            % if data[\'yesterday\'][kpi][\'margin\'] is greaterthan(0.0):"
+"                                                                <span style=\"color: #0bbc22;\">▲</span>${\"%.2f\" % data[\'yesterday\'][kpi][\'margin\']} %"
+"                                                            % endif"
+"                                                            % if data[\'yesterday\'][kpi][\'margin\'] is lessthan(0.0):"
+"                                                                <span style=\"color: #ff0000;\">▼</span>${\"%.2f\" % data[\'yesterday\'][kpi][\'margin\']} %"
+"                                                            % endif"
+"                                                        </span>"
+"                                                    % endif"
+"                                                </td>"
+"                                            </tr>"
+"                                        </table>"
+"                                    </td>"
+"                                    <td style=\"border-collapse: collapse; margin: 0; padding: 0; border-top: 2px solid #9a5b82;\">"
+"                                        <table style=\"width: 100%; max-width: 199px; border-spacing: 0; margin: 0; padding: 0;\">"
+"                                            <tr>"
+"                                                <td style=\"border-collapse: collapse; padding: 20px; text-align: center;\">"
+"                                                    <span style=\"color: #9a5b82; font-size: 35px; font-weight: bold; text-decoration: none; line-height: 36px;\">${data[\'lastweek\'][kpi][kpi]}</span><br/>"
+"                                                    <span style=\"color: #888888; display: inline-block; font-size: 12px; line-height: 18px; text-transform: uppercase;\">Last 7 Days</span>"
+"                                                    % if data[\'lastweek\'][kpi][\'margin\'] != 0.0:"
+"                                                        <span style=\"color: #888888; display: block; font-size: 12px; line-height: 18px; text-transform: uppercase;\">"
+"                                                            % if data[\'lastweek\'][kpi][\'margin\'] is greaterthan(0.0):"
+"                                                                <span style=\"color: #0bbc22;\">▲</span>${\"%.2f\" % data[\'lastweek\'][kpi][\'margin\']} %"
+"                                                            % endif"
+"                                                            % if data[\'lastweek\'][kpi][\'margin\'] is lessthan(0.0):"
+"                                                                <span style=\"color: #ff0000;\">▼</span>${\"%.2f\" % data[\'lastweek\'][kpi][\'margin\']} %"
+"                                                            %endif"
+"                                                        </span>"
+"                                                    %endif"
+"                                                </td>"
+"                                            </tr>"
+"                                        </table>"
+"                                    </td>"
+"                                    <td style=\"border-collapse: collapse; margin: 0; padding: 15px; border-top: 2px solid #56b3b5;\">"
+"                                        <table style=\"width: 100%; max-width: 199px; border-spacing: 0; margin: 0; padding: 0;\">"
+"                                            <tr>"
+"                                                <td style=\"border-collapse: collapse; margin: 0; text-align: center;\">"
+"                                                    <span style=\"color: #56b3b5; font-size: 35px; font-weight: bold; text-decoration: none; line-height: 36px\">${data[\'lastmonth\'][kpi][kpi]}</span><br/>"
+"                                                    <span style=\"color: #888888; display: inline-block; font-size: 12px; line-height: 18px; text-transform: uppercase;\">Last 30 Days</span>"
+"                                                    % if data[\'lastmonth\'][kpi][\'margin\'] != 0.0:"
+"                                                        <span style=\"color: #888888; display: block; font-size: 12px; line-height: 18px; text-transform: uppercase;\">"
+"                                                             % if data[\'lastmonth\'][kpi][\'margin\'] is greaterthan(0.0):"
+"                                                                <span style=\"color: #0bbc22;\">▲</span>${\"%.2f\" % data[\'lastmonth\'][kpi][\'margin\']} %"
+"                                                            % endif"
+"                                                            % if data[\'lastmonth\'][kpi][\'margin\'] is lessthan(0.0):"
+"                                                                <span style=\"color: #ff0000;\">▼</span>${\"%.2f\" % data[\'lastmonth\'][kpi][\'margin\']} %"
+"                                                            %endif"
+"                                                        </span>"
+"                                                    %endif"
+"                                                </td>"
+"                                            </tr>"
+"                                        </table>"
+"                                    </td>"
+"                                </tr>"
+"                            </table>"
+"                        </td>"
+"                    </tr>"
+"                </table>"
+"            % endfor"
+"            % if tips:"
+"                <table style=\"width: 100%; max-width: 600px; margin-top: 5px; border: 1px solid #e7e7e7;\">"
+"                    <tr>"
+"                        <td style=\"border-collapse: collapse; background-color: #ffffff; line-height: 21px; padding: 0px 20px 20px;\"><br/>"
+"                            <div style=\"color: #3d466e; line-height: 23px;\">${tips | safe}</div>"
+"                        </td>"
+"                    </tr>"
+"                </table>"
+"            % endif"
+"            <table style=\"width: 100%; max-width: 600px; margin-top: 5px; border: 1px solid #e7e7e7;\">"
+"                <tr>"
+"                    <td style=\"border-collapse: collapse; background-color: #ffffff; line-height: 21px; padding: 0 20px 10px 20px; text-align: center;\"><br/>"
+"                        <div style=\"color: #3d466e; font-size: 16px; font-weight: 600; line-height: 23px;\">Run your business from anywhere with Odoo Mobile.</div>"
+"                    </td>"
+"                </tr>"
+"                <tr>"
+"                    <td style=\"padding-bottom:20px;\">"
+"                        <div style=\"text-align: center;\"><a href=\"https://play.google.com/store/apps/details?id=com.odoo.mobile\" target=\"_blank\"><img src=\"/digest/static/src/img/google_play.png\" style=\"display: inline-block; height: 30px; margin-left: auto; margin-right: 12px;\"/></a><a href=\"https://itunes.apple.com/us/app/odoo/id1272543640\" target=\"_blank\"><img src=\"/digest/static/src/img/app_store.png\" style=\"display: inline-block; height: 30px; margin-left: 12px; margin-right: auto;\"/></a>"
+"                        </div>"
+"                    </td>"
+"                </tr>"
+"            </table>"
+"            <table style=\"margin-top: 5px; border: 1px solid #e7e7e7; font-size: 15px; width: 100%; max-width: 600px;\">"
+"                <tr>"
+"                    <td style=\"border-collapse: collapse; margin: 0; padding: 10px 20px;\">"
+"                        % if user.has_group(\'base.group_system\'):"
+"                            <div style=\"margin-top: 20px;\"> "
+"                                Want to customize this email?"
+"                                <a href=\"/web#view_type=form&amp;model=digest.digest&amp;id=${object.id}\" target=\"_blank\" style=\"color: #875A7B;\">Choose the metrics you care about</a>"
+"                            </div>"
+"                            <br/>"
+"                        % endif"
+"                        <p style=\"font-size: 11px; margin-top: 10px;\">"
+"                            <strong>"
+"                                Sent by"
+"                                <a href=\"https://www.odoo.com\" style=\"text-decoration: none; color: #875A7B;\">Odoo</a> - <a href=\"/web#view_type=form&amp;model=digest.digest&amp;id=${object.id}\" target=\"_blank\" style=\"color: #888888;\">Unsubscribe</a>"
+"                            </strong>"
+"                        </p>"
+"                    </td>"
+"                </tr>"
+"            </table>"
+"        </td>"
+"    </tr>"
+"</table>"
+msgstr ""
+"<ሠንጠረዥ ዘይቤ=\"ስፋት፡ 100%; ድንበር - 0; ፎንት-ቤተሰብ፡ Helvetica, Arial, Verdana,sans-serif;\">"
+" <tr>"
+" <td align=\"መሃል\" valign=\"ከላይ\" style=\" ድንበር-ሰብስብ: ውድቀት; ንጣፍ: 0\">"
+"% አዘጋጅ ተጠቃሚ = ctx.get(\'ተጠቃሚ \'፣ ተጠቃሚ)"
+"% አዘጋጅ ኩባንያ = ተጠቃሚ.company_id"
+"% አዘጋጅ ውሂብ = object.compute_kpi (ኩባንያ, ተጠቃሚ)"
+"% አዘጋጅ ምክሮች = object.compute_tips(ኩባንያ፣ ተጠቃሚ)"
+" % kpi_actions = object.compute_kpis_actions(ኩባንያ፣ ተጠቃሚ) አዘጋጅ"
+"% አዘጋጅ kpis = data.yesterday.keys()"
+" <ሠንጠረዥ style=\"ስፋት፡ 100%; ከፍተኛ-ወርድ: 600 ፒክስል; ድንበር - 0; ድንበር: 1 ፒክስል ጠንካራ # e7e7e7; ድንበር-ታች፡ የለም; ቀለም፡ # 6e7172; የመስመር ቁመት: 23 ፒክስል; text-align: left;\">"
+" <tr>"
+" <td style=\" ድንበር-መፈራረስ: መሰባበር; ንጣፍ: 10 ፒክስል 20 ፒክስል; text-align: left;\">"
+" <strong style=\" ቀለም፡ #000000; የቅርጸ-ቁምፊ መጠን: 22 ፒክስል; line-height፡ 32px;\">${object.name}</strong>"
+" <div style=\" ቀለም፡ #000000; font-size፡ 15px;\">${datetime.date.today().strftime(\'%B %d, %Y\')}</div>"
+"</td>"
+" <td style=\"text-align: right; ንጣፍ: 10 ፒክስል 20 ፒክስል\">"
+" <img style=\" padding: 0px; ህዳግ፡ 0 ፒክስል; ቁመት፡ አውቶማቲክ; ስፋት፡ 80 ፒክስል፤ \" src=\"/logo.png?company=${company.id}\"/>"
+" <div style=\"padding-top: 5px;\">"
+" <a href=\"/web/login\" style=\"background-color: #875A7B; ህዳግ-ግራ፡ 5 ፒክስል; ንጣፍ: 8 ፒክስል 16 ፒክስል 8 ፒክስል 16 ፒክስል; ጽሑፍ-ማጌጫ: የለም; ቀለም፡ #fff; ድንበር-ራዲየስ: 5 ፒክስል; font-size:13px;\">አገናኝ</a>"
+" </div>
+"</td>"
+" </tr>
+" <tr><td colspan=\"2\" style=\"text-align: center;\">"
+" <hr width=\"95%\" style=\"ዳራ-ቀለም፡ rgb(204,204,204); ድንበር: መካከለኛ ምንም; ግልጽ፡ ሁለቱም; ማሳያ፡ ማገድ; የቅርጸ-ቁምፊ መጠን: 0 ፒክስል; ዝቅተኛ ቁመት: 1 ፒክስል; የመስመር-ቁመት: 0; ህዳግ፡ 16 ፒክስል 0 ፒክስል 16 ፒክስል 14 ፒክስል፤ \"/>"
+" </td></tr>"
+" </ጠረጴዛ>"
+"% ለ kpi በ kpis፡"
+" <table style=\"የድንበር-ቦታ: 0; ስፋት: 100%; ከፍተኛ ስፋት፡ 600 ፒክስል፤\">"
+" <tr>"
+" <td style=\" ድንበር-መፈራረስ: መሰባበር; ዳራ-ቀለም: #ffffff; ድንበር-ግራ: 1 ፒክስል ጠንካራ # e7e7e7; ድንበር-ቀኝ: 1 ፒክስል ጠንካራ # e7e7e7; የመስመር ቁመት: 21 ፒክስል; ንጣፍ: 0 20 ፒክስል 10 ፒክስል 20 ፒክስል; ጽሑፍ-አሰላለፍ፡ በግራ፣\"><br/>"
+" <span style=\" ቀለም፡ # 3d466e; የቅርጸ-ቁምፊ መጠን: 18 ፒክስል; የቅርጸ-ቁምፊ ክብደት: 500; line-height፡ 23px;\">${object.fields_get()[kpi][\'string\']}</span>"
+" %if kpi በ kpi_actions፡"
+" <span style=\"float: right;\">"
+" <a href=\"/web#action=${kpi_actions[kpi]}\">ተጨማሪ ይመልከቱ</a>"
+" </span>
+"% endif"
+"</td>"
+" </tr>
+" <tr>"
+" <td style=\" ድንበር-መፈራረስ: መሰባበር; ህዳግ፡ 0; padding:0;\">"
+" <ሠንጠረዥ style=\"ስፋት፡ 100%; ድንበር - 0; የበስተጀርባ ቀለም፡ # f9f9f9; ድንበር: 1 ፒክስል ጠንካራ # e7e7e7; ድንበር-ከላይ: የለም;\">"
+" <tr>"
+" <td style=\" ድንበር-መፈራረስ: መሰባበር; ህዳግ፡ 0; ንጣፍ፡ 0; ማሳያ፡ ማገድ; ድንበር-ከላይ፡ 2 ፒክስል ጠንካራ #56b3b5;\">"
+" <ሠንጠረዥ style=\"ስፋት፡ 100%; ከፍተኛ-ወርድ: 199 ፒክስል; ድንበር - 0;\">"
+" <tr>"
+" <td style=\" ድንበር-መፈራረስ: መሰባበር; ንጣፍ: 20 ፒክስል; text-align: center;\">"
+" <span style=\" ቀለም፡ # 56b3b5; የቅርጸ-ቁምፊ መጠን: 35 ፒክስል; የቅርጸ-ቁምፊ ክብደት: ደማቅ; ጽሑፍ-ማጌጫ: የለም; line-height፡ 36px;\">${ዳታ[\'ትላንትና\'][kpi][kpi]}</span><br/>"
+" <span style=\" ቀለም፡ # 888888; ማሳያ: የመስመር ውስጥ-ብሎክ; የቅርጸ-ቁምፊ መጠን: 12 ፒክስል; የመስመር-ቁመት: 18 ፒክስል; text-transform: uppercase;\">ትላንትና</span>"
+" % ከዳታ[\'ትላንትና\'][kpi][\'ህዳግ\']!= 0.0:"
+" <span style=\" ቀለም፡ # 888888; ማሳያ፡ ማገድ; የቅርጸ-ቁምፊ መጠን: 12 ፒክስል; የመስመር-ቁመት: 18 ፒክስል; ጽሑፍ-ትራንስፎርም: አቢይ ሆሄ;\">"
+" % ውሂብ[\'ትላንትና\'][kpi][\'ህዳግ\'] ከ(0.0) የሚበልጥ ከሆነ"
+" <span style=\"color: #0bbc22;\">▲</span>${\"%.2f\" % ውሂብ[\'ትላንትና\'][kpi][\'ህዳግ\']} % "
+"% መጨረሻ"
+" % ውሂብ[\'ትላንትና\'][kpi][\'ህዳግ\'] ከ(0.0) ያነሰ ከሆነ"
+" <span style=\"color: #ff0000;\">▼</span>${\"%2f\" % ውሂብ[\'ትላንትና\'][kpi][\'margin\']} % "
+"% መጨረሻ"
+" </span>
+"% መጨረሻ"
+"</td>"
+" </tr>
+" </ጠረጴዛ>"
+"</td>"
+" <td style=\" ድንበር-መፈራረስ: መሰባበር; ህዳግ፡ 0; ንጣፍ፡ 0; ድንበር-ከላይ፡ 2 ፒክስል ጠንካራ #9a5b82;\">"
+" <ሠንጠረዥ style=\"ስፋት፡ 100%; ከፍተኛ-ወርድ: 199 ፒክስል; ድንበር - 0; ህዳግ፡ 0; ንጣፍ፡ 0;\">"
+" <tr>"
+" <td style=\" ድንበር-መፈራረስ: መሰባበር; ንጣፍ: 20 ፒክስል; text-align: center;\">"
+" <span style=\" ቀለም፡ #9a5b82; የቅርጸ-ቁምፊ መጠን: 35 ፒክስል; የቅርጸ-ቁምፊ ክብደት: ደማቅ; ጽሑፍ-ማጌጫ: የለም; line-height፡ 36px;\">${ዳታ[\'lastweek\'][kpi][kpi]}</span><br/>"
+" <span style=\" ቀለም፡ # 888888; ማሳያ: የመስመር ውስጥ-ብሎክ; የቅርጸ-ቁምፊ መጠን: 12 ፒክስል; የመስመር-ቁመት: 18 ፒክስል; text-transform: uppercase;\">ባለፉት 7 ቀናት</span>"
+" % ከዳታ[\'lastweek\'][kpi][\'ህዳግ\']!= 0.0:"
+" <span style=\" ቀለም፡ # 888888; ማሳያ፡ ማገድ; የቅርጸ-ቁምፊ መጠን: 12 ፒክስል; የመስመር-ቁመት: 18 ፒክስል; ጽሑፍ-ትራንስፎርም: አቢይ ሆሄ;\">"
+" % ውሂብ[\'ባለፈው ሳምንት\'][kpi][\'ህዳግ\'] ከ(0.0) የሚበልጥ ከሆነ"
+" <span style=\"color: #0bbc22;\">▲</span>${\"%.2f\" % ዳታ[\'lastweek\'][kpi][\'margin\']} % "
+"% መጨረሻ"
+" % ውሂብ[\'ባለፈው ሳምንት\'][kpi][\'ህዳግ\'] ከ(0.0) ያነሰ ከሆነ"
+" <span style=\"color: #ff0000;\">▼</span>${\"%2f\" % ውሂብ[\'lastweek\'][kpi][\'margin\']} % "
+"% endif"
+" </span>
+"% endif"
+"</td>"
+" </tr>
+" </ጠረጴዛ>"
+"</td>"
+" <td style=\" ድንበር-መፈራረስ: መሰባበር; ህዳግ፡ 0; ንጣፍ: 15 ፒክስል; ድንበር-ከላይ፡ 2 ፒክስል ጠንካራ #56b3b5;\">"
+" <ሠንጠረዥ style=\"ስፋት፡ 100%; ከፍተኛ-ወርድ: 199 ፒክስል; ድንበር - 0; ህዳግ፡ 0; ንጣፍ፡ 0;\">"
+" <tr>"
+" <td style=\" ድንበር-መፈራረስ: መሰባበር; ህዳግ፡ 0; text-align: center;\">"
+" <span style=\" ቀለም፡ # 56b3b5; የቅርጸ-ቁምፊ መጠን: 35 ፒክስል; የቅርጸ-ቁምፊ ክብደት: ደማቅ; ጽሑፍ-ማጌጫ: የለም; line-height፡ 36px\">${ውሂብ[\'ባለፈው ወር\'][kpi][kpi]}</span><br/>"
+" <span style=\" ቀለም፡ # 888888; ማሳያ: የመስመር ውስጥ-ብሎክ; የቅርጸ-ቁምፊ መጠን: 12 ፒክስል; የመስመር-ቁመት: 18 ፒክስል; text-transform: uppercase;\">ያለፉት 30 ቀናት</span>"
+" % ከዳታ[\'የመጨረሻው ወር\'][kpi][\'ህዳግ\']!= 0.0:"
+" <span style=\" ቀለም፡ # 888888; ማሳያ፡ ማገድ; የቅርጸ-ቁምፊ መጠን: 12 ፒክስል; የመስመር-ቁመት: 18 ፒክስል; ጽሑፍ-ትራንስፎርም: አቢይ ሆሄ;\">"
+" % ውሂብ[\'ባለፈው ወር\'][kpi][\'ህዳግ\'] ከ(0.0) የሚበልጥ ከሆነ"
+" <span style=\"color: #0bbc22;\">▲</span>${\"%2f\" % ውሂብ[\'lastmonth\'][kpi][\'margin\']} % "
+"% መጨረሻ"
+" % ውሂብ[\'ባለፈው ወር\'][kpi][\'ህዳግ\'] ከ(0.0) ያነሰ ከሆነ"
+" <span style=\"color: #ff0000;\">▼</span>${\"%2f\" % ውሂብ[\'lastmonth\'][kpi][\'margin\']} % "
+"% endif"
+" </span>
+"% endif"
+"</td>"
+" </tr>
+" </ጠረጴዛ>"
+"</td>"
+" </tr>
+" </ጠረጴዛ>"
+"</td>"
+" </tr>
+" </ጠረጴዛ>"
+"% መጨረሻ"
+" % ጠቃሚ ምክሮች ከሆነ:"
+" <ሠንጠረዥ style=\"ስፋት፡ 100%; ከፍተኛ-ወርድ: 600 ፒክስል; ህዳግ-ከላይ: 5 ፒክስል; ድንበር፡ 1 ፒክስል ጠንካራ #e7e7e7;\">"
+" <tr>"
+" <td style=\" ድንበር-መፈራረስ: መሰባበር; ዳራ-ቀለም: #ffffff; የመስመር ቁመት: 21 ፒክስል; ንጣፍ፡ 0 ፒክስል 20 ፒክስል 20 ፒክስል፤ \"><br/>"
+" <div style=\" ቀለም፡ # 3d466e; line-height፡ 23px;\">${ጠቃሚ ምክሮች | አስተማማኝ}</div>"
+"</td>"
+" </tr>
+" </ጠረጴዛ>"
+"% መጨረሻ"
+" <ሠንጠረዥ style=\"ስፋት፡ 100%; ከፍተኛ-ወርድ: 600 ፒክስል; ህዳግ-ከላይ: 5 ፒክስል; ድንበር፡ 1 ፒክስል ጠንካራ #e7e7e7;\">"
+" <tr>"
+" <td style=\" ድንበር-መፈራረስ: መሰባበር; ዳራ-ቀለም: #ffffff; የመስመር ቁመት: 21 ፒክስል; ንጣፍ: 0 20 ፒክስል 10 ፒክስል 20 ፒክስል; ጽሑፍ-አሰላለፍ፡ መሃል፤\"><br/>"
+" <div style=\" ቀለም፡ # 3d466e; የቅርጸ-ቁምፊ መጠን: 16 ፒክስል; የቅርጸ-ቁምፊ ክብደት: 600; line-height: 23px;\">ንግድዎን ከየትኛውም ቦታ ሆነው በኦዱ ሞባይል ያሂዱ።</div>"
+"</td>"
+" </tr>
+" <tr>"
+" <td style=\"padding-bottom:20px;\">"
+" <div style=\"text-align: center;\"><a href=\"https://play.google.com/store/apps/details?id=com.odoo.mobile\" target=\" _ባዶ\"><img src=\"/digest/static/src/img/google_play.png\" style=\"ማሳያ፡ inline-block; ቁመት: 30 ፒክስል; ኅዳግ-ግራ፡ auto; ህዳግ-ቀኝ፡ 12px፤\"/></a><a href=\"https://itunes.apple.com/us/app/odoo/id1272543640\" target=\"_ባዶ\"><img src =\"/digest/static/src/img/app_store.png\" style=\"ማሳያ፡ inline-block; ቁመት: 30 ፒክስል; ህዳግ-ግራ፡ 12 ፒክስል; ህዳግ-በቀኝ፡- ራስ፤\"/></a>"
+" </div>
+"</td>"
+" </tr>
+" </ጠረጴዛ>"
+" <table style=\"ህዳግ-ከላይ፡ 5px; ድንበር: 1 ፒክስል ጠንካራ # e7e7e7; የቅርጸ-ቁምፊ መጠን: 15 ፒክስል; ስፋት: 100%; ከፍተኛ ስፋት፡ 600 ፒክስል፤\">"
+" <tr>"
+" <td style=\" ድንበር-መፈራረስ: መሰባበር; ህዳግ፡ 0; ንጣፍ፡ 10 ፒክስል 20 ፒክስል፤\">"
+" % ተጠቃሚ.has_group(\'base.group_system\') ከሆነ፡"
+" <div style=\"margin-top: 20px;\"> ​​"
+"ይህን ኢሜይል ማበጀት ይፈልጋሉ?"
+" <a href=\"/web#view_type=form&model=digest.digest&id=${object.id}\" target=\"_blank\" style=\"color: #875A7B;\">የሚጨነቁላቸውን መለኪያዎች ምረጥ ስለ</a>
+" </div>
+" <br/>
+"% መጨረሻ"
+" <p style=\"የቅርጸ-ቁምፊ መጠን፡ 11px; ህዳግ-ከላይ፡ 10 ፒክስል;\">"
+" <strong>
+" የተላከው በ "
+" <a href=\"https://www.odoo.com\" style=\"text-decoration: none; color: #875A7B;\">ኦዱ</a> - <a href=\"/web#view_type=form&model=digest.digest&id=${object.id}\" target=\"_ባዶ\" style=\" ቀለም፡ #888888;\">ደንበኝነት ይውጡ</a>"
+"</strong>
+"</p>
+"</td>"
+" </tr>
+" </ጠረጴዛ>"
+"</td>"
+" </tr>
+"</table>"
+#. module: digest
+#: model_terms:ir.ui.view,arch_db:digest.digest_digest_view_form
+msgid "Activate"
+msgstr "አግብር"
+
+#. module: digest
+#: model:ir.model.fields.selection,name:digest.selection__digest_digest__state__activated
+msgid "Activated"
+msgstr "ነቅቷል"
+
+#. module: digest
+#: model_terms:ir.ui.view,arch_db:digest.res_config_settings_view_form
+msgid "Add new users as recipient of a periodic email with key metrics"
+msgstr "ከቁልፍ መለኪያዎች ጋር በየጊዜው ኢሜይል ተቀባይ አዲስ ተጠቃሚዎችን ያክሉ"
+
+#. module: digest
+#: model:ir.model.fields,field_description:digest.field_digest_tip__group_id
+msgid "Authorized Group"
+msgstr "የተፈቀደ ቡድን"
+
+#. module: digest
+#: model:ir.model.fields,field_description:digest.field_digest_digest__available_fields
+msgid "Available Fields"
+msgstr "የሚገኙ መስኮች"
+
+#. module: digest
+#: model:ir.model.fields,field_description:digest.field_digest_digest__company_id
+msgid "Company"
+msgstr "ኩባንያ"
+
+#. module: digest
+#: model:ir.model,name:digest.model_res_config_settings
+msgid "Config Settings"
+msgstr "ቅንብሮችን ያዋቅሩ"
+
+#. module: digest
+#: model_terms:ir.ui.view,arch_db:digest.res_config_settings_view_form
+msgid "Configure Digest Emails"
+msgstr "Digest ኢሜይሎችን ያዋቅሩ"
+
+#. module: digest
+#: model:ir.model.fields,field_description:digest.field_digest_digest__kpi_res_users_connected
+msgid "Connected Users"
+msgstr "የተገናኙ ተጠቃሚዎች"
+
+#. module: digest
+#: model_terms:ir.ui.view,arch_db:digest.digest_digest_view_form
+msgid "Create or edit the mail template: you may get computed KPI\'s value using these fields:"
+msgstr "የደብዳቤውን አብነት ይፍጠሩ ወይም ያርትዑ፡ እነዚህን መስኮች በመጠቀም የ KPI ዋጋ ሊያገኙ ይችላሉ፡"
+
+#. module: digest
+#: model:ir.model.fields,field_description:digest.field_digest_digest__create_uid
+#: model:ir.model.fields,field_description:digest.field_digest_tip__create_uid
+msgid "Created by"
+msgstr "የተፈጠረ"
+
+#. module: digest
+#: model:ir.model.fields,field_description:digest.field_digest_digest__create_date
+#: model:ir.model.fields,field_description:digest.field_digest_tip__create_date
+msgid "Created on"
+msgstr "ላይ ተፈጠረ"
+
+#. module: digest
+#: model:ir.model.fields,field_description:digest.field_digest_digest__currency_id
+msgid "Currency"
+msgstr "ምንዛሪ"
+
+#. module: digest
+#: model_terms:ir.ui.view,arch_db:digest.digest_digest_view_form
+msgid "Deactivate for everyone"
+msgstr "ለሁሉም ሰው አቦዝን"
+
+#. module: digest
+#: model:ir.model.fields.selection,name:digest.selection__digest_digest__state__deactivated
+msgid "Deactivated"
+msgstr "ቦዝኗል"
+
+#. module: digest
+#: model:ir.model,name:digest.model_digest_digest
+msgid "Digest"
+msgstr "መፍጨት"
+
+#. module: digest
+#: model:ir.model.fields,field_description:digest.field_res_config_settings__digest_id
+#: model_terms:ir.ui.view,arch_db:digest.res_config_settings_view_form
+msgid "Digest Email"
+msgstr "ዳይጀስት ኢሜል"
+
+#. module: digest
+#: model:ir.actions.act_window,name:digest.digest_digest_action
+#: model:ir.actions.server,name:digest.ir_cron_digest_scheduler_action_ir_actions_server
+#: model:ir.cron,cron_name:digest.ir_cron_digest_scheduler_action
+#: model:ir.cron,name:digest.ir_cron_digest_scheduler_action
+#: model:ir.model.fields,field_description:digest.field_res_config_settings__digest_emails
+#: model:ir.ui.menu,name:digest.digest_menu
+msgid "Digest Emails"
+msgstr "ዳይጀስት ኢሜይሎች"
+
+#. module: digest
+#: model_terms:ir.ui.view,arch_db:digest.portal_digest_unsubscribed
+msgid "Digest Subscriptions"
+msgstr "ዳይጀስት የደንበኝነት ምዝገባዎች"
+
+#. module: digest
+#: model:ir.model,name:digest.model_digest_tip
+msgid "Digest Tips"
+msgstr "የምግብ መፍጨት ምክሮች"
+
+#. module: digest
+#: model:ir.model.fields,field_description:digest.field_digest_digest__display_name
+#: model:ir.model.fields,field_description:digest.field_digest_tip__display_name
+msgid "Display Name"
+msgstr "መጠሪያው ስም"
+
+#. module: digest
+#: model:ir.model.fields,field_description:digest.field_digest_digest__template_id
+msgid "Email Template"
+msgstr "የኢሜል አብነት"
+
+#. module: digest
+#: model_terms:ir.ui.view,arch_db:digest.digest_digest_view_form
+msgid "General"
+msgstr "አጠቃላይ"
+
+#. module: digest
+#: model_terms:ir.ui.view,arch_db:digest.digest_digest_view_search
+msgid "Group by"
+msgstr "ቡድን በ"
+
+#. module: digest
+#: model_terms:ir.ui.view,arch_db:digest.digest_digest_view_form
+msgid "How to customize your digest?"
+msgstr "የምግብ መፍጫዎትን እንዴት ማበጀት ይቻላል?"
+
+#. module: digest
+#: model:ir.model.fields,field_description:digest.field_digest_digest__id
+#: model:ir.model.fields,field_description:digest.field_digest_tip__id
+msgid "ID"
+msgstr "መታወቂያ"
+
+#. module: digest
+#: model_terms:ir.ui.view,arch_db:digest.digest_digest_view_form
+msgid "In order to build your customized digest, follow these steps:"
+msgstr "የእርስዎን ብጁ መፍጨት ለመገንባት፣ እነዚህን ደረጃዎች ይከተሉ፡-"
+
+#. module: digest
+#: model:ir.model.fields,field_description:digest.field_digest_digest__is_subscribed
+msgid "Is user subscribed"
+msgstr "ተጠቃሚ ተመዝግቧል"
+
+#. module: digest
+#: model_terms:ir.ui.view,arch_db:digest.digest_digest_view_form
+#: model_terms:ir.ui.view,arch_db:digest.digest_digest_view_tree
+msgid "KPI Digest"
+msgstr "KPI Digest"
+
+#. module: digest
+#: model_terms:ir.ui.view,arch_db:digest.digest_digest_view_form
+msgid "KPIs"
+msgstr "KPIs"
+
+#. module: digest
+#: model:ir.model.fields,field_description:digest.field_digest_digest__kpi_mail_message_total_value
+msgid "Kpi Mail Message Total Value"
+msgstr "የKpi Mail መልእክት ጠቅላላ ዋጋ"
+
+#. module: digest
+#: model:ir.model.fields,field_description:digest.field_digest_digest__kpi_res_users_connected_value
+msgid "Kpi Res Users Connected Value"
+msgstr "የKpi Res ተጠቃሚዎች የተገናኘ እሴት"
+
+#. module: digest
+#: model:ir.model.fields,field_description:digest.field_digest_digest____last_update
+#: model:ir.model.fields,field_description:digest.field_digest_tip____last_update
+msgid "Last Modified on"
+msgstr "መጨረሻ የተሻሻለው በርቷል።"
+
+#. module: digest
+#: model:ir.model.fields,field_description:digest.field_digest_digest__write_uid
+#: model:ir.model.fields,field_description:digest.field_digest_tip__write_uid
+msgid "Last Updated by"
+msgstr "መጨረሻ የዘመነው በ"
+
+#. module: digest
+#: model:ir.model.fields,field_description:digest.field_digest_digest__write_date
+#: model:ir.model.fields,field_description:digest.field_digest_tip__write_date
+msgid "Last Updated on"
+msgstr "መጨረሻ የዘመነው በርቷል።"
+
+#. module: digest
+#: model:ir.model.fields,field_description:digest.field_digest_digest__kpi_mail_message_total
+msgid "Messages"
+msgstr "መልዕክቶች"
+
+#. module: digest
+#: model:ir.model.fields.selection,name:digest.selection__digest_digest__periodicity__monthly
+msgid "Monthly"
+msgstr "ወርሃዊ"
+
+#. module: digest
+#: model:ir.model.fields,field_description:digest.field_digest_digest__name
+msgid "Name"
+msgstr "ስም"
+
+#. module: digest
+#: model_terms:ir.ui.view,arch_db:digest.res_config_settings_view_form
+msgid "New users are automatically added as recipient of the following digest email."
+msgstr "አዲስ ተጠቃሚዎች የሚከተለው የምግብ መፍጫ ኢሜይል ተቀባይ ሆነው በቀጥታ ይታከላሉ።"
+
+#. module: digest
+#: model:ir.model.fields,field_description:digest.field_digest_digest__next_run_date
+msgid "Next Send Date"
+msgstr "የሚቀጥለው መላኪያ ቀን"
+
+#. module: digest
+#: model:ir.model.fields,field_description:digest.field_digest_digest__periodicity
+#: model_terms:ir.ui.view,arch_db:digest.digest_digest_view_search
+msgid "Periodicity"
+msgstr "ወቅታዊነት"
+
+#. module: digest
+#: model:ir.model.fields.selection,name:digest.selection__digest_digest__periodicity__quarterly
+msgid "Quarterly"
+msgstr "በየሩብ ዓመቱ"
+
+#. module: digest
+#: model:ir.model.fields,field_description:digest.field_digest_digest__user_ids
+#: model:ir.model.fields,field_description:digest.field_digest_tip__user_ids
+#: model_terms:ir.ui.view,arch_db:digest.digest_digest_view_form
+msgid "Recipients"
+msgstr "ተቀባዮች"
+
+#. module: digest
+#: model_terms:ir.ui.view,arch_db:digest.digest_digest_view_form
+msgid "Select your KPIs in the KPI\'s tab."
+msgstr "በKPI ትር ውስጥ የእርስዎን KPIዎች ይምረጡ።"
+
+#. module: digest
+#: model_terms:ir.ui.view,arch_db:digest.digest_digest_view_form
+msgid "Send Now"
+msgstr "አሁን ላክ"
+
+#. module: digest
+#: model:ir.model.fields,field_description:digest.field_digest_tip__sequence
+msgid "Sequence"
+msgstr "ቅደም ተከተል"
+
+#. module: digest
+#: model:ir.model.fields,field_description:digest.field_digest_digest__state
+msgid "Status"
+msgstr "ሁኔታ"
+
+#. module: digest
+#: model_terms:ir.ui.view,arch_db:digest.digest_digest_view_form
+msgid "Subscribe"
+msgstr "ሰብስክራይብ ያድርጉ"
+
+#. module: digest
+#: model:ir.model.fields,field_description:digest.field_digest_tip__tip_description
+msgid "Tip description"
+msgstr "ጠቃሚ መግለጫ"
+
+#. module: digest
+#: model_terms:digest.tip,tip_description:digest.digest_tip_mail_2
+msgid "To reach your full potential with Odoo, have a look at our"
+msgstr "በOdoo ሙሉ አቅምዎን ለመድረስ የእኛን ይመልከቱ"
+
+#. module: digest
+#: model_terms:ir.ui.view,arch_db:digest.digest_digest_view_form
+msgid "Unsubscribe me"
+msgstr "ከደንበኝነት ምዝገባ ውጣ"
+
+#. module: digest
+#: model:ir.model.fields,help:digest.field_digest_tip__sequence
+msgid "Used to display digest tip in email template base on order"
+msgstr "በትእዛዙ መሰረት በኢሜል አብነት ላይ የመፍጨት ጥቆማን ለማሳየት ይጠቅማል"
+
+#. module: digest
+#: model:ir.model,name:digest.model_res_users
+msgid "Users"
+msgstr "ተጠቃሚዎች"
+
+#. module: digest
+#: model:ir.model.fields,help:digest.field_digest_tip__user_ids
+msgid "Users having already received this tip"
+msgstr "ተጠቃሚዎች ይህን ጠቃሚ ምክር አስቀድመው ተቀብለዋል።"
+
+#. module: digest
+#: model:ir.model.fields.selection,name:digest.selection__digest_digest__periodicity__weekly
+msgid "Weekly"
+msgstr "በየሳምንቱ"
+
+#. module: digest
+#: model:digest.digest,name:digest.digest_digest_default
+msgid "Weekly Stats in Odoo"
+msgstr "ሳምንታዊ ስታቲስቲክስ በኦዱ"
+
+#. module: digest
+#: model_terms:digest.tip,tip_description:digest.digest_tip_mail_0
+msgid "You can ping colleagues by tagging them in your messages using \"@\". They will be instantly notified.<br>"
+msgstr "ባልደረቦችህን \"@\" በመጠቀም በመልእክቶችህ ላይ መለያ በመስጠት ልትኳቸው ትችላለህ። ወዲያውኑ ማሳወቂያ ይደርሳቸዋል።<br>"
+
+#. module: digest
+#: model_terms:digest.tip,tip_description:digest.digest_tip_mail_1
+msgid "You don\'t have any activity scheduled. Use activities on any business document to schedule meetings, calls and todos."
+msgstr "የታቀደ ምንም አይነት እንቅስቃሴ የለዎትም። ስብሰባዎችን፣ ጥሪዎችን እና ስራዎችን ለማስያዝ በማንኛውም የንግድ ሰነድ ላይ እንቅስቃሴዎችን ይጠቀሙ።"
+
+#. module: digest
+#: model_terms:ir.ui.view,arch_db:digest.portal_digest_unsubscribed
+msgid "You have been successfully unsubscribed from"
+msgstr "በተሳካ ሁኔታ ከደንበኝነት ምዝገባ ወጥተዋል።"
+
+#. module: digest
+#: model_terms:ir.ui.view,arch_db:digest.digest_digest_view_form
+msgid "You may want to add new computed fields with Odoo Studio:"
+msgstr "ከኦዱ ስቱዲዮ ጋር አዲስ የተሰሉ መስኮችን ማከል ይፈልጉ ይሆናል፡-"
+
+#. module: digest
+#: model_terms:digest.tip,tip_description:digest.digest_tip_mail_2
+msgid "and discover new tools to work better and faster."
+msgstr "እና በተሻለ እና በፍጥነት ለመስራት አዳዲስ መሳሪያዎችን ያግኙ።"
+
+#. module: digest
+#: model_terms:digest.tip,tip_description:digest.digest_tip_mail_2
+msgid "apps videos"
+msgstr "መተግበሪያዎች ቪዲዮዎች ኩባንያ የውይይት ቻናል."
+
+#. module: digest
+#: model_terms:digest.tip,tip_description:digest.digest_tip_mail_0
+msgid "company\'s discussion channel."
+msgstr "የኩባንያው የውይይት ጣቢያ።"
+ 
+
+#. module: digest
+#: model_terms:ir.ui.view,arch_db:digest.digest_digest_view_form
+msgid ""
+"first create a boolean field called"
+"                                                <code>kpi_myfield</code>"
+"                                                and display it in the KPI\'s tab;"
+msgstr  ""
+"መጀመሪያ የተባለ ቡሊያን መስክ ይፍጠሩ"
+" <code>kpi_myfield</code>"
+" እና በ KPI ትር ውስጥ አሳይ;"
+#. module: digest
+#: model_terms:ir.ui.view,arch_db:digest.digest_digest_view_form
+msgid ""
+"then create a computed field called"
+"                                                <code>kpi_myfield_value</code>"
+"                                                that will compute your customized KPI."
+msgstr  ""
+"ከዚያ የተሰላ መስክ ይፍጠሩ"
+" <code>kpi_myfield_value</code>"
+"ይህ የእርስዎን ብጁ KPI ያሰላል።"
+#. module: digest
+#: model_terms:ir.ui.view,arch_db:digest.digest_digest_view_form
+msgid ""
+"you must create 2 fields on the"
+"                                                <code>digest</code>"
+"                                                object:"
+msgstr ""
+"በ ላይ 2 መስኮችን መፍጠር አለብህ"
+"                                                 <code>diest</code>"
+"                                                 ነገር:"

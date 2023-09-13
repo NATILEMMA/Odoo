@@ -11,7 +11,7 @@ class ProjectAssignment(models.Model):
     _inherit = ["mail.thread"]
 
     active = fields.Boolean(default=True,)
-    name = fields.Char(compute="_compute_name", store=True, index=True,)
+    name = fields.Char(compute="_compute_name", store=True, index=True,translate=True)
     company_id = fields.Many2one(
         comodel_name="res.company",
         string="Company",

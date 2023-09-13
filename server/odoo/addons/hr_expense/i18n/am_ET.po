@@ -458,7 +458,7 @@ msgstr "ሠራተኛ"
 #. module: hr_expense
 #: model:ir.model.fields.selection,name:hr_expense.selection__hr_expense__payment_mode__own_account
 msgid "Employee (to reimburse)"
-msgstr "ተቀጣሪ (ክፍያውን ለመመለስ)"
+msgstr "ተቀጣሪ (ክፍያውን ለመመለስ/ለማወራረድ)"
 
 #. module: hr_expense
 #: model:ir.actions.act_window,name:hr_expense.action_approved_expense
@@ -783,7 +783,7 @@ msgstr "አዶ"
 #: model:ir.model.fields,help:hr_expense.field_hr_expense__activity_exception_icon
 #: model:ir.model.fields,help:hr_expense.field_hr_expense_sheet__activity_exception_icon
 msgid "Icon to indicate an exception activity."
-msgstr "ልዩ እንቅስቃሴን ለማመልከት የሚጠቅም አዶ።"
+msgstr "ልዩ ክንውንን ለማመልከት የሚጠቅም አዶ።"
 
 #. module: hr_expense
 #: model:ir.model.fields,help:hr_expense.field_hr_expense__message_needaction
@@ -975,7 +975,7 @@ msgid ""
 "No Expense account found for the product %s (or for its category), please "
 "configure one."
 msgstr ""
-"ለምርቱ %s (ወይም ምድቡ) ምንም የወጪ መለያ አልተገኘም"
+"ለእቃው %s (ወይም ምድቡ) ምንም የወጪ መለያ አልተገኘም"
 "አንዱን አዋቅር"
 #. module: hr_expense
 #: code:addons/hr_expense/models/hr_expense.py:0
@@ -1186,12 +1186,12 @@ msgstr "ዋጋ"
 #: model:ir.model.fields,field_description:hr_expense.field_hr_expense__product_id
 #: model_terms:ir.ui.view,arch_db:hr_expense.hr_expense_view_search
 msgid "Product"
-msgstr "እቃ/ቁስ/አገልግሎት"
+msgstr "እቃ/ቁስ "
 
 #. module: hr_expense
 #: model_terms:ir.ui.view,arch_db:hr_expense.product_product_expense_form_view
 msgid "Product Name"
-msgstr "እቃ/ቁስ/አገልግሎት ስም"
+msgstr "እቃ/ቁስ  ስም"
 
 #. module: hr_expense
 #: model_terms:ir.ui.view,arch_db:hr_expense.product_product_expense_tree_view
@@ -1201,12 +1201,12 @@ msgstr "የእቃ/ቁስ ዓይነቶች"
 #. module: hr_expense
 #: model_terms:ir.ui.view,arch_db:hr_expense.hr_expense_template_register
 msgid "Product:"
-msgstr "እቃ/ቁስ/አገልግሎት"
+msgstr "እቃ/ቁስ "
 
 #. module: hr_expense
 #: model_terms:ir.ui.view,arch_db:hr_expense.hr_expense_template_register
 msgid "Product: not found"
-msgstr "እቃ/ቁስ/አገልግሎት አልተገኘም"
+msgstr "እቃ/ቁስ  አልተገኘም"
 
 #. module: hr_expense
 #: model:ir.model,name:hr_expense.model_hr_employee_public
@@ -1365,7 +1365,7 @@ msgid ""
 "set it on the expense too."
 msgstr ""
 "በአንድ ጠቅታ ወጪ ለመፍጠር ለዚህ ኢሜል ቅጽል ስም ከደረሰኙ ጋር በኢሜል ይላኩ።" 
-"የመልእክቱ ርዕሰ ጉዳይ የመጀመሪያ ቃል የምርቱን ውስጣዊ ማጣቀሻ ወይም የምርት ስም የያዘ ከሆነ ፣ ተጓዳኙ ምርቱ ወዲያውኑ ይዘጋጃል።"
+"የመልእክቱ ርዕሰ ጉዳይ የመጀመሪያ ቃል የእቃውን ውስጣዊ ማጣቀሻ ወይም የእቃ ስም የያዘ ከሆነ ፣ ተጓዳኙ እቃው ወዲያውኑ ይዘጋጃል።"
 #. module: hr_expense
 #: model:ir.actions.act_window,name:hr_expense.action_hr_expense_configuration
 #: model:ir.ui.menu,name:hr_expense.menu_hr_expense_global_settings
@@ -1453,7 +1453,7 @@ msgid ""
 "only one available which is 'manual'"
 msgstr ""
 "የመክፈያ ዘዴውን ለመደበቅ የሚያገለግል የቴክኒክ ፊልድ ነው።"
-"የተመረጠው ጆርናል አንድ ብቻ የሚገኝ ከሆነ ያለው እሱም 'ማንዋል/በእጅ"
+"የተመረጠው ጆርናል አንድ ብቻ የሚገኝ ከሆነ ያለው እሱም 'ማንዋል/በማኗል"
 
 #. module: hr_expense
 #: model:ir.model.fields,help:hr_expense.field_hr_expense_sheet_register_payment_wizard__show_partner_bank_account
@@ -1486,8 +1486,8 @@ msgid ""
 "The first word of the email subject did not correspond to any product code. "
 "You'll have to set the product manually on the expense."
 msgstr ""
-"የኢሜል ርዕሰ ጉዳይ የመጀመሪያ ቃል ከማንኛውም የምርት/ቁስ/አገልግሎት ኮድ ጋር አልተዛመደም።"
-"በወጪው ላይ ምርቱን እራስዎ ማዘጋጀት አለብዎት."
+"የኢሜል ርዕሰ ጉዳይ የመጀመሪያ ቃል ከማንኛውም የእቃ/ቁስ/አገልግሎት ኮድ ጋር አልተዛመደም።"
+"በወጪው ላይ እቃውን እራስዎ ማዘጋጀት አለብዎት."
 #. module: hr_expense
 #: model:ir.model.constraint,message:hr_expense.constraint_hr_expense_sheet_journal_id_required_posted
 msgid "The journal must be set on posted expense"
@@ -1680,7 +1680,7 @@ msgstr "ይህን የወጪ ሪፖርት ለማርትዕ አልተፈቀደል�
 #: code:addons/hr_expense/models/hr_expense.py:0
 #, python-format
 msgid "You can not create report without product."
-msgstr "ያለ ምርት/ቁስ/አገልግሎት ሪፖርት መፍጠር አይችሉም።"
+msgstr "ያለ እቃ/ቁስ ሪፖርት መፍጠር አይችሉም።"
 
 #. module: hr_expense
 #: model_terms:ir.ui.view,arch_db:hr_expense.hr_expense_template_register

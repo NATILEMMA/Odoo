@@ -28,9 +28,9 @@ STATES = [
     ('paid', 'Paid'),
     ('submitted', 'Submitted To Manager'),
     ('to_allocate','Allocated'),
-    ('allocated','Approved'),
+    # ('allocated','Allocation Approved'),
     ('canceled', 'Cancel'),
-    ('done', 'Done'),
+    # ('done', 'Done'),
 ]
 
 class FundApplicationStage(models.Model):
@@ -127,10 +127,10 @@ class FundCollection(models.Model):
     #     return stages.browse(stage_ids)
 
     funder_id = fields.Many2one('res.partner', 'Name', required=True)
-    name = fields.Char('Name')
+    name = fields.Char('Name', translate=True)
     description = fields.Html('Internal Note')
     month = fields.Selection(MONTH,
-                          string='Month',default="January", store=True,)
+                          string='Month',default="1", store=True,)
     year = fields.Selection(
         year_selection,
         string="Year",
@@ -157,16 +157,16 @@ class FundCollection(models.Model):
         ('done', 'Green'),
         ('blocked', 'Red')], string='Kanban State',
         copy=False, default='normal', required=True)
-    kanban_state_label = fields.Char(compute='_compute_kanban_state_label', string='Kanban State Label', tracking=True)
+    kanban_state_label = fields.Char(compute='_compute_kanban_state_label', string='Kanban State Label', tracking=True, translate=True)
     create_date = fields.Datetime("Created On", readonly=True, index=True)
     write_date = fields.Datetime("Last Updated On", readonly=True, index=True)
     date_end = fields.Datetime(string='Ending Date', index=True, copy=False)
     date_assign = fields.Datetime(string='Assigning Date', index=True, copy=False, readonly=True)
     date_deadline = fields.Date(string='Deadline', index=True, copy=False, tracking=True)
-    date_deadline_formatted = fields.Char()
-    legend_blocked = fields.Char(related='stage_id.legend_blocked', string='Kanban Blocked Explanation', readonly=True, related_sudo=False)
-    legend_done = fields.Char(related='stage_id.legend_done', string='Kanban Valid Explanation', readonly=True, related_sudo=False)
-    legend_normal = fields.Char(related='stage_id.legend_normal', string='Kanban Ongoing Explanation', readonly=True, related_sudo=False)
+    date_deadline_formatted = fields.Char( translate=True)
+    legend_blocked = fields.Char(related='stage_id.legend_blocked', string='Kanban Blocked Explanation', readonly=True, related_sudo=False, translate=True)
+    legend_done = fields.Char(related='stage_id.legend_done', string='Kanban Valid Explanation', readonly=True, related_sudo=False, translate=True)
+    legend_normal = fields.Char(related='stage_id.legend_normal', string='Kanban Ongoing Explanation', readonly=True, related_sudo=False, translate=True)
     color = fields.Integer(string='Color Index')
     partner_id = fields.Many2one('res.partner',
         string='Customer',
@@ -184,16 +184,23 @@ class FundCollection(models.Model):
     grant_motheds = fields.Many2one('grant.method','Grant Method')
     receiver_id = fields.Many2one('res.users', string='Reciever', default=lambda self: self.env.user, tracking=True)
     payment_date = fields.Date('Payment Date')
-    email_from = fields.Char(string='Email', help="These people will receive email.", index=True)
+    email_from = fields.Char(string='Email', help="These people will receive email.", index=True, translate=True)
     sequence = fields.Integer(string='Sequence', index=True, default=10,
         help="Gives the sequence order when displaying a list of tasks.")
     
     attachment_ids = fields.Many2many('ir.attachment', string='Attachments')
     attachment_amount = fields.Integer(compute="_count_attachments",tracking=True)
-    
+    remain_amount = fields.Float()
     squ = fields.Char(string='FMS', required=True, copy=False, readonly=True,
-                       default=lambda self: _('New'))
+                       default=lambda self: _('New'), translate=True)
+    # attachment_type = fields.Many2one('attachment.type')
   
+    @api.onchange('amount','allocate_id.amount')
+    def _onchange_ramin_amount(self):
+        _logger.info("GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG")
+        _logger.info("FFFFFFF %s",self.amount)
+        _logger.info("FFFFFFF %s",self.allocate_id)
+
     def _count_attachments(self):
         """This function will count the number of attachments"""
         for record in self:
@@ -219,18 +226,38 @@ class FundCollection(models.Model):
  
     @api.model
     def create(self, vals):
-        months = [('1', 'January'),('2', 'February'),('3', 'March'),('4', 'April'),('5', 'May'),('6', 'June'),('7', 'July'),('8', 'August'), ('9', 'September'),('10', 'October'), ('11', 'November'), ('12', 'December')]
-        month_name = dict(months).get(vals.get('month'))
-        vals['name'] = 'Fund - %s - %s' % (month_name, vals.get('year'))
-        vals['squ'] = self.env['ir.sequence'].next_by_code('fund.collection') or _('New')
+        try:
+            months = [('1', 'January'),('2', 'February'),('3', 'March'),('4', 'April'),('5', 'May'),('6', 'June'),('7', 'July'),('8', 'August'), ('9', 'September'),('10', 'October'), ('11', 'November'), ('12', 'December')]
+            month_name = dict(months).get(vals.get('month'))
+            vals['name'] = 'Fund - %s - %s' % (month_name, vals.get('year'))
+            vals['squ'] = self.env['ir.sequence'].next_by_code('fund.collection') or _('New')
+            res = super(FundCollection, self).create(vals)
+            return res
+        except:
+            pass
         
-        res = super(FundCollection, self).create(vals)
-        return res
 
     def action_fund_recieved(self):
         self.state = "paid"
         self.payment_date = datetime.today()
         super(FundCollection, self).write({'state':'paid'})
+
+    def action_fund_recieved_approved(self):
+        self.state = "submitted"
+        self.payment_date = datetime.today()
+        super(FundCollection, self).write({'state':'submitted'})
+
+    def action_fund_reset(self):
+        self.state = "draft"
+        self.payment_date = datetime.today()
+        super(FundCollection, self).write({'state':'draft'})
+
+    def action_fund_reject(self):
+        self.state = "canceled"
+        self.payment_date = datetime.today()
+        super(FundCollection, self).write({'state':'canceled'})
+
+
 
     def action_fund_manager_approval(self):
         self.state = "submitted"
@@ -240,55 +267,58 @@ class FundCollection(models.Model):
     def action_fund_allocation(self):
         _logger.info("############ action_fund_allocation")
         today = datetime.today()
-        new_date = today + relativedelta(years=1)
-        fund = self.env['fund.fund'].create({
-            'name' : self.name, 
-            "date_from": today,
-            "date_to": new_date
-        })
-        
-        for line in self.allocate_id:
-                    _logger.info("#########Fund Line##############")
-                    vals = []
-                    val = {}
-                    analytic_account = self.env['account.analytic.account'].search([('id','=',line.analytic_account_id.id)])
-                    _logger.info(analytic_account.id)
-                    if analytic_account.fund_line:
-                            for line2 in analytic_account.fund_line:
-                                _logger.info(line2)
-                                val['fund_id'] = fund.id
-                                val['general_fund_id'] = line.general_fund_id.id
-                                val['fund_analytic_account_id']= line.analytic_account_id.id
-                                val['planned_amount'] = line2.planned_amount
-                                val['date_from'] = line2.date_from
-                                val['date_to'] = line2.date_to
-                                _logger.info("Val:%s",val)
-                                fund_lines = fund.fund_line.sudo().create(val)
-                                _logger.info("FundLINE:%s",fund_lines)
-                                _logger.info(analytic_account.name)
-                                remove = self.env['fund.fund'].search([('name','=',analytic_account.name)])
-                                _logger.info(remove.id)
-                                removed = remove.unlink()
-                                _logger.info("remove     |||           account=%s",removed)
-        
-                    else:
-                        val['fund_id'] = fund.id
-                        val['general_fund_id'] = line.general_fund_id.id
-                        val['fund_analytic_account_id']= line.analytic_account_id.id
-                        val['planned_amount'] = line.amount
-                        val['date_from'] = today#line2.date_from
-                        val['date_to'] = new_date #line2.date_to
-                        _logger.info("Val:%s",val)
-                        fund_lines = fund.fund_line.sudo().create(val)
-                        _logger.info("FundLINE:%s",fund_lines)
-                        remove = self.env['fund.fund'].search([('name','=',analytic_account.name)])
-                        _logger.info(remove.id)
-                        removed = remove.unlink()
-                        _logger.info("remove     |||           account=%s",removed)
+        if len(self.allocate_id) <=0:
+            raise ValidationError('Please provide the budget code for allocation before approving it.')
+        else:
+            new_date = today + relativedelta(years=1)
+            fund = self.env['fund.fund'].create({
+                'name' : self.name, 
+                "date_from": today,
+                "date_to": new_date
+            })
+            
+            for line in self.allocate_id:
+                        _logger.info("#########Fund Line##############")
+                        vals = []
+                        val = {}
+                        analytic_account = self.env['account.analytic.account'].search([('id','=',line.analytic_account_id.id)])
+                        _logger.info(analytic_account.id)
+                        if analytic_account.fund_line:
+                                for line2 in analytic_account.fund_line:
+                                    _logger.info(line2)
+                                    val['fund_id'] = fund.id
+                                    val['general_fund_id'] = line.general_fund_id.id
+                                    val['fund_analytic_account_id']= line.analytic_account_id.id
+                                    val['planned_amount'] = line2.planned_amount
+                                    val['date_from'] = line2.date_from
+                                    val['date_to'] = line2.date_to
+                                    _logger.info("Val:%s",val)
+                                    fund_lines = fund.fund_line.sudo().create(val)
+                                    _logger.info("FundLINE:%s",fund_lines)
+                                    _logger.info(analytic_account.name)
+                                    remove = self.env['fund.fund'].search([('name','=',analytic_account.name)])
+                                    _logger.info(remove.id)
+                                    removed = remove.unlink()
+                                    _logger.info("remove     |||           account=%s",removed)
+            
+                        else:
+                            val['fund_id'] = fund.id
+                            val['general_fund_id'] = line.general_fund_id.id
+                            val['fund_analytic_account_id']= line.analytic_account_id.id
+                            val['planned_amount'] = line.amount
+                            val['date_from'] = today#line2.date_from
+                            val['date_to'] = new_date #line2.date_to
+                            _logger.info("Val:%s",val)
+                            fund_lines = fund.fund_line.sudo().create(val)
+                            _logger.info("FundLINE:%s",fund_lines)
+                            remove = self.env['fund.fund'].search([('name','=',analytic_account.name)])
+                            _logger.info(remove.id)
+                            removed = remove.unlink()
+                            _logger.info("remove     |||           account=%s",removed)
 
-        self.state = "to_allocate"
+            self.state = "to_allocate"
 
-        super(FundCollection, self).write({'state':'to_allocate'})
+            super(FundCollection, self).write({'state':'to_allocate'})
 
     def action_fund_distribution(self):
         _logger.info("##################FUND")
@@ -367,8 +397,8 @@ class ProjectTeam(models.Model):
     _name = 'project.team'
     _inherit = ['portal.mixin', 'mail.thread', 'mail.activity.mixin', 'utm.mixin']
 
-    code = fields.Char('Code')
-    name = fields.Char('Name')
+    code = fields.Char('Code', translate=True)
+    name = fields.Char('Name', translate=True)
     project_id = fields.Many2one('project.project', 'Projects')
     project_manager = fields.Many2one('hr.employee','Project Manager')
     # project_team = fields.Many2many('hr.employee', 'Project Members')
@@ -377,8 +407,8 @@ class ApplicationTeam(models.Model):
     _name = 'application.team'
     _inherit = ['mail.thread', 'mail.activity.mixin', 'utm.mixin']
 
-    code = fields.Char('Code')
-    name = fields.Char('Name')
+    code = fields.Char('Code', translate=True)
+    name = fields.Char('Name', translate=True)
     team_leader = fields.Many2one('hr.employee','Team Leader')
     # team_member = fields.Many2many('hr.employee', 'Team Members')
 
@@ -386,21 +416,21 @@ class GrantType(models.Model):
     _name = 'grant.type'
     _inherit = ['mail.thread', 'mail.activity.mixin', 'utm.mixin']
 
-    code = fields.Char('Code')
-    name = fields.Char('Name')
+    code = fields.Char('Code', translate=True)
+    name = fields.Char('Name', translate=True)
    
 class GrantMethods(models.Model):
     _name = 'grant.method'
     _inherit = ['mail.thread', 'mail.activity.mixin', 'utm.mixin']
 
-    code = fields.Char('Code')
-    name = fields.Char('Name')
+    code = fields.Char('Code', translate=True)
+    name = fields.Char('Name', translate=True)
    
 
-class Employee(models.Model):
-    _inherit='hr.employee'
+# class Employee(models.Model):
+#     _inherit='hr.employee'
 
-    is_fund_mgr = fields.Boolean('Is Fund Manager', default=False)
+#     is_fund_mgr = fields.Boolean('Is Fund Manager', default=False)
 
 
 #class Users(models.Model):
@@ -434,6 +464,8 @@ class AllocateToFundLine(models.Model):
     analytic_account_id = fields.Many2one('account.analytic.account', 'Analytic Account',tracking=True, store=True)
     general_fund_id = fields.Many2one('account.fund.post', 'Fund Position',tracking=True, store=True)
     
+
+
  
 
 class Expense(models.Model):
@@ -444,9 +476,9 @@ class Expense(models.Model):
 
     funder_id = fields.Many2one('res.partner', 'Name')
     purpose = fields.Selection([('bday','Birthday Expense'), ('other','Other')], required=True)
-    other_reason = fields.Text('Specify Other Reason')
+    other_reason = fields.Text('Specify Other Reason', translate=True)
     expense_amount = fields.Float('Expense Amount', required=True)
-    spender = fields.Many2one('hr.employee','Expensed By', required=True, domain=[('is_fund_mgr','=',True)])
+    spender = fields.Many2one('hr.employee','Expensed By', required=True,)
     payment_date = fields.Date('Payment Date', required=True)
     state = fields.Selection([
         ('draft', 'Not Expensed'),

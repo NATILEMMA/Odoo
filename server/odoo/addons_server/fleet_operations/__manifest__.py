@@ -17,7 +17,7 @@
     # Website
     'author': 'Amen mesfin',
     # Dependencies
-    'depends': ['fleet', 'stock', 'account','hr_expense','purchase','reconciliation'],
+    'depends': ['fleet', 'stock', 'account','hr_expense','purchase','reconciliation', 'budget'],
     # Data
     'data': [
               'security/fleet_security.xml',

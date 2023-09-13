@@ -1,0 +1,2870 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* fleet
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20221005\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-23 06:01+0000\n"
+"PO-Revision-Date: 2023-05-23 06:01+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.res_config_settings_view_form
+msgid "<span class=\"o_form_label\">End Date Contract Alert</span>"
+msgstr "<span class=\"o_form_label\">የመጨረሻ ቀን የኮንትራት ማስጠንቀቂያ</span>"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.res_config_settings_view_form
+msgid "<span> days before the end date</span>"
+msgstr "<span> ከማብቂያ ቀን በፊት</span>"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.res_config_settings_view_form
+msgid "<span>Send an alert </span>"
+msgstr "<span>ማንቂያ ላክ </span>"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_form
+msgid "<span>g/km</span>"
+msgstr "<span>ግ/ኪሜ</span>"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_form
+msgid "<span>kW</span>"
+msgstr "<span>kW</span>"
+
+#. module: fleet
+#: model:fleet.vehicle.model,name:fleet.model_a1
+msgid "A1"
+msgstr "A1"
+
+#. module: fleet
+#: model:fleet.vehicle.model,name:fleet.model_a3
+msgid "A3"
+msgstr ""
+
+#. module: fleet
+#: model:fleet.vehicle.model,name:fleet.model_a4
+msgid "A4"
+msgstr ""
+
+#. module: fleet
+#: model:fleet.vehicle.model,name:fleet.model_a5
+msgid "A5"
+msgstr ""
+
+#. module: fleet
+#: model:fleet.vehicle.model,name:fleet.model_a6
+msgid "A6"
+msgstr ""
+
+#. module: fleet
+#: model:fleet.vehicle.model,name:fleet.model_a7
+msgid "A7"
+msgstr ""
+
+#. module: fleet
+#: model:fleet.vehicle.model,name:fleet.model_a8
+msgid "A8"
+msgstr ""
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_abarth
+msgid "Abarth"
+msgstr ""
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__message_needaction
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__message_needaction
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel__message_needaction
+msgid "Action Needed"
+msgstr "እርምጃ ያስፈልጋል"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_contract_view_form
+msgid "Activation Cost"
+msgstr "የማግበር ወጪ"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__active
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__active
+msgid "Active"
+msgstr "ንቁ"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__activity_ids
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__activity_ids
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel__activity_ids
+msgid "Activities"
+msgstr "ክንውንዎች"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__activity_exception_decoration
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__activity_exception_decoration
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "የክንውን ልዩ ማስጌጥ"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__activity_state
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__activity_state
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel__activity_state
+msgid "Activity State"
+msgstr "የክንውን ሁኔታ"
+
+#. module: fleet
+#: model:ir.actions.act_window,name:fleet.mail_activity_type_action_config_fleet
+#: model:ir.ui.menu,name:fleet.fleet_menu_config_activity_type
+msgid "Activity Types"
+msgstr "የክንውን ዓይነቶች"
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_acura
+msgid "Acura"
+msgstr " "
+
+#. module: fleet
+#: model_terms:ir.actions.act_window,help:fleet.fleet_vehicle_tag_action
+msgid "Add a new tag"
+msgstr "አዲስ መለያ ያክሉ"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_fuel_view_form
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_services_view_form
+msgid "Additional Details"
+msgstr "ተጨማሪ ዝርዝሮች"
+
+#. module: fleet
+#: model:res.groups,name:fleet.fleet_group_manager
+msgid "Administrator"
+msgstr "አስተዳዳሪ"
+
+#. module: fleet
+#: model:fleet.vehicle.model,name:fleet.model_agila
+msgid "Agila"
+msgstr " "
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_alfa
+msgid "Alfa"
+msgstr " "
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_search
+msgid "All vehicles"
+msgstr "ሁሉም ተሽከርካሪዎች"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__cost_amount
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel__cost_amount
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_services__cost_amount
+msgid "Amount"
+msgstr "መጠን"
+
+#. module: fleet
+#: model:fleet.vehicle.model,name:fleet.model_ampera
+msgid "Ampera"
+msgstr " "
+
+#. module: fleet
+#: model:fleet.vehicle.model,name:fleet.model_antara
+msgid "Antara"
+msgstr " "
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_form
+msgid "Apply Change"
+msgstr "ለውጥን ተግብር"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_contract_view_form
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_contract_view_search
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_form
+msgid "Archived"
+msgstr "በማህደር የተቀመጠ"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__next_assignation_date
+msgid "Assignation Date"
+msgstr "የምደባ ቀን"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__log_drivers
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_assignation_log_view_list
+msgid "Assignation Logs"
+msgstr "የምደባ ምዝግብ ማስታወሻዎች"
+
+#. module: fleet
+#: model:fleet.vehicle.model,name:fleet.model_astra
+msgid "Astra"
+msgstr " "
+
+#. module: fleet
+#: model:fleet.vehicle.model,name:fleet.model_astragtc
+msgid "AstraGTC"
+msgstr ""
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__message_attachment_count
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__message_attachment_count
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel__message_attachment_count
+msgid "Attachment Count"
+msgstr "የአባሪ ብዛት"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_kanban
+msgid "Attention: renewal overdue"
+msgstr "ትኩረት: እድሳት ዘግይቷል"
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_audi
+msgid "Audi"
+msgstr " "
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_austin
+msgid "Austin"
+msgstr " "
+
+#. module: fleet
+#: model:ir.model.fields.selection,name:fleet.selection__fleet_vehicle__transmission__automatic
+msgid "Automatic"
+msgstr "አውቶማቲክ"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_cost__auto_generated
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__auto_generated
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel__auto_generated
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_services__auto_generated
+msgid "Automatically Generated"
+msgstr "በራስ ሰር የተፈጠረ"
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_bentley
+msgid "Bentley"
+msgstr ""
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_bmw
+msgid "Bmw"
+msgstr ""
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__brand_id
+msgid "Brand"
+msgstr "የእቃ ስም"
+
+#. module: fleet
+#: model:ir.model,name:fleet.model_fleet_vehicle_model_brand
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle__brand_id
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_model__brand_id
+msgid "Brand of the vehicle"
+msgstr "የተሽከርካሪው የእቃ ስም"
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_bugatti
+msgid "Bugatti"
+msgstr ""
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_buick
+msgid "Buick"
+msgstr ""
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_byd
+msgid "Byd"
+msgstr ""
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__co2
+msgid "CO2 Emissions"
+msgstr "የ CO2 ልቀቶች"
+
+#. module: fleet
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle__co2
+msgid "CO2 emissions of the vehicle"
+msgstr "የተሽከርካሪው CO2 ልቀቶች"
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_cadillac
+msgid "Cadillac"
+msgstr ""
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel__campaign_id
+msgid "Campaign"
+msgstr "ዘመቻ"
+
+#. module: fleet
+#: model:ir.actions.act_window,name:fleet.fleet_vehicle_model_brand_action
+#: model:ir.ui.menu,name:fleet.fleet_vehicle_model_brand_menu
+msgid "Car Manufacturers"
+msgstr "የመኪና አምራቾች"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__car_value
+msgid "Catalog Value (VAT Incl.)"
+msgstr "ካታሎግ ዋጋ (ተጨማሪ እሴት ታክስ)"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_service_type__category
+msgid "Category"
+msgstr "ምድብ"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_cost__cost_type
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__cost_type
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel__cost_type
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_services__cost_type
+msgid "Category of the cost"
+msgstr "የወጪው ምድብ"
+
+#. module: fleet
+#: model:mail.message.subtype,description:fleet.mt_fleet_driver_updated
+#: model:mail.message.subtype,name:fleet.mt_fleet_driver_updated
+msgid "Changed Driver"
+msgstr "የተቀየረ ሹፌር"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__vin_sn
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_search
+msgid "Chassis Number"
+msgstr "ቻሲ ቁጥር"
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_chevrolet
+msgid "Chevrolet"
+msgstr ""
+
+#. module: fleet
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_log_contract__state
+msgid "Choose whether the contract is still valid or not"
+msgstr "ውሉ አሁንም የሚሰራ መሆኑን ወይም አለመሆኑን ይምረጡ"
+
+#. module: fleet
+#: model:ir.model.fields,help:fleet.field_fleet_service_type__category
+msgid ""
+"Choose whether the service refer to contracts, vehicle services or both"
+msgstr "አገልግሎቱ ውሎችን፣ የተሽከርካሪ ሰርቪሶችን ወይም ሁለቱንም የሚያመለክት መሆኑን ይምረጡ"
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_chrysler
+msgid "Chrysler"
+msgstr ""
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_citroen
+msgid "Citroen"
+msgstr ""
+
+#. module: fleet
+#: model:fleet.vehicle.model,name:fleet.model_classa
+msgid "Class A"
+msgstr ""
+
+#. module: fleet
+#: model:fleet.vehicle.model,name:fleet.model_classb
+msgid "Class B"
+msgstr ""
+
+#. module: fleet
+#: model:fleet.vehicle.model,name:fleet.model_classc
+msgid "Class C"
+msgstr ""
+
+#. module: fleet
+#: model:fleet.vehicle.model,name:fleet.model_classcl
+msgid "Class CL"
+msgstr ""
+
+#. module: fleet
+#: model:fleet.vehicle.model,name:fleet.model_classcls
+msgid "Class CLS"
+msgstr ""
+
+#. module: fleet
+#: model:fleet.vehicle.model,name:fleet.model_classe
+msgid "Class E"
+msgstr ""
+
+#. module: fleet
+#: model:fleet.vehicle.model,name:fleet.model_classgl
+msgid "Class GL"
+msgstr ""
+
+#. module: fleet
+#: model:fleet.vehicle.model,name:fleet.model_classglk
+msgid "Class GLK"
+msgstr ""
+
+#. module: fleet
+#: model:fleet.vehicle.model,name:fleet.model_classm
+msgid "Class M"
+msgstr ""
+
+#. module: fleet
+#: model:fleet.vehicle.model,name:fleet.model_classr
+msgid "Class R"
+msgstr ""
+
+#. module: fleet
+#: model:fleet.vehicle.model,name:fleet.model_classs
+msgid "Class S"
+msgstr ""
+
+#. module: fleet
+#: model:fleet.vehicle.model,name:fleet.model_classslk
+msgid "Class SLK"
+msgstr ""
+
+#. module: fleet
+#: model_terms:ir.actions.act_window,help:fleet.fleet_vehicle_log_services_action
+msgid "Click to create a new service entry."
+msgstr "አዲስ የአገልግሎት ግቤት ለመፍጠር ጠቅ ያድርጉ"
+
+#. module: fleet
+#: model_terms:ir.actions.act_window,help:fleet.fleet_vehicle_action
+msgid "Click to create a new vehicle."
+msgstr "አዲስ ተሽከርካሪ ለመፍጠር ጠቅ ያድርጉ"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_contract_view_form
+msgid "Close Contract"
+msgstr "ውል ዝጋ"
+
+#. module: fleet
+#: model:ir.model.fields.selection,name:fleet.selection__fleet_vehicle_log_contract__state__closed
+msgid "Closed"
+msgstr "ዝግ"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__color
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_search
+msgid "Color"
+msgstr "ቀለም"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_tag__color
+msgid "Color Index"
+msgstr "የቀለም መረጃ ጠቋሚ"
+
+#. module: fleet
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle__color
+msgid "Color of the vehicle"
+msgstr "የተሽከርካሪው ቀለም"
+
+#. module: fleet
+#: model:fleet.vehicle.model,name:fleet.model_combotour
+msgid "Combo Tour"
+msgstr "ጥምር ጉብኝት"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__company_id
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_cost__company_id
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__company_id
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel__company_id
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_services__company_id
+msgid "Company"
+msgstr "ድርጅት"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_search
+msgid "Completed"
+msgstr "ተጠናቀቀ"
+
+#. module: fleet
+#: model:ir.model,name:fleet.model_res_config_settings
+msgid "Config Settings"
+msgstr "የማስተካያዎች ማዋቀሪያ"
+
+#. module: fleet
+#: model:ir.ui.menu,name:fleet.fleet_configuration
+msgid "Configuration"
+msgstr "ማዋቀር"
+
+#. module: fleet
+#: model:ir.model,name:fleet.model_res_partner
+msgid "Contact"
+msgstr "እውቂያ(ኮንታክት)"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_cost__contract_id
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__contract_id
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel__contract_id
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_services__contract_id
+#: model:ir.model.fields.selection,name:fleet.selection__fleet_service_type__category__contract
+#: model:ir.model.fields.selection,name:fleet.selection__fleet_vehicle_cost__cost_type__contract
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_form
+msgid "Contract"
+msgstr "ውል"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_contract_view_graph
+msgid "Contract Costs Per Month"
+msgstr "የኮንትራት ወጪዎች በወር"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__contract_count
+msgid "Contract Count"
+msgstr "የኮንትራት ብዛት"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__expiration_date
+msgid "Contract Expiration Date"
+msgstr "ኮንትራቱ የሚያበቃበት ቀን"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_contract_view_form
+msgid "Contract Informations"
+msgstr "የኮንትራት መረጃ"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__ins_ref
+msgid "Contract Reference"
+msgstr "የውል ማጣቀሻ"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__start_date
+msgid "Contract Start Date"
+msgstr "የውል መጀመሪያ ቀን"
+
+#. module: fleet
+#: model:ir.actions.act_window,name:fleet.fleet_vehicle_contract_types_action
+#: model:ir.ui.menu,name:fleet.fleet_vehicle_contract_types_menu
+msgid "Contract Types"
+msgstr "የኮንትራት ዓይነቶች"
+
+#. module: fleet
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_cost__contract_id
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_log_contract__contract_id
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_log_fuel__contract_id
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_log_services__contract_id
+msgid "Contract attached to this cost"
+msgstr "ከዚህ ወጪ ጋር የተያያዘ ውል"
+
+#. module: fleet
+#: model:ir.model,name:fleet.model_fleet_vehicle_log_contract
+msgid "Contract information on a vehicle"
+msgstr "በተሽከርካሪ ላይ የውል መረጃ"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_contract_view_form
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_contract_view_tree
+msgid "Contract logs"
+msgstr "የኮንትራት ምዝግብ ማስታወሻዎች"
+
+#. module: fleet
+#: model:mail.activity.type,name:fleet.mail_act_fleet_contract_to_renew
+msgid "Contract to Renew"
+msgstr "ለማደስ ውል"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_kanban
+msgid "Contract(s)"
+msgstr "ውል(ዎች)"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__log_contracts
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_form
+msgid "Contracts"
+msgstr "ውሎች"
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_corre_la_licorne
+msgid "Corre La Licorne"
+msgstr ""
+
+#. module: fleet
+#: model:fleet.vehicle.model,name:fleet.model_corsa
+msgid "Corsa"
+msgstr ""
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__cost_id
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel__cost_id
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_services__cost_id
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_cost_view_tree
+msgid "Cost"
+msgstr "ወጪ"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_cost__description
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__description
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel__description
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_services__description
+msgid "Cost Description"
+msgstr "የወጪ መግለጫ"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_costs_view_form
+msgid "Cost Details"
+msgstr "የወጪ ዝርዝሮች"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_costs_view_search
+msgid "Cost Subtype"
+msgstr "የወጪ ንዑስ ዓይነት"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_costs_view_search
+msgid "Cost Type"
+msgstr "የወጪ አይነት"
+
+#. module: fleet
+#: model:ir.model,name:fleet.model_fleet_vehicle_cost
+msgid "Cost related to a vehicle"
+msgstr "ከተሽከርካሪ ጋር የተያያዘ ወጪ"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_contract_view_form
+msgid "Cost that is paid only once at the creation of the contract"
+msgstr "ኮንትራቱ ሲፈጠር አንድ ጊዜ ብቻ የሚከፈል ወጪ"
+
+#. module: fleet
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_cost__cost_subtype_id
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_log_contract__cost_subtype_id
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_log_fuel__cost_subtype_id
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_log_services__cost_subtype_id
+msgid "Cost type purchased with this cost"
+msgstr "በዚህ ወጪ የተገዛ የወጪ አይነት"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__cost_count
+#: model:ir.ui.menu,name:fleet.menu_fleet_reporting_costs
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_form
+msgid "Costs"
+msgstr "ወጪዎች"
+
+#. module: fleet
+#: model:ir.actions.act_window,name:fleet.fleet_costs_reporting_action
+msgid "Costs Analysis"
+msgstr "ወጪዎች ትንተና"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_costs_view_graph
+msgid "Costs Per Month"
+msgstr "ወጪዎች በወር"
+
+#. module: fleet
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_log_contract__cost_generated
+msgid ""
+"Costs paid at regular intervals, depending on the cost frequency. If the "
+"cost frequency is set to unique, the cost will be logged at the start date"
+msgstr ""
+"እንደ የዋጋ ድግግሞሽ መጠን በመደበኛ ክፍተቶች የሚከፈሉ ወጪዎች።"
+"የዋጋ ድግግሞሹ ወደ ልዩ ከተዋቀረ ወጪው በመነሻ ቀን ይመዘገባል"
+#. module: fleet
+#: model_terms:ir.actions.act_window,help:fleet.fleet_vehicle_log_contract_action
+msgid "Create a new contract"
+msgstr "አዲስ ውል ይፍጠሩ"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_contract_view_form
+msgid ""
+"Create a new contract automatically with all the same informations except "
+"for the date that will start at the end of current contract"
+msgstr ""
+"አሁን ባለው ውል መጨረሻ ላይ ከሚጀመረው ቀን በስተቀር በሁሉም ተመሳሳይ መረጃዎች አዲስ ውል ይፍጠሩ"
+#. module: fleet
+#: model_terms:ir.actions.act_window,help:fleet.fleet_vehicle_costs_action
+msgid "Create a new cost"
+msgstr "አዲስ ወጪ ይፍጠሩ"
+
+#. module: fleet
+#: model_terms:ir.actions.act_window,help:fleet.fleet_vehicle_log_fuel_action
+msgid "Create a new fuel log"
+msgstr "አዲስ የነዳጅ መዝገብ ይፍጠሩ"
+
+#. module: fleet
+#: model_terms:ir.actions.act_window,help:fleet.fleet_vehicle_model_brand_action
+msgid "Create a new manufacturer"
+msgstr "አዲስ አምራች ይፍጠሩ"
+
+#. module: fleet
+#: model_terms:ir.actions.act_window,help:fleet.fleet_vehicle_model_action
+msgid "Create a new model"
+msgstr "አዲስ ሞዴል ይፍጠሩ"
+
+#. module: fleet
+#: model_terms:ir.actions.act_window,help:fleet.fleet_vehicle_odometer_action
+msgid "Create a new odometer log"
+msgstr "አዲስ የ ኦዶሜትር መዝገብ ይፍጠሩ"
+
+#. module: fleet
+#: model_terms:ir.actions.act_window,help:fleet.fleet_vehicle_contract_types_action
+msgid "Create a new type of contract"
+msgstr "አዲስ ዓይነት ውል ይፍጠሩ"
+
+#. module: fleet
+#: model_terms:ir.actions.act_window,help:fleet.fleet_vehicle_service_types_action
+msgid "Create a new type of service"
+msgstr "አዲስ ዓይነት አገልግሎት ይፍጠሩ"
+
+#. module: fleet
+#: model_terms:ir.actions.act_window,help:fleet.fleet_vehicle_state_action
+msgid "Create a new vehicle status"
+msgstr "አዲስ የተሽከርካሪ ሁኔታ ይፍጠሩ"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_service_type__create_uid
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__create_uid
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_assignation_log__create_uid
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_cost__create_uid
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__create_uid
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel__create_uid
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_services__create_uid
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_model__create_uid
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_model_brand__create_uid
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_odometer__create_uid
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_state__create_uid
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_tag__create_uid
+msgid "Created by"
+msgstr "የተፈጠረው በ"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_service_type__create_date
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__create_date
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_assignation_log__create_date
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_cost__create_date
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__create_date
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel__create_date
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_services__create_date
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_model__create_date
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_model_brand__create_date
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_odometer__create_date
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_state__create_date
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_tag__create_date
+msgid "Created on"
+msgstr "ላይ ተፈጠረ"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__odometer
+msgid "Creation Contract Odometer"
+msgstr "የፍጥረት ውል ኦዶሜትር"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__currency_id
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_cost__currency_id
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__currency_id
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel__currency_id
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_services__currency_id
+msgid "Currency"
+msgstr "ምንዛሪ"
+
+#. module: fleet
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle__state_id
+msgid "Current state of the vehicle"
+msgstr "የተሽከርካሪው ወቅታዊ ሁኔታ"
+
+#. module: fleet
+#: model:ir.actions.act_window,name:fleet.fleet_vehicle_log_services_action
+#: model:ir.ui.menu,name:fleet.fleet_vehicle_log_services_menu
+msgid "Customer Services"
+msgstr "የተሽከርካሪ ሰርቪስ መዝገቦች"
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_daewoo
+msgid "Daewoo"
+msgstr ""
+
+#. module: fleet
+#: model:ir.model.fields.selection,name:fleet.selection__fleet_vehicle_log_contract__cost_frequency__daily
+msgid "Daily"
+msgstr "በየቀኑ"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_cost__date
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__date
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel__date
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_services__date
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_odometer__date
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_costs_view_search
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_fuel_view_search
+msgid "Date"
+msgstr "ቀን"
+
+#. module: fleet
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_cost__date
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_log_contract__date
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_log_fuel__date
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_log_services__date
+msgid "Date when the cost has been executed"
+msgstr "ወጪው የተፈጸመበት ቀን"
+
+#. module: fleet
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_log_contract__start_date
+msgid "Date when the coverage of the contract begins"
+msgstr "የውሉ ሽፋን የሚጀምርበት ቀን"
+
+#. module: fleet
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_log_contract__expiration_date
+msgid ""
+"Date when the coverage of the contract expirates (by default, one year after"
+" begin date)"
+msgstr ""
+"የኮንትራቱ ሽፋን የሚያልቅበት ቀን (በነባሪነት፣ ከተጀመረ ከአንድ አመት በኋላ)"
+#. module: fleet
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle__acquisition_date
+msgid "Date when the vehicle has been immatriculated"
+msgstr "ተሽከርካሪው ያልተስተካከለበት ቀን"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_res_config_settings__delay_alert_contract
+msgid "Delay alert contract outdated"
+msgstr "የዘገየ ማንቂያ ውል ጊዜው አልፎበታል።"
+
+#. module: fleet
+#: model:ir.model.fields.selection,name:fleet.selection__fleet_vehicle__fuel_type__diesel
+msgid "Diesel"
+msgstr ""
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_service_type__display_name
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__display_name
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_assignation_log__display_name
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_cost__display_name
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__display_name
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel__display_name
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_services__display_name
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_model__display_name
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_model_brand__display_name
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_odometer__display_name
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_state__display_name
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_tag__display_name
+msgid "Display Name"
+msgstr "መጠሪያው ስም"
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_dodge
+msgid "Dodge"
+msgstr ""
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__doors
+msgid "Doors Number"
+msgstr "በሮች ቁጥር"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__driver_id
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_assignation_log__driver_id
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__purchaser_id
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_odometer__driver_id
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_contract_view_search
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_form
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_search
+msgid "Driver"
+msgstr "ሹፌር"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_search
+msgid "Driver Contact"
+msgstr "የአሽከርካሪ ግንኙነት"
+
+#. module: fleet
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle__driver_id
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_odometer__driver_id
+msgid "Driver of the vehicle"
+msgstr "የተሽከርካሪው ሹፌር"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_form
+msgid "Drivers History"
+msgstr "የአሽከርካሪዎች ታሪክ"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__history_count
+msgid "Drivers History Count"
+msgstr "የአሽከርካሪዎች ታሪክ ብዛት"
+
+#. module: fleet
+#: model:ir.model,name:fleet.model_fleet_vehicle_assignation_log
+msgid "Drivers history on a vehicle"
+msgstr "የአሽከርካሪዎች ታሪክ በተሽከርካሪ ላይ"
+
+#. module: fleet
+#: model_terms:ir.actions.act_window,help:fleet.fleet_vehicle_log_contract_action
+msgid ""
+"Each contract (e.g.: leasing) may include several services\n"
+"            (reparation, insurances, periodic maintenance)."
+msgstr ""
+"እያንዳንዱ ውል (ለምሳሌ፡ ኪራይ) ብዙ ሰርቪሶችን ሊያካትት ይችላል\n"
+" (ማካካሻ, ኢንሹራንስ, ወቅታዊ ጥገና)."
+#. module: fleet
+#: model_terms:ir.actions.act_window,help:fleet.fleet_vehicle_service_types_action
+msgid "Each service can used in contracts, as a standalone service or both."
+msgstr "እያንዳንዱ አገልግሎት እንደ ገለልተኛ አገልግሎት ወይም ሁለቱንም በውሎች ውስጥ ሊያገለግል ይችላል።"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_costs_view_search
+msgid "Effective Costs"
+msgstr "ውጤታማ ወጪዎች"
+
+#. module: fleet
+#: model:ir.model.fields.selection,name:fleet.selection__fleet_vehicle__fuel_type__electric
+msgid "Electric"
+msgstr "ኤሌክትሪክ"
+
+#. module: fleet
+#: code:addons/fleet/models/fleet_vehicle_cost.py:0
+#, python-format
+msgid "Emptying the odometer value of a vehicle is not allowed."
+msgstr "የተሽከርካሪውን የ ኦዶሜትር ዋጋ ባዶ ማድረግ አይፈቀድም።"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_assignation_log__date_end
+msgid "End Date"
+msgstr "የመጨረሻ ቀን"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_form
+msgid "Engine"
+msgstr "ሞተር"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_search
+msgid "Engine No"
+msgstr "ሞተር ቁጥር"
+
+#. module: fleet
+#: model:ir.model.fields.selection,name:fleet.selection__fleet_vehicle_log_contract__state__expired
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_contract_view_search
+msgid "Expired"
+msgstr "ጊዜው አልፎበታል።"
+
+#. module: fleet
+#: model:ir.model.fields.selection,name:fleet.selection__fleet_vehicle_log_contract__state__diesoon
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_contract_view_search
+msgid "Expiring Soon"
+msgstr "በቅርቡ ጊዜው ያበቃል"
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_ferrari
+msgid "Ferrari"
+msgstr ""
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_fiat
+msgid "Fiat"
+msgstr ""
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_search
+msgid "Filter By Main Type ..."
+msgstr "በዋናው ዓይነት አጣራ..."
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_search
+msgid "Filter By Status ..."
+msgstr "በሁኔታ አጣራ"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__first_contract_date
+msgid "First Contract Date"
+msgstr "የመጀመሪያ ውል ቀን"
+
+#. module: fleet
+#: model:ir.module.category,name:fleet.module_fleet_category
+#: model:ir.ui.menu,name:fleet.menu_root
+#: model_terms:ir.ui.view,arch_db:fleet.res_config_settings_view_form
+msgid "Fleet"
+msgstr "ተሽከርካሪ"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.res_config_settings_view_form
+msgid "Fleet Management"
+msgstr "የተሽከርካሪ አስተዳደር"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__manager_id
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_model__manager_id
+msgid "Fleet Manager"
+msgstr "የተሽከርካሪ አስተዳዳሪ"
+
+#. module: fleet
+#: model:ir.model,name:fleet.model_fleet_service_type
+msgid "Fleet Service Type"
+msgstr "የተሽከርካሪ አገልግሎት ዓይነት"
+
+#. module: fleet
+#: model:ir.actions.server,name:fleet.ir_cron_contract_costs_generator_ir_actions_server
+#: model:ir.cron,cron_name:fleet.ir_cron_contract_costs_generator
+#: model:ir.cron,name:fleet.ir_cron_contract_costs_generator
+msgid "Fleet: Generate contracts costs based on costs frequency"
+msgstr "ተሽከርካሪ፡- በወጪ ድግግሞሽ ላይ በመመስረት የኮንትራት ወጪዎችን መፍጠር"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__message_follower_ids
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__message_follower_ids
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel__message_follower_ids
+msgid "Followers"
+msgstr "ተከታዮች"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__message_channel_ids
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__message_channel_ids
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "ተከታዮች (ሰርጦች)"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__message_partner_ids
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__message_partner_ids
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "ተከታዮች (አጋሮች)"
+
+#. module: fleet
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_cost__cost_type
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_log_contract__cost_type
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_log_fuel__cost_type
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_log_services__cost_type
+msgid "For internal purpose only"
+msgstr "ለውስጣዊ ዓላማ ብቻ"
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_ford
+msgid "Ford"
+msgstr ""
+
+#. module: fleet
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_log_contract__cost_frequency
+msgid "Frequency of the recuring cost"
+msgstr "የተደጋጋሚ ወጪ ድግግሞሽ"
+
+#. module: fleet
+#: model:ir.model.fields.selection,name:fleet.selection__fleet_vehicle_cost__cost_type__fuel
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_form
+msgid "Fuel"
+msgstr "ነዳጅ"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_fuel_view_graph
+msgid "Fuel Costs Per Month"
+msgstr "የነዳጅ ወጪዎች በወር"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__fuel_logs_count
+msgid "Fuel Log Count"
+msgstr "የነዳጅ ምዝግብ ማስታወሻ ብዛት"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__log_fuel
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_fuel_view_form
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_fuel_view_search
+msgid "Fuel Logs"
+msgstr "የነዳጅ ምዝግብ ማስታወሻዎች"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__fuel_type
+msgid "Fuel Type"
+msgstr "የነዳጅ ዓይነት"
+
+#. module: fleet
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle__fuel_type
+msgid "Fuel Used by the vehicle"
+msgstr "በተሽከርካሪው ጥቅም ላይ የዋለ ነዳጅ"
+
+#. module: fleet
+#: model:ir.model,name:fleet.model_fleet_vehicle_log_fuel
+msgid "Fuel log for vehicles"
+msgstr "ለተሽከርካሪዎች የነዳጅ መዝገብ"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_contract_view_search
+msgid "Future Activities"
+msgstr "የወደፊት ተግባራት"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__future_driver_id
+msgid "Future Driver"
+msgstr "የወደፊት ሹፌር"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_kanban
+msgid "Future Driver :"
+msgstr "የወደፊት ሹፌር"
+
+#. module: fleet
+#: model:ir.model.fields.selection,name:fleet.selection__fleet_vehicle__fuel_type__gasoline
+msgid "Gasoline"
+msgstr "ቤንዚን"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__generated_cost_ids
+msgid "Generated Costs"
+msgstr "የመነጩ ወጪዎች"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_contract_view_form
+msgid "Generated Recurring Costs"
+msgstr "የመነጩ ተደጋጋሚ ወጪዎች"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_costs_view_search
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_contract_view_search
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_model_view_search
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_odometer_view_search
+msgid "Group By"
+msgstr "በመደብ"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_fuel_view_search
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_services_view_search
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_search
+msgid "Group By..."
+msgstr "ቡድን በ.."
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__contract_renewal_overdue
+msgid "Has Contracts Overdue"
+msgstr "ጊዜው ያለፈበት ውሎች አሉት"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__contract_renewal_due_soon
+msgid "Has Contracts to renew"
+msgstr "ለማደስ ውል አለው።"
+
+#. module: fleet
+#: model_terms:ir.actions.act_window,help:fleet.fleet_vehicle_log_fuel_action
+msgid "Here you can add refuelling entries for all vehicles."
+msgstr "እዚህ ለሁሉም ተሽከርካሪዎች የነዳጅ ማደያ ግቤቶችን ማከል ይችላሉ።"
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_holden
+msgid "Holden"
+msgstr ""
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_honda
+msgid "Honda"
+msgstr ""
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__horsepower
+msgid "Horsepower"
+msgstr "የፈረስ ጉልበት"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__horsepower_tax
+msgid "Horsepower Taxation"
+msgstr "የፈረስ ጉልበት ግብር"
+
+#. module: fleet
+#: model:ir.model.fields.selection,name:fleet.selection__fleet_vehicle__fuel_type__hybrid
+msgid "Hybrid"
+msgstr "ድቅል"
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_hyundai
+msgid "Hyundai"
+msgstr ""
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_service_type__id
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__id
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_assignation_log__id
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_cost__id
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__id
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel__id
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_services__id
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_model__id
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_model_brand__id
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_odometer__id
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_state__id
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_tag__id
+msgid "ID"
+msgstr "መታወቂያ"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__activity_exception_icon
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__activity_exception_icon
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel__activity_exception_icon
+msgid "Icon"
+msgstr "አዶ"
+
+#. module: fleet
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle__activity_exception_icon
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_log_contract__activity_exception_icon
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_log_fuel__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "ልዩ ክንውንን ለማመልከት አዶ"
+
+#. module: fleet
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle__message_needaction
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle__message_unread
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_log_contract__message_needaction
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_log_contract__message_unread
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_log_fuel__message_needaction
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_log_fuel__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "ምልክት ካደረጉ፣ አዲስ መልዕክቶች የእርስዎን ትኩረት ይፈልጋሉ።"
+
+#. module: fleet
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle__message_has_error
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_log_contract__message_has_error
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_log_fuel__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "ምልክት ካደረጉ፣ አንዳንድ መልዕክቶች የማድረስ ስህተት አለባቸው።"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__image_128
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_model__image_128
+msgid "Image"
+msgstr "ምስል"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__acquisition_date
+msgid "Immatriculation Date"
+msgstr "የማይገባበት ቀን"
+
+#. module: fleet
+#: model:ir.model.fields.selection,name:fleet.selection__fleet_vehicle_log_contract__state__open
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_contract_view_search
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_search
+msgid "In Progress"
+msgstr "በሂደት ላይ"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_cost__cost_ids
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__cost_ids
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel__cost_ids
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_services__cost_ids
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_contract_view_form
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_services_view_form
+msgid "Included Services"
+msgstr "የተካተቱ ሰርቪሶች"
+
+#. module: fleet
+#: model:ir.model.fields.selection,name:fleet.selection__fleet_vehicle_log_contract__state__futur
+msgid "Incoming"
+msgstr "ገቢ"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_contract_view_form
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_services_view_form
+msgid "Indicative Cost"
+msgstr "አመላካች ወጪ"
+
+#. module: fleet
+#: model:ir.ui.menu,name:fleet.menu_fleet_reporting_indicative_costs
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_costs_view_search
+msgid "Indicative Costs"
+msgstr "አመላካች ወጪዎች"
+
+#. module: fleet
+#: model:ir.actions.act_window,name:fleet.fleet_costs_reporting_non_effective_action
+msgid "Indicative Costs Analysis"
+msgstr "አመላካች ወጪዎች ትንተና"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__sum_cost
+msgid "Indicative Costs Total"
+msgstr "አጠቃላይ አመላካች ወጪዎች"
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_infiniti
+msgid "Infiniti"
+msgstr ""
+
+#. module: fleet
+#: model:fleet.vehicle.model,name:fleet.model_insignia
+msgid "Insignia"
+msgstr "መለያ ምልክት"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_search
+msgid "Inspection"
+msgstr "ምርመራ"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_contract_view_form
+msgid "Invoice Date"
+msgstr "የክፍያ መጠየቂያ ቀን"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel__inv_ref
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_services__inv_ref
+msgid "Invoice Reference"
+msgstr "የክፍያ መጠየቂያ ማጣቀሻ"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__message_is_follower
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__message_is_follower
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel__message_is_follower
+msgid "Is Follower"
+msgstr "ተከታይ ነው።"
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_isuzu
+msgid "Isuzu"
+msgstr ""
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_jaguar
+msgid "Jaguar"
+msgstr ""
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_jeep
+msgid "Jeep"
+msgstr ""
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_kia
+msgid "Kia"
+msgstr ""
+
+#. module: fleet
+#: model:ir.model.fields.selection,name:fleet.selection__fleet_vehicle__odometer_unit__kilometers
+msgid "Kilometers"
+msgstr "ኪሎሜትሮች"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_odometer_view_kanban
+msgid "Km"
+msgstr ""
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_koenigsegg
+msgid "Koenigsegg"
+msgstr ""
+
+#. module: fleet
+#: model:ir.model.fields.selection,name:fleet.selection__fleet_vehicle__fuel_type__lpg
+msgid "LPG"
+msgstr ""
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_lagonda
+msgid "Lagonda"
+msgstr ""
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_lamborghini
+msgid "Lamborghini"
+msgstr ""
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_lancia
+msgid "Lancia"
+msgstr ""
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_land_rover
+msgid "Land Rover"
+msgstr ""
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_service_type____last_update
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle____last_update
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_assignation_log____last_update
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_cost____last_update
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract____last_update
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel____last_update
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_services____last_update
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_model____last_update
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_model_brand____last_update
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_odometer____last_update
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_state____last_update
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_tag____last_update
+msgid "Last Modified on"
+msgstr "መጨረሻ የተሻሻለው በ"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__odometer
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel__odometer
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_services__odometer
+msgid "Last Odometer"
+msgstr "የመጨረሻው ኦዶሜትር"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_search
+msgid "Last Service Date"
+msgstr "የመጨረሻው የአገልግሎት ቀን"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_service_type__write_uid
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__write_uid
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_assignation_log__write_uid
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_cost__write_uid
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__write_uid
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel__write_uid
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_services__write_uid
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_model__write_uid
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_model_brand__write_uid
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_odometer__write_uid
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_state__write_uid
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_tag__write_uid
+msgid "Last Updated by"
+msgstr "መጨረሻ የዘመነው በ"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_service_type__write_date
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__write_date
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_assignation_log__write_date
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_cost__write_date
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__write_date
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel__write_date
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_services__write_date
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_model__write_date
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_model_brand__write_date
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_odometer__write_date
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_state__write_date
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_tag__write_date
+msgid "Last Updated on"
+msgstr "መጨረሻ የዘመነው በ"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_contract_view_search
+msgid "Late Activities"
+msgstr "ዘግይተው የሚደረጉ ክንውንዎች"
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_lexus
+msgid "Lexus"
+msgstr ""
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__license_plate
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_search
+msgid "License Plate"
+msgstr "ታርጋ ቁጥር"
+
+#. module: fleet
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle__license_plate
+msgid ""
+"License plate number of the vehicle.                                (ie: "
+"plate number for a vehicle)"
+msgstr ""
+"የተሽከርካሪው የሰሌዳ ቁጥር። (ማለት፡ ለተሽከርካሪ የሰሌዳ ቁጥር)"
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_lincoln
+msgid "Lincoln"
+msgstr ""
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_search
+msgid "List of Released Vehicle"
+msgstr "የተለቀቀው ተሽከርካሪ ዝርዝር"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_search
+msgid "List of completed service vehicle"
+msgstr "የተጠናቀቀ አገልግሎት መኪና ዝርዝር"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_search
+msgid "List of pending service vehicle"
+msgstr "በመጠባበቅ ላይ ያለ አገልግሎት መኪና ዝርዝር"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_search
+msgid "List of vehicle those are in inspection"
+msgstr "በምርመራ ላይ ያሉ የተሽከርካሪዎች ዝርዝር"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_search
+msgid "List of vehicle those are in onrent"
+msgstr "የተከራዩ የተሽከርካሪዎች ዝርዝር"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_search
+msgid "List of vehicle those are in workshop for service"
+msgstr "በአገልግሎት አውደ ጥናት ላይ ያሉት የተሽከርካሪዎች ዝርዝር"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_search
+msgid "List of vehicle those are write-off"
+msgstr "የተሰረዙ የተሽከርካሪዎች ዝርዝር"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_search
+msgid "List of vehicle with non-vehcile type"
+msgstr "ተሽከርካሪ ያልሆነ የተሽከርካሪ ዝርዝር"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_search
+msgid "List of vehicle with non-write off"
+msgstr "ያልተፃፈ የተሽከርካሪ ዝርዝር"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_search
+msgid "List of vehicle with vehicle type"
+msgstr "የተሸከርካሪ ዓይነት ያለው የተሽከርካሪ ዝርዝር"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel__liter
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_fuel_view_kanban
+msgid "Liter"
+msgstr "ሊትር"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__location
+msgid "Location"
+msgstr "አካባቢ"
+
+#. module: fleet
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle__location
+msgid "Location of the vehicle (garage, ...)"
+msgstr "የተሽከርካሪው ቦታ (ጋራዥ፣...)"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_services_view_search
+msgid "Location(Team)"
+msgstr "አካባቢ(ቡድን)"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_model_brand__image_128
+msgid "Logo"
+msgstr "አርማ"
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_lotus
+msgid "Lotus"
+msgstr ""
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__message_main_attachment_id
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__message_main_attachment_id
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "ዋና አባሪ"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_search
+msgid "Main Type"
+msgstr "ዋና ዓይነት"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_model__brand_id
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_model_brand__name
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_fuel_view_search
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_services_view_search
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_model_view_search
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_search
+msgid "Make"
+msgstr "ስሪት"
+
+#. module: fleet
+#: model_terms:ir.actions.act_window,help:fleet.fleet_vehicle_log_contract_action
+msgid ""
+"Manage all your contracts (leasing, insurances, etc.) with\n"
+"            their related services, costs. Odoo will automatically warn\n"
+"            you when some contracts have to be renewed."
+msgstr ""
+"ሁሉንም ውሎችህን (ኪራይ፣ ኢንሹራንስ፣ ወዘተ) አስተዳድር\n"
+"በ ተዛማጅ አገልግሎቶቻቸው፣ ወጪዎች። ኦዱ በራስሰር ያስጠነቅቃል\n"
+"አንዳንድ ውሎች መታደስ ሲኖርብዎት።"
+#. module: fleet
+#: model_terms:ir.actions.act_window,help:fleet.fleet_vehicle_costs_action
+msgid ""
+"Manage the costs for your different vehicles.\n"
+"                Costs are created automatically from services, contracts and fuel logs."
+msgstr ""
+"ለተለያዩ ተሽከርካሪዎችዎ ወጪዎችን ያስተዳድሩ።\n"
+" ወጪዎች ከሰርቪሶች, ውሎች እና የነዳጅ ምዝግብ ማስታወሻዎች በራስ-ሰር ይፈጠራሉ."
+#. module: fleet
+#: model:ir.model.fields.selection,name:fleet.selection__fleet_vehicle__transmission__manual
+msgid "Manual"
+msgstr "ማኗል"
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_maserati
+msgid "Maserati"
+msgstr ""
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_maybach
+msgid "Maybach"
+msgstr ""
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_mazda
+msgid "Mazda"
+msgstr ""
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel__medium_id
+msgid "Medium"
+msgstr "መካከለኛ"
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_mercedes
+msgid "Mercedes"
+msgstr ""
+
+#. module: fleet
+#: model:fleet.vehicle.model,name:fleet.model_meriva
+msgid "Meriva"
+msgstr ""
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__message_has_error
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__message_has_error
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel__message_has_error
+msgid "Message Delivery error"
+msgstr "የመልእክት ማቅረቢያ ስህተት"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__message_ids
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__message_ids
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel__message_ids
+msgid "Messages"
+msgstr "መልዕክቶች"
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_mg
+msgid "Mg"
+msgstr ""
+
+#. module: fleet
+#: model:ir.model.fields.selection,name:fleet.selection__fleet_vehicle__odometer_unit__miles
+msgid "Miles"
+msgstr ""
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_mini
+msgid "Mini"
+msgstr ""
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_mitsubishi
+msgid "Mitsubishi"
+msgstr ""
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__model_id
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_fuel_view_search
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_model_view_form
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_form
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_search
+msgid "Model"
+msgstr "ሞዴል"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_model_brand_view_form
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_model_brand_view_tree
+msgid "Model Brand"
+msgstr "ሞዴል የእቃ ስም"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__model_year
+msgid "Model Year"
+msgstr "ሞዴል ዓመት"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_model__name
+msgid "Model name"
+msgstr "የሞዴል ስም"
+
+#. module: fleet
+#: model:ir.model,name:fleet.model_fleet_vehicle_model
+msgid "Model of a vehicle"
+msgstr "የተሽከርካሪ ሞዴል"
+
+#. module: fleet
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle__model_id
+msgid "Model of the vehicle"
+msgstr "የተሽከርካሪው ሞዴል"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_model_view_kanban
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_model_view_tree
+msgid "Models"
+msgstr "ሞዴሎች"
+
+#. module: fleet
+#: model:fleet.vehicle.model,name:fleet.model_mokka
+msgid "Mokka"
+msgstr ""
+
+#. module: fleet
+#: model:ir.model.fields.selection,name:fleet.selection__fleet_vehicle_log_contract__cost_frequency__monthly
+msgid "Monthly"
+msgstr "ወርሃዊ"
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_morgan
+msgid "Morgan"
+msgstr ""
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_service_type__name
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_cost__name
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__name
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel__name
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_odometer__name
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_state__name
+msgid "Name"
+msgstr "ስም"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__contract_renewal_name
+msgid "Name of contract to renew soon"
+msgstr "የውል ስምምነቱ በቅርቡ ይታደሳል"
+
+#. module: fleet
+#: model:fleet.vehicle.state,name:fleet.fleet_vehicle_state_new_request
+msgid "New Request"
+msgstr "አዲስ ጥያቄ"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__activity_date_deadline
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__activity_date_deadline
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "ቀጣይ የክንውን ገደብ"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__activity_summary
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__activity_summary
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel__activity_summary
+msgid "Next Activity Summary"
+msgstr "ቀጣይ የክንውን ማጠቃለያ"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__activity_type_id
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__activity_type_id
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel__activity_type_id
+msgid "Next Activity Type"
+msgstr "ቀጣይ የክንውን አይነት"
+
+#. module: fleet
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle__future_driver_id
+msgid "Next Driver of the vehicle"
+msgstr "ቀጣይ የተሽከርካሪው ሹፌር"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_search
+msgid "Next Service Date"
+msgstr "ቀጣይ የአገልግሎት ቀን"
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_nissan
+msgid "Nissan"
+msgstr ""
+
+#. module: fleet
+#: model:ir.model.fields.selection,name:fleet.selection__fleet_vehicle_log_contract__cost_frequency__no
+msgid "No"
+msgstr "አይ"
+
+#. module: fleet
+#: code:addons/fleet/models/fleet_vehicle.py:0
+#, python-format
+msgid "No Plate"
+msgstr "ፕሌት የለም"
+
+#. module: fleet
+#: model_terms:ir.actions.act_window,help:fleet.fleet_costs_reporting_action
+#: model_terms:ir.actions.act_window,help:fleet.fleet_costs_reporting_non_effective_action
+msgid "No data for analysis"
+msgstr "ለመተንተን ምንም ውሂብ የለም"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_search
+msgid "Non-Vehicle"
+msgstr "ተሽከርካሪ ያልሆነ"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_search
+msgid "Non-Write-Off"
+msgstr "አገልግሎት እየሰጡ ያሉ"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel__notes
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_services__notes
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_services_view_form
+msgid "Notes"
+msgstr "ማስታወሻዎች"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__message_needaction_counter
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__message_needaction_counter
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel__message_needaction_counter
+msgid "Number of Actions"
+msgstr "የተግባሮች ብዛት"
+
+#. module: fleet
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle__doors
+msgid "Number of doors of the vehicle"
+msgstr "የተሽከርካሪው በሮች ብዛት"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__message_has_error_counter
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__message_has_error_counter
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel__message_has_error_counter
+msgid "Number of errors"
+msgstr "የስህተት ብዛት"
+
+#. module: fleet
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle__message_needaction_counter
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_log_contract__message_needaction_counter
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_log_fuel__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "እርምጃ የሚያስፈልገው የመልእክት ብዛት"
+
+#. module: fleet
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle__message_has_error_counter
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_log_contract__message_has_error_counter
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_log_fuel__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "የማድረስ ስህተት ያለባቸው መልዕክቶች ብዛት"
+
+#. module: fleet
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle__seats
+msgid "Number of seats of the vehicle"
+msgstr "የተሽከርካሪው መቀመጫዎች ብዛት"
+
+#. module: fleet
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle__message_unread_counter
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_log_contract__message_unread_counter
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_log_fuel__message_unread_counter
+msgid "Number of unread messages"
+msgstr "ያልተነበቡ መልዕክቶች ብዛት"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__odometer_count
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_cost__odometer_id
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__odometer_id
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel__odometer_id
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_services__odometer_id
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_form
+msgid "Odometer"
+msgstr "ኦዶሜትር"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_fuel_view_form
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_services_view_form
+msgid "Odometer Details"
+msgstr "የኦዶሜትር ዝርዝሮች"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_odometer_view_form
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_odometer_view_tree
+msgid "Odometer Logs"
+msgstr "የኦዶሜትር ምዝግብ ማስታወሻዎች"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__odometer_unit
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel__odometer_unit
+msgid "Odometer Unit"
+msgstr "የኦዶሜትር ክፍል"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_cost__odometer
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_odometer__value
+msgid "Odometer Value"
+msgstr "የኦዶሜትር እሴት"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_odometer_view_graph
+msgid "Odometer Values Per Vehicle"
+msgstr "የኦዶሜትር እሴቶች በአንድ ተሽከርካሪ"
+
+#. module: fleet
+#: model:ir.model,name:fleet.model_fleet_vehicle_odometer
+msgid "Odometer log for a vehicle"
+msgstr "የኦዶሜትር መዝገብ ለተሽከርካሪ"
+
+#. module: fleet
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle__odometer
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_log_services__odometer
+msgid ""
+"Odometer measure of the vehicle at the                                 "
+"moment of this log"
+msgstr ""
+"በዚህ ሎግ ቅጽበት የተሽከርካሪው የኦዶሜትር መለኪያ"
+#. module: fleet
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_log_contract__odometer
+msgid "Odometer measure of the vehicle at the moment of the contract creation"
+msgstr "ኮንትራቱ በሚፈጠርበት ጊዜ የተሽከርካሪው የኦዶሜትር መለኪያ"
+
+#. module: fleet
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_cost__odometer
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_cost__odometer_id
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_log_contract__odometer_id
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_log_fuel__odometer
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_log_fuel__odometer_id
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_log_services__odometer_id
+msgid "Odometer measure of the vehicle at the moment of this log"
+msgstr "በዚህ ሎግ ቅጽበት የተሽከርካሪው የኦዶሜትር መለኪያ"
+
+#. module: fleet
+#: model_terms:ir.actions.act_window,help:fleet.fleet_costs_reporting_action
+#: model_terms:ir.actions.act_window,help:fleet.fleet_costs_reporting_non_effective_action
+msgid ""
+"Odoo helps you managing the costs for your different vehicles\n"
+"          Costs are generally created from services and contract and appears here."
+msgstr ""
+"Odoo ለተለያዩ ተሽከርካሪዎችዎ ወጪዎችን እንዲያስተዳድሩ ያግዝዎታል\n"
+" ወጪዎች በአጠቃላይ ከሰርቪሶች እና ውሎች የተፈጠሩ እና እዚህ ይታያሉ."
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_oldsmobile
+msgid "Oldsmobile"
+msgstr ""
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_search
+msgid "On Rent"
+msgstr "በኪራይ"
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_opel
+msgid "Opel"
+msgstr ""
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_model_brand_view_kanban
+msgid "Open"
+msgstr "ክፈት"
+
+#. module: fleet
+#: model_terms:ir.actions.act_window,help:fleet.fleet_vehicle_log_services_action
+msgid ""
+"OpenERP helps you keeping track of all the services done\n"
+"            on your vehicle.Services can be of many type: occasional\n"
+"            repair, fixed maintenance, etc."
+msgstr ""
+"ERP ክፈት ሁሉንም የተከናወኑ ሰርቪሶችን እንዲከታተሉ ያግዝዎታል\n"
+"በተሽከርካሪዎ ላይ። አገልግሎቶቹ ብዙ አይነት ሊሆኑ ይችላሉ፡ አልፎ አልፎ\n"
+"ጥገና, ቋሚ ጥገና, ወዘተ."
+#. module: fleet
+#: model_terms:ir.actions.act_window,help:fleet.fleet_vehicle_action
+msgid ""
+"OpenERP will warn you when services or contract have to be\n"
+"            renewed."
+msgstr ""
+"ክፈት ERP ሰርቪሶች ወይም ውል መሆን ሲኖርባቸው ያስጠነቅቀዎታል\n"
+" ታድሷል።"
+#. module: fleet
+#: model:ir.model.fields.selection,name:fleet.selection__fleet_vehicle_cost__cost_type__other
+msgid "Other"
+msgstr "ሌላ"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_cost__parent_id
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__parent_id
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel__parent_id
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_services__parent_id
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_costs_view_search
+msgid "Parent"
+msgstr "ወላጅ"
+
+#. module: fleet
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_cost__parent_id
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_log_contract__parent_id
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_log_fuel__parent_id
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_log_services__parent_id
+msgid "Parent cost to this current cost"
+msgstr "ለዚህ የአሁኑ ወጪ የወላጅ ወጪ"
+
+#. module: fleet
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_log_contract__purchaser_id
+msgid "Person to which the contract is signed for"
+msgstr "ኮንትራቱ የተፈረመበት ሰው"
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_peugeot
+msgid "Peugeot"
+msgstr ""
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__plan_to_change_car
+#: model:ir.model.fields,field_description:fleet.field_res_partner__plan_to_change_car
+#: model:ir.model.fields,field_description:fleet.field_res_users__plan_to_change_car
+msgid "Plan To Change Car"
+msgstr "መኪና ለመለወጥ እቅድ"
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_pontiac
+msgid "Pontiac"
+msgstr ""
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_porsche
+msgid "Porsche"
+msgstr ""
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__power
+msgid "Power"
+msgstr "ኃይል"
+
+#. module: fleet
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle__power
+msgid "Power in kW of the vehicle"
+msgstr "በተሽከርካሪው kW ውስጥ ያለው ኃይል"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_contract_view_form
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_services_view_form
+msgid "Price"
+msgstr "ዋጋ"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel__price_per_liter
+msgid "Price Per Liter"
+msgstr "ዋጋ በአንድ ሊትር"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__net_car_value
+msgid "Purchase Value"
+msgstr "የግዢ ዋጋ"
+
+#. module: fleet
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle__net_car_value
+msgid "Purchase Value of the car"
+msgstr "የመኪና ግዢ ዋጋ"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel__purchaser_id
+msgid "Purchaser"
+msgstr "ገዥ"
+
+#. module: fleet
+#: model:fleet.vehicle.model,name:fleet.model_q3
+msgid "Q3"
+msgstr ""
+
+#. module: fleet
+#: model:fleet.vehicle.model,name:fleet.model_q5
+msgid "Q5"
+msgstr ""
+
+#. module: fleet
+#: model:fleet.vehicle.model,name:fleet.model_q7
+msgid "Q7"
+msgstr ""
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_rambler
+msgid "Rambler"
+msgstr ""
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__cost_generated
+msgid "Recurring Cost Amount"
+msgstr "ተደጋጋሚ የወጪ መጠን"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__cost_frequency
+msgid "Recurring Cost Frequency"
+msgstr "ተደጋጋሚ ወጪ ድግግሞሽ"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_fuel_view_form
+msgid "Refueling Details"
+msgstr "የነዳጅ መሙላት ዝርዝሮች"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_search
+msgid "Registered Date"
+msgstr "የተመዘገበ ቀን"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_services_view_search
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_search
+msgid "Registration State"
+msgstr "የምዝገባ ግዛት"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_search
+msgid "Released"
+msgstr "ተለቋል"
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_renault
+msgid "Renault"
+msgstr ""
+
+#. module: fleet
+#: code:addons/fleet/models/fleet_vehicle_cost.py:0
+#: model:ir.actions.act_window,name:fleet.act_renew_contract
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_contract_view_form
+#, python-format
+msgid "Renew Contract"
+msgstr "ውል ማደስ"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_services_view_search
+msgid "Repair Type"
+msgstr "የጥገና ዓይነት"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_search
+msgid "Repairs Pending"
+msgstr "ጥገናዎች በመጠባበቅ ላይ"
+
+#. module: fleet
+#: model:ir.ui.menu,name:fleet.menu_fleet_reporting
+msgid "Reports"
+msgstr "ሪፖርቶች"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__residual_value
+msgid "Residual Value"
+msgstr "ትራፊ እሴት"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__user_id
+msgid "Responsible"
+msgstr "ተጠያቂ"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__activity_user_id
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__activity_user_id
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel__activity_user_id
+msgid "Responsible User"
+msgstr "ኃላፊነት የሚሰማው ተጠቃሚ"
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_rolls-royce
+msgid "Rolls-Royce"
+msgstr ""
+
+#. module: fleet
+#: model:fleet.vehicle.model,name:fleet.model_classsls
+msgid "SLS"
+msgstr ""
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_saab
+msgid "Saab"
+msgstr ""
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_scion
+msgid "Scion"
+msgstr ""
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__seats
+msgid "Seats Number"
+msgstr "የመቀመጫዎች ቁጥር"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_state__sequence
+msgid "Sequence"
+msgstr "ቅደም ተከተል"
+
+#. module: fleet
+#: model:fleet.vehicle.model,name:fleet.model_serie1
+msgid "Serie 1"
+msgstr ""
+
+#. module: fleet
+#: model:fleet.vehicle.model,name:fleet.model_serie3
+msgid "Serie 3"
+msgstr ""
+
+#. module: fleet
+#: model:fleet.vehicle.model,name:fleet.model_serie5
+msgid "Serie 5"
+msgstr ""
+
+#. module: fleet
+#: model:fleet.vehicle.model,name:fleet.model_serie6
+msgid "Serie 6"
+msgstr ""
+
+#. module: fleet
+#: model:fleet.vehicle.model,name:fleet.model_serie7
+msgid "Serie 7"
+msgstr ""
+
+#. module: fleet
+#: model:fleet.vehicle.model,name:fleet.model_seriehybrid
+msgid "Serie Hybrid"
+msgstr ""
+
+#. module: fleet
+#: model:fleet.vehicle.model,name:fleet.model_seriem
+msgid "Serie M"
+msgstr ""
+
+#. module: fleet
+#: model:fleet.vehicle.model,name:fleet.model_seriex
+msgid "Serie X"
+msgstr ""
+
+#. module: fleet
+#: model:fleet.vehicle.model,name:fleet.model_seriez4
+msgid "Serie Z4"
+msgstr ""
+
+#. module: fleet
+#: model:ir.model.fields.selection,name:fleet.selection__fleet_service_type__category__service
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_contract_view_form
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_services_view_form
+msgid "Service"
+msgstr "አገልግሎት"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_contract_view_search
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_services_view_form
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_services_view_search
+msgid "Service Type"
+msgstr "የአገልግሎት ዓይነት"
+
+#. module: fleet
+#: model:ir.actions.act_window,name:fleet.fleet_vehicle_service_types_action
+#: model:ir.ui.menu,name:fleet.fleet_vehicle_service_types_menu
+msgid "Service Types"
+msgstr "የሰርቪስ አይነቶች"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_service_types_view_tree
+msgid "Service types"
+msgstr "የሰርቪስ አይነቶች"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__service_count
+#: model:ir.model.fields.selection,name:fleet.selection__fleet_vehicle_cost__cost_type__services
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_form
+msgid "Services"
+msgstr "ሰርቪሶች"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_services_view_graph
+msgid "Services Costs Per Month"
+msgstr "የአገልግሎት ወጪዎች በወር"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_services_view_form
+msgid "Services Details"
+msgstr "የሰርቪሶች ዝርዝሮች"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__log_services
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_services_view_form
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_services_view_tree
+msgid "Services Logs"
+msgstr "የአገልግሎት ምዝግብ ማስታወሻዎች"
+
+#. module: fleet
+#: model:ir.model,name:fleet.model_fleet_vehicle_log_services
+msgid "Services for vehicles"
+msgstr "ለተሽከርካሪዎች ሰርቪሶች"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_contract_view_form
+msgid "Set Contract In Progress"
+msgstr "በሂደት ላይ ያለ ውል ያዘጋጁ"
+
+#. module: fleet
+#: model:ir.actions.act_window,name:fleet.fleet_config_settings_action
+#: model:ir.ui.menu,name:fleet.fleet_config_settings_menu
+msgid "Settings"
+msgstr "ቅንብሮች"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_contract_view_search
+msgid "Show all records which has next action date is before today"
+msgstr "የሚቀጥለው የድርጊት ቀን ከዛሬ በፊት ያለውን ሁሉንም መዝገቦች አሳይ"
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_skoda
+msgid "Skoda"
+msgstr ""
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_smart
+msgid "Smart"
+msgstr ""
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel__source_id
+msgid "Source"
+msgstr "ምንጭ"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_assignation_log__date_start
+msgid "Start Date"
+msgstr "የመጀመሪያ ቀን"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__state_id
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_state_view_tree
+msgid "State"
+msgstr "ግዛት"
+
+#. module: fleet
+#: model:ir.model.constraint,message:fleet.constraint_fleet_vehicle_state_fleet_state_name_unique
+msgid "State name already exists"
+msgstr "የግዛት ስም አስቀድሞ አለ።"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__state
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_services_view_search
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_search
+msgid "Status"
+msgstr "ሁኔታው"
+
+#. module: fleet
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle__activity_state
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_log_contract__activity_state
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_log_fuel__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"በክንውን ላይ የተመሰረተ ሁኔታ\n"
+"አልፏል፡ የማለቂያ ቀን አስቀድሞ አልፏል\n"
+"ዛሬ፡ የተግባር ቀን ዛሬ ነው\n"
+"የታቀደው: የወደፊት ክንውንዎች."
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_steyr
+msgid "Steyr"
+msgstr ""
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_subaru
+msgid "Subaru"
+msgstr ""
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_suzuki
+msgid "Suzuki"
+msgstr ""
+
+#. module: fleet
+#: model:fleet.vehicle.model,name:fleet.model_tt
+msgid "TT"
+msgstr ""
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_tag__name
+msgid "Tag Name"
+msgstr "የመለያ ስም"
+
+#. module: fleet
+#: model:ir.model.constraint,message:fleet.constraint_fleet_vehicle_tag_name_uniq
+msgid "Tag name already exists !"
+msgstr "የመለያ ስም አስቀድሞ አለ!"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__tag_ids
+msgid "Tags"
+msgstr "መለያዎች"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__notes
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_contract_view_form
+msgid "Terms and Conditions"
+msgstr "አተገባበሩና ​​መመሪያው"
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_tesla_motors
+msgid "Tesla Motors"
+msgstr ""
+
+#. module: fleet
+#: model_terms:ir.actions.act_window,help:fleet.fleet_costs_reporting_action
+#: model_terms:ir.actions.act_window,help:fleet.fleet_costs_reporting_non_effective_action
+msgid ""
+"Thanks to the different filters, Odoo can only print the effective\n"
+"          costs, sort them by type and by vehicle."
+msgstr ""
+" ለተለያዩ ማጣሪያዎች ምስጋና ይግባውና ኦዱ ውጤታማውን ብቻ ማተም ይችላል\n"
+"ወጪ፣ በአይነት እና በተሽከርካሪ ደርድርላቸው።"
+#. module: fleet
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_log_fuel__campaign_id
+msgid ""
+"This is a name that helps you keep track of your different campaign efforts,"
+" e.g. Fall_Drive, Christmas_Special"
+msgstr ""
+"ይህ የተለያዩ የዘመቻ ጥረቶችዎን ለመከታተል የሚረዳዎት ስም ነው"
+"ለምሳሌ ውድቀት_ Drive፣ ገና_ልዩ"
+#. module: fleet
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle__next_assignation_date
+msgid ""
+"This is the date at which the car will be available, if not set it means "
+"available instantly"
+msgstr ""
+"ይህ መኪናው የሚገኝበት ቀን ነው፣ ካልተዋቀረ ወዲያውኑ ይገኛል ማለት ነው"
+#. module: fleet
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_log_fuel__medium_id
+msgid "This is the method of delivery, e.g. Postcard, Email, or Banner Ad"
+msgstr "ይህ የማስረከቢያ ዘዴ ነው, ለምሳሌ. ፖስትካርድ፣ ኢሜል ወይም ባነር ማስታወቂያ"
+
+#. module: fleet
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_log_fuel__source_id
+msgid ""
+"This is the source of the link, e.g. Search Engine, another domain, or name "
+"of email list"
+msgstr ""
+"ይህ የግንኙነት ምንጭ ነው, ለምሳሌ. የፍለጋ ሞተር፣ ሌላ ጎራ ወይም የኢሜይል ዝርዝር ስም"
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_contract_view_search
+msgid "Today Activities"
+msgstr "የዛሬ ተግባራት"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_services_view_search
+msgid "Todays Closed WO"
+msgstr "ዛሬ ተዘግቷል WO"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_services_view_search
+msgid "Todays Issue WO"
+msgstr "የዛሬው እትም WO"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_services_view_search
+msgid "Todays Open WO"
+msgstr "ዛሬ ክፍት WO"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_services_view_tree
+msgid "Total"
+msgstr "ጠቅላላ"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_cost__amount
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__amount
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel__amount
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_services__amount
+msgid "Total Price"
+msgstr "ጠቅላላ ዋጋ"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__contract_renewal_total
+msgid "Total of contracts due or overdue minus one"
+msgstr "አንድ ሲቀነስ ያለፉ ወይም ያለፉ ውሎች ጠቅላላ"
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_toyota
+msgid "Toyota"
+msgstr ""
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_trabant
+msgid "Trabant"
+msgstr ""
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__transmission
+msgid "Transmission"
+msgstr "የማርሽ አይነት"
+
+#. module: fleet
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle__transmission
+msgid "Transmission Used by the vehicle"
+msgstr "በተሽከርካሪው ጥቅም ላይ የዋለ ማስተላለፊያ"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_cost__cost_subtype_id
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__cost_subtype_id
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel__cost_subtype_id
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_services__cost_subtype_id
+msgid "Type"
+msgstr "ዓይነት"
+
+#. module: fleet
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle__activity_exception_decoration
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_log_contract__activity_exception_decoration
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_log_fuel__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "በመዝገብ ላይ ያለ ልዩ ክንውን አይነት።"
+
+#. module: fleet
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle__vin_sn
+msgid "Unique number written on the vehicle motor (VIN/SN number)"
+msgstr "በተሽከርካሪው ሞተር ላይ የተጻፈ ልዩ ቁጥር (VIN/SN ቁጥር)"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_cost__odometer_unit
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__odometer_unit
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_services__odometer_unit
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_odometer__unit
+msgid "Unit"
+msgstr "ክፍል"
+
+#. module: fleet
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle__odometer_unit
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_cost__odometer_unit
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_log_contract__odometer_unit
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_log_fuel__odometer_unit
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_log_services__odometer_unit
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_odometer__unit
+msgid "Unit of the odometer "
+msgstr "የ ኦዶሜትር አሃድ"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__message_unread
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__message_unread
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel__message_unread
+msgid "Unread Messages"
+msgstr "ያልተነበቡ መልእክቶች"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__message_unread_counter
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__message_unread_counter
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "ያልተነበቡ መልዕክቶች ቆጣሪ"
+
+#. module: fleet
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_state__sequence
+msgid "Used to order the note stages"
+msgstr "የማስታወሻ ደረጃዎችን ለማዘዝ ጥቅም ላይ ይውላል"
+
+#. module: fleet
+#: model:res.groups,name:fleet.fleet_group_user
+msgid "User"
+msgstr "ተጠቃሚ"
+
+#. module: fleet
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle__car_value
+msgid "Value of the bought vehicle"
+msgstr "የተገዛው ተሽከርካሪ ዋጋ"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_search
+msgid "Vechical Type"
+msgstr "የተሽከርካሪ አይነት"
+
+#. module: fleet
+#: model:ir.model,name:fleet.model_fleet_vehicle
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_assignation_log__vehicle_id
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_cost__vehicle_id
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__vehicle_id
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel__vehicle_id
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_services__vehicle_id
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_odometer__vehicle_id
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_costs_view_search
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_contract_view_search
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_fuel_view_search
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_services_view_search
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_odometer_view_search
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_form
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_kanban
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_search
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_tree
+msgid "Vehicle"
+msgstr "ተሽከርካሪ"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_cost_view_tree
+msgid "Vehicle Costs"
+msgstr "የተሽከርካሪ ወጪዎች"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_costs_view_search
+msgid "Vehicle Costs by Date"
+msgstr "የተሽከርካሪ ወጪዎች በቀን"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_fuel_view_form
+msgid "Vehicle Details"
+msgstr "የተሽከርካሪ ዝርዝሮች"
+
+#. module: fleet
+#: model:ir.actions.act_window,name:fleet.fleet_vehicle_log_fuel_action
+#: model:ir.ui.menu,name:fleet.fleet_vehicle_log_fuel_menu
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_fuel_view_tree
+msgid "Vehicle Fuel Log"
+msgstr "የተሽከርካሪ ነዳጅ መዝገብ"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_search
+msgid "Vehicle ID"
+msgstr "የተሽከርካሪ መለያ"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_contract_view_form
+msgid "Vehicle Informations"
+msgstr "የተሽከርካሪ መረጃ"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_services__purchaser_id
+msgid "Vehicle Owner"
+msgstr "የተሽከርካሪ ባለቤት"
+
+#. module: fleet
+#: model:ir.actions.act_window,name:fleet.fleet_vehicle_state_action
+#: model:ir.model,name:fleet.model_fleet_vehicle_state
+#: model:ir.ui.menu,name:fleet.fleet_vehicle_state_menu
+msgid "Vehicle Status"
+msgstr "የተሽከርካሪ ሁኔታ"
+
+#. module: fleet
+#: model:ir.model,name:fleet.model_fleet_vehicle_tag
+msgid "Vehicle Tag"
+msgstr "የተሽከርካሪ መለያ"
+
+#. module: fleet
+#: model:ir.actions.act_window,name:fleet.fleet_vehicle_tag_action
+#: model:ir.ui.menu,name:fleet.fleet_vehicle_tag_menu
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_tag_view_view_form
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_tag_view_view_tree
+msgid "Vehicle Tags"
+msgstr "የተሽከርካሪ መለያዎች"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_services_view_search
+msgid "Vehicle Type"
+msgstr "የተሽከርካሪ አይነት"
+
+#. module: fleet
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_cost__vehicle_id
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_log_contract__vehicle_id
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_log_fuel__vehicle_id
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_log_services__vehicle_id
+msgid "Vehicle concerned by this log"
+msgstr "በዚህ መዝገብ የተመለከተው ተሽከርካሪ"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_costs_view_form
+msgid "Vehicle costs"
+msgstr "የተሽከርካሪ ወጪዎች"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__name
+msgid "Vehicle-ID"
+msgstr "ተሽከርካሪ-መለያ"
+
+#. module: fleet
+#: model:ir.ui.menu,name:fleet.fleet_vehicles
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_activity
+msgid "Vehicles"
+msgstr "ተሽከርካሪዎች"
+
+#. module: fleet
+#: model:ir.actions.act_window,name:fleet.fleet_vehicle_log_contract_action
+#: model:ir.ui.menu,name:fleet.fleet_vehicle_log_contract_menu
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_contract_view_activity
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_contract_view_search
+msgid "Vehicles Contracts"
+msgstr "የተሽከርካሪዎች ውሎች"
+
+#. module: fleet
+#: model:ir.actions.act_window,name:fleet.fleet_vehicle_costs_action
+#: model:ir.ui.menu,name:fleet.fleet_vehicle_costs_menu
+msgid "Vehicles Costs"
+msgstr "የተሽከርካሪዎች ወጪዎች"
+
+#. module: fleet
+#: model:ir.actions.act_window,name:fleet.fleet_vehicle_model_action
+#: model:ir.ui.menu,name:fleet.fleet_vehicle_model_menu
+msgid "Vehicles Model"
+msgstr "የተሽከርካሪዎች ሞዴል"
+
+#. module: fleet
+#: model:ir.actions.act_window,name:fleet.fleet_vehicle_odometer_action
+#: model:ir.ui.menu,name:fleet.fleet_vehicle_odometer_menu
+msgid "Vehicles Odometer"
+msgstr "የተሽከርካሪዎች ኦዶሜትር"
+
+#. module: fleet
+#: model:ir.actions.act_window,name:fleet.fleet_vehicle_action
+#: model:ir.ui.menu,name:fleet.fleet_vehicle_menu
+msgid "Vehicles Registration"
+msgstr "የተሽከርካሪዎች ምዝገባ"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_cost_indicative_view_graph
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_cost_indicative_view_pivot
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_cost_view_graph
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_cost_view_pivot
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_costs_view_search
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_model_view_search
+msgid "Vehicles costs"
+msgstr "የተሽከርካሪዎች ወጪዎች"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_odometer_view_search
+msgid "Vehicles odometers"
+msgstr "የተሽከርካሪዎች ኦዶሜትር"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__insurer_id
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel__vendor_id
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_services__vendor_id
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_contract_view_search
+msgid "Vendor"
+msgstr "ሻጭ"
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_model__vendors
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_model_view_form
+msgid "Vendors"
+msgstr "ሻጮች"
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_volkswagen
+msgid "Volkswagen"
+msgstr ""
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_volvo
+msgid "Volvo"
+msgstr ""
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__days_left
+msgid "Warning Date"
+msgstr "የማስጠንቀቂያ ቀን"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_kanban
+msgid "Warning: renewal due soon"
+msgstr "ማስጠንቀቂያ፡ በቅርቡ እድሳት ያበቃል"
+
+#. module: fleet
+#: model:ir.model.fields.selection,name:fleet.selection__fleet_vehicle_log_contract__cost_frequency__weekly
+msgid "Weekly"
+msgstr "በየሳምንቱ"
+
+#. module: fleet
+#: model:fleet.vehicle.model.brand,name:fleet.brand_willys
+msgid "Willys"
+msgstr ""
+
+#. module: fleet
+#: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_services__name
+msgid "Work Order"
+msgstr "የሥራ ትዕዛዝ"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_services_view_search
+msgid "Work Orders"
+msgstr "የሥራ ትዕዛዞች"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_contract_view_form
+msgid "Write here all other information relative to this contract"
+msgstr "ከዚህ ውል ጋር በተያያዘ ሁሉንም ሌሎች መረጃዎች እዚህ ይጻፉ"
+
+#. module: fleet
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle_log_contract__notes
+msgid "Write here all supplementary information relative to this contract"
+msgstr "ከዚህ ውል ጋር በተያያዘ ሁሉንም ተጨማሪ መረጃዎች እዚህ ይጻፉ"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_fuel_view_form
+msgid "Write here any other information"
+msgstr "ሌላ ማንኛውንም መረጃ እዚህ ይጻፉ"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_services_view_form
+msgid "Write here any other information related to the service completed."
+msgstr "ከተጠናቀቀው አገልግሎት ጋር የተያያዘ ሌላ ማንኛውንም መረጃ እዚህ ይጻፉ።"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_search
+msgid "Write-Off"
+msgstr "ሰረዘ"
+
+#. module: fleet
+#: model:ir.model.fields,help:fleet.field_fleet_vehicle__model_year
+msgid "Year of the model"
+msgstr "የአምሳያው አመት"
+
+#. module: fleet
+#: model:ir.model.fields.selection,name:fleet.selection__fleet_vehicle_log_contract__cost_frequency__yearly
+msgid "Yearly"
+msgstr "ዓመታዊ"
+
+#. module: fleet
+#: model_terms:ir.actions.act_window,help:fleet.fleet_vehicle_odometer_action
+msgid "You can add various odometer entries for all vehicles."
+msgstr "ለሁሉም ተሽከርካሪዎች የተለያዩ የኦዶሜትር ግቤቶችን ማከል ይችላሉ።"
+
+#. module: fleet
+#: model_terms:ir.actions.act_window,help:fleet.fleet_vehicle_state_action
+msgid ""
+"You can customize available status to track the evolution of\n"
+"            each vehicle. Example: active, being repaired, sold."
+msgstr ""
+"የእያንዳንዱን ተሽከርካሪ ዝግመተ ለውጥ ለመከታተል ያለውን ሁኔታ ማበጀት ትችላለህ።"
+ "ለምሳሌ ንቁ፣ እየተጠገነ፣ እየተሸጠ ነው።"
+#. module: fleet
+#: model_terms:ir.actions.act_window,help:fleet.fleet_vehicle_model_action
+msgid "You can define several models (e.g. A3, A4) for each make (Audi)."
+msgstr "ለእያንዳንዱ አሰራር (Audi) ብዙ ሞዴሎችን (ለምሳሌ A3፣ A4) መግለፅ ይችላሉ።"
+
+#. module: fleet
+#: code:addons/fleet/models/fleet_vehicle_cost.py:0
+#, python-format
+msgid ""
+"You cannot delete an activation cost linked to a contract. You should delete"
+" the contract instead."
+msgstr ""
+"ከኮንትራት ጋር የተያያዘ የማግበር ወጪን መሰረዝ አትችልም። በምትኩ ውሉን መሰረዝ አለብህ።"
+#. module: fleet
+#: model_terms:ir.actions.act_window,help:fleet.fleet_vehicle_action
+msgid ""
+"You will be able to manage your fleet by keeping track of the\n"
+"            contracts, services, fixed and recurring costs, odometers and\n"
+"            fuel logs associated to each vehicle."
+msgstr ""
+"የእርስዎን መርከቦች በመከታተል ማስተዳደር ይችላሉ\n"
+"ውሎች፣ ሰርቪሶች፣ ቋሚ እና ተደጋጋሚ ወጪዎች፣ odometers እና\n"
+"ከእያንዳንዱ ተሽከርካሪ ጋር የተያያዙ የነዳጅ ምዝግብ ማስታወሻዎች."
+#. module: fleet
+#: model:fleet.vehicle.model,name:fleet.model_zafira
+msgid "Zafira"
+msgstr ""
+
+#. module: fleet
+#: model:fleet.vehicle.model,name:fleet.model_zafiratourer
+msgid "Zafira Tourer"
+msgstr ""
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_contract_view_form
+msgid "amount"
+msgstr "መጠን"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_model_view_form
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_form
+msgid "e.g. Model S"
+msgstr ""
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_form
+msgid "e.g. PAE 326"
+msgstr ""
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_model_view_form
+msgid "e.g. Tesla"
+msgstr "ለምሳሌ. ቴስላ"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_form
+msgid "show all the costs for this vehicle"
+msgstr "ለዚህ ተሽከርካሪ ሁሉንም ወጪዎች ያሳዩ"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_form
+msgid "show the contract for this vehicle"
+msgstr "የዚህን መኪና ውል አሳይ"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_form
+msgid "show the fuel logs for this vehicle"
+msgstr "ለዚህ ተሽከርካሪ የነዳጅ መዝገቦችን አሳይ"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_form
+msgid "show the odometer logs for this vehicle"
+msgstr "ለዚህ ተሽከርካሪ የ ኦዶሜትር ምዝግብ ማስታወሻዎችን አሳይ"
+
+#. module: fleet
+#: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_form
+msgid "show the services logs for this vehicle"
+msgstr "ለዚህ ተሽከርካሪ የአገልግሎት ምዝግብ ማስታወሻዎችን አሳይ"

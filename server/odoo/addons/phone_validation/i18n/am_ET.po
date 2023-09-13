@@ -1,0 +1,295 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* phone_validation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20221005\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-23 06:07+0000\n"
+"PO-Revision-Date: 2023-05-23 06:07+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: phone_validation
+#: model:ir.model.fields,field_description:phone_validation.field_mail_thread_phone__message_needaction
+#: model:ir.model.fields,field_description:phone_validation.field_phone_blacklist__message_needaction
+msgid "Action Needed"
+msgstr "እርምጃ ያስፈልጋል"
+
+#. module: phone_validation
+#: model:ir.model.fields,field_description:phone_validation.field_phone_blacklist__active
+msgid "Active"
+msgstr "ንቁ"
+
+#. module: phone_validation
+#: model_terms:ir.actions.act_window,help:phone_validation.phone_blacklist_action
+msgid "Add a phone number in the blacklist"
+msgstr "ብላክሊስት ውስጥ ስልክ ቁጥር ያክሉ"
+
+#. module: phone_validation
+#: model_terms:ir.ui.view,arch_db:phone_validation.phone_blacklist_view_search
+msgid "Archived"
+msgstr "በማህደር የተቀመጠ"
+
+#. module: phone_validation
+#: model:ir.model.fields,field_description:phone_validation.field_mail_thread_phone__message_attachment_count
+#: model:ir.model.fields,field_description:phone_validation.field_phone_blacklist__message_attachment_count
+msgid "Attachment Count"
+msgstr "የአባሪ ብዛት"
+
+#. module: phone_validation
+#: model_terms:ir.ui.view,arch_db:phone_validation.phone_blacklist_view_tree
+msgid "Blacklist Date"
+msgstr "ብላክሊስት ቀን"
+
+#. module: phone_validation
+#: model_terms:ir.actions.act_window,help:phone_validation.phone_blacklist_action
+msgid ""
+"Blacklisted phone numbers means that the recipient won't receive SMS "
+"Marketing anymore."
+msgstr ""
+"የብላክሊስት ቁጥሮች ማለት ተቀባዩ አጭር የጽሁፍ መልእክትና ማርኬቲንግ መረጃዎች የማይደርሳቸው ማለት ነው።"
+
+#. module: phone_validation
+#: model:ir.model,name:phone_validation.model_res_partner
+msgid "Contact"
+msgstr "ኮንታክት"
+
+#. module: phone_validation
+#: model:ir.model.fields,field_description:phone_validation.field_phone_blacklist__create_uid
+msgid "Created by"
+msgstr "ተፈጠረ በ"
+
+#. module: phone_validation
+#: model:ir.model.fields,field_description:phone_validation.field_phone_blacklist__create_date
+msgid "Created on"
+msgstr "የተፈጠረበት ጊዜ"
+
+#. module: phone_validation
+#: model:ir.model.fields,field_description:phone_validation.field_mail_thread_phone__display_name
+#: model:ir.model.fields,field_description:phone_validation.field_phone_blacklist__display_name
+#: model:ir.model.fields,field_description:phone_validation.field_phone_validation_mixin__display_name
+msgid "Display Name"
+msgstr "መጠሪያው ስም"
+
+#. module: phone_validation
+#: model:ir.model.fields,help:phone_validation.field_mail_thread_phone__phone_sanitized
+msgid ""
+"Field used to store sanitized phone number. Helps speeding up searches and "
+"comparisons."
+msgstr ""
+"የተጣራ ስልክ ቁጥር ለማከማቸት የሚያገለግል መስክ። ፍለጋዎችን እና ንፅፅሮችን ለማፋጠን ይረዳል።"
+#. module: phone_validation
+#: model:ir.model.fields,field_description:phone_validation.field_mail_thread_phone__message_follower_ids
+#: model:ir.model.fields,field_description:phone_validation.field_phone_blacklist__message_follower_ids
+msgid "Followers"
+msgstr "ተከታዮች"
+
+#. module: phone_validation
+#: model:ir.model.fields,field_description:phone_validation.field_mail_thread_phone__message_channel_ids
+#: model:ir.model.fields,field_description:phone_validation.field_phone_blacklist__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "ተከታዮች (ቻናሎች)"
+
+#. module: phone_validation
+#: model:ir.model.fields,field_description:phone_validation.field_mail_thread_phone__message_partner_ids
+#: model:ir.model.fields,field_description:phone_validation.field_phone_blacklist__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "ተከታዮች (አጋሮች)"
+
+#. module: phone_validation
+#: model:ir.model.fields,field_description:phone_validation.field_mail_thread_phone__id
+#: model:ir.model.fields,field_description:phone_validation.field_phone_blacklist__id
+#: model:ir.model.fields,field_description:phone_validation.field_phone_validation_mixin__id
+msgid "ID"
+msgstr "ልዩ መታወቅያ"
+
+#. module: phone_validation
+#: model:ir.model.fields,help:phone_validation.field_mail_thread_phone__message_needaction
+#: model:ir.model.fields,help:phone_validation.field_mail_thread_phone__message_unread
+#: model:ir.model.fields,help:phone_validation.field_phone_blacklist__message_needaction
+#: model:ir.model.fields,help:phone_validation.field_phone_blacklist__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "የተረጋገጡ ከሆነ፣ አዲስ መልዕክቶች የእርስዎን ትኩረት ይፈልጋሉ።"
+
+#. module: phone_validation
+#: model:ir.model.fields,help:phone_validation.field_mail_thread_phone__message_has_error
+#: model:ir.model.fields,help:phone_validation.field_phone_blacklist__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "ከተረጋገጡ፣ አንዳንድ መልዕክቶች በትክክል የመድረስ ስህተት አለባቸው።"
+
+#. module: phone_validation
+#: model:ir.model.fields,help:phone_validation.field_mail_thread_phone__phone_blacklisted
+msgid ""
+"If the email address is on the blacklist, the contact won't receive mass "
+"mailing anymore, from any list"
+msgstr ""
+"የኢሜል አድራሻው በብላክሊስት ውስጥ ካለ፣ ኮንታክቱ ከአሁን በኋላ ከማንኛውም ዝርዝር የጅምላ መልእክት አይቀበልም"
+#. module: phone_validation
+#: code:addons/phone_validation/tools/phone_validation.py:0
+#, python-format
+msgid "Impossible number %s: probably invalid number of digits"
+msgstr "የማይቻል ቁጥር %s፡ ምናልባት ልክ ያልሆነ የአሃዞች ብዛት"
+
+#. module: phone_validation
+#: code:addons/phone_validation/models/phone_blacklist.py:0
+#: code:addons/phone_validation/models/phone_blacklist.py:0
+#, python-format
+msgid "Invalid number %s"
+msgstr "የማይቻል ቁጥር %s"
+
+#. module: phone_validation
+#: code:addons/phone_validation/tools/phone_validation.py:0
+#, python-format
+msgid "Invalid number %s: probably incorrect prefix"
+msgstr "ልክ ያልሆነ ቁጥር %s፡ ምናልባት የተሳሳተ ቅድመ ቅጥያ"
+
+#. module: phone_validation
+#: code:addons/phone_validation/models/mail_thread_phone.py:0
+#: code:addons/phone_validation/models/mail_thread_phone.py:0
+#, python-format
+msgid "Invalid primary phone field on model %s"
+msgstr "በሞዴል %s ላይ ልክ ያልሆነ የመጀመሪያ ስልክ መስክ"
+
+#. module: phone_validation
+#: model:ir.model.fields,field_description:phone_validation.field_mail_thread_phone__message_is_follower
+#: model:ir.model.fields,field_description:phone_validation.field_phone_blacklist__message_is_follower
+msgid "Is Follower"
+msgstr "ተከታይ ነው"
+
+#. module: phone_validation
+#: model:ir.model.fields,field_description:phone_validation.field_mail_thread_phone____last_update
+#: model:ir.model.fields,field_description:phone_validation.field_phone_blacklist____last_update
+#: model:ir.model.fields,field_description:phone_validation.field_phone_validation_mixin____last_update
+msgid "Last Modified on"
+msgstr "የመጨረሻው ማስተካከያ የተደረገበት ግዜ"
+
+#. module: phone_validation
+#: model:ir.model.fields,field_description:phone_validation.field_phone_blacklist__write_uid
+msgid "Last Updated by"
+msgstr "መጨረሻ አፕዴት የተደረገው በ"
+
+#. module: phone_validation
+#: model:ir.model.fields,field_description:phone_validation.field_phone_blacklist__write_date
+msgid "Last Updated on"
+msgstr "የመጨረሻው አፕዴት የተደረገበት ግዜ"
+
+#. module: phone_validation
+#: model:ir.model.fields,field_description:phone_validation.field_mail_thread_phone__message_main_attachment_id
+#: model:ir.model.fields,field_description:phone_validation.field_phone_blacklist__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "ዋና አባሪ"
+
+#. module: phone_validation
+#: model:ir.model.fields,field_description:phone_validation.field_mail_thread_phone__message_has_error
+#: model:ir.model.fields,field_description:phone_validation.field_phone_blacklist__message_has_error
+msgid "Message Delivery error"
+msgstr "መልእክት በትክክል ያለመድረስ ስህተት"
+
+#. module: phone_validation
+#: model:ir.model.fields,field_description:phone_validation.field_mail_thread_phone__message_ids
+#: model:ir.model.fields,field_description:phone_validation.field_phone_blacklist__message_ids
+msgid "Messages"
+msgstr "መልእክቶች"
+
+#. module: phone_validation
+#: model:ir.model.constraint,message:phone_validation.constraint_phone_blacklist_unique_number
+msgid "Number already exists"
+msgstr "ቁጥሩ አስቀድሞ አለ።"
+
+#. module: phone_validation
+#: model:ir.model.fields,field_description:phone_validation.field_mail_thread_phone__message_needaction_counter
+#: model:ir.model.fields,field_description:phone_validation.field_phone_blacklist__message_needaction_counter
+msgid "Number of Actions"
+msgstr "የእርምጃዎች ብዛት"
+
+#. module: phone_validation
+#: model:ir.model.fields,field_description:phone_validation.field_mail_thread_phone__message_has_error_counter
+#: model:ir.model.fields,field_description:phone_validation.field_phone_blacklist__message_has_error_counter
+msgid "Number of errors"
+msgstr "የስህተቶች ብዛት"
+
+#. module: phone_validation
+#: model:ir.model.fields,help:phone_validation.field_mail_thread_phone__message_needaction_counter
+#: model:ir.model.fields,help:phone_validation.field_phone_blacklist__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "እርምጃ የሚያስፈልገው የመልእክት ብዛት"
+
+#. module: phone_validation
+#: model:ir.model.fields,help:phone_validation.field_mail_thread_phone__message_has_error_counter
+#: model:ir.model.fields,help:phone_validation.field_phone_blacklist__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "በትክክል ያለመድረስ ስህተት ያለባቸው መልእክቶች ብዛት"
+
+#. module: phone_validation
+#: model:ir.model.fields,help:phone_validation.field_mail_thread_phone__message_unread_counter
+#: model:ir.model.fields,help:phone_validation.field_phone_blacklist__message_unread_counter
+msgid "Number of unread messages"
+msgstr "ያልተነበቡ መልዕክቶች ብዛት"
+
+#. module: phone_validation
+#: model:ir.model.fields,help:phone_validation.field_phone_blacklist__number
+msgid "Number should be E164 formatted"
+msgstr "ቁጥሩ E164 ፎርማት መሆን አለበት።"
+
+#. module: phone_validation
+#: model:ir.ui.menu,name:phone_validation.phone_menu_main
+msgid "Phone / SMS"
+msgstr "ስልክ / አጭር የጽሁፍ መልእክት"
+
+#. module: phone_validation
+#: model:ir.actions.act_window,name:phone_validation.phone_blacklist_action
+#: model:ir.model,name:phone_validation.model_phone_blacklist
+#: model:ir.ui.menu,name:phone_validation.phone_blacklist_menu
+#: model_terms:ir.ui.view,arch_db:phone_validation.phone_blacklist_view_form
+#: model_terms:ir.ui.view,arch_db:phone_validation.phone_blacklist_view_tree
+msgid "Phone Blacklist"
+msgstr "የስልክ ብላክሊስት"
+
+#. module: phone_validation
+#: model:ir.model,name:phone_validation.model_mail_thread_phone
+msgid "Phone Blacklist Mixin"
+msgstr "የስልክ ብላክሊስት ሚክሲን"
+
+#. module: phone_validation
+#: model:ir.model.fields,field_description:phone_validation.field_mail_thread_phone__phone_blacklisted
+msgid "Phone Blacklisted"
+msgstr "ስልኩ ብላክሊስት ዉስጥ ገብቷል"
+
+#. module: phone_validation
+#: model:ir.model.fields,field_description:phone_validation.field_phone_blacklist__number
+msgid "Phone Number"
+msgstr "ስልክ ቁጥር"
+
+#. module: phone_validation
+#: model:ir.model,name:phone_validation.model_phone_validation_mixin
+msgid "Phone Validation Mixin"
+msgstr "የስልክ ማረጋገጫ ሚክሲን"
+
+#. module: phone_validation
+#: model:ir.model.fields,field_description:phone_validation.field_mail_thread_phone__phone_sanitized
+msgid "Sanitized Number"
+msgstr "የተረጋገጠ ቁጥር"
+
+#. module: phone_validation
+#: code:addons/phone_validation/tools/phone_validation.py:0
+#, python-format
+msgid "Unable to parse %s: %s"
+msgstr "%s: %sን መተንተን አልተቻለም"
+
+#. module: phone_validation
+#: model:ir.model.fields,field_description:phone_validation.field_mail_thread_phone__message_unread
+#: model:ir.model.fields,field_description:phone_validation.field_phone_blacklist__message_unread
+msgid "Unread Messages"
+msgstr "ያልተነበቡ መልእክቶች"
+
+#. module: phone_validation
+#: model:ir.model.fields,field_description:phone_validation.field_mail_thread_phone__message_unread_counter
+#: model:ir.model.fields,field_description:phone_validation.field_phone_blacklist__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "ያልተነበቡ መልእክቶች ቆጣሪ"

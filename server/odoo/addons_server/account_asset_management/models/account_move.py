@@ -71,50 +71,55 @@ class AccountMove(models.Model):
         return super().write(vals)
 
     def post(self):
-        super().post()
-        for move in self:
-            for aml in move.line_ids.filtered("asset_profile_id"):
-                depreciation_base = aml.debit or -aml.credit
-                if not aml.name:
-                    raise UserError(
-                        _("Asset name must be set in the label of the line.")
+        try: 
+            super().post()
+            for move in self:
+                for aml in move.line_ids.filtered("asset_profile_id"):
+                    depreciation_base = aml.debit or -aml.credit
+                    if not aml.name:
+                        raise UserError(
+                            _("Asset name must be set in the label of the line.")
+                        )
+                    if aml.asset_id:
+                        continue
+                    vals = {
+                        "name": aml.name,
+                        "code": move.name,
+                        "profile_id": aml.asset_profile_id,
+                        "purchase_value": depreciation_base,
+                        "product_id":aml.product_id,
+                        "partner_id": aml.partner_id,
+                        "date_start": move.date,
+                        "account_analytic_id": aml.analytic_account_id,
+                    }
+                    asset_form = Form(
+                        self.env["account.asset"].with_context(
+                            create_asset_from_move_line=True,
+                            force_company=move.company_id.id,
+                            move_id=move.id,
+                        )
                     )
-                if aml.asset_id:
-                    continue
-                vals = {
-                    "name": aml.name,
-                    "code": move.name,
-                    "profile_id": aml.asset_profile_id,
-                    "purchase_value": depreciation_base,
-                    "product_id":aml.product_id,
-                    "partner_id": aml.partner_id,
-                    "date_start": move.date,
-                    "account_analytic_id": aml.analytic_account_id,
-                }
-                asset_form = Form(
-                    self.env["account.asset"].with_context(
-                        create_asset_from_move_line=True,
-                        force_company=move.company_id.id,
-                        move_id=move.id,
-                    )
-                )
-                for key, val in vals.items():
-                    setattr(asset_form, key, val)
-                asset = asset_form.save()
-                asset.analytic_tag_ids = aml.analytic_tag_ids
-                aml.with_context(
-                    allow_asset=True, allow_asset_removal=True
-                ).asset_id = asset.id
-            refs = [
-                "<a href=# data-oe-model=account.asset data-oe-id=%s>%s</a>"
-                % tuple(name_get)
-                for name_get in move.line_ids.filtered(
-                    "asset_profile_id"
-                ).asset_id.name_get()
-            ]
-            if refs:
-                message = _("This invoice created the asset(s): %s") % ", ".join(refs)
-                move.message_post(body=message)
+                    for key, val in vals.items():
+                        setattr(asset_form, key, val)
+                    asset = asset_form.save()
+                    asset.analytic_tag_ids = aml.analytic_tag_ids
+                    aml.with_context(
+                        allow_asset=True, allow_asset_removal=True
+                    ).asset_id = asset.id
+                refs = [
+                    "<a href=# data-oe-model=account.asset data-oe-id=%s>%s</a>"
+                    % tuple(name_get)
+                    for name_get in move.line_ids.filtered(
+                        "asset_profile_id"
+                    ).asset_id.name_get()
+                ]
+                if refs:
+                    message = _("This invoice created the asset(s): %s") % ", ".join(refs)
+                    move.message_post(body=message)
+        except:
+            return super(AccountMove, self).post()
+            
+
 
     def button_draft(self):
         invoices = self.filtered(lambda r: r.is_purchase_document())

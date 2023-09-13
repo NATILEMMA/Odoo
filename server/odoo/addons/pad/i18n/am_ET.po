@@ -1,0 +1,140 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pad
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20221005\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-22 10:23+0000\n"
+"PO-Revision-Date: 2023-05-22 10:23+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: pad
+#: model_terms:ir.ui.view,arch_db:pad.res_config_settings_view_form
+msgid "API Key"
+msgstr "API ቁልፍ"
+
+#. module: pad
+#: model:ir.model,name:pad.model_res_company
+msgid "Companies"
+msgstr "ድርጅት"
+
+#. module: pad
+#: model:ir.model,name:pad.model_res_config_settings
+msgid "Config Settings"
+msgstr "የማስተካያዎች ማዋቀሪያ"
+
+#. module: pad
+#: model:ir.model.fields,field_description:pad.field_pad_common__display_name
+msgid "Display Name"
+msgstr "መጠሪያው ስም"
+
+#. module: pad
+#: model:ir.model.fields,help:pad.field_res_company__pad_key
+#: model:ir.model.fields,help:pad.field_res_config_settings__pad_key
+msgid "Etherpad lite api key."
+msgstr "በEtherpar ትንሽ ውስጥ የapi ቁልፍ።"
+
+#. module: pad
+#: model:ir.model.fields,help:pad.field_res_company__pad_server
+#: model:ir.model.fields,help:pad.field_res_config_settings__pad_server
+msgid "Etherpad lite server. Example: beta.primarypad.com"
+msgstr "Etherpad lite server. Example: beta.primarypad.com"
+
+#. module: pad
+#: model:ir.model.fields,field_description:pad.field_pad_common__id
+msgid "ID"
+msgstr "መታወቂያ"
+
+#. module: pad
+#: model:ir.model.fields,field_description:pad.field_pad_common____last_update
+msgid "Last Modified on"
+msgstr "መጨረሻ የተሻሻለው በርቷል።"
+
+#. module: pad
+#. openerp-web
+#: code:addons/pad/static/src/js/pad.js:0
+#, python-format
+msgid "Loading"
+msgstr "በመጫን ላይ"
+
+#. module: pad
+#: model:ir.model.fields,field_description:pad.field_res_company__pad_key
+msgid "Pad Api Key"
+msgstr "የፓድ API ቁልፍ"
+
+#. module: pad
+#: model:ir.model.fields,field_description:pad.field_res_config_settings__pad_key
+msgid "Pad Api Key *"
+msgstr "የፓድ API ቁልፍ"
+
+#. module: pad
+#: model:ir.model,name:pad.model_pad_common
+msgid "Pad Common"
+msgstr "ፓድ የተለመደ"
+
+#. module: pad
+#: model:ir.model.fields,field_description:pad.field_res_company__pad_server
+msgid "Pad Server"
+msgstr "ፓድ ሰርቨር"
+
+#. module: pad
+#: model:ir.model.fields,field_description:pad.field_res_config_settings__pad_server
+msgid "Pad Server *"
+msgstr "ፓድ ሰርቨር"
+
+#. module: pad
+#: code:addons/pad/models/pad.py:0
+#, python-format
+msgid ""
+"Pad creation failed, either there is a problem with your pad server URL or "
+"with your connection."
+msgstr ""
+"ፓድ መፍጠር አልተሳካም፣ ወይ በእርስዎ የፓድ አገልጋይ URL ላይ ችግር አለ ወይም"
+"ከእርስዎ ግንኙነት ጋር."
+
+#. module: pad
+#. openerp-web
+#: code:addons/pad/static/src/xml/pad.xml:0
+#, python-format
+msgid ""
+"Please enter your Etherpad credentials through the menu 'Settings > General "
+"Settings'."
+msgstr "እባክዎ የኢተርፓድ ምስክርነቶችዎን በምናሌው ቅንብሮች  አጠቃላይ ውስጥ ያስገቡ ቅንጅቶች"
+
+#. module: pad
+#: model_terms:ir.ui.view,arch_db:pad.res_config_settings_view_form
+msgid "Server"
+msgstr "ሰርቨር"
+
+#. module: pad
+#. openerp-web
+#: code:addons/pad/static/src/xml/pad.xml:0
+#, python-format
+msgid "Switch pad"
+msgstr "መቀየሪያ ፓድ"
+
+#. module: pad
+#. openerp-web
+#: code:addons/pad/static/src/js/pad.js:0
+#, python-format
+msgid "This pad will be initialized on first edit"
+msgstr "ይህ ፓድ በመጀመሪያ አርትዖት ይጀምራል"
+
+#. module: pad
+#. openerp-web
+#: code:addons/pad/static/src/js/pad.js:0
+#, python-format
+msgid "Unable to load pad"
+msgstr "ፓድ መጫን አልተቻለም"
+
+#. module: pad
+#: model_terms:ir.ui.view,arch_db:pad.res_config_settings_view_form
+msgid "e.g. beta.primarypad.com"
+msgstr "e.g. beta.primarypad.com"

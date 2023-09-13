@@ -159,7 +159,7 @@
                     type="action"
                     class="oe_stat_button"
                     icon="fa-calendar"
-                    groups="hr.group_hr_manager,hr.group_hr_user">
+                    groups="hr.group_hr_manager,hr.group_hr_user,hr.group_user_custom">
                     <field name="loan_count" widget="statinfo" string="Loans"/>
                 </button>
             </xpath>

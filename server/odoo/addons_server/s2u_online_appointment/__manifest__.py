@@ -34,15 +34,17 @@
     'depends': [
         'calendar',
         'website',
-        'portal'
+        'portal',
+        'member_registration',
     ],
     'data': [
         'security/ir.model.access.csv',
+        'security/security.xml',
         'data/times.xml',
         'wizard/make_more_slots.xml',
         'views/menus.xml',
-        'views/appointment_slot_view.xml',
-        'views/appointment_option_view.xml',
+        # 'views/appointment_slot_view.xml',
+        # 'views/appointment_option_view.xml',
     ],
     'qweb': [
     ],

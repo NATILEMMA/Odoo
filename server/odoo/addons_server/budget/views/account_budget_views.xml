@@ -128,11 +128,11 @@
                                         <group>
                                             <label for="date_from" string="Period"/>
                                             <div>
-                                                <field name="date_from" placeholder="From" class="oe_inline"/>
+                                                <field name="date_from" placeholder="From" readonly='1' class="oe_inline"/>
                                                 -
-                                                <field name="date_to" placeholder="To" class="oe_inline"/>
+                                                <field name="date_to" placeholder="To" readonly='1' class="oe_inline"/>
                                             </div>
-                                            <field name="paid_date" groups="base.group_no_one"/>
+                                            <!-- <field name="paid_date" groups="base.group_no_one"/> -->
                                             <field name="company_id" options="{'no_create': True}"
                                                    groups="base.group_multi_company"/>
                                         </group>
@@ -217,11 +217,36 @@
         </field>
     </record>
 
+
+  <record id="budget_budget_view_search" model="ir.ui.view">
+    <field name="name">budget.budget.search</field>
+    <field name="model">budget.budget</field>
+    <field name="arch" type="xml">
+      <search>
+        <field name="name" string="Budget" filter_domain="[('name', 'ilike', self)]"/>
+        <field name="planned_amount" string="Planned Amount" filter_domain="[('planned_amount', 'ilike', self)]"/>
+        <field name="budget_usage" string="Budget Usage" filter_domain="[('budget_usage', 'ilike', self)]"/>
+        <field name="state" string="State" filter_domain="[('state', 'ilike', self)]"/>
+        <field name="creating_user_id" string="Created By" filter_domain="[('creating_user_id', 'ilike', self)]"/>
+
+        <group expand="0" string="Group By" colspan="10" col="8">
+          <filter name="name" string="Budget" context="{'group_by': 'name'}"/>
+          <filter name="state" string="Status" context="{'group_by': 'state'}"/>
+          <filter name="planned_amount" string="Planned Amount" context="{'group_by': 'planned_amount'}"/>
+          <filter name="creating_user_id" string="Created By" context="{'group_by': 'creating_user_id'}"/>
+
+        </group>
+      </search>
+    </field>
+  </record>
+
     <record model="ir.actions.act_window" id="act_budget_view">
         <field name="name">Budgets</field>
         <field name="res_model">budget.budget</field>
         <field name="view_mode">tree,kanban,form</field>
         <field name="view_id" ref="budget_budget_view_tree"/>
+        <field name="search_view_id" ref="budget_budget_view_search"/>
+
         <field name="help" type="html">
             <p class="oe_view_nocontent_create">
                 Click to create a new budget.

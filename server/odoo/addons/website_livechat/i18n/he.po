@@ -7,14 +7,11 @@
 # ilan kl <ilan@qaroads.co.il>, 2019
 # Fishfur A Banter <fishfurbanter@gmail.com>, 2019
 # שהאב חוסיין <shhab89@gmail.com>, 2019
-# hed shefer <hed@laylinetech.com>, 2019
+# hed shefetr <hed@laylinetech.com>, 2019
 # דודי מלכה <Dudimalka6@gmail.com>, 2019
 # Yihya Hugirat <hugirat@gmail.com>, 2020
 # ZVI BLONDER <ZVIBLONDER@gmail.com>, 2020
 # Lilach Gilliam <lilach.gilliam@gmail.com>, 2021
-# Roy Sayag, 2022
-# NoaFarkash, 2022
-# Ha Ketem <haketem@gmail.com>, 2022
 # 
 msgid ""
 msgstr ""
@@ -22,7 +19,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-27 09:22+0000\n"
 "PO-Revision-Date: 2019-08-26 09:16+0000\n"
-"Last-Translator: Ha Ketem <haketem@gmail.com>, 2022\n"
+"Last-Translator: Lilach Gilliam <lilach.gilliam@gmail.com>, 2021\n"
 "Language-Team: Hebrew (https://www.transifex.com/odoo/teams/41243/he/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -46,13 +43,11 @@ msgid ""
 "<span class=\"o_form_label\">Live Chat</span>\n"
 "                        <span class=\"fa fa-lg fa-globe\" title=\"Values set here are website-specific.\" groups=\"website.group_multi_website\"/>"
 msgstr ""
-"<span class=\"o_form_label\">צ'אט חי</span>\n"
-"                        <span class=\"fa fa-lg fa-globe\" title=\"Values set here are website-specific.\" groups=\"website.group_multi_website\"/>"
 
 #. module: website_livechat
 #: model_terms:ir.ui.view,arch_db:website_livechat.channel_page
 msgid "<span>Livechat Channel</span>"
-msgstr "<span>ערוץ צ'אט חי</span>"
+msgstr ""
 
 #. module: website_livechat
 #: model_terms:ir.ui.view,arch_db:website_livechat.website_visitor_view_search
@@ -87,7 +82,7 @@ msgstr "הגדרות תצורה"
 #. module: website_livechat
 #: model:ir.model.fields,help:website_livechat.field_im_livechat_channel__website_description
 msgid "Description of the channel displayed on the website page"
-msgstr "תיאור של הערוץ שיוצג בדף באתר"
+msgstr ""
 
 #. module: website_livechat
 #: model:ir.model,name:website_livechat.model_mail_channel
@@ -97,7 +92,7 @@ msgstr "ערוץ דיון"
 #. module: website_livechat
 #: model_terms:ir.ui.view,arch_db:website_livechat.channel_page
 msgid "Great"
-msgstr "מצוין"
+msgstr ""
 
 #. module: website_livechat
 #: model:ir.model,name:website_livechat.model_ir_http
@@ -136,17 +131,17 @@ msgstr "תמיכה בזמן אמת"
 #. module: website_livechat
 #: model_terms:ir.ui.view,arch_db:website_livechat.res_config_settings_view_form
 msgid "Live chat channel of your website"
-msgstr "ערוץ צ'אט חי באתר שלך"
+msgstr ""
 
 #. module: website_livechat
 #: model:ir.model,name:website_livechat.model_im_livechat_channel
 msgid "Livechat Channel"
-msgstr "ערוץ צ'אט חי"
+msgstr ""
 
 #. module: website_livechat
 #: model_terms:ir.ui.view,arch_db:website_livechat.channel_list_page
 msgid "Livechat Support Channels"
-msgstr "ערוצי תמיכה לייב צ'אט "
+msgstr ""
 
 #. module: website_livechat
 #: model:ir.model.fields,help:website_livechat.field_mail_channel__livechat_active
@@ -172,7 +167,7 @@ msgstr "פרצוף ניטרלי"
 #: code:addons/website_livechat/static/src/js/website_livechat.editor.js:0
 #, python-format
 msgid "New Channel"
-msgstr "ערוץ חדש"
+msgstr ""
 
 #. module: website_livechat
 #: code:addons/website_livechat/models/website_visitor.py:0
@@ -183,7 +178,7 @@ msgstr ""
 #. module: website_livechat
 #: model_terms:ir.ui.view,arch_db:website_livechat.channel_page
 msgid "Not rated yet"
-msgstr "לא דורג עדיין"
+msgstr ""
 
 #. module: website_livechat
 #. openerp-web
@@ -195,7 +190,7 @@ msgstr "לא מחובר"
 #. module: website_livechat
 #: model_terms:ir.ui.view,arch_db:website_livechat.channel_page
 msgid "Okay"
-msgstr "בסדר"
+msgstr ""
 
 #. module: website_livechat
 #. openerp-web
@@ -225,13 +220,13 @@ msgstr "פרצוף עצוב"
 #. module: website_livechat
 #: model:ir.actions.server,name:website_livechat.website_livechat_send_chat_request_action_server
 msgid "Send Chat Requests"
-msgstr "שליחה בקשה לצ'אט"
+msgstr ""
 
 #. module: website_livechat
 #: model_terms:ir.ui.view,arch_db:website_livechat.website_visitor_view_form
 #: model_terms:ir.ui.view,arch_db:website_livechat.website_visitor_view_tree
 msgid "Send chat request"
-msgstr "שליחת בקשה לצ'אט"
+msgstr ""
 
 #. module: website_livechat
 #: model_terms:ir.ui.view,arch_db:website_livechat.website_visitor_view_form
@@ -241,12 +236,12 @@ msgstr "תהליכי מכירה"
 #. module: website_livechat
 #: model_terms:ir.ui.view,arch_db:website_livechat.website_visitor_view_kanban
 msgid "Speaking With"
-msgstr "מדבר עם"
+msgstr ""
 
 #. module: website_livechat
 #: model:ir.model.fields,field_description:website_livechat.field_website_visitor__livechat_operator_id
 msgid "Speaking with"
-msgstr "מדבר עם"
+msgstr ""
 
 #. module: website_livechat
 #: model_terms:ir.ui.view,arch_db:website_livechat.channel_page
@@ -261,13 +256,13 @@ msgstr "ה־"
 #. module: website_livechat
 #: model_terms:ir.ui.view,arch_db:website_livechat.channel_page
 msgid "The Team"
-msgstr "הצוות"
+msgstr ""
 
 #. module: website_livechat
 #: code:addons/website_livechat/models/mail_channel.py:0
 #, python-format
 msgid "The visitor"
-msgstr "האורח"
+msgstr ""
 
 #. module: website_livechat
 #: model_terms:ir.ui.view,arch_db:website_livechat.channel_list_page

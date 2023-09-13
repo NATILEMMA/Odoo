@@ -40,13 +40,13 @@ class EmployeeTraining(models.Model):
     _name = 'employee.training'
     _description = "Employee Training"
     _inherit = 'mail.thread'
-    name = fields.Char( required=True,readonly=True, default='New', index=True)
+    name = fields.Char( required=True,readonly=True, default='New', index=True, translate=True)
     program_id = fields.Many2one('employee.training.program',string='Training Program', required=True)
     program_round_id = fields.Many2one('employee.training.program.round',required=True)
     program_department = fields.Many2one('hr.department', string='Department', required=True)
     program_convener = fields.Many2one('res.users', string='Responsible User', size=32, required=True)
     training_id = fields.One2many('hr.employee','program_id', string='Employee Details')
-    note_id = fields.Text('Description')
+    note_id = fields.Text('Description', translate=True)
     date_from = fields.Datetime(string="Date From")
     date_to = fields.Datetime(string="Date To")
     user_id = fields.Many2one('res.users', string='users', default=lambda self: self.env.user)

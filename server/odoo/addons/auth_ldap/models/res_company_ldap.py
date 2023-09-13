@@ -21,15 +21,15 @@ class CompanyLDAP(models.Model):
 
     sequence = fields.Integer(default=10)
     company = fields.Many2one('res.company', string='Company', required=True, ondelete='cascade')
-    ldap_server = fields.Char(string='LDAP Server address', required=True, default='127.0.0.1')
+    ldap_server = fields.Char(string='LDAP Server address', required=True, default='127.0.0.1', translate=True)
     ldap_server_port = fields.Integer(string='LDAP Server port', required=True, default=389)
     ldap_binddn = fields.Char('LDAP binddn',
         help="The user account on the LDAP server that is used to query the directory. "
-             "Leave empty to connect anonymously.")
+             "Leave empty to connect anonymously.", translate=True)
     ldap_password = fields.Char(string='LDAP password',
-        help="The password of the user account on the LDAP server that is used to query the directory.")
-    ldap_filter = fields.Char(string='LDAP filter', required=True)
-    ldap_base = fields.Char(string='LDAP base', required=True)
+        help="The password of the user account on the LDAP server that is used to query the directory.", translate=True)
+    ldap_filter = fields.Char(string='LDAP filter', required=True, translate=True)
+    ldap_base = fields.Char(string='LDAP base', required=True, translate=True)
     user = fields.Many2one('res.users', string='Template User',
         help="User to copy when creating new users")
     create_user = fields.Boolean(default=True,

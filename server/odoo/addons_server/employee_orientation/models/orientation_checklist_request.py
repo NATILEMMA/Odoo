@@ -30,7 +30,7 @@ class OrientationChecklistRequest(models.Model):
     _rec_name = 'request_name'
     _inherit = 'mail.thread'
 
-    request_name = fields.Char(string='Name')
+    request_name = fields.Char(string='Name', translate=True)
     request_orientation = fields.Many2one('employee.orientation', string='Employee Orientation')
     employee_company = fields.Many2one('res.company', string='Company', required=True,
                                        default=lambda self: self.env.user.company_id)
@@ -39,7 +39,7 @@ class OrientationChecklistRequest(models.Model):
     employee_id = fields.Many2one('hr.employee', string='Employee')
     request_expected_date = fields.Date(string="Expected Date")
     attachment_id_1 = fields.Many2many('ir.attachment', 'orientation_rel_1', string="Attachment")
-    note_id = fields.Text('Description')
+    note_id = fields.Text('Description', translate=True)
     user_id = fields.Many2one('res.users', string='users', default=lambda self: self.env.user)
     company_id = fields.Many2one('res.company', string='Company', required=True,
                                  default=lambda self: self.env.user.company_id)

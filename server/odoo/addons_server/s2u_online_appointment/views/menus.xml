@@ -12,5 +12,11 @@
             <field name="parent_id" ref="website.main_menu"/>
         </record>
 
+        <record id="registration_menu" model="website.menu">
+            <field name="name">Supporter Registation Form</field>
+            <field name="url">/registrations</field>
+            <field name="parent_id" ref="website.main_menu"/>
+        </record>
+
     </data>
 </odoo>

@@ -2,7 +2,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 {
-    'name': 'Project',
+    'name': 'Planning',
     'version': '1.1',
     'website': 'https://www.odoo.com/page/project-management',
     'category': 'Operations/Project',
@@ -22,6 +22,7 @@
     'description': "",
     'data': [
         'security/project_security.xml',
+        'security/planning_group_rules.xml',
         'security/ir.model.access.csv',
         'report/project_report_views.xml',
         'views/analytic_views.xml',

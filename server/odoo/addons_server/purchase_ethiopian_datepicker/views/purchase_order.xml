@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="purchase_order_form_inherited" model="ir.ui.view">
+            <field name="name">purchase.order.form.inherit</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.purchase_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date_order']" position="replace">
+                    <field name="ethiopian_from" class="oe_read_only" string="Issue date" style=" float:left;" attrs="{'invisible': ['|', ('is_pagum_from', '=',False),('state', '!=', 'draft')]}"
+                           groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    <field name="date_order" string="Order Date" groups="EthiopianCalendar.group_gregory" attrs="{'invisible': [('state', '!=', 'draft')]}"/>
+                    <field name="pagum_from" class="oe_read_only" string="Date" style=" float:left" attrs="{'invisible': ['|',('is_pagum_from', '!=',False)  ]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    <field name="is_pagum_from" invisible="1"/>
+                    <div>
+                    </div>
+                    <div style="margin-bottom:40px;margin-top:-22px; width: 50%;margin-left:10px;margin-right:0px">
+                        <widget name="ethiopian_calander_widget" style=" float:left;width:226px;" class="oe_edit_only" groups="EthiopianCalendar.group_ethio_datepicker"
+                        attrs="{'invisible': [('state', '!=', 'draft')]}"/>
+                    </div>
+                </xpath>
+                <xpath expr="//field[@name='date_approve']" position="replace">
+                    <field name="ethiopian_to" class="oe_read_only" string="Expiery date" style=" float:left;" attrs="{'invisible': ['|', ('is_pagum_to', '=',False),('state', '!=', 'draft')]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    <field name="date_approve" string="Order Date" groups="EthiopianCalendar.group_gregory" attrs="{'invisible': [('state', '=', 'draft')]}"/>
+                    <field name="pagum_to" class="oe_read_only" string="Date" stsyle=" float:left" attrs="{'invisible': ['|',('is_pagum_to', '!=',False)  ]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    <field name="is_pagum_to" invisible="1"/>
+                    <div>
+                    </div>
+<!--                    <div style="margin-bottom:40px;margin-top:-22px; width: 50%;margin-left:10px;margin-right:0px">-->
+<!--                        <widget name="ethiopian_calander_widget_two" style=" float:left;width:226px;" class="oe_edit_only" groups="EthiopianCalendar.group_ethio_datepicker"-->
+<!--                        attrs="{'invisible': [(False, '=', False)]}"/>-->
+<!--                    </div>-->
+                </xpath>
+
+            </field>
+        </record>
+        <record model="ir.ui.view" id="purchase_order_tree_inherited_13">
+            <field name="name">purchase.order.tree.inherit</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.purchase_order_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date_order']" position="replace">
+                     <field name="is_pagum_from" invisible="1"/>
+                    <field  name="date_order"   groups="EthiopianCalendar.group_gregory"/>
+                    <field  name="ethiopian_from"  string="Date"   attrs="{'invisible': ['|', ('is_pagum_from', '=',False) ]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                   <field  name="pagum_to"  string="Date"  optional="True" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

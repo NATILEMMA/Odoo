@@ -30,7 +30,7 @@ from odoo.exceptions import UserError
 class FilterRecurringEntries(models.Model):
     _inherit = 'account.move'
 
-    recurring_ref = fields.Char()
+    recurring_ref = fields.Char ( translate=True)
 
 
 class RecurringPayments(models.Model):
@@ -54,7 +54,7 @@ class RecurringPayments(models.Model):
                     start_date += relativedelta(years=self.recurring_interval)
             self.next_date = start_date.date()
 
-    name = fields.Char('Name')
+    name = fields.Char('Name', translate=True)
     debit_account = fields.Many2one('account.account', 'Debit Account',
                                     required=True,
                                     domain="['|', ('company_id', '=', False), "
@@ -75,7 +75,7 @@ class RecurringPayments(models.Model):
                                                    ('years', 'Years')],
                                         store=True, required=True)
     amount = fields.Float('Amount')
-    description = fields.Text('Description')
+    description = fields.Text('Description', translate=True)
     state = fields.Selection(selection=[('draft', 'Draft'),
                                         ('running', 'Running')],
                              default='draft', string='Status')
@@ -172,7 +172,7 @@ class RecurringPayments(models.Model):
         _description = 'Account Recurring Entries Line'
 
         date = fields.Date('Date')
-        template_name = fields.Char('Name')
+        template_name = fields.Char('Name', translate=True)
         amount = fields.Float('Amount')
         tmpl_id = fields.Many2one('account.recurring.payments', string='id')
 

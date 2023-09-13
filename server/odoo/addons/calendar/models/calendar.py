@@ -147,6 +147,7 @@ class Attendee(models.Model):
 
     @api.model_create_multi
     def create(self, vals_list):
+        # _logger.info("################### %s",vals_list)
         for values in vals_list:
             if not values.get("email") and values.get("common_name"):
                 common_nameval = values.get("common_name").split(':')
@@ -164,6 +165,7 @@ class Attendee(models.Model):
             :param template_xmlid: xml id of the email template to use to send the invitation
             :param force_send: if set to True, the mail(s) will be sent immediately (instead of the next queue processing)
         """
+        _logger.info("************** _send_mail_to_attendees")
         res = False
 
         if self.env['ir.config_parameter'].sudo().get_param('calendar.block_mail') or self._context.get("no_mail_to_attendees"):
@@ -217,6 +219,7 @@ class Attendee(models.Model):
                     mail_ids.append(invitation_template.send_mail(attendee.id, email_values=email_values, notif_layout='mail.mail_notification_light'))
 
         if force_send and mail_ids:
+            _logger.info("Sssssssssssssending:%s",mail_ids)
             res = self.env['mail.mail'].browse(mail_ids).send()
 
         return res
@@ -768,6 +771,7 @@ class Meeting(models.Model):
         else:
             for event in self:
                 event.is_highlighted = False
+    is_generated_date = fields.Boolean(default=False)
 
     name = fields.Char('Meeting Subject', required=True, states={'done': [('readonly', True)]})
     state = fields.Selection([('draft', 'Unconfirmed'), ('open', 'Confirmed')], string='Status', readonly=True, tracking=True, default='draft')
@@ -1240,10 +1244,10 @@ class Meeting(models.Model):
                 for name, desc in sort_spec
             )
             # then Reverse if the value matches a "desc" column
-            return tuple(
+            return [
                 (tools.Reverse(v) if desc else v)
                 for v, desc in vals_spec
-            )
+            ]
         return [r['id'] for r in sorted(result_data, key=key)]
 
     def _rrule_serialize(self):
@@ -1518,75 +1522,86 @@ class Meeting(models.Model):
         return super(Meeting, self)._name_search(name=name, args=args, operator=operator, limit=limit, name_get_uid=name_get_uid)
 
     def write(self, values):
-        # FIXME: neverending recurring events
-        if 'rrule' in values:
-            values['rrule'] = self._fix_rrule(values)
+        _logger.info("################# WRITE %s",values)
+        _logger.info("################# WRITE %s",self.create_uid.id)
+        GROUP_NAME = 'Calendar group'
+        user_groups = self.env.user.groups_id.mapped('name')
+        _logger.info("User      :%s",user_groups)
+        if self.create_uid.id == self.env.user.id or GROUP_NAME in user_groups:
+            _logger.info("pppppppppppppppppppppppppp")
 
-        # compute duration, only if start and stop are modified
-        if not 'duration' in values and 'start' in values and 'stop' in values:
-            values['duration'] = self._get_duration(values['start'], values['stop'])
+            # FIXME: neverending recurring events
+            if 'rrule' in values:
+                values['rrule'] = self._fix_rrule(values)
 
-        self._sync_activities(values)
+            # compute duration, only if start and stop are modified
+            if not 'duration' in values and 'start' in values and 'stop' in values:
+                values['duration'] = self._get_duration(values['start'], values['stop'])
 
-        # process events one by one
-        for meeting in self:
-            # special write of complex IDS
-            real_ids = []
-            new_ids = []
-            if not is_calendar_id(meeting.id):
-                real_ids = [int(meeting.id)]
-            else:
-                real_event_id = calendar_id2real_id(meeting.id)
+            self._sync_activities(values)
 
-                # if we are setting the recurrency flag to False or if we are only changing fields that
-                # should be only updated on the real ID and not on the virtual (like message_follower_ids):
-                # then set real ids to be updated.
-                blacklisted = any(key in values for key in ('start', 'stop', 'active'))
-                if not values.get('recurrency', True) or not blacklisted:
-                    real_ids = [real_event_id]
+            # process events one by one
+            for meeting in self:
+                # special write of complex IDS
+                real_ids = []
+                new_ids = []
+                if not is_calendar_id(meeting.id):
+                    real_ids = [int(meeting.id)]
                 else:
-                    data = meeting.read(['start', 'stop', 'rrule', 'duration'])[0]
-                    if data.get('rrule'):
-                        new_ids = meeting.with_context(dont_notify=True).detach_recurring_event(values).ids  # to prevent multiple _notify_next_alarm
+                    real_event_id = calendar_id2real_id(meeting.id)
 
-            new_meetings = self.browse(new_ids)
-            real_meetings = self.browse(real_ids)
-            all_meetings = real_meetings + new_meetings
-            super(Meeting, real_meetings).write(values)
-
-            # set end_date for calendar searching
-            if any(field in values for field in ['recurrency', 'end_type', 'count', 'rrule_type', 'start', 'stop']):
-                for real_meeting in real_meetings:
-                    if real_meeting.recurrency and real_meeting.end_type == u'count':
-                        final_date = real_meeting._get_recurrency_end_date()
-                        super(Meeting, real_meeting).write({'final_date': final_date})
-
-            attendees_create = False
-            if values.get('partner_ids', False):
-                attendees_create = all_meetings.with_context(dont_notify=True).create_attendees()  # to prevent multiple _notify_next_alarm
-
-            # Notify attendees if there is an alarm on the modified event, or if there was an alarm
-            # that has just been removed, as it might have changed their next event notification
-            if not self._context.get('dont_notify'):
-                if len(meeting.alarm_ids) > 0 or values.get('alarm_ids'):
-                    partners_to_notify = meeting.partner_ids.ids
-                    event_attendees_changes = attendees_create and real_ids and attendees_create[real_ids[0]]
-                    if event_attendees_changes:
-                        partners_to_notify.extend(event_attendees_changes['removed_partners'].ids)
-                    self.env['calendar.alarm_manager']._notify_next_alarm(partners_to_notify)
-
-            if (values.get('start_date') or values.get('start_datetime') or
-                    (values.get('start') and self.env.context.get('from_ui'))) and values.get('active', True):
-                for current_meeting in all_meetings:
-                    if attendees_create:
-                        attendees_create = attendees_create[current_meeting.id]
-                        attendee_to_email = attendees_create['old_attendees'] - attendees_create['removed_attendees']
+                    # if we are setting the recurrency flag to False or if we are only changing fields that
+                    # should be only updated on the real ID and not on the virtual (like message_follower_ids):
+                    # then set real ids to be updated.
+                    blacklisted = any(key in values for key in ('start', 'stop', 'active'))
+                    if not values.get('recurrency', True) or not blacklisted:
+                        real_ids = [real_event_id]
                     else:
-                        attendee_to_email = current_meeting.attendee_ids
+                        data = meeting.read(['start', 'stop', 'rrule', 'duration'])[0]
+                        if data.get('rrule'):
+                            new_ids = meeting.with_context(dont_notify=True).detach_recurring_event(values).ids  # to prevent multiple _notify_next_alarm
 
-                    if attendee_to_email:
-                        attendee_to_email._send_mail_to_attendees('calendar.calendar_template_meeting_changedate')
-        return True
+                new_meetings = self.browse(new_ids)
+                real_meetings = self.browse(real_ids)
+                all_meetings = real_meetings + new_meetings
+                super(Meeting, real_meetings).write(values)
+
+                # set end_date for calendar searching
+                if any(field in values for field in ['recurrency', 'end_type', 'count', 'rrule_type', 'start', 'stop']):
+                    for real_meeting in real_meetings:
+                        if real_meeting.recurrency and real_meeting.end_type == u'count':
+                            final_date = real_meeting._get_recurrency_end_date()
+                            super(Meeting, real_meeting).write({'final_date': final_date})
+
+                attendees_create = False
+                if values.get('partner_ids', False):
+                    attendees_create = all_meetings.with_context(dont_notify=True).create_attendees()  # to prevent multiple _notify_next_alarm
+
+                # Notify attendees if there is an alarm on the modified event, or if there was an alarm
+                # that has just been removed, as it might have changed their next event notification
+                if not self._context.get('dont_notify'):
+                    if len(meeting.alarm_ids) > 0 or values.get('alarm_ids'):
+                        partners_to_notify = meeting.partner_ids.ids
+                        event_attendees_changes = attendees_create and real_ids and attendees_create[real_ids[0]]
+                        if event_attendees_changes:
+                            partners_to_notify.extend(event_attendees_changes['removed_partners'].ids)
+                        self.env['calendar.alarm_manager']._notify_next_alarm(partners_to_notify)
+
+                if (values.get('start_date') or values.get('start_datetime') or
+                        (values.get('start') and self.env.context.get('from_ui'))) and values.get('active', True):
+                    for current_meeting in all_meetings:
+                        _logger.info("SSSSSSSSSSSSSSSSSSSSSSS %s",all_meetings)
+                        if attendees_create:
+                            attendees_create = attendees_create[current_meeting.id]
+                            attendee_to_email = attendees_create['old_attendees'] - attendees_create['removed_attendees']
+                        else:
+                            attendee_to_email = current_meeting.attendee_ids
+
+                        if attendee_to_email:
+                            attendee_to_email._send_mail_to_attendees('calendar.calendar_template_meeting_changedate')
+            return True
+        else:
+            raise UserError("Sorry, you are not allowed to access this operation type, This operation is allowed for only the Calender Administrator groups ")
 
     @api.model_create_multi
     def create(self, vals_list):

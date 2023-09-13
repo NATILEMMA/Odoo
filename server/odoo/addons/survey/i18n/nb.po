@@ -5,8 +5,7 @@
 # Translators:
 # Martin Trigaux, 2019
 # Jorunn D. Newth, 2019
-# Marius Stedjan <marius@stedjan.com>, 2022
-# Henning Fyllingsnes, 2023
+# Marius Stedjan <marius@stedjan.com>, 2021
 # 
 msgid ""
 msgstr ""
@@ -14,7 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-05 12:34+0000\n"
 "PO-Revision-Date: 2019-08-26 09:14+0000\n"
-"Last-Translator: Henning Fyllingsnes, 2023\n"
+"Last-Translator: Marius Stedjan <marius@stedjan.com>, 2021\n"
 "Language-Team: Norwegian Bokmål (https://www.transifex.com/odoo/teams/41243/nb/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -465,8 +464,8 @@ msgid ""
 "Add a list of email of recipients (will not be converted into contacts). "
 "Separated by commas, semicolons or newline..."
 msgstr ""
-"Legg til en liste med e-postadresser til mottakere (som ikke blir lagret som"
-" kontakter). Skill dem med komma, semikolon eller linjeskift..."
+"Legg til en liste med epostadresser til mottakere (som ikke blir lagret som "
+"kontakter). Skill dem med komma, semikolon eller linjeskift..."
 
 #. module: survey
 #: model_terms:ir.actions.act_window,help:survey.action_survey_form
@@ -813,7 +812,7 @@ msgstr "Fullført"
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_invite_view_form
 msgid "Compose Email"
-msgstr "Skriv e-postmelding"
+msgstr "Skriv epostmelding"
 
 #. module: survey
 #: model:survey.label,value:survey.vendor_certification_page_1_question_2_choice_3
@@ -1068,7 +1067,7 @@ msgstr "Nedtrekksmeny"
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_user_input__email
 msgid "E-mail"
-msgstr "E-post"
+msgstr "Epost"
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_kanban
@@ -1088,12 +1087,12 @@ msgstr "Rediger i backend"
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_user_input_view_search
 msgid "Email"
-msgstr "E-post"
+msgstr "Epost"
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_survey__certification_mail_template_id
 msgid "Email Template"
-msgstr "E-postmal"
+msgstr "Epostmal"
 
 #. module: survey
 #: model:ir.model.fields,help:survey.field_survey_invite__email_from
@@ -1247,7 +1246,7 @@ msgstr ""
 #. module: survey
 #: model:survey.label,value:survey.survey_feedback_p2_q2_row5
 msgid "I have added products to my wishlist"
-msgstr "Jeg har lagt til produkter i min ønskeliste"
+msgstr ""
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_invite__id
@@ -1354,7 +1353,7 @@ msgstr ""
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_question__validation_email
 msgid "Input must be an email"
-msgstr "Feltet må fylles ut med en e-postadresse"
+msgstr "Feltet må fylles ut med en epostadresse"
 
 #. module: survey
 #: code:addons/survey/models/survey_survey.py:0
@@ -1845,7 +1844,7 @@ msgstr ""
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_invite__mail_server_id
 msgid "Outgoing mail server"
-msgstr "Utgående e-postserver"
+msgstr "Utgående epostserver"
 
 #. module: survey
 #. openerp-web
@@ -2234,7 +2233,7 @@ msgstr "Vis kommentarfelt"
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_survey_view_search
 msgid "Show all records which has next action date is before today"
-msgstr "Vis alle poster som har neste handlingsdato før dagen i dag"
+msgstr "Vis alle oppføringer som har en neste tiltak-dato før dagen i dag"
 
 #. module: survey
 #: model:ir.model.fields.selection,name:survey.selection__survey_question__question_type__textbox
@@ -2645,7 +2644,7 @@ msgstr ""
 #: code:addons/survey/tests/test_survey.py:0
 #, python-format
 msgid "This answer must be an email address"
-msgstr "Svaret må være en e-postadresse"
+msgstr "Svaret må være en epostadresse"
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.back
@@ -2672,8 +2671,8 @@ msgid ""
 "This list of emails of recipients will not be converted in contacts.        "
 "Emails must be separated by commas, semicolons or newline."
 msgstr ""
-"Listen over e-postmottakere vil ikke bli lagret som kontakter. Skill "
-"e-postadressene med komma, semikolon eller linjeskift."
+"Listen over epostmottakere vil ikke bli lagret som kontakter. Skill "
+"epostadressene med komma, semikolon eller linjeskift."
 
 #. module: survey
 #: model:ir.model.fields,help:survey.field_survey_survey__thank_you_message
@@ -2792,7 +2791,7 @@ msgstr "Type svar"
 #. module: survey
 #: model:ir.model.fields,help:survey.field_survey_survey__activity_exception_decoration
 msgid "Type of the exception activity on record."
-msgstr "Type unntaks-aktivitet på posten."
+msgstr "Type for unntaksaktiviteten på posten."
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_question__labels_ids

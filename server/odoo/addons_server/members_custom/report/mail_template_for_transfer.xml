@@ -46,22 +46,9 @@
                             <div>
                               Dear ${ object.partner_id.name },<br/><br/>
                               The transfer that you submitted on ${ object.create_date.strftime('%b %d, %Y') } has been received!<br/>
-                              It is being reviewed.<br/>
-                              % if object.for_city or object.for_subcity or object.for_woreda
-                                Your reviewer will be ${ object.receiving_manager_city.name }.<br/><br/>
-                              % endif
-                              % if not object.for_city and not object.for_subcity and not object.for_woreda
-                                Your reviewer will be ${ object.receiving_manager.name }.<br/><br/>
-                              % endif
+                              It is being reviewed by ${ object.receiving_manager.name }.<br/>
                               If you don't receive an email, in regards to the outcome of your transfer,<br/>
-                              from us soon, please feel free to contact<br/>
-                              your reviewer 
-                              % if object.for_city or object.for_subcity or object.for_woreda 
-                                ${ object.receiving_manager_city.name } at ${ object.receiving_manager_city.email }.<br/><br/>
-                              % endif
-                              % if not object.for_city and not object.for_subcity and not object.for_woreda
-                                ${ object.receiving_manager.name } at ${ object.receiving_manager.email }.<br/><br/>
-                              % endif
+                              from us soon, please feel free to contact your reviewer at ${ object.receiving_manager.email }<br/>
                               Thank you for your input,<br/>
                               % if user.signature:
                                 <br/>
@@ -276,15 +263,10 @@
                           <td valign="top" style="font-size: 13px;">
                             <div>
                               Dear ${ object.partner_id.name },<br/><br/>
-                              We are sorry to inform you that, the transfer that you submitted on ${ object.create_date.strftime('%b %d, %Y') } has been rejected!<br/>
-                              Please discuss your transfer with 
-                              % if object.for_city or object.for_subcity or object.for_woreda
-                                ${ object.receiving_manager_city.name } at ${ object.receiving_manager_city.email },<br/>
-                              % endif
-                              % if not object.for_city and not object.for_subcity and not object.for_woreda
-                                ${ object.receiving_manager.name } at ${ object.receiving_manager.email },<br/>
-                              % endif
-                              if you have further questions.
+                              We are sorry to inform you that, the transfer that you submitted<br/>
+                              on ${ object.create_date.strftime('%b %d, %Y') } has been rejected!<br/>
+                              Please discuss your transfer with ${ object.receiving_manager.name } at <br/>
+                              ${ object.receiving_manager.email } if you have further questions.
                               Thank you for your input,<br/>
                               % if user.signature:
                                 <br/>

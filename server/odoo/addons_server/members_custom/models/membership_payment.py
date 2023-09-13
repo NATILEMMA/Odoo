@@ -3,8 +3,16 @@
 from odoo import fields, models, api, _
 from odoo.exceptions import UserError, ValidationError
 from datetime import datetime, timedelta
+import os
+import re
+from odoo.tools import config
+import base64
+import hashlib
+import logging
 
 original = 0.00
+
+_logger = logging.getLogger(__name__)
 
 class PaymentFeeConfiguration(models.Model):
     _name="payment.fee.configuration"
@@ -18,8 +26,6 @@ class PaymentFeeConfiguration(models.Model):
     sequence = fields.Integer(default=1)
 
     _sql_constraints = [
-                    # ('check_on_maximum_wage', 'CHECK(minimum_wage < maximum_wage)', 'Maximum wage must be more than Minimum Wage.'),
-                    # ('check_on_minimum_wage', 'CHECK(maximum_wage > minimum_wage)', 'Minimum wage must be less than Maximum Wage.'),
                     ('check_on_fee_in_percent', 'CHECK(fee_in_percent <= 100)', 'Fee in Percent Must be Less Than 100')
                     ]
 
@@ -44,35 +50,37 @@ class PaymentFeeConfiguration(models.Model):
                 if fee.minimum_wage <= record.minimum_wage <= fee.maximum_wage:
                     raise UserError(_("Configuration for Minimum Wage all ready exists"))                  
 
+
 class LeaguePayment(models.Model):
     _name="each.league.payment"
-    _description="This model will handle each league's payment"
+    _description="This model will handle each league's payments"
     _order = "month"
     _inherit = ['portal.mixin', 'mail.thread', 'mail.activity.mixin', 'utm.mixin']
+
 
     members_payment_id = fields.Many2one('membership.payment', copy=False, track_visibility='onchange')
     cell_payment_id = fields.Many2one('membership.cell.payment', copy=False)
     user_id = fields.Many2one('res.users', default=lambda self: self.env.user)
     subcity_id = fields.Many2one(related='cell_payment_id.subcity_id', readonly=True, store=True)
     wereda_id = fields.Many2one(related='cell_payment_id.wereda_id', readonly=True, store=True, track_visibility='onchange')
-    league_id = fields.Many2one('res.partner', domain="['&', ('wereda_id', '=', wereda_id),'|', '|', ('is_member', '=', True), ('is_leader', '=', True), ('is_league', '=', True)]", copy=False)
-    main_office_id = fields.Many2one(related="league_id.main_office", readonly=True, store=True)
-    cell_id = fields.Many2one(related="league_id.member_cells", readonly=True, store=True)
+    league_id = fields.Many2one('res.partner', domain="[('league_member_cells', '=', cell_payment_id)]", copy=False)
+    main_office_id = fields.Many2one(related="league_id.league_main_office", readonly=True, store=True)
+    cell_id = fields.Many2one(related="league_id.league_member_cells", readonly=True, store=True)
     amount_paid = fields.Float(store=True, default=0.00, track_visibility='onchange')
-    amount_remaining = fields.Float(store=True, readonly=True)
-    fee_amount = fields.Float(store=True, readonly=True)
+    amount_remaining = fields.Float(store=True, compute="_compute_remaining_for_league")
+    fee_amount = fields.Float(store=True, compute="_get_from_league")
     state = fields.Selection(selection=[('paid', 'Paid'), ('paid some', 'Paid Some'), ('not payed', 'Not Payed')], track_visibility='onchange', store=True)
     traced_league_payment = fields.Float(string="Tracked Payment", store=True)
     year = fields.Many2one(related="month.fiscal_year", string='Year', store=True, track_visibility='onchange')
-    month = fields.Many2one('reconciliation.time.fream', domain="[('fiscal_year', '=', year), ('is_active', '=', True)]", string="Time Frame", store=True, track_visibility='onchange')
+    month = fields.Many2one('reconciliation.time.fream', domain="[('is_active', '=', True)]", string="Payment Month", store=True, track_visibility='onchange')
     league_type = fields.Selection(related="league_id.league_type", readonly=True, store=True)
-    league_org = fields.Selection(related="league_id.league_org", readonly=True, store=True)
     annual_league_fee = fields.Float()
     type_of_payment = fields.Selection(related="league_id.type_of_payment", readonly=True, store=True)
     original = fields.Float()
     id_payment = fields.Float(track_visibility='onchange')
     paid_for_id = fields.Boolean(default=False, track_visibility='onchange')
     paid = fields.Boolean(default=False)
+
 
     @api.model
     def create(self, vals):
@@ -87,7 +95,7 @@ class LeaguePayment(models.Model):
         else:
             return super(LeaguePayment, self).create(vals)
 
-    @api.onchange('amount_paid')
+    @api.depends('amount_paid')
     def _compute_remaining_for_league(self):
         """This function will compute the remaining amount"""
         for record in self:
@@ -104,13 +112,13 @@ class LeaguePayment(models.Model):
                     })
 
 
-    @api.onchange('league_id')
+    @api.depends('league_id')
     def _get_from_league(self):
         """This will get the membership fee from league"""
         for record in self:
             if record.league_id:
                 record.fee_amount = record.league_id.league_payment
-                record.amount_remaining = record.fee_amount
+                # record.amount_remaining = record.fee_amount
                 record.annual_league_fee = 12 * record.fee_amount
 
 
@@ -119,33 +127,58 @@ class LeaguePayment(models.Model):
         for record in self:
             return self.env.ref('members_custom.create_league_payment_report').report_action(record._origin.id)
 
+    def add_attachment(self):
+        """this function will add attachments"""
+        view_id = self.env.ref('members_custom.each_league_payment_form').id
+        context = self._context.copy()
+        return {
+            'name':'Payment',
+            'view_type':'form',
+            'view_mode':'form',
+            'views' : [(view_id,'form')],
+            'res_model':'each.league.payment',
+            'view_id':view_id,
+            'type':'ir.actions.act_window',
+            'res_id':self.id,
+            'target':'current',
+            'context':context,
+        }
+
+    def get_dashboard_url(self):
+        """This function will get url"""
+        return "/my/payment_details/%s/%s" % (self.id, self.cell_payment_id.payment_for_league_member)
+
+
+
 class MembershipPayment(models.Model):
     _name="each.member.payment"
     _description="This model will handle each member's payment"
     _order = "month"
     _inherit = ['portal.mixin', 'mail.thread', 'mail.activity.mixin', 'utm.mixin']
 
+
     members_payment_id = fields.Many2one('membership.payment', copy=False)
     cell_payment_id = fields.Many2one('membership.cell.payment', copy=False)
     user_id = fields.Many2one('res.users', default=lambda self: self.env.user)
     subcity_id = fields.Many2one(related='cell_payment_id.subcity_id', readonly=True, store=True)
     wereda_id = fields.Many2one(related='cell_payment_id.wereda_id', readonly=True, store=True)
-    member_id = fields.Many2one('res.partner', domain="['&', ('wereda_id', '=', wereda_id),'|', '|', ('is_member', '=', True), ('is_leader', '=', True), ('is_league', '=', False)]", copy=False, track_visibility='onchange')
+    member_id = fields.Many2one('res.partner',  domain="[('member_cells', '=', cell_payment_id)]", copy=False, track_visibility='onchange')
     main_office_id = fields.Many2one(related="member_id.main_office", readonly=True, store=True)
     cell_id = fields.Many2one(related="member_id.member_cells", readonly=True, store=True)
     amount_paid = fields.Float(store=True, default=0.00, track_visibility='onchange')
-    amount_remaining = fields.Float(store=True, readonly=True)
-    fee_amount = fields.Float(store=True, readonly=True)
+    amount_remaining = fields.Float(store=True, compute="_compute_remaining")
+    fee_amount = fields.Float(store=True, compute="_get_from_member")
     traced_member_payment = fields.Float(string="Tracked Payment", store=True)
     state = fields.Selection(selection=[('paid', 'Paid'), ('paid some', 'Paid Some'), ('not payed', 'Not Payed')], track_visibility='onchange', store=True)
     year = fields.Many2one(related="month.fiscal_year", string='Year', store=True, track_visibility='onchange')
-    month = fields.Many2one('reconciliation.time.fream', domain="[('fiscal_year', '=', year), ('is_active', '=', True)]", string="Time Frame", store=True, track_visibility='onchange')
+    month = fields.Many2one('reconciliation.time.fream', domain="[('is_active', '=', True)]", string="Payment Month", store=True, track_visibility='onchange')
     annual_fee = fields.Float()
     type_of_payment = fields.Selection(related="member_id.type_of_payment", readonly=True, store=True)
     original = fields.Float()
     id_payment = fields.Float(track_visibility='onchange')
     paid_for_id = fields.Boolean(default=False, track_visibility='onchange')
     paid = fields.Boolean(default=False)
+
 
     @api.model
     def create(self, vals):
@@ -160,7 +193,7 @@ class MembershipPayment(models.Model):
         else:
             return super(MembershipPayment, self).create(vals)
 
-    @api.onchange('amount_paid')
+    @api.depends('amount_paid')
     def _compute_remaining(self):
         """This function will compute the remaining amount"""
         for record in self:           
@@ -177,13 +210,13 @@ class MembershipPayment(models.Model):
                     })
 
 
-    @api.onchange('member_id')
+    @api.depends('member_id')
     def _get_from_member(self):
         """This will get the membership fee from member"""
         for record in self:
             if record.member_id:
                 record.fee_amount = record.member_id.membership_monthly_fee_cash_from_percent + record.member_id.membership_monthly_fee_cash
-                record.amount_remaining = record.fee_amount
+                # record.amount_remaining = record.fee_amount
                 record.annual_fee = 12 * (record.member_id.membership_monthly_fee_cash_from_percent + record.member_id.membership_monthly_fee_cash)
 
     def print_payslip(self):
@@ -191,13 +224,33 @@ class MembershipPayment(models.Model):
         for record in self:
             return self.env.ref('members_custom.create_member_payment_report').report_action(record._origin.id)
 
+    def add_attachment(self):
+        """this function will add attachments"""
+        view_id = self.env.ref('members_custom.each_member_payment_form').id
+        context = self._context.copy()
+        return {
+            'name':'Payment',
+            'view_type':'form',
+            'view_mode':'form',
+            'views' : [(view_id,'form')],
+            'res_model':'each.member.payment',
+            'view_id':view_id,
+            'type':'ir.actions.act_window',
+            'res_id':self.id,
+            'target':'current',
+            'context':context,
+        }
+
+    def get_dashboard_url(self):
+        """This function will get url"""
+        return "/my/payment_details/%s/%s" % (self.id, self.cell_payment_id.payment_for_league_member)
 
 class ProductsToDonate(models.Model):
     _name = "product.to.donate"
     _description = "This model will have a list of products that are donated"
 
     product_id = fields.Many2one('product.product', required=True)
-    cost = fields.Float(related="product_id.standard_price", store=True)
+    cost = fields.Float(required=True, store=True)
     amount = fields.Integer(required=True)
     donor_payment_id = fields.Many2one('donation.payment')
 
@@ -210,14 +263,14 @@ class DonationPayments(models.Model):
     name = fields.Char(string='Reference', required=True, copy=False, readonly=True, default='New')
     user_id = fields.Many2one('res.users', default=lambda self: self.env.user)
     year = fields.Many2one("fiscal.year", string='Year', store=True, track_visibility='onchange', required=True)
-    month = fields.Many2one('reconciliation.time.fream', domain="[('fiscal_year', '=', year), ('is_active', '=', True)]", string="Time Frame", track_visibility='onchange', required=True)
+    month = fields.Many2one('reconciliation.time.fream', domain="[('fiscal_year', '=', year), ('is_active', '=', True)]", string="Payment Month", track_visibility='onchange', required=True)
     amount = fields.Float(string="Amount Received", track_visibility='onchange', required=True, store=True)
-    payment_for = fields.Selection(selection=[('city', 'City'), ('subcity', 'Sub City'), ('wereda', 'Woreda'), ('main office', 'Main Office'), ('cell', 'Cell')], default='city', required=True)
+    payment_for = fields.Selection(selection=[('city', 'City'), ('subcity', 'Sub City'), ('wereda', 'Woreda')], default='city', required=True)
     city = fields.Many2one('membership.city.handlers')
     subcity_id = fields.Many2one('membership.handlers.parent', domain="[('city_id', '=', city)]", track_visibility='onchange')
     wereda_id = fields.Many2one('membership.handlers.branch', domain="[('parent_id', '=', subcity_id)]", track_visibility='onchange')
-    main_office = fields.Many2one('main.office', domain="[('wereda_id', '=', wereda_id)]")
-    member_cell = fields.Many2one('member.cells', domain="['|', ('main_office', '=', main_office), ('main_office_league', '=', main_office)]", string="Cell")
+    main_office = fields.Many2one('main.office', domain="[('wereda_id', '=', wereda_id)]", string="Basic Organization")
+    member_cell = fields.Many2one('member.cells', domain="['|', ('main_office', '=', main_office), ('main_office', '=', main_office)]", string="Cell")
     product_cash = fields.Selection(selection=[('product', 'Product'), ('cash', 'Cash')], default='cash', string="Product or Cash")
     product_ids = fields.One2many('product.to.donate', 'donor_payment_id')
     for_donor_or_supporter = fields.Selection(selection=[('donor', 'Donor'), ('supporter', 'Supporter')], required=True, default="supporter", string="Donor or Supporter")
@@ -234,7 +287,6 @@ class DonationPayments(models.Model):
     def create(self, vals):
         """This function will create a payment and save it as a draft"""
         vals['name'] = self.env['ir.sequence'].next_by_code('donation.payment')
-        vals['state'] = 'draft'
         return super(DonationPayments, self).create(vals)
 
 
@@ -303,16 +355,27 @@ class DonationPayments(models.Model):
                 record.amount = total
 
 
+    @api.onchange('product_cash')
+    def _make_balues_null(self):
+        """This function will make fields null"""
+        for record in self:
+            if record.product_cash == 'product':
+                record.amount = 0.00
+            if record.product_cash == 'cash':
+                record.product_ids = [(5, 0, 0)]
+                record.amount = 0.00
+
+
     def submit_button(self):
         """This function will submit payment"""
         for record in self:
-            if not record.reason:
-                raise UserError(_("Please Add A Reason For Your Donation"))
+            for product in record.product_ids:
+                if product.amount == 0 or product.cost == 0.00:
+                    raise UserError(_("Please Add The Amount and Cost of the Product"))
             if record.amount == 0.00:
                 raise UserError(_("Please Add The Amount of Donation"))
-            for product in record.product_ids:
-                if product.amount == 0:
-                    raise UserError(_("Please Add The Amount of the Product"))
+            if not record.reason:
+                raise UserError(_("Please Add A Reason For Your Donation"))
             record.state = 'submit'
 
     def draft_button(self):
@@ -335,29 +398,25 @@ class CellPayment(models.Model):
 
     def _default_cell_member(self):
         """This function will set default value for cell"""
-        return self.env['member.cells'].search([('cell_finance', '=', self.env.user.id)], limit=1).id
+        return self.env['member.cells'].search([('cell_finance', '=', self.env.user.id), ('state', '=', 'active')], limit=1).id
 
     def _default_main_office(self):
         """This function will set default value for cell"""
-        cell = self.env['member.cells'].search([('cell_finance', '=', self.env.user.id)], limit=1)
-        if cell.for_which_members == 'member':
-            return self.env['member.cells'].search([('cell_finance', '=', self.env.user.id)], limit=1).main_office.id
-        if cell.for_which_members == 'league':
-            return self.env['member.cells'].search([('cell_finance', '=', self.env.user.id)], limit=1).main_office_league.id        
+        return self.env['member.cells'].search([('cell_finance', '=', self.env.user.id), ('state', '=', 'active')], limit=1).main_office.id      
 
     def _default_wereda(self):
         """This function will set a default value to wereda"""
-        return self.env['member.cells'].search([('cell_finance', '=', self.env.user.id)], limit=1).wereda_id.id  
+        return self.env['member.cells'].search([('cell_finance', '=', self.env.user.id), ('state', '=', 'active')], limit=1).wereda_id.id  
 
     def _default_subcity(self):
         """This function will set a default value to wereda"""
-        return self.env['member.cells'].search([('cell_finance', '=', self.env.user.id)], limit=1).subcity_id.id   
+        return self.env['member.cells'].search([('cell_finance', '=', self.env.user.id), ('state', '=', 'active')], limit=1).subcity_id.id   
 
 
     name = fields.Char(string='Reference', required=True, copy=False, readonly=True, default='New')
     user_id = fields.Many2one('res.users', default=lambda self: self.env.user)
     year = fields.Many2one("fiscal.year", string='Year', store=True, track_visibility='onchange', required=True)
-    month = fields.Many2one('reconciliation.time.fream', domain="[('fiscal_year', '=', year), ('is_active', '=', True)]", string="Time Frame", track_visibility='onchange', required=True)
+    month = fields.Many2one('reconciliation.time.fream', domain="[('fiscal_year', '=', year), ('is_active', '=', True)]", string="Payment Month", track_visibility='onchange', required=True)
     amount = fields.Float(string="Amount Received", track_visibility='onchange', required=True)
     main_office_payment = fields.Many2one('membership.payment')
     estimated_amount_remaining = fields.Float(string="Amount Remaining", readonly=True, store=True)
@@ -367,9 +426,9 @@ class CellPayment(models.Model):
     subcity_id = fields.Many2one('membership.handlers.parent', default=_default_subcity, track_visibility='onchange', required=True)
     wereda_id = fields.Many2one('membership.handlers.branch', default=_default_wereda, domain="[('parent_id', '=', subcity_id)]", track_visibility='onchange', required=True)
     payment_for_league_member = fields.Selection(selection=[('member', 'Member'), ('league', 'League')], default='member', required=True, string="League or Member")
-    main_office = fields.Many2one('main.office', string="Main Office",  default=_default_main_office, domain="['&', ('for_which_members', '=', payment_for_league_member), ('wereda_id', '=', wereda_id)]", required=True, copy=False, track_visibility='onchange')
-    member_cell = fields.Many2one('member.cells', string="Member Cell", default=_default_cell_member, domain="[('main_office', '=', main_office)]")
-    league_cell = fields.Many2one('member.cells', string="League Cell", default=_default_cell_member, domain="[('main_office_league', '=', main_office)]")
+    main_office = fields.Many2one('main.office', string="Basic Organization",  default=_default_main_office, domain="['&', ('for_which_members', '=', payment_for_league_member), ('wereda_id', '=', wereda_id)]", required=True, copy=False, track_visibility='onchange')
+    member_cell = fields.Many2one('member.cells', string="Member Cell", default=_default_cell_member, domain="[('main_office', '=', main_office), ('state', '=', 'active')]", required=True)
+    # league_cell = fields.Many2one('member.cells', string="League Cell", default=_default_cell_member, domain="[('main_office', '=', main_office)]")
     state = fields.Selection(selection=[('draft', 'Draft'), ('pending payments', 'Pending Payments'), ('submit', 'Submit'), ('registered', 'Registered')], default="draft")
     member_ids = fields.One2many('each.member.payment', 'cell_payment_id', copy=False, track_visibility='onchange')
     total_estimated_for_members = fields.Float(compute="_compute_members_fees", string="Members' Estimated", store=True)
@@ -382,38 +441,32 @@ class CellPayment(models.Model):
     total_remaining_for_leagues = fields.Float(compute="_compute_leagues_fees", string="Leagues' Remaining", store=True)
     total_id_payments_leagues = fields.Float(compute="_compute_leagues_fees", string="Leagues' ID Payment", store=True)
     x_css = fields.Html(sanitize=False, compute="_compute_css", store=False)
-    donor_ids = fields.One2many('donation.payment', 'cell_payment')
-    total_donors = fields.Float(store=True, readonly=True)
+    # donor_ids = fields.One2many('donation.payment', 'cell_payment')
+    # total_donors = fields.Float(store=True, readonly=True)
     
 
     @api.model
     def create(self, vals):
         """This function will create a payment and save it as a draft"""
         vals['name'] = self.env['ir.sequence'].next_by_code('membership.payment')
-        if vals['member_cell']:
+        if vals['member_cell'] and vals['payment_for_league_member'] == 'member':
             member_cell = self.env['member.cells'].search([('id', '=', vals['member_cell'])]).members_ids.ids
             leader_cell = self.env['member.cells'].search([('id', '=', vals['member_cell'])]).leaders_ids.ids
             if len(member_cell) == 0 and len(leader_cell) == 0:
                 raise UserError(_("You Can Not Create Payment For A Cell That Has No Members"))
-        if vals['league_cell']:
-            league_cell = self.env['member.cells'].search([('id', '=', vals['league_cell'])]).leagues_ids.ids
-            league_leader_cell = self.env['member.cells'].search([('id', '=', vals['league_cell'])]).league_leaders_ids.ids
+        if vals['member_cell'] and vals['payment_for_league_member'] == 'league':
+            league_cell = self.env['member.cells'].search([('id', '=', vals['member_cell'])]).leagues_ids.ids
+            league_leader_cell = self.env['member.cells'].search([('id', '=', vals['member_cell'])]).league_leaders_ids.ids
             if len(league_cell) == 0 and len(league_leader_cell) == 0:
-                raise UserError(_("You Can Not Create Payment For A Cell That Has No Members"))
+                raise UserError(_("You Can Not Create Payment For A Cell That Has No Leagues"))
         if vals['main_office']:
             main_office_cell = self.env['main.office'].search([('id', '=', vals['main_office'])]).cell_ids.ids
-            league_main_office_cell = self.env['main.office'].search([('id', '=', vals['main_office'])]).league_cell_ids.ids
-            if (len(main_office_cell) == 0 and len(league_main_office_cell) == 0):
-                raise UserError(_("You Can Not Create Payment For A Main Office That Has No Cells"))
-        if vals['payment_for_league_member'] == 'member':
-            all_payments = self.env['membership.cell.payment'].search([('year', '=', vals['year']), ('month', '=', vals['month']), ('member_cell', '=', vals['member_cell']), ('state', 'in', ['draft', 'pending payments'])])
+            if len(main_office_cell) == 0:
+                raise UserError(_("You Can Not Create Payment For A Basic Organization That Has No Cells"))
+        if vals['payment_for_league_member'] == 'member' or vals['payment_for_league_member'] == 'league':
+            all_payments = self.env['membership.cell.payment'].search([('year', '=', vals['year']), ('month', '=', vals['month']), ('member_cell', '=', vals['member_cell'])])
             if all_payments:
                 raise UserError(_("Payment for your Cell for this Month Already Exists"))
-        if vals['payment_for_league_member'] == 'league':
-            all_payments = self.env['membership.cell.payment'].search([('year', '=', vals['year']), ('month', '=', vals['month']), ('league_cell', '=', vals['league_cell']), ('state', 'in', ['draft', 'pending payments'])])
-            if all_payments:
-                raise UserError(_("Payment for your Cell for this Month Already Exists"))
-        vals['state'] = 'draft'
         return super(CellPayment, self).create(vals)
 
 
@@ -442,7 +495,8 @@ class CellPayment(models.Model):
                 record.total_remaining_for_members = sum(record.member_ids.mapped('amount_remaining'))
                 record.total_id_payments_members = sum(record.member_ids.mapped('id_payment'))
                 record.total_paid_for_members = sum(record.member_ids.mapped('amount_paid'))
-                record.estimated_amount_remaining = record.amount - (record.total_paid_for_members + record.total_id_payments_members + record.total_donors)
+                # record.estimated_amount_remaining = record.amount - (record.total_paid_for_members + record.total_id_payments_members + record.total_donors)
+                record.estimated_amount_remaining = record.amount - (record.total_paid_for_members + record.total_id_payments_members)
 
     @api.depends('league_ids', 'amount')
     def _compute_leagues_fees(self):
@@ -453,7 +507,8 @@ class CellPayment(models.Model):
                 record.total_remaining_for_leagues = sum(record.league_ids.mapped('amount_remaining'))                
                 record.total_id_payments_leagues = sum(record.league_ids.mapped('id_payment'))
                 record.total_paid_for_leagues = sum(record.league_ids.mapped('amount_paid'))
-                record.estimated_amount_remaining = record.amount - (record.total_paid_for_leagues + record.total_id_payments_leagues + record.total_donors)
+                # record.estimated_amount_remaining = record.amount - (record.total_paid_for_leagues + record.total_id_payments_leagues + record.total_donors)
+                record.estimated_amount_remaining = record.amount - (record.total_paid_for_leagues + record.total_id_payments_leagues)
 
 
 
@@ -466,7 +521,6 @@ class CellPayment(models.Model):
                 record.wereda_id = False
                 record.main_office = False
                 record.member_cell = False
-                record.league_cell = False
 
     @api.onchange('wereda_id')
     def _change_woreda(self):
@@ -475,7 +529,6 @@ class CellPayment(models.Model):
             if record.wereda_id:
                 record.main_office = False
                 record.member_cell = False
-                record.league_cell = False
                 if not record.subcity_id:
                     raise UserError(_("Please Fill In The Sub City Information First!"))
 
@@ -486,7 +539,6 @@ class CellPayment(models.Model):
         for record in self:
             if record.main_office:
                 record.member_cell = False
-                record.league_cell = False
                 if not record.wereda_id or not record.subcity_id:
                     raise UserError(_("Please Fill In The Woreda and Sub City Information First!"))
 
@@ -496,15 +548,7 @@ class CellPayment(models.Model):
         for record in self:
             if record.member_cell:
                 if not record.main_office or not record.wereda_id or not record.subcity_id:
-                    raise UserError(_("Please Fill In The Main Office, Woreda and Sub City Information First!"))
-
-    @api.onchange('league_cell')
-    def _chnage_league_cell(self):
-        """This function will first check"""
-        for record in self:
-            if record.league_cell:
-                if not record.main_office or not record.wereda_id or not record.subcity_id:
-                    raise UserError(_("Please Fill In The Main Office, Woreda and Sub City Information First!"))
+                    raise UserError(_("Please Fill In The Basic Organization, Woreda and Sub City Information First!"))
 
 
     @api.onchange('payment_for_league_member')
@@ -516,7 +560,6 @@ class CellPayment(models.Model):
                 record.wereda_id = False
                 record.main_office = False
                 record.member_cell = False
-                record.league_cell = False
 
 
     def start_button(self):
@@ -534,9 +577,9 @@ class CellPayment(models.Model):
 
             if record.payment_for_league_member == 'member':
 
-                donation = self.env['donation.payment'].search([('year', '=', record.year.id), ('month', '=', record.month.id), ('state', '=', 'submit'), ('product_cash', '=', 'cash'), ('member_cell', '=', record.member_cell.id)])
-                record.donor_ids = donation  
-                record.total_donors = sum(record.donor_ids.mapped('amount'))  
+                # donation = self.env['donation.payment'].search([('year', '=', record.year.id), ('month', '=', record.month.id), ('state', '=', 'submit'), ('product_cash', '=', 'cash'), ('member_cell', '=', record.member_cell.id)])
+                # record.donor_ids = donation  
+                # record.total_donors = sum(record.donor_ids.mapped('amount'))  
 
                 for member in record.member_cell.members_ids:
                     paid_month = self.env['each.member.payment'].search([('member_id', '=', member.id), ('year', '=', record.year.id), ('month', '=', record.month.id)])
@@ -612,11 +655,11 @@ class CellPayment(models.Model):
                         })
             if record.payment_for_league_member == 'league':
 
-                donation = self.env['donation.payment'].search([('year', '=', record.year.id), ('month', '=', record.month.id), ('state', '=', 'submit'), ('product_cash', '=', 'cash'), ('member_cell', '=', record.league_cell.id)])
-                record.donor_ids = donation  
-                record.total_donors = sum(record.donor_ids.mapped('amount'))  
+                # donation = self.env['donation.payment'].search([('year', '=', record.year.id), ('month', '=', record.month.id), ('state', '=', 'submit'), ('product_cash', '=', 'cash'), ('member_cell', '=', record.league_cell.id)])
+                # record.donor_ids = donation  
+                # record.total_donors = sum(record.donor_ids.mapped('amount'))  
 
-                for league in record.league_cell.leagues_ids:
+                for league in record.member_cell.leagues_ids:
                     paid_month = self.env['each.league.payment'].search([('league_id', '=', league.id), ('year', '=', record.year.id), ('month', '=', record.month.id)])
                     if paid_month.id:
                         paid_month.write({
@@ -624,9 +667,8 @@ class CellPayment(models.Model):
                             'subcity_id': record.subcity_id.id,
                             'wereda_id': record.wereda_id.id,
                             'main_office_id': record.main_office.id,
-                            'cell_id': record.league_cell.id,
-                            'league_type': league.league_type,
-                            'league_org': league.league_org                           
+                            'cell_id': record.member_cell.id,
+                            'league_type': league.league_type,                     
                         })
                         record.write({
                             'league_ids': [(4, paid_month.id)]
@@ -637,7 +679,7 @@ class CellPayment(models.Model):
                             'subcity_id': record.subcity_id.id,
                             'wereda_id': record.wereda_id.id,
                             'main_office_id': record.main_office.id,
-                            'cell_id': record.league_cell.id,
+                            'cell_id': record.member_cell.id,
                             'fee_amount': league.league_payment,
                             'amount_remaining': league.league_payment,
                             'amount_paid': 0.00,
@@ -649,14 +691,14 @@ class CellPayment(models.Model):
                             'cell_payment_id': record.id,
                             'type_of_payment': league.type_of_payment,
                             'league_type': league.league_type,
-                            'league_org': league.league_org,
+                            # 'league_org': league.league_org.id,
                             'id_payment': 0.00
                         })
                         league.write({
                             'league_payments': [(4, payment.id)],
                             'year_of_payment': payment.year.id
                         })
-                for league in record.league_cell.league_leaders_ids:
+                for league in record.member_cell.league_leaders_ids:
                     paid_month = self.env['each.league.payment'].search([('league_id', '=', league.id), ('year', '=', record.year.id), ('month', '=', record.month.id)])
                     if paid_month.id:
                         paid_month.write({
@@ -664,9 +706,9 @@ class CellPayment(models.Model):
                             'subcity_id': record.subcity_id.id,
                             'wereda_id': record.wereda_id.id,
                             'main_office_id': record.main_office.id,
-                            'cell_id': record.league_cell.id,
+                            'cell_id': record.member_cell.id,
                             'league_type': league.league_type,
-                            'league_org': league.league_org                           
+                            # 'league_org': league.league_org.id                          
                         })
                         record.write({
                             'league_ids': [(4, paid_month.id)]
@@ -677,7 +719,7 @@ class CellPayment(models.Model):
                             'subcity_id': record.subcity_id.id,
                             'wereda_id': record.wereda_id.id,
                             'main_office_id': record.main_office.id,
-                            'cell_id': record.league_cell.id,
+                            'cell_id': record.member_cell.id,
                             'fee_amount': league.league_payment,
                             'amount_remaining': league.league_payment,
                             'amount_paid': 0.00,
@@ -689,7 +731,7 @@ class CellPayment(models.Model):
                             'cell_payment_id': record.id,
                             'type_of_payment': league.type_of_payment,
                             'league_type': league.league_type,
-                            'league_org': league.league_org,
+                            # 'league_org': league.league_org.id,
                             'id_payment': 0.00
                         })
                         league.write({
@@ -702,10 +744,10 @@ class CellPayment(models.Model):
     def submit_button(self):
         """This function will change the state of the payment"""
         for record in self:
-            if record.donor_ids:
-                for donor in record.donor_ids:
-                    donor.state = 'registered'
-            if (record.amount - record.total_remaining_for_members != 0.00) and (record.amount == 0.00):
+            # if record.donor_ids:
+            #     for donor in record.donor_ids:
+            #         donor.state = 'registered'
+            if (record.amount == 0.00):
                 raise UserError(_("Please Add The Amount Paid"))
             if record.amount - record.total_estimated_for_leagues != 0.00 and (record.amount == 0.00):
                 raise UserError(_("Please Add The Amount Paid"))
@@ -872,34 +914,34 @@ class Payment(models.Model):
     name = fields.Char(string='Reference', required=True, copy=False, readonly=True, default='New')
     user_id = fields.Many2one('res.users', default=lambda self: self.env.user)
     year = fields.Many2one("fiscal.year", string='Year', store=True, track_visibility='onchange', required=True)
-    month = fields.Many2one('reconciliation.time.fream', domain="[('fiscal_year', '=', year), ('is_active', '=', True)]", string="Time Frame", track_visibility='onchange', required=True)
-    amount_collected = fields.Float(store=True, compute="_get_totals", readonly=True)
+    month = fields.Many2one('reconciliation.time.fream', domain="[('fiscal_year', '=', year), ('is_active', '=', True)]", string="Payment Month", track_visibility='onchange', required=True)
+    amount_collected = fields.Float(store=True, compute="_get_totals")
     amount = fields.Float(string="Amount Received", track_visibility='onchange', required=True)
-    estimated_amount_remaining = fields.Float(compute="_claculate_remaining", string="Amount Remaining", readonly=True, store=True)
+    estimated_amount_remaining = fields.Float(compute="_claculate_remaining", string="Amount Remaining", store=True)
     total_estimated_for_cells = fields.Float(compute="_get_totals", string="Total Estimated of Cells", store=True, readonly=True)
     total_paid_for_cells = fields.Float(compute="_get_totals", string="Total Paid of Cells", store=True, readonly=True)
     total_remaining_for_cells = fields.Float(compute="_get_totals", string="Total remaining of Cells", store=True, readonly=True)
-    total_paid_for_donors = fields.Float(compute="_get_totals", store=True, readonly=True)
+    wereda_payment = fields.Many2one('sub.payment')
+    # total_paid_for_donors = fields.Float(compute="_get_totals", store=True, readonly=True)
     subcity_id = fields.Many2one('membership.handlers.parent',track_visibility='onchange', default=_default_subcity, required=True)
     wereda_id = fields.Many2one('membership.handlers.branch', domain="[('parent_id', '=', subcity_id)]", default=_default_wereda, track_visibility='onchange', required=True)
     payment_for_league_member = fields.Selection(selection=[('member', 'Member'), ('league', 'League')], default='member', required=True)
-    main_office = fields.Many2one('main.office', default=_default_main_office, domain="['&', ('for_which_members', '=', payment_for_league_member), ('wereda_id', '=', wereda_id)]", copy=False, track_visibility='onchange', required=True)
+    main_office = fields.Many2one('main.office', default=_default_main_office, domain="['&', ('for_which_members', '=', payment_for_league_member), ('wereda_id', '=', wereda_id)]", copy=False, track_visibility='onchange', required=True, string="Basic Organization")
     state = fields.Selection(selection=[('draft', 'Draft'), ('pending payments', 'Pending Payments'), ('submit', 'Submit'), ('registered', 'Registered')], default="draft")
     cell_payment_ids = fields.One2many('membership.cell.payment', 'main_office_payment')
     x_css = fields.Html(sanitize=False, compute="_compute_css", store=False)
     total_paid = fields.Float()
-    donor_ids = fields.One2many('donation.payment', 'main_payment')
-    total_donors = fields.Float(store=True, readonly=True)
+    # donor_ids = fields.One2many('donation.payment', 'main_payment')
+    # total_donors = fields.Float(store=True, readonly=True)
 
 
     @api.model
     def create(self, vals):
         """This function will create a payment and save it as a draft"""
-        all_payments = self.env['membership.payment'].search([('year', '=', vals['year']), ('month', '=', vals['month']), ('main_office', '=', vals['main_office']), ('state', 'in', ['draft', 'pending payments'])])
+        all_payments = self.env['membership.payment'].search([('year', '=', vals['year']), ('month', '=', vals['month']), ('main_office', '=', vals['main_office'])])
         if all_payments:
-            raise UserError(_("Payment for your Main Office for this Month Already Exists"))
+            raise UserError(_("Payment for your Basic Organization for this Month Already Exists"))
         vals['name'] = self.env['ir.sequence'].next_by_code('main.office.payment')
-        vals['state'] = 'draft'
         return super(Payment, self).create(vals)
 
 
@@ -975,8 +1017,10 @@ class Payment(models.Model):
         """This will bring all cells under a main office"""
         for record in self:
             cell_payment = self.env['membership.cell.payment'].search([('year', '=', record.year.id), ('month', '=', record.month.id), ('main_office', '=', record.main_office.id), ('state', '=', 'submit')])
-            
-            record.cell_payment_ids = cell_payment
+            if cell_payment:
+                record.cell_payment_ids = cell_payment
+            else:
+                raise UserError(_("There are No Payments Made By Cells for this Month"))
 
             if record.payment_for_league_member == 'member':
                 record.total_estimated_for_cells = sum(record.cell_payment_ids.member_ids.mapped('fee_amount'))
@@ -986,8 +1030,8 @@ class Payment(models.Model):
                 record.total_paid_for_cells = sum(record.cell_payment_ids.league_ids.mapped('amount_paid'))
             
             donation = self.env['donation.payment'].search([('year', '=', record.year.id), ('month', '=', record.month.id), ('main_office', '=', record.main_office.id), ('state', '=', 'submit'), ('product_cash', '=', 'cash')])
-            record.donor_ids = donation
-            record.total_donors = sum(record.donor_ids.mapped('amount'))
+            # record.donor_ids = donation
+            # record.total_donors = sum(record.donor_ids.mapped('amount'))
             record.state = 'pending payments'
 
 
@@ -999,15 +1043,18 @@ class Payment(models.Model):
             record.total_estimated_for_cells = sum(record.cell_payment_ids.mapped('total_estimated_for_members')) + sum(record.cell_payment_ids.mapped('total_estimated_for_leagues'))
             record.total_paid_for_cells = sum(record.cell_payment_ids.mapped('total_paid_for_members') + record.cell_payment_ids.mapped('total_id_payments_members')) + sum(record.cell_payment_ids.mapped('total_paid_for_leagues') + record.cell_payment_ids.mapped('total_id_payments_leagues'))
             record.total_remaining_for_cells = sum(record.cell_payment_ids.mapped('total_remaining_for_members')) + sum(record.cell_payment_ids.mapped('total_remaining_for_leagues'))
-            record.amount_collected = sum(record.cell_payment_ids.mapped('amount')) + record.total_donors
-            record.total_paid_for_donors = sum(record.cell_payment_ids.mapped('total_donors'))
+            # record.amount_collected = sum(record.cell_payment_ids.mapped('amount')) + record.total_donors
+            record.amount_collected = sum(record.cell_payment_ids.mapped('amount'))
+            # record.total_paid_for_donors = sum(record.cell_payment_ids.mapped('total_donors'))
 
     def submit_button(self):
         """This function will make cells registered"""
         for record in self:
-            if record.donor_ids:
-                for donor in record.donor_ids:
-                    donor.state = 'registered'
+            # if record.donor_ids:
+            #     for donor in record.donor_ids:
+            #         donor.state = 'registered'
+            if (record.amount == 0.00):
+                raise UserError(_("Please Add The Amount Paid"))
             if record.cell_payment_ids:
                 for cell in record.cell_payment_ids:
                     cell.state = 'registered'
@@ -1021,9 +1068,9 @@ class Payment(models.Model):
                 for cell in record.cell_payment_ids:
                     cell.state = 'submit'
                 record.cell_payment_ids = [(5, 0, 0)]
-            if record.donor_ids:
-                for donor in record.donor_ids:
-                    donor.state = 'submit'
-                record.donor_ids = [(5, 0, 0)]
+            # if record.donor_ids:
+            #     for donor in record.donor_ids:
+            #         donor.state = 'submit'
+            #     record.donor_ids = [(5, 0, 0)]
             record.state = 'draft'
             

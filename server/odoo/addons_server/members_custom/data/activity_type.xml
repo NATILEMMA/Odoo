@@ -47,15 +47,21 @@
         </record>
 
         <record id="mail_act_meeting_each_other_main" model="mail.activity.type">
-            <field name="name">Main Office Meeting Each Other</field>
+            <field name="name">Basic Organization Meeting Each Other</field>
             <field name="icon">fa-sun-o</field>
             <field name="res_model_id" ref="members_custom.model_meeting_each_other_main"/>
         </record>
 
         <record id="mail_act_meeting_cell" model="mail.activity.type">
-            <field name="name">Main Office Meeting Cells</field>
+            <field name="name">Basic Organization Meeting Cells</field>
             <field name="icon">fa-sun-o</field>
             <field name="res_model_id" ref="members_custom.model_meeting_cells"/>
+        </record>
+
+        <record id="mail_act_members_transfer" model="mail.activity.type">
+            <field name="name">Member Transfer</field>
+            <field name="icon">fa-sun-o</field>
+            <field name="res_model_id" ref="members_custom.model_members_transfer"/>
         </record>
 
     </data>

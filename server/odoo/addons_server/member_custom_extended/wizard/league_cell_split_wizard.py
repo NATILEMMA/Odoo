@@ -11,11 +11,11 @@ class LeagueCellSplitWizard(models.TransientModel):
 
     cell_name = fields.Char(required=True,String="New cell name")
     wereda_id = fields.Many2one('membership.handlers.branch', string="Woreda",readonly=True)
-    cell_id = fields.Many2one('member.cells',readonly=True)
-    for_which_members = fields.Char("league or member",readonly=True)
-    league_cell_type_id = fields.Char("league cell type",readonly=True)
-    main_office_league = fields.Many2one('main.office',string='Main office league',domain="[('wereda_id','=',wereda_id),('league_main_type_id','=',league_cell_type_id)]" ,required=True)
-    leagues_ids = fields.Many2many('res.partner', domain="[('league_member_cells','=',cell_id)]")
+    cell_id = fields.Many2one('member.cells',readonly=True, string="Cell")
+    for_which_members = fields.Char(readonly=True,  string="League or Member")
+    league_cell_type_id = fields.Char(readonly=True, string="Organization")
+    main_office_league = fields.Many2one('main.office', string='League Basic Organization', domain="[('wereda_id','=',wereda_id),('league_main_type_id','=',league_cell_type_id)]" ,required=True)
+    leagues_ids = fields.Many2many('res.partner', domain="[('league_member_cells','=',cell_id)]", string="Leagues")
     
     @api.onchange('main_office_league')
     def _can_not_add_to_main_office_league(self):

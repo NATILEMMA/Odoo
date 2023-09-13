@@ -9,7 +9,7 @@ from odoo.tools import date_utils, lazy
 from odoo.tools.misc import get_lang
 from odoo.exceptions import UserError
 
-SEARCH_PANEL_LIMIT = 200
+SEARCH_PANEL_LIMIT = 2000
 
 
 DISPLAY_DATE_FORMATS = {

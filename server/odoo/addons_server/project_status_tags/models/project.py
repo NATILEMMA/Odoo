@@ -9,6 +9,9 @@ import time
 from odoo import models, tools, _
 from odoo.exceptions import UserError
 import logging
+# from datetime import datetime, date 
+# from odoo import api, exceptions, fields, models, _
+from ethiopian_date import EthiopianDateConverter
 _logger = logging.getLogger(__name__)
 
 
@@ -78,6 +81,9 @@ class Project(models.Model):
     @api.depends('state', 'date_start', 'date', 'projected_date_end')
     def _project_task_status(self):
         for val in self:
+            _logger.info(val.project_status)
+            _logger.info(val.state)
+
             project_status = False
             if val.date_start and val.date:
                 date_start = val.date_start
@@ -139,6 +145,8 @@ class Project(models.Model):
             today = datetime.now().date()
             if val.date and val.date_start:
                 diff_days = (val.date - val.date_start).days or 0
+                _logger.info("diff_days day %s",diff_days)
+
                 if not val.actual_date_start:
                     if today <= val.date_start:
                         projected_date_end = val.date
@@ -153,6 +161,8 @@ class Project(models.Model):
                         projected_date_end = today + timedelta(days=int(progress_days))
                     else:
                         projected_date_end = val.date
+            _logger.info("projected_date_end day %s",projected_date_end)
+
             val.projected_date_end = projected_date_end
 
     def _check_tasks(self):
@@ -161,14 +171,14 @@ class Project(models.Model):
         if task_search:
             for task in task_search:
                 if task.state not in ('done', 'cancelled', 'pending'):
-                    raise UserError('Warning! \n Task - ' + task.name + ' is in ' + task.state + ' state You cannot complete ,cancel or put this on hold this project unless the tasks \n related to this project are completed or cancelled.')
+                   raise UserError(_('Warning! \n Task - %s is currently cannot complete, cancel, or put this project on hold until the tasks associated with it are completed or cancelled.') %(str(task.name.name )))
         return True
 
     @api.onchange('date_start','date')
     def onchange_check_date(self):
         if self.date_start and self.date:
             if self.date_start > self.date:
-                raise UserError('Start Date cannot be lesser than End Date')
+               raise UserError(_('Start Date cannot be lesser than End Date'))
     def action_request(self):
         self.state = "requested"
         self._project_task_status()
@@ -184,7 +194,7 @@ class Project(models.Model):
     def action_approve(self):
         self.state = "approved"
         self._project_task_status()
-        self.write({'state': 'open', 'actual_date_end': datetime.now(), 'project_status': 'on_track'})
+        self.write({'state': 'approved', 'actual_date_end': datetime.now(), 'project_status': 'on_track'})
 
 
     def set_cancel(self):
@@ -195,12 +205,51 @@ class Project(models.Model):
 
     def start_project(self):
         self._project_task_status()
-        self.write({'state': 'open', 'actual_date_start': datetime.now()})
+        date1 = datetime.now()
+        date_time_obj = str(date1).split(' ')
+        date_time_obj = date_time_obj[0].split('-')
+
+        Edate1 = EthiopianDateConverter.to_ethiopian(int(date_time_obj[0]),int(date_time_obj[1]),int(date_time_obj[2]))
+        _logger.info("^^^^^^^^^^^ %s",type(Edate1))
+        self.actual_date_start = date1
+        if type(Edate1) == str:
+            self.ethiopian_three = None
+            self.is_pagum_three = False
+            self.pagum_three = Edate1
+            self.state = 'open'
+        elif type(Edate1) == date:
+            self.ethiopian_three = Edate1
+            self.is_pagum_three = True
+            self.pagum_three = ' '
+            self.state = 'open'
+
+
+
+        # self.write({'state': 'open', 'actual_date_start': datetime.now()})
 
     def set_done(self):
         self._check_tasks()
         self._project_task_status()
-        self.write({'state': 'close', 'actual_date_end': datetime.now(), 'project_status': 'done'})
+        date1 = datetime.now()
+        _logger.info("^^^^^^^^^^^ %s",date1)
+
+        date_time_obj = str(date1).split(' ')
+        date_time_obj = date_time_obj[0].split('-')
+
+        Edate1 = EthiopianDateConverter.to_ethiopian(int(date_time_obj[0]),int(date_time_obj[1]),int(date_time_obj[2]))
+        _logger.info("^^^^^^^^^^^ %s",type(Edate1))
+        self.actual_date_end = date1
+        if type(Edate1) == str:
+            self.ethiopian_four = None
+            self.is_pagum_four = False
+            self.pagum_four = Edate1
+            self.state = 'close'
+        elif type(Edate1) == date:
+            self.ethiopian_four = Edate1
+            self.is_pagum_four = True
+            self.pagum_four = ' '
+            self.state = 'close'
+        # self.write({'state': 'close', 'actual_date_end': datetime.now(), 'project_status': 'done'})
 
     def set_pending(self):
         self._project_task_status()
@@ -265,11 +314,24 @@ class ProjectTaskType(models.Model):
 class Task(models.Model):
     _inherit = 'project.task'
 
+    # @api.model
+    # def _get_default_partner(self):
+    #     _logger.info("DDDDDDDDDDDDDDDDDD %s",self.proje)
+    #     _logger.info("DDDDDDDDDDDDDDDDDD %s",self.user_id)
+
+    #     if self.project_id:
+    #         default_project_id = self.env['project.project'].browse(self.env.context['default_project_id'])
+    #         date = datetime.now()
+    #         return False
+
+    # date_end = fields.Datetime(string='Start Date', index=True, default=lambda self: self._get_default_date(),copy=False)
+    # date_end = fields.Datetime(string='Ending Date', index=True, cdefault=lambda self: self._get_default_date(),opy=False)
+
     def _check_project(self):
         for i in self:
             if i.project_id:
                 if i.project_id.state != 'open':
-                    raise UserError('Warning! \n Planning - ' + i.project_id.name + ' is in ' + i.project_id.state + ' state \n You cannot start this task.')
+                   raise UserError(_('Warning! \n Your %s  is in draft state,  so you cannot start this task.\n Please activate your planning first')%(str(i.project_id.name )))
         return True
 
     def days_between(self, d1, d2):
@@ -313,7 +375,7 @@ class Task(models.Model):
                             status = 'onhold'
                     val.task_status = status
                 except:
-                    raise UserError("You cannot move the task until the parent planning is in the Start state. Please start your planning first.")
+                   raise UserError(_("You cannot move the task until the parent planning is in the Start state. Please start your planning first."))
 
     @api.depends('task_status')
     def _check_color(self):
@@ -339,13 +401,31 @@ class Task(models.Model):
 
     def write(self, vals):
         _logger.info("######################## %s",self.kanban_state)
+        _logger.info("############# project_id ########### %s",self.project_id.state)
+        _logger.info("############# task ########### %s",self.stage_id.state)
+
+        if self.project_id.state == 'draft':
+            # for i in self:
+            #     if i.project_id:
+            #         if i.project_id.state != 'open':
+            #             raise UserError(_('Warning! \n Your %s  is in draft state,  so you cannot start this task.\n Please activate your planning first')%(str(i.project_id.name )))
+            # pass
+            if self.stage_id.state == 'open' or self.stage_id.state == 'pending':
+                self.stage_id.state == 'draft'
+            
+                raise UserError(_('Warning! \n Your %s  is in draft state,  so you cannot move this task.\n Please activate your planning first')%(str(self.project_id.name )))
+
         if vals.get('stage_id'):
             if self.kanban_state == 'blocked':
-                # raise UserError(('You can modify the task which is ' + self.state + ' ' +'but its reviewed result not success'))
+                #raise UserError(_(('You can modify the task which is ' + self.state + ' ' +'but its reviewed result not success'))
                 vals.update({'state': self.stage_id.state})
             else:
-                if self.state in ('done', 'cancelled'):
-                    raise UserError(('You cannot modify the task which is ' + self.state + ' '))
+                if self.state in ('done'):
+                   raise UserError(_('You cannot modify the task which is Done'))
+                elif self.state in ('cancelled'):
+                   raise UserError(_('You cannot modify the task which is cancelled'))
+                else:
+                    pass
             vals.update({'state': self.env['project.task.type'].browse(vals.get('stage_id')).state})
         if vals.get('sequence'):
             vals.update({'state': self.stage_id.state})
@@ -360,24 +440,36 @@ class Task(models.Model):
         if vals.get('state') == 'done' and not vals.get('actual_date_start'):
             vals.update({'actual_date_start': datetime.now()})
         if vals.get('date_start'):
-            date_start = datetime.strptime(vals.get('date_start'), '%Y-%m-%d').date()
+            # date_start = datetime.strptime(vals.get('date_start'), '%Y-%m-%d').date()
             if self.project_id.date_start:
-                if date_start < self.project_id.date_start:
-                    raise UserError(('Task start date cannot be greater than the project starting date (' + str(self.project_id.date_start) + ' )'))
+                if self.date_start < self.project_id.date_start:
+                   raise UserError(_('Task start date cannot be greater than the project starting date %s') %(str(self.project_id.date_start)))
         if vals.get('date_deadline') and self.date_start:
-            deadline = datetime.strptime(vals.get('date_deadline'), '%Y-%m-%d').date()
-            if deadline < self.date_start:
-                raise UserError(('1Deadline cannot be lesser than the starting date'))
+            # deadline = datetime.strptime(vals.get('date_deadline'), '%Y-%m-%d').date()
+            _logger.info("deadline 333333 %s",self.date_start )
+            _logger.info("deadline 333333 %s",self.date_deadline )
+
+            if self.date_deadline < self.date_start:
+               raise UserError(_('Deadline cannot be lesser than the starting date'))
         if self.date_deadline and vals.get('date_start'):
-            date_start = datetime.strptime(vals.get('date_start'), '%Y-%m-%d').date()
-            if self.date_deadline < date_start:
-                raise UserError(('2Deadline cannot be lesser than the starting date(' + str(self.date_deadline) +  str(self.date_deadline) + ' )'))
-        if vals.get('date_deadline'):
-            if self.project_id.date:
-                date_deadline = datetime.strptime(vals.get('date_deadline'), '%Y-%m-%d').date()
-                prj_end_date = self.project_id.date
-                if prj_end_date < date_deadline:
-                    raise UserError(('Deadline cannot be greater than the project end date (' + str(self.project_id.date) + ' )'))
+            # date_start = datetime.strptime(vals.get('date_start'), '%Y-%m-%d').date()
+            if self.date_deadline < self.date_start:
+               raise UserError(_('Deadline cannot be lesser than the starting date %s') %(str(self.date_deadline) )) 
+        # if vals.get('date_deadline'):
+        #     if self.project_id.date:
+        #         prj_end_date = self.project_id.date
+
+        #         _logger.info("date_deadline %s",vals.get('date_deadline'))
+        #         _logger.info("prj_end_date %s",prj_end_date)
+
+
+        #         _logger.info("date_deadline %s",type(vals.get('date_deadline')))
+        #         _logger.info("prj_end_date %s",type(prj_end_date))
+        #         date_deadline = vals.get('date_deadline') #datetime.strptime(vals.get('date_deadline'), '%Y-%m-%d').date()
+              
+
+        #         if prj_end_date < date_deadline:
+        #            raise UserError(_('Deadline cannot be greater than the project end date %s') %( str(self.project_id.date) ))
         res = super(Task, self).write(vals)
         return res
 
@@ -413,35 +505,35 @@ class Task(models.Model):
         for stage_search in stage_obj.search([('state', '=', False)]):
             if stage_search:
                 pass
-                # raise UserError(('Kindly configure your stages with the related status field'))
+                #raise UserError(_(('Kindly configure your stages with the related status field'))
         return True
 
     @api.model
     def create(self, vals):
         _logger.info("VVVVVVVVVVVVV %s",vals)
         if vals.get('date_deadline'):
-            date_deadline = datetime.strptime(vals.get('date_deadline'), '%Y-%m-%d').date()
-            date_start = datetime.strptime(vals.get('date_start'), '%Y-%m-%d').date()
+            date_deadline = vals.get('date_deadline') #datetime.strptime(vals.get('date_deadline'), '%Y-%m-%d').date()
+            date_start = vals.get('date_start') #datetime.strptime(vals.get('date_start'), '%Y-%m-%d').date()
             if date_deadline < date_start:
-                raise UserError(('Deadline cannot be lesser than the starting date'))
+               raise UserError(_('Deadline cannot be lesser than the starting date'))
         if vals.get('project_id'):
             project_end_date = self.env['project.project'].browse(vals.get('project_id')).date
             if not project_end_date:
-                raise UserError('Kindly Fill the Planning End Date')
-            date_deadline = datetime.strptime(vals.get('date_deadline'), '%Y-%m-%d').date()
-            starting_dt = datetime.strptime(vals.get('date_start'), '%Y-%m-%d').date()
+               raise UserError(_('Kindly Fill the Planning End Date'))
+            date_deadline = vals.get('date_deadline') #datetime.strptime(vals.get('date_deadline'), '%Y-%m-%d').date()
+            starting_dt = vals.get('date_start') #datetime.strptime(vals.get('date_start'), '%Y-%m-%d').date()
             if vals.get('date_start'):
                 project_starting_date = self.env['project.project'].browse(vals.get('project_id')).date_start
                 if project_starting_date > starting_dt:
-                    raise UserError(('Task start date cannot be greater than the project starting date (' + str(self.env['project.project'].browse(vals.get('project_id')).date_start) + ')'))
+                   raise UserError(_('Task start date cannot be greater than the project starting date %s') % (str(self.env['project.project'].browse(vals.get('project_id')).date_start)))
             if project_end_date < date_deadline:
-                raise UserError(('Deadline cannot be greater than the project end date (' + str(self.env['project.project'].browse(vals.get('project_id')).date) + ')'))
+               raise UserError(_('Deadline cannot be greater than the project end date %s') % (str(self.env['project.project'].browse(vals.get('project_id')).date)))
         return super(Task, self).create(vals)
 
     def unlink(self):
         for i in self:
             if i.state != 'draft':
-                raise UserError('Warning! You cannot delete a created task')
+               raise UserError(_('Warning! You cannot delete a created task'))
         return super(Task, self).unlink()
 
     task_status = fields.Selection(compute='_get_task_status', method=True,
@@ -489,7 +581,7 @@ class Task(models.Model):
     def onchange_check_date(self):
         if self.date_start and self.date_deadline:
             if self.date_start > self.date_deadline:
-                raise UserError('Start Date cannot be lesser than deadline')
+               raise UserError(_('Start Date cannot be lesser than deadline'))
 
     def start_task(self):
         self._check_project()
@@ -520,7 +612,7 @@ class Task(models.Model):
     def set_done(self):
         self._check_project()
         if self.state == 'draft':
-            raise UserError(('You cannot completed the task if the task has not been started'))
+           raise UserError(_('You cannot completed the task if the task has not been started'))
         stage_obj = self.env['project.task.type'].search([('state', '=', 'done')])
         for stage_search in stage_obj.search([('state', '=', 'done')]):
             self.write({'stage_id': stage_search.id, 'state': 'done', 'actual_date_end': datetime.now()})

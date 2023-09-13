@@ -235,7 +235,7 @@
               action="act_fund_view" sequence="1"
               groups="account.group_account_user"/>
 
-              <menuitem parent="fund_management.menu_fund_planning"
+              <!-- <menuitem parent="fund_management.menu_fund_planning"
               id="menu_act_project_fund_view"
               name="Fund Entries"
               action="act_fund_view" sequence="2"
@@ -245,7 +245,7 @@
               id="menu_act_all_fund_view"
               name="All funds Details"
               action="act_fund_view" sequence="3"
-              groups="account.group_account_user"/>
+              groups="account.group_account_user"/> -->
 
               <!-- <menuitem parent="fund_management.menu_fund_planning"
               id="menu_act_all_fund_view"
@@ -312,8 +312,8 @@
         <field name="view_id" ref="view_fund_line_tree"/>
     </record>
 
-    <!-- <menuitem parent="account.account_reports_management_menu"
+    <menuitem parent="account.account_reports_management_menu"
               id="menu_act_crossovered_fund_lines_view"
-              action="fund_management.act_fund_lines_view" sequence="20"/> -->
+              action="fund_management.act_fund_lines_view" sequence="20"/>
 
 </odoo>

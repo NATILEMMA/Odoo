@@ -16,8 +16,8 @@ class ResConfigSettings(models.TransientModel):
         return "%s/auth_oauth/signin" % (self.env['ir.config_parameter'].get_param('web.base.url'))
 
     auth_oauth_google_enabled = fields.Boolean(string='Allow users to sign in with Google')
-    auth_oauth_google_client_id = fields.Char(string='Client ID')
-    server_uri_google = fields.Char(string='Server uri')
+    auth_oauth_google_client_id = fields.Char(string='Client ID', translate=True)
+    server_uri_google = fields.Char(string='Server uri', translate=True)
 
     @api.model
     def get_values(self):

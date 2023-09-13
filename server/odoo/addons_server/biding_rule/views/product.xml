@@ -5,9 +5,9 @@
         <field name="model">purchase.order</field>
         <field name="inherit_id" ref="purchase.purchase_order_form"/>
         <field name="arch" type="xml">
-            <xpath expr="//button[@id='draft_confirm']" position="after">
+            <!-- <xpath expr="//button[@id='draft_confirm']" position="after">
                 <button name="button_approve_new" type="object" string="select purchase" class="oe_highlight" attrs="{'invisible': ['|',('state', 'not in', ['draft','sent']),('requisition_id', '=', False)]}"/>
-            </xpath>
+            </xpath> -->
             <xpath expr="//field[@name='request_id']" position="after">
               <field name="from_tendor" invisible="1"/>
             </xpath>
@@ -18,7 +18,7 @@
                   <attribute name="attrs">{'invisible': ['|',('requisition_id', '!=', False)]}</attribute>
             </xpath>
             <xpath expr="//field[@name='order_line']" position="attributes">
-              <attribute name="attrs">{'readonly': [('state', 'not in', ['draft','to approve'])]}</attribute>
+              <attribute name="attrs">{'readonly': [('state', 'not in', ['draft','to approve','sent'])]}</attribute>
             </xpath>
             <xpath expr="//field[@name='price_unit']" position="attributes">
               <attribute name="groups">biding_rule.group_biding_financial</attribute>
@@ -50,6 +50,10 @@
             <xpath expr="//label[@for='amount_total']" position="attributes">
               <attribute name="groups">biding_rule.group_biding_financial</attribute>
               <!-- <attribute name="attrs">{'column_invisible': [('parent.from_tendor', '=', False)]}</attribute> -->
+            </xpath>
+
+            <xpath expr="//field[@name='requisition_id']" position="after">
+                   <field name="finanical" attrs="{'invisible': [('purchase_type', 'in', ['direct','proforma'])]}"/>
             </xpath>
             <xpath expr="//button[@name='button_approve']" position="replace">
               <button name="button_approved" type="object" string="Approve purchase"  class="oe_highlight" attrs="{'invisible': ['|',('state', '!=', 'to approve'),('requisition_id', '=', False)]}"

@@ -1,0 +1,86 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* payroll_datepicker
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20221005\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-09 07:55+0000\n"
+"PO-Revision-Date: 2023-08-09 07:55+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: payroll_datepicker
+#: model_terms:ir.ui.view,arch_db:payroll_datepicker.hr_payroll_community_eth_hr_payslip_run_form
+#: model_terms:ir.ui.view,arch_db:payroll_datepicker.payroll_community_view_hr_payslip_form
+msgid "Date"
+msgstr "ቀን"
+
+#. module: payroll_datepicker
+#: model_terms:ir.ui.view,arch_db:payroll_datepicker.hr_payslip_run_tree_inherit_12
+msgid "Date To"
+msgstr "ቀን ወደ"
+
+#. module: payroll_datepicker
+#: model_terms:ir.ui.view,arch_db:payroll_datepicker.hr_payslip_run_tree_inherit_12
+#: model_terms:ir.ui.view,arch_db:payroll_datepicker.hr_payslip_tree_inherit_12
+msgid "Date from"
+msgstr "ቀን ከ"
+
+#. module: payroll_datepicker
+#: model:ir.model.fields,field_description:payroll_datepicker.field_hr_payslip__is_pagum_from
+#: model:ir.model.fields,field_description:payroll_datepicker.field_hr_payslip_run__is_pagum_from
+msgid "Is Pagum From"
+msgstr "ከመንደር"
+
+#. module: payroll_datepicker
+#: model:ir.model,name:payroll_datepicker.model_hr_payslip
+msgid "Pay Slip"
+msgstr "የክፍያ ደረሰኝ"
+
+#. module: payroll_datepicker
+#: model:ir.model,name:payroll_datepicker.model_hr_payslip_run
+msgid "Payslip Batches"
+msgstr "የክፍያ ደብተሮች"
+
+#. module: payroll_datepicker
+#: model_terms:ir.ui.view,arch_db:payroll_datepicker.hr_payroll_community_eth_hr_payslip_run_form
+#: model_terms:ir.ui.view,arch_db:payroll_datepicker.payroll_community_view_hr_payslip_form
+msgid "Period"
+msgstr "ጊዜ"
+
+#. module: payroll_datepicker
+#: model_terms:ir.ui.view,arch_db:payroll_datepicker.hr_payroll_community_eth_hr_payslip_run_form
+#: model_terms:ir.ui.view,arch_db:payroll_datepicker.payroll_community_view_hr_payslip_form
+msgid "Tender end date"
+msgstr "የጨረታ ማብቂያ ቀን"
+
+#. module: payroll_datepicker
+#: model_terms:ir.ui.view,arch_db:payroll_datepicker.payroll_community_view_hr_payslip_form
+msgid "Tender start"
+msgstr "የጨረታ ጅምር"
+
+#. module: payroll_datepicker
+#: model:ir.model.fields,field_description:payroll_datepicker.field_hr_payslip__ethiopian_from
+#: model:ir.model.fields,field_description:payroll_datepicker.field_hr_payslip__ethiopian_to
+#: model:ir.model.fields,field_description:payroll_datepicker.field_hr_payslip__is_pagum_to
+#: model:ir.model.fields,field_description:payroll_datepicker.field_hr_payslip__pagum_from
+#: model:ir.model.fields,field_description:payroll_datepicker.field_hr_payslip__pagum_to
+#: model:ir.model.fields,field_description:payroll_datepicker.field_hr_payslip_run__ethiopian_from
+#: model:ir.model.fields,field_description:payroll_datepicker.field_hr_payslip_run__ethiopian_to
+#: model:ir.model.fields,field_description:payroll_datepicker.field_hr_payslip_run__is_pagum_to
+#: model:ir.model.fields,field_description:payroll_datepicker.field_hr_payslip_run__pagum_from
+#: model:ir.model.fields,field_description:payroll_datepicker.field_hr_payslip_run__pagum_to
+msgid "in ethiopian date"
+msgstr "በኢትዮጵያ ቀን"
+
+#. module: payroll_datepicker
+#: code:addons/payroll_datepicker/models/payslip.py:0
+#, python-format
+msgid "you stat date should be less than end date"
+msgstr "የእርስዎ ስታቲስቲክስ ቀን ከማብቂያ ቀን ያነሰ መሆን አለበት።"

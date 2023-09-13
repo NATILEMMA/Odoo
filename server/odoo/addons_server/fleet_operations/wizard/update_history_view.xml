@@ -10,8 +10,8 @@
                 <group colspan="4" col="6">
                     <field name="workorder_id" required="1" domain="[('vehicle_id','=',vehicle_id)]"
                             options="{'no_open': True, 'no_create': True, 'no_create_edit': True}" />
-                    <field name="previous_color_id" attrs="{'readonly':[('temp_bool','=',True)]}"/>
                     <field name="current_color_id" options="{'no_open': True, 'create': false, 'create_edit': false}" domain="[('id','!=',previous_color_id)]" required="1"/>
+                    <field name="previous_color_id" attrs="{'readonly':[('temp_bool','=',True)]}"/>
                     <field name="changed_date"/>
                     <field name="vehicle_id" invisible="1"/>
                 </group>
@@ -37,8 +37,10 @@
                 <group colspan="4" col="6">
                     <field name="workorder_id" required="1" domain="[('vehicle_id','=',vehicle_id)]"
                     options="{'no_open': True, 'no_create': True, 'no_create_edit': True}"/>
-                    <field name="previous_engine_no" attrs="{'readonly':[('temp_bool','=',True)]}"/>
                     <field name="new_engine_no" required="1"/>
+
+                    <field name="previous_engine_no" attrs="{'readonly':[('temp_bool','=',True)]}"/>
+                   
                     <field name="changed_date"/>
                     <field name="vehicle_id" invisible="1"/>
                 </group>
@@ -99,9 +101,12 @@
                     <group>
                         <field name="new_tire_size" required="1"/>
                         <field name="new_tire_sn" required="1"/>
-                        <field name="new_tire_issue_date" required="1"/>
-                        <field name="changed_date"/>
+    
+                       
                         <field name="vehicle_id" invisible="1"/>
+                    </group>
+                    <group name="name">
+                        <field name="changed_date"/>
                     </group>
                 </group>
                 <field name="temp_bool" invisible="1"/>
@@ -130,14 +135,20 @@
                         <field name="previous_battery_size" attrs="{'readonly':[('temp_bool','=',True)]}"/>
                         <field name="previous_battery_sn" attrs="{'readonly':[('temp_bool','=',True)]}"/>
                         <field name="previous_battery_issue_date" attrs="{'readonly':[('temp_bool','=',True)]}"/>
+                        
                     </group>
                     <group>
                         <field name="new_battery_size" required="1"/>
                         <field name="new_battery_sn" required="1"/>
-                        <field name="new_battery_issue_date" required="1"/>
-                        <field name="changed_date"/>
+                       
+                        
                         <field name="vehicle_id" invisible="1"/>
                     </group>
+                    <group name="name">
+                        <field name="changed_date"/>
+                    </group>
+                    
+
                 </group>
                 <field name="temp_bool" invisible="1"/>
                 <separator string="Notes" colspan="4" />

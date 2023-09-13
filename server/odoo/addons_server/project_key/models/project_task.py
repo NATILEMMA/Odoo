@@ -10,9 +10,9 @@ TASK_URL = "/web#id=%s&view_type=form&model=project.task&action=%s"
 class Task(models.Model):
     _inherit = "project.task"
 
-    key = fields.Char(string="key", size=20, required=False, index=True)
+    key = fields.Char(string="key", size=20, required=False, index=True,translate=True)
 
-    url = fields.Char(string="URL", compute="_compute_task_url")
+    url = fields.Char(string="URL", compute="_compute_task_url",translate=True)
 
     _sql_constraints = [("task_key_unique", "UNIQUE(key)", "Task key must be unique!")]
 

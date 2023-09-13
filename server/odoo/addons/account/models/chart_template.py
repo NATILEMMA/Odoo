@@ -40,15 +40,15 @@ class AccountAccountTemplate(models.Model):
     _description = 'Templates for Accounts'
     _order = "code"
 
-    name = fields.Char(required=True, index=True)
+    name = fields.Char(required=True, index=True, translate=True)
     currency_id = fields.Many2one('res.currency', string='Account Currency', help="Forces all moves for this account to have this secondary currency.")
-    code = fields.Char(size=64, required=True, index=True)
+    code = fields.Char(size=64, required=True, index=True, translate=True)
     user_type_id = fields.Many2one('account.account.type', string='Type', required=True,
         help="These types are defined according to your country. The type contains more information "\
         "about the account and its specificities.")
     reconcile = fields.Boolean(string='Allow Invoices & payments Matching', default=False,
         help="Check this option if you want the user to reconcile entries in this account.")
-    note = fields.Text()
+    note = fields.Text(translate=True)
     tax_ids = fields.Many2many('account.tax.template', 'account_account_template_tax_rel', 'account_id', 'tax_id', string='Default Taxes')
     nocreate = fields.Boolean(string='Optional Create', default=False,
         help="If checked, the new chart of accounts will not contain this by default.")
@@ -74,7 +74,7 @@ class AccountChartTemplate(models.Model):
     _name = "account.chart.template"
     _description = "Account Chart Template"
 
-    name = fields.Char(required=True)
+    name = fields.Char(required=True, translate=True)
     parent_id = fields.Many2one('account.chart.template', string='Parent Chart Template')
     code_digits = fields.Integer(string='# of Digits', required=True, default=6, help="No. of Digits to use for account code")
     visible = fields.Boolean(string='Can be Visible?', default=True,
@@ -88,9 +88,9 @@ class AccountChartTemplate(models.Model):
     account_ids = fields.One2many('account.account.template', 'chart_template_id', string='Associated Account Templates')
     tax_template_ids = fields.One2many('account.tax.template', 'chart_template_id', string='Tax Template List',
         help='List of all the taxes that have to be installed by the wizard')
-    bank_account_code_prefix = fields.Char(string='Prefix of the bank accounts', required=True)
-    cash_account_code_prefix = fields.Char(string='Prefix of the main cash accounts', required=True)
-    transfer_account_code_prefix = fields.Char(string='Prefix of the main transfer accounts', required=True)
+    bank_account_code_prefix = fields.Char(string='Prefix of the bank accounts', required=True, translate=True)
+    cash_account_code_prefix = fields.Char(string='Prefix of the main cash accounts', required=True, translate=True)
+    transfer_account_code_prefix = fields.Char(string='Prefix of the main transfer accounts', required=True, translate=True)
     income_currency_exchange_account_id = fields.Many2one('account.account.template',
         string="Gain Exchange Rate Account", domain=[('internal_type', '=', 'other'), ('deprecated', '=', False)])
     expense_currency_exchange_account_id = fields.Many2one('account.account.template',
@@ -810,7 +810,7 @@ class AccountTaxTemplate(models.Model):
 
     chart_template_id = fields.Many2one('account.chart.template', string='Chart Template', required=True)
 
-    name = fields.Char(string='Tax Name', required=True)
+    name = fields.Char(string='Tax Name', required=True, translate=True)
     type_tax_use = fields.Selection(TYPE_TAX_USE, string='Tax Scope', required=True, default="sale",
         help="Determines where the tax is selectable. Note : 'None' means a tax can't be used by itself, however it can still be used in a group.")
     amount_type = fields.Selection(default='percent', string="Tax Computation", required=True,
@@ -820,7 +820,7 @@ class AccountTaxTemplate(models.Model):
     sequence = fields.Integer(required=True, default=1,
         help="The sequence field is used to define order in which the tax lines are applied.")
     amount = fields.Float(required=True, digits=(16, 4), default=0)
-    description = fields.Char(string='Display on Invoices')
+    description = fields.Char(string='Display on Invoices', translate=True)
     price_include = fields.Boolean(string='Included in Price', default=False,
         help="Check this if the price you use on the product and invoices includes this tax.")
     include_base_amount = fields.Boolean(string='Affect Subsequent Taxes', default=False,
@@ -1039,11 +1039,11 @@ class AccountFiscalPositionTemplate(models.Model):
     _description = 'Template for Fiscal Position'
 
     sequence = fields.Integer()
-    name = fields.Char(string='Fiscal Position Template', required=True)
+    name = fields.Char(string='Fiscal Position Template', required=True, translate=True)
     chart_template_id = fields.Many2one('account.chart.template', string='Chart Template', required=True)
     account_ids = fields.One2many('account.fiscal.position.account.template', 'position_id', string='Account Mapping')
     tax_ids = fields.One2many('account.fiscal.position.tax.template', 'position_id', string='Tax Mapping')
-    note = fields.Text(string='Notes')
+    note = fields.Text(string='Notes', translate=True)
     auto_apply = fields.Boolean(string='Detect Automatically', help="Apply automatically this fiscal position.")
     vat_required = fields.Boolean(string='VAT required', help="Apply only if partner has a VAT number.")
     country_id = fields.Many2one('res.country', string='Country',
@@ -1051,8 +1051,8 @@ class AccountFiscalPositionTemplate(models.Model):
     country_group_id = fields.Many2one('res.country.group', string='Country Group',
         help="Apply only if delivery or invoicing country match the group.")
     state_ids = fields.Many2many('res.country.state', string='Federal States')
-    zip_from = fields.Char(string='Zip Range From')
-    zip_to = fields.Char(string='Zip Range To')
+    zip_from = fields.Char(string='Zip Range From', translate=True)
+    zip_to = fields.Char(string='Zip Range To', translate=True)
 
 
 class AccountFiscalPositionTaxTemplate(models.Model):
@@ -1081,7 +1081,7 @@ class AccountReconcileModelTemplate(models.Model):
 
     # Base fields.
     chart_template_id = fields.Many2one('account.chart.template', string='Chart Template', required=True)
-    name = fields.Char(string='Button Label', required=True)
+    name = fields.Char(string='Button Label', required=True, translate=True)
     sequence = fields.Integer(required=True, default=10)
 
     rule_type = fields.Selection(selection=[
@@ -1122,7 +1122,7 @@ class AccountReconcileModelTemplate(models.Model):
         * Contains: The proposition label must contains this string (case insensitive).
         * Not Contains: Negation of "Contains".
         * Match Regex: Define your own regular expression.''')
-    match_label_param = fields.Char(string='Label Parameter')
+    match_label_param = fields.Char(string='Label Parameter', translate=True)
     match_note = fields.Selection(selection=[
         ('contains', 'Contains'),
         ('not_contains', 'Not Contains'),
@@ -1131,7 +1131,7 @@ class AccountReconcileModelTemplate(models.Model):
         * Contains: The proposition note must contains this string (case insensitive).
         * Not Contains: Negation of "Contains".
         * Match Regex: Define your own regular expression.''')
-    match_note_param = fields.Char(string='Note Parameter')
+    match_note_param = fields.Char(string='Note Parameter', translate=True)
     match_transaction_type = fields.Selection(selection=[
         ('contains', 'Contains'),
         ('not_contains', 'Not Contains'),
@@ -1140,7 +1140,7 @@ class AccountReconcileModelTemplate(models.Model):
         * Contains: The proposition transaction type must contains this string (case insensitive).
         * Not Contains: Negation of "Contains".
         * Match Regex: Define your own regular expression.''')
-    match_transaction_type_param = fields.Char(string='Transaction Type Parameter')
+    match_transaction_type_param = fields.Char(string='Transaction Type Parameter', translate=True)
     match_same_currency = fields.Boolean(string='Same Currency Matching', default=True,
         help='Restrict to propositions having the same currency as the statement line.')
     match_total_amount = fields.Boolean(string='Amount Matching', default=True,
@@ -1156,29 +1156,29 @@ class AccountReconcileModelTemplate(models.Model):
 
     # First part fields.
     account_id = fields.Many2one('account.account.template', string='Account', ondelete='cascade', domain=[('deprecated', '=', False)])
-    label = fields.Char(string='Journal Item Label')
+    label = fields.Char(string='Journal Item Label', translate=True)
     amount_type = fields.Selection([
         ('fixed', 'Fixed'),
         ('percentage', 'Percentage of balance'),
         ('regex', 'From label'),
         ], required=True, default='percentage')
     amount = fields.Float(string='Write-off Amount', digits=0, required=True, default=100.0, help="Fixed amount will count as a debit if it is negative, as a credit if it is positive.")
-    amount_from_label_regex = fields.Char(string="Amount from Label (regex)", default=r"([\d\.,]+)")
-    decimal_separator = fields.Char(help="Every character that is nor a digit nor this separator will be removed from the matching string")
+    amount_from_label_regex = fields.Char(string="Amount from Label (regex)", default=r"([\d\.,]+)", translate=True)
+    decimal_separator = fields.Char(help="Every character that is nor a digit nor this separator will be removed from the matching string", translate=True)
     force_tax_included = fields.Boolean(string='Tax Included in Price',
         help='Force the tax to be managed as a price included tax.')
     # Second part fields.
     has_second_line = fields.Boolean(string='Add a second line', default=False)
     tax_ids = fields.Many2many('account.tax.template', string='Taxes', ondelete='restrict')
     second_account_id = fields.Many2one('account.account.template', string='Second Account', ondelete='cascade', domain=[('deprecated', '=', False)])
-    second_label = fields.Char(string='Second Journal Item Label')
+    second_label = fields.Char(string='Second Journal Item Label', translate=True)
     second_amount_type = fields.Selection([
         ('fixed', 'Fixed'),
         ('percentage', 'Percentage of amount'),
         ('regex', 'From label'),
         ], string="Second Amount type",required=True, default='percentage')
     second_amount = fields.Float(string='Second Write-off Amount', digits=0, required=True, default=100.0, help="Fixed amount will count as a debit if it is negative, as a credit if it is positive.")
-    second_amount_from_label_regex = fields.Char(string="Second Amount from Label (regex)", default=r"([\d\.,]+)")
+    second_amount_from_label_regex = fields.Char(string="Second Amount from Label (regex)", default=r"([\d\.,]+)", translate=True)
     force_second_tax_included = fields.Boolean(string='Second Tax Included in Price',
         help='Force the second tax to be managed as a price included tax.')
     second_tax_ids = fields.Many2many('account.tax.template', relation='account_reconcile_model_tmpl_account_tax_bis_rel', string='Second Taxes', ondelete='restrict')

@@ -21,7 +21,7 @@ class ProjectTaskType(models.Model):
     name = fields.Char(string='Stage Name', required=True, translate=True)
     description = fields.Text(translate=True)
     sequence = fields.Integer(default=1)
-    project_ids = fields.Many2many('project.project', 'project_task_type_rel', 'type_id', 'project_id', string='Projects',
+    project_ids = fields.Many2many('project.project', 'project_task_type_rel', 'type_id', 'project_id', string='Plannings',
         default=_get_default_project_ids)
     legend_blocked = fields.Char(
         'Red Kanban Label', default=lambda s: _('Blocked'), translate=True, required=True,
@@ -63,7 +63,7 @@ class ProjectTaskType(models.Model):
 
 class Project(models.Model):
     _name = "project.project"
-    _description = "Project"
+    _description = "Planning"
     _inherit = ['portal.mixin', 'mail.alias.mixin', 'mail.thread', 'rating.parent.mixin']
     _order = "sequence, name, id"
     _period_number = 5
@@ -185,7 +185,7 @@ class Project(models.Model):
     task_ids = fields.One2many('project.task', 'project_id', string='Tasks',
                                domain=['|', ('stage_id.fold', '=', False), ('stage_id', '=', False)])
     color = fields.Integer(string='Color Index')
-    user_id = fields.Many2one('res.users', string='Project Manager', default=lambda self: self.env.user, tracking=True)
+    user_id = fields.Many2one('res.users', string='Planning Manager', default=lambda self: self.env.user, tracking=True)
     alias_id = fields.Many2one('mail.alias', string='Alias', ondelete="restrict", required=True,
         help="Internal email associated with this project. Incoming emails are automatically synchronized "
              "with Tasks (or optionally Issues if the Issue Tracker module is installed).")
@@ -209,7 +209,7 @@ class Project(models.Model):
     date_start = fields.Date(string='Start Date')
     date = fields.Date(string='Expiration Date', index=True, tracking=True)
     subtask_project_id = fields.Many2one('project.project', string='Sub-task Project', ondelete="restrict",
-        help="Project in which sub-tasks of the current project will be created. It can be the current project itself.")
+        help="Planning in which sub-tasks of the current project will be created. It can be the current project itself.")
 
     # rating fields
     rating_request_deadline = fields.Datetime(compute='_compute_rating_request_deadline', store=True)
@@ -223,7 +223,11 @@ class Project(models.Model):
     ], 'Rating Frequency')
 
     portal_show_rating = fields.Boolean('Rating visible publicly', copy=False)
+    department_id = fields.Many2one('hr.department','Department') 
 
+    user_ids = fields.Many2many('res.users',
+        string='Assigned to',
+        index=True, tracking=True)
     _sql_constraints = [
         ('project_date_greater', 'check(date >= date_start)', 'Error! project start-date must be lower than project end-date.')
     ]
@@ -479,7 +483,9 @@ class Task(models.Model):
         return stages.browse(stage_ids)
 
     active = fields.Boolean(default=True)
-    name = fields.Char(string='Title', tracking=True, required=True, index=True)
+    # name = fields.Char(string='Task Name', translate=True)
+
+    name = fields.Many2one('planning.goal', store=True ,string='Title', tracking=True, required=True, index=True)
     description = fields.Html(string='Description')
     priority = fields.Selection([
         ('0', 'Normal'),
@@ -507,7 +513,7 @@ class Task(models.Model):
         index=True,
         copy=False,
         readonly=True)
-    project_id = fields.Many2one('project.project', string='Project', default=lambda self: self.env.context.get('default_project_id'),
+    project_id = fields.Many2one('project.project', string='Planning', default=lambda self: self.env.context.get('default_project_id'),
         index=True, tracking=True, check_company=True, change_default=True)
     planned_hours = fields.Float("Planned Hours", help='It is the time planned to achieve the task. If this document has sub-tasks, it means the time needed to achieve this tasks and its childs.',tracking=True)
     subtask_planned_hours = fields.Float("Subtasks", compute='_compute_subtask_planned_hours', help="Computed using sum of hours planned of all subtasks created from main task. Usually these hours are less or equal to the Planned Hours (of main task).")
@@ -520,7 +526,7 @@ class Task(models.Model):
         default=lambda self: self._get_default_partner(),
         domain="['|', ('company_id', '=', False), ('company_id', '=', company_id)]")
     partner_city = fields.Char(related='partner_id.city', readonly=False)
-    manager_id = fields.Many2one('res.users', string='Project Manager', related='project_id.user_id', readonly=True, related_sudo=False)
+    manager_id = fields.Many2one('res.users', string='Planning Manager', related='project_id.user_id', readonly=True, related_sudo=False)
     company_id = fields.Many2one('res.company', string='Company', required=True, default=_default_company_id)
     color = fields.Integer(string='Color Index')
     user_email = fields.Char(related='user_id.email', string='User Email', readonly=True, related_sudo=False)
@@ -984,7 +990,7 @@ class Task(models.Model):
 class ProjectTags(models.Model):
     """ Tags of project's tasks """
     _name = "project.tags"
-    _description = "Project Tags"
+    _description = "Planning Tags"
 
     name = fields.Char('Tag Name', required=True)
     color = fields.Integer(string='Color Index')

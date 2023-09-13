@@ -28,7 +28,7 @@ class HrAttendanceAbsetn(models.Model):
 
     employee_id = fields.Many2one('hr.employee', string='Employee')
     date = fields.Date(string="Absent Date")
-    month_y = fields.Char()
+    month_y = fields.Char(translate=True)
 
 
     def action_absent_employee(self,compute_leaves=True, calendar=None, domain=None):

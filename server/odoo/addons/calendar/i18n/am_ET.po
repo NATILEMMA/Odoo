@@ -32,12 +32,17 @@ msgid ""
 "%s at %s To\n"
 " %s at %s (%s)"
 msgstr ""
+"%s በ%s ወደ\n"
+"%s በ%s (%s)"
+
 
 #. module: calendar
 #: code:addons/calendar/models/calendar.py:0
 #, python-format
 msgid "%s at (%s To %s) (%s)"
-msgstr ""
+msgstr "%s በ (%s ወደ %s) (%s)"
+
+
 
 #. module: calendar
 #: code:addons/calendar/models/calendar.py:0
@@ -143,7 +148,7 @@ msgstr ""
 "        <a href=\"/calendar/meeting/accept?db=${'dbname' in ctx and ctx['dbname'] or ''}&amp;token=${object.access_token}&amp;action=${'action_id' in ctx and ctx['action_id'] or ''}&amp;id=${object.event_id.id}\" style=\"padding: 5px 10px; color: #FFFFFF; text-decoration: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius: 3px\">\n"
 "            Accept</a>\n"
 "        <a href=\"/calendar/meeting/decline?db=${'dbname' in ctx and ctx['dbname'] or '' }&amp;token=${object.access_token}&amp;action=${'action_id' in ctx and ctx['action_id'] or ''}&amp;id=${object.event_id.id}\" style=\"padding: 5px 10px; color: #FFFFFF; text-decoration: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius: 3px\">\n"
-" እምቢ ማለት</a>\n"
+" ተከልክሏል </a>\n"
 " <a href=\"/calendar/meeting/view?db=${'dbname' በctx እና ctx['dbname'] ወይም ''}&token=${object.access_token}&action=${'action_id' ውስጥ ctx እና ctx['action_id'] ወይም ''}&id=${object.event_id.id}\" style=\" padding: 5px 10px; ቀለም፡ #FFFFFF; ጽሑፍ-ማጌጫ: የለም; ዳራ-ቀለም: # 875A7B; ድንበር: 1 ፒክስል ጠንካራ # 875A7B; ድንበር-ራዲየስ፡ 3px\">\n"
 "            View</a>\n"
 " </see>ጁን"
@@ -283,7 +288,7 @@ msgstr ""
 " <a href=\"/calendar/meting/accept?db=${'dbname' በctx እና ctx['dbname'] ወይም ''}&token=${object.access_token}&action=${'action_id' ውስጥ ctx እና ctx['action_id'] ወይም ''}&id=${object.event_id.id}\" style=\" padding: 5px 10px; ቀለም፡ #FFFFFF; ጽሑፍ-ማጌጫ: የለም; ዳራ-ቀለም: # 875A7B; ድንበር: 1 ፒክስል ጠንካራ # 875A7B; ድንበር-ራዲየስ፡ 3px\">\n"
 " ተቀበል</a>\n"
 " <a href=\"/calendar/meeting/decline?db=${'dbname' በctx እና ctx['dbname'] ወይም }&token=${object.access_token}&action=${'action_id' ውስጥ ctx እና ctx['action_id'] ወይም ''}&id=${object.event_id.id}\" style=\" padding: 5px 10px; ቀለም፡ #FFFFFF; ጽሑፍ-ማጌጫ: የለም; ዳራ-ቀለም: # 875A7B; ድንበር: 1 ፒክስል ጠንካራ # 875A7B; ድንበር-ራዲየስ፡ 3px\">\n"
-" እምቢ ማለት</a>\n"
+" ተከልክሏል </a>\n"
 " <a href=\"/calendar/meeting/view?db=${'dbname' በctx እና ctx['dbname'] ወይም ''}&token=${object.access_token}&action=${'action_id' ውስጥ ctx እና ctx['action_id'] ወይም ''}&id=${object.event_id.id}\" style=\" padding: 5px 10px; ቀለም፡ #FFFFFF; ጽሑፍ-ማጌጫ: የለም; ዳራ-ቀለም: # 875A7B; ድንበር: 1 ፒክስል ጠንካራ # 875A7B; ድንበር-ራዲየስ፡ 3px\">\n"
 " ይመልከቱ</a>\n"
 "    </div>\n"
@@ -423,7 +428,7 @@ msgstr ""
 " <a href=\"/calendar/ስብሰባ/ተቀበል?db=${'dbname' በctx እና ctx['dbname'] ወይም ''}&amp;token=${object.access_token}&amp;action=${ 'action_id' በctx እና ctx['action_id'] ወይም ''}&amp;id=${object.event_id}\" style=\"padding: 5px 10px; ቀለም፡ #FFFFFF; ጽሑፍ-ማጌጫ: የለም; ዳራ-ቀለም: # 875A7B; ድንበር: 1 ፒክስል ጠንካራ # 875A7B; ድንበር-ራዲየስ፡ 3px\">\n"
 " ተቀበል</a>\n"
 " <a href=\"/calendar/meting/decline?db=${'dbname' በctx እና ctx['dbname'] ወይም }&amp;token=${object.access_token}&amp;action=${ 'action_id' በctx እና ctx['action_id'] ወይም ''}&amp;id=${object.event_id}\ style=\"padding: 5px 10px; ቀለም፡ #FFFFFF; ጽሑፍ-ማጌጫ: የለም; ዳራ-ቀለም: # 875A7B; ድንበር: 1 ፒክስል ጠንካራ # 875A7B; ድንበር-ራዲየስ፡ 3px\">\n"
-" እምቢ ማለት</a>\n"
+" ተከልክሏል</a>\n"
 " <a href=\"/calendar/meeting/view?db=${'dbname' በctx እና ctx['dbname'] ወይም ''}&amp;token=${object.access_token}&amp;action=${ 'action_id' በctx እና ctx['action_id'] ወይም ''}&amp;id=${object.event_id}\" style=\"padding: 5px 10px; ቀለም፡ #FFFFFF; ጽሑፍ-ማጌጫ: የለም; ዳራ-ቀለም: # 875A7B; ድንበር: 1 ፒክስል ጠንካራ # 875A7B; ድንበር-ራዲየስ፡ 3px\">\n"
 " ይመልከቱ</a>\n"
 " </div>\n"
@@ -529,12 +534,12 @@ msgstr "ተግባራት"
 #. module: calendar
 #: model:ir.model,name:calendar.model_mail_activity
 msgid "Activity"
-msgstr "እንቅስቃሴ"
+msgstr "ክንውን"
 
 #. module: calendar
 #: model:ir.model,name:calendar.model_mail_activity_type
 msgid "Activity Type"
-msgstr "የእንቅስቃሴ አይነት"
+msgstr "የክንውን አይነት"
 
 #. module: calendar
 #: model:res.groups,name:calendar.group_calendar_manager
@@ -1383,7 +1388,7 @@ msgstr "አስታዋሾች"
 #. module: calendar
 #: model:ir.model.fields,field_description:calendar.field_calendar_event__count
 msgid "Repeat"
-msgstr "Repeat"
+msgstr "ይድገሙ"
 
 #. module: calendar
 #: model:ir.model.fields,field_description:calendar.field_calendar_event__interval
@@ -1548,7 +1553,7 @@ msgid ""
 "The activity is linked to a meeting. Deleting it will remove the meeting as "
 "well. Do you want to proceed ?"
 msgstr ""
-"እንቅስቃሴው ከስብሰባ ጋር የተያያዘ ነው። እሱን መሰረዝ ስብሰባውን ያስወግዳል"
+"ክንውንው ከስብሰባ ጋር የተያያዘ ነው። እሱን መሰረዝ ስብሰባውን ያስወግዳል"
 "እሺ. መቀጠል ትፈልጋለህ?"
 #. module: calendar
 #: model_terms:ir.actions.act_window,help:calendar.action_calendar_event

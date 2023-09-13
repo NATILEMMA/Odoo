@@ -5,16 +5,6 @@ from odoo.exceptions import ValidationError, UserError
 from dateutil.relativedelta import relativedelta
 from datetime import date
 
-#Personal Competencies
-#Workplace Competencies
-#Workplace Competencies
-#Technical Competencies
-#Other Competencies
-#Unsatisfactory
-#Needs improvements
-#Meet Expectation
-#Exceed Expectation
-#Outstanding
 RATING_VALUATION = {
                     '0':'unsatisfactory',
                     '1':'unsatisfactory',
@@ -28,14 +18,14 @@ class PerformancePeriod(models.Model):
     _name = "performance.period"
     _description = 'Performance Period'
     
-    evaluate_before = fields.Integer(required=True)
+    evaluate_before = fields.Integer(required=True, string="Evaluate Before Trial End Period")
     
     @api.model
     def create(self, vals):
         """This function will make sure there is only one probation period given"""
         period = self.env['performance.period'].sudo().search([])
         if period:
-            raise ValidationError(_("You can only have one Probation Period"))
+            raise ValidationError(_("You can only have one "))
         return super(PerformancePeriod, self).create(vals)
 
 class PerformanceEvaluationProgramConfig(models.Model):
@@ -133,7 +123,7 @@ class EvaluationPoints(models.Model):
     _name="evaluation.points"
     _description="This will create evaluation points, their description and their points"
 
-    name = fields.Char(translate=True, required=True)
+    name = fields.Char(translate=True, required=True, size=256)
     # description_ids = fields.One2many('title.description', 'evaluation_point')
     config_id = fields.Many2one("performance.evaluation.program.config", ondelete='cascade', index=True, copy=False)
     # program_id = fields.Many2one("performance.evaluation.program", ondelete='cascade', index=True)
@@ -409,6 +399,14 @@ class PerformanceEvaluationProgram(models.Model):
     # technical_ev_line_ids = fields.One2many("program.technical.line", "program_id", string="Technical Competencies", copy=True, auto_join=True, tracking=1)
     # other_ev_line_ids = fields.One2many("program.other.line", "program_id", string="Other Competencies", copy=True, auto_join=True, tracking=1)
     
+
+    #############################################################
+    #                                                           #
+    #        domain="[('parent_id.user_id', '=', user_id)]",    #
+    #                                                           #
+    #############################################################
+
+
     
     active = fields.Boolean(default=True, tracking=1)
     company_id = fields.Many2one("res.company", index=True, default=lambda self: self.env.company)
@@ -418,7 +416,7 @@ class PerformanceEvaluationProgram(models.Model):
     date_from = fields.Date()
     date_to = fields.Date()
     user_id = fields.Many2one('res.users', default=lambda self: self.env.user)
-    employee_id = fields.Many2one("hr.employee", domain="[('parent_id.user_id', '=', user_id)]", tracking=1, copy=False)
+    employee_id = fields.Many2one("hr.employee", tracking=1, copy=False)
     department_id = fields.Many2one("hr.department", compute="_compute_emp_info", store=True)
     job_id = fields.Many2one("hr.job", compute="_compute_emp_info", store=True)
     

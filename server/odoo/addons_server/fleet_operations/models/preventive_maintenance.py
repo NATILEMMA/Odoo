@@ -10,7 +10,7 @@ class PreventiveMaintenance(models.Model):
     _description = 'Preventive Maintenance'
 
 
-    maintenance_name = fields.Char(string="maintenance name")
+    maintenance_name = fields.Char(string="maintenance name", translate=True)
     service_odometer = fields.Float(string='Minimum Odometer Value')
     service_odometer_2 = fields.Float(string='Maximum Odometer Value')
     vehicle_model = fields.Many2one('fleet.vehicle.model', string='model')

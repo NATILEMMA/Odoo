@@ -54,8 +54,8 @@
                                  <tree>
                                     <field name="name"/>
                                     <field name="name_2"/>
-                                    <field name="fiscal_year" options="{'no_create': True, 'no_open': True}"/>
-                                    <field name="time_frame" options="{'no_create': True, 'no_open': True}"/>
+                                    <field name="fiscal_year"/>
+                                    <field name="time_frame"/>
                                     <field name="amount"/>
                                     <field name="amount_2"/>
                                     <field name="amount_3"/>
@@ -102,38 +102,17 @@
         </field>
     </record>
 
-    <record model="ir.ui.view" id="main_branch_graph">
-            <field name="name">main.branch.graph</field>
-            <field name="model">main.branch</field>
-            <field name="arch" type="xml">
-                <graph string="Main office report">
-                    <field name="time_frame"/>
-                    <field name="amount_2" type="measure"/>
-                </graph>
-            </field>
-    </record>
-    <record model="ir.ui.view" id="main_branch_pivot">
-            <field name="name">main.branch.pivot</field>
-            <field name="model">main.branch</field>
-            <field name="arch" type="xml">
-                <pivot string="Main office report" display_quantity="True">
-                    <field name="time_frame"/>
-                    <field name="amount_2" type="measure"/>
-                </pivot>
-            </field>
-        </record>
-
     <record id="membership_main_city_payment_action" model="ir.actions.act_window">
         <field name="name">Main City Payment Menu</field>
         <field name="res_model">main.branch</field>
-        <field name="view_mode">tree,form,graph,pivot</field>
+        <field name="view_mode">tree,form</field>
     </record>
 
     <menuitem id="membership_mai_city_payment_action"
               name="All Membership Payment"
-              parent="members_custom.membership_payment_menu"
+              parent="members_features.membership_payment_menu"
               action="membership_main_city_payment_action"
               sequence="70"
-              groups="members_custom.member_group_city_admin"/>
+              groups="member_minor_configuration.member_group_city_admin"/>
 
 </odoo>

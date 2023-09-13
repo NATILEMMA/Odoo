@@ -11,7 +11,7 @@ class DepartmentChangeHistory(models.Model):
     _inherit = ['mail.thread', 'mail.activity.mixin']
     _rec_name = "display_name"
 
-    display_name = fields.Char(store=False, compute="_compute_display_name")
+    display_name = fields.Char(store=False, compute="_compute_display_name", translate=True)
 
     employee_id = fields.Many2one('hr.employee', string='Employee', copy=False,
                                   readonly=1, states={'draft': [('readonly', False)]},

@@ -8,7 +8,7 @@ class MainBranch(models.Model):
     _description = "This model will help to handel subcity payment"
     _inherit = ['portal.mixin', 'mail.thread', 'mail.activity.mixin', 'utm.mixin']
 
-    name = fields.Char(string="Subcity", defualt='draft', readonly=True)
+    name = fields.Char(string="Subcity", defualt='draft', readonly=True,translate=True)
     amount = fields.Float(string='amount')
     fiscal_year = fields.Many2one('fiscal.year', string="Fiscal year", required=True, )
     time_frame = fields.Many2one('reconciliation.time.fream', string='Time frame',
@@ -21,16 +21,18 @@ class MainBranch(models.Model):
         ('submit', 'Submit'),
         ('register', 'Register'), ], default='draft', string="Status")
     cash_account_id = fields.Many2one("account.account",
-                                      string="Bank Account", domain=[('user_type_id', '=', 'Bank and Cash')],
+                                      string="Bank Account",  domain=['|',('user_type_id', '=', 'Bank and Cash'),
+                                                                      ('user_type_id', '=', 'ባንክ እና ጥሬ ገንዘብ')],
                                       required=True)
     income_account_id = fields.Many2one("account.account",
-                                        string="Income Account", domain=[('user_type_id', '=', 'Income')],
+                                        string="Income Account", domain=['|',('user_type_id', '=', 'Income'),
+                                                                            ('user_type_id', '=', 'ገቢ')],
                                         required=True)
     journal_id = fields.Many2one('account.journal', 'Journal', required=True, )
     account_move = fields.Many2one('account.move', string='Account Move')
     date = fields.Date("Date", required=True,
                        default=fields.Date.context_today)
-    payment_ref = fields.Char("Payment Ref.")
+    payment_ref = fields.Char("Payment Ref.",translate=True)
     payments_2 = fields.One2many('supporter.payment.main', 'rev', string='supporter/donor payments')
     amount_4 = fields.Float(string='Supporter/Donor payment')
 

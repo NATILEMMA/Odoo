@@ -8,6 +8,7 @@ class Payment(models.Model):
     _description = "This model will handle with the payment of memberships"
 
     sub_city = fields.Many2one('sub.payment', string="Fiscal year")
+    wereda_payment = fields.Many2one('sub.payment')
     # sub_city_2 = fields.Many2one('sub.payment', string="Fiscal year")
 
 
@@ -16,14 +17,14 @@ class SubPayment(models.Model):
     _description = "This model will help to handel subcity payment"
     _inherit = ['portal.mixin', 'mail.thread', 'mail.activity.mixin', 'utm.mixin']
 
-    name = fields.Char(string="Subcity", defualt='draft', readonly=True)
+    name = fields.Char(string="Subcity", defualt='draft', readonly=True,translate=True)
     name_2 = fields.Many2one('membership.handlers.parent', string="Subcity", required=True)
     amount = fields.Float(string='amount')
-    fiscal_year = fields.Many2one('fiscal.year', string="Fiscal year", required=True, )
-    city = fields.Many2one('city.payment', string="Fiscal year")
-    time_frame = fields.Many2one('reconciliation.time.fream', string='Time frame',
+    fiscal_year = fields.Many2one('fiscal.year', string="Year", required=True, )
+    city = fields.Many2one('city.payment', string="Sub City Payment")
+    time_frame = fields.Many2one('reconciliation.time.fream', string='Payment Month',
                                  domain="[('fiscal_year', '=', fiscal_year)]", required=True, )
-    payments = fields.One2many('membership.payment', 'sub_city', string='payments')
+    payments = fields.One2many('membership.payment', 'wereda_payment', string='Payments')
     # payments_2 = fields.One2many('membership.payment','sub_city_2', string='payments')
     woreda = fields.Many2one('membership.handlers.branch', string="Woreda", domain="[('parent_id', '=', name_2)]",
                              required=True)
@@ -65,7 +66,9 @@ class SubPayment(models.Model):
                 , ('state', '=', 'submit')])
         for line in payment:
             if line.state == 'draft' or line.state == 'submit':
-                raise UserError(_("There is already existing payment that is not closed"))
+                if line.id != self.id:
+                    # raise UserError(_("There is already existing payment that is not closed"))
+                    print("55")
         if self.time_frame and self.woreda:
             member = self.env['membership.payment'].search(
                 [('month', '=', self.time_frame.id), ('wereda_id', '=', self.woreda.id)])

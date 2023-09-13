@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from odoo import fields, models, api, _
-from odoo.exceptions import ValidationError
+from odoo.exceptions import ValidationError, UserError
 from datetime import date, datetime
 from dateutil.relativedelta import relativedelta
 
@@ -16,7 +16,7 @@ class CategoryDiscipline(models.Model):
 
     code = fields.Char(string="Code", required=True, translate=True, help="Category code")
     name = fields.Char(string="Name", required=True, translate=True, help="Category name")
-    description = fields.Text(string="Details", help="Details for this category")
+    description = fields.Text(string="Details", help="Details for this category", translate=True)
     action_category = fields.Many2one('discipline.action', string="Discipline Action", required=True)
 
 
@@ -30,7 +30,7 @@ class CategoryDisciplineAction(models.Model):
 
     code = fields.Char(string="Code", translate=True, required=True, help="Category code")
     name = fields.Char(string="Name", required=True, translate=True, help="Category name")
-    description = fields.Text(string="Details", help="Details for this category")
+    description = fields.Text(string="Details", help="Details for this category", translate=True)
 
 
 class DisciplinaryAction(models.Model):
@@ -49,7 +49,7 @@ class DisciplinaryAction(models.Model):
     ], default='draft', track_visibility='onchange')
 
     name = fields.Char(string='Reference', required=True, copy=False, readonly=True,
-                       default=lambda self: _('New'))
+                       default=lambda self: _('New'), translate=True)
 
     employee_name = fields.Many2one('hr.employee', string='Employee', help="Employee name")
     # employee_user = fields.Many2one('res.users', related="employee_name.user_id", string="Employee User")
@@ -67,7 +67,7 @@ class DisciplinaryAction(models.Model):
     action_details = fields.Text(string="Action Details", help="Give the details for this action", translate=True)
     attachment_ids = fields.Many2many('ir.attachment', string="Attachments",
                                       help="Employee can submit any documents which supports their explanation")
-    note = fields.Text(string="Internal Note")
+    note = fields.Text(string="Internal Note", translate=True)
     joined_date = fields.Date(string="Joined Date", help="Employee joining date")
     complaint_id = fields.Many2one('employee.complaint', readonly=True)
     x_css = fields.Html(sanitize=False, compute="_compute_css", store=False)
@@ -87,8 +87,8 @@ class DisciplinaryAction(models.Model):
     def _compute_css(self):
         """This function will help remove edit button based on state"""
         for record in self:
-            if (record.state == 'draft' or record.state == 'explain' or record.state == 'cancel') and self.env.user.has_group('hr_disciplinary_tracking.group_employee_disciplinary_committee') or\
-                (record.state == 'draft' or record.state == 'explain' or record.state == 'action' or record.state == 'cancel') and self.env.user.has_group('hr.group_hr_manager') or\
+            if (record.state == 'draft' or record.state == 'explain' or record.state == 'cancel') and self.env.user.has_group('hr_disciplinary_tracking.group_employee_disciplinary_committee') and (record.employee_name.user_id.id != self.env.user.id) or\
+                (record.state == 'draft' or record.state == 'explain' or record.state == 'action' or record.state == 'cancel') and self.env.user.has_group('hr.group_hr_manager') and (record.employee_name.user_id.id != self.env.user.id) or\
                 (record.state == 'submitted' or record.state == 'action' or record.state == 'cancel') and self.env.user.has_group('hr.group_user_custom') and not self.env.user.has_group('hr_disciplinary_tracking.group_employee_disciplinary_committee'):
                 record.x_css = '<style> .o_form_button_edit {display:None}</style>'
             else:

@@ -15,7 +15,7 @@ class AccountAssetCategory(models.Model):
     _description = 'Asset category'
 
     active = fields.Boolean(default=True)
-    name = fields.Char(required=True, index=True, string="Asset Type")
+    name = fields.Char(required=True, index=True, string="Asset Type",translate=True)
     account_analytic_id = fields.Many2one('account.analytic.account', string='Analytic Account')
     analytic_tag_ids = fields.Many2many('account.analytic.tag', string='Analytic Tag')
     account_asset_id = fields.Many2one('account.account', string='Asset Account', required=True, domain=[('internal_type','=','other'), ('deprecated', '=', False)], help="Account used to record the purchase of the asset at its original price.")
@@ -75,15 +75,15 @@ class AccountAssetAsset(models.Model):
     _inherit = ['mail.thread']
 
     entry_count = fields.Integer(compute='_entry_count', string='# Asset Entries')
-    name = fields.Char(string='Asset Name', required=True, readonly=True, states={'draft': [('readonly', False)]})
-    code = fields.Char(string='Reference', size=32, readonly=True, states={'draft': [('readonly', False)]})
+    name = fields.Char(string='Asset Name', required=True, readonly=True, states={'draft': [('readonly', False)]},translate=True)
+    code = fields.Char(string='Reference', size=32, readonly=True, states={'draft': [('readonly', False)]},translate=True)
     value = fields.Float(string='Gross Value', required=True, readonly=True, digits=0, states={'draft': [('readonly', False)]})
     currency_id = fields.Many2one('res.currency', string='Currency', required=True, readonly=True, states={'draft': [('readonly', False)]},
         default=lambda self: self.env.user.company_id.currency_id.id)
     company_id = fields.Many2one('res.company', string='Company', required=True,
                                  readonly=True, states={'draft': [('readonly', False)]},
                                  default=lambda self: self.env.company)
-    note = fields.Text()
+    note = fields.Text(translate=True)
     category_id = fields.Many2one('account.asset.category', string='Category', required=True, change_default=True, readonly=True, states={'draft': [('readonly', False)]})
     date = fields.Date(string='Date', required=True, readonly=True, states={'draft': [('readonly', False)]}, default=fields.Date.context_today)
     state = fields.Selection([('draft', 'Draft'), ('open', 'Running'), ('close', 'Close')], 'Status', required=True, copy=False, default='draft',
@@ -475,7 +475,7 @@ class AccountAssetDepreciationLine(models.Model):
     _name = 'account.asset.depreciation.line'
     _description = 'Asset depreciation line'
 
-    name = fields.Char(string='Depreciation Name', required=True, index=True)
+    name = fields.Char(string='Depreciation Name', required=True, index=True,translate=True)
     sequence = fields.Integer(required=True)
     asset_id = fields.Many2one('account.asset.asset', string='Asset', required=True, ondelete='cascade')
     parent_state = fields.Selection(related='asset_id.state', string='State of Asset')

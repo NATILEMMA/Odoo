@@ -11,7 +11,7 @@ class AccountAssetLine(models.Model):
     _order = "type, line_date"
     _check_company_auto = True
 
-    name = fields.Char(string="Depreciation Name", size=64, readonly=True)
+    name = fields.Char(string="Depreciation Name", size=64, readonly=True, translate=True)
     asset_id = fields.Many2one(
         comodel_name="account.asset",
         string="Asset",

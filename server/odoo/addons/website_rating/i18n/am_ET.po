@@ -22,15 +22,14 @@ msgstr ""
 msgid ""
 "#{widget.options['force_submit_url'] ? widget.options['force_submit_url'] : "
 "'/mail/chatter_post'}"
-msgstr "#{widget.አማራጮች['force_submit_url']? widget.options['force_submit_url']:"
+msgstr "#{widget.options['force_submit_url'] ? widget.options['force_submit_url'] : "
 "'/mail/chatter_post'}"
-
 #. module: website_rating
 #. openerp-web
 #: code:addons/website_rating/static/src/xml/portal_rating_composer.xml:0
 #, python-format
 msgid "&times;"
-msgstr "&ጊዜዎች;"
+msgstr "&times;"
 
 #. module: website_rating
 #. openerp-web
@@ -97,7 +96,7 @@ msgstr "ዝርዝሮች"
 #: code:addons/website_rating/static/src/xml/portal_chatter.xml:0
 #, python-format
 msgid "Edit"
-msgstr "አርትዕ"
+msgstr "አስተካክል "
 
 #. module: website_rating
 #. openerp-web

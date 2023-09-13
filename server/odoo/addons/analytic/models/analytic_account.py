@@ -38,12 +38,12 @@ class AccountAnalyticGroup(models.Model):
     _parent_store = True
     _rec_name = 'complete_name'
 
-    name = fields.Char(required=True)
-    description = fields.Text(string='Description')
+    name = fields.Char(required=True, translate=True)
+    description = fields.Text(string='Description', translate=True)
     parent_id = fields.Many2one('account.analytic.group', string="Parent", ondelete='cascade', domain="['|', ('company_id', '=', False), ('company_id', '=', company_id)]")
-    parent_path = fields.Char(index=True)
+    parent_path = fields.Char(index=True, translate=True)
     children_ids = fields.One2many('account.analytic.group', 'parent_id', string="Childrens")
-    complete_name = fields.Char('Complete Name', compute='_compute_complete_name', store=True)
+    complete_name = fields.Char('Complete Name', compute='_compute_complete_name', store=True, translate=True)
     company_id = fields.Many2one('res.company', string='Company', default=lambda self: self.env.company)
 
     @api.depends('name', 'parent_id.complete_name')
@@ -121,8 +121,8 @@ class AccountAnalyticAccount(models.Model):
             account.credit = data_credit.get(account.id, 0.0)
             account.balance = account.credit - account.debit
 
-    name = fields.Char(string='Analytic Account', index=True, required=True, tracking=True)
-    code = fields.Char(string='Reference', index=True, tracking=True)
+    name = fields.Char(string='Analytic Account', index=True, required=True, tracking=True, translate=True)
+    code = fields.Char(string='Reference', index=True, tracking=True, translate=True)
     active = fields.Boolean('Active', help="If the active field is set to False, it will allow you to hide the account without removing it.", default=True)
 
     group_id = fields.Many2one('account.analytic.group', string='Group', domain="['|', ('company_id', '=', False), ('company_id', '=', company_id)]")
@@ -176,7 +176,7 @@ class AccountAnalyticLine(models.Model):
     def _default_user(self):
         return self.env.context.get('user_id', self.env.user.id)
 
-    name = fields.Char('Description', required=True)
+    name = fields.Char('Description', required=True, translate=True)
     date = fields.Date('Date', required=True, index=True, default=fields.Date.context_today)
     amount = fields.Monetary('Amount', required=True, default=0.0)
     unit_amount = fields.Float('Quantity', default=0.0)

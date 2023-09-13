@@ -1,0 +1,98 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* budget_ethiopian_datepicker
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-10 12:48+0000\n"
+"PO-Revision-Date: 2023-08-10 12:48+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: budget_ethiopian_datepicker
+#: model:ir.model,name:budget_ethiopian_datepicker.model_budget_budget
+msgid "Budget"
+msgstr "በጀት"
+
+#. module: budget_ethiopian_datepicker
+#: model:ir.model,name:budget_ethiopian_datepicker.model_budget_lines
+msgid "Budget Line"
+msgstr "የበጀት መስመር"
+
+#. module: budget_ethiopian_datepicker
+#: model:ir.model,name:budget_ethiopian_datepicker.model_budget_planning
+msgid "Budget Planning"
+msgstr "የበጀት እቅድ ማውጣት"
+
+#. module: budget_ethiopian_datepicker
+#: model:ir.model,name:budget_ethiopian_datepicker.model_budget_transfer
+msgid "Budget Transfer"
+msgstr "በጀት ማስተላለፍ"
+
+#. module: budget_ethiopian_datepicker
+#: model_terms:ir.ui.view,arch_db:budget_ethiopian_datepicker.view_budget_planning_form_inherit_local
+#: model_terms:ir.ui.view,arch_db:budget_ethiopian_datepicker.view_budgettransfer_form_inherit_local
+msgid "Date"
+msgstr "ቀን"
+
+#. module: budget_ethiopian_datepicker
+#: model_terms:ir.ui.view,arch_db:budget_ethiopian_datepicker.view_budget_bugdet_form_inherit_local
+msgid "Date From"
+msgstr "ከ ቀን"
+
+#. module: budget_ethiopian_datepicker
+#: model_terms:ir.ui.view,arch_db:budget_ethiopian_datepicker.view_budget_bugdet_form_inherit_local
+msgid "Date TO"
+msgstr "እስከ"
+
+#. module: budget_ethiopian_datepicker
+#: model_terms:ir.ui.view,arch_db:budget_ethiopian_datepicker.view_budget_bugdet_form_inherit_local
+msgid "Date To"
+msgstr "እስከ"
+
+#. module: budget_ethiopian_datepicker
+#: model:ir.model.fields,field_description:budget_ethiopian_datepicker.field_budget_budget__is_pagum_from
+#: model:ir.model.fields,field_description:budget_ethiopian_datepicker.field_budget_lines__is_pagum_from
+#: model:ir.model.fields,field_description:budget_ethiopian_datepicker.field_budget_planning__is_pagum_from
+#: model:ir.model.fields,field_description:budget_ethiopian_datepicker.field_budget_transfer__is_pagum_from
+msgid "Is Pagum From"
+msgstr "ጳጉሜን ከ"
+
+#. module: budget_ethiopian_datepicker
+#: code:addons/budget_ethiopian_datepicker/models/budget.py:0
+#: code:addons/budget_ethiopian_datepicker/models/budget.py:0
+#, python-format
+msgid "New"
+msgstr "አዲስ"
+
+#. module: budget_ethiopian_datepicker
+#: model_terms:ir.ui.view,arch_db:budget_ethiopian_datepicker.view_budget_bugdet_form_inherit_local
+msgid "Paid Date"
+msgstr "የተከፈለበት ቀን"
+
+#. module: budget_ethiopian_datepicker
+#: model:ir.model.fields,field_description:budget_ethiopian_datepicker.field_budget_budget__ethiopian_from
+#: model:ir.model.fields,field_description:budget_ethiopian_datepicker.field_budget_budget__ethiopian_to
+#: model:ir.model.fields,field_description:budget_ethiopian_datepicker.field_budget_budget__is_pagum_to
+#: model:ir.model.fields,field_description:budget_ethiopian_datepicker.field_budget_budget__pagum_from
+#: model:ir.model.fields,field_description:budget_ethiopian_datepicker.field_budget_budget__pagum_to
+#: model:ir.model.fields,field_description:budget_ethiopian_datepicker.field_budget_lines__ethiopian_from
+#: model:ir.model.fields,field_description:budget_ethiopian_datepicker.field_budget_lines__ethiopian_three
+#: model:ir.model.fields,field_description:budget_ethiopian_datepicker.field_budget_lines__ethiopian_to
+#: model:ir.model.fields,field_description:budget_ethiopian_datepicker.field_budget_lines__is_pagum_three
+#: model:ir.model.fields,field_description:budget_ethiopian_datepicker.field_budget_lines__is_pagum_to
+#: model:ir.model.fields,field_description:budget_ethiopian_datepicker.field_budget_lines__pagum_from
+#: model:ir.model.fields,field_description:budget_ethiopian_datepicker.field_budget_lines__pagum_three
+#: model:ir.model.fields,field_description:budget_ethiopian_datepicker.field_budget_lines__pagum_to
+#: model:ir.model.fields,field_description:budget_ethiopian_datepicker.field_budget_planning__ethiopian_from
+#: model:ir.model.fields,field_description:budget_ethiopian_datepicker.field_budget_planning__pagum_from
+#: model:ir.model.fields,field_description:budget_ethiopian_datepicker.field_budget_transfer__ethiopian_from
+#: model:ir.model.fields,field_description:budget_ethiopian_datepicker.field_budget_transfer__pagum_from
+msgid "in ethiopian date"
+msgstr "ቀን"

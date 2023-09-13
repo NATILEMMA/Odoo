@@ -46,21 +46,21 @@
                     <group>
                         <group>
                             <separator string="Information"/>
-                            <field name="name" placeholder="Eg. John Does Smith" attrs="{'readonly': [('saved', '=', True)]}"/>
-                            <field name="date" attrs="{'invisible': [('type_of_supporter', '=', 'company')], 'readonly': [('saved', '=', True)], 'required': [('type_of_supporter', '=', 'individual')]}"/>
+                            <field name="name" placeholder="Eg. John Does Smith" attrs="{'readonly': [('saved', '=', True)]}" required="1"/>
+                            <field name="date" attrs="{'invisible': [('type_of_supporter', '=', 'company')], 'readonly': [('saved', '=', True)]}"/>
                             <field name="age" string="Age" attrs="{'invisible': [('type_of_supporter', '=', 'company')]}"  force_save="1"/>
-                            <field name="gender" string="Gender" attrs="{'invisible': [('type_of_supporter', '=', 'company')], 'readonly': [('saved', '=', True)]}"/>
-                            <field name="ethnic_group" string="Ethnicity" attrs="{'invisible': [('type_of_supporter', '=', 'company')], 'readonly': [('saved', '=', True)]}" options="{'no_create': True, 'no_create_edit': True}"/>
-                            <field name="email" string="email" attrs="{'invisible': [('type_of_supporter', '=', 'individual')]}"/>
-                            <field name="website" string="website" attrs="{'invisible': [('type_of_supporter', '=', 'individual')]}"/>
+                            <field name="gender" string="Gender" attrs="{'invisible': [('type_of_supporter', '=', 'company')], 'readonly': [('saved', '=', True)], 'required': [('type_of_supporter', '=', 'individual')]}"/>
+                            <field name="ethnic_group" string="Ethnicity" attrs="{'invisible': [('type_of_supporter', '=', 'company')], 'readonly': [('saved', '=', True)], 'required': [('type_of_supporter', '=', 'individual')]}" options="{'no_create': True, 'no_create_edit': True}"/>
+                            <field name="email" string="email" attrs="{'invisible': [('type_of_supporter', '=', 'individual')], 'required': [('type_of_supporter', '=', 'company')]}"/>
+                            <field name="website" string="website" attrs="{'invisible': [('type_of_supporter', '=', 'individual')], 'required': [('type_of_supporter', '=', 'company')]}"/>
                             <separator string="Educational Status" attrs="{'invisible': [('type_of_supporter', '=', 'company')]}" options="{'no_create': True, 'no_create_edit': True}"/>
-                            <field name="education_level" string="Education Level" attrs="{'invisible': [('type_of_supporter', '=', 'company')]}" options="{'no_create': True, 'no_create_edit': True}"/>
+                            <field name="education_level" string="Education Level" attrs="{'invisible': [('type_of_supporter', '=', 'company')], 'required': [('type_of_supporter', '=', 'individual')]}" options="{'no_create': True, 'no_create_edit': True}"/>
                             <field name="field_of_study_id" string="Field of Study" options="{'no_create': True, 'no_create_edit': True}" attrs="{'invisible': [('type_of_supporter', '=', 'company')]}"/>
                             <field name="user_input" attrs="{'invisible': [('is_user_input', '=', False)]}" string="Other Field"/>
                             <separator string="Supporter Status"/>
-                            <field name="start_of_support" string="Start of Support Year"/>
+                            <field name="start_of_support" string="Start of Support Year" required="1"/>
                             <field name="status"/>
-                            <field name="gov_responsibility"/>
+                            <!-- <field name="gov_responsibility"/> -->
                         </group>
                         <group>
                             <separator string="Employment Status" attrs="{'invisible': [('type_of_supporter', '=', 'company')]}"/>
@@ -80,6 +80,20 @@
                                     <field name="date_to" string="Date To"/>
                                     <field name="departure_reason" string="Reason"/>
                                     <field name="additional_information" string="Additional Information"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Donations" name="donation">
+                            <group>
+                                <field name="year_of_payment" options="{'no_create': True, 'no_create_edit': True}"/>
+                            </group>
+                            <field name="donation_ids">
+                                <tree delete="false" create="false">
+                                <field name="donor_ids"/>
+                                <field name="year"/>
+                                <field name="month"/>
+                                <field name="amount"/>
+                                <field name="state"/>
                                 </tree>
                             </field>
                         </page>
@@ -173,7 +187,7 @@
             name="Donors"
             parent="menu_membership"
             sequence="7"
-            groups="members_custom.member_group_cell_manager,members_custom.member_group_finance"  
+            groups="members_custom.member_group_city_transfer_handler,members_custom.member_group_cell_manager,members_custom.member_group_finance"  
             action="donor_action"/>
 
 </odoo>

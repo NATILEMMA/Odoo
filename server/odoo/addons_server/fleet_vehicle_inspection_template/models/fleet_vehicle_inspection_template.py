@@ -10,7 +10,7 @@ class FleetVehicleInspectionTemplate(models.Model):
     _description = "Fleet Vehicle Inspection Template"
     _inherit = ["mail.thread", "mail.activity.mixin"]
 
-    name = fields.Char()
+    name = fields.Char(translate=True)
     note = fields.Html("Notes")
     inspection_template_line_ids = fields.One2many(
         "fleet.vehicle.inspection.template.line",

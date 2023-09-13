@@ -15,8 +15,8 @@ class ProductionLot(models.Model):
 
     name = fields.Char(
         'Lot/Serial Number', default=lambda self: self.env['ir.sequence'].next_by_code('stock.lot.serial'),
-        required=True, help="Unique Lot/Serial Number")
-    ref = fields.Char('Internal Reference', help="Internal reference number in case it differs from the manufacturer's lot/serial number")
+        required=True, help="Unique Lot/Serial Number", translate=True)
+    ref = fields.Char('Internal Reference', help="Internal reference number in case it differs from the manufacturer's lot/serial number", translate=True)
     product_id = fields.Many2one(
         'product.product', 'Product',
         domain=lambda self: self._domain_product_id(), required=True, check_company=True)

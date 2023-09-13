@@ -9,8 +9,7 @@
 # Martin Aavastik <martin@avalah.ee>, 2020
 # Helen Sulaoja <helen@avalah.ee>, 2020
 # Eneli Õigus <enelioigus@gmail.com>, 2020
-# Triine Aavik <triine@avalah.ee>, 2020
-# Anna, 2023
+# atriine <triine@avalah.ee>, 2020
 # 
 msgid ""
 msgstr ""
@@ -18,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-25 15:03+0000\n"
 "PO-Revision-Date: 2019-08-26 09:12+0000\n"
-"Last-Translator: Anna, 2023\n"
+"Last-Translator: atriine <triine@avalah.ee>, 2020\n"
 "Language-Team: Estonian (https://www.transifex.com/odoo/teams/41243/et/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -105,7 +104,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:partner_autocomplete.field_res_partner__additional_info
 #: model:ir.model.fields,field_description:partner_autocomplete.field_res_users__additional_info
 msgid "Additional info"
-msgstr "Lisainfo"
+msgstr ""
 
 #. module: partner_autocomplete
 #. openerp-web
@@ -124,7 +123,7 @@ msgstr "Ettevõtted"
 #: model:ir.model.fields,field_description:partner_autocomplete.field_res_partner__partner_gid
 #: model:ir.model.fields,field_description:partner_autocomplete.field_res_users__partner_gid
 msgid "Company database ID"
-msgstr "Ettevõtte andmebaasi ID"
+msgstr ""
 
 #. module: partner_autocomplete
 #: model:ir.model,name:partner_autocomplete.model_res_config_settings
@@ -156,7 +155,7 @@ msgstr "Näidatav nimi"
 #: code:addons/partner_autocomplete/static/src/js/partner_autocomplete_core.js:0
 #, python-format
 msgid "IAP Account Token missing"
-msgstr "IAP konto token puudub"
+msgstr ""
 
 #. module: partner_autocomplete
 #: model:ir.model.fields,field_description:partner_autocomplete.field_res_partner_autocomplete_sync__id
@@ -166,12 +165,12 @@ msgstr "ID"
 #. module: partner_autocomplete
 #: model:ir.model.fields,field_description:partner_autocomplete.field_res_config_settings__partner_autocomplete_insufficient_credit
 msgid "Insufficient credit"
-msgstr "Ebapiisav krediit"
+msgstr ""
 
 #. module: partner_autocomplete
 #: model:ir.model.fields,field_description:partner_autocomplete.field_res_partner_autocomplete_sync__synched
 msgid "Is synched"
-msgstr "On sünkroniseeritud"
+msgstr ""
 
 #. module: partner_autocomplete
 #: model:ir.model.fields,field_description:partner_autocomplete.field_res_partner_autocomplete_sync____last_update
@@ -194,7 +193,6 @@ msgstr "Viimati uuendatud (millal)"
 #, python-format
 msgid "Not enough credits for Partner Autocomplete"
 msgstr ""
-"Pole piisavalt palju punkte, et täiendada partneri andmeid automaatselt"
 
 #. module: partner_autocomplete
 #: model:ir.model.fields,field_description:partner_autocomplete.field_res_partner_autocomplete_sync__partner_id
@@ -206,17 +204,17 @@ msgstr "Partner"
 #: model:ir.cron,cron_name:partner_autocomplete.ir_cron_partner_autocomplete
 #: model:ir.cron,name:partner_autocomplete.ir_cron_partner_autocomplete
 msgid "Partner Autocomplete : Sync with remote DB"
-msgstr "Partneri automaatne täiendus: sünkroonimine kaug DB-ga"
+msgstr ""
 
 #. module: partner_autocomplete
 #: model:ir.model,name:partner_autocomplete.model_res_partner_autocomplete_sync
 msgid "Partner Autocomplete Sync"
-msgstr "Partneri automaatse täienduse sünkroniseerimine"
+msgstr ""
 
 #. module: partner_autocomplete
 #: model_terms:ir.ui.view,arch_db:partner_autocomplete.additional_info_template
 msgid "Partner created by Odoo Partner Autocomplete Service"
-msgstr "Parter on loodud Odoo teenuste abiga"
+msgstr ""
 
 #. module: partner_autocomplete
 #. openerp-web
@@ -230,14 +228,14 @@ msgstr "Kohatäitja"
 #: code:addons/partner_autocomplete/static/src/js/partner_autocomplete_many2one.js:0
 #, python-format
 msgid "Searching Autocomplete..."
-msgstr "Automaatse täienduse otsimine..."
+msgstr ""
 
 #. module: partner_autocomplete
 #. openerp-web
 #: code:addons/partner_autocomplete/static/src/xml/partner_autocomplete.xml:0
 #, python-format
 msgid "Set Your Account Token"
-msgstr "Määra oma konto märgis"
+msgstr ""
 
 #. module: partner_autocomplete
 #: model_terms:ir.ui.view,arch_db:partner_autocomplete.additional_info_template

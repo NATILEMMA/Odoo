@@ -20,7 +20,7 @@ class ProductConfiguratorAttribute(models.Model):
         # product.configurator
         ondelete="cascade",
     )
-    owner_model = fields.Char(required=True)
+    owner_model = fields.Char(required=True,translate=True)
     product_tmpl_id = fields.Many2one(
         comodel_name="product.template", string="Product Template", required=True
     )

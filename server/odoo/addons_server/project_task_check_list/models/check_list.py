@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models, fields
+from odoo import api, models, fields, _
+import logging
+_logger = logging.getLogger(__name__)
 
 
 class CheckList(models.Model):
@@ -11,6 +13,15 @@ class CheckList(models.Model):
     status = fields.Selection(string="Status",
                               selection=[('done', 'Done'), ('progress', 'In Progress'), ('cancel', 'Cancel')],
                               readonly=True, track_visibility='onchange')
+    weight = fields.Float(default="0")
+    work_done = fields.Float(default="0")
+    reason = fields.Char()
+    start_date = fields.Date()
+    end_date = fields.Date()
+
+
+    
+
 
     def do_accept(self):
         self.write({

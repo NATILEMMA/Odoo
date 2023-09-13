@@ -13,7 +13,7 @@ class AppointmentRegistration(models.Model):
     appointee_id = fields.Many2one('res.partner', string='Appointee', ondelete='cascade')
     appointment_begin = fields.Datetime(string="Event Start Date", related='event_id.start', readonly=True, store=True)
     appointment_end = fields.Datetime(string="Event End Date", related='event_id.stop', readonly=True)
-    name = fields.Char(string='Event', related='event_id.name', readonly=True, store=True)
+    name = fields.Char(string='Event', related='event_id.name', readonly=True, store=True,translate=True)
     state = fields.Selection([
         ('pending', _('Pending')),
         ('valid', _('Scheduled')),
@@ -21,7 +21,7 @@ class AppointmentRegistration(models.Model):
         ('ended', _('Ended')),
     ], required=True, default='valid', string='Status', copy=False)
     appointee_interaction = fields.Boolean(string='Appointee interaction', default=False)
-    meeting_minute = fields.Text('Meeting Minute')
+    meeting_minute = fields.Text('Meeting Minute',translate=True)
 
     def cancel_appointment(self):
         for appointment in self:

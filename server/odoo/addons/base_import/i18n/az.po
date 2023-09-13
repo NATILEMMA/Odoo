@@ -2,17 +2,12 @@
 # This file contains the translation of the following modules:
 # 	* base_import
 # 
-# Translators:
-# erpgo translator <jumshud@erpgo.az>, 2022
-# Jumshud Sultanov <cumshud@gmail.com>, 2022
-# 
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server saas~12.5\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-23 11:32+0000\n"
 "PO-Revision-Date: 2019-08-26 09:09+0000\n"
-"Last-Translator: Jumshud Sultanov <cumshud@gmail.com>, 2022\n"
 "Language-Team: Azerbaijani (https://www.transifex.com/odoo/teams/41243/az/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -71,17 +66,17 @@ msgstr ""
 #. module: base_import
 #: model:ir.model,name:base_import.model_base
 msgid "Base"
-msgstr "Baza"
+msgstr ""
 
 #. module: base_import
 #: model:ir.model,name:base_import.model_base_import_import
 msgid "Base Import"
-msgstr "Baza İmport"
+msgstr ""
 
 #. module: base_import
 #: model:ir.model,name:base_import.model_base_import_mapping
 msgid "Base Import Mapping"
-msgstr "Əsas İdxal Quraşdırmaları"
+msgstr ""
 
 #. module: base_import
 #. openerp-web
@@ -102,7 +97,7 @@ msgstr ""
 #: code:addons/base_import/static/src/xml/base_import.xml:0
 #, python-format
 msgid "Cancel"
-msgstr "Ləğv edin"
+msgstr ""
 
 #. module: base_import
 #. openerp-web
@@ -115,18 +110,18 @@ msgstr ""
 #: code:addons/base_import/models/base_import.py:0
 #, python-format
 msgid "Column %s contains incorrect values (value: %s)"
-msgstr "%s sütununda səhv dəyərlər var (dəyər:% s)"
+msgstr ""
 
 #. module: base_import
 #: code:addons/base_import/models/base_import.py:0
 #, python-format
 msgid "Column %s contains incorrect values. Error in line %d: %s"
-msgstr "%s sütununda səhv dəyərlər var. %d: %s sətrində xəta"
+msgstr ""
 
 #. module: base_import
 #: model:ir.model.fields,field_description:base_import.field_base_import_mapping__column_name
 msgid "Column Name"
-msgstr "Sütunun Adı"
+msgstr ""
 
 #. module: base_import
 #. openerp-web
@@ -134,7 +129,7 @@ msgstr "Sütunun Adı"
 #: code:addons/base_import/static/src/js/import_action.js:0
 #, python-format
 msgid "Comma"
-msgstr "Nöqtə"
+msgstr ""
 
 #. module: base_import
 #: code:addons/base_import/models/base_import.py:0
@@ -143,8 +138,6 @@ msgid ""
 "Could not retrieve URL: %(url)s [%(field_name)s: L%(line_number)d]: "
 "%(error)s"
 msgstr ""
-"URL bərpa etmək mümkün olmadı: %(url)s [%(field_name)s: L%(line_number)d]: "
-"%(error)s"
 
 #. module: base_import
 #. openerp-web
@@ -172,7 +165,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_o2m_child__create_uid
 #: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_preview__create_uid
 msgid "Created by"
-msgstr "Tərəfindən yaradılıb"
+msgstr ""
 
 #. module: base_import
 #: model:ir.model.fields,field_description:base_import.field_base_import_import__create_date
@@ -193,7 +186,7 @@ msgstr "Tərəfindən yaradılıb"
 #: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_o2m_child__create_date
 #: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_preview__create_date
 msgid "Created on"
-msgstr "Tarixdə yaradıldı"
+msgstr ""
 
 #. module: base_import
 #. openerp-web
@@ -209,14 +202,14 @@ msgstr ""
 #: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_complex__currency_id
 #: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_float__currency_id
 msgid "Currency"
-msgstr "Valyuta"
+msgstr ""
 
 #. module: base_import
 #: code:addons/base_import/models/base_import.py:0
 #: code:addons/base_import/models/base_import.py:0
 #, python-format
 msgid "Database ID"
-msgstr "Verilənlər bazası ID"
+msgstr ""
 
 #. module: base_import
 #. openerp-web
@@ -258,7 +251,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_o2m_child__display_name
 #: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_preview__display_name
 msgid "Display Name"
-msgstr "Ekran Adı"
+msgstr ""
 
 #. module: base_import
 #. openerp-web
@@ -279,7 +272,7 @@ msgstr ""
 #: code:addons/base_import/static/src/xml/base_import.xml:0
 #, python-format
 msgid "Download"
-msgstr "Yüklə"
+msgstr ""
 
 #. module: base_import
 #: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_complex__dt
@@ -304,7 +297,7 @@ msgstr ""
 #: code:addons/base_import/models/base_import.py:0
 #, python-format
 msgid "Error Parsing Date [%s:L%d]: %s"
-msgstr "Xəta Qiymətləndirmə Tarixi [%s:L%d]: %s"
+msgstr ""
 
 #. module: base_import
 #. openerp-web
@@ -325,27 +318,27 @@ msgstr ""
 #: code:addons/base_import/models/base_import.py:0
 #, python-format
 msgid "External ID"
-msgstr "Xarici ID"
+msgstr ""
 
 #. module: base_import
 #: model:ir.model.fields,field_description:base_import.field_base_import_mapping__field_name
 msgid "Field Name"
-msgstr "Sahə Adı"
+msgstr ""
 
 #. module: base_import
 #: model:ir.model.fields,field_description:base_import.field_base_import_import__file
 msgid "File"
-msgstr "Fayl"
+msgstr ""
 
 #. module: base_import
 #: model:ir.model.fields,field_description:base_import.field_base_import_import__file_name
 msgid "File Name"
-msgstr "Fayl Adı"
+msgstr ""
 
 #. module: base_import
 #: model:ir.model.fields,field_description:base_import.field_base_import_import__file_type
 msgid "File Type"
-msgstr "Fayl Növü "
+msgstr ""
 
 #. module: base_import
 #: code:addons/base_import/models/base_import.py:0
@@ -353,12 +346,11 @@ msgstr "Fayl Növü "
 #, python-format
 msgid "File size exceeds configured maximum (%s bytes)"
 msgstr ""
-"Fayl ölçüsü konfiqurasiya edilmiş maksimumdan   (%s bitlər) artıqdır. "
 
 #. module: base_import
 #: model:ir.model.fields,help:base_import.field_base_import_import__file
 msgid "File to check and/or import, raw binary (not base64)"
-msgstr " İkili say ardıcıllığını yükləmək və yoxlamaq üçün fayl (not base64)"
+msgstr ""
 
 #. module: base_import
 #. openerp-web
@@ -381,8 +373,6 @@ msgid ""
 "Found invalid image data, images should be imported as either URLs or "
 "base64-encoded data."
 msgstr ""
-"Tapılmış səhv görüntü təsviri, təsvirlər   ya URL'lər, ya da base64 "
-"-kodlanmış məlumatlar kimi yüklənməlidir."
 
 #. module: base_import
 #. openerp-web
@@ -410,7 +400,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_o2m_child__id
 #: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_preview__id
 msgid "ID"
-msgstr "ID"
+msgstr ""
 
 #. module: base_import
 #. openerp-web
@@ -438,7 +428,7 @@ msgstr ""
 #: code:addons/base_import/static/src/xml/base_import.xml:0
 #, python-format
 msgid "Import"
-msgstr "İmport"
+msgstr ""
 
 #. module: base_import
 #. openerp-web
@@ -482,7 +472,7 @@ msgstr ""
 #: code:addons/base_import/models/base_import.py:0
 #, python-format
 msgid "Invalid cell value at row %(row)s, column %(col)s: %(cell_value)s"
-msgstr "%(row)s sıralarında, %(col)s sütunlarında səhv xana: %(cell_value)s"
+msgstr ""
 
 #. module: base_import
 #: model:ir.model.fields,field_description:base_import.field_base_import_import____last_update
@@ -503,7 +493,7 @@ msgstr "%(row)s sıralarında, %(col)s sütunlarında səhv xana: %(cell_value)s
 #: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_o2m_child____last_update
 #: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_preview____last_update
 msgid "Last Modified on"
-msgstr "Son Dəyişdirilmə tarixi"
+msgstr ""
 
 #. module: base_import
 #: model:ir.model.fields,field_description:base_import.field_base_import_import__write_uid
@@ -524,7 +514,7 @@ msgstr "Son Dəyişdirilmə tarixi"
 #: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_o2m_child__write_uid
 #: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_preview__write_uid
 msgid "Last Updated by"
-msgstr "Son Yeniləyən"
+msgstr ""
 
 #. module: base_import
 #: model:ir.model.fields,field_description:base_import.field_base_import_import__write_date
@@ -545,7 +535,7 @@ msgstr "Son Yeniləyən"
 #: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_o2m_child__write_date
 #: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_preview__write_date
 msgid "Last Updated on"
-msgstr "Son Yenilənmə tarixi"
+msgstr ""
 
 #. module: base_import
 #. openerp-web
@@ -577,7 +567,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_o2m__name
 #: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_preview__name
 msgid "Name"
-msgstr "Ad"
+msgstr ""
 
 #. module: base_import
 #. openerp-web
@@ -603,12 +593,12 @@ msgstr ""
 #. module: base_import
 #: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_preview__othervalue
 msgid "Other Variable"
-msgstr "Digər Dəyişkən "
+msgstr ""
 
 #. module: base_import
 #: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_o2m_child__parent_id
 msgid "Parent"
-msgstr "Əsas"
+msgstr ""
 
 #. module: base_import
 #. openerp-web
@@ -627,7 +617,7 @@ msgstr ""
 #. module: base_import
 #: model:ir.model.fields,field_description:base_import.field_base_import_mapping__res_model
 msgid "Res Model"
-msgstr "Res Modeli"
+msgstr ""
 
 #. module: base_import
 #. openerp-web
@@ -682,14 +672,14 @@ msgstr ""
 #. module: base_import
 #: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_preview__somevalue
 msgid "Some Value"
-msgstr "Bəzi Dəyərlər"
+msgstr ""
 
 #. module: base_import
 #. openerp-web
 #: code:addons/base_import/static/src/js/import_action.js:0
 #, python-format
 msgid "Space"
-msgstr "Ara"
+msgstr ""
 
 #. module: base_import
 #. openerp-web
@@ -715,77 +705,77 @@ msgstr ""
 #. module: base_import
 #: model:ir.model,name:base_import.model_base_import_tests_models_preview
 msgid "Tests : Base Import Model Preview"
-msgstr "Testlər: Əsas İdxal Modelinə Öncədən Baxış"
+msgstr ""
 
 #. module: base_import
 #: model:ir.model,name:base_import.model_base_import_tests_models_char
 msgid "Tests : Base Import Model, Character"
-msgstr "Testlər: Əsas İdxal Modeli, Xarakter"
+msgstr ""
 
 #. module: base_import
 #: model:ir.model,name:base_import.model_base_import_tests_models_char_noreadonly
 msgid "Tests : Base Import Model, Character No readonly"
-msgstr "Testlər: Əsas İdxal Modeli, Xarakter Yalnız oxunur"
+msgstr ""
 
 #. module: base_import
 #: model:ir.model,name:base_import.model_base_import_tests_models_char_readonly
 msgid "Tests : Base Import Model, Character readonly"
-msgstr "Testlər: Əsas İdxal Modeli, Xarakter yalnız oxunur"
+msgstr ""
 
 #. module: base_import
 #: model:ir.model,name:base_import.model_base_import_tests_models_char_required
 msgid "Tests : Base Import Model, Character required"
-msgstr "Testlər: Əsas İdxal Modeli, tələb olunan Xarakter"
+msgstr ""
 
 #. module: base_import
 #: model:ir.model,name:base_import.model_base_import_tests_models_char_states
 msgid "Tests : Base Import Model, Character states"
-msgstr "Testlər: Əsas İdxal Modeli, Xarakter vəziyyətləri"
+msgstr ""
 
 #. module: base_import
 #: model:ir.model,name:base_import.model_base_import_tests_models_char_stillreadonly
 msgid "Tests : Base Import Model, Character still readonly"
-msgstr "Testlər: Əsas İdxal Modeli, Xarakter hələ də yalnız oxunur"
+msgstr ""
 
 #. module: base_import
 #: model:ir.model,name:base_import.model_base_import_tests_models_m2o
 msgid "Tests : Base Import Model, Many to One"
-msgstr "Testlər: Əsas İdxal Modeli, Bir çoxu"
+msgstr ""
 
 #. module: base_import
 #: model:ir.model,name:base_import.model_base_import_tests_models_m2o_related
 msgid "Tests : Base Import Model, Many to One related"
-msgstr "Testlər: Əsas İdxal Modeli, Bir çoxu ilə əlaqəli"
+msgstr ""
 
 #. module: base_import
 #: model:ir.model,name:base_import.model_base_import_tests_models_m2o_required
 msgid "Tests : Base Import Model, Many to One required"
-msgstr "Testlər: Əsas İdxal Modeli, Bir çoxu tələb olunur"
+msgstr ""
 
 #. module: base_import
 #: model:ir.model,name:base_import.model_base_import_tests_models_m2o_required_related
 msgid "Tests : Base Import Model, Many to One required related"
-msgstr "Testlər: Əsas İdxal Modeli, Bir çoxu ilə əlaqəli tələb olunur"
+msgstr ""
 
 #. module: base_import
 #: model:ir.model,name:base_import.model_base_import_tests_models_o2m
 msgid "Tests : Base Import Model, One to Many"
-msgstr "Testlər: Əsas İdxal Modeli, Bir Çoxları üçün"
+msgstr ""
 
 #. module: base_import
 #: model:ir.model,name:base_import.model_base_import_tests_models_o2m_child
 msgid "Tests : Base Import Model, One to Many child"
-msgstr "Testlər: Əsas İdxal Modeli, Bir Çox alt "
+msgstr ""
 
 #. module: base_import
 #: model:ir.model,name:base_import.model_base_import_tests_models_complex
 msgid "Tests: Base Import Model Complex"
-msgstr "Testlər: Əsas İdxal Model Kompleksi"
+msgstr ""
 
 #. module: base_import
 #: model:ir.model,name:base_import.model_base_import_tests_models_float
 msgid "Tests: Base Import Model Float"
-msgstr "Testlər: Əsas İdxal Üzmə Modeli"
+msgstr ""
 
 #. module: base_import
 #. openerp-web
@@ -829,8 +819,6 @@ msgstr ""
 #, python-format
 msgid "Unable to load \"{extension}\" file: requires Python module \"{modname}\""
 msgstr ""
-"\"{extension}\" faylı yüklənə bilmir: \"{modname}\" Python modulu tələb "
-"olunur"
 
 #. module: base_import
 #: code:addons/base_import/models/base_import.py:0
@@ -838,13 +826,11 @@ msgstr ""
 msgid ""
 "Unsupported file format \"{}\", import only supports CSV, ODS, XLS and XLSX"
 msgstr ""
-"Dəstəklənməyən fayl formatı \"{}\", idxal yalnız CSV, ODS, XLS və XLSX-i "
-"dəstəkləyir"
 
 #. module: base_import
 #: model:ir.model,name:base_import.model_res_users
 msgid "Users"
-msgstr "İstifadəçilər"
+msgstr ""
 
 #. module: base_import
 #: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_char__value
@@ -861,12 +847,12 @@ msgstr "İstifadəçilər"
 #: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_o2m__value
 #: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_o2m_child__value
 msgid "Value"
-msgstr "Dəyər"
+msgstr ""
 
 #. module: base_import
 #: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_float__value2
 msgid "Value2"
-msgstr "Dəyər2"
+msgstr ""
 
 #. module: base_import
 #. openerp-web
@@ -884,8 +870,6 @@ msgid ""
 "You can not import images via URL, check with your administrator or support "
 "for the reason."
 msgstr ""
-"URL vasitəsilə şəkillər yerləşdirə bilməzsiniz, səbəbi üçün "
-"administratorunuzla və ya dəsttək qrupunuz ilə əlaqə saxlayın."
 
 #. module: base_import
 #. openerp-web
@@ -898,7 +882,7 @@ msgstr ""
 #: code:addons/base_import/models/base_import.py:0
 #, python-format
 msgid "You must configure at least one field to import"
-msgstr "Siz idxal üçün ən azı bir sahə tənzimləməlisiniz"
+msgstr ""
 
 #. module: base_import
 #. openerp-web
@@ -925,4 +909,4 @@ msgstr ""
 #: code:addons/base_import/models/base_import.py:0
 #, python-format
 msgid "unknown error code %s"
-msgstr "naməlum xəta kodu %s"
+msgstr ""

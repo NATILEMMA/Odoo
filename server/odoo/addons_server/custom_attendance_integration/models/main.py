@@ -71,7 +71,7 @@ class FIlteredHrAttendance(models.Model):
     def _default_employee(self):
         return self.env.user.employee_id
     date = fields.Date()
-    month_y = fields.Char()
+    month_y = fields.Char(translate=True)
     employee_id = fields.Many2one('hr.employee', string="Employee", default=_default_employee, required=True, ondelete='cascade', index=True)
     department_id = fields.Many2one('hr.department', string="Department", related="employee_id.department_id",
         readonly=True)
@@ -193,7 +193,7 @@ class AttendanceShiftControl(models.Model):
     _name = "attendance.shift.control"
     _description = "Attendance Shift Control"
 
-    name = fields.Char()
+    name = fields.Char( translate=True)
     shift_type = fields.Many2one('shift.type')
     time_from = fields.Float(string='Time Form', compute="_compute_time")
     time_to = fields.Float(string='Time To', compute="_compute_time")
@@ -202,17 +202,17 @@ class ShiftType(models.Model):
     _name = "shift.type"
     _description = "Shift Type"
 
-    name = fields.Char('Shift Name')
+    name = fields.Char('Shift Name',translate=True)
 
 class AttendanceCheckTimeControl(models.Model):
     _name = "check.time"
     _description = "Attendance Check Time"
 
-    name = fields.Char()
-    time_from = fields.Char(string='Time From')
-    time_to = fields.Char(string='Time TO')
-    time_f = fields.Char(string='Time From')
-    time_t = fields.Char(string='Time TO')
+    name = fields.Char( translate=True)
+    time_from = fields.Char(string='Time From', translate=True)
+    time_to = fields.Char(string='Time TO', translate=True)
+    time_f = fields.Char(string='Time From', translate=True)
+    time_t = fields.Char(string='Time TO', translate=True)
     punching_type = fields.Selection(CHECKTIME, string='Punching Type')
     state = fields.Selection(STATES,
                               'Status',
@@ -325,7 +325,7 @@ class SpecailCaseAbsent(models.Model):
     reason_cat = fields.Many2one('specail.reason.categories', string='Reason Category')
     date_from = fields.Date(string="Date From", required=True)
     date_to = fields.Date(string="Date To",required=True)
-    reason = fields.Text(tracking=True)
+    reason = fields.Text(tracking=True, translate=True)
     month_y = fields.Char()
     state = fields.Selection(S_STATES,
                               'Status',

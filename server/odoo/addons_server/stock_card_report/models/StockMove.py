@@ -9,17 +9,20 @@ class StockMove(models.Model):
     cost_price = fields.Float(
         'Balance unit Price at time of move', help="This the balance unit price of the product at the time of purchase.", copy=False, default=0)
     
-    @api.model
-    def create(self, vals):
-         
-        print("************************** before creation",product.standard_price)
-        product = self.env['product.product'].search([('id','=',vals['product_id'])])
-
-        move = super(StockMove, self).create(vals)
-        print("************************** after creation",product.standard_price)
-        return move
-    
-    
-    
         
+    
+    
 
+class StockPicking(models.Model):
+    _inherit = "stock.picking"
+
+    
+    def action_done(self):
+        ret = super().action_done()
+
+        for loop in self.move_ids_without_package:
+            print("in stock card report","product",loop.product_id.name,"product value",loop.product_id.standard_price,"unite price",loop.cost_price)
+            loop.cost_price = loop.product_id.standard_price
+            print("stock move ",loop,loop.cost_price)
+        
+        return ret

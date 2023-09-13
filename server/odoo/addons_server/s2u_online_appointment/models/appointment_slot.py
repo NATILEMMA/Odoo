@@ -8,14 +8,14 @@ class Times(models.Model):
     _name = "times"
     _description = "This model will create times"
 
-    name = fields.Char()
+    name = fields.Char(translate=True)
     time = fields.Float(required=True)
 
 class Duration(models.Model):
     _name = "duration"
     _description = "This model will create duration time"
 
-    name = fields.Char()
+    name = fields.Char(translate=True)
     time = fields.Float(required=True)
 
 class AppointmentSlot(models.Model):

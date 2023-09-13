@@ -2,6 +2,7 @@
 <odoo>
 
     <record id="base.module_category_operations_project" model="ir.module.category">
+        <field name="name">Planning</field>
         <field name="description">Helps you manage your projects and tasks by tracking them, generating plannings, etc...</field>
         <field name="sequence">3</field>
     </record>
@@ -25,7 +26,7 @@
     </record>
 
     <record id="group_project_rating" model="res.groups">
-        <field name="name">Use Rating on Project</field>
+        <field name="name">Use Rating on Planning</field>
         <field name="category_id" ref="base.module_category_hidden"/>
     </record>
 
@@ -35,21 +36,21 @@
     </record>
 
     <record model="ir.rule" id="project_comp_rule">
-        <field name="name">Project: multi-company</field>
+        <field name="name">Planning: multi-company</field>
         <field name="model_id" ref="model_project_project"/>
         <field name="global" eval="True"/>
         <field name="domain_force">[('company_id', 'in', company_ids)]</field>
     </record>
 
     <record model="ir.rule" id="project_project_manager_rule">
-        <field name="name">Project: project manager: see all</field>
+        <field name="name">Planning: project manager: see all</field>
         <field name="model_id" ref="model_project_project"/>
         <field name="domain_force">[(1, '=', 1)]</field>
         <field name="groups" eval="[(4,ref('project.group_project_manager'))]"/>
     </record>
 
     <record model="ir.rule" id="project_public_members_rule">
-        <field name="name">Project: employees: following required for follower-only projects</field>
+        <field name="name">Planning: employees: following required for follower-only projects</field>
         <field name="model_id" ref="model_project_project"/>
         <field name="domain_force">['|',
                                         ('privacy_visibility', '!=', 'followers'),
@@ -62,14 +63,14 @@
     </record>
 
     <record model="ir.rule" id="task_comp_rule">
-        <field name="name">Project/Task: multi-company</field>
+        <field name="name">Planning/Task: multi-company</field>
         <field name="model_id" ref="model_project_task"/>
         <field name="global" eval="True"/>
         <field name="domain_force">[('company_id', 'in', company_ids)]</field>
     </record>
 
     <record model="ir.rule" id="task_visibility_rule">
-        <field name="name">Project/Task: employees: follow required for follower-only projects</field>
+        <field name="name">Planning/Task: employees: follow required for follower-only projects</field>
         <field name="model_id" ref="model_project_task"/>
         <field name="domain_force">[
         '|',
@@ -85,7 +86,7 @@
     </record>
 
     <record model="ir.rule" id="project_manager_all_project_tasks_rule">
-        <field name="name">Project/Task: project manager: see all</field>
+        <field name="name">Planning/Task: project manager: see all</field>
         <field name="model_id" ref="model_project_task"/>
         <field name="domain_force">[(1, '=', 1)]</field>
         <field name="groups" eval="[(4,ref('project.group_project_manager'))]"/>
@@ -100,7 +101,7 @@
 
      <!-- Portal -->
     <record id="project_project_rule_portal" model="ir.rule">
-        <field name="name">Project: portal users: portal and following</field>
+        <field name="name">Planning: portal users: portal and following</field>
         <field name="model_id" ref="project.model_project_project"/>
         <field name="domain_force">[
             '&amp;',
@@ -111,7 +112,7 @@
     </record>
 
     <record id="project_task_rule_portal" model="ir.rule">
-        <field name="name">Project/Task: portal users: (portal and following project) or (portal and following task)</field>
+        <field name="name">Planning/Task: portal users: (portal and following project) or (portal and following task)</field>
         <field name="model_id" ref="project.model_project_task"/>
         <field name="domain_force">[
         '|',

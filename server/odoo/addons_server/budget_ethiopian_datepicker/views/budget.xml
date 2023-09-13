@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+   <data>
+   
+          <!-- Budget Budget  -->
+
+    <record id="view_budget_bugdet_form_inherit_local" model="ir.ui.view">
+      <field name="name">budget.budget.form.inherit.local</field>
+      <field name="model">budget.budget</field>
+      <field name="inherit_id" ref="budget.crossovered_budget_view_form"/>
+      <field name="arch" type="xml">
+
+      
+          <xpath expr="//field[@name='date_from']" position="replace">
+                  <field name="is_pagum_from" invisible="1"/>
+                  <field name="is_pagum_to" invisible="1"/>
+  
+                  <field  name="date_from" attrs="{'readonly':[('state','!=','draft')]}"   class="col-50 oe_inline" colspan="3" groups="EthiopianCalendar.group_gregory"/>
+                  <field  name="ethiopian_from" class="oe_read_only oe_inline" string="Date From" style=" float:left" attrs="{'invisible': ['|', ('is_pagum_from', '=',False)],'readonly':[('state','!=','draft')]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                  <field  name="pagum_from" class="oe_read_only oe_inline"  string="Date From" style=" float:left"  attrs="{'invisible': ['|',('is_pagum_from', '!=',False)  ],'readonly':[('state','!=','draft')]}"  groups="EthiopianCalendar.group_ethio_datepicker"/>
+                  -
+                  <div style="margin-bottom:40px;margin-top:-20px;margin-left:10px;margin-right:0px">
+                  <widget name="ethiopian_calander_widget"  style=" float:left;width:226px;" class="oe_edit_only "  groups="EthiopianCalendar.group_ethio_datepicker"/>
+                  </div>
+             
+          </xpath>
+          <xpath expr="//field[@name='date_to']" position="replace">
+              <field  name="date_to" attrs="{'readonly':[('state','!=','draft')]}"  class="col-50 oe_inline" colspan="3" groups="EthiopianCalendar.group_gregory"/>
+              <field  name="ethiopian_to" class="oe_read_only oe_inline" string="Date TO" style=" float:left"   attrs="{'invisible': ['|', ('is_pagum_to', '=',False) ],'readonly':[('state','!=','draft')]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+              <field  name="pagum_to" class="oe_read_only oe_inline" string="Date To" style=" float:left"  attrs="{'invisible': ['|',('is_pagum_to', '!=',False) ],'readonly':[('state','!=','draft')]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+            
+              <div style="margin-bottom:50px;margin-top:-14px;margin-left:10px;margin-right:0px">
+              <widget name="ethiopian_calander_widget_two"  style=" float:left;width:226px;" class="oe_edit_only" groups="EthiopianCalendar.group_ethio_datepicker"/>
+              </div>
+      
+          </xpath>
+
+          <xpath expr = "//field[@name ='budget_line']/tree/field[@name='date_from']" position = "replace" > 
+            <field name="is_pagum_from" invisible="1"/>
+            <field  name="date_from"  colspan="3" groups="EthiopianCalendar.group_gregory"/>
+            <field  name="ethiopian_from"  string="Date From" attrs="{'invisible': ['|', ('is_pagum_from', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+            <!-- <field  name="pagum_from"  string="Date From" attrs="{'invisible': ['|',('is_pagum_from', '!=',False)]}"  groups="EthiopianCalendar.group_ethio_datepicker"/> -->
+            
+          </xpath>
+          <xpath expr = "//field[@name ='budget_line']/tree/field[@name='date_to']" position = "replace" > 
+            <field name="is_pagum_to" invisible="1"/>
+            <field  name="date_to"  colspan="3" groups="EthiopianCalendar.group_gregory"/>
+            <field  name="ethiopian_to" string="Date TO" attrs="{'invisible': ['|', ('is_pagum_to', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+            <!-- <field  name="pagum_to"  string="Date To"  attrs="{'invisible': ['|',('is_pagum_to', '!=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker"/> -->
+            
+          </xpath>
+          <xpath expr = "//field[@name ='budget_line']/tree/field[@name='paid_date']" position = "replace" > 
+            <field name="is_pagum_three" invisible="1"/>
+            <field  name="paid_date"  colspan="3" groups="EthiopianCalendar.group_gregory"/>
+            <field  name="ethiopian_three" string="Paid Date" attrs="{'invisible': ['|', ('is_pagum_three', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+            <!-- <field  name="pagum_three"  string="Paid Date"  attrs="{'invisible': ['|',('is_pagum_three', '!=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker"/> -->
+            
+          </xpath>
+        
+          
+      </field>
+  </record>
+  <!-- <record id="view_reconciliation_time_frame_tree_inherit_local" model="ir.ui.view">
+      <field name="name">budget.budget.tree.inherit.local</field>
+      <field name="model">budget.budget</field>
+      <field name="inherit_id" ref="reconciliation.reconciliation_time_fream_tree"/>
+      <field name="arch" type="xml">
+
+
+          <xpath expr="//field[@name='date_from']" position="replace">
+                  <field name="is_pagum_from" invisible="1"/>
+                  <field name="is_pagum_to" invisible="1"/>
+
+                  <field  name="date_from"   groups="EthiopianCalendar.group_gregory"/>
+                  <field  name="ethiopian_from"  string="Date From" attrs="{'invisible': ['|', ('is_pagum_from', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                 <field  name="pagum_from"  string="Date From"   optional="True"  groups="EthiopianCalendar.group_ethio_datepicker"/>
+          </xpath>
+          <xpath expr="//field[@name='date_to']" position="replace">
+              <field  name="date_to"   groups="EthiopianCalendar.group_gregory"/>
+              <field  name="ethiopian_to"  string="Date TO"   attrs="{'invisible': ['|', ('is_pagum_to', '=',False) ]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+             <field  name="pagum_to"  string="Date To"  optional="True" groups="EthiopianCalendar.group_ethio_datepicker"/>
+          </xpath>
+
+
+      </field>
+  </record> -->
+
+         <!-- Budget Transfer Form View  \ Date Widget Modification -->
+
+
+
+         <record id="view_budgettransfer_form_inherit_local" model="ir.ui.view">
+            <field name="name">budget.transfer.inherit.local</field>
+            <field name="model">budget.transfer</field>
+            <field name="inherit_id" ref="budget_transfer_2.view_budget_transfer_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date']" position="replace">
+                  <field  name="ethiopian_from"   string="Date" style=" float:left;" 
+                  attrs="{'readonly': [('state', 'in',['requested','approved','canceled'])], 'invisible': [('is_pagum_from', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                  <field  name="date"  attrs="{'readonly': [('state', 'in',['requested','approved','canceled'])]}"  groups="EthiopianCalendar.group_gregory"/>
+                  <field  name="pagum_from" class="oe_read_only"  string="Date " style=" float:left"  attrs="{'invisible': ['|',('is_pagum_from', '!=',False)  ]}"  groups="EthiopianCalendar.group_ethio_datepicker"/>
+                  <field name="is_pagum_from" invisible="1"/>
+                   <div>
+                   </div>
+                  <div style="margin-bottom:40px;margin-top:-32px; width: 30%;margin-left:0px;margin-right:0px"  attrs="{'invisible': [('state', 'in',['requested','approved','canceled'])]}" >
+                  <widget name="ethiopian_calander_widget"  style=" float:left;width:237px;" class="oe_edit_only oe_field"  groups="EthiopianCalendar.group_ethio_datepicker"/>
+                  </div>
+                </xpath>
+            </field>
+        </record>
+
+       
+         <!-- Budget Management Form View  \ Date Widget Modification -->
+
+         <record id="view_budget_planning_form_inherit_local" model="ir.ui.view">
+            <field name="name">budget.planning.inherit.local</field>
+            <field name="model">budget.planning</field>
+            <field name="inherit_id" ref="budget.view_budget_planning_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date']" position="replace">
+                  <field  name="ethiopian_from"   string="Date" style=" float:left;" 
+                  attrs="{'readonly': [('state', 'in',['requested','dep_approved','fin_approved','ceo_approved','done','rejected'])], 'invisible': [('is_pagum_from', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                  <field  name="date"  attrs="{'readonly': [('state', 'in',['requested','dep_approved','fin_approved','ceo_approved','done','rejected'])]}"  groups="EthiopianCalendar.group_gregory"/>
+                  <field  name="pagum_from" class="oe_read_only"  string="Date " style=" float:left"  attrs="{'invisible': ['|',('is_pagum_from', '!=',False)  ]}"  groups="EthiopianCalendar.group_ethio_datepicker"/>
+                  <field name="is_pagum_from" invisible="1"/>
+                   <div>
+                   </div>
+                  <div style="margin-bottom:40px;margin-top:-32px; width: 30%;margin-left:0px;margin-right:0px"  attrs="{'invisible': [('state', 'in',['requested','dep_approved','fin_approved','ceo_approved','done','rejected'])]}" >
+                  <widget name="ethiopian_calander_widget"  style=" float:left;width:237px;" class="oe_edit_only oe_field"  groups="EthiopianCalendar.group_ethio_datepicker"/>
+                  </div>
+                </xpath>
+            </field>
+        </record>
+
+         <!-- Budget Managment Tree View  \ Date Widget  Modification-->
+
+<!-- 
+        <record id="view_budget_planning_tree_inherit_local" model="ir.ui.view">
+            <field name="name">budget.planning.tree.inherit.local</field>
+            <field name="model">budget.planning</field>
+            <field name="inherit_id" ref="budget.view_budget_planning_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date']" position="replace">
+                        <field  name="date"   groups="EthiopianCalendar.group_gregory"/>
+                        <field  name="ethiopian_from"  string="Date" attrs="{'invisible': ['|', ('is_pagum_from', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                        <field name="is_pagum_from" invisible="1"/>
+                </xpath>
+            </field>
+        </record> -->
+
+
+  </data>
+
+</odoo>

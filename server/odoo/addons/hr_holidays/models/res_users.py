@@ -14,8 +14,8 @@ class User(models.Model):
     leave_date_to = fields.Date(related='employee_id.leave_date_to')
     current_leave_state = fields.Selection(related='employee_id.current_leave_state')
     is_absent = fields.Boolean(related='employee_id.is_absent')
-    allocation_used_display = fields.Char(related='employee_id.allocation_used_display')
-    allocation_display = fields.Char(related='employee_id.allocation_display')
+    allocation_used_display = fields.Char(related='employee_id.allocation_used_display', translate=True)
+    allocation_display = fields.Char(related='employee_id.allocation_display', translate=True)
 
     def __init__(self, pool, cr):
         """ Override of __init__ to add access rights.

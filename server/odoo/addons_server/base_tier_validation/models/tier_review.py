@@ -8,7 +8,7 @@ class TierReview(models.Model):
     _name = "tier.review"
     _description = "Tier Review"
 
-    name = fields.Char(related="definition_id.name", readonly=True)
+    name = fields.Char(related="definition_id.name", readonly=True, translate=True)
     status = fields.Selection(
         selection=[
             ("pending", "Pending"),
@@ -17,7 +17,7 @@ class TierReview(models.Model):
         ],
         default="pending",
     )
-    model = fields.Char(string="Related Document Model", index=True)
+    model = fields.Char(string="Related Document Model", index=True, translate=True)
     res_id = fields.Integer(string="Related Document ID", index=True)
     definition_id = fields.Many2one(comodel_name="tier.definition")
     review_type = fields.Selection(related="definition_id.review_type", readonly=True)
@@ -36,7 +36,7 @@ class TierReview(models.Model):
     requested_by = fields.Many2one(comodel_name="res.users")
     reviewed_date = fields.Datetime(string="Validation Date")
     has_comment = fields.Boolean(related="definition_id.has_comment", readonly=True)
-    comment = fields.Char(string="Comments")
+    comment = fields.Char(string="Comments", translate=True)
     can_review = fields.Boolean(
         compute="_compute_can_review",
         store=True,

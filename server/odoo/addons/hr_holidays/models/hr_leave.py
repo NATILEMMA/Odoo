@@ -102,7 +102,7 @@ class HolidaysRequest(models.Model):
         return new_values
 
     # description
-    name = fields.Char('Description')
+    name = fields.Char('Description', translate=True)
     state = fields.Selection([
         ('draft', 'To Submit'),
         ('cancel', 'Cancelled'),  # YTI This state seems to be unused. To remove
@@ -116,7 +116,7 @@ class HolidaysRequest(models.Model):
         "\nThe status is 'Refused', when time off request is refused by manager." +
         "\nThe status is 'Approved', when time off request is approved by manager.")
     payslip_status = fields.Boolean('Reported in last payslips', help='Green this button when the time off has been taken into account in the payslip.', copy=False)
-    report_note = fields.Text('HR Comments', copy=False, groups="hr_holidays.group_hr_holidays_manager")
+    report_note = fields.Text('HR Comments', copy=False, groups="hr_holidays.group_hr_holidays_manager", translate=True)
     user_id = fields.Many2one('res.users', string='User', related='employee_id.user_id', related_sudo=True, compute_sudo=True, store=True, default=lambda self: self.env.uid, readonly=True)
     manager_id = fields.Many2one('hr.employee')
     # leave type configuration
@@ -142,7 +142,7 @@ class HolidaysRequest(models.Model):
     department_id = fields.Many2one(
         'hr.department', string='Department', readonly=True,
         states={'draft': [('readonly', False)], 'confirm': [('readonly', False)]})
-    notes = fields.Text('Reasons', readonly=True, states={'draft': [('readonly', False)], 'confirm': [('readonly', False)]})
+    notes = fields.Text('Reasons', readonly=True, states={'draft': [('readonly', False)], 'confirm': [('readonly', False)]}, translate=True)
     # duration
     date_from = fields.Datetime(
         'Start Date', readonly=True, index=True, copy=False, required=True,
@@ -162,7 +162,7 @@ class HolidaysRequest(models.Model):
         'Duration in hours', compute='_compute_number_of_hours_display', readonly=True,
         help='Number of hours of the time off request according to your working schedule. Used for interface.')
     duration_display = fields.Char('Requested (Days/Hours)', compute='_compute_duration_display',
-        help="Field allowing to see the leave request duration in days or hours depending on the leave_type_request_unit")    # details
+        help="Field allowing to see the leave request duration in days or hours depending on the leave_type_request_unit", translate=True)    # details
     # details
     meeting_id = fields.Many2one('calendar.event', string='Meeting', copy=False)
     parent_id = fields.Many2one('hr.leave', string='Parent', copy=False)

@@ -40,7 +40,7 @@ msgstr "የአካውንት ማስታረቅ መግብር"
 #. module: stock_account
 #: model_terms:ir.ui.view,arch_db:stock_account.view_category_property_form
 msgid "Account Stock Properties"
-msgstr "የመለያ አክሲዮን ንብረቶች"
+msgstr "የመለያ እቃዎች ንብረቶች"
 
 #. module: stock_account
 #: model:ir.model.fields,field_description:stock_account.field_stock_inventory__accounting_date
@@ -117,7 +117,7 @@ msgid ""
 "Cannot find a stock input account for the product %s. You must define one on"
 " the product category, or on the location, before processing this operation."
 msgstr ""
-"ለምርቱ %s የአክሲዮን ኢንፎርም ሂሳብ ማግኘት አይቻልም አንድ ላይ መወሰን አለብዎት"
+"ለምርቱ %s የእቃዎች ኢንፎርም ሂሳብ ማግኘት አይቻልም አንድ ላይ መወሰን አለብዎት"
 "ይህንን አሠራር ከመስራትዎ በፊት የምርት ምድብ ወይም ቦታ ላይ"
 
 #. module: stock_account
@@ -128,7 +128,7 @@ msgid ""
 "on the product category, or on the location, before processing this "
 "operation."
 msgstr ""
-"ለምርቱ %s የአክሲዮን ውጤት ሂሳብ ማግኘት አልተቻለም. አንዱን ለይተህ ልትለግሰው ይገባል "
+"ለምርቱ %s የእቃዎች ውጤት ሂሳብ ማግኘት አልተቻለም. አንዱን ለይተህ ልትለግሰው ይገባል "
 "ይህንን ከመስራት በፊት በምርት ምድብ ወይም ቦታ ላይ "
 "ክወና."
 
@@ -238,7 +238,7 @@ msgstr ""
 #. module: stock_account
 #: model:ir.model.fields,help:stock_account.field_stock_valuation_layer__uom_id
 msgid "Default unit of measure used for all stock operations."
-msgstr "ለሁሉም የአክሲዮን ስራዎች የሚውል ነባሪ የመለኪያ ክፍል።"
+msgstr "ለሁሉም የእቃዎች ስራዎች የሚውል ነባሪ የመለኪያ ክፍል።"
 
 #. module: stock_account
 #: model:ir.model.fields,field_description:stock_account.field_stock_valuation_layer__description
@@ -290,8 +290,8 @@ msgid ""
 "If cost price is increased, stock variation account will be debited and stock output account will be credited with the value = (difference of amount * quantity available).\n"
 "If cost price is decreased, stock variation account will be creadited and stock input account will be debited."
 msgstr ""
-"የወጪ ዋጋ ከተጨመረ፣ የአክሲዮን ልዩነት መለያ ተቀናሽ ይደረጋል እና የአክሲዮን ውፅዓት ሒሳብ ከዋጋው = (የመጠኑ * ብዛት ያለው ልዩነት) ገቢ ይደረጋል።\n"
-"የዋጋው ዋጋ ከተቀነሰ የአክሲዮን ልዩነት መለያ ይፈጠራል እና የአክሲዮን ግብዓት ሂሳብ ይቆረጣል።"
+"የወጪ ዋጋ ከተጨመረ፣ የእቃዎች ልዩነት መለያ ተቀናሽ ይደረጋል እና የእቃዎች ውፅዓት ሒሳብ ከዋጋው = (የመጠኑ * ብዛት ያለው ልዩነት) ገቢ ይደረጋል።\n"
+"የዋጋው ዋጋ ከተቀነሰ የእቃዎች ልዩነት መለያ ይፈጠራል እና የእቃዎች ግብዓት ሂሳብ ይቆረጣል።"
 
 #. module: stock_account
 #: model:ir.model.fields,help:stock_account.field_stock_valuation_layer__active
@@ -427,7 +427,7 @@ msgstr "የእየቁሶች መደብ"
 #. module: stock_account
 #: model:ir.model,name:stock_account.model_stock_move_line
 msgid "Product Moves (Stock Move Line)"
-msgstr "የምርት እንቅስቃሴዎች (የአክሲዮን ማንቀሳቀስ መስመር)"
+msgstr "የምርት እንቅስቃሴዎች (የእቃዎች ማንቀሳቀስ መስመር)"
 
 #. module: stock_account
 #: model:ir.model.fields,field_description:stock_account.field_stock_valuation_layer__product_tmpl_id
@@ -504,12 +504,12 @@ msgstr ""
 #. module: stock_account
 #: model:ir.model.fields,field_description:stock_account.field_product_category__property_stock_account_input_categ_id
 msgid "Stock Input Account"
-msgstr "የአክሲዮን ግቤት መለያ"
+msgstr "የእቃዎች ግቤት መለያ"
 
 #. module: stock_account
 #: model:ir.model.fields,field_description:stock_account.field_product_category__property_stock_journal
 msgid "Stock Journal"
-msgstr "የአክሲዮን ጆርናል"
+msgstr "የእቃዎች ጆርናል"
 
 #. module: stock_account
 #: model:ir.model,name:stock_account.model_stock_move
@@ -521,7 +521,7 @@ msgstr "ወደ ግምጃ ቤት የሚገቡና የሚወጡ እቃዎች"
 #. module: stock_account
 #: model:ir.model.fields,field_description:stock_account.field_product_category__property_stock_account_output_categ_id
 msgid "Stock Output Account"
-msgstr "የአክሲዮን ውፅዓት መለያ"
+msgstr "የእቃዎች ውፅዓት መለያ"
 
 #. module: stock_account
 #: model:ir.model,name:stock_account.model_stock_quantity_history
@@ -531,22 +531,22 @@ msgstr "የክምችት ብዛት ታሪክ"
 #. module: stock_account
 #: model:ir.actions.act_window,name:stock_account.stock_valuation_layer_action
 msgid "Stock Valuation"
-msgstr "የአክሲዮን ዋጋ"
+msgstr "የእቃዎች ዋጋ"
 
 #. module: stock_account
 #: model:ir.model.fields,field_description:stock_account.field_product_category__property_stock_valuation_account_id
 msgid "Stock Valuation Account"
-msgstr "የአክሲዮን ዋጋ መለያ"
+msgstr "የእቃዎች ዋጋ መለያ"
 
 #. module: stock_account
 #: model:ir.model.fields,field_description:stock_account.field_stock_location__valuation_in_account_id
 msgid "Stock Valuation Account (Incoming)"
-msgstr "የአክሲዮን ዋጋ መለያ (ገቢ)"
+msgstr "የእቃዎች ዋጋ መለያ (ገቢ)"
 
 #. module: stock_account
 #: model:ir.model.fields,field_description:stock_account.field_stock_location__valuation_out_account_id
 msgid "Stock Valuation Account (Outgoing)"
-msgstr "የአክሲዮን ዋጋ መለያ (ወጪ)"
+msgstr "የእቃዎች ዋጋ መለያ (ወጪ)"
 
 #. module: stock_account
 #: model:ir.model,name:stock_account.model_stock_valuation_layer
@@ -555,7 +555,7 @@ msgstr "የአክሲዮን ዋጋ መለያ (ወጪ)"
 #: model:ir.model.fields,field_description:stock_account.field_stock_move__stock_valuation_layer_ids
 #: model:ir.model.fields,field_description:stock_account.field_stock_valuation_layer__stock_valuation_layer_ids
 msgid "Stock Valuation Layer"
-msgstr "የአክሲዮን ዋጋ ሽፋን"
+msgstr "የእቃዎች ዋጋ ሽፋን"
 
 #. module: stock_account
 #: model:ir.model.fields,help:stock_account.field_account_move_line__is_anglo_saxon_line
@@ -569,7 +569,7 @@ msgid ""
 "The Stock Input and/or Output accounts cannot be the same than the Stock "
 "Valuation account."
 msgstr ""
-"የአክሲዮን ግቤት እና/ወይም የውጤት መለያዎች ከአክሲዮን ጋር ተመሳሳይ ሊሆኑ አይችሉም።"
+"የእቃዎች ግቤት እና/ወይም የውጤት መለያዎች ከእቃዎች ጋር ተመሳሳይ ሊሆኑ አይችሉም።"
 "የዋጋ መለያ።"
 
 #. module: stock_account
@@ -668,7 +668,7 @@ msgstr ""
 "ለእውነተኛ ጊዜ የእቃ ግምት ዋጋ ጥቅም ላይ ይውላል። ምናባዊ ቦታ ላይ ሲዋቀር (ያልሆነ"
 "ውስጣዊ ዓይነት) ይህ መለያ የምርቶችን ዋጋ ለመያዝ ጥቅም ላይ ይውላል"
 "ከውስጣዊ ቦታ ወደዚህ ቦታ መወሰድ በ ፋንታ"
-"አጠቃላይ የአክሲዮን ውፅዓት መለያ በምርቱ ላይ ተቀናብሯል። ይህ ለ ምንም ውጤት የለውም።"
+"አጠቃላይ የእቃዎች ውፅዓት መለያ በምርቱ ላይ ተቀናብሯል። ይህ ለ ምንም ውጤት የለውም።"
 "ውስጣዊ ቦታዎች"
 
 #. module: stock_account
@@ -683,7 +683,7 @@ msgstr ""
 "ለእውነተኛ ጊዜ የእቃ ግምት ዋጋ ጥቅም ላይ ይውላል። ምናባዊ ቦታ ላይ ሲዋቀር (ያልሆነ"
 "የውስጥ ዓይነት) ይህ መለያ የምርቶችን ዋጋ ለመያዝ ጥቅም ላይ ይውላል "
 "ከዚህ ቦታ ወጥተው ወደ ውስጣዊ ቦታ መወሰድ በ ፈንታ "
-"በምርት ላይ የተቀመጠው አጠቃላይ የአክሲዮን ውፅዓት መለያ። ይህ ምንም ውጤት የለውም"
+"በምርት ላይ የተቀመጠው አጠቃላይ የእቃዎች ውፅዓት መለያ። ይህ ምንም ውጤት የለውም"
 "ውስጣዊ ቦታዎች"
 
 #. module: stock_account
@@ -736,7 +736,7 @@ msgid ""
 "                unless there is a specific valuation account set on the source location. This is the default value for all products in this category.\n"
 "                It can also directly be set on each product."
 msgstr ""
-"አውቶማቲክ የእቃ ግምትን በሚሰሩበት ጊዜ ለሁሉም ገቢ የአክሲዮን እንቅስቃሴዎች አቻ ጆርናል ንጥሎች በዚህ መለያ ውስጥ ይለጠፋሉ፣\n"
+"አውቶማቲክ የእቃ ግምትን በሚሰሩበት ጊዜ ለሁሉም ገቢ የእቃዎች እንቅስቃሴዎች አቻ ጆርናል ንጥሎች በዚህ መለያ ውስጥ ይለጠፋሉ፣\n"
 "በምንጭ ቦታ ላይ የተወሰነ የግምገማ መለያ ከሌለ በስተቀር። ይህ በዚህ ምድብ ውስጥ ላሉ ሁሉም ምርቶች ነባሪ እሴት ነው።\n"
 "እንዲሁም በእያንዳንዱ ምርት ላይ በቀጥታ ሊዘጋጅ ይችላል."
 
@@ -747,7 +747,7 @@ msgid ""
 "                unless there is a specific valuation account set on the destination location. This is the default value for all products in this category.\n"
 "                It can also directly be set on each product."
 msgstr ""
-"ራስ-ሰር የእቃ ግምትን በሚሰሩበት ጊዜ ለሁሉም ወጪ የአክሲዮን እንቅስቃሴዎች አቻ ጆርናል ንጥሎች በዚህ መለያ ውስጥ ይለጠፋሉ፣\n"
+"ራስ-ሰር የእቃ ግምትን በሚሰሩበት ጊዜ ለሁሉም ወጪ የእቃዎች እንቅስቃሴዎች አቻ ጆርናል ንጥሎች በዚህ መለያ ውስጥ ይለጠፋሉ፣\n"
 " በመድረሻ ቦታ ላይ የተወሰነ የግምገማ መለያ ከሌለ በስተቀር ይህ በዚህ ምድብ ውስጥ ላሉ ሁሉም ምርቶች ነባሪ ዋጋ ነው።\n"
 "እንዲሁም በእያንዳንዱ ምርት ላይ በቀጥታ ሊዘጋጅ ይችላል."
 
@@ -758,7 +758,7 @@ msgid ""
 "which entries will be automatically posted when stock moves are processed."
 msgstr ""
 "ራስ-ሰር የእቃ ግምትን በሚሰሩበት ጊዜ ይህ በ ውስጥ የሂሳብ አያያዝ ጆርናል ነው"
-"የአክሲዮን እንቅስቃሴዎች ሲከናወኑ የትኛዎቹ ግቤቶች በራስ-ሰር ይለጠፋሉ።"
+"የእቃዎች እንቅስቃሴዎች ሲከናወኑ የትኛዎቹ ግቤቶች በራስ-ሰር ይለጠፋሉ።"
 
 #. module: stock_account
 #: code:addons/stock_account/models/product.py:0
@@ -777,7 +777,7 @@ msgid ""
 "You don't have any stock journal defined on your product category, check if "
 "you have installed a chart of accounts."
 msgstr ""
-"በምርትዎ ምድብ ላይ የተገለጸ ምንም የአክሲዮን ጆርናል የለዎትም፣ ካለ ያረጋግጡ"
+"በምርትዎ ምድብ ላይ የተገለጸ ምንም የእቃዎች ጆርናል የለዎትም፣ ካለ ያረጋግጡ"
 "የመለያዎች ገበታ ጭነዋል።"
 
 #. module: stock_account
@@ -790,7 +790,7 @@ msgid ""
 "You don't have any stock valuation account defined on your product category."
 " You must define one before processing this operation."
 msgstr ""
-"በምርት ምድብዎ ላይ የተገለጸ ምንም አይነት የአክሲዮን ዋጋ መለያ የለዎትም።"
+"በምርት ምድብዎ ላይ የተገለጸ ምንም አይነት የእቃዎች ዋጋ መለያ የለዎትም።"
 "ይህን ክዋኔ ከማቀናበርዎ በፊት አንዱን መግለፅ አለብዎት።"
 
 #. module: stock_account

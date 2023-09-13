@@ -522,13 +522,13 @@ msgid ""
 "A service is a non-material product you provide."
 msgstr ""
 "ሊከማች የሚችል ምርት እርስዎ ክምችት የሚያስተዳድሩበት ምርት ነው።\n "
-"የኢንቬንቶሪ አፕሊኬሽኑ መጫን አለበት።የሚበላ ምርት አክሲዮን የማይተዳደርበት ምርት ነው።\n"
+"የኢንቬንቶሪ አፕሊኬሽኑ መጫን አለበት።የሚበላ ምርት እቃዎች የማይተዳደርበት ምርት ነው።\n"
 "አገልግሎት እርስዎ የሚያቀርቡት ቁሳቁስ ያልሆነ ምርት ነው።"
 
 #. module: stock
 #: model:res.groups,name:stock.group_warning_stock
 msgid "A warning can be set on a partner (Stock)"
-msgstr "ማስጠንቀቂያ በባልደረባ (አክሲዮን) ላይ ሊዘጋጅ ይችላል"
+msgstr "ማስጠንቀቂያ በባልደረባ (እቃዎች) ላይ ሊዘጋጅ ይችላል"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_rule__action
@@ -1402,7 +1402,7 @@ msgstr "አዲስ ምርት ይፍጠሩ"
 #. module: stock
 #: model_terms:ir.actions.act_window,help:stock.stock_move_action
 msgid "Create a new stock movement"
-msgstr "አዲስ የአክሲዮን እንቅስቃሴ ይፍጠሩ"
+msgstr "አዲስ የእቃዎች እንቅስቃሴ ይፍጠሩ"
 
 #. module: stock
 #: model_terms:ir.actions.act_window,help:stock.action_picking_form
@@ -1537,7 +1537,7 @@ msgstr "መስቀለኛ መንገድ"
 #: model:ir.actions.act_window,name:stock.location_open_quants
 #: model_terms:ir.ui.view,arch_db:stock.view_location_form
 msgid "Current Stock"
-msgstr "የአሁኑ አክሲዮን"
+msgstr "የአሁኑ እቃዎች"
 
 #. module: stock
 #: model:ir.model.fields,help:stock.field_product_product__qty_available
@@ -1661,7 +1661,7 @@ msgstr "ነባሪ ወደ ዜሮ"
 #: model:ir.model.fields,help:stock.field_stock_return_picking_line__uom_id
 #: model:ir.model.fields,help:stock.field_stock_warehouse_orderpoint__product_uom
 msgid "Default unit of measure used for all stock operations."
-msgstr "ለሁሉም የአክሲዮን ስራዎች ጥቅም ላይ የሚውለው ነባሪ የመለኪያ ክፍል።"
+msgstr "ለሁሉም የእቃዎች ስራዎች ጥቅም ላይ የሚውለው ነባሪ የመለኪያ ክፍል።"
 
 #. module: stock
 #: model:ir.model.fields.selection,name:stock.selection__stock_move__procure_method__make_to_stock
@@ -2123,10 +2123,10 @@ msgid ""
 "            location to the Stock location. Each report can be performed on\n"
 "            physical, partner or virtual locations."
 msgstr ""
-"በኦዶዎ ውስጥ እያንዳንዱ የአክሲዮን ሥራ ምርቶቹን ከአንዱ "
+"በኦዶዎ ውስጥ እያንዳንዱ የእቃዎች ሥራ ምርቶቹን ከአንዱ "
 "            አካባቢን ለሌላ ያንቀሳቅሳል.ለምሳሌ, ምርቶችን ከአቅራቢው ከተቀበሉ\n"
 "            , ኦዶ ምርቶችን ከአቅራቢው ሥፍራ ወደ \ n"
-"            አክሲዮን ቦታ ያንቀሳቀሳል።እያንዳንዱ ሪፖርት "
+"            እቃዎች ቦታ ያንቀሳቀሳል።እያንዳንዱ ሪፖርት "
 "            በአካል, በአጋር ወይም በምናባዊ ሥፍራዎች ሊከናወን ይችላል."
 
 #. module: stock
@@ -2240,7 +2240,7 @@ msgstr ""
 "የትንበያ ብዛት (በእጅ ላይ ያለው ብዛት - ወጪ + ገቢ ተብሎ የሚሰላ) \n"
 "በአንድ የክምችት መገኛ ጋር ባለው አውድ ውስጥ፣ ይህ በዚህ ቦታ የተከማቹ ዕቃዎችን ወይም ማንኛውንም ልጆቹን ያጠቃልላል። \n"
 "ከአንድ መጋዘን ጋር ባለው አውድ ውስጥ፣ ይህ በዚህ መጋዘን የክምችት መገኛ ውስጥ የተከማቹ እቃዎችን ወይም ማንኛውንም ልጆቹን ያጠቃልላል።\n"
-" ያለበለዚያ ይህ በማንኛውም የአክሲዮን መገኛ ውስጥ 'ውስጣዊ' ዓይነት ያላቸው ዕቃዎችን ያጠቃልላል።"
+" ያለበለዚያ ይህ በማንኛውም የእቃዎች መገኛ ውስጥ 'ውስጣዊ' ዓይነት ያላቸው ዕቃዎችን ያጠቃልላል።"
 
 #. module: stock
 #: model:ir.model.fields,help:stock.field_product_product__free_qty
@@ -2287,7 +2287,7 @@ msgstr "የተገመቱ ደረሰኞች"
 #: model:ir.model.fields.selection,name:stock.selection__report_stock_quantity__state__forecast
 #: model_terms:ir.ui.view,arch_db:stock.stock_report_view_search
 msgid "Forecasted Stock"
-msgstr "የተተነበየ አክሲዮን"
+msgstr "የተተነበየ እቃዎች"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_product_product__free_qty
@@ -2947,7 +2947,7 @@ msgstr "የመመለሻ ቦታ ነው?"
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_location__scrap_location
 msgid "Is a Scrap Location?"
-msgstr "ቆሻሻ ቦታ ነው?"
+msgstr "የአቃ ማስዎገጃ ቦታ ነው?"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_move__is_initial_demand_editable
@@ -4432,7 +4432,7 @@ msgstr "የምርት እንቅስቃሴዎች"
 #. module: stock
 #: model:ir.model,name:stock.model_stock_move_line
 msgid "Product Moves (Stock Move Line)"
-msgstr "የምርት እንቅስቃሴዎች (የአክሲዮን ማንቀሳቀስ መስመር)"
+msgstr "የምርት እንቅስቃሴዎች (የእቃዎች ማንቀሳቀስ መስመር)"
 
 #. module: stock
 #: model:ir.actions.report,name:stock.label_product_packaging
@@ -5089,7 +5089,7 @@ msgid ""
 "is advised to better manage priorities in case of long customer lead times "
 "or/and frequent stock-outs."
 msgstr ""
-"ምርቶችን በእጅ ማዘዣ በማስረከብ ወይም የጊዜ መርሐግብር አስኪያጁን በማስኬድ ረጅም የደንበኛ አመራር ጊዜ ወይም/እና ብዙ ጊዜ የአክሲዮን መውጣቶችን በተመለከተ ቅድሚያ የሚሰጣቸውን ነገሮች በተሻለ ሁኔታ ለመቆጣጠር ይመከራል።"
+"ምርቶችን በእጅ ማዘዣ በማስረከብ ወይም የጊዜ መርሐግብር አስኪያጁን በማስኬድ ረጅም የደንበኛ አመራር ጊዜ ወይም/እና ብዙ ጊዜ የእቃዎች መውጣቶችን በተመለከተ ቅድሚያ የሚሰጣቸውን ነገሮች በተሻለ ሁኔታ ለመቆጣጠር ይመከራል።"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_product_product__responsible_id
@@ -5233,7 +5233,7 @@ msgstr "ምርቶች ላይ ደንቦች"
 #: model:ir.ui.menu,name:stock.menu_procurement_compute
 #: model_terms:ir.ui.view,arch_db:stock.view_procurement_compute_wizard
 msgid "Run Scheduler"
-msgstr "መርሐግብር አሂድ"
+msgstr "መርሐግብር አካሂድ"
 
 #. module: stock
 #: model:ir.model,name:stock.model_stock_scheduler_compute
@@ -5300,13 +5300,13 @@ msgstr "መርሐግብር ማስያዝ"
 #: model_terms:ir.ui.view,arch_db:stock.view_picking_form
 #, python-format
 msgid "Scrap"
-msgstr "ዘርዝ"
+msgstr "የአቃ ማስዎገጃ"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_scrap__scrap_location_id
 #: model_terms:ir.ui.view,arch_db:stock.stock_scrap_search_view
 msgid "Scrap Location"
-msgstr "ቆሻሻ ቦታ"
+msgstr "የአቃ ማስዎገጃ ቦታ"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_scrap__move_id
@@ -5321,7 +5321,7 @@ msgstr "የተሰረዙ ትዕዛዞች"
 #. module: stock
 #: model_terms:ir.actions.act_window,help:stock.action_stock_scrap
 msgid "Scrap products"
-msgstr "ቆሻሻ ምርቶች"
+msgstr "የአቃ ማስዎገጃ ምርቶች"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_move__scrapped
@@ -5490,7 +5490,7 @@ msgstr "ተለዋጮችን ለማስተዳደር የምርት ባህሪያትን
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.view_inventory_form
 msgid "Set to Draft"
-msgstr "ወደ ረቂቅ አዘጋጅ"
+msgstr "ወደ ረቂቅ ይመልሱ"
 
 #. module: stock
 #: model:ir.model.fields,help:stock.field_stock_move__location_id
@@ -5609,7 +5609,7 @@ msgstr "በተመረጡ መጋዘኖች ላይ የሚተገበሩትን መን�
 #. module: stock
 #: model:ir.model.fields,help:stock.field_stock_move__string_availability_info
 msgid "Show various information on stock availability for this move"
-msgstr "ለዚህ እንቅስቃሴ በአክሲዮን ተገኝነት ላይ የተለያዩ መረጃዎችን አሳይ"
+msgstr "ለዚህ እንቅስቃሴ በእቃዎች ተገኝነት ላይ የተለያዩ መረጃዎችን አሳይ"
 
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.view_stock_track_confirmation
@@ -5807,7 +5807,7 @@ msgstr "የክምችት ብዛት ሪፖርት"
 #: model:ir.model,name:stock.model_stock_rule
 #: model:ir.model.fields,field_description:stock.field_stock_move__rule_id
 msgid "Stock Rule"
-msgstr "የአክሲዮን ደንብ"
+msgstr "የእቃዎች ደንብ"
 
 #. module: stock
 #: model:ir.actions.act_window,name:stock.action_stock_rules_report
@@ -6425,7 +6425,7 @@ msgid ""
 "This stock location will be used, instead of the default one, as the source "
 "location for stock moves generated when you do an inventory."
 msgstr ""
-"ይህ የአክሲዮን መገኛ ቦታ በነባሪው ምትክ ጥቅም ላይ ይውላል፣ ምክንያቱም የአክሲዮን እንቅስቃሴ መነሻ ቦታ አንድ ክምችት ሲያደርጉ ነው።"
+"ይህ የእቃዎች መገኛ ቦታ በነባሪው ምትክ ጥቅም ላይ ይውላል፣ ምክንያቱም የእቃዎች እንቅስቃሴ መነሻ ቦታ አንድ ክምችት ሲያደርጉ ነው።"
 #. module: stock
 #: model:ir.model.fields,help:stock.field_product_product__responsible_id
 #: model:ir.model.fields,help:stock.field_product_template__responsible_id
@@ -7310,7 +7310,7 @@ msgstr "በተፈጸመ ወይም በተሰረዘ ዝውውር ላይ የታቀ�
 msgid ""
 "You cannot change the UoM for a stock move that has been set to 'Done'."
 msgstr ""
-"'ተከናውኗል' ተብሎ ለተዋቀረው የአክሲዮን እንቅስቃሴ UoM ን መቀየር አይችሉም።"
+"'ተከናውኗል' ተብሎ ለተዋቀረው የእቃዎች እንቅስቃሴ UoM ን መቀየር አይችሉም።"
 
 
 #. module: stock
@@ -7320,7 +7320,7 @@ msgid ""
 "You cannot change the location type or its use as a scrap location as there "
 "are products reserved in this location. Please unreserve the products first."
 msgstr ""
-"በዚህ አካባቢ የተያዙ ምርቶች ስላሉ የመገኛ ቦታውን አይነት ወይም አጠቃቀሙን እንደ ቆሻሻ ቦታ መቀየር አይችሉም።"
+"በዚህ አካባቢ የተያዙ ምርቶች ስላሉ የመገኛ ቦታውን አይነት ወይም አጠቃቀሙን እንደ የአቃ ማስዎገጃ ቦታ መቀየር አይችሉም።"
 "እባክዎ መጀመሪያ ምርቶቹን ያስቀምጡ።"
 
 #. module: stock
@@ -7433,7 +7433,7 @@ msgid ""
 "force the transfer, switch in edit more and encode the done quantities."
 msgstr ""
 "ምንም መጠኖች ካልተያዙ ወይም ካልተደረጉ ማስተላለፍን ማረጋገጥ አይችሉም። ወደ"
-"ዝውውሩን አስገድደው፣ ተጨማሪ አርትዕ ያድርጉ እና የተከናወኑትን መጠኖች ኮድ ያድርጉ።"
+"ዝውውሩን አስገድደው፣ ተጨማሪ አስተካክል  ያድርጉ እና የተከናወኑትን መጠኖች ኮድ ያድርጉ።"
 
 #. module: stock
 #: code:addons/stock/wizard/stock_picking_return.py:0

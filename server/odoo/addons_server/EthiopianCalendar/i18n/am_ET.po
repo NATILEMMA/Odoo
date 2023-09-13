@@ -1,0 +1,145 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* EthiopianCalendar
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-12 09:32+0000\n"
+"PO-Revision-Date: 2023-08-12 09:32+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: EthiopianCalendar
+#: model:ir.model,name:EthiopianCalendar.model_budget_planning
+msgid "Budget Planning"
+msgstr "የበጀት እቅድ ማውጣት"
+
+#. module: EthiopianCalendar
+#: model:ir.model,name:EthiopianCalendar.model_res_config_settings
+msgid "Config Settings"
+msgstr "ቅንብሮችን ያዋቅሩ"
+
+#. module: EthiopianCalendar
+#: model_terms:ir.ui.view,arch_db:EthiopianCalendar.view_fiscal_year_form_inherit_local
+#: model_terms:ir.ui.view,arch_db:EthiopianCalendar.view_fiscal_year_tree_inherit_local
+#: model_terms:ir.ui.view,arch_db:EthiopianCalendar.view_reconciliation_time_frame_tree_inherit_local
+#: model_terms:ir.ui.view,arch_db:EthiopianCalendar.view_reconciliation_time_fream_form_inherit_local
+msgid "Date From"
+msgstr "ቀን ከ"
+
+#. module: EthiopianCalendar
+#: model_terms:ir.ui.view,arch_db:EthiopianCalendar.view_fiscal_year_form_inherit_local
+#: model_terms:ir.ui.view,arch_db:EthiopianCalendar.view_fiscal_year_tree_inherit_local
+#: model_terms:ir.ui.view,arch_db:EthiopianCalendar.view_reconciliation_time_frame_tree_inherit_local
+#: model_terms:ir.ui.view,arch_db:EthiopianCalendar.view_reconciliation_time_fream_form_inherit_local
+msgid "Date TO"
+msgstr "ቀን ወደ"
+
+#. module: EthiopianCalendar
+#: model_terms:ir.ui.view,arch_db:EthiopianCalendar.view_fiscal_year_form_inherit_local
+#: model_terms:ir.ui.view,arch_db:EthiopianCalendar.view_reconciliation_time_frame_tree_inherit_local
+#: model_terms:ir.ui.view,arch_db:EthiopianCalendar.view_reconciliation_time_fream_form_inherit_local
+msgid "Date To"
+msgstr "ቀን ወደ"
+
+#. module: EthiopianCalendar
+#: model:ir.model.fields,field_description:EthiopianCalendar.field_res_config_settings__is_ethiopian_datepicker
+#: model:ir.model.fields,field_description:EthiopianCalendar.field_res_users__is_ethiopian_datepicker
+#: model:res.groups,name:EthiopianCalendar.group_ethio_datepicker
+msgid "Ethiopian Datepicker"
+msgstr "የኢትዮጵያዊ የቀን መቁጠሪያ"
+
+#. module: EthiopianCalendar
+#: model:res.groups,name:EthiopianCalendar.group_gregory
+msgid "Gregory Datepicker"
+msgstr "የግሪጎሪ የቀን መቁጠሪያ"
+
+#. module: EthiopianCalendar
+#: model:ir.module.category,name:EthiopianCalendar.module_category_datepicker
+msgid "Hidden Category"
+msgstr "የተደበቀ ምድብ"
+
+#. module: EthiopianCalendar
+#: model:ir.model.fields,field_description:EthiopianCalendar.field_res_users_role_line__is_active
+msgid "Is Active"
+msgstr "ስራ ላይ ነው?"
+
+#. module: EthiopianCalendar
+#: model:ir.model.fields,field_description:EthiopianCalendar.field_fiscal_year__is_pagum_from
+#: model:ir.model.fields,field_description:EthiopianCalendar.field_reconciliation_time_fream__is_pagum_from
+msgid "Is Pagum From"
+msgstr "ጳጉሜን ከ "
+
+#. module: EthiopianCalendar
+#: model:ir.model,name:EthiopianCalendar.model_res_users_role
+msgid "User role"
+msgstr "የተጠቃሚ ሚና"
+
+#. module: EthiopianCalendar
+#: model:ir.model,name:EthiopianCalendar.model_res_users
+msgid "Users"
+msgstr "ተጠቃሚዎች"
+
+#. module: EthiopianCalendar
+#: model:ir.model,name:EthiopianCalendar.model_res_users_role_line
+msgid "Users associated to a role"
+msgstr "ከአንድ ሚና ጋር የተቆራኙ ተጠቃሚዎች"
+
+#. module: EthiopianCalendar
+#: code:addons/EthiopianCalendar/models/main.py:0
+#: code:addons/EthiopianCalendar/models/main.py:0
+#, python-format
+msgid ""
+"You cannot delete/remove this role because it is built into the system."
+msgstr "ይህ ሚና በስርዓቱ ውስጥ ስለተሰራ መሰረዝ/ማስወገድ አይችሉም"
+
+#. module: EthiopianCalendar
+#: code:addons/EthiopianCalendar/models/main.py:0
+#: code:addons/EthiopianCalendar/models/main.py:0
+#, python-format
+msgid "You cannot edit/update this role because it is built into the system"
+msgstr "ይህ ሚና በስርዓቱ ውስጥ ስለተሰራ ማዘመን አይችሉም"
+
+#. module: EthiopianCalendar
+#: model:ir.model,name:EthiopianCalendar.model_fiscal_year
+msgid "fiscal year"
+msgstr "የበጀት ዓመት"
+
+#. module: EthiopianCalendar
+#: model:ir.model.fields,field_description:EthiopianCalendar.field_budget_planning__ethiopian_three
+#: model:ir.model.fields,field_description:EthiopianCalendar.field_budget_planning__is_pagum_three
+#: model:ir.model.fields,field_description:EthiopianCalendar.field_budget_planning__pagum_three
+#: model:ir.model.fields,field_description:EthiopianCalendar.field_fiscal_year__ethiopian_from
+#: model:ir.model.fields,field_description:EthiopianCalendar.field_fiscal_year__ethiopian_to
+#: model:ir.model.fields,field_description:EthiopianCalendar.field_fiscal_year__is_pagum_to
+#: model:ir.model.fields,field_description:EthiopianCalendar.field_fiscal_year__pagum_from
+#: model:ir.model.fields,field_description:EthiopianCalendar.field_fiscal_year__pagum_to
+#: model:ir.model.fields,field_description:EthiopianCalendar.field_reconciliation_time_fream__ethiopian_from
+#: model:ir.model.fields,field_description:EthiopianCalendar.field_reconciliation_time_fream__ethiopian_to
+#: model:ir.model.fields,field_description:EthiopianCalendar.field_reconciliation_time_fream__is_pagum_to
+#: model:ir.model.fields,field_description:EthiopianCalendar.field_reconciliation_time_fream__pagum_from
+#: model:ir.model.fields,field_description:EthiopianCalendar.field_reconciliation_time_fream__pagum_to
+msgid "in ethiopian date"
+msgstr "በኢትዮጵያ ቀን"
+
+#. module: EthiopianCalendar
+#: model:ir.model,name:EthiopianCalendar.model_reconciliation_time_fream
+msgid "time frame for reconciliation"
+msgstr "የማስታረቅ ጊዜ"
+
+
+
+
+
+
+
+
+
+
+

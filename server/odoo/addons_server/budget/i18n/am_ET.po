@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-25 07:21+0000\n"
-"PO-Revision-Date: 2023-01-25 07:21+0000\n"
+"POT-Creation-Date: 2023-08-10 11:20+0000\n"
+"PO-Revision-Date: 2023-08-10 11:20+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,11 +16,42 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: budget
-#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_form
+#: code:addons/budget/models/budget_planning.py:0
+#, python-format
 msgid ""
-"<span class=\"o_stat_text\">Customer</span>\n"
-"                              <span class=\"o_stat_text\">Preview</span>"
+"%s Budget planning name  already exists on budget; It cannot be used for "
+"multiple budget please check budget name."
 msgstr ""
+"%s ይህ የበጀት እቅድ ስም አስቀድሞ በበጀት  ቋት  ላይ  አለ፤  እባክዎን የበጀት ስም ከ አንድ ጊዜ በላይ መጠቀም "
+"ስለማይችሉ ስሙን ይቀይሩ። "
+
+#. module: budget
+#: code:addons/budget/models/budget_planning.py:0
+#, python-format
+msgid ""
+"%s's Please review and approve my planned budget request %s at your earliest"
+" convenience"
+msgstr "%s' እባክዎን ያቀድኩትን የበጀት ጥያቄ %s በተቻለ ፍጥነት ገምግመው አጽድቁት"
+
+#. module: budget
+#: code:addons/budget/models/budget_planning.py:0
+#, python-format
+msgid ""
+"%s's Please review and approve the attached budget proposal for %s at your "
+"earliest convenience."
+msgstr "%s እባኮትን ለ %s የበጀት ፕሮፖዛልን በተቻለ ፍጥነት ገምግመው አጽድቁት።"
+
+#. module: budget
+#: code:addons/budget/models/budget_planning.py:0
+#, python-format
+msgid "<h4>Planned Budget Request</h4>"
+msgstr "<h4>የታቀደ የበጀት ጥያቄ</h4>"
+
+#. module: budget
+#: code:addons/budget/models/budget_planning.py:0
+#, python-format
+msgid "<h4>Urgent: Final Financial Approval Needed </h4>"
+msgstr "<h4>አስቸኳይ፡ የመጨረሻ የፋይናንስ ማረጋገጫ ያስፈልጋል</h4>"
 
 #. module: budget
 #: model_terms:ir.actions.act_window,help:budget.act_budget_view
@@ -30,8 +61,13 @@ msgid ""
 "                financial accounts and/or analytic accounts (that may represent\n"
 "                projects, departments, categories of products, etc.)"
 msgstr ""
+"በጀት የድርጅትዎ ገቢ እና/ወይም ወጪዎች ትንበያ ነው\n"
+"ለወደፊት ለተወሰነ ጊዜ ይጠበቃል። በጀት በአንዳንዶች ላይ ይገለጻል\n"
+" የፋይናንሺያል መለያዎች እና/ወይም የትንታኔ መለያዎች (ይህ ሊወክል ይችላል\n"
+"ፕሮጀክቶች, ክፍሎች, ምርቶች ምድቦች, ወዘተ.)"
 
 #. module: budget
+#: model:ir.model.fields,field_description:budget.field_budget_approver__access_warning
 #: model:ir.model.fields,field_description:budget.field_budget_planning__access_warning
 #: model:ir.model.fields,field_description:budget.field_budget_planning_attachement__access_warning
 #: model:ir.model.fields,field_description:budget.field_budget_type__access_warning
@@ -40,106 +76,112 @@ msgid "Access warning"
 msgstr "የመዳረሻ ማስጠንቀቂያ"
 
 #. module: budget
-#: model:ir.model.fields,field_description:budget.field_hr_employee__accountAnalytic
+#: model:ir.model.fields,field_description:budget.field_hr_mapping_employee_account__accountAnalytic
 msgid "Accountanalytic"
-msgstr ""
+msgstr "የበጀት ትንተና"
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_account_budget_post__account_ids
 #: model_terms:ir.ui.view,arch_db:budget.view_budget_post_form
 msgid "Accounts"
-msgstr ""
+msgstr "መለያዎች"
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_budget_lines__percentage
 msgid "Achievement"
-msgstr ""
+msgstr "ስኬት"
 
 #. module: budget
+#: model:ir.model.fields,field_description:budget.field_budget_approver__message_needaction
 #: model:ir.model.fields,field_description:budget.field_budget_budget__message_needaction
 #: model:ir.model.fields,field_description:budget.field_budget_planning__message_needaction
 #: model:ir.model.fields,field_description:budget.field_budget_planning_attachement__message_needaction
 #: model:ir.model.fields,field_description:budget.field_budget_type__message_needaction
 #: model:ir.model.fields,field_description:budget.field_work_activity_stream__message_needaction
 msgid "Action Needed"
-msgstr ""
+msgstr "እርምጃ ያስፈልጋል"
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_budget_planning__active
 msgid "Active"
-msgstr ""
+msgstr "ንቁ"
 
 #. module: budget
+#: model:ir.model.fields,field_description:budget.field_budget_approver__activity_ids
 #: model:ir.model.fields,field_description:budget.field_budget_planning__activity_ids
 #: model:ir.model.fields,field_description:budget.field_budget_planning_attachement__activity_ids
 #: model:ir.model.fields,field_description:budget.field_budget_type__activity_ids
 #: model:ir.model.fields,field_description:budget.field_work_activity_stream__activity_ids
 msgid "Activities"
-msgstr ""
+msgstr "እንቅስቃሴዎች"
 
 #. module: budget
+#: model:ir.model.fields,field_description:budget.field_budget_approver__activity_exception_decoration
 #: model:ir.model.fields,field_description:budget.field_budget_planning__activity_exception_decoration
 #: model:ir.model.fields,field_description:budget.field_budget_planning_attachement__activity_exception_decoration
 #: model:ir.model.fields,field_description:budget.field_budget_type__activity_exception_decoration
 #: model:ir.model.fields,field_description:budget.field_work_activity_stream__activity_exception_decoration
 msgid "Activity Exception Decoration"
-msgstr ""
+msgstr "የእንቅስቃሴ ልዩ ማስጌጫ"
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_work_activity_stream__name
 msgid "Activity Name"
-msgstr "የበጀት እንቅስቃሴ ስም"
+msgstr "የተግባር ስም"
 
 #. module: budget
+#: model:ir.model.fields,field_description:budget.field_budget_approver__activity_state
 #: model:ir.model.fields,field_description:budget.field_budget_planning__activity_state
 #: model:ir.model.fields,field_description:budget.field_budget_planning_attachement__activity_state
 #: model:ir.model.fields,field_description:budget.field_budget_type__activity_state
 #: model:ir.model.fields,field_description:budget.field_work_activity_stream__activity_state
 msgid "Activity State"
-msgstr ""
+msgstr "የእንቅስቃሴ ሁኔታ"
 
 #. module: budget
-#: model:ir.model.fields.selection,name:budget.selection__budget_planning__budget_methods__activity_based_budgeting
-msgid "Activity-based budgeting"
-msgstr ""
-
-#. module: budget
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_approve_one_form
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_approve_two_form
 #: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_form
-msgid "Add Attachement"
-msgstr ""
-
-#. module: budget
-#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_form
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_request_form
 msgid "Add Work stream"
 msgstr "የስራ ዥረት ጨምር"
 
 #. module: budget
-#: model:ir.ui.menu,name:budget.menu_act_all_budget_view
-msgid "All Budgets Details"
-msgstr ""
-
-#. module: budget
 #: model:res.groups,name:budget.group_departmental_approval
-msgid "Allow to Department Manager Approval"
-msgstr ""
+msgid "Allow to  First Financial Approval"
+msgstr "ለመጀመሪያው የፋይናንስ ማረጋገጫ ፍቀድ"
 
 #. module: budget
 #: model:res.groups,name:budget.group_financial_approval
-msgid "Allow to Financial Approval"
-msgstr ""
+msgid "Allow to Senior Financie Approval"
+msgstr "ለከፍተኛ የፋይናንስ ማጽደቅ ፍቀድ"
 
 #. module: budget
 #: model:res.groups,name:budget.group_requester
 msgid "Allow to request budget planning"
-msgstr ""
+msgstr "የበጀት እቅድ ለመጠየቅ ፍቀድ"
+
+#. module: budget
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_approve_one_form
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_approve_two_form
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_form
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_request_form
+msgid "Allowed Members"
+msgstr "የተፈቀዱ አባላት"
 
 #. module: budget
 #: model:ir.model,name:budget.model_account_analytic_account
 #: model:ir.model.fields,field_description:budget.field_budget_lines__analytic_account_id
 #: model:ir.model.fields,field_description:budget.field_budget_planning__analytic_account_id
+#: model:ir.model.fields,field_description:budget.field_hr_expense__analytic_account_id
 #: model:ir.model.fields,field_description:budget.field_work_activity_stream__analytic_account_id
 msgid "Analytic Account"
-msgstr "የበጀት የትንታኔ መለያ"
+msgstr "የበጀት መለያ "
+
+#. module: budget
+#: model:ir.model,name:budget.model_account_analytic_line
+msgid "Analytic Line"
+msgstr "የትንታኔ መስመር"
 
 #. module: budget
 #: model:ir.model.fields,help:budget.field_budget_planning__analytic_account_id
@@ -147,56 +189,58 @@ msgid ""
 "Analytic account to which this project is linked for financial management. "
 "Use an analytic account to record cost and revenue on your project."
 msgstr ""
+"ይህ ፕሮጀክት ከፋይናንሺያል አስተዳደር ጋር የተገናኘበት የትንታኔ መለያ። በፕሮጀክትዎ ላይ ወጪን እና ገቢን ለመመዝገብ "
+"የትንታኔ መለያ ይጠቀሙ"
 
 #. module: budget
 #: model_terms:ir.ui.view,arch_db:budget.crossovered_budget_view_form
 msgid "Approve"
-msgstr ""
+msgstr "አጽድቅ"
 
 #. module: budget
 #: model:ir.model.fields.selection,name:budget.selection__budget_planning__state__fin_approved
 msgid "Approved"
-msgstr ""
+msgstr "ጸድቋል"
 
 #. module: budget
 #: model:ir.model,name:budget.model_ir_attachment
 msgid "Attachment"
-msgstr "አባሪ"
+msgstr "ተያያዥ"
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_budget_planning__attachment_amount
 msgid "Attachment Amount"
-msgstr ""
+msgstr "የአባሪ መጠን"
 
 #. module: budget
+#: model:ir.model.fields,field_description:budget.field_budget_approver__message_attachment_count
 #: model:ir.model.fields,field_description:budget.field_budget_budget__message_attachment_count
 #: model:ir.model.fields,field_description:budget.field_budget_planning__message_attachment_count
 #: model:ir.model.fields,field_description:budget.field_budget_planning_attachement__message_attachment_count
 #: model:ir.model.fields,field_description:budget.field_budget_type__message_attachment_count
 #: model:ir.model.fields,field_description:budget.field_work_activity_stream__message_attachment_count
 msgid "Attachment Count"
-msgstr ""
+msgstr "የአባሪ ብዛት"
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_budget_attachment_type__name
 msgid "Attachment Type"
-msgstr ""
+msgstr "የአባሪ አይነት"
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_budget_planning_attachement__budget_attachment_ids
-#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_form
 msgid "Attachments"
 msgstr "አባሪዎች"
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_budget_planning__attchement_information
 msgid "Attchement Information"
-msgstr ""
+msgstr "የአባሪ መረጃ"
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_budget_lines__available_amount
 msgid "Available Amount"
-msgstr ""
+msgstr "የሚገኝ መጠን"
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_budget_planning__squ
@@ -204,54 +248,89 @@ msgid "BPF"
 msgstr ""
 
 #. module: budget
+#: model:ir.model.fields,field_description:budget.field_account_move_line__amount
+msgid "Balance"
+msgstr "ሚዛን"
+
+#. module: budget
 #: model:ir.model.fields.selection,name:budget.selection__budget_planning__kanban_state__blocked
 msgid "Blocked"
-msgstr ""
+msgstr "ታግዷል"
 
 #. module: budget
 #: model:ir.model,name:budget.model_budget_budget
 #: model:ir.model.fields,field_description:budget.field_budget_lines__budget_id
+#: model:ir.model.fields,field_description:budget.field_budget_refuse_wizard__budget_ids
+#: model:ir.ui.menu,name:budget.menu_root
+#: model_terms:ir.ui.view,arch_db:budget.budget_budget_view_search
 #: model_terms:ir.ui.view,arch_db:budget.budget_budget_view_tree
+#: model_terms:ir.ui.view,arch_db:budget.budget_planning_view_search
 #: model_terms:ir.ui.view,arch_db:budget.crossovered_budget_view_form
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_approve_one_tree
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_approve_two_tree
 #: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_attachment_tree
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_request_tree
 #: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_tree
 msgid "Budget"
-msgstr ""
+msgstr "በጀት"
 
 #. module: budget
+#: model:ir.model,name:budget.model_budget_approver
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_approver_form
+msgid "Budget APprover"
+msgstr "በጀት አጽዳቂ"
+
+#. module: budget
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_approve_one_form
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_approve_two_form
 #: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_form
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_request_form
 msgid "Budget Account"
-msgstr "የበጀት ሂሳብ መለያ"
+msgstr "የበጀት ሂሳብ"
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_account_analytic_account__budget_analytic_account
 msgid "Budget Analytic Account"
-msgstr ""
+msgstr "የበጀት ትንታኔ ሂሳብ"
 
 #. module: budget
+#: model:ir.ui.menu,name:budget.menu_budget_approval
 #: model:ir.ui.menu,name:budget.menu_for_departmental_approval
 msgid "Budget Approval"
 msgstr "የበጀት ማጽደቅ"
 
 #. module: budget
-#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_attachment_form
-msgid "Budget Documents Attachments"
-msgstr ""
+#: model:ir.actions.act_window,name:budget.action_budget_approver
+#: model:ir.ui.menu,name:budget.menu_budget_approver
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_approver_tree
+msgid "Budget Approver"
+msgstr "የበጀት አጽዳቂ"
 
 #. module: budget
-#: model:ir.ui.menu,name:budget.menu_act_project_budget_view
-msgid "Budget Entries"
-msgstr ""
+#: model:ir.actions.act_window,name:budget.action_attachment
+msgid "Budget Attachment"
+msgstr "የበጀት አባሪ"
+
+#. module: budget
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_attachment_form
+msgid "Budget Documents Attachments"
+msgstr "የበጀት ሰነዶች ዓባሪዎች"
 
 #. module: budget
 #: model:ir.actions.act_window,name:budget.budget_financial_approval
 msgid "Budget Financial Approval"
-msgstr ""
+msgstr "የበጀት ፋይናንሺያል ማፅደቅ"
 
 #. module: budget
 #: model:ir.model,name:budget.model_budget_lines
 msgid "Budget Line"
-msgstr ""
+msgstr "የበጀት መስመር"
+
+#. module: budget
+#: model:ir.model.fields,field_description:budget.field_account_analytic_line__budget_line_code
+#: model:ir.model.fields,field_description:budget.field_account_move_line__budget_line_code
+msgid "Budget Line Code"
+msgstr "የበጀት መስመር ኮድ"
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_account_analytic_account__budget_line
@@ -262,12 +341,12 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:budget.view_budget_line_search
 #: model_terms:ir.ui.view,arch_db:budget.view_budget_line_tree
 msgid "Budget Lines"
-msgstr ""
+msgstr "የበጀት መስመሮች"
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_budget_planning__budget_methods
 msgid "Budget Methods"
-msgstr "የበጀት ዘዴዎች"
+msgstr "የበጀት ዘዴ"
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_budget_budget__name
@@ -278,75 +357,84 @@ msgstr "የበጀት ስም"
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_budget_planning__user_id
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_approve_one_form
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_approve_two_form
 #: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_form
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_request_form
 msgid "Budget Planner"
 msgstr "የበጀት እቅድ አውጪ"
-
-
 
 #. module: budget
 #: model:ir.model,name:budget.model_budget_planning
 #: model:ir.ui.menu,name:budget.menu_for_budget_planning
-#: model:ir.ui.menu,name:budget.menu_root
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_approve_one_form
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_approve_two_form
 #: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_form
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_request_form
 msgid "Budget Planning"
 msgstr "የበጀት እቅድ ማውጣት"
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_ir_attachment__budget_planning_attachment_type
 msgid "Budget Planning Attachment Type"
-msgstr ""
-
-#. module: budget
-#: model:ir.actions.act_window,name:budget.action_attachment
-msgid "Budget Planning Attachments"
-msgstr ""
+msgstr "የበጀት እቅድ አባሪ አይነት"
 
 #. module: budget
 #: model:ir.model,name:budget.model_budget_planning_attachement
 msgid "Budget Planning Detail Information"
-msgstr ""
+msgstr "የበጀት እቅድ ዝርዝር መረጃ"
 
 #. module: budget
 #: model:ir.model.fields,help:budget.field_budget_planning__attchement_information
 msgid "Budget Planning Document Attachement detail Information"
-msgstr ""
+msgstr "የበጀት እቅድ ሰነድ አባሪ ዝርዝር መረጃ"
 
 #. module: budget
 #: model:ir.actions.act_window,name:budget.budget_departmental_approval
 msgid "Budget Planning Requests for Approval"
-msgstr ""
+msgstr "ለማጽደቅ የበጀት እቅድ ጥያቄዎች"
 
 #. module: budget
 #: model:ir.module.category,description:budget.module_category_budget_planning_request
 #: model:ir.module.category,name:budget.module_category_budget_planning_request
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_approve_one_form
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_approve_two_form
 #: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_form
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_request_form
 msgid "Budget Planning Setting"
 msgstr "የበጀት እቅድ ዝግጅት"
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_budget_planning_attachement__budget_attachement_id
 msgid "Budget Reference"
-msgstr ""
+msgstr "የበጀት ማጣቀሻ"
 
 #. module: budget
+#: model:ir.model,name:budget.model_budget_refuse_wizard
+msgid "Budget Refuse Reason Wizard"
+msgstr "የበጀት እምቢታ ምክንያት አዋቂ"
+
+#. module: budget
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_approve_one_form
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_approve_two_form
 #: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_form
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_request_form
 msgid "Budget Request"
 msgstr "የበጀት ጥያቄ"
 
 #. module: budget
 #: model:ir.actions.act_window,name:budget.budget_planning_request
 msgid "Budget Requests"
-msgstr "የበጀት ጥያቄ"
+msgstr "የበጀት ጥያቄዎች"
 
 #. module: budget
 #: model:ir.actions.act_window,name:budget.action_budget_type
-msgid "Budget TYpe"
-msgstr "የበጀት አይነት"
-
-#. module: budget
 #: model:ir.model,name:budget.model_budget_type
 #: model:ir.model.fields,field_description:budget.field_budget_planning__budget_type
+#: model:ir.ui.menu,name:budget.menu_budget_type
+#: model_terms:ir.ui.view,arch_db:budget.budget_planning_view_search
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_type_form
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_type_tree
 msgid "Budget Type"
 msgstr "የበጀት አይነት"
 
@@ -354,13 +442,37 @@ msgstr "የበጀት አይነት"
 #: model:ir.model.fields,field_description:budget.field_account_analytic_account__used_percentage
 #: model:ir.model.fields,field_description:budget.field_budget_budget__budget_usage
 #: model:ir.model.fields,field_description:budget.field_budget_lines__budget_usage
+#: model_terms:ir.ui.view,arch_db:budget.budget_budget_view_search
 msgid "Budget Usage"
-msgstr ""
+msgstr "የበጀት አጠቃቀም"
 
 #. module: budget
+#: model:ir.ui.menu,name:budget.budget_module_report_tab
+msgid "Budget and  Fund"
+msgstr "በጀት እና ፈንድ"
+
+#. module: budget
+#: model:ir.ui.menu,name:budget.budget_planing_menu
+msgid "Budget managment"
+msgstr "የበጀት አስተዳደር"
+
+#. module: budget
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_approve_one_form
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_approve_two_form
 #: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_form
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_request_form
 msgid "Budget objective and Descritption"
 msgstr "የበጀት ዓላማ እና መግለጫ"
+
+#. module: budget
+#: model_terms:ir.ui.view,arch_db:budget.budget_refuse_wizard_view_form
+msgid "Budget planning refuse reason"
+msgstr "የበጀት ማቀድ ምክንያት እምቢ ማለት"
+
+#. module: budget
+#: model:ir.ui.menu,name:budget.budget_planning_report_menu
+msgid "Budget report"
+msgstr "የበጀት ሪፖርት"
 
 #. module: budget
 #: model:ir.model,name:budget.model_account_budget_post
@@ -376,7 +488,7 @@ msgstr "የበጀት አቀማመጥ"
 #: model:ir.actions.act_window,name:budget.open_budget_post_form
 #: model:ir.ui.menu,name:budget.menu_budget_post_form
 msgid "Budgetary Positions"
-msgstr "የበጀት አቀማመጥ"
+msgstr "የበጀት ቦታዎች"
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_budget_planning__budgeted_amount
@@ -391,11 +503,13 @@ msgstr "የበጀት መጠን"
 #. module: budget
 #: model:ir.actions.act_window,name:budget.act_budget_lines_view
 #: model:ir.actions.act_window,name:budget.act_budget_view
+#: model:ir.actions.act_window,name:budget.action_budget_lines_view
+#: model:ir.actions.act_window,name:budget.budget_planning_graph_action
 #: model:ir.ui.menu,name:budget.menu_act_budget_view
 #: model:ir.ui.menu,name:budget.menu_act_crossovered_budget_lines_view
 #: model:ir.ui.menu,name:budget.menu_budget_planning
 msgid "Budgets"
-msgstr ""
+msgstr "በጀቶች"
 
 #. module: budget
 #: model_terms:ir.actions.act_window,help:budget.act_budget_view
@@ -406,44 +520,45 @@ msgid ""
 "                analytic account and monitor its evolution based on the actuals\n"
 "                realised during that period."
 msgstr ""
+"ገንዘብህ የት እንደሚሄድ በመከታተል ያነሰ ሊሆን ይችላል\n"
+"ከመጠን በላይ የማውጣት ዕድሉ ከፍተኛ ነው፣ እና የእርስዎን ፋይናንሺያል ለማሟላት\n"
+" ግቦች። የሚጠበቀውን ገቢ በዝርዝር በመግለጽ በጀትን ይተነብዩ\n"
+" የትንታኔ መለያ እና ዝግመተ ለውጥን በተጨባጭ ሁኔታ ተቆጣጠር\n"
+"በዚያ ጊዜ ውስጥ ተገንዝቧል."
 
 #. module: budget
-#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_form
-msgid "CEO Approve"
-msgstr "ዋና ሥራ አስፈጻሚ አጽድቋል"
-
-#. module: budget
-#: model:ir.model.fields.selection,name:budget.selection__budget_planning__state__ceo_approved
-msgid "CEO Approved"
-msgstr "ዋና ሥራ አስፈጻሚ አጽድቋል"
-
-#. module: budget
+#: model:ir.model.fields,field_description:budget.field_budget_approver__campaign_id
 #: model:ir.model.fields,field_description:budget.field_budget_planning__campaign_id
 #: model:ir.model.fields,field_description:budget.field_budget_planning_attachement__campaign_id
 #: model:ir.model.fields,field_description:budget.field_budget_type__campaign_id
 #: model:ir.model.fields,field_description:budget.field_work_activity_stream__campaign_id
 msgid "Campaign"
-msgstr ""
+msgstr "ዘመቻ"
+
+#. module: budget
+#: model_terms:ir.ui.view,arch_db:budget.budget_refuse_wizard_view_form
+msgid "Cancel"
+msgstr "ሰርዝ"
 
 #. module: budget
 #: model_terms:ir.ui.view,arch_db:budget.crossovered_budget_view_form
 msgid "Cancel Budget"
-msgstr ""
+msgstr "በጀት ሰርዝ"
 
 #. module: budget
 #: model:ir.model.fields.selection,name:budget.selection__budget_budget__state__cancel
 msgid "Cancelled"
-msgstr ""
+msgstr "ተሰርዟል"
 
 #. module: budget
 #: model_terms:ir.actions.act_window,help:budget.act_budget_view
 msgid "Click to create a new budget."
-msgstr ""
+msgstr "አዲስ በጀት ለመፍጠር ጠቅ ያድርጉ"
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_budget_lines__commitment
 msgid "Commitment"
-msgstr ""
+msgstr "ቁርጠኝነት"
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_account_budget_post__company_id
@@ -451,7 +566,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:budget.field_budget_lines__company_id
 #: model:ir.model.fields,field_description:budget.field_budget_planning__company_id
 msgid "Company"
-msgstr "ድርጅት"
+msgstr "ኩባንያ"
 
 #. module: budget
 #: model:ir.model.fields,help:budget.field_account_analytic_account__unused_percentage
@@ -460,58 +575,72 @@ msgid ""
 "Comparison between practical and theoretical amount. This measure tells you "
 "if you are below or over budget."
 msgstr ""
+"በተግባራዊ እና በንድፈ ሃሳባዊ መጠን መካከል ማነፃፀር. ይህ ልኬት ይነግርዎታል ከበጀት በታች ከሆኑ ወይም የበጀት በላይ"
+" ከሆኑ."
+
 #. module: budget
 #: model:ir.ui.menu,name:budget.menu_budget_configuration
 msgid "Configuration"
 msgstr "ማዋቀር"
 
-
 #. module: budget
 #: model_terms:ir.ui.view,arch_db:budget.crossovered_budget_view_form
 msgid "Confirm"
-msgstr ""
+msgstr "አረጋግጥ"
 
 #. module: budget
 #: model:ir.model.fields.selection,name:budget.selection__budget_budget__state__confirm
 msgid "Confirmed"
-msgstr ""
+msgstr "ተረጋግጧል"
+
+#. module: budget
+#: model_terms:ir.ui.view,arch_db:budget.budget_budget_view_search
+msgid "Created By"
+msgstr "የተፈጠረ"
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_account_budget_post__create_uid
+#: model:ir.model.fields,field_description:budget.field_budget_approver__create_uid
 #: model:ir.model.fields,field_description:budget.field_budget_attachment_type__create_uid
 #: model:ir.model.fields,field_description:budget.field_budget_budget__create_uid
 #: model:ir.model.fields,field_description:budget.field_budget_lines__create_uid
 #: model:ir.model.fields,field_description:budget.field_budget_planning__create_uid
 #: model:ir.model.fields,field_description:budget.field_budget_planning_attachement__create_uid
+#: model:ir.model.fields,field_description:budget.field_budget_refuse_wizard__create_uid
 #: model:ir.model.fields,field_description:budget.field_budget_type__create_uid
+#: model:ir.model.fields,field_description:budget.field_hr_mapping_employee_account__create_uid
 #: model:ir.model.fields,field_description:budget.field_work_activity_stream__create_uid
 msgid "Created by"
-msgstr ""
+msgstr "የተፈጠረ"
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_account_budget_post__create_date
+#: model:ir.model.fields,field_description:budget.field_budget_approver__create_date
 #: model:ir.model.fields,field_description:budget.field_budget_attachment_type__create_date
 #: model:ir.model.fields,field_description:budget.field_budget_budget__create_date
 #: model:ir.model.fields,field_description:budget.field_budget_lines__create_date
 #: model:ir.model.fields,field_description:budget.field_budget_planning__create_date
 #: model:ir.model.fields,field_description:budget.field_budget_planning_attachement__create_date
+#: model:ir.model.fields,field_description:budget.field_budget_refuse_wizard__create_date
 #: model:ir.model.fields,field_description:budget.field_budget_type__create_date
+#: model:ir.model.fields,field_description:budget.field_hr_mapping_employee_account__create_date
 #: model:ir.model.fields,field_description:budget.field_work_activity_stream__create_date
 msgid "Created on"
-msgstr ""
+msgstr "ላይ ተፈጠረ"
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_budget_planning__currency_id
 msgid "Currency"
-msgstr ""
+msgstr "ምንዛሪ"
 
 #. module: budget
+#: model:ir.model.fields,help:budget.field_budget_approver__access_url
 #: model:ir.model.fields,help:budget.field_budget_planning__access_url
 #: model:ir.model.fields,help:budget.field_budget_planning_attachement__access_url
 #: model:ir.model.fields,help:budget.field_budget_type__access_url
 #: model:ir.model.fields,help:budget.field_work_activity_stream__access_url
 msgid "Customer Portal URL"
-msgstr ""
+msgstr "የደንበኛ ፖርታል URL"
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_budget_planning__date
@@ -522,35 +651,32 @@ msgstr "ቀን"
 #: model:ir.model.fields,field_description:budget.field_account_analytic_account__department_id
 #: model:ir.model.fields,field_description:budget.field_budget_lines__department_id
 msgid "Department"
-msgstr ""
+msgstr "መምሪያ"
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_budget_planning__description
 msgid "Description"
-msgstr ""
+msgstr "መግለጫ"
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_account_budget_post__display_name
+#: model:ir.model.fields,field_description:budget.field_budget_approver__display_name
 #: model:ir.model.fields,field_description:budget.field_budget_attachment_type__display_name
 #: model:ir.model.fields,field_description:budget.field_budget_budget__display_name
 #: model:ir.model.fields,field_description:budget.field_budget_lines__display_name
 #: model:ir.model.fields,field_description:budget.field_budget_planning__display_name
 #: model:ir.model.fields,field_description:budget.field_budget_planning_attachement__display_name
+#: model:ir.model.fields,field_description:budget.field_budget_refuse_wizard__display_name
 #: model:ir.model.fields,field_description:budget.field_budget_type__display_name
+#: model:ir.model.fields,field_description:budget.field_hr_mapping_employee_account__display_name
 #: model:ir.model.fields,field_description:budget.field_work_activity_stream__display_name
 msgid "Display Name"
-msgstr ""
-
-#. module: budget
-#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_form
-msgid "Document Attachement"
-msgstr "አባሪ ሰነድ"
+msgstr "መጠሪያው ስም"
 
 #. module: budget
 #: model:ir.model.fields.selection,name:budget.selection__budget_budget__state__done
 #: model:ir.model.fields.selection,name:budget.selection__budget_planning__state__done
 #: model_terms:ir.ui.view,arch_db:budget.crossovered_budget_view_form
-#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_form
 msgid "Done"
 msgstr "ተከናውኗል"
 
@@ -558,7 +684,7 @@ msgstr "ተከናውኗል"
 #: model:ir.model.fields.selection,name:budget.selection__budget_budget__state__draft
 #: model:ir.model.fields.selection,name:budget.selection__budget_planning__state__draft
 msgid "Draft"
-msgstr ""
+msgstr "ረቂቅ"
 
 #. module: budget
 #: model:ir.model.constraint,message:budget.constraint_budget_attachment_type_Check
@@ -569,45 +695,53 @@ msgstr ""
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_budget_planning__partner_email
 msgid "Email"
-msgstr ""
+msgstr "ኢሜይል"
 
 #. module: budget
 #: model:ir.model,name:budget.model_hr_employee
+#: model:ir.model.fields,field_description:budget.field_hr_mapping_employee_account__employee_id
 msgid "Employee"
-msgstr ""
+msgstr "ሰራተኛ"
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_budget_budget__date_to
 #: model:ir.model.fields,field_description:budget.field_budget_lines__date_to
 #: model:ir.model.fields,field_description:budget.field_budget_type__date_to
 msgid "End Date"
-msgstr ""
+msgstr "የመጨረሻ ቀን"
 
 #. module: budget
 #: model:ir.model,name:budget.model_hr_expense
 msgid "Expense"
-msgstr ""
+msgstr "ወጪ"
+
+#. module: budget
+#: model:ir.model,name:budget.model_hr_expense_sheet
+msgid "Expense Report"
+msgstr "የወጪ ሪፖርት"
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_budget_planning_attachement__file_name
 msgid "File Name"
-msgstr ""
+msgstr "የመዝገብ ስም"
 
 #. module: budget
 #: model:ir.ui.menu,name:budget.menu_for_financial_approval
 msgid "Financial Approval"
-msgstr "የፋይናንስ ማጽደቅ"
+msgstr "የፋይናንስ ማረጋገጫ"
 
 #. module: budget
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_approve_one_form
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_approve_two_form
 #: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_form
-msgid "Allowed Members"
-msgstr "የተፈቀዱ አባላት"
-
-
-#. module: budget
-#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_form
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_request_form
 msgid "Finanical Approve"
-msgstr "የፋይናንስ ማጽደቅ"
+msgstr "የፋይናንስ ማረጋገጫ"
+
+#. module: budget
+#: model:ir.model.fields,field_description:budget.field_budget_approver__first_approver
+msgid "First Approver"
+msgstr "የመጀመሪያው አጽዳቂ"
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_budget_planning__fiscal_year
@@ -616,72 +750,107 @@ msgstr "የበጀት ዓመት"
 
 #. module: budget
 #: code:addons/budget/models/account_analytic_account.py:0
-#: code:addons/budget/models/account_analytic_account.py:0
 #, python-format
 msgid "Fiscal year of the system is not set."
-msgstr ""
+msgstr "የስርዓቱ የበጀት ዓመት አልተዘጋጀም"
 
 #. module: budget
+#: model:ir.model.fields,field_description:budget.field_budget_approver__message_follower_ids
 #: model:ir.model.fields,field_description:budget.field_budget_budget__message_follower_ids
 #: model:ir.model.fields,field_description:budget.field_budget_planning__message_follower_ids
 #: model:ir.model.fields,field_description:budget.field_budget_planning_attachement__message_follower_ids
 #: model:ir.model.fields,field_description:budget.field_budget_type__message_follower_ids
 #: model:ir.model.fields,field_description:budget.field_work_activity_stream__message_follower_ids
 msgid "Followers"
-msgstr ""
+msgstr "ተከታዮች"
 
 #. module: budget
+#: model:ir.model.fields,field_description:budget.field_budget_approver__message_channel_ids
 #: model:ir.model.fields,field_description:budget.field_budget_budget__message_channel_ids
 #: model:ir.model.fields,field_description:budget.field_budget_planning__message_channel_ids
 #: model:ir.model.fields,field_description:budget.field_budget_planning_attachement__message_channel_ids
 #: model:ir.model.fields,field_description:budget.field_budget_type__message_channel_ids
 #: model:ir.model.fields,field_description:budget.field_work_activity_stream__message_channel_ids
 msgid "Followers (Channels)"
-msgstr ""
+msgstr "ተከታዮች (ሰርጦች)"
 
 #. module: budget
+#: model:ir.model.fields,field_description:budget.field_budget_approver__message_partner_ids
 #: model:ir.model.fields,field_description:budget.field_budget_budget__message_partner_ids
 #: model:ir.model.fields,field_description:budget.field_budget_planning__message_partner_ids
 #: model:ir.model.fields,field_description:budget.field_budget_planning_attachement__message_partner_ids
 #: model:ir.model.fields,field_description:budget.field_budget_type__message_partner_ids
 #: model:ir.model.fields,field_description:budget.field_work_activity_stream__message_partner_ids
 msgid "Followers (Partners)"
-msgstr ""
+msgstr "ተከታዮች (አጋሮች)"
 
 #. module: budget
 #: model_terms:ir.ui.view,arch_db:budget.crossovered_budget_view_form
 msgid "From"
-msgstr ""
+msgstr "ከ"
+
+#. module: budget
+#: model:ir.actions.act_window,name:budget.fund_fund_collection_graph_action
+msgid "Fund"
+msgstr "ፈንድ"
+
+#. module: budget
+#: model:ir.ui.menu,name:budget.fund_fund_collection_report_menu
+msgid "Fund managment"
+msgstr "ፈንድ አስተዳደር"
+
+#. module: budget
+#: model:ir.ui.menu,name:budget.fund_collection_report_menu12
+msgid "Fund report"
+msgstr "ፈንድ ሪፖርት"
+
+#. module: budget
+#: model_terms:ir.ui.view,arch_db:budget.budget_planning_view_search
+msgid "Grade"
+msgstr "ደረጃ"
+
+#. module: budget
+#: model_terms:ir.ui.view,arch_db:budget.budget_budget_view_search
+#: model_terms:ir.ui.view,arch_db:budget.budget_planning_view_search
+msgid "Group By"
+msgstr "ቡድን በ"
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_account_budget_post__id
+#: model:ir.model.fields,field_description:budget.field_budget_approver__id
 #: model:ir.model.fields,field_description:budget.field_budget_attachment_type__id
 #: model:ir.model.fields,field_description:budget.field_budget_budget__id
 #: model:ir.model.fields,field_description:budget.field_budget_lines__id
 #: model:ir.model.fields,field_description:budget.field_budget_planning__id
 #: model:ir.model.fields,field_description:budget.field_budget_planning_attachement__id
+#: model:ir.model.fields,field_description:budget.field_budget_refuse_wizard__id
 #: model:ir.model.fields,field_description:budget.field_budget_type__id
+#: model:ir.model.fields,field_description:budget.field_hr_mapping_employee_account__id
 #: model:ir.model.fields,field_description:budget.field_work_activity_stream__id
 msgid "ID"
-msgstr ""
+msgstr "መታወቂያ"
 
 #. module: budget
+#: model:ir.model.fields,field_description:budget.field_budget_approver__activity_exception_icon
 #: model:ir.model.fields,field_description:budget.field_budget_planning__activity_exception_icon
 #: model:ir.model.fields,field_description:budget.field_budget_planning_attachement__activity_exception_icon
 #: model:ir.model.fields,field_description:budget.field_budget_type__activity_exception_icon
 #: model:ir.model.fields,field_description:budget.field_work_activity_stream__activity_exception_icon
 msgid "Icon"
-msgstr ""
+msgstr "አዶ"
 
 #. module: budget
+#: model:ir.model.fields,help:budget.field_budget_approver__activity_exception_icon
 #: model:ir.model.fields,help:budget.field_budget_planning__activity_exception_icon
 #: model:ir.model.fields,help:budget.field_budget_planning_attachement__activity_exception_icon
 #: model:ir.model.fields,help:budget.field_budget_type__activity_exception_icon
 #: model:ir.model.fields,help:budget.field_work_activity_stream__activity_exception_icon
 msgid "Icon to indicate an exception activity."
-msgstr ""
+msgstr "ልዩ እንቅስቃሴን ለማመልከት አዶ።"
 
 #. module: budget
+#: model:ir.model.fields,help:budget.field_budget_approver__message_needaction
+#: model:ir.model.fields,help:budget.field_budget_approver__message_unread
 #: model:ir.model.fields,help:budget.field_budget_budget__message_needaction
 #: model:ir.model.fields,help:budget.field_budget_budget__message_unread
 #: model:ir.model.fields,help:budget.field_budget_planning__message_needaction
@@ -693,9 +862,11 @@ msgstr ""
 #: model:ir.model.fields,help:budget.field_work_activity_stream__message_needaction
 #: model:ir.model.fields,help:budget.field_work_activity_stream__message_unread
 msgid "If checked, new messages require your attention."
-msgstr ""
+msgstr "ምልክት ካደረጉ፣ አዲስ መልዕክቶች የእርስዎን ትኩረት ይፈልጋሉ።"
 
 #. module: budget
+#: model:ir.model.fields,help:budget.field_budget_approver__message_has_error
+#: model:ir.model.fields,help:budget.field_budget_approver__message_has_sms_error
 #: model:ir.model.fields,help:budget.field_budget_budget__message_has_error
 #: model:ir.model.fields,help:budget.field_budget_budget__message_has_sms_error
 #: model:ir.model.fields,help:budget.field_budget_planning__message_has_error
@@ -707,17 +878,12 @@ msgstr ""
 #: model:ir.model.fields,help:budget.field_work_activity_stream__message_has_error
 #: model:ir.model.fields,help:budget.field_work_activity_stream__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
-msgstr ""
+msgstr "ምልክት ካደረጉ፣ አንዳንድ መልዕክቶች የማድረስ ስህተት አለባቸው"
 
 #. module: budget
 #: model:ir.model.fields.selection,name:budget.selection__budget_planning__kanban_state__normal
 msgid "In Progress"
-msgstr ""
-
-#. module: budget
-#: model:ir.model.fields.selection,name:budget.selection__budget_planning__budget_methods__incremental_budgeting
-msgid "Incremental budgeting"
-msgstr ""
+msgstr "በሂደት ላይ"
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_budget_planning__is_project
@@ -725,105 +891,144 @@ msgid "Integrate to Project"
 msgstr "ከፕሮጀክት ጋር ያዋህዱ"
 
 #. module: budget
+#: model:ir.model.fields,field_description:budget.field_account_move__is_budget_transfer_journal
+msgid "Is Budget Transfer Journal"
+msgstr "የበጀት ማስተላለፍ ጆርናል ነው"
+
+#. module: budget
+#: model:ir.model.fields,field_description:budget.field_budget_approver__message_is_follower
 #: model:ir.model.fields,field_description:budget.field_budget_budget__message_is_follower
 #: model:ir.model.fields,field_description:budget.field_budget_planning__message_is_follower
 #: model:ir.model.fields,field_description:budget.field_budget_planning_attachement__message_is_follower
 #: model:ir.model.fields,field_description:budget.field_budget_type__message_is_follower
 #: model:ir.model.fields,field_description:budget.field_work_activity_stream__message_is_follower
 msgid "Is Follower"
-msgstr ""
+msgstr "ተከታይ ነው"
+
+#. module: budget
+#: model:ir.model.fields,field_description:budget.field_budget_planning__is_refused
+msgid "Is Refused"
+msgstr "ውድቅ ተደርጓል"
+
+#. module: budget
+#: model:ir.model.fields,field_description:budget.field_account_budget_post__is_transfer_code
+msgid "Is Transfer Code"
+msgstr "የዝውውር ኮድ ነው"
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_account_analytic_account__is_allowed
-#: model:ir.model.fields,field_description:budget.field_hr_employee__is_allowed
+#: model:ir.model.fields,field_description:budget.field_hr_mapping_employee_account__is_allowed
 msgid "Is_allowed"
-msgstr ""
+msgstr "ተፈቅዷል"
+
+#. module: budget
+#: model:ir.model,name:budget.model_account_move
+msgid "Journal Entries"
+msgstr "የጆርናል መግቢያዎች"
+
+#. module: budget
+#: model:ir.model,name:budget.model_account_move_line
+msgid "Journal Item"
+msgstr "መዝገብ ኣይተም"
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_budget_planning__kanban_state
 msgid "Kanban State"
-msgstr ""
+msgstr "የምልክት ሰሌዳ ኤስ በአቀባዊ"
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_account_budget_post____last_update
+#: model:ir.model.fields,field_description:budget.field_budget_approver____last_update
 #: model:ir.model.fields,field_description:budget.field_budget_attachment_type____last_update
 #: model:ir.model.fields,field_description:budget.field_budget_budget____last_update
 #: model:ir.model.fields,field_description:budget.field_budget_lines____last_update
 #: model:ir.model.fields,field_description:budget.field_budget_planning____last_update
 #: model:ir.model.fields,field_description:budget.field_budget_planning_attachement____last_update
+#: model:ir.model.fields,field_description:budget.field_budget_refuse_wizard____last_update
 #: model:ir.model.fields,field_description:budget.field_budget_type____last_update
+#: model:ir.model.fields,field_description:budget.field_hr_mapping_employee_account____last_update
 #: model:ir.model.fields,field_description:budget.field_work_activity_stream____last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "መጨረሻ የተሻሻለው በ"
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_account_budget_post__write_uid
+#: model:ir.model.fields,field_description:budget.field_budget_approver__write_uid
 #: model:ir.model.fields,field_description:budget.field_budget_attachment_type__write_uid
 #: model:ir.model.fields,field_description:budget.field_budget_budget__write_uid
 #: model:ir.model.fields,field_description:budget.field_budget_lines__write_uid
 #: model:ir.model.fields,field_description:budget.field_budget_planning__write_uid
 #: model:ir.model.fields,field_description:budget.field_budget_planning_attachement__write_uid
+#: model:ir.model.fields,field_description:budget.field_budget_refuse_wizard__write_uid
 #: model:ir.model.fields,field_description:budget.field_budget_type__write_uid
+#: model:ir.model.fields,field_description:budget.field_hr_mapping_employee_account__write_uid
 #: model:ir.model.fields,field_description:budget.field_work_activity_stream__write_uid
 msgid "Last Updated by"
-msgstr ""
+msgstr "መጨረሻ የዘመነው በ"
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_account_budget_post__write_date
+#: model:ir.model.fields,field_description:budget.field_budget_approver__write_date
 #: model:ir.model.fields,field_description:budget.field_budget_attachment_type__write_date
 #: model:ir.model.fields,field_description:budget.field_budget_budget__write_date
 #: model:ir.model.fields,field_description:budget.field_budget_lines__write_date
 #: model:ir.model.fields,field_description:budget.field_budget_planning__write_date
 #: model:ir.model.fields,field_description:budget.field_budget_planning_attachement__write_date
+#: model:ir.model.fields,field_description:budget.field_budget_refuse_wizard__write_date
 #: model:ir.model.fields,field_description:budget.field_budget_type__write_date
+#: model:ir.model.fields,field_description:budget.field_hr_mapping_employee_account__write_date
 #: model:ir.model.fields,field_description:budget.field_work_activity_stream__write_date
 msgid "Last Updated on"
-msgstr ""
+msgstr "መጨረሻ የዘመነው በ"
 
 #. module: budget
+#: model:ir.model.fields,field_description:budget.field_budget_approver__message_main_attachment_id
 #: model:ir.model.fields,field_description:budget.field_budget_budget__message_main_attachment_id
 #: model:ir.model.fields,field_description:budget.field_budget_planning__message_main_attachment_id
 #: model:ir.model.fields,field_description:budget.field_budget_planning_attachement__message_main_attachment_id
 #: model:ir.model.fields,field_description:budget.field_budget_type__message_main_attachment_id
 #: model:ir.model.fields,field_description:budget.field_work_activity_stream__message_main_attachment_id
 msgid "Main Attachment"
-msgstr ""
+msgstr "ዋና አባሪ"
 
 #. module: budget
+#: model:ir.model.fields,field_description:budget.field_budget_approver__medium_id
 #: model:ir.model.fields,field_description:budget.field_budget_planning__medium_id
 #: model:ir.model.fields,field_description:budget.field_budget_planning_attachement__medium_id
 #: model:ir.model.fields,field_description:budget.field_budget_type__medium_id
 #: model:ir.model.fields,field_description:budget.field_work_activity_stream__medium_id
 msgid "Medium"
-msgstr ""
+msgstr "መካከለኛ"
 
 #. module: budget
+#: model:ir.model.fields,field_description:budget.field_budget_approver__message_has_error
 #: model:ir.model.fields,field_description:budget.field_budget_budget__message_has_error
 #: model:ir.model.fields,field_description:budget.field_budget_planning__message_has_error
 #: model:ir.model.fields,field_description:budget.field_budget_planning_attachement__message_has_error
 #: model:ir.model.fields,field_description:budget.field_budget_type__message_has_error
 #: model:ir.model.fields,field_description:budget.field_work_activity_stream__message_has_error
 msgid "Message Delivery error"
-msgstr ""
+msgstr "የመልእክት ማቅረቢያ ስህተት"
 
 #. module: budget
+#: model:ir.model.fields,field_description:budget.field_budget_approver__message_ids
 #: model:ir.model.fields,field_description:budget.field_budget_budget__message_ids
 #: model:ir.model.fields,field_description:budget.field_budget_planning__message_ids
 #: model:ir.model.fields,field_description:budget.field_budget_planning_attachement__message_ids
 #: model:ir.model.fields,field_description:budget.field_budget_type__message_ids
 #: model:ir.model.fields,field_description:budget.field_work_activity_stream__message_ids
 msgid "Messages"
-msgstr ""
+msgstr "መልእክቶች"
 
 #. module: budget
 #: model:ir.ui.menu,name:budget.menu_for_my_request
 msgid "My Request"
-msgstr "የበጀት ጥያቄ"
+msgstr "የእኔ ጥያቄ"
 
 #. module: budget
 #: model:ir.actions.act_window,name:budget.my_budget_planning_request
 msgid "My Requests"
-msgstr "የበጀት ጥያቄ"
+msgstr "የእኔ ጥያቄ"
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_account_budget_post__name
@@ -840,113 +1045,121 @@ msgid "New"
 msgstr "አዲስ"
 
 #. module: budget
+#: model:ir.model.fields,field_description:budget.field_budget_approver__activity_date_deadline
 #: model:ir.model.fields,field_description:budget.field_budget_planning__activity_date_deadline
 #: model:ir.model.fields,field_description:budget.field_budget_planning_attachement__activity_date_deadline
 #: model:ir.model.fields,field_description:budget.field_budget_type__activity_date_deadline
 #: model:ir.model.fields,field_description:budget.field_work_activity_stream__activity_date_deadline
 msgid "Next Activity Deadline"
-msgstr ""
+msgstr "ቀጣይ የእንቅስቃሴ ገደብ"
 
 #. module: budget
+#: model:ir.model.fields,field_description:budget.field_budget_approver__activity_summary
 #: model:ir.model.fields,field_description:budget.field_budget_planning__activity_summary
 #: model:ir.model.fields,field_description:budget.field_budget_planning_attachement__activity_summary
 #: model:ir.model.fields,field_description:budget.field_budget_type__activity_summary
 #: model:ir.model.fields,field_description:budget.field_work_activity_stream__activity_summary
 msgid "Next Activity Summary"
-msgstr ""
+msgstr "ቀጣይ የእንቅስቃሴ ማጠቃለያ"
 
 #. module: budget
+#: model:ir.model.fields,field_description:budget.field_budget_approver__activity_type_id
 #: model:ir.model.fields,field_description:budget.field_budget_planning__activity_type_id
 #: model:ir.model.fields,field_description:budget.field_budget_planning_attachement__activity_type_id
 #: model:ir.model.fields,field_description:budget.field_budget_type__activity_type_id
 #: model:ir.model.fields,field_description:budget.field_work_activity_stream__activity_type_id
 msgid "Next Activity Type"
-msgstr ""
+msgstr "ቀጣይ የእንቅስቃሴ አይነት"
+
+#. module: budget
+#: model_terms:ir.actions.act_window,help:budget.my_budget_planning_request
+msgid "No Budget Requests"
+msgstr "ምንም የበጀት ጥያቄዎች የሉም"
 
 #. module: budget
 #: model_terms:ir.actions.act_window,help:budget.budget_departmental_approval
 msgid "No Budget Requests From Your Derpartment"
-msgstr ""
+msgstr "ከእርስዎ ዲፓርትመንት ምንም የበጀት ጥያቄዎች የሉም"
 
 #. module: budget
-#: model_terms:ir.actions.act_window,help:budget.budget_financial_approval
-msgid "No Budget Requests Yet"
-msgstr ""
-
-#. module: budget
+#: model:ir.model.fields,field_description:budget.field_budget_approver__message_needaction_counter
 #: model:ir.model.fields,field_description:budget.field_budget_budget__message_needaction_counter
 #: model:ir.model.fields,field_description:budget.field_budget_planning__message_needaction_counter
 #: model:ir.model.fields,field_description:budget.field_budget_planning_attachement__message_needaction_counter
 #: model:ir.model.fields,field_description:budget.field_budget_type__message_needaction_counter
 #: model:ir.model.fields,field_description:budget.field_work_activity_stream__message_needaction_counter
 msgid "Number of Actions"
-msgstr ""
+msgstr "የተግባሮች ብዛት"
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_budget_planning__attachment_number
 msgid "Number of Attachments"
-msgstr ""
+msgstr "የአባሪዎች ብዛት"
 
 #. module: budget
+#: model:ir.model.fields,field_description:budget.field_budget_approver__message_has_error_counter
 #: model:ir.model.fields,field_description:budget.field_budget_budget__message_has_error_counter
 #: model:ir.model.fields,field_description:budget.field_budget_planning__message_has_error_counter
 #: model:ir.model.fields,field_description:budget.field_budget_planning_attachement__message_has_error_counter
 #: model:ir.model.fields,field_description:budget.field_budget_type__message_has_error_counter
 #: model:ir.model.fields,field_description:budget.field_work_activity_stream__message_has_error_counter
 msgid "Number of errors"
-msgstr ""
+msgstr "የስህተት ብዛት"
 
 #. module: budget
+#: model:ir.model.fields,help:budget.field_budget_approver__message_needaction_counter
 #: model:ir.model.fields,help:budget.field_budget_budget__message_needaction_counter
 #: model:ir.model.fields,help:budget.field_budget_planning__message_needaction_counter
 #: model:ir.model.fields,help:budget.field_budget_planning_attachement__message_needaction_counter
 #: model:ir.model.fields,help:budget.field_budget_type__message_needaction_counter
 #: model:ir.model.fields,help:budget.field_work_activity_stream__message_needaction_counter
 msgid "Number of messages which requires an action"
-msgstr ""
+msgstr "እርምጃ የሚያስፈልገው የመልእክት ብዛት"
 
 #. module: budget
+#: model:ir.model.fields,help:budget.field_budget_approver__message_has_error_counter
 #: model:ir.model.fields,help:budget.field_budget_budget__message_has_error_counter
 #: model:ir.model.fields,help:budget.field_budget_planning__message_has_error_counter
 #: model:ir.model.fields,help:budget.field_budget_planning_attachement__message_has_error_counter
 #: model:ir.model.fields,help:budget.field_budget_type__message_has_error_counter
 #: model:ir.model.fields,help:budget.field_work_activity_stream__message_has_error_counter
 msgid "Number of messages with delivery error"
-msgstr ""
+msgstr "የማድረስ ስህተት ያለባቸው መልዕክቶች ብዛት"
 
 #. module: budget
+#: model:ir.model.fields,help:budget.field_budget_approver__message_unread_counter
 #: model:ir.model.fields,help:budget.field_budget_budget__message_unread_counter
 #: model:ir.model.fields,help:budget.field_budget_planning__message_unread_counter
 #: model:ir.model.fields,help:budget.field_budget_planning_attachement__message_unread_counter
 #: model:ir.model.fields,help:budget.field_budget_type__message_unread_counter
 #: model:ir.model.fields,help:budget.field_work_activity_stream__message_unread_counter
 msgid "Number of unread messages"
-msgstr ""
+msgstr "ያልተነበቡ መልዕክቶች ብዛት"
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_budget_lines__original_planned_amount
 msgid "Original Planned Amount"
-msgstr ""
+msgstr "የመጀመሪያው የታቀደ መጠን"
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_budget_planning__output
 msgid "Out Put"
-msgstr ""
+msgstr "ውፅዓት"
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_budget_lines__paid_date
 msgid "Paid Date"
-msgstr ""
+msgstr "የተከፈለበት ቀን"
 
 #. module: budget
 #: model_terms:ir.ui.view,arch_db:budget.crossovered_budget_view_form
 msgid "Period"
-msgstr ""
+msgstr "ጊዜ"
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_budget_planning__partner_phone
 msgid "Phone"
-msgstr ""
+msgstr "ስልክ"
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_project_task__budget_amount
@@ -959,36 +1172,53 @@ msgid "Plane amount"
 msgstr "የታቀደ መጠን"
 
 #. module: budget
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_approve_one_form
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_approve_two_form
 #: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_form
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_request_form
 msgid "Planed Amount"
 msgstr "የታቀደ መጠን"
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_budget_lines__planned_amount
 #: model:ir.model.fields,field_description:budget.field_budget_planning__planned_amount
+#: model_terms:ir.ui.view,arch_db:budget.budget_budget_view_search
 #: model_terms:ir.ui.view,arch_db:budget.crossovered_budget_view_form
 msgid "Planned Amount"
 msgstr "የታቀደ መጠን"
 
 #. module: budget
+#: code:addons/budget/models/budget_planning.py:0
+#, python-format
+msgid ""
+"Please input the Work Stream Breakdown/ Budget Line for the planned budget."
+msgstr "እባክዎን ለታቀደው በጀት የስራ  ክፍፍል/በጀት መስመር ያስገቡ"
+
+#. module: budget
+#: model:ir.model.fields,field_description:budget.field_budget_approver__access_url
 #: model:ir.model.fields,field_description:budget.field_budget_planning__access_url
 #: model:ir.model.fields,field_description:budget.field_budget_planning_attachement__access_url
 #: model:ir.model.fields,field_description:budget.field_budget_type__access_url
 #: model:ir.model.fields,field_description:budget.field_work_activity_stream__access_url
 msgid "Portal Access URL"
-msgstr ""
+msgstr "ፖርታል መዳረሻ URL"
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_budget_lines__practical_amount
 #: model_terms:ir.ui.view,arch_db:budget.crossovered_budget_view_form
 #: model_terms:ir.ui.view,arch_db:budget.view_account_analytic_account_form_inherit_budget
 msgid "Practical Amount"
-msgstr ""
+msgstr "ተግባራዊ መጠን"
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_budget_planning__budget_planner
 msgid "Project Leader"
-msgstr ""
+msgstr "የፕሮጀክት መሪ"
+
+#. module: budget
+#: model:ir.model,name:budget.model_hr_employee_public
+msgid "Public Employee"
+msgstr "ፐብሊክ ሠራተኛ"
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_work_activity_stream__quantity
@@ -998,108 +1228,181 @@ msgstr "ብዛት"
 #. module: budget
 #: model:ir.model.fields.selection,name:budget.selection__budget_planning__kanban_state__done
 msgid "Ready"
-msgstr ""
+msgstr "ዝግጁ"
 
 #. module: budget
+#: model:ir.model.fields,field_description:budget.field_budget_refuse_wizard__reason
+msgid "Reason"
+msgstr "ምላሽ"
+
+#. module: budget
+#: model_terms:ir.ui.view,arch_db:budget.budget_template_refuse_reason
+msgid "Reason :"
+msgstr "ምክንያት:"
+
+#. module: budget
+#: model_terms:ir.ui.view,arch_db:budget.budget_refuse_wizard_view_form
+msgid "Reason to refuse Budget planning"
+msgstr "የበጀት እቅድን ውድቅ ለማድረግ ምክንያት"
+
+#. module: budget
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_approve_one_form
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_approve_one_tree
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_approve_two_form
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_approve_two_tree
 #: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_form
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_request_form
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_request_tree
 #: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_tree
 msgid "Reference"
 msgstr "ማጣቀሻ"
 
 #. module: budget
+#: model_terms:ir.ui.view,arch_db:budget.budget_refuse_wizard_view_form
+msgid "Refuse"
+msgstr "እምቢ ማለት"
+
+#. module: budget
+#: model:ir.actions.act_window,name:budget.budget_refuse_wizard_action
+msgid "Refuse Budget"
+msgstr "በጀት አለመቀበል"
+
+#. module: budget
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_approve_two_form
 #: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_form
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_request_form
 msgid "Reject Request"
-msgstr "ጥያቄ አለመቀበል"
+msgstr "ጥያቄን ውድቅ አድርግ"
 
 #. module: budget
 #: model:ir.model.fields.selection,name:budget.selection__budget_planning__state__rejected
 msgid "Rejected"
-msgstr ""
+msgstr "ውድቅ ተደርጓል"
 
 #. module: budget
 #: model:ir.model.fields,help:budget.field_budget_planning_attachement__budget_attachement_id
 #: model:ir.model.fields,help:budget.field_work_activity_stream__activity_id
 msgid "Relation field"
-msgstr ""
+msgstr "የግንኙነት መስክ"
 
 #. module: budget
 #: model:ir.model.fields.selection,name:budget.selection__budget_planning__state__requested
 msgid "Requested"
-msgstr ""
+msgstr "ተጠይቋል"
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_budget_lines__reserved_amount
 #: model_terms:ir.ui.view,arch_db:budget.crossovered_budget_view_form
 msgid "Reserved Amount"
-msgstr ""
+msgstr "የተያዘው መጠን"
 
 #. module: budget
 #: model_terms:ir.ui.view,arch_db:budget.crossovered_budget_view_form
 msgid "Reset to Draft"
-msgstr ""
+msgstr "ወደ ረቂቅ ዳግም አስጀምር"
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_budget_budget__creating_user_id
 msgid "Responsible"
-msgstr ""
+msgstr "ተጠያቂ"
 
 #. module: budget
+#: model:ir.model.fields,field_description:budget.field_budget_approver__activity_user_id
 #: model:ir.model.fields,field_description:budget.field_budget_planning__activity_user_id
 #: model:ir.model.fields,field_description:budget.field_budget_planning_attachement__activity_user_id
 #: model:ir.model.fields,field_description:budget.field_budget_type__activity_user_id
 #: model:ir.model.fields,field_description:budget.field_work_activity_stream__activity_user_id
 msgid "Responsible User"
-msgstr ""
+msgstr "ኃላፊነት የሚሰማው ተጠቃሚ"
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_account_analytic_account__unused_percentage
 msgid "Rest Budget"
-msgstr ""
+msgstr "በጀት ዳግም አስጀምር"
 
 #. module: budget
+#: model:ir.model.fields,field_description:budget.field_budget_approver__message_has_sms_error
 #: model:ir.model.fields,field_description:budget.field_budget_budget__message_has_sms_error
 #: model:ir.model.fields,field_description:budget.field_budget_planning__message_has_sms_error
 #: model:ir.model.fields,field_description:budget.field_budget_planning_attachement__message_has_sms_error
 #: model:ir.model.fields,field_description:budget.field_budget_type__message_has_sms_error
 #: model:ir.model.fields,field_description:budget.field_work_activity_stream__message_has_sms_error
 msgid "SMS Delivery error"
-msgstr ""
+msgstr "የኤስኤምኤስ የማድረስ ስህተት"
 
 #. module: budget
+#: model:ir.model.fields.selection,name:budget.selection__budget_planning__state__ceo_approved
+msgid "Second Approved"
+msgstr "በሁለተኛው ፋይናንስ ጸድቋል"
+
+#. module: budget
+#: model:ir.model.fields,field_description:budget.field_budget_approver__second_approver
+msgid "Second Approver"
+msgstr "ሁለተኛ አጽዳቂ"
+
+#. module: budget
+#: model:ir.model.fields,field_description:budget.field_budget_approver__access_token
 #: model:ir.model.fields,field_description:budget.field_budget_planning__access_token
 #: model:ir.model.fields,field_description:budget.field_budget_planning_attachement__access_token
 #: model:ir.model.fields,field_description:budget.field_budget_type__access_token
 #: model:ir.model.fields,field_description:budget.field_work_activity_stream__access_token
 msgid "Security Token"
-msgstr ""
+msgstr "የደህንነት ማስመሰያ"
 
 #. module: budget
+#: code:addons/budget/models/account_analytic_account.py:0
+#, python-format
+msgid "Select the appropriate fiscal date for your Expense."
+msgstr "ለወጪዎ ተገቢውን የበጀት ቀን ይምረጡ።"
+
+#. module: budget
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_approve_one_form
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_approve_two_form
 #: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_form
-msgid "Set To Draft"
-msgstr ""
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_request_form
+msgid "Senior Finanical Approve"
+msgstr "ከፍተኛ የገንዘብ ማጽደቅ"
 
 #. module: budget
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_approve_one_form
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_approve_two_form
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_form
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_request_form
+msgid "Set To Draft"
+msgstr "ወደ ረቂቅ አዘጋጅ"
+
+#. module: budget
+#: model:ir.model.fields,field_description:budget.field_budget_approver__source_id
 #: model:ir.model.fields,field_description:budget.field_budget_planning__source_id
 #: model:ir.model.fields,field_description:budget.field_budget_planning_attachement__source_id
 #: model:ir.model.fields,field_description:budget.field_budget_type__source_id
 #: model:ir.model.fields,field_description:budget.field_work_activity_stream__source_id
 msgid "Source"
-msgstr ""
+msgstr "ምንጭ"
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_budget_budget__date_from
 #: model:ir.model.fields,field_description:budget.field_budget_lines__date_from
 #: model:ir.model.fields,field_description:budget.field_budget_type__date_from
 msgid "Start Date"
-msgstr ""
+msgstr "የመጀመሪያ ቀን"
+
+#. module: budget
+#: model_terms:ir.ui.view,arch_db:budget.budget_budget_view_search
+#: model_terms:ir.ui.view,arch_db:budget.budget_planning_view_search
+msgid "State"
+msgstr "ሁኔታ"
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_budget_budget__state
 #: model:ir.model.fields,field_description:budget.field_budget_planning__state
+#: model_terms:ir.ui.view,arch_db:budget.budget_budget_view_search
+#: model_terms:ir.ui.view,arch_db:budget.budget_planning_view_search
 msgid "Status"
-msgstr ""
+msgstr "ሁኔታ"
 
 #. module: budget
+#: model:ir.model.fields,help:budget.field_budget_approver__activity_state
 #: model:ir.model.fields,help:budget.field_budget_planning__activity_state
 #: model:ir.model.fields,help:budget.field_budget_planning_attachement__activity_state
 #: model:ir.model.fields,help:budget.field_budget_type__activity_state
@@ -1110,42 +1413,70 @@ msgid ""
 "Today: Activity date is today\n"
 "Planned: Future activities."
 msgstr ""
+"በእንቅስቃሴ ላይ የተመሰረተ ሁኔታ\n"
+"አልፏል፡ የማለቂያ ቀን አስቀድሞ አልፏል\n"
+"ዛሬ፡ የተግባር ቀን ዛሬ ነው\n"
+"የታቀደው: የወደፊት እንቅስቃሴዎች."
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_project_task__target_area
 #: model:ir.model.fields,field_description:budget.field_work_activity_stream__target_point
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_approve_one_form
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_approve_two_form
 #: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_form
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_request_form
 msgid "Target Area"
-msgstr "ዒላማ አካባቢ"
+msgstr "የዒላማ አካባቢ"
 
 #. module: budget
 #: model:ir.model,name:budget.model_project_task
 msgid "Task"
-msgstr ""
+msgstr "ተግባር"
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_budget_planning__teams
 msgid "Team Members"
-msgstr "የተፈቀዱ አባላት"
+msgstr "የቡድን አባላት"
+
+#. module: budget
+#: code:addons/budget/models/account_analytic_account.py:0
+#: code:addons/budget/models/account_analytic_account.py:0
+#, python-format
+msgid ""
+"The Expense Account are not in this budget code...\n"
+" Please ckeck your product Expense Account"
+msgstr ""
+"የወጪ ሂሳብ በዚህ የበጀት ኮድ ውስጥ የለም...\n"
+"እባክዎ የምርት ወጪ መለያዎን ያውጡ"
 
 #. module: budget
 #: code:addons/budget/models/account_budget.py:0
 #, python-format
 msgid "The budget must have at least one account."
-msgstr ""
+msgstr "በጀቱ ቢያንስ አንድ መለያ ሊኖረው ይገባል።"
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_budget_lines__theoretical_amount
 msgid "Theoretical Amount"
-msgstr ""
+msgstr "የንድፈ ሐሳብ መጠን"
 
 #. module: budget
 #: code:addons/budget/models/account_analytic_account.py:0
+#: code:addons/budget/models/account_analytic_account.py:0
 #, python-format
-msgid "This Account are not Approved."
-msgstr ""
+msgid ""
+"This account has not been approved, and the budget approval process has not "
+"been completed."
+msgstr "ይህ መለያ አልጸደቀም፣ እና የበጀት ማጽደቁ ሂደት አልደረሰም ተጠናቀቀ።"
 
 #. module: budget
+#: code:addons/budget/models/budget_planning.py:0
+#, python-format
+msgid "This budget is already linked to the project."
+msgstr "ይህ በጀት አስቀድሞ ከፕሮጀክቱ ጋር የተያያዘ ነው።"
+
+#. module: budget
+#: model:ir.model.fields,help:budget.field_budget_approver__campaign_id
 #: model:ir.model.fields,help:budget.field_budget_planning__campaign_id
 #: model:ir.model.fields,help:budget.field_budget_planning_attachement__campaign_id
 #: model:ir.model.fields,help:budget.field_budget_type__campaign_id
@@ -1153,17 +1484,19 @@ msgstr ""
 msgid ""
 "This is a name that helps you keep track of your different campaign efforts,"
 " e.g. Fall_Drive, Christmas_Special"
-msgstr ""
+msgstr "ይህ የተለያዩ የዘመቻ ጥረቶችዎን ለመከታተል የሚረዳዎት ስም ነውለምሳሌ ውድቀት_Drive፣ የገና_ልዩ"
 
 #. module: budget
+#: model:ir.model.fields,help:budget.field_budget_approver__medium_id
 #: model:ir.model.fields,help:budget.field_budget_planning__medium_id
 #: model:ir.model.fields,help:budget.field_budget_planning_attachement__medium_id
 #: model:ir.model.fields,help:budget.field_budget_type__medium_id
 #: model:ir.model.fields,help:budget.field_work_activity_stream__medium_id
 msgid "This is the method of delivery, e.g. Postcard, Email, or Banner Ad"
-msgstr ""
+msgstr "ይህ የማስረከቢያ ዘዴ ነው, ለምሳሌ. ፖስትካርድ፣ ኢሜል ወይም ባነር ማስታወቂያ"
 
 #. module: budget
+#: model:ir.model.fields,help:budget.field_budget_approver__source_id
 #: model:ir.model.fields,help:budget.field_budget_planning__source_id
 #: model:ir.model.fields,help:budget.field_budget_planning_attachement__source_id
 #: model:ir.model.fields,help:budget.field_budget_type__source_id
@@ -1171,152 +1504,210 @@ msgstr ""
 msgid ""
 "This is the source of the link, e.g. Search Engine, another domain, or name "
 "of email list"
-msgstr ""
+msgstr "ይህ የአገናኙ ምንጭ ነው፣ ለምሳሌ የፍለጋ ሞተር፣ ሌላ ጎራ ወይም የኢሜይል ዝርዝር ስም"
 
 #. module: budget
 #: model:ir.model,name:budget.model_budget_attachment_type
 msgid ""
 "This will handle the different types of budget planning related attachments"
-msgstr ""
+msgstr "ይህ የበጀት እቅድ ተያያዥ አባሪዎችን የተለያዩ አይነቶችን ይቆጣጠራል"
 
 #. module: budget
 #: model_terms:ir.ui.view,arch_db:budget.crossovered_budget_view_form
 msgid "To"
-msgstr ""
+msgstr "ለ"
 
 #. module: budget
 #: model:ir.model.fields.selection,name:budget.selection__budget_planning__state__dep_approved
 msgid "To be approve"
-msgstr ""
+msgstr "ለማጽደቅ"
+
+#. module: budget
+#: code:addons/budget/models/budget_planning.py:0
+#, python-format
+msgid ""
+"To create additional approvers for the budget case, please edit/update the "
+"record. The system only allows a maximum of two approvers"
+msgstr "ለበጀት ጉዳይ ተጨማሪ አጽዳቂዎችን ለመፍጠር፣ እባክዎ መዝገቡን ያርትዑ/ያዘምኑ። ስርዓቱ የሚፈቀደው ቢበዛ ሁለት አጽዳቂዎችን ብቻ ነው።"
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_budget_budget__planned_amount
 #: model:ir.model.fields,field_description:budget.field_budget_planning__amount_total
 #: model:ir.model.fields,field_description:budget.field_work_activity_stream__amount_total
 msgid "Total Planned Amount"
-msgstr ""
+msgstr "ጠቅላላ የታቀደ መጠን"
 
 #. module: budget
-#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_form
-msgid "Total Planned Amount:"
-msgstr "የታቀዱ የብር መጠን"
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_post_form
+msgid "Transfer Code"
+msgstr "የማስተላለፊያ ኮድ"
 
 #. module: budget
+#: model:ir.model.fields,help:budget.field_budget_approver__activity_exception_decoration
 #: model:ir.model.fields,help:budget.field_budget_planning__activity_exception_decoration
 #: model:ir.model.fields,help:budget.field_budget_planning_attachement__activity_exception_decoration
 #: model:ir.model.fields,help:budget.field_budget_type__activity_exception_decoration
 #: model:ir.model.fields,help:budget.field_work_activity_stream__activity_exception_decoration
 msgid "Type of the exception activity on record."
-msgstr ""
+msgstr "በመዝገብ ላይ ያለ ልዩ እንቅስቃሴ ዓይነት።"
 
 #. module: budget
+#: model:ir.model.fields,field_description:budget.field_budget_approver__message_unread
 #: model:ir.model.fields,field_description:budget.field_budget_budget__message_unread
 #: model:ir.model.fields,field_description:budget.field_budget_planning__message_unread
 #: model:ir.model.fields,field_description:budget.field_budget_planning_attachement__message_unread
 #: model:ir.model.fields,field_description:budget.field_budget_type__message_unread
 #: model:ir.model.fields,field_description:budget.field_work_activity_stream__message_unread
 msgid "Unread Messages"
-msgstr ""
+msgstr "ያልተነበቡ መልእክቶች"
 
 #. module: budget
+#: model:ir.model.fields,field_description:budget.field_budget_approver__message_unread_counter
 #: model:ir.model.fields,field_description:budget.field_budget_budget__message_unread_counter
 #: model:ir.model.fields,field_description:budget.field_budget_planning__message_unread_counter
 #: model:ir.model.fields,field_description:budget.field_budget_planning_attachement__message_unread_counter
 #: model:ir.model.fields,field_description:budget.field_budget_type__message_unread_counter
 #: model:ir.model.fields,field_description:budget.field_work_activity_stream__message_unread_counter
 msgid "Unread Messages Counter"
-msgstr ""
+msgstr "ያልተነበቡ መልዕክቶች ቆጣሪ"
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_budget_planning__alias_enabled
 msgid "Use email alias"
-msgstr ""
+msgstr "ኢሜል ተለዋጭ ስም ተጠቀም"
 
 #. module: budget
 #: model:ir.model.fields.selection,name:budget.selection__budget_budget__state__validate
 msgid "Validated"
-msgstr ""
+msgstr "ተረጋግጧል"
 
 #. module: budget
-#: model:ir.model.fields.selection,name:budget.selection__budget_planning__budget_methods__value_proposition_budgeting
-msgid "Value proposition budgeting"
-msgstr ""
-
-#. module: budget
+#: model:ir.model.fields,field_description:budget.field_budget_approver__website_message_ids
 #: model:ir.model.fields,field_description:budget.field_budget_budget__website_message_ids
 #: model:ir.model.fields,field_description:budget.field_budget_planning__website_message_ids
 #: model:ir.model.fields,field_description:budget.field_budget_planning_attachement__website_message_ids
 #: model:ir.model.fields,field_description:budget.field_budget_type__website_message_ids
 #: model:ir.model.fields,field_description:budget.field_work_activity_stream__website_message_ids
 msgid "Website Messages"
-msgstr ""
+msgstr "የድረ-ገጽ  መልዕክቶች"
 
 #. module: budget
+#: model:ir.model.fields,help:budget.field_budget_approver__website_message_ids
 #: model:ir.model.fields,help:budget.field_budget_budget__website_message_ids
 #: model:ir.model.fields,help:budget.field_budget_planning__website_message_ids
 #: model:ir.model.fields,help:budget.field_budget_planning_attachement__website_message_ids
 #: model:ir.model.fields,help:budget.field_budget_type__website_message_ids
 #: model:ir.model.fields,help:budget.field_work_activity_stream__website_message_ids
 msgid "Website communication history"
-msgstr ""
+msgstr "የድረ-ገጽ ግንኙነት ታሪክ"
 
 #. module: budget
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_approve_one_form
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_approve_two_form
 #: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_form
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_request_form
 msgid "Work Stream"
-msgstr ""
+msgstr "የስራ ፍሰት"
 
 #. module: budget
 #: model:ir.model,name:budget.model_work_activity_stream
 msgid "Work Stream Activity"
-msgstr ""
+msgstr "የስራ ፍሰት እንቅስቃሴ"
 
 #. module: budget
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_approve_one_form
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_approve_two_form
 #: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_form
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_request_form
 msgid "Work Stream Break Down/ Budget Line"
-msgstr "የስራ ፍሰት እንቅስቃሴ/በጀት መስመር"
+msgstr "የስራ ፍሰት ክፍፍል/ የበጀት መስመር"
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_budget_planning__work_stream_line
 msgid "Work Stream Line"
-msgstr ""
+msgstr "የስራ ዥረት መስመር"
 
 #. module: budget
 #: model:ir.model.fields,help:budget.field_budget_planning__work_stream_line
 msgid "Work stream budget breakdown"
-msgstr ""
+msgstr "የስራ ፍሰት የበጀት ክፍፍል"
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_work_activity_stream__activity_id
 msgid "WorkStreamActivity Reference"
+msgstr "የስራ ፍሰት የተግባር ማጣቀሻ"
+
+#. module: budget
+#: code:addons/budget/models/account_analytic_account.py:0
+#: code:addons/budget/models/account_analytic_account.py:0
+#, python-format
+msgid "You are not authorized to use this budget account."
+msgstr "ይህን የበጀት መለያ ለመጠቀም ፍቃድ የለዎትም።"
+
+#. module: budget
+#: code:addons/budget/models/budget_planning.py:0
+#, python-format
+msgid "You cannot delete a budget request that has been %s"
+msgstr "%s የነበረውን የበጀት ጥያቄ መሰረዝ አይችሉም"
+
+#. module: budget
+#: code:addons/budget/models/budget_planning.py:0
+#, python-format
+msgid "You cannot delete a budget request that has been requested"
 msgstr ""
+
+#. module: budget
+#: model_terms:ir.ui.view,arch_db:budget.budget_template_refuse_reason
+msgid "Your budget planning request"
+msgstr "የበጀት እቅድ ጥያቄዎ"
 
 #. module: budget
 #: code:addons/budget/models/account_analytic_account.py:0
 #, python-format
-msgid "You are not authorized to use this budget account."
-msgstr ""
+msgid ""
+"Your requested amount:%s is greater than the amount specified in the budget "
+"code."
+msgstr "የጠየቁት መጠን፡ %s በበጀት ኮድ ውስጥ ከተገለጸው መጠን ይበልጣል"
 
 #. module: budget
 #: model:ir.model.fields.selection,name:budget.selection__budget_planning__budget_methods__zero_based_budgeting
 msgid "Zero based budgeting"
-msgstr ""
+msgstr "በዜሮ ላይ የተመሰረተ በጀት ማውጣት"
 
 #. module: budget
 #: model_terms:ir.ui.view,arch_db:budget.view_account_analytic_account_form_inherit_budget
 msgid "budget Items"
+msgstr "የበጀት እቃዎች"
+
+#. module: budget
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_approve_one_form
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_approve_two_form
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_form
+#: model_terms:ir.ui.view,arch_db:budget.view_budget_planning_request_form
+msgid "budget_amount"
 msgstr ""
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_budget_planning__compute_field
 msgid "check field"
-msgstr ""
+msgstr "የቼክ መስክ"
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_budget_planning__employee_id
 msgid "employee"
-msgstr ""
+msgstr "ሰራተኛ"
+
+#. module: budget
+#: model_terms:ir.ui.view,arch_db:budget.budget_template_refuse_reason
+msgid "has been refused"
+msgstr "ውድቅ ተደርጓል"
+
+#. module: budget
+#: model:ir.model,name:budget.model_hr_mapping_employee_account
+msgid "hr.mapping.employee.account"
+msgstr "hr.mapping.የሰራተኛ.መለያ"
 
 #. module: budget
 #: model:ir.model.fields,field_description:budget.field_budget_planning__partner_id
 msgid "partner"
-msgstr ""
+msgstr "አጋር"

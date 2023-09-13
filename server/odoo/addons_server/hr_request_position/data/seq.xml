@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
    <data>
+
     <record id="seq_employee_request" model="ir.sequence">
         <field name="name">Employee Request</field>
         <field name="code">hr.employee.position.request</field>
@@ -9,4 +10,5 @@
         <field name="company_id" eval="False"/>
     </record>
    </data>
+
 </odoo>

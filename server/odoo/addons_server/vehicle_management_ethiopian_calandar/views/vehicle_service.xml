@@ -55,7 +55,7 @@
                     <div>
                     </div>
                     <div style="margin-bottom:40px;margin-top:-22px; width: 50%;margin-left:10px;margin-right:0px">
-                        <widget name="ethiopian_calander_widget" style=" float:left;width:178px;margin-left:-3px;" class="oe_edit_only" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                        <widget name="ethiopian_calander_widget" style=" float:left;width:230px;margin-left:-3px;" class="oe_edit_only" groups="EthiopianCalendar.group_ethio_datepicker"/>
                     </div>
                 </xpath>
 
@@ -67,7 +67,7 @@
                     <div>
                     </div>
                     <div style="margin-bottom:40px;margin-top:-22px; width: 50%;margin-left:10px;margin-right:0px">
-                        <widget name="ethiopian_calander_widget_two" style=" float:left;width:178px;margin-left:-3px;" class="oe_edit_only" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                        <widget name="ethiopian_calander_widget_two" style="float:left;width:230px;margin-left:-3px;" class="oe_edit_only" groups="EthiopianCalendar.group_ethio_datepicker"/>
                     </div>
                 </xpath>
 
@@ -79,19 +79,10 @@
                     <div>
                     </div>
                     <div style="margin-bottom:40px;margin-top:-22px; width: 50%;margin-left:10px;margin-right:0px">
-                        <widget name="ethiopian_calander_widget_three" style="float:left;width:178px;margin-left:-3px;" class="oe_edit_only" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                        <widget name="ethiopian_calander_widget_three" style="float:left;width:230px;margin-left:-3px;" class="oe_edit_only" groups="EthiopianCalendar.group_ethio_datepicker"/>
                     </div>
                 </xpath>
                 <xpath expr="//field[@name='date_complete']" position="replace">
-                    <field name="ethiopian_four" class="oe_read_only" string="Estimated Date" style=" float:left;" attrs="{'invisible': ['|', ('is_pagum_four', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
-                    <field name="date_complete" string="Estimated Date" groups="EthiopianCalendar.group_gregory"/>
-                    <field name="pagum_four" class="oe_read_only" string="Date" style=" float:left" attrs="{'invisible': ['|',('is_pagum_four', '!=',False)  ]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
-                    <field name="is_pagum_four" invisible="1"/>
-                    <div>
-                    </div>
-                    <div style="margin-bottom:40px;margin-top:-22px; width: 50%;margin-left:10px;margin-right:0px">
-                        <widget name="ethiopian_calander_widget_four" style=" float:left;width:178px;margin-left:-3px;" class="oe_edit_only" groups="EthiopianCalendar.group_ethio_datepicker"/>
-                    </div>
                 </xpath>
             </field>
         </record>

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<odoo>
+     <record id="action_planning_reports" model="ir.actions.act_window">
+            <field name="name">Planning Report</field>
+            <field name="res_model">project.project</field>
+            <field name="view_mode">graph,pivot</field>
+             <field name="domain">['&amp;',('task_count','!=',0),('parent_id','!=',False)]</field>
+            <field name="context">{'group_by_no_leaf':1,'group_by':[]}</field>
+            <field name="help">This report allows you to analyse the performance of your projects and users. You can analyse the quantities of tasks, the hours spent compared to the planned hours, the average number of days to open or close a task, etc.</field>
+        </record>
+
+
+    <menuitem id="Purchase_all_module_report_tab"
+              name="Purchase"
+              parent="report.all_module_report"
+              groups="purchase_request.group_purchase_request_user"/>
+
+
+    <menuitem id="planning_all_module_report_tab"
+              name="Planning"
+              parent="report.all_module_report"
+               sequence="20"
+               groups="project.group_project_manager"/>
+
+    <!-- <menuitem name="Planning Analysis"
+              id="menu_planning_analysis"
+              parent="planning_all_module_report_tab"
+              groups="project.group_project_manager"
+              action="action_planning_reports"/> -->
+
+    <menuitem name="Tasks Analysis"
+              id="menu_project_report_task_analysis"
+              parent="planning_all_module_report_tab"
+              groups="project.group_project_manager"
+              action="project.action_project_task_user_tree"/>
+  
+   
+
+</odoo>

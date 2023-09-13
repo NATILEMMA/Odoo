@@ -1,0 +1,52 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_expense_ethiopian_calendar
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20220525\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-07 07:27+0000\n"
+"PO-Revision-Date: 2023-07-07 07:27+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_expense_ethiopian_calendar
+#: model:ir.model.fields,field_description:hr_expense_ethiopian_calendar.field_hr_expense__ethiopian_from
+#: model:ir.model.fields,field_description:hr_expense_ethiopian_calendar.field_hr_expense__is_pagum_from
+#: model:ir.model.fields,field_description:hr_expense_ethiopian_calendar.field_hr_expense__pagum_from
+#: model:ir.model.fields,field_description:hr_expense_ethiopian_calendar.field_hr_expense_sheet__ethiopian_from
+#: model:ir.model.fields,field_description:hr_expense_ethiopian_calendar.field_hr_expense_sheet__is_pagum_from
+#: model:ir.model.fields,field_description:hr_expense_ethiopian_calendar.field_hr_expense_sheet__pagum_from
+msgid "Date"
+msgstr "ቀን"
+
+#. module: hr_expense_ethiopian_calendar
+#: model_terms:ir.ui.view,arch_db:hr_expense_ethiopian_calendar.hr_expense_sheet_view_search
+#: model_terms:ir.ui.view,arch_db:hr_expense_ethiopian_calendar.hr_expense_view_search_inherited_view
+msgid "Ethiopian Date"
+msgstr "በኢትዮጵያ ቀን አቆጣጠር"
+
+#. module: hr_expense_ethiopian_calendar
+#: model:ir.model,name:hr_expense_ethiopian_calendar.model_hr_expense
+msgid "Expense"
+msgstr "ወጪ"
+
+#. module: hr_expense_ethiopian_calendar
+#: model_terms:ir.ui.view,arch_db:hr_expense_ethiopian_calendar.hr_expense_view_search_inherited_view
+msgid "Expense Date in Ethiopia"
+msgstr "የወጪ ቀን በኢትዮጵያ አቆጣጠር"
+
+#. module: hr_expense_ethiopian_calendar
+#: model:ir.model,name:hr_expense_ethiopian_calendar.model_hr_expense_sheet
+msgid "Expense Report"
+msgstr "የወጪ ሪፖርት"
+
+#. module: hr_expense_ethiopian_calendar
+#: model_terms:ir.ui.view,arch_db:hr_expense_ethiopian_calendar.hr_expense_sheet_view_search
+msgid "Expenses by Ethiopian Date"
+msgstr "ወጪ በኢትዮጵያ አቆጣጠር"

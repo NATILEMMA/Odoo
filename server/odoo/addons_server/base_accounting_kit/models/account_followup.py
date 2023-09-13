@@ -32,7 +32,7 @@ class Followup(models.Model):
                                         'Follow-up', copy=True)
     company_id = fields.Many2one('res.company', 'Company',
                                  default=lambda self: self.env.company)
-    name = fields.Char(related='company_id.name', readonly=True)
+    name = fields.Char(related='company_id.name', readonly=True, translate=True)
 
 
 class FollowupLine(models.Model):

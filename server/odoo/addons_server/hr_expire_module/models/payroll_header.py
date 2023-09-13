@@ -7,14 +7,14 @@ class PayrollHeaderContent(models.Model):
     _description = 'Bank Report Contents'
 
     reference_no = fields.Char(string='Payroll Content Reference', required=True,
-                          readonly=True, default='New', index=True)
+                          readonly=True, default='New', index=True, translate=True)
     company_id = fields.Many2one('res.company', string='Company',default=lambda self: self.env.company, required=True)
     employee_id = fields.Many2one('hr.employee', string="General Manager", required=True)
-    bank_name = fields.Char(string="Bank Name")
-    bank_branch = fields.Char(string="Bank Branch")
-    company_account = fields.Char(string="Company Account Number")
-    content1 = fields.Text(string="First Content")
-    content2 = fields.Text(string="Second Content")
+    bank_name = fields.Char(string="Bank Name", translate=True)
+    bank_branch = fields.Char(string="Bank Branch", translate=True)
+    company_account = fields.Char(string="Company Account Number", translate=True)
+    content1 = fields.Text(string="First Content", translate=True)
+    content2 = fields.Text(string="Second Content", translate=True)
     isActive = fields.Boolean(string="Is Active")
 
     @api.model

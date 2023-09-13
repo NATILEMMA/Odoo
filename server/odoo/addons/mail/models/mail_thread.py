@@ -2273,7 +2273,7 @@ class MailThread(models.AbstractModel):
             _logger.warning('QWeb template %s not found when sending notification emails. Sending without layouting.' % (template_xmlid))
             base_template = False
 
-        mail_subject = message.subject or (message.record_name and 'Re: %s' % message.record_name) # in cache, no queries
+        mail_subject = message.subject or (message.record_name and 'Am: %s' % message.record_name) # in cache, no queries
         # Replace new lines by spaces to conform to email headers requirements
         mail_subject = ' '.join((mail_subject or '').splitlines())
         # compute references: set references to the parent and add current message just to

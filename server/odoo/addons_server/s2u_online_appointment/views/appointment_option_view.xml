@@ -51,12 +51,12 @@
             <field name="view_mode">tree,form,pivot,graph</field>
         </record>
 
-        <menuitem id="menu_appointment_option"
+        <!-- <menuitem id="menu_appointment_option"
                   name="Appointment Options"
                   parent="menu_appointment"
                   groups="website.group_website_designer"
                   action="appointment_option_action"
-                  sequence="20"/>
+                  sequence="20"/> -->
 
     </data>
 </odoo>

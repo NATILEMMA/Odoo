@@ -1,0 +1,305 @@
+<?xml version="1.0"?>
+
+<odoo>
+
+    <record id="member_cell_action_search" model="ir.ui.view">
+        <field name="name">Cell Configuration</field>
+        <field name="model">member.cells</field>
+        <field name="arch" type="xml">
+            <search string="Member's Cell">
+                <field name="name"/>
+                <group expand="0" string="Group By" colspan="10" col="8">
+                    <filter string="Members" name="members" context="{'group_by': 'for_which_members'}"/>
+                    <filter string="Member Organization" name="member_org" context="{'group_by': 'member_cell_type_id'}"/>
+                    <filter string="Basic Organization" name="office" context="{'group_by': 'main_office'}"/>
+                    <filter string="Woreda" name="woreda" context="{'group_by': 'wereda_id'}"/>
+                    <filter string="Subcity" name="subcity" context="{'group_by': 'subcity_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+   <record id="member_cell_action" model="ir.actions.act_window">
+       <field name="name">Cell Configuration</field>
+       <field name="res_model">member.cells</field>
+       <field name="view_mode">tree,form,pivot,graph</field>
+       <field name="search_view_id" ref="member_cell_action_search"/>
+       <field name="domain">[]</field>
+       <field name="domain">['|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|',
+                            ('cell_admin', '=', uid),
+                            ('cell_assembler', '=', uid),
+                            ('cell_finance', '=', uid),
+                            ('main_office.main_assembler', '=', uid),
+                            ('main_office.main_admin', '=', uid),
+                            ('main_office.main_finance', '=', uid),
+                            ('wereda_id.branch_manager', 'in', [uid]),
+                            ('wereda_id.ict_manager', '=', uid),
+                            ('subcity_id.parent_manager', 'in', [uid]),
+                            ('subcity_id.ict_manager', '=', uid),
+                            ('subcity_id.city_id.city_manager', 'in', [uid]),
+                            ('subcity_id.city_id.ict_manager', '=', uid),
+                            ('subcity_id.city_id.transfer_handler', '=', uid),
+                            ('subcity_id.city_id.responsible_id.system_admin', 'in', [uid])]</field>
+         <field name="context">{'search_default_office': 1}</field>
+   </record>
+
+   <record id="member_cell_tree" model="ir.ui.view">
+       <field name="name">Cell Configuration</field>
+       <field name="model">member.cells</field>
+       <field name="arch" type="xml">
+           <tree>
+                <field name="name"/>
+                <field name="user_id" invisible="1"/>
+                <field name="for_which_members"/>
+                <field name="member_cell_type_id"/>
+                <field name="main_office" string="Main Office"/>
+                <field name="subcity_id"/>
+                <field name="wereda_id"/>
+                <field name="state"/>
+           </tree>
+       </field>
+   </record>
+
+   <record id="member_cell_form" model="ir.ui.view">
+       <field name="name">Cell Configuration Form</field>
+       <field name="model">member.cells</field>
+       <field name="arch" type="xml">
+           <form duplicate="false">
+                <header>
+                    <field name="activate_cell" invisible="1"/>
+                    <field name="total" force_save="1" invisible="1"/>
+                    <button name="activate_cell_now" string="Activate" type="object" confirm="Are you sure you want to Activate the Cell?" class="btn btn-success" attrs="{'invisible': ['|', ('state', '=', 'active'), ('activate_cell', '=', False)]}" groups="member_minor_configuration.member_group_cell_manager"/>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button class="oe_stat_button" name="%(meeting_eachother_action_cell)d" type="action" icon="fa-users">
+                        <field name="pending_meetings" string="Pending Meetings" widget="statinfo"/>
+                        </button>
+                    </div>
+                    <h1>
+                    <field name="name" placeholder="Eg. Selam Cell"/>
+                    </h1>
+                    <div>
+                        <group col="3">
+                            <group>
+                                <field name="members" invisible="1"/>
+                                <field name="user_id" invisible="1"/>
+                                <field name="duplicate" invisible="1"/>
+                                <field name="cell_id"/>
+                                <field name="subcity_id" attrs="{'readonly': [('members', '=', True)]}" force_save="1" options="{'no_create': True, 'no_create_edit': True}"/>
+                                <field name="wereda_id" attrs="{'readonly': [('members', '=', True)]}" force_save="1" options="{'no_create': True, 'no_create_edit': True}"/>
+                                <field name="total_membership_fee" widget="monetary"   readonly="1"/>
+                                <field name="is_mixed" force_save="1" attrs="{'readonly': [('members', '=', True)]}"/>
+                            </group>
+                            <group>
+                                <field name="for_which_members" attrs="{'readonly': [('members', '=', True)]}" force_save="1"/>
+                                <field name="league_type" attrs="{'invisible': [('for_which_members', '=', 'member')], 'readonly': [('members', '=', True)], 'required': [('for_which_members', '=', 'league')],}" force_save="1"/>
+                                <field name="member_cell_type_id" options="{'no_create': True, 'no_create_edit': True}" attrs="{'invisible': [('is_mixed', '=', True)], 'required': [('is_mixed', '=', False)], 'readonly': [('members', '=', True)]}" force_save="1"/>
+                                <field name="main_office" options="{'no_create': True, 'no_create_edit': True}" string="Main Office" force_save="1" attrs="{'invisible': [('is_mixed', '=', True)], 'required': [('is_mixed', '=', False)]}"/>
+                                <field name="main_office_mixed" options="{'no_create': True, 'no_create_edit': True}" string="Main Office" force_save="1" attrs="{'invisible': [('is_mixed', '=', False)], 'required': [('is_mixed', '=', True)]}"/>
+                            </group>
+                            <group>
+                                <field name="cell_admin" force_save="1"/>
+                                <field name="cell_finance" force_save="1"/>
+                                <field name="cell_assembler" force_save="1"/>
+                            </group>
+                        </group>
+                    </div>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+           </form>
+       </field>
+   </record>
+
+  <!-- This record will create a tree view for membership handlers parent reporting-->
+  <record id="membership_reporting_tree_view" model="ir.ui.view">
+    <field name="name">Membership Reporting</field>
+    <field name="model">member.cells</field>
+    <field name="arch" type="xml">
+      <tree create="false" edit="false" duplicate="false" delete="false">
+        <field name="name" string="Cell"/>
+        <field name="total_leaders" string="Total Leaders"/>
+        <field name="total_members" string="Total Members"/>
+        <field name="total" string="Total"/>
+        <field name="total_leader_fee" string="Total Leader Fees"/>
+        <field name="total_member_fee" string="Total Member Fees"/>
+        <field name="total_membership_fee" string="Total Fee"/>
+      </tree>
+    </field>
+  </record>
+
+    <record id="cell_graph" model="ir.ui.view">
+        <field name="name">Cell</field>
+        <field name="model">member.cells</field>
+        <field name="arch" type="xml">  
+            <graph string="Cell">
+                <field name="name"/>
+                <field name="total_membership_fee" type="measure"/>
+            </graph>
+        </field>
+    </record>  
+
+ <!-- This record will create an action for the membership handlers parent model reporting -->
+  <record id="membership_reporting_action" model="ir.actions.act_window">
+    <field name="name">Membership Reporting</field>
+    <field name="res_model">member.cells</field>
+    <field name="view_mode">tree,pivot,graph</field>
+    <field name="view_id" ref="membership_reporting_tree_view"/>
+  </record>
+
+
+    <record id="main_office_action_search" model="ir.ui.view">
+        <field name="name">Basic Organization Configuration</field>
+        <field name="model">main.office</field>
+        <field name="arch" type="xml">
+            <search string="Members' Main Office">
+                <field name="name"/>
+                <group expand="0" string="Group By" colspan="10" col="8">
+                    <filter string="Members" name="members" context="{'group_by': 'for_which_members'}"/>
+                    <filter string="Organization" name="member_org" context="{'group_by': 'member_main_type_id'}"/>
+                    <filter string="Woreda" name="woreda" context="{'group_by': 'wereda_id'}"/>
+                    <filter string="Subcity" name="subcity" context="{'group_by': 'subcity_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+   <record id="member_office_action" model="ir.actions.act_window">
+       <field name="name">Basic Organization Configuration</field>
+       <field name="res_model">main.office</field>
+       <field name="view_mode">tree,form,pivot,graph</field>
+       <field name="search_view_id" ref="main_office_action_search"/>
+       <field name="domain">['|', '|', '|', '|', '|', '|', '|', '|', '|', '|',
+                            ('main_admin', '=', uid),
+                            ('main_assembler', '=', uid),
+                            ('main_finance', '=', uid),
+                            ('wereda_id.branch_manager', 'in', [uid]),
+                            ('wereda_id.ict_manager', '=', uid),
+                            ('subcity_id.parent_manager', 'in', [uid]),
+                            ('subcity_id.ict_manager', '=', uid),
+                            ('subcity_id.city_id.city_manager', 'in', [uid]),
+                            ('subcity_id.city_id.ict_manager', '=', uid),
+                            ('subcity_id.city_id.transfer_handler', '=', uid),
+                            ('subcity_id.city_id.responsible_id.system_admin', 'in', [uid])]</field>
+
+        <field name="context">{'search_default_woreda': 1}</field>
+   </record>
+
+   <record id="member_office_tree" model="ir.ui.view">
+       <field name="name">Basic Organization Configuration</field>
+       <field name="model">main.office</field>
+       <field name="arch" type="xml">
+           <tree>
+                <field name="user_id" invisible="1"/>
+                <field name="for_which_members"/>
+                <field name="name"/>
+                <field name="member_main_type_id"/>
+                <field name="subcity_id"/>
+                <field name="wereda_id"/>
+                <field name="total_cell"/>
+           </tree>
+       </field>
+   </record>
+
+   <record id="member_office_form" model="ir.ui.view">
+       <field name="name">Basic Organization Configuration Form</field>
+       <field name="model">main.office</field>
+       <field name="arch" type="xml">
+           <form duplicate="false">
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button class="oe_stat_button" name="%(meeting_eachother_action_main)d" type="action" icon="fa-users">
+                            <field name="pending_meetings" string="Pending Meetings" widget="statinfo"/>
+                        </button>
+                        <button class="oe_stat_button" name="%(meeting_cell_action)d" type="action" icon="fa-users">
+                            <field name="pending_meetings_cells" string="Pending Meetings With Cells" widget="statinfo"/>
+                        </button>
+                    </div>
+                    <h1>
+                        <field name="name" placeholder="Eg. Medemer Main Office"/>
+                    </h1>
+                    <group col="3">
+                        <group>
+                            <field name="cells" invisible="1"/>
+                            <field name="user_id" invisible="1"/>
+                            <field name="duplicate" invisible="1"/>
+                            <field name="main_office_id"/>
+                            <field name="subcity_id" force_save="1" attrs="{'readonly': [('cells', '=', True)]}" options="{'no_create': True, 'no_create_edit': True}"/>
+                            <field name="wereda_id" force_save="1" attrs="{'readonly': [('cells', '=', True)]}" options="{'no_create': True, 'no_create_edit': True}"/>
+                            <field name="for_which_members" attrs="{'readonly': [('cells', '=', True)]}"/>
+                            <field name="league_type" attrs="{'invisible': [('for_which_members', '=', 'member')], 'readonly': [('cells', '=', True)], 'required': [('for_which_members', '=', 'league')],}" force_save="1"/>
+                            <field name="member_main_type_id" options="{'no_create': True, 'no_create_edit': True}" attrs="{'readonly': [('cells', '=', True)]}"/>
+                        </group>
+                        <group>
+                            <field name="total_cell" force_save="1"/>
+                            <field name="total_league" invisible="1"/>
+                            <field name="total_leagues" force_save="1" attrs="{'invisible': [('for_which_members', '=', 'member')]}"/>
+                            <field name="total_member" invisible="1"/>
+                            <field name="total_members" force_save="1" attrs="{'invisible': [('for_which_members', '=', 'league')]}"/>
+                            <field name="total_league_fee" invisible="1"/>
+                            <field name="total_leagues_fee" force_save="1" attrs="{'invisible': [('for_which_members', '=', 'member')]}"/>
+                            <field name="total_member_fee" invisible="1"/>
+                            <field name="total_membership_fee" force_save="1" attrs="{'invisible': [('for_which_members', '=', 'league')]}"/>
+                        </group>
+                        <group>
+                            <field name="main_admin" force_save="1"/>
+                            <field name="main_finance" force_save="1"/>
+                            <field name="main_assembler" force_save="1"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Cells" name="cell_ids">
+                            <field name="cell_ids">
+                                <tree>
+                                    <field name="member_cell_type_id"/>
+                                    <field name="name"/>
+                                    <field name="main_office" string="Main Office"/>
+                                    <field name="subcity_id"/>
+                                    <field name="wereda_id"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+           </form>
+       </field>
+   </record>
+ 
+
+   <menuitem name="Basic Organization Configuration"
+            id="member_office_menu"
+            parent="membership_handlers_menu"
+            action="member_office_action"
+            groups="member_minor_configuration.member_group_city_transfer_handler,member_minor_configuration.member_group_main_manager,member_minor_configuration.member_group_main_assembler,member_minor_configuration.member_group_main_finance"
+            sequence="4"/>
+
+   <menuitem name="Cell Configuration"
+            id="member_cell_menu"
+            parent="membership_handlers_menu"
+            action="member_cell_action"
+            groups="member_minor_configuration.member_group_city_transfer_handler,member_minor_configuration.member_group_cell_manager,member_minor_configuration.member_group_assembler,member_minor_configuration.member_group_finance"
+            sequence="5"/>
+
+    <menuitem id="fee_reports"
+            name="Members Total and Fee Report"
+            parent="member_minor_configuration.menu_report_membership"
+            sequence="2"
+            groups="member_minor_configuration.member_group_city_admin"
+            action="membership_reporting_action"/>
+
+
+
+
+</odoo>
+
+

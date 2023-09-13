@@ -11,12 +11,13 @@ class FinancialClosing(models.TransientModel):
 
 
     journal_id = fields.Many2one('account.journal', 'Journal', required=True)
-    debit = fields.Many2many('account.account.type', string="Debit Account group", required=True)
-    date = fields.Date('Current Date', required=True)
-    credit = fields.Many2many('account.account.type','write_uid', string="Credit Account group", required=True)
-    profit = fields.Many2one('account.account', string="Profit / loss account", required=True)
-
-
+    debit = fields.Many2many('account.account.type', string="Debit Account group")
+    date = fields.Date('Current Date')
+    credit = fields.Many2many('account.account.type','write_uid', string="Credit Account group")
+    profit = fields.Many2one('account.account', string="Profit / loss account")
+    state = fields.Selection([
+        ('draft', 'New'),
+        ('post', 'Post')], default='draft', string="Status")
 
     def close_year(self):
         active_id = self.env.context.get('active_ids', [])
@@ -63,15 +64,24 @@ class FinancialClosing(models.TransientModel):
                 acc.account_credit = total_credit
                 acc.account_balance = acc.account_debit - acc.account_credit
                 tot_credit = tot_credit + abs(acc.account_balance)
-                move_vals['line_ids'].append((0, 0, {
-                'name': acc.name,
-                'debit': abs(acc.account_balance),
-                'credit': 0.0,
-                'account_id': acc.id,
-                'fiscal_year': id,
-                'exclude_from_invoice_tab': False,
-            }))
-
+                if acc.account_balance > 0:
+                    move_vals['line_ids'].append((0, 0, {
+                    'name': acc.name,
+                    'debit': 0,
+                    'credit': abs(acc.account_balance),
+                    'account_id': acc.id,
+                    'fiscal_year': id,
+                    'exclude_from_invoice_tab': False,
+                    }))
+                else:
+                    move_vals['line_ids'].append((0, 0, {
+                        'name': acc.name,
+                        'debit': 0,
+                        'credit': abs(acc.account_balance),
+                        'account_id': acc.id,
+                        'fiscal_year': id,
+                        'exclude_from_invoice_tab': False,
+                    }))
 
 
 
@@ -92,21 +102,31 @@ class FinancialClosing(models.TransientModel):
                 # print("per tot_debit", tot_debit)
                 tot_debit = tot_debit + abs(acc.account_balance)
                 # print("tot_debit after", tot_debit)
-                move_vals['line_ids'].append((0, 0, {
-                    'name': acc.name,
-                    'debit': 0,
-                    'credit': abs(acc.account_balance),
-                    'account_id': acc.id,
-                    'fiscal_year': id,
-                    'exclude_from_invoice_tab': False,
-                }))
+                if acc.account_balance < 0:
+                    move_vals['line_ids'].append((0, 0, {
+                        'name': acc.name,
+                        'debit': abs(acc.account_balance),
+                        'credit': 0,
+                        'account_id': acc.id,
+                        'fiscal_year': id,
+                        'exclude_from_invoice_tab': False,
+                    }))
+                else:
+                    move_vals['line_ids'].append((0, 0, {
+                        'name': acc.name,
+                        'debit': abs(acc.account_balance),
+                        'credit': 0,
+                        'account_id': acc.id,
+                        'fiscal_year': id,
+                        'exclude_from_invoice_tab': False,
+                    }))
 
         print("tot_debit",tot_debit,"tot_credit", tot_credit)
         if tot_debit < tot_credit:
             move_vals['line_ids'].append((0, 0, {
                     'name': self.profit.name,
-                    'debit': 0,
-                    'credit': abs(tot_debit - tot_credit),
+                    'debit': abs(tot_debit - tot_credit),
+                    'credit': 0,
                     'account_id': self.profit.id,
                     'fiscal_year': id,
                     'exclude_from_invoice_tab': False,
@@ -114,8 +134,8 @@ class FinancialClosing(models.TransientModel):
         else:
             move_vals['line_ids'].append((0, 0, {
                 'name': self.profit.name,
-                'debit': abs(tot_debit - tot_credit),
-                'credit': 0,
+                'debit': 0,
+                'credit': abs(tot_debit - tot_credit),
                 'account_id': self.profit.id,
                 'fiscal_year': id,
                 'exclude_from_invoice_tab': False,
@@ -123,3 +143,5 @@ class FinancialClosing(models.TransientModel):
         year.state = 'active'
         move = self.env['account.move'].sudo().create(move_vals)
         year.state = 'closed'
+        self.state = 'post'
+        return

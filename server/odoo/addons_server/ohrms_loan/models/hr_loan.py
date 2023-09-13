@@ -39,9 +39,9 @@ class HrLoan(models.Model):
             loan.balance_amount = balance_amount
             loan.total_paid_amount = total_paid
 
-    name = fields.Char(string="Loan Name", default="/", readonly=True, help="Name of the loan")
-    date = fields.Date(string="Date", default=fields.Date.today(), readonly=True, help="Date", store=True)
-    employee_id = fields.Many2one('hr.employee', string="Employee", required=True, help="Employee",readonly=True, store=True)
+    name = fields.Char(string="Loan Name", default="/", readonly=True, help="Name of the loan", store=True,translate=True)
+    date = fields.Date(string="Date", default=fields.Date.today(), readonly=True, help="Date")
+    employee_id = fields.Many2one('hr.employee', string="Employee", required=True, help="Employee",readonly=True,store=True)
     department_id = fields.Many2one('hr.department', related="employee_id.department_id", readonly=True,
                                     string="Department", help="Employee")
     installment = fields.Integer(string="No Of Installments", default=1, help="Number of installments")

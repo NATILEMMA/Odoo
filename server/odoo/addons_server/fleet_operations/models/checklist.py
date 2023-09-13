@@ -18,9 +18,9 @@ class ChecklistCategory(models.Model):
     _description = 'checklist category'
     
 
-    name = fields.Char('Name')
+    name = fields.Char('Name', translate=True)
     parent_category = fields.Many2one('checklist.category','Parent Category')
-    code = fields.Char(string='Code')
+    code = fields.Char(string='Code', translate=True)
 
 class FleetChecklist(models.Model):
     
@@ -28,7 +28,7 @@ class FleetChecklist(models.Model):
     _description = 'checklist category'
     
 
-    name = fields.Char('Name')
+    name = fields.Char('Name', translate=True)
     category_id = fields.Many2one('checklist.category','Category')
     template_id = fields.Many2one('fleet.checklist.template',invisible=1)
 
@@ -42,7 +42,7 @@ class FleetChecklistEvaluateInitial(models.Model):
     ok = fields.Boolean('OK')
     defect = fields.Boolean('Defect')
     fixed = fields.Boolean('fixed')
-    remark = fields.Char('Remark')
+    remark = fields.Char('Remark', translate=True)
 
 class FleetChecklistEvaluateFinal(models.Model):
     
@@ -54,7 +54,7 @@ class FleetChecklistEvaluateFinal(models.Model):
     ok = fields.Boolean('OK')
     defect = fields.Boolean('Defect')
     fixed = fields.Boolean('fixed')
-    remark = fields.Char('Remark')
+    remark = fields.Char('Remark', translate=True)
 
 
 

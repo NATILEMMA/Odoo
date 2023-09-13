@@ -21,7 +21,7 @@ class VisitorIDWidget(models.TransientModel):
     _description = "This will create widgets for the visitors"
 
     visit = fields.Many2one('fo.visit')
-    visitor_id = fields.Many2one('fo.visitor', string="Visitor")
+    visitor_id = fields.Many2one('res.partner', string="Visitor")
     visitor_id_number = fields.Many2one('visitor.number', string="Visitor ID", domain="[('occupied', '=', False)]")
 
 
@@ -55,7 +55,7 @@ class RescheduleVisits(models.TransientModel):
     _name = "reschedule.visit"
     _description="This model will handle the archiving members"
 
-    date = fields.Date(string="Date")
+    date = fields.Date(string="Date", default=date.today())
     check_in_float = fields.Float(string="Check In Time")
     duration_in_float = fields.Float(string="Estimated Duration of Meeting")
     check_out_float = fields.Float(string="Check Out Time", readonly=True, store=True)
@@ -69,63 +69,3 @@ class RescheduleVisits(models.TransientModel):
         local = ethTZ
         local_dt = local.localize(date_parsed, is_dst=None)
         return local_dt.astimezone(pytz.utc)
-
-    def action_done(self):
-        """This function will be the action for wizards"""
-        wizard = self.env['reschedule.visit'].search([('id', '=', self.id)])
-        if self.date and self.check_in_float and self.duration_in_float:
-            if self.date:
-                days = wizard.visits_id.resource_calendar_id.attendance_ids.mapped('dayofweek')
-                new_list = []
-                for day in days:
-                    new_list.append(all_days[day])
-                if self.date.strftime("%A") not in new_list:
-                    self.date = False
-                    raise UserError(_("The Date You Picked Isn't Apart of Your Working Days"))
-                leaves = wizard.visits_id.resource_calendar_id.global_leave_ids
-                for leave in leaves:
-                    if leave.date_from.date() <= self.date <= leave.date_to.date():
-                        self.date = False
-                        raise UserError(_("The Date You Picked Is A Holiday"))
-            out = self.duration_in_float + self.check_in_float
-            self.check_out_float = out
-            if self.check_out_float > 11.0:
-                raise UserError(_("Sorry, This Time is Out Of The Range of Regular Working Hours"))
-            else:
-                self.env['rescheduled.time'].sudo().create({
-                    'date': wizard.visits_id.date,
-                    'check_in_float': wizard.visits_id.check_in_float,
-                    'check_out_float': wizard.visits_id.check_out_float,
-                    'duration_in_float': wizard.visits_id.duration_in_float,
-                    'visits_id': wizard.visits_id.id
-                })
-
-                ethTZ = pytz.timezone("Africa/Addis_Ababa")
-                date_app = self.date.strftime("%Y-%m-%d")
-                start = date_app + " " + functions.float_to_time(self.check_in_float)
-                date_start = self.ld_to_utc(start)
-
-                wizard.visits_id.write({
-                    'state': 'approved',
-                    'date': self.date,
-                    'check_in_float': self.check_in_float,
-                    'duration_in_float': self.duration_in_float,
-                    'check_out_float': self.check_out_float,
-                    'rescheduled': True
-                })
-                wizard.visits_id.event_id.write({
-                    'start': date_start.strftime("%Y-%m-%d %H:%M"),
-                    'stop': (date_start + timedelta(minutes=round(self.duration_in_float * 60))).strftime("%Y-%m-%d %H:%M"),
-                    'duration': self.duration_in_float
-                })
-                wizard.visits_id.event_id.attendee_ids.write({
-                    'state': 'accepted'
-                })
-                registration = self.env['s2u.appointment.registration'].search([('event_id', '=', wizard.visits_id.event_id.id)])
-                if registration:
-                    registration.state = 'valid'
-                mail_temp = self.env.ref('s2u_online_appointment.appointment_rescheduled_in')
-                mail_temp.send_mail(wizard.visits_id.id)
-
-        else:
-            raise UserError(_("Please Fill In The Required Fields"))

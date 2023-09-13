@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-22 07:09+0000\n"
-"PO-Revision-Date: 2023-05-22 07:09+0000\n"
+"POT-Creation-Date: 2023-07-05 12:28+0000\n"
+"PO-Revision-Date: 2023-07-05 12:28+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -18,45 +18,46 @@ msgstr ""
 #. module: custom_quality_control
 #: model:ir.model,name:custom_quality_control.model_qc_trigger_line
 msgid "Abstract line for defining triggers"
-msgstr ""
+msgstr "ቀስቅሴዎችን ለመወሰን ረቂቅ መስመር"
 
 #. module: custom_quality_control
 #: model_terms:ir.ui.view,arch_db:custom_quality_control.view_qc_test_set_test_form
 msgid "Accept"
-msgstr ""
+msgstr "ተቀበል"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_inspection__message_needaction
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_test__message_needaction
 msgid "Action Needed"
-msgstr ""
+msgstr "እርምጃ ያስፈልጋል"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_test__active
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_test_category__active
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_trigger__active
 msgid "Active"
-msgstr ""
+msgstr "ንቁ"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_inspection__activity_ids
 msgid "Activities"
-msgstr ""
+msgstr "ተግባራት"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_inspection__activity_exception_decoration
 msgid "Activity Exception Decoration"
-msgstr ""
+msgstr "የእንቅስቃሴ ልዩ ማስጌጥ"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_inspection__activity_state
 msgid "Activity State"
-msgstr ""
+msgstr "የእንቅስቃሴ ሁኔታ"
 
 #. module: custom_quality_control
+#: model:ir.model,name:custom_quality_control.model_product_product
 #: model:ir.model,name:custom_quality_control.model_product_template
 msgid "Adding is asset field"
-msgstr ""
+msgstr "መጨመር የንብረት መስክ ነው።"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_inspection_line__possible_ql_values
@@ -68,11 +69,6 @@ msgstr "መልሶች"
 #: model_terms:ir.ui.view,arch_db:custom_quality_control.qc_inspection_form_view
 msgid "Approve"
 msgstr "ማጽደቅ"
-
-#. module: custom_quality_control
-#: model:ir.model,name:custom_quality_control.model_product_product
-msgid "Asset description line inherit"
-msgstr ""
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_inspection__message_attachment_count
@@ -126,6 +122,8 @@ msgid ""
 "Conversion between Units of Measure can only occur if they belong to the "
 "same category. The conversion will be made based on the ratios."
 msgstr ""
+"በመለኪያ አሃዶች መካከል የሚደረግ ለውጥ ሊፈጠር የሚችለው የአንድ ምድብ አባል ከሆኑ ብቻ ነው። ለውጡ የሚከናወነው "
+"በተመጣጣኝ ዋጋ መሰረት ነው።"
 
 #. module: custom_quality_control
 #: model_terms:ir.ui.view,arch_db:custom_quality_control.qc_inspection_line_search_view
@@ -151,7 +149,7 @@ msgstr "ትክክለኛ መልስ?"
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_trigger_product_line__create_uid
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_trigger_product_template_line__create_uid
 msgid "Created by"
-msgstr ""
+msgstr "የተፈጠረ"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_inspection__create_date
@@ -166,7 +164,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_trigger_product_line__create_date
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_trigger_product_template_line__create_date
 msgid "Created on"
-msgstr ""
+msgstr "ላይ ተፈጠረ"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_inspection__date
@@ -187,7 +185,7 @@ msgstr "ቀን"
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_trigger_product_line__display_name
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_trigger_product_template_line__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "መጠሪያው ስም"
 
 #. module: custom_quality_control
 #: model:ir.model.fields.selection,name:custom_quality_control.selection__qc_inspection__state__draft
@@ -199,7 +197,7 @@ msgstr "ረቂቅ"
 #: code:addons/custom_quality_control/models/qc_test_category.py:0
 #, python-format
 msgid "Error! You can not create recursive categories."
-msgstr ""
+msgstr "ስህተት! ተደጋጋሚ ምድቦችን መፍጠር አይችሉም።"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_inspection__external_notes
@@ -211,19 +209,19 @@ msgstr "ውጫዊ ማስታወሻዎች"
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_inspection__message_follower_ids
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_test__message_follower_ids
 msgid "Followers"
-msgstr ""
+msgstr "ተከታዮች"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_inspection__message_channel_ids
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_test__message_channel_ids
 msgid "Followers (Channels)"
-msgstr ""
+msgstr "ተከታዮች (ሰርጦች)"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_inspection__message_partner_ids
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_test__message_partner_ids
 msgid "Followers (Partners)"
-msgstr ""
+msgstr "ተከታዮች (አጋሮች)"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_test_category__complete_name
@@ -239,7 +237,7 @@ msgstr "አጠቃላይ"
 #: model_terms:ir.ui.view,arch_db:custom_quality_control.qc_inspection_line_search_view
 #: model_terms:ir.ui.view,arch_db:custom_quality_control.qc_inspection_search_view
 msgid "Group by..."
-msgstr ""
+msgstr "ቡድን በ..."
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_inspection__id
@@ -255,23 +253,23 @@ msgstr ""
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_trigger_product_line__id
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_trigger_product_template_line__id
 msgid "ID"
-msgstr ""
+msgstr "መታወቂያ"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_inspection__activity_exception_icon
 msgid "Icon"
-msgstr ""
+msgstr "አዶ"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,help:custom_quality_control.field_qc_inspection__activity_exception_icon
 msgid "Icon to indicate an exception activity."
-msgstr ""
+msgstr "ልዩ እንቅስቃሴን ለማመልከት አዶ።"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,help:custom_quality_control.field_qc_inspection__auto_generated
 msgid ""
 "If an inspection is auto-generated, it can be canceled but not removed."
-msgstr ""
+msgstr "ፍተሻ በራስ-ሰር የተፈጠረ ከሆነ ሊሰረዝ ይችላል ነገር ግን አይወገድም።"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,help:custom_quality_control.field_qc_inspection__message_needaction
@@ -279,7 +277,7 @@ msgstr ""
 #: model:ir.model.fields,help:custom_quality_control.field_qc_test__message_needaction
 #: model:ir.model.fields,help:custom_quality_control.field_qc_test__message_unread
 msgid "If checked, new messages require your attention."
-msgstr ""
+msgstr "ምልክት ካደረጉ፣ አዲስ መልዕክቶች የእርስዎን ትኩረት ይፈልጋሉ።"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,help:custom_quality_control.field_qc_inspection__message_has_error
@@ -287,7 +285,7 @@ msgstr ""
 #: model:ir.model.fields,help:custom_quality_control.field_qc_test__message_has_error
 #: model:ir.model.fields,help:custom_quality_control.field_qc_test__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
-msgstr ""
+msgstr "ምልክት ካደረጉ፣ አንዳንድ መልዕክቶች የማድረስ ስህተት አለባቸው።"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,help:custom_quality_control.field_qc_trigger_line__partners
@@ -298,12 +296,14 @@ msgid ""
 "If filled, the test will only be created when the action is done for one of "
 "the specified partners. If empty, the test will always be created."
 msgstr ""
+"ከተሞላ, ፈተናው የሚፈጠረው ከተገለጹት አጋሮች ውስጥ ለአንዱ እርምጃ ሲወሰድ ብቻ ነው. ባዶ ከሆነ, ፈተናው ሁልጊዜ "
+"ይፈጠራል."
 
 #. module: custom_quality_control
 #: model_terms:ir.ui.view,arch_db:custom_quality_control.qc_inspection_line_search_view
 #: model_terms:ir.ui.view,arch_db:custom_quality_control.qc_inspection_search_view
 msgid "Incorrect"
-msgstr "የተሳሳተ"
+msgstr "ትክክል አይደለም።"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_inspection_line__inspection_id
@@ -338,13 +338,13 @@ msgstr "ምርመራዎች"
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_inspection__internal_notes
 #: model_terms:ir.ui.view,arch_db:custom_quality_control.qc_inspection_form_view
 msgid "Internal notes"
-msgstr "የውስጥ ማስታወሻዎች"
+msgstr "ውስጣዊ ማስታወሻዎች"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_inspection__message_is_follower
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_test__message_is_follower
 msgid "Is Follower"
-msgstr ""
+msgstr "ተከታይ ነው።"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_inspection____last_update
@@ -360,7 +360,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_trigger_product_line____last_update
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_trigger_product_template_line____last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "መጨረሻ የተሻሻለው በርቷል።"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_inspection__write_uid
@@ -375,7 +375,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_trigger_product_line__write_uid
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_trigger_product_template_line__write_uid
 msgid "Last Updated by"
-msgstr ""
+msgstr "መጨረሻ የዘመነው በ"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_inspection__write_date
@@ -390,7 +390,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_trigger_product_line__write_date
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_trigger_product_template_line__write_date
 msgid "Last Updated on"
-msgstr ""
+msgstr "መጨረሻ የዘመነው በርቷል።"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_inspection__message_main_attachment_id
@@ -401,35 +401,35 @@ msgstr "ዋና አባሪ"
 #. module: custom_quality_control
 #: model:res.groups,name:custom_quality_control.group_quality_control_manager
 msgid "Manager"
-msgstr "ሥራ አስኪያጅ"
+msgstr "አስተዳዳሪ"
 
 #. module: custom_quality_control
 #: model_terms:ir.ui.view,arch_db:custom_quality_control.qc_inspection_form_view
 msgid "Mark todo"
-msgstr "ሁሉንም ነገር ምልክት ያድርጉበት"
+msgstr "ቶዶ ምልክት ያድርጉ"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_inspection_line__max_value
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_test_question__max_value
 msgid "Max"
-msgstr "Max"
+msgstr "ከፍተኛ"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,help:custom_quality_control.field_qc_inspection_line__max_value
 msgid "Maximum valid value for a quantitative question."
-msgstr "ለቁጥር ጥያቄ ከፍተኛ ትክክለኛ እሴት."
+msgstr "ለቁጥር ጥያቄ የሚፈቀደው ከፍተኛ ዋጋ።"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_inspection__message_has_error
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_test__message_has_error
 msgid "Message Delivery error"
-msgstr "Message Delivery error"
+msgstr "የመልእክት ማቅረቢያ ስህተት"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_inspection__message_ids
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_test__message_ids
 msgid "Messages"
-msgstr "መልእክቶች
+msgstr "መልዕክቶች"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_inspection_line__min_value
@@ -440,7 +440,7 @@ msgstr "ደቂቃ"
 #. module: custom_quality_control
 #: model:ir.model.fields,help:custom_quality_control.field_qc_inspection_line__min_value
 msgid "Minimum valid value for a quantitative question."
-msgstr "ለቁጥር ጥያቄ አነስተኛ እሴት"
+msgstr "ለቁጥር ጥያቄ አነስተኛ ዋጋ ያለው እሴት።"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_test__name
@@ -454,17 +454,17 @@ msgstr "ስም"
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_inspection__activity_date_deadline
 msgid "Next Activity Deadline"
-msgstr ""
+msgstr "ቀጣይ የእንቅስቃሴ ገደብ"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_inspection__activity_summary
 msgid "Next Activity Summary"
-msgstr ""
+msgstr "ቀጣይ የእንቅስቃሴ ማጠቃለያ"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_inspection__activity_type_id
 msgid "Next Activity Type"
-msgstr ""
+msgstr "ቀጣይ የእንቅስቃሴ አይነት"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_inspection_line__notes
@@ -477,36 +477,36 @@ msgstr "ማስታወሻዎች"
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_inspection__message_needaction_counter
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_test__message_needaction_counter
 msgid "Number of Actions"
-msgstr ""
+msgstr "የተግባሮች ብዛት"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_inspection__message_has_error_counter
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_test__message_has_error_counter
 msgid "Number of errors"
-msgstr ""
+msgstr "የስህተት ብዛት"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,help:custom_quality_control.field_qc_inspection__message_needaction_counter
 #: model:ir.model.fields,help:custom_quality_control.field_qc_test__message_needaction_counter
 msgid "Number of messages which requires an action"
-msgstr ""
+msgstr "እርምጃ የሚያስፈልገው የመልእክት ብዛት"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,help:custom_quality_control.field_qc_inspection__message_has_error_counter
 #: model:ir.model.fields,help:custom_quality_control.field_qc_test__message_has_error_counter
 msgid "Number of messages with delivery error"
-msgstr ""
+msgstr "የማድረስ ስህተት ያለባቸው መልዕክቶች ብዛት"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,help:custom_quality_control.field_qc_inspection__message_unread_counter
 #: model:ir.model.fields,help:custom_quality_control.field_qc_test__message_unread_counter
 msgid "Number of unread messages"
-msgstr ""
+msgstr "ያልተነበቡ መልዕክቶች ብዛት"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_test_category__parent_id
 msgid "Parent category"
-msgstr "Parent category"
+msgstr "የወላጅ ምድብ"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_trigger_line__partners
@@ -514,7 +514,7 @@ msgstr "Parent category"
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_trigger_product_line__partners
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_trigger_product_template_line__partners
 msgid "Partners"
-msgstr "Partners"
+msgstr "አጋሮች"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_inspection_line__passed_total
@@ -524,12 +524,12 @@ msgstr "አለፈ"
 #. module: custom_quality_control
 #: model_terms:ir.ui.view,arch_db:custom_quality_control.qc_inspection_form_view
 msgid "Passed qty"
-msgstr "ያለፈ መጠን"
+msgstr "qty አልፏል"
 
 #. module: custom_quality_control
 #: model:ir.model,name:custom_quality_control.model_qc_test_question_value
 msgid "Possible values for qualitative questions."
-msgstr "ለችሎታ ጥያቄዎች ሊሆኑ የሚችሉ እሴቶች."
+msgstr "ለጥራት ጥያቄዎች ሊሆኑ የሚችሉ እሴቶች."
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_test__fill_correct_values
@@ -549,7 +549,7 @@ msgstr "ምርት"
 #: model:ir.model,name:custom_quality_control.model_product_category
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_trigger_product_category_line__product_category
 msgid "Product Category"
-msgstr "የእየቁሶች መደብ"
+msgstr "የምርት ምድብ"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_trigger_product_template_line__product_template
@@ -560,71 +560,71 @@ msgstr "የምርት አብነት"
 #: model:ir.model.fields,help:custom_quality_control.field_qc_inspection__product_id
 #: model:ir.model.fields,help:custom_quality_control.field_qc_inspection_line__product_id
 msgid "Product associated with the inspection"
-msgstr "ምርመራው ከተመረጠው ምርቱ ጋር የተቆራኘ ምርት
+msgstr "ከምርመራው ጋር የተያያዘ ምርት"
 
 #. module: custom_quality_control
 #: model:ir.model.fields.selection,name:custom_quality_control.selection__qc_inspection_line__question_type__qualitative
 #: model:ir.model.fields.selection,name:custom_quality_control.selection__qc_test_question__type__qualitative
 msgid "Qualitative"
-msgstr "ብቃት ያለው"
+msgstr "ጥራት ያለው"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_inspection_line__qualitative_value
 msgid "Qualitative value"
-msgstr "ብቃት ያለው እሴት
+msgstr "የጥራት እሴት"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_test_question__ql_values
 msgid "Qualitative values"
-msgstr "Qualitative values"
+msgstr "የጥራት እሴቶች"
 
 #. module: custom_quality_control
 #: model:ir.model,name:custom_quality_control.model_qc_trigger_product_category_line
 msgid "Quality Control Trigger Product Category Line"
-msgstr "Quality Control Trigger Product Category Line"
+msgstr "የጥራት ቁጥጥር ቀስቃሽ የምርት ምድብ መስመር"
 
 #. module: custom_quality_control
 #: model:ir.model,name:custom_quality_control.model_qc_trigger_product_line
 msgid "Quality Control Trigger Product Line"
-msgstr "Quality Control Trigger Product Line"
+msgstr "የጥራት ቁጥጥር ቀስቃሽ የምርት መስመር"
 
 #. module: custom_quality_control
 #: model:ir.model,name:custom_quality_control.model_qc_trigger_product_template_line
 msgid "Quality Control Trigger Product Template Line"
-msgstr "Quality Control Trigger Product Template Line"
+msgstr "የጥራት ቁጥጥር ቀስቅሴ የምርት አብነት መስመር"
 
 #. module: custom_quality_control
 #: model:ir.module.category,name:custom_quality_control.module_category_quality_control
 #: model_terms:ir.ui.view,arch_db:custom_quality_control.product_category_qc_form_view
 #: model_terms:ir.ui.view,arch_db:custom_quality_control.product_template_form_view
 msgid "Quality control"
-msgstr "Quality control"
+msgstr "የጥራት ቁጥጥር"
 
 #. module: custom_quality_control
 #: model:ir.model,name:custom_quality_control.model_qc_inspection
 msgid "Quality control inspection"
-msgstr "Quality control inspection"
+msgstr "የጥራት ቁጥጥር ምርመራ"
 
 #. module: custom_quality_control
 #: model:ir.model,name:custom_quality_control.model_qc_inspection_line
 msgid "Quality control inspection line"
-msgstr "Quality control inspection line"
+msgstr "የጥራት ቁጥጥር ፍተሻ መስመር"
 
 #. module: custom_quality_control
 #: model:ir.model,name:custom_quality_control.model_qc_test_question
 msgid "Quality control question"
-msgstr ""
+msgstr "የጥራት ቁጥጥር ጥያቄ"
 
 #. module: custom_quality_control
 #: model:ir.model,name:custom_quality_control.model_qc_test
 msgid "Quality control test"
-msgstr "የጥራት ቁጥጥር ፈተና"
+msgstr "የጥራት ቁጥጥር ሙከራ"
 
 #. module: custom_quality_control
 #: model:ir.model,name:custom_quality_control.model_qc_trigger
 #: model_terms:ir.ui.view,arch_db:custom_quality_control.qc_trigger_form_view
 msgid "Quality control trigger"
-msgstr ""
+msgstr "የጥራት ቁጥጥር ቀስቅሴ"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_product_category__qc_triggers
@@ -634,39 +634,39 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:custom_quality_control.product_template_form_view
 #: model_terms:ir.ui.view,arch_db:custom_quality_control.qc_trigger_tree_view
 msgid "Quality control triggers"
-msgstr ""
+msgstr "የጥራት ቁጥጥር ቀስቅሴዎች"
 
 #. module: custom_quality_control
 #: model:ir.model.fields.selection,name:custom_quality_control.selection__qc_inspection__state__failed
 msgid "Quality failed"
-msgstr ""
+msgstr "ጥራት አልተሳካም።"
 
 #. module: custom_quality_control
 #: model:ir.model.fields.selection,name:custom_quality_control.selection__qc_inspection__state__success
 msgid "Quality success"
-msgstr ""
+msgstr "ጥራት ያለው ስኬት"
 
 #. module: custom_quality_control
 #: model:ir.model.fields.selection,name:custom_quality_control.selection__qc_inspection_line__question_type__quantitative
 #: model:ir.model.fields.selection,name:custom_quality_control.selection__qc_test_question__type__quantitative
 msgid "Quantitative"
-msgstr ""
+msgstr "መጠናዊ"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_inspection_line__quantitative_value
 msgid "Quantitative value"
-msgstr ""
+msgstr "የቁጥር እሴት"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_inspection__qty
 msgid "Quantity"
-msgstr ""
+msgstr "ብዛት"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_inspection_line__name
 #: model_terms:ir.ui.view,arch_db:custom_quality_control.qc_inspection_line_search_view
 msgid "Question"
-msgstr ""
+msgstr "ጥያቄ"
 
 #. module: custom_quality_control
 #: code:addons/custom_quality_control/models/qc_test.py:0
@@ -675,45 +675,45 @@ msgid ""
 "Question '%s' is not valid: minimum value can't be higher than maximum "
 "value."
 msgstr ""
-
+"የ%s ጥያቄ ትክክል አይደለም፡ ትንሹ እሴት ከከፍተኛው እሴት በላይ ሊሆን አይችልም።"
 #. module: custom_quality_control
 #: code:addons/custom_quality_control/models/qc_test.py:0
 #, python-format
 msgid "Question '%s' is not valid: you have to mark at least one value as OK."
-msgstr ""
+msgstr "ጥያቄ '%s' ልክ አይደለም፡ ቢያንስ አንድ እሴት እሺ ብለህ ምልክት ማድረግ አለብህ።"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_inspection_line__question_type
 msgid "Question type"
-msgstr ""
+msgstr "የጥያቄ ዓይነት"
 
 #. module: custom_quality_control
 #: model_terms:ir.ui.view,arch_db:custom_quality_control.qc_test_question_form_view
 msgid "Question value"
-msgstr ""
+msgstr "የጥያቄ ዋጋ"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_test__test_lines
 #: model_terms:ir.ui.view,arch_db:custom_quality_control.qc_inspection_form_view
 #: model_terms:ir.ui.view,arch_db:custom_quality_control.qc_test_form_view
 msgid "Questions"
-msgstr ""
+msgstr "ጥያቄዎች"
 
 #. module: custom_quality_control
 #: model:ir.model.fields.selection,name:custom_quality_control.selection__qc_inspection__state__ready
 msgid "Ready"
-msgstr ""
+msgstr "ዝግጁ"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_inspection__object_id
 #: model_terms:ir.ui.view,arch_db:custom_quality_control.qc_inspection_search_view
 msgid "Reference"
-msgstr ""
+msgstr "ማጣቀሻ"
 
 #. module: custom_quality_control
 #: model:qc.test.category,name:custom_quality_control.qc_test_template_category_referenced
 msgid "Referenced"
-msgstr ""
+msgstr "ማጣቀሻ"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_inspection__user
@@ -723,60 +723,60 @@ msgstr ""
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_trigger_product_template_line__user
 #: model_terms:ir.ui.view,arch_db:custom_quality_control.qc_inspection_search_view
 msgid "Responsible"
-msgstr ""
+msgstr "ተጠያቂ"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_inspection__activity_user_id
 msgid "Responsible User"
-msgstr ""
+msgstr "ኃላፊነት የሚሰማው ተጠቃሚ"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_inspection__message_has_sms_error
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_test__message_has_sms_error
 msgid "SMS Delivery error"
-msgstr ""
+msgstr "የኤስኤምኤስ አቅርቦት ስህተት"
 
 #. module: custom_quality_control
 #: model_terms:ir.ui.view,arch_db:custom_quality_control.qc_inspection_search_view
 msgid "Search inspection"
-msgstr ""
+msgstr "የፍለጋ ፍተሻ"
 
 #. module: custom_quality_control
 #: model_terms:ir.ui.view,arch_db:custom_quality_control.qc_inspection_line_search_view
 msgid "Search inspection line"
-msgstr ""
+msgstr "የፍተሻ መስመርን ይፈልጉ"
 
 #. module: custom_quality_control
 #: model:ir.actions.act_window,name:custom_quality_control.action_qc_inspection_set_test
 #: model_terms:ir.ui.view,arch_db:custom_quality_control.view_qc_test_set_test_form
 msgid "Select test"
-msgstr ""
+msgstr "ፈተናን ይምረጡ"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_trigger__partner_selectable
 msgid "Selectable by partner"
-msgstr ""
+msgstr "በአጋር ሊመረጥ የሚችል"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_test_question__sequence
 msgid "Sequence"
-msgstr ""
+msgstr "ቅደም ተከተል"
 
 #. module: custom_quality_control
 #: model_terms:ir.ui.view,arch_db:custom_quality_control.qc_inspection_form_view
 msgid "Set test"
-msgstr ""
+msgstr "ፈተናን አዘጋጅ"
 
 #. module: custom_quality_control
 #: model:ir.model,name:custom_quality_control.model_qc_inspection_set_test
 msgid "Set test for inspection"
-msgstr ""
+msgstr "ለምርመራ ፈተና ያዘጋጁ"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_inspection__state
 #: model_terms:ir.ui.view,arch_db:custom_quality_control.qc_inspection_search_view
 msgid "State"
-msgstr ""
+msgstr "ግዛት"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,help:custom_quality_control.field_qc_inspection__activity_state
@@ -786,18 +786,21 @@ msgid ""
 "Today: Activity date is today\n"
 "Planned: Future activities."
 msgstr ""
-
+"በእንቅስቃሴ ላይ የተመሰረተ ሁኔታ\n"
+"አልፏል፡ የማለቂያ ቀን አስቀድሞ አልፏል\n"
+"ዛሬ፡ የተግባር ቀን ዛሬ ነው\n"
+"የታቀደው: የወደፊት እንቅስቃሴዎች."
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_inspection__success
 #: model_terms:ir.ui.view,arch_db:custom_quality_control.qc_inspection_line_search_view
 #: model_terms:ir.ui.view,arch_db:custom_quality_control.qc_inspection_search_view
 msgid "Success"
-msgstr ""
+msgstr "ስኬት"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_inspection_line__success
 msgid "Success?"
-msgstr ""
+msgstr "ስኬት?"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_inspection__test
@@ -810,31 +813,31 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:custom_quality_control.qc_inspection_search_view
 #: model_terms:ir.ui.view,arch_db:custom_quality_control.qc_test_form_view
 msgid "Test"
-msgstr ""
+msgstr "ሙከራ"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_inspection_line__test_uom_id
 msgid "Test UoM"
-msgstr ""
+msgstr "UoMን ይሞክሩ"
 
 #. module: custom_quality_control
 #: model:ir.actions.act_window,name:custom_quality_control.action_qc_test_category
 #: model:ir.ui.menu,name:custom_quality_control.qc_test_category_menu
 #: model_terms:ir.ui.view,arch_db:custom_quality_control.qc_test_category_tree_view
 msgid "Test categories"
-msgstr ""
+msgstr "የሙከራ ምድቦች"
 
 #. module: custom_quality_control
 #: model:ir.model,name:custom_quality_control.model_qc_test_category
 msgid "Test category"
-msgstr ""
+msgstr "የሙከራ ምድብ"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_inspection_line__test_line
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_test_question_value__test_line
 #: model_terms:ir.ui.view,arch_db:custom_quality_control.qc_test_question_form_view
 msgid "Test question"
-msgstr ""
+msgstr "የፈተና ጥያቄ"
 
 #. module: custom_quality_control
 #: model:ir.actions.act_window,name:custom_quality_control.action_qc_test
@@ -842,28 +845,22 @@ msgstr ""
 #: model:ir.ui.menu,name:custom_quality_control.qc_test_menu
 #: model_terms:ir.ui.view,arch_db:custom_quality_control.qc_test_tree_view
 msgid "Tests"
-msgstr ""
-
-#. module: custom_quality_control
-#: code:addons/custom_quality_control/models/qc_inspection.py:0
-#, python-format
-msgid "The passed quantity shouldn't be 0.0(Zero)"
-msgstr ""
+msgstr "ሙከራዎች"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,help:custom_quality_control.field_qc_test_category__active
 msgid "This field allows you to hide the category without removing it."
-msgstr ""
+msgstr "ይህ መስክ ምድቡን ሳያስወግዱት እንዲደብቁ ያስችልዎታል."
 
 #. module: custom_quality_control
 #: model:ir.model.fields,help:custom_quality_control.field_qc_inspection__success
 msgid "This field will be marked if all tests have succeeded."
-msgstr ""
+msgstr "ሁሉም ሙከራዎች ከተሳኩ ይህ መስክ ምልክት ይደረግበታል።"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,help:custom_quality_control.field_qc_trigger__partner_selectable
 msgid "This technical field is to allow to filter by partner in triggers"
-msgstr ""
+msgstr "ይህ የቴክኒክ መስክ ቀስቅሴዎች ውስጥ በአጋር ለማጣራት መፍቀድ ነው"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_trigger_line__trigger
@@ -871,134 +868,140 @@ msgstr ""
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_trigger_product_line__trigger
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_trigger_product_template_line__trigger
 msgid "Trigger"
-msgstr ""
+msgstr "ቀስቅሴ"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_test_question__type
 msgid "Type"
-msgstr ""
+msgstr "ዓይነት"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,help:custom_quality_control.field_qc_inspection__activity_exception_decoration
 msgid "Type of the exception activity on record."
-msgstr ""
+msgstr "በመዝገብ ላይ ያለ ልዩ እንቅስቃሴ ዓይነት።"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_inspection__message_unread
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_test__message_unread
 msgid "Unread Messages"
-msgstr ""
+msgstr "ያልተነበቡ መልእክቶች"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_inspection__message_unread_counter
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_test__message_unread_counter
 msgid "Unread Messages Counter"
-msgstr ""
+msgstr "ያልተነበቡ መልዕክቶች ቆጣሪ"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_inspection_line__uom_id
 msgid "UoM"
-msgstr ""
+msgstr "የመለኪያ ክፍል"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,help:custom_quality_control.field_qc_inspection_line__test_uom_id
 msgid "UoM for minimum and maximum values for a quantitative question."
-msgstr ""
+msgstr "UoM ለዝቅተኛ እና ከፍተኛ እሴቶች ለቁጥር ጥያቄ።"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,help:custom_quality_control.field_qc_inspection_line__uom_id
 msgid "UoM of the inspection value for a quantitative question."
-msgstr ""
+msgstr "UoM የቁጥራዊ ጥያቄ የፍተሻ ዋጋ።"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_test_question__uom_id
 msgid "Uom"
-msgstr ""
+msgstr "ኡም"
 
 #. module: custom_quality_control
 #: model:res.groups,name:custom_quality_control.group_quality_control_user
 msgid "User"
-msgstr ""
+msgstr "ተጠቃሚ"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_inspection_line__valid_values
 msgid "Valid values"
-msgstr ""
+msgstr "ትክክለኛ እሴቶች"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_inspection_line__value_setted
 msgid "Value Setted"
-msgstr ""
+msgstr "እሴት ተቀምጧል"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,help:custom_quality_control.field_qc_inspection_line__qualitative_value
 msgid "Value of the result for a qualitative question."
-msgstr ""
+msgstr "ለጥራት ጥያቄ የውጤቱ ዋጋ።"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,help:custom_quality_control.field_qc_inspection_line__quantitative_value
 msgid "Value of the result for a quantitative question."
-msgstr ""
+msgstr "ለቁጥር ጥያቄ የውጤቱ ዋጋ።"
 
 #. module: custom_quality_control
 #: model:ir.model.fields.selection,name:custom_quality_control.selection__qc_inspection__state__waiting
 msgid "Waiting supervisor approval"
-msgstr ""
+msgstr "የተቆጣጣሪ ማጽደቅን በመጠባበቅ ላይ"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_inspection__website_message_ids
 #: model:ir.model.fields,field_description:custom_quality_control.field_qc_test__website_message_ids
 msgid "Website Messages"
-msgstr ""
+msgstr "የድህረገፅ መልዕክቶች"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,help:custom_quality_control.field_qc_inspection__website_message_ids
 #: model:ir.model.fields,help:custom_quality_control.field_qc_test__website_message_ids
 msgid "Website communication history"
-msgstr ""
+msgstr "የድህረገፅ የግንኙነት ታሪክ"
 
 #. module: custom_quality_control
 #: model:ir.model.fields,help:custom_quality_control.field_qc_test_question_value__ok
 msgid "When this field is marked, the answer is considered correct."
-msgstr ""
+msgstr "ይህ መስክ ምልክት ሲደረግ መልሱ ትክክል እንደሆነ ይቆጠራል።"
 
 #. module: custom_quality_control
 #: code:addons/custom_quality_control/models/qc_inspection.py:0
 #, python-format
 msgid "You cannot remove an auto-generated inspection."
-msgstr ""
+msgstr "በራስ ሰር የተፈጠረ ፍተሻን ማስወገድ አይችሉም።"
 
 #. module: custom_quality_control
 #: code:addons/custom_quality_control/models/qc_inspection.py:0
 #, python-format
 msgid "You cannot remove an inspection that is not in draft state."
-msgstr ""
+msgstr "በረቂቅ ሁኔታ ውስጥ ያልሆነ ፍተሻን ማስወገድ አይችሉም።"
 
 #. module: custom_quality_control
 #: code:addons/custom_quality_control/models/qc_inspection.py:0
 #, python-format
 msgid "You must first set the test to perform."
-msgstr ""
+msgstr "በመጀመሪያ ፈተናውን ለማከናወን ማዘጋጀት አለብዎት."
+
+#. module: custom_quality_control
+#: code:addons/custom_quality_control/models/qc_inspection.py:0
+#, python-format
+msgid "You should input passed quantity for each rule"
+msgstr "ለእያንዳንዱ ደንብ ያለፈውን መጠን ማስገባት አለብዎት"
 
 #. module: custom_quality_control
 #: code:addons/custom_quality_control/models/qc_inspection.py:0
 #, python-format
 msgid "You should provide a unit of measure for quantitative questions."
-msgstr ""
+msgstr "ለቁጥር ጥያቄዎች አንድ መለኪያ ማቅረብ አለቦት።"
 
 #. module: custom_quality_control
 #: code:addons/custom_quality_control/models/qc_inspection.py:0
 #, python-format
 msgid "You should provide an answer for all qualitative questions."
-msgstr ""
+msgstr "ለሁሉም የጥራት ጥያቄዎች መልስ መስጠት አለብህ።"
 
 #. module: custom_quality_control
 #: code:addons/custom_quality_control/models/qc_inspection.py:0
 #, python-format
-msgid "Your input value of   is greater than the Product total quantity of "
-msgstr ""
+msgid "Your input value of %s  is greater than the Product total quantity"
+msgstr "የ%s ግቤትዎ ዋጋ ከምርቱ አጠቃላይ መጠን ይበልጣል"
 
 #. module: custom_quality_control
 #: model_terms:ir.ui.view,arch_db:custom_quality_control.view_qc_test_set_test_form
 msgid "or"
-msgstr ""
+msgstr "ወይም"

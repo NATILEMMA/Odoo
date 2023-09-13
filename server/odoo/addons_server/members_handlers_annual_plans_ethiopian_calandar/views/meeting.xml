@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data> 
+     
+                <!-- 
+                    
+                    Adding Ethiopian Calander Date to Time Fream 
+
+                    step 1: Inherit the View of the model to which you wish to add the Ethiopian calendar extension.
+
+                    step 2, xpath your exact location of converting date fields if your date fields are located within a form sheet, use col and colspan to adjust CSS
+                
+                    Ethiopian Date Picker Widget
+
+                    - ethiopian_calander_widget
+                    - ethiopian_calander_widget_two
+                    - ethiopian_calander_widget_three
+                    - ethiopian_calander_widget_four
+                
+                
+                -->
+
+        <record id="meeting_cell_tree_inherited_view" model="ir.ui.view">
+            <field name="name">Meeting Cells</field>
+            <field name="model">meeting.cells</field>
+            <field name="inherit_id" ref="members_handlers_annual_plans.meeting_cell_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date_of_meeting']" position="replace">
+                    <field name="is_pagum_from" invisible="1"/>
+                    <field  name="date_of_meeting" groups="EthiopianCalendar.group_gregory"/>
+                    <field  name="ethiopian_from" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    <field  name="pagum_from" groups="EthiopianCalendar.group_ethio_datepicker" optional="hidden"/>
+                </xpath>
+            </field>
+        </record>
+
+
+        <record id="meeting_cells_inherited_view" model="ir.ui.view">
+           <field name="name">Meeting Cells</field>
+             <field name="model">meeting.cells</field>
+            <field name="inherit_id" ref="members_handlers_annual_plans.meeting_cell_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date_of_meeting']" position="replace">
+                    <field name="is_pagum_from" invisible="1"/>
+                    <field  name="date_of_meeting" force_save="1" class="col-50" colspan="3" groups="EthiopianCalendar.group_gregory" attrs="{'readonly': [('state', 'not in', ['new'])]}"/>
+                    <field  name="ethiopian_from" style="float:left" attrs="{'invisible': ['|', ('is_pagum_from', '=',False)], 'readonly': [('state', 'not in', ['new'])]}" groups="EthiopianCalendar.group_ethio_datepicker" force_save="1" readonly="1"/>
+                    <field  name="pagum_from" style="float:left" attrs="{'invisible': ['|',('is_pagum_from', '!=',False)], 'readonly': [('state', 'not in', ['new'])]}"  groups="EthiopianCalendar.group_ethio_datepicker" force_save="1" readonly="1"/>
+                        <div>
+                        </div>
+                    <div style="margin-bottom:40px;margin-top:-15px;margin-left:10px;margin-right:0px">
+                    <widget name="ethiopian_calander_widget"  style="float:left;width:226px;" class="oe_edit_only" groups="EthiopianCalendar.group_ethio_datepicker" attrs="{'invisible': [('state', 'not in', ['new'])]}"/>
+                    </div>
+                </xpath>
+                <xpath expr="//field[@name='next_date_of_meeting']" position="replace">
+                    <field name="is_pagum_to" invisible="1" force_save="1"/>
+                    <field  name="next_date_of_meeting"  class="col-50" colspan="3" groups="EthiopianCalendar.group_gregory" force_save="1" attrs="{'invisible': [('state', 'not in', ['started', 'finished'])], 'readonly': [('state', '=', 'finished')]}"/>
+                    <field  name="ethiopian_to" readonly="1" style="float:left" attrs="{'invisible': ['|', ('is_pagum_to', '=',False), ('state', 'not in', ['started', 'finished'])]}" groups="EthiopianCalendar.group_ethio_datepicker" force_save="1"/>
+                    <field  name="pagum_to"  readonly="1" style="float:left"  attrs="{'invisible': ['|',('is_pagum_to', '!=',False), ('state', 'not in', ['started', 'finished'])]}"  groups="EthiopianCalendar.group_ethio_datepicker" force_save="1"/>
+                    <div>
+                    </div>
+                    <div style="margin-bottom:40px;margin-top:-25px;margin-left:10px;margin-right:0px">
+                    <widget name="ethiopian_calander_widget_two"  style=" float:left;width:226px;" class="oe_edit_only" groups="EthiopianCalendar.group_ethio_datepicker" attrs="{'invisible': [('state', 'not in', ['started'])]}"/>
+                    </div>
+                </xpath>
+            </field>
+        </record> 
+
+    <record id="meeting_eachother_tree_main_inherited_view" model="ir.ui.view">
+            <field name="name">Meeting Eachother</field>
+            <field name="model">meeting.each.other.main</field>
+            <field name="inherit_id" ref="members_handlers_annual_plans.meeting_eachother_tree_main"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date_of_meeting']" position="replace">
+                    <field name="is_pagum_from" invisible="1"/>
+                    <field  name="date_of_meeting" groups="EthiopianCalendar.group_gregory"/>
+                    <field  name="ethiopian_from" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    <field  name="pagum_from" groups="EthiopianCalendar.group_ethio_datepicker" optional="hidden"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="meeting_eachother_form_main_inherited_view" model="ir.ui.view">
+           <field name="name">Meeting Eachother</field>
+             <field name="model">meeting.each.other.main</field>
+            <field name="inherit_id" ref="members_handlers_annual_plans.meeting_eachother_form_main"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date_of_meeting']" position="replace">
+                    <field name="is_pagum_from" invisible="1"/>
+                    <field  name="date_of_meeting" force_save="1" class="col-50" colspan="3" groups="EthiopianCalendar.group_gregory" attrs="{'readonly': [('state', 'not in', ['new'])]}"/>
+                    <field  name="ethiopian_from" style="float:left" attrs="{'invisible': ['|', ('is_pagum_from', '=',False)], 'readonly': [('state', 'not in', ['new'])]}" groups="EthiopianCalendar.group_ethio_datepicker" force_save="1" readonly="1"/>
+                    <field  name="pagum_from" style="float:left" attrs="{'invisible': ['|',('is_pagum_from', '!=',False)], 'readonly': [('state', 'not in', ['new'])]}"  groups="EthiopianCalendar.group_ethio_datepicker" force_save="1" readonly="1"/>
+                        <div>
+                        </div>
+                    <div style="margin-bottom:40px;margin-top:-15px;margin-left:10px;margin-right:0px">
+                    <widget name="ethiopian_calander_widget"  style="float:left;width:226px;" class="oe_edit_only" groups="EthiopianCalendar.group_ethio_datepicker" attrs="{'invisible': [('state', 'not in', ['new'])]}"/>
+                    </div>
+                </xpath>
+                <xpath expr="//field[@name='next_date_of_meeting']" position="replace">
+                    <field name="is_pagum_to" invisible="1" force_save="1"/>
+                    <field  name="next_date_of_meeting"  class="col-50" colspan="3" groups="EthiopianCalendar.group_gregory" force_save="1" attrs="{'invisible': [('state', 'not in', ['started', 'finished'])], 'readonly': [('state', '=', 'finished')]}"/>
+                    <field  name="ethiopian_to" readonly="1" style="float:left" attrs="{'invisible': ['|', ('is_pagum_to', '=',False), ('state', 'not in', ['started', 'finished'])]}" groups="EthiopianCalendar.group_ethio_datepicker" force_save="1"/>
+                    <field  name="pagum_to"  readonly="1" style="float:left"  attrs="{'invisible': ['|',('is_pagum_to', '!=',False), ('state', 'not in', ['started', 'finished'])]}"  groups="EthiopianCalendar.group_ethio_datepicker" force_save="1"/>
+                    <div>
+                    </div>
+                    <div style="margin-bottom:40px;margin-top:-25px;margin-left:10px;margin-right:0px">
+                    <widget name="ethiopian_calander_widget_two"  style=" float:left;width:226px;" class="oe_edit_only" groups="EthiopianCalendar.group_ethio_datepicker" attrs="{'invisible': [('state', 'not in', ['started'])]}"/>
+                    </div>
+                </xpath>
+            </field>
+        </record> 
+
+        <record id="meeting_eachother_tree_cell_inherited_view" model="ir.ui.view">
+            <field name="name">Meeting Eachother</field>
+            <field name="model">meeting.each.other</field>
+            <field name="inherit_id" ref="members_handlers_annual_plans.meeting_eachother_tree_cell"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date_of_meeting']" position="replace">
+                    <field name="is_pagum_from" invisible="1"/>
+                    <field  name="date_of_meeting" groups="EthiopianCalendar.group_gregory"/>
+                    <field  name="ethiopian_from" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    <field  name="pagum_from" groups="EthiopianCalendar.group_ethio_datepicker" optional="hidden"/>
+                </xpath>
+            </field>
+        </record>
+
+
+        <record id="meeting_eachother_form_cell_inherited_view" model="ir.ui.view">
+           <field name="name">Meeting Eachother</field>
+             <field name="model">meeting.each.other</field>
+            <field name="inherit_id" ref="members_handlers_annual_plans.meeting_eachother_form_cell"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date_of_meeting']" position="replace">
+                    <field name="is_pagum_from" invisible="1"/>
+                    <field  name="date_of_meeting" force_save="1" class="col-50" colspan="3" groups="EthiopianCalendar.group_gregory" attrs="{'readonly': [('state', 'not in', ['new'])]}"/>
+                    <field  name="ethiopian_from" style="float:left" attrs="{'invisible': ['|', ('is_pagum_from', '=',False)], 'readonly': [('state', 'not in', ['new'])]}" groups="EthiopianCalendar.group_ethio_datepicker" force_save="1" readonly="1"/>
+                    <field  name="pagum_from" style="float:left" attrs="{'invisible': ['|',('is_pagum_from', '!=',False)], 'readonly': [('state', 'not in', ['new'])]}"  groups="EthiopianCalendar.group_ethio_datepicker" force_save="1" readonly="1"/>
+                        <div>
+                        </div>
+                    <div style="margin-bottom:40px;margin-top:-15px;margin-left:10px;margin-right:0px">
+                    <widget name="ethiopian_calander_widget"  style="float:left;width:226px;" class="oe_edit_only" groups="EthiopianCalendar.group_ethio_datepicker" attrs="{'invisible': [('state', 'not in', ['new'])]}"/>
+                    </div>
+                </xpath>
+                <xpath expr="//field[@name='next_date_of_meeting']" position="replace">
+                    <field name="is_pagum_to" invisible="1" force_save="1"/>
+                    <field  name="next_date_of_meeting"  class="col-50" colspan="3" groups="EthiopianCalendar.group_gregory" force_save="1" attrs="{'invisible': [('state', 'not in', ['started', 'finished'])], 'readonly': [('state', '=', 'finished')]}"/>
+                    <field  name="ethiopian_to" readonly="1" style="float:left" attrs="{'invisible': ['|', ('is_pagum_to', '=',False), ('state', 'not in', ['started', 'finished'])]}" groups="EthiopianCalendar.group_ethio_datepicker" force_save="1"/>
+                    <field  name="pagum_to"  readonly="1" style="float:left"  attrs="{'invisible': ['|',('is_pagum_to', '!=',False), ('state', 'not in', ['started', 'finished'])]}"  groups="EthiopianCalendar.group_ethio_datepicker" force_save="1"/>
+                    <div>
+                    </div>
+                    <div style="margin-bottom:40px;margin-top:-25px;margin-left:10px;margin-right:0px">
+                    <widget name="ethiopian_calander_widget_two"  style=" float:left;width:226px;" class="oe_edit_only" groups="EthiopianCalendar.group_ethio_datepicker" attrs="{'invisible': [('state', 'not in', ['started'])]}"/>
+                    </div>
+                </xpath>
+            </field>
+        </record> 
+
+        
+    </data>
+</odoo>

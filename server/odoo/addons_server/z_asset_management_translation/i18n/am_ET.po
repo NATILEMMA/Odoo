@@ -1,0 +1,1942 @@
+# Date created: 2023-06-20 16:03:28 by dichthuatphuongdong.com
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-06-20 03:13:39+0000"
+"MIME-Version: 1.0"
+"Content-Type: text/plain; charset=UTF-8"
+"Content-Transfer-Encoding: 8bit"
+"Plural-Forms: nplurals=1; plural=0;"
+"X-Generator: GlotPress/3.0.0-alpha.2"
+"Language: en_GB"
+"Project-Id-Version: PO File 5.8.1"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/models/account_asset.py:0
+msgid ""
+""
+"Error while processing asset \'%s\': %s"
+msgstr ""
+""
+"ንብረት \'%s\': %s በማስኬድ ላይ ስህተት"
+#. module: account_asset_management
+#: model_terms:ir.ui.view,arch_db:account_asset_management.asset_removal_template
+msgid "<b>Disposable Asset Record</b>"
+msgstr "<b>የሚጣል የንብረት መዝገብ</b>"
+
+#. module: account_asset_management
+#: model_terms:ir.ui.view,arch_db:account_asset_management.view_move_form
+msgid "<span class=\"o_stat_text\"> Asset(s)</span>"
+msgstr "<span class=\"o_stat_text\">ንብረት(ዎች)</span>"
+
+#. module: account_asset_management
+#: model_terms:ir.ui.view,arch_db:account_asset_management.asset_removal_template
+msgid "<strong>Date from :</strong>"
+msgstr "<strong>ከ፡</strong> ቀን"
+
+#. module: account_asset_management
+#: model_terms:ir.ui.view,arch_db:account_asset_management.asset_removal_template
+msgid "<strong>Date to :</strong>"
+msgstr "<strong>ቀን እስከ :</strong>"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/report/account_asset_report_xls.py:0
+#: model:ir.model,name:account_asset_management.model_account_account
+#, python-format
+msgid "Account"
+msgstr "መለያ"
+
+#. module: account_asset_management
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_view_search
+msgid "Account Asset"
+msgstr "የመለያ ንብረት"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__carry_forward_missed_depreciations
+msgid "Accumulate missed depreciations"
+msgstr "ያመለጡ የዋጋ ቅነሳዎችን ያከማቹ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__message_needaction
+msgid "Action Needed"
+msgstr "እርምጃ ያስፈልጋል"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__active
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_profile__active
+msgid "Active"
+msgstr "ንቁ"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/report/account_asset_report_xls.py:0
+#: code:addons/account_asset_management/report/account_asset_report_xls.py:0
+#, python-format
+msgid "Active Assets"
+msgstr "ንቁ ንብረቶች"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__activity_ids
+msgid "Activities"
+msgstr "እንቅስቃሴዎች"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "የእንቅስቃሴ ልዩ ማስጌጥ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__activity_state
+msgid "Activity State"
+msgstr "የእንቅስቃሴ ሁኔታ"
+
+#. module: account_asset_management
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_view_form
+msgid "Add an internal note here..."
+msgstr "የውስጥ ማስታወሻ እዚህ ያክሉ..."
+
+#. module: account_asset_management
+#: model:ir.model,name:account_asset_management.model_product_product
+#: model:ir.model,name:account_asset_management.model_product_template
+msgid "Adding is asset field"
+msgstr "መጨመር የንብረት መስክ ነው።"
+
+#. module: account_asset_management
+#: model:ir.model.fields,help:account_asset_management.field_account_asset_compute__date_end
+msgid "All depreciation lines prior to this date will be automatically posted"
+msgstr "ከዚህ ቀን በፊት ሁሉም የዋጋ ቅነሳ መስመሮች በራስ-ሰር ይለጠፋሉ።"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_profile__allow_reversal
+msgid "Allow Reversal of journal entries"
+msgstr "የመጽሔት ግቤቶችን መቀልበስ ፍቀድ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_line__amount
+msgid "Amount"
+msgstr "መጠን"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_line__depreciated_value
+msgid "Amount Already Depreciated"
+msgstr "መጠኑ ቀድሞ ተቀንሷል"
+
+#. module: account_asset_management
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_profile_view_form
+msgid "Analytic Information"
+msgstr "የትንታኔ መረጃ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__account_analytic_id
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_profile__account_analytic_id
+msgid "Analytic account"
+msgstr "የትንታኔ መለያ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__analytic_tag_ids
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_profile__analytic_tag_ids
+msgid "Analytic tags"
+msgstr "የበጀት መለያዎች"
+
+#. module: account_asset_management
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_view_form
+msgid "Are you sure ?"
+msgstr "እርግጠኛ ነዎት? "
+
+#. module: account_asset_management
+#: model:ir.model,name:account_asset_management.model_account_asset
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_line__asset_id
+#: model:ir.model.fields,field_description:account_asset_management.field_account_move_line__asset_id
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_view_form
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_view_search
+msgid "Asset"
+msgstr "ንብረት"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/wizard/account_asset_remove.py:0
+msgid "Asset \'%s\' Removal Journal Entry"
+msgstr "የንብረት \'%s\' የማስወገጃ ጆርናል መግቢያ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_profile__account_asset_id
+msgid "Asset Account"
+msgstr "የንብረት መለያ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_move__asset_count
+msgid "Asset Count"
+msgstr "የንብረት ብዛት"
+
+#. module: account_asset_management
+#: model:ir.model,name:account_asset_management.model_account_asset_group
+#: model:ir.model.fields,field_description:account_asset_management.field_wiz_account_asset_removal_report__asset_group_id
+#: model:ir.model.fields,field_description:account_asset_management.field_wiz_account_asset_report__asset_group_id
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_group_view_form
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_group_view_search
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_group_view_tree
+msgid "Asset Group"
+msgstr "የንብረት ቡድን"
+
+#. module: account_asset_management
+#: model:ir.actions.act_window,name:account_asset_management.account_asset_group_action
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__group_ids
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_profile__group_ids
+#: model:ir.ui.menu,name:account_asset_management.account_asset_group_menu
+msgid "Asset Groups"
+msgstr "የንብረት ቡድኖች"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_wiz_asset_move_reverse__line_id
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_view_form
+msgid "Asset Line"
+msgstr "የንብረት መስመር"
+
+#. module: account_asset_management
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_view_form
+msgid "Asset Lines"
+msgstr "የንብረት መስመሮች"
+
+#. module: account_asset_management
+#: model:ir.actions.server,name:account_asset_management.ir_cron_assets_generator_ir_actions_server
+#: model:ir.cron,cron_name:account_asset_management.ir_cron_assets_generator
+#: model:ir.cron,name:account_asset_management.ir_cron_assets_generator
+msgid "Asset Management: Generate assets"
+msgstr "የንብረት አስተዳደር፡ ንብረቶችን መፍጠር"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__name
+msgid "Asset Name"
+msgstr "የንብረት ስም"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_account__asset_profile_id
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__profile_id
+#: model:ir.model.fields,field_description:account_asset_management.field_account_move_line__asset_profile_id
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_profile_view_search
+msgid "Asset Profile"
+msgstr "የንብረት መገለጫ"
+
+#. module: account_asset_management
+#: model:ir.actions.act_window,name:account_asset_management.account_asset_profile_action
+#: model:ir.ui.menu,name:account_asset_management.account_asset_profile_menu
+msgid "Asset Profiles"
+msgstr "የንብረት መገለጫዎች"
+
+#. module: account_asset_management
+#: model:ir.model.fields.selection,name:account_asset_management.selection__account_asset_line__type__remove
+msgid "Asset Removal"
+msgstr "የንብረት ማስወገድ"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/report/account_asset_report_xls.py:0
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__date_remove
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_remove__date_remove
+#, python-format
+msgid "Asset Removal Date"
+msgstr "የንብረት ማስወገጃ ቀን"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_remove__account_sale_id
+msgid "Asset Sale Account"
+msgstr "የንብረት ሽያጭ መለያ"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/report/account_asset_report_xls.py:0
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__date_start
+#, python-format
+msgid "Asset Start Date"
+msgstr "የንብረት መጀመሪያ ቀን"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_product_product__asset_category_custom_id
+#: model:ir.model.fields,field_description:account_asset_management.field_product_template__asset_category_custom_id
+msgid "Asset Type"
+msgstr "የንብረት አይነት"
+
+#. module: account_asset_management
+#: model:ir.model,name:account_asset_management.model_account_asset_line
+#: model:ir.model,name:account_asset_management.model_product_product
+msgid "Asset description line inherit"
+msgstr "የንብረት መግለጫ መስመር ይወርሳል"#. module: account_asset_management
+#: model:ir.model,name:account_asset_management.model_account_asset
+msgid "Asset inherit"
+msgstr "የንብረት ውርስ"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/models/account_move.py:0
+#, python-format
+msgid "Asset name must be set in the label of the line."
+msgstr "የንብረት ስም በመስመሩ መለያ ውስጥ መቀመጥ አለበት።"
+
+#. module: account_asset_management
+#: model:ir.model,name:account_asset_management.model_account_asset_profile
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_profile_view_form
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_profile_view_tree
+msgid "Asset profile"
+msgstr "የንብረት መገለጫ"
+
+#. module: account_asset_management
+#: model_terms:ir.ui.view,arch_db:account_asset_management.asset_removal_template
+msgid "Asset removal reference no"
+msgstr "የንብረት ማስወገድ ማጣቀሻ ቁጥር"
+
+#. module: account_asset_management
+#: model:ir.actions.act_window,name:account_asset_management.wiz_account_asset_removal_report_action
+msgid "Asset removal report"
+msgstr "የንብረት ማስወገድ ሪፖርት"
+
+#. module: account_asset_management
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_view_form
+msgid "Asset removal."
+msgstr "የንብረት ማስወገድ."
+
+#. module: account_asset_management
+#: model:ir.actions.report,name:account_asset_management.asset_removal_report
+msgid "Asset report"
+msgstr "የንብረት ሪፖርት"
+
+#. module: account_asset_management
+#: model:ir.model,name:account_asset_management.model_account_asset_recompute_trigger
+msgid "Asset table recompute triggers"
+msgstr "የንብረት ሠንጠረዥ ቀስቅሴዎችን እንደገና ያሰሉ"
+
+#. module: account_asset_management
+#: model_terms:ir.ui.view,arch_db:account_asset_management.asset_removal_template
+msgid "Asset type"
+msgstr "የንብረት አይነት"
+
+#. module: account_asset_management
+#: model:ir.actions.act_window,name:account_asset_management.account_asset_action
+#: model:ir.ui.menu,name:account_asset_management.account_asset_menu
+#: model:ir.ui.menu,name:account_asset_management.menu_finance_assets
+#: model:ir.ui.menu,name:account_asset_management.menu_finance_config_assets
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_view_tree
+msgid "Assets"
+msgstr "ንብረቶች"
+
+#. module: account_asset_management
+#: model:ir.ui.menu,name:account_asset_management.wiz_account_asset_removal_report_menu
+msgid "Assets disposal report"
+msgstr "የንብረት አወጋገድ ሪፖርት"
+
+#. module: account_asset_management
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_view_search
+msgid "Assets in Close State"
+msgstr "በዝግ ግዛት ውስጥ ያሉ ንብረቶች"
+
+#. module: account_asset_management
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_view_search
+msgid "Assets in Running State"
+msgstr "በሩጫ ግዛት ውስጥ ያሉ ንብረቶች"
+
+#. module: account_asset_management
+#: model_terms:ir.ui.view,arch_db:account_asset_management.wiz_account_asset_removal_report_view_form
+msgid "Assets removal report"
+msgstr "የንብረት ማስወገድ ሪፖርት"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/report/account_asset_report_xls.py:0
+#, python-format
+msgid "Assets to be corrected"
+msgstr "የሚስተካከሉ ንብረቶች"
+
+#. module: account_asset_management
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_view_search
+msgid "Assets which have been removed"
+msgstr "የተወገዱ ንብረቶች"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_stock_production_lot__associated_asset
+msgid "Associated asset"
+msgstr "ተያያዥነት ያለው ንብረት"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__message_attachment_count
+msgid "Attachment Count"
+msgstr "የአባሪ ብዛት"
+
+#. module: account_asset_management
+#: model:ir.model.fields,help:account_asset_management.field_account_asset_profile__asset_product_item
+msgid ""
+"By default during the validation of an invoice, an asset is created by "
+"invoice line as long as an accounting entry is created by invoice line. With"
+" this setting, an accounting entry will be created by product item. So, "
+"there will be an asset by product item."
+msgstr ""
+"በነባሪነት የክፍያ መጠየቂያ ደረሰኝ በሚረጋገጥበት ጊዜ፣ የሒሳብ ግቤት በሒሳብ መጠየቂያ መስመር እስከተፈጠረ ድረስ "
+"ንብረቱ በክፍያ መጠየቂያ መስመር ይፈጠራል። በዚህ ቅንብር፣ በምርት ንጥል ነገር የሂሳብ ግቤት ይፈጠራል። ስለዚህ, "
+"በምርት ንጥል ንብረት ይኖራል."
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__days_calc
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_profile__days_calc
+msgid "Calculate by days"
+msgstr "በቀናት አስላ"
+
+#. module: account_asset_management
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_compute_view_form
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_compute_view_form_result
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_remove_view_form
+#: model_terms:ir.ui.view,arch_db:account_asset_management.wiz_account_asset_removal_report_view_form
+#: model_terms:ir.ui.view,arch_db:account_asset_management.wiz_account_asset_report_view_form
+#: model_terms:ir.ui.view,arch_db:account_asset_management.wiz_asset_move_reverse_view_form
+msgid "Cancel"
+msgstr "ሰርዝ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,help:account_asset_management.field_account_asset_profile__open_asset
+msgid ""
+"Check this if you want to automatically confirm the assets of this profile "
+"when created by invoices."
+msgstr "በክፍያ መጠየቂያዎች ሲፈጠሩ የዚህን መገለጫ ንብረቶች በራስ-ሰር ማረጋገጥ ከፈለጉ ይህንን ያረጋግጡ።"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_group__child_ids
+msgid "Child Asset Groups"
+msgstr "የልጅ ንብረት ቡድኖች"
+
+#. module: account_asset_management
+#: model:ir.model.fields,help:account_asset_management.field_account_asset__method_time
+#: model:ir.model.fields,help:account_asset_management.field_account_asset_profile__method_time
+msgid ""
+"Choose the method to use to compute the dates and number of depreciation lines.\n"
+"  * Number of Years: Specify the number of years for the depreciation.\n"
+"  * Number of Depreciations: Fix the number of depreciation lines and the time between 2 depreciations.\n"
+msgstr ""
+"የዋጋ ቅነሳ መስመሮችን ቀኖች እና ቁጥር ለማስላት የሚጠቀሙበትን ዘዴ ይምረጡ።"
+"   * የዓመታት ብዛት፡ ለዋጋ ቅናሽ የዓመታትን ብዛት ይግለጹ።"
+"   * የዋጋ ቅነሳዎች ብዛት፡ የዋጋ ቅነሳ መስመሮችን ቁጥር እና በ2 ቅናሾች መካከል ያለውን ጊዜ ያስተካክሉ።"
+""
+
+#. module: account_asset_management
+#: model:ir.model.fields,help:account_asset_management.field_account_asset__method
+#: model:ir.model.fields,help:account_asset_management.field_account_asset_profile__method
+msgid ""
+"Choose the method to use to compute the depreciation lines.\n"
+"  * Linear: Calculated on basis of: Depreciation Base / Number of Depreciations. Depreciation Base = Purchase Value - Salvage Value.\n"
+"  * Linear-Limit: Linear up to Salvage Value. Depreciation Base = Purchase Value.\n"
+"  * Degressive: Calculated on basis of: Residual Value * Degressive Factor.\n"
+"  * Degressive-Linear (only for Time Method = Year): Degressive becomes linear when the annual linear depreciation exceeds the annual degressive depreciation.\n"
+"   * Degressive-Limit: Degressive up to Salvage Value. The Depreciation Base is equal to the asset value."
+msgstr ""
+"የዋጋ ቅነሳ መስመሮችን ለማስላት የሚጠቀሙበትን ዘዴ ይምረጡ።"
+"   * መስመራዊ፡ በሚከተሉት መሰረት ይሰላል፡ የዋጋ ቅነሳ መሰረት/የዋጋ ቅናሽ ብዛት። የዋጋ ቅነሳ መሰረት = የግዢ ዋጋ - የማዳን ዋጋ።"
+"   * መስመራዊ-ገደብ፡ መስመራዊ እስከ ማዳን እሴት። የዋጋ ቅነሳ መሰረት = የግዢ ዋጋ።"
+"   * Degressive: መሠረት የሚሰላው: ቀሪ እሴት * Degressive ምክንያት."
+"   * Degressive-Linear (ለጊዜ ዘዴ = አመት ብቻ)፡- ዝቅጠት መስመራዊ የሚሆነው አመታዊው የመስመር ላይ የዋጋ ቅናሽ ከዓመታዊ የዋጋ ቅናሽ ሲበልጥ ነው።"
+"   * Degressive-Limit: Degressive እስከ መዳን እሴት። የዋጋ ቅነሳው መሠረት ከንብረቱ ዋጋ ጋር እኩል ነው።"
+""
+
+#. module: account_asset_management
+#: model:ir.model.fields,help:account_asset_management.field_account_asset_remove__remove_method
+msgid "Choose the method to use to remove the asset \n"
+msgstr ""
+"ንብረቱን ለማስወገድ የሚጠቀሙበትን ዘዴ ይምረጡ"
+""
+
+#. module: account_asset_management
+#: model:ir.model.fields.selection,name:account_asset_management.selection__account_asset__state__close
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_view_search
+msgid "Close"
+msgstr "ዝጋ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_group__code
+msgid "Code"
+msgstr "ኮድ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__company_id
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_group__company_id
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_line__company_id
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_profile__company_id
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_recompute_trigger__company_id
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_remove__company_id
+#: model:ir.model.fields,field_description:account_asset_management.field_wiz_account_asset_removal_report__company_id
+#: model:ir.model.fields,field_description:account_asset_management.field_wiz_account_asset_report__company_id
+msgid "Company"
+msgstr "ኩባንያ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__company_currency_id
+msgid "Company Currency"
+msgstr "የኩባንያ ምንዛሪ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_recompute_trigger__date_completed
+msgid "Completion Date"
+msgstr "የማጠናቀቂያ ቀን"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/report/account_asset_report_xls.py:0
+#, python-format
+msgid "Comput. Method"
+msgstr "የኮምፒውተር ዘዴ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__method
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_profile__method
+msgid "Computation Method"
+msgstr "የማስላት ዘዴ"
+
+#. module: account_asset_management
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_compute_view_form
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_view_form
+msgid "Compute"
+msgstr "አስላ"
+
+#. module: account_asset_management
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_compute_view_form
+msgid "Compute Asset"
+msgstr "ንብረት አስላ"
+
+#. module: account_asset_management
+#: model:ir.actions.act_window,name:account_asset_management.account_asset_compute_action
+#: model:ir.model,name:account_asset_management.model_account_asset_compute
+#: model:ir.ui.menu,name:account_asset_management.account_asset_compute_menu
+msgid "Compute Assets"
+msgstr "ንብረቶችን አስሉ "
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/wizard/account_asset_compute.py:0
+#, python-format
+msgid "Compute Assets errors"
+msgstr "የንብረት ስህተቶችን አስሉ"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/wizard/account_asset_compute.py:0
+#, python-format
+msgid "Compute Assets result"
+msgstr "የንብረት ውጤት አስሉ"
+
+#. module: account_asset_management
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_compute_view_form_result
+msgid "Compute Assets results"
+msgstr "የንብረት ውጤቶችን አስሉ"
+
+#. module: account_asset_management
+#: model_terms:ir.ui.view,arch_db:account_asset_management.wiz_asset_move_reverse_view_form
+msgid "Confirm"
+msgstr "አረጋግጥ"
+
+#. module: account_asset_management
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_view_form
+msgid "Confirm Asset"
+msgstr "ንብረት አረጋግጥ"
+
+#. module: account_asset_management
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_view_form
+msgid "Create Move"
+msgstr "እንቅስቃሴን ይፍጠሩ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_profile__asset_product_item
+msgid "Create an asset by product item"
+msgstr "በምርት ንጥል ነገር ንብረት ይፍጠሩ"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/wizard/account_asset_compute.py:0
+#: code:addons/account_asset_management/wizard/account_asset_compute.py:0
+#, python-format
+msgid "Created Asset Moves"
+msgstr "የተፈጠረ የንብረት እንቅስቃሴዎች"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__create_uid
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_compute__create_uid
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_group__create_uid
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_line__create_uid
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_profile__create_uid
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_recompute_trigger__create_uid
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_remove__create_uid
+#: model:ir.model.fields,field_description:account_asset_management.field_wiz_account_asset_removal_report__create_uid
+#: model:ir.model.fields,field_description:account_asset_management.field_wiz_account_asset_report__create_uid
+#: model:ir.model.fields,field_description:account_asset_management.field_wiz_asset_move_reverse__create_uid
+msgid "Created by"
+msgstr "የተፈጠረው በ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__create_date
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_compute__create_date
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_group__create_date
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_line__create_date
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_profile__create_date
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_recompute_trigger__create_date
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_remove__create_date
+#: model:ir.model.fields,field_description:account_asset_management.field_wiz_account_asset_removal_report__create_date
+#: model:ir.model.fields,field_description:account_asset_management.field_wiz_account_asset_report__create_date
+#: model:ir.model.fields,field_description:account_asset_management.field_wiz_asset_move_reverse__create_date
+msgid "Created on"
+msgstr "ላይ ተፈጠረ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_compute__date_end
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_line__line_date
+msgid "Date"
+msgstr "ቀን"
+
+#. module: account_asset_management
+#: model:ir.model.fields,help:account_asset_management.field_account_asset_recompute_trigger__date_trigger
+msgid "Date of the event triggering the need to recompute the Asset Tables."
+msgstr "የንብረት ሠንጠረዦችን እንደገና ለማስላት የሚያስፈልግ የዝግጅቱ ቀን።"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_line__line_days
+msgid "Days"
+msgstr "ቀናት"
+
+#. module: account_asset_management
+#: model:ir.model.fields,help:account_asset_management.field_account_account__asset_profile_id
+msgid "Default Asset Profile when creating invoice lines with this account."
+msgstr "በዚህ መለያ የክፍያ መጠየቂያ መስመሮችን ሲፈጥሩ ነባሪ የንብረት መገለጫ።"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/wizard/account_asset_remove.py:0
+#, python-format
+msgid ""
+"Default destination location not given! Please set default location in "
+"Inventory >> Configuration >> Operation Types >> Delivery Orders >> field "
+"(Default destination location)"
+msgstr "ነባሪ መድረሻ ቦታ አልተሰጠም! እባክህ ነባሪውን በዕቃ ዝርዝር >> ውቅረት >> የአሠራር ዓይነቶች >> የማስረከቢያ ትዕዛዞች >> መስክ (ነባሪው የመድረሻ ቦታ) ያቀናብሩ"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/models/account_asset_profile.py:0
+#, python-format
+msgid "Degressive"
+msgstr "ዝቅጠት"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/models/account_asset_profile.py:0
+#, python-format
+msgid "Degressive  up to Salvage Value"
+msgstr "እስከ ማዳን እሴት ድረስ ወራዳ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__method_progress_factor
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_profile__method_progress_factor
+msgid "Degressive Factor"
+msgstr "የድጋፍ ምክንያት"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/models/account_asset_profile.py:0
+#, python-format
+msgid "Degressive-Linear"
+msgstr ""
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/models/account_asset.py:0
+#: code:addons/account_asset_management/models/account_asset_profile.py:0
+#, python-format
+msgid "Degressive-Linear is only supported for Time Method = Year."
+msgstr "Degressive-Linear የሚደገፈው ለጊዜ ዘዴ = አመት ብቻ ነው።"
+
+#. module: account_asset_management
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_view_form
+msgid "Delete/Reverse Move"
+msgstr "መሰረዝ/መቀልበስ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_remove__partner_id
+msgid "Delivery Partner"
+msgstr "የመላኪያ አጋር"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__delivery_transfer_link
+msgid "Delivery Transfer Link"
+msgstr "የማስተላለፊያ ማገናኛ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_profile__account_expense_depreciation_id
+msgid "Depr. Expense Account"
+msgstr "ዴፕር. የወጪ ሂሳብ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__value_depreciated
+msgid "Depreciated Value"
+msgstr "የተቀነሰ ዋጋ"
+
+#. module: account_asset_management
+#: model:ir.model.fields.selection,name:account_asset_management.selection__account_asset_line__type__depreciate
+msgid "Depreciation"
+msgstr "የዋጋ ቅነሳ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_profile__account_depreciation_id
+msgid "Depreciation Account"
+msgstr "የዋጋ ቅነሳ መለያ"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/report/account_asset_report_xls.py:0
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__depreciation_base
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_line__depreciation_base
+#: model:ir.model.fields.selection,name:account_asset_management.selection__account_asset_line__type__create
+#, python-format
+msgid "Depreciation Base"
+msgstr "የዋጋ ቅነሳ መሠረት"
+
+#. module: account_asset_management
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_view_form
+msgid "Depreciation Board"
+msgstr "የዋጋ ቅነሳ ቦርድ"
+
+#. module: account_asset_management
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_profile_view_form
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_view_form
+msgid "Depreciation Dates"
+msgstr "የዋጋ ቅነሳ ቀኖች"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_line__move_id
+msgid "Depreciation Entry"
+msgstr "የዋጋ ቅነሳ መግቢያ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__depreciation_line_ids
+msgid "Depreciation Lines"
+msgstr "የዋጋ ቅነሳ መስመሮች"
+
+#. module: account_asset_management
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_profile_view_form
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_view_form
+msgid "Depreciation Method"
+msgstr "የዋጋ ቅነሳ ዘዴ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_line__name
+msgid "Depreciation Name"
+msgstr "የዋጋ ቅነሳ ስም"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_remove__location_dest_id
+msgid "Destination Location"
+msgstr "መድረሻ ቦታ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__display_name
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_compute__display_name
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_group__display_name
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_line__display_name
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_profile__display_name
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_recompute_trigger__display_name
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_remove__display_name
+#: model:ir.model.fields,field_description:account_asset_management.field_report_account_asset_management_asset_removal_template__display_name
+#: model:ir.model.fields,field_description:account_asset_management.field_report_account_asset_management_asset_report_xls__display_name
+#: model:ir.model.fields,field_description:account_asset_management.field_wiz_account_asset_removal_report__display_name
+#: model:ir.model.fields,field_description:account_asset_management.field_wiz_account_asset_report__display_name
+#: model:ir.model.fields,field_description:account_asset_management.field_wiz_asset_move_reverse__display_name
+msgid "Display Name"
+msgstr "መጠሪያው ስም"
+
+#. module: account_asset_management
+#: model_terms:ir.ui.view,arch_db:account_asset_management.asset_removal_template
+msgid "Dispose date"
+msgstr "የማስወገጃ ቀን"
+
+#. module: account_asset_management
+#: model:ir.model.fields.selection,name:account_asset_management.selection__account_asset_recompute_trigger__state__done
+msgid "Done"
+msgstr "ተከናውኗል"
+
+#. module: account_asset_management
+#: model:ir.model.fields.selection,name:account_asset_management.selection__account_asset__state__draft
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_view_search
+msgid "Draft"
+msgstr "ረቂቅ"
+
+#. module: account_asset_management
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_view_search
+msgid "Draft Assets"
+msgstr "ረቂቅ ንብረቶች"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/report/account_asset_report_xls.py:0
+#, python-format
+msgid "Duplicate reporting entries"
+msgstr "የተባዙ የሪፖርት ማቅረቢያ ግቤቶች"
+
+#. module: account_asset_management
+#: model:ir.model,name:account_asset_management.model_report_account_asset_management_asset_report_xls
+msgid "Dynamic XLS asset report generator"
+msgstr "ተለዋዋጭ XLS የንብረት ሪፖርት አመንጪ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_wiz_account_asset_removal_report__date_to
+#: model:ir.model.fields,field_description:account_asset_management.field_wiz_account_asset_report__date_to
+msgid "End Date"
+msgstr "የመጨረሻ ቀን"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__method_end
+msgid "Ending Date"
+msgstr "የሚያበቃበት ቀን"
+
+#. module: account_asset_management
+#: model:ir.model.fields,help:account_asset_management.field_account_asset__tracking
+msgid "Ensure the traceability of a storable product in your warehouse."
+msgstr "በእርስዎ መጋዘን ውስጥ ሊከማች የሚችል ምርት መያዙን ያረጋግጡ።"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__account_move_line_ids
+msgid "Entries"
+msgstr "ግቤቶች"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/models/account_asset.py:0
+#, python-format
+msgid ""
+"Error while processing asset '%s': \n"
+"\n"
+"%s"
+msgstr ""
+"\"ንብረት\"%s\"ን በማስኬድ ላይ ሳለ ስህተት፡-"
+"%s"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__estimated_value
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_remove__estimated_value
+msgid "Estimated Value"
+msgstr "የሚገመተው ዋጋ"
+
+#. module: account_asset_management
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_view_form
+#: model_terms:ir.ui.view,arch_db:account_asset_management.asset_removal_template
+msgid "Estimated value"
+msgstr "የሚገመተው ዋጋ"
+
+#. module: account_asset_management
+#: model:ir.ui.menu,name:account_asset_management.account_asset_report_menu
+msgid "Financial Assets"
+msgstr "የገንዘብ ንብረቶች"
+
+#. module: account_asset_management
+#: model:ir.actions.act_window,name:account_asset_management.wiz_account_asset_report_action
+#: model:ir.model,name:account_asset_management.model_wiz_account_asset_removal_report
+#: model:ir.model,name:account_asset_management.model_wiz_account_asset_report
+#: model:ir.ui.menu,name:account_asset_management.wiz_account_asset_report_menu
+#: model_terms:ir.ui.view,arch_db:account_asset_management.wiz_account_asset_report_view_form
+msgid "Financial Assets report"
+msgstr "የፋይናንስ ንብረቶች ሪፖርት"
+
+#. module: account_asset_management
+#: model:ir.model,name:account_asset_management.model_account_fiscal_year
+msgid "Fiscal Year"
+msgstr "የበጀት ዓመት"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__message_follower_ids
+msgid "Followers"
+msgstr "ተከታዮች"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "ተከታዮች (ሰርጦች)"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "ተከታዮች (አጋሮች)"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_remove__force_date
+msgid "Force accounting date"
+msgstr "የሂሳብ ቀንን አስገድድ"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/wizard/account_asset_remove.py:0
+#, python-format
+msgid "Gain/Loss on Sale"
+msgstr "በሽያጭ ላይ ትርፍ/ኪሳራ"
+
+#. module: account_asset_management
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_view_form
+msgid "General"
+msgstr "አጠቃላይ"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/models/account_asset.py:0
+#, python-format
+msgid "Generate Asset Removal entries"
+msgstr "የንብረት ማስወገጃ ግቤቶችን ይፍጠሩ"
+
+#. module: account_asset_management
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_remove_view_form
+msgid "Generate Removal entries"
+msgstr "የማስወገጃ ግቤቶችን ይፍጠሩ"
+
+#. module: account_asset_management
+#: model_terms:ir.ui.view,arch_db:account_asset_management.wiz_account_asset_removal_report_view_form
+#: model_terms:ir.ui.view,arch_db:account_asset_management.wiz_account_asset_report_view_form
+msgid "Generate Report"
+msgstr "ሪፖርት ማመንጨት"
+
+#. module: account_asset_management
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_view_search
+msgid "Group By..."
+msgstr "ቡድን በ..."
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__move_line_check
+msgid "Has accounting entries"
+msgstr "የሂሳብ ግቤቶች አሉት"
+
+#. module: account_asset_management
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_view_form
+msgid "History"
+msgstr "ታሪክ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__id
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_compute__id
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_group__id
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_line__id
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_profile__id
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_recompute_trigger__id
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_remove__id
+#: model:ir.model.fields,field_description:account_asset_management.field_report_account_asset_management_asset_removal_template__id
+#: model:ir.model.fields,field_description:account_asset_management.field_report_account_asset_management_asset_report_xls__id
+#: model:ir.model.fields,field_description:account_asset_management.field_wiz_account_asset_removal_report__id
+#: model:ir.model.fields,field_description:account_asset_management.field_wiz_account_asset_report__id
+#: model:ir.model.fields,field_description:account_asset_management.field_wiz_asset_move_reverse__id
+msgid "ID"
+msgstr "መታወቂያ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__activity_exception_icon
+msgid "Icon"
+msgstr "አዶ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,help:account_asset_management.field_account_asset__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "ልዩ እንቅስቃሴን ለማመልከት አዶ።"
+
+#. module: account_asset_management
+#: model:ir.model.fields,help:account_asset_management.field_account_asset__message_needaction
+#: model:ir.model.fields,help:account_asset_management.field_account_asset__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "ምልክት ካደረጉ፣ አዲስ መልዕክቶች የእርስዎን ትኩረት ይፈልጋሉ።"
+
+#. module: account_asset_management
+#: model:ir.model.fields,help:account_asset_management.field_account_asset__message_has_error
+#: model:ir.model.fields,help:account_asset_management.field_account_asset__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "ምልክት ካደረጉ፣ አንዳንድ መልዕክቶች የማድረስ ስህተት አለባቸው።"
+
+#. module: account_asset_management
+#: model:ir.model.fields,help:account_asset_management.field_account_asset__carry_forward_missed_depreciations
+msgid ""
+"If create an asset in a fiscal period that is now closed\n"
+"        the accumulated amount of depreciations that cannot be posted will be\n"
+"        carried forward to the first depreciation line of the current open\n"
+"        period."
+msgstr ""
+"\"አሁን በተዘጋ የበጀት ጊዜ ውስጥ ንብረት ከፈጠሩ"
+"         ሊለጠፍ የማይችል የተጠራቀመ የዋጋ ቅናሽ መጠን ይሆናል።"
+"         የአሁኑ ክፍት ወደ መጀመሪያው የዋጋ ቅናሽ መስመር ተሸጋግሯል።"
+"         ጊዜ\""
+
+#. module: account_asset_management
+#: model:ir.model.fields,help:account_asset_management.field_wiz_asset_move_reverse__journal_id
+msgid "If empty, uses the journal of the journal entry to be reversed."
+msgstr "ባዶ ከሆነ ለመገልበጥ የመጽሔቱን መግቢያ ጆርናል ይጠቀማል።"
+
+#. module: account_asset_management
+#: model:ir.model.fields,help:account_asset_management.field_account_asset_profile__use_leap_years
+msgid ""
+"If not set, the system will distribute evenly the amount to amortize across the years, based on the number of years. So the amount per year will be the depreciation base / number of years.\n"
+" If set, the system will consider if the current year is a leap year. The amount to depreciate per year will be calculated as depreciation base / (depreciation end date - start date + 1) * days in the current year."
+msgstr ""
+"ካልተዋቀረ ስርዓቱ በዓመታት ብዛት ላይ በመመስረት ለዓመታት የሚከፈለውን መጠን በእኩል መጠን ያከፋፍላል። ስለዚህ በዓመት ውስጥ ያለው መጠን የዋጋ ቅነሳ መሠረት / የዓመታት ብዛት ይሆናል።"
+"  ከተዋቀረ ስርዓቱ አሁን ያለው አመት የመዝለል አመት መሆኑን ይመለከታል። በዓመት የሚቀነሰው መጠን እንደ የዋጋ ቅነሳ መሠረት ይሰላል / (የዋጋ ቅናሽ ማብቂያ ቀን - የመጀመሪያ ቀን + 1) * ቀናት በዚህ ዓመት።"
+
+#. module: account_asset_management
+#: model:ir.model.fields,help:account_asset_management.field_account_asset__use_leap_years
+msgid ""
+"If not set, the system will distribute evenly the amount to amortize across the years, based on the number of years. So the amount per year will be the depreciation base / number zof years.\n"
+" If set, the system will consider if the current year is a leap year. The amount to depreciate per year will be calculated as depreciation base / (depreciation end date - start date + 1) * days in the current year."
+msgstr ""
+"ካልተዋቀረ ስርዓቱ በዓመታት ብዛት ላይ በመመስረት ለዓመታት የሚከፈለውን መጠን በእኩል መጠን ያከፋፍላል። ስለዚህ በዓመት ውስጥ ያለው መጠን የዋጋ ቅነሳ መሠረት / ቁጥር zof ዓመታት ይሆናል።"
+"  ከተዋቀረ ስርዓቱ አሁን ያለው አመት የመዝለል አመት መሆኑን ይመለከታል። በዓመት የሚቀነሰው መጠን እንደ የዋጋ ቅነሳ መሠረት ይሰላል / (የዋጋ ቅናሽ ማብቂያ ቀን - የመጀመሪያ ቀን + 1) * ቀናት በዚህ ዓመት።"
+
+#. module: account_asset_management
+#: model:ir.model.fields,help:account_asset_management.field_account_asset_profile__allow_reversal
+msgid ""
+"If set, when pressing the Delete/Reverse Move button in a posted "
+"depreciation line will prompt the option to reverse the journal entry, "
+"instead of deleting them."
+msgstr ""
+"ከተዋቀረ፣ በተለጠፈ የዋጋ ቅናሽ መስመር ላይ ያለውን Delete/Reverse Move የሚለውን ቁልፍ ሲጫኑ የጆርናል "
+"ግቤትን ከመሰረዝ ይልቅ የመቀልበስ ምርጫን ይጠይቃል።ህገወጥ እሴት %s በ asset.method።"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/models/account_asset.py:0
+#, python-format
+msgid "Illegal value %s in asset.method."
+msgstr "ህገወጥ እሴት %s በ asset.method።"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_wiz_account_asset_removal_report__draft
+#: model:ir.model.fields,field_description:account_asset_management.field_wiz_account_asset_report__draft
+msgid "Include draft assets"
+msgstr "ረቂቅ ንብረቶችን ያካትቱ"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/report/account_asset_report_xls.py:0
+#, python-format
+msgid ""
+"Inconsistent reporting structure.\n"
+"Please correct Asset Group '%s' (id %s)"
+msgstr ""
+"ተመጣጣኝ ያልሆነ የሪፖርት አቀራረብ መዋቅር።"
+"እባክህ የንብረት ቡድን \'%s\' (id %s) አስተካክል"
+
+#. module: account_asset_management
+#: model:ir.model.fields,help:account_asset_management.field_account_asset__prorata
+#: model:ir.model.fields,help:account_asset_management.field_account_asset_profile__prorata
+msgid ""
+"Indicates that the first depreciation entry for this asset has to be done "
+"from the depreciation start date instead of the first day of the fiscal "
+"year."
+msgstr ""
+"የዚህ ንብረት የመጀመሪያ የዋጋ ቅነሳ ግቤት በበጀት ዓመቱ የመጀመሪያ ቀን ሳይሆን ከተቀነሰበት ቀን ጀምሮ መከናወን "
+"እንዳለበት ያሳያል።"
+
+#. module: account_asset_management
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_view_form
+msgid "Init"
+msgstr "በ ዉስጥ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_line__init_entry
+msgid "Initial Balance Entry"
+msgstr "የመነሻ ሚዛን መግቢያ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_product_product__is_asset
+#: model:ir.model.fields,field_description:account_asset_management.field_product_template__is_asset
+msgid "Is Asset"
+msgstr "ንብረት ነው።"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__message_is_follower
+msgid "Is Follower"
+msgstr "ተከታይ ነው።"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_profile__journal_id
+msgid "Journal"
+msgstr "ጆርናል"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/models/account_asset.py:0
+#: model:ir.model,name:account_asset_management.model_account_move
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_view_form
+#, python-format
+msgid "Journal Entries"
+msgstr "ጆርናል ግቤቶች"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/models/account_asset_line.py:0
+#, python-format
+msgid "Journal Entry"
+msgstr "ጆርናል ማስገቢያ"
+
+#. module: account_asset_management
+#: model:ir.model,name:account_asset_management.model_account_move_line
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_view_form
+msgid "Journal Item"
+msgstr "መዝገብ ኣይተም"
+
+#. module: account_asset_management
+#: model:ir.actions.act_window,name:account_asset_management.act_entries_open
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_view_form
+msgid "Journal Items"
+msgstr "የጆርናል እቃዎች"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset____last_update
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_compute____last_update
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_group____last_update
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_line____last_update
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_profile____last_update
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_recompute_trigger____last_update
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_remove____last_update
+#: model:ir.model.fields,field_description:account_asset_management.field_report_account_asset_management_asset_removal_template____last_update
+#: model:ir.model.fields,field_description:account_asset_management.field_report_account_asset_management_asset_report_xls____last_update
+#: model:ir.model.fields,field_description:account_asset_management.field_wiz_account_asset_removal_report____last_update
+#: model:ir.model.fields,field_description:account_asset_management.field_wiz_account_asset_report____last_update
+#: model:ir.model.fields,field_description:account_asset_management.field_wiz_asset_move_reverse____last_update
+msgid "Last Modified on"
+msgstr "መጨረሻ የተሻሻለው በ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__write_uid
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_compute__write_uid
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_group__write_uid
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_line__write_uid
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_profile__write_uid
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_recompute_trigger__write_uid
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_remove__write_uid
+#: model:ir.model.fields,field_description:account_asset_management.field_wiz_account_asset_removal_report__write_uid
+#: model:ir.model.fields,field_description:account_asset_management.field_wiz_account_asset_report__write_uid
+#: model:ir.model.fields,field_description:account_asset_management.field_wiz_asset_move_reverse__write_uid
+msgid "Last Updated by"
+msgstr "መጨረሻ የዘመነው በ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__write_date
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_compute__write_date
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_group__write_date
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_line__write_date
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_profile__write_date
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_recompute_trigger__write_date
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_remove__write_date
+#: model:ir.model.fields,field_description:account_asset_management.field_wiz_account_asset_removal_report__write_date
+#: model:ir.model.fields,field_description:account_asset_management.field_wiz_account_asset_report__write_date
+#: model:ir.model.fields,field_description:account_asset_management.field_wiz_asset_move_reverse__write_date
+msgid "Last Updated on"
+msgstr "መጨረሻ የዘመነው በ"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/models/account_asset_profile.py:0
+#, python-format
+msgid "Linear"
+msgstr "መስመራዊ"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/models/account_asset_profile.py:0
+#, python-format
+msgid "Linear up to Salvage Value"
+msgstr "መስመራዊ እስከ ማዳን እሴት"
+
+#. module: account_asset_management
+#: model:ir.model,name:account_asset_management.model_stock_production_lot
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__lot_id
+msgid "Lot/Serial"
+msgstr "ሎጥ / መለያ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "ዋና አባሪ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__message_has_error
+msgid "Message Delivery error"
+msgstr "የመልእክት ማቅረቢያ ስህተት"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__message_ids
+msgid "Messages"
+msgstr "መልዕክቶች"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_profile__account_min_value_id
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_remove__account_min_value_id
+msgid "Min-Value Account"
+msgstr "አነስተኛ እሴት መለያ"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/report/account_asset_report_xls.py:0
+#, python-format
+msgid "Missing depreciation table"
+msgstr "የዋጋ ቅነሳ ሰንጠረዥ ይጎድላል"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/models/account_asset_profile.py:0
+#, python-format
+msgid "Month"
+msgstr "ወር"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/report/account_asset_report_xls.py:0
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__partner_name
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__profile_name
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_group__name
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_profile__name
+#, python-format
+msgid "Name"
+msgstr "ስም"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/report/account_asset_report_xls.py:0
+#: code:addons/account_asset_management/report/account_asset_report_xls.py:0
+#, python-format
+msgid "New Acquisitions"
+msgstr "አዲስ ግዢዎች"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "ቀጣይ የእንቅስቃሴ ገደብ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__activity_summary
+msgid "Next Activity Summary"
+msgstr "ቀጣይ የእንቅስቃሴ ማጠቃለያ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__activity_type_id
+msgid "Next Activity Type"
+msgstr "ቀጣይ የእንቅስቃሴ አይነት"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_line__remaining_value
+msgid "Next Period Depreciation"
+msgstr "የሚቀጥለው ጊዜ የዋጋ ቅነሳ"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/report/account_asset_report_xls.py:0
+#, python-format
+msgid "No"
+msgstr "አይ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__note
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_compute__note
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_profile__note
+msgid "Note"
+msgstr "ማስታወሻ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_remove__note
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_profile_view_form
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_remove_view_form
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_view_form
+msgid "Notes"
+msgstr "ማስታወሻዎች"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__message_needaction_counter
+msgid "Number of Actions"
+msgstr "የተግባሮች ብዛት"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/models/account_asset_profile.py:0
+#, python-format
+msgid "Number of Depreciations"
+msgstr "የዋጋ ቅነሳዎች ብዛት"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/report/account_asset_report_xls.py:0
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__method_number
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_profile__method_number
+#, python-format
+msgid "Number of Years"
+msgstr "የዓመታት ብዛት"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/models/account_asset_profile.py:0
+#, python-format
+msgid "Number of Years or end date"
+msgstr "የዓመታት ብዛት ወይም የመጨረሻ ቀን"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__message_has_error_counter
+msgid "Number of errors"
+msgstr "የስህተት ብዛት"
+
+#. module: account_asset_management
+#: model:ir.model.fields,help:account_asset_management.field_account_asset__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "እርምጃ የሚያስፈልገው የመልእክት ብዛት"
+
+#. module: account_asset_management
+#: model:ir.model.fields,help:account_asset_management.field_account_asset__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "የማድረስ ስህተት ያለባቸው መልዕክቶች ብዛት"
+
+#. module: account_asset_management
+#: model:ir.model.fields,help:account_asset_management.field_account_asset__message_unread_counter
+msgid "Number of unread messages"
+msgstr "ያልተነበቡ መልዕክቶች ብዛት"
+
+#. module: account_asset_management
+#: model:ir.model.fields.selection,name:account_asset_management.selection__account_asset_recompute_trigger__state__open
+msgid "Open"
+msgstr "ክፈት"
+
+#. module: account_asset_management
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_view_form
+msgid "Other Information"
+msgstr "ሌላ መረጃ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_group__parent_id
+msgid "Parent Asset Group"
+msgstr "የወላጅ ንብረት ቡድን"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_group__parent_path
+msgid "Parent Path"
+msgstr "የወላጅ መንገድ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__partner_id
+#: model_terms:ir.ui.view,arch_db:account_asset_management.asset_removal_template
+msgid "Partner"
+msgstr "አጋር"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/report/account_asset_report_xls.py:0
+#, python-format
+msgid "Period Depreciation"
+msgstr "የወቅቱ የዋጋ ቅነሳ"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/report/account_asset_report_xls.py:0
+#, python-format
+msgid "Period End Value"
+msgstr "የጊዜ ማብቂያ ዋጋ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__method_period
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_profile__method_period
+msgid "Period Length"
+msgstr "የጊዜ ርዝመት"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/report/account_asset_report_xls.py:0
+#, python-format
+msgid "Period Start Value"
+msgstr "የወቅቱ መጀመሪያ እሴት"
+
+#. module: account_asset_management
+#: model:ir.model.fields,help:account_asset_management.field_account_asset__method_period
+#: model:ir.model.fields,help:account_asset_management.field_account_asset_profile__method_period
+msgid "Period length for the depreciation accounting entries"
+msgstr "ለዋጋ ቅነሳ የሂሳብ ግቤቶች የጊዜ ርዝመት"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_profile__account_plus_value_id
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_remove__account_plus_value_id
+msgid "Plus-Value Account"
+msgstr "የፕላስ-ዋጋ መለያ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_line__move_check
+msgid "Posted"
+msgstr "ተለጠፈ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_line__previous_id
+msgid "Previous Depreciation Line"
+msgstr "የቀደመው የዋጋ ቅናሽ መስመር"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__product_id
+msgid "Product"
+msgstr "እቃ"
+
+#. module: account_asset_management
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_view_search
+msgid "Profile"
+msgstr "መገለጫ"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/report/account_asset_report_xls.py:0
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__prorata
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_profile__prorata
+#, python-format
+msgid "Prorata Temporis"
+msgstr "በጊዜው መሰረት"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__purchase_value
+msgid "Purchase Value"
+msgstr "የግዢ ዋጋ"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/models/account_asset_profile.py:0
+#, python-format
+msgid "Quarter"
+msgstr "ሩብ"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/report/account_asset_report_xls.py:0
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_recompute_trigger__reason
+#: model:ir.model.fields,field_description:account_asset_management.field_wiz_asset_move_reverse__reason
+#, python-format
+msgid "Reason"
+msgstr "ሩብ"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/report/account_asset_report_xls.py:0
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__code
+#, python-format
+msgid "Reference"
+msgstr "ማጣቀሻ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_remove__posting_regime
+msgid "Removal Entry Policy"
+msgstr "የማስወገድ የመግቢያ መመሪያ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,help:account_asset_management.field_account_asset_remove__posting_regime
+msgid ""
+"Removal Entry Policy \n"
+"  * Residual Value: The non-depreciated value will be posted on the 'Residual Value Account' \n"
+"  * Gain/Loss on Sale: The Gain or Loss will be posted on the 'Plus-Value Account' or 'Min-Value Account' "
+msgstr ""
+"\"የማስወገድ ፖሊሲ
+"
+"   * ቀሪ ዋጋ፡- ያልተቀነሰ ዋጋ በ\'ቀሪ እሴት መለያ\' ላይ ይለጠፋል።
+"
+"   * በሽያጭ ላይ ያለው ትርፍ/ኪሳራ፡ ትርፍ ወይም ኪሳራው በ\'Plus-Value Account\' ወይም \'Min-Value Account\' ላይ ይለጠፋል።"
+
+#. module: account_asset_management
+#: model:ir.model.fields,help:account_asset_management.field_account_asset_remove__date_remove
+msgid ""
+"Removal date must be after the last posted entry in case of early removal"
+msgstr "የማስወገጃ ቀን ቀደም ብሎ መወገድ ከሆነ የመጨረሻው ከተለጠፈ በኋላ መሆን አለበት።"
+
+#. module: account_asset_management
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_view_form
+msgid "Remove"
+msgstr "አስወግድ"
+
+#. module: account_asset_management
+#: model:ir.model,name:account_asset_management.model_account_asset_remove
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_remove_view_form
+msgid "Remove Asset"
+msgstr "ንብረት አስወግድ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_remove__remove_method
+msgid "Remove Method"
+msgstr "ዘዴን ያስወግዱ"
+
+#. module: account_asset_management
+#: model:ir.model.fields.selection,name:account_asset_management.selection__account_asset__state__removed
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_view_search
+msgid "Removed"
+msgstr "ተወግዷል"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/report/account_asset_report_xls.py:0
+#: code:addons/account_asset_management/report/account_asset_report_xls.py:0
+#, python-format
+msgid "Removed Assets"
+msgstr "የተወገዱ ንብረቶች"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/wizard/account_asset_remove.py:0
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_view_form
+#, python-format
+msgid "Residual Value"
+msgstr "ትራፊ እሴት"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_profile__account_residual_value_id
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_remove__account_residual_value_id
+msgid "Residual Value Account"
+msgstr "ቀሪ እሴት መለያ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__activity_user_id
+msgid "Responsible User"
+msgstr "ኃላፊነት የሚሰማው ተጠቃሚ"
+
+#. module: account_asset_management
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_compute_view_form_result
+msgid "Results :"
+msgstr "ውጤቶች፡"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_wiz_asset_move_reverse__date_reversal
+msgid "Reversal date"
+msgstr "የተገላቢጦሽ ቀን"
+
+#. module: account_asset_management
+#: model_terms:ir.ui.view,arch_db:account_asset_management.wiz_asset_move_reverse_view_form
+msgid "Reverse Journal Entry"
+msgstr "የተገላቢጦሽ ጆርናል መግቢያ"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/models/account_asset_line.py:0
+#, python-format
+msgid "Reverse Move"
+msgstr "የተገላቢጦሽ እንቅስቃሴ"
+
+#. module: account_asset_management
+#: model:ir.model,name:account_asset_management.model_wiz_asset_move_reverse
+msgid "Reverse posted journal entry on depreciation line"
+msgstr "በዋጋ ቅናሽ መስመር ላይ የተለጠፈ መጽሔት ግልባጭ"
+
+#. module: account_asset_management
+#: model:ir.model.fields.selection,name:account_asset_management.selection__account_asset__state__open
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_view_search
+msgid "Running"
+msgstr "መሮጥ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "የኤስኤምኤስ የማድረስ ስህተት"
+
+#. module: account_asset_management
+#: model:ir.model.fields.selection,name:account_asset_management.selection__account_asset_remove__remove_method__sale
+msgid "Sale"
+msgstr "ሽያጭ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_remove__sale_value
+msgid "Sale Value"
+msgstr "የሽያጭ ዋጋ"
+
+#. module: account_asset_management
+#: model_terms:ir.ui.view,arch_db:account_asset_management.asset_removal_template
+msgid "Sale value"
+msgstr "የሽያጭ ዋጋ"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/report/account_asset_report_xls.py:0
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__salvage_value
+#, python-format
+msgid "Salvage Value"
+msgstr "የማዳን እሴት"
+
+#. module: account_asset_management
+#: model:ir.model.fields.selection,name:account_asset_management.selection__account_asset_remove__remove_method__scrap
+msgid "Scrap"
+msgstr "ቁርጥራጭ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_remove__scrap_location_id
+msgid "Scrap Location"
+msgstr "የአቃ ማስዎገጃ ቦታ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__scrap_link
+msgid "Scrap link"
+msgstr "የጭረት ማያያዣ"
+
+#. module: account_asset_management
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_group_view_search
+msgid "Search Asset Group"
+msgstr "የንብረት ቡድን ይፈልጉ"
+
+#. module: account_asset_management
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_profile_view_search
+msgid "Search Asset Profile"
+msgstr "የንብረት መገለጫ ይፈልጉ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,help:account_asset_management.field_account_asset_line__init_entry
+msgid ""
+"Set this flag for entries of previous fiscal years for which Odoo has not "
+"generated accounting entries."
+msgstr "ኦዱ የሂሳብ ግቤቶችን ላልፈለሰፈባቸው ያለፉት የበጀት አመታት ግቤቶች ይህንን ባንዲራ ያዘጋጁ።"
+
+#. module: account_asset_management
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_view_form
+msgid "Set to Draft"
+msgstr "ወደ ረቂቅ አዘጋጅ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_profile__open_asset
+msgid "Skip Draft State"
+msgstr "ረቂቅ ግዛት ዝለል"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__sold_price
+msgid "Sold Price"
+msgstr "የተሸጠ ዋጋ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_remove__location_id
+msgid "Source Location"
+msgstr "ምንጭ አካባቢ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_wiz_account_asset_removal_report__date_from
+#: model:ir.model.fields,field_description:account_asset_management.field_wiz_account_asset_report__date_from
+msgid "Start Date"
+msgstr "የመጀመሪያ ቀን"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_recompute_trigger__state
+msgid "State"
+msgstr "ግዛት"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_line__parent_state
+msgid "State of Asset"
+msgstr "የንብረት ሁኔታ"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/report/account_asset_report_xls.py:0
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__state
+#, python-format
+msgid "Status"
+msgstr "ሁኔታ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,help:account_asset_management.field_account_asset__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"በእንቅስቃሴ ላይ የተመሰረተ ሁኔታ\n"
+"አልፏል፡ የማለቂያ ቀን አስቀድሞ አልፏል\n"
+"ዛሬ፡ የተግባር ቀን ዛሬ ነው\n"
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__partner_id
+msgid "Supplier name"
+msgstr "የአቅራቢ ስም"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/models/account_asset.py:0
+msgid "The \'_compute_year_amount\' method is only intended for Time Method \'Number of Years\'."
+msgstr "የ\'_የዓመት_መጠን\' ዘዴ የታሰበው ለጊዜ ዘዴ \'የዓመታት ብዛት\' ብቻ ነው።"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/report/account_asset_report_xls.py:0
+msgid "The \'account\' field is a mandatory entry of the \'_xls_%s_fields\' list !"
+msgstr "የ\'መለያ\' መስክ የግዴታ የ\'_xls_%s_fields\' ዝርዝር ነው!"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/models/account_account.py:0
+#, python-format
+msgid ""
+"The Asset Account defined in the Asset Profile must be equal to the account."
+msgstr "በንብረት መገለጫ ውስጥ የተገለጸው የንብረት መለያ ከመለያው ጋር እኩል መሆን አለበት።"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/wizard/account_asset_remove.py:0
+#, python-format
+msgid "The Sale Value must be positive!"
+msgstr "የሽያጭ ዋጋ አዎንታዊ መሆን አለበት!"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/models/account_asset.py:0
+#: code:addons/account_asset_management/wizard/wiz_account_asset_removal_report.py:0
+#: code:addons/account_asset_management/wizard/wiz_account_asset_report.py:0
+#, python-format
+msgid "The Start Date must precede the Ending Date."
+msgstr "የመጀመርያው ቀን ከማብቂያው ቀን በፊት መሆን አለበት።"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/models/account_asset.py:0
+#, python-format
+msgid ""
+"The duration of the asset conflicts with the posted depreciation table entry"
+" dates."
+msgstr "የንብረቱ ቆይታ ከተለጠፈው የዋጋ ቅናሽ ሰንጠረዥ መግቢያ ቀናት ጋር ይጋጫል።"
+
+#. module: account_asset_management
+#: model:ir.model.fields,help:account_asset_management.field_account_asset__salvage_value
+msgid ""
+"The estimated value that an asset will realize upon its sale at the end of its useful life.\n"
+"This value is used to determine the depreciation amounts."
+msgstr ""
+"ንብረቱ በሚሸጥበት ጊዜ ጠቃሚ ህይወቱ ሲያበቃ የሚገነዘበው ግምታዊ ዋጋ።"
+"ይህ ዋጋ የቅናሽ መጠኖችን ለመወሰን ጥቅም ላይ ይውላል።"
+
+#. module: account_asset_management
+#: model:ir.model.fields,help:account_asset_management.field_account_asset__method_number
+#: model:ir.model.fields,help:account_asset_management.field_account_asset_profile__method_number
+msgid "The number of years needed to depreciate your asset"
+msgstr "የንብረትዎን ዋጋ ለመቀነስ የሚያስፈልጉት የዓመታት ብዛት"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/models/account_asset.py:0
+#: code:addons/account_asset_management/models/account_asset.py:0
+#, python-format
+msgid ""
+"The product is tracked using serial/lotPlease fill the lot field by setting "
+"the form state to draft !!!"
+msgstr "ምርጡን የሚከታተለው ተከታታይ/ሎትን በመጠቀም እባካችሁ የቅማንት ሁኔታ እንዲዘገይ በማድረግ የሎተሪ መ ለይን ለመመልከት!!!"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/wizard/account_asset_remove.py:0
+#, python-format
+msgid "The removal date must be after the last depreciation date."
+msgstr "የማስወገጃው ቀን ከመጨረሻው የዋጋ ቅናሽ ቀን በኋላ መሆን አለበት።"
+
+#. module: account_asset_management
+#: model:ir.model.fields,help:account_asset_management.field_account_asset__depreciation_base
+#: model:ir.model.fields,help:account_asset_management.field_account_asset_line__depreciation_base
+msgid ""
+"This amount represent the depreciation base of the asset (Purchase Value - "
+"Salvage Value)."
+msgstr "ይህ መጠን የንብረቱን የዋጋ ቅናሽ መሠረት ይወክላል (የግዢ ዋጋ - የመዳኛ እሴት)።"
+
+#. module: account_asset_management
+#: model:ir.model.fields,help:account_asset_management.field_account_asset__purchase_value
+msgid ""
+"This amount represent the initial value of the asset.\n"
+"The Depreciation Base is calculated as follows:\n"
+"Purchase Value - Salvage Value."
+msgstr ""
+"ይህ መጠን የንብረቱን የመጀመሪያ ዋጋ ይወክላል።
+"
+"የዋጋ ቅነሳው መሠረት እንደሚከተለው ይሰላል-
+"
+"የግዢ ዋጋ - የማዳን ዋጋ።"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/models/account_move.py:0
+#, python-format
+msgid "This invoice created the asset(s): %s"
+msgstr "ይህ የክፍያ መጠየቂያ ንብረቱን ፈጥሯል፡ %s"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__method_time
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_profile__method_time
+msgid "Time Method"
+msgstr "የጊዜ ዘዴ"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/report/account_asset_report_xls.py:0
+#, python-format
+msgid "Tot. Depreciation"
+msgstr "ቶት. የዋጋ ቅነሳ"
+
+#. module: account_asset_management
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_view_form
+msgid "Total Credit"
+msgstr "ጠቅላላ ክሬዲት"
+
+#. module: account_asset_management
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_view_form
+msgid "Total Days"
+msgstr "ጠቅላላ ቀናት"
+
+#. module: account_asset_management
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_view_form
+msgid "Total Debit"
+msgstr "ጠቅላላ ዴቢት"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/report/account_asset_report_xls.py:0
+#, python-format
+msgid "Totals"
+msgstr "ድምር"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__tracking
+msgid "Tracking"
+msgstr "መከታተል"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_recompute_trigger__date_trigger
+msgid "Trigger Date"
+msgstr "ቀስቅሴ ቀን"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_line__type
+msgid "Type"
+msgstr "ዓይነት"
+
+#. module: account_asset_management
+#: model:ir.model.fields,help:account_asset_management.field_account_asset__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "በመዝገብ ላይ ያለ ልዩ እንቅስቃሴ አይነት።"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/report/account_asset_report_xls.py:0
+#, python-format
+msgid "Undetermined error"
+msgstr "ያልተወሰነ ስህተት"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__message_unread
+msgid "Unread Messages"
+msgstr "ያልተነበቡ መልእክቶች"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "ያልተነበቡ መልዕክቶች ቆጣሪ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_wiz_asset_move_reverse__journal_id
+msgid "Use Specific Journal"
+msgstr "ልዩ ጆርናል ይጠቀሙ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__use_leap_years
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset_profile__use_leap_years
+msgid "Use leap years"
+msgstr "የመዝለል ዓመታትን ይጠቀሙ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,help:account_asset_management.field_account_asset__days_calc
+#: model:ir.model.fields,help:account_asset_management.field_account_asset_profile__days_calc
+msgid "Use number of days to calculate depreciation amount"
+msgstr "የዋጋ ቅነሳን መጠን ለማስላት የቀኖች ብዛት ይጠቀሙ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__value_residual
+msgid "Value Residual"
+msgstr "የተረፈ እሴት"
+
+#. module: account_asset_management
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_compute_view_form_result
+msgid "View Asset Moves"
+msgstr "የንብረት እንቅስቃሴዎችን ይመልከቱ"
+
+#. module: account_asset_management
+#: model_terms:ir.ui.view,arch_db:account_asset_management.account_asset_view_form
+msgid "View Move"
+msgstr "እንቅስቃሴን ይመልከቱ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,field_description:account_asset_management.field_account_asset__website_message_ids
+msgid "Website Messages"
+msgstr "የድር ጣቢያ መልዕክቶች"
+
+#. module: account_asset_management
+#: model:ir.model.fields,help:account_asset_management.field_account_asset__website_message_ids
+msgid "Website communication history"
+msgstr "የድር ጣቢያ የግንኙነት ታሪክ"
+
+#. module: account_asset_management
+#: model:ir.model.fields,help:account_asset_management.field_account_asset__state
+#: model:ir.model.fields,help:account_asset_management.field_account_asset_line__parent_state
+msgid ""
+"When an asset is created, the status is 'Draft'.\n"
+"If the asset is confirmed, the status goes in 'Running' and the depreciation lines can be posted to the accounting.\n"
+"If the last depreciation line is posted, the asset goes into the 'Close' status.\n"
+"When the removal entries are generated, the asset goes into the 'Removed' status."
+msgstr ""
+"\"ንብረት ሲፈጠር ሁኔታው \'ረቂቅ\' ነው።
+"
+"ንብረቱ ከተረጋገጠ፣ ሁኔታው በ\'Running\' ውስጥ ይሄዳል እና የዋጋ ቅነሳ መስመሮቹ በሂሳብ መዝገብ ላይ ሊለጠፉ ይችላሉ።
+"
+"የመጨረሻው የዋጋ ቅናሽ መስመር ከተለጠፈ ንብረቱ ወደ \'ዝጋ\' ሁኔታ ይሄዳል።
+"
+"የማስወገጃ ግቤቶች ሲፈጠሩ ንብረቱ ወደ \'ተወግዷል\' ሁኔታ ውስጥ ይገባል::"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/models/account_asset_profile.py:0
+#, python-format
+msgid "Year"
+msgstr "አመት"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/models/account_move.py:0
+#: code:addons/account_asset_management/models/account_move.py:0
+#, python-format
+msgid ""
+"You are not allowed to link an accounting entry to an asset.\n"
+"You should generate such entries from the asset."
+msgstr ""
+"የሂሳብ ግቤትን ከንብረት ጋር ማገናኘት አልተፈቀደልዎም።"
+"እንደዚህ ያሉ ግቤቶችን ከንብረቱ መፍጠር አለብዎት።"
+"ከንብረት ጋር የተገናኘ የሂሳብ ግቤት እንዲያስወግዱ አልተፈቀደልዎትም::"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/models/account_asset_line.py:0
+#: code:addons/account_asset_management/models/account_move.py:0
+#, python-format
+msgid ""
+"You are not allowed to remove an accounting entry linked to an asset.\n"
+"You should remove such entries from the asset."
+msgstr "እንደዚህ ያሉ ግቤቶችን ከንብረቱ ማስወገድ አለብዎት።"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/models/account_asset.py:0
+#, python-format
+msgid "You can only delete assets in draft state."
+msgstr "በረቂቅ ሁኔታ ውስጥ ያሉ ንብረቶችን ብቻ መሰረዝ ይችላሉ።"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/wizard/account_asset_remove.py:0
+#, python-format
+msgid ""
+"You can't make an early removal if all the depreciation lines for previous "
+"periods are not posted."
+msgstr ""
+"ያለፉት ጊዜያት ሁሉም የዋጋ ቅነሳ መስመሮች ካልተለጠፉ ቀደም ብሎ ማስወገድ አይችሉም።"
+#. module: account_asset_management
+#: code:addons/account_asset_management/models/account_asset_line.py:0
+#, python-format
+msgid ""
+"You cannot change a depreciation line with an associated accounting entry."
+msgstr "ከተዛማጅ የሂሳብ ግቤት ጋር የዋጋ ቅናሽ መስመር መቀየር አይችሉም።"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/models/account_move.py:0
+#, python-format
+msgid ""
+"You cannot change an accounting entry linked to an asset depreciation line."
+msgstr "ከንብረት ዋጋ መቀነስ መስመር ጋር የተገናኘ የሂሳብ ግቤት መቀየር አይችሉም።"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/models/account_move.py:0
+#, python-format
+msgid ""
+"You cannot change an accounting item linked to an asset depreciation line."
+msgstr "ከንብረት የዋጋ ቅነሳ መስመር ጋር የተገናኘ የሂሳብ ዕቃ መቀየር አይችሉም።"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/models/account_asset.py:0
+#, python-format
+msgid "You cannot change the profile of an asset with accounting entries."
+msgstr "የንብረቱን መገለጫ በሂሳብ መዝገብ መለወጥ አይችሉም።"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/models/account_asset_line.py:0
+#, python-format
+msgid ""
+"You cannot delete a depreciation line with an associated accounting entry."
+msgstr "ከተዛማጅ የሂሳብ ግቤት ጋር የዋጋ ቅናሽ መስመርን መሰረዝ አይችሉም።"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/models/account_asset.py:0
+#, python-format
+msgid "You cannot delete an asset that containsposted depreciation lines."
+msgstr "የተለጠፈ የዋጋ ቅነሳ መስመሮችን የያዘ ንብረት መሰረዝ አይችሉም።"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/models/account_asset_line.py:0
+#, python-format
+msgid "You cannot remove an asset line of type 'Depreciation Base'."
+msgstr "የእሴት መስመር አይነት 'የዋጋ ቅናሽ ቤዝ' ማስወገድ አይችሉም።"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/models/account_asset_line.py:0
+#, python-format
+msgid ""
+"You cannot set the 'Initial Balance Entry' flag on a depreciation line with "
+"prior posted entries."
+msgstr "የ\'የመጀመሪያ ሚዛን ግቤት\' ባንዲራ በቅድሚያ በተለጠፈ የዋጋ ቅናሽ መስመር ላይ ማዘጋጀት አይችሉም።"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/models/account_asset_line.py:0
+#, python-format
+msgid "You cannot set the Asset Start Date after already posted entries."
+msgstr "አስቀድመው ከተለጠፉ በኋላ የንብረት መጀመሪያ ቀንን ማቀናበር አይችሉም።"
+
+#. module: account_asset_management
+#: code:addons/account_asset_management/models/account_asset_line.py:0
+#, python-format
+msgid ""
+"You cannot set the date on a depreciation line prior to already posted "
+"entries."
+msgstr "አስቀድመው ከተለጠፉ ግቤቶች በፊት ቀኑን በዋጋ ቅናሽ መስመር ላይ ማስቀመጥ አይችሉም።"
+
+#. module: account_asset_management
+#: model:ir.model.fields,help:account_asset_management.field_account_asset__date_start
+msgid ""
+"You should manually add depreciation lines with the depreciations of "
+"previous fiscal years if the Depreciation Start Date is different from the "
+"date for which accounting entries need to be generated."
+msgstr ""
+"የዋጋ ቅነሳው የሚጀመርበት ቀን የሂሳብ መዛግብት መፈጠር ካለበት ቀን የተለየ ከሆነ ካለፉት የበጀት አመታት የዋጋ ቅናሽ "
+"ጋር በእጅ መጨመር አለቦት።"
+
+#. module: account_asset_management
+#: model_terms:ir.ui.view,arch_db:account_asset_management.wiz_account_asset_removal_report_view_form
+#: model_terms:ir.ui.view,arch_db:account_asset_management.wiz_account_asset_report_view_form
+msgid "or"
+msgstr "ወይም"
+
+#. module: account_asset_management
+#: model:ir.model,name:account_asset_management.model_report_account_asset_management_asset_removal_template
+msgid "report.account_asset_management.asset_removal_template"
+msgstr ""

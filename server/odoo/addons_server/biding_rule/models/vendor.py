@@ -16,14 +16,14 @@ class HrEmployeeDocument(models.Model):
     _name = 'financial.document'
     _description = 'financial Documents'
 
-    name = fields.Char(string='financial Document name')
+    name = fields.Char(string='financial Document name', translate=True)
 
 
 class VendorEmployee(models.Model):
     _name = 'vendor.employee'
     _description = 'Vendor Employee'
 
-    name = fields.Char(string='employee name')
+    name = fields.Char(string='employee name', translate=True)
     selection = fields.Selection(
         [('under', 'understanding'),
          ('working', 'working'),
@@ -39,7 +39,7 @@ class VendorPartner(models.Model):
     _name = 'vendor.partner'
     _description = 'vendor partner'
 
-    name = fields.Char(string='Rule name')
+    name = fields.Char(string='Rule name', translate=True)
     is_pass = fields.Boolean('passed')
     input_type = fields.Selection(
         [('attach', 'Attach file'),

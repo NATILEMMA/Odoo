@@ -13,18 +13,18 @@ class HrEmployeeBase(models.AbstractModel):
     _description = "Basic Employee"
     _order = 'name'
 
-    name = fields.Char()
+    name = fields.Char(translate=False)
     active = fields.Boolean("Active")
     color = fields.Integer('Color Index', default=0)
     department_id = fields.Many2one('hr.department', 'Department', domain="['|', ('company_id', '=', False), ('company_id', '=', company_id)]")
     job_id = fields.Many2one('hr.job', 'Job Position', domain="['|', ('company_id', '=', False), ('company_id', '=', company_id)]")
-    job_title = fields.Char("Job Title")
+    job_title = fields.Char("Job Title", translate=False)
     company_id = fields.Many2one('res.company', 'Company')
     address_id = fields.Many2one('res.partner', 'Work Address', domain="['|', ('company_id', '=', False), ('company_id', '=', company_id)]")
-    work_phone = fields.Char('Work Phone')
-    mobile_phone = fields.Char('Work Mobile')
-    work_email = fields.Char('Work Email')
-    work_location = fields.Char('Work Location')
+    work_phone = fields.Char('Work Phone', translate=False)
+    mobile_phone = fields.Char('Work Mobile', translate=False)
+    work_email = fields.Char('Work Email', translate=False)
+    work_location = fields.Char('Work Location', translate=False)
     user_id = fields.Many2one('res.users')
     resource_id = fields.Many2one('resource.resource')
     resource_calendar_id = fields.Many2one('resource.calendar', domain="['|', ('company_id', '=', False), ('company_id', '=', company_id)]")
@@ -38,7 +38,7 @@ class HrEmployeeBase(models.AbstractModel):
         ('absent', 'Absent'),
         ('to_define', 'To Define')], compute='_compute_presence_state', default='to_define')
     last_activity = fields.Date(compute="_compute_last_activity")
-    last_activity_time = fields.Char(compute="_compute_last_activity")
+    last_activity_time = fields.Char(compute="_compute_last_activity", translate=False)
 
     @api.depends('user_id.im_status')
     def _compute_presence_state(self):

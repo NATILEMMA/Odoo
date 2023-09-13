@@ -8,6 +8,7 @@
     "depends": ["custom_quality_control", "stock","purchase"],
     "data": [
         "security/ir.model.access.csv",
+        "data/data.xml",
         "views/qc_inspection_view.xml",
         "views/stock_move_views.xml",
         "views/stock_picking_view.xml",

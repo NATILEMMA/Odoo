@@ -9,7 +9,7 @@ class EmployeeEntryDocuments(models.Model):
     _description = "Employee Documents"
     _order = 'sequence'
 
-    name = fields.Char(string='Name', copy=False, required=1, help="Checklist Name")
+    name = fields.Char(string='Name', copy=False, required=1, help="Checklist Name",translate=True)
     document_type = fields.Selection([('entry', 'Entry Process'),
                                       ('exit', 'Exit Process'),
                                       ('other', 'Other')], string='Checklist Type', help='Type of Checklist',

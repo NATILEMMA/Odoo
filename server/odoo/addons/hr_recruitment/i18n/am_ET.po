@@ -419,22 +419,23 @@ msgid ""
 "                If you install the document management modules, all resumes are indexed automatically,\n"
 "                so that you can easily search through their content."
 msgstr ""
-
-#. module: hr_recruitment
+ "አመልካቾች እና የተያያዘው ሲቪ ኢሜል ሲላክ በራስ ሰር ይፈጠራሉ።\n"
+"የሰነድ አስተዳደር ሞጁሎችን ከጫኑ ሁሉም ከቆመበት ቀጥል በራስ-ሰር መረጃ ጠቋሚ ይደረግባቸዋል፣ በዚህም ይዘታቸውን በቀላሉ መፈለግ ይችላሉ።"
 #: model_terms:ir.actions.act_window,help:hr_recruitment.crm_case_categ0_act_job
 msgid ""
 "Applicants and their attached CV are created automatically when an email is sent.\n"
 "            If you install the document management modules, all resumes are indexed automatically,\n"
 "            so that you can easily search through their content."
 msgstr ""
-
-#. module: hr_recruitment
+ "አመልካቾች እና የተያያዘው ሲቪ ኢሜል ሲላክ በራስ ሰር ይፈጠራሉ።\n"
+"የሰነድ አስተዳደር ሞጁሎችን ከጫኑ ሁሉም ከቆመበት ቀጥል በራስ-ሰር መረጃ ጠቋሚ ይደረግባቸዋል፣"
+" በዚህም ይዘታቸውን በቀላሉ መፈለግ ይችላሉ።"
 #: model_terms:ir.ui.view,arch_db:hr_recruitment.hr_job_simple_form
 msgid ""
 "Applicants can send resume to this email address,<br/>it will create an "
 "application automatically"
 msgstr ""
-
+"አመልካቾች ወደዚህ ኢሜይል አድራሻ ከቆመበት ቀጥል መላክ ይችላሉ፣<br/>መተግበሪያውን በራስ ሰር ይፈጥራል"
 #. module: hr_recruitment
 #: model:ir.model.fields,field_description:hr_recruitment.field_hr_applicant__application_count
 #: model:ir.model.fields,field_description:hr_recruitment.field_hr_job__application_count
@@ -817,7 +818,7 @@ msgstr "ተቆልቋይ ምናሌ"
 #. module: hr_recruitment
 #: model_terms:ir.ui.view,arch_db:hr_recruitment.view_hr_job_kanban
 msgid "Edit"
-msgstr "አርትዕ"
+msgstr "አስተካክል "
 
 #. module: hr_recruitment
 #: model:ir.model.fields,field_description:hr_recruitment.field_hr_applicant__email_from
@@ -1239,7 +1240,7 @@ msgstr "የስራ መድብ እንፍጠር"
 msgid ""
 "Let's have a look at the <b>applications pipeline</b> for this job position."
 msgstr ""
-
+"ለዚህ የስራ ቦታ የ<b>መተግበሪያዎች ቧንቧን</b>ን እንመልከት።"
 #. module: hr_recruitment
 #: model:ir.model.fields,help:hr_recruitment.field_hr_applicant__email_cc
 msgid "List of cc from incoming emails."
@@ -1350,7 +1351,8 @@ msgid ""
 "New applicants can be generated from incoming emails. You just need to set "
 "email aliases in configuration of job positions.<br>"
 msgstr ""
-
+"አዲስ አመልካቾች ከገቢ ኢሜይሎች ሊመነጩ ይችላሉ። ማዘጋጀት ብቻ ያስፈልግዎታል"
+"የኢሜል ተለዋጭ ስሞች በስራ ቦታዎች ውቅር ውስጥ።<br>"
 #. module: hr_recruitment
 #: model_terms:ir.ui.view,arch_db:hr_recruitment.hr_employee_view_search
 msgid "Newly Hired"
@@ -1419,7 +1421,7 @@ msgid ""
 "Number of applications that are new in the flow (typically at first step of "
 "the flow)"
 msgstr ""
-
+"በፍሰቱ ውስጥ አዲስ የሆኑ የመተግበሪያዎች ብዛት (በተለይ በፍሰቱ የመጀመሪያ ደረጃ)"
 #. module: hr_recruitment
 #: model:ir.model.fields,help:hr_recruitment.field_hr_applicant__delay_close
 msgid "Number of days to close"
@@ -1451,14 +1453,16 @@ msgid ""
 "Odoo helps you track applicants in the recruitment\n"
 "                process and follow up all operations: meetings, interviews, etc."
 msgstr ""
-
+"ኦዱ በምልመላ ሂደት ውስጥ አመልካቾችን ለመከታተል እና "
+"ሁሉንም ስራዎች ለመከታተል ይረዳዎታል፡ ስብሰባዎች፣ ቃለመጠይቆች፣ ወዘተ"
 #. module: hr_recruitment
 #: model_terms:ir.actions.act_window,help:hr_recruitment.crm_case_categ0_act_job
 msgid ""
 "Odoo helps you track applicants in the recruitment\n"
 "            process and follow up all operations: meetings, interviews, etc."
 msgstr ""
-
+"ኦዱ በምልመላ ሂደት ውስጥ አመልካቾችን ለመከታተል እና\n"
+" ሁሉንም ስራዎች ለመከታተል ይረዳል-ስብሰባዎች, ቃለመጠይቆች, ወዘተ."
 #. module: hr_recruitment
 #: model:res.groups,name:hr_recruitment.group_hr_recruitment_user
 msgid "Officer"
@@ -1720,7 +1724,7 @@ msgstr "የአመልካቾች ምንጮች"
 msgid ""
 "Specific jobs that uses this stage. Other jobs will not use this stage."
 msgstr ""
-
+"ይህን ደረጃ የሚጠቀሙ ልዩ ስራዎች. ሌሎች ስራዎች ይህንን ደረጃ አይጠቀሙም."
 #. module: hr_recruitment
 #: model:ir.model.fields,field_description:hr_recruitment.field_hr_applicant__stage_id
 #: model_terms:ir.ui.view,arch_db:hr_recruitment.hr_applicant_view_search
@@ -1755,7 +1759,7 @@ msgid ""
 "Stage of the applicant before being in the current stage. Used for lost "
 "cases analysis."
 msgstr ""
-
+"አሁን ባለው ደረጃ ላይ ከመሆናቸው በፊት የአመልካቹ ደረጃ. ለጠፉ ጉዳዮች ትንተና ጥቅም ላይ ይውላል."
 #. module: hr_recruitment
 #: model:ir.actions.act_window,name:hr_recruitment.hr_recruitment_stage_act
 #: model:ir.ui.menu,name:hr_recruitment.menu_hr_recruitment_stage
@@ -1781,7 +1785,10 @@ msgid ""
 "Today: Activity date is today\n"
 "Planned: Future activities."
 msgstr ""
-
+"በእንቅስቃሴ ላይ የተመሰረተ ሁኔታ\n"
+"አልፏል፡ የማለቂያ ቀን አስቀድሞ አልፏል\n"
+"ዛሬ፡ የተግባር ቀን ዛሬ ነው\n"
+"የታቀደው: የወደፊት እንቅስቃሴዎች."
 #. module: hr_recruitment
 #: model:ir.model.fields,field_description:hr_recruitment.field_hr_applicant__name
 msgid "Subject / Application Name"
@@ -1822,14 +1829,16 @@ msgid ""
 "These aliases can be emails or urls for every source. When the applicant "
 "arrives here through one of these you'll know where he came from."
 msgstr ""
-
+"እነዚህ ተለዋጭ ስሞች ለእያንዳንዱ ምንጭ ኢሜይሎች ወይም ዩአርኤል ሊሆኑ ይችላሉ። አመልካቹ ሲከሰት "
+"ከእነዚህ በአንዱ በኩል ወደዚህ ይደርሳል ከየት እንደመጣ ታውቃለህ።"
 #. module: hr_recruitment
 #: model:ir.model.fields,help:hr_recruitment.field_hr_applicant__campaign_id
 msgid ""
 "This is a name that helps you keep track of your different campaign efforts,"
 " e.g. Fall_Drive, Christmas_Special"
 msgstr ""
-
+"ይህ የተለያዩ የዘመቻ ጥረቶችዎን ለመከታተል የሚረዳዎት ስም ነው"
+"ለምሳሌ ውድቀት_Drive፣ የገና_ልዩ"
 #. module: hr_recruitment
 #: model:ir.model.fields,help:hr_recruitment.field_hr_applicant__medium_id
 msgid "This is the method of delivery, e.g. Postcard, Email, or Banner Ad"
@@ -1841,14 +1850,14 @@ msgid ""
 "This is the source of the link, e.g. Search Engine, another domain, or name "
 "of email list"
 msgstr ""
-
+"ይህ የአገናኙ ምንጭ ነው፣ ለምሳሌ የፍለጋ ሞተር፣ ሌላ ጎራ ወይም የኢሜይል ዝርዝር ስም"
 #. module: hr_recruitment
 #: model:ir.model.fields,help:hr_recruitment.field_hr_recruitment_stage__fold
 msgid ""
 "This stage is folded in the kanban view when there are no records in that "
 "stage to display."
 msgstr ""
-
+"ይህ ደረጃ በካንባን እይታ ላይ የሚታጠፈው በዚያ ደረጃ ላይ ምንም መዛግብት በማይኖርበት ጊዜ ነው።"
 #. module: hr_recruitment
 #: model_terms:ir.ui.view,arch_db:hr_recruitment.view_hr_job_kanban
 msgid "To Recruit"
@@ -1872,7 +1881,7 @@ msgid ""
 "Try to send an email to this address, it will create an application "
 "automatically."
 msgstr ""
-
+"ወደዚህ አድራሻ ኢሜይል ለመላክ ሞክር፣ መተግበሪያን በራስ ሰር ይፈጥራል።"
 #. module: hr_recruitment
 #: model:ir.model.fields,help:hr_recruitment.field_hr_applicant__activity_exception_decoration
 msgid "Type of the exception activity on record."
@@ -1908,7 +1917,9 @@ msgid ""
 "process. Select the form to use in the job position detail form. This relies"
 " on Survey app."
 msgstr ""
-
+"በቅጥር ወቅት ለእያንዳንዱ የሥራ ቦታ የተዘጋጁ የቃለ መጠይቅ ቅጾችን ተጠቀም"
+"ሂደት. በስራ ቦታ ዝርዝር ቅፅ ውስጥ ለመጠቀም ቅጹን ምረጥ. ይህ የተመካ ነው"
+"በዳሰሳ ጥናት መተግበሪያ ላይ"
 #. module: hr_recruitment
 #. openerp-web
 #: code:addons/hr_recruitment/static/src/js/tours/hr_recruitment.js:0

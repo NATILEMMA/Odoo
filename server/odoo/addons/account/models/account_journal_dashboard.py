@@ -61,9 +61,9 @@ class account_journal(models.Model):
                 })
             journal.json_activity_data = json.dumps({'activities': activities})
 
-    kanban_dashboard = fields.Text(compute='_kanban_dashboard')
-    kanban_dashboard_graph = fields.Text(compute='_kanban_dashboard_graph')
-    json_activity_data = fields.Text(compute='_get_json_activity_data')
+    kanban_dashboard = fields.Text(compute='_kanban_dashboard', translate=True)
+    kanban_dashboard_graph = fields.Text(compute='_kanban_dashboard_graph', translate=True)
+    json_activity_data = fields.Text(compute='_get_json_activity_data', translate=True)
     show_on_dashboard = fields.Boolean(string='Show journal on dashboard', help="Whether this journal should be displayed on the dashboard or not", default=True)
     color = fields.Integer("Color Index", default=0)
 

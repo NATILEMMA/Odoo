@@ -60,10 +60,10 @@
                                 <td><span t-esc="complaint.state"/></td>
                                 <td>
                                   <a t-attf-href="/report/pdf/members_custom.complaint_reports/#{complaint.id}">
-                                    <button class="fa fa-edit btn btn-sm btn-primary">Download</button>
+                                    <button class="fa fa-arrow-down btn btn-sm btn-primary">Download</button>
                                   </a>
                                   <a t-attf-href="/complaint/#{complaint.id}/transfer_subcity">
-                                    <button class="fa fa-edit btn btn-sm btn-primary">Transfer to Subcity</button>
+                                    <button class="fa fa-forward btn btn-sm btn-primary">Transfer to Subcity</button>
                                   </a>
                                 </td>
                               </tr>
@@ -77,10 +77,10 @@
                                 <td><span t-esc="complaint.state"/></td>
                                 <td>
                                   <a t-attf-href="/report/pdf/members_custom.complaint_reports/#{complaint.id}">
-                                    <button class="fa fa-edit btn btn-sm btn-primary">Download</button>
+                                    <button class="fa fa-arrow-down btn btn-sm btn-primary">Download</button>
                                   </a>
                                   <a t-attf-href="/complaint/#{complaint.id}/transfer_subcity">
-                                    <button class="fa fa-edit btn btn-sm btn-primary">Transfer to Subity</button>
+                                    <button class="fa fa-forward btn btn-sm btn-primary">Transfer to Subity</button>
                                   </a>
                                 </td>
                               </tr>
@@ -122,10 +122,10 @@
                                 <td><span t-esc="complaint.state"/></td>
                                 <td>
                                   <a t-attf-href="/report/pdf/members_custom.complaint_reports/#{complaint.id}">
-                                    <button class="fa fa-edit btn btn-sm btn-primary">Download</button>
+                                    <button class="fa fa-arrow-down btn btn-sm btn-primary">Download</button>
                                   </a>
                                   <a t-attf-href="/complaint/#{complaint.id}/transfer_city">
-                                    <button class="fa fa-edit btn btn-sm btn-primary">Transfer to City</button>
+                                    <button class="fa fa-forward btn btn-sm btn-primary">Transfer to City</button>
                                   </a>
                                 </td>
                               </tr>
@@ -139,10 +139,10 @@
                                 <td><span t-esc="complaint.state"/></td>
                                 <td>
                                   <a t-attf-href="/report/pdf/members_custom.complaint_reports/#{complaint.id}">
-                                    <button class="fa fa-edit btn btn-sm btn-primary">Download</button>
+                                    <button class="fa fa-arrow-down btn btn-sm btn-primary">Download</button>
                                   </a>
                                   <a t-attf-href="/complaint/#{complaint.id}/transfer_city">
-                                    <button class="fa fa-edit btn btn-sm btn-primary">Transfer to City</button>
+                                    <button class="fa fa-forward btn btn-sm btn-primary">Transfer to City</button>
                                   </a>
                                 </td>
                               </tr>
@@ -167,7 +167,7 @@
                                 <td><span t-esc="complaint.state"/></td>
                                 <td>
                                   <a t-attf-href="/report/pdf/members_custom.complaint_reports/#{complaint.id}">
-                                    <button class="fa fa-edit btn btn-sm btn-primary">Download</button>
+                                    <button class="fa fa-arrow-down btn btn-sm btn-primary">Download</button>
                                   </a>
                                 </td>
                               </tr>
@@ -181,7 +181,7 @@
                                 <td><span t-esc="complaint.state"/></td>
                                 <td>
                                   <a t-attf-href="/report/pdf/members_custom.complaint_reports/#{complaint.id}">
-                                    <button class="fa fa-edit btn btn-sm btn-primary">Download</button>
+                                    <button class="fa fa-arrow-down btn btn-sm btn-primary">Download</button>
                                   </a>
                                 </td>
                               </tr>

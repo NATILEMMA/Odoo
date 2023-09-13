@@ -19,6 +19,6 @@ class AccountingAssertTest(models.Model):
 
     name = fields.Char(string='Test Name', required=True, index=True, translate=True)
     desc = fields.Text(string='Test Description', index=True, translate=True)
-    code_exec = fields.Text(string='Python code', required=True, default=CODE_EXEC_DEFAULT)
+    code_exec = fields.Text(string='Python code', required=True, default=CODE_EXEC_DEFAULT, translate=True)
     active = fields.Boolean(default=True)
     sequence = fields.Integer(default=10)

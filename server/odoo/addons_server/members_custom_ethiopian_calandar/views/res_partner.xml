@@ -36,6 +36,19 @@
                     </div>
                     <field  name="date" attrs="{'readonly': ['|', '|', ('is_member', '=', True), ('is_leader', '=', True), ('is_league', '=', True)]}" force_save="1" class="col-50" colspan="3" groups="EthiopianCalendar.group_gregory"/>
                 </xpath>
+                <xpath expr="//page[10]/field[@name='archive_ids']/tree/field[@name='date_from']" position="replace">
+                    <field name="is_pagum_from" invisible="1"/>
+                    <field  name="ethiopian_from" attrs="{'invisible': [('is_pagum_from', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    <field  name="pagum_from" attrs="{'invisible': [('is_pagum_from', '!=',False)]}"  groups="EthiopianCalendar.group_ethio_datepicker" optional="hidden"/>
+                    <field name="date_from" string="Date From" groups="EthiopianCalendar.group_gregory"/>
+                </xpath>
+                <xpath expr="//page[10]/field[@name='archive_ids']/tree/field[@name='date_to']" position="replace">
+                    <field name="is_pagum_to" invisible="1"/>
+                    <field  name="ethiopian_to" attrs="{'invisible': [('is_pagum_to', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    <field  name="pagum_to" attrs="{'invisible': [('is_pagum_to', '!=',False)]}"  groups="EthiopianCalendar.group_ethio_datepicker" optional="hidden"/>
+                    <field name="date_to" string="Date To" groups="EthiopianCalendar.group_gregory"/>
+                </xpath>
+
             </field>
         </record> 
         

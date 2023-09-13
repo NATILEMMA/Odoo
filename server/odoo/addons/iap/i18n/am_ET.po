@@ -1,0 +1,150 @@
+# Date created: 2023-06-17 15:05:57 by dichthuatphuongdong.com
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-06-17 03:13:39+0000"
+"MIME-Version: 1.0"
+"Content-Type: text/plain; charset=UTF-8"
+"Content-Transfer-Encoding: 8bit"
+"Plural-Forms: nplurals=1; plural=0;"
+"X-Generator: GlotPress/3.0.0-alpha.2"
+"Language: en_GB"
+"Project-Id-Version: PO File 5.8.1"
+
+#. module: iap
+#: model_terms:ir.ui.view,arch_db:iap.iap_account_view_form
+msgid "Account Information"
+msgstr "የመለያ መረጃ"
+
+#. module: iap
+#: model:ir.model.fields,field_description:iap.field_iap_account__account_token
+msgid "Account Token"
+msgstr "መለያ ማስመሰያ"
+
+#. module: iap
+#. openerp-web
+#: code:addons/iap/static/src/js/crash_manager.js:0
+#: code:addons/iap/static/src/xml/iap_templates.xml:0
+msgid "Buy credits"
+msgstr "ክሬዲቶች ይግዙ"
+
+#. module: iap
+#. openerp-web
+#: code:addons/iap/static/src/js/crash_manager.js:0
+msgid "Cancel"
+msgstr "ሰርዝ"
+
+#. module: iap
+#: model:ir.model.fields,field_description:iap.field_iap_account__company_ids
+msgid "Company"
+msgstr "ኩባንያ"
+
+#. module: iap
+#: model:ir.model,name:iap.model_res_config_settings
+msgid "Config Settings"
+msgstr "ቅንብሮችን ያዋቅሩ"
+
+#. module: iap
+#: model:ir.model.fields,field_description:iap.field_iap_account__create_uid
+msgid "Created by"
+msgstr "የተፈጠረ"
+
+#. module: iap
+#: model:ir.model.fields,field_description:iap.field_iap_account__create_date
+msgid "Created on"
+msgstr " ተፈጠረ "
+
+#. module: iap
+#: model:ir.model.fields,field_description:iap.field_iap_account__display_name
+msgid "Display Name"
+msgstr "መጠሪያው ስም"
+
+#. module: iap
+#: model:ir.ui.menu,name:iap.iap_root_menu
+msgid "IAP"
+msgstr "IAP"
+
+#. module: iap
+#: model:ir.actions.act_window,name:iap.iap_account_action
+#: model:ir.model,name:iap.model_iap_account
+#: model_terms:ir.ui.view,arch_db:iap.iap_account_view_form
+msgid "IAP Account"
+msgstr "IAP መለያ"
+
+#. module: iap
+#: model:ir.ui.menu,name:iap.iap_account_menu
+#: model_terms:ir.ui.view,arch_db:iap.iap_account_view_tree
+msgid "IAP Accounts"
+msgstr "IAP መለያዎች"
+
+#. module: iap
+#: model:ir.model.fields,field_description:iap.field_iap_account__id
+msgid "ID"
+msgstr "መታወቂያ"
+
+#. module: iap
+#: model_terms:ir.ui.view,arch_db:iap.res_config_settings_view_form
+msgid "In-App Purchases"
+msgstr "የውስጠ-መተግበሪያ ግዢዎች"
+
+#. module: iap
+#. openerp-web
+#: code:addons/iap/static/src/js/crash_manager.js:0
+msgid "Insufficient Balance"
+msgstr "በቂ ያልሆነ ሚዛን"
+
+#. module: iap
+#. openerp-web
+#: code:addons/iap/static/src/xml/iap_templates.xml:0
+msgid "Insufficient credit to perform this service."
+msgstr "ይህንን አገልግሎት ለማከናወን በቂ ያልሆነ ብድር።"
+
+#. module: iap
+#: model:ir.model.fields,field_description:iap.field_iap_account____last_update
+msgid "Last Modified on"
+msgstr "መጨረሻ የተሻሻለው በርቷል።"
+
+#. module: iap
+#: model:ir.model.fields,field_description:iap.field_iap_account__write_uid
+msgid "Last Updated by"
+msgstr "መጨረሻ የዘመነው በ"
+
+#. module: iap
+#: model:ir.model.fields,field_description:iap.field_iap_account__write_date
+msgid "Last Updated on"
+msgstr "መጨረሻ የዘመነው በርቷል።"
+
+#. module: iap
+#: model_terms:ir.ui.view,arch_db:iap.res_config_settings_view_form
+msgid "Odoo IAP"
+msgstr "ኦዱ IAP"
+
+#. module: iap
+#: model:ir.actions.server,name:iap.open_iap_account
+msgid "Open IAP Account"
+msgstr "IAP መለያን ይክፈቱ"
+
+#. module: iap
+#: model:ir.model.fields,field_description:iap.field_iap_account__service_name
+msgid "Service Name"
+msgstr "የአገልግሎት ስም"
+
+#. module: iap
+#. openerp-web
+#: code:addons/iap/static/src/js/crash_manager.js:0
+msgid "Start a Trial at Odoo"
+msgstr "Odoo ላይ ሙከራ ይጀምሩ"
+
+#. module: iap
+#: code:addons/iap/models/iap.py:0
+msgid "The url that this service requested returned an error. Please contact the author of the app. The url it tried to contact was %s"
+msgstr "ይህ አገልግሎት የጠየቀው ዩአርኤል ስህተት መለሰ። እባክዎ የመተግበሪያውን ደራሲ ያነጋግሩ። ለማነጋገር የሞከረው ዩአርኤል %s ነበር።"
+
+#. module: iap
+#: model_terms:ir.ui.view,arch_db:iap.res_config_settings_view_form
+msgid "View My Services"
+msgstr "የእኔን አገልግሎቶች ይመልከቱ"
+
+#. module: iap
+#: model_terms:ir.ui.view,arch_db:iap.res_config_settings_view_form
+msgid "View your IAP Services and recharge your credits"
+msgstr "የእርስዎን IAP አገልግሎቶች ይመልከቱ እና ክሬዲቶችዎን ይሙሉ"

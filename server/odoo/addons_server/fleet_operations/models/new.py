@@ -77,12 +77,12 @@ class AccountPayment(models.Model):
         ('last_year', 'Last Year Sales'),
         ('sent', 'Sent'), ('reconciled', 'Reconciled'),
         ('cancelled', 'Cancelled')], default='draft', string="Status")
-    transaction_ref = fields.Char("Transaction Ref.")
+    transaction_ref = fields.Char("Transaction Ref.", translate=True)
     write_off_balance = fields.Float("write_off_balance")
     withholding_amount = fields.Float("Withholding Amount")
     taxed_amount = fields.Float(string="Vat Amount")
     untaxed_amount = fields.Float("untaxed_amount")
-    invoice_ref = fields.Char("Invoice Ref.")
+    invoice_ref = fields.Char("Invoice Ref.", translate=True)
 
     withholding_account = fields.Many2one("account.account",
                                           string="Withholding Account")
@@ -99,7 +99,7 @@ class AccountPayment(models.Model):
     qty_to_invoice = fields.Float(string='To Invoice Quantity', store=True, readonly=True,
                                   digits='Product Unit of Measure')
     is_change = fields.Boolean(string="Is Change", default=False)
-    payment_type = fields.Char("Payment type")
+    payment_type = fields.Char("Payment type", translate=True)
     is_last_payment = fields.Boolean(string="Is Change", default=False)
     advance_tax_line_ids = fields.One2many('advanced.tax', 'sale_id', string='Taxes', store=True)
 
@@ -397,7 +397,7 @@ class AdvanceedTax(models.Model):
     _name = "advanced.tax"
     _description = "Advanced Tax"
 
-    name = fields.Char("Tax name")
+    name = fields.Char("Tax name", translate=True)
     sale_id = fields.Many2one('account.payment', string='Sale', ondelete='cascade', index=True)
     tax_id = fields.Many2one('account.tax', string='Tax', ondelete='restrict')
     account_id = fields.Many2one('account.account', string='Tax Account', domain=[('deprecated', '=', False)])

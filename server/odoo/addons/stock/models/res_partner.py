@@ -18,5 +18,5 @@ class Partner(models.Model):
         domain="['|', ('company_id', '=', False), ('company_id', '=', allowed_company_ids[0])]",
         help="The stock location used as source when receiving goods from this contact.")
     picking_warn = fields.Selection(WARNING_MESSAGE, 'Stock Picking', help=WARNING_HELP, default='no-message')
-    picking_warn_msg = fields.Text('Message for Stock Picking')
+    picking_warn_msg = fields.Text('Message for Stock Picking', translate=True)
 

@@ -11,9 +11,9 @@ class ExaminationType(models.Model):
 
     parent_id = fields.Many2one(comodel_name="hr.employee.medical.examination.type", string="Parent Type")
     child_ids = fields.One2many(comodel_name="hr.employee.medical.examination.type", inverse_name="parent_id", string="Subtypes")
-    name = fields.Char(string='Examination Type', required=True, help="Name")
+    name = fields.Char(string='Examination Type', required=True, help="Name", translate=True)
     complete_name = fields.Char(
-        string="Complete Name", compute="_compute_complete_name", store=True
+        string="Complete Name", compute="_compute_complete_name", store=True, translate=True
     )
 
 

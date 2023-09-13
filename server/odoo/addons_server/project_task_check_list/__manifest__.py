@@ -1,20 +1,18 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Project Task Check List",
+    'name': "Planning Task Check List",
 
     'summary': """
-        Project Task Check List
-        Develop by Magenest JSC""",
+        Planning Task Check List""",
 
     'description': """
-        Project task check list
+        Planning task check list
     """,
 
     'author': "Tria Trading",
     'website': "",
     'category': 'Extra Tools',
     'version': '0.1',
-    'license': 'OPL-1',
     'depends': ['base', 'project'],
     'images': ['static/images/0.png'],
     'data': [

@@ -45,7 +45,7 @@ msgid ""
 "href=\"%s\">onboarding plan?</a>"
 msgstr ""
 "<b>እንኳን ደስ አለዎት!</b> May I recommend you to setup an <a "
-"href=\"%s\">በመጠምዘዝ ዕቅድ?</a>"
+"href=\"%s\">የማስጀመሪያ ዕቅድ?</a>"
 
 #. module: hr
 #: model_terms:ir.ui.view,arch_db:hr.hr_department_view_kanban
@@ -377,7 +377,7 @@ msgstr "ራቅ"
 #. module: hr
 #: model:ir.model.fields.selection,name:hr.selection__hr_employee__certificate__bachelor
 msgid "Bachelor"
-msgstr "ላጤ"
+msgstr "የመጀመሪያ ድግሪ"
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_employee__barcode
@@ -686,7 +686,7 @@ msgstr "የእይታ ስም"
 #. module: hr
 #: model:ir.model.fields.selection,name:hr.selection__hr_employee__marital__divorced
 msgid "Divorced"
-msgstr "የተፋቱ"
+msgstr " የፈታ/ች"
 
 #. module: hr
 #: model_terms:ir.ui.view,arch_db:hr.res_users_view_form_profile
@@ -720,13 +720,13 @@ msgstr "አደጋ"
 #: model:ir.model.fields,field_description:hr.field_hr_employee__emergency_contact
 #: model:ir.model.fields,field_description:hr.field_res_users__emergency_contact
 msgid "Emergency Contact"
-msgstr "የአደጋ ጊዜ ግንኙነት"
+msgstr "የአደጋ ጊዜ ተጠሪ "
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_employee__emergency_phone
 #: model:ir.model.fields,field_description:hr.field_res_users__emergency_phone
 msgid "Emergency Phone"
-msgstr "የአደጋ ጊዜ ግንኙነት"
+msgstr " የአደጋ ጊዜ የተጠሪ ስልክ"
 
 #. module: hr
 #: model:ir.model,name:hr.model_hr_employee
@@ -1139,7 +1139,7 @@ msgstr "ሥራዎች"
 #: model:ir.model.fields,field_description:hr.field_hr_employee__km_home_work
 #: model:ir.model.fields,field_description:hr.field_res_users__km_home_work
 msgid "Km Home-Work"
-msgstr ""
+msgstr "ኪ.ሜ. ከቤት እስከ ሥራ"
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_employee__last_activity
@@ -1182,7 +1182,7 @@ msgstr "መጨረሻ የተሻሻለው ጊዜ።"
 #: model:ir.model.fields,field_description:hr.field_hr_plan_activity_type__write_uid
 #: model:ir.model.fields,field_description:hr.field_hr_plan_wizard__write_uid
 msgid "Last Updated by"
-msgstr "መጨረሻ ያሻሻለው ሰው።"
+msgstr "መጨረሻ ያሻሻለው ሰው"
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_department__write_date
@@ -1224,7 +1224,7 @@ msgstr "የስራ ቦታን ይፍጠር"
 #: model_terms:ir.ui.view,arch_db:hr.res_users_view_form_profile
 #: model_terms:ir.ui.view,arch_db:hr.view_employee_form
 msgid "Location"
-msgstr "አካባቢ"
+msgstr "የስራ አድራሻ"
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_department__message_main_attachment_id
@@ -1272,7 +1272,7 @@ msgstr "ግብይት እና የማህበረሰብ ሥራ አስኪያጅ"
 #. module: hr
 #: model:ir.model.fields.selection,name:hr.selection__hr_employee__marital__married
 msgid "Married"
-msgstr "አገባ"
+msgstr "ያገባ/ች"
 
 #. module: hr
 #: model:ir.model.fields.selection,name:hr.selection__hr_employee__certificate__master
@@ -1493,7 +1493,7 @@ msgstr "ስልክ"
 #: model:ir.model.fields,field_description:hr.field_hr_employee__place_of_birth
 #: model:ir.model.fields,field_description:hr.field_res_users__place_of_birth
 msgid "Place of Birth"
-msgstr "የተወለደክባተ ቦታ"
+msgstr "የትውልድ ቦታ"
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_departure_wizard__plan_id
@@ -1722,7 +1722,7 @@ msgstr "መርሃግብር"
 #: model:ir.model.fields,field_description:hr.field_hr_employee__study_school
 #: model:ir.model.fields,field_description:hr.field_res_users__study_school
 msgid "School"
-msgstr "ትምህርት ቤት"
+msgstr "የተማሩበት ተቋም ስም"
 
 #. module: hr
 #: model_terms:ir.ui.view,arch_db:hr.res_config_settings_view_form
@@ -1750,7 +1750,7 @@ msgstr "በሠራተኛ ቅፅ ላይ የድርጅት ሰንጠረዥ አሳይ"
 #. module: hr
 #: model:ir.model.fields.selection,name:hr.selection__hr_employee__marital__single
 msgid "Single"
-msgstr "ነጠላ"
+msgstr "ያላገባ/ች"
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_res_config_settings__module_hr_skills
@@ -2007,7 +2007,7 @@ msgstr "ቪዛ ቁጥር"
 #. module: hr
 #: model:ir.model.fields.selection,name:hr.selection__hr_employee__marital__widower
 msgid "Widower"
-msgstr "ባልድር"
+msgstr " የትዳር አጋር በሞት ያጣ/ች"
 
 #. module: hr
 #: model_terms:ir.actions.act_window,help:hr.act_employee_from_department

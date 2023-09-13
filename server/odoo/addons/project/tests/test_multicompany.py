@@ -146,7 +146,7 @@ class TestMultiCompanyProject(TestMultiCompanyCommon):
         # create project in both companies
         Project = cls.env['project.project'].with_context({'mail_create_nolog': True, 'tracking_disable': True})
         cls.project_company_a = Project.create({
-            'name': 'Project Company A',
+            'name': 'Planning Company A',
             'alias_name': 'project+companya',
             'partner_id': cls.partner_1.id,
             'company_id': cls.company_a.id,
@@ -162,7 +162,7 @@ class TestMultiCompanyProject(TestMultiCompanyCommon):
             ]
         })
         cls.project_company_b = Project.create({
-            'name': 'Project Company B',
+            'name': 'Planning Company B',
             'alias_name': 'project+companyb',
             'partner_id': cls.partner_1.id,
             'company_id': cls.company_b.id,
@@ -194,7 +194,7 @@ class TestMultiCompanyProject(TestMultiCompanyCommon):
         """ Check project creation in multiple companies """
         with self.sudo('manager-a'):
             project = self.env['project.project'].with_context({'tracking_disable': True}).create({
-                'name': 'Project Company A',
+                'name': 'Planning Company A',
                 'partner_id': self.partner_1.id,
             })
             self.assertEqual(project.company_id, self.env.user.company_id, "A newly created project should be in the current user company")
@@ -202,7 +202,7 @@ class TestMultiCompanyProject(TestMultiCompanyCommon):
             with self.switch_company(self.company_b):
                 with self.assertRaises(AccessError, msg="Manager can not create project in a company in which he is not allowed"):
                     project = self.env['project.project'].with_context({'tracking_disable': True}).create({
-                        'name': 'Project Company B',
+                        'name': 'Planning Company B',
                         'partner_id': self.partner_1.id,
                         'company_id': self.company_b.id
                     })
@@ -210,7 +210,7 @@ class TestMultiCompanyProject(TestMultiCompanyCommon):
                 # when allowed in other company, can create a project in another company (different from the one in which you are logged)
                 with self.allow_companies([self.company_a.id, self.company_b.id]):
                     project = self.env['project.project'].with_context({'tracking_disable': True}).create({
-                        'name': 'Project Company B',
+                        'name': 'Planning Company B',
                         'partner_id': self.partner_1.id,
                         'company_id': self.company_b.id
                     })

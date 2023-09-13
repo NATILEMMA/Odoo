@@ -11,4 +11,4 @@ class Department(models.Model):
     _inherit = "hr.department"
 
 
-    secretary_ids = fields.Many2many('hr.employee', domain="[('department_id', '=', id)]", required=True)
+    secretary_ids = fields.Many2many('hr.employee', domain="[('user_id', '!=', False), ('department_id', '=', id)]", required=True)

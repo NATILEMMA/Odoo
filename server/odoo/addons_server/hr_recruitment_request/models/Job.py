@@ -127,7 +127,7 @@ class Job(models.Model):
                 'employee_id':self.employee_id.id,
                 'department_id': self.department_id.id,
                 'salary_or_position':'position_request',
-                'state':'in_progress',
+                'state':'manager_approval',
                 'requested_position_id':self.applied_job_id.id,
                 'requested_department_id':self.applied_job_department_id.id,
                 'grade_id':self.applied_grade_id.id

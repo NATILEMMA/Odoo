@@ -6,7 +6,7 @@ from odoo import api, fields, models
 class ResConfigSettings(models.TransientModel):
     _inherit = 'res.config.settings'
 
-    expense_alias_prefix = fields.Char('Default Alias Name for Expenses')
+    expense_alias_prefix = fields.Char('Default Alias Name for Expenses', translate=True)
     use_mailgateway = fields.Boolean(string='Let your employees record expenses by email',
                                      config_parameter='hr_expense.use_mailgateway')
 

@@ -24,9 +24,9 @@ STATES = [
     ('done', 'Done'), 
 ]
 BudgetMethods = [
-    ('incremental_budgeting','Incremental budgeting'),
-    ('activity_based_budgeting','Activity-based budgeting'),
-    ('value_proposition_budgeting','Value proposition budgeting'),
+    # ('incremental_budgeting','Incremental budgeting'),
+    # ('activity_based_budgeting','Activity-based budgeting'),
+    # ('value_proposition_budgeting','Value proposition budgeting'),
     ('zero_based_budgeting','Zero based budgeting'),
 ]
 
@@ -62,7 +62,7 @@ class BudgetPlanning(models.Model):
                               copy=False,tracking=True)
     budget_type = fields.Many2one('budget.type', string="Budget Type")
     
-    fiscal_year = fields.Many2one('fiscal.year', string="Fiscal Year")
+    fiscal_year = fields.Many2one('fiscal.year', string="Fiscal Year",  domain="[('state', '=', 'active')]")
     attchement_information = fields.One2many(
         "budget.planning.attachement",
         "budget_attachement_id",
@@ -92,7 +92,7 @@ class BudgetPlanning(models.Model):
                               copy=False, default='draft',tracking=True)
     teams = fields.Many2many('hr.employee', string='Team Members' ,tracking=True)
     attachment_number = fields.Integer('Number of Attachments', compute='_compute_attachment_number')
-    date = fields.Datetime(string="Date")
+    date = fields.Datetime(string="Date", default=datetime.now().date())
     is_project = fields.Boolean(string="Integrate to Project", default=False)
     partner_id = fields.Many2many('res.partner', string='partner', tracking=True)
     partner_phone = fields.Char(related='partner_id.phone', related_sudo=False, tracking=True)
@@ -108,7 +108,9 @@ class BudgetPlanning(models.Model):
         help="Work stream budget breakdown",tracking=True
     )
     compute_field = fields.Boolean(string="check field", compute='get_user')
+    # budget_methods = fields.Boolean(string="check field")
     attachment_amount = fields.Integer(compute="_count_attachments",tracking=True)
+    is_refused = fields.Boolean(default=False)
     # attachment_ids = fields.Many2many('ir.attachment', string='Attachments')
     # attachment_count = fields.Integer(compute="_count_files")
     
@@ -123,7 +125,33 @@ class BudgetPlanning(models.Model):
     #         else:
     #             record.attachment_count = 0
 
+    @api.onchange('work_stream_line')
+    def _get_budget_to_workstream_lien(self):
+        budget_name = self.env['account.analytic.account'].search([('name','=',self.name)],limit=1)
+        self.work_stream_line.analytic_account_id = budget_name.id
 
+    @api.depends('state')
+    def _get_budget_name(self):
+        _logger.info("FFFFFFFFFFFFFFF %s",self.state)
+
+        for line in self.work_stream_line:
+            _logger.info("sssssssssssssssss %s",self.state)
+
+            _logger.info("TTTTTTTTTTTTTTT %s",line)
+            analytic_account = self.env['account.analytic.account'].search([('name','=',self.name)])
+            _logger.info("TTTTTTTTTTT analytic_account TTTT %s",analytic_account)
+            if self.state == 'requested':
+                if len(analytic_account) > 0:
+                    _logger.info("#####################")
+                    line.write({'analytic_account_id': analytic_account.id})
+                else:
+                    _logger.info("#############  es ########")
+
+                    analytic_account.create({
+                        'name': self.name,
+                    })
+                    line.write({'analytic_account_id': analytic_account.id})
+    
   
     def _count_attachments(self):
         """This function will count the number of attachments"""
@@ -146,9 +174,13 @@ class BudgetPlanning(models.Model):
 
 
     def unlink(self):
-        if self.state in ['requested','dep_approved','fin_approved','ceo_approved','done']:
-            state = self.state
-            raise ValidationError('You cannot delete a budget request that has been '+self.state)
+        try:
+            if self.state in ['requested','dep_approved','fin_approved','ceo_approved','done']:
+                state = self.state
+                raise ValidationError(_('You cannot delete a budget request that has been %s') %(str(self.state)))
+        except:
+            raise ValidationError(_('You cannot delete a budget request that has been requested'))
+
 
     def action_project(self):
         action = self.env.ref('project.project_task_action_sub_task').read()[0]
@@ -284,7 +316,7 @@ class BudgetPlanning(models.Model):
             else:
                 _logger.info("Project Already Exist")
                 self.is_project = True
-                raise Warning("This budget is already linked to the project.")
+                raise Warning(_("This budget is already linked to the project."))
         else:
             _logger.info("Is Project:%s",self.is_project)
 
@@ -350,12 +382,46 @@ class BudgetPlanning(models.Model):
             vals.update({'planned_amount':budget})
         res = super(BudgetPlanning, self).create(vals)
         return res
+    
+   
+    # @api.model
+    # def write(self,vals):
+    #     for line in self.work_stream_line:
+    #         _logger.info("TTTTTTTTTTTTTTT %s",line)
+    #         res = super(BudgetPlanning, self).write(vals)
+
+    #         analytic_account = self.env['account.analytic.account'].search([('name','=',self.name)])
+    #         _logger.info("TTTTTTTTTTT analytic_account TTTT %s",analytic_account)
+
+    #         if len(analytic_account) > 0:
+    #             _logger.info("#####################")
+    #             line.write({'analytic_account_id': analytic_account.id})
+    #         else:
+    #             _logger.info("#############  es ########")
+
+    #             analytic_account.create({
+    #                 'name': self.name,
+    #             })
+    #             line.write({'analytic_account_id': analytic_account.id})
+
+            # line.analytic_account_id = analytic_account.id
+            # res = self.env['work.activity.stream'].sudo().search([('id','=',line.id)])
+            # _logger.info("TTTTTTTT  res TTTTTTT %s",res)
+
+            # res.write({
+            #     'analytic_account_id': analytic_account.id
+        #     # })
+            
+        #     _logger.info("TTTTTTTT af TTTTTTT %s",line.analytic_account_id)
+        # return res
+
+
 
     def action_set_to_draft(self):
         self.state = "draft"
         budget = self.env['budget.planning'].search([('id','=',self.ids)],limit=1)
         for budget_line in self.work_stream_line:
-            _logger.info("#########Budget Line##############")
+            # _logger.info("#########Budget Line##############")
             analytic_account = self.env['account.analytic.account'].search([('id','=',budget_line[0].analytic_account_id.id)])
             _logger.info(analytic_account.id)
             analytic_account.write({
@@ -377,7 +443,7 @@ class BudgetPlanning(models.Model):
                 # filtered_analytic_account = res = [*set(Is_allowed_accounts)]
                 # _logger.info("MMMMMMMMMBBBBBBBBBBBBBBBBB %s",filtered_analytic_account)
                 search_mapping = self.env['hr.mapping.employee.account'].search([('employee_id','=',members.id),('accountAnalytic','=',analytic_account.id)], limit=1)
-                _logger.info("MMMMMMMMMBBBBBBBBBBBBBBBBB %s",search_mapping)
+                # _logger.info("MMMMMMMMMBBBBBBBBBBBBBBBBB %s",search_mapping)
 
                 if search_mapping:
                    search_mapping.unlink()
@@ -399,15 +465,35 @@ class BudgetPlanning(models.Model):
         
 
     def action_request(self):
+        approver = self.env['budget.approver'].search([])
+        approvers = approver.first_approver
+        message =  _("%s's Please review and approve my planned budget request %s at your earliest convenience") % (str(approvers.employee_id.name), str(self.squ))
+        title = _("<h4>Planned Budget Request</h4>")
         self.state = "requested"
-        analytic_account = self.env['account.analytic.account'].search([('name','=',self.name)])
-        if len(analytic_account) > 0:
-            pass
+        if len(self.work_stream_line) <= 0:
+            raise ValidationError(_("Please input the Work Stream Breakdown/ Budget Line for the planned budget."))
         else:
-            analytic_account.create({
-                'name': self.name,
-            })
-        super(BudgetPlanning, self).write({'state':'requested'})
+            analytic_account = self.env['account.analytic.account'].search([('name','=',self.name)])
+            if len(analytic_account) > 0:
+                pass
+            else:
+                analytic_account.create({
+                    'name': self.name,
+                })
+
+            for line in self.work_stream_line:
+                analytic_account = self.env['account.analytic.account'].search([('name','=',self.name)])
+                # if self.state == 'requested':
+                if len(analytic_account) > 0:
+                    line.write({'analytic_account_id': analytic_account.id})
+                else:
+                    analytic_account.create({
+                        'name': self.name,
+                    })
+                    line.write({'analytic_account_id': analytic_account.id})
+            approvers.notify_warning(message, title, True)
+
+            super(BudgetPlanning, self).write({'state':'requested'})
     
     
  
@@ -476,6 +562,13 @@ class BudgetPlanning(models.Model):
         super(BudgetPlanning, self).write({'state':'ceo_approved','analytic_account_id': analytic_account.id})
         
     def action_finanical_approve(self):
+        _logger.info("############### ")
+        approver = self.env['budget.approver'].search([])
+        approvers = approver.second_approver
+        _logger.info(str(approvers.employee_id.name))
+        message =  _("%s's Please review and approve the attached budget proposal for %s at your earliest convenience.") % (str(approvers.employee_id.name),str(self.squ))
+        title = _("<h4>Urgent: Final Financial Approval Needed </h4>")
+
         project_name = self.name
         analytic_account = self.name
         today = datetime.today()
@@ -548,6 +641,7 @@ class BudgetPlanning(models.Model):
                     
                 _logger.info(vals)   
                 self.state = "fin_approved"
+                
             
                 super(BudgetPlanning, self).write({'state':'fin_approved'})
         else:
@@ -556,7 +650,7 @@ class BudgetPlanning(models.Model):
             if len(analytic.budget_line) > 0:
                 
                 _logger.info("analytic account exist:--")
-                raise Warning(analytic.name+ " -- analytic account already exists on budget; It cannot be used for multiple budget \n please check your Work Stream Break Down/ Budget Line analytic accounts.")
+                raise Warning(_("%s Budget planning name  already exists on budget; It cannot be used for multiple budget please check budget name.") %(str(analytic.name)))
             
             else:
                 
@@ -569,11 +663,19 @@ class BudgetPlanning(models.Model):
                     _logger.info("CREEEEEEEEEEEEEEEE")
                     _logger.info(self.work_stream_line)
 
+                    fiscal_year = self.fiscal_year
                     budget = self.env["budget.budget"].sudo().create({
                         "name": project_name,
-                        "date_from": fields.Date.to_string(datetime.now()),
-                        "date_to": fields.Date.to_string(datetime.now() + timedelta(months))
-                    
+                        "date_from": fiscal_year.date_from, #fields.Date.to_string(datetime.now()),
+                        "date_to": fiscal_year.date_to, #fields.Date.to_string(datetime.now() + timedelta(months))
+                        "ethiopian_to": fiscal_year.ethiopian_to, 
+                        "pagum_to": fiscal_year.pagum_to, 
+                        "is_pagum_to": fiscal_year.is_pagum_to,
+
+                        "ethiopian_from": fiscal_year.ethiopian_from, 
+                        "pagum_from": fiscal_year.pagum_from, 
+                        "is_pagum_from": fiscal_year.is_pagum_from
+
                     })
                     _logger.info("budget:%s",budget)
 
@@ -584,28 +686,21 @@ class BudgetPlanning(models.Model):
                         val = {}
                         analytic_account = self.env['account.analytic.account'].search([('id','=',budget_line.analytic_account_id.id)])
                         _logger.info("AA:%s",analytic_account.id)
-                        # if analytic_account.budget_line:
-                        #         for line2 in analytic_account.budget_line:
-                        #             _logger.info("###########lin222222222")
-                        #             _logger.info(line2)
-                        #             val['budget_id'] = budget.id
-                        #             val['general_budget_id'] = budget_line.general_budget_id.id
-                        #             val['analytic_account_id']= budget_line.analytic_account_id.id
-                        #             val['planned_amount'] = line2.planned_amount
-                        #             val['date_from'] = line2.date_from
-                        #             val['date_to'] = line2.date_to
-                        #             _logger.info("Val:%s",val)
-                        #             budget_lines = budget.budget_line.sudo().create(val)
-                        #             _logger.info("budgetLINE:%s",budget_lines)
-                        # else:
-                            
                         val['budget_id'] = budget.id    
                         val['general_budget_id'] = budget_line.general_budget_id.id
                         val['analytic_account_id']= budget_line.analytic_account_id.id
                         val['planned_amount']= budget_line.budget_amount
-                        val['date_from'] = today
-                        val['date_to'] = new_date
-                        _logger.info("No Details:%s",val)
+                        val['date_from'] =  fiscal_year.date_from
+                        val['ethiopian_from'] =  fiscal_year.ethiopian_from
+                        val['pagum_from'] =  fiscal_year.pagum_from
+                        val['is_pagum_from'] =  fiscal_year.is_pagum_from
+                        
+                        val['date_to'] =  fiscal_year.date_to
+                        val['ethiopian_to'] =  fiscal_year.ethiopian_to
+                        val['pagum_to'] =  fiscal_year.pagum_to
+                        val['is_pagum_to'] =  fiscal_year.is_pagum_to
+
+                        # _logger.info("TTTTTTTTTTTTTT No Details:%s",val)
                         budget_lines = budget.budget_line.sudo().create(val)
                         _logger.info("budgetLINE:%s",budget_lines)
                 
@@ -625,7 +720,7 @@ class BudgetPlanning(models.Model):
 
                     _logger.info(vals)   
                     self.state = "fin_approved"
-                
+                approvers.notify_warning(message, title, True)
                 super(BudgetPlanning, self).write({'state':'fin_approved'})
                 
     def action_done(self):     
@@ -647,6 +742,14 @@ class BudgetPlanning(models.Model):
         #         })
         self.state = "done"
         super(BudgetPlanning, self).write({'state':'done'})
+
+
+    def refuse_budget(self, reason):
+        _logger.info("******* refuse_budget ********")
+        self.write({'is_refused': True})
+        self.write({'state': 'rejected'})
+        self.message_post_with_view('budget.budget_template_refuse_reason',
+                                             values={'reason': reason, 'is_sheet': False, 'name': self.name})
                 
     def margin_action(self): 
         search_project = self.env["project.project"].sudo().search([('name','=',self.name)])   
@@ -677,6 +780,22 @@ class BudgetPlanning(models.Model):
             #     n +=1
 
         
+class BudgetApprover(models.Model):
+    _name = "budget.approver"
+    _inherit = ['portal.mixin', 'mail.thread', 'mail.activity.mixin', 'utm.mixin']
+    _description = 'Budget APprover'
+
+    first_approver = fields.Many2one('res.users')
+    second_approver = fields.Many2one('res.users')
+
+    @api.model
+    def create(self, vals):
+        search = self.env['budget.approver'].search([])
+        if len(search) > 0:
+            raise ValidationError(_('To create additional approvers for the budget case, please edit/update the record. The system only allows a maximum of two approvers'))
+        else:
+            pass
+        return super(BudgetApprover, self).create(vals)
 class BudgetType(models.Model):
     _name = "budget.type"
     _inherit = ['portal.mixin', 'mail.thread', 'mail.activity.mixin', 'utm.mixin']

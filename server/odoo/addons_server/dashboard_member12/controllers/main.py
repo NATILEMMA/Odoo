@@ -290,7 +290,7 @@ class WebRegisteration(AuthSignupHome):
                 'subject': kwargs.get('subject'),
                 'circumstances': kwargs.get('circumstances'),
                 'victim_id': user.id,
-                'wereda_id': partner_id.wereda_id.id
+                'wereda_id': partner_id.wereda_id.id,
             # 'perpertrators': [
             #   (
             #     6,
@@ -545,79 +545,79 @@ class WebRegisteration(AuthSignupHome):
         return request.render('dashboard_member12.delete_transfer_end', {'users': users, 'is_users': is_users, 'is_member': is_member})
 
 
-    @http.route('/transfer/<int:id>/edit', type='http', auth='user', website='True')
-    def edit_transfer(self, id, **kwargs):
-        """This function will edit the transfer on the form"""
-        partner = request.env.user.partner_id
-        users = request.env['res.partner'].search([('id','=',partner.id)])
-        is_users = []
-        is_member = False
-        if not users:
-            is_users.append("False")
-        else:
-            is_users.append("True")
+    # @http.route('/transfer/<int:id>/edit', type='http', auth='user', website='True')
+    # def edit_transfer(self, id, **kwargs):
+    #     """This function will edit the transfer on the form"""
+    #     partner = request.env.user.partner_id
+    #     users = request.env['res.partner'].search([('id','=',partner.id)])
+    #     is_users = []
+    #     is_member = False
+    #     if not users:
+    #         is_users.append("False")
+    #     else:
+    #         is_users.append("True")
 
-        if partner.is_league == True or partner.is_member == True or partner.is_leader == True:
-            is_member = True 
+    #     if partner.is_league == True or partner.is_member == True or partner.is_leader == True:
+    #         is_member = True 
 
-        request.redirect('/my/request_a_transfer')
-        transfers = request.env['members.transfer'].sudo().search([('id', '=', id)])
-        is_leader = partner.is_leader
-        is_member = partner.is_member
-        is_league = partner.is_league
-        fee = partner.membership_monthly_fee_cash + partner.membership_monthly_fee_cash_from_percent
-        subcity = request.env['membership.handlers.parent'].sudo().search([])
-        wereda = request.env['membership.handlers.branch'].sudo().search([])
-        main_office = request.env['main.office'].sudo().search([])
-        cells = request.env['member.cells'].sudo().search([])
-        leader_responsibility = request.env['leaders.responsibility'].sudo().search([])
-        member_responsibility = request.env['members.responsibility'].sudo().search([])
-        organization = request.env['membership.organization'].sudo().search([])
-        strengths = request.env['interpersonal.skills'].sudo().search([('positive', '=', True)])
-        weakness = request.env['interpersonal.skills'].sudo().search([('positive', '=', False)])
-        transfer_leader_responsibility = request.env['leaders.responsibility'].sudo().search([])
-        transfer_member_responsibility = request.env['members.responsibility'].sudo().search([])
-        transfer_league_responsibility = request.env['league.responsibility'].sudo().search([])
-        new_organization = request.env['membership.organization'].sudo().search([])
-        transfer_subcities = request.env['membership.handlers.parent'].sudo().search([])
-        transfer_weredas = request.env['membership.handlers.branch'].sudo().search([])
-        transfer_main_office = request.env['main.office'].sudo().search([])
-        transfer_cells = request.env['member.cells'].sudo().search([])
-        place_of_work = ''
-        current_job = partner.work_experience_ids.filtered(lambda rec: rec.current_job == True)
-        if current_job:
-            place_of_work = current_job.place_of_work
-        else:
-            place_of_work = ''
-        return request.render("dashboard_member12.tranfer_member", {
-                                                                    'transfers': transfers,
-                                                                    'partner': partner,
-                                                                    'subcity': subcity,
-                                                                    'wereda': wereda,
-                                                                    'main_office': main_office,
-                                                                    'cells': cells,
-                                                                    "users":users,
-                                                                    'place_of_work': place_of_work,
-                                                                    'leader_responsibility': leader_responsibility,
-                                                                    'member_responsibility': member_responsibility,
-                                                                    'organization': organization,
-                                                                    'is_leader': is_leader,
-                                                                    'is_member': is_member,
-                                                                    'is_league': is_league,
-                                                                    'fee': fee,
-                                                                    'strengths': strengths,
-                                                                    'weakness': weakness,
-                                                                    'transfer_leader_responsibility': transfer_leader_responsibility,
-                                                                    'transfer_member_responsibility': transfer_member_responsibility,
-                                                                    'transfer_league_responsibility': transfer_league_responsibility,
-                                                                    'new_organization': new_organization,
-                                                                    'transfer_subcities': transfer_subcities,
-                                                                    'transfer_weredas': transfer_weredas,
-                                                                    'transfer_main_office': transfer_main_office,
-                                                                    'transfer_cells': transfer_cells,
-                                                                    'is_users': is_users,
-                                                                    'is_member': is_member
-                                                                 })
+    #     request.redirect('/my/request_a_transfer')
+    #     transfers = request.env['members.transfer'].sudo().search([('id', '=', id)])
+    #     is_leader = partner.is_leader
+    #     is_member = partner.is_member
+    #     is_league = partner.is_league
+    #     fee = partner.membership_monthly_fee_cash + partner.membership_monthly_fee_cash_from_percent
+    #     subcity = request.env['membership.handlers.parent'].sudo().search([])
+    #     wereda = request.env['membership.handlers.branch'].sudo().search([])
+    #     main_office = request.env['main.office'].sudo().search([])
+    #     cells = request.env['member.cells'].sudo().search([])
+    #     leader_responsibility = request.env['leaders.responsibility'].sudo().search([])
+    #     member_responsibility = request.env['members.responsibility'].sudo().search([])
+    #     organization = request.env['membership.organization'].sudo().search([])
+    #     strengths = request.env['interpersonal.skills'].sudo().search([('positive', '=', True)])
+    #     weakness = request.env['interpersonal.skills'].sudo().search([('positive', '=', False)])
+    #     transfer_leader_responsibility = request.env['leaders.responsibility'].sudo().search([])
+    #     transfer_member_responsibility = request.env['members.responsibility'].sudo().search([])
+    #     transfer_league_responsibility = request.env['league.responsibility'].sudo().search([])
+    #     new_organization = request.env['membership.organization'].sudo().search([])
+    #     transfer_subcities = request.env['membership.handlers.parent'].sudo().search([])
+    #     transfer_weredas = request.env['membership.handlers.branch'].sudo().search([])
+    #     transfer_main_office = request.env['main.office'].sudo().search([])
+    #     transfer_cells = request.env['member.cells'].sudo().search([])
+    #     place_of_work = ''
+    #     current_job = partner.work_experience_ids.filtered(lambda rec: rec.current_job == True)
+    #     if current_job:
+    #         place_of_work = current_job.place_of_work
+    #     else:
+    #         place_of_work = ''
+    #     return request.render("dashboard_member12.tranfer_member", {
+    #                                                                 'transfers': transfers,
+    #                                                                 'partner': partner,
+    #                                                                 'subcity': subcity,
+    #                                                                 'wereda': wereda,
+    #                                                                 'main_office': main_office,
+    #                                                                 'cells': cells,
+    #                                                                 "users":users,
+    #                                                                 'place_of_work': place_of_work,
+    #                                                                 'leader_responsibility': leader_responsibility,
+    #                                                                 'member_responsibility': member_responsibility,
+    #                                                                 'organization': organization,
+    #                                                                 'is_leader': is_leader,
+    #                                                                 'is_member': is_member,
+    #                                                                 'is_league': is_league,
+    #                                                                 'fee': fee,
+    #                                                                 'strengths': strengths,
+    #                                                                 'weakness': weakness,
+    #                                                                 'transfer_leader_responsibility': transfer_leader_responsibility,
+    #                                                                 'transfer_member_responsibility': transfer_member_responsibility,
+    #                                                                 'transfer_league_responsibility': transfer_league_responsibility,
+    #                                                                 'new_organization': new_organization,
+    #                                                                 'transfer_subcities': transfer_subcities,
+    #                                                                 'transfer_weredas': transfer_weredas,
+    #                                                                 'transfer_main_office': transfer_main_office,
+    #                                                                 'transfer_cells': transfer_cells,
+    #                                                                 'is_users': is_users,
+    #                                                                 'is_member': is_member
+    #                                                              })
 
 
     @http.route('/my/request_a_transfer', type="http", auth="user", website="True")
@@ -643,7 +643,7 @@ class WebRegisteration(AuthSignupHome):
             # values['is_users'] = is_users
 
             values.update(kwargs)
-            for field in set(['partner', 'partner_id', 'transfer_responsibility_leader', 'transfer_membership_org', 'transfers',
+            for field in set(['partner', 'partner_id', 'transfer_responsibility_leader', 'transfer_membership_org', 'transfers', 'transfer_league_organization', 
                               'transfer_responsibility_member', 'transfer_subcity_id', 'transfer_wereda_id', 'transfer_league_responsibility',
                               'transfer_main_office', 'transfer_member_cells', 'transfer_league_main_office', 'transfer_league_member_cells']) & set(values.keys()):
                 try:
@@ -678,20 +678,20 @@ class WebRegisteration(AuthSignupHome):
                     return request.render("dashboard_member12.register_error_4", {'is_users': is_users, 'is_member': is_member, 'users': users})
 
                 if values['is_league'] == 'True':
-                    if values['transfer_as_a_league_or_member'] == 'member' and values['is_member'] == False and values['is_leader'] == False:
+                    if values['transfer_as_a_league_or_member'] == 'member' and values['is_member'] == '' and values['is_leader'] == '':
                         return request.render("dashboard_member12.register_error_3", {'is_users': is_users, 'is_member': is_member, 'users': users})
-                    if values['transfer_as_a_league_or_member'] == False:
+                    if values['transfer_as_a_league_or_member'] == '':
                         return request.render("dashboard_member12.register_error", {'is_users': is_users, 'is_member': is_member, 'users': users})
-                    values['league_org'] = partner.league_org
+                    values['league_organization'] = partner.league_organization.id
                     values['league_responsibility_in_org'] = partner.league_responsibility.id
                     values['league_fee'] = partner.league_payment
                     values['from_league_main_office'] = partner.league_main_office.id
                     values['from_league_member_cells'] = partner.league_member_cells.id
 
                 if values['is_leader'] == 'True':
-                    if values['transfer_as_a_leader_or_member'] == 'league' and values['is_league'] == False:
+                    if values['transfer_as_a_leader_or_member'] == 'league' and values['is_league'] == '':
                         return request.render("dashboard_member12.register_error_1", {'is_users': is_users, 'is_member': is_member, 'users': users})
-                    if values['transfer_as_a_leader_or_member'] == False:
+                    if values['transfer_as_a_leader_or_member'] == '':
                         return request.render("dashboard_member12.register_error", {'is_users': is_users, 'is_member': is_member, 'users': users})
                     values['leadership_experience'] = partner.experience
                     values['responsibility_in_org_leader'] = partner.leader_responsibility.id
@@ -702,9 +702,9 @@ class WebRegisteration(AuthSignupHome):
                     values['from_member_cells'] = partner.member_cells.id
 
                 if values['is_member'] == 'True':
-                    if values['transfer_as_a_league_or_member'] == 'league' and values['is_league'] == False:
+                    if values['transfer_as_a_league_or_member'] == 'league' and values['is_league'] == '':
                         return request.render("dashboard_member12.register_error_2", {'is_users': is_users, 'is_member': is_member, 'users': users})
-                    if values['transfer_as_a_league_or_member'] == False:
+                    if values['transfer_as_a_league_or_member'] == '':
                         return request.render("dashboard_member12.register_error", {'is_users': is_users, 'is_member': is_member, 'users': users})
                     values['membership_org'] = partner.membership_org.id
                     values['responsibility_in_org_member'] = partner.member_responsibility.id
@@ -721,7 +721,7 @@ class WebRegisteration(AuthSignupHome):
                 strength = values['key_strength']
                 weakness = values['key_weakness']
                 values.pop('partner')
-                values.pop('transfers')              
+                values.pop('transfers')  
                 this_request = request.env['members.transfer'].sudo().create(values)
                 this_request.sudo().write({
                     'key_strength': [
@@ -748,7 +748,7 @@ class WebRegisteration(AuthSignupHome):
         subcity = request.env['membership.handlers.parent'].sudo().search([])
         wereda = request.env['membership.handlers.branch'].sudo().search([])
         main_office = request.env['main.office'].sudo().search([])
-        cells = request.env['member.cells'].sudo().search([])
+        cells = request.env['member.cells'].sudo().search([('state', '=', 'active')])
         leader_responsibility = request.env['leaders.responsibility'].sudo().search([])
         member_responsibility = request.env['members.responsibility'].sudo().search([])
         organization = request.env['membership.organization'].sudo().search([])
@@ -758,10 +758,11 @@ class WebRegisteration(AuthSignupHome):
         transfer_member_responsibility = request.env['members.responsibility'].sudo().search([])
         transfer_league_responsibility = request.env['league.responsibility'].sudo().search([])
         new_organization = request.env['membership.organization'].sudo().search([])
+        new_league_organization = request.env['membership.organization'].sudo().search([])
         transfer_subcities = request.env['membership.handlers.parent'].sudo().search([])
         transfer_weredas = request.env['membership.handlers.branch'].sudo().search([])
         transfer_main_office = request.env['main.office'].sudo().search([])
-        transfer_cells = request.env['member.cells'].sudo().search([])
+        transfer_cells = request.env['member.cells'].sudo().search([('state', '=', 'active')])
         place_of_work = ''
         current_job = partner.work_experience_ids.filtered(lambda rec: rec.current_job == True)
         if current_job:
@@ -771,7 +772,7 @@ class WebRegisteration(AuthSignupHome):
         empty = {'id': None, 'is_member': is_member, 'is_leader': is_leader, 'is_league': is_league,
                 'transfer_as_a_leader_or_member': None, 'transfer_as_a_league_or_member': None,
                 'transfer_responsibility_leader': False, 'transfer_league_responsibility': None,
-                'transfer_league_org': None, 'transfer_responsibility_member': False,
+                'transfer_league_organization': None, 'transfer_responsibility_member': False,
                 'transfer_membership_org': False, 'transfer_subcity_id': False,
                 'transfer_wereda_id': False, 'transfer_main_office': False, 'transfer_member_cells': False,
                 'transfer_league_main_office': False, 'transfer_league_member_cells': False}
@@ -797,6 +798,7 @@ class WebRegisteration(AuthSignupHome):
                                                                     'transfer_member_responsibility': transfer_member_responsibility,
                                                                     'transfer_league_responsibility': transfer_league_responsibility,
                                                                     'new_organization': new_organization,
+                                                                    'new_league_organization': new_league_organization,
                                                                     'transfer_subcities': transfer_subcities,
                                                                     'transfer_weredas': transfer_weredas,
                                                                     'transfer_main_office': transfer_main_office,
@@ -979,11 +981,10 @@ class WebRegisteration(AuthSignupHome):
         if partner_id.is_league == True or partner_id.is_member == True or partner_id.is_leader == True:
             is_member = True  
 
-        active_year = request.env['fiscal.year'].search([('state', '=', 'active')])
         years = request.env['fiscal.year'].search([])
 
         if partner_id.is_league == True:
-            payments = request.env['each.league.payment'].search([('year', '=', active_year.id)])
+            payments = request.env['each.league.payment'].search([('league_id', '=', partner_id.id)])
             return request.render("dashboard_member12.member_payments", {
                                         'league_payments': payments,
                                         'league': partner_id.is_league,
@@ -995,7 +996,7 @@ class WebRegisteration(AuthSignupHome):
                                         'is_member': is_member
                                     }) 
         if partner_id.is_member == True or partner_id.is_leader == True:
-            payments = request.env['each.member.payment'].search([('year', '=', active_year.id)])
+            payments = request.env['each.member.payment'].search([('member_id', '=', partner_id.id)])
             return request.render("dashboard_member12.member_payments", {
                                         'payments': payments,
                                         'league': partner_id.is_league,
@@ -1007,31 +1008,72 @@ class WebRegisteration(AuthSignupHome):
                                         'is_member': is_member
                                     }) 
 
-    # @http.route('/yearly/payments', type='json', auth='user', website=True)
-    # def for_which_year(self, year, **kwargs):
+    @http.route('/yearly/payments', type='json', auth='user', website=True)
+    def for_which_year(self, year, **kwargs):
 
-    #     partner_id = request.env.user.partner_id
-    #     league_payments = False
-    #     payments = False
-    #     try:
-    #         year_id = int(year)
-    #     except:
-    #         year_id = 0
+        partner_id = request.env.user.partner_id
+        league_payments = []
+        payments = []
+        try:
+            year_id = int(year)
+        except:
+            year_id = 0
 
-    #     if year_id != 0:
-    #         if partner_id.is_league:
-    #             league_payments = request.env['each.league.payment'].search([('year', '=', year)])
-    #         if partner_id.is_member or partner_id.is_leader:
-    #             payments = request.env['each.member.payment'].search([('year', '=', year)])
-    #     else:
-    #         payments = []
+        if year_id != 0:
+            if partner_id.is_league:
+                all_league_payments = request.env['each.league.payment'].sudo().search([('league_id', '=', partner_id.id), ('year', '=', year_id)])
+                for payment in all_league_payments:
+                    league_payments.append({
+                        'id': payment.id,
+                        'league_id': payment.league_id.name,
+                        'year': payment.year.name,
+                        'month': payment.month.name,
+                        'fee_amount': payment.fee_amount,
+                        'amount_remaining': payment.amount_remaining,
+                        'amount_paid': payment.amount_paid,
+                        'traced_league_payment': payment.traced_league_payment,
+                        'id_payment': payment.id_payment,
+                        'state': payment.state,
+                        'type_of_payment': payment.type_of_payment,
+                        'cell_payment_state': payment.cell_payment_id.state,
+                        'payment': payment.get_dashboard_url()
+                    })
+            if partner_id.is_member or partner_id.is_leader:
+                member_payments = request.env['each.member.payment'].sudo().search([('member_id', '=', partner_id.id), ('year', '=', year_id)])
+                for payment in member_payments:
+                    payments.append({
+                        'id': payment.id,
+                        'member_id': payment.member_id.name,
+                        'year': payment.year.name,
+                        'month': payment.month.name,
+                        'fee_amount': payment.fee_amount,
+                        'amount_remaining': payment.amount_remaining,
+                        'amount_paid': payment.amount_paid,
+                        'traced_member_payment': payment.traced_member_payment,
+                        'id_payment': payment.id_payment,
+                        'state': payment.state,
+                        'type_of_payment': payment.type_of_payment,
+                        'cell_payment_state': payment.cell_payment_id.state,
+                        'payment': payment.get_dashboard_url()
+                    })
+        else:
+            payments = []
+            league_payments = []
 
-    #     print(payments)
-    #     print(league_payments)
-    #     return {
-    #         'payments': payments,
-    #         'league_payments': league_payments
-    #     }
+        return {
+            'payments': payments,
+            'league_payments': league_payments
+        }
+
+    @http.route('/my/payment_details/<int:id>/<string:member_league>', type='http', auth='user', website='True', methods=['GET'])
+    def payment_details(self, id, member_league,**kwargs):
+        """This function will handle the display of all payments"""
+        if member_league == 'league':
+            payment = request.env['each.league.payment'].sudo().search([('id', '=', id)])
+            return request.render("dashboard_member12.league_report", {'payment': payment})
+        if member_league == 'member':
+            payment = request.env['each.member.payment'].sudo().search([('id', '=', id)])
+            return request.render("dashboard_member12.member_report", {'payment': payment})
 
 
     @http.route('/contact-us', type='http',  auth='public', website=True)

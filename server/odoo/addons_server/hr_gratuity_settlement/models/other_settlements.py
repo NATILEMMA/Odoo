@@ -18,12 +18,12 @@ class OtherSettlements(models.Model):
     ], default='draft', track_visibility='onchange')
 
     name = fields.Char(string='Reference', required=True, copy=False, readonly=True,
-                       default=lambda self: _('New'))
+                       default=lambda self: _('New'), translate=True)
     employee_id = fields.Many2one('hr.employee', string='Employee', required=True)
     joined_date = fields.Date(string="Joined Date")
     worked_years = fields.Integer(string="Total Work Years")
     last_month_salary = fields.Integer(string="Last Salary", required=True, default=0)
-    allowance = fields.Char(string="Dearness Allowance", default=0)
+    allowance = fields.Char(string="Dearness Allowance", default=0, translate=True)
     gratuity_amount = fields.Integer(string="Gratuity Payable", required=True, default=0, readony=True, help=("Gratuity is calculated based on 							the equation Last salary * Number of years of service * 15 / 26 "))
 
     reason = fields.Many2one('settlement.reason', string="Settlement Reason", required="True")
@@ -116,5 +116,5 @@ class SettlementReason(models.Model):
     _rec_name = 'settlement_reason'
 
 
-    settlement_reason = fields.Char(string="Reason",required=True)
-    description = fields.Text(string="Description")
+    settlement_reason = fields.Char(string="Reason",required=True, translate=True)
+    description = fields.Text(string="Description", translate=True)

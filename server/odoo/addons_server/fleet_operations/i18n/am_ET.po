@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 13.0-20221005\n"
+"Project-Id-Version: Odoo Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-22 07:26+0000\n"
-"PO-Revision-Date: 2023-05-22 07:26+0000\n"
+"POT-Creation-Date: 2023-07-12 09:18+0000\n"
+"PO-Revision-Date: 2023-07-12 09:18+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -34,24 +34,24 @@ msgstr ""
 "\n"
 " <div style=\"የፎንት ቤተሰብ፡ 'ሉሲካ ግራንዴ'፣ ኡቡንቱ፣ አሪያል፣ ቬርዳና፣ ሳንስ-ሰሪፍ; የቅርጸ-ቁምፊ መጠን: 12 ፒክስል; ቀለም: rgb (34, 34, 34); የጀርባ ቀለም፡ #FFF; \">\n"
 " <p>ሰላም ${object.purchaser_id.name}</p>\n"
-" <p>የእርስዎ ተሽከርካሪ ${object.vehicle_id ወይም ''}' አገልግሎት ቀን ${object.next_አገልግሎት_ቀን ወይም ''} ነው።\n"
+" <p>የእርስዎ ተሽከርካሪ ${object.vehicle_id ወይም ''}' ሰርቪስ ቀን ${object.next_ሰርቪስ_ቀን ወይም ''} ነው።\n"
 " <div style=\"ስፋት፡ 347px; ህዳግ፡ 0 ፒክስል; ንጣፍ: 5 ፒክስል 14 ፒክስል; የመስመር-ቁመት: 16 ፒክስል; የጀርባ ቀለም፡ #F2F2F2;\">\n"
 " <span style=\" ቀለም፡ #222; ህዳግ-ታች: 5 ፒክስል; ማሳያ፡ ማገድ; \">\n"
 " <p>እናመሰግናለን </p>\n"
 " <p>ከሠላምታ ጋር </p>\n"
-" <p>Fleet Manager</p>\n"
+" <p>የተሽከርካሪ አስተዳዳሪ</p>\n"
 " </div>\n"
 " </div>\n"
-""
+
 #. module: fleet_operations
 #: model:ir.actions.report,print_report_name:fleet_operations.action_report_check_list
 msgid "                 'Checklist report'+str(object.id)"
-msgstr ""
+msgstr "'የማረጋገጫ ዝርዝር ዘገባ'+str(object.id)"
 
 #. module: fleet_operations
 #: model:ir.actions.report,print_report_name:fleet_operations.action_report_repair_list
 msgid "                 'Repair report'+str(object.id)"
-msgstr ""
+msgstr "'የጥገና ሪፖርት'+str(object.id)"
 
 #. module: fleet_operations
 #: model:ir.model.fields.selection,name:fleet_operations.selection__fleet_vehicle_log_services__main_type__non-vehicle
@@ -115,12 +115,13 @@ msgstr ""
 "\t\t\t\t\tስራ የሚበዛበት ፕሮግራም እንዳለህ ተረድተናል እናም ማስታወሻ ልንልክልህ እንወዳለን።\n"
 "\t\t\t\t</p>\n"
 "\t\t\t\t<p>\n"
-"\t\t\t\t\tየተሽከርካሪዎ አገልግሎት በ${object.next_service_date} ላይ እንደሚወድቅ ልናስታውስዎ እንፈልጋለን።\n"
+"\t\t\t\t\tየተሽከርካሪዎ ሰርቪስ በ${object.next_service_date} ላይ እንደሚወድቅ ልናስታውስዎ እንፈልጋለን።\n"
 "\t\t\t\t\t<br/>\n"
 "\t\t\t\t\tእናመሰግናለን\n"
 "\t\t\t\t</p>\n"
 "\t\t\t</div>\n"
 "\t\t"
+
 #. module: fleet_operations
 #: model_terms:ir.ui.view,arch_db:fleet_operations.res_config_settings_view_form
 msgid "<span class=\"o_form_label\">Payment Per Hour</span>"
@@ -155,7 +156,7 @@ msgstr "<strong>የተዘገበበት ቀን፡</strong>"
 #. module: fleet_operations
 #: model_terms:ir.ui.view,arch_db:fleet_operations.report_checklist
 msgid "<strong>Service Checklist</strong>"
-msgstr "<strong>የአገልግሎት ማረጋገጫ ዝርዝር</strong>"
+msgstr "<strong>የሰርቪስ ማረጋገጫ ዝርዝር</strong>"
 
 #. module: fleet_operations
 #: model_terms:ir.ui.view,arch_db:fleet_operations.report_repair_list
@@ -170,7 +171,7 @@ msgstr "የ<strong>ጠቅላላ ክፍሎች መጠን፡</strong>"
 #. module: fleet_operations
 #: model_terms:ir.ui.view,arch_db:fleet_operations.report_repair_list
 msgid "<strong>Total services charge:</strong>"
-msgstr "<strong>ጠቅላላ የአገልግሎት ክፍያ፡</strong>"
+msgstr "<strong>ጠቅላላ የሰርቪስ ክፍያ፡</strong>"
 
 #. module: fleet_operations
 #: model_terms:ir.ui.view,arch_db:fleet_operations.report_repair_list
@@ -186,7 +187,7 @@ msgstr "<strong>ያልተከፈለ መጠን፡</strong>"
 #. module: fleet_operations
 #: model_terms:ir.ui.view,arch_db:fleet_operations.report_repair_list
 msgid "<strong>next service Date:</strong>"
-msgstr "<strong>የሚቀጥለው የአገልግሎት ቀን፡</strong>"
+msgstr "<strong>የሚቀጥለው የሰርቪስ ቀን፡</strong>"
 
 #. module: fleet_operations
 #: model:repair.type,name:fleet_operations.nds_repair_type03
@@ -208,9 +209,10 @@ msgstr "ስለ ተሽከርካሪ"
 #: model:ir.model.fields.selection,name:fleet_operations.selection__fleet_vehicle__state__active_new
 #: model_terms:ir.ui.view,arch_db:fleet_operations.fleet_vehicle_model_form_extended
 msgid "Active"
-msgstr "ንቁ"
+msgstr "በሰራ ላይ ያለ"
 
 #. module: fleet_operations
+#: model:ir.model,name:fleet_operations.model_product_product
 #: model:ir.model,name:fleet_operations.model_product_template
 msgid "Adding is asset field"
 msgstr "መጨመር የንብረት መስክ ነው።"
@@ -228,7 +230,7 @@ msgstr "ተጨማሪ ክፍያ"
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle_log_services__additional_service
 msgid "Additional Service"
-msgstr "ተጨማሪ አገልግሎት"
+msgstr "ተጨማሪ ሰርቪስ"
 
 #. module: fleet_operations
 #: model_terms:ir.ui.view,arch_db:fleet_operations.fleet_wittenoff_search
@@ -275,7 +277,7 @@ msgstr "አጽድቅ"
 #. module: fleet_operations
 #: model_terms:ir.ui.view,arch_db:fleet_operations.fleet_vehicle_log_services_view_inherit
 msgid "Approve Request"
-msgstr "ጥያቄን አጽድቅ"
+msgstr "ጠየቀን አጽድቅ"
 
 #. module: fleet_operations
 #: model:ir.model.fields.selection,name:fleet_operations.selection__fleet_vehicle_log_services__state__approved
@@ -300,17 +302,12 @@ msgstr "እርግጠኛ ነዎት ይህንን ለመሰረዝ ማረጋገጥ �
 #. module: fleet_operations
 #: model_terms:ir.ui.view,arch_db:fleet_operations.fleet_vehicle_log_services_view_inherit
 msgid "Are you sure you want to open this work order?"
-msgstr ""
+msgstr "እርግጠኛ ነዎት ይህን የስራ ትዕዛዝ መክፈት ይፈልጋሉ?"
 
 #. module: fleet_operations
 #: model_terms:ir.ui.view,arch_db:fleet_operations.fleet_vehicle_wittenoff_form_view
 msgid "Are you sure you want to set Draft this write off?"
 msgstr "እርግጠኛ ነዎት ይህን የስራ ትዕዛዝ መክፈት ይፈልጋሉ?"
-
-#. module: fleet_operations
-#: model:ir.model,name:fleet_operations.model_product_product
-msgid "Asset description line inherit"
-msgstr "የንብረት መግለጫ መስመር ይወርሳል"
 
 #. module: fleet_operations
 #: model_terms:ir.ui.view,arch_db:fleet_operations.fleet_vehicle_wittenoff_form_view
@@ -328,7 +325,7 @@ msgstr "እርዳታ"
 #: model:ir.model.fields,field_description:fleet_operations.field_ir_attachment__attachment_id
 #: model_terms:ir.ui.view,arch_db:fleet_operations.fleet_vehicle_log_services_view_inherit
 msgid "Attachment"
-msgstr "አባሪ"
+msgstr "ተያያዥ"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle_log_services__attachment_count
@@ -408,12 +405,12 @@ msgstr "ከኢኮኖሚያዊ ጥገና ባሻገር"
 #. module: fleet_operations
 #: model:repair.type,name:fleet_operations.nds_repair_type06
 msgid "Body Repaint"
-msgstr "የሰውነት እንደገና መቀባት"
+msgstr "ቦዲ እንደገና መቀባት"
 
 #. module: fleet_operations
 #: model:repair.type,name:fleet_operations.nds_repair_type05
 msgid "Body Repair"
-msgstr "የሰውነት ጥገና"
+msgstr "የቦዲ ጥገና "
 
 #. module: fleet_operations
 #: model:ir.model.fields.selection,name:fleet_operations.selection__fleet_service_type__category__both
@@ -424,12 +421,12 @@ msgstr "ሁለቱም"
 #: model:ir.model,name:fleet_operations.model_fleet_vehicle_model_brand
 #: model:ir.model.fields,help:fleet_operations.field_fleet_vehicle_model__brand_id
 msgid "Brand of the vehicle"
-msgstr "የተሽከርካሪው የምርት ስም"
+msgstr "የተሽከርካሪው የእቃ ስም"
 
 #. module: fleet_operations
 #: model:repair.type,name:fleet_operations.nds_repair_type07
 msgid "Break System"
-msgstr "ስርዓትን መስበር"
+msgstr "ብሬክ ስይስተም "
 
 #. module: fleet_operations
 #: model:vehicle.type,name:fleet_operations.vehicle_type_bus_2
@@ -450,7 +447,7 @@ msgstr "በ"
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle__cc
 msgid "CC"
-msgstr "CC"
+msgstr ""
 
 #. module: fleet_operations
 #: model:ir.model.fields.selection,name:fleet_operations.selection__fleet_vehicle_log_fuel__state__cancel
@@ -472,22 +469,22 @@ msgstr "CC"
 #: model_terms:ir.ui.view,arch_db:fleet_operations.view_writeoff_cancel_reason_wizard
 #: model_terms:ir.ui.view,arch_db:fleet_operations.wo_report_form_view
 msgid "Cancel"
-msgstr "ሰርዝ"
+msgstr "አጥፋ"
 
 #. module: fleet_operations
 #: model_terms:ir.ui.view,arch_db:fleet_operations.fleet_vehicle_wittenoff_form_view
 msgid "Cancel By"
-msgstr "ሰርዝ በ"
+msgstr "የጠፋው በ"
 
 #. module: fleet_operations
 #: model_terms:ir.ui.view,arch_db:fleet_operations.fleet_vehicle_wittenoff_form_view
 msgid "Cancel Date"
-msgstr "ቀን ሰርዝ"
+msgstr "ቀን አጥፋ"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_wittenoff__cancel_note
 msgid "Cancel Note"
-msgstr "ማስታወሻ ሰርዝ"
+msgstr "ማስታወሻ አጥፋ"
 
 #. module: fleet_operations
 #: model:ir.model.fields.selection,name:fleet_operations.selection__fleet_wittenoff__state__cancel
@@ -537,11 +534,12 @@ msgstr "ቀን ለውጥ"
 #: model:ir.actions.act_window,name:fleet_operations.fleet_work_order_advance_search_act
 #: model:ir.ui.menu,name:fleet_operations.work_order_advance_search_sub_menu
 msgid "Check Service Status"
-msgstr "የአገልግሎት ሁኔታን ያረጋግጡ"
+msgstr "የሰርቪስ ሁኔታን ያረጋግጡ"
 
 #. module: fleet_operations
 #: model:ir.actions.act_window,name:fleet_operations.checklist_action
-#: model:ir.model.fields,field_description:fleet_operations.field_fleet_checklistevaluate__checklist_id
+#: model:ir.model.fields,field_description:fleet_operations.field_fleet_checklistevaluate_final__checklist_id
+#: model:ir.model.fields,field_description:fleet_operations.field_fleet_checklistevaluate_initial__checklist_id
 #: model:ir.ui.menu,name:fleet_operations.checklist_menu
 #: model_terms:ir.ui.view,arch_db:fleet_operations.checklist_form_view
 #: model_terms:ir.ui.view,arch_db:fleet_operations.checklist_tree_view
@@ -578,8 +576,7 @@ msgstr "የማረጋገጫ ዝርዝር ዘገባ"
 #: model:ir.model.fields,help:fleet_operations.field_fleet_service_type__category
 msgid ""
 "Choose whether the service refer to contracts, vehicle services or both"
-msgstr ""
-"አገልግሎቱ ኮንትራቶችን፣ የተሽከርካሪ አገልግሎቶችን ወይም ሁለቱንም የሚያመለክት መሆኑን ይምረጡ"
+msgstr "አገልግሎቱ ውሎችን፣ የተሽከርካሪ ሰርቪሶችን ወይም ሁለቱንም የሚያመለክት መሆኑን ይምረጡ"
 
 #. module: fleet_operations
 #: model:ir.model.fields.selection,name:fleet_operations.selection__preventive_maintenance_line__type__clean
@@ -598,7 +595,7 @@ msgstr "የ Xls ፋይልን ለማውረድ አውርድን ጠቅ ያድርጉ
 #: model_terms:ir.actions.act_window,help:fleet_operations.fleet_vehicle_log_services_approve_form_action
 #: model_terms:ir.actions.act_window,help:fleet_operations.fleet_vehicle_log_services_form_action
 msgid "Click to create a new service entry."
-msgstr "አዲስ የአገልግሎት ግቤት ለመፍጠር ጠቅ ያድርጉ"
+msgstr "አዲስ የሰርቪስ ግቤት ለመፍጠር ጠቅ ያድርጉ"
 
 #. module: fleet_operations
 #: model_terms:ir.actions.act_window,help:fleet_operations.fleet_vehicle_witten_off_act
@@ -661,7 +658,13 @@ msgstr "ቀለሞች"
 #. module: fleet_operations
 #: model:ir.model,name:fleet_operations.model_res_company
 msgid "Companies"
-msgstr "ድርጅቶች"
+msgstr "ኩባንያዎች"
+
+#. module: fleet_operations
+#: model:ir.model.fields.selection,name:fleet_operations.selection__fleet_vehicle_log_services__covered_by__company
+#: model:ir.model.fields.selection,name:fleet_operations.selection__hr_expense__covered_by__company
+msgid "Company"
+msgstr "ኩባንያ"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_res_company__name
@@ -684,7 +687,7 @@ msgstr "የተጠናቀቀበት ቀን"
 #: model:ir.model.fields.selection,name:fleet_operations.selection__fleet_vehicle__state__complete
 #: model:ir.model.fields.selection,name:fleet_operations.selection__fleet_vehicle_advance_search__state__complete
 msgid "Completed"
-msgstr "ተጠናቋል"
+msgstr "ሰርቪሱ ተጠናቋል"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_service_repair_line__condition
@@ -694,7 +697,7 @@ msgstr "ሁኔታ"
 #. module: fleet_operations
 #: model:ir.model,name:fleet_operations.model_res_config_settings
 msgid "Config Settings"
-msgstr "የማስተካያዎች ማዋቀሪያ"
+msgstr "ቅንብሮችን ያዋቅሩ"
 
 #. module: fleet_operations
 #: model_terms:ir.ui.view,arch_db:fleet_operations.fleet_vehicle_log_services_view_inherit
@@ -715,8 +718,7 @@ msgstr "WO በኃይል ያረጋግጡ"
 msgid ""
 "Confirm work order can only when vehicle status is in Inspection or "
 "Released!"
-msgstr ""
-"የሥራ ትዕዛዝ ማረጋገጥ የሚቻለው የተሽከርካሪ ሁኔታ ሲፈተሽ ወይም ሲለቀቅ ብቻ ነው!"
+msgstr "የሥራ ትዕዛዝ ማረጋገጥ የሚቻለው የተሽከርካሪ ሁኔታ ሲፈተሽ ወይም ሲለቀቅ ብቻ ነው!"
 
 #. module: fleet_operations
 #: model:ir.model.fields.selection,name:fleet_operations.selection__fleet_wittenoff__state__confirm
@@ -726,7 +728,7 @@ msgstr "ተረጋግጧል"
 #. module: fleet_operations
 #: model:ir.model,name:fleet_operations.model_res_partner
 msgid "Contact"
-msgstr "እውቂያ(ኮንታክት)"
+msgstr "ኮንታክት"
 
 #. module: fleet_operations
 #: model:ir.model,name:fleet_operations.model_report_fleet_operations_contact_team_trip_ticket_xls
@@ -769,6 +771,12 @@ msgid "Costs"
 msgstr "ወጪዎች"
 
 #. module: fleet_operations
+#: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle_log_services__covered_by
+#: model:ir.model.fields,field_description:fleet_operations.field_hr_expense__covered_by
+msgid "Covered by"
+msgstr "የተሸፈነው በ"
+
+#. module: fleet_operations
 #: model_terms:ir.ui.view,arch_db:fleet_operations.fleet_vehicle_log_services_view_inherit
 #: model_terms:ir.ui.view,arch_db:fleet_operations.fleet_vehicle_model_form_extended
 msgid "Create Invoice"
@@ -791,8 +799,7 @@ msgstr "የደንበኛ ክፍያ ይፍጠሩ"
 msgid ""
 "Create invoices, register payments and keep track of the discussions with "
 "your customers."
-msgstr ""
-"ደረሰኞችን ይፍጠሩ፣ ክፍያዎችን ይመዝገቡ እና ከደንበኞችዎ ጋር የሚያደርጉትን ውይይት ይከታተሉ።"
+msgstr "ደረሰኞችን ይፍጠሩ፣ ክፍያዎችን ይመዝገቡ እና ከደንበኞችዎ ጋር የሚያደርጉትን ውይይት ይከታተሉ።"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_battery_history__create_uid
@@ -805,7 +812,8 @@ msgstr ""
 #: model:ir.model.fields,field_description:fleet_operations.field_excel_fleet_report__create_uid
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_checklist__create_uid
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_checklist_template__create_uid
-#: model:ir.model.fields,field_description:fleet_operations.field_fleet_checklistevaluate__create_uid
+#: model:ir.model.fields,field_description:fleet_operations.field_fleet_checklistevaluate_final__create_uid
+#: model:ir.model.fields,field_description:fleet_operations.field_fleet_checklistevaluate_initial__create_uid
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle_advance_search__create_uid
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_wittenoff__create_uid
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_work_order_search__create_uid
@@ -848,7 +856,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:fleet_operations.field_workorder_parts_history_details__create_uid
 #: model:ir.model.fields,field_description:fleet_operations.field_writeoff_cancel_reason__create_uid
 msgid "Created by"
-msgstr ""
+msgstr "የተፈጠረው በ"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_battery_history__create_date
@@ -861,7 +869,8 @@ msgstr ""
 #: model:ir.model.fields,field_description:fleet_operations.field_excel_fleet_report__create_date
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_checklist__create_date
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_checklist_template__create_date
-#: model:ir.model.fields,field_description:fleet_operations.field_fleet_checklistevaluate__create_date
+#: model:ir.model.fields,field_description:fleet_operations.field_fleet_checklistevaluate_final__create_date
+#: model:ir.model.fields,field_description:fleet_operations.field_fleet_checklistevaluate_initial__create_date
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle_advance_search__create_date
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_wittenoff__create_date
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_work_order_search__create_date
@@ -1047,10 +1056,11 @@ msgid "Deduction"
 msgstr "ቅነሳ"
 
 #. module: fleet_operations
-#: model:ir.model.fields,field_description:fleet_operations.field_fleet_checklistevaluate__defect
+#: model:ir.model.fields,field_description:fleet_operations.field_fleet_checklistevaluate_final__defect
+#: model:ir.model.fields,field_description:fleet_operations.field_fleet_checklistevaluate_initial__defect
 #: model_terms:ir.ui.view,arch_db:fleet_operations.report_checklist
 msgid "Defect"
-msgstr "ጉድለት"
+msgstr "የተጎዳ"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle_log_services__delivery_id
@@ -1075,9 +1085,7 @@ msgstr "ተቀማጭ ደረሰ?"
 msgid ""
 "Deposit Return invoice is already Pending\n"
 "Please proceed that deposit invoice first"
-msgstr ""
-"የተቀማጭ ገንዘብ ተመላሽ ደረሰኝ አስቀድሞ በመጠባበቅ ላይ ነው።"
-"እባክዎ መጀመሪያ የተቀማጭ ደረሰኝ ይቀጥሉ"
+msgstr "የተቀማጭ ገንዘብ ተመላሽ ደረሰኝ አስቀድሞ በመጠባበቅ ላይ ነው።እባክዎ መጀመሪያ የተቀማጭ ደረሰኝ ይቀጥሉ"
 
 #. module: fleet_operations
 #: code:addons/fleet_operations/models/fleet_service.py:0
@@ -1088,6 +1096,7 @@ msgid ""
 msgstr ""
 "የተቀማጭ ደረሰኝ አስቀድሞ በመጠባበቅ ላይ ነው።\n"
 "እባክዎ መጀመሪያ የተቀማጭ ደረሰኝ ይቀጥሉ"
+
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle__monthly_deprication
 msgid "Deprecation(Monthly)"
@@ -1124,7 +1133,8 @@ msgstr "መጠኖች እና አቅም"
 #: model:ir.model.fields,field_description:fleet_operations.field_excel_fleet_report__display_name
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_checklist__display_name
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_checklist_template__display_name
-#: model:ir.model.fields,field_description:fleet_operations.field_fleet_checklistevaluate__display_name
+#: model:ir.model.fields,field_description:fleet_operations.field_fleet_checklistevaluate_final__display_name
+#: model:ir.model.fields,field_description:fleet_operations.field_fleet_checklistevaluate_initial__display_name
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle_advance_search__display_name
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_wittenoff__display_name
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_work_order_search__display_name
@@ -1205,9 +1215,7 @@ msgstr "ክፍፍል"
 msgid ""
 "Do you Forcefully want to close the WO because there is some repair types "
 "which are selected for repair but not completed"
-msgstr ""
-"አንዳንድ የጥገና ዓይነቶች ስላሉ WO ን በግድ መዝጋት ይፈልጋሉ"
-"ለመጠገን የተመረጡ ግን ያልተጠናቀቁ ናቸው"
+msgstr "አንዳንድ የጥገና ዓይነቶች ስላሉ WO ን በግድ መዝጋት ይፈልጋሉ ለጥገና የተመረጡ ግን ያልተጠናቀቁ ናቸው"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_report_heading__document_no
@@ -1268,6 +1276,11 @@ msgid "Driver of the vehicle"
 msgstr "የተሽከርካሪው ሹፌር"
 
 #. module: fleet_operations
+#: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle__driver_status
+msgid "Driver status"
+msgstr "የሹፌሩ ሁኔታ"
+
+#. module: fleet_operations
 #: model_terms:ir.ui.view,arch_db:fleet_operations.write_off_qweb
 msgid "Driver:"
 msgstr "ሹፌር"
@@ -1280,12 +1293,12 @@ msgstr "የአሽከርካሪዎች ታሪክ"
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle__due_odometer_unit
 msgid "Due Odometer Units"
-msgstr "ተገቢ የኦዶ ሜትር ክፍሎች"
+msgstr "ተገቢ የኦዶሜትር ክፍሎች"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_trip_encoded_history__dummy_encoded_qty
 msgid "Dummy Encoded Qty"
-msgstr ""
+msgstr "ለሙከራ የገባ መጠን"
 
 #. module: fleet_operations
 #: model:ir.model.fields.selection,name:fleet_operations.selection__fleet_vehicle__fuel_type__electric
@@ -1400,6 +1413,11 @@ msgid "Exhaust System"
 msgstr "የጭስ ማውጫ ስርዓት"
 
 #. module: fleet_operations
+#: model:ir.model,name:fleet_operations.model_hr_expense
+msgid "Expense"
+msgstr "ወጪ"
+
+#. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle__expence_acc_id
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle_model__expence_acc_id
 msgid "Expense Account"
@@ -1408,7 +1426,7 @@ msgstr "የወጪ ሂሳብ"
 #. module: fleet_operations
 #: model_terms:ir.ui.view,arch_db:fleet_operations.fleet_vehicle_wittenoff_form_view
 msgid "Expense To Repair"
-msgstr "ለመጠገን ወጪ"
+msgstr "ለጥገና ወጪ"
 
 #. module: fleet_operations
 #: model_terms:ir.ui.view,arch_db:fleet_operations.fleet_vehicle_wittenoff_form_view
@@ -1433,159 +1451,163 @@ msgstr "የበጀት ዓመት"
 #. module: fleet_operations
 #: model_terms:ir.ui.view,arch_db:fleet_operations.report_checklist
 msgid "Fixed"
-msgstr "ቋሚ"
+msgstr "የተጠገነ"
 
 #. module: fleet_operations
 #: model_terms:ir.ui.view,arch_db:fleet_operations.res_config_settings_view_form
 #: model_terms:ir.ui.view,arch_db:fleet_operations.view_users_form_expiration_date
 msgid "Fleet"
-msgstr "ፍሊት"
+msgstr "ተሽከርካሪ"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle__fleet_attach_ids
 msgid "Fleet Attachments"
-msgstr "ፍሊት አባሪዎች"
+msgstr "የተሽከርካሪ አባሪዎች"
 
 #. module: fleet_operations
 #: model:ir.model.fields.selection,name:fleet_operations.selection__print_fleet_history__sel_report__complete_stage
 msgid "Fleet Complete Stage"
-msgstr "ፍሊት የተሟላ ደረጃ"
+msgstr "የተሽከርካሪ የተሟላ ደረጃ"
 
 #. module: fleet_operations
 #: code:addons/fleet_operations/report/fleet_history.py:0
 #, python-format
 msgid "Fleet Complete Stage Report"
-msgstr "ፍሊት የተሟላ ደረጃ ሪፖርት"
+msgstr "የተሽከርካሪ የተሟላ ደረጃ ሪፖርት"
 
 #. module: fleet_operations
-#: model:ir.actions.act_window,name:fleet_operations.action_res_partner_driver
-#: model:ir.ui.menu,name:fleet_operations.fleet_driver_menu
 #: model_terms:ir.ui.view,arch_db:fleet_operations.fleet_driver_search_view
 msgid "Fleet Driver"
-msgstr "ፍሊት ነጂ"
+msgstr "የተሽከርካሪ ሹፌር"
 
 #. module: fleet_operations
 #: model:ir.model,name:fleet_operations.model_excel_fleet_report
 msgid "Fleet Excel Report"
-msgstr "ፍሊት ኤክሴል ሪፖርት"
+msgstr "የተሽከርካሪ ኤክሴል ሪፖርት"
 
 #. module: fleet_operations
 #: model:ir.model.fields.selection,name:fleet_operations.selection__print_fleet_history__sel_report__history
 msgid "Fleet History"
-msgstr "ፍሊት ታሪክ"
+msgstr "የተሽከርካሪ ታሪክ"
 
 #. module: fleet_operations
 #: code:addons/fleet_operations/report/fleet_history.py:0
 #, python-format
 msgid "Fleet History Report"
-msgstr "ፍሊት ታሪክ ሪፖርት"
+msgstr "የተሽከርካሪ ታሪክ ሪፖርት"
 
 #. module: fleet_operations
 #: model:ir.model,name:fleet_operations.model_report_fleet_operations_fleet_history_work_order_xls
 msgid "Fleet History Work Order"
-msgstr "ፍሊት ታሪክ የሥራ ትዕዛዝ"
+msgstr "የተሽከርካሪ ታሪክ የሥራ ትዕዛዝ"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle__fleet_id
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_wittenoff__fleet_id
 msgid "Fleet ID"
-msgstr "ፍሊት መታወቂያ"
+msgstr "የተሽከርካሪ መለያ"
 
 #. module: fleet_operations
 #: model:ir.model.fields.selection,name:fleet_operations.selection__print_fleet_history__sel_report__listing
 msgid "Fleet Listing"
-msgstr "ፍሊት ዝርዝር"
+msgstr "የተሽከርካሪ ዝርዝር"
 
 #. module: fleet_operations
 #: code:addons/fleet_operations/report/fleet_history.py:0
 #: model:ir.model,name:fleet_operations.model_report_fleet_operations_fleet_summary_xls
 #, python-format
 msgid "Fleet Listing Report"
-msgstr "የፍሊት ዝርዝር ዘገባ"
+msgstr "የተሽከርካሪ ዝርዝር ዘገባ"
 
 #. module: fleet_operations
 #: model:ir.model,name:fleet_operations.model_report_fleet_operations_outstanding_wo_xls
 msgid "Fleet Outstanding Workorder Report"
-msgstr "ፍሊት የላቀ የስራ ትዕዛዝ ሪፖርት"
+msgstr "የተሽከርካሪ የላቀ የስራ ትዕዛዝ ሪፖርት"
 
 #. module: fleet_operations
 #: model:ir.model,name:fleet_operations.model_report_fleet_operations_fleet_pending_repairs_xls
 msgid "Fleet Pending Repair Report"
-msgstr "ፍሊት በመጠባበቅ ላይ ያለ የጥገና ሪፖርት"
+msgstr "የተሽከርካሪ በመጠባበቅ ላይ ያለ የጥገና ሪፖርት"
 
 #. module: fleet_operations
 #: model:ir.model.fields.selection,name:fleet_operations.selection__print_fleet_history__sel_report__pending_repair_summary
 msgid "Fleet Pending Repair Summary"
-msgstr "ፍሊት በመጠባበቅ ላይ ያለ የጥገና ማጠቃለያ"
+msgstr "ተሽከርካሪ በመጠባበቅ ላይ ያለ የጥገና ማጠቃለያ"
 
 #. module: fleet_operations
 #: code:addons/fleet_operations/report/fleet_history.py:0
 #, python-format
 msgid "Fleet Pending Repair Summary Report"
-msgstr "ፍሊት በመጠባበቅ ላይ ያለ የጥገና ማጠቃለያ ሪፖርት"
+msgstr "ተሽከርካሪ በመጠባበቅ ላይ ያለ የጥገና ማጠቃለያ ሪፖርት"
 
 #. module: fleet_operations
 #: model:ir.model.fields.selection,name:fleet_operations.selection__print_fleet_history__sel_report__pending_repairs
 msgid "Fleet Pending Repairs"
-msgstr "ፍሊት በመጠባበቅ ላይ ያሉ ጥገናዎች"
+msgstr "ተሽከርካሪ በመጠባበቅ ላይ ያሉ ጥገናዎች"
 
 #. module: fleet_operations
 #: code:addons/fleet_operations/report/fleet_history.py:0
 #, python-format
 msgid "Fleet Pending Repairs Report"
-msgstr "ፍሊት በመጠባበቅ ላይ ያለ የጥገና ሪፖርት"
+msgstr "ተሽከርካሪ በመጠባበቅ ላይ ያለ የጥገና ሪፖርት"
 
 #. module: fleet_operations
 #: model:ir.model,name:fleet_operations.model_report_fleet_operations_fleet_pending_xls
 msgid "Fleet Pending Report"
-msgstr "ፍሊት በመጠባበቅ ላይ ያለ ሪፖርት"
+msgstr "ተሽከርካሪ በመጠባበቅ ላይ ያለ ሪፖርት"
 
 #. module: fleet_operations
 #: model:ir.actions.act_window,name:fleet_operations.action_fleet_service_expense_view
 msgid "Fleet Service Expenses"
-msgstr "የፍሊት አገልግሎት ወጪዎች"
+msgstr "የተሽከርካሪ ሰርቪስ ወጪዎች"
 
 #. module: fleet_operations
 #: model:ir.model,name:fleet_operations.model_fleet_service_type
 msgid "Fleet Service Type"
-msgstr "ፍሊት አገልግሎት ዓይነት"
+msgstr "የተሽከርካሪ ሰርቪስ ዓይነት"
 
 #. module: fleet_operations
 #: model:ir.actions.server,name:fleet_operations.fleet_mail_service_ir_actions_server
 #: model:ir.cron,cron_name:fleet_operations.fleet_mail_service
 #: model:ir.cron,name:fleet_operations.fleet_mail_service
 msgid "Fleet Vehicle Service Reminder."
-msgstr "ፍሊት ተሽከርካሪ አገልግሎት አስታዋሽ."
+msgstr "የተሽከርካሪ ሰርቪስ አስታዋሽ."
 
 #. module: fleet_operations
 #: model:ir.model,name:fleet_operations.model_report_fleet_operations_fleet_wait_collection_xls
 msgid "Fleet Waiting Collection Report"
-msgstr "ፍሊት በመጠባበቅ ላይ ስብስብ ሪፖርት"
+msgstr "ተሽከርካሪ በመጠባበቅ ላይ ስብስብ ሪፖርት"
 
 #. module: fleet_operations
 #: model:ir.model,name:fleet_operations.model_fleet_work_order_search
 msgid "Fleet Work order Search"
-msgstr "የፍሊት ስራ ትዕዛዝ ፍለጋ"
+msgstr "የተሽከርካሪ ስራ ትዕዛዝ ፍለጋ"
 
 #. module: fleet_operations
 #: model:ir.model,name:fleet_operations.model_report_fleet_operations_workorder_summary_xls
 msgid "Fleet WorkOrder Reports"
-msgstr "የፍሊት ስራ ትዕዛዝ ሪፖርቶች"
+msgstr "የተሽከርካሪ ስራ ትዕዛዝ ሪፖርቶች"
 
 #. module: fleet_operations
 #: model:ir.actions.report,name:fleet_operations.report_fleet_writeoff
 msgid "Fleet Writeoff"
-msgstr "ፍሊት ይፃፉ"
+msgstr "የተሽከርካሪ ይፃፉ"
 
 #. module: fleet_operations
 #: model_terms:ir.ui.view,arch_db:fleet_operations.view_fleet_driver_tree
 msgid "Fleet driver"
-msgstr "ፍሊት ነጂ"
+msgstr "የተሽከርካሪ ሹፌር"
+
+#. module: fleet_operations
+#: model:product.product,name:fleet_operations.fleet_product
+#: model:product.template,name:fleet_operations.fleet_product_product_template
+msgid "Fleet product"
+msgstr "የተሽከርካሪ ምርት"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle__vehicle_owner_2
 msgid "Fleet responsible"
-msgstr "ፍሊት ተጠያቂ"
+msgstr "ተሽከርካሪ ተጠያቂ"
 
 #. module: fleet_operations
 #: model_terms:ir.ui.view,arch_db:fleet_operations.fleet_vehicle_model_form_extended
@@ -1611,6 +1633,11 @@ msgstr "የቅጽ ይዘት ይጎድላል፣ ይህ ሪፖርት ሊታተም 
 msgid ""
 "Form content is missing,                     this report cannot be printed."
 msgstr "የቅጽ ይዘት ይጎድላል፣ ይህ ሪፖርት ሊታተም አይችልም።"
+
+#. module: fleet_operations
+#: model:ir.model.fields.selection,name:fleet_operations.selection__fleet_vehicle__driver_status__free
+msgid "Free"
+msgstr "ነፃ"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle_log_services__from_migration
@@ -1708,7 +1735,7 @@ msgstr "ከፍተኛ"
 #: model:ir.model.fields.selection,name:fleet_operations.selection__preventive_maintenance_line__condition__harsh
 #: model:ir.model.fields.selection,name:fleet_operations.selection__service_repair_line__condition__harsh
 msgid "Harsh"
-msgstr "ጨካኝ"
+msgstr "አስቸጋሪ ሁኔታ"
 
 #. module: fleet_operations
 #: model_terms:ir.ui.view,arch_db:fleet_operations.register_payment_form
@@ -1728,7 +1755,7 @@ msgstr "ታሪክ"
 #. module: fleet_operations
 #: model:ir.model.fields.selection,name:fleet_operations.selection__fleet_vehicle__fuel_type__hybrid
 msgid "Hybrid"
-msgstr "ድብልቅ"
+msgstr "ድቅል"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_battery_history__id
@@ -1741,7 +1768,8 @@ msgstr "ድብልቅ"
 #: model:ir.model.fields,field_description:fleet_operations.field_excel_fleet_report__id
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_checklist__id
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_checklist_template__id
-#: model:ir.model.fields,field_description:fleet_operations.field_fleet_checklistevaluate__id
+#: model:ir.model.fields,field_description:fleet_operations.field_fleet_checklistevaluate_final__id
+#: model:ir.model.fields,field_description:fleet_operations.field_fleet_checklistevaluate_initial__id
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle_advance_search__id
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_wittenoff__id
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_work_order_search__id
@@ -1837,7 +1865,7 @@ msgstr "በሂደት ላይ"
 #. module: fleet_operations
 #: model:ir.model.fields.selection,name:fleet_operations.selection__fleet_vehicle__state__in_progress
 msgid "In Service"
-msgstr "በአገልግሎት ውስጥ"
+msgstr "በሰርቪስ ውስጥ"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_product_product__in_active_part
@@ -1854,14 +1882,14 @@ msgstr "የገቢ መለያ"
 #: code:addons/fleet_operations/models/new.py:0
 #, python-format
 msgid "Income account product  is empty"
-msgstr "የገቢ መለያ ምርት ባዶ ነው።"
+msgstr "የገቢ መለያ እቃ ባዶ ነው።"
 
 #. module: fleet_operations
 #: code:addons/fleet_operations/models/new.py:0
 #: code:addons/fleet_operations/models/new.py:0
 #, python-format
 msgid "Income account product is empty"
-msgstr "የገቢ መለያ ምርት ባዶ ነው።"
+msgstr "የገቢ መለያ እቃ ባዶ ነው።"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_service_task__maintenance_info
@@ -1873,17 +1901,19 @@ msgstr "መረጃ"
 #: model:ir.model.fields.selection,name:fleet_operations.selection__preventive_maintenance_line__type__inspect
 #: model:ir.model.fields.selection,name:fleet_operations.selection__service_repair_line__type__inspect
 msgid "Inspect"
-msgstr "መርምር"
+msgstr "ምርመራ "
 
 #. module: fleet_operations
 #: model:ir.model.fields.selection,name:fleet_operations.selection__fleet_vehicle_advance_search__state__inspection
 #: model:repair.type,name:fleet_operations.nds_repair_type01
 msgid "Inspection"
-msgstr ""
+msgstr "ምርመራ"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_res_partner__insurance
 #: model:ir.model.fields,field_description:fleet_operations.field_res_users__insurance
+#: model:ir.model.fields.selection,name:fleet_operations.selection__fleet_vehicle_log_services__covered_by__insurance
+#: model:ir.model.fields.selection,name:fleet_operations.selection__hr_expense__covered_by__insurance
 msgid "Insurance"
 msgstr "ምርመራ"
 
@@ -1980,17 +2010,12 @@ msgstr "መከላከል ነው"
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_account_move__is_invoice_return
 msgid "Is Service Invoice Deposit"
-msgstr "የአገልግሎት ደረሰኝ ተቀማጭ ገንዘብ ነው"
+msgstr "የሰርቪስ ደረሰኝ ተቀማጭ ገንዘብ ነው"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_account_move__is_invoice_receive
 msgid "Is Service Invoice Receive"
-msgstr "የአገልግሎት ክፍያ ደረሰኝ ነው"
-
-#. module: fleet_operations
-#: model:ir.model.fields,field_description:fleet_operations.field_product_product__is_part
-msgid "Is Spare Part?"
-msgstr "መለዋወጫ ነው?"
+msgstr "የሰርቪስ ክፍያ ደረሰኝ ነው"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle__is_tire_issue_set
@@ -2020,7 +2045,7 @@ msgstr "የባትሪ ጉዳይ ተዘጋጅቷል?"
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle__is_battery_size_set
 msgid "Is battery Size set?"
-msgstr "Is battery Size set?"
+msgstr "የባትሪ መጠን ተዘጋጅቷል?"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle__is_battery_srno_set
@@ -2050,7 +2075,12 @@ msgstr "ደረሰኝ ነው?"
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle_log_services__is_customer
 msgid "Is this services is for customer?"
-msgstr "ይህ አገልግሎት ለደንበኛ ነው?"
+msgstr "ይህ ሰርቪስ ለደንበኛ ነው?"
+
+#. module: fleet_operations
+#: model:ir.model.fields,field_description:fleet_operations.field_product_product__is_part
+msgid "Is vehicle service?"
+msgstr "የተሽከርካሪ አገልግሎት ነው?"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_pending_applied_history__issue_date
@@ -2127,7 +2157,8 @@ msgstr "ዝቅተኛ"
 #: model:ir.model.fields,field_description:fleet_operations.field_excel_fleet_report____last_update
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_checklist____last_update
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_checklist_template____last_update
-#: model:ir.model.fields,field_description:fleet_operations.field_fleet_checklistevaluate____last_update
+#: model:ir.model.fields,field_description:fleet_operations.field_fleet_checklistevaluate_final____last_update
+#: model:ir.model.fields,field_description:fleet_operations.field_fleet_checklistevaluate_initial____last_update
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle_advance_search____last_update
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_wittenoff____last_update
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_work_order_search____last_update
@@ -2198,38 +2229,38 @@ msgstr "መጨረሻ የተሻሻለው በ"
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle_log_fuel__odometer
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle_log_services__odometer
 msgid "Last Odometer"
-msgstr "የመጨረሻው Odometer"
+msgstr "የመጨረሻው ኦዶሜትር"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle__last_odometer_unit
 msgid "Last Odometer Unit"
-msgstr "የመጨረሻው Odometer ክፍል"
+msgstr "የመጨረሻው ኦዶሜትር ክፍል"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle__last_service_date
 #: model_terms:ir.ui.view,arch_db:fleet_operations.fleet_vehicle_model_form_extended
 msgid "Last Service"
-msgstr "የመጨረሻው አገልግሎት"
+msgstr "የመጨረሻው ሰርቪስ"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle__last_service_by_id
 msgid "Last Service By"
-msgstr "የመጨረሻው አገልግሎት በ"
+msgstr "የመጨረሻው ሰርቪስ በ"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle_advance_search__last_service_date
 msgid "Last Service From"
-msgstr "የመጨረሻው አገልግሎት ከ"
+msgstr "የመጨረሻው ሰርቪስ ከ"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle__last_odometer
 msgid "Last Service Odometer"
-msgstr "የመጨረሻው አገልግሎት Odometer"
+msgstr "የመጨረሻው ሰርቪስ ኦዶሜትር"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle_advance_search__last_service_date_to
 msgid "Last Service To"
-msgstr "የመጨረሻው አገልግሎት ወደ"
+msgstr "የመጨረሻው ሰርቪስ ወደ"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle__last_change_status_date
@@ -2247,7 +2278,8 @@ msgstr "የመጨረሻው ሁኔታ የተቀየረበት ቀን"
 #: model:ir.model.fields,field_description:fleet_operations.field_excel_fleet_report__write_uid
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_checklist__write_uid
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_checklist_template__write_uid
-#: model:ir.model.fields,field_description:fleet_operations.field_fleet_checklistevaluate__write_uid
+#: model:ir.model.fields,field_description:fleet_operations.field_fleet_checklistevaluate_final__write_uid
+#: model:ir.model.fields,field_description:fleet_operations.field_fleet_checklistevaluate_initial__write_uid
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle_advance_search__write_uid
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_wittenoff__write_uid
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_work_order_search__write_uid
@@ -2303,7 +2335,8 @@ msgstr "መጨረሻ የዘመነው በ"
 #: model:ir.model.fields,field_description:fleet_operations.field_excel_fleet_report__write_date
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_checklist__write_date
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_checklist_template__write_date
-#: model:ir.model.fields,field_description:fleet_operations.field_fleet_checklistevaluate__write_date
+#: model:ir.model.fields,field_description:fleet_operations.field_fleet_checklistevaluate_final__write_date
+#: model:ir.model.fields,field_description:fleet_operations.field_fleet_checklistevaluate_initial__write_date
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle_advance_search__write_date
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_wittenoff__write_date
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_work_order_search__write_date
@@ -2393,8 +2426,8 @@ msgstr "አካባቢ"
 msgid ""
 "Location, Make and Sequence all should be                 uniqe for unique "
 "sequence!"
-msgstr ""
-"አካባቢ፣ ሰሪ እና ቅደም ተከተል ሁሉም ለየት ያለ ቅደም ተከተል ልዩ መሆን አለባቸው!"
+msgstr "አካባቢ፣ ሰሪ እና ቅደም ተከተል ሁሉም ለየት ያለ ቅደም ተከተል ልዩ መሆን አለባቸው!"
+
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle_log_services__note
 msgid "Log Notes"
@@ -2437,7 +2470,7 @@ msgstr "የጥገና ሥራዎች"
 #: model:ir.model.fields,field_description:fleet_operations.field_vehicle_unique_sequence__make_id
 #: model_terms:ir.ui.view,arch_db:fleet_operations.fleet_vehicle_odometer_search_view
 msgid "Make"
-msgstr "አድርግ"
+msgstr "ስሪት"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_preventive_maintenance__service_odometer_2
@@ -2463,11 +2496,9 @@ msgid ""
 "                                  sizes. Use this field in form views or"
 "                                  some kanban views."
 msgstr ""
-"የሪፖርቱ መካከለኛ መጠን ያለው ምስል።"
-"እንደ 128x128 ፒክስል ምስል በራስ ሰር ተቀይሯል፣"
-"ምጥጥነ ገጽታ ተጠብቆ፣ ምስሉ ከእነዚህ ውስጥ አንዱን ሲያልፍ ብቻ"
-" መጠኖች። ይህንን መስክ በቅጽ እይታ ይጠቀሙ ወይም"
-"አንዳንድ የካንባን እይታዎች."
+"የሪፖርቱ መካከለኛ መጠን ያለው ምስል።እንደ 128x128 ፒክስል ምስል በራስ ሰር ተቀይሯል፣ምጥጥነ ገጽታ ተጠብቆ፣ ምስሉ"
+" ከእነዚህ ውስጥ አንዱን ሲያልፍ ብቻ መጠኖች። ይህንን መስክ በቅጽ እይታ ይጠቀሙ ወይምአንዳንድ የካንባን እይታዎች."
+
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle__mileage
 msgid "Mileage(K/H)"
@@ -2524,7 +2555,7 @@ msgstr "የተሽከርካሪው ሞዴል"
 #. module: fleet_operations
 #: model:ir.model.constraint,message:fleet_operations.constraint_fleet_vehicle_model_model_brand_name_uniq
 msgid "Model with this brand Name and Make is already exist!"
-msgstr "በዚህ የምርት ስም እና የተሰራ ሞዴል አስቀድሞ አለ!"
+msgstr "በዚህ የእቃ ስም እና የተሰራ ሞዴል አስቀድሞ አለ!"
 
 #. module: fleet_operations
 #: model:ir.model,name:fleet_operations.model_report_fleet_operations_most_used_parts_xls
@@ -2595,6 +2626,7 @@ msgid ""
 msgstr ""
 "አዲስ \n"
 "                                የባትሪ መጠን"
+
 #. module: fleet_operations
 #: model_terms:ir.ui.view,arch_db:fleet_operations.vehicle_change_history_qweb
 msgid ""
@@ -2603,6 +2635,7 @@ msgid ""
 msgstr ""
 "አዲስ \n"
 "                                 የጎማ መጠን"
+
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_battery_history__new_battery_issue_date
 #: model:ir.model.fields,field_description:fleet_operations.field_update_battery_info__new_battery_issue_date
@@ -2673,7 +2706,7 @@ msgstr "አዲስ የጎማ መጠን"
 #: model:ir.model.fields,field_description:fleet_operations.field_update_vin_info__new_vin_no
 #: model:ir.model.fields,field_description:fleet_operations.field_vin_history__new_vin_no
 msgid "New Vin No"
-msgstr "አዲስ Vin ቁጥር"
+msgstr "አዲስ ቪን ቁጥር"
 
 #. module: fleet_operations
 #: model_terms:ir.ui.view,arch_db:fleet_operations.vehicle_change_history_qweb
@@ -2686,9 +2719,7 @@ msgstr "አዲስ ቀለም"
 msgid ""
 "New work order can only be generated either vehicle status is in Inspection "
 "or Released!"
-msgstr ""
-"አዲስ የስራ ትእዛዝ ሊፈጠር የሚችለው ወይ የተሽከርካሪ ሁኔታ በምርመራ ላይ ነው"
-" ወይም የተለቀቀው ብቻ ነው!"
+msgstr "አዲስ የስራ ትእዛዝ ሊፈጠር የሚችለው ወይ የተሽከርካሪ ሁኔታ በምርመራ ላይ ነው ወይም የተለቀቀው ብቻ ነው!"
 
 #. module: fleet_operations
 #: model:ir.model,name:fleet_operations.model_next_increment_number
@@ -2698,43 +2729,42 @@ msgstr "የሚቀጥለው ጭማሪ ቁጥር"
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle__increment_odometer
 msgid "Next Increment Odometer"
-msgstr "የሚቀጥለው ጭማሪ Odometer"
+msgstr "የሚቀጥለው ጭማሪ ኦዶሜትር"
 
 #. module: fleet_operations
 #: code:addons/fleet_operations/wizard/pending_repair_confirm.py:0
 #, python-format
 msgid ""
 "Next Increment Odometer is not set for %s please set it from configuration!"
-msgstr ""
+msgstr "ቀጣይ ጭማሪ ኦዶሜትር ለ %s አልተዘጋጀም እባኮትን ከማዋቀር ያዋቅሩት!"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle_log_services__next_service_odometer
 msgid "Next Odometer Value"
-msgstr ""
-"ቀጣይ ጭማሪ Odometer ለ %s አልተዘጋጀም እባኮትን ያዋቅሩት!"
+msgstr "ቀጣይ ጭማሪ ኦዶሜትር ለ %s አልተዘጋጀም እባኮትን ያዋቅሩት!"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle__next_service_date
 msgid "Next Service"
-msgstr "ቀጣይ አገልግሎት"
+msgstr "ቀጣይ ሰርቪስ"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle_log_services__next_service_date
 msgid "Next Service Date"
-msgstr "ቀጣይ የአገልግሎት ቀን"
+msgstr "ቀጣይ የሰርቪስ ቀን"
 
 #. module: fleet_operations
 #: code:addons/fleet_operations/report/fleet_history.py:0
 #, python-format
 msgid "Next Service Date Report"
-msgstr "የሚቀጥለው የአገልግሎት ቀን ሪፖርት"
+msgstr "የሚቀጥለው የሰርቪስ ቀን ሪፖርት"
 
 #. module: fleet_operations
 #: code:addons/fleet_operations/models/fleet_service.py:0
 #: code:addons/fleet_operations/models/fleet_service.py:0
 #, python-format
 msgid "Next Service Day"
-msgstr "የሚቀጥለው የአገልግሎት ቀን"
+msgstr "የሚቀጥለው የሰርቪስ ቀን"
 
 #. module: fleet_operations
 #: model:ir.actions.act_window,name:fleet_operations.next_service_days_act
@@ -2742,59 +2772,59 @@ msgstr "የሚቀጥለው የአገልግሎት ቀን"
 #: model_terms:ir.ui.view,arch_db:fleet_operations.next_service_days_form
 #: model_terms:ir.ui.view,arch_db:fleet_operations.next_service_days_tree
 msgid "Next Service Days"
-msgstr "ቀጣይ የአገልግሎት ቀናት"
+msgstr "ቀጣይ የሰርቪስ ቀናት"
 
 #. module: fleet_operations
 #: model_terms:ir.ui.view,arch_db:fleet_operations.fleet_vehicle_model_form_extended
 msgid "Next Service Due"
-msgstr "ቀጣይ የአገልግሎት ክፍያ"
+msgstr "ቀጣይ የሰርቪስ ክፍያ"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle_advance_search__next_service_date
 msgid "Next Service From"
-msgstr "ቀጣይ አገልግሎት ከ"
+msgstr "ቀጣይ ሰርቪስ ከ"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle__due_odometer
 #: model_terms:ir.ui.view,arch_db:fleet_operations.fleet_vehicle_log_services_view_inherit
 msgid "Next Service Odometer"
-msgstr "ቀጣይ አገልግሎት Odometer"
+msgstr "ቀጣይ ሰርቪስ ኦዶሜትር"
 
 #. module: fleet_operations
 #: code:addons/fleet_operations/report/fleet_history.py:0
 #, python-format
 msgid "Next Service Odometer Repairs Report"
-msgstr "ቀጣይ አገልግሎት Odometer ጥገናዎች ሪፖርት"
+msgstr "ቀጣይ ሰርቪስ ኦዶሜትር ጥገናዎች ሪፖርት"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle_advance_search__next_service_date_to
 msgid "Next Service To"
-msgstr "ቀጣይ አገልግሎት ለ"
+msgstr "ቀጣይ ሰርቪስ ለ"
 
 #. module: fleet_operations
 #: model:ir.model,name:fleet_operations.model_report_fleet_operations_next_services_by_date_xls
 #: model:ir.model.fields.selection,name:fleet_operations.selection__print_fleet_history__sel_report__nex_ser_date
 msgid "Next Service by Date"
-msgstr "ቀጣይ አገልግሎት በቀን"
+msgstr "ቀጣይ ሰርቪስ በቀን"
 
 #. module: fleet_operations
 #: model:ir.model,name:fleet_operations.model_report_fleet_operations_next_services_by_odometer_xls
 #: model:ir.model.fields.selection,name:fleet_operations.selection__print_fleet_history__sel_report__nex_ser_odometer
 msgid "Next Service by Odometer"
-msgstr "ቀጣይ አገልግሎት Odometer"
+msgstr "ቀጣይ ሰርቪስ በኦዶሜትር"
 
 #. module: fleet_operations
 #: model:ir.model,name:fleet_operations.model_next_service_days
 msgid "Next Service days"
-msgstr "ቀጣይ የአገልግሎት ቀናት"
+msgstr "ቀጣይ የሰርቪስ ቀናት"
 
 #. module: fleet_operations
 #: code:addons/fleet_operations/wizard/pending_repair_confirm.py:0
 #, python-format
 msgid ""
 "Next service days is not configured for %s please set it from configuration!"
-msgstr ""
-"የሚቀጥሉት የአገልግሎት ቀናት ለ%s አልተዋቀሩም እባኮትን ከውቅር ያዋቅሩት!"
+msgstr "የሚቀጥሉት የሰርቪስ ቀናት ለ%s አልተዋቀሩም እባኮትን ከውቅር ያዋቅሩት!"
+
 #. module: fleet_operations
 #: model_terms:ir.ui.view,arch_db:fleet_operations.vehicle_change_history_qweb
 msgid "No"
@@ -2822,6 +2852,7 @@ msgid "Non-Vehicle"
 msgstr "ተሽከርካሪ ያልሆነ"
 
 #. module: fleet_operations
+#: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle_log_services__explanation_note
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_wittenoff__note
 #: model:ir.model.fields,field_description:fleet_operations.field_update_pending_repair_history__note
 #: model_terms:ir.ui.view,arch_db:fleet_operations.fleet_vehicle_model_form_extended
@@ -2851,11 +2882,17 @@ msgid "Notes"
 msgstr "ማስታወሻዎች"
 
 #. module: fleet_operations
-#: model:ir.model.fields,field_description:fleet_operations.field_fleet_checklistevaluate__ok
+#: model:ir.model.fields,field_description:fleet_operations.field_fleet_checklistevaluate_final__ok
+#: model:ir.model.fields,field_description:fleet_operations.field_fleet_checklistevaluate_initial__ok
 #: model_terms:ir.ui.view,arch_db:fleet_operations.report_checklist
 #: model_terms:ir.ui.view,arch_db:fleet_operations.view_writeoff_cancel_reason_wizard
 msgid "OK"
-msgstr "እሺ"
+msgstr "ደህና "
+
+#. module: fleet_operations
+#: model:ir.model.fields.selection,name:fleet_operations.selection__fleet_vehicle__driver_status__occupied
+msgid "Occupied"
+msgstr "ተይዟል"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_wittenoff__odometer
@@ -2899,15 +2936,13 @@ msgstr "የኦዶሜትር መዝገብ ለተሽከርካሪ"
 msgid ""
 "Odometer measure of the vehicle at the                                 "
 "moment of this log"
-msgstr ""
-"የተሽከርካሪው የኦዶሜትር መለኪያ በ                                "
-"የዚህ መዝገብ ቅጽበት"
+msgstr "በዚህ ሎግ ቅጽበት የተሽከርካሪው የኦዶሜትር መለኪያ"
 
 #. module: fleet_operations
 #: model:ir.model.fields,help:fleet_operations.field_fleet_vehicle_log_fuel__odometer
 msgid "Odometer measure of the vehicle at the moment of this log"
-msgstr ""
-"በዚህ ሎግ ቅጽበት የተሽከርካሪው የኦዶሜትር መለኪያ"
+msgstr "በዚህ ሎግ ቅጽበት የተሽከርካሪው የኦዶሜትር መለኪያ"
+
 #. module: fleet_operations
 #: model_terms:ir.ui.view,arch_db:fleet_operations.write_off_qweb
 msgid "Odometer:"
@@ -2931,7 +2966,7 @@ msgstr "የዘይት ስም"
 #. module: fleet_operations
 #: model_terms:ir.ui.view,arch_db:fleet_operations.continue_pending_repair_form_view
 msgid "Okay"
-msgstr "እሺ"
+msgstr "ደህና "
 
 #. module: fleet_operations
 #: model_terms:ir.ui.view,arch_db:fleet_operations.vehicle_change_history_qweb
@@ -2941,6 +2976,7 @@ msgid ""
 msgstr ""
 "የድሮ \n"
 "                                የባትሪ መጠን"
+
 #. module: fleet_operations
 #: model_terms:ir.ui.view,arch_db:fleet_operations.vehicle_change_history_qweb
 msgid ""
@@ -2949,6 +2985,7 @@ msgid ""
 msgstr ""
 "የድሮ \n"
 "                               የጎማ መጠን"
+
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle_log_services__old_part_price
 msgid "Old Part Price"
@@ -2998,9 +3035,10 @@ msgid ""
 "            on your vehicle.Services can be of many type: occasional\n"
 "            repair, fixed maintenance, etc."
 msgstr ""
-"OpenERP ሁሉንም የተከናወኑ አገልግሎቶችን እንዲከታተሉ ያግዝዎታል\n"
-"በተሽከርካሪዎ ላይ። አገልግሎቶቹ ብዙ አይነት ሊሆኑ ይችላሉ፡ አልፎ አልፎ\n"
+"ኢአርፒን ይክፈቱ ሁሉንም የተከናወኑ ሰርቪሶችን እንዲከታተሉ ያግዝዎታል\n"
+"በተሽከርካሪዎ ላይ። ሰርቪሶቹን ብዙ አይነት ሊሆኑ ይችላሉ፡ አልፎ አልፎ\n"
 "ጥገና, ቋሚ ጥገና, ወዘተ."
+
 #. module: fleet_operations
 #: model_terms:ir.actions.act_window,help:fleet_operations.fleet_vehicle_witten_off_act
 msgid ""
@@ -3008,9 +3046,10 @@ msgid ""
 "            on your vehicle. Write off can be of many type: general accident\n"
 "            insurgent accident etc."
 msgstr ""
-"OpenERP የተፈጸሙትን ሁሉንም ስህተቶች ለመከታተል ያግዝዎታል\n"
+"ኢአርፒን ይክፈቱ የተፈጸሙትን ሁሉንም ስህተቶች ለመከታተል ያግዝዎታል\n"
 "            በተሽከርካሪዎ ላይ። መፃፍ ብዙ አይነት ሊሆን ይችላል፡ አጠቃላይ አደጋ\n"
 "            የአመፅ አደጋ ወዘተ."
+
 #. module: fleet_operations
 #: model_terms:ir.ui.view,arch_db:fleet_operations.report_repair_list
 msgid "Operation"
@@ -3157,7 +3196,7 @@ msgstr "እባክዎን የክፍያ ደብተር ያያይዙ"
 #: code:addons/fleet_operations/models/fleet_service.py:0
 #, python-format
 msgid "Please configure Driver from vehicle or in a service order!!"
-msgstr "እባክዎን ሾፌሩን ከተሽከርካሪ ወይም በአገልግሎት ማዘዣ ያዋቅሩ!!"
+msgstr "እባክዎን ሾፌሩን ከተሽከርካሪ ወይም በሰርቪስ ማዘዣ ያዋቅሩ!!"
 
 #. module: fleet_operations
 #: code:addons/fleet_operations/models/fleet_service.py:0
@@ -3281,7 +3320,7 @@ msgstr "ያለፈው የጎማ መጠን"
 #: model:ir.model.fields,field_description:fleet_operations.field_update_vin_info__previous_vin_no
 #: model:ir.model.fields,field_description:fleet_operations.field_vin_history__previous_vin_no
 msgid "Previous Vin No"
-msgstr "የቀድሞው Vin ቁጥር"
+msgstr "የቀድሞው ቪን ቁጥር"
 
 #. module: fleet_operations
 #: code:addons/fleet_operations/models/fleet_service.py:0
@@ -3290,6 +3329,7 @@ msgid ""
 "Previous work order is not complete, complete that work order first than you"
 " can confirm this work order!"
 msgstr ""
+"የቀደመው የስራ ቅደም ተከተል አልተጠናቀቀም ፣ ይህንን የስራ ቅደም ተከተል ከማረጋገጥ ይልቅ መጀመሪያ ያጠናቀቁት!"
 
 #. module: fleet_operations
 #: code:addons/fleet_operations/models/fleet_service.py:0
@@ -3297,9 +3337,8 @@ msgstr ""
 msgid ""
 "Previous work order is not complete,Please complete that work order first "
 "than you can create new work order!"
-msgstr ""
-"ያለፈው የስራ ትእዛዝ አልተጠናቀቀም ፣"
-" ይህንን የስራ ትዕዛዝ ከማረጋገጥ ይልቅ መጀመሪያ ያጠናቁት!"
+msgstr "ያለፈው የስራ ትእዛዝ አልተጠናቀቀም ፣ ይህንን የስራ ትዕዛዝ ከማረጋገጥ ይልቅ መጀመሪያ ያጠናቁት!"
+
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_service_repair_line__price
 #: model:ir.model.fields,field_description:fleet_operations.field_vehicle_type__price
@@ -3325,7 +3364,7 @@ msgstr "የበረራ ታሪክን አትም"
 #: model:ir.model.fields,field_description:fleet_operations.field_repair_type__product
 #: model:ir.model.fields,field_description:fleet_operations.field_service_task__product_ids
 msgid "Product"
-msgstr "ምርት"
+msgstr "እቃ"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle_advance_search__vehicle_location_id
@@ -3341,18 +3380,18 @@ msgstr "የውስጥ ማስታወሻ ያስቀምጡ..."
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_workorder_parts_history_details__wo_encoded_qty
 msgid "Qty"
-msgstr "Qty"
+msgstr "መጠን"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_trip_encoded_history__available_qty
 #: model:ir.model.fields,field_description:fleet_operations.field_workorder_parts_history_details__new_encode_qty
-msgid "Qty for Encoding "
-msgstr "Qty ለ ኢንኮዲንግ"
+msgid "Qty for Encoding"
+msgstr ""
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_task_line__qty_hand
 msgid "Qty on Hand"
-msgstr "በእጅ ላይ Qty"
+msgstr "በእጅ ያለ መጠን"
 
 #. module: fleet_operations
 #: model_terms:ir.ui.view,arch_db:fleet_operations.report_repair_list
@@ -3445,7 +3484,7 @@ msgstr "ክፍያ ይመዝገቡ"
 #: model:ir.model,name:fleet_operations.model_register_payment
 #: model_terms:ir.ui.view,arch_db:fleet_operations.register_payment_form
 msgid "Register Payment Wizard"
-msgstr ""
+msgstr "የክፍያ አዋቂን ይመዝገቡ"
 
 #. module: fleet_operations
 #: model_terms:ir.actions.act_window,help:fleet_operations.action_fleet_service_expense_view
@@ -3487,7 +3526,7 @@ msgstr "ምዝገባ ለ"
 #: model:ir.model.fields.selection,name:fleet_operations.selection__fleet_vehicle_advance_search__state__released
 #: model_terms:ir.ui.view,arch_db:fleet_operations.fleet_vehicle_model_form_extended
 msgid "Released"
-msgstr "ተለቋል"
+msgstr "ከሰርቪስ ወጥቷል"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle__released_date
@@ -3510,7 +3549,8 @@ msgid "Remaining Liter"
 msgstr "የቀረው ሊትር"
 
 #. module: fleet_operations
-#: model:ir.model.fields,field_description:fleet_operations.field_fleet_checklistevaluate__remark
+#: model:ir.model.fields,field_description:fleet_operations.field_fleet_checklistevaluate_final__remark
+#: model:ir.model.fields,field_description:fleet_operations.field_fleet_checklistevaluate_initial__remark
 #: model_terms:ir.ui.view,arch_db:fleet_operations.report_checklist
 msgid "Remark"
 msgstr "አስተያየት"
@@ -3575,7 +3615,7 @@ msgstr "የጥገና ዓይነት"
 #: code:addons/fleet_operations/models/fleet_service.py:0
 #, python-format
 msgid "Repair type with this name already exists!"
-msgstr "በዚህ ስም የመጠገን አይነት አስቀድሞ አለ!"
+msgstr "በዚህ ስም የጥገና አይነት አስቀድሞ አለ!"
 
 #. module: fleet_operations
 #: model_terms:ir.ui.view,arch_db:fleet_operations.fleet_vehicle_log_services_view_inherit
@@ -3586,7 +3626,7 @@ msgstr "ጥገናዎች"
 #: model:ir.model.fields.selection,name:fleet_operations.selection__preventive_maintenance_line__type__replace
 #: model:ir.model.fields.selection,name:fleet_operations.selection__service_repair_line__type__replace
 msgid "Replace"
-msgstr "ተካ"
+msgstr "መተካት"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_wittenoff__report_date
@@ -3615,7 +3655,7 @@ msgstr "ምስል ሪፖርት አድርግ"
 #. module: fleet_operations
 #: model_terms:ir.ui.view,arch_db:fleet_operations.fleet_vehicle_log_fuel_form_view
 msgid "Request"
-msgstr "ጥያቄ"
+msgstr "ጠይቅ"
 
 #. module: fleet_operations
 #: model:ir.model.fields.selection,name:fleet_operations.selection__fleet_vehicle_log_services__state__requested
@@ -3640,7 +3680,7 @@ msgstr "የመንገድ ጎማ እና ጎማ"
 #. module: fleet_operations
 #: model:repair.type,name:fleet_operations.nds_repair_type17
 msgid "Routine Service and Inspection"
-msgstr "መደበኛ አገልግሎት እና ቁጥጥር"
+msgstr "መደበኛ ሰርቪስ እና ምርመራ"
 
 #. module: fleet_operations
 #: model:color.color,name:fleet_operations.color_silver_4
@@ -3679,26 +3719,27 @@ msgid "Sequence"
 msgstr "ቅደመ ተከተል"
 
 #. module: fleet_operations
-#: model:ir.model.fields,field_description:fleet_operations.field_fleet_checklistevaluate__service_id
+#: model:ir.model.fields,field_description:fleet_operations.field_fleet_checklistevaluate_final__service_id
+#: model:ir.model.fields,field_description:fleet_operations.field_fleet_checklistevaluate_initial__service_id
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle_log_services__source_service_id
 #: model:ir.model.fields,field_description:fleet_operations.field_register_payment__service
 #: model:ir.model.fields,field_description:fleet_operations.field_service_repair_line__service_id
 #: model:ir.model.fields.selection,name:fleet_operations.selection__fleet_service_type__category__service
 msgid "Service"
-msgstr "አገልግሎት"
+msgstr "ሰርቪስ"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle_log_services__amount2
 #: model_terms:ir.ui.view,arch_db:fleet_operations.fleet_vehicle_log_services_tree_inherit
 #: model_terms:ir.ui.view,arch_db:fleet_operations.fleet_vehicle_log_services_view_inherit
 msgid "Service Amount"
-msgstr "የአገልግሎት መጠን"
+msgstr "የሰርቪስ መጠን"
 
 #. module: fleet_operations
 #: model:ir.actions.act_window,name:fleet_operations.fleet_vehicle_log_services_approve_form_action
 #: model:ir.ui.menu,name:fleet_operations.service_approve
 msgid "Service Approve"
-msgstr "አገልግሎት አጽድቋል"
+msgstr "ሰርቪስ ማጽደቂያ"
 
 #. module: fleet_operations
 #: model:ir.actions.act_window,name:fleet_operations.service_category_tree_act
@@ -3707,23 +3748,23 @@ msgstr "አገልግሎት አጽድቋል"
 #: model_terms:ir.ui.view,arch_db:fleet_operations.service_repair_line_form_view
 #: model_terms:ir.ui.view,arch_db:fleet_operations.service_repair_line_tree_view
 msgid "Service Category"
-msgstr "የአገልግሎት ምድብ"
+msgstr "የሰርቪስ ምድብ"
 
 #. module: fleet_operations
 #: model_terms:ir.ui.view,arch_db:fleet_operations.fleet_vehicle_log_services_view_inherit
 msgid "Service Close Date"
-msgstr "የአገልግሎት መዝጊያ ቀን"
+msgstr "የሰርቪስ መጨረሻ ቀን "
 
 #. module: fleet_operations
 #: model_terms:ir.ui.view,arch_db:fleet_operations.fleet_vehicle_model_form_extended
 msgid "Service Details"
-msgstr "የአገልግሎት ዝርዝሮች"
+msgstr "የሰርቪስ ዝርዝሮች"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle_log_services__service_invoice_id
 #: model_terms:ir.ui.view,arch_db:fleet_operations.fleet_vehicle_log_services_view_inherit
 msgid "Service Invoice"
-msgstr "የአገልግሎት ደረሰኝ"
+msgstr "የሰርቪስ ደረሰኝ"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle__work_order_ids
@@ -3731,93 +3772,93 @@ msgstr "የአገልግሎት ደረሰኝ"
 #: model:ir.model.fields,field_description:fleet_operations.field_trip_encoded_history_temp__work_order_id
 #: model_terms:ir.ui.view,arch_db:fleet_operations.vehicle_change_history_qweb
 msgid "Service Order"
-msgstr "የአገልግሎት ትዕዛዝ"
+msgstr "የሰርቪስ ትዕዛዝ"
 
 #. module: fleet_operations
 #: model_terms:ir.ui.view,arch_db:fleet_operations.vehicle_change_history_qweb
 msgid "Service Order Closed Date"
-msgstr "የአገልግሎት ትዕዛዝ የተዘጋበት ቀን"
+msgstr "የሰርቪስ ትዕዛዝ የተዘጋበት ቀን"
 
 #. module: fleet_operations
 #: model_terms:ir.ui.view,arch_db:fleet_operations.fleet_vehicle_log_services_view_inherit
 msgid "Service Order Details"
-msgstr "የአገልግሎት ትዕዛዝ ዝርዝሮች"
+msgstr "የሰርቪስ ትዕዛዝ ዝርዝሮች"
 
 #. module: fleet_operations
 #: model_terms:ir.ui.view,arch_db:fleet_operations.vehicle_change_history_qweb
 msgid "Service Order No"
-msgstr "የአገልግሎት ትዕዛዝ ቁጥር"
+msgstr "የሰርቪስ ትዕዛዝ ቁጥር"
 
 #. module: fleet_operations
 #: model_terms:ir.ui.view,arch_db:fleet_operations.fleet_vehicle_log_services_view_inherit
 msgid "Service Order#"
-msgstr "የአገልግሎት ትዕዛዝ#"
+msgstr "የሰርቪስ ትዕዛዝ#"
 
 #. module: fleet_operations
 #: model_terms:ir.ui.view,arch_db:fleet_operations.fleet_vehicle_log_services_view_inherit
 msgid "Service Priority"
-msgstr "የአገልግሎት ቅድሚያ"
+msgstr "የሰርቪስ ቅድሚያ"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle_log_services__service_ref_invoice_id
 msgid "Service Refund Invoice"
-msgstr "የአገልግሎት ተመላሽ ደረሰኝ"
+msgstr "የሰርቪስ ተመላሽ ደረሰኝ"
 
 #. module: fleet_operations
 #: model:ir.model,name:fleet_operations.model_service_repair_line
 msgid "Service Repair Line"
-msgstr "የአገልግሎት ጥገና መስመር"
+msgstr "የሰርቪስ ጥገና መስመር"
 
 #. module: fleet_operations
 #: model:ir.actions.act_window,name:fleet_operations.fleet_vehicle_log_services_form_action
 #: model:ir.ui.menu,name:fleet_operations.service_request
 msgid "Service Request"
-msgstr "የአገልግሎት ጥያቄ"
+msgstr "ሰርቪስ መጠየቂያ"
 
 #. module: fleet_operations
 #: model_terms:ir.ui.view,arch_db:fleet_operations.fleet_vehicle_log_services_view_inherit
 msgid "Service Start Date"
-msgstr "የአገልግሎት መጀመሪያ ቀን"
+msgstr "የሰርቪስ መጀመሪያ ቀን"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle_log_services__task_ids
 msgid "Service Task"
-msgstr "የአገልግሎት ተግባር"
+msgstr "የሰርቪስ ተግባር"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_preventive_maintenance__service_type
 #: model_terms:ir.ui.view,arch_db:fleet_operations.fleet_repair_type_form_view
 #: model_terms:ir.ui.view,arch_db:fleet_operations.fleet_vehicle_log_services_view_inherit
 msgid "Service Type"
-msgstr "የአገልግሎት ዓይነት"
+msgstr "የሰርቪስ ዓይነት"
 
 #. module: fleet_operations
 #: model_terms:ir.ui.view,arch_db:fleet_operations.fleet_vehicle_service_types_form
 msgid "Service types"
-msgstr "የአገልግሎት ዓይነቶች"
+msgstr "የሰርቪስ አይነቶች"
 
 #. module: fleet_operations
 #: model:ir.ui.menu,name:fleet_operations.service_root_menu
 #: model_terms:ir.ui.view,arch_db:fleet_operations.fleet_vehicle_model_form_extended
 msgid "Services"
-msgstr "አገልግሎቶች"
+msgstr "ሰርቪሶች"
 
 #. module: fleet_operations
 #: model:ir.actions.act_window,name:fleet_operations.fleet_vehicle_work_order
 msgid "Services Report"
-msgstr "የአገልግሎቶች ሪፖርት"
+msgstr "የሰርቪሶች ሪፖርት"
 
 #. module: fleet_operations
 #: model:ir.model,name:fleet_operations.model_fleet_vehicle_log_services
 msgid "Services for vehicles"
-msgstr "ለተሽከርካሪዎች አገልግሎቶች"
+msgstr "ለተሽከርካሪዎች ሰርቪሶች"
 
 #. module: fleet_operations
 #: model_terms:ir.ui.view,arch_db:fleet_operations.fleet_vehicle_log_fuel_form_view
 #: model_terms:ir.ui.view,arch_db:fleet_operations.fleet_vehicle_model_form_extended
 #: model_terms:ir.ui.view,arch_db:fleet_operations.fleet_vehicle_wittenoff_form_view
 msgid "Set to Draft"
-msgstr "ወደ ረቂቅ አዘጋጅ"
+msgstr "ወደ ረቂቅ ይመልሱ"
 
 #. module: fleet_operations
 #: model_terms:ir.ui.view,arch_db:fleet_operations.fleet_vehicle_log_services_view_inherit
@@ -3832,9 +3873,10 @@ msgid ""
 "with aspect ratio preserved. Use this field anywhere a small"
 "                                 image is required."
 msgstr ""
-"አነስተኛ መጠን ያለው የሪፖርቱ ምስል።                                 "
-" ልክ እንደ 64x64 ፒክስል ምስል ተቀይሯል፣ ምጥጥኑም ተጠብቆ ይቆያል። ይህንን መስክ በትንሽ ቦታ ይጠቀሙበት"
+"አነስተኛ መጠን ያለው የሪፖርቱ ምስል።                                  ልክ እንደ 64x64 ፒክስል "
+"ምስል ተቀይሯል፣ ምጥጥኑም ተጠብቆ ይቆያል። ይህንን መስክ በትንሽ ቦታ ይጠቀሙበት"
 "                                 ምስል ያስፈልጋል."
+
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle__start_date_insurance
 msgid "Start Date"
@@ -3865,17 +3907,17 @@ msgstr "መሪ ስርዓት"
 #. module: fleet_operations
 #: model:ir.model,name:fleet_operations.model_report_fleet_operations_stock_adjustment_xls
 msgid "Stock Adjustment Report"
-msgstr "የአክሲዮን ማስተካከያ ሪፖርት"
+msgstr "የንብረት ማስተካከያ ሪፖርት"
 
 #. module: fleet_operations
 #: model:ir.model,name:fleet_operations.model_stock_picking_xls_report
 msgid "Stock Picking XLSX reports"
-msgstr "የአክሲዮን መልቀም XLSX ሪፖርቶች"
+msgstr "የንብረት መልቀም XLSX ሪፖርቶች"
 
 #. module: fleet_operations
 #: model_terms:ir.ui.view,arch_db:fleet_operations.fleet_vehicle_log_services_view_inherit
 msgid "Submit Request"
-msgstr "ጥያቄ አስገባ"
+msgstr "ጠየቀ አስገባ"
 
 #. module: fleet_operations
 #: model:repair.type,name:fleet_operations.nds_repair_type19
@@ -3921,23 +3963,23 @@ msgid ""
 "Temp Bool for making                                                 "
 "previous Tire info readonly"
 msgstr ""
-"Temp Bool ለመስራት                                                "
-"የቀድሞ የጎማ መረጃ ተነባቢ ብቻ"
+"Temp Bool ለመስራት                                                የቀድሞ የጎማ መረጃ "
+"ተነባቢ ብቻ"
+
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_update_engine_info__temp_bool
 msgid ""
 "Temp Bool for making                                     previous color "
 "readonly"
-msgstr ""
-"የቀድሞውን ቀለም ለመሥራት Temp Bool                         "
-"ለማንበብ ብቻ የተፈቀደ"
+msgstr "የቀድሞውን ቀለም ለመሥራት Temp Bool                         ለማንበብ ብቻ የተፈቀደ"
+
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_update_battery_info__temp_bool
 msgid ""
-"Temp Bool for making previous                                           "
+"Temp Bool for making previous                                              "
 "Battery info readonly"
-msgstr ""
-"ያለፈውን የባትሪ መረጃ ለማንበብ ብቻ Temp Bool"
+msgstr "Temp Bool ያለፈውን የባትሪ መረጃ ለማንበብ ብቻ"
+
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_update_vin_info__temp_bool
 msgid ""
@@ -3948,8 +3990,8 @@ msgstr "የቀደመውን ቀለም ለንባብ ብቻ ለመስራት Temp Bo
 #: model:ir.model.fields,field_description:fleet_operations.field_update_color_info__temp_bool
 msgid ""
 "Temp Bool for making previous                                color readonly"
-msgstr ""
-"የቀደመውን ቀለም ለንባብ ብቻ ለመስራት Temp Bool"
+msgstr "የቀደመውን ቀለም ለንባብ ብቻ ለመስራት Temp Bool"
+
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_checklist__template_id
 msgid "Template"
@@ -3977,15 +4019,15 @@ msgstr "የክፍል ቁጥር"
 msgid ""
 "The Quantity that is used in                                         in "
 "Workorder"
-msgstr ""
-"በስራ ቅደም ተከተል ውስጥ ጥቅም ላይ የዋለው መጠን"
+msgstr "በስራ ቅደም ተከተል ውስጥ ጥቅም ላይ የዋለው መጠን"
+
 #. module: fleet_operations
 #: model:ir.model.fields,help:fleet_operations.field_trip_encoded_history__used_qty
 msgid ""
 "The Quantity that is used in in                                     Contact "
 "Team Trip"
-msgstr ""
-"በእውቂያ ቡድን ጉዞ ውስጥ ጥቅም ላይ የሚውለው ብዛት"
+msgstr "በእውቂያ ቡድን ጉዞ ውስጥ ጥቅም ላይ የሚውለው ብዛት"
+
 #. module: fleet_operations
 #: model:ir.model.fields,help:fleet_operations.field_trip_encoded_history_temp__used_qty
 #: model:ir.model.fields,help:fleet_operations.field_workorder_parts_history_details__used_qty
@@ -4012,10 +4054,9 @@ msgid ""
 "\"%s %s\" to ship and                         only rounding of \"%s %s\" is "
 "accepted                         by the uom."
 msgstr ""
-"የመጀመሪያው uom ዙር አይፈቅድልዎትም"
-"ለመላክ \" %s %s \" ፣ ልክ እንደ "
-"\"%s %s\" ለመላክ እና \"%s %s\" ማጠጋጋት ብቻ ነው"
-"በ uom ተቀባይነት."
+"የመጀመሪያው uom ዙር አይፈቅድልዎትምለመላክ \" %s %s \" ፣ ልክ እንደ \"%s %s\" ለመላክ እና \"%s "
+"%s\" ማጠጋጋት ብቻ ነውበ uom ተቀባይነት."
+
 #. module: fleet_operations
 #: code:addons/fleet_operations/models/fleet_service.py:0
 #, python-format
@@ -4023,19 +4064,22 @@ msgid ""
 "The unit of measure                             rounding does not allow you "
 "to ship \"%s %s\",                             only rounding of \"%s %s\" is"
 " accepted by the                             Unit of Measure."
-msgstr ""
-"የመለኪያ አሃድ አይፈቅድልዎትም"
-"ለመርከብ \"%s %s\"፣ የ \"%s %s\" ማጠጋጋት ብቻ ነው"
-"በመለኪያ ክፍል ተቀባይነት"
+msgstr "የመለኪያ አሃድ አይፈቅድልዎትምለመርከብ \"%s %s\"፣ የ \"%s %s\" ማጠጋጋት ብቻ ነውበመለኪያ ክፍል ተቀባይነት"
+
 #. module: fleet_operations
 #: model:ir.model.fields,help:fleet_operations.field_workorder_parts_history_details__issued_by
 msgid "The user who would issue the parts"
 msgstr "ክፍሎቹን የሚያወጣው ተጠቃሚ"
 
 #. module: fleet_operations
+#: model:ir.model.constraint,message:fleet_operations.constraint_fleet_vehicle_licence_unique
+msgid "The vehicle is already exist with this Licence plate.!"
+msgstr "ተሽከርካሪው አስቀድሞ ከዚህ ታርጋ ጋር አለ።"
+
+#. module: fleet_operations
 #: model:ir.model.constraint,message:fleet_operations.constraint_fleet_vehicle_fmp_unique
 msgid "The vehicle is already exist with this Vehicle ID!"
-msgstr "ተሽከርካሪው አስቀድሞ ከዚህ የተሽከርካሪ መታወቂያ ጋር አለ!"
+msgstr "ተሽከርካሪው አስቀድሞ ከዚህ የተሽከርካሪ መለያ ጋር አለ!"
 
 #. module: fleet_operations
 #: model:ir.model.constraint,message:fleet_operations.constraint_fleet_vehicle_vehilce_unique
@@ -4046,6 +4090,12 @@ msgstr "ተሽከርካሪው ቀድሞውኑ ከዚህ vin ቁጥር ጋር አ
 #: model:ir.model.fields,help:fleet_operations.field_workorder_parts_history_details__wo_id
 msgid "The workorder for which the part was used"
 msgstr "ክፍሉ ጥቅም ላይ የዋለበት የስራ ቅደም ተከተል"
+
+#. module: fleet_operations
+#: code:addons/fleet_operations/models/fleet_extended.py:0
+#, python-format
+msgid "There is a services that is not on done state."
+msgstr "በግዛት ላይ ያልተሰራ አገልግሎት አለ"
 
 #. module: fleet_operations
 #: code:addons/fleet_operations/models/fleet_service.py:0
@@ -4063,15 +4113,13 @@ msgstr "ይህ ክፍፍል አስቀድሞ አለ!"
 msgid ""
 "This field holds the image used as image                             for the"
 " Report , limited to 1024x1024px."
-msgstr ""
-"ይህ መስክ እንደ ምስል ጥቅም ላይ የዋለውን ምስል ይይዛል"
-" ሪፖርት፣ በ1024x1024 ፒክስል የተገደበ።"
+msgstr "ይህ መስክ እንደ ምስል ጥቅም ላይ የዋለውን ምስል ይይዛል ሪፖርት፣ በ1024x1024 ፒክስል የተገደበ።"
 
 #. module: fleet_operations
 #: code:addons/fleet_operations/models/fleet_extended.py:0
 #, python-format
 msgid "This vehicle is already in write-off state!"
-msgstr "ይህ ተሽከርካሪ አስቀድሞ በመጥፋት ሁኔታ ላይ ነው!"
+msgstr "ይህ ተሽከርካሪ አስቀድሞ ከጥቅም ውጪ ሁኔታ ላይ ነው!"
 
 #. module: fleet_operations
 #: code:addons/fleet_operations/models/fleet_extended.py:0
@@ -4138,7 +4186,7 @@ msgstr "ርዕስ"
 #. module: fleet_operations
 #: model:mail.template,subject:fleet_operations.fleet_email_template
 msgid "Today your vehicle service "
-msgstr "ዛሬ የተሽከርካሪዎ አገልግሎት"
+msgstr "ዛሬ የተሽከርካሪዎ ሰርቪስ"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_task_line__total
@@ -4163,7 +4211,7 @@ msgstr "የጠቅላላ ክፍሎች መጠን"
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle_log_services__service_amount
 msgid "Total Service Amount"
-msgstr "የጠቅላላ የአገልግሎት መጠን"
+msgstr "የጠቅላላ የሰርቪስ መጠን"
 
 #. module: fleet_operations
 #: model_terms:ir.ui.view,arch_db:fleet_operations.report_repair_list
@@ -4243,7 +4291,13 @@ msgstr "የክፍል ዋጋ"
 #: model:ir.model.fields,help:fleet_operations.field_fleet_vehicle_odometer__unit
 #: model:ir.model.fields,help:fleet_operations.field_fleet_wittenoff__odometer_unit
 msgid "Unit of the odometer "
-msgstr "የ odometer አሃድ"
+msgstr "የ ኦዶሜትር አሃድ"
+
+#. module: fleet_operations
+#: model:product.product,uom_name:fleet_operations.fleet_product
+#: model:product.template,uom_name:fleet_operations.fleet_product_product_template
+msgid "Units"
+msgstr "ክፍሎች"
 
 #. module: fleet_operations
 #: model_terms:ir.ui.view,arch_db:fleet_operations.report_repair_list
@@ -4296,12 +4350,12 @@ msgstr "የሞተር መረጃን አዘምን"
 #: model:ir.actions.act_window,name:fleet_operations.action_update_next_service_day
 #: model_terms:ir.ui.view,arch_db:fleet_operations.view_update_next_service_view
 msgid "Update Next Service Day"
-msgstr "የሚቀጥለውን የአገልግሎት ቀን ያዘምኑ"
+msgstr "የሚቀጥለውን የሰርቪስ ቀን ያዘምኑ"
 
 #. module: fleet_operations
 #: model:ir.model,name:fleet_operations.model_update_next_service_config
 msgid "Update Next Service configuration"
-msgstr "የሚቀጥለውን የአገልግሎት ውቅር ያዘምኑ"
+msgstr "የሚቀጥለውን የሰርቪስ ውቅር ያዘምኑ"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_pending_applied_history__updated_pending_id
@@ -4335,7 +4389,7 @@ msgstr "የጎማ መረጃን ያዘምኑ"
 #: model:ir.model,name:fleet_operations.model_update_vin_info
 #: model_terms:ir.ui.view,arch_db:fleet_operations.update_vin_info_form_view
 msgid "Update Vin Info"
-msgstr "የ Vin መረጃን ያዘምኑ"
+msgstr "የ ቪን መረጃን ያዘምኑ"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle__updated_by
@@ -4356,7 +4410,7 @@ msgstr "ጥቅም ላይ የዋለ"
 #: model:ir.model.fields,field_description:fleet_operations.field_trip_encoded_history__used_qty
 #: model:ir.model.fields,field_description:fleet_operations.field_trip_encoded_history_temp__used_qty
 msgid "Used Qty"
-msgstr "ጥቅም ላይ የዋለው Qty"
+msgstr "ጥቅም ላይ የዋለው መጠን"
 
 #. module: fleet_operations
 #: code:addons/fleet_operations/wizard/vehicle_change_history.py:0
@@ -4367,6 +4421,7 @@ msgid ""
 msgstr ""
 "የተጠቃሚ ስህተት!\n"
 "እባክዎ የተሽከርካሪ ለውጥ ታሪክ ሪፖርት ለመፍጠር መስፈርት ይምረጡ!"
+
 #. module: fleet_operations
 #: code:addons/fleet_operations/wizard/vehicle_change_history.py:0
 #, python-format
@@ -4376,6 +4431,7 @@ msgid ""
 msgstr ""
 "የተጠቃሚ ስህተት!\n"
 "ቀን ወደ'የበለጠ መሆን አለበት ከ'ቀን ከ'"
+
 #. module: fleet_operations
 #: code:addons/fleet_operations/wizard/repair_line_summary.py:0
 #, python-format
@@ -4385,6 +4441,7 @@ msgid ""
 msgstr ""
 "የተጠቃሚ ስህተት!\n"
 "'ቀን ወደ' ከ'ቀን ከ' የበለጠ መሆን አለበት!"
+
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_res_users__usersql_id
 msgid "User ID"
@@ -4484,6 +4541,8 @@ msgid "Vehicle Division"
 msgstr "የተሽከርካሪ ክፍል"
 
 #. module: fleet_operations
+#: model:ir.actions.act_window,name:fleet_operations.action_res_partner_driver
+#: model:ir.ui.menu,name:fleet_operations.fleet_driver_menu
 #: model_terms:ir.ui.view,arch_db:fleet_operations.fleet_vehicle_wittenoff_form_view
 msgid "Vehicle Driver"
 msgstr "የተሽከርካሪ ሹፌር"
@@ -4498,19 +4557,19 @@ msgstr "የተሽከርካሪ ሹፌር"
 #: model_terms:ir.ui.view,arch_db:fleet_operations.fleet_wittenoff_search
 #: model_terms:ir.ui.view,arch_db:fleet_operations.update_pending_reapir_history_search_view
 msgid "Vehicle ID"
-msgstr "የተሽከርካሪ መታወቂያ"
+msgstr "የተሽከርካሪ መለያ"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle__fmp_id_editable
 msgid "Vehicle ID Editable?"
-msgstr "የተሽከርካሪ መታወቂያ ሊስተካከል ይችላል?"
+msgstr "የተሽከርካሪ መለያ ሊስተካከል ይችላል?"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_next_increment_number__vehicle_id
 #: model:ir.model.fields,field_description:fleet_operations.field_next_service_days__vehicle_id
 #: model:ir.model.fields,field_description:fleet_operations.field_update_next_service_config__vehicle_id
 msgid "Vehicle Id"
-msgstr "የተሽከርካሪ መታወቂያ"
+msgstr "የተሽከርካሪ መለያ"
 
 #. module: fleet_operations
 #: model_terms:ir.ui.view,arch_db:fleet_operations.fleet_vehicle_model_form_extended
@@ -4541,7 +4600,7 @@ msgstr "ተሽከርካሪ መስራት"
 #. module: fleet_operations
 #: model_terms:ir.ui.view,arch_db:fleet_operations.fleet_vehicle_wittenoff_form_view
 msgid "Vehicle Odometer"
-msgstr "የተሽከርካሪ Odometer"
+msgstr "የተሽከርካሪ ኦዶሜትር"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle__vehicle_owner
@@ -4567,22 +4626,22 @@ msgstr "የተሽከርካሪ ጥገና ዓይነት"
 #. module: fleet_operations
 #: model:repair.type,name:fleet_operations.nds_repair_type20
 msgid "Vehicle Roll Over"
-msgstr "ተሽከርካሪ ተንከባላይ"
+msgstr "የመገልበጥ አደጋ"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_account_move__vehicle_service_id
 msgid "Vehicle Service"
-msgstr "የተሽከርካሪ አገልግሎት"
+msgstr "የተሽከርካሪ ሰርቪስ"
 
 #. module: fleet_operations
 #: model:ir.model,name:fleet_operations.model_service_category
 msgid "Vehicle Service Category"
-msgstr "የተሽከርካሪ አገልግሎት ምድብ"
+msgstr "የተሽከርካሪ ሰርቪስ ምድብ"
 
 #. module: fleet_operations
 #: model:ir.model.fields.selection,name:fleet_operations.selection__work_order_reports__select_report__wo_month_sum_rep
 msgid "Vehicle Services Monthly Summary Report"
-msgstr "የተሽከርካሪ አገልግሎቶች ወርሃዊ ማጠቃለያ ሪፖርት"
+msgstr "የተሽከርካሪ ሰርቪሶች ወርሃዊ ማጠቃለያ ሪፖርት"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle__state
@@ -4619,7 +4678,7 @@ msgstr "የተሽከርካሪ ሥራ ትዕዛዝ"
 #. module: fleet_operations
 #: model:ir.model,name:fleet_operations.model_writeoff_cancel_reason
 msgid "Vehicle Write-off Cancel Reason"
-msgstr "የተሽከርካሪ መፃፍ መሰረዝ ምክንያት"
+msgstr "የተሽከርካሪ ከጥቅም ውጪ ምክንያት"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_preventive_maintenance_line__condition
@@ -4628,12 +4687,18 @@ msgid "Vehicle condition"
 msgstr "የተሽከርካሪ ሁኔታ"
 
 #. module: fleet_operations
+#: model_terms:ir.ui.view,arch_db:fleet_operations.fleet_vehicle_pivot
+#: model_terms:ir.ui.view,arch_db:fleet_operations.vehicle_libre_graph
+msgid "Vehicle report"
+msgstr "የተሽከርካሪ ሪፖርት"
+
+#. module: fleet_operations
 #: code:addons/fleet_operations/models/fleet_extended.py:0
 #: code:addons/fleet_operations/models/fleet_extended.py:0
 #, python-format
 msgid "Vehicle status will only set to released if it is in completed state."
-msgstr ""
-"የተሽከርካሪ ሁኔታ የሚለቀቀው በተጠናቀቀ ሁኔታ ላይ ከሆነ ብቻ ነው።"
+msgstr "የተሽከርካሪ ሁኔታ የሚለቀቀው በተጠናቀቀ ሁኔታ ላይ ከሆነ ብቻ ነው።"
+
 #. module: fleet_operations
 #: model_terms:ir.ui.view,arch_db:fleet_operations.fleet_print
 msgid ""
@@ -4642,12 +4707,13 @@ msgid ""
 msgstr ""
 "የተሽከርካሪ xlsx ሪፖርት <br/>\n"
 "                  አማራጭን ምረጥ እና ለዛ የ xlsx ሪፖርት አትም"
+
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle__name
 #: model:ir.model.fields,field_description:fleet_operations.field_vehicle_change_history__fleet_id
 #: model_terms:ir.ui.view,arch_db:fleet_operations.fleet_vehicle_model_form_extended
 msgid "Vehicle-ID"
-msgstr "ተሽከርካሪ-መታወቂያ"
+msgstr "ተሽከርካሪ-መለያ"
 
 #. module: fleet_operations
 #: model_terms:ir.ui.view,arch_db:fleet_operations.write_off_qweb
@@ -4658,20 +4724,20 @@ msgstr "ተሽከርካሪ"
 #: model:ir.actions.act_window,name:fleet_operations.fleet_vehicle_witten_off_act
 #: model:ir.ui.menu,name:fleet_operations.vehicle_written_off_menu_id
 msgid "Vehicles Write-off"
-msgstr "የተሸከርካሪዎች መፃፍ"
+msgstr "ከጥቅም ውጪ ተሸከርካሪዎች"
 
 #. module: fleet_operations
 #: model:ir.model,name:fleet_operations.model_vin_history
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle__vin_history_ids
 #: model_terms:ir.ui.view,arch_db:fleet_operations.fleet_vehicle_model_form_extended
 msgid "Vin History"
-msgstr "Vin ታሪክ"
+msgstr "ቪን ታሪክ"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle_advance_search__vin_no
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_wittenoff__vin_no
 msgid "Vin No"
-msgstr "Vin ቁጥር"
+msgstr "ቪን ቁጥር"
 
 #. module: fleet_operations
 #: model:color.color,name:fleet_operations.color_white_6
@@ -4706,7 +4772,7 @@ msgstr "ማስጠንቀቂያ! በተመረጠው ቀን መካከል ምንም 
 msgid ""
 "Warning!! There is some previous repairs are remains to be repair for this "
 "vehicle"
-msgstr "ማስጠንቀቂያ!! ለዚህ ተሽከርካሪ ለመጠገን የተወሰኑ ቀደምት ጥገናዎች አሉ"
+msgstr "ማስጠንቀቂያ!! ለዚህ ተሽከርካሪ ለጥገና የተወሰኑ ቀደምት ጥገናዎች አሉ"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle__warranty_period
@@ -4718,8 +4784,8 @@ msgstr "ዋስትና እስከ"
 msgid ""
 "When Work Order                                         will confirm this "
 "date will be set."
-msgstr ""
-"የስራ ማዘዣው ሲረጋገጥ                                         ይህ ቀን ይቀናበራል።"
+msgstr "የስራ ማዘዣው ሲረጋገጥ                                         ይህ ቀን ይቀናበራል።"
+
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle__vehicle_width
 msgid "Width(mm)"
@@ -4838,7 +4904,7 @@ msgstr "የስራ ቅደመ ተከተል"
 #: code:addons/fleet_operations/models/fleet_extended.py:0
 #, python-format
 msgid "Write Off Cancel Form"
-msgstr "የሰርዝ ቅጽ ይፃፉ"
+msgstr "የጠፋ ቅጽ ይፃፉ"
 
 #. module: fleet_operations
 #: model:ir.actions.act_window,name:fleet_operations.action_writeoff_cancel_reason_wizard
@@ -4855,28 +4921,28 @@ msgstr "የተሽከርካሪ ሪፖርት ይፃፉ"
 #: model:ir.model.fields.selection,name:fleet_operations.selection__fleet_vehicle__state__write-off
 #: model:ir.model.fields.selection,name:fleet_operations.selection__fleet_vehicle_advance_search__state__write-off
 msgid "Write-Off"
-msgstr "ሰረዘ"
+msgstr "ከጥቅም ውጪ"
 
 #. module: fleet_operations
 #: model:ir.actions.act_window,name:fleet_operations.fleet_vehicle_write_off_form_action
 #: model_terms:ir.ui.view,arch_db:fleet_operations.fleet_vehicle_model_form_extended
 msgid "Write-off"
-msgstr "ሰረዘ"
+msgstr "ከጥቅም ውጪ"
 
 #. module: fleet_operations
 #: model_terms:ir.ui.view,arch_db:fleet_operations.fleet_vehicle_wittenoff_form_view
 msgid "Write-off Pictures"
-msgstr "የተቀረጹ ምስሎች"
+msgstr "ከጥቅም ውጪ ምስሎች"
 
 #. module: fleet_operations
 #: model_terms:ir.ui.view,arch_db:fleet_operations.write_off_qweb
 msgid "Write-off Report"
-msgstr "ሰረዘ ሪፖርት"
+msgstr "ከጥቅም ውጪ ሪፖርት"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_wittenoff__write_off_type
 msgid "Write-off Type"
-msgstr "የመጻፍ አይነት"
+msgstr "ከጥቅም ውጪ አይነት"
 
 #. module: fleet_operations
 #: model:color.color,name:fleet_operations.color_yellow_5
@@ -4890,8 +4956,9 @@ msgid ""
 "You can\t enter parts issue either open work order date or in between open "
 "work order date and current date!"
 msgstr ""
-"የክፍሎችን እትም በክፍት የስራ ትእዛዝ ቀን "
-"ወይም በክፍት የስራ ትዕዛዝ ቀን እና አሁን ባለው ቀን መካከል ማስገባት አትችልም!"
+"የክፍሎችን እትም በክፍት የስራ ትእዛዝ ቀን ወይም በክፍት የስራ ትዕዛዝ ቀን እና አሁን ባለው ቀን መካከል ማስገባት "
+"አትችልም!"
+
 #. module: fleet_operations
 #: code:addons/fleet_operations/models/fleet_service.py:0
 #: code:addons/fleet_operations/models/fleet_service.py:0
@@ -4912,22 +4979,20 @@ msgid ""
 "You can't confirm this                                 work order which "
 "vehicle is in write-off state!"
 msgstr ""
-"ይህንን የሥራ ትዕዛዝ የትኛውን ማረጋገጥ አይችሉም"
-"ተሽከርካሪው ተዘግቷል!"
- "የትኛው ተሽከርካሪ በመጥፋት ላይ እንዳለ ይህንን የስራ ትዕዛዝ ማረጋገጥ አይችሉም!"
+"ይህንን የሥራ ትዕዛዝ የትኛውን ማረጋገጥ አይችሉም ተሽከርካሪው ከጥቅም ውጪ ሆኗል!የትኛው ተሽከርካሪ ከጥቅም ውጪ ላይ እንዳለ ይህንን "
+"የስራ ትዕዛዝ ማረጋገጥ አይችሉም!"
+
 #. module: fleet_operations
 #: code:addons/fleet_operations/models/fleet_service.py:0
 #, python-format
 msgid "You can't create work order for vehicle which is already On Rent!"
-msgstr ""
-"ቀድሞውንም በኪራይ ላለው ተሽከርካሪ የስራ ትዕዛዝ መፍጠር አይችሉም!"
+msgstr "ቀድሞውንም በኪራይ ላለው ተሽከርካሪ የስራ ትዕዛዝ መፍጠር አይችሉም!"
 
 #. module: fleet_operations
 #: code:addons/fleet_operations/models/fleet_service.py:0
 #, python-format
 msgid "You can't create work order for vehicle which is already write-off!"
-msgstr ""
-"ቀድሞውንም ለጠፋ ተሽከርካሪ የስራ ትዕዛዝ መፍጠር አይችሉም!"
+msgstr "ቀድሞውንም ከጥቅም ውጪ ተሽከርካሪ የስራ ትዕዛዝ መፍጠር አይችሉም!"
 
 #. module: fleet_operations
 #: code:addons/fleet_operations/models/fleet_service.py:0
@@ -4939,7 +5004,7 @@ msgstr "በተረጋገጠ ወይም በተጠናቀቀ ሁኔታ ውስጥ ያ�
 #: code:addons/fleet_operations/models/fleet_extended.py:0
 #, python-format
 msgid "You can't duplicate this record because it is already write-off"
-msgstr "ይህን መዝገብ ማባዛት አይችሉም ምክንያቱም እሱ አስቀድሞ ተሰርዟል"
+msgstr "ይህን መዝገብ ማባዛት አይችሉም ምክንያቱም እሱ አስቀድሞ ከጥቅም ውጪ ነው"
 
 #. module: fleet_operations
 #: code:addons/fleet_operations/models/fleet_extended.py:0
@@ -4947,7 +5012,7 @@ msgstr "ይህን መዝገብ ማባዛት አይችሉም ምክንያቱም �
 #: code:addons/fleet_operations/models/fleet_service.py:0
 #, python-format
 msgid "You can't enter odometer less than previous odometer %s !"
-msgstr "ከቀደመው odo ሜትር %s ያነሰ የ odo ሜትር ማስገባት አይችሉም!"
+msgstr "ከቀደመው ኦዶሜትር ሜትር %s ያነሰ የ ኦዶሜትር ማስገባት አይችሉም!"
 
 #. module: fleet_operations
 #: code:addons/fleet_operations/models/fleet_service.py:0
@@ -4965,15 +5030,14 @@ msgstr "ንቁ የሆነ ክፍል መምረጥ አይችሉም!"
 #: code:addons/fleet_operations/models/fleet_extended.py:0
 #, python-format
 msgid "You can't write-off this vehicle which is On Rent."
-msgstr "በኪራይ ላይ ያለውን ይህን ተሽከርካሪ መሰረዝ አይችሉም"
+msgstr "በኪራይ ላይ ያለውን ይህን ተሽከርካሪ ከጥቅም ውጪ አይችሉም"
 
 #. module: fleet_operations
 #: code:addons/fleet_operations/models/fleet_extended.py:0
 #, python-format
 msgid ""
 "You can't write-off this vehicle which is in Progress or Complete state!"
-msgstr ""
-"ይህንን ተሽከርካሪ በሂደት ላይ እያለ ወይም ሙሉ በሙሉ መሰረዝ አይችሉም!"
+msgstr "ይህንን ተሽከርካሪ በሂደት ላይ እያለ ወይም ሙሉ በሙሉ እያለ ከጥቅም ውጪ ማድረግ አይችሉም!"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_register_payment__amount
@@ -4988,7 +5052,8 @@ msgstr "ሰረዝ"
 #. module: fleet_operations
 #: model:ir.model,name:fleet_operations.model_checklist_category
 #: model:ir.model,name:fleet_operations.model_fleet_checklist
-#: model:ir.model,name:fleet_operations.model_fleet_checklistevaluate
+#: model:ir.model,name:fleet_operations.model_fleet_checklistevaluate_final
+#: model:ir.model,name:fleet_operations.model_fleet_checklistevaluate_initial
 msgid "checklist category"
 msgstr "የማረጋገጫ ዝርዝር ምድብ"
 
@@ -5001,7 +5066,7 @@ msgstr "ንፁህ"
 #. module: fleet_operations
 #: model_terms:ir.ui.view,arch_db:fleet_operations.report_repair_list
 msgid "completed"
-msgstr "ተጠናቋል"
+msgstr "ሰርቪሱ የተጠናቀቀ"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_register_payment__date
@@ -5011,17 +5076,18 @@ msgstr "የተቀማጭ ቀን"
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle_log_services__invoice_count
 msgid "expanse Count"
-msgstr "ስፋት ቆጠራ"
+msgstr "ሰፊ ቁጥር"
 
 #. module: fleet_operations
-#: model:ir.model.fields,field_description:fleet_operations.field_fleet_checklistevaluate__fixed
+#: model:ir.model.fields,field_description:fleet_operations.field_fleet_checklistevaluate_final__fixed
+#: model:ir.model.fields,field_description:fleet_operations.field_fleet_checklistevaluate_initial__fixed
 msgid "fixed"
-msgstr "ቋሚ"
+msgstr "የተጠገነ"
 
 #. module: fleet_operations
 #: model:ir.model,name:fleet_operations.model_fleet_checklist_template
 msgid "fleet.checklist.template"
-msgstr ""
+msgstr "fleet.Checklist.አብነት"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_product_product__amount_liter
@@ -5070,7 +5136,7 @@ msgstr "መከላከል"
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle_log_fuel__product
 msgid "product"
-msgstr "ምርት"
+msgstr "እቃ"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_register_payment__ref
@@ -5085,7 +5151,7 @@ msgstr "የጥገና ሪፖርት"
 #. module: fleet_operations
 #: model:ir.model.fields.selection,name:fleet_operations.selection__fleet_vehicle_log_fuel__state__requested
 msgid "requested"
-msgstr "ጠየቀ"
+msgstr "ተጠይቋል"
 
 #. module: fleet_operations
 #: model_terms:ir.ui.view,arch_db:fleet_operations.fleet_vehicle_model_form_extended
@@ -5110,12 +5176,12 @@ msgstr "ለዚህ ተሽከርካሪ የነዳጅ መዝገቦችን አሳይ"
 #. module: fleet_operations
 #: model_terms:ir.ui.view,arch_db:fleet_operations.fleet_vehicle_model_form_extended
 msgid "show the odometer logs for this vehicle"
-msgstr "ለዚህ መኪና odo ሜትር ምዝግቦችን አሳይ"
+msgstr "ለዚህ መኪና ኦዶሜትር ሜትር ምዝግቦችን አሳይ"
 
 #. module: fleet_operations
 #: model_terms:ir.ui.view,arch_db:fleet_operations.fleet_vehicle_model_form_extended
 msgid "show the services logs for this vehicle"
-msgstr "ለዚህ ተሽከርካሪ የአገልግሎት ምዝግብ ማስታወሻዎችን አሳይ"
+msgstr "ለዚህ ተሽከርካሪ የሰርቪስ ምዝግብ ማስታወሻዎችን አሳይ"
 
 #. module: fleet_operations
 #: model:ir.model.fields,field_description:fleet_operations.field_fleet_vehicle_log_fuel__state

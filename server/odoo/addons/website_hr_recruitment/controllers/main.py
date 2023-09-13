@@ -27,6 +27,14 @@ class WebsiteHrRecruitment(http.Controller):
 
         Country = env['res.country']
         Jobs = env['hr.job']
+        partner_id = request.env.user.partner_id
+        user = request.env['res.partner'].search([('id','=',partner_id.id)])
+        user = request.env['res.users'].sudo().browse(request.session.uid).partner_id
+        is_users = []
+        if not user:
+            is_users.append("False")
+        else:
+            is_users.append("True")
 
         # List jobs available to current UID
         domain = request.website.website_domain()
@@ -45,8 +53,8 @@ class WebsiteHrRecruitment(http.Controller):
 
         # Filter job / office for country
         if country and not kwargs.get('all_countries'):
-            jobs = [j for j in jobs if not j.address_id or j.address_id.country_id.id == country.id]
-            offices = set(j.address_id for j in jobs if not j.address_id or j.address_id.country_id.id == country.id)
+            jobs = [j for j in jobs if j.address_id is None or j.address_id.country_id and j.address_id.country_id.id == country.id]
+            offices = set(j.address_id for j in jobs if j.address_id is None or j.address_id.country_id and j.address_id.country_id.id == country.id)
         else:
             offices = set(j.address_id for j in jobs if j.address_id)
 
@@ -70,6 +78,7 @@ class WebsiteHrRecruitment(http.Controller):
             'country_id': country,
             'department_id': department,
             'office_id': office_id,
+            'is_users': is_users
         })
 
     @http.route('/jobs/add', type='http', auth="user", website=True)
@@ -84,10 +93,20 @@ class WebsiteHrRecruitment(http.Controller):
     def jobs_detail(self, job, **kwargs):
         if not job.can_access_from_current_website():
             raise NotFound()
+        
+        partner_id = request.env.user.partner_id
+        user = request.env['res.partner'].search([('id','=',partner_id.id)])
+        user = request.env['res.users'].sudo().browse(request.session.uid).partner_id
+        is_users = []
+        if not user:
+            is_users.append("False")
+        else:
+            is_users.append("True")
 
         return request.render("website_hr_recruitment.detail", {
             'job': job,
             'main_object': job,
+            'is_users': is_users
         })
 
     @http.route('''/jobs/apply/<model("hr.job", "[('website_id', 'in', (False, current_website_id))]"):job>''', type='http', auth="public", website=True)

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 13.0-20221005\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-02 07:08+0000\n"
-"PO-Revision-Date: 2023-05-02 07:08+0000\n"
+"POT-Creation-Date: 2023-08-09 07:38+0000\n"
+"PO-Revision-Date: 2023-08-09 07:38+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -43,8 +43,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:biding_rule.tendor_results
 msgid ""
 "<span style=\"font-weight: bold; font-size: 20px;\">Product Quantity</span>"
-msgstr ""
-"<span style=\" font-weight: bold; font-size: 20px;\">የምርት ብዛት</span>"
+msgstr "<span style=\" font-weight: bold; font-size: 20px;\">የምርት ብዛት</span>"
 
 #. module: biding_rule
 #: model_terms:ir.ui.view,arch_db:biding_rule.tendor_results
@@ -61,9 +60,7 @@ msgstr "<span style=\"font-weight: bold; font-size: 20px;\">ምርት</span>"
 msgid ""
 "<span style=\"font-weight: bold; font-size: 20px;\">Professional "
 "Results</span>"
-msgstr ""
-"<span style=\"font-weight: bold; font-size: 20px;\">የሙያ "
-"ውጤቶች</span>"
+msgstr "<span style=\"font-weight: bold; font-size: 20px;\">የሙያ ውጤቶች</span>"
 
 #. module: biding_rule
 #: model_terms:ir.ui.view,arch_db:biding_rule.tendor_results
@@ -266,6 +263,16 @@ msgstr "የፋይናንስ መረጃ"
 #: model:res.groups,name:biding_rule.group_biding_financial
 msgid "Financial evaluate"
 msgstr "የፋይናንስ ግምገማ"
+
+#. module: biding_rule
+#: model:ir.model.fields,field_description:biding_rule.field_purchase_order__finanical
+msgid "Financial point"
+msgstr "የፋይናንስ ነጥብ"
+
+#. module: biding_rule
+#: model:ir.model.fields,field_description:biding_rule.field_requisition_result__amount_5
+msgid "Financial result"
+msgstr "የፋይናንስ ውጤት"
 
 #. module: biding_rule
 #: model:ir.model.fields.selection,name:biding_rule.selection__vendor_document__input_type__financial
@@ -568,8 +575,7 @@ msgstr "ሁኔታ"
 #, python-format
 msgid ""
 "Sum of the values of Product and Professional rule must be exactly 100% "
-msgstr ""
-"የምርት እና ሙያዊ ህግ እሴቶች ድምር በትክክል 100% መሆን አለበት"
+msgstr "የምርት እና ሙያዊ ህግ እሴቶች ድምር በትክክል 100% መሆን አለበት"
 
 #. module: biding_rule
 #: code:addons/biding_rule/models/purchase_reqution.py:0
@@ -577,14 +583,17 @@ msgstr ""
 msgid ""
 "Sum of the values of Product and Professional rule must be exactly 100%. The"
 " value "
-msgstr ""
-"የምርት እና የባለሙያ ህግ እሴቶች ድምር በትክክል 100% መሆን አለበት።"
-" እሴቱ"
+msgstr "የምርት እና የባለሙያ ህግ እሴቶች ድምር በትክክል 100% መሆን አለበት። እሴቱ"
 
 #. module: biding_rule
 #: model:res.groups,name:biding_rule.group_biding_technical
 msgid "Technical evaluate"
 msgstr "ቴክኒካዊ ግምገማ"
+
+#. module: biding_rule
+#: model:ir.model.fields,field_description:biding_rule.field_purchase_requisition__passing
+msgid "Technical passing point"
+msgstr "ቴክኒካዊ ማለፊያ ነጥብ"
 
 #. module: biding_rule
 #: model_terms:ir.ui.view,arch_db:biding_rule.purchase_order_t_inherit_form_view
@@ -601,6 +610,13 @@ msgstr "የጨረታ አስተዳደር"
 #: model:ir.actions.report,name:biding_rule.tendor_all_results
 msgid "Tendor Results"
 msgstr "የጨረታ ውጤቶች"
+
+#. module: biding_rule
+#: code:addons/biding_rule/models/technical_document.py:0
+#: code:addons/biding_rule/models/vendor_document.py:0
+#, python-format
+msgid "The Biding rule amount can not be Zero"
+msgstr "የጨረታው ደንብ መጠን ዜሮ ሊሆን አይችልም።"
 
 #. module: biding_rule
 #: code:addons/biding_rule/models/vendor_document.py:0
@@ -627,6 +643,12 @@ msgstr "ደንቡ% እሴቱ ማለፊያ 100። እሴቱ"
 #, python-format
 msgid "The rule % value have pass 100. The value  "
 msgstr "ደንቡ% እሴቱ ማለፊያ 100። እሴቱ"
+
+#. module: biding_rule
+#: code:addons/biding_rule/models/purchase_reqution.py:0
+#, python-format
+msgid "There is more one then winner"
+msgstr "ከአሸናፊው የበለጠ አንድ አለ።"
 
 #. module: biding_rule
 #: model:ir.model,name:biding_rule.model_product_selected
@@ -656,6 +678,11 @@ msgstr "አጠቃላይ የባለሙያ ውጤቶች"
 
 #. module: biding_rule
 #: model:ir.model.fields,field_description:biding_rule.field_requisition_result__amount_4
+msgid "Total Technical result"
+msgstr "ጠቅላላ የቴክኒክ ውጤት"
+
+#. module: biding_rule
+#: model:ir.model.fields,field_description:biding_rule.field_requisition_result__total
 msgid "Total result"
 msgstr "አጠቃላይ ውጤት"
 
@@ -685,6 +712,11 @@ msgstr "የአቅራቢ ሰነድ እሴት ብዛት"
 #: model:ir.model,name:biding_rule.model_vendor_employee
 msgid "Vendor Employee"
 msgstr "ሻጭ ሰራተኛ"
+
+#. module: biding_rule
+#: model:ir.model.fields.selection,name:biding_rule.selection__requisition_result__selection__win
+msgid "Win"
+msgstr ""
 
 #. module: biding_rule
 #: model:ir.model.fields,field_description:biding_rule.field_vendor_statement__amount
@@ -728,6 +760,12 @@ msgid "You cannot confirm purchase which is in biding process"
 msgstr "በጨረታ ሂደት ላይ ያለውን ግዢ ማረጋገጥ አይችሉም"
 
 #. module: biding_rule
+#: code:addons/biding_rule/models/purchase_reqution.py:0
+#, python-format
+msgid "You have to pass a minimum numbers of vendor"
+msgstr "አነስተኛውን የሻጭ ቁጥሮች ማለፍ አለቦት"
+
+#. module: biding_rule
 #: model:ir.model.fields,field_description:biding_rule.field_product_document__agreement
 #: model:ir.model.fields,field_description:biding_rule.field_vendor_document__agreement
 msgid "agreement"
@@ -737,6 +775,11 @@ msgstr "ስምምነት"
 #: model:ir.model,name:biding_rule.model_biding_product
 msgid "biding product"
 msgstr "የመጫረቻ ምርት"
+
+#. module: biding_rule
+#: model_terms:ir.ui.view,arch_db:biding_rule.vendor_document_inherit_form_view
+msgid "compute"
+msgstr "አስላ"
 
 #. module: biding_rule
 #: model:ir.model.fields,field_description:biding_rule.field_number_document_2__doc
@@ -869,6 +912,11 @@ msgid "selection value"
 msgstr "የመምረጫ ዋጋ"
 
 #. module: biding_rule
+#: model_terms:ir.ui.view,arch_db:biding_rule.vendor_document_inherit_form_view
+msgid "send to Financial approve"
+msgstr "ወደ ፋይናንሺያል ማረጋገጫ ይላኩ"
+
+#. module: biding_rule
 #: model:ir.model.fields,field_description:biding_rule.field_res_partner__is_tender
 #: model:ir.model.fields,field_description:biding_rule.field_res_users__is_tender
 msgid "tender competitor"
@@ -926,3 +974,9 @@ msgstr "ሻጭ.ሰነድ"
 #: model:ir.model.fields.selection,name:biding_rule.selection__vendor_employee__selection__working
 msgid "working"
 msgstr "መስራት"
+
+#. module: biding_rule
+#: code:addons/biding_rule/models/purchase_reqution.py:0
+#, python-format
+msgid "you did not compute the bidder"
+msgstr "ተጫራቹን አላሰሉም"

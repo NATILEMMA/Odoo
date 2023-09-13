@@ -16,4 +16,4 @@ class HrSalarySummary(models.Model):
     _inherit = 'salary.summary'
 
     name = fields.Char(string='Reference', required=True, copy=False, readonly=True, index=True,
-                       default=lambda self: _('New'))
+                       default=lambda self: _('New'), translate=True)

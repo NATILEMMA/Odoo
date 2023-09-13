@@ -3,7 +3,7 @@
     <data>
 
         <!-- Page : List of project -->
-        <template id="rating_index" name="Project Rating List">
+        <template id="rating_index" name="Planning Rating List">
             <t t-call="portal.frontend_layout">
                 <t t-set="additional_title">Project Satisfaction</t>
                 <div id="wrap" class="row mt4">
@@ -144,7 +144,7 @@
             </div>
         </template>
 
-        <template id="rating_project_rating_page" name="Project Rating Page">
+        <template id="rating_project_rating_page" name="Planning Rating Page">
             <t t-call="portal.frontend_layout">
                  <div id="wrap" class="row mt4">
                     <div class="oe_structure" id="oe_structure_project_rating_page_1"/>

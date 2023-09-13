@@ -46,7 +46,7 @@ class ResPartnerExtended(models.Model):
 
     _inherit = 'res.partner'
 
-    d_id = fields.Char(string='ID-Card', size=64)
+    d_id = fields.Char(string='ID-Card', size=64, translate=True)
     # is_workshop = fields.Boolean(string='Is Work Shop')
     is_driver = fields.Boolean(string='Is Driver')
     insurance = fields.Boolean(string='Insurance')

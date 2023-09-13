@@ -19,7 +19,7 @@ class RecruitmentSource(models.Model):
     _inherits = {"utm.source": "source_id"}
 
     source_id = fields.Many2one('utm.source', "Source", ondelete='cascade', required=True)
-    email = fields.Char(related='alias_id.display_name', string="Email", readonly=True)
+    email = fields.Char(related='alias_id.display_name', string="Email", readonly=True, translate=True)
     job_id = fields.Many2one('hr.job', "Job ID")
     alias_id = fields.Many2one('mail.alias', "Alias ID")
 
@@ -53,7 +53,7 @@ class RecruitmentStage(models.Model):
     job_ids = fields.Many2many(
         'hr.job', string='Job Specific',
         help='Specific jobs that uses this stage. Other jobs will not use this stage.')
-    requirements = fields.Text("Requirements")
+    requirements = fields.Text("Requirements", translate=True)
     template_id = fields.Many2one(
         'mail.template', "Email Template",
         help="If set, a message is posted on the applicant using the template when the applicant is set to the stage.")
@@ -114,10 +114,10 @@ class Applicant(models.Model):
             company_id = self.env.company
         return company_id
 
-    name = fields.Char("Subject / Application Name", required=True)
+    name = fields.Char("Subject / Application Name", required=True, translate=True)
     active = fields.Boolean("Active", default=True, help="If the active field is set to false, it will allow you to hide the case without removing it.")
-    description = fields.Text("Description")
-    email_from = fields.Char("Email", size=128, help="Applicant email")
+    description = fields.Text("Description", translate=True)
+    email_from = fields.Char("Email", size=128, help="Applicant email", translate=True)
     probability = fields.Float("Probability")
     partner_id = fields.Many2one('res.partner', "Contact", copy=False)
     create_date = fields.Datetime("Creation Date", readonly=True, index=True)
@@ -136,14 +136,14 @@ class Applicant(models.Model):
     date_last_stage_update = fields.Datetime("Last Stage Update", index=True, default=fields.Datetime.now)
     priority = fields.Selection(AVAILABLE_PRIORITIES, "Appreciation", default='0')
     job_id = fields.Many2one('hr.job', "Applied Job", domain="['|', ('company_id', '=', False), ('company_id', '=', company_id)]", index=True)
-    salary_proposed_extra = fields.Char("Proposed Salary Extra", help="Salary Proposed by the Organisation, extra advantages")
-    salary_expected_extra = fields.Char("Expected Salary Extra", help="Salary Expected by Applicant, extra advantages")
+    salary_proposed_extra = fields.Char("Proposed Salary Extra", help="Salary Proposed by the Organisation, extra advantages", translate=True)
+    salary_expected_extra = fields.Char("Expected Salary Extra", help="Salary Expected by Applicant, extra advantages", translate=True)
     salary_proposed = fields.Float("Proposed Salary", group_operator="avg", help="Salary Proposed by the Organisation")
     salary_expected = fields.Float("Expected Salary", group_operator="avg", help="Salary Expected by Applicant")
     availability = fields.Date("Availability", help="The date at which the applicant will be available to start working")
-    partner_name = fields.Char("Applicant's Name")
-    partner_phone = fields.Char("Phone", size=32)
-    partner_mobile = fields.Char("Mobile", size=32)
+    partner_name = fields.Char("Applicant's Name", translate=True)
+    partner_phone = fields.Char("Phone", size=32, translate=True)
+    partner_mobile = fields.Char("Mobile", size=32, translate=True)
     type_id = fields.Many2one('hr.recruitment.degree', "Degree")
     department_id = fields.Many2one('hr.department', "Department", domain="['|', ('company_id', '=', False), ('company_id', '=', company_id)]")
     day_open = fields.Float(compute='_compute_day', string="Days to Open", compute_sudo=True)
@@ -151,18 +151,18 @@ class Applicant(models.Model):
     delay_close = fields.Float(compute="_compute_day", string='Delay to Close', readonly=True, group_operator="avg", help="Number of days to close", store=True)
     color = fields.Integer("Color Index", default=0)
     emp_id = fields.Many2one('hr.employee', string="Employee", help="Employee linked to the applicant.", copy=False)
-    user_email = fields.Char(related='user_id.email', type="char", string="User Email", readonly=True)
+    user_email = fields.Char(related='user_id.email', type="char", string="User Email", readonly=True, translate=True)
     attachment_number = fields.Integer(compute='_get_attachment_number', string="Number of Attachments")
-    employee_name = fields.Char(related='emp_id.name', string="Employee Name", readonly=False, tracking=False)
+    employee_name = fields.Char(related='emp_id.name', string="Employee Name", readonly=False, tracking=False, translate=True)
     attachment_ids = fields.One2many('ir.attachment', 'res_id', domain=[('res_model', '=', 'hr.applicant')], string='Attachments')
     kanban_state = fields.Selection([
         ('normal', 'Grey'),
         ('done', 'Green'),
         ('blocked', 'Red')], string='Kanban State',
         copy=False, default='normal', required=True)
-    legend_blocked = fields.Char(related='stage_id.legend_blocked', string='Kanban Blocked', readonly=False)
-    legend_done = fields.Char(related='stage_id.legend_done', string='Kanban Valid', readonly=False)
-    legend_normal = fields.Char(related='stage_id.legend_normal', string='Kanban Ongoing', readonly=False)
+    legend_blocked = fields.Char(related='stage_id.legend_blocked', string='Kanban Blocked', readonly=False, translate=True)
+    legend_done = fields.Char(related='stage_id.legend_done', string='Kanban Valid', readonly=False, translate=True)
+    legend_normal = fields.Char(related='stage_id.legend_normal', string='Kanban Ongoing', readonly=False, translate=True)
     application_count = fields.Integer(compute='_compute_application_count', help='Applications with the same email')
     meeting_count = fields.Integer(compute='_compute_meeting_count', help='Meeting Count')
 
@@ -511,7 +511,7 @@ class ApplicantCategory(models.Model):
     _name = "hr.applicant.category"
     _description = "Category of applicant"
 
-    name = fields.Char("Tag Name", required=True)
+    name = fields.Char("Tag Name", required=True, translate=True)
     color = fields.Integer(string='Color Index', default=10)
 
     _sql_constraints = [

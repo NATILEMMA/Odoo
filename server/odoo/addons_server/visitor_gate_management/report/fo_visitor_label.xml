@@ -29,21 +29,21 @@
                                                 <td width="60%">
                                                     <table>
                                                         <tr>
-                                                            <t t-if="o.visiting_person">
+                                                            <t t-if="o.visiting_employee">
                                                                 <td>
                                                                     <p style="text-align:right;padding-top:10px;"><strong>Visitor ID: </strong></p>
                                                                     <p style="text-align:right;"><strong>Phone: </strong></p>
-                                                                    <t t-if="o.visiting_person"><p style="text-align:right;"><strong>Meeting With : </strong></p></t>
-                                                                    <t t-if="o.visiting_person"><p style="text-align:right;"><strong>Department : </strong></p></t>
+                                                                    <t t-if="o.visiting_employee"><p style="text-align:right;"><strong>Meeting With : </strong></p></t>
+                                                                    <t t-if="o.visiting_employee"><p style="text-align:right;"><strong>Department : </strong></p></t>
                                                                 </td>
                                                                 <td>
                                                                     <p style="text-align:left;padding-top:10px;padding-left:10px;" t-field="o.name"/>
                                                                     <p style="text-align:left;padding-left:10px;" t-field="o.phone"/>
-                                                                    <t t-if="o.visiting_person"><p style="text-align:left;padding-left:10px;" t-field="o.visiting_person"/></t>
-                                                                    <t t-if="o.visiting_person"><p style="text-align:left;padding-left:10px;" t-field="o.department"/></t>
+                                                                    <t t-if="o.visiting_employee"><p style="text-align:left;padding-left:10px;" t-field="o.visiting_employee"/></t>
+                                                                    <t t-if="o.visiting_employee"><p style="text-align:left;padding-left:10px;" t-field="o.department"/></t>
                                                                 </td>
                                                             </t>
-                                                            <t t-if="not o.visiting_person">
+                                                            <t t-if="not o.visiting_employee">
                                                                 <td>
                                                                     <p style="text-align:right;padding-top:30px;"><strong>VisitorID: </strong></p>
                                                                     <p style="text-align:right;padding-top:30px;"><strong>Phone: </strong></p>

@@ -41,7 +41,7 @@ class StockMoveLine(models.Model):
     lot_id = fields.Many2one(
         'stock.production.lot', 'Lot/Serial Number',
         domain="[('product_id', '=', product_id), ('company_id', '=', company_id)]", check_company=True)
-    lot_name = fields.Char('Lot/Serial Number Name')
+    lot_name = fields.Char('Lot/Serial Number Name', translate=True)
     result_package_id = fields.Many2one(
         'stock.quant.package', 'Destination Package',
         ondelete='restrict', required=False, check_company=True,
@@ -63,11 +63,11 @@ class StockMoveLine(models.Model):
     is_locked = fields.Boolean(related='move_id.is_locked', default=True, readonly=True)
     consume_line_ids = fields.Many2many('stock.move.line', 'stock_move_line_consume_rel', 'consume_line_id', 'produce_line_id', help="Technical link to see who consumed what. ")
     produce_line_ids = fields.Many2many('stock.move.line', 'stock_move_line_consume_rel', 'produce_line_id', 'consume_line_id', help="Technical link to see which line was produced with this. ")
-    reference = fields.Char(related='move_id.reference', store=True, related_sudo=False, readonly=False)
+    reference = fields.Char(related='move_id.reference', store=True, related_sudo=False, readonly=False, translate=True)
     tracking = fields.Selection(related='product_id.tracking', readonly=True)
-    origin = fields.Char(related='move_id.origin', string='Source')
+    origin = fields.Char(related='move_id.origin', string='Source', translate=True)
     picking_type_entire_packs = fields.Boolean(related='picking_id.picking_type_id.show_entire_packs', readonly=True)
-    description_picking = fields.Text(string="Description picking")
+    description_picking = fields.Text(string="Description picking", translate=True)
 
     @api.depends('picking_id.picking_type_id', 'product_id.tracking')
     def _compute_lots_visible(self):

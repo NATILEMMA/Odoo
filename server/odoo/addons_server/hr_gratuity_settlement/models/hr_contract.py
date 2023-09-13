@@ -7,7 +7,7 @@ from odoo.exceptions import UserError
 class Contract(models.Model):
     _inherit = 'hr.contract'
 
-    training_info = fields.Text(string='Probationary Info')
+    training_info = fields.Text(string='Probationary Info', translate=True)
     waiting_for_approval = fields.Boolean()
     is_approve = fields.Boolean(default=False)
     state = fields.Selection(
@@ -27,8 +27,9 @@ class Contract(models.Model):
     def date_correction(self):
         """This function will make sure probation end is less than date_end"""
         for record in self:
-            if record.trial_date_end and record.trial_date_end >= record.date_end:
-                raise UserError(_("End Date Can't Be Less Than End of Trial Period"))
+            if record.trial_date_end and record.date_end:
+                if record.trial_date_end >= record.date_end:
+                    raise UserError(_("End Date Can't Be Less Than End of Trial Period"))
 
 
     @api.onchange('trial_date_end')

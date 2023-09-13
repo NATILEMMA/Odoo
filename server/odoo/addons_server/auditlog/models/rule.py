@@ -50,7 +50,7 @@ class AuditlogRule(models.Model):
     _name = "auditlog.rule"
     _description = "Auditlog - Rule"
 
-    name = fields.Char(required=True, states={"subscribed": [("readonly", True)]})
+    name = fields.Char(required=True, states={"subscribed": [("readonly", True)]}, translate=True)
     model_id = fields.Many2one(
         "ir.model",
         "Model",

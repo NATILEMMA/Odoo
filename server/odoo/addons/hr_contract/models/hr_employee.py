@@ -9,10 +9,10 @@ class Employee(models.Model):
     _inherit = "hr.employee"
 
     medic_exam = fields.Date(string='Medical Examination Date', groups="hr.group_hr_user")
-    vehicle = fields.Char(string='Company Vehicle', groups="hr.group_hr_user")
+    vehicle = fields.Char(string='Company Vehicle', groups="hr.group_hr_user", translate=True)
     contract_ids = fields.One2many('hr.contract', 'employee_id', string='Employee Contracts')
     contract_id = fields.Many2one('hr.contract', string='Current Contract',
-        groups="hr.group_hr_user",domain="[('company_id', '=', company_id)]", help='Current contract of the employee')
+        domain="[('company_id', '=', company_id)]", help='Current contract of the employee')
     calendar_mismatch = fields.Boolean(related='contract_id.calendar_mismatch')
     contracts_count = fields.Integer(compute='_compute_contracts_count', string='Contract Count')
     contract_warning = fields.Boolean(string='Contract Warning', store=True, compute='_compute_contract_warning', groups="hr.group_hr_user")
@@ -21,9 +21,6 @@ class Employee(models.Model):
     def _compute_contract_warning(self):
         for employee in self:
             employee.contract_warning = not employee.contract_id or employee.contract_id.kanban_state == 'blocked' or employee.contract_id.state != 'open'
-   
-    contract_count_non_computed = fields.Integer(String="contract count")
-
 
     def _compute_contracts_count(self):
         # read_group as sudo, since contract count is displayed on form view
@@ -31,8 +28,6 @@ class Employee(models.Model):
         result = dict((data['employee_id'][0], data['employee_id_count']) for data in contract_data)
         for employee in self:
             employee.contracts_count = result.get(employee.id, 0)
-            employee.contract_count_non_computed = employee.contracts_count
-        print("contracts coount",employee.contract_count_non_computed)
 
     def _get_contracts(self, date_from, date_to, states=['open'], kanban_state=False):
         """

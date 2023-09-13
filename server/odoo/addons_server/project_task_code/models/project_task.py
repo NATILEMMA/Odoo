@@ -7,7 +7,7 @@ from odoo import _, api, fields, models
 class ProjectTask(models.Model):
     _inherit = "project.task"
 
-    code = fields.Char(string="Task Number", required=True, default="/", readonly=True)
+    code = fields.Char(string="Task Number", required=True, default="/", readonly=True,translate=True)
 
     _sql_constraints = [
         ("project_task_unique_code", "UNIQUE (code)", _("The code must be unique!"))

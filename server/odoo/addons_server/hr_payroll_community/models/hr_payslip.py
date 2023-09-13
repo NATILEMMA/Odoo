@@ -70,7 +70,7 @@ class HrPayslip(models.Model):
                                      readonly=True, states={'draft': [('readonly', False)]})
     paid = fields.Boolean(string='Made Payment Order ? ', readonly=True, copy=False,
                           states={'draft': [('readonly', False)]})
-    note = fields.Text(string='Internal Note', readonly=True, states={'draft': [('readonly', False)]})
+    note = fields.Text(string='Internal Note', readonly=True, states={'draft': [('readonly', False)]}, translate=True)
     contract_id = fields.Many2one('hr.contract', string='Contract', readonly=True, help="Contract",
                                   states={'draft': [('readonly', False)]})
     details_by_salary_rule_category = fields.One2many('hr.payslip.line',
@@ -557,11 +557,11 @@ class HrPayslipWorkedDays(models.Model):
     _description = 'Payslip Worked Days'
     _order = 'payslip_id, sequence'
 
-    name = fields.Char(string='Description', required=True)
+    name = fields.Char(string='Description', required=True, translate=True)
     payslip_id = fields.Many2one('hr.payslip', string='Pay Slip', required=True, ondelete='cascade', index=True,
                                  help="Payslip")
     sequence = fields.Integer(required=True, index=True, default=10, help="Sequence")
-    code = fields.Char(required=True, help="The code that can be used in the salary rules")
+    code = fields.Char(required=True, help="The code that can be used in the salary rules", translate=True)
     number_of_days = fields.Float(string='Number of Days', help="Number of days worked")
     number_of_hours = fields.Float(string='Number of Hours', help="Number of hours worked")
     contract_id = fields.Many2one('hr.contract', string='Contract', required=True,
@@ -573,11 +573,11 @@ class HrPayslipInput(models.Model):
     _description = 'Payslip Input'
     _order = 'payslip_id, sequence'
 
-    name = fields.Char(string='Description', required=True)
+    name = fields.Char(string='Description', required=True, translate=True)
     payslip_id = fields.Many2one('hr.payslip', string='Pay Slip', required=True, ondelete='cascade', help="Payslip",
                                  index=True)
     sequence = fields.Integer(required=True, index=True, default=10, help="Sequence")
-    code = fields.Char(required=True, help="The code that can be used in the salary rules")
+    code = fields.Char(required=True, help="The code that can be used in the salary rules", translate=True)
     amount = fields.Float(help="It is used in computation. For e.g. A rule for sales having "
                                "1% commission of basic salary for per product can defined in expression "
                                "like result = inputs.SALEURO.amount * contract.wage*0.01.")
@@ -591,7 +591,7 @@ class HrPayslipRun(models.Model):
 
     bank_account = fields.Many2one('account.account', 'Bank Account')
 
-    name = fields.Char(required=True, readonly=True, states={'draft': [('readonly', False)]})
+    name = fields.Char(required=True, readonly=True, states={'draft': [('readonly', False)]}, translate=True)
     slip_ids = fields.One2many('hr.payslip', 'payslip_run_id', string='Payslips')
     summary_id = fields.One2many('salary.summary', 'salary_payslip_run', string='Summary id')
     account_move_id = fields.Many2one('account.move', string='Journal Entry', copy=False,
@@ -864,5 +864,5 @@ class SalarySummary(models.Model):
     salary_detail = fields.Many2one('hr.salary.rule', string='Salary Details')
     salary_payslip_run = fields.Many2one('hr.payslip.run')
 
-    month = fields.Char()
+    month = fields.Char(translate=True)
     amount = fields.Float()

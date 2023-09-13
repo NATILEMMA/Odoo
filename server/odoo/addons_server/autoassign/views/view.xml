@@ -10,9 +10,15 @@
             <button name="action_auto_assign"
                     string="Auto Assign"
                     class="btn btn-success"  
-                    attrs="{'invisible': ['|', ('state', 'in', ('draft','waiting','confirmed','done'))]}" 
+                    attrs="{'invisible': ['|', ('state', 'in', ('draft','waiting','confirmed','done')),('is_picking','!=',False)]}" 
                     type="object"/>
         </xpath>
+         <xpath expr = "//field[@name='origin']" position = "after" > 
+             <!-- <group col="2"> -->
+                 <field name="is_picking" invisible="1"/>
+            <!-- </group> -->
+           
+       </xpath> 
     </field>
 </record>
 

@@ -69,7 +69,7 @@ class EventType(models.Model):
         default=lambda self: self.env.user.tz)
     # communication
     use_hashtag = fields.Boolean('Use Default Hashtag')
-    default_hashtag = fields.Char('Twitter Hashtag')
+    default_hashtag = fields.Char('Twitter Hashtag', translate=True)
     use_mail_schedule = fields.Boolean(
         'Automatically Send Emails', default=True)
     event_type_mail_ids = fields.One2many(
@@ -158,8 +158,8 @@ class EventEvent(models.Model):
     date_end = fields.Datetime(
         string='End Date', required=True,
         tracking=True, states={'done': [('readonly', True)]})
-    date_begin_located = fields.Char(string='Start Date Located', compute='_compute_date_begin_tz')
-    date_end_located = fields.Char(string='End Date Located', compute='_compute_date_end_tz')
+    date_begin_located = fields.Char(string='Start Date Located', compute='_compute_date_begin_tz', translate=True)
+    date_end_located = fields.Char(string='End Date Located', compute='_compute_date_end_tz', translate=True)
     is_one_day = fields.Boolean(compute='_compute_field_is_one_day')
 
     state = fields.Selection([
@@ -394,7 +394,7 @@ class EventRegistration(models.Model):
     # event
     origin = fields.Char(
         string='Source Document', readonly=True,
-        help="Reference of the document that created the registration, for example a sales order")
+        help="Reference of the document that created the registration, for example a sales order", translate=True)
     event_id = fields.Many2one(
         'event.event', string='Event', required=True,
         readonly=True, states={'draft': [('readonly', False)]})
@@ -402,10 +402,10 @@ class EventRegistration(models.Model):
     partner_id = fields.Many2one(
         'res.partner', string='Contact',
         states={'done': [('readonly', True)]})
-    name = fields.Char(string='Attendee Name', index=True)
-    email = fields.Char(string='Email')
-    phone = fields.Char(string='Phone')
-    mobile = fields.Char(string='Mobile')
+    name = fields.Char(string='Attendee Name', index=True, translate=True)
+    email = fields.Char(string='Email', translate=True)
+    phone = fields.Char(string='Phone', translate=True)
+    mobile = fields.Char(string='Mobile', translate=True)
     # organization
     date_open = fields.Datetime(string='Registration Date', readonly=True, default=lambda self: fields.Datetime.now())  # weird crash is directly now
     date_closed = fields.Datetime(string='Attended Date', readonly=True)

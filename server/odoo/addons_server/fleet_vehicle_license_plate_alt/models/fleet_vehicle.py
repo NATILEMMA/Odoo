@@ -11,7 +11,7 @@ class FleetVehicle(models.Model):
     license_plate_alt = fields.Char(
         "Alternative Licence Plate",
         tracking=True,
-        help="License plate alternative number of the vehicle.",
+        help="License plate alternative number of the vehicle.",  translate=True
     )
 
     @api.model

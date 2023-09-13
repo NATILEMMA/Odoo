@@ -17,152 +17,41 @@ class Holiday(models.Model):
     _name = 'holiday.interval'
     _inherit = ['mail.thread', 'mail.activity.mixin', 'utm.mixin']
 
-    year_from = fields.Char("From")
-    year_to = fields.Char("TO")
+    year_from = fields.Char("From", translate=True)
+    year_to = fields.Char("TO", translate=True)
 
 class Year(models.Model):
     _name = 'year.interval'
     _inherit = ['mail.thread', 'mail.activity.mixin', 'utm.mixin']
 
-    year_from = fields.Char("From")
-    year_to = fields.Char("To")
+    year_from = fields.Char("From", translate=True)
+    year_to = fields.Char("To", translate=True)
 
 class Month(models.Model):
     _name = 'month.interval'
     _inherit = ['mail.thread', 'mail.activity.mixin', 'utm.mixin']
 
-    month_from = fields.Char("From")
-    month_to = fields.Char("To")
+    month_from = fields.Char("From", translate=True)
+    month_to = fields.Char("To", translate=True)
 
 class ResUsers(models.Model):
     _inherit = 'res.users'
 
+    
     @api.model
     def create(self, vals):
-        _logger.info("valllllllllll %s",vals)
-        # _logger.info("valllllllllll %s",valss)
-        result = super(ResUsers, self).create(vals)
-
-        try:
-            if vals['sel_groups_1_8_9'] == 1:
-
-                monthNames =  ['0','መስከረም', 'ጥቅምት', 'ኅዳር','ታህሣሥ', 'ጥር', 'የካቲት',
-                                'መጋቢት','ሚያዝያ','ግንቦት','ሰኔ','ሐምሌ', 'ነሐሴ','ጳጉሜ']
-                Ethio_numbers = ['0','፩','፪','፫','፬','፭','፮','፯','፰','፱','፲',
-                                '፲፩','፲፪','፲፫','፲፬','፲፭','፲፮','፲፯','፲፰','፲፱','፳',
-                                '፳፩','፳፪','፳፫','፳፬','፳፭','፳፮','፳፯','፳፰','፳፱','፴']
-                
-                date1 = datetime.now()
-                startDate = date(date1.year,1, 1)
-                endDate = date(date1.year,1, 1)
-
-                for year in range(startDate.year, endDate.year+1):
-                    for month in range(1, 6):
-                        partners = self.env['res.users'].search([('share','=',False)])
-                        partner_ids = []
-                        for users in partners:
-                            if users.partner_id is not None:
-                                partner_ids.append(users.partner_id.id)
-                            else:
-                                pass
-                        year = 2021
-                        month = date1.month # February
-                        num_days = calendar.monthrange(date1.year, month)[1]
-                        f_date = date(date1.year,month, 1)
-                        et = self.env['res.users'].search([('name','=','Ethiopian Calendar')], limit=1)
-                        hd = self.env['res.users'].search([('name','=','Holidays')], limit=1)
-                    
-                        for da in range(int(num_days)):
-                                a_date1 = (f_date + timedelta(days = da)).isoformat()
-                                a_date = str(a_date1).split('-')
-                                Edate1 = EthiopianDateConverter.to_ethiopian(int(a_date[0]),int(a_date[1]),int(a_date[2]))
-                                if type(Edate1) ==   date:
-                                    # _logger.info(" Date type date:%s",type(a_date1))
-
-                                    month = monthNames[int(Edate1.month)].split(' ')[0]
-                                    ethioDay = Ethio_numbers[int(Edate1.day)].split(' ')[0]
-                                    value = str(month) +"-" +str(Edate1.day) +"("+ str(ethioDay) +")" +"-"+ str(Edate1.year)
-                                
-                                    search = self.env['calendar.event'].search([('start','=',a_date1),('name','=', value)])
-                                    if len(search) > 0:
-                                        _logger.info("TTTTTTTTTTTTTTTTT               yyyyyyyyyy")
-                                        search.update({'partner_ids': partner_ids})
-                                    else:
-                                        pass
-                                if type(Edate1) ==   str:
-                
-                                    Edate1 = Edate1.split('/')
-                                    month = monthNames[int(Edate1[0])].split(' ')[0]
-                                    ethioDay = Ethio_numbers[int(Edate1[1])].split(' ')[0]
-                                    value = str(month) +"-"+ str(ethioDay) +str(Edate1[1])+ "("+str(ethioDay)+")"+"-"+ str(Edate1[2])
-                                    # _logger.info("tttttttvaluevaluettttttttt %s",value)
-                                    search = self.env['calendar.event'].search([('start','=',a_date1),('name','=', value)])
-                                    if len(search) > 0:
-                                        _logger.info("yyyyyyyupdateyyyy               yyyyyyyyyy")
-                                        search.update({
-                                                'partner_ids': partner_ids
-                                            })
-                                    else:
-                                        pass
-
-                date1 = datetime.now()
-                startDate = date(date1.year-1,1, 1)
-                endDate = date(date1.year+1, 1, 1)
-                hd = self.env['res.users'].search([('name','=','Holidays')], limit=1)
-                gro_groups = self.env['res.groups'].search([('name','=','Gregory Datepicker')], limit=1)
-                ethio_groups = self.env['res.groups'].search([('name','=','Ethiopian Datepicker')], limit=1)
-                res_users = self.env['res.users'].search([('share', '=', False)])
-                
-                ethio_user_list = []
-                gro_user_list = []
-                if ethio_groups.users is not None:
-                        if self.env.user in ethio_groups.users: 
-                            pass
-                for user in res_users:
-                    if user in ethio_groups.users:
-                        pass
-                    else:
-                        gro_user_list.append(user.id)
-                    gro_groups['users'] = [(6,0,gro_user_list)]
-                for year in range(startDate.year, endDate.year):
-                    url = "https://calendarific.com/api/v2/holidays?api_key=cf5724f67854d92263a14a3f69e04b670262c5bc&country=ET&year="+str(year)
-                    _logger.info("Url :%s",url)
-                
-                    payload = json.dumps({})
-                    headers = {
-                            'Content-Type': 'application/json',
-                            'Cookie': 'PHPSESSID=v3tdp5b0d8dn5kud10gdrgm1gs'
-                            }
-                    response = requests.request("GET", url, headers=headers, data=payload)
-                    _logger.info(pprint.pformat(response.json()))
-                    res = response.json()
-                    holiday = res['response']['holidays']
-
-                    for hol in holiday:
-            
-                        Htype = str(hol['type']).split(" [' ")
-                        Htype = Htype[0].split("'")
-                        s_date = date(hol['date']['datetime']['year'],hol['date']['datetime']['month'], hol['date']['datetime']['day'])
-                        search = self.env['calendar.event'].search([('start','=',s_date),('name','=', hol['name'])])
-                        _logger.info("SSSSSSSSSSSSSSSSSssss search %s",search)
-                        if len(search) > 0:
-                            search.update({
-                                                'partner_ids': partner_ids
-                                            })
-                        else:
-                            pass
-            else: 
-                pass
-        except:
-            pass
-
-            
-        return result
+        res = super(ResUsers, self).create(vals)
+        self.env.cr.execute("INSERT INTO calendar_event_res_partner_rel(res_partner_id ,calendar_event_id ) select %s,id from calendar_event where is_generated_date = True"%(res.partner_id.id))
+        self.env.cr.commit()
+        gro_groups = self.env['res.groups'].search([('name', '=', 'Gregory Datepicker')], limit=1)
+        res.write({
+            'groups_id': [(4, gro_groups.id)]
+        })
+        return res
     
 
        
     def generat_general_group(self):
-        _logger.info("Init function runing ********")
         try:
             gro_groups = self.env['res.groups'].search([('name','=','Gregory Datepicker')], limit=1)
             ethio_groups = self.env['res.groups'].search([('name','=','Ethiopian Datepicker')], limit=1)
@@ -198,16 +87,9 @@ class CalanderEventInherit(models.Model):
     def unlinkAutoGenerateValues(self):
         return super(CalanderEventInherit, self).unlink()
     
-    @api.model
-    def calander_changer(self,data):
-        _logger.info("777777777777777777777777")
-        _logger.info("GGGGGGGGGGGGGGG %s",data)
-
 
 
     def auto_generate(self):  
-        
-    
         monthNames =  ['0','መስከረም', 'ጥቅምት', 'ኅዳር','ታህሣሥ', 'ጥር', 'የካቲት',
 		                'መጋቢት','ሚያዝያ','ግንቦት','ሰኔ','ሐምሌ', 'ነሐሴ','ጳጉሜ']
         Ethio_numbers = ['0','፩','፪','፫','፬','፭','፮','፯','፰','፱','፲',
@@ -222,16 +104,17 @@ class CalanderEventInherit(models.Model):
         months = [('1', 'January'),('2', 'February'),('3', 'March'),('4', 'April'),('5', 'May'),('6', 'June'),('7', 'July'),('8', 'August'), ('9', 'September'),('10', 'October'), ('11', 'November'), ('12', 'December')]
         # month_name = dict(months).get(vals.get('month'))
         date1 = datetime.now()
-        startDate = date(date1.year,1, 1)
-        endDate = date(date1.year,1, 1)
-        for year in range(startDate.year, endDate.year+1):
-            for month in range(1, 6):
+        startDate = date(date1.year-5,1, 1)
+        endDate = date(date1.year+5, 1, 1)
+        _logger.info(startDate)
+        _logger.info(endDate)
+
+        for year in range(startDate.year, endDate.year):
+            for month in range(1, 13):
                 search = self.env['res.users'].search([('name','=','Ethiopian Calendar')])
-                _logger.info("seeeeeeeeeeeeeeeeeeeeeee %s",month)
                 if len(search) > 0:
                     pass
                 else:
-                    
                     user = self.env['res.users'].create({
                         'name': 'Ethiopian Calendar',
                         'login': 'ET',
@@ -239,10 +122,7 @@ class CalanderEventInherit(models.Model):
                         'password': 'password',
                         'groups_id': [(6, 0, [self.env.ref('base.group_user').id])]
                     })
-
-        
                 search = self.env['res.users'].search([('name','=','Holidays')])
-                _logger.info("seeeeeeeeeeeeeeeeeeeeeee %s",search)
                 if len(search) > 0:
                     pass
                 else:
@@ -253,7 +133,7 @@ class CalanderEventInherit(models.Model):
                         'password': 'password',
                         'groups_id': [(6, 0, [self.env.ref('base.group_user').id])]
                     })
-                partners = self.env['res.users'].search([('share','=',False)])
+                partners = self.env['res.users'].search([('id','=',2)])
                 partner_ids = []
                 for users in partners:
                     if users.partner_id is not None:
@@ -264,51 +144,26 @@ class CalanderEventInherit(models.Model):
                 
 
                 
-                year = 2021
+                # year = 2021
                 # month = 4 # February
-                num_days = calendar.monthrange(date1.year, month)[1]
-                f_date = date(date1.year,month, 1)
+                num_days = calendar.monthrange(year, month)[1]
+                f_date = date(year,month, 1)
                 et = self.env['res.users'].search([('name','=','Ethiopian Calendar')], limit=1)
                 hd = self.env['res.users'].search([('name','=','Holidays')], limit=1)
             
                 for da in range(int(num_days)):
-                        _logger.info("Attttttttttendaness %s",len(partner_ids))
-                        # _logger.info("Attttttttttendaness %s",partner_ids)
                         a_date1 = (f_date + timedelta(days = da)).isoformat()
                         a_date = str(a_date1).split('-')
                         Edate1 = EthiopianDateConverter.to_ethiopian(int(a_date[0]),int(a_date[1]),int(a_date[2]))
-                        _logger.info("DDDDDDDDDDDD date:%s",a_date1)
-                        _logger.info("EEEEEEEEEEEE date:%s",a_date1)
-
-                        _logger.info(" Type date:%s",type(Edate1))
-
                         if type(Edate1) ==   date:
-                            # _logger.info(" Date type date:%s",type(a_date1))
-
                             month = monthNames[int(Edate1.month)].split(' ')[0]
                             ethioDay = Ethio_numbers[int(Edate1.day)].split(' ')[0]
                             value = str(month) +"-" +str(Edate1.day) +"("+ str(ethioDay) +")" +"-"+ str(Edate1.year)
                         
                             search = self.env['calendar.event'].search([('start','=',a_date1),('name','=', value)])
                             if len(search) > 0:
-                                _logger.info("TTTTTTTTTTTTTTTTT               yyyyyyyyyy")
-                                _logger.info("partner_ids:%s", len(search.partner_ids))
-                                # search.write({
-                                #             'partner_ids': partner_ids
-                                #         })
                                 search.update({'partner_ids': partner_ids})
-                                # search['partner_ids'] = []
-                                _logger.info("Innnnnnnnnnn partner_ids:%s", len(search.partner_ids))
-
                                 search['partner_ids'] = [(6,0, (partner_ids))]
-                                # search.write({'partner_ids': [(4, partner_ids) for rel in partner_ids]})
-                                _logger.info("AAAAAA partner_ids:%s", len(search.partner_ids))
-
-                                # self.env.cr.commit()
-                                
-                                # _logger.info("-----------------               %s",update)
-
-                                
                             else:
                                 create = self.env['calendar.event'].create({
                                 'name': value,
@@ -325,30 +180,16 @@ class CalanderEventInherit(models.Model):
                                 'partner_ids': partner_ids
                                 })
                         if type(Edate1) ==   str:
-                            _logger.info(" Date SSSString date:%s",type(a_date1))
-
                             Edate1 = Edate1.split('/')
-
-                            # a_date1 = date(int(Edate1[2]),int(Edate1[0]),int(Edate1[1]))
-                            _logger.info(" Date SSSString date:%s",Edate1[0])
-                            _logger.info(" Date SSSString date:%s",Edate1[1])
-                            _logger.info(" Date SSSString date:%s",Edate1[2])
-
                             month = monthNames[int(Edate1[0])].split(' ')[0]
                             ethioDay = Ethio_numbers[int(Edate1[1])].split(' ')[0]
-                            # month  = month.split(',')
-                            # _logger.info("tttttttttttttttt %s",ethioDay)
                             value = str(month) +"-"+ str(ethioDay) +str(Edate1[1])+ "("+str(ethioDay)+")"+"-"+ str(Edate1[2])
-                            # _logger.info("tttttttvaluevaluettttttttt %s",value)
                             search = self.env['calendar.event'].search([('start','=',a_date1),('name','=', value)])
                             if len(search) > 0:
-                                _logger.info("yyyyyyyupdateyyyy               yyyyyyyyyy")
-
                                 search.update({
                                         'partner_ids': partner_ids
                                     })
                             else:
-                            
                                 create = self.env['calendar.event'].create({
                                 'name': value,
                                 'user_id': et.id,
@@ -372,9 +213,9 @@ class CalanderEventInherit(models.Model):
 
        
         date1 = datetime.now()
-        startDate = date(date1.year-1,1, 1)
-        endDate = date(date1.year+1, 1, 1)
-        partners = self.env['res.users'].search([('share','=',False)])
+        startDate = date(date1.year-5,1, 1)
+        endDate = date(date1.year+5, 1, 1)
+        partners = self.env['res.users'].search([('id','=',2)])
         partner_ids = []
         hd = self.env['res.users'].search([('name','=','Holidays')], limit=1)
         for users in partners:
@@ -402,9 +243,8 @@ class CalanderEventInherit(models.Model):
                 Htype = Htype[0].split("'")
                 s_date = date(hol['date']['datetime']['year'],hol['date']['datetime']['month'], hol['date']['datetime']['day'])
                 search = self.env['calendar.event'].search([('start','=',s_date),('name','=', hol['name'])])
-                _logger.info("SSSSSSSSSSSSSSSSSssss search %s",search)
                 if len(search) > 0:
-                    _logger.info("YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY")
+                    _logger.info("----------")
                 else:
                     if Htype[1] == "National holiday":
                         create = self.env['calendar.event'].create({
@@ -421,16 +261,13 @@ class CalanderEventInherit(models.Model):
                                 'is_holiday': True,
                                 'partner_ids': partner_ids
                         })
-                        _logger.info("*****createcreatecreatecreate:%s",create)
+                        _logger.info("create:%s",create)
         # _logger.info("Date:%s",res['response']['holidays'][0]['date']['iso'])
 
         # groups = self.env['res.groups'].search([('name','=','Calendar group')], limit=1)
         # events = self.env['calendar.event'].search([('is_holiday', '=', True)])
         # groups['users'] = [(6,0,events)]
-        
-        _logger.info("----------------------------------------------------------------------")
-
-    
+   
 
     def unlink(self):
         search = self.env['calendar.event'].search([('id','=',self.id)])

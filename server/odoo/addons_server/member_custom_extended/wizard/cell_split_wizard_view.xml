@@ -14,15 +14,100 @@
                         <field name="member_cell_type_id"/>
                         <field name="cell_id" />
                         <field name="wereda_id" />
-                        <field name="main_office"/>
-                       
+                        <field name="main_office"  options="{'no_create': True, 'no_create_edit': True}" />
+                        <field name="is_mixed"/>
                     </group>
-
                 </group>
-                <group >
-                    <field name="members_ids"  />  
-                    
-                </group>
+                <notebook>
+                    <page string="Mixed Members" name="members_ids_mixed" attrs="{'invisible': ['|', ('is_mixed', '=', False), ('for_which_members', '=', 'league')]}">
+                        <field name="members_ids_mixed" context="{'form_view_ref': 'member_registration.membership_view_partner_form'}" options="{'no_create': True, 'no_create_edit': True}" force_save="1">
+                            <tree>
+                                <field name="name"/>
+                                <field name="phone"/>
+                                <field name="email_address"/>
+                            </tree>
+                        </field>
+                    </page>
+                    <page string="Mixed Leaders" name="leaders_ids_mixed" attrs="{'invisible': ['|', ('is_mixed', '=', False), ('for_which_members', '=', 'league')]}">
+                        <field name="leaders_ids_mixed" context="{'form_view_ref': 'member_registration.membership_view_partner_form'}" options="{'no_create': True, 'no_create_edit': True}" force_save="1">
+                            <tree>
+                                <field name="name"/>
+                                <field name="phone"/>
+                                <field name="email_address"/>
+                            </tree>
+                        </field>
+                    </page>
+                    <page string="Mixed Leagues" name="leagues_ids_mixed" attrs="{'invisible': ['|', ('is_mixed', '=', False), ('for_which_members', '=', 'member')]}">
+                        <field name="leagues_ids_mixed" context="{'form_view_ref': 'member_registration.membership_view_partner_form'}" options="{'no_create': True, 'no_create_edit': True}" force_save="1">
+                            <tree>
+                                <field name="name"/>
+                                <field name="phone"/>
+                                <field name="email_address"/>
+                            </tree>
+                        </field>
+                    </page>
+                    <page string="Mixed League Leaders" name="league_leaders_ids_mixed" attrs="{'invisible': ['|', ('is_mixed', '=', False), ('for_which_members', '=', 'member')]}">
+                        <field name="league_leaders_ids_mixed" context="{'form_view_ref': 'member_registration.membership_view_partner_form'}" options="{'no_create': True, 'no_create_edit': True}" force_save="1">
+                            <tree>
+				<field name="name"/>
+                                <field name="phone"/>
+                                <field name="email_address"/>
+                            </tree>
+                        </field>
+                    </page>
+                    <page string="Members" name="members_ids" attrs="{'invisible': ['|', ('is_mixed', '=', True), ('for_which_members', '=', 'league')]}">
+                        <field name="members_ids" context="{'form_view_ref': 'member_registration.membership_view_partner_form'}" options="{'no_create': True, 'no_create_edit': True}" force_save="1">
+                            <tree>
+                                <field name="name"/>
+                                <field name="phone"/>
+                                <field name="email_address"/>
+                            </tree>
+                        </field>
+                    </page>
+                    <page string="Leaders" name="leaders_ids" attrs="{'invisible': ['|', ('is_mixed', '=', True), ('for_which_members', '=', 'league')]}">
+                        <field name="leaders_ids" context="{'form_view_ref': 'member_registration.membership_view_partner_form'}" options="{'no_create': True, 'no_create_edit': True}" force_save="1">
+                            <tree>
+                                <field name="name"/>
+                                <field name="phone"/>
+                                <field name="email_address"/>
+                            </tree>
+                        </field>
+                    </page>
+                    <page string="Leagues" name="leagues_ids" attrs="{'invisible': ['|', ('is_mixed', '=', True), ('for_which_members', '=', 'member')]}">
+                        <field name="leagues_ids" context="{'form_view_ref': 'member_registration.membership_view_partner_form'}" options="{'no_create': True, 'no_create_edit': True}" force_save="1">
+                            <tree>
+                                <field name="name"/>
+                                <field name="phone"/>
+                                <field name="email_address"/>
+                            </tree>
+                        </field>
+                    </page>
+                    <page string="League Leaders" name="league_leaders_ids" attrs="{'invisible': ['|', ('is_mixed', '=', True), ('for_which_members', '=', 'member')]}">
+                        <field name="league_leaders_ids" context="{'form_view_ref': 'member_registration.membership_view_partner_form'}" options="{'no_create': True, 'no_create_edit': True}" force_save="1">
+                            <tree>
+                                <field name="name"/>
+                                <field name="phone"/>
+                                <field name="email_address"/>
+                            </tree>
+                        </field>
+                    </page>
+                    <page string="Supporters" name="supporter_ids">
+                        <field name="supporter_ids">
+                            <tree>
+                                <field name="name"/>
+                                <field name="phone"/>
+                            </tree>
+                        </field>
+                    </page>
+                    <page string="Candidates" name="candidate_ids">
+                        <field name="candidate_ids">
+                            <tree>
+                                <field name="name"/>
+                                <field name="phone"/>
+                            </tree>
+                        </field>
+                    </page>
+                </notebook>
                 <footer>
                    <button
                         name="button_split_cell"

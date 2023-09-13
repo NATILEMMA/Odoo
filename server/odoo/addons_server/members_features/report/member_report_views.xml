@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<odoo>
+
+
+   <!-- This record will hold the action to create certificate for trainings details -->
+   <report id="create_training_certificate"
+           string="Certificate"
+           model="member.training"
+           report_type="qweb-pdf"
+           file="members_features.training_certificate_template"
+           name="members_features.training_certificate_template"
+           menu="False"/>
+
+   <!-- This record will hold the action to create certificate for participation details -->
+   <report id="create_participation_certificate"
+           string="Certificate"
+           model="assembly"
+           report_type="qweb-pdf"
+           file="members_features.participation_certificate_template"
+           name="members_features.participation_certificate_template"
+           menu="False"/>
+
+</odoo>

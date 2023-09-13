@@ -46,6 +46,9 @@ class HolidaysAllocation(models.Model):
         approved_ids = self.env['hr.leave.allocation'].search([('state', '=', 'validate'), ('expired_date', '=', date.today())])
         for approved in approved_ids:
             hr_partner = approved.employee_id.contract_id.hr_responsible_id
+            hr_partner = approved.employee_id.contract_id.hr_responsible_id
+            if not hr_partner:
+                raise UserError(_("Please Add Hr Responsible for this Employee's Contract"))
             employee = approved.employee_id
             start_date = date.today()
             approved.write({'state': 'refuse'})
@@ -70,9 +73,11 @@ class HolidaysAllocation(models.Model):
         approved_ids = self.env['hr.leave.allocation'].search([('state', '=', 'validate'), ('expired_date', '=', two_month_from_today)])
         for approved in approved_ids:
             hr_partner = approved.employee_id.contract_id.hr_responsible_id
+            if not hr_partner:
+                raise UserError(_("Please Add Hr Responsible for this Employee's Contract"))
             remaining = approved.employee_id.remaining_leaves
             if remaining > 0:
-                new_message = f"Please discuss with {hr_partner.name} about your remaing {remaining} leaves that are about to expire on {two_month_from_today}."
+                new_message = f"Please discuss with {hr_partner.name} about your remaing {remaining} leave days that are about to expire on {two_month_from_today}."
                 approved.employee_id.user_id.notify_warning(new_message, '<h4>Leave Expiry Meeting</h4>', True)
                 message = f"Please discuss with {approved.employee_id.name} about the remaining leaves before it expires on {two_month_from_today}."
                 model = self.env['ir.model'].search([('model', '=', 'hr.leave.allocation'), ('is_mail_activity', '=', True)])
@@ -99,7 +104,11 @@ class HolidaysAllocation(models.Model):
                 raise UserError(_('Selected employee has multiple or no running contracts!'))
             if record.employee_id and record.for_leave_type == 'annual':
                 today_date = date.today()
-                start_date = contract.trial_date_end
+                
+                start_date = None
+                if contract.trial_date_end: start_date = contract.trial_date_end 
+                else: start_date = contract.date_start
+
                 total_days = (today_date - start_date).days
                 record.total_working_years, total_days = total_days // 365, total_days % 365
                 record.total_working_months, total_days = total_days // 30, total_days % 30

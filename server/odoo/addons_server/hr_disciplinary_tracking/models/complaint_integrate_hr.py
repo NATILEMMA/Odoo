@@ -15,15 +15,15 @@ class EmployeeComplaints(models.Model):
         """This function will get the employee name from user"""
         return self.env['hr.employee'].search([('user_id', '=', self.env.user.id)], limit=1).id
 
-    name = fields.Char(string='Reference', required=True, copy=False, readonly=True, default='New')
+    name = fields.Char(string='Reference', required=True, copy=False, readonly=True, default='New', translate=True)
     subject = fields.Many2one('discipline.category', string="Subject", required=True)
     victim_id = fields.Many2one('hr.employee', default=_default_user, string="Victim")
-    mode = fields.Selection(selection=[('by_employee', 'On Employee'), ('by_department', 'On Department'), ('by_company', 'On Company')], required=True, string="Complaint")
+    mode = fields.Selection(selection=[('by_employee', 'By Employee'), ('by_department', 'By Department'), ('by_company', 'By Company')], required=True)
     employee_offendors_ids = fields.Many2many('hr.employee', string="Employees")
     department_offendors_ids = fields.Many2many('hr.department', string="Departments")
     company_offendors_id = fields.Many2one('res.company', string='Company', default=lambda self: self.env.company.id)
     action = fields.Many2one('discipline.action', string="Action")
-    action_details = fields.Text(string="Action Details")
+    action_details = fields.Text(string="Action Details", translate=True)
     circumstances = fields.Text(string="Circumstances", translate=True)
     state = fields.Selection(string="Complaint status", selection=[('new', 'New'), ('draft', 'Draft'), ('waiting for approval', 'Waiting For Approval'), ('resolved', 'Resolved')], default='new')
     disciplinary_id = fields.Many2one('disciplinary.action', string="Disciplinary Action")
@@ -140,21 +140,18 @@ class ResUsersComplaint(models.Model):
     employee_complaint_ids = fields.One2many('employee.complaint', 'victim_id')
     discipline_count = fields.Integer(compute="_compute_discipline_count")
     complaint_counter = fields.Integer(compute="_compute_complaint_count")
-    employee_complaint_counter = fields.Integer(String="Employee complaint counter")
-    employee_discipline_counter = fields.Integer(String="Employee discipline counter")
+
     def _compute_discipline_count(self):
         """This function will count the number of actions for a user"""
         for record in self:
             actions = self.env['disciplinary.action'].search([('state', 'in', ('explain','action')), ('employee_name', '=', record.id)])
             record.discipline_count = len(actions)
-            record.employee_discipline_counter = len(actions)
 
     def _compute_complaint_count(self):
         """This function will compute the number of complaints"""
         for record in self:
             complaints = self.env['employee.complaint'].search([('victim_id', '=', record.id)])
             record.complaint_counter = len(complaints)
-            record.employee_complaint_counter =  len(complaints)
 
 
 class ResUsersComplaint(models.Model):
@@ -163,6 +160,8 @@ class ResUsersComplaint(models.Model):
     employee_complaint_ids = fields.One2many('employee.complaint', 'victim_id')
     discipline_count = fields.Integer(compute="_compute_discipline_count")
     complaint_counter = fields.Integer(compute="_compute_complaint_count")
+    contract_id = fields.Many2one('hr.contract', string='Current Contract', help='Current contract of the employee')
+      
 
     def _compute_discipline_count(self):
         """This function will count the number of actions for a user"""

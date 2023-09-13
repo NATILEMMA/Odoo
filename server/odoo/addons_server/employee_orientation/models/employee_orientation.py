@@ -27,7 +27,7 @@ class Orientation(models.Model):
     _description = "Employee Orientation"
     _inherit = 'mail.thread'
 
-    name = fields.Char(string='Employee Orientation', readonly=True, default=lambda self: _('New'))
+    name = fields.Char(string='Employee Orientation', readonly=True, default=lambda self: _('New'), translate=True)
     employee_name = fields.Many2one('hr.employee', string='Employee', size=32, required=True)
     department = fields.Many2one('hr.department', string='Department', related='employee_name.department_id',
                                  required=True)
@@ -40,7 +40,7 @@ class Orientation(models.Model):
                              domain="[('department_id', '=', department)]")
     orientation_id = fields.Many2one('orientation.checklist', string='Orientation Checklist',
                                      domain="[('checklist_department','=', department)]", required=True)
-    note_id = fields.Text('Description')
+    note_id = fields.Text('Description', translate=True)
     orientation_request = fields.One2many('orientation.request', 'request_orientation', string='Orientation Request')
     state = fields.Selection([
         ('draft', 'Draft'),

@@ -8,16 +8,16 @@ class QueryDeluxe(models.Model):
     _inherit = ['mail.thread', 'mail.activity.mixin']
 
     tips = fields.Many2one('tipsqueries', string="Examples")
-    tips_description = fields.Text(related='tips.description')
+    tips_description = fields.Text(related='tips.description',translate=True)
 
-    rowcount = fields.Text(string='Rowcount')
+    rowcount = fields.Text(string='Rowcount',translate=True)
     html = fields.Html(string='HTML')
 
-    name = fields.Char(string='Type a query : ')
-    valid_query_name = fields.Char()
+    name = fields.Char(string='Type a query : ',translate=True)
+    valid_query_name = fields.Char(translate=True)
 
     show_raw_output = fields.Boolean(string='Show the raw output of the query')
-    raw_output = fields.Text(string='Raw output')
+    raw_output = fields.Text(string='Raw output',translate=True)
 
     def print_result(self):
         return {
@@ -106,5 +106,5 @@ class TipsQueries(models.Model):
     _description = "Tips for queries"
     _order = 'create_date desc, id'
 
-    name = fields.Char(string='Query', required=True)
-    description = fields.Text(string="Description")
+    name = fields.Char(string='Query', required=True,translate=True)
+    description = fields.Text(string="Description",translate=True)

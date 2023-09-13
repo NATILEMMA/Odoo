@@ -22,7 +22,7 @@ class PurchaseOrder(models.Model):
 
     grid_product_tmpl_id = fields.Many2one('product.template', store=False, help="Technical field for product_matrix functionalities.")
     grid_update = fields.Boolean(default=False, store=False, help="Whether the grid field contains a new matrix to apply or not.")
-    grid = fields.Char(store=False, help="Technical storage of grid. \nIf grid_update, will be loaded on the SO. \nIf not, represents the matrix to open.")
+    grid = fields.Char(store=False, help="Technical storage of grid. \nIf grid_update, will be loaded on the SO. \nIf not, represents the matrix to open.", translate=True)
 
     @api.onchange('grid_product_tmpl_id')
     def _set_grid_up(self):

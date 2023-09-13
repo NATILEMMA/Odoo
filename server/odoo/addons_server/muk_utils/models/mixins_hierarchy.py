@@ -43,7 +43,7 @@ class Hierarchy(models.AbstractModel):
     # Database
     # ----------------------------------------------------------
 
-    parent_path = fields.Char(string="Parent Path", index=True)
+    parent_path = fields.Char(string="Parent Path", index=True,translate=True)
 
     @api.model
     def _add_magic_fields(self):
@@ -59,7 +59,7 @@ class Hierarchy(models.AbstractModel):
         add(
             "parent_path_names",
             fields.Char(
-                _module=self._module,
+                _module=self._module,translate=True,
                 compute="_compute_parent_paths",
                 compute_sudo=self._parent_path_sudo,
                 store=self._parent_path_store,
@@ -72,7 +72,7 @@ class Hierarchy(models.AbstractModel):
         add(
             "parent_path_json",
             fields.Text(
-                _module=self._module,
+                _module=self._module,translate=True,
                 compute="_compute_parent_paths",
                 compute_sudo=self._parent_path_sudo,
                 store=self._parent_path_store,

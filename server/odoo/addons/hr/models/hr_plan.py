@@ -15,7 +15,7 @@ class HrPlanActivityType(models.Model):
         default=lambda self: self.env.ref('mail.mail_activity_data_todo'),
         domain=lambda self: ['|', ('res_model_id', '=', False), ('res_model_id', '=', self.env['ir.model']._get('hr.employee').id)]
     )
-    summary = fields.Char('Summary')
+    summary = fields.Char('Summary', translate=False)
     responsible = fields.Selection([
         ('coach', 'Coach'),
         ('manager', 'Manager'),
@@ -57,6 +57,6 @@ class HrPlan(models.Model):
     _name = 'hr.plan'
     _description = 'plan'
 
-    name = fields.Char('Name', required=True)
+    name = fields.Char('Name', required=True, translate=False)
     plan_activity_type_ids = fields.Many2many('hr.plan.activity.type', string='Activities')
     active = fields.Boolean(default=True)

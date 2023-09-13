@@ -34,7 +34,7 @@ class QcInspection(models.Model):
         default="/",
         readonly=True,
         states={"draft": [("readonly", False)]},
-        copy=False,
+        copy=False, translate=True
     )
     date = fields.Datetime(
         string="Date",
@@ -66,10 +66,10 @@ class QcInspection(models.Model):
         readonly=True,
         states={"ready": [("readonly", False)]},
     )
-    internal_notes = fields.Text(string="Internal notes")
+    internal_notes = fields.Text(string="Internal notes", translate=True)
     external_notes = fields.Text(
         string="External notes",
-        states={"success": [("readonly", True)], "failed": [("readonly", True)]},
+        states={"success": [("readonly", True)], "failed": [("readonly", True)]}, translate=True
     )
     state = fields.Selection(
         [
@@ -173,7 +173,7 @@ class QcInspection(models.Model):
                 elif line.passed_total == 0.0:
                     raise exceptions.UserError(
                         _(
-                            "The passed quantity shouldn't be 0.0(Zero)"
+                            "You should input passed quantity for each rule"
                             
                         )
                     )
@@ -341,7 +341,7 @@ class QcInspectionLine(models.Model):
     inspection_id = fields.Many2one(
         comodel_name="qc.inspection", string="Inspection", ondelete="cascade"
     )
-    name = fields.Char(string="Question", readonly=True)
+    name = fields.Char(string="Question", readonly=True, translate=True)
     product_id = fields.Many2one(
         comodel_name="product.product", related="inspection_id.product_id", store=True,
     )
@@ -362,7 +362,7 @@ class QcInspectionLine(models.Model):
         help="Value of the result for a qualitative question.",
         domain="[('id', 'in', possible_ql_values)]",
     )
-    notes = fields.Text(string="Notes")
+    notes = fields.Text(string="Notes", translate=True)
     min_value = fields.Float(
         string="Min",
         digits="Quality Control",
@@ -396,7 +396,7 @@ class QcInspectionLine(models.Model):
         readonly=True,
     )
     valid_values = fields.Char(
-        string="Valid values", store=True, compute="_compute_valid_values"
+        string="Valid values", store=True, compute="_compute_valid_values", translate=True
     )
     success = fields.Boolean(
         compute="_compute_quality_test_check", string="Success?", store=True
@@ -422,13 +422,10 @@ class QcInspectionLine(models.Model):
             _logger.info("qty-----validation %s",search.qty)
             if self.passed_total > search.qty:
                 raise exceptions.UserError(
-                        _(
-                            "Your input value of "+str(self.passed_total)+ "  is greater than the Product total quantity of " +str(search.qty) 
+                        _('Your input value of %s  is greater than the Product total quantity') %(str(self.passed_total)) )
+           
             
-                        )
-                    )
-
-
+               
 
 
 

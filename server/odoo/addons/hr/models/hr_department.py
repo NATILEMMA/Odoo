@@ -12,8 +12,8 @@ class Department(models.Model):
     _order = "name"
     _rec_name = 'complete_name'
 
-    name = fields.Char('Department Name', required=True)
-    complete_name = fields.Char('Complete Name', compute='_compute_complete_name', store=True)
+    name = fields.Char('Department Name', required=True, translate=False)
+    complete_name = fields.Char('Complete Name', compute='_compute_complete_name', store=True, translate=False)
     active = fields.Boolean('Active', default=True)
     company_id = fields.Many2one('res.company', string='Company', index=True, default=lambda self: self.env.company)
     parent_id = fields.Many2one('hr.department', string='Parent Department', index=True, domain="['|', ('company_id', '=', False), ('company_id', '=', company_id)]")
@@ -21,7 +21,7 @@ class Department(models.Model):
     manager_id = fields.Many2one('hr.employee', string='Manager', tracking=True, domain="['|', ('company_id', '=', False), ('company_id', '=', company_id)]")
     member_ids = fields.One2many('hr.employee', 'department_id', string='Members', readonly=True)
     jobs_ids = fields.One2many('hr.job', 'department_id', string='Jobs')
-    note = fields.Text('Note')
+    note = fields.Text('Note', translate=False)
     color = fields.Integer('Color Index')
 
     def name_get(self):

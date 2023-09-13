@@ -16,9 +16,6 @@
 # Piia Paurson <piia@avalah.ee>, 2021
 # Triine Aavik <triine@avalah.ee>, 2021
 # Eneli Õigus <enelioigus@gmail.com>, 2021
-# Leaanika Randmets, 2022
-# Jana Jaakson, 2022
-# Anna, 2023
 # 
 msgid ""
 msgstr ""
@@ -26,7 +23,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-05 12:34+0000\n"
 "PO-Revision-Date: 2019-08-26 09:14+0000\n"
-"Last-Translator: Anna, 2023\n"
+"Last-Translator: Eneli Õigus <enelioigus@gmail.com>, 2021\n"
 "Language-Team: Estonian (https://www.transifex.com/odoo/teams/41243/et/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -54,7 +51,7 @@ msgstr "&amp;korda;"
 #. module: survey
 #: model:ir.actions.report,print_report_name:survey.certification_report
 msgid "'Certification - %s' % (object.survey_id.display_name)"
-msgstr "'Sertifikaat - %s' % (object.survey_id.display_name)"
+msgstr ""
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_header
@@ -84,7 +81,7 @@ msgstr ""
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.403
 msgid "403: Forbidden"
-msgstr "403: Keelatud"
+msgstr ""
 
 #. module: survey
 #: model:survey.label,value:survey.vendor_certification_page_2_question_1_choice_2
@@ -443,12 +440,12 @@ msgstr "Pikkus peab olema positiivne number!"
 #. module: survey
 #: model:survey.label,value:survey.vendor_certification_page_2_question_3_choice_4
 msgid "A little bit overpriced"
-msgstr "Natuke ülehinnatud"
+msgstr ""
 
 #. module: survey
 #: model:survey.label,value:survey.vendor_certification_page_2_question_3_choice_5
 msgid "A lot overpriced"
-msgstr "Palju ülehinnatud"
+msgstr ""
 
 #. module: survey
 #: model:ir.model.fields,help:survey.field_survey_label__answer_score
@@ -473,7 +470,7 @@ msgstr ""
 #: model:survey.question,question:survey.survey_feedback_p2
 #: model:survey.question,title:survey.survey_feedback_p2
 msgid "About our ecommerce"
-msgstr "Meie e-kaubandusest"
+msgstr ""
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_invite__survey_access_mode
@@ -696,7 +693,7 @@ msgstr ""
 #. module: survey
 #: model:survey.label,value:survey.vendor_certification_page_2_question_2_choice_3
 msgid "Cabinet with Doors"
-msgstr "Ustega kabinet"
+msgstr ""
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_invite_view_form
@@ -780,7 +777,7 @@ msgstr "Edukaid sertifitseerimisi"
 #: model_terms:ir.ui.view,arch_db:survey.survey_form
 #: model_terms:ir.ui.view,arch_db:survey.survey_kanban
 msgid "Certified"
-msgstr "Sertifitseeritud"
+msgstr ""
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.certification_report_view
@@ -790,7 +787,7 @@ msgstr ""
 #. module: survey
 #: model:survey.label,value:survey.vendor_certification_page_1_question_2_choice_1
 msgid "Chair floor protection"
-msgstr "Tooli põrandakaitse"
+msgstr ""
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.result
@@ -801,7 +798,7 @@ msgstr "Diagramm"
 #: model:ir.model.fields,help:survey.field_survey_survey__is_attempts_limited
 #: model:ir.model.fields,help:survey.field_survey_user_input__is_attempts_limited
 msgid "Check this option if you want to limit the number of attempts per user"
-msgstr "Märkige see valik, kui soovite piirata katsete arvu kasutaja kohta"
+msgstr ""
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_question_form
@@ -876,7 +873,7 @@ msgstr "Koosta e-kiri"
 #. module: survey
 #: model:survey.label,value:survey.vendor_certification_page_1_question_2_choice_3
 msgid "Conference chair"
-msgstr "Konverentsi tool"
+msgstr ""
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.sfinished
@@ -901,7 +898,7 @@ msgstr "Sisukord"
 #. module: survey
 #: model:survey.label,value:survey.vendor_certification_page_2_question_2_choice_1
 msgid "Corner Desk Right Sit"
-msgstr "Nurgalaud"
+msgstr ""
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_user_input_line__answer_is_correct
@@ -911,7 +908,7 @@ msgstr "Õige"
 #. module: survey
 #: model:survey.label,value:survey.vendor_certification_page_2_question_3_choice_3
 msgid "Correctly priced"
-msgstr "Õige hinnaga"
+msgstr ""
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_invite__create_uid
@@ -984,12 +981,12 @@ msgstr ""
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_invite_view_form
 msgid "Customers will receive the same token."
-msgstr "Kliendid saavad samasuguse juurdepääsuloa"
+msgstr ""
 
 #. module: survey
 #: model:survey.label,value:survey.vendor_certification_page_1_question_2_choice_5
 msgid "Customizable Lamp"
-msgstr "Kohandatav lamp"
+msgstr ""
 
 #. module: survey
 #: model:ir.model.fields.selection,name:survey.selection__survey_question__question_type__date
@@ -1059,18 +1056,18 @@ msgstr ""
 #. module: survey
 #: model:survey.label,value:survey.vendor_certification_page_2_question_2_choice_2
 msgid "Desk Combination"
-msgstr "Lauakombinatsioon"
+msgstr ""
 
 #. module: survey
 #: model:ir.actions.act_window,name:survey.action_survey_user_input_line
 #: model:ir.ui.menu,name:survey.menu_survey_response_line_form
 msgid "Detailed Answers"
-msgstr "Detailsed vastused"
+msgstr ""
 
 #. module: survey
 #: model:survey.label,value:survey.survey_feedback_p2_q2_col2
 msgid "Disagree"
-msgstr "Ei nõustu"
+msgstr ""
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_question__display_mode
@@ -1101,20 +1098,19 @@ msgstr ""
 #: model:survey.question,question:survey.vendor_certification_page_1_question_1
 #: model:survey.question,title:survey.vendor_certification_page_1_question_1
 msgid "Do we sell Acoustic Bloc Screens?"
-msgstr "Kas me müüme akustilisi Bloc ekraane?"
+msgstr ""
 
 #. module: survey
 #: model:survey.question,question:survey.survey_feedback_p2_q3
 #: model:survey.question,title:survey.survey_feedback_p2_q3
 msgid "Do you have any other comments, questions, or concerns ?"
-msgstr "Kas Teil on muid kommentaare, küsimusi või muresid?"
+msgstr ""
 
 #. module: survey
 #: model:survey.question,question:survey.vendor_certification_page_1_question_5
 #: model:survey.question,title:survey.vendor_certification_page_1_question_5
 msgid "Do you think we have missing products in our catalog? (not rated)"
 msgstr ""
-"Kas Te arvate, et meie tootekataloogist on mõned tooted puudu? (Ei hinnata)"
 
 #. module: survey
 #: model:ir.model.fields.selection,name:survey.selection__survey_survey__state__draft
@@ -1124,7 +1120,7 @@ msgstr "Mustand"
 #. module: survey
 #: model:survey.label,value:survey.vendor_certification_page_1_question_2_choice_4
 msgid "Drawer"
-msgstr "Sahtel"
+msgstr ""
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_kanban
@@ -1184,7 +1180,7 @@ msgstr "Olemasolev partner"
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_invite__existing_emails
 msgid "Existing emails"
-msgstr "Olemasolevad e-kirjad"
+msgstr ""
 
 #. module: survey
 #: model:survey.label,value:survey.vendor_certification_page_1_question_2_choice_2
@@ -1239,7 +1235,7 @@ msgstr "Mängustamise märk"
 #. module: survey
 #: model:ir.model,name:survey.model_gamification_challenge
 msgid "Gamification Challenge"
-msgstr "Mängustamise väljakutse"
+msgstr ""
 
 #. module: survey
 #: model:survey.question,question:survey.survey_feedback_p1
@@ -1260,7 +1256,7 @@ msgstr "Anna märk"
 #. module: survey
 #: model:survey.label,value:survey.survey_feedback_p2_q1_sug4
 msgid "Good value for money"
-msgstr "Hea hinna ja kvaliteedi suhe"
+msgstr ""
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_question_search
@@ -1284,36 +1280,36 @@ msgstr "Kõrgus"
 #. module: survey
 #: model:survey.label,value:survey.survey_feedback_p2_q1_sug1
 msgid "High quality"
-msgstr "Kõrge kvaliteet"
+msgstr ""
 
 #. module: survey
 #: model:survey.question,question:survey.survey_feedback_p1_q3
 #: model:survey.question,title:survey.survey_feedback_p1_q3
 msgid "How frequently do you buy products online ?"
-msgstr "Kui sageli Te ostate tooteid Internetist?"
+msgstr ""
 
 #. module: survey
 #: model:survey.question,question:survey.survey_feedback_p1_q4
 #: model:survey.question,title:survey.survey_feedback_p1_q4
 msgid "How many times did you order products on our website ?"
-msgstr "Mitu korda tellisite meie veebisaidilt tooteid?"
+msgstr ""
 
 #. module: survey
 #: model:survey.question,question:survey.vendor_certification_page_1_question_4
 #: model:survey.question,title:survey.vendor_certification_page_1_question_4
 msgid "How many versions of the Corner Desk do we have?"
-msgstr "Mitu nurgalaua versiooni meil on?"
+msgstr ""
 
 #. module: survey
 #: model:survey.question,question:survey.vendor_certification_page_2_question_1
 #: model:survey.question,title:survey.vendor_certification_page_2_question_1
 msgid "How much do we sell our Cable Management Box?"
-msgstr "Kui palju me oma kaablihaldusboksi müüme?"
+msgstr ""
 
 #. module: survey
 #: model:survey.label,value:survey.survey_feedback_p2_q2_row5
 msgid "I have added products to my wishlist"
-msgstr "Lisasin tooted oma soovinimekirja"
+msgstr ""
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_invite__id
@@ -1409,7 +1405,7 @@ msgstr "Kui Sa soovid, siis suudad"
 #. module: survey
 #: model:survey.label,value:survey.survey_feedback_p2_q1_sug6
 msgid "Impractical"
-msgstr "Ebapraktiline"
+msgstr ""
 
 #. module: survey
 #: model:ir.model.fields.selection,name:survey.selection__survey_survey__state__open
@@ -1419,7 +1415,7 @@ msgstr "Töös"
 #. module: survey
 #: model:survey.label,value:survey.survey_feedback_p2_q1_sug7
 msgid "Ineffective"
-msgstr "Ebaefektiivne"
+msgstr ""
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_question__validation_email
@@ -1475,7 +1471,7 @@ msgstr ""
 #. module: survey
 #: model:survey.label,value:survey.survey_feedback_p2_q2_row2
 msgid "It is easy to find the product that I want"
-msgstr "Soovitud toodet on lihtne leida"
+msgstr ""
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_label__sequence
@@ -1493,13 +1489,11 @@ msgid ""
 "Labels used for proposed choices: simple choice, multiple choice and columns"
 " of matrix"
 msgstr ""
-"Pakutavate valikute jaoks kasutatavad sildid: lihtvalik, valikvastus ja "
-"maatriksi veerud"
 
 #. module: survey
 #: model:survey.label,value:survey.vendor_certification_page_2_question_2_choice_4
 msgid "Large Desk"
-msgstr "Suur laud"
+msgstr ""
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_invite____last_update
@@ -1549,7 +1543,7 @@ msgstr "Paigutus"
 #. module: survey
 #: model:survey.label,value:survey.vendor_certification_page_1_question_3_choice_4
 msgid "Legs"
-msgstr "Jalad"
+msgstr ""
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_survey__is_attempts_limited
@@ -1710,7 +1704,7 @@ msgstr "Mitme valikuvõimalus: ainult üks vastus"
 #. module: survey
 #: model:ir.model.fields.selection,name:survey.selection__survey_question__matrix_subtype__multiple
 msgid "Multiple choices per row"
-msgstr "Mitu valikuvõimalust ühel real"
+msgstr ""
 
 #. module: survey
 #: model:survey.survey,title:survey.vendor_certification
@@ -1781,7 +1775,7 @@ msgstr "Küsitluse silte ei leitud"
 #. module: survey
 #: model_terms:ir.actions.act_window,help:survey.action_survey_user_input_line
 msgid "No user input lines found"
-msgstr "Ühtegi kasutaja sisestusrida ei leitud"
+msgstr ""
 
 #. module: survey
 #: model_terms:ir.actions.act_window,help:survey.action_survey_user_input
@@ -1818,7 +1812,7 @@ msgstr "Veergude arv"
 #. module: survey
 #: model:survey.label,value:survey.vendor_certification_page_1_question_3_choice_5
 msgid "Number of drawers"
-msgstr "Sahtlite arv"
+msgstr ""
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_survey__message_has_error_counter
@@ -1858,12 +1852,12 @@ msgstr ""
 #. module: survey
 #: model:survey.label,value:survey.vendor_certification_page_2_question_2_choice_5
 msgid "Office Chair Black"
-msgstr "Must kontoritool"
+msgstr ""
 
 #. module: survey
 #: model:survey.label,value:survey.survey_feedback_p1_q3_sug1
 msgid "Once a day"
-msgstr "Kord päevas"
+msgstr ""
 
 #. module: survey
 #: model:survey.label,value:survey.survey_feedback_p1_q3_sug3
@@ -1873,12 +1867,12 @@ msgstr "Kord kuus"
 #. module: survey
 #: model:survey.label,value:survey.survey_feedback_p1_q3_sug2
 msgid "Once a week"
-msgstr "Korra nädalas"
+msgstr ""
 
 #. module: survey
 #: model:survey.label,value:survey.survey_feedback_p1_q3_sug4
 msgid "Once a year"
-msgstr "Korra aastas"
+msgstr ""
 
 #. module: survey
 #: model:ir.model.fields.selection,name:survey.selection__survey_question__matrix_subtype__simple
@@ -1931,7 +1925,7 @@ msgstr ""
 #. module: survey
 #: model:survey.label,value:survey.survey_feedback_p2_q1_sug5
 msgid "Overpriced"
-msgstr "Ülehinnatud"
+msgstr ""
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_question__page_id
@@ -1995,14 +1989,11 @@ msgid ""
 "Please make sure you have at least one question in your survey. You also "
 "need at least one section if you chose the \"Page per section\" layout.<br/>"
 msgstr ""
-"Veenduge, et Teie küsitluses oleks vähemalt üks küsimus. Samuti on Teil vaja"
-" vähemalt ühte jaotist, kui valisite paigutuse „Lehekülg jaotise "
-"kohta”.<br/>"
 
 #. module: survey
 #: model:survey.label,value:survey.survey_feedback_p2_q1_sug8
 msgid "Poor quality"
-msgstr "Halb kvaliteet"
+msgstr ""
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_user_input__question_ids
@@ -2023,7 +2014,7 @@ msgstr ""
 #: model:survey.question,question:survey.vendor_certification_page_2
 #: model:survey.question,title:survey.vendor_certification_page_2
 msgid "Prices"
-msgstr "Hinnad"
+msgstr ""
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_form
@@ -2250,19 +2241,19 @@ msgstr "Lõigud ja küsimused"
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_form
 msgid "See results"
-msgstr "Vaata tulemusi"
+msgstr ""
 
 #. module: survey
 #: model:survey.question,question:survey.vendor_certification_page_1_question_3
 #: model:survey.question,title:survey.vendor_certification_page_1_question_3
 msgid "Select all the available customizations for our Customizable Desk"
-msgstr "Valige meie kohandatava töölaua jaoks kõik saadaolevad lisad."
+msgstr ""
 
 #. module: survey
 #: model:survey.question,question:survey.vendor_certification_page_1_question_2
 #: model:survey.question,title:survey.vendor_certification_page_1_question_2
 msgid "Select all the existing products"
-msgstr "Valige kõik olemasolevad tooted"
+msgstr ""
 
 #. module: survey
 #: model:survey.question,question:survey.vendor_certification_page_2_question_2
@@ -2591,7 +2582,7 @@ msgstr "Tänuavaldus"
 #: code:addons/survey/models/survey_user.py:0
 #, python-format
 msgid "The answer must be in the right type"
-msgstr "Vastus peab olema õiget tüüpi"
+msgstr ""
 
 #. module: survey
 #: code:addons/survey/models/survey_question.py:0
@@ -2634,7 +2625,7 @@ msgstr "Iga küsitluse märk peaks olema ainulaadne!"
 #. module: survey
 #: model:survey.label,value:survey.survey_feedback_p2_q2_row4
 msgid "The checkout process is clear and secure"
-msgstr "Kassaprotsess on selge ja turvaline"
+msgstr ""
 
 #. module: survey
 #. openerp-web
@@ -2685,7 +2676,7 @@ msgstr ""
 #. module: survey
 #: model:survey.label,value:survey.survey_feedback_p2_q2_row1
 msgid "The new layout and design is fresh and up-to-date"
-msgstr "Uus paigutus ja kujundus on värske ning ajakohane"
+msgstr ""
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.403
@@ -2707,7 +2698,7 @@ msgstr ""
 #. module: survey
 #: model:survey.label,value:survey.survey_feedback_p2_q2_row3
 msgid "The tool to compare the products is useful to make a choice"
-msgstr "Toodete võrdlemise tööriist on valiku tegemisel kasulik"
+msgstr ""
 
 #. module: survey
 #: code:addons/survey/controllers/main.py:0
@@ -2863,7 +2854,7 @@ msgstr "Täiesti nõus"
 #. module: survey
 #: model:survey.label,value:survey.survey_feedback_p2_q2_col1
 msgid "Totally disagree"
-msgstr "Täiesti nõus"
+msgstr ""
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_question_search
@@ -2894,7 +2885,7 @@ msgstr "Sõnumit ei saa postitada, looge saatja e-posti aadress."
 #. module: survey
 #: model:survey.label,value:survey.vendor_certification_page_2_question_3_choice_2
 msgid "Underpriced"
-msgstr "Alahinnatud"
+msgstr ""
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.sfinished
@@ -2904,7 +2895,7 @@ msgstr "Kahjuks olete testi läbi kukkunud."
 #. module: survey
 #: model:survey.label,value:survey.survey_feedback_p2_q1_sug3
 msgid "Unique"
-msgstr "Ainulaadne"
+msgstr ""
 
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_survey__message_unread
@@ -2943,7 +2934,7 @@ msgstr ""
 #. module: survey
 #: model:survey.label,value:survey.survey_feedback_p2_q1_sug2
 msgid "Useful"
-msgstr "Kasulik"
+msgstr ""
 
 #. module: survey
 #: model:res.groups,name:survey.group_survey_user
@@ -3001,7 +2992,7 @@ msgstr "Valideerimise veateade"
 #. module: survey
 #: model:survey.label,value:survey.vendor_certification_page_2_question_3_choice_1
 msgid "Very underpriced"
-msgstr "Väga alahinnatud"
+msgstr ""
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.result_choice
@@ -3022,7 +3013,7 @@ msgstr "Veebilehe suhtluse ajalugu"
 #: model:survey.question,question:survey.vendor_certification_page_2_question_3
 #: model:survey.question,title:survey.vendor_certification_page_2_question_3
 msgid "What do you think about our prices (not rated)?"
-msgstr "Mida arvate meie hindadest (ei ole hinnatud)?"
+msgstr ""
 
 #. module: survey
 #: model:survey.question,question:survey.survey_feedback_p2_q2
@@ -3034,19 +3025,19 @@ msgstr ""
 #: model:survey.question,question:survey.survey_feedback_p1_q2
 #: model:survey.question,title:survey.survey_feedback_p1_q2
 msgid "When is your date of birth ?"
-msgstr "Millal on Teie sünnikuupäev?"
+msgstr ""
 
 #. module: survey
 #: model:survey.question,question:survey.survey_feedback_p1_q1
 #: model:survey.question,title:survey.survey_feedback_p1_q1
 msgid "Where do you live ?"
-msgstr "Kus Te elate?"
+msgstr ""
 
 #. module: survey
 #: model:survey.question,question:survey.survey_feedback_p2_q1
 #: model:survey.question,title:survey.survey_feedback_p2_q1
 msgid "Which of the following words would you use to describe our products ?"
-msgstr "Milliseid sõnu kasutaksite meie toodete kirjeldamiseks?"
+msgstr ""
 
 #. module: survey
 #: model:survey.label,value:survey.vendor_certification_page_1_question_3_choice_3
@@ -3107,8 +3098,6 @@ msgid ""
 "You cannot send an invitation for a \"One page per section\" survey if the "
 "survey has no sections."
 msgstr ""
-"Te ei saa saata kutset küsitlusele \"Üks leht jaotise kohta\", kui "
-"küsitluses pole jaotisi."
 
 #. module: survey
 #: code:addons/survey/models/survey_survey.py:0
@@ -3117,8 +3106,6 @@ msgid ""
 "You cannot send an invitation for a \"One page per section\" survey if the "
 "survey only contains empty sections."
 msgstr ""
-"Te ei saa saata kutset küsitlusele \"Üks leht jaotise kohta\", kui küsitlus "
-"sisaldab ainult tühje jaotisi."
 
 #. module: survey
 #: code:addons/survey/models/survey_survey.py:0

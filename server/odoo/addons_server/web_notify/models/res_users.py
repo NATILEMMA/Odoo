@@ -26,11 +26,11 @@ class ResUsers(models.Model):
             record.notify_info_channel_name = "notify_info_%s" % res_id
             record.notify_default_channel_name = "notify_default_%s" % res_id
 
-    notify_success_channel_name = fields.Char(compute="_compute_channel_names")
-    notify_danger_channel_name = fields.Char(compute="_compute_channel_names")
-    notify_warning_channel_name = fields.Char(compute="_compute_channel_names")
-    notify_info_channel_name = fields.Char(compute="_compute_channel_names")
-    notify_default_channel_name = fields.Char(compute="_compute_channel_names")
+    notify_success_channel_name = fields.Char(compute="_compute_channel_names",translate=True)
+    notify_danger_channel_name = fields.Char(compute="_compute_channel_names",translate=True)
+    notify_warning_channel_name = fields.Char(compute="_compute_channel_names",translate=True)
+    notify_info_channel_name = fields.Char(compute="_compute_channel_names",translate=True)
+    notify_default_channel_name = fields.Char(compute="_compute_channel_names",translate=True)
 
     def notify_success(self, message="Default message", title=None, sticky=False):
         title = title or _("Success")

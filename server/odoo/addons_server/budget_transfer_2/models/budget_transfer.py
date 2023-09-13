@@ -42,7 +42,8 @@ class AccountAccount(models.Model):
 
 class BudgetTransfer(models.Model):
     _name = "budget.transfer"
-    # _inherits = 'account.move'
+    _inherit = ['portal.mixin', 'mail.thread', 'mail.activity.mixin', 'utm.mixin']
+
     _description = 'Budget Transfer'
 
 
@@ -50,10 +51,10 @@ class BudgetTransfer(models.Model):
     pagum_from = fields.Char(string="in ethiopian date")
     is_pagum_from = fields.Boolean(default='True')
 
-    name = fields.Char()
+    name = fields.Char(tracking=True )
     budget_line = fields.One2many('budget.transfer.line', 'budget_id', string='Budget Lines', default={})
-    date = fields.Date()
-    journal_id = fields.Many2one('account.journal',required=True)
+    date = fields.Date(tracking=True )
+    journal_id = fields.Many2one('account.journal',required=True,tracking=True )
     time_frame = fields.Many2one('reconciliation.time.fream')
     fiscal_year = fields.Many2one('fiscal.year')
     state = fields.Selection(STATES_TRANSFER,
@@ -69,6 +70,8 @@ class BudgetTransfer(models.Model):
     approver_signed_on = fields.Datetime('Signed On', help='Date of the signature.', copy=False)
     squ = fields.Char(string='Reference', required=True, copy=False, readonly=True,
                        default=lambda self: _('New'))
+    is_refused = fields.Boolean(default=False)
+    
     @api.onchange('date')
     def onchange_date_field(self):
         if not self.date:
@@ -94,7 +97,7 @@ class BudgetTransfer(models.Model):
     def unlink(self):
         if self.state in ['requested','approved']:
             state = self.state
-            raise ValidationError('You cannot delete a budget transfer request that has been '+self.state)
+            raise ValidationError(_('You cannot delete a budget transfer request that has been %s')% str(self.state))
 
     def action_reset(self):
         self.state = "draft"
@@ -106,6 +109,15 @@ class BudgetTransfer(models.Model):
     def action_reject(self):
         self.state = "canceled"
         super(BudgetTransfer, self).write({'state':'canceled'})
+
+    def refuse_transfer_budget(self, reason):
+        _logger.info("******* refuse_budget_transfer ********")
+        _logger.info("******* refuse_budget ********")
+        self.write({'is_refused': True})
+        self.write({'state': 'canceled'})
+        self.message_post_with_view('budget_transfer_2.budget_transfer_template_refuse_reason',
+                                             values={'reason': reason, 'is_sheet': False, 'name': self.name})
+                
         
     def action_approve(self):
         account = self.env["account.move"].sudo().create({
@@ -194,7 +206,7 @@ class BudgetTransfer(models.Model):
                     else:
                         _logger.info("NNNNNNNNNNNNNN")
             else:
-                raise ValidationError('You cannot transfer from the budget code '+'"'+ vv.general_budget_id.name + '"' +' because it is a non-transferable budget code.')
+                raise ValidationError(_('You cannot transfer from the budget code %s because it is a non-transferable budget code.')% str(vv.general_budget_id.name)) 
 
             filtered_from_budget_account  = [*set(from_budget_account)]
             _logger.info("DDDDDDDDDDDDDD filtered_from_budget_account %s",filtered_from_budget_account)
@@ -311,9 +323,9 @@ class BudgetTransfer(models.Model):
                     self.move_id = account.id
 
                 else:
-                    raise ValidationError("The approved amount is greater than the budget code amount. Please check your approved amount;  it must be less than the transfer budget code amount.")
+                    raise ValidationError(_("The approved amount is greater than the budget code amount. Please check your approved amount;  it must be less than the transfer budget code amount."))
             else:
-                    raise ValidationError("The approved amount fields are required for budget transfer approval.")
+                    raise ValidationError(_("The approved amount fields are required for budget transfer approval."))
            
                 
            
@@ -321,184 +333,184 @@ class BudgetTransfer(models.Model):
         self.state = "approved"
         super(BudgetTransfer, self).write({'state':'approved'}) 
 
-    @api.model
-    def create(self, vals):
-        for i in range(0, len(pick1)):
+    # @api.model
+    # def create(self, vals):
+    #     for i in range(0, len(pick1)):
   
-            if i == (len(pick1)-1):
-                date1 = EthiopianDateConverter.to_gregorian(pick1[i]['year'],pick1[i]['month'],pick1[i]['day'])
-                Edate1 = EthiopianDateConverter.to_ethiopian(date1.year,date1.month,date1.day)
-                if pick1[i]['pick'] == 1:
-                    if type(Edate1) ==   str:
-                        vals['ethiopian_from'] = None
-                        vals['date'] = date1
-                        vals['pagum_from'] = Edate1
-                        vals['is_pagum_from'] = False
+    #         if i == (len(pick1)-1):
+    #             date1 = EthiopianDateConverter.to_gregorian(pick1[i]['year'],pick1[i]['month'],pick1[i]['day'])
+    #             Edate1 = EthiopianDateConverter.to_ethiopian(date1.year,date1.month,date1.day)
+    #             if pick1[i]['pick'] == 1:
+    #                 if type(Edate1) ==   str:
+    #                     vals['ethiopian_from'] = None
+    #                     vals['date'] = date1
+    #                     vals['pagum_from'] = Edate1
+    #                     vals['is_pagum_from'] = False
 
-                        pick1.clear()
-                    if type(Edate1) ==   date:
-                        vals['date'] = date1
-                        vals['ethiopian_from'] = Edate1
-                        pick1.clear()
-                vals['squ'] = self.env['ir.sequence'].next_by_code('budget.transfer') or _('New')
+    #                     pick1.clear()
+    #                 if type(Edate1) ==   date:
+    #                     vals['date'] = date1
+    #                     vals['ethiopian_from'] = Edate1
+    #                     pick1.clear()
+    #             vals['squ'] = self.env['ir.sequence'].next_by_code('budget.transfer') or _('New')
                 
-                date_1 = str(date1)
-                date_1 = date_1.split('-')
-                vals['squ'] = "BT/"+date_1[0]+"/"+vals['squ']
-                _logger.info("After :%s",vals['squ'])
-                vals['name'] = vals['squ']
-                # The blow code used for only budget transfer moduel
+    #             date_1 = str(date1)
+    #             date_1 = date_1.split('-')
+    #             vals['squ'] = "BT/"+date_1[0]+"/"+vals['squ']
+    #             _logger.info("After :%s",vals['squ'])
+    #             vals['name'] = vals['squ']
+    #             # The blow code used for only budget transfer moduel
 
-                active_time_frame = self.env['reconciliation.time.fream'].search(
-                    [('date_from', '<=', date1), ('date_to', '>=', date1)], limit=1)
-                vals['time_frame'] = active_time_frame.id
-                vals['fiscal_year'] = active_time_frame.fiscal_year.id
-
-
-        try:
-            if vals['date'] is not None:
-                date1 = vals['date']
-                date_time_obj = date1.split('-')
-                Edate1 = EthiopianDateConverter.to_ethiopian(int(date_time_obj[0]),int(date_time_obj[1]),int(date_time_obj[2]))
-                if type(Edate1) ==   date:
-                    vals['ethiopian_from'] = Edate1
-                elif type(Edate1) ==   str :
-                    vals['pagum_from'] = Edate1
-                    vals['is_pagum_from'] = False
-
-                else:
-                    pass
-                vals['squ'] = self.env['ir.sequence'].next_by_code('budget.transfer') or _('New')
-
-                date_1 = str(date1)
-                date_1 = date_1.split('-')
-                vals['squ'] = "BT/"+date_1[0]+"/"+vals['squ']
-                _logger.info("After :%s",vals['squ'])
-                vals['name'] = vals['squ']
-                active_time_frame = self.env['reconciliation.time.fream'].search(
-                    [('date_from', '<=', date1), ('date_to', '>=', date1)], limit=1)
-                vals['time_frame'] = active_time_frame.id
-                vals['fiscal_year'] = active_time_frame.fiscal_year.id
+    #             active_time_frame = self.env['reconciliation.time.fream'].search(
+    #                 [('date_from', '<=', date1), ('date_to', '>=', date1)], limit=1)
+    #             vals['time_frame'] = active_time_frame.id
+    #             vals['fiscal_year'] = active_time_frame.fiscal_year.id
 
 
-        except:
-            pass
+    #     try:
+    #         if vals['date'] is not None:
+    #             date1 = vals['date']
+    #             date_time_obj = date1.split('-')
+    #             Edate1 = EthiopianDateConverter.to_ethiopian(int(date_time_obj[0]),int(date_time_obj[1]),int(date_time_obj[2]))
+    #             if type(Edate1) ==   date:
+    #                 vals['ethiopian_from'] = Edate1
+    #             elif type(Edate1) ==   str :
+    #                 vals['pagum_from'] = Edate1
+    #                 vals['is_pagum_from'] = False
 
-        return super(BudgetTransfer, self).create(vals)
+    #             else:
+    #                 pass
+    #             vals['squ'] = self.env['ir.sequence'].next_by_code('budget.transfer') or _('New')
+
+    #             date_1 = str(date1)
+    #             date_1 = date_1.split('-')
+    #             vals['squ'] = "BT/"+date_1[0]+"/"+vals['squ']
+    #             _logger.info("After :%s",vals['squ'])
+    #             vals['name'] = vals['squ']
+    #             active_time_frame = self.env['reconciliation.time.fream'].search(
+    #                 [('date_from', '<=', date1), ('date_to', '>=', date1)], limit=1)
+    #             vals['time_frame'] = active_time_frame.id
+    #             vals['fiscal_year'] = active_time_frame.fiscal_year.id
+
+
+    #     except:
+    #         pass
+
+    #     return super(BudgetTransfer, self).create(vals)
     
 
 
-    def write(self, vals):
-        _logger.info("############# Write:%s",vals)
-        try:
-            if vals['ethiopian_from'] is not None:
-                date_str = vals['ethiopian_from']
-                date_time_obj = date_str.split('-')
-                date_gr = EthiopianDateConverter.to_gregorian(int(date_time_obj[0]),int(date_time_obj[1]),int(date_time_obj[2]))
-                Edate1 = EthiopianDateConverter.to_ethiopian(date_gr.year,date_gr.month,date_gr.day)
-                vals['date'] = date_gr
-                if type(Edate1) ==   str:
-                        vals['ethiopian_from'] = None
-                        vals['pagum_from'] = Edate1
-                        vals['is_pagum_from'] = False
-                if type(Edate1) ==   date:
-                        vals['ethiopian_from'] = Edate1
-                        vals['pagum_from'] = None
-                        vals['is_pagum_from'] = True
+    # def write(self, vals):
+    #     _logger.info("############# Write:%s",vals)
+    #     try:
+    #         if vals['ethiopian_from'] is not None:
+    #             date_str = vals['ethiopian_from']
+    #             date_time_obj = date_str.split('-')
+    #             date_gr = EthiopianDateConverter.to_gregorian(int(date_time_obj[0]),int(date_time_obj[1]),int(date_time_obj[2]))
+    #             Edate1 = EthiopianDateConverter.to_ethiopian(date_gr.year,date_gr.month,date_gr.day)
+    #             vals['date'] = date_gr
+    #             if type(Edate1) ==   str:
+    #                     vals['ethiopian_from'] = None
+    #                     vals['pagum_from'] = Edate1
+    #                     vals['is_pagum_from'] = False
+    #             if type(Edate1) ==   date:
+    #                     vals['ethiopian_from'] = Edate1
+    #                     vals['pagum_from'] = None
+    #                     vals['is_pagum_from'] = True
 
-                # The blow code used for only budget transfer moduel
+    #             # The blow code used for only budget transfer moduel
 
-                active_time_frame = self.env['reconciliation.time.fream'].search(
-                    [('date_from', '<=', vals['date']), ('date_to', '>=', vals['date'])], limit=1)
-                if not active_time_frame.id:
-                    pass
-                else:
-                    self['time_frame'] = active_time_frame
-                    self['fiscal_year'] = active_time_frame.fiscal_year.id
-        except:
-            pass
-        try:           
-            if vals['date'] is not None:
-                date_str = vals['date']
-                date_time_obj = date_str.split('-')
-                Edate = EthiopianDateConverter.to_ethiopian(int(date_time_obj[0]),int(date_time_obj[1]),int(date_time_obj[2]))
-                if type(Edate) == str:
-                    vals['ethiopian_from'] = None
-                    vals['is_pagum_from'] = False
-                    vals['pagum_from'] = Edate
-                elif type(Edate) == date:
-                    vals['ethiopian_from'] = Edate
-                    vals['is_pagum_from'] = True
-                    vals['pagum_from'] = ' '
-        except:
-            pass
-        return super(BudgetTransfer, self).write(vals)
+    #             active_time_frame = self.env['reconciliation.time.fream'].search(
+    #                 [('date_from', '<=', vals['date']), ('date_to', '>=', vals['date'])], limit=1)
+    #             if not active_time_frame.id:
+    #                 pass
+    #             else:
+    #                 self['time_frame'] = active_time_frame
+    #                 self['fiscal_year'] = active_time_frame.fiscal_year.id
+    #     except:
+    #         pass
+    #     try:           
+    #         if vals['date'] is not None:
+    #             date_str = vals['date']
+    #             date_time_obj = date_str.split('-')
+    #             Edate = EthiopianDateConverter.to_ethiopian(int(date_time_obj[0]),int(date_time_obj[1]),int(date_time_obj[2]))
+    #             if type(Edate) == str:
+    #                 vals['ethiopian_from'] = None
+    #                 vals['is_pagum_from'] = False
+    #                 vals['pagum_from'] = Edate
+    #             elif type(Edate) == date:
+    #                 vals['ethiopian_from'] = Edate
+    #                 vals['is_pagum_from'] = True
+    #                 vals['pagum_from'] = ' '
+    #     except:
+    #         pass
+    #     return super(BudgetTransfer, self).write(vals)
     
-    @api.model
-    def initial_date(self, data):
-        _logger.info("################# Initial DATA %s", data)
+    # @api.model
+    # def initial_date(self, data):
+    #     _logger.info("################# Initial DATA %s", data)
 
-        dd = data['url'].split('id=')
-        id = str(dd[1]).split('&')
-        m = data['url'].split('model=')
-        mm = m[1].split('&')
-        if len(id[0]) <= 0:
-            _logger.info("################# not fund")
-            date = datetime.now()
-            date = EthiopianDateConverter.to_ethiopian(date.year,date.month,date.day)
-            _logger.info("################# d: %s",date)
+    #     dd = data['url'].split('id=')
+    #     id = str(dd[1]).split('&')
+    #     m = data['url'].split('model=')
+    #     mm = m[1].split('&')
+    #     if len(id[0]) <= 0:
+    #         _logger.info("################# not fund")
+    #         date = datetime.now()
+    #         date = EthiopianDateConverter.to_ethiopian(date.year,date.month,date.day)
+    #         _logger.info("################# d: %s",date)
 
-            return date
-        else:
+    #         return {'from': date, 'to': date}
+    #     else:
             
-            models = mm[0]
-            search = self.env[models].search([('id','=',id[0])])
-            if search.ethiopian_from != False and search.pagum_from == False:
-                _logger.info("################# T")
-                today = datetime.now()
-                today = EthiopianDateConverter.to_ethiopian(today.year,today.month,today.day)
-                return {'from': search.ethiopian_from, 'to': today}
-            elif search.ethiopian_from == False and search.pagum_from != False:
-                _logger.info("#################  T pa")
-                date_from_str = str(search.pagum_from).split('/')
-                date_from = date_from_str[2]+'-'+ date_from_str[0]+'-'+ date_from_str[1]
-                today = datetime.now()
-                today = EthiopianDateConverter.to_ethiopian(today.year,today.month,today.day)
-                return {'from': date_from, 'to': today}
-            elif search.ethiopian_from == False and search.pagum_from == False:
-                _logger.info("#################  F")
-                today = datetime.now()
-                today = EthiopianDateConverter.to_ethiopian(today.year,today.month,today.day)
-                return {'from': today, 'to': today}
-            else:
-                date = datetime.now()
-                date = EthiopianDateConverter.to_ethiopian(date.year,date.month,date.day)
-                _logger.info("################# d: %s",date)
+    #         models = mm[0]
+    #         search = self.env[models].search([('id','=',id[0])])
+    #         if search.ethiopian_from != False and search.pagum_from == False:
+    #             _logger.info("################# T")
+    #             today = datetime.now()
+    #             today = EthiopianDateConverter.to_ethiopian(today.year,today.month,today.day)
+    #             return {'from': search.ethiopian_from, 'to': today}
+    #         elif search.ethiopian_from == False and search.pagum_from != False:
+    #             _logger.info("#################  T pa")
+    #             date_from_str = str(search.pagum_from).split('/')
+    #             date_from = date_from_str[2]+'-'+ date_from_str[0]+'-'+ date_from_str[1]
+    #             today = datetime.now()
+    #             today = EthiopianDateConverter.to_ethiopian(today.year,today.month,today.day)
+    #             return {'from': date_from, 'to': today}
+    #         elif search.ethiopian_from == False and search.pagum_from == False:
+    #             _logger.info("#################  F")
+    #             today = datetime.now()
+    #             today = EthiopianDateConverter.to_ethiopian(today.year,today.month,today.day)
+    #             return {'from': today, 'to': today}
+    #         else:
+    #             date = datetime.now()
+    #             date = EthiopianDateConverter.to_ethiopian(date.year,date.month,date.day)
+    #             _logger.info("################# d: %s",date)
 
-                return date
+    #             return date
 
-    @api.model
-    def date_convert_and_set(self,picked_date):
-        date_gr = EthiopianDateConverter.to_gregorian(picked_date['year'], picked_date['month'], picked_date['day'])
-        date,time = str(datetime.now()).split(" ")
-        dd,mm,yy= picked_date['day'],picked_date['month'],picked_date['year']
-        # date = str(date_et) + " " + str(f"{time}")
-        date = EthiopianDateConverter.to_ethiopian(date_gr.year,date_gr.month,date_gr.day)
-        date = {"data":f"d={picked_date['day']},m={picked_date['month']},y={picked_date['year']}","date":date}
-        data = {
-            'day':   picked_date['day'],
-            'month': picked_date['month'],
-            'year': picked_date['year'],
-            'pick': picked_date['pick']
-        }
-        if picked_date['pick'] == 1:
-            pick1.append(data)
-        if picked_date['pick'] == 2:
-            pick2.append(data)
-        if picked_date['pick'] == 3:
-            pick3.append(data)
-        if picked_date['pick'] == 4:
-            pick3.append(data)
+    # @api.model
+    # def date_convert_and_set(self,picked_date):
+    #     date_gr = EthiopianDateConverter.to_gregorian(picked_date['year'], picked_date['month'], picked_date['day'])
+    #     date,time = str(datetime.now()).split(" ")
+    #     dd,mm,yy= picked_date['day'],picked_date['month'],picked_date['year']
+    #     # date = str(date_et) + " " + str(f"{time}")
+    #     date = EthiopianDateConverter.to_ethiopian(date_gr.year,date_gr.month,date_gr.day)
+    #     date = {"data":f"d={picked_date['day']},m={picked_date['month']},y={picked_date['year']}","date":date}
+    #     data = {
+    #         'day':   picked_date['day'],
+    #         'month': picked_date['month'],
+    #         'year': picked_date['year'],
+    #         'pick': picked_date['pick']
+    #     }
+    #     if picked_date['pick'] == 1:
+    #         pick1.append(data)
+    #     if picked_date['pick'] == 2:
+    #         pick2.append(data)
+    #     if picked_date['pick'] == 3:
+    #         pick3.append(data)
+    #     if picked_date['pick'] == 4:
+    #         pick3.append(data)
 
 
     
@@ -506,8 +518,8 @@ class BudgetTransferLine(models.Model):
     _name = "budget.transfer.line"
     _description = 'Budget Transfer Line'
 
-    account_from = fields.Many2one('account.account', 'Account code' ,required=True, default=lambda self: self.env['account.account'].search([('is_transfer_account','=',True)], limit=1))
-    account_to = fields.Many2one('account.account', 'Account code',required=True,  default=lambda self: self.env['account.account'].search([('is_transfer_account','=',True)], limit=1))
+    account_from = fields.Many2one('account.account', 'Account code' ,required=True, domain="[('is_transfer_account', '=', True)]")
+    account_to = fields.Many2one('account.account', 'Account code',required=True,  domain="[('is_transfer_account', '=', True)]")
     budget_type = fields.Many2one('budget.type')
     from_budget_code = fields.Many2one('budget.budget', string="From Budget")
     to_budget_code = fields.Many2one('budget.budget', string="To Budget")

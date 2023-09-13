@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 13.0-20221005\n"
+"Project-Id-Version: Odoo Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-10 07:30+0000\n"
-"PO-Revision-Date: 2023-03-10 07:30+0000\n"
+"POT-Creation-Date: 2023-06-20 23:55+0000\n"
+"PO-Revision-Date: 2023-06-20 23:55+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -54,7 +54,7 @@ msgstr "እንቅስቃሴዎች"
 #. module: hr_request_position
 #: model:ir.model.fields,field_description:hr_request_position.field_hr_employee_position_request__activity_exception_decoration
 msgid "Activity Exception Decoration"
-msgstr "የእንቅስቃሴ ልዩ ችግሮች ማስዋብ" 
+msgstr "የእንቅስቃሴ ልዩ ችግሮች ማስዋብ"
 
 #. module: hr_request_position
 #: model:ir.model.fields,field_description:hr_request_position.field_hr_employee_position_request__activity_state
@@ -68,9 +68,9 @@ msgid "Application Request"
 msgstr "የማመልከቻዎች ጥያቄ"
 
 #. module: hr_request_position
-#: model:ir.ui.menu,name:hr_request_position.menu_ot_request_to_approve
-msgid "Approve Requests"
-msgstr "ጥያቄ ማጽደቅ"
+#: model:ir.ui.menu,name:hr_request_position.menu_to_approve_postition_salary_request
+msgid "Approve position/salary Requests"
+msgstr "የስራ ቦታ/የደሞዝ ጥያቄዎችን አጽድቅ"
 
 #. module: hr_request_position
 #: model_terms:ir.ui.view,arch_db:hr_request_position.view_employee_request_filter
@@ -128,6 +128,11 @@ msgid "Current contract of the employee"
 msgstr "የሰራተኛውን የአሁኑ ውል"
 
 #. module: hr_request_position
+#: model:ir.model.fields,field_description:hr_request_position.field_hr_employee_position_request__current_grade_id
+msgid "Current job Grade"
+msgstr "የአሁኑ የሥራ ደረጃ"
+
+#. module: hr_request_position
 #: model:ir.model.fields,help:hr_request_position.field_hr_employee_position_request__access_url
 msgid "Customer Portal URL"
 msgstr "የደንበኛ ፖርታል ዩ አር ኤል"
@@ -156,7 +161,6 @@ msgstr ""
 "መምሪያ.\n"
 "               እኔ እመሰክራለሁ, ከዚህ ልኡክ ጽሁፍ ጋር ያለውን ኃላፊነቶች ሙሉ በሙሉ እረዳለሁ እናም ለእነርሱ  ጥሩ ምርጫ እንድሆንኩ ቃል እገባለሁ."
 
-
 #. module: hr_request_position
 #: model_terms:ir.ui.view,arch_db:hr_request_position.report_application_request
 msgid ""
@@ -165,7 +169,6 @@ msgid ""
 msgstr ""
 "መምሪያ. \n"
 "                በዚህ ወቅት, ለእኛ ጽኑ ሥራችን ከፍተኛ ትርፍ ለማግኘት አጥብቄ እየሰራሁ ነው."
-
 
 #. module: hr_request_position
 #: model:ir.model.fields,field_description:hr_request_position.field_hr_employee_position_request__display_name
@@ -181,12 +184,12 @@ msgstr "ረቂቅ"
 #. module: hr_request_position
 #: model:ir.model,name:hr_request_position.model_hr_employee
 msgid "Employee"
-msgstr "ሠራተኛ"
+msgstr "ሰራተኛ"
 
 #. module: hr_request_position
 #: model:ir.model,name:hr_request_position.model_hr_contract
 msgid "Employee Contract"
-msgstr "የሰራተኛ ኮንትራት"
+msgstr "የሰራተኛ ውል"
 
 #. module: hr_request_position
 #: model_terms:ir.ui.view,arch_db:hr_request_position.view_employee_request_filter
@@ -199,20 +202,19 @@ msgid "Employee Position Request"
 msgstr "የሰራተኛ የሥራ መደቦች ጥያቄ"
 
 #. module: hr_request_position
-#: model:ir.ui.menu,name:hr_request_position.menu_employee_request
-#: model:ir.ui.menu,name:hr_request_position.menu_root
-msgid "Employee Request"
-msgstr "የሰራተኛ ጥያቄ"
-
-#. module: hr_request_position
 #: model_terms:ir.ui.view,arch_db:hr_request_position.view_employee_position_request_tree
 msgid "Employee Requests"
 msgstr "የሰራተኛ ጥያቄዎች"
 
 #. module: hr_request_position
+#: model:ir.model.fields,help:hr_request_position.field_hr_employee_position_request__estimated_salary
+msgid "Employee's Requested salary."
+msgstr "የተጠየቀው የሰራተኛ ደመወዝ"
+
+#. module: hr_request_position
 #: model:ir.actions.act_window,name:hr_request_position.act_action_employee_requests
 #: model:ir.actions.act_window,name:hr_request_position.action_employee_requests
-#: model:ir.ui.menu,name:hr_request_position.menu_employee_requests
+#: model:ir.ui.menu,name:hr_request_position.menu_employee_request
 msgid "Employee's Requests"
 msgstr "የሰራተኛ ጥያቄዎች"
 
@@ -222,10 +224,14 @@ msgid "Employee's Requests for Approval"
 msgstr "የሰራተኛ ጥያቄዎች ለማፅደቅ"
 
 #. module: hr_request_position
-#: model:ir.model.fields,help:hr_request_position.field_hr_employee_position_request__estimated_salary
 #: model:ir.model.fields,help:hr_request_position.field_hr_employee_position_request__wage
 msgid "Employee's monthly gross wage."
 msgstr "የሰራተኛ ወርሃዊ አጠቃላይ ደመወዝ."
+
+#. module: hr_request_position
+#: model:ir.model.fields,help:hr_request_position.field_hr_employee_position_request__previous_salary
+msgid "Employee's salary befor salary request."
+msgstr "ከደመወዝ ጥያቄ በፊት የሰራተኛ ደመወዝ።"
 
 #. module: hr_request_position
 #: model:ir.model,name:hr_request_position.model_hr_employee_position_request
@@ -236,11 +242,6 @@ msgstr "የሰራተኞች የሥራ መደቦች ጥያቄ"
 #: model:ir.module.category,description:hr_request_position.module_category_employee_request
 msgid "Employees Request Position"
 msgstr "የሰራተኞች የሥራ መደቦች ጥያቄ"
-
-#. module: hr_request_position
-#: model:ir.model.fields,field_description:hr_request_position.field_hr_employee_position_request__estimated_salary
-msgid "Estimated Salary"
-msgstr "የተገመተ ደመወዝ"
 
 #. module: hr_request_position
 #: model:ir.model.fields,field_description:hr_request_position.field_hr_employee_position_request__attachment_name
@@ -290,7 +291,7 @@ msgstr "ከሰው ሃይል ኃላፊነት የተቀበለው"
 #. module: hr_request_position
 #: model_terms:ir.ui.view,arch_db:hr_request_position.view_employee_position_request_form
 msgid "Hr Approve"
-msgstr "Hr ማጽደቅ"
+msgstr "ኤች.አር ማጽደቅ"
 
 #. module: hr_request_position
 #: model_terms:ir.ui.view,arch_db:hr_request_position.report_application_request
@@ -298,7 +299,6 @@ msgid ""
 "I would like to bring to your notice that I have been working at your firm "
 "for the past"
 msgstr "እኔ በድርጅቱ ላይ እየሠራሁ መሆኑን ማሳሰቢያዎ ማምጣት እፈልጋለሁ ላለፉት "
-
 
 #. module: hr_request_position
 #: model:ir.model.fields,field_description:hr_request_position.field_hr_employee_position_request__id
@@ -345,6 +345,7 @@ msgstr "ተከታይ ነው"
 #. module: hr_request_position
 #: model:ir.model,name:hr_request_position.model_hr_job
 #: model:ir.model.fields,field_description:hr_request_position.field_hr_employee_position_request__job_id
+#: model:ir.model.fields,field_description:hr_request_position.field_hr_employee_position_request__job_title
 msgid "Job Position"
 msgstr "የሥራ መደብ"
 
@@ -400,9 +401,8 @@ msgid ""
 "believe you have what it takes to take the challenges of this new job and "
 "bring about a great success to the business."
 msgstr ""
-"አስተዳደር ከርስዎ ጥሩ ነገሮችን እናም የበለጠ አስተዋጽኦ እየጠበቀ  ነው. እኛ"
-"የዚህ አዲስ ሥራ ተፈታታኝ ሁኔታዎችን መውሰድ እንደሚችሉ እና"
-"ለ ቢዝነሱ ታላቅ ስኬት እንደሚያመጡ እናምናለን. "
+"አስተዳደር ከርስዎ ጥሩ ነገሮችን እናም የበለጠ አስተዋጽኦ እየጠበቀ  ነው. እኛየዚህ አዲስ ሥራ ተፈታታኝ ሁኔታዎችን "
+"መውሰድ እንደሚችሉ እናለ ቢዝነሱ ታላቅ ስኬት እንደሚያመጡ እናምናለን. "
 
 #. module: hr_request_position
 #: model:ir.model.fields,field_description:hr_request_position.field_hr_employee_position_request__medium_id
@@ -428,6 +428,11 @@ msgstr "የእኔ ጥያቄዎች"
 #: model:ir.model.fields,field_description:hr_request_position.field_hr_employee_position_request__name
 msgid "Name"
 msgstr "ስም"
+
+#. module: hr_request_position
+#: model:ir.model.fields.selection,name:hr_request_position.selection__hr_employee_position_request__state__new
+msgid "New"
+msgstr "አዲስ"
 
 #. module: hr_request_position
 #: model_terms:ir.ui.view,arch_db:hr_request_position.view_employee_request_filter
@@ -485,8 +490,9 @@ msgid ""
 "On behalf of the management, i congratulate you on your performance for tis year. Your performance and the attached resume clearly speaks for itself and the whole board acknowledges the contributions you have made this year. \n"
 "                They have anonimously voted to approve your promotion request to the position of"
 msgstr ""
-"አስተዳደሩን ወክሎ, ለዚህ አመት ላለዎት መልካም በአፈፃፀምዎ ላይ እንኳን ደስ አለዎት. የእርስዎ አፈፃፀም እና የተያያዘው የስራ ማመልከቻ በጣም ጥሩ ነው እና ሁሉም ቦርዱ ይህንን  አስተዋጽኦ በግልፅ እውቅና ይሰጣል. \ N"
-"የሰራ ጥያቄዎን ለማፅደቅ በአስቸኳይ ድምጽ ሰጥተዋል"
+"አስተዳደሩን ወክሎ, ለዚህ አመት ላለዎት መልካም በአፈፃፀምዎ ላይ እንኳን ደስ አለዎት. የእርስዎ አፈፃፀም እና "
+"የተያያዘው የስራ ማመልከቻ በጣም ጥሩ ነው እና ሁሉም ቦርዱ ይህንን  አስተዋጽኦ በግልፅ እውቅና ይሰጣል. \\ Nየሰራ "
+"ጥያቄዎን ለማፅደቅ በአስቸኳይ ድምጽ ሰጥተዋል"
 
 #. module: hr_request_position
 #: model:ir.model.fields,field_description:hr_request_position.field_hr_employee_position_request__period
@@ -496,7 +502,7 @@ msgstr "ጊዜ"
 #. module: hr_request_position
 #: model:ir.model.fields,help:hr_request_position.field_hr_employee_position_request__hr_responsible_user_id
 msgid "Person responsible for validating the employee's contracts."
-msgstr "የሰራተኛውን ኮንትራቶች ለማረጋጥ ተጠያቂው ሰው."
+msgstr "የሰራተኛውን ውሎች ለማረጋጥ ተጠያቂው ሰው."
 
 #. module: hr_request_position
 #: model:ir.model.fields,field_description:hr_request_position.field_hr_employee_position_request__access_url
@@ -522,6 +528,11 @@ msgstr "የስራ መደብ ወይም የደመወዝ ክፍያ ጠይቅ"
 #: model:mail.activity.type,name:hr_request_position.mail_act_Position_request
 msgid "Position request mail"
 msgstr "የሥራ መደቡ ጥያቄ ደብዳቤ"
+
+#. module: hr_request_position
+#: model:ir.model.fields,field_description:hr_request_position.field_hr_employee_position_request__previous_salary
+msgid "Prior Salary"
+msgstr ""
 
 #. module: hr_request_position
 #: model_terms:ir.ui.view,arch_db:hr_request_position.view_employee_position_request_form
@@ -577,6 +588,11 @@ msgstr "የተጠየቀ ደረጃ"
 #: model:ir.model.fields,field_description:hr_request_position.field_hr_employee_position_request__requested_position_id
 msgid "Requested Job Position"
 msgstr "የተጠየቀ የሥራ አቀማመጥ"
+
+#. module: hr_request_position
+#: model:ir.model.fields,field_description:hr_request_position.field_hr_employee_position_request__estimated_salary
+msgid "Requested Salary"
+msgstr "የተጠየቀ ደሞዝ"
 
 #. module: hr_request_position
 #: model:ir.model.fields,field_description:hr_request_position.field_hr_employee_position_request__activity_user_id
@@ -663,9 +679,7 @@ msgstr "በተጠበቀው ነገር ከማመስገን."
 msgid ""
 "This is a name that helps you keep track of your different campaign efforts,"
 " e.g. Fall_Drive, Christmas_Special"
-msgstr ""
-"ይህ የተለየ ዘመቻ ስራዎች የሚከታተሉበት ስም ነው."
-"e.g. የገና_ልዩ"
+msgstr "ይህ የተለየ ዘመቻ ስራዎች የሚከታተሉበት ስም ነው.e.g. የገና_ልዩ"
 
 #. module: hr_request_position
 #: model:ir.model.fields,help:hr_request_position.field_hr_employee_position_request__medium_id
@@ -677,8 +691,7 @@ msgstr "ይህ የመላኪያ ዘዴ, ምሳሌ የፖስታ ካርድ, ኢሜ�
 msgid ""
 "This is the source of the link, e.g. Search Engine, another domain, or name "
 "of email list"
-msgstr ""
-"ይህ ግንኙነት ምንጭ ነው, e.g.የፍለጋ ሞተር, ሌላ ጎራ ወይም የኢሜል ዝርዝር ስም"
+msgstr "ይህ ግንኙነት ምንጭ ነው, e.g.የፍለጋ ሞተር, ሌላ ጎራ ወይም የኢሜል ዝርዝር ስም"
 
 #. module: hr_request_position
 #: model_terms:ir.ui.view,arch_db:hr_request_position.report_application_request
@@ -729,13 +742,7 @@ msgstr "የድርጣቢያ ግንኙነት ታሪክ"
 #: model_terms:ir.ui.view,arch_db:hr_request_position.report_application_request
 msgid ""
 "With all the knowledge, experience, and know-how-of how things work here at"
-msgstr ""
-"እዚህ  በእውቀት, ልምዶች እና ነገሮች እንዴ እንደሚሰሩ ማወቅ"
-
-#. module: hr_request_position
-#: model:ir.model.fields,field_description:hr_request_position.field_hr_employee_position_request__work_email
-msgid "Work Email"
-msgstr "የሥራ ኢሜይል"
+msgstr "እዚህ  በእውቀት, ልምዶች እና ነገሮች እንዴ እንደሚሰሩ ማወቅ"
 
 #. module: hr_request_position
 #: model:ir.model.fields,field_description:hr_request_position.field_hr_employee_position_request__work_location
@@ -746,6 +753,11 @@ msgstr "የሥራ ቦታ"
 #: model:ir.model.fields,field_description:hr_request_position.field_hr_employee_position_request__work_phone
 msgid "Work Phone"
 msgstr "የስራ ስልክ"
+
+#. module: hr_request_position
+#: model:ir.model.fields,field_description:hr_request_position.field_hr_employee_position_request__work_email
+msgid "Work email"
+msgstr "የስራ ኢሜይል"
 
 #. module: hr_request_position
 #: model_terms:ir.ui.view,arch_db:hr_request_position.report_application_request

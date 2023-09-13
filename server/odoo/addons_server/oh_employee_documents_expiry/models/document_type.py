@@ -7,4 +7,4 @@ from odoo.exceptions import Warning
 class DocumentType(models.Model):
     _name = 'document.type'
 
-    name = fields.Char(string="Name", required=True, help="Name")
+    name = fields.Char(string="Name", required=True, help="Name",translate=True)

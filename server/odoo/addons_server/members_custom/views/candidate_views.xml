@@ -10,10 +10,10 @@
 
   <!-- This record will create a tree view for candidate members -->
   <record id="candidate_members_tree_view" model="ir.ui.view">
-    <field name="name">Candidate Members</field>
+    <field name="name">Candidate</field>
     <field name="model">candidate.members</field>
     <field name="arch" type="xml">
-      <tree create="false">
+      <tree>
         <field name="name" string="Name"/>
         <field name="age"/>
         <field name="gender" string="Gender"/>
@@ -28,19 +28,25 @@
 
   <!-- This record will create a form for candidate Members -->
   <record id="candidate_members_form_view" model="ir.ui.view">
-    <field name="name">Candidate Member Form</field>
+    <field name="name">Candidate Form</field>
     <field name="model">candidate.members</field>
     <field name="arch" type="xml">
       <form create="false" duplicate="false">
         <header>
           <field name="active" invisible="1"/>
           <field name="saved" invisible="1"/>
+          <field name="click_counter" invisible="1"/>
+          <field name="is_user_input" invisible="1"/>
+          <field name="x_css" force_save="1" nolabel="1" invisible="1"/>
+          <field name="is_lessthan_18" nolabel="1" invisible="1"/>
           <button name="archive_record" string="Archive" type="object" groups="members_custom.member_group_cell_manager" attrs="{'invisible': [('active', '=', False)]}" confirm="Are you sure you want to archive this candidate?"/>
           <button name="un_archive_record" string="Unarchive" type="object" groups="members_custom.member_group_cell_manager" attrs="{'invisible': [('active', '=', True)]}" confirm="Are you sure you want to remove this candidate from archived list?"/>
-          <button type="object" name="send_approval" string="Send Approval" states="waiting for approval" class="btn btn-success" groups="members_custom.member_group_manager" confirm="Are you sure you want to Send Approval to Main Office and Cell?"/>
-          <button type="object" name="create_members" string="Create a Member" states="waiting for approval" class="btn btn-primary" groups="members_custom.member_group_cell_manager" confirm="Are you sure you want to create a member?"/>
-          <button type="object" name="deny_membership" string="Deny Membership" states="waiting for approval" class="btn btn-secondary" groups="members_custom.member_group_cell_manager" confirm="Are you sure you want to deny membership?"/>
-          <button type="object" name="postpone_approval" string="Postpone Decision" states="waiting for approval" class="btn btn-warning" groups="members_custom.member_group_cell_manager" confirm="Are you sure you added the right due date?"/>
+          <button type="object" name="send_approval" string="Send Approval" states="waiting for approval" class="btn btn-success" groups="members_custom.member_group_cell_manager" confirm="Are you sure you want to Send Approval to Main Office?"/>
+          <button type="object" name="create_members" string="Create a Member"  class="btn btn-primary"  attrs="{'invisible': ['|',('is_lessthan_18', '=', True),('state','not in',['waiting for approval'])]}" groups="members_custom.member_group_main_manager" confirm="Are you sure you want to create a member?"/>
+          <button type="object" name="create_league" string="Create League" class="oe_highlight float-left" attrs="{'invisible': [('state','not in',['waiting for approval'])]}" groups="members_custom.member_group_main_manager"  confirm="Are you sure you want to create a league?"/>
+          <button type="object" name="deny_membership" string="Deny Membership" states="waiting for approval" class="btn btn-secondary" groups="members_custom.member_group_main_manager" confirm="Are you sure you want to deny membership?"/>
+          <button type="object" name="postpone_approval" string="Postpone Decision" states="waiting for approval" class="btn btn-warning" groups="members_custom.member_group_main_manager" confirm="Are you sure you added the right due date?"/>
+          <button type="object" name="back_to_new" string="Back to New" states="rejected" class="btn btn-success" groups="members_custom.member_group_cell_manager" confirm="Please Attach Justification for Returning Candidacy!!"/>
           
           <button type="object" name="send_approval" string="Send Approval" class="btn btn-success" groups="members_custom.member_group_agent" confirm="Are you sure you want to Send Approval to Main Office and Cell?"/>
           <button type="object" name="create_members" string="Create a Member" class="btn btn-primary" groups="members_custom.member_group_agent" confirm="Are you sure you want to create a member?"/>
@@ -50,17 +56,17 @@
           <field name="state" widget="statusbar" statusbar_visible="new,waiting for approval,postponed,approved,rejected"/>
         </header>
         <sheet>
-          <div class="oe_button_box" name="button_box">
-            <button class="oe_stat_button" name="%(base.action_attachment)d" type="action" icon="fa-files-o" attrs="{'invisible': [('state', '=', 'new')], 'readonly': [('state', 'in', ['postponed', 'approved', 'rejected'])]}">
-              <field name="attachment_amount" string="Attachments" widget="statinfo"/>
-            </button>
-          </div>
           <field name="image_1920" widget="image" class="oe_avatar" options='{"preview_image": "image_1920"}'/>
           <widget name="web_ribbon" title="Archived" bg_color="bg-danger" attrs="{'invisible': [('active', '=', True)]}"/>
+          <h1>
+            <field name="name" readonly="1" force_save="1" attrs="{'invisible': [('saved', '=', False)]}"/>
+          </h1>
           <group>
             <group>
-              <separator string="Demographic Information"/>
-              <field name="name" placeholder="Eg. John Does Smith" attrs="{'readonly': [('saved', '=', True)]}" force_save="1"/>
+              <separator string="Information"/>
+              <field name="first_name" placeholder="Eg. John" attrs="{'invisible': [('saved', '=', True)]}" force_save="1"/>
+              <field name="father_name" placeholder="Eg. Smith" attrs="{'invisible': [('saved', '=', True)]}" force_save="1"/>
+              <field name="grand_father_name" placeholder="Eg. Willam" attrs="{'invisible': [('saved', '=', True)]}" force_save="1"/>
               <field name="gender" string="Gender" attrs="{'readonly': [('saved', '=', True)]}" force_save="1"/>
               <field name="date" string="Date of Birth" attrs="{'readonly': [('saved', '=', True)]}" force_save="1"/>
               <field name="age" string="Age" force_save="1"/>
@@ -68,26 +74,29 @@
               <separator string="Educational Status"/>
               <field name="education_level" string="Education Level" options="{'no_create': True, 'no_create_edit': True}"/>
               <field name="field_of_study_id" string="Field of Study" options="{'no_create': True, 'no_create_edit': True}"/>
-              <field name="is_user_input" invisible="1"/>
               <field name="user_input" attrs="{'invisible': [('is_user_input', '=', False)]}" string="Other Field"/>
               <!-- <field name="other_job_trainings" string="Other Job Trainings"/> -->
               <separator string="Can Become A Member On"/>
+              <field name="subcity_id" string="Working Subcity" options="{'no_create': True, 'no_create_edit': True}" attrs="{'readonly': [('saved', '=', True)]}"/>
+              <field name="wereda_id" string="Working Woreda" options="{'no_create': True, 'no_create_edit': True}" attrs="{'readonly': [('saved', '=', True)]}"/>  
+              <field name="main_office_id" string="Basic Organization" options="{'no_create': True, 'no_create_edit': True}" attrs="{'readonly': [('saved', '=', True)]}" required="1"/>
+              <field name="cell_id" string="Cell" options="{'no_create': True, 'no_create_edit': True}" attrs="{'readonly': [('saved', '=', True)]}" required="1"/> 
               <field name="becomes_member_on" class="col-50" colspan="3"/>
             </group>
             <group>
               <separator string="Private Address"/>
-              <field name="subcity_id" string="Subcity" options="{'no_create': True, 'no_create_edit': True}"/>
-              <field name="wereda_id" string="Woreda" options="{'no_create': True, 'no_create_edit': True}"/>
+              <!-- <field name="residential_subcity_id" string="Residential Subcity" options="{'no_create': True, 'no_create_edit': True}"/>
+              <field name="residential_wereda_id" string="Residential Woreda" options="{'no_create': True, 'no_create_edit': True}"/> -->
+              <field name="residential_subcity" string="Residential Subcity"/>
+              <field name="residential_wereda" string="Residential Woreda"/>
               <field name="house_number" string="House Number"/>
               <field name="house_phone_number" string="Home Phone Number"/>
               <field name="office_phone_number" string="Office Phone Number"/>
-              <field name="phone" string="Phone"/>
+              <field name="phone" string="Phone" required="1"/>
               <field name="email_address" string="Email"/>
               <!-- <field name="previous_membership" string="Previous Political Membership"/> -->
               <field name="partner_id" string="Member" attrs="{'invisible': [('state', '=', 'new')]}" context="{'form_view_ref': 'members_custom.membership_view_partner_form'}"/>
               <field name="supporter_id" string="Supporter" force_save="1"/>
-              <button name="add_attachment" string="Attachment" type="object" class="oe_highlight fa fa-paperclip" attrs="{'invisible': [('state', '=', 'new')], 'readonly': [('state', 'in', ['postponed', 'approved', 'rejected'])]}"/>
-              <field name="x_css" force_save="1" nolabel="1" invisible="1"/>
             </group>
           </group>
           <notebook>
@@ -97,7 +106,7 @@
                   <field name="source_of_livelihood" string="Livelihood"/>
                 </group>
                 <group>
-                  <field name="income"/>
+                  <field name="income" string="Monthly Income"/>
                 </group>
               </group>
               <field name="work_experience_ids">
@@ -131,9 +140,6 @@
                 </tree>
               </field>
             </page>
-            <page string="Notes">
-              <field name="note_id" attrs="{'readonly': [('state', '!=', 'waiting for approval')]}"/>
-            </page>
             <page name="archive" string="Archives" attrs="{'invisible': [('active', '=', True)]}">
                 <field name="archive_ids" readonly="1">
                     <tree>
@@ -157,7 +163,7 @@
 
     <!-- This record will handle the kanban view for Candidate Members -->
     <record id="candidate_kanban_view" model="ir.ui.view">
-      <field name="name">Candidate Kanban</field>
+      <field name="name">Candidate</field>
       <field name="model">candidate.members</field>
       <field name="arch" type="xml">
           <kanban class="o_candidate_kanban" sample="1" create="false">
@@ -278,21 +284,20 @@
 
   <!-- This record will create the action for candidate members -->
   <record id="candidate_members_action" model="ir.actions.act_window">
-    <field name="name">Candidate Members</field>
+    <field name="name">Candidate</field>
     <field name="res_model">candidate.members</field>
     <field name="view_mode">tree,form,kanban,pivot,graph</field>
     <field name="limit">20</field>
     <field name="search_view_id" ref="candidate_view_search"/>
     <field name="context">{'search_default_state': 1}</field>
-    <field name="domain">['|', '|', '|', '|', '|', '|', '|',
+    <field name="domain">['|', '|', '|', '|', '|', '|',
                           ('wereda_id.main_office_ids.cell_ids.cell_admin', '=', uid),
-                          ('wereda_id.main_office_ids.league_cell_ids.cell_admin', '=', uid),
                           ('wereda_id.main_office_ids.main_admin', '=', uid),
                           ('wereda_id.branch_manager', '=', uid),
                           ('subcity_id.parent_manager.id', '=', uid),
                           ('subcity_id.city_id.city_manager', 'in', [uid]),
                           ('subcity_id.city_id.transfer_handler', '=', uid),
-                          ('subcity_id.city_id.responsible_id.system_admin', '=', uid)]</field>
+                          ('subcity_id.city_id.responsible_id.system_admin', 'in', [uid])]</field>
   </record>
 
 
@@ -312,6 +317,6 @@
             parent="menu_membership"
             sequence="5"
             action="candidate_members_action"
-            groups="members_custom.member_group_cell_manager,members_custom.member_group_agent"/>
+            groups="members_custom.member_group_city_transfer_handler,members_custom.member_group_cell_manager,members_custom.member_group_agent"/>
 
 </odoo>

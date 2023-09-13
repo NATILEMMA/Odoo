@@ -123,7 +123,7 @@ class Mestengido(models.Model):
 
 
     department_id = fields.Many2one('hr.department','Department')
-    name = fields.Char('Name')
+    name = fields.Char('Name',translate=True)
     description = fields.Html('Internal Note')
     month = fields.Selection(MONTH,
                           string='Month',default="1", store=True,)
@@ -158,16 +158,16 @@ class Mestengido(models.Model):
     approver_signature = fields.Image('Signature', help='Signature received through the portal.', copy=False, attachment=True, max_width=1024, max_height=1024)
     approver_signed_by = fields.Many2one('hr.employee','Signed By', help='Name of the person that signed the SO.', copy=False)
     approver_signed_on = fields.Datetime('Signed On', help='Date of the signature.', copy=False)
-    approver_comment = fields.Char()
+    approver_comment = fields.Char(translate=True)
     
     final_approver_signature = fields.Image('Signature', help='Signature received through the portal.', copy=False, attachment=True, max_width=1024, max_height=1024)
     final_approver_signed_by = fields.Many2one('hr.employee','Signed By', help='Name of the person that signed the SO.', copy=False)
     final_approver_signed_on = fields.Datetime('Signed On', help='Date of the signature.', copy=False)
-    final_approver_comment = fields.Char()
+    final_approver_comment = fields.Char(translate=True)
 
     
     squ = fields.Char(string='reference', required=True, copy=False, readonly=True,
-                       default=lambda self: _('New'))
+                       default=lambda self: _('New'),translate=True)
     max_line_sequence = fields.Integer(
         string='Max sequence in lines',
         compute='_compute_max_line_sequence',
@@ -243,7 +243,7 @@ class MestengidoOrderLine(models.Model):
     _order = 'order_id, sequence, id'
 
 
-    name = fields.Text(string='Description')
+    name = fields.Text(string='Description',translate=True)
     product_qty = fields.Integer(string='Quantity', digits='Product Unit of Measure')
     product_uom_qty = fields.Float(string='Total Quantity', compute='_compute_product_uom_qty', store=True)
     date_planned = fields.Datetime(string='Scheduled Date', index=True)
@@ -406,7 +406,7 @@ class MestengidoOrder(models.Model):
 
     requests = fields.Many2many('mest.mest')
     department_id = fields.Many2one('hr.department','Department')
-    name = fields.Char('Name')
+    name = fields.Char('Name',translate=True)
     description = fields.Html('Internal Note')
     month = fields.Selection(MONTH,
                           string='Month')
@@ -444,12 +444,12 @@ class MestengidoOrder(models.Model):
     approver_signature = fields.Image('Signature', help='Signature received through the portal.', copy=False, attachment=True, max_width=1024, max_height=1024)
     approver_signed_by = fields.Many2one('hr.employee','Signed By', help='Name of the person that signed the SO.', copy=False)
     approver_signed_on = fields.Datetime('Signed On', help='Date of the signature.', copy=False)
-    approver_comment = fields.Char()
+    approver_comment = fields.Char(translate=True)
     
     final_approver_signature = fields.Image('Signature', help='Signature received through the portal.', copy=False, attachment=True, max_width=1024, max_height=1024)
     final_approver_signed_by = fields.Many2one('hr.employee','Signed By', help='Name of the person that signed the SO.', copy=False)
     final_approver_signed_on = fields.Datetime('Signed On', help='Date of the signature.', copy=False)
-    final_approver_comment = fields.Char()
+    final_approver_comment = fields.Char(translate=True)
     is_ture = fields.Boolean(default=False)
     mestengido_count = fields.Integer(compute='compute_count')
     purchas_order = fields.Many2one('purchas.order')
@@ -457,7 +457,7 @@ class MestengidoOrder(models.Model):
 
     
     squ = fields.Char(string='Reference', required=True, copy=False, readonly=True,
-                       default=lambda self: _('New'))
+                       default=lambda self: _('New'),translate=True)
   
     def get_mestengido(self):
             self.ensure_one()
@@ -664,7 +664,7 @@ class MestengidoOrderLines(models.Model):
    
 
 
-    name = fields.Text(string='Description')
+    name = fields.Text(string='Description',translate=True)
     sequence = fields.Integer(
         help="Gives the sequence of this line when displaying the Mestengido request.",
         default=1,
@@ -741,7 +741,7 @@ class MestengidoOrderLinesDetails(models.Model):
    
 
 
-    name = fields.Text(string='Description')
+    name = fields.Text(string='Description',translate=True)
     sequence = fields.Integer(
         help="Gives the sequence of this line when displaying the Mestengido request.",
         default=1,

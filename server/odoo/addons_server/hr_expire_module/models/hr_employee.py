@@ -6,4 +6,4 @@ class HrEmployee(models.Model):
 
     employee_bank_account = fields.Many2one('account.journal', domain=[('type', '=', 'bank')],
                                             string='Employee Bank Account')
-    emp_acc = fields.Char(string='Bank Account ')
+    emp_acc = fields.Char(string='Bank Account ', translate=True)

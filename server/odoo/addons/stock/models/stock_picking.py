@@ -33,7 +33,7 @@ class PickingType(models.Model):
     sequence_id = fields.Many2one(
         'ir.sequence', 'Reference Sequence',
         check_company=True, copy=False)
-    sequence_code = fields.Char('Code', required=True)
+    sequence_code = fields.Char('Code', required=True, translate=True)
     default_location_src_id = fields.Many2one(
         'stock.location', 'Default Source Location',
         check_company=True,
@@ -73,7 +73,7 @@ class PickingType(models.Model):
     count_picking_backorders = fields.Integer(compute='_compute_picking_count')
     rate_picking_late = fields.Integer(compute='_compute_picking_count')
     rate_picking_backorders = fields.Integer(compute='_compute_picking_count')
-    barcode = fields.Char('Barcode', copy=False)
+    barcode = fields.Char('Barcode', copy=False, translate=True)
     company_id = fields.Many2one(
         'res.company', 'Company', required=True,
         default=lambda s: s.env.company.id, index=True)
@@ -248,12 +248,12 @@ class Picking(models.Model):
 
     name = fields.Char(
         'Reference', default='/',
-        copy=False, index=True, readonly=True)
+        copy=False, index=True, readonly=True, translate=True)
     origin = fields.Char(
         'Source Document', index=True,
         states={'done': [('readonly', True)], 'cancel': [('readonly', True)]},
-        help="Reference of the document")
-    note = fields.Text('Notes')
+        help="Reference of the document", translate=True)
+    note = fields.Text('Notes', translate=True)
     backorder_id = fields.Many2one(
         'stock.picking', 'Back Order of',
         copy=False, index=True, readonly=True,

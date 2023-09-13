@@ -9,8 +9,8 @@ class ProductUsage(models.Model):
     _name = "purchase.product.usage"
     _description = "Product Usage"
 
-    name = fields.Char(string="Description", required=True)
-    code = fields.Char(string="Code")
+    name = fields.Char(string="Description", required=True,translate=True)
+    code = fields.Char(string="Code",translate=True)
     company_id = fields.Many2one(
         comodel_name="res.company",
         string="Company",

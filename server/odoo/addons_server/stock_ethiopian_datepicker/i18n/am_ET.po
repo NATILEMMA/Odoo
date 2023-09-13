@@ -1,0 +1,126 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* stock_ethiopian_datepicker
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-10 13:15+0000\n"
+"PO-Revision-Date: 2023-08-10 13:15+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: stock_ethiopian_datepicker
+#: model_terms:ir.ui.view,arch_db:stock_ethiopian_datepicker.view_payment_account_form_inherit_local
+#: model_terms:ir.ui.view,arch_db:stock_ethiopian_datepicker.view_stock_inventory_form_inherit_local
+msgid "Accounting Date"
+msgstr "የሂሳብ አያያዝ ቀን"
+
+#. module: stock_ethiopian_datepicker
+#: model_terms:ir.ui.view,arch_db:stock_ethiopian_datepicker.inherit_stock_quantity_update_wizard_form
+msgid "Create Date"
+msgstr "የተፈጠረበት ቀን"
+
+#. module: stock_ethiopian_datepicker
+#: model_terms:ir.ui.view,arch_db:stock_ethiopian_datepicker.view_stock_scrap_form_inherit_local
+msgid "Date"
+msgstr "ቀን"
+
+#. module: stock_ethiopian_datepicker
+#: model:ir.model,name:stock_ethiopian_datepicker.model_stock_inventory
+msgid "Inventory"
+msgstr "ንብረት አስተዳደር"
+
+#. module: stock_ethiopian_datepicker
+#: model:ir.model.fields,field_description:stock_ethiopian_datepicker.field_account_payment__is_pagum_from
+#: model:ir.model.fields,field_description:stock_ethiopian_datepicker.field_stock_card_report_wizard__is_pagum_from
+#: model:ir.model.fields,field_description:stock_ethiopian_datepicker.field_stock_inventory__is_pagum_from
+#: model:ir.model.fields,field_description:stock_ethiopian_datepicker.field_stock_picking__is_pagum_from
+#: model:ir.model.fields,field_description:stock_ethiopian_datepicker.field_stock_quant__is_pagum_from
+#: model:ir.model.fields,field_description:stock_ethiopian_datepicker.field_stock_quantity_history__is_pagum_from
+#: model:ir.model.fields,field_description:stock_ethiopian_datepicker.field_stock_scrap__is_pagum_from
+msgid "Is Pagum From"
+msgstr ""
+
+#. module: stock_ethiopian_datepicker
+#: model:ir.model,name:stock_ethiopian_datepicker.model_account_payment
+msgid "Payments"
+msgstr "ክፍያዎች"
+
+#. module: stock_ethiopian_datepicker
+#: code:addons/stock_ethiopian_datepicker/wizard/inventory_report_update.py:0
+#, python-format
+msgid "Products"
+msgstr "ምርቶች"
+
+#. module: stock_ethiopian_datepicker
+#: model:ir.model,name:stock_ethiopian_datepicker.model_stock_quant
+msgid "Quants"
+msgstr "ብዛት"
+
+#. module: stock_ethiopian_datepicker
+#: model_terms:ir.ui.view,arch_db:stock_ethiopian_datepicker.view_stock_inventory_tree_inherit_local
+#: model_terms:ir.ui.view,arch_db:stock_ethiopian_datepicker.view_stock_picking_form_inherit_local
+#: model_terms:ir.ui.view,arch_db:stock_ethiopian_datepicker.view_stock_picking_tree_inherit_local
+#: model_terms:ir.ui.view,arch_db:stock_ethiopian_datepicker.view_stock_scrap_tree_inherit_local
+msgid "Scheduled Date"
+msgstr "የታቀደበት ቀን"
+
+#. module: stock_ethiopian_datepicker
+#: model_terms:ir.ui.view,arch_db:stock_ethiopian_datepicker.view_stock_picking_form_inherit_local
+msgid "Scheduled_Date"
+msgstr "የታቀደበት ቀን"
+
+#. module: stock_ethiopian_datepicker
+#: model:ir.model,name:stock_ethiopian_datepicker.model_stock_scrap
+msgid "Scrap"
+msgstr "ዘርዝ"
+
+#. module: stock_ethiopian_datepicker
+#: model_terms:ir.ui.view,arch_db:stock_ethiopian_datepicker.inherit_stock_quantity_update_wizard_form
+msgid "Start Date"
+msgstr "የመጀመሪያ ቀን"
+
+#. module: stock_ethiopian_datepicker
+#: model:ir.model,name:stock_ethiopian_datepicker.model_stock_card_report_wizard
+msgid "Stock Card Report Wizard"
+msgstr "የእቃዎች ካርድ ሪፖርት አዋቂ"
+
+#. module: stock_ethiopian_datepicker
+#: model:ir.model,name:stock_ethiopian_datepicker.model_stock_quantity_history
+msgid "Stock Quantity History"
+msgstr "የክምችት ብዛት ታሪክ"
+
+#. module: stock_ethiopian_datepicker
+#: model:ir.model,name:stock_ethiopian_datepicker.model_stock_picking
+msgid "Transfer"
+msgstr "ማስተላለፍ"
+
+#. module: stock_ethiopian_datepicker
+#: model:ir.model.fields,field_description:stock_ethiopian_datepicker.field_account_payment__ethiopian_from
+#: model:ir.model.fields,field_description:stock_ethiopian_datepicker.field_account_payment__pagum_from
+#: model:ir.model.fields,field_description:stock_ethiopian_datepicker.field_stock_card_report_wizard__ethiopian_from
+#: model:ir.model.fields,field_description:stock_ethiopian_datepicker.field_stock_card_report_wizard__ethiopian_to
+#: model:ir.model.fields,field_description:stock_ethiopian_datepicker.field_stock_card_report_wizard__is_pagum_to
+#: model:ir.model.fields,field_description:stock_ethiopian_datepicker.field_stock_card_report_wizard__pagum_from
+#: model:ir.model.fields,field_description:stock_ethiopian_datepicker.field_stock_card_report_wizard__pagum_to
+#: model:ir.model.fields,field_description:stock_ethiopian_datepicker.field_stock_inventory__ethiopian_from
+#: model:ir.model.fields,field_description:stock_ethiopian_datepicker.field_stock_inventory__pagum_from
+#: model:ir.model.fields,field_description:stock_ethiopian_datepicker.field_stock_picking__ethiopian_from
+#: model:ir.model.fields,field_description:stock_ethiopian_datepicker.field_stock_picking__pagum_from
+#: model:ir.model.fields,field_description:stock_ethiopian_datepicker.field_stock_quant__ethiopian_from
+#: model:ir.model.fields,field_description:stock_ethiopian_datepicker.field_stock_quant__ethiopian_to
+#: model:ir.model.fields,field_description:stock_ethiopian_datepicker.field_stock_quant__is_pagum_to
+#: model:ir.model.fields,field_description:stock_ethiopian_datepicker.field_stock_quant__pagum_from
+#: model:ir.model.fields,field_description:stock_ethiopian_datepicker.field_stock_quant__pagum_to
+#: model:ir.model.fields,field_description:stock_ethiopian_datepicker.field_stock_quantity_history__ethiopian_from
+#: model:ir.model.fields,field_description:stock_ethiopian_datepicker.field_stock_quantity_history__pagum_from
+#: model:ir.model.fields,field_description:stock_ethiopian_datepicker.field_stock_scrap__ethiopian_from
+#: model:ir.model.fields,field_description:stock_ethiopian_datepicker.field_stock_scrap__pagum_from
+msgid "in ethiopian date"
+msgstr ""

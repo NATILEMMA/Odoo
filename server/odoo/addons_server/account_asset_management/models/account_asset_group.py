@@ -13,8 +13,8 @@ class AccountAssetGroup(models.Model):
     _parent_store = True
     _check_company_auto = True
 
-    name = fields.Char(string="Name", size=64, required=True, index=True)
-    code = fields.Char(index=True)
+    name = fields.Char(string="Name", size=64, required=True, index=True, translate=True)
+    code = fields.Char(index=True, translate=True)
     parent_path = fields.Char(index=True)
     company_id = fields.Many2one(
         comodel_name="res.company",

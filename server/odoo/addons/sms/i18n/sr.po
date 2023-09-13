@@ -6,7 +6,6 @@
 # Martin Trigaux, 2019
 # Slobodan Simić <slsimic@gmail.com>, 2019
 # Uros Kalajdzic <ukalajdzic@gmail.com>, 2020
-# Dragan Vukosavljevic <dragan.vukosavljevic@gmail.com>, 2022
 # 
 msgid ""
 msgstr ""
@@ -14,7 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-07 07:13+0000\n"
 "PO-Revision-Date: 2019-08-26 09:14+0000\n"
-"Last-Translator: Dragan Vukosavljevic <dragan.vukosavljevic@gmail.com>, 2022\n"
+"Last-Translator: Uros Kalajdzic <ukalajdzic@gmail.com>, 2020\n"
 "Language-Team: Serbian (https://www.transifex.com/odoo/teams/41243/sr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -248,7 +247,7 @@ msgstr "Podrazumevana vrednost"
 #. module: sms
 #: model_terms:ir.ui.view,arch_db:sms.sms_template_preview_form
 msgid "Discard"
-msgstr "Poništi"
+msgstr ""
 
 #. module: sms
 #: model:ir.actions.act_window,name:sms.sms_cancel_action
@@ -275,7 +274,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:sms.field_sms_template__display_name
 #: model:ir.model.fields,field_description:sms.field_sms_template_preview__display_name
 msgid "Display Name"
-msgstr "Naziv za prikaz"
+msgstr ""
 
 #. module: sms
 #: model:ir.model,name:sms.model_mail_followers
@@ -285,7 +284,7 @@ msgstr ""
 #. module: sms
 #: model:ir.model.fields,field_description:sms.field_sms_composer__res_id
 msgid "Document ID"
-msgstr "ID dokumenta"
+msgstr ""
 
 #. module: sms
 #: model:ir.model.fields,field_description:sms.field_sms_composer__res_ids
@@ -295,12 +294,12 @@ msgstr ""
 #. module: sms
 #: model:ir.model.fields,field_description:sms.field_sms_composer__res_model
 msgid "Document Model Name"
-msgstr "Naziv modela dokumenta"
+msgstr ""
 
 #. module: sms
 #: model:ir.model.fields.selection,name:sms.selection__sms_sms__error_code__sms_duplicate
 msgid "Duplicate"
-msgstr "Dupliraj"
+msgstr ""
 
 #. module: sms
 #: model_terms:ir.ui.view,arch_db:sms.sms_template_view_form
@@ -315,7 +314,7 @@ msgstr ""
 #. module: sms
 #: model:ir.model,name:sms.model_mail_thread
 msgid "Email Thread"
-msgstr "Email niz"
+msgstr ""
 
 #. module: sms
 #. openerp-web
@@ -430,7 +429,7 @@ msgstr "ID"
 #: model:ir.model.fields,help:sms.field_res_partner__message_has_sms_error
 #: model:ir.model.fields,help:sms.field_res_users__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
-msgstr "Ako je označeno, neke poruke imaju grešku u isporuci."
+msgstr ""
 
 #. module: sms
 #: model_terms:ir.ui.view,arch_db:sms.sms_cancel
@@ -482,7 +481,7 @@ msgstr "Jezik"
 #: model:ir.model.fields,field_description:sms.field_sms_template____last_update
 #: model:ir.model.fields,field_description:sms.field_sms_template_preview____last_update
 msgid "Last Modified on"
-msgstr "Poslednja izmena dana"
+msgstr ""
 
 #. module: sms
 #: model:ir.model.fields,field_description:sms.field_sms_cancel__write_uid
@@ -493,7 +492,7 @@ msgstr "Poslednja izmena dana"
 #: model:ir.model.fields,field_description:sms.field_sms_template__write_uid
 #: model:ir.model.fields,field_description:sms.field_sms_template_preview__write_uid
 msgid "Last Updated by"
-msgstr "Poslednje izmenio/la"
+msgstr ""
 
 #. module: sms
 #: model:ir.model.fields,field_description:sms.field_sms_cancel__write_date
@@ -504,7 +503,7 @@ msgstr "Poslednje izmenio/la"
 #: model:ir.model.fields,field_description:sms.field_sms_template__write_date
 #: model:ir.model.fields,field_description:sms.field_sms_template_preview__write_date
 msgid "Last Updated on"
-msgstr "Poslednje ažuriranje dana"
+msgstr ""
 
 #. module: sms
 #: model:ir.model.fields,field_description:sms.field_ir_actions_server__sms_mass_keep_log
@@ -540,8 +539,6 @@ msgid ""
 "Message type: email for email message, notification for system message, "
 "comment for other messages such as user replies"
 msgstr ""
-"Vrsta poruke: email za email poruke, notifikacija za sistemske poruke, "
-"komentar za druge poruke poput odgovora korsnika"
 
 #. module: sms
 #: model:ir.model.fields.selection,name:sms.selection__mail_notification__failure_type__sms_number_missing
@@ -574,7 +571,7 @@ msgstr "Ime"
 #. module: sms
 #: model:ir.model.fields,field_description:sms.field_sms_resend_recipient__notification_id
 msgid "Notification"
-msgstr "Notifikacija"
+msgstr ""
 
 #. module: sms
 #: model:ir.model.fields,field_description:sms.field_mail_notification__notification_type
@@ -623,7 +620,7 @@ msgstr ""
 #. module: sms
 #: model_terms:ir.ui.view,arch_db:sms.sms_template_view_form
 msgid "Preview"
-msgstr "Pregled"
+msgstr ""
 
 #. module: sms
 #: model_terms:ir.ui.view,arch_db:sms.sms_template_preview_form
@@ -650,7 +647,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:sms.field_sms_resend__recipient_ids
 #: model_terms:ir.ui.view,arch_db:sms.sms_composer_view_form
 msgid "Recipients"
-msgstr "Primaoci"
+msgstr ""
 
 #. module: sms
 #: model:ir.model.fields,field_description:sms.field_sms_composer__numbers
@@ -676,7 +673,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:sms.field_sms_template__model
 #: model:ir.model.fields,field_description:sms.field_sms_template_preview__model
 msgid "Related Document Model"
-msgstr "Model povezanog dokumenta"
+msgstr ""
 
 #. module: sms
 #: model_terms:ir.ui.view,arch_db:sms.sms_template_view_form
@@ -705,7 +702,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:sms.sms_tsms_view_form
 #, python-format
 msgid "SMS"
-msgstr "SMS"
+msgstr ""
 
 #. module: sms
 #: model:ir.model,name:sms.model_sms_api
@@ -742,7 +739,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:sms.field_res_partner__message_has_sms_error
 #: model:ir.model.fields,field_description:sms.field_res_users__message_has_sms_error
 msgid "SMS Delivery error"
-msgstr "Greška u dostavi SMS-a"
+msgstr ""
 
 #. module: sms
 #. openerp-web
@@ -783,7 +780,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:sms.field_ir_actions_server__sms_template_id
 #: model_terms:ir.ui.view,arch_db:sms.sms_template_view_form
 msgid "SMS Template"
-msgstr "SMS šablon"
+msgstr ""
 
 #. module: sms
 #: model:ir.model,name:sms.model_sms_template_preview
@@ -834,12 +831,12 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:sms.sms_composer_view_form
 #: model_terms:ir.ui.view,arch_db:sms.sms_tsms_view_form
 msgid "Send Now"
-msgstr "Pošalji odmah"
+msgstr ""
 
 #. module: sms
 #: model_terms:ir.ui.view,arch_db:sms.sms_composer_view_form
 msgid "Send SMS"
-msgstr "Šalji SMS"
+msgstr ""
 
 #. module: sms
 #: code:addons/sms/models/sms_template.py:0
@@ -862,7 +859,7 @@ msgstr "Пошаљи СМС поруку"
 #. module: sms
 #: model:ir.model,name:sms.model_sms_composer
 msgid "Send SMS Wizard"
-msgstr "Čarobnjak slanja SMS-a"
+msgstr ""
 
 #. module: sms
 #: model:ir.model.fields.selection,name:sms.selection__sms_composer__composition_mode__mass
@@ -901,7 +898,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:sms.selection__sms_sms__state__sent
 #, python-format
 msgid "Sent"
-msgstr "Poslato"
+msgstr ""
 
 #. module: sms
 #: model:ir.model,name:sms.model_ir_actions_server
@@ -912,7 +909,7 @@ msgstr "Akcija servera"
 #: model:ir.model.fields.selection,name:sms.selection__mail_notification__failure_type__sms_server
 #: model:ir.model.fields.selection,name:sms.selection__sms_sms__error_code__sms_server
 msgid "Server Error"
-msgstr "Greška servera"
+msgstr ""
 
 #. module: sms
 #: model:ir.model.fields,field_description:sms.field_sms_template__sidebar_action_id

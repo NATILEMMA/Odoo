@@ -14,7 +14,7 @@ class HrWorkEntry(models.Model):
     _description = 'HR Work Entry'
     _order = 'conflict desc,state,date_start'
 
-    name = fields.Char(required=True)
+    name = fields.Char(required=True, translate=True)
     active = fields.Boolean(default=True)
     employee_id = fields.Many2one('hr.employee', required=True, domain="['|', ('company_id', '=', False), ('company_id', '=', company_id)]", index=True)
     date_start = fields.Datetime(required=True, string='From')
@@ -188,8 +188,8 @@ class HrWorkEntryType(models.Model):
     _name = 'hr.work.entry.type'
     _description = 'HR Work Entry Type'
 
-    name = fields.Char(required=True)
-    code = fields.Char(required=True)
+    name = fields.Char(required=True, translate=True)
+    code = fields.Char(required=True, translate=True)
     color = fields.Integer(default=0)
     sequence = fields.Integer(default=25)
     active = fields.Boolean(

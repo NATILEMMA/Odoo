@@ -50,33 +50,46 @@ class PurchaseOrderLine(models.Model):
 class PurchaseOrder(models.Model):
     _inherit = 'purchase.order'
 
-    request_id = fields.Many2one('sprogroup.purchase.request',
-                                 'Requeste  Id')
+    request_id = fields.Many2one('sprogroup.purchase.request', 'Requeste  Id')
+    purchase_type = fields.Selection([('direct', 'Direct purchase'),
+                                      ('proforma', 'Proforma Purchase'),
+                                      ('limited', 'Limited Tender'),
+                                      ('open', 'Open Tender'),
+                                      ], 'Purchase Type')
 
-    # purchase_request_id = fields.Many2one('sprogroup.purchase.request', index=True)
+    @api.model
+    def create(self, vals):
+        res = super(PurchaseOrder, self).create(vals)
+        if res.requisition_id:
+            res.purchase_type = res.requisition_id.purchase_type
+            if res.requisition_id.purchase_type == 'limited':
+                req = self.env["purchase.order"].search([('requisition_id', '=', res.requisition_id.id)])
+                limt = self.env["tender.limit"].search([('limit_by', '=', 'limit')],limit=1)
+                if req and limt:
+                    if len(req) > limt.max_amount:
+                        raise ValidationError(_("You exceed the maximum amount of tender"))
 
-    # @api.onchange('partner_id')
-    # def onchange_total(self):
-    #     self.purchase_request_id = self.request_id.id
+        return res
 
 
 
-    @api.onchange('order_line')
-    def onchange_total_amount(self):
-        # account_ids = self.env.context.get('active_ids', [])
-        acc = self.env['sprogroup.purchase.request'].browse(self.request_id.id)
-        for value in self.order_line:
-            if value.product_qty != acc.line_ids:
-                num = 0.0
-                for line in acc.line_ids:
-                    if line.product_id.id == value.product_id.id and num == 1:
-                        if line.product_qty - value.product_qty < 0:
-                            print("j")
-                            #raise ValidationError(_("you can not increase quantity"))
-                        else:
-                            line._compute_line_state()
 
-    def button_cancel(self):
+    # @api.onchange('order_line')
+    # def onchange_total_amount(self):
+    #     # account_ids = self.env.context.get('active_ids', [])
+    #     acc = self.env['sprogroup.purchase.request'].browse(self.request_id.id)
+    #     for value in self.order_line:
+    #         if value.product_qty != acc.line_ids:
+    #             num = 0.0
+    #             for line in acc.line_ids:
+    #                 if line.product_id.id == value.product_id.id and num == 1:
+    #                     if line.product_qty - value.product_qty < 0:
+    #                         print("j")
+    #                         #raise ValidationError(_("you can not increase quantity"))
+    #                     else:
+    #                         line._compute_line_state()
+
+    def button_draft(self):
         request = self.env['sprogroup.purchase.request'].search([('id', '=', self.request_id.id)])
         for request_line in request.line_ids:
             print("if", request_line.po_number_2.id, self.id)
@@ -84,9 +97,11 @@ class PurchaseOrder(models.Model):
                 request_line.invoice_flag = False
                 request_line.po_number_2 = False
                 request_line.purchased_qty = 0
-        return super(PurchaseOrder, self).button_cancel()
+        return super(PurchaseOrder, self).button_draft()
 
     def button_confirm(self):
+        if self.purchase_type != 'direct' and self.state == 'draft':
+             raise ValidationError(_("you can only Direct purchase"))
         request = self.env['sprogroup.purchase.request'].search([('id', '=', self.request_id.id)])
         for request_line in request.line_ids:
             for order_line in self.order_line:
@@ -101,6 +116,7 @@ class PurchaseOrder(models.Model):
                         "product_id": request_line.product_id.id,
                         "product_uom_id": request_line.product_uom_id.id,
                         "name": request_line.name,
+                        "analytic_acount": self.order_line.account_analytic_id.id,
                         "po_number_2": self.id,
 
                     }
@@ -168,7 +184,7 @@ class SprogroupPurchaseRequest(models.Model):
     def unlink(self):
         if self.state != 'draft':
             raise ValidationError(_("You can delete only draft state purchase"))
-        return super('SprogroupPurchaseRequest', self).unlink()
+        return super(SprogroupPurchaseRequest, self).unlink()
 
     @api.model
     def _get_default_requested_by(self):
@@ -204,10 +220,10 @@ class SprogroupPurchaseRequest(models.Model):
 
     max_qty = fields.Float(string='max qty', store=True)
     amount_total = fields.Float(string='Total', store=True, compute='_amount_all')
-    description = fields.Char('Request Name', size=32, required=True)
-    name = fields.Char('Name', size=32, required=True, )
-    code = fields.Char('Code', size=32, required=True, default=_get_default_name, track_visibility='onchange')
-    current_label = fields.Char('Label', size=32, default=_get_default_label, track_visibility='onchange')
+    description = fields.Char('Request Name', size=32, required=True,translate=True)
+    name = fields.Char('Name', size=32, required=True,translate=True )
+    code = fields.Char('Code', size=32, required=True, default=_get_default_name, track_visibility='onchange',translate=True)
+    current_label = fields.Char('Label', size=32, default=_get_default_label, track_visibility='onchange',translate=True)
     date_start = fields.Date('Start date',
                              help="Date when the user initiated the request.",
                              default=fields.Date.context_today,
@@ -221,7 +237,7 @@ class SprogroupPurchaseRequest(models.Model):
                                    default=_get_default_requested_by)
     assigned_to = fields.Many2one('res.users', 'Approver', required=True,
                                   track_visibility='onchange')
-    description = fields.Text('Description')
+    description = fields.Text('Description',translate=True)
 
     line_ids = fields.One2many('sprogroup.purchase.request.line', 'request_id',
                                'Products to Purchase',
@@ -236,6 +252,24 @@ class SprogroupPurchaseRequest(models.Model):
                              default='draft')
     company_id = fields.Many2one('res.company', string='Company', required=True, readonly=True,
                                  states={'draft': [('readonly', False)]}, default=lambda self: self.env.company)
+    purchase_type = fields.Selection([('direct', 'Direct purchase'),
+                                      ('proforma', 'Proforma Purchase'),
+                                      ('limited', 'Limited Tender'),
+                                      ('open', 'Open Tender'),
+                                     ],'Purchase Type',)
+    is_direct = fields.Boolean("is direct", default=False)
+    is_proforma = fields.Boolean("is proforma", default=False)
+    is_limited = fields.Boolean("is limited", default=False)
+    is_open = fields.Boolean("is open", default=False)
+    purchase_count = fields.Integer(
+        compute="_purchase_count", string="purchase quotation Count")
+
+    def _purchase_count(self):
+        obj = self.env['purchase.order'].search([('request_id', '=', self.id)])
+        for serv in self:
+            serv.purchase_count = obj.search_count([('request_id', '=', self.id)])
+
+
 
     @api.onchange('state')
     def onchange_state(self):
@@ -327,12 +361,20 @@ class SprogroupPurchaseRequest(models.Model):
         return res
 
     def button_draft(self):
+        self.is_limited = False
+        self.is_proforma = False
+        self.is_direct = False
+        self.is_open = False
         self.mapped('line_ids').do_uncancel()
         return self.write({'state': 'draft'})
 
     def button_to_approve(self):
         flag = False
         for line in self.line_ids:
+            try:
+                line.date_required = self.date
+            except:
+                line.date_required = datetime.today()
             flag = True
         if not flag:
             raise ValidationError(_("The purchase request is empty"))
@@ -342,6 +384,17 @@ class SprogroupPurchaseRequest(models.Model):
         return self.write({'state': 'leader_approved'})
 
     def button_manager_approved(self):
+        print(self.purchase_type)
+        if self.purchase_type == False:
+            raise ValidationError(_("You have not select Purchase Type"))
+        if self.purchase_type == 'direct':
+            self.is_direct = True
+        if self.purchase_type == 'proforma':
+            self.is_proforma = True
+        if self.purchase_type == 'open':
+            self.is_open = True
+        if self.purchase_type == 'limited':
+            self.is_limited = True
         for rec in self:
             can_approve = False
             error_message = ''
@@ -407,6 +460,61 @@ class SprogroupPurchaseRequest(models.Model):
             if not pr.line_ids.filtered(lambda l: l.cancelled is False):
                 pr.write({'state': 'rejected'})
 
+    def make_purchase_agreement_limted(self):
+        valid = False
+        for pro in self.line_ids:
+            if pro.product_qty - pro.purchased_qty > 0:
+                valid = True
+        if not valid:
+            raise ValidationError(_("you have purchase all the requested quantity"))
+
+        view_id = self.env.ref('purchase_requisition.view_purchase_requisition_form')
+        order_line = []
+        for line in self.line_ids:
+            product = line.product_id
+            fpos = self.env['account.fiscal.position']
+            if self.env.uid == SUPERUSER_ID:
+                company_id = self.env.user.company_id.id
+                taxes_id = fpos.map_tax(
+                    product.supplier_taxes_id.filtered(lambda r: r.company_id.id == company_id))
+            else:
+                taxes_id = fpos.map_tax(product.supplier_taxes_id)
+            if line.request_line_state == "pr_request" or line.request_line_state == "p_rfq":
+                if not line.invoice_flag and line.product_qty - line.purchased_qty != 0:
+                    product_line = (0, 0, {
+                        'product_id': product.id,
+                        'request_line_id': line.id,
+                        # 'state': 'draft',
+                        'product_uom_id': product.uom_po_id.id,
+                        'price_unit': 0,
+                        # 'date_planned': datetime.today().strftime(DEFAULT_SERVER_DATETIME_FORMAT),
+                        # 'taxes_id' : ((6,0,[taxes_id.id])),
+                        'product_qty': line.product_qty - line.purchased_qty,
+                    })
+
+                    order_line.append(product_line)
+        if order_line:
+            return {
+                'name': _('New'),
+                'type': 'ir.actions.act_window',
+                'res_model': 'purchase.requisition',
+                'view_mode': 'form',
+                'target': 'current',
+                'view_id': view_id.id,
+                'views': [(view_id.id, 'form')],
+                'context': {
+                    # 'default_purchase_requisition_id': self.id,
+                    'default_line_ids': order_line,
+                    'default_state': 'draft',
+                    'default_origin': self.name,
+                    'default_purchase_type': self.purchase_type,
+                    # 'default_request_id': self.id,
+                    'default_user_id': self.requested_by.id,
+                    'default_request_line_id': self.id
+
+                }
+        }
+
     def make_purchase_agreement(self):
         valid = False
         for pro in self.line_ids:
@@ -454,6 +562,7 @@ class SprogroupPurchaseRequest(models.Model):
                     'default_line_ids': order_line,
                     'default_state': 'draft',
                     'default_origin': self.name,
+                    'default_purchase_type': self.purchase_type,
                     # 'default_request_id': self.id,
                     'default_user_id': self.requested_by.id,
                     'default_request_line_id': self.id
@@ -510,6 +619,62 @@ class SprogroupPurchaseRequest(models.Model):
                 'context': {
                     'default_request_id': self.id,
                     'default_order_line': order_line,
+                    'default_purchase_type': self.purchase_type,
+                    'default_state': 'draft',
+                    'default_request_id': self.id,
+                }
+            }
+
+    def make_purchase_proforma(self):
+        valid = False
+        for pro in self.line_ids:
+            if pro.product_qty - pro.purchased_qty > 0:
+                valid = True
+        if not valid:
+            raise ValidationError(_("you have purchase all the requested quantity"))
+        view_id = self.env.ref('purchase.purchase_order_form')
+        order_line = []
+        for line in self.line_ids:
+            product = line.product_id
+            print("product", product, line.request_line_state)
+            fpos = self.env['account.fiscal.position']
+            if self.env.uid == SUPERUSER_ID:
+                company_id = self.env.user.company_id.id
+                taxes_id = fpos.map_tax(
+                    line.product_id.supplier_taxes_id.filtered(lambda r: r.company_id.id == company_id))
+            else:
+                taxes_id = fpos.map_tax(line.product_id.supplier_taxes_id)
+
+            if line.request_line_state == "pr_request" or line.request_line_state == "p_rfq":
+                if not line.invoice_flag and line.product_qty - line.purchased_qty != 0:
+                    product_line = (0, 0, {
+                        'product_id': line.product_id.id,
+                        'request_line_id': line.id,
+                        'state': 'draft',
+                        'product_uom': line.product_id.uom_po_id.id,
+                        'price_unit': 0,
+                        'date_planned': datetime.today().strftime(DEFAULT_SERVER_DATETIME_FORMAT),
+                        # 'taxes_id' : ((6,0,[taxes_id.id])),
+                        'product_qty': line.product_qty - line.purchased_qty,
+                        'name': line.product_id.name,
+                        'account_analytic_id': line.analytic_acount.id
+                    })
+                    order_line.append(product_line)
+                    print("self.id..dersual", self.id)
+        if order_line:
+            return {
+                'name': _('New Quotation'),
+                'type': 'ir.actions.act_window',
+                'res_model': 'purchase.order',
+                'view_mode': 'form',
+                'target': 'current',
+                'request_id': self.id,
+                'view_id': view_id.id,
+                'views': [(view_id.id, 'form')],
+                'context': {
+                    'default_request_id': self.id,
+                    'default_purchase_type': self.purchase_type,
+                    'default_order_line': order_line,
                     'default_state': 'draft',
                     'default_request_id': self.id,
                 }
@@ -526,10 +691,7 @@ class SprogroupPurchaseRequestLine(models.Model):
     def _compute_line(self):
 
         for rec in self:
-            _logger.info("--fffffffffffffuuuuuuuuuuuuuu------rec.id=%s", rec.id)
-
             purchase_line = self.env['purchase.requisition.line'].search([('request_line_id', '=', rec.id)]).ids
-            _logger.info("--fffffffffffffuuuuuuuuuuuuuu------purchase_line=%s", purchase_line.request_line_id)
 
             if purchase_line:
                 purchased_qty = 0
@@ -630,7 +792,7 @@ class SprogroupPurchaseRequestLine(models.Model):
         domain=[('purchase_ok', '=', True)], required=True,
         track_visibility='onchange')
     name = fields.Char('Description', size=256,
-                       track_visibility='onchange')
+                       track_visibility='onchange',translate=True)
     product_uom_id = fields.Many2one('uom.uom', 'Product UOM',
                                      track_visibility='onchange', readonly=True)
     product_qty = fields.Float(string='Requested QTY', digits=dp.get_precision('Product Unit of Measure'))
@@ -657,12 +819,12 @@ class SprogroupPurchaseRequestLine(models.Model):
                             store=True)
     description = fields.Text(related='request_id.description',
                               string='Description', readonly=True,
-                              store=True)
-    date_required = fields.Date(string='Request Date', required=True,
+                              store=True,translate=True)
+    date_required = fields.Date(string='Request Date',
                                 track_visibility='onchange',
                                 default=fields.Date.context_today)
 
-    specifications = fields.Text(string='Specifications')
+    specifications = fields.Text(string='Specifications',translate=True)
     request_state = fields.Selection(string='Request state',
                                      readonly=True,
                                      related='request_id.state',
@@ -761,3 +923,21 @@ class PurchaseRequisition(models.Model):
 
     request_line_id = fields.Many2one('sprogroup.purchase.request',
                                       'Requsition Line Id')
+    purchase_type = fields.Selection([('direct', 'Direct purchase'),
+                                      ('proforma', 'Proforma Purchase'),
+                                      ('limited', 'Limited Tender'),
+                                      ('open', 'Open Tender'),
+                                      ], 'Purchase Type')
+
+    def action_in_progress(self):
+        if self.purchase_type == 'limited':
+           search = self.env["tender.limit"].search([('limit_by', '=', 'limit')])
+           if len(search) == 0:
+               raise ValidationError(_("Please configer rule for Limited tender"))
+        elif self.purchase_type == 'open' :
+            search = self.env["tender.limit"].search([('limit_by', '=', 'open Tender')])
+            if len(search) == 0:
+                raise ValidationError(_("Please configer rule for Limited tender"))
+        return super(PurchaseRequisition, self).action_in_progress()
+
+

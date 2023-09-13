@@ -23,7 +23,7 @@ class Warehouse(models.Model):
     # namedtuple used in helper methods generating values for routes
     Routing = namedtuple('Routing', ['from_loc', 'dest_loc', 'picking_type', 'action'])
 
-    name = fields.Char('Warehouse', index=True, required=True, default=lambda self: self.env.company.name)
+    name = fields.Char('Warehouse', index=True, required=True, default=lambda self: self.env.company.name, translate=True)
     active = fields.Boolean('Active', default=True)
     company_id = fields.Many2one(
         'res.company', 'Company', default=lambda self: self.env.company,
@@ -38,7 +38,7 @@ class Warehouse(models.Model):
         'stock.location', 'Location Stock',
         domain="[('usage', '=', 'internal'), ('company_id', '=', company_id)]",
         required=True, check_company=True)
-    code = fields.Char('Short Name', required=True, size=5, help="Short name used to identify your warehouse")
+    code = fields.Char('Short Name', required=True, size=5, help="Short name used to identify your warehouse", translate=True)
     route_ids = fields.Many2many(
         'stock.location.route', 'stock_route_warehouse', 'warehouse_id', 'route_id',
         'Routes',
@@ -977,7 +977,7 @@ class Orderpoint(models.Model):
 
     name = fields.Char(
         'Name', copy=False, required=True, readonly=True,
-        default=lambda self: _('New'))
+        default=lambda self: _('New'), translate=True)
     active = fields.Boolean(
         'Active', default=True,
         help="If the active field is set to False, it will allow you to hide the orderpoint without removing it.")
@@ -994,7 +994,7 @@ class Orderpoint(models.Model):
         'uom.uom', 'Unit of Measure', related='product_id.uom_id',
         readonly=True, required=True,
         default=lambda self: self._context.get('product_uom', False))
-    product_uom_name = fields.Char(string='Product unit of measure label', related='product_uom.display_name', readonly=True)
+    product_uom_name = fields.Char(string='Product unit of measure label', related='product_uom.display_name', readonly=True, translate=True)
     product_min_qty = fields.Float(
         'Minimum Quantity', digits='Product Unit of Measure', required=True,
         help="When the virtual stock equals to or goes below the Min Quantity specified for this field, Odoo generates "

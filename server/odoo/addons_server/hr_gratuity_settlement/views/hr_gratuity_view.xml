@@ -85,10 +85,10 @@
                             <h2>
                                 <field name="name" readonly="1"/>
                             </h2>
-                            <label for="employee_id" string="Employee Name" class="oe_edit_only"/>
+                            <label for="employee_id" string="Employee Name"/>
                             <h1>
                                 <field name="employee_id" string="Employee Name" placeholder="Employee"
-                                       attrs="{'readonly':[('state','!=','draft')]}" required="True"/>
+                                       attrs="{'readonly':[('state','!=','draft')]}" required="True" options="{'no_create': True, 'no_create_edit': True}"/>
                             </h1>
                         </div>
                         <group col="2" colspan="6">

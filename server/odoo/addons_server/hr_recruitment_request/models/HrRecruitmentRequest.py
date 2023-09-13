@@ -32,17 +32,17 @@ class HrRecruitmentRequest(models.Model):
        An employee with applier role  for approved recruitment request can apply on the request itself when the recruitment request is in state in internal recruitment or external recruitment."""
 
     
-    name = fields.Char( required=True,readonly=True, default='New', index=True)
+    name = fields.Char( required=True,readonly=True , store = True , default='New', index=True, exportable=True, translate=True)
     
-    department_id = fields.Many2one('hr.department',readonly=True, related_sudo=False,default = lambda self : self.env.user.employee_id.department_id)
-    department_name = fields.Char(related='department_id.name',readonly=True)
+    department_id = fields.Many2one('hr.department',readonly=True , store = True , related_sudo=False,default = lambda self : self.env.user.employee_id.department_id,exportable=True)
+    department_name = fields.Char(related='department_id.name',readonly=True , store = True ,exportable=True, translate=True)
     
     job_id = fields.Many2one('hr.job', String='Requested Postion',domain="[('department_id','=',department_id)]", required=True)
-    job_title = fields.Char(related='job_id.name',default ='job', related_sudo=False)
-    job_description = fields.Text(string="Job descripton")
+    job_title = fields.Char(related='job_id.name',default ='job', related_sudo=False, translate=True)
+    job_description = fields.Text(string="Job descripton", translate=True)
     
     
-    company_id = fields.Many2one('res.company', string='Company',default=lambda self: self.env.company, required=True,readonly=True)
+    company_id = fields.Many2one('res.company', string='Company',default=lambda self: self.env.company, required=True,readonly=True , store = True ,exportable=True)
     
     expected_employees = fields.Integer(string ="Expected Employees",required=True,default = 1)
     applicant_ids = fields.One2many('custom.job','recruitment_request_id',string="Applicants")
@@ -84,7 +84,7 @@ class HrRecruitmentRequest(models.Model):
         return employee_rec.id
 
     applicant_count = fields.Integer(compute='_compute_applicant_count', string='Applicant count')
-    requester_employee_id = fields.Many2one('hr.employee', string="Requested By", default=_get_employee_id, readonly=True)
+    requester_employee_id = fields.Many2one('hr.employee', string="Requested By", default=_get_employee_id, readonly=True , store = True  ,exportable=True)
 
 
     @api.depends('state')

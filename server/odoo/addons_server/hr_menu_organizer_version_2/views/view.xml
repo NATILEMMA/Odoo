@@ -241,25 +241,15 @@
             <field name="act_window_id" ref="open_view_employee_custom_list_my"/>
         </record>
 
-        
-
-        <menuitem
-            id="menu_hr_employee_directory_custom"
-            name="Employee Directory"
-            parent="hr.menu_hr_root"
-            groups="hr.group_user_custom"
-            sequence="0"/>
 
             <menuitem
                 id="menu_hr_employee_user"
-                name="Employees"
+                name="My profile"
                 action="hr_menu_organizer_version_2.open_view_employee_custom_list_my"
-                parent="hr_menu_organizer_version_2.menu_hr_employee_directory_custom"
+                parent="hr.menu_hr_employee"
                 sequence="0"/>
 
-            <record id="hr.menu_hr_employee" model="ir.ui.menu">
-                <field name="active" eval="False"></field>
-            </record>
+          
              <!-- <record id="hr.menu_hr_root" model="ir.ui.menu">
                 <field name="groups_id" eval="[(4, ref('hr.group_user_custom'))]"/>
             </record> -->

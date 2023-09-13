@@ -11,7 +11,7 @@ class UpdatePendingRepairHistory(models.Model):
     _description = 'Update Pending Repair History'
 
     vehicle_id = fields.Many2one('fleet.vehicle', string="Vehicle ID", size=64)
-    fmp_id = fields.Char("Vehicle", char="128")
+    fmp_id = fields.Char("Vehicle", char="128", translate=True)
     pending_reapir_ids = fields.Many2many("pending.repair.type",
                                           "update_pending_history_rel",
                                           "pending_history_id",
@@ -69,7 +69,7 @@ class PendingAppliedHistory(models.Model):
                                          string="Update Pending")
     vehicle_rep_type_id = fields.Many2one('fleet.vehicle', string="Vehicle")
     repair_type_id = fields.Many2one('repair.type', string="Repair Type")
-    name = fields.Char(string='Work Order #')
+    name = fields.Char(string='Work Order #', translate=True)
     categ_id = fields.Many2one("service.category", string="Category")
     issue_date = fields.Date(string="Issue Date")
     state = fields.Selection([('complete', 'Complete'),

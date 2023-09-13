@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+   <data>
+
+    <record id="seq_hr_employee_document" model="ir.sequence">
+        <field name="name">Employee Document</field>
+        <field name="code">hr.employee.document.sequence</field>
+        <field name="prefix">Emp-Doc-</field>
+        <field name="padding">3</field>
+    </record>
+    <record id="seq_hr_document" model="ir.sequence">
+        <field name="name">Document</field>
+        <field name="code">hr.document.sequence</field>
+        <field name="prefix">Doc-</field>
+        <field name="padding">3</field>
+    </record>
+   </data>
+
+</odoo>

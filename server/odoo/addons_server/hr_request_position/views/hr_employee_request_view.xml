@@ -40,7 +40,7 @@
                         <field name="requested_department_id" attrs="{'invisible': [('salary_or_position', '=', 'salary_request')], 'required':[('salary_or_position','=','position_request')],'readonly':[('state','!=','draft'),('state','!=','new')]}" />
                         <field name="grade_id" attrs = "{'readonly':[('state','!=','draft'),('state','!=','new')],'invisible': [('salary_or_position','=','salary_request')]}"/> 
                         <field name="hr_responsible_user_id" />
-                        <field name="wage" attrs="{'invisible': [('salary_or_position','=','position_request')],'readonly':True}"/>
+                        <field name="wage" attrs="{'invisible': [('salary_or_position','=','position_request')],'readonly':[('state','!=','draft'),('state','!=','new')]}"/>
                         <field name="previous_salary" attrs="{'invisible': [('salary_or_position','=','position_request')],'readonly':True}"/>
                         <field name="estimated_salary" attrs="{'invisible': [('salary_or_position','=','position_request')],'readonly':[('state','!=','draft'),('state','!=','new')]}"/>
                     </group>
@@ -168,16 +168,16 @@
     <menuitem 
         name="Employee's Requests" 
         id="menu_employee_request" 
-        parent="hr_menu_organizer.hr_employee_status_menu" 
+        parent="hr.menu_hr_employee" 
         action="action_employee_requests" 
-        sequence="0" 
+        sequence="3" 
         groups="hr_request_position.group_request_hr_approval_request,hr_request_position.group_position_request_manager_approval,hr_request_position.group_requester"/>
     
     <menuitem 
         name="Approve position/salary Requests" 
         id="menu_to_approve_postition_salary_request"   
         sequence="100"
-        parent="hr_menu_organizer.hr_employee_status_menu" 
+        parent="hr_menu_organizer.hr_employee_activities_menu" 
         action="hr_request_position_to_approve"  
         groups="hr_request_position.group_request_hr_approval_request,hr_request_position.group_position_request_manager_approval"/>
   

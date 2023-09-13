@@ -6,7 +6,7 @@ class InstutionType(models.Model):
     _description = 'hr employee instution type'
     
 
-    name = fields.Char(string='Instution Type', required=True, help="Instution Type Name")
+    name = fields.Char(string='Instution Type', required=True, help="Instution Type Name", translate=True)
 
 
 

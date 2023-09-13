@@ -1,0 +1,200 @@
+<?xml version="1.0"?>
+<odoo>
+
+
+    <!-- This record will handle the member assembly -->
+    <record id="member_training_report_tree" model="ir.ui.view">
+        <field name="name">Leaders Training</field>
+        <field name="model">leaders.trainings</field>
+        <field name="arch" type="xml">
+            <tree edit="false" create="false" duplicate="false">
+                <field name="partner_id" readonly="1" string="Leader"/>
+                <field name="training_type" readonly="1"/>
+                <field name="training_round" readonly="1"/>
+                <field name="training_year" readonly="1"/>
+                <field name="training_result" readonly="1"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <!-- This record will handle the member assembly -->
+    <record id="member_training_report_form" model="ir.ui.view">
+        <field name="name">Leaders Training</field>
+        <field name="model">leaders.trainings</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="partner_id" readonly="1" context="{'form_view_ref': 'member_registration.membership_view_partner_form'}" string="Leader"/>
+                            <field name="training_type" readonly="1"/>
+                        </group>
+                        <group>
+                            <field name="training_round" readonly="1"/>
+                            <field name="training_year" readonly="1"/>
+                            <field name="training_result" readonly="1"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <!-- This record will handle the member assembly search -->
+    <record id="member_training_report_search" model="ir.ui.view">
+        <field name="name">Leaders Training</field>
+        <field name="model">leaders.trainings</field>
+        <field name="arch" type="xml">
+            <search string="Member Assembly">
+                <group expand="0" string="Group By" colspan="10" col="8">
+                    <filter string="Training" name="training" context="{'group_by': 'training_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!--This record will create the action of assembly -->
+    <record id="member_training_report_action" model="ir.actions.act_window">
+        <field name="name">Leaders Training</field>
+        <field name="res_model">leaders.trainings</field>
+        <field name="view_mode">tree,pivot,graph</field>
+        <field name="search_view_id" ref="member_training_report_search"/>
+        <field name="context">{'search_default_training': 1}</field>
+        <field name="limit">100</field>
+    </record>
+
+
+
+    <!-- This record will create a tree view for training -->
+    <record id="member_training_tree" model="ir.ui.view">
+        <field name="name">Leader Training</field>
+        <field name="model">member.training</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="training_type"/>
+                <field name="instution_id"/>
+                <field name="training_round"/>
+                <field name="training_year"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- This record will create a form view for training -->
+    <record id="member_training_form" model="ir.ui.view">
+        <field name="name">Leader Training</field>
+        <field name="model">member.training</field>
+        <field name="arch" type="xml">
+            <form duplicate="false">
+                <header>
+                    <field name="added_leaders" invisible="1"/>
+                    <button name="add_leaders" string="Add Leaders" type="object" attrs="{'invisible': ['|', ('added_leaders', '=', True), ('state', 'in', ['draft', 'cancel', 'complete'])]}" class="btn-primary" confirm="Are you sure you want to add Leaders?"/>
+                    <button name="confirm_event" string="Confirm Training" type="object" states="draft" class="btn-primary" confirm="Are you sure you want to confirm the Training?"/>
+                    <button name="complete_event" string="Complete Training" type="object" states="confirm"  class="btn-primary" confirm="Are you sure you want to complete this Training?"/>
+                    <button name="cancel_event" string="Cancel Training" type="object" attrs="{'invisible': [('state', 'not in', ['draft', 'confirm'])]}" confirm="Are you sure you want to cancel this Training?"/>
+                    <button name="print_event" string="Print Certificates"  type="object"  class="oe_highlight" attrs="{'invisible': [('state', 'not in', 'complete')]}" confirm="Are you sure you want to print Certificates?"/>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <h1>
+                        <field name="name"/>
+                    </h1>
+                    <group>
+                        <group>
+                            <field name="wereda_id" attrs="{'readonly': [('state', '!=', 'draft')]}" options="{'no_create': True, 'no_create_edit': True}" invisible="1"/>
+                            <field name="subcity_id" attrs="{'readonly': [('state', '!=', 'draft')]}" options="{'no_create': True, 'no_create_edit': True}" invisible="1"/>
+                            <field name="city_id" attrs="{'readonly': [('state', '!=', 'draft')]}" options="{'no_create': True, 'no_create_edit': True}" invisible="1"/>
+                            <field name="training_type" attrs="{'readonly': [('state', '!=', 'draft')]}" options="{'no_create': True, 'no_create_edit': True}"/>
+                            <field name="training_round" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="training_year" readonly="1" options="{'no_create': True, 'no_create_edit': True}"/>
+                            <field name="x_css" force_save="1" nolabel="1" invisible="1"/>
+                        </group>
+                        <group>
+                            <field name="instution_type_id" attrs="{'readonly': [('state', '!=', 'draft')]}" options="{'no_create': True, 'no_create_edit': True}"/>
+                            <field name="instution_id" attrs="{'readonly': [('state', '!=', 'draft')]}" options="{'no_create': True, 'no_create_edit': True}"/>
+                            <field name="start_date" string="Start Date" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="end_date" string="End Date" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Leaders" attrs="{'invisible': [('state', 'in', ['draft'])]}">
+                            <field name="leader_ids">
+                                <tree editable="bottom" create="false">
+                                    <field name="partner_id" readonly="1" string="Leader"/>
+                                    <field name="training_result" string="Training Result"/>
+                                    <field name="certificate" string="Certificate"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Notes"  attrs="{'readonly': [('state', '=', 'cancel')]}">
+                            <field name="note_id"/>
+                        </page>     
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>    
+
+    <!--This record will create the action of training -->
+    <record id="member_training_action" model="ir.actions.act_window">
+        <field name="name">Leader Training</field>
+        <field name="res_model">member.training</field>
+        <field name="view_mode">tree,form,pivot,graph</field>
+        <field name="limit">20</field>
+        <field name="domain">['|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|',
+                            ('wereda_id.branch_manager', 'in', [uid]),
+                            ('wereda_id.parent_id.parent_manager', 'in', [uid]),
+                            ('wereda_id.parent_id.city_id.city_manager', 'in', [uid]),
+                            ('wereda_id.ict_manager', '=', uid),
+                            ('wereda_id.parent_id.city_id.transfer_handler', '=', uid),
+                            ('wereda_id.parent_id.city_id.responsible_id.system_admin', 'in', [uid]),
+                            ('subcity_id.parent_manager', 'in', [uid]),
+                            ('subcity_id.city_id.city_manager', 'in', [uid]),
+                            ('subcity_id.city_id.transfer_handler', '=', uid),
+                            ('subcity_id.city_id.responsible_id.system_admin', 'in', [uid]),
+                            ('subcity_id.ict_manager', '=', uid),
+                            ('city_id.city_manager', 'in', [uid]),
+                            ('city_id.ict_manager', '=', uid),
+                            ('city_id.transfer_handler', '=', uid),
+                            ('city_id.responsible_id.system_admin', 'in', [uid])]</field>
+
+    </record>
+
+
+    <menuitem id="member_training_menu"
+              name="Leader Trainings"
+              parent="member_minor_configuration.menu_association"
+              sequence="80"
+              groups="member_minor_configuration.member_group_city_transfer_handler,member_minor_configuration.member_group_manager"
+              action="member_training_action"/>
+
+
+    <menuitem id="training_report_menu"
+              name="Training Report"
+              parent="member_minor_configuration.menu_report_membership"
+              sequence="5"
+              action="member_training_report_action"
+              groups="member_minor_configuration.member_group_city_admin"/>
+
+
+    <menuitem id="training_report_menu_dos"
+              name="Training Report"
+              parent="member_minor_configuration.membership_all_module_report_tab"
+              sequence="7"
+              groups="member_minor_configuration.member_group_manager"/>
+
+
+    <menuitem id="training_report_submenu_dos"
+              name="Training Report"
+              parent="training_report_menu_dos"
+              action="member_training_report_action"/>
+
+</odoo>

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 13.0-20221005\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-02 08:13+0000\n"
-"PO-Revision-Date: 2023-05-02 08:13+0000\n"
+"POT-Creation-Date: 2023-06-17 13:41+0000\n"
+"PO-Revision-Date: 2023-06-17 13:41+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -22,41 +22,41 @@ msgid ""
 "Quotation - %s' % (object.name) or                 'Purchase Order - %s' % "
 "(object.name))"
 msgstr ""
-"                 (object.state in ('draft', 'sent') and 'ፕሮፎርማ መጠይቅ "
-" - %s' % (object.name) or                 'የግዢ ትዕዛዝ - %s' % "
-"(object.name))"
+"                 (object.state in ('draft', 'sent') and 'ፕሮፎርማ መጠይቅ  - %s' %"
+" (object.name) or                 'የግዢ ትዕዛዝ - %s' % (object.name))"
+
 #. module: purchase
 #: model:ir.model.fields,field_description:purchase.field_res_partner__supplier_invoice_count
 #: model:ir.model.fields,field_description:purchase.field_res_users__supplier_invoice_count
 msgid "# Vendor Bills"
-msgstr ""
-"የአቅራቢ ቢል(ሒሳብ)"
+msgstr "የአቅራቢ ቢል(ሒሳብ)"
+
 #. module: purchase
 #: model:ir.model.fields,field_description:purchase.field_purchase_report__nbr_lines
 msgid "# of Lines"
-msgstr ""
-"ዝርዝሮች"
+msgstr "ዝርዝሮች"
+
 #. module: purchase
 #: model:mail.template,subject:purchase.email_template_edi_purchase
 #: model:mail.template,subject:purchase.email_template_edi_purchase_done
 msgid "${object.company_id.name} Order (Ref ${object.name or 'n/a' })"
-msgstr ""
-"${object.company_id.name} ትዕዛዝ (Ref ${object.name or 'n/a' })"
+msgstr "${object.company_id.name} ትዕዛዝ (Ref ${object.name or 'n/a' })"
+
 #. module: purchase
 #: model:ir.actions.report,print_report_name:purchase.report_purchase_quotation
 msgid "'Request for Quotation - %s' % (object.name)"
-msgstr ""
-"' - %s' % (object.name)"
+msgstr "' - %s' % (object.name)"
+
 #. module: purchase
 #: model_terms:ir.ui.view,arch_db:purchase.res_config_settings_view_form_purchase
 msgid "3-way matching"
-msgstr ""
-"ባለ 3-መንገድ ማመሳከሪያ"
+msgstr "ባለ 3-መንገድ ማመሳከሪያ"
+
 #. module: purchase
 #: model:ir.model.fields,field_description:purchase.field_res_config_settings__module_account_3way_match
 msgid "3-way matching: purchases, receptions and bills"
-msgstr ""
-"ባለ 3-መንገድ ማመሳከሪያ:ግዢዎች, ገቢ የሆኑ የእቃ ዝርዝሮች እና ሂሳቦች"
+msgstr "ባለ 3-መንገድ ማመሳከሪያ:ግዢዎች, ገቢ የሆኑ የእቃ ዝርዝሮች እና ሂሳቦች"
+
 #. module: purchase
 #: model:mail.template,body_html:purchase.email_template_edi_purchase_done
 msgid ""
@@ -99,6 +99,7 @@ msgstr ""
 "        ከሠላምታ ጋር,\n"
 "    </p>\n"
 "</div>"
+
 #. module: purchase
 #: model:mail.template,body_html:purchase.email_template_edi_purchase
 msgid ""
@@ -139,22 +140,25 @@ msgstr ""
 "        ከሠላምታ ጋር,\n"
 "    </p>\n"
 "</div>"
+
 #. module: purchase
 #: model_terms:ir.ui.view,arch_db:purchase.purchase_partner_kanban_view
 msgid ""
 "<i class=\"fa fa-fw fa-shopping-cart\" role=\"img\" aria-label=\"Shopping "
 "cart\" title=\"Shopping cart\"/>"
 msgstr ""
-"<i class=\"fa fa-fw fa-shopping-cart\" role=\"img\" aria-label=\"የግብይት "
-"ሳጥን\" title=\"የግብይት ሳጥን\"/>"
+"<i class=\"fa fa-fw fa-shopping-cart\" role=\"img\" aria-label=\"የግብይት ሳጥን\""
+" title=\"የግብይት ሳጥን\"/>"
+
 #. module: purchase
 #: model_terms:ir.ui.view,arch_db:purchase.portal_my_purchase_orders
 msgid ""
 "<span class=\"badge badge-info\"><i class=\"fa fa-fw fa-file-text\"/> "
 "Waiting for Bill</span>"
 msgstr ""
-"<span class=\"badge badge-info\"><i class=\"fa fa-fw fa-file-text\"/> "
-"ሂሳብ በመጠባበቅ ላይ</span>"
+"<span class=\"badge badge-info\"><i class=\"fa fa-fw fa-file-text\"/> ሂሳብ "
+"በመጠባበቅ ላይ</span>"
+
 #. module: purchase
 #: model_terms:ir.ui.view,arch_db:purchase.portal_my_purchase_orders
 msgid ""
@@ -163,6 +167,7 @@ msgid ""
 msgstr ""
 "<span class=\"badge badge-secondary\"><i class=\"fa fa-fw fa-remove\"/> "
 "ተሰርዘዋል</span>"
+
 #. module: purchase
 #: model_terms:ir.ui.view,arch_db:purchase.res_config_settings_view_form_purchase
 msgid ""
@@ -184,77 +189,76 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:purchase.product_normal_form_view_inherit_purchase
 #: model_terms:ir.ui.view,arch_db:purchase.view_product_template_purchase_buttons_from
 msgid "<span class=\"o_stat_text\">Purchased</span>"
-msgstr ""
-"<span class=\"o_stat_text\">የተገዛ</span>"
+msgstr "<span class=\"o_stat_text\">የተገዛ</span>"
+
 #. module: purchase
 #: model_terms:ir.ui.view,arch_db:purchase.report_purchaseorder_document
 msgid "<strong class=\"mr16\">Subtotal</strong>"
-msgstr ""
-"<strong class=\"mr16\">ንዑስ ድምር</strong>"
+msgstr "<strong class=\"mr16\">ንዑስ ድምር</strong>"
+
 #. module: purchase
 #: model_terms:ir.ui.view,arch_db:purchase.report_purchaseorder_document
 msgid "<strong>Amount</strong>"
-msgstr ""
-"<strong>መጠን</strong>"
+msgstr "<strong>መጠን</strong>"
+
 #. module: purchase
 #: model_terms:ir.ui.view,arch_db:purchase.report_purchaseorder_document
 msgid "<strong>Date Req.</strong>"
-msgstr ""
-"<strong>የተጠየቀበት ቀን.</strong>"
+msgstr "<strong>የተጠየቀበት ቀን.</strong>"
+
 #. module: purchase
 #: model_terms:ir.ui.view,arch_db:purchase.portal_my_purchase_order
 msgid "<strong>Date:</strong>"
-msgstr ""
-"<strong>ቀን:</strong>"
+msgstr "<strong>ቀን:</strong>"
+
 #. module: purchase
 #: model_terms:ir.ui.view,arch_db:purchase.report_purchaseorder_document
 #: model_terms:ir.ui.view,arch_db:purchase.report_purchasequotation_document
 msgid "<strong>Description</strong>"
-msgstr ""
-"<strong>መግለጫ</strong>"
+msgstr "<strong>መግለጫ</strong>"
+
 #. module: purchase
 #: model_terms:ir.ui.view,arch_db:purchase.report_purchasequotation_document
 msgid "<strong>Expected Date</strong>"
-msgstr ""
-"<strong>የሚጠበቅበት ቀን</strong>"
+msgstr "<strong>የሚጠበቅበት ቀን</strong>"
 
 #. module: purchase
 #: model_terms:ir.ui.view,arch_db:purchase.report_purchaseorder_document
 msgid "<strong>Order Date:</strong>"
-msgstr ""
-"<strong>የታዘዘበት ቀን:</strong>"
+msgstr "<strong>የታዘዘበት ቀን:</strong>"
+
 #. module: purchase
 #: model_terms:ir.ui.view,arch_db:purchase.report_purchaseorder_document
 msgid "<strong>Order Deadline:</strong>"
 msgstr ""
-"<strong>የትዕዛዝ ቀነ-ገደብ:</strong>"
+
 #. module: purchase
 #: model_terms:ir.ui.view,arch_db:purchase.portal_my_purchase_order
 msgid "<strong>Product</strong>"
-msgstr ""
-"<strong>ዕቃ</strong>"
+msgstr "<strong>ዕቃ</strong>"
+
 #. module: purchase
 #: model_terms:ir.ui.view,arch_db:purchase.report_purchaseorder_document
 msgid "<strong>Purchase Representative:</strong>"
-msgstr ""
-"<strong>የግዢ ተወካይ:</strong>"
+msgstr "<strong>የግዢ ተወካይ:</strong>"
+
 #. module: purchase
 #: model_terms:ir.ui.view,arch_db:purchase.report_purchaseorder_document
 #: model_terms:ir.ui.view,arch_db:purchase.report_purchasequotation_document
 msgid "<strong>Qty</strong>"
-msgstr ""
-"<strong>ብዛት</strong>"
+msgstr "<strong>ብዛት</strong>"
+
 #. module: purchase
 #: model_terms:ir.ui.view,arch_db:purchase.portal_my_purchase_order
 msgid "<strong>Quantity</strong>"
-msgstr ""
-"<strong>ብዛት</strong>"
+msgstr "<strong>ብዛት</strong>"
+
 #. module: purchase
 #: model_terms:ir.ui.view,arch_db:purchase.report_purchaseorder_document
 #: model_terms:ir.ui.view,arch_db:purchase.report_purchasequotation_document
 msgid "<strong>Shipping address:</strong>"
-msgstr ""
-"<strong>የመላኪያ አድራሻ:</strong>"
+msgstr "<strong>የመላኪያ አድራሻ:</strong>"
+
 #. module: purchase
 #: model_terms:ir.ui.view,arch_db:purchase.portal_my_purchase_order
 #: model_terms:ir.ui.view,arch_db:purchase.report_purchaseorder_document
@@ -264,34 +268,34 @@ msgstr "ንዑስ ድምር"
 #. module: purchase
 #: model_terms:ir.ui.view,arch_db:purchase.report_purchaseorder_document
 msgid "<strong>Taxes</strong>"
-msgstr ""
-"<strong>ታክስ</strong>"
+msgstr "<strong>ታክስ</strong>"
+
 #. module: purchase
 #: model_terms:ir.ui.view,arch_db:purchase.track_po_line_template
 msgid "<strong>The ordered quantity has been updated.</strong>"
-msgstr ""
-"<strong>የታዘዘው ብዛቱ ተስተካክሏል.</strong>"
+msgstr "<strong>የታዘዘው ብዛቱ ተስተካክሏል.</strong>"
+
 #. module: purchase
 #: model_terms:ir.ui.view,arch_db:purchase.portal_my_purchase_order
 msgid "<strong>Total:</strong>"
-msgstr ""
-"<strong>አጠቃላይ:</strong>"
+msgstr "<strong>አጠቃላይ:</strong>"
+
 #. module: purchase
 #: model_terms:ir.ui.view,arch_db:purchase.report_purchaseorder_document
 msgid "<strong>Total</strong>"
-msgstr ""
-"<strong>አጠቃላይ</strong>"
+msgstr "<strong>አጠቃላይ</strong>"
+
 #. module: purchase
 #: model_terms:ir.ui.view,arch_db:purchase.portal_my_purchase_order
 #: model_terms:ir.ui.view,arch_db:purchase.report_purchaseorder_document
 msgid "<strong>Unit Price</strong>"
-msgstr ""
-"<strong>የአንዱ ዋጋ</strong>"
+msgstr "<strong>የአንዱ ዋጋ</strong>"
+
 #. module: purchase
 #: model_terms:ir.ui.view,arch_db:purchase.report_purchaseorder_document
 msgid "<strong>Your Order Reference:</strong>"
-msgstr ""
-"<strong>የትዕዛዝዎ ማጣቀሻ:</strong>"
+msgstr "<strong>የትዕዛዝዎ ማጣቀሻ:</strong>"
+
 #. module: purchase
 #: model:ir.model.fields,help:purchase.field_purchase_order_line__product_type
 msgid ""
@@ -302,16 +306,17 @@ msgstr ""
 "ስቶረብል ፕሮዳክት ማለት ሊከማች የሚችል ዕቃ፣ ምርት ወይም ንብረት ማለት ነው.የንብረት ማስተዳደሪያው መተግበሪያ መጫን አለበት።\n"
 "ኮንስዩመብል ፕሮዳክት ማለት አላቂ ዕቃ የሆነ እና ሊከማች የማይችል የዕቃ ወይም የምርት ዓይነት ነው።\n"
 "ሰርቪስ እርስዎ የሚሰጡት ወይም የሚቀበሉት ቁሳቁስ ያልሆነ አገልግሎት ነው።"
+
 #. module: purchase
 #: model:res.groups,name:purchase.group_warning_purchase
 msgid "A warning can be set on a product or a customer (Purchase)"
-msgstr ""
-"ማስጠንቀቂያ በአንድ ቁስ ወይም በደንበኛ (ግዢ) ላይ ሊቀመጥ ይችላል"
+msgstr "ማስጠንቀቂያ በአንድ ቁስ ወይም በደንበኛ (ግዢ) ላይ ሊቀመጥ ይችላል"
+
 #. module: purchase
 #: model:ir.model.fields,field_description:purchase.field_purchase_order__access_warning
 msgid "Access warning"
-msgstr ""
-"የ አክሰስ ማስጠንቀቂያ"
+msgstr "የ አክሰስ ማስጠንቀቂያ"
+
 #. module: purchase
 #: model:ir.model.fields,help:purchase.field_purchase_order_line__qty_received_method
 msgid ""
@@ -322,36 +327,37 @@ msgstr ""
 "ሊከማች በሚችል ምርት፣ዕቃ ወይም ንብረት ውቅር መሠረት የተቀበልንው የዕቃ ብዛት አውቶማቲካሊ በሚከተለው መንገድ ሊሰላ ይችላል-\n"
 "  - ማኑዋል(በሰው)-የዕቃው ብዛት በእጅ የሚሰራው በእጅ ማኑዋሊ ይሆናል\n"
 "  - የክምችት እንቅስቃሴዎች(ስቶክ ሙቭ)-ብዛቱ አውቶማቲካሊ ከተረጋገጠ የይቀበሉ አገልግሎት ይመጣል\n"
+
 #. module: purchase
 #: model:ir.model.fields,field_description:purchase.field_purchase_order__message_needaction
 msgid "Action Needed"
-msgstr ""
-"እርምጃ ያስፈልጋል"
+msgstr "እርምጃ ያስፈልጋል"
+
 #. module: purchase
 #: model:ir.model.fields,field_description:purchase.field_purchase_order__activity_ids
 msgid "Activities"
-msgstr ""
-"ክንውኖች"
+msgstr "ክንውኖች"
+
 #. module: purchase
 #: model:ir.model.fields,field_description:purchase.field_purchase_order__activity_exception_decoration
 msgid "Activity Exception Decoration"
-msgstr ""
-"ለየት ያሉ እንቅስቃሴዎች"
+msgstr "ለየት ያሉ እንቅስቃሴዎች"
+
 #. module: purchase
 #: model:ir.model.fields,field_description:purchase.field_purchase_order__activity_state
 msgid "Activity State"
-msgstr ""
-"የስራ ወይም እንቅስቃሴ ሁኔታ"
+msgstr "የስራ ወይም እንቅስቃሴ ሁኔታ"
+
 #. module: purchase
 #: model_terms:ir.ui.view,arch_db:purchase.purchase_order_form
 msgid "Add a note"
-msgstr ""
-"ማስታወሻ ያክሉ"
+msgstr "ማስታወሻ ያክሉ"
+
 #. module: purchase
 #: model_terms:ir.ui.view,arch_db:purchase.purchase_order_form
 msgid "Add a product"
-msgstr ""
-"ቁስ፣ አግልግሎት ወይም ንብረት ይጨምሩ"
+msgstr "ቁስ፣ አግልግሎት ወይም ንብረት ይጨምሩ"
+
 #. module: purchase
 #: model_terms:ir.ui.view,arch_db:purchase.purchase_order_form
 msgid "Add a section"
@@ -361,6 +367,12 @@ msgstr "ማቧደኛ ይጨምሩ"
 #: model_terms:ir.ui.view,arch_db:purchase.res_config_settings_view_form_purchase
 msgid "Add several variants to the purchase order from a grid"
 msgstr "ከግሪዱ ላይ የመረጡትን የቁስ ወይንም ንብረት ዓይነት ያክሉ"
+
+#. module: purchase
+#: model:ir.model,name:purchase.model_product_product
+#: model:ir.model,name:purchase.model_product_template
+msgid "Adding is asset field"
+msgstr "መጨመር የንብረት መስክ ነው።"
 
 #. module: purchase
 #: model:res.groups,name:purchase.group_purchase_manager
@@ -386,24 +398,18 @@ msgstr "መጠን"
 #. module: purchase
 #: model:ir.model.fields,field_description:purchase.field_purchase_order_line__account_analytic_id
 #: model:ir.model.fields,field_description:purchase.field_purchase_report__account_analytic_id
-msgid "Budget Account"
-msgstr "የበጀት መለያ"
+msgid "Analytic Account"
+msgstr "በጀት መለያ"
 
 #. module: purchase
 #: model:ir.model.fields,field_description:purchase.field_purchase_order_line__analytic_tag_ids
-msgid "Budget Tags"
-msgstr "የበጀት ታግ"
+msgid "Analytic Tags"
+msgstr ""
 
 #. module: purchase
 #: model_terms:ir.ui.view,arch_db:purchase.purchase_order_form
 msgid "Approve Order"
 msgstr "ትዕዛዝ ያፅድቁ"
-
-#. module: purchase
-#: model:ir.model,name:purchase.model_product_product
-#: model:ir.model,name:purchase.model_product_template
-msgid "Asset description line inherit"
-msgstr "የቋሚ ንብረት መግለጫ መስመር ውርስ"
 
 #. module: purchase
 #: model:ir.model.fields,field_description:purchase.field_purchase_order__message_attachment_count
@@ -423,12 +429,12 @@ msgstr "ካለፈው የክፍያ መጠየቂያ / የግዢ ትዕዛዝ በ�
 #. module: purchase
 #: model:ir.model.fields,help:purchase.field_account_move__purchase_id
 msgid "Auto-complete from a past purchase order."
-msgstr "ካለፈው የግዢ ትዕዛዝ በራሱ ይሙላ/ይጨርስ"
+msgstr "ካለፈው የግዢ ትእዛዝ በራስ ሰር ያጠናቅቁ።"
 
 #. module: purchase
 #: model_terms:ir.ui.view,arch_db:purchase.res_config_settings_view_form_purchase
 msgid "Automatically lock confirmed orders to prevent edition"
-msgstr "አርትዕን ለመከላከል የተረጋገጡ ትዕዛዞችን ኣውቶማቲካሊ ቆልፍ"
+msgstr "ማስተካከልን ለመከላከል የተረጋገጡ ትዕዛዞችን ኣውቶማቲካሊ ቆልፍ"
 
 #. module: purchase
 #: model:ir.model.fields,field_description:purchase.field_purchase_report__price_average
@@ -509,10 +515,10 @@ msgid ""
 "product if you directly do a Request for Quotation to one vendor or if you "
 "want a Call for Tenders to compare offers from several vendors."
 msgstr ""
+"ለተወሰኑ ቁሶች/ንበረቶች ግዢ ፍላጎት ስብስብ ለብዙ አቅራቢዎች የፕሮፎርማ ጥያቄዎችን ለማመንጨት በሚፈልጉበት ጊዜ የጨረታ"
+" ጥሪዎች ጥቅም ላይ ይውላሉ።ለአንድ ሻጭ በቀጥታ የፕሮፎርማ ጥያቄ ካቀረቡ ወይም ከበርካታ አቅራቢዎች የሚቀርቡትን ቅናሾች"
+" ለማነፃፀርየጨረታ ጥሪ ከፈለጉ በእያንዳንዱ ምርት ማዋቀር ይችላሉ።."
 
-"ለተወሰኑ ቁሶች/ንበረቶች ግዢ ፍላጎት ስብስብ ለብዙ አቅራቢዎች የፕሮፎርማ ጥያቄዎችን ለማመንጨት በሚፈልጉበት ጊዜ የጨረታ ጥሪዎች ጥቅም ላይ ይውላሉ።" 
-"ለአንድ ሻጭ በቀጥታ የፕሮፎርማ ጥያቄ ካቀረቡ ወይም ከበርካታ አቅራቢዎች የሚቀርቡትን ቅናሾች ለማነፃፀር" 
-"የጨረታ ጥሪ ከፈለጉ በእያንዳንዱ ምርት ማዋቀር ይችላሉ።."
 #. module: purchase
 #: model_terms:ir.ui.view,arch_db:purchase.purchase_order_form
 msgid "Cancel"
@@ -570,12 +576,12 @@ msgstr "የድርጅቱ ምንዛሬ"
 #: code:addons/purchase/models/purchase.py:0
 #, python-format
 msgid "Compose Email"
-msgstr "የተጻፉ ኢሜይል"
+msgstr "ኢሜል ይጻፉ"
 
 #. module: purchase
 #: model:ir.model,name:purchase.model_res_config_settings
 msgid "Config Settings"
-msgstr "የማስተካያዎች ማዋቀሪያ"
+msgstr "ቅንብሮችን ያዋቅሩ"
 
 #. module: purchase
 #: model:ir.ui.menu,name:purchase.menu_purchase_config
@@ -602,12 +608,12 @@ msgstr "የማረጋገጫ ቀን"
 #. module: purchase
 #: model:ir.model.fields.selection,name:purchase.selection__res_company__po_lock__lock
 msgid "Confirmed purchase orders are not editable"
-msgstr "የተረጋገጡ የግዢ ትዕዛዞች አርትዕ መደረግ አይችሉም"
+msgstr "የተረጋገጡ የግዢ ትዕዛዞች አስተካክል  መደረግ አይችሉም"
 
 #. module: purchase
 #: model:ir.model,name:purchase.model_res_partner
 msgid "Contact"
-msgstr "እውቂያ(ኮንታክት)"
+msgstr "ኮንታክት"
 
 #. module: purchase
 #: model:ir.model.fields,field_description:purchase.field_product_product__purchase_method
@@ -620,8 +626,9 @@ msgstr "የመቆጣጠሪያ ፖሊሲ"
 msgid ""
 "Conversion between Units of Measure can only occur if they belong to the "
 "same category. The conversion will be made based on the ratios."
-msgstr "በቁስ/ንብረት ወይም አገልግሎት መለኪያ ክፍሎች መካከል መለወጥ ተመሳሳይ ምድብ ከሆኑ ብቻ ሊከሰት ይችላል።" 
-"ልውውጡ የሚከናወነው ሬሾዎች ላይ በመመስረት ነው."
+msgstr ""
+"በቁስ/ንብረት ወይም አገልግሎት መለኪያ ክፍሎች መካከል መለወጥ ተመሳሳይ ምድብ ከሆኑ ብቻ ሊከሰት ይችላል።ልውውጡ "
+"የሚከናወነው ሬሾዎች ላይ በመመስረት ነው."
 
 #. module: purchase
 #: model_terms:ir.ui.view,arch_db:purchase.purchase_order_form
@@ -865,8 +872,9 @@ msgstr "የባለ 3-መንገድ ማመሳከሪያ እየተጠቀምን ከሆ
 #. module: purchase
 #: model_terms:ir.ui.view,arch_db:purchase.res_config_settings_view_form_purchase
 msgid ""
-"If installed, the product variants will be added to purchase orders."
-msgstr "ከተጫነ፣ የቁስ/ዕቃ አይነቶች ትዕዛዞችን ለመግዛት ይታከላሉ."
+"If installed, the product variants will be added to purchase orders through "
+"a grid entry."
+msgstr ""
 
 #. module: purchase
 #: code:addons/purchase/models/product.py:0
@@ -890,7 +898,8 @@ msgstr "ኢንኮተርም"
 msgid ""
 "International Commercial Terms are a series of predefined commercial terms "
 "used in international transactions."
-msgstr "አለምአቀፍ የንግድ ውሎች በአለም አቀፍ ግብይቶች ውስጥ ጥቅም ላይ የሚውሉ ተከታታይ ቀድሞ የተገለጹ የንግድ ቃላት ናቸው።"
+msgstr ""
+"አለምአቀፍ የንግድ ውሎች በአለም አቀፍ ግብይቶች ውስጥ ጥቅም ላይ የሚውሉ ተከታታይ ቀድሞ የተገለጹ የንግድ ቃላት ናቸው።"
 
 #. module: purchase
 #: model_terms:ir.ui.view,arch_db:purchase.purchase_order_form
@@ -915,12 +924,12 @@ msgstr "ወደ ግዢ ትዕዛዝ ይለውጣል."
 #. module: purchase
 #: model:ir.model,name:purchase.model_account_move
 msgid "Journal Entries"
-msgstr "ጆርናል ኢንትሪ"
+msgstr "የጆርናል መግቢያዎች"
 
 #. module: purchase
 #: model:ir.model,name:purchase.model_account_move_line
 msgid "Journal Item"
-msgstr "ጆርናል አይተም"
+msgstr "መዝገብ ኣይተም"
 
 #. module: purchase
 #: model:ir.model.fields,field_description:purchase.field_purchase_bill_union____last_update
@@ -988,8 +997,8 @@ msgstr "አዘው ለተቀበሉት ዕቃዎች ብቻ ሂሳብ መክፈል�
 
 #. module: purchase
 #: model_terms:ir.ui.view,arch_db:purchase.res_config_settings_view_form_purchase
-msgid "Manage your purchase agreements"
-msgstr "የግዢ ስምምነቶችዎን ያስተዳድሩ"
+msgid "Manage your purchase agreements (call for tenders, blanket orders)"
+msgstr "የግዢ ስምምነቶችዎን ያስተዳድሩ (ለጨረታዎች ይደውሉ, ብርድ ልብስ ትዕዛዞች)"
 
 #. module: purchase
 #: model:ir.model.fields.selection,name:purchase.selection__purchase_order_line__qty_received_method__manual
@@ -1013,8 +1022,9 @@ msgid ""
 "Margin of error for vendor lead times. When the system generates Purchase "
 "Orders for procuring products, they will be scheduled that many days earlier"
 " to cope with unexpected vendor delays."
-msgstr "ለሻጭ መሪ ጊዜዎች የስህተት ህዳግ። ስርዓቱ ምርቶችን ለመግዛት የግዢ ትዕዛዞችን ሲያመነጭ፣" 
-"ያልተጠበቁ የሻጭ መዘግየቶችን ለመቋቋም ከብዙ ቀናት በፊት ቀጠሮ ተይዞላቸዋል።"
+msgstr ""
+"ለሻጭ መሪ ጊዜዎች የስህተት ህዳግ። ስርዓቱ ምርቶችን ለመግዛት የግዢ ትዕዛዞችን ሲያመነጭ፣ያልተጠበቁ የሻጭ መዘግየቶችን "
+"ለመቋቋም ከብዙ ቀናት በፊት ቀጠሮ ተይዞላቸዋል።"
 
 #. module: purchase
 #: model:ir.model.fields,help:purchase.field_res_config_settings__use_po_lead
@@ -1022,8 +1032,9 @@ msgid ""
 "Margin of error for vendor lead times. When the system generates Purchase "
 "Orders for reordering products,they will be scheduled that many days earlier"
 " to cope with unexpected vendor delays."
-msgstr "ለሻጭ መሪ ጊዜዎች የስህተት ህዳግ። ስርዓቱ ምርቶችን እንደገና ለመደርደር የግዢ ትዕዛዞችን ሲያመነጭ፣"
-"ያልተጠበቁ የሻጭ መዘግየቶችን ለመቋቋም ከብዙ ቀናት በፊት ቀጠሮ ተይዞላቸዋል።"
+msgstr ""
+"ለሻጭ መሪ ጊዜዎች የስህተት ህዳግ። ስርዓቱ ምርቶችን እንደገና ለመደርደር የግዢ ትዕዛዞችን ሲያመነጭ፣ያልተጠበቁ የሻጭ "
+"መዘግየቶችን ለመቋቋም ከብዙ ቀናት በፊት ቀጠሮ ተይዞላቸዋል።"
 
 #. module: purchase
 #: model:ir.model.fields,field_description:purchase.field_purchase_order__message_has_error
@@ -1295,7 +1306,7 @@ msgstr "የቁስ ምድብ"
 #: model:ir.model.fields,field_description:purchase.field_purchase_report__category_id
 #: model_terms:ir.ui.view,arch_db:purchase.view_purchase_order_search
 msgid "Product Category"
-msgstr "የእየቁሶች መደብ"
+msgstr "የእቃ ምድብ"
 
 #. module: purchase
 #: model:ir.model.fields,field_description:purchase.field_purchase_report__product_tmpl_id
@@ -1354,8 +1365,9 @@ msgid ""
 "Purchase Analysis allows you to easily check and analyse your company "
 "purchase history and performance. From this menu you can track your "
 "negotiation performance, the delivery performance of your vendors, etc."
-msgstr "የግዢ ትንተና የድርጅቶን የግዢ ታሪክ እና አፈጻጸም በቀላሉ እንዲፈትሹ እና እንዲተነትኑ ያስችልዎታል።"
-"ከዚህ ምናሌ(ሜንዩ) ውስጥ የእርስዎን የርክክብ አፈጻጸም፣ የአቅራቢዎችዎን አቅርቦት አፈጻጸም፣ ወዘተ መከታተል ይችላሉ።"
+msgstr ""
+"የግዢ ትንተና የድርጅቶን የግዢ ታሪክ እና አፈጻጸም በቀላሉ እንዲፈትሹ እና እንዲተነትኑ ያስችልዎታል።ከዚህ ምናሌ(ሜንዩ)"
+" ውስጥ የእርስዎን የርክክብ አፈጻጸም፣ የአቅራቢዎችዎን አቅርቦት አፈጻጸም፣ ወዘተ መከታተል ይችላሉ።"
 
 #. module: purchase
 #: model_terms:ir.ui.view,arch_db:purchase.view_product_supplier_inherit
@@ -1629,7 +1641,7 @@ msgstr "የተቀበልንው ብዛት መጠን"
 #. module: purchase
 #: model:ir.model.fields,field_description:purchase.field_purchase_order_line__qty_received_method
 msgid "Received Qty Method"
-msgstr "የተቀበልንው ብዛት ዘዴ"
+msgstr "የQty ዘዴ ተቀብሏል።"
 
 #. module: purchase
 #: model_terms:ir.ui.view,arch_db:purchase.purchase_order_form
@@ -1682,8 +1694,9 @@ msgid ""
 "Reference of the sales order or bid sent by the vendor. It's used to do the "
 "matching when you receive the products as this reference is usually written "
 "on the delivery order sent by your vendor."
-msgstr "በሻጩ የተላከውን የሽያጭ ትዕዛዝ ወይም የጨረታ ማጣቀሻ።" 
-"ይህ ማመሳከሪያ ብዙውን ጊዜ በሻጭዎ በተላከው የማድረሻ ማዘዣ ላይ ስለሚፃፍ ምርቶቹን ሲቀበሉ ማዛመጃውን ለመስራት ይጠቅማል።"
+msgstr ""
+"በሻጩ የተላከውን የሽያጭ ትዕዛዝ ወይም የጨረታ ማጣቀሻ።ይህ ማመሳከሪያ ብዙውን ጊዜ በሻጭዎ በተላከው የማድረሻ ማዘዣ ላይ"
+" ስለሚፃፍ ምርቶቹን ሲቀበሉ ማዛመጃውን ለመስራት ይጠቅማል።"
 
 #. module: purchase
 #: model:ir.ui.menu,name:purchase.purchase_report
@@ -1777,9 +1790,9 @@ msgid ""
 "Selecting the \"Warning\" option will notify user with the message, "
 "Selecting \"Blocking Message\" will throw an exception with the message and "
 "block the flow. The Message has to be written in the next field."
-msgstr "\"ማስጠንቀቂያ\" የሚለውን አማራጭ መምረጥ ተጠቃሚውን በመልእክቱ ያሳውቃል፣ "
-"\"መልዕክቱን ማገድ\" መምረጥ ከመልእክቱ የተለየ ነገርን ይፈጥራል እና "
-"ፍሰቱን አግድ። መልእክቱ በሚቀጥለው መስክ መፃፍ አለበት።"
+msgstr ""
+"\"ማስጠንቀቂያ\" የሚለውን አማራጭ መምረጥ ተጠቃሚውን በመልእክቱ ያሳውቃል፣ \"መልዕክቱን ማገድ\" መምረጥ ከመልእክቱ "
+"የተለየ ነገርን ይፈጥራል እና ፍሰቱን አግድ። መልእክቱ በሚቀጥለው መስክ መፃፍ አለበት።"
 
 #. module: purchase
 #: model_terms:ir.ui.view,arch_db:purchase.purchase_order_form
@@ -1848,6 +1861,7 @@ msgstr ""
 "አልፏል፡ የማለቂያ ቀን አስቀድሞ አልፏል\n"
 "ዛሬ፡ የተግባር ቀን ዛሬ ነው\n"
 "የታቀደው: የወደፊት ክንውኖች."
+
 #. module: purchase
 #: model:ir.model.fields,field_description:purchase.field_purchase_order_line__price_subtotal
 #: model_terms:ir.ui.view,arch_db:purchase.portal_my_purchase_order
@@ -1897,15 +1911,17 @@ msgstr "ደንብና እና ግዴታዎች"
 msgid ""
 "The quotation contains the history of the discussion\n"
 "                you had with your vendor."
-msgstr ""
-"ፕሮፎርማው ከአቅራቢዎ ጋር የነበረዎትን የውይይቱን ታሪክ ይዟል\n"
+msgstr "ፕሮፎርማው ከአቅራቢዎ ጋር የነበረዎትን የውይይቱን ታሪክ ይዟል\n"
+
 #. module: purchase
 #: model_terms:ir.actions.act_window,help:purchase.act_res_partner_2_purchase_order
 msgid ""
 "The request for quotation is the first step of the purchases flow. Once\n"
 "                    converted into a purchase order, you will be able to control the receipt\n"
 "                    of the products and the vendor bill."
-msgstr "የፕሮፎርማ ጥያቄ የግዢዎች ፍሰት የመጀመሪያ ደረጃ ነው። አንዴ\n ወደ ግዢ ማዘዣ ከተቀየሩ የምርቶቹን ርክክብ እና የአቅራቢውን ሂሳብ መቆጣጠር ይችላሉ።"
+msgstr ""
+"የፕሮፎርማ ጥያቄ የግዢዎች ፍሰት የመጀመሪያ ደረጃ ነው። አንዴ\n"
+" ወደ ግዢ ማዘዣ ከተቀየሩ የምርቶቹን ርክክብ እና የአቅራቢውን ሂሳብ መቆጣጠር ይችላሉ።"
 
 #. module: purchase
 #: model:ir.model.fields,help:purchase.field_product_product__property_account_creditor_price_difference
@@ -1914,7 +1930,9 @@ msgid ""
 "This account is used in automated inventory valuation to record the price "
 "difference between a purchase order and its related vendor bill when "
 "validating this vendor bill."
-msgstr "ይህ መለያ በግዢ ትእዛዝ እና በተዛማጅ አቅራቢ ክፍያ መካከል ያለውን የዋጋ ልዩነት ለመመዝገብ አውቶማቲክ የእቃ ግምገማ ላይ ጥቅም ላይ ይውላል።"
+msgstr ""
+"ይህ መለያ በግዢ ትእዛዝ እና በተዛማጅ አቅራቢ ክፍያ መካከል ያለውን የዋጋ ልዩነት ለመመዝገብ አውቶማቲክ የእቃ ግምገማ "
+"ላይ ጥቅም ላይ ይውላል።"
 
 #. module: purchase
 #: model:ir.model.fields,help:purchase.field_product_category__property_account_creditor_price_difference_categ
@@ -1929,9 +1947,8 @@ msgstr "ይህ መለያ በግዢ ዋጋ እና በሂሳብ አያያዝ ዋ�
 msgid ""
 "This currency will be used, instead of the default one, for purchases from "
 "the current partner"
-msgstr ""
-"ይህ ምንዛሬ ከነባሪው ይልቅ ለግዢዎች ጥቅም ላይ ይውላል"
-"የአሁኑ አጋር"
+msgstr "ይህ ምንዛሬ ከነባሪው ይልቅ ለግዢዎች ጥቅም ላይ ይውላልየአሁኑ አጋር"
+
 #. module: purchase
 #: model:ir.model.fields,help:purchase.field_res_config_settings__default_purchase_method
 #: model_terms:ir.ui.view,arch_db:purchase.res_config_settings_view_form_purchase
@@ -1940,6 +1957,7 @@ msgid ""
 "changed in the product detail form."
 msgstr ""
 "ይህ ነባሪ እሴት በተፈጠረ ማንኛውም አዲስ ምርት ላይ ይተገበራል። ይህ በምርት ዝርዝር ቅፅ ውስጥ ሊቀየር ይችላል።"
+
 #. module: purchase
 #: model_terms:ir.ui.view,arch_db:purchase.view_product_supplier_inherit
 msgid "This note is added to purchase orders."
@@ -1983,7 +2001,7 @@ msgstr "የዛሬ ክንውኖች/ተግባራቶች"
 #: model_terms:ir.ui.view,arch_db:purchase.portal_my_purchase_orders
 #, python-format
 msgid "Total"
-msgstr "አጠቃላይ"
+msgstr "ጠቅላላ"
 
 #. module: purchase
 #: model:ir.model.fields,field_description:purchase.field_purchase_order_line__product_uom_qty
@@ -2028,17 +2046,17 @@ msgstr "ነጠላ ዋጋ፥"
 #. module: purchase
 #: model:ir.model.fields,field_description:purchase.field_purchase_order_line__product_uom
 msgid "Unit of Measure"
-msgstr "መለክያ"
+msgstr "መለኪያ"
 
 #. module: purchase
 #: model:ir.ui.menu,name:purchase.menu_purchase_uom_form_action
 msgid "Units of Measure"
-msgstr "መለክያ"
+msgstr "መለኪያ"
 
 #. module: purchase
 #: model:ir.ui.menu,name:purchase.menu_purchase_uom_categ_form_action
 msgid "Units of Measure Categories"
-msgstr "የመለክያ ምድቦች "
+msgstr "የመለኪያ ምድቦች "
 
 #. module: purchase
 #: model_terms:ir.ui.view,arch_db:purchase.purchase_order_form
@@ -2149,8 +2167,9 @@ msgid ""
 "                    you receive from your vendor according to the draft\n"
 "                    document in Odoo."
 msgstr ""
-"የአቅራቢዎች ሂሳቦች በግዢ ትዕዛዞች ወይም ደረሰኞች ላይ ተመስርተው አስቀድመው ሊፈጠሩ ይችላሉ።" 
-"ይህ በትሪያ ኢ.ኣር.ፒ ውስጥ ባለው ረቂቅ ሰነድ መሰረት ከአቅራቢዎ የሚቀበሉትን ሂሳቦች ለመቆጣጠር ያስችልዎታል."
+"የአቅራቢዎች ሂሳቦች በግዢ ትዕዛዞች ወይም ደረሰኞች ላይ ተመስርተው አስቀድመው ሊፈጠሩ ይችላሉ።ይህ በትሪያ ኢ.ኣር.ፒ "
+"ውስጥ ባለው ረቂቅ ሰነድ መሰረት ከአቅራቢዎ የሚቀበሉትን ሂሳቦች ለመቆጣጠር ያስችልዎታል."
+
 #. module: purchase
 #: model:ir.model.fields,field_description:purchase.field_purchase_report__volume
 msgid "Volume"
@@ -2214,8 +2233,9 @@ msgstr "ሻጩን በስሙ፣ በቲን፣ በኢሜል ወይም በውስጥ 
 msgid ""
 "You cannot change the type of a purchase order line. Instead you should "
 "delete the current line and create a new line of the proper type."
-msgstr "የግዢ ማዘዣ መስመር አይነት መቀየር አይችሉም።" 
-"በምትኩ የአሁኑን መስመር መሰረዝ እና ተገቢውን አይነት አዲስ መስመር መፍጠር አለብዎት"
+msgstr ""
+"የግዢ ማዘዣ መስመር አይነት መቀየር አይችሉም።በምትኩ የአሁኑን መስመር መሰረዝ እና ተገቢውን አይነት አዲስ መስመር "
+"መፍጠር አለብዎት"
 
 #. module: purchase
 #: model_terms:ir.actions.act_window,help:purchase.product_product_action
@@ -2223,16 +2243,17 @@ msgid ""
 "You must define a product for everything you sell or purchase,\n"
 "                whether it's a storable product, a consumable or a service."
 msgstr ""
-"ለምትሸጡት ወይም ለሚገዙት ነገር ሁሉ አንድን ምርት መግለፅ አለቦት፣" 
-"ሊከማች የሚችል ምርትም ሆነ ለፍጆታ ወይም ለአገልግሎት የሚውል።"
+"ለምትሸጡት ወይም ለሚገዙት ነገር ሁሉ አንድን ምርት መግለፅ አለቦት፣ሊከማች የሚችል ምርትም ሆነ ለፍጆታ ወይም "
+"ለአገልግሎት የሚውል።"
+
 #. module: purchase
 #: model_terms:ir.actions.act_window,help:purchase.product_normal_action_puchased
 msgid ""
 "You must define a product for everything you sell or purchase,\n"
 "            whether it's a storable product, a consumable or a service."
 msgstr ""
-"ለምትሸጡት ወይም ለሚገዙት ነገር ሁሉ አንድን ምርት መግለፅ አለቦት፣" 
-"ሊከማች የሚችል ምርትም ሆነ ለፍጆታ ወይም ለአገልግሎት የሚውል።"
+"ለምትሸጡት ወይም ለሚገዙት ነገር ሁሉ አንድን ምርት መግለፅ አለቦት፣ሊከማች የሚችል ምርትም ሆነ ለፍጆታ ወይም "
+"ለአገልግሎት የሚውል።"
 
 #. module: purchase
 #: code:addons/purchase/models/purchase.py:0
@@ -2241,6 +2262,5 @@ msgid ""
 "Your quotation contains products from company %s whereas your quotation belongs to company %s. \n"
 " Please change the company of your quotation or remove the products from other companies (%s)."
 msgstr ""
-
 "የእርስዎ ፕሮፎርማ የ%s ድርጅት ምርቶችን ይዟል፣ የእርስዎ ፕሮፎርማ ግን የ%s ድርጅት ነው። \n"
 "እባክዎ ፕሮፎርማዎን ድርጅት ይለውጡ ወይም ምርቶቹን ከሌሎች ድርጅቶች (%s) ያስወግዱ."

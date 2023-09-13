@@ -20,7 +20,7 @@ class account_payment_method(models.Model):
     _description = "Payment Methods"
 
     name = fields.Char(required=True, translate=True)
-    code = fields.Char(required=True)  # For internal identification
+    code = fields.Char(required=True, translate=True)  # For internal identification
     payment_type = fields.Selection([('inbound', 'Inbound'), ('outbound', 'Outbound')], required=True)
 
 
@@ -30,9 +30,9 @@ class account_payment(models.Model):
     _description = "Payments"
     _order = "payment_date desc, name desc"
 
-    name = fields.Char(readonly=True, copy=False)  # The name is attributed upon post()
-    payment_reference = fields.Char(copy=False, readonly=True, help="Reference of the document used to issue this payment. Eg. check number, file name, etc.")
-    move_name = fields.Char(string='Journal Entry Name', readonly=True,
+    name = fields.Char(readonly=True, copy=False, translate=True)  # The name is attributed upon post()
+    payment_reference = fields.Char(copy=False, readonly=True, help="Reference of the document used to issue this payment. Eg. check number, file name, etc.", translate=True)
+    move_name = fields.Char(string='Journal Entry Name', readonly=True, translate=True,
         default=False, copy=False,
         help="Technical field holding the number given to the journal entry, automatically set when the statement line is reconciled then stored to set the same number again if the line is cancelled, set to draft and re-processed again.")
 
@@ -61,7 +61,7 @@ class account_payment(models.Model):
         "Batch Deposit: Encase several customer checks at once by generating a batch deposit to submit to your bank. When encoding the bank statement in Odoo, you are suggested to reconcile the transaction with the batch deposit.To enable batch deposit, module account_batch_payment must be installed.\n"\
         "SEPA Credit Transfer: Pay bill from a SEPA Credit Transfer file you submit to your bank. To enable sepa credit transfer, module account_sepa must be installed ")
     payment_method_code = fields.Char(related='payment_method_id.code',
-        help="Technical field used to adapt the interface to the payment type selected.", readonly=True)
+        help="Technical field used to adapt the interface to the payment type selected.", readonly=True, translate=True)
 
     partner_type = fields.Selection([('customer', 'Customer'), ('supplier', 'Vendor')], tracking=True, readonly=True, states={'draft': [('readonly', False)]})
     partner_id = fields.Many2one('res.partner', string='Partner', tracking=True, readonly=True, states={'draft': [('readonly', False)]}, domain="['|', ('company_id', '=', False), ('company_id', '=', company_id)]")
@@ -69,7 +69,7 @@ class account_payment(models.Model):
     amount = fields.Monetary(string='Amount', required=True, readonly=True, states={'draft': [('readonly', False)]}, tracking=True)
     currency_id = fields.Many2one('res.currency', string='Currency', required=True, readonly=True, states={'draft': [('readonly', False)]}, default=lambda self: self.env.company.currency_id)
     payment_date = fields.Date(string='Date', default=fields.Date.context_today, required=True, readonly=True, states={'draft': [('readonly', False)]}, copy=False, tracking=True)
-    communication = fields.Char(string='Memo', readonly=True, states={'draft': [('readonly', False)]})
+    communication = fields.Char(string='Memo', readonly=True, states={'draft': [('readonly', False)]}, translate=True)
     journal_id = fields.Many2one('account.journal', string='Journal', required=True, readonly=True, states={'draft': [('readonly', False)]}, tracking=True, domain="[('type', 'in', ('bank', 'cash')), ('company_id', '=', company_id)]")
     company_id = fields.Many2one('res.company', related='journal_id.company_id', string='Company', readonly=True)
 
@@ -83,7 +83,7 @@ class account_payment(models.Model):
     writeoff_label = fields.Char(
         string='Journal Item Label',
         help='Change label of the counterpart that will hold the payment difference',
-        default='Write-Off')
+        default='Write-Off', translate=True)
     partner_bank_account_id = fields.Many2one('res.partner.bank', string="Recipient Bank Account", readonly=True, states={'draft': [('readonly', False)]}, domain="['|', ('company_id', '=', False), ('company_id', '=', company_id)]")
     show_partner_bank_account = fields.Boolean(compute='_compute_show_partner_bank', help='Technical field used to know whether the field `partner_bank_account_id` needs to be displayed or not in the payments form views')
     require_partner_bank_account = fields.Boolean(compute='_compute_show_partner_bank', help='Technical field used to know whether the field `partner_bank_account_id` needs to be required or not in the payments form views')

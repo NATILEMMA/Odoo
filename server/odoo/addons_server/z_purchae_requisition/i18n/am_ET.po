@@ -1,0 +1,1129 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* purchase_requisition
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20221005\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-03 12:15+0000\n"
+"PO-Revision-Date: 2023-08-03 12:15+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: purchase_requisition
+#: model:ir.actions.report,print_report_name:purchase_requisition.action_report_purchase_requisitions
+msgid "'Tender - %s' % (object.name)"
+msgstr "'ጨረታ - %s' % (object.name)"
+
+#. module: purchase_requisition
+#: model:ir.actions.report,print_report_name:purchase_requisition.action_report_purchase_requisitions_2
+msgid "'Tender Result - %s' % (object.name)"
+msgstr "'የጨረታ ውጤት - %s' % (object.name)"
+
+#. module: purchase_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.report_purchaserequisitions
+msgid "<strong>Call for Tender Reference:</strong><br/>"
+msgstr "<strong>የጨረታ ማጣቀሻ ይደውሉ፡</strong><br/>"
+
+#. module: purchase_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.report_purchaserequisitions
+msgid "<strong>Date</strong>"
+msgstr "<strong>ቀን</strong>"
+
+#. module: purchase_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.report_purchaserequisitions
+msgid "<strong>Description</strong>"
+msgstr "<strong>መግለጫ</strong>"
+
+#. module: purchase_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.report_purchaserequisitions
+msgid "<strong>Product UoM</strong>"
+msgstr "<strong>ምርት UoM</strong>"
+
+#. module: purchase_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.report_purchaserequisitions_2
+msgid "<strong>Product</strong>"
+msgstr "<strong>ምርት</strong>"
+
+#. module: purchase_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.report_purchaserequisitions
+msgid "<strong>Qty</strong>"
+msgstr "<strong>ብዛት</strong>"
+
+#. module: purchase_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.report_purchaserequisitions_2
+msgid "<strong>Quantity</strong>"
+msgstr "<strong>ብዛት</strong>"
+
+#. module: purchase_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.report_purchaserequisitions_2
+msgid "<strong>Reason</strong>"
+msgstr "<strong>ምክንያት</strong>"
+
+#. module: purchase_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.report_purchaserequisitions
+msgid "<strong>Reference </strong>"
+msgstr "<strong>ማጣቀሻ </strong>"
+
+#. module: purchase_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.report_purchaserequisitions
+msgid "<strong>Scheduled Date</strong>"
+msgstr "<strong>የተያዘለት ቀን</strong>"
+
+#. module: purchase_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.report_purchaserequisitions
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.report_purchaserequisitions_2
+msgid "<strong>Scheduled Ordering Date:</strong><br/>"
+msgstr "<strong>የታዘዘበት ቀን፡</strong><br/>"
+
+#. module: purchase_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.report_purchaserequisitions
+msgid "<strong>Selection Type:</strong><br/>"
+msgstr "<strong>የምርጫ አይነት፡</strong><br/>"
+
+#. module: purchase_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.report_purchaserequisitions
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.report_purchaserequisitions_2
+msgid "<strong>Source:</strong><br/>"
+msgstr "<strong>ምንጭ፡</strong><br/>"
+
+#. module: purchase_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.report_purchaserequisitions_2
+msgid "<strong>Tax</strong>"
+msgstr "<strong>ግብር</strong>"
+
+#. module: purchase_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.report_purchaserequisitions_2
+msgid "<strong>Tender result:</strong><br/>"
+msgstr ""
+
+#. module: purchase_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.report_purchaserequisitions_2
+msgid "<strong>Total</strong>"
+msgstr "<strong>ጠቅላላ</strong>"
+
+#. module: purchase_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.report_purchaserequisitions
+msgid "<strong>Vendor </strong>"
+msgstr "<strong>አቅራቢ </strong>"
+
+#. module: purchase_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.report_purchaserequisitions_2
+msgid "<strong>Vendor</strong>"
+msgstr "<strong>ሻጭ</strong>"
+
+#. module: purchase_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.report_purchaserequisitions_2
+msgid "<strong>purchase Analyst:</strong><br/>"
+msgstr "<strong>የግዢ ተንታኝ፡-</strong><br/>"
+
+#. module: purchase_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.report_purchaserequisitions_2
+msgid "<strong>purchase approve</strong><br/>"
+msgstr "<strong>ግዢ አጽድቋል</strong><br/>"
+
+#. module: purchase_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.report_purchaserequisitions_2
+msgid "<strong>purchase representative:</strong><br/>"
+msgstr "<strong>የግዢ ተወካይ፡-</strong><br/>"
+
+#. module: purchase_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.report_purchaserequisitions_2
+msgid "<strong>status</strong>"
+msgstr "<strong>ሁኔታ</strong>"
+
+#. module: purchase_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.report_purchaserequisitions_2
+msgid "<strong>unit price</strong>"
+msgstr "<strong>unit ዋጋ</strong>"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition__message_needaction
+msgid "Action Needed"
+msgstr "እርምጃ ያስፈልጋል"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition__activity_ids
+msgid "Activities"
+msgstr "ተግባራት"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "የእንቅስቃሴ ልዩ ማስጌጥ"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition__activity_state
+msgid "Activity State"
+msgstr "የእንቅስቃሴ ሁኔታ"
+
+#. module: purchase_requisition
+#: model:ir.model,name:purchase_requisition.model_product_product
+#: model:ir.model,name:purchase_requisition.model_product_template
+msgid "Adding is asset field"
+msgstr "መጨመር የንብረት መስክ ነው።"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_product_supplierinfo__purchase_requisition_id
+msgid "Agreement"
+msgstr "ስምምነት"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition__date_end
+msgid "Agreement Deadline"
+msgstr "የስምምነት መጨረሻ"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition_type__exclusive
+msgid "Agreement Selection Type"
+msgstr "የስምምነት ምርጫ ዓይነት"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition__type_id
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition_type__name
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.view_purchase_requisition_type_form
+msgid "Agreement Type"
+msgstr "የስምምነት አይነት"
+
+#. module: purchase_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.res_config_settings_view_form
+msgid "Agreement Types"
+msgstr "የስምምነት ዓይነቶች"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition_line__account_analytic_id
+msgid "Analytic Account"
+msgstr "የትንታኔ አካውንት"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition_line__analytic_tag_ids
+msgid "Analytic Tags"
+msgstr "የበጀት መለያ"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition__message_attachment_count
+msgid "Attachment Count"
+msgstr "የአባሪ ብዛት"
+
+#. module: purchase_requisition
+#: model:ir.model.fields.selection,name:purchase_requisition.selection__purchase_requisition__state__open
+#: model:ir.model.fields.selection,name:purchase_requisition.selection__purchase_requisition__state_blanket_order__open
+msgid "Bid Selection"
+msgstr "የጨረታ ምርጫ"
+
+#. module: purchase_requisition
+#: model:purchase.requisition.type,name:purchase_requisition.type_single
+msgid "Blanket Order"
+msgstr "ብርድ ልብስ ትእዛዝ"
+
+#. module: purchase_requisition
+#: model:purchase.requisition.type,name:purchase_requisition.type_multi
+msgid "Call for Tender"
+msgstr "ለጨረታ ይደውሉ"
+
+#. module: purchase_requisition
+#: model:ir.actions.report,name:purchase_requisition.action_report_purchase_requisitions
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.report_purchaserequisitions
+msgid "Call for Tenders"
+msgstr "ለጨረታዎች ይደውሉ"
+
+#. module: purchase_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.view_purchase_requisition_form
+msgid "Cancel"
+msgstr "መሰረዝ"
+
+#. module: purchase_requisition
+#: model:ir.model.fields.selection,name:purchase_requisition.selection__purchase_requisition__state__cancel
+#: model:ir.model.fields.selection,name:purchase_requisition.selection__purchase_requisition__state_blanket_order__cancel
+msgid "Cancelled"
+msgstr "ተሰርዟል"
+
+#. module: purchase_requisition
+#: code:addons/purchase_requisition/models/purchase_requisition.py:0
+#: code:addons/purchase_requisition/models/purchase_requisition.py:0
+#, python-format
+msgid "Cancelled by the agreement associated to this quotation."
+msgstr "ከዚህ ግዢ ጋር በተገናኘው ስምምነት ተሰርዟል።"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition_line__product_uom_category_id
+msgid "Category"
+msgstr "ምድብ"
+
+#. module: purchase_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.view_purchase_requisition_form
+msgid "Close"
+msgstr "ዝጋ"
+
+#. module: purchase_requisition
+#: model:ir.model.fields.selection,name:purchase_requisition.selection__purchase_requisition__state__done
+#: model:ir.model.fields.selection,name:purchase_requisition.selection__purchase_requisition__state_blanket_order__done
+msgid "Closed"
+msgstr "ዝግ"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition__company_id
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition_line__company_id
+msgid "Company"
+msgstr "ድርጅት"
+
+#. module: purchase_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.view_purchase_requisition_form
+msgid "Confirm"
+msgstr "አረጋግጥ"
+
+#. module: purchase_requisition
+#: model:ir.model.fields.selection,name:purchase_requisition.selection__purchase_requisition__state__in_progress
+#: model:ir.model.fields.selection,name:purchase_requisition.selection__purchase_requisition__state_blanket_order__in_progress
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.view_purchase_requisition_filter
+msgid "Confirmed"
+msgstr "ተረጋገጠ"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,help:purchase_requisition.field_purchase_requisition_line__product_uom_category_id
+msgid ""
+"Conversion between Units of Measure can only occur if they belong to the "
+"same category. The conversion will be made based on the ratios."
+msgstr ""
+"በመለኪያ አሃዶች መካከል የሚደረግ ለውጥ ሊፈጠር የሚችለው የአንድ ምድብ አባል ከሆኑ ብቻ ነው። ለውጡ የሚከናወነው "
+"በዋጋዎች ላይ በመመስረት ነው።"
+
+#. module: purchase_requisition
+#: model:ir.model.fields.selection,name:purchase_requisition.selection__product_template__purchase_requisition__rfq
+msgid "Create a draft purchase order"
+msgstr "ረቂቅ የግዢ ትዕዛዝ ይፍጠሩ"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,help:purchase_requisition.field_product_product__purchase_requisition
+#: model:ir.model.fields,help:purchase_requisition.field_product_template__purchase_requisition
+msgid ""
+"Create a draft purchase order: Based on your product configuration, the "
+"system will create a draft purchase order.Propose a call for tender : If the"
+" 'purchase_requisition' module is installed and this option is selected, the"
+" system will create a draft call for tender."
+msgstr ""
+"ረቂቅ የግዢ ትዕዛዝ ይፍጠሩ፡ በምርትዎ ውቅር ላይ በመመስረት ስርዓቱ ረቂቅ የግዢ ትዕዛዝ ይፈጥራል፡ ለጨረታ ለመደወል "
+"ያቅርቡ፡ purchase_requisition' ሞጁል ከተጫነ እና ይህ አማራጭ ከተመረጠ ስርዓቱ ለጨረታ ረቂቅ ጥሪ "
+"ይፈጥራል። "
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_merge_requisition_wizard__create_uid
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_order_line_unlink__create_uid
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition__create_uid
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition_line__create_uid
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition_type__create_uid
+msgid "Created by"
+msgstr "የተፈጠረ በ"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_merge_requisition_wizard__create_date
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_order_line_unlink__create_date
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition__create_date
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition_line__create_date
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition_type__create_date
+msgid "Created on"
+msgstr "የተፈጠረ በቀን"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition__currency_id
+msgid "Currency"
+msgstr "ምንዛሪ"
+
+#. module: purchase_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.view_purchase_requisition_type_form
+msgid "Data for new quotations"
+msgstr "ለአዲስ የግዢ ውሂብ"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition__schedule_date
+msgid "Delivery Date"
+msgstr "መላኪያ ቀን"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_order_line_unlink__name
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition__description
+msgid "Description"
+msgstr "ማብራርያ"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_merge_requisition_wizard__display_name
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_order_line_unlink__display_name
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition__display_name
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition_line__display_name
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition_type__display_name
+msgid "Display Name"
+msgstr "መጠሪያው ስም"
+
+#. module: purchase_requisition
+#: model:ir.model.fields.selection,name:purchase_requisition.selection__purchase_requisition_type__line_copy__none
+msgid "Do not create RfQ lines automatically"
+msgstr "የ RfQ መስመሮችን በራስ-ሰር አይፍጠሩ"
+
+#. module: purchase_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.view_purchase_requisition_filter
+msgid "Done"
+msgstr "ተጠናቋል"
+
+#. module: purchase_requisition
+#: model:ir.model.fields.selection,name:purchase_requisition.selection__purchase_requisition__state__draft
+#: model:ir.model.fields.selection,name:purchase_requisition.selection__purchase_requisition__state_blanket_order__draft
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.view_purchase_requisition_filter
+msgid "Draft"
+msgstr "ንድፍ"
+
+#. module: purchase_requisition
+#: model_terms:ir.actions.act_window,help:purchase_requisition.action_purchase_requisition
+msgid ""
+"Example of purchase agreements include call for tenders and blanket orders."
+msgstr "የግዢ ስምምነቶች ምሳሌ ለጨረታዎች ጥሪ እና ብርድ ልብስ ማዘዣ ያካትታል።"
+
+#. module: purchase_requisition
+#: model:ir.model.fields.selection,name:purchase_requisition.selection__purchase_requisition__state__financial
+#: model:ir.model.fields.selection,name:purchase_requisition.selection__purchase_requisition__state_blanket_order__financial
+msgid "Financial approve"
+msgstr "የፋይናንስ ማረጋገጫ"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition__message_follower_ids
+msgid "Followers"
+msgstr "ከተከታይ"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "ተከታዮች (ቻናሎች)"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "ተከታዮች (አጋሮች)"
+
+#. module: purchase_requisition
+#: model_terms:ir.actions.act_window,help:purchase_requisition.action_purchase_requisition
+msgid ""
+"For a blanket order, you can record an agreement for a specifc period\n"
+"            (e.g. a year) and you order products within this agreement, benefiting\n"
+"            from the negociated prices."
+msgstr ""
+"ለብርድ ልብስ ማዘዣ፣ ለተወሰነ ጊዜ (ለምሳሌ አንድ አመት) \n"
+"ስምምነትን መመዝገብ እና በዚህ ስምምነት ውስጥ ምርቶችን ማዘዝ ይችላሉ፣ \n"
+"ከድርድር ዋጋዎች ተጠቃሚ።"
+
+#. module: purchase_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.view_purchase_requisition_filter
+msgid "Future Activities"
+msgstr "የወደፊት ተግባራት"
+
+#. module: purchase_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.view_purchase_requisition_filter
+msgid "Group By"
+msgstr "በመደብ"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_merge_requisition_wizard__id
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_order_line_unlink__id
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition__id
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition_line__id
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition_type__id
+msgid "ID"
+msgstr "መታወቂያ"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition__activity_exception_icon
+msgid "Icon"
+msgstr "አዶ"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,help:purchase_requisition.field_purchase_requisition__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "ልዩ እንቅስቃሴን ለማመልከት አዶ።"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,help:purchase_requisition.field_purchase_requisition__message_needaction
+#: model:ir.model.fields,help:purchase_requisition.field_purchase_requisition__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "ምልክት ካደረጉ፣ አዲስ መልዕክቶች የእርስዎን ትኩረት ይፈልጋሉ።"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,help:purchase_requisition.field_purchase_requisition__message_has_error
+#: model:ir.model.fields,help:purchase_requisition.field_purchase_requisition__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "ምልክት ካደረጉ፣ አንዳንድ መልዕክቶች የማድረስ ስህተት አለባቸው።"
+
+#. module: purchase_requisition
+#: model_terms:ir.actions.act_window,help:purchase_requisition.action_purchase_requisition
+msgid ""
+"In a call for tenders, you can record the products you need to buy\n"
+"            and generate the creation of RfQs to vendors. Once the tenders have\n"
+"            been registered, you can review and compare them and you can\n"
+"            validate some and cancel others."
+msgstr ""
+"ለጨረታ በሚደረገው ጥሪ፣ ለመግዛት የሚያስፈልጉዎትን ምርቶች መመዝገብ \n"
+"         እና RfQs ለአቅራቢዎች መፍጠር ይችላሉ። አንዴ ጨረታዎቹ \n"
+"         ከተመዘገቡ በኋላ ገምግመው ማወዳደር እና የተወሰኑትን ማረጋገጥ እና ሌሎችን መሰረዝ ይችላሉ።"
+
+#. module: purchase_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.view_purchase_requisition_filter
+msgid "In negotiation"
+msgstr "በድርድር"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition__message_is_follower
+msgid "Is Follower"
+msgstr "ተከታይ ነው።"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition__is_merge
+msgid "Is merge"
+msgstr "ውህደት ነው።"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_merge_requisition_wizard____last_update
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_order_line_unlink____last_update
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition____last_update
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition_line____last_update
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition_type____last_update
+msgid "Last Modified on"
+msgstr "መጨረሻ የተሻሻለው በቀን"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_merge_requisition_wizard__write_uid
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_order_line_unlink__write_uid
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition__write_uid
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition_line__write_uid
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition_type__write_uid
+msgid "Last Updated by"
+msgstr "መጨረሻ የዘመነው በ"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_merge_requisition_wizard__write_date
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_order_line_unlink__write_date
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition__write_date
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition_line__write_date
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition_type__write_date
+msgid "Last Updated on"
+msgstr "መጨረሻ የዘመነው በቀን"
+
+#. module: purchase_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.view_purchase_requisition_filter
+msgid "Late Activities"
+msgstr "ዘግይተው የሚደረጉ እንቅስቃሴዎች"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition_type__line_copy
+msgid "Lines"
+msgstr "መስመሮች"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition__line_id_2
+msgid "List of Product"
+msgstr "የምርት ዝርዝር"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "ዋና አባሪ"
+
+#. module: purchase_requisition
+#: model:ir.actions.act_window,name:purchase_requisition.action_product_merge
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.merge_product_wizard_form
+msgid "Merge"
+msgstr "አዋህድ"
+
+#. module: purchase_requisition
+#: model:ir.model,name:purchase_requisition.model_merge_requisition_wizard
+msgid "Merge Statement Wizard"
+msgstr "የመግለጫ አዋቂን አዋህድ"
+
+#. module: purchase_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.merge_product_wizard_form
+msgid "Merge Wizard"
+msgstr "አዋህድ አዋቂ"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition__message_has_error
+msgid "Message Delivery error"
+msgstr "የመልእክት ማቅረቢያ ስህተት"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition__message_ids
+msgid "Messages"
+msgstr "መልእክቶች"
+
+#. module: purchase_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.report_purchaserequisitions
+msgid "Multiple Requisitions"
+msgstr "በርካታ መስፈርቶች"
+
+#. module: purchase_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.view_purchase_requisition_filter
+msgid "My Agreements"
+msgstr "የእኔ ስምምነቶች"
+
+#. module: purchase_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.view_purchase_requisition_filter
+msgid "New Agreements"
+msgstr "አዲስ ስምምነቶች"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_merge_requisition_wizard__requisition_id_many
+msgid "New Purchase Agreement"
+msgstr "አዲስ የግዢ ስምምነት"
+
+#. module: purchase_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.view_purchase_requisition_form
+msgid "New Quotation"
+msgstr "ቀጥታ ግዢ"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "ቀጣይ የእንቅስቃሴ ገደብ"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition__activity_summary
+msgid "Next Activity Summary"
+msgstr "ቀጣይ የእንቅስቃሴ ማጠቃለያ"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition__activity_type_id
+msgid "Next Activity Type"
+msgstr "ቀጣይ የእንቅስቃሴ አይነት"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition__message_needaction_counter
+msgid "Number of Actions"
+msgstr "የተግባሮች ብዛት"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition__order_count
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition__order_two
+msgid "Number of Orders"
+msgstr "የትዕዛዝ ብዛት"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition__message_has_error_counter
+msgid "Number of errors"
+msgstr "የስህተት ብዛት"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,help:purchase_requisition.field_purchase_requisition__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "እርምጃ የሚያስፈልገው የመልእክት ብዛት"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,help:purchase_requisition.field_purchase_requisition__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "የማድረስ ስህተት ያለባቸው መልዕክቶች ብዛት"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,help:purchase_requisition.field_purchase_requisition__message_unread_counter
+msgid "Number of unread messages"
+msgstr "ያልተነበቡ መልዕክቶች ብዛት"
+
+#. module: purchase_requisition
+#: model:ir.model.fields.selection,name:purchase_requisition.selection__purchase_requisition__state__ongoing
+#: model:ir.model.fields.selection,name:purchase_requisition.selection__purchase_requisition__state_blanket_order__ongoing
+msgid "Ongoing"
+msgstr "በመካሄድ ላይ"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition_line__qty_ordered
+msgid "Ordered Quantities"
+msgstr "የታዘዙ መጠኖች"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition__ordering_date
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.view_purchase_requisition_filter
+msgid "Ordering Date"
+msgstr "የማዘዣ ቀን"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_order_line_unlink__par_id
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_order_line_unlink__partner_id
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_order_line_unlink__requisition_id_2
+msgid "Partner"
+msgstr "አጋር"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_product_product__purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_product_template__purchase_requisition
+msgid "Procurement"
+msgstr "ግዢ"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_order_line_unlink__product_id
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition__product_id
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition_line__product_id
+msgid "Product"
+msgstr "እቃ"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition_line__product_uom_id
+msgid "Product Unit of Measure"
+msgstr "የእቃው መለኪያ"
+
+#. module: purchase_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.report_purchaserequisitions
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.view_purchase_requisition_form
+msgid "Products"
+msgstr "እቃዎች"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition__line_ids
+msgid "Products to Purchase"
+msgstr "የሚገዙ እቃዎች"
+
+#. module: purchase_requisition
+#: model:ir.model.fields.selection,name:purchase_requisition.selection__product_template__purchase_requisition__tenders
+msgid "Propose a call for tenders"
+msgstr "ለጨረታዎች ጥሪ ያቅርቡ"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_order__requisition_id
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition_line__requisition_id
+msgid "Purchase Agreement"
+msgstr "የግዢ ስምምነት"
+
+#. module: purchase_requisition
+#: model:ir.actions.act_window,name:purchase_requisition.tender_type_action
+#: model:ir.ui.menu,name:purchase_requisition.menu_purchase_requisition_type
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.view_purchase_requisition_type_form
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.view_purchase_requisition_type_tree
+msgid "Purchase Agreement Types"
+msgstr "የግዢ ስምምነት ዓይነቶች"
+
+#. module: purchase_requisition
+#: model:ir.actions.act_window,name:purchase_requisition.action_purchase_requisition
+#: model:ir.ui.menu,name:purchase_requisition.menu_purchase_requisition_pro_mgt
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.view_purchase_requisition_form
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.view_purchase_requisition_tree
+msgid "Purchase Agreements"
+msgstr "የግዢ ስምምነቶች"
+
+#. module: purchase_requisition
+#: model:ir.model,name:purchase_requisition.model_purchase_order
+msgid "Purchase Order"
+msgstr "የግዢ ትዕዛዝ"
+
+#. module: purchase_requisition
+#: model:ir.model,name:purchase_requisition.model_purchase_order_line
+msgid "Purchase Order Line"
+msgstr "የግዢ ትዕዛዝ መስመር"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition__purchase_ids
+msgid "Purchase Orders"
+msgstr "የግዢ ትዕዛዞች"
+
+#. module: purchase_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.purchase_order_search_inherit
+msgid "Purchase Orders with requisition"
+msgstr "ትዕዛዞችን ከመጠየቅ ጋር ይግዙ"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition__user_id
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.view_purchase_requisition_filter
+msgid "Purchase Representative"
+msgstr "የግዢ ተወካይ"
+
+#. module: purchase_requisition
+#: model:ir.model,name:purchase_requisition.model_purchase_requisition_line
+#: model:ir.model.fields,field_description:purchase_requisition.field_product_supplierinfo__purchase_requisition_line_id
+msgid "Purchase Requisition Line"
+msgstr "የግዢ መስፈርት መስመር"
+
+#. module: purchase_requisition
+#: model:ir.model,name:purchase_requisition.model_purchase_requisition_type
+msgid "Purchase Requisition Type"
+msgstr "የግዢ መስፈርት አይነት"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition__analysis_id
+msgid "Purchase analysis"
+msgstr "የግዢ ትንተና"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition__approver_id
+msgid "Purchase approve"
+msgstr "ግዢ ጸድቋል"
+
+#. module: purchase_requisition
+#: model:ir.actions.act_window,name:purchase_requisition.act_res_partner_2_purchase_order
+msgid "Purchase orders"
+msgstr "የግዢ ትዕዛዞች"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_order__is_quantity_copy
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition__is_quantity_copy
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition_type__quantity_copy
+msgid "Quantities"
+msgstr "መጠኖች"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_order_line_unlink__product_qty
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition_line__product_qty
+msgid "Quantity"
+msgstr "ብዛት"
+
+#. module: purchase_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.view_purchase_requisition_form
+msgid "RFQs/Orders"
+msgstr "RFQs/ትዕዛዞች"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_order_line__reason
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_order_line_unlink__reason
+msgid "Reason"
+msgstr "ምክንያት"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition__name
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.view_purchase_requisition_filter
+msgid "Reference"
+msgstr "ማመሳከሪያ"
+
+#. module: purchase_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.product_template_form_view_inherit
+msgid "Reordering"
+msgstr "እንደገና በማዘዝ ላይ"
+
+#. module: purchase_requisition
+#: model:ir.actions.act_window,name:purchase_requisition.action_purchase_requisition_to_so
+msgid "Request for Quotation"
+msgstr "የግዢ ጥያቄ"
+
+#. module: purchase_requisition
+#: model:ir.actions.act_window,name:purchase_requisition.action_purchase_requisition_list
+msgid "Request for Quotations"
+msgstr "የግዢ ጥያቄ"
+
+#. module: purchase_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.report_purchaserequisitions
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.report_purchaserequisitions_2
+msgid "Requests for Quotation Details"
+msgstr "የግዢ ዝርዝሮች ጥያቄዎች"
+
+#. module: purchase_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.purchase_order_search_inherit
+msgid "Requisition"
+msgstr "ፍላጎት"
+
+#. module: purchase_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.view_purchase_requisition_form
+msgid "Reset to Draft"
+msgstr "ወደ ረቂቅ ዳግም አስጀምር"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition__activity_user_id
+msgid "Responsible User"
+msgstr "የሚመለከተው ተጠቃሚ"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "የኤስኤምኤስ የማድረስ ስህተት"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition_line__schedule_date
+msgid "Scheduled Date"
+msgstr "የግዢ ቀን"
+
+#. module: purchase_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.view_purchase_requisition_filter
+msgid "Search Purchase Agreements"
+msgstr "የግዢ ስምምነቶችን ይፈልጉ"
+
+#. module: purchase_requisition
+#: model:ir.model.fields.selection,name:purchase_requisition.selection__purchase_requisition_type__exclusive__multiple
+msgid "Select multiple RFQ"
+msgstr "ብዙ RFQ ን ይምረጡ"
+
+#. module: purchase_requisition
+#: model:ir.model.fields.selection,name:purchase_requisition.selection__purchase_requisition_type__exclusive__exclusive
+msgid "Select only one RFQ (exclusive)"
+msgstr "አንድ RFQ ብቻ ምረጥ (የማያካትት)"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,help:purchase_requisition.field_purchase_requisition_type__exclusive
+msgid ""
+"Select only one RFQ (exclusive):  when a purchase order is confirmed, cancel the remaining purchase order.\n"
+"\n"
+"                    Select multiple RFQ: allows multiple purchase orders. On confirmation of a purchase order it does not cancel the remaining orders"
+msgstr ""
+"አንድ RFQ ብቻ ይምረጡ (የማያካትት)፡ የግዢ ትዕዛዝ ከተረጋገጠ የቀረውን የግዢ ትዕዛዝ ይሰርዙ።\n"
+"\n"
+"                    በርካታ RFQ ምረጥ፡ ብዙ የግዢ ትዕዛዞችን ይፈቅዳል። የግዢ ትዕዛዝ ሲረጋገጥ የቀሩትን ትዕዛዞች አይሰርዝም"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_order_line__selection
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_order_line_unlink__selection
+msgid "Selection"
+msgstr "ምርጫ"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition_type__sequence
+msgid "Sequence"
+msgstr "ቅደም ተከተል"
+
+#. module: purchase_requisition
+#: model:ir.model.fields.selection,name:purchase_requisition.selection__purchase_requisition_type__quantity_copy__none
+msgid "Set quantities manually"
+msgstr "መጠኖችን በእጅ ያዘጋጁ"
+
+#. module: purchase_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.view_purchase_requisition_filter
+msgid "Show all records which has next action date is before today"
+msgstr "የሚቀጥለው የድርጊት ቀን ከዛሬ በፊት ያለውን ሁሉንም መዝገቦች አሳይ"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition__origin
+msgid "Source Document"
+msgstr "የሰነዱ ምንጭ"
+
+#. module: purchase_requisition
+#: model_terms:ir.actions.act_window,help:purchase_requisition.action_purchase_requisition
+msgid "Start a new purchase agreement"
+msgstr "አዲስ የግዢ ስምምነት ይጀምሩ"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition__state_blanket_order
+msgid "State Blanket Order"
+msgstr "ብርድ ልብስ ትእዛዝ ሁኔታ"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition__state
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.view_purchase_requisition_filter
+msgid "Status"
+msgstr "ሁኔታው"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,help:purchase_requisition.field_purchase_requisition__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"በእንቅስቃሴ ላይ የተመሰረተ ሁኔታ\n"
+"አልፏል፡ የማለቂያ ቀን አስቀድሞ አልፏል\n"
+"ዛሬ፡ የተግባር ቀን ዛሬ ነው\n"
+"የታቀደው: የወደፊት እንቅስቃሴዎች."
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_order_line_unlink__price_subtotal
+msgid "Subtotal"
+msgstr "ንዑስ ድምር"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition_line__supplier_info_ids
+msgid "Supplier Info"
+msgstr "የአቅራቢ መረጃ"
+
+#. module: purchase_requisition
+#: model:ir.model,name:purchase_requisition.model_product_supplierinfo
+msgid "Supplier Pricelist"
+msgstr "የአቅራቢ የዋጋ ዝርዝር"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_order_line_unlink__price_tax
+msgid "Tax"
+msgstr "ግብር"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_order_line_unlink__taxes_id
+msgid "Taxes"
+msgstr "ግብሮች"
+
+#. module: purchase_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.report_purchaserequisitions_2
+msgid "Tender result:"
+msgstr "የጨረታ ውጤት፡-"
+
+#. module: purchase_requisition
+#: model:ir.actions.report,name:purchase_requisition.action_report_purchase_requisitions_2
+msgid "Tenders result"
+msgstr "የጨረታ ውጤት"
+
+#. module: purchase_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.view_purchase_requisition_form
+msgid "Terms and Conditions"
+msgstr "አተገባበሩና ​​መመሪያው"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,help:purchase_requisition.field_purchase_requisition__schedule_date
+msgid ""
+"The expected and scheduled delivery date where all the products are received"
+msgstr "ሁሉም ምርቶች የተቀበሉበት የሚጠበቀው እና የታቀደው የመላኪያ ቀን"
+
+#. module: purchase_requisition
+#: code:addons/purchase_requisition/models/purchase_requisition.py:0
+#: code:addons/purchase_requisition/models/purchase_requisition.py:0
+#, python-format
+msgid ""
+"There is already an open blanket order for this supplier. We suggest you to "
+"use to complete this open blanket order instead of creating a new one."
+msgstr ""
+"ለዚህ አቅራቢ አስቀድሞ የተከፈተ ብርድ ልብስ ትእዛዝ አለ። አዲስ ከመፍጠር ይልቅ ይህንን ክፍት ብርድ ልብስ ትእዛዝ "
+"ለማጠናቀቅ እንዲጠቀሙ እንመክርዎታለን።"
+
+#. module: purchase_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.view_purchase_requisition_filter
+msgid "Today Activities"
+msgstr "የዛሬ ተግባራት"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_order_line_unlink__price_total
+msgid "Total"
+msgstr "ጠቅላላ"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,help:purchase_requisition.field_purchase_requisition__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "በመዝገብ ላይ ያለ ልዩ እንቅስቃሴ ዓይነት።"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_order_line_unlink__price_unit
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition_line__price_unit
+msgid "Unit Price"
+msgstr "ነጠላ ዋጋ"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition__message_unread
+msgid "Unread Messages"
+msgstr "ያልተነበቡ መልእክቶች"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "ያልተነበቡ መልዕክቶች ቆጣሪ"
+
+#. module: purchase_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.view_purchase_requisition_form
+msgid "UoM"
+msgstr ""
+
+#. module: purchase_requisition
+#: model:ir.model.fields.selection,name:purchase_requisition.selection__purchase_requisition_type__line_copy__copy
+msgid "Use lines of agreement"
+msgstr "የስምምነት መስመሮችን ይጠቀሙ"
+
+#. module: purchase_requisition
+#: model:ir.model.fields.selection,name:purchase_requisition.selection__purchase_requisition_type__quantity_copy__copy
+msgid "Use quantities of agreement"
+msgstr "የስምምነት መጠኖችን ይጠቀሙ"
+
+#. module: purchase_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.view_purchase_requisition_form
+msgid "Validate"
+msgstr "አረጋግጥ"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition__vendor_id
+msgid "Vendor"
+msgstr "ሻጭ"
+
+#. module: purchase_requisition
+#: code:addons/purchase_requisition/models/purchase_requisition.py:0
+#: code:addons/purchase_requisition/models/purchase_requisition.py:0
+#, python-format
+msgid "Warning for %s"
+msgstr "ማስጠንቀቂያ ለ%s"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_requisition__website_message_ids
+msgid "Website Messages"
+msgstr "የድረ ገጽ መልዕክቶች"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,help:purchase_requisition.field_purchase_requisition__website_message_ids
+msgid "Website communication history"
+msgstr "የድረ ገጽ የግንኙነት ታሪክ"
+
+#. module: purchase_requisition
+#: code:addons/purchase_requisition/models/purchase_requisition.py:0
+#: code:addons/purchase_requisition/models/purchase_requisition.py:0
+#, python-format
+msgid "You can only delete draft requisitions."
+msgstr "ረቂቅ መስፈርቶችን ብቻ መሰረዝ ይችላሉ።"
+
+#. module: purchase_requisition
+#: code:addons/purchase_requisition/models/purchase_requisition.py:0
+#: code:addons/purchase_requisition/models/purchase_requisition.py:0
+#, python-format
+msgid "You cannot confirm agreement '%s' because there is no product line."
+msgstr "ምንም አይነት የእቃ መስመር ስለሌለ ስምምነቱን '%s' ማረጋገጥ አይችሉም።"
+
+#. module: purchase_requisition
+#: code:addons/purchase_requisition/models/purchase_requisition.py:0
+#: code:addons/purchase_requisition/models/purchase_requisition.py:0
+#: code:addons/purchase_requisition/models/purchase_requisition.py:0
+#: code:addons/purchase_requisition/models/purchase_requisition.py:0
+#: code:addons/purchase_requisition/models/purchase_requisition.py:0
+#: code:addons/purchase_requisition/models/purchase_requisition.py:0
+#, python-format
+msgid "You cannot confirm the blanket order without price."
+msgstr "የብርድልብሱን ትዕዛዝ ያለ ዋጋ ማረጋገጥ አይችሉም።"
+
+#. module: purchase_requisition
+#: code:addons/purchase_requisition/models/purchase_requisition.py:0
+#: code:addons/purchase_requisition/models/purchase_requisition.py:0
+#, python-format
+msgid "You cannot confirm the blanket order without quantity."
+msgstr "የብርድ ልብስ ትዕዛዙን ያለብዛት ማረጋገጥ አይችሉም።"
+
+#. module: purchase_requisition
+#: code:addons/purchase_requisition/models/purchase_requisition.py:0
+#: code:addons/purchase_requisition/models/purchase_requisition.py:0
+#, python-format
+msgid ""
+"You have to cancel or validate every RfQ before closing the purchase "
+"requisition."
+msgstr "የግዢውን መስፈርት ከመዝጋትዎ በፊት እያንዳንዱን RfQ መሰረዝ ወይም ማረጋገጥ አለብዎት።"
+
+#. module: purchase_requisition
+#: model_terms:ir.ui.view,arch_db:purchase_requisition.view_purchase_requisition_form
+msgid "e.g. PO0025"
+msgstr "ለምሳሌ. ፖ0025"
+
+#. module: purchase_requisition
+#: model:ir.model.fields.selection,name:purchase_requisition.selection__purchase_order_line__selection__failed
+#: model:ir.model.fields.selection,name:purchase_requisition.selection__purchase_order_line_unlink__selection__failed
+msgid "failed"
+msgstr "አልተሳካም"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_purchase_order_line_unlink__order_line
+msgid "line"
+msgstr "መስመር"
+
+#. module: purchase_requisition
+#: model:ir.model.fields,field_description:purchase_requisition.field_merge_requisition_wizard__requisition_id_many_2
+msgid "merged Purchase Agreement"
+msgstr "የተዋሃደ የግዢ ስምምነት"
+
+#. module: purchase_requisition
+#: model:ir.model.fields.selection,name:purchase_requisition.selection__purchase_order_line__selection__uncompered
+msgid "not compered"
+msgstr "አልተገመተም"
+
+#. module: purchase_requisition
+#: model:ir.model,name:purchase_requisition.model_purchase_requisition
+msgid "purchase requisition Documents"
+msgstr "የግዢ አስፈላጊ ሰነዶች"
+
+#. module: purchase_requisition
+#: model:ir.model,name:purchase_requisition.model_purchase_order_line_unlink
+msgid "purchase.order.line.unlink"
+msgstr "ግዢ.ትእዛዝ.line.unlink"
+
+#. module: purchase_requisition
+#: model:ir.model.fields.selection,name:purchase_requisition.selection__purchase_order_line__selection__selected
+#: model:ir.model.fields.selection,name:purchase_requisition.selection__purchase_order_line_unlink__selection__selected
+msgid "selected"
+msgstr "ተመርጧል"

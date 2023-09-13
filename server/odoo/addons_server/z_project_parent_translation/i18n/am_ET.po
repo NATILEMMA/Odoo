@@ -1,0 +1,241 @@
+# Date created: 2023-06-21 20:16:32 by dichthuatphuongdong.com
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-06-21 03:13:39+0000"
+"MIME-Version: 1.0"
+"Content-Type: text/plain; charset=UTF-8"
+"Content-Transfer-Encoding: 8bit"
+"Plural-Forms: nplurals=1; plural=0;"
+"X-Generator: GlotPress/3.0.0-alpha.2"
+"Language: en_GB"
+"Project-Id-Version: PO File 5.8.1"
+
+#. module: project_parent
+#: model_terms:ir.ui.view,arch_db:project_parent.view_parent_project_kanban
+msgid "<i class=\"fa fa-ellipsis-v\" role=\"img\" aria-label=\"Manage\" title=\"Manage\"/>"
+msgstr "<i class=\"fa fa-ellipsis-v\" role=\"img\" aria-label=\"አስተዳድር\" title=\"አስተዳደር\"/>"
+
+#. module: project_parent
+#: model_terms:ir.ui.view,arch_db:project_parent.view_parent_project_kanban
+msgid "<i class=\"fa fa-envelope\" role=\"img\" aria-label=\"Domain Alias\" title=\"Domain Alias\"/>"
+msgstr "<i class=\"fa fa-envelope\" role=\"img\" aria-label=\"Domain Alias\" title=\"የጎራ ተለዋጭ ስም\"/>"
+
+#. module: project_parent
+#: model_terms:ir.ui.view,arch_db:project_parent.view_parent_project_kanban
+msgid "<i class=\"fa fa-smile-o\" role=\"img\" aria-label=\"Percentage of satisfaction\" title=\"Percentage of satisfaction\"/>"
+msgstr "<i class=\"fa fa-smile-o\" role=\"img\" aria-label=\"የእርካታ መቶኛ\" title=\"የእርካታ መቶኛ\"/>"
+
+#. module: project_parent
+#: model_terms:ir.ui.view,arch_db:project_parent.view_parent_project_kanban
+msgid "<i class=\"fa fa-smile-o\"/> No rating yet"
+msgstr "<i class=\"fa fa-smile-o\"/> እስካሁን የተሰጠ ደረጃ የለም።"
+
+#. module: project_parent
+#: model_terms:ir.ui.view,arch_db:project_parent.view_parent_project_kanban
+msgid "<span class=\"o_label\">Profitability</span>"
+msgstr "<span class=\"o_label\">ትርፋማነት</span>"
+
+#. module: project_parent
+#: model:ir.ui.menu,name:project_parent.all_child_projcet
+msgid "All Planning"
+msgstr "ሁሉም እቅድ ማውጣት"
+
+#. module: project_parent
+#: model:ir.actions.act_window,name:project_parent.open_view_project_all
+msgid "All Plannings"
+msgstr "ሁሉም እቅዶች"
+
+#. module: project_parent
+#: model:ir.actions.act_window,name:project_parent.open_view_project_all_user_assign
+#: model:ir.ui.menu,name:project_parent.menu_projects_user_assign
+msgid "Assigned Planning"
+msgstr "የተመደበ እቅድ ማውጣት"
+
+#. module: project_parent
+#: model:ir.model.fields,field_description:project_parent.field_project_project__child_ids_count
+msgid "Child Ids Count"
+msgstr "የልጅ መታወቂያዎች ብዛት"
+
+#. module: project_parent
+#: model:ir.actions.act_window,name:project_parent.act_project_child
+#: model_terms:ir.ui.view,arch_db:project_parent.edit_project
+msgid "Child Planning"
+msgstr "የልጅ እቅድ ማውጣት"
+
+#. module: project_parent
+#: model_terms:ir.actions.act_window,help:project_parent.act_project_child
+#: model_terms:ir.actions.act_window,help:project_parent.open_view_project_all
+#: model_terms:ir.actions.act_window,help:project_parent.open_view_project_all_user
+#: model_terms:ir.actions.act_window,help:project_parent.open_view_project_all_user_assign
+#: model_terms:ir.actions.act_window,help:project_parent.open_view_project_department_head
+#: model_terms:ir.actions.act_window,help:project_parent.open_view_project_requested_view
+#: model_terms:ir.actions.act_window,help:project_parent.parent_middel_view_project_all
+#: model_terms:ir.actions.act_window,help:project_parent.parent_view_project_all
+msgid "Create a new Planning"
+msgstr "አዲስ እቅድ ይፍጠሩ"
+
+#. module: project_parent
+#: model_terms:ir.actions.act_window,help:project_parent.action_view_my_task
+msgid "Create a new task"
+msgstr "አዲስ ተግባር ፍጠር"
+
+#. module: project_parent
+#: model_terms:ir.ui.view,arch_db:project_parent.view_parent_project_kanban
+msgid "Customer Ratings"
+msgstr "የደንበኛ ደረጃዎች"
+
+#. module: project_parent
+#: model_terms:ir.ui.view,arch_db:project_parent.view_parent_project_kanban
+msgid "Edit"
+msgstr "አስተካክል "
+
+#. module: project_parent
+#: model:ir.model.fields,field_description:project_parent.field_project_project__is_parent
+msgid "Is Parent"
+msgstr "ወላጅ ነው"
+
+#. module: project_parent
+#: model:ir.actions.act_window,name:project_parent.open_view_project_all_user
+#: model:ir.ui.menu,name:project_parent.menu_projects_user
+msgid "My Planning"
+msgstr "የእኔ እቅድ"
+
+#. module: project_parent
+#: model:ir.actions.act_window,name:project_parent.action_view_my_task
+#: model:ir.ui.menu,name:project_parent.menu_my_task
+msgid "My Tasks"
+msgstr "የእኔ ተግባራት"
+
+#. module: project_parent
+#: model_terms:ir.actions.act_window,help:project_parent.parent_middel_view_project_all1
+msgid "No Planning Package created!"
+msgstr "ምንም የእቅድ ጥቅል አልተፈጠረም!"
+
+#. module: project_parent
+#: model_terms:ir.actions.act_window,help:project_parent.action_view_my_task
+msgid ""
+"Odoo\'s Planning management allows you to manage the pipeline of your tasks efficiently.<br>"
+"                    You can track progress, discuss on tasks, attach documents, etc."
+msgstr ""
+"የኦዱ ፕላኒንግ አስተዳደር የተግባሮችዎን ቧንቧ በብቃት እንዲቆጣጠሩ ይፈቅድልዎታል።<br>"
+"                     ሂደቱን መከታተል፣ በተግባሮች ላይ መወያየት፣ ሰነዶችን ማያያዝ፣ ወዘተ."
+""
+
+#. module: project_parent
+#: model_terms:ir.actions.act_window,help:project_parent.act_project_child
+#: model_terms:ir.actions.act_window,help:project_parent.open_view_project_all
+#: model_terms:ir.actions.act_window,help:project_parent.open_view_project_all_user
+#: model_terms:ir.actions.act_window,help:project_parent.open_view_project_all_user_assign
+#: model_terms:ir.actions.act_window,help:project_parent.open_view_project_department_head
+#: model_terms:ir.actions.act_window,help:project_parent.parent_middel_view_project_all
+#: model_terms:ir.actions.act_window,help:project_parent.parent_view_project_all
+msgid "Or"
+msgstr "ወይም"
+
+#. module: project_parent
+#: model_terms:ir.actions.act_window,help:project_parent.open_view_project_requested_view
+msgid "Organize your activities (plan tasks, track issues, invoice timesheets) for internal, personal or customer projects."
+msgstr "ለውስጣዊ፣ ለግል ወይም ለደንበኛ ፕሮጀክቶች እንቅስቃሴዎችዎን ያደራጁ (ተግባራትን ያቅዱ፣ ጉዳዮችን ይከታተሉ፣ የክፍያ መጠየቂያ ጊዜ ሉሆች)።"
+
+#. module: project_parent
+#: model:ir.actions.act_window,name:project_parent.parent_view_project_all
+#: model:ir.ui.menu,name:project_parent.menu_parent_pr
+msgid "Packages"
+msgstr "ጥቅሎች"
+
+#. module: project_parent
+#: model:ir.model.fields,field_description:project_parent.field_project_project__parent_path
+msgid "Parent Path"
+msgstr "የወላጅ መንገድ"
+
+#. module: project_parent
+#: model:ir.model.fields,field_description:project_parent.field_project_project__parent_path2
+msgid "Parent Path2"
+msgstr "የወላጅ መንገድ 2"
+
+#. module: project_parent
+#: model:ir.actions.act_window,name:project_parent.parent_middel_view_project_all
+#: model:ir.actions.act_window,name:project_parent.parent_middel_view_project_all1
+#: model:ir.model.fields,field_description:project_parent.field_project_project__parent_id
+msgid "Parent Planning"
+msgstr "የወላጅ እቅድ ማውጣት"
+
+#. module: project_parent
+#: model_terms:ir.ui.view,arch_db:project_parent.view_parent_project_kanban
+msgid "Percentage of happy ratings over the past 30 days. Get rating details from the More menu."
+msgstr "ላለፉት 30 ቀናት የደስታ ደረጃዎች መቶኛ። የደረጃ ዝርዝሮችን ከተጨማሪ ምናሌ ያግኙ።"
+
+#. module: project_parent
+#: model:ir.model,name:project_parent.model_project_project
+#: model:ir.ui.menu,name:project_parent.menu_main_project
+#: model:ir.ui.menu,name:project_parent.planning_all_module_report_tab
+msgid "Planning"
+msgstr "እቅድ ማውጣት"
+
+#. module: project_parent
+#: model:ir.actions.act_window,name:project_parent.action_planning_reports
+msgid "Planning Report"
+msgstr "የእቅድ ሪፖርት"
+
+#. module: project_parent
+#: model:ir.ui.menu,name:project_parent.Purchase_all_module_report_tab
+msgid "Purchase"
+msgstr "ግዢ"
+
+#. module: project_parent
+#: model:ir.actions.act_window,name:project_parent.open_view_project_requested_view
+#: model:ir.ui.menu,name:project_parent.menu_requested_planning_view
+msgid "Requested Planning"
+msgstr "የተጠየቀ እቅድ"
+
+#. module: project_parent
+#: model_terms:ir.ui.view,arch_db:project_parent.view_parent_project_kanban
+msgid "Share"
+msgstr "አጋራ"
+
+#. module: project_parent
+#: model:ir.model.fields,field_description:project_parent.field_project_project__child_ids
+msgid "Sub-projects"
+msgstr "ንዑስ ፕሮጀክቶች"
+
+#. module: project_parent
+#: model:ir.ui.menu,name:project_parent.menu_project_report_task_analysis
+msgid "Tasks Analysis"
+msgstr "ተግባራት ትንተና"
+
+#. module: project_parent
+#: model:ir.actions.act_window,name:project_parent.open_view_project_department_head
+msgid "Team Planning"
+msgstr "የቡድን እቅድ ማውጣት"
+
+#. module: project_parent
+#: model_terms:ir.actions.act_window,help:project_parent.action_planning_reports
+msgid "This report allows you to analyse the performance of your projects and users. You can analyse the quantities of tasks, the hours spent compared to the planned hours, the average number of days to open or close a task, etc."
+msgstr "ይህ ሪፖርት የፕሮጀክቶችዎን እና የተጠቃሚዎችን አፈፃፀም እንዲተነትኑ ያስችልዎታል። የተግባሮችን ብዛት፣ከታቀዱት ሰዓቶች ጋር ሲነጻጸር ያሳለፉትን ሰዓቶች፣አንድን ተግባር ለመክፈት ወይም ለመዝጋት አማካይ የቀናት ብዛት፣ወዘተ መተንተን ይችላሉ።"
+
+#. module: project_parent
+#: model_terms:ir.actions.act_window,help:project_parent.act_project_child
+#: model_terms:ir.actions.act_window,help:project_parent.open_view_project_all
+#: model_terms:ir.actions.act_window,help:project_parent.open_view_project_all_user
+#: model_terms:ir.actions.act_window,help:project_parent.open_view_project_all_user_assign
+#: model_terms:ir.actions.act_window,help:project_parent.open_view_project_department_head
+#: model_terms:ir.actions.act_window,help:project_parent.parent_middel_view_project_all
+#: model_terms:ir.actions.act_window,help:project_parent.parent_view_project_all
+msgid "activate a sample Planning"
+msgstr "የናሙና እቅድ ማውጣት"
+
+#. module: project_parent
+#: model_terms:ir.actions.act_window,help:project_parent.parent_middel_view_project_all1
+msgid "add parent for your Planning."
+msgstr "ለእቅድዎ ወላጅ ያክሉ።"
+
+#. module: project_parent
+#: model_terms:ir.actions.act_window,help:project_parent.act_project_child
+#: model_terms:ir.actions.act_window,help:project_parent.open_view_project_all
+#: model_terms:ir.actions.act_window,help:project_parent.open_view_project_all_user
+#: model_terms:ir.actions.act_window,help:project_parent.open_view_project_all_user_assign
+#: model_terms:ir.actions.act_window,help:project_parent.open_view_project_department_head
+#: model_terms:ir.actions.act_window,help:project_parent.parent_middel_view_project_all
+#: model_terms:ir.actions.act_window,help:project_parent.parent_view_project_all
+msgid "to play with."
+msgstr "ጋር መጫወት."

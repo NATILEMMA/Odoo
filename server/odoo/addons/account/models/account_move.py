@@ -91,12 +91,12 @@ class AccountMove(models.Model):
         return self.env.company.incoterm_id
 
     # ==== Business fields ====
-    name = fields.Char(string='Number', required=True, readonly=True, copy=False, default='/')
+    name = fields.Char(string='Number', required=True, readonly=True, copy=False, default='/', translate=True)
     date = fields.Date(string='Date', required=True, index=True, readonly=True,
         states={'draft': [('readonly', False)]},
         default=fields.Date.context_today)
-    ref = fields.Char(string='Reference', copy=False)
-    narration = fields.Text(string='Terms and Conditions')
+    ref = fields.Char(string='Reference', copy=False, translate=True)
+    narration = fields.Text(string='Terms and Conditions', translate=True)
     state = fields.Selection(selection=[
             ('draft', 'Draft'),
             ('posted', 'Posted'),
@@ -113,7 +113,7 @@ class AccountMove(models.Model):
             ('in_receipt', 'Purchase Receipt'),
         ], string='Type', required=True, store=True, index=True, readonly=True, tracking=True,
         default="entry", change_default=True)
-    type_name = fields.Char('Type Name', compute='_compute_type_name')
+    type_name = fields.Char('Type Name', compute='_compute_type_name', translate=True)
     to_check = fields.Boolean(string='To Check', default=False,
         help='If this checkbox is ticked, it means that the user was not sure of all the related informations at the time of the creation of the move and that the move needs to be checked again.')
     journal_id = fields.Many2one('account.journal', string='Journal', required=True, readonly=True,
@@ -202,11 +202,11 @@ class AccountMove(models.Model):
     invoice_date_due = fields.Date(string='Due Date', readonly=True, index=True, copy=False,
         states={'draft': [('readonly', False)]})
     invoice_payment_ref = fields.Char(string='Payment Reference', index=True, copy=False,
-        help="The payment reference to set on journal items.")
+        help="The payment reference to set on journal items.", translate=True)
     invoice_sent = fields.Boolean(readonly=True, default=False, copy=False,
         help="It indicates that the invoice has been sent.")
     invoice_origin = fields.Char(string='Origin', readonly=True, tracking=True,
-        help="The document(s) that generated the invoice.")
+        help="The document(s) that generated the invoice.", translate=True)
     invoice_payment_term_id = fields.Many2one('account.payment.term', string='Payment Terms',
         domain="['|', ('company_id', '=', False), ('company_id', '=', company_id)]",
         readonly=True, states={'draft': [('readonly', False)]})
@@ -225,9 +225,9 @@ class AccountMove(models.Model):
 
     # ==== Payment widget fields ====
     invoice_outstanding_credits_debits_widget = fields.Text(groups="account.group_account_invoice",
-        compute='_compute_payments_widget_to_reconcile_info')
+        compute='_compute_payments_widget_to_reconcile_info', translate=True)
     invoice_payments_widget = fields.Text(groups="account.group_account_invoice",
-        compute='_compute_payments_widget_reconciled_info')
+        compute='_compute_payments_widget_reconciled_info', translate=True)
     invoice_has_outstanding = fields.Boolean(groups="account.group_account_invoice",
         compute='_compute_payments_widget_to_reconcile_info')
 
@@ -236,9 +236,9 @@ class AccountMove(models.Model):
         domain="['|', ('company_id', '=', False), ('company_id', '=', company_id)]",
         string='Vendor Bill',
         help="Auto-complete from a past bill.")
-    invoice_source_email = fields.Char(string='Source Email', tracking=True)
-    invoice_partner_display_name = fields.Char(compute='_compute_invoice_partner_display_info', store=True)
-    invoice_partner_icon = fields.Char(compute='_compute_invoice_partner_display_info', store=False, compute_sudo=True)
+    invoice_source_email = fields.Char(string='Source Email', tracking=True, translate=True)
+    invoice_partner_display_name = fields.Char(compute='_compute_invoice_partner_display_info', store=True, translate=True)
+    invoice_partner_icon = fields.Char(compute='_compute_invoice_partner_display_info', store=False, compute_sudo=True, translate=True)
 
     # ==== Cash rounding fields ====
     invoice_cash_rounding_id = fields.Many2one('account.cash.rounding', string='Cash Rounding Method',
@@ -248,27 +248,27 @@ class AccountMove(models.Model):
     # ==== Fields to set the sequence, on the first invoice of the journal ====
     invoice_sequence_number_next = fields.Char(string='Next Number',
         compute='_compute_invoice_sequence_number_next',
-        inverse='_inverse_invoice_sequence_number_next')
+        inverse='_inverse_invoice_sequence_number_next', translate=True)
     invoice_sequence_number_next_prefix = fields.Char(string='Next Number Prefix',
-        compute="_compute_invoice_sequence_number_next")
+        compute="_compute_invoice_sequence_number_next", translate=True)
 
     # ==== Display purpose fields ====
     invoice_filter_type_domain = fields.Char(compute='_compute_invoice_filter_type_domain',
-        help="Technical field used to have a dynamic domain on journal / taxes in the form view.")
+        help="Technical field used to have a dynamic domain on journal / taxes in the form view.", translate=True)
     bank_partner_id = fields.Many2one('res.partner', help='Technical field to get the domain on the bank', compute='_compute_bank_partner_id')
     invoice_has_matching_suspense_amount = fields.Boolean(compute='_compute_has_matching_suspense_amount',
         groups='account.group_account_invoice',
         help="Technical field used to display an alert on invoices if there is at least a matching amount in any supsense account.")
     tax_lock_date_message = fields.Char(
         compute='_compute_tax_lock_date_message',
-        help="Technical field used to display a message when the invoice's accounting date is prior of the tax lock date.")
+        help="Technical field used to display a message when the invoice's accounting date is prior of the tax lock date.", translate=True)
     # Technical field to hide Reconciled Entries stat button
     has_reconciled_entries = fields.Boolean(compute="_compute_has_reconciled_entries")
     # ==== Hash Fields ====
     restrict_mode_hash_table = fields.Boolean(related='journal_id.restrict_mode_hash_table')
     secure_sequence_number = fields.Integer(string="Inalteralbility No Gap Sequence #", readonly=True, copy=False)
-    inalterable_hash = fields.Char(string="Inalterability Hash", readonly=True, copy=False)
-    string_to_hash = fields.Char(compute='_compute_string_to_hash', readonly=True)
+    inalterable_hash = fields.Char(string="Inalterability Hash", readonly=True, copy=False, translate=True)
+    string_to_hash = fields.Char(compute='_compute_string_to_hash', readonly=True, translate=True)
 
     @api.model
     def _field_will_change(self, record, vals, field_name):
@@ -2333,6 +2333,13 @@ class AccountMove(models.Model):
 
     def post(self):
         # `user_has_group` won't be bypassed by `sudo()` since it doesn't change the user anymore.
+        cr = 0
+        db = 0
+        for line in self.line_ids:
+            cr = line.credit + cr
+            db = line.debit + db
+        if db - cr != 0:
+            raise AccessError(_("You can not post unbalance entry."))
         if not self.env.su and not self.env.user.has_group('account.group_account_invoice'):
             raise AccessError(_("You don't have the access rights to post an invoice."))
         for move in self:
@@ -2717,9 +2724,9 @@ class AccountMoveLine(models.Model):
     move_id = fields.Many2one('account.move', string='Journal Entry',
         index=True, required=True, readonly=True, auto_join=True, ondelete="cascade",
         help="The move of this entry line.")
-    move_name = fields.Char(string='Number', related='move_id.name', store=True, index=True)
+    move_name = fields.Char(string='Number', related='move_id.name', store=True, index=True, translate=True)
     date = fields.Date(related='move_id.date', store=True, readonly=True, index=True, copy=False, group_operator='min')
-    ref = fields.Char(related='move_id.ref', store=True, copy=False, index=True, readonly=True)
+    ref = fields.Char(related='move_id.ref', store=True, copy=False, index=True, readonly=True, translate=True)
     parent_state = fields.Selection(related='move_id.state', store=True, readonly=True)
     journal_id = fields.Many2one(related='move_id.journal_id', store=True, index=True, copy=False)
     company_id = fields.Many2one(related='move_id.company_id', store=True, readonly=True)
@@ -2733,7 +2740,7 @@ class AccountMoveLine(models.Model):
     account_internal_type = fields.Selection(related='account_id.user_type_id.type', string="Internal Type", store=True, readonly=True)
     account_root_id = fields.Many2one(related='account_id.root_id', string="Account Root", store=True, readonly=True)
     sequence = fields.Integer(default=10)
-    name = fields.Char(string='Label')
+    name = fields.Char(string='Label', translate=True)
     quantity = fields.Float(string='Quantity',
         default=1.0, digits='Product Unit of Measure',
         help="The optional quantity expressed by this line, eg: number of product sold. "
@@ -2795,7 +2802,7 @@ class AccountMoveLine(models.Model):
     tag_ids = fields.Many2many(string="Tags", comodel_name='account.account.tag', ondelete='restrict',
         help="Tags assigned to this line by the tax creating it, if any. It determines its impact on financial reports.")
     tax_audit = fields.Char(string="Tax Audit String", compute="_compute_tax_audit", store=True,
-        help="Computed field, listing the tax grids impacted by this line, and the amount it applies to each of them.")
+        help="Computed field, listing the tax grids impacted by this line, and the amount it applies to each of them.", translate=True)
 
     # ==== Reconciliation fields ====
     amount_residual = fields.Monetary(string='Residual Amount', store=True,
@@ -4788,7 +4795,7 @@ class AccountFullReconcile(models.Model):
     _name = "account.full.reconcile"
     _description = "Full Reconcile"
 
-    name = fields.Char(string='Number', required=True, copy=False, default=lambda self: self.env['ir.sequence'].next_by_code('account.reconcile'))
+    name = fields.Char(string='Number', required=True, copy=False, default=lambda self: self.env['ir.sequence'].next_by_code('account.reconcile'), translate=True)
     partial_reconcile_ids = fields.One2many('account.partial.reconcile', 'full_reconcile_id', string='Reconciliation Parts')
     reconciled_line_ids = fields.One2many('account.move.line', 'full_reconcile_id', string='Matched Journal Items')
     exchange_move_id = fields.Many2one('account.move')

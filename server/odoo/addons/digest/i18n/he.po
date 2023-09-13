@@ -7,12 +7,11 @@
 # ExcaliberX <excaliberx@gmail.com>, 2019
 # Leandro Noijovich <eliel.sorcerer@gmail.com>, 2019
 # Yihya Hugirat <hugirat@gmail.com>, 2019
-# hed shefer <hed@laylinetech.com>, 2019
+# hed shefetr <hed@laylinetech.com>, 2019
 # דודי מלכה <Dudimalka6@gmail.com>, 2019
 # ZVI BLONDER <ZVIBLONDER@gmail.com>, 2020
 # Lilach Gilliam <lilach.gilliam@gmail.com>, 2021
 # david danilov, 2021
-# Ha Ketem <haketem@gmail.com>, 2022
 # 
 msgid ""
 msgstr ""
@@ -20,7 +19,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-08-26 08:16+0000\n"
 "PO-Revision-Date: 2019-08-26 09:09+0000\n"
-"Last-Translator: Ha Ketem <haketem@gmail.com>, 2022\n"
+"Last-Translator: david danilov, 2021\n"
 "Language-Team: Hebrew (https://www.transifex.com/odoo/teams/41243/he/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -308,17 +307,17 @@ msgstr "דוא\"ל Digest"
 #: model:ir.model.fields,field_description:digest.field_res_config_settings__digest_emails
 #: model:ir.ui.menu,name:digest.digest_menu
 msgid "Digest Emails"
-msgstr "מיילים לתקציר"
+msgstr ""
 
 #. module: digest
 #: model_terms:ir.ui.view,arch_db:digest.portal_digest_unsubscribed
 msgid "Digest Subscriptions"
-msgstr "מנויים לעדכונים"
+msgstr ""
 
 #. module: digest
 #: model:ir.model,name:digest.model_digest_tip
 msgid "Digest Tips"
-msgstr "טיפים לתקציר"
+msgstr ""
 
 #. module: digest
 #: model:ir.model.fields,field_description:digest.field_digest_digest__display_name
@@ -344,7 +343,7 @@ msgstr "קבץ לפי"
 #. module: digest
 #: model_terms:ir.ui.view,arch_db:digest.digest_digest_view_form
 msgid "How to customize your digest?"
-msgstr "איך להתאים את התקציר שלך?"
+msgstr ""
 
 #. module: digest
 #: model:ir.model.fields,field_description:digest.field_digest_digest__id
@@ -355,28 +354,28 @@ msgstr "תעודה מזהה"
 #. module: digest
 #: model_terms:ir.ui.view,arch_db:digest.digest_digest_view_form
 msgid "In order to build your customized digest, follow these steps:"
-msgstr "כדי לבנות תקציב מותאם אישית, יש לבצע את הצעדים הבאים:"
+msgstr ""
 
 #. module: digest
 #: model:ir.model.fields,field_description:digest.field_digest_digest__is_subscribed
 msgid "Is user subscribed"
-msgstr "האם המשתמש נרשם כמנוי"
+msgstr ""
 
 #. module: digest
 #: model_terms:ir.ui.view,arch_db:digest.digest_digest_view_form
 #: model_terms:ir.ui.view,arch_db:digest.digest_digest_view_tree
 msgid "KPI Digest"
-msgstr "תקציר מדדי-ביצוע עיקריים"
+msgstr ""
 
 #. module: digest
 #: model_terms:ir.ui.view,arch_db:digest.digest_digest_view_form
 msgid "KPIs"
-msgstr "מדדי-ביצוע עיקריים"
+msgstr ""
 
 #. module: digest
 #: model:ir.model.fields,field_description:digest.field_digest_digest__kpi_mail_message_total_value
 msgid "Kpi Mail Message Total Value"
-msgstr "סכום כולל של מיילים עם מדדי-ביצוע עיקריים"
+msgstr ""
 
 #. module: digest
 #: model:ir.model.fields,field_description:digest.field_digest_digest__kpi_res_users_connected_value
@@ -421,12 +420,12 @@ msgstr "שם"
 msgid ""
 "New users are automatically added as recipient of the following digest "
 "email."
-msgstr "משתמשים חדשים יירשמו אוטומטית לתקציר במייל הזה."
+msgstr ""
 
 #. module: digest
 #: model:ir.model.fields,field_description:digest.field_digest_digest__next_run_date
 msgid "Next Send Date"
-msgstr "תאריך שליחה הבא"
+msgstr ""
 
 #. module: digest
 #: model:ir.model.fields,field_description:digest.field_digest_digest__periodicity
@@ -449,7 +448,7 @@ msgstr "נמענים"
 #. module: digest
 #: model_terms:ir.ui.view,arch_db:digest.digest_digest_view_form
 msgid "Select your KPIs in the KPI's tab."
-msgstr "בחרו מדדי-ביצוע עיקריים בלשונית של מדדי-ביצוע עיקריים (KPI)"
+msgstr ""
 
 #. module: digest
 #: model_terms:ir.ui.view,arch_db:digest.digest_digest_view_form
@@ -474,7 +473,7 @@ msgstr "הירשם כמנוי"
 #. module: digest
 #: model:ir.model.fields,field_description:digest.field_digest_tip__tip_description
 msgid "Tip description"
-msgstr "תיאור הטיפ"
+msgstr ""
 
 #. module: digest
 #: model_terms:digest.tip,tip_description:digest.digest_tip_mail_2
@@ -489,7 +488,7 @@ msgstr "בטל את הרישום שלי"
 #. module: digest
 #: model:ir.model.fields,help:digest.field_digest_tip__sequence
 msgid "Used to display digest tip in email template base on order"
-msgstr "לשימוש כדי להציג בתבניות תקציר במייל טיפים על סמך הזמנה "
+msgstr ""
 
 #. module: digest
 #: model:ir.model,name:digest.model_res_users
@@ -499,7 +498,7 @@ msgstr "משתמשים"
 #. module: digest
 #: model:ir.model.fields,help:digest.field_digest_tip__user_ids
 msgid "Users having already received this tip"
-msgstr "משתמשים שכבר קיבלו את הטיפ הזה"
+msgstr ""
 
 #. module: digest
 #: model:ir.model.fields.selection,name:digest.selection__digest_digest__periodicity__weekly
@@ -528,12 +527,12 @@ msgstr ""
 #. module: digest
 #: model_terms:ir.ui.view,arch_db:digest.portal_digest_unsubscribed
 msgid "You have been successfully unsubscribed from"
-msgstr "ביטת את המנוי בהצלחה מ"
+msgstr ""
 
 #. module: digest
 #: model_terms:ir.ui.view,arch_db:digest.digest_digest_view_form
 msgid "You may want to add new computed fields with Odoo Studio:"
-msgstr "ייתכן ותרצו להוסיף שדות מחושבים עם סטודיו Odoo"
+msgstr ""
 
 #. module: digest
 #: model_terms:digest.tip,tip_description:digest.digest_tip_mail_2

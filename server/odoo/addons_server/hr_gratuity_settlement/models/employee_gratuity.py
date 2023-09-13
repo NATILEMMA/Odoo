@@ -17,13 +17,13 @@ class EmployeeGratuity(models.Model):
         ('cancel', 'Cancelled')],
         default='draft', track_visibility='onchange')
     name = fields.Char(string='Reference', required=True, copy=False, readonly=True,
-                       default=lambda self: _('New'))
+                       default=lambda self: _('New'), translate=True)
     employee_id = fields.Many2one('hr.resignation', string='Employee', required=True,
                                     domain="[('state', '=', 'approved')]")
     joined_date = fields.Date(string="Joined Date", readonly=True)
     worked_years = fields.Integer(string="Total Work Years", readonly=True)
     last_month_salary = fields.Integer(string="Last Salary", required=True, default=0)
-    allowance = fields.Char(string="Dearness Allowance", default=0)
+    allowance = fields.Char(string="Dearness Allowance", default=0, translate=True)
     gratuity_amount = fields.Float(string="Gratuity Payable", required=True, default=0,
                                   readony=True, help=("Gratuity is calculated based on the "
                                   "equation Last salary * Number of years of service * 15 / 26 "))

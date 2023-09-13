@@ -11,7 +11,7 @@ class AccountFiscalYear(models.Model):
     _name = 'account.fiscal.year'
     _description = 'Fiscal Year'
 
-    name = fields.Char(string='Name', required=True)
+    name = fields.Char(string='Name', required=True, translate=True)
     date_from = fields.Date(string='Start Date', required=True,
         help='Start Date, included in the fiscal year.')
     date_to = fields.Date(string='End Date', required=True,

@@ -27,5 +27,5 @@ class ChecklistLine(models.Model):
     _name = 'checklist.line'
     _rec_name = 'line_name'
 
-    line_name = fields.Char(string='Name', required=True)
+    line_name = fields.Char(string='Name', required=True, translate=True)
     responsible_user = fields.Many2one('res.users', string='Responsible User', required=True)

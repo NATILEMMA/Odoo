@@ -11,7 +11,7 @@ class ReconciliationTimeFream(models.Model):
     _name = "reconciliation.time.fream"
     _description = "time frame for reconciliation"
 
-    name = fields.Char('Description', size=256)
+    name = fields.Char('Description', size=256, required=True)
     date_from = fields.Date('Date From')
     date_to = fields.Date('Date To')
     is_active = fields.Boolean('Is Active time frame')
@@ -44,3 +44,10 @@ class ReconciliationTimeFream(models.Model):
            raise ValidationError(_(
                'Please select Date for the Time Frame which dose not overlaps'))
            return
+
+    @api.onchange('name', 'fiscal_year')
+    def onchange_name_field(self):
+        if self.name and self.fiscal_year:
+            name = self.name.split('/')
+            self.name = name[0] +"/"+str(self.fiscal_year.name)
+

@@ -2,6 +2,10 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from odoo import fields, models, tools
+MONTH = [
+        ('1', 'January'), ('2', 'February'), ('3', 'March'), ('4', 'April'),
+        ('5', 'May'), ('6', 'June'), ('7', 'July'), ('8', 'August'), 
+        ('9', 'September'), ('10', 'October'), ('11', 'November'), ('12', 'December'), ]
 
 
 class ReportProjectTaskUser(models.Model):
@@ -16,7 +20,7 @@ class ReportProjectTaskUser(models.Model):
     date_end = fields.Datetime(string='Ending Date', readonly=True)
     date_deadline = fields.Date(string='Deadline', readonly=True)
     date_last_stage_update = fields.Datetime(string='Last Stage Update', readonly=True)
-    project_id = fields.Many2one('project.project', string='Project', readonly=True)
+    project_id = fields.Many2one('project.project', string='Planning', readonly=True)
     working_days_close = fields.Float(string='# Working Days to Close',
         digits=(16,2), readonly=True, group_operator="avg",
         help="Number of Working Days to close the task")
@@ -38,7 +42,9 @@ class ReportProjectTaskUser(models.Model):
     company_id = fields.Many2one('res.company', string='Company', readonly=True)
     partner_id = fields.Many2one('res.partner', string='Customer', readonly=True)
     stage_id = fields.Many2one('project.task.type', string='Stage', readonly=True)
-
+    milestone_id = fields.Many2one('project.milestone', string='Quarters', readonly=True)
+    month = fields.Selection(MONTH,
+                          string='Month',default="1", store=True,)
     def _select(self):
         select_str = """
              SELECT
@@ -50,6 +56,8 @@ class ReportProjectTaskUser(models.Model):
                     t.date_deadline as date_deadline,
                     t.user_id,
                     t.project_id,
+                    t.milestone_id,
+                    t.month,
                     t.priority,
                     t.name as name,
                     t.company_id,
@@ -74,6 +82,8 @@ class ReportProjectTaskUser(models.Model):
                     t.date_last_stage_update,
                     t.user_id,
                     t.project_id,
+                    t.milestone_id,
+                    t.month,
                     t.priority,
                     t.name,
                     t.company_id,

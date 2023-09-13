@@ -151,8 +151,8 @@
          </field>
       </record>
 
-      <menuitem id="internal_recruitment_menu_root"  name="Internal recruitment" sequence="0" parent="hr_menu_organizer.hr_employee_status_menu"/>
-      <menuitem name="Job Applications Personal" id="internal_recruitment_menu_applications_personal"  sequence="101" parent="internal_recruitment_menu_root" action="action_custom_job_all_personal" groups="hr_recruitment_request.group_recruitment_hr_approval,hr_recruitment_request.group_apply" />
+      <menuitem id="internal_recruitment_menu_root"  name="Internal recruitment" sequence="3" parent="hr.menu_hr_employee"/>
+      <menuitem name="Job Applications Personal" id="internal_recruitment_menu_applications_personal"  sequence="1" parent="internal_recruitment_menu_root" action="action_custom_job_all_personal" groups="hr_recruitment_request.group_recruitment_hr_approval,hr_recruitment_request.group_apply" />
       <menuitem name="Job Applications" id="internal_recruitment_menu_applications"  sequence="1" parent="internal_recruitment_menu_root" action="action_custom_job" groups="hr_recruitment_request.group_recruitment_hr_approval" />
    </data>
 </odoo>

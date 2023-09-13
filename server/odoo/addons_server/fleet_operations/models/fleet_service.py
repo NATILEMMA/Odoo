@@ -392,8 +392,8 @@ class FleetVehicleLogServices(models.Model):
             'service.order.sequence')
         self.seq = sequence
         self.name = sequence
-        self.state = 'approved'
-        print("self.seq",self.seq)
+        self.state = 'confirm'
+        self.vehicle_id.state = 'in_progress'
         return
 
     def action_cancel(self):
@@ -907,7 +907,7 @@ class FleetVehicleLogServices(models.Model):
     name = fields.Char(string='Work Order', size=32, readonly=True,
                        translate=True, copy=False, default="New")
     fmp_id = fields.Char(string="Vehicle ID", size=64,
-                         related='vehicle_id.name')
+                         related='vehicle_id.name', translate=True)
     wo_tax_amount = fields.Float(string='Tax', readonly=True)
     priority = fields.Selection([('normal', 'NORMAL'), ('high', 'HIGH'),
                                  ('low', 'LOW')], default='normal',
@@ -931,7 +931,7 @@ class FleetVehicleLogServices(models.Model):
                                string='Service Task')
     parts_ids = fields.One2many('task.line', 'fleet_service_id',
                                 string='Parts')
-    note = fields.Text(string='Log Notes')
+    note = fields.Text(string='Log Notes', translate=True)
     date_child = fields.Date(related='cost_id.date', string='Cost Date',
                              store=True)
     sub_total = fields.Float(compute="_compute_get_total", string='Total Parts Amount',
@@ -1015,8 +1015,8 @@ class FleetVehicleLogServices(models.Model):
     additional_service = fields.Float(store=True)
     old_price = fields.Float(store=True)
     old_part_price = fields.Float(store=True)
-    seq = fields.Char(store=True)
-    pre_name = fields.Char(string="Preventive name", store=True)
+    seq = fields.Char(store=True, translate=True)
+    pre_name = fields.Char(string="Preventive name", store=True, translate=True)
     mechanic_2 = fields.Many2one('res.users', 'Engineer', domain=[('is_mechanic', '=', True)])
     location_id = fields.Many2one('stock.location', 'Location')
     picking_type_id = fields.Many2one('stock.picking.type', 'Operation Type')
@@ -1499,7 +1499,7 @@ class ResUsers(models.Model):
     _inherit = 'res.users'
 
     usersql_id = fields.Char(string='User ID',
-                             help="Take this field for data migration")
+                             help="Take this field for data migration", translate=True)
 
 
 class IrAttachment(models.Model):

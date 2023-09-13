@@ -1,0 +1,2023 @@
+# Date created: 2023-08-11 16:33:40 by dichthuatphuongdong.com
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-08-11 03:13:39+0000"
+"MIME-Version: 1.0"
+"Content-Type: text/plain; charset=UTF-8"
+"Content-Transfer-Encoding: 8bit"
+"Plural-Forms: nplurals=1; plural=0;"
+"X-Generator: GlotPress/3.0.0-alpha.2"
+"Language: en_GB"
+"Project-Id-Version: PO File 5.8.1"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_transaction__invoice_ids_nbr
+msgid "# of Invoices"
+msgstr "# የክፍያ መጠየቂያዎች"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.payment_confirmation_status
+msgid "&amp;times;"
+msgstr "&amp;ጊዜዎች;"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_transaction__html_3ds
+msgid "3D Secure HTML"
+msgstr "3D ደህንነቱ የተጠበቀ HTML"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.pay
+msgid "<b>Amount:</b>"
+msgstr "<b>መጠን፡</b>"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.payment_confirmation_status
+msgid "<b>Communication: </b>"
+msgstr "<b>ግንኙነት፡</b>"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.pay
+msgid "<b>Reference:</b>"
+msgstr "<b>ማጣቀሻ፡</b>"
+
+#. module: payment
+#: code:addons/payment/wizards/payment_acquirer_onboarding_wizard.py:0
+msgid "<h3>Please make a payment to: </h3><ul><li>Bank: %s</li><li>Account Number: %s</li><li>Account Holder: %s</li></ul>"
+msgstr "<h3>እባክዎ ክፍያ ይፈጽሙ ለ፡ </ h3> <ul>> ባንክ፡ %s</li><li>መለያ ቁጥር፡ %s</li><li>መለያ ያዥ፡ %s</li >>"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.confirm
+msgid "<i class=\"fa fa-arrow-circle-right\"/> Back to My Account"
+msgstr "<i class=\"fa fa-arrow-circle-right\"/> ወደ የእኔ መለያ ተመለስ"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.payment_tokens_list
+msgid "<i class=\"fa fa-check text-muted\" title=\"This payment method has not been verified by our system.\" role=\"img\" aria-label=\"Not verified\"/>"
+msgstr "<i class=\"fa fa-check text-muted\" title=\"ይህ የመክፈያ ዘዴ በስርዓታችን አልተረጋገጠም።\" role=\"img\" aria-label=\"አልተረጋገጠም\"/>"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.payment_tokens_list
+msgid "<i class=\"fa fa-check text-success\" title=\"This payment method is verified by our system.\" role=\"img\" aria-label=\"Ok\"/>"
+msgstr "<i class=\"fa fa-check text-success\" title=\"ይህ የመክፈያ ዘዴ በስርዓታችን የተረጋገጠ ነው።\" ሚና = \"img\" aria-label = \"እሺ\" />"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.pay_methods
+msgid "<i class=\"fa fa-home\" role=\"img\" aria-label=\"Home\" title=\"Home\"/>"
+msgstr "<i class=\"fa fa-home\" role=\"img\" aria-label=\"Home\" title=\"ቤት\"/>"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.payment_tokens_list
+msgid "<i class=\"fa fa-lock\"/> Pay"
+msgstr "<i class=\"fa fa-lock\"/> ይክፈሉ።"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.payment_tokens_list
+msgid "<i class=\"fa fa-plus-circle\"/> Add new card"
+msgstr "<i class=\"fa fa-plus-circle\"/> አዲስ ካርድ ያክሉ"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.payment_tokens_list
+msgid "<i class=\"fa fa-trash\"/> Delete"
+msgstr "<i class=\"fa fa-trash\"/> ሰርዝ"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.payment_tokens_list
+msgid "<small class=\"text-muted\">(Some fees may apply)</small>"
+msgstr "<small class=\"text-muted\">(አንዳንድ ክፍያዎች ተፈጻሚ ሊሆኑ ይችላሉ)</small>"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.acquirer_kanban
+msgid "<span class=\"badge badge-primary oe_inline o_enterprise_label\">Enterprise</span>"
+msgstr "<span class=\"badge badge-primary oe_inline o_enterprise_label\">ኢንተርፕራይዝ</span>"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.payment_acquirer_onboarding_wizard_form
+msgid "<span class=\"fa fa-arrow-right\"> Get my Stripe keys</span>"
+msgstr "<span class=\"fa fa-arrow-right\">የእኔን ስትሪፕ ቁልፎች አግኝ</span>"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.payment_acquirer_onboarding_wizard_form
+msgid "<span class=\"fa fa-arrow-right\"> How to configure your PayPal account</span>"
+msgstr "<span class=\"fa fa-arrow-right\">የ PayPal መለያዎን እንዴት ማዋቀር እንደሚቻል</span>"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.view_partners_form_payment_defaultcreditcard
+msgid "<span class=\"o_stat_text\">Credit Cards</span>"
+msgstr "<span class=\"o_stat_text\">ክሬዲት ካርዶች</span>"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.payment_acquirer_onboarding_wizard_form
+msgid "<span>Start selling directly without an account; an email will be sent by Paypal to create your new account and collect your payments.</span>"
+msgstr "<span>ያለ መለያ በቀጥታ መሸጥ ይጀምሩ; አዲሱን መለያዎን ለመፍጠር እና ክፍያዎችን ለመሰብሰብ በ Paypal ኢሜይል ይላካል።</span>"
+
+#. module: payment
+#: code:addons/payment/models/account_invoice.py:0
+msgid "A journal must be specified of the acquirer %s."
+msgstr "መጽሔት ስለ %s ተቀባይ መገለጽ አለበት።"
+
+#. module: payment
+#: code:addons/payment/models/account_invoice.py:0
+msgid "A payment acquirer is required to create a transaction."
+msgstr "ግብይት ለመፍጠር የክፍያ ተቀባይ ያስፈልጋል።"
+
+#. module: payment
+#: code:addons/payment/models/account_payment.py:0
+msgid "A payment transaction already exists."
+msgstr "የክፍያ ግብይት አስቀድሞ አለ።"
+
+#. module: payment
+#: code:addons/payment/models/account_payment.py:0
+msgid "A token is required to create a new payment transaction."
+msgstr "አዲስ የክፍያ ግብይት ለመፍጠር ማስመሰያ ያስፈልጋል።"
+
+#. module: payment
+#: code:addons/payment/models/payment_acquirer.py:0
+msgid "A transaction %s with %s initiated using %s credit card."
+msgstr "የ%s ግብይት ከ%s ጋር የተጀመረው %s ክሬዲት ካርድን በመጠቀም ነው።"
+
+#. module: payment
+#: code:addons/payment/models/payment_acquirer.py:0
+msgid "A transaction %s with %s initiated."
+msgstr "ከ%s ጋር የ%s ግብይት ተጀምሯል።"
+
+#. module: payment
+#: code:addons/payment/models/account_invoice.py:0
+msgid "A transaction can\'t be linked to invoices having different currencies."
+msgstr "ግብይት የተለያዩ ምንዛሬዎች ካላቸው ደረሰኞች ጋር ሊገናኝ አይችልም።"
+
+#. module: payment
+#: code:addons/payment/models/account_invoice.py:0
+msgid "A transaction can\'t be linked to invoices having different partners."
+msgstr "ግብይት የተለያዩ አጋሮች ካላቸው ደረሰኞች ጋር ሊገናኝ አይችልም።"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_link_wizard__access_token
+msgid "Access Token"
+msgstr "የመዳረሻ ማስመሰያ"
+
+#. module: payment
+#: code:addons/payment/wizards/payment_acquirer_onboarding_wizard.py:0
+msgid "Account"
+msgstr "መለያ"
+
+#. module: payment
+#: model:ir.model,name:payment.model_account_chart_template
+msgid "Account Chart Template"
+msgstr "የመለያ ገበታ አብነት"
+
+#. module: payment
+#: model_terms:payment.acquirer,pending_msg:payment.payment_acquirer_transfer
+msgid "Account Holder:"
+msgstr "የመለያ ባለቤት:"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_acquirer_onboarding_wizard__acc_number
+msgid "Account Number"
+msgstr "መለያ ቁጥር"
+
+#. module: payment
+#: model_terms:payment.acquirer,pending_msg:payment.payment_acquirer_transfer
+msgid "Account Number:"
+msgstr "መለያ ቁጥር፡-"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_transaction__acquirer_id
+#: model_terms:ir.ui.view,arch_db:payment.acquirer_kanban
+#: model_terms:ir.ui.view,arch_db:payment.acquirer_search
+msgid "Acquirer"
+msgstr "ገዢ"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_token__acquirer_id
+msgid "Acquirer Account"
+msgstr "የገዢ መለያ"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_token__acquirer_ref
+msgid "Acquirer Ref."
+msgstr "አግዚአብሔር ማጣቀሻ."
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_transaction__acquirer_reference
+msgid "Acquirer Reference"
+msgstr "የገዢ ማጣቀሻ"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_icon__acquirer_ids
+msgid "Acquirers"
+msgstr "ገዢዎች"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.payment_icon_form_view
+msgid "Acquirers list"
+msgstr "የገዢዎች ዝርዝር"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.acquirer_kanban
+msgid "Activate"
+msgstr "አግብር"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_token__active
+msgid "Active"
+msgstr "ንቁ"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_acquirer__fees_active
+msgid "Add Extra Fees"
+msgstr "ተጨማሪ ክፍያዎችን ያክሉ"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_transaction__partner_address
+#: model_terms:ir.ui.view,arch_db:payment.transaction_form
+msgid "Address"
+msgstr "አድራሻ"
+
+#. module: payment
+#: model:payment.acquirer,name:payment.payment_acquirer_adyen
+msgid "Adyen"
+msgstr "አድየን"
+
+#. module: payment
+#: model:payment.acquirer,name:payment.payment_acquirer_alipay
+msgid "Alipay"
+msgstr "አሊፓይ"
+
+#. module: payment
+#: model:ir.model.fields.selection,name:payment.selection__payment_acquirer__save_token__always
+msgid "Always"
+msgstr "ሁሌም"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_link_wizard__amount
+#: model:ir.model.fields,field_description:payment.field_payment_transaction__amount
+#: model_terms:ir.ui.view,arch_db:payment.confirm
+msgid "Amount"
+msgstr "መጠን"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_link_wizard__amount_max
+msgid "Amount Max"
+msgstr "ከፍተኛ መጠን"
+
+#. module: payment
+#: code:addons/payment/models/account_journal.py:0
+msgid "An acquirer is using this journal. Only bank and cash types are allowed."
+msgstr "አንድ አግኝ ይህን መጽሔት እየተጠቀመ ነው። የባንክ እና የገንዘብ ዓይነቶች ብቻ ይፈቀዳሉ።"
+
+#. module: payment
+#: code:addons/payment/controllers/portal.py:0
+msgid "An error occured during the processing of this payment"
+msgstr "በዚህ ክፍያ ሂደት ወቅት ስህተት ተፈጥሯል።"
+
+#. module: payment
+#. openerp-web
+#: code:addons/payment/static/src/xml/payment_processing.xml:0
+msgid "An error occured during the processing of this payment."
+msgstr "በዚህ ክፍያ ሂደት ወቅት ስህተት ተፈጥሯል።"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.payment_acquirer_onboarding_wizard_form
+msgid "Apply"
+msgstr "ያመልክቱ"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.payment_token_view_search
+msgid "Archived"
+msgstr "በማህደር የተቀመጠ"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.account_invoice_view_form_inherit_payment
+#: model_terms:ir.ui.view,arch_db:payment.transaction_form
+msgid "Are you sure you want to void the authorized transaction? This action can\'t be undone."
+msgstr "የተፈቀደውን ግብይት መሻር መፈለግህን እርግጠኛ ነህ? ይህ እርምጃ ሊቀለበስ አይችልም።"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_acquirer__authorize_implemented
+msgid "Authorize Mechanism Supported"
+msgstr "ተፈቅዶ ሜካኒዝም ይደገፋል"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_acquirer__auth_msg
+msgid "Authorize Message"
+msgstr "መልእክት ፍቀድ"
+
+#. module: payment
+#: model:payment.acquirer,name:payment.payment_acquirer_authorize
+msgid "Authorize.net"
+msgstr "ፍቃድ.net"
+
+#. module: payment
+#: model:ir.model.fields.selection,name:payment.selection__payment_transaction__state__authorized
+msgid "Authorized"
+msgstr "የተፈቀደ"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_account_move__authorized_transaction_ids
+msgid "Authorized Transactions"
+msgstr "የተፈቀዱ ግብይቶች"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.acquirer_form
+msgid "Availability"
+msgstr "ተገኝነት"
+
+#. module: payment
+#: code:addons/payment/wizards/payment_acquirer_onboarding_wizard.py:0
+msgid "Bank"
+msgstr "ባንክ"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_acquirer_onboarding_wizard__journal_name
+msgid "Bank Name"
+msgstr "የባንክ ስም"
+
+#. module: payment
+#: model_terms:payment.acquirer,pending_msg:payment.payment_acquirer_transfer
+msgid "Bank:"
+msgstr "ባንክ፡"
+
+#. module: payment
+#: model:payment.acquirer,name:payment.payment_acquirer_buckaroo
+msgid "Buckaroo"
+msgstr "ቡካሮ"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_transaction__callback_res_id
+msgid "Callback Document ID"
+msgstr "የመልሶ መደወል ሰነድ መታወቂያ"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_transaction__callback_model_id
+msgid "Callback Document Model"
+msgstr "የመልሶ መደወያ ሰነድ ሞዴል"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_transaction__callback_hash
+msgid "Callback Hash"
+msgstr "የመልሶ ጥሪ ሃሽ"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_transaction__callback_method
+msgid "Callback Method"
+msgstr "የመልሶ መደወል ዘዴ"
+
+#. module: payment
+#. openerp-web
+#: code:addons/payment/static/src/js/payment_form.js:0
+#: model_terms:ir.ui.view,arch_db:payment.payment_acquirer_onboarding_wizard_form
+msgid "Cancel"
+msgstr "ሰርዝ"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_acquirer__cancel_msg
+msgid "Cancel Message"
+msgstr "መልእክት ሰርዝ"
+
+#. module: payment
+#: model:ir.model.fields.selection,name:payment.selection__payment_transaction__state__cancel
+msgid "Canceled"
+msgstr "ተሰርዟል።"
+
+#. module: payment
+#. openerp-web
+#: code:addons/payment/static/src/xml/payment_processing.xml:0
+msgid "Cancelled payments"
+msgstr "የተሰረዙ ክፍያዎች"
+
+#. module: payment
+#. openerp-web
+#: code:addons/payment/static/src/js/payment_form.js:0
+msgid "Cannot setup the payment"
+msgstr "ክፍያውን ማዋቀር አልተቻለም"
+
+#. module: payment
+#: code:addons/payment/controllers/portal.py:0
+msgid "Cannot setup the payment."
+msgstr "ክፍያውን ማዋቀር አልተቻለም።"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_acquirer__capture_manually
+msgid "Capture Amount Manually"
+msgstr "መጠን በእጅ ይያዙ"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.account_invoice_view_form_inherit_payment
+#: model_terms:ir.ui.view,arch_db:payment.transaction_form
+msgid "Capture Transaction"
+msgstr "ግብይት ይቅረጹ"
+
+#. module: payment
+#: model:ir.model.fields,help:payment.field_payment_acquirer__capture_manually
+msgid "Capture the amount from Odoo, when the delivery is completed."
+msgstr "ማስረከቢያው ሲጠናቀቅ መጠኑን ከኦዱ ይያዙ።"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.payment_acquirer_onboarding_wizard_form
+msgid "Check here"
+msgstr "እዚህ ይመልከቱ"
+
+#. module: payment
+#: model:ir.actions.act_window,name:payment.action_open_payment_onboarding_payment_acquirer_wizard
+#: model_terms:ir.ui.view,arch_db:payment.payment_acquirer_onboarding_wizard_form
+msgid "Choose a payment method"
+msgstr "የመክፈያ ዘዴ ይምረጡ"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.onboarding_payment_acquirer_step
+msgid "Choose your default customer payment method."
+msgstr "ነባሪ የደንበኛ መክፈያ ዘዴዎን ይምረጡ።"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_transaction__partner_city
+#: model_terms:ir.ui.view,arch_db:payment.transaction_form
+msgid "City"
+msgstr "ከተማ"
+
+#. module: payment
+#. openerp-web
+#: code:addons/payment/static/src/xml/payment_processing.xml:0
+msgid "Click here to be redirected to the confirmation page."
+msgstr "ወደ የማረጋገጫ ገጹ ለመምራት እዚህ ጠቅ ያድርጉ።"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.payment_confirmation_status
+#: model_terms:ir.ui.view,arch_db:payment.payment_link_wizard_view_form
+msgid "Close"
+msgstr "ገጠመ"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_acquirer__color
+msgid "Color"
+msgstr "ቀለም"
+
+#. module: payment
+#: model:ir.model,name:payment.model_res_company
+msgid "Companies"
+msgstr "ኩባንያዎች"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_acquirer__company_id
+#: model:ir.model.fields,field_description:payment.field_payment_link_wizard__company_id
+#: model:ir.model.fields,field_description:payment.field_payment_token__company_id
+msgid "Company"
+msgstr "ኩባንያ"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.acquirer_form
+msgid "Configuration"
+msgstr "ማዋቀር"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.acquirer_kanban
+msgid "Configure"
+msgstr "አዋቅር"
+
+#. module: payment
+#. openerp-web
+#: code:addons/payment/static/src/js/payment_form.js:0
+msgid "Confirm Deletion"
+msgstr "ስረዛን ያረጋግጡ"
+
+#. module: payment
+#: model:ir.model,name:payment.model_res_partner
+msgid "Contact"
+msgstr "ተገናኝ"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_acquirer__module_id
+msgid "Corresponding Module"
+msgstr "ተጓዳኝ ሞጁል"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_res_partner__payment_token_count
+#: model:ir.model.fields,field_description:payment.field_res_users__payment_token_count
+msgid "Count Payment Token"
+msgstr "የክፍያ ማስመሰያ ይቁጠሩ"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_acquirer__country_ids
+msgid "Countries"
+msgstr "አገሮች"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_transaction__partner_country_id
+#: model_terms:ir.ui.view,arch_db:payment.transaction_form
+msgid "Country"
+msgstr "ሀገር"
+
+#. module: payment
+#: model_terms:ir.actions.act_window,help:payment.action_payment_acquirer
+msgid "Create a new payment acquirer"
+msgstr "አዲስ የክፍያ ተቀባይ ይፍጠሩ"
+
+#. module: payment
+#: model_terms:ir.actions.act_window,help:payment.action_payment_transaction
+msgid "Create a new payment transaction"
+msgstr "አዲስ የክፍያ ግብይት ይፍጠሩ"
+
+#. module: payment
+#: model_terms:ir.actions.act_window,help:payment.action_payment_icon
+msgid "Create a payment icon"
+msgstr "የክፍያ አዶ ይፍጠሩ"
+
+#. module: payment
+#: model_terms:ir.actions.act_window,help:payment.payment_token_action
+msgid "Create a saved payment data"
+msgstr "የተቀመጠ የክፍያ ውሂብ ይፍጠሩ"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_acquirer__create_uid
+#: model:ir.model.fields,field_description:payment.field_payment_acquirer_onboarding_wizard__create_uid
+#: model:ir.model.fields,field_description:payment.field_payment_icon__create_uid
+#: model:ir.model.fields,field_description:payment.field_payment_link_wizard__create_uid
+#: model:ir.model.fields,field_description:payment.field_payment_token__create_uid
+#: model:ir.model.fields,field_description:payment.field_payment_transaction__create_uid
+msgid "Created by"
+msgstr "የተፈጠረ"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_acquirer__create_date
+#: model:ir.model.fields,field_description:payment.field_payment_acquirer_onboarding_wizard__create_date
+#: model:ir.model.fields,field_description:payment.field_payment_icon__create_date
+#: model:ir.model.fields,field_description:payment.field_payment_link_wizard__create_date
+#: model:ir.model.fields,field_description:payment.field_payment_token__create_date
+#: model:ir.model.fields,field_description:payment.field_payment_transaction__create_date
+msgid "Created on"
+msgstr "ላይ ተፈጠረ"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.acquirer_form
+msgid "Credentials"
+msgstr "ምስክርነቶች"
+
+#. module: payment
+#: model:payment.acquirer,display_as:payment.payment_acquirer_adyen
+msgid "Credit Card (powered by Adyen)"
+msgstr "ክሬዲት ካርድ (በአድየን የተጎላበተ)"
+
+#. module: payment
+#: model:payment.acquirer,display_as:payment.payment_acquirer_alipay
+msgid "Credit Card (powered by Alipay)"
+msgstr "ክሬዲት ካርድ (በAlipay የተጎላበተ)"
+
+#. module: payment
+#: model:payment.acquirer,display_as:payment.payment_acquirer_authorize
+msgid "Credit Card (powered by Authorize)"
+msgstr "ክሬዲት ካርድ (በፈቃድ የተጎላበተ)"
+
+#. module: payment
+#: model:payment.acquirer,display_as:payment.payment_acquirer_buckaroo
+msgid "Credit Card (powered by Buckaroo)"
+msgstr "ክሬዲት ካርድ (በ Buckaroo የተጎላበተ)"
+
+#. module: payment
+#: model:payment.acquirer,display_as:payment.payment_acquirer_ingenico
+msgid "Credit Card (powered by Ingenico)"
+msgstr "ክሬዲት ካርድ (በIngenico የተጎላበተ)"
+
+#. module: payment
+#: model:payment.acquirer,display_as:payment.payment_acquirer_payulatam
+msgid "Credit Card (powered by PayU Latam)"
+msgstr "ክሬዲት ካርድ (በPayU Latam የተጎላበተ)"
+
+#. module: payment
+#: model:payment.acquirer,display_as:payment.payment_acquirer_payu
+msgid "Credit Card (powered by PayUmoney)"
+msgstr "ክሬዲት ካርድ (በPayUmoney የተጎላበተ)"
+
+#. module: payment
+#: model:payment.acquirer,display_as:payment.payment_acquirer_sips
+msgid "Credit Card (powered by Sips)"
+msgstr "ክሬዲት ካርድ (በሲፕስ የተጎላበተ)"
+
+#. module: payment
+#: model:payment.acquirer,display_as:payment.payment_acquirer_stripe
+msgid "Credit Card (powered by Stripe)"
+msgstr "ክሬዲት ካርድ (በStripe የተጎላበተ)"
+
+#. module: payment
+#: model:ir.model.fields.selection,name:payment.selection__payment_acquirer_onboarding_wizard__payment_method__stripe
+msgid "Credit card (via Stripe)"
+msgstr "ክሬዲት ካርድ (በStripe በኩል)"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_link_wizard__currency_id
+#: model:ir.model.fields,field_description:payment.field_payment_transaction__currency_id
+msgid "Currency"
+msgstr "ምንዛሪ"
+
+#. module: payment
+#: model:ir.model.fields.selection,name:payment.selection__payment_acquirer__provider__manual
+msgid "Custom Payment Form"
+msgstr "ብጁ የክፍያ ቅጽ"
+
+#. module: payment
+#: model:ir.model.fields.selection,name:payment.selection__payment_acquirer_onboarding_wizard__payment_method__manual
+msgid "Custom payment instructions"
+msgstr "ብጁ የክፍያ መመሪያዎች"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_transaction__partner_id
+msgid "Customer"
+msgstr "ደንበኛ"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_acquirer__description
+msgid "Description"
+msgstr "መግለጫ"
+
+#. module: payment
+#: model:ir.model.fields,help:payment.field_payment_acquirer__sequence
+msgid "Determine the display order"
+msgstr "የማሳያውን ቅደም ተከተል ይወስኑ"
+
+#. module: payment
+#: model:ir.model.fields.selection,name:payment.selection__payment_acquirer__state__disabled
+#: model_terms:ir.ui.view,arch_db:payment.acquirer_form
+msgid "Disabled"
+msgstr "ተሰናክሏል።"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.payment_confirmation_status
+msgid "Dismiss"
+msgstr "አሰናብት"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_acquirer__display_name
+#: model:ir.model.fields,field_description:payment.field_payment_acquirer_onboarding_wizard__display_name
+#: model:ir.model.fields,field_description:payment.field_payment_icon__display_name
+#: model:ir.model.fields,field_description:payment.field_payment_link_wizard__display_name
+#: model:ir.model.fields,field_description:payment.field_payment_token__display_name
+#: model:ir.model.fields,field_description:payment.field_payment_transaction__display_name
+msgid "Display Name"
+msgstr "መጠሪያው ስም"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_acquirer__display_as
+msgid "Displayed as"
+msgstr "እንደ ሚታየው"
+
+#. module: payment
+#: model:ir.model.fields.selection,name:payment.selection__payment_transaction__state__done
+#: model:ir.model.fields.selection,name:payment.selection__res_company__payment_acquirer_onboarding_state__done
+msgid "Done"
+msgstr "ተከናውኗል"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_acquirer__done_msg
+msgid "Done Message"
+msgstr "የተጠናቀቀ መልእክት"
+
+#. module: payment
+#: model:ir.model.fields.selection,name:payment.selection__payment_transaction__state__draft
+msgid "Draft"
+msgstr "ረቂቅ"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.transaction_form
+msgid "E-mail"
+msgstr "ኢ-ሜይል"
+
+#. module: payment
+#: model:account.payment.method,name:payment.account_payment_method_electronic_in
+msgid "Electronic"
+msgstr "ኤሌክትሮኒክ"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_acquirer_onboarding_wizard__paypal_email_account
+#: model:ir.model.fields,field_description:payment.field_payment_link_wizard__partner_email
+#: model:ir.model.fields,field_description:payment.field_payment_transaction__partner_email
+#: model_terms:ir.ui.view,arch_db:payment.payment_acquirer_onboarding_wizard_form
+msgid "Email"
+msgstr "ኢሜይል"
+
+#. module: payment
+#: model:ir.model.fields.selection,name:payment.selection__payment_acquirer__state__enabled
+msgid "Enabled"
+msgstr "ነቅቷል"
+
+#. module: payment
+#: model:ir.model.fields.selection,name:payment.selection__payment_transaction__state__error
+msgid "Error"
+msgstr "ስህተት"
+
+#. module: payment
+#. openerp-web
+#: code:addons/payment/static/src/js/payment_form.js:0
+msgid "Error: "
+msgstr "ስህተት፡-"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.payment_tokens_list
+msgid "Fee"
+msgstr "ክፍያ"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_transaction__fees
+#: model_terms:ir.ui.view,arch_db:payment.acquirer_form
+msgid "Fees"
+msgstr "ክፍያዎች"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_acquirer__fees_implemented
+msgid "Fees Computation Supported"
+msgstr "ክፍያዎች ማስላት ይደገፋሉ"
+
+#. module: payment
+#: model:ir.model.fields,help:payment.field_payment_transaction__fees
+msgid "Fees amount; set by the system because depends on the acquirer"
+msgstr "የክፍያ መጠን; በስርዓቱ ተዘጋጅቷል ምክንያቱም በገዢው ላይ የተመሰረተ ነው"
+
+#. module: payment
+#: model:ir.model.fields,help:payment.field_payment_transaction__state_message
+msgid "Field used to store error and/or validation messages for information"
+msgstr "ለመረጃ ስህተት እና/ወይም የማረጋገጫ መልዕክቶችን ለማከማቸት የሚያገለግል መስክ"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_acquirer__fees_dom_fixed
+msgid "Fixed domestic fees"
+msgstr "ቋሚ የቤት ውስጥ ክፍያዎች"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_acquirer__fees_int_fixed
+msgid "Fixed international fees"
+msgstr "ቋሚ ዓለም አቀፍ ክፍያዎች"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_acquirer__inbound_payment_method_ids
+msgid "For Incoming Payments"
+msgstr "ለገቢ ክፍያዎች"
+
+#. module: payment
+#: model:ir.model.fields.selection,name:payment.selection__payment_transaction__type__form
+msgid "Form"
+msgstr "ቅፅ"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_acquirer__view_template_id
+msgid "Form Button Template"
+msgstr "የቅጽ አዝራር አብነት"
+
+#. module: payment
+#: model:ir.model.fields.selection,name:payment.selection__payment_transaction__type__form_save
+msgid "Form with tokenization"
+msgstr "ቅጽ በ tokenization"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.confirm
+msgid "From"
+msgstr "ከ"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.payment_link_wizard_view_form
+msgid "Generate Payment Link"
+msgstr "የክፍያ አገናኝ ይፍጠሩ"
+
+#. module: payment
+#: model:ir.model,name:payment.model_payment_link_wizard
+msgid "Generate Sales Payment Link"
+msgstr "የሽያጭ ክፍያ አገናኝ ይፍጠሩ"
+
+#. module: payment
+#: model:ir.actions.act_window,name:payment.action_invoice_order_generate_link
+msgid "Generate a Payment Link"
+msgstr "የክፍያ አገናኝ ይፍጠሩ"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.acquirer_search
+msgid "Group By"
+msgstr "ቡድን በ"
+
+#. module: payment
+#: model:ir.model,name:payment.model_ir_http
+msgid "HTTP Routing"
+msgstr "HTTP ማዘዣ"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_transaction__is_processed
+msgid "Has the payment been post processed"
+msgstr "ክፍያው ተለጥፏል"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_acquirer__pre_msg
+msgid "Help Message"
+msgstr "የእገዛ መልእክት"
+
+#. module: payment
+#: model:ir.model.fields,help:payment.field_payment_acquirer__display_as
+msgid "How the acquirer is displayed to the customers."
+msgstr "ገዢው እንዴት ለደንበኞች እንደሚታይ።"
+
+#. module: payment
+#: model:ir.model.fields.selection,name:payment.selection__payment_acquirer_onboarding_wizard__paypal_user_type__new_user
+msgid "I don't have a Paypal account"
+msgstr "የ Paypal መለያ የለኝም"
+
+#. module: payment
+#: model:ir.model.fields.selection,name:payment.selection__payment_acquirer_onboarding_wizard__paypal_user_type__existing_user
+msgid "I have a Paypal account"
+msgstr "የ Paypal መለያ አለኝ"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_acquirer__id
+#: model:ir.model.fields,field_description:payment.field_payment_acquirer_onboarding_wizard__id
+#: model:ir.model.fields,field_description:payment.field_payment_icon__id
+#: model:ir.model.fields,field_description:payment.field_payment_link_wizard__id
+#: model:ir.model.fields,field_description:payment.field_payment_token__id
+#: model:ir.model.fields,field_description:payment.field_payment_transaction__id
+msgid "ID"
+msgstr "መታወቂያ"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.acquirer_form
+msgid "If not defined, the acquirer name will be used."
+msgstr "ካልተገለጸ፣ የገዢው ስም ጥቅም ላይ ይውላል።"
+
+#. module: payment
+#. openerp-web
+#: code:addons/payment/static/src/xml/payment_processing.xml:0
+msgid "If the payment hasn\'t been confirmed you can contact us."
+msgstr "ክፍያው ካልተረጋገጠ እኛን ማነጋገር ይችላሉ።"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_acquirer__image_128
+#: model:ir.model.fields,field_description:payment.field_payment_icon__image
+msgid "Image"
+msgstr "ምስል"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_icon__image_payment_form
+msgid "Image displayed on the payment form"
+msgstr "በክፍያ ቅጽ ላይ ምስል ይታያል"
+
+#. module: payment
+#: model:ir.model.fields,help:payment.field_payment_acquirer__state
+msgid ""
+"In test mode, a fake payment is processed through a test"
+"             payment interface. This mode is advised when setting up the"
+"             acquirer. Watch out, test and production modes require"
+"             different credentials."
+msgstr ""
+"በሙከራ ሁኔታ፣ የውሸት ክፍያ የሚከናወነው በሙከራ ነው።"
+"              የክፍያ በይነገጽ. ይህ ሁነታ በሚዘጋጅበት ጊዜ ይመከራል"
+"              ገዢ። ተጠንቀቅ፣ የሙከራ እና የምርት ሁነታዎች ያስፈልጋሉ።"
+"              የተለያዩ ምስክርነቶች."
+
+#. module: payment
+#: model:payment.acquirer,name:payment.payment_acquirer_ingenico
+msgid "Ingenico"
+msgstr "ኢንጌኒኮ"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.acquirer_form
+#: model_terms:ir.ui.view,arch_db:payment.acquirer_kanban
+msgid "Install"
+msgstr "ጫን"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_acquirer__module_state
+msgid "Installation State"
+msgstr "የመጫኛ ሁኔታ"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.acquirer_search
+msgid "Installed"
+msgstr "ተጭኗል"
+
+#. module: payment
+#: model:ir.model.fields,help:payment.field_payment_transaction__reference
+msgid "Internal reference of the TX"
+msgstr "የ TX ውስጣዊ ማጣቀሻ"
+
+#. module: payment
+#. openerp-web
+#: code:addons/payment/static/src/xml/payment_processing.xml:0
+msgid "Internal server error"
+msgstr "የውስጥ መቆጣጠርያ ችግር"
+
+#. module: payment
+#: code:addons/payment/models/account_invoice.py:0
+msgid "Invalid token found! Token acquirer %s != %s"
+msgstr "ልክ ያልሆነ ማስመሰያ ተገኝቷል! ማስመሰያ አግኚ %s!= %s"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.transaction_form
+msgid "Invoice(s)"
+msgstr "ደረሰኝ(ዎች)"
+
+#. module: payment
+#: code:addons/payment/models/payment_acquirer.py:0
+#: model:ir.model.fields,field_description:payment.field_payment_transaction__invoice_ids
+msgid "Invoices"
+msgstr "ደረሰኞች"
+
+#. module: payment
+#: model:ir.model,name:payment.model_account_journal
+msgid "Journal"
+msgstr "ጆርናል"
+
+#. module: payment
+#: model:ir.model,name:payment.model_account_move
+msgid "Journal Entries"
+msgstr "ጆርናል ግቤቶች"
+
+#. module: payment
+#: model:ir.model.fields,help:payment.field_payment_acquirer__journal_id
+msgid "Journal where the successful transactions will be posted"
+msgstr "የተሳካላቸው ግብይቶች የሚለጠፉበት ጆርናል"
+
+#. module: payment
+#: model:ir.model.fields.selection,name:payment.selection__res_company__payment_acquirer_onboarding_state__just_done
+msgid "Just done"
+msgstr "በቃ ተፈጸመ"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_transaction__partner_lang
+msgid "Language"
+msgstr "ቋንቋ"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_acquirer____last_update
+#: model:ir.model.fields,field_description:payment.field_payment_acquirer_onboarding_wizard____last_update
+#: model:ir.model.fields,field_description:payment.field_payment_icon____last_update
+#: model:ir.model.fields,field_description:payment.field_payment_link_wizard____last_update
+#: model:ir.model.fields,field_description:payment.field_payment_token____last_update
+#: model:ir.model.fields,field_description:payment.field_payment_transaction____last_update
+msgid "Last Modified on"
+msgstr "መጨረሻ የተሻሻለው በ"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_acquirer__write_uid
+#: model:ir.model.fields,field_description:payment.field_payment_acquirer_onboarding_wizard__write_uid
+#: model:ir.model.fields,field_description:payment.field_payment_icon__write_uid
+#: model:ir.model.fields,field_description:payment.field_payment_link_wizard__write_uid
+#: model:ir.model.fields,field_description:payment.field_payment_token__write_uid
+#: model:ir.model.fields,field_description:payment.field_payment_transaction__write_uid
+msgid "Last Updated by"
+msgstr "መጨረሻ የዘመነው በ"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_acquirer__write_date
+#: model:ir.model.fields,field_description:payment.field_payment_acquirer_onboarding_wizard__write_date
+#: model:ir.model.fields,field_description:payment.field_payment_icon__write_date
+#: model:ir.model.fields,field_description:payment.field_payment_link_wizard__write_date
+#: model:ir.model.fields,field_description:payment.field_payment_token__write_date
+#: model:ir.model.fields,field_description:payment.field_payment_transaction__write_date
+msgid "Last Updated on"
+msgstr "መጨረሻ የዘመነው በ"
+
+#. module: payment
+#: model:ir.model.fields.selection,name:payment.selection__payment_acquirer__save_token__ask
+msgid "Let the customer decide"
+msgstr "ደንበኛው እንዲወስን ያድርጉ"
+
+#. module: payment
+#: model:ir.model.fields,help:payment.field_payment_icon__acquirer_ids
+msgid "List of Acquirers supporting this payment icon."
+msgstr "ይህን የክፍያ አዶ የሚደግፉ የገዢዎች ዝርዝር።"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.pay_methods
+msgid "Manage Payment Methods"
+msgstr "የመክፈያ ዘዴዎችን ያስተዳድሩ"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.pay_meth_link
+msgid "Manage payment methods"
+msgstr "የመክፈያ ዘዴዎችን ያስተዳድሩ"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.payment_tokens_list
+msgid "Manage your payment methods"
+msgstr "የመክፈያ ዘዴዎችዎን ያስተዳድሩ"
+
+#. module: payment
+#: model:ir.model.fields.selection,name:payment.selection__res_company__payment_onboarding_payment_method__manual
+msgid "Manual"
+msgstr "መመሪያ"
+
+#. module: payment
+#: model:ir.model.fields,help:payment.field_payment_acquirer__inbound_payment_method_ids
+msgid ""
+"Manual: Get paid by cash, check or any other method outside of Odoo."
+"Electronic: Get paid automatically through a payment acquirer by requesting a transaction on a card saved by the customer when buying or subscribing online (payment token)."
+"Batch Deposit: Encase several customer checks at once by generating a batch deposit to submit to your bank. When encoding the bank statement in Odoo,you are suggested to reconcile the transaction with the batch deposit. Enable this option from the settings."
+msgstr ""
+"ማንዋል፡ በጥሬ ገንዘብ፣ በቼክ ወይም ከኦዱ ውጭ በማንኛውም ዘዴ ይክፈሉ።"
+"ኤሌክትሮኒክ፡ በመስመር ላይ ሲገዙ ወይም ሲመዘገቡ በደንበኛው በተቀመጡት ካርድ ላይ ግብይት በመጠየቅ በክፍያ ገዢ በኩል ይክፈሉ (የክፍያ ቶከን)።"
+"Batch Deposit: ለባንክዎ ለማስገባት የቢች ተቀማጭ በማዘጋጀት ብዙ የደንበኛ ቼኮችን በአንድ ጊዜ ያቅርቡ። የባንክ ሂሳቡን በኦዱ ውስጥ ሲቀይሩ ግብይቱን ከተቀማጭ ገንዘብ ጋር ለማስታረቅ ይጠቁማሉ። ይህን አማራጭ ከቅንብሮች አንቃ።"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_acquirer_onboarding_wizard__paypal_seller_account
+msgid "Merchant Account ID"
+msgstr "የነጋዴ መለያ መታወቂያ"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_transaction__state_message
+#: model_terms:ir.ui.view,arch_db:payment.transaction_form
+msgid "Message"
+msgstr "መልእክት"
+
+#. module: payment
+#: model:ir.model.fields,help:payment.field_payment_acquirer__auth_msg
+msgid "Message displayed if payment is authorized."
+msgstr "ክፍያ ከተፈቀደ መልእክት ይታያል።"
+
+#. module: payment
+#: model:ir.model.fields,help:payment.field_payment_acquirer__pre_msg
+msgid "Message displayed to explain and help the payment process."
+msgstr "የክፍያውን ሂደት ለማብራራት እና ለማገዝ መልእክት ታይቷል።"
+
+#. module: payment
+#: model:ir.model.fields,help:payment.field_payment_acquirer__cancel_msg
+msgid "Message displayed, if order is cancel during the payment process."
+msgstr "በክፍያ ሂደቱ ውስጥ ትዕዛዙ ከተሰረዘ መልእክት ይታያል።"
+
+#. module: payment
+#: model:ir.model.fields,help:payment.field_payment_acquirer__done_msg
+msgid "Message displayed, if order is done successfully after having done the payment process."
+msgstr "የክፍያ ሂደቱን ከጨረሱ በኋላ ትዕዛዙ በተሳካ ሁኔታ ከተከናወነ መልእክት ይታያል።"
+
+#. module: payment
+#: model:ir.model.fields,help:payment.field_payment_acquirer__pending_msg
+msgid "Message displayed, if order is in pending state after having done the payment process."
+msgstr "የክፍያ ሂደቱን ከጨረሱ በኋላ ትዕዛዙ በመጠባበቅ ላይ ከሆነ መልእክት ይታያል።"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.acquirer_form
+msgid "Messages"
+msgstr "መልዕክቶች"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_acquirer_onboarding_wizard__manual_name
+msgid "Method"
+msgstr "ዘዴ"
+
+#. module: payment
+#: code:addons/payment/models/payment_acquirer.py:0
+msgid "Missing partner reference when trying to create a new payment token"
+msgstr "አዲስ የክፍያ ማስመሰያ ለመፍጠር ሲሞክሩ የአጋር ማጣቀሻ ይጎድላል"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_acquirer__name
+#: model:ir.model.fields,field_description:payment.field_payment_icon__name
+#: model:ir.model.fields,field_description:payment.field_payment_token__name
+#: model_terms:ir.ui.view,arch_db:payment.acquirer_form
+#: model_terms:ir.ui.view,arch_db:payment.payment_icon_form_view
+#: model_terms:ir.ui.view,arch_db:payment.transaction_form
+msgid "Name"
+msgstr "ስም"
+
+#. module: payment
+#: model:ir.model.fields,help:payment.field_payment_token__name
+msgid "Name of the payment token"
+msgstr "የክፍያ ማስመሰያ ስም"
+
+#. module: payment
+#: model:ir.model.fields.selection,name:payment.selection__payment_acquirer__save_token__none
+msgid "Never"
+msgstr "በጭራሽ"
+
+#. module: payment
+#: code:addons/payment/wizards/payment_acquirer_onboarding_wizard.py:0
+msgid "No manual payment method could be found for this company. Please create one from the Payment Acquirer menu."
+msgstr "ለዚህ ኩባንያ ምንም አይነት በእጅ የመክፈያ ዘዴ ሊገኝ አልቻለም። እባኮትን ከ Payment Accurer ምናሌ አንድ ይፍጠሩ።"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.pay
+msgid "No payment acquirer found."
+msgstr "ምንም ክፍያ አግኚ አልተገኘም።"
+
+#. module: payment
+#. openerp-web
+#: code:addons/payment/static/src/xml/payment_processing.xml:0
+msgid "No payment has been processed."
+msgstr "ምንም ክፍያ አልተሰራም።"
+
+#. module: payment
+#. openerp-web
+#: code:addons/payment/static/src/js/payment_form.js:0
+#: code:addons/payment/static/src/js/payment_form.js:0
+msgid "No payment method selected"
+msgstr "ምንም የመክፈያ ዘዴ አልተመረጠም።"
+
+#. module: payment
+#: model:ir.model.fields.selection,name:payment.selection__res_company__payment_acquirer_onboarding_state__not_done
+msgid "Not done"
+msgstr "አላለቀም"
+
+#. module: payment
+#: model:ir.model.fields,help:payment.field_account_payment__payment_token_id
+msgid "Note that tokens from acquirers set to only authorize transactions (instead of capturing the amount) are not available."
+msgstr "ግብይቶችን ለመፍቀድ ብቻ የተቀናበሩ የገዢዎች ቶከኖች (መጠኑን ከመያዝ ይልቅ) እንደማይገኙ ልብ ይበሉ።"
+
+#. module: payment
+#: model:ir.model.fields,help:payment.field_payment_acquirer__payment_flow
+msgid "Note: Subscriptions does not take this field in account, it uses server to server by default."
+msgstr "ማስታወሻ፡ የደንበኝነት ምዝገባዎች ይህንን መስክ ከግምት ውስጥ አያስገባም, በነባሪነት ከአገልጋይ ወደ አገልጋይ ይጠቀማል."
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_acquirer__module_to_buy
+msgid "Odoo Enterprise Module"
+msgstr "ኦዱ ኢንተርፕራይዝ ሞዱል"
+
+#. module: payment
+#. openerp-web
+#: code:addons/payment/static/src/js/payment_form.js:0
+msgid "Ok"
+msgstr "እሺ"
+
+#. module: payment
+#: code:addons/payment/wizards/payment_acquirer_onboarding_wizard.py:0
+msgid "Only administrators can access this data."
+msgstr "ይህን ውሂብ መድረስ የሚችሉት አስተዳዳሪዎች ብቻ ናቸው።"
+
+#. module: payment
+#: code:addons/payment/models/payment_acquirer.py:0
+msgid "Only transactions having the capture status can be captured."
+msgstr "የተያዘው ሁኔታ ያላቸው ግብይቶች ብቻ ናቸው ሊያዙ የሚችሉት።"
+
+#. module: payment
+#: code:addons/payment/models/payment_acquirer.py:0
+msgid "Only transactions having the capture status can be voided."
+msgstr "የመያዙ ሁኔታ ያላቸው ግብይቶች ብቻ ውድቅ ሊሆኑ ይችላሉ።"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.confirm
+#: model_terms:ir.ui.view,arch_db:payment.payment_confirmation_status
+msgid "Or scan me with your banking app."
+msgstr "ወይም በባንክ መተግበሪያዎ ይቃኙኝ።"
+
+#. module: payment
+#: model:ir.model.fields.selection,name:payment.selection__res_company__payment_onboarding_payment_method__other
+msgid "Other"
+msgstr "ሌላ"
+
+#. module: payment
+#: model:ir.model.fields.selection,name:payment.selection__payment_acquirer_onboarding_wizard__payment_method__other
+msgid "Other payment acquirer"
+msgstr "ሌላ የክፍያ አቅራቢ"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_acquirer_onboarding_wizard__paypal_pdt_token
+msgid "PDT Identity Token"
+msgstr "PDT ማንነት ማስመሰያ"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_link_wizard__partner_id
+#: model:ir.model.fields,field_description:payment.field_payment_token__partner_id
+msgid "Partner"
+msgstr "አጋር"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_transaction__partner_name
+msgid "Partner Name"
+msgstr "የአጋር ስም"
+
+#. module: payment
+#: model:ir.model.fields.selection,name:payment.selection__payment_acquirer_onboarding_wizard__payment_method__paypal
+#: model:ir.model.fields.selection,name:payment.selection__res_company__payment_onboarding_payment_method__paypal
+#: model:payment.acquirer,name:payment.payment_acquirer_paypal
+msgid "PayPal"
+msgstr "PayPal"
+
+#. module: payment
+#: model:payment.acquirer,name:payment.payment_acquirer_payulatam
+msgid "PayU Latam"
+msgstr "PayU Latam"
+
+#. module: payment
+#: model:payment.acquirer,name:payment.payment_acquirer_payu
+msgid "PayUmoney"
+msgstr "PayUmoney"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_transaction__payment_id
+#: model_terms:ir.ui.view,arch_db:payment.confirm
+#: model_terms:ir.ui.view,arch_db:payment.pay
+msgid "Payment"
+msgstr "ክፍያ"
+
+#. module: payment
+#: model:ir.model,name:payment.model_payment_acquirer
+#: model_terms:ir.ui.view,arch_db:payment.acquirer_form
+msgid "Payment Acquirer"
+msgstr "ክፍያ አድራጊ"
+
+#. module: payment
+#: model:ir.actions.act_window,name:payment.action_payment_acquirer
+#: model:ir.ui.menu,name:payment.payment_acquirer_menu
+#: model_terms:ir.ui.view,arch_db:payment.acquirer_list
+msgid "Payment Acquirers"
+msgstr "ክፍያ አግቢዎች"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_acquirer__payment_flow
+msgid "Payment Flow"
+msgstr "የክፍያ ፍሰት"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.acquirer_form
+msgid "Payment Followup"
+msgstr "የክፍያ ክትትል"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.acquirer_form
+msgid "Payment Form"
+msgstr "የክፍያ ቅጽ"
+
+#. module: payment
+#: model:ir.model,name:payment.model_payment_icon
+#: model_terms:ir.ui.view,arch_db:payment.payment_icon_form_view
+msgid "Payment Icon"
+msgstr "የክፍያ አዶ"
+
+#. module: payment
+#: model:ir.actions.act_window,name:payment.action_payment_icon
+#: model:ir.ui.menu,name:payment.payment_icon_menu
+msgid "Payment Icons"
+msgstr "የክፍያ አዶዎች"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_acquirer_onboarding_wizard__manual_post_msg
+msgid "Payment Instructions"
+msgstr "የክፍያ መመሪያዎች"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_acquirer__journal_id
+msgid "Payment Journal"
+msgstr "የክፍያ ጆርናል"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_link_wizard__link
+msgid "Payment Link"
+msgstr "የክፍያ ማገናኛ"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_acquirer_onboarding_wizard__payment_method
+#: model_terms:ir.ui.view,arch_db:payment.onboarding_payment_acquirer_step
+msgid "Payment Method"
+msgstr "የመክፈያ ዘዴ"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.pay_methods
+msgid "Payment Methods"
+msgstr "የመክፈያ ዘዴዎች"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_link_wizard__description
+msgid "Payment Ref"
+msgstr "ክፍያ ማጣቀሻ"
+
+#. module: payment
+#: model:ir.model,name:payment.model_payment_token
+#: model:ir.model.fields,field_description:payment.field_payment_transaction__payment_token_id
+msgid "Payment Token"
+msgstr "የክፍያ ማስመሰያ"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_res_partner__payment_token_ids
+#: model:ir.model.fields,field_description:payment.field_res_users__payment_token_ids
+#: model_terms:ir.ui.view,arch_db:payment.payment_token_form_view
+#: model_terms:ir.ui.view,arch_db:payment.payment_token_tree_view
+#: model_terms:ir.ui.view,arch_db:payment.payment_token_view_search
+msgid "Payment Tokens"
+msgstr "የክፍያ ማስመሰያዎች"
+
+#. module: payment
+#: model:ir.model,name:payment.model_payment_transaction
+#: model:ir.model.fields,field_description:payment.field_account_payment__payment_transaction_id
+msgid "Payment Transaction"
+msgstr "የክፍያ ግብይት"
+
+#. module: payment
+#: model:ir.actions.act_window,name:payment.action_payment_transaction
+#: model:ir.actions.act_window,name:payment.action_payment_tx_ids
+#: model:ir.model.fields,field_description:payment.field_payment_token__payment_ids
+#: model:ir.ui.menu,name:payment.payment_transaction_menu
+#: model_terms:ir.ui.view,arch_db:payment.transaction_form
+#: model_terms:ir.ui.view,arch_db:payment.transaction_list
+msgid "Payment Transactions"
+msgstr "የክፍያ ግብይቶች"
+
+#. module: payment
+#: model:ir.model,name:payment.model_payment_acquirer_onboarding_wizard
+msgid "Payment acquire onboarding wizard"
+msgstr "ክፍያ የመሳፈሪያ አዋቂ ያግኙ"
+
+#. module: payment
+#: model:ir.model.fields.selection,name:payment.selection__payment_acquirer__payment_flow__s2s
+msgid "Payment from Odoo"
+msgstr "ክፍያ ከኦዱ"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.onboarding_payment_acquirer_step
+msgid "Payment method set!"
+msgstr "የመክፈያ ዘዴ ተቀናብሯል!"
+
+#. module: payment
+#: model:ir.model,name:payment.model_account_payment
+#: model_terms:ir.ui.view,arch_db:payment.payment_token_form_view
+msgid "Payments"
+msgstr "ክፍያዎች"
+
+#. module: payment
+#. openerp-web
+#: code:addons/payment/static/src/xml/payment_processing.xml:0
+msgid "Payments failed"
+msgstr "ክፍያዎች አልተሳኩም"
+
+#. module: payment
+#. openerp-web
+#: code:addons/payment/static/src/xml/payment_processing.xml:0
+msgid "Payments received"
+msgstr "ክፍያዎች ተቀብለዋል።"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_acquirer_onboarding_wizard__paypal_user_type
+msgid "Paypal User Type"
+msgstr "የ Paypal የተጠቃሚ ዓይነት"
+
+#. module: payment
+#: model:ir.model.fields.selection,name:payment.selection__payment_transaction__state__pending
+msgid "Pending"
+msgstr "በመጠባበቅ ላይ"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_acquirer__pending_msg
+msgid "Pending Message"
+msgstr "በመጠባበቅ ላይ ያለ መልእክት"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_transaction__partner_phone
+msgid "Phone"
+msgstr "ስልክ"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.pay
+msgid "Please configure a payment acquirer."
+msgstr "እባክዎ የክፍያ ገዢን ያዋቅሩ።"
+
+#. module: payment
+#: model_terms:payment.acquirer,pending_msg:payment.payment_acquirer_transfer
+msgid "Please make a payment to:"
+msgstr "እባክዎ ክፍያ ለሚከተሉት ይክፈሉ፡"
+
+#. module: payment
+#. openerp-web
+#: code:addons/payment/static/src/js/payment_form.js:0
+msgid "Please select a payment method."
+msgstr "እባክዎ የመክፈያ ዘዴ ይምረጡ።"
+
+#. module: payment
+#. openerp-web
+#: code:addons/payment/static/src/js/payment_form.js:0
+msgid "Please select the option to add a new payment method."
+msgstr "እባክዎ አዲስ የመክፈያ ዘዴ ለመጨመር አማራጩን ይምረጡ።"
+
+#. module: payment
+#: code:addons/payment/wizards/payment_link_wizard.py:0
+msgid "Please set an amount smaller than %s."
+msgstr "እባክዎ ከ%s ያነሰ መጠን ያዘጋጁ።"
+
+#. module: payment
+#. openerp-web
+#: code:addons/payment/static/src/xml/payment_processing.xml:0
+msgid "Please wait ..."
+msgstr "ቆይ በናተህ ..."
+
+#. module: payment
+#: model:ir.actions.server,name:payment.cron_post_process_payment_tx_ir_actions_server
+#: model:ir.cron,cron_name:payment.cron_post_process_payment_tx
+#: model:ir.cron,name:payment.cron_post_process_payment_tx
+msgid "Post process payment transactions"
+msgstr "የክፍያ ሂደቶችን ይለጥፉ"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.confirm
+msgid "Processed by"
+msgstr "የተቀናበረው በ"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_acquirer__provider
+#: model:ir.model.fields,field_description:payment.field_payment_transaction__provider
+#: model_terms:ir.ui.view,arch_db:payment.acquirer_search
+msgid "Provider"
+msgstr "አቅራቢ"
+
+#. module: payment
+#. openerp-web
+#: code:addons/payment/static/src/xml/payment_processing.xml:0
+msgid "Reason:"
+msgstr "ምክንያት፡-"
+
+#. module: payment
+#: model:ir.model.fields.selection,name:payment.selection__payment_acquirer__payment_flow__form
+msgid "Redirection to the acquirer website"
+msgstr "ወደ ገዢው ድር ጣቢያ ማዞር"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_transaction__reference
+#: model_terms:ir.ui.view,arch_db:payment.confirm
+msgid "Reference"
+msgstr "ማጣቀሻ"
+
+#. module: payment
+#: model:ir.model.constraint,message:payment.constraint_payment_transaction_reference_uniq
+msgid "Reference must be unique!"
+msgstr "ማጣቀሻ ልዩ መሆን አለበት!"
+
+#. module: payment
+#: model:ir.model.fields,help:payment.field_payment_transaction__acquirer_reference
+msgid "Reference of the TX as stored in the acquirer database"
+msgstr "የ TX ማጣቀሻ በ acquirer ዳታቤዝ ውስጥ እንደተከማቸ"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_link_wizard__res_id
+msgid "Related Document ID"
+msgstr "ተዛማጅ ሰነድ መታወቂያ"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_link_wizard__res_model
+msgid "Related Document Model"
+msgstr "ተዛማጅ ሰነድ ሞዴል"
+
+#. module: payment
+#: code:addons/payment/models/payment_acquirer.py:0
+msgid "Required fields not filled: %s"
+msgstr "አስፈላጊ መስኮች አልተሞሉም: %s"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_transaction__return_url
+msgid "Return URL after payment"
+msgstr "ከተከፈለ በኋላ ዩአርኤልን ይመልሱ"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_acquirer__registration_view_template_id
+msgid "S2S Form Template"
+msgstr "S2S ቅጽ አብነት"
+
+#. module: payment
+#: model:payment.acquirer,name:payment.payment_acquirer_sepa_direct_debit
+msgid "SEPA Direct Debit"
+msgstr "SEPA ቀጥታ ዴቢት"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_acquirer__save_token
+msgid "Save Cards"
+msgstr "ካርዶችን ያስቀምጡ"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.payment_tokens_list
+msgid "Save my payment data"
+msgstr "የክፍያ ውሂቤን አስቀምጥ"
+
+#. module: payment
+#: model:ir.actions.act_window,name:payment.payment_token_action
+#: model:ir.ui.menu,name:payment.payment_token_menu
+msgid "Saved Payment Data"
+msgstr "የተቀመጠ የክፍያ ውሂብ"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_account_payment__payment_token_id
+msgid "Saved payment token"
+msgstr "የክፍያ ማስመሰያ ተቀምጧል"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_acquirer__token_implemented
+msgid "Saving Card Data supported"
+msgstr "የካርድ ውሂብን ማስቀመጥ ይደገፋል"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.acquirer_form
+msgid "Select countries. Leave empty to use everywhere."
+msgstr "አገሮችን ይምረጡ። በሁሉም ቦታ ለመጠቀም ባዶ ይተዉት።"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_res_company__payment_onboarding_payment_method
+msgid "Selected onboarding payment method"
+msgstr "የመሳፈሪያ መክፈያ ዘዴ ተመርጧል"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_acquirer__sequence
+msgid "Sequence"
+msgstr "ቅደም ተከተል"
+
+#. module: payment
+#. openerp-web
+#: code:addons/payment/static/src/js/payment_form.js:0
+#: code:addons/payment/static/src/js/payment_form.js:0
+#: code:addons/payment/static/src/js/payment_form.js:0
+#: code:addons/payment/static/src/js/payment_form.js:0
+#: code:addons/payment/static/src/js/payment_form.js:0
+#: code:addons/payment/static/src/js/payment_form.js:0
+#: code:addons/payment/static/src/js/payment_form.js:0
+msgid "Server Error"
+msgstr "የአገልጋይ ስህተት"
+
+#. module: payment
+#: model:ir.model.fields.selection,name:payment.selection__payment_transaction__type__server2server
+msgid "Server To Server"
+msgstr "አገልጋይ ወደ አገልጋይ"
+
+#. module: payment
+#. openerp-web
+#: code:addons/payment/static/src/js/payment_form.js:0
+msgid "Server error"
+msgstr "የአገልጋይ ስህተት"
+
+#. module: payment
+#. openerp-web
+#: code:addons/payment/static/src/xml/payment_processing.xml:0
+msgid "Server error:"
+msgstr "የአገልጋይ ስህተት፡-"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.onboarding_payment_acquirer_step
+msgid "Set payments"
+msgstr "ክፍያዎችን ያዘጋጁ"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_token__short_name
+msgid "Short name"
+msgstr "አጭር ስም"
+
+#. module: payment
+#: model:payment.acquirer,name:payment.payment_acquirer_sips
+msgid "Sips"
+msgstr "ሲፕስ"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_acquirer__state
+#: model_terms:ir.ui.view,arch_db:payment.acquirer_search
+msgid "State"
+msgstr "ግዛት"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_res_company__payment_acquirer_onboarding_state
+msgid "State of the onboarding payment acquirer step"
+msgstr "የመሳፈሪያ ክፍያ ማግኛ ደረጃ ሁኔታ"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_transaction__state
+msgid "Status"
+msgstr "ሁኔታ"
+
+#. module: payment
+#: model:ir.model.fields.selection,name:payment.selection__res_company__payment_onboarding_payment_method__stripe
+#: model:payment.acquirer,name:payment.payment_acquirer_stripe
+msgid "Stripe"
+msgstr "ጭረት"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_acquirer_onboarding_wizard__stripe_publishable_key
+msgid "Stripe Publishable Key"
+msgstr "Stripe ሊታተም የሚችል ቁልፍ"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_acquirer_onboarding_wizard__stripe_secret_key
+msgid "Stripe Secret Key"
+msgstr "የጭረት ምስጢር ቁልፍ"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_acquirer__payment_icon_ids
+msgid "Supported Payment Icons"
+msgstr "የሚደገፉ የክፍያ አዶዎች"
+
+#. module: payment
+#: model:ir.model.fields,help:payment.field_payment_acquirer__registration_view_template_id
+msgid "Template for method registration"
+msgstr "ዘዴ ለመመዝገብ አብነት"
+
+#. module: payment
+#: model:ir.model.fields.selection,name:payment.selection__payment_acquirer__state__test
+#: model_terms:ir.ui.view,arch_db:payment.acquirer_form
+#: model_terms:ir.ui.view,arch_db:payment.payment_tokens_list
+msgid "Test Mode"
+msgstr "የሙከራ ሁነታ"
+
+#. module: payment
+#: code:addons/payment/models/payment_acquirer.py:0
+msgid "The %s payment acquirers are not allowed to manual capture mode!"
+msgstr "የ%s ክፍያ ገዢዎች በእጅ መቅረጽ ሁነታ አይፈቀድላቸውም!"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.confirm
+#: model_terms:ir.ui.view,arch_db:payment.payment_confirmation_status
+msgid "The SEPA QR Code informations are not set correctly."
+msgstr "የ SEPA QR ኮድ መረጃዎች በትክክል አልተዘጋጁም።"
+
+#. module: payment
+#: code:addons/payment/models/payment_acquirer.py:0
+msgid "The customer has selected %s to pay this document."
+msgstr "ደንበኛው ይህንን ሰነድ ለመክፈል %s መርጧል።"
+
+#. module: payment
+#: code:addons/payment/models/payment_acquirer.py:0
+msgid "The transaction %s with %s for %s has been authorized. Waiting for capture..."
+msgstr "ከ%s ለ %s ያለው የ%s ግብይት ተፈቅዶለታል። ለመያዝ በመጠበቅ ላይ..."
+
+#. module: payment
+#: code:addons/payment/models/payment_acquirer.py:0
+msgid "The transaction %s with %s for %s has been cancelled with the following message: %s"
+msgstr "ከ%s ለ %s ያለው የ%s ግብይት በሚከተለው መልእክት ተሰርዟል። %s"
+
+#. module: payment
+#: code:addons/payment/models/payment_acquirer.py:0
+msgid "The transaction %s with %s for %s has been cancelled."
+msgstr "ከ%s ለ %s ያለው የ%s ግብይት ተሰርዟል።"
+
+#. module: payment
+#: code:addons/payment/models/payment_acquirer.py:0
+msgid "The transaction %s with %s for %s has been confirmed. The related payment is posted: %s"
+msgstr "ከ%s ለ %s ያለው የ%s ግብይት ተረጋግጧል። ተዛማጅ ክፍያ ተለጠፈ፡%s"
+
+#. module: payment
+#: code:addons/payment/models/payment_acquirer.py:0
+msgid "The transaction %s with %s for %s has return failed with the following error message: %s"
+msgstr "የ%s ከ%s ለ %s መመለሻ የ%s ግብይት በሚከተለው የስህተት መልእክት አልተሳካም፡ %s"
+
+#. module: payment
+#: code:addons/payment/models/payment_acquirer.py:0
+msgid "The transaction %s with %s for %s is pending."
+msgstr "ከ%s ለ%s ያለው የ%s ግብይት በመጠባበቅ ላይ ነው።"
+
+#. module: payment
+#: code:addons/payment/models/account_invoice.py:0
+msgid "The transaction was aborted because you are not the customer of this invoice. Log in as %s to be able to use this payment method."
+msgstr "እርስዎ የዚህ ደረሰኝ ደንበኛ ስላልሆኑ ግብይቱ ተቋርጧል። ይህን የመክፈያ ዘዴ ለመጠቀም እንደ %s ይግቡ።"
+
+#. module: payment
+#: code:addons/payment/wizards/payment_link_wizard.py:0
+msgid "The value of the payment amount must be positive."
+msgstr "የክፍያው መጠን ዋጋ አዎንታዊ መሆን አለበት."
+
+#. module: payment
+#: code:addons/payment/models/payment_acquirer.py:0
+msgid "This Transaction was automatically processed & refunded in order to validate a new credit card."
+msgstr "አዲስ ክሬዲት ካርድን ለማረጋገጥ ይህ ግብይት በራስ ሰር ተዘጋጅቶ ተመላሽ ተደርጓል።"
+
+#. module: payment
+#. openerp-web
+#: code:addons/payment/static/src/js/payment_form.js:0
+msgid "This card is currently linked to the following records:"
+msgstr "ይህ ካርድ በአሁኑ ጊዜ ከሚከተሉት መዝገቦች ጋር ተያይዟል፡-"
+
+#. module: payment
+#: model:ir.model.fields,help:payment.field_payment_icon__image
+msgid "This field holds the image used for this payment icon, limited to 1024x1024px"
+msgstr "ይህ መስክ ለዚህ የክፍያ አዶ ጥቅም ላይ የዋለውን ምስል በ1024x1024 ፒክስል ይይዛል"
+
+#. module: payment
+#: model:ir.model.fields,help:payment.field_payment_acquirer__save_token
+msgid "This option allows customers to save their credit card as a payment token and to reuse it for a later purchase. If you manage subscriptions (recurring invoicing), you need it to automatically charge the customer when you issue an invoice."
+msgstr "ይህ አማራጭ ደንበኞች ክሬዲት ካርዳቸውን እንደ የክፍያ ማስመሰያ እንዲያስቀምጡ እና በኋላ ላይ ለግዢ እንደገና እንዲጠቀሙበት ያስችላቸዋል። የደንበኝነት ምዝገባዎችን (ተደጋጋሚ ደረሰኞችን) የሚያስተዳድሩ ከሆነ, የክፍያ መጠየቂያ ደረሰኝ ሲሰጡ ደንበኛው በራስ-ሰር እንዲከፍል ያስፈልግዎታል."
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.payment_link_wizard_view_form
+msgid "This partner has no email, which may cause issues with some payment acquirers. Setting an email for this partner is advised."
+msgstr "ይህ አጋር ምንም ኢሜይል የለውም፣ ይህም በአንዳንድ የክፍያ ተቀባዮች ላይ ችግር ሊፈጥር ይችላል። ለዚህ አጋር ኢሜይል ማቀናበር ይመከራል።"
+
+#. module: payment
+#: model:ir.model.fields,help:payment.field_payment_acquirer__country_ids
+msgid "This payment gateway is available for selected countries. If none is selected it is available for all countries."
+msgstr "ይህ የክፍያ መተላለፊያ ለተመረጡ አገሮች ይገኛል። ምንም ካልተመረጠ ለሁሉም አገሮች ይገኛል።"
+
+#. module: payment
+#: model:ir.model.fields,help:payment.field_payment_acquirer__view_template_id
+msgid ""
+"This template renders the acquirer button with all necessary values."
+"It is rendered with qWeb with the following evaluation context:"
+"tx_url: transaction URL to post the form"
+"acquirer: payment.acquirer browse record"
+"user: current user browse record"
+"reference: the transaction reference number"
+"currency: the transaction currency browse record"
+"amount: the transaction amount, a float"
+"partner: the buyer partner browse record, not necessarily set"
+"partner_values: specific values about the buyer, for example coming from a shipping form"
+"tx_values: transaction values"
+"context: the current context dictionary"
+msgstr ""
+"\"ይህ አብነት የገዢውን ቁልፍ ከሁሉም አስፈላጊ እሴቶች ጋር ያቀርባል።
+"
+"ከሚከተለው የግምገማ አውድ ጋር በqWeb ነው የተሰራው፡
+"
+"tx_url፡ ቅጹን ለመለጠፍ የግብይት URL
+"
+"acquirer: pay.acquirer የአሰሳ መዝገብ
+"
+"ተጠቃሚ: የአሁኑ የተጠቃሚ አሰሳ መዝገብ
+"
+"ማጣቀሻ: የግብይቱን ማመሳከሪያ ቁጥር
+"
+"ምንዛሬ: የግብይት ምንዛሬ አሰሳ መዝገብ
+"
+"መጠን: የግብይቱ መጠን, ተንሳፋፊ
+"
+"አጋር፡ የገዢው አጋር የአሰሳ መዝገብ እንጂ የግድ አልተዘጋጀም።
+"
+"partner_values፡ ስለ ገዢው የተወሰኑ እሴቶች፣ ለምሳሌ ከማጓጓዣ ቅጽ የሚመጡ
+"
+"tx_values፡ የግብይት ዋጋዎች
+"
+"አውድ፡ የአሁኑ አውድ መዝገበ ቃላት\""
+
+#. module: payment
+#. openerp-web
+#: code:addons/payment/static/src/xml/payment_processing.xml:0
+msgid "This transaction has been cancelled."
+msgstr "ይህ ግብይት ተሰርዟል።"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_account_move__transaction_ids
+msgid "Transactions"
+msgstr "ግብይቶች"
+
+#. module: payment
+#: model:ir.model.fields,help:payment.field_payment_acquirer__check_validity
+msgid ""
+"Trigger a transaction of 1 currency unit and its refund to check the validity of new credit cards entered in the customer portal."
+"        Without this check, the validity will be verified at the very first transaction."
+msgstr ""
+" በደንበኛው ፖርታል ውስጥ የገቡትን አዲስ ክሬዲት ካርዶችን ትክክለኛነት ለማረጋገጥ የ1 ምንዛሪ አሃድ ግብይት እና ተመላሽ ገንዘቡን ያስነሱ።
+"
+"         ያለዚህ ቼክ ትክክለኛነቱ በመጀመሪያው ግብይት ይረጋገጣል።\""
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_transaction__type
+msgid "Type"
+msgstr "ዓይነት"
+
+#. module: payment
+#. openerp-web
+#: code:addons/payment/static/src/xml/payment_processing.xml:0
+msgid "Unable to contact the Odoo server."
+msgstr "የኦዱ አገልጋይን ማግኘት አልተቻለም።"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.acquirer_form
+#: model_terms:ir.ui.view,arch_db:payment.acquirer_kanban
+msgid "Upgrade"
+msgstr "አሻሽል።"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_acquirer__qr_code
+msgid "Use SEPA QR Code"
+msgstr "SEPA QR ኮድ ይጠቀሙ"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_transaction__date
+msgid "Validation Date"
+msgstr "የማረጋገጫ ቀን"
+
+#. module: payment
+#: model:ir.model.fields.selection,name:payment.selection__payment_transaction__type__validation
+msgid "Validation of the bank card"
+msgstr "የባንክ ካርዱን ማረጋገጥ"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_acquirer__fees_dom_var
+msgid "Variable domestic fees (in percents)"
+msgstr "ተለዋዋጭ የቤት ውስጥ ክፍያዎች (በመቶኛ)"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_acquirer__fees_int_var
+msgid "Variable international fees (in percents)"
+msgstr "ተለዋዋጭ ዓለም አቀፍ ክፍያዎች (በመቶዎች)"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_token__verified
+msgid "Verified"
+msgstr "የተረጋገጠ"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_acquirer__check_validity
+msgid "Verify Card Validity"
+msgstr "የካርድ ትክክለኛነትን ያረጋግጡ"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.account_invoice_view_form_inherit_payment
+#: model_terms:ir.ui.view,arch_db:payment.transaction_form
+msgid "Void Transaction"
+msgstr "ባዶ ግብይት"
+
+#. module: payment
+#. openerp-web
+#: code:addons/payment/static/src/xml/payment_processing.xml:0
+msgid "Waiting for payment"
+msgstr "ክፍያ በመጠበቅ ላይ"
+
+#. module: payment
+#: code:addons/payment/models/payment_acquirer.py:0
+msgid "Waiting for payment confirmation..."
+msgstr "የክፍያ ማረጋገጫን በመጠበቅ ላይ..."
+
+#. module: payment
+#. openerp-web
+#: code:addons/payment/static/src/js/payment_form.js:0
+msgid "Warning!"
+msgstr "ማስጠንቀቂያ!"
+
+#. module: payment
+#. openerp-web
+#: code:addons/payment/static/src/js/payment_form.js:0
+#: code:addons/payment/static/src/js/payment_form.js:0
+msgid "We are not able to add your payment method at the moment."
+msgstr "በአሁኑ ጊዜ የመክፈያ ዘዴዎን ማከል አልቻልንም።"
+
+#. module: payment
+#. openerp-web
+#: code:addons/payment/static/src/js/payment_form.js:0
+#: code:addons/payment/static/src/js/payment_form.js:0
+msgid "We are not able to delete your payment method at the moment."
+msgstr "በአሁኑ ጊዜ የመክፈያ ዘዴዎን መሰረዝ አልቻልንም።"
+
+#. module: payment
+#. openerp-web
+#: code:addons/payment/static/src/xml/payment_processing.xml:0
+msgid "We are not able to find your payment, but don\'t worry."
+msgstr "ክፍያዎን ማግኘት አልቻልንም፣ ነገር ግን አይጨነቁ።"
+
+#. module: payment
+#. openerp-web
+#: code:addons/payment/static/src/js/payment_form.js:0
+#: code:addons/payment/static/src/js/payment_form.js:0
+msgid "We are not able to redirect you to the payment form."
+msgstr "ወደ የክፍያ ቅጹ ልንዘዋወር አልቻልንም።"
+
+#. module: payment
+#. openerp-web
+#: code:addons/payment/static/src/js/payment_processing.js:0
+msgid "We are processing your payment, please wait ..."
+msgstr "ክፍያዎን እየሰራን ነው፣ እባክዎ ይጠብቁ..."
+
+#. module: payment
+#. openerp-web
+#: code:addons/payment/static/src/xml/payment_processing.xml:0
+msgid "We are waiting for the payment acquirer to confirm the payment."
+msgstr "ክፍያውን ለማረጋገጥ የክፍያ ገዢውን እየጠበቅን ነው."
+
+#. module: payment
+#. openerp-web
+#: code:addons/payment/static/src/js/payment_form.js:0
+msgid "We\'re unable to process your payment."
+msgstr "ክፍያዎን ማካሄድ አልቻልንም።"
+
+#. module: payment
+#: model:payment.acquirer,name:payment.payment_acquirer_transfer
+msgid "Wire Transfer"
+msgstr "የሃዋላ ገንዘብ መላኪያ"
+
+#. module: payment
+#. openerp-web
+#: code:addons/payment/static/src/xml/payment_processing.xml:0
+msgid "You can click here to be redirected to the confirmation page."
+msgstr "ወደ የማረጋገጫ ገጽ ለመምራት እዚህ ጠቅ ማድረግ ይችላሉ።"
+
+#. module: payment
+#: code:addons/payment/wizards/payment_acquirer_onboarding_wizard.py:0
+msgid "You have to set a journal for your payment acquirer %s."
+msgstr "ለክፍያ ተቀባይ %s መጽሔት ማዘጋጀት አለብህ።"
+
+#. module: payment
+#. openerp-web
+#: code:addons/payment/static/src/xml/payment_processing.xml:0
+msgid "You should receive an email confirming your payment in a few minutes."
+msgstr "ክፍያዎን በጥቂት ደቂቃዎች ውስጥ የሚያረጋግጥ ኢሜይል ሊደርስዎት ይገባል።"
+
+#. module: payment
+#. openerp-web
+#: code:addons/payment/static/src/xml/payment_processing.xml:0
+msgid "You will be notified when the payment is confirmed."
+msgstr "ክፍያው ሲረጋገጥ ማሳወቂያ ይደርሰዎታል።"
+
+#. module: payment
+#. openerp-web
+#: code:addons/payment/static/src/xml/payment_processing.xml:0
+msgid "You will be notified when the payment is fully confirmed."
+msgstr "ክፍያው ሙሉ በሙሉ ሲረጋገጥ ማሳወቂያ ይደርሰዎታል።"
+
+#. module: payment
+#. openerp-web
+#: code:addons/payment/static/src/xml/payment_processing.xml:0
+msgid "Your order has been processed."
+msgstr "ትዕዛዝህ ተከናውኗል።"
+
+#. module: payment
+#. openerp-web
+#: code:addons/payment/static/src/xml/payment_processing.xml:0
+msgid "Your order is being processed, please wait ..."
+msgstr "ትዕዛዝዎ በሂደት ላይ ነው፣ እባክዎ ይጠብቁ..."
+
+#. module: payment
+#: code:addons/payment/models/payment_acquirer.py:0
+#: model_terms:payment.acquirer,auth_msg:payment.payment_acquirer_adyen
+#: model_terms:payment.acquirer,auth_msg:payment.payment_acquirer_alipay
+#: model_terms:payment.acquirer,auth_msg:payment.payment_acquirer_authorize
+#: model_terms:payment.acquirer,auth_msg:payment.payment_acquirer_buckaroo
+#: model_terms:payment.acquirer,auth_msg:payment.payment_acquirer_ingenico
+#: model_terms:payment.acquirer,auth_msg:payment.payment_acquirer_paypal
+#: model_terms:payment.acquirer,auth_msg:payment.payment_acquirer_payu
+#: model_terms:payment.acquirer,auth_msg:payment.payment_acquirer_payulatam
+#: model_terms:payment.acquirer,auth_msg:payment.payment_acquirer_sepa_direct_debit
+#: model_terms:payment.acquirer,auth_msg:payment.payment_acquirer_sips
+#: model_terms:payment.acquirer,auth_msg:payment.payment_acquirer_stripe
+#: model_terms:payment.acquirer,auth_msg:payment.payment_acquirer_transfer
+msgid "Your payment has been authorized."
+msgstr "ክፍያዎ ተፈቅዶለታል።"
+
+#. module: payment
+#: code:addons/payment/models/payment_acquirer.py:0
+#: model_terms:payment.acquirer,cancel_msg:payment.payment_acquirer_adyen
+#: model_terms:payment.acquirer,cancel_msg:payment.payment_acquirer_alipay
+#: model_terms:payment.acquirer,cancel_msg:payment.payment_acquirer_authorize
+#: model_terms:payment.acquirer,cancel_msg:payment.payment_acquirer_buckaroo
+#: model_terms:payment.acquirer,cancel_msg:payment.payment_acquirer_ingenico
+#: model_terms:payment.acquirer,cancel_msg:payment.payment_acquirer_paypal
+#: model_terms:payment.acquirer,cancel_msg:payment.payment_acquirer_payu
+#: model_terms:payment.acquirer,cancel_msg:payment.payment_acquirer_payulatam
+#: model_terms:payment.acquirer,cancel_msg:payment.payment_acquirer_sepa_direct_debit
+#: model_terms:payment.acquirer,cancel_msg:payment.payment_acquirer_sips
+#: model_terms:payment.acquirer,cancel_msg:payment.payment_acquirer_stripe
+#: model_terms:payment.acquirer,cancel_msg:payment.payment_acquirer_transfer
+msgid "Your payment has been cancelled."
+msgstr "ክፍያዎ ተሰርዟል።"
+
+#. module: payment
+#. openerp-web
+#: code:addons/payment/static/src/xml/payment_processing.xml:0
+msgid "Your payment has been received but need to be confirmed manually."
+msgstr "ክፍያዎ ደርሷል ነገር ግን በእጅ መረጋገጥ አለበት።"
+
+#. module: payment
+#: code:addons/payment/models/payment_acquirer.py:0
+#: model_terms:payment.acquirer,pending_msg:payment.payment_acquirer_adyen
+#: model_terms:payment.acquirer,pending_msg:payment.payment_acquirer_alipay
+#: model_terms:payment.acquirer,pending_msg:payment.payment_acquirer_authorize
+#: model_terms:payment.acquirer,pending_msg:payment.payment_acquirer_buckaroo
+#: model_terms:payment.acquirer,pending_msg:payment.payment_acquirer_ingenico
+#: model_terms:payment.acquirer,pending_msg:payment.payment_acquirer_paypal
+#: model_terms:payment.acquirer,pending_msg:payment.payment_acquirer_payu
+#: model_terms:payment.acquirer,pending_msg:payment.payment_acquirer_payulatam
+#: model_terms:payment.acquirer,pending_msg:payment.payment_acquirer_sepa_direct_debit
+#: model_terms:payment.acquirer,pending_msg:payment.payment_acquirer_sips
+#: model_terms:payment.acquirer,pending_msg:payment.payment_acquirer_stripe
+msgid "Your payment has been successfully processed but is waiting for approval."
+msgstr "ክፍያዎ በተሳካ ሁኔታ ተካሂዷል ነገር ግን መጽደቅን በመጠባበቅ ላይ ነው።"
+
+#. module: payment
+#: code:addons/payment/models/payment_acquirer.py:0
+#: model_terms:payment.acquirer,done_msg:payment.payment_acquirer_adyen
+#: model_terms:payment.acquirer,done_msg:payment.payment_acquirer_alipay
+#: model_terms:payment.acquirer,done_msg:payment.payment_acquirer_authorize
+#: model_terms:payment.acquirer,done_msg:payment.payment_acquirer_buckaroo
+#: model_terms:payment.acquirer,done_msg:payment.payment_acquirer_ingenico
+#: model_terms:payment.acquirer,done_msg:payment.payment_acquirer_paypal
+#: model_terms:payment.acquirer,done_msg:payment.payment_acquirer_payu
+#: model_terms:payment.acquirer,done_msg:payment.payment_acquirer_payulatam
+#: model_terms:payment.acquirer,done_msg:payment.payment_acquirer_sepa_direct_debit
+#: model_terms:payment.acquirer,done_msg:payment.payment_acquirer_sips
+#: model_terms:payment.acquirer,done_msg:payment.payment_acquirer_stripe
+#: model_terms:payment.acquirer,done_msg:payment.payment_acquirer_transfer
+msgid "Your payment has been successfully processed. Thank you!"
+msgstr "ክፍያዎ በተሳካ ሁኔታ ተካሂዷል። አመሰግናለሁ!"
+
+#. module: payment
+#. openerp-web
+#: code:addons/payment/static/src/xml/payment_processing.xml:0
+msgid "Your payment is in pending state."
+msgstr "ክፍያዎ በመጠባበቅ ላይ ነው።"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.transaction_form
+msgid "ZIP"
+msgstr "ዚፕ"
+
+#. module: payment
+#: model:ir.model.fields,field_description:payment.field_payment_transaction__partner_zip
+msgid "Zip"
+msgstr "ዚፕ"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.payment_tokens_list
+msgid "and more"
+msgstr "ሌሎችም"
+
+#. module: payment
+#. openerp-web
+#: code:addons/payment/static/src/js/payment_form.js:0
+#: code:addons/payment/static/src/js/payment_form.js:0
+msgid "e.g. Your credit card details are wrong. Please verify."
+msgstr "ለምሳሌ. የክሬዲት ካርድ ዝርዝሮችዎ የተሳሳቱ ናቸው። እባክዎ ያረጋግጡ።"
+
+#. module: payment
+#: model:account.payment.method,code:payment.account_payment_method_electronic_in
+msgid "electronic"
+msgstr "ኤሌክትሮኒክ"
+
+#. module: payment
+#: model_terms:ir.ui.view,arch_db:payment.payment_acquirer_onboarding_wizard_form
+msgid "to choose another payment method."
+msgstr "ሌላ የመክፈያ ዘዴ ለመምረጥ."

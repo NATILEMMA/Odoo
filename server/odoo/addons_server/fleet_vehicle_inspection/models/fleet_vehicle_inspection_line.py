@@ -35,7 +35,7 @@ class FleetVehicleInspectionLine(models.Model):
     )
 
     inspection_item_instruction = fields.Text(
-        "Instruction", related="inspection_item_id.instruction"
+        "Instruction", related="inspection_item_id.instruction" , translate=True
     )
 
     result = fields.Selection(
@@ -47,7 +47,7 @@ class FleetVehicleInspectionLine(models.Model):
         copy=False,
     )
 
-    result_description = fields.Char()
+    result_description = fields.Char( translate=True)
 
     state = fields.Selection(
         [("draft", "Draft"), ("confirmed", "Confirmed"), ("cancel", "Cancelled")],

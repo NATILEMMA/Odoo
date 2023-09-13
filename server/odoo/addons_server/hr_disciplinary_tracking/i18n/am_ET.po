@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 13.0-20221005\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-23 09:01+0000\n"
-"PO-Revision-Date: 2023-03-23 09:01+0000\n"
+"POT-Creation-Date: 2023-08-14 09:37+0000\n"
+"PO-Revision-Date: 2023-08-14 09:37+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -119,6 +119,11 @@ msgid "Attachments"
 msgstr "ተያያዦች"
 
 #. module: hr_disciplinary_tracking
+#: model:discipline.category,code:hr_disciplinary_tracking.discipline_category_behave
+msgid "BEHAVE"
+msgstr "ጠባይ አሳምር"
+
+#. module: hr_disciplinary_tracking
 #: model:ir.model.fields.selection,name:hr_disciplinary_tracking.selection__employee_complaint__mode__by_company
 msgid "By Company"
 msgstr "በድርጅት"
@@ -192,7 +197,7 @@ msgstr "የኮሚቴ ማሳወቂያ"
 #. module: hr_disciplinary_tracking
 #: model:ir.model,name:hr_disciplinary_tracking.model_res_company
 msgid "Companies"
-msgstr "ድርጅቶች"
+msgstr "ድርጅት"
 
 #. module: hr_disciplinary_tracking
 #: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_employee_complaint__company_offendors_id
@@ -225,13 +230,13 @@ msgstr "ቅሬታ ገምጋሚዎች"
 
 #. module: hr_disciplinary_tracking
 #: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_employee__complaint_counter
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_employee_public__complaint_counter
 #: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_res_users__complaint_counter
 msgid "Complaint Counter"
 msgstr "የቅሬታ ብዛት"
 
 #. module: hr_disciplinary_tracking
 #: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.complaint_assessors_form_view
-#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.employee_complaint_form_view
 msgid "Complaint Report"
 msgstr "ቅሬታ ሪፖርት"
 
@@ -271,12 +276,32 @@ msgid "Created on"
 msgstr "ተፈጠረበት ቀን"
 
 #. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_employee_public__contract_id
+msgid "Current Contract"
+msgstr "የአሁኑ ውል"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_hr_employee_public__contract_id
+msgid "Current contract of the employee"
+msgstr "የሰራተኛው አሁን ውል"
+
+#. module: hr_disciplinary_tracking
 #: model:ir.model.fields,help:hr_disciplinary_tracking.field_disciplinary_action__access_url
 #: model:ir.model.fields,help:hr_disciplinary_tracking.field_discipline_action__access_url
 #: model:ir.model.fields,help:hr_disciplinary_tracking.field_discipline_category__access_url
 #: model:ir.model.fields,help:hr_disciplinary_tracking.field_employee_complaint__access_url
 msgid "Customer Portal URL"
 msgstr "የደንበኛ ፖርታል URL"
+
+#. module: hr_disciplinary_tracking
+#: model:discipline.category,code:hr_disciplinary_tracking.discipline_category_damage
+msgid "DAMAGE"
+msgstr "ጎዳ"
+
+#. module: hr_disciplinary_tracking
+#: model:discipline.category,name:hr_disciplinary_tracking.discipline_category_damage
+msgid "Damage to Company Properties"
+msgstr "በኩባንያው ንብረቶች ላይ የሚደርስ ጉዳት"
 
 #. module: hr_disciplinary_tracking
 #: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_attachment_wizard__datas
@@ -332,8 +357,9 @@ msgstr "የዚህ ምድብ ማብራርያ"
 #: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_employee_complaint__disciplinary_id
 #: model:ir.ui.menu,name:hr_disciplinary_tracking.disciplinary_action_create
 #: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.employee_disciplinary_form
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.employee_disciplinary_graph
 #: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.employee_disciplinary_tree
-#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.employee_form_inherit_disciplinary
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.employee_form_inherit_complaint
 msgid "Disciplinary Action"
 msgstr "የተግሣጽ እርምጃ"
 
@@ -357,6 +383,11 @@ msgstr "የተግሣጽ ኮሚቴ"
 #: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.employee_disciplinary_form
 msgid "Disciplinary Information"
 msgstr "የተግሣጽ መረጃ"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.actions.act_window,name:hr_disciplinary_tracking.disciplinary_action_graph_action
+msgid "Disciplinary Report"
+msgstr "የተግሣጽ ሪፖርት"
 
 #. module: hr_disciplinary_tracking
 #: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.disciplinary_action_search
@@ -392,6 +423,7 @@ msgstr "የተግሣጽ ምድብ እና እርምጃ"
 
 #. module: hr_disciplinary_tracking
 #: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_employee__discipline_count
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_employee_public__discipline_count
 #: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_res_users__discipline_count
 msgid "Discipline Count"
 msgstr "የተግሣጽ ብዛት"
@@ -418,7 +450,6 @@ msgid "Draft"
 msgstr "ንድፍ"
 
 #. module: hr_disciplinary_tracking
-#: model:ir.model,name:hr_disciplinary_tracking.model_hr_employee
 #: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_disciplinary_action__employee_name
 #: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.disciplinary_action_search
 #: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.employee_disciplinary_form
@@ -428,6 +459,7 @@ msgstr "ሰራተኛ"
 #. module: hr_disciplinary_tracking
 #: model:ir.model,name:hr_disciplinary_tracking.model_employee_complaint
 #: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_employee__employee_complaint_ids
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_employee_public__employee_complaint_ids
 #: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_res_users__employee_complaint_ids
 msgid "Employee Complaint"
 msgstr "የሰራተኛ ቅሬታ"
@@ -436,6 +468,8 @@ msgstr "የሰራተኛ ቅሬታ"
 #: model:ir.actions.act_window,name:hr_disciplinary_tracking.employee_complaint
 #: model:ir.actions.act_window,name:hr_disciplinary_tracking.employee_complaint_form_action
 #: model:ir.actions.act_window,name:hr_disciplinary_tracking.employee_complaint_form_action_company
+#: model:ir.actions.act_window,name:hr_disciplinary_tracking.employee_complaint_form_action_employee
+#: model:ir.ui.menu,name:hr_disciplinary_tracking.employee_complaint_assessor_menu
 msgid "Employee Complaints"
 msgstr "የሰራተኛ ቅሬታዎች"
 
@@ -546,6 +580,12 @@ msgid "ID"
 msgstr "መለያ ቁጥር"
 
 #. module: hr_disciplinary_tracking
+#: model:discipline.category,code:hr_disciplinary_tracking.discipline_category_instruction
+#: model:discipline.category,code:hr_disciplinary_tracking.discipline_category_performence
+msgid "INSTRUCTION"
+msgstr "ማኗል"
+
+#. module: hr_disciplinary_tracking
 #: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_disciplinary_action__activity_exception_icon
 #: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_discipline_action__activity_exception_icon
 #: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_discipline_category__activity_exception_icon
@@ -632,6 +672,11 @@ msgid "Last Updated on"
 msgstr "ለመጨረሻ ጊዜ የታደሰው"
 
 #. module: hr_disciplinary_tracking
+#: model:discipline.action,code:hr_disciplinary_tracking.action_category_meet
+msgid "MEET"
+msgstr "መገናኘት"
+
+#. module: hr_disciplinary_tracking
 #: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_disciplinary_action__message_main_attachment_id
 #: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_discipline_action__message_main_attachment_id
 #: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_discipline_category__message_main_attachment_id
@@ -646,6 +691,11 @@ msgstr "ዋና ተያያዥ"
 #: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_employee_complaint__medium_id
 msgid "Medium"
 msgstr "መካከለኛ"
+
+#. module: hr_disciplinary_tracking
+#: model:discipline.action,name:hr_disciplinary_tracking.action_category_meet
+msgid "Meet the Manager"
+msgstr "አስተዳዳሪውን ያግኙ"
 
 #. module: hr_disciplinary_tracking
 #: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_disciplinary_action__message_has_error
@@ -664,10 +714,20 @@ msgid "Messages"
 msgstr "መልዕክቶች"
 
 #. module: hr_disciplinary_tracking
+#: model:discipline.category,name:hr_disciplinary_tracking.discipline_category_behave
+msgid "Misbehaviour to Co-workers"
+msgstr "ለሥራ ባልደረቦች መጥፎ ባህሪ"
+
+#. module: hr_disciplinary_tracking
 #: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_employee_complaint__mode
 #: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.complaint_search_view
 msgid "Mode"
 msgstr "ዓይነት"
+
+#. module: hr_disciplinary_tracking
+#: model:discipline.action,code:hr_disciplinary_tracking.action_category_noact
+msgid "NOACTION"
+msgstr "እርምጃ የለም"
 
 #. module: hr_disciplinary_tracking
 #: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_attachment_wizard__name
@@ -706,6 +766,16 @@ msgstr "የቀጣይ እንቅስቃሴ ማጠቃለያ"
 #: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_employee_complaint__activity_type_id
 msgid "Next Activity Type"
 msgstr "የቀጣይ እንቅስቃሴ ዓይነት"
+
+#. module: hr_disciplinary_tracking
+#: model:discipline.action,name:hr_disciplinary_tracking.action_category_noact
+msgid "No Action"
+msgstr "ምንም እርምጃ የለም።"
+
+#. module: hr_disciplinary_tracking
+#: model:discipline.category,name:hr_disciplinary_tracking.discipline_category_instruction
+msgid "Not Follow Management Instructions"
+msgstr "የአስተዳደር መመሪያዎችን አትከተል"
 
 #. module: hr_disciplinary_tracking
 #: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.disciplinary_action_search
@@ -750,7 +820,7 @@ msgstr "የማድረስ ስህተት ያለባቸው መልዕክቶች ብዛ�
 #: model:ir.model.fields,help:hr_disciplinary_tracking.field_discipline_category__message_unread_counter
 #: model:ir.model.fields,help:hr_disciplinary_tracking.field_employee_complaint__message_unread_counter
 msgid "Number of unread messages"
-msgstr "Number of unread messages"
+msgstr "ያልተነበቡ መልዕክቶች ብዛት"
 
 #. module: hr_disciplinary_tracking
 #: code:addons/hr_disciplinary_tracking/wizard/archive.py:0
@@ -779,6 +849,16 @@ msgid "Proceed"
 msgstr "ቀጥል"
 
 #. module: hr_disciplinary_tracking
+#: model:ir.model,name:hr_disciplinary_tracking.model_hr_employee_public
+msgid "Public Employee"
+msgstr "ፐብሊክ ሠራተኛ"
+
+#. module: hr_disciplinary_tracking
+#: model:discipline.category,code:hr_disciplinary_tracking.discipline_category_care
+msgid "RULES"
+msgstr "ደንቦች"
+
+#. module: hr_disciplinary_tracking
 #: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_disciplinary_action__read_only
 msgid "Read Only"
 msgstr "ለማንበብ ብቻ"
@@ -803,7 +883,7 @@ msgstr "ማጣቀሻ"
 #. module: hr_disciplinary_tracking
 #: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_attachment_wizard__res_model
 msgid "Res Model"
-msgstr ""
+msgstr "ሞዴል"
 
 #. module: hr_disciplinary_tracking
 #: model:ir.model.fields.selection,name:hr_disciplinary_tracking.selection__employee_complaint__state__resolved
@@ -814,7 +894,7 @@ msgstr "ተፈቷል"
 #. module: hr_disciplinary_tracking
 #: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_attachment_wizard__res_id
 msgid "Resource ID"
-msgstr ""
+msgstr "መታወቂያ"
 
 #. module: hr_disciplinary_tracking
 #: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_disciplinary_action__activity_user_id
@@ -831,6 +911,11 @@ msgstr "ኃላፊነት ያለው ተጠቃሚ"
 #: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_employee_complaint__message_has_sms_error
 msgid "SMS Delivery error"
 msgstr "የኤስኤምኤስ የማድረስ ስህተት"
+
+#. module: hr_disciplinary_tracking
+#: model:discipline.action,code:hr_disciplinary_tracking.action_category_susp
+msgid "SUSPENSION"
+msgstr "እገዳ"
 
 #. module: hr_disciplinary_tracking
 #: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.complaint_search_view
@@ -913,14 +998,40 @@ msgid "Submit"
 msgstr "አስገባ"
 
 #. module: hr_disciplinary_tracking
+#: model:discipline.action,name:hr_disciplinary_tracking.action_category_susp
+msgid "Suspend the Employee"
+msgstr "ሰራተኛውን ማገድ"
+
+#. module: hr_disciplinary_tracking
 #: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_disciplinary_action__suspension_letter
 msgid "Suspension Letter"
 msgstr "የእግድ ደብዳቤ"
 
 #. module: hr_disciplinary_tracking
+#: model:discipline.action,code:hr_disciplinary_tracking.action_category_term
+msgid "TERMINATE"
+msgstr "ማቋረጥ"
+
+#. module: hr_disciplinary_tracking
+#: model:discipline.action,name:hr_disciplinary_tracking.action_category_term
+msgid "Terminate the Employee"
+msgstr "ሰራተኛውን ያቋርጡ"
+
+#. module: hr_disciplinary_tracking
 #: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_disciplinary_action__termination_letter
 msgid "Termination Letter"
 msgstr "የማባረርያ ደብዳቤ"
+
+#. module: hr_disciplinary_tracking
+#: code:addons/hr_disciplinary_tracking/models/disciplinary_action.py:0
+#, python-format
+msgid "This Employee Does Not Have Access to The System."
+msgstr "ይህ ሰራተኛ የስርዓቱ መዳረሻ የለውም።"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model,name:hr_disciplinary_tracking.model_hr_employee
+msgid "This class will add field validation for employee"
+msgstr "ይህ ክፍል ለሰራተኛው የመስክ ማረጋገጫን ይጨምራል"
 
 #. module: hr_disciplinary_tracking
 #: model:ir.model.fields,help:hr_disciplinary_tracking.field_disciplinary_action__campaign_id
@@ -971,7 +1082,7 @@ msgstr "በመዝገብ ላይ ያለ ልዩ እንቅስቃሴ ዓይነት።"
 #. module: hr_disciplinary_tracking
 #: model:ir.model.fields.selection,name:hr_disciplinary_tracking.selection__attachment_wizard__type__url
 msgid "URL"
-msgstr "URL"
+msgstr ""
 
 #. module: hr_disciplinary_tracking
 #: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_disciplinary_action__message_unread
@@ -995,14 +1106,34 @@ msgid "Users"
 msgstr "ተጠቃሚዎች"
 
 #. module: hr_disciplinary_tracking
+#: model:discipline.action,code:hr_disciplinary_tracking.action_category_verb
+msgid "VERBAL"
+msgstr "በቃል"
+
+#. module: hr_disciplinary_tracking
 #: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.employee_disciplinary_form
 msgid "Validate Action"
 msgstr "እርምጃን ያረጋግጡ"
 
 #. module: hr_disciplinary_tracking
+#: model:discipline.action,name:hr_disciplinary_tracking.action_category_verb
+msgid "Verbal Warning"
+msgstr "የቃል ማስጠንቀቂያ"
+
+#. module: hr_disciplinary_tracking
 #: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_employee_complaint__victim_id
 msgid "Victim"
 msgstr "ተጎጂ"
+
+#. module: hr_disciplinary_tracking
+#: model:discipline.category,name:hr_disciplinary_tracking.discipline_category_care
+msgid "Violation of Company Rules"
+msgstr "የኩባንያውን ደንቦች መጣስ"
+
+#. module: hr_disciplinary_tracking
+#: model:discipline.action,code:hr_disciplinary_tracking.action_category_wrt
+msgid "WRITTEN"
+msgstr "የተፃፈ"
 
 #. module: hr_disciplinary_tracking
 #: model:ir.model.fields.selection,name:hr_disciplinary_tracking.selection__disciplinary_action__state__submitted
@@ -1045,6 +1176,16 @@ msgstr "የድህረገፅ መልዕክቶች"
 #: model:ir.model.fields,help:hr_disciplinary_tracking.field_employee_complaint__website_message_ids
 msgid "Website communication history"
 msgstr "የድህረገፅ የግንኙነት ታሪክ"
+
+#. module: hr_disciplinary_tracking
+#: model:discipline.category,name:hr_disciplinary_tracking.discipline_category_performence
+msgid "Work Performance Issues"
+msgstr "የሥራ አፈጻጸም ጉዳዮች"
+
+#. module: hr_disciplinary_tracking
+#: model:discipline.action,name:hr_disciplinary_tracking.action_category_wrt
+msgid "Written Warning"
+msgstr "የጽሑፍ ማስጠንቀቂያ"
 
 #. module: hr_disciplinary_tracking
 #: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_disciplinary_action__x_css

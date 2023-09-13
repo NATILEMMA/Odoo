@@ -61,8 +61,8 @@ class AccountAnalyticLine(models.Model):
                                          related='move_id.account_id', store=True, domain=[('deprecated', '=', False)],
                                          compute_sudo=True)
     move_id = fields.Many2one('account.move.line', string='Journal Item', ondelete='cascade', index=True)
-    code = fields.Char(size=8)
-    ref = fields.Char(string='Ref.')
+    code = fields.Char(size=8, translate=True)
+    ref = fields.Char(string='Ref.', translate=True)
 
     @api.onchange('product_id', 'product_uom_id', 'unit_amount', 'currency_id')
     def on_change_unit_amount(self):

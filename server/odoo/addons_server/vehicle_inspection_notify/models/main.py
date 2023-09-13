@@ -9,11 +9,16 @@ from odoo.exceptions import UserError, Warning
 from datetime import datetime, timedelta
 
 
+pick1 = []
+pick2 = []
+pick3 = []
+pick4 = []
+
 class InspectionDate(models.Model):
     _inherit = "vehicle.libre"
 
-    issue_date = fields.Date(string="Next Inspection Date", required=True, store=True)
-    inspect_date = fields.Date(string="last Inspection Date", required=True, store=True)
+    issue_date = fields.Date(string="Next Inspection Date",  store=True)
+    inspect_date = fields.Date(string="last Inspection Date", store=True)
     notify_date = fields.Date(string="Notify Date", compute='_compute_date', readonly=True, store=True)
     sticker_number = fields.Char(string="Annual Sticker Number",translate=True)
     approver = fields.Many2one('res.partner', string="Approver")
@@ -212,7 +217,7 @@ class InspectionDate(models.Model):
     
        
 
-        return super(VehicleLibreInherited, self).create(vals)
+        return super(InspectionDate, self).create(vals)
 
     def write(self, vals):
     
@@ -291,7 +296,7 @@ class InspectionDate(models.Model):
             pass
 
        
-        return super(VehicleLibreInherited, self).write(vals)
+        return super(InspectionDate, self).write(vals)
 
 
     @api.model
@@ -405,6 +410,12 @@ class InspectionDate(models.Model):
             pick3.append(data)
         if picked_date['pick'] == 4:
             pick3.append(data)
+
+    @api.onchange('inspect_date')
+    def get_inspect_date(self):
+        print("get_inspect_date")
+        if self.inspect_date:
+            self.issue_date = self.inspect_date + timedelta(days=365)
 
 
 

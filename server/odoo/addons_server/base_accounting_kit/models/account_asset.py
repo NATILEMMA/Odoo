@@ -36,7 +36,7 @@ class AccountAssetCategory(models.Model):
     _description = 'Asset category'
 
     active = fields.Boolean(default=True)
-    name = fields.Char(required=True, index=True, string="Asset Type")
+    name = fields.Char(required=True, index=True, string="Asset Type", translate=True)
     account_analytic_id = fields.Many2one('account.analytic.account',
                                           string='Analytic Account')
     account_asset_id = fields.Many2one('account.account',
@@ -116,9 +116,9 @@ class AccountAssetAsset(models.Model):
     entry_count = fields.Integer(compute='_entry_count',
                                  string='# Asset Entries')
     name = fields.Char(string='Asset Name', required=True, readonly=True,
-                       states={'draft': [('readonly', False)]})
+                       states={'draft': [('readonly', False)]}, translate=True)
     code = fields.Char(string='Reference', size=32, readonly=True,
-                       states={'draft': [('readonly', False)]})
+                       states={'draft': [('readonly', False)]}, translate=True)
     value = fields.Float(string='Gross Value', required=True, readonly=True,
                          digits=0, states={'draft': [('readonly', False)]})
     currency_id = fields.Many2one('res.currency', string='Currency',
@@ -609,7 +609,7 @@ class AccountAssetDepreciationLine(models.Model):
     _name = 'account.asset.depreciation.line'
     _description = 'Asset depreciation line'
 
-    name = fields.Char(string='Depreciation Name', required=True, index=True)
+    name = fields.Char(string='Depreciation Name', required=True, index=True, translate=True)
     sequence = fields.Integer(required=True)
     asset_id = fields.Many2one('account.asset.asset', string='Asset',
                                required=True, ondelete='cascade')

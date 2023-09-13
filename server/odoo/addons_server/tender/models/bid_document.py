@@ -15,15 +15,15 @@ class BidDocument(models.Model):
     _description = 'Bid document for tender'
 
 
-    reference_no = fields.Char(string='Bid Document Reference', required=True,
+    reference_no = fields.Char(string='Bid Document Reference', required=True,translate=True,
                           readonly=True, default='New', index=True)
     company_id = fields.Many2one('res.company', string=  'Company',default=lambda self: self.env.company, required=True)
     currency_id = fields.Many2one('res.currency', related='company_id.currency_id', readonly=True)
-    subject_of_procurment  = fields.Char('Subject of Procurement')
-    reference_number = fields.Char('Procurement Reference Number')
-    project_name = fields.Char('Project Name')
+    subject_of_procurment  = fields.Char('Subject of Procurement',translate=True)
+    reference_number = fields.Char('Procurement Reference Number',translate=True)
+    project_name = fields.Char('Project Name',translate=True)
     issue_date = fields.Date('Date of Issue of Bidding Document')
-    location = fields.Char('Location')
+    location = fields.Char('Location',translate=True)
     bid_bond = fields.Monetary('Bid Bond')
     validity_day = fields.Integer('Validity Days')
     delivery_date = fields.Date('Date of Delivery')

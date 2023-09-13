@@ -28,6 +28,7 @@
                     attrs="{'invisible':[('use_milestones','=', False)]}"
                     context="{'default_project_id': project_id}"
                 />
+                <field name="month"/>
             </xpath>
         </field>
     </record>

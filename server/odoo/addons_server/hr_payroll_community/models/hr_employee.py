@@ -18,4 +18,4 @@ class HrEmployee(models.Model):
             employee.payslip_count = result.get(employee.id, 0)
             employee.employee_payslip_count = employee.payslip_count
 
-
+     

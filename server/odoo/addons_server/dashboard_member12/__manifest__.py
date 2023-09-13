@@ -14,7 +14,7 @@
     "license": "LGPL-3",
     "installable": True,
     "depends": [
-        's2u_online_appointment'
+        'visitor_gate_management',
     ],
     "data": [
 		'views/template.xml',
@@ -32,6 +32,7 @@
 		'views/my_profile.xml',
         'views/reset_password.xml',
 		'views/feedback.xml',
+        'views/supporter.xml',
 		
     ],
     'installable': True,

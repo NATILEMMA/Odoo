@@ -12,6 +12,7 @@
         'views/menus.xml',
         # 'data/ir.cron.data.xml',
         'security/ir.model.access.csv',
+        'security/stock_transfer_security.xml',
         'sequences/sequences.xml',
         'views/stock_picking.xml'
     ],

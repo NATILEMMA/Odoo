@@ -19,15 +19,15 @@
 # Gradien Foundation <gradien.co@gmail.com>, 2020
 # whenwesober, 2020
 # Abdul Munif Hanafi <amunifhanafi@gmail.com>, 2021
-# Abe Manyo, 2023
+# Abe Manyo, 2022
 # 
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 13.0\n"
+"Planning-Id-Version: Odoo Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-27 09:21+0000\n"
 "PO-Revision-Date: 2019-08-26 09:13+0000\n"
-"Last-Translator: Abe Manyo, 2023\n"
+"Last-Translator: Abe Manyo, 2022\n"
 "Language-Team: Indonesian (https://www.transifex.com/odoo/teams/41243/id/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -755,7 +755,7 @@ msgstr ""
 #. module: project
 #: model_terms:ir.actions.act_window,help:project.project_tags_action
 msgid "Create a new tag"
-msgstr "Buat tag baru"
+msgstr ""
 
 #. module: project
 #: model_terms:ir.actions.act_window,help:project.action_view_task
@@ -1257,7 +1257,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:project.portal_project_rating_partner_stat
 #: model_terms:ir.ui.view,arch_db:project.view_task_kanban
 msgid "Happy face"
-msgstr "Muka bahagia"
+msgstr ""
 
 #. module: project
 #: model:ir.model.fields.selection,name:project.selection__report_project_task_user__priority__2
@@ -1711,7 +1711,7 @@ msgstr "Butuh bantuan fungsional atau teknis"
 #: model_terms:ir.ui.view,arch_db:project.portal_project_rating_partner_stat
 #: model_terms:ir.ui.view,arch_db:project.view_task_kanban
 msgid "Neutral face"
-msgstr "Muka netral"
+msgstr ""
 
 #. module: project
 #. openerp-web
@@ -2078,12 +2078,12 @@ msgstr "Prioritas"
 #: model_terms:ir.ui.view,arch_db:project.view_task_project_user_search
 #: model_terms:ir.ui.view,arch_db:project.view_task_search_form
 #, python-format
-msgid "Project"
+msgid "Planning"
 msgstr "Proyek"
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_account_analytic_account__project_count
-msgid "Project Count"
+msgid "Planning Count"
 msgstr "Jumlah Proyek"
 
 #. module: project
@@ -2094,7 +2094,7 @@ msgstr "Jumlah Proyek"
 #: model_terms:ir.ui.view,arch_db:project.project_view_kanban
 #: model_terms:ir.ui.view,arch_db:project.view_project
 #: model_terms:ir.ui.view,arch_db:project.view_project_project_filter
-msgid "Project Manager"
+msgid "Planning Manager"
 msgstr "Manajer Proyek"
 
 #. module: project
@@ -2102,49 +2102,49 @@ msgstr "Manajer Proyek"
 #: model_terms:ir.ui.view,arch_db:project.project_project_view_form_simplified
 #: model_terms:ir.ui.view,arch_db:project.project_view_kanban
 #: model_terms:ir.ui.view,arch_db:project.view_project
-msgid "Project Name"
+msgid "Planning Name"
 msgstr "Nama Proyek"
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.rating_index
-msgid "Project Satisfaction"
+msgid "Planning Satisfaction"
 msgstr "Kepuasan proyek"
 
 #. module: project
 #: model:ir.model,name:project.model_project_tags
-msgid "Project Tags"
+msgid "Planning Tags"
 msgstr ""
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.project_task_view_activity
 #: model_terms:ir.ui.view,arch_db:project.view_project_task_graph
 #: model_terms:ir.ui.view,arch_db:project.view_project_task_pivot
-msgid "Project Tasks"
+msgid "Planning Tasks"
 msgstr "Kegiatan-kegiatan proyek"
 
 #. module: project
 #: model:ir.model.fields,help:project.field_project_project__subtask_project_id
 #: model:ir.model.fields,help:project.field_project_task__subtask_project_id
 msgid ""
-"Project in which sub-tasks of the current project will be created. It can be"
+"Planning in which sub-tasks of the current project will be created. It can be"
 " the current project itself."
 msgstr ""
 
 #. module: project
 #: model:ir.actions.act_window,name:project.dblc_proj
-msgid "Project's tasks"
+msgid "Planning's tasks"
 msgstr "Kegiatan-kegiatan proyek"
 
 #. module: project
 #: model:ir.actions.server,name:project.ir_actions_server_project_sample
-msgid "Project: Activate Sample Project"
+msgid "Planning: Activate Sample Project"
 msgstr ""
 
 #. module: project
 #: model:ir.actions.server,name:project.ir_cron_rating_project_ir_actions_server
 #: model:ir.cron,cron_name:project.ir_cron_rating_project
 #: model:ir.cron,name:project.ir_cron_rating_project
-msgid "Project: Send rating"
+msgid "Planning: Send rating"
 msgstr ""
 
 #. module: project
@@ -2160,12 +2160,12 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:project.portal_my_projects
 #: model_terms:ir.ui.view,arch_db:project.rating_index
 #: model_terms:ir.ui.view,arch_db:project.view_project
-msgid "Projects"
+msgid "Plannings"
 msgstr "Proyek"
 
 #. module: project
 #: model:mail.channel,name:project.mail_channel_project_task
-msgid "Projects & Tasks"
+msgid "Plannings & Tasks"
 msgstr "Proyek & Tugas"
 
 #. module: project
@@ -2209,17 +2209,17 @@ msgstr ""
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_task__rating_last_feedback
 msgid "Rating Last Feedback"
-msgstr "Nilai Feedback Terakhir"
+msgstr ""
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_task__rating_last_image
 msgid "Rating Last Image"
-msgstr "Nilai Gambar Terakhir"
+msgstr ""
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_task__rating_last_value
 msgid "Rating Last Value"
-msgstr "Nilai Value Terakhir"
+msgstr ""
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_project__rating_request_deadline
@@ -2229,12 +2229,12 @@ msgstr ""
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_project__rating_percentage_satisfaction
 msgid "Rating Satisfaction"
-msgstr "Nilai Kepuasan"
+msgstr ""
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_task__rating_count
 msgid "Rating count"
-msgstr "Jumlah nilai"
+msgstr ""
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_project__portal_show_rating
@@ -2386,7 +2386,7 @@ msgstr "Kesalahan Pengiriman SMS"
 #: model_terms:ir.ui.view,arch_db:project.portal_project_rating_partner_stat
 #: model_terms:ir.ui.view,arch_db:project.view_task_kanban
 msgid "Sad face"
-msgstr "Muka sedih"
+msgstr ""
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.res_config_settings_view_form
@@ -2494,7 +2494,7 @@ msgstr ""
 #: code:addons/project/static/src/js/project_task_kanban_examples.js:0
 #, python-format
 msgid "Specifications"
-msgstr "Spesifikasi"
+msgstr ""
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.res_config_settings_view_form
@@ -2701,13 +2701,11 @@ msgstr "Kegiatan yang diblokir"
 #: model_terms:ir.ui.view,arch_db:project.task_type_edit
 msgid "Task in progress. Click to block or set as done."
 msgstr ""
-"Tugas sedang dalam progres. Klik untuk blok atau tetapkan sebagai selesai."
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.task_type_edit
 msgid "Task is blocked. Click to unblock or set as done."
 msgstr ""
-"Tugas diblok. Klik untuk menghilangkan blokir atau tetapkan sebagai selesai."
 
 #. module: project
 #: model:mail.message.subtype,description:project.mt_task_ready
@@ -2880,7 +2878,7 @@ msgstr ""
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.task_type_edit
 msgid "This step is done. Click to block or set in progress."
-msgstr "Langkah ini sudah selesai. Klik untuk blok atau mulai progres."
+msgstr ""
 
 #. module: project
 #. openerp-web

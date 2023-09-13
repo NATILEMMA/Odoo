@@ -8,12 +8,14 @@
         <field name="arch" type="xml">
             <tree duplicate="false">
                 <field name="name"/>
-                <field name="woreda"/>
+                <field name="fiscal_year"/>
                 <field name="time_frame"/>
+                <field name="woreda"/>
                 <field name="amount"/>
                 <field name="amount_2"/>
                 <field name="amount_3"/>
                 <field name="fiscal_year"/>
+                <field name="woreda"/>
                 <field name="state"/>
             </tree>
         </field>
@@ -38,8 +40,8 @@
                     <group>
                         <group>
                             <field name="name_2" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
-                            <field name="fiscal_year" attrs="{'readonly': [('state', '!=', 'draft')]}" options="{'no_create': True, 'no_open': True}"/>
-                            <field name="time_frame" attrs="{'readonly': [('state', '!=', 'draft')]}" options="{'no_create': True, 'no_open': True}"/>
+                            <field name="fiscal_year" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="time_frame" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
                         </group>
                         <group>
                             <field name="woreda" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
@@ -109,31 +111,11 @@
             </form>
         </field>
     </record>
-     <record model="ir.ui.view" id="sub_payment_graph">
-            <field name="name">sub.payment.graph</field>
-            <field name="model">sub.payment</field>
-            <field name="arch" type="xml">
-                <graph string="Wereda Payment report">
-                    <field name="woreda"/>
-                    <field name="amount_2" type="measure"/>
-                </graph>
-            </field>
-    </record>
-    <record model="ir.ui.view" id="sub_payment_pivot">
-            <field name="name">sub.payment.pivot</field>
-            <field name="model">sub.payment</field>
-            <field name="arch" type="xml">
-                <pivot string="Wereda Payment report" display_quantity="True">
-                    <field name="woreda"/>
-                    <field name="amount_2" type="measure"/>
-                </pivot>
-            </field>
-        </record>
 
     <record id="membership_sub_payment_action" model="ir.actions.act_window">
         <field name="name">Wereda Payment Menu</field>
         <field name="res_model">sub.payment</field>
-        <field name="view_mode">tree,form,graph,pivot</field>
+        <field name="view_mode">tree,form</field>
         <field name="domain">['|','|',('user', '=', uid),('woreda.parent_id.parent_manager', '=', uid),('name_2.city_id.city_manager', 'in', [uid])]</field>
     </record>
     <record id="membership_sub_payment_action_2" model="ir.actions.act_window">
@@ -144,9 +126,9 @@
 
     <menuitem id="membership_sub_payment_action_id"
               name="Wereda Membership Payment"
-              parent="members_custom.membership_payment_menu"
+              parent="members_features.membership_payment_menu"
               action="membership_sub_payment_action"
               sequence="4"
-              groups="members_custom.member_group_manager"/>
+              groups="member_minor_configuration.member_group_manager"/>
 
 </odoo>

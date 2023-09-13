@@ -49,9 +49,18 @@
                                     console.log("Response", data)
                                     try{
                                         var  date = data.toString()
-                                        date = date.split("-")
+                                        date = date.split("-") 
+                                        console.log("DDDDDDDDD-----DDDDDDDDD", date)
+                                        if (date[1] === undefined){
+                                            var date11 = data.split("/")
+                                            var dateFrom11 = date11[0] + "/" +  date11[1] + "/" +  date11[2]
+                                            $("#popupDatepickercustom").val(dateFrom11);
+                                         }
+                                         else{
+
                                         var dates = date[1] + "/" +  date[2] + "/" +  date[0]
-                                        $("#popupDatepicker").val(dates);
+                                        $("#popupDatepickercustom").val(dates);
+                                         }
                                         }
                                         catch (error) {
                                             //console.log('There was an error:', error);
@@ -63,7 +72,7 @@
                                     }
                                 $(function() {
                                     var calendar = $.calendars.instance('ethiopian','am');
-                                   $('#popupDatepicker').calendarsPicker({calendar: calendar, onSelect: showDate});
+                                   $('#popupDatepickercustom').calendarsPicker({calendar: calendar, onSelect: showDate});
                                });
                                function showDate(date) {
                                 var rpc = require('web.rpc') 
@@ -98,12 +107,374 @@
                 <field name="is_pagum_from" invisible="1"/>
                 <field  name="ethiopian_from" class="oe_read_only" string="Create Date" attrs="{'invisible': ['|', ('is_pagum_from', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
                 <field  name="pagum_from" class="oe_read_only"  string="Start Date" style=" float:left"  attrs="{'invisible': ['|',('is_pagum_from', '!=',False)  ]}"  groups="EthiopianCalendar.group_ethio_datepicker"/>
-                <input style="margin-top:2px;margin-left: -495px;margin-right:0px; width:95px;" type="text" id="popupDatepicker" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                <input style="margin-top:2px;margin-left: -565px;margin-right:0px; width:125px;" type="text" id="popupDatepickercustom" groups="EthiopianCalendar.group_ethio_datepicker"/>
             </xpath>
-            <xpath expr="//field[@name='new_engine_no']" position="replace">
-                <field name="new_engine_no" required="1" style="width:100px;"/>
-            </xpath>
+            
           
         </field>
     </record>
+
+    <record id="inherit_update_color_wizard_form_custom" model="ir.ui.view">
+        <field name="name">update.color.info.form</field>
+        <field name="model">update.color.info</field>
+        <field name="inherit_id" ref="fleet_operations.update_color_info_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='changed_date']" position="replace">
+                <field name="changed_date" groups="EthiopianCalendar.group_gregory"/>
+                <script>
+                    odoo.define(function(require) {
+                                "use strict";
+                                var rpc = require('web.rpc') 
+                                var basicFields = require('web.basic_fields');
+                                var current_url = window.location.href;
+                                let pickeddate = {
+                                    "pick": 1,
+                                }
+                                try{
+                                    var dd,model;
+                                    dd = current_url.split('model=')
+                                    model = dd[1].toString()
+                                    var res = rpc.query({
+                                        model: "update.color.info",
+                                        method: 'initial_date',
+                                        args: [pickeddate],
+                                    }).then(function(data)
+                                    {
+                                    console.log("Response", data)
+                                    try{
+                                        var  date = data.toString()
+                                        date = date.split("-")
+                                        if (date[1] === undefined){
+                                            var date22 = data.split("/")
+                                            var dateFrom22 = date22[0] + "/" +  date22[1] + "/" +  date22[2]
+                                            $("#popupDatepickercustom2").val(dateFrom22);
+                                         }
+                                         else{
+
+                                        var dates = date[1] + "/" +  date[2] + "/" +  date[0]
+                                        $("#popupDatepickercustom2").val(dates);
+                                        }
+                                    }
+                                        catch (error) {
+                                            //console.log('There was an error:', error);
+                                    }
+                                        });
+                              
+                                }catch (error) {
+                                        //console.log('There was an error:', error);
+                                    }
+                                $(function() {
+                                    var calendar = $.calendars.instance('ethiopian','am');
+                                   $('#popupDatepickercustom2').calendarsPicker({calendar: calendar, onSelect: showDate});
+                               });
+                               function showDate(date) {
+                                var rpc = require('web.rpc') 
+                                var basicFields = require('web.basic_fields');
+                                var current_url = window.location.href;
+                                var myArray = current_url.split('model=');
+                                var dd,models, model;
+                                dd = current_url.split('model=')
+                                models = dd[1].toString()
+                                models = models.split('view_type')
+                                model = models[0].substring(0, models[0].length - 1);
+                                var dateObject = $(this).calendarsPicker("getDate")
+                                console.log("dateObject", dateObject)
+                                let pickeddate = {
+                                    "day" : dateObject[0]._day,
+                                    "month" : dateObject[0]._month,
+                                    "year":dateObject[0]._year,
+                                    "current_model": model,
+                                    "url": current_url,
+                                    "pick": 1,
+                                    }
+                                var res = rpc.query({
+                                    model: "update.color.info",
+                                    method: 'date_convert_and_set',
+                                    args: [pickeddate],
+                                }).then(function (data)
+                                {
+                            }); 
+                        }
+                    }); 
+                </script>
+                <field name="is_pagum_from" invisible="1"/>
+                <field name="ethiopian_from" class="oe_read_only" string="Create Date" attrs="{'invisible': ['|', ('is_pagum_from', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                <field name="pagum_from" class="oe_read_only" string="Start Date" style=" float:left" attrs="{'invisible': ['|',('is_pagum_from', '!=',False)  ]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                <input style="margin-top:2px;margin-left: -594px;margin-right:0px; width:140px;" type="text" id="popupDatepickercustom2" groups="EthiopianCalendar.group_ethio_datepicker"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="inherit_update_tire_wizard_form_custom" model="ir.ui.view">
+        <field name="name">update.tire.info.form</field>
+        <field name="model">update.tire.info</field>
+        <field name="inherit_id" ref="fleet_operations.update_tire_info_form_view"/>
+        <field name="arch" type="xml">
+
+            <!-- 
+
+            # Modify the model's name
+
+
+            => as in line 43: "update.engine.info" to get the initial date for your date field model, TO model: your desired model 
+
+            => as in line 88: To get set selected date to your date field record model: "update.engine.info", TO model: your desired model 
+
+
+            # ethiopian CSS date change 
+             Add or change the CSS code to make your design user-friendly. 
+
+            => similar to line 100: css style  
+        -->
+
+
+
+
+            <xpath expr="//field[@name='changed_date']" position="replace">
+                
+                <script>
+                    odoo.define(function(require) {
+                                "use strict";
+                                var rpc = require('web.rpc') 
+                                var basicFields = require('web.basic_fields');
+                                var current_url = window.location.href;
+                                let pickeddate = {
+                                    "pick": 1,
+                                }
+                                try{
+                                    var dd,model;
+                                    dd = current_url.split('model=')
+                                    model = dd[1].toString()
+                                    var res = rpc.query({
+                                        model: "update.tire.info",
+                                        method: 'initial_date',
+                                        args: [pickeddate],
+                                    }).then(function(data)
+                                    {
+                                    console.log("Response", data)
+                                    try{
+                                        var  date = data.toString()
+                                        date = date.split("-")
+                                        if (date[1] === undefined){
+                                            var date33 = data.split("/")
+                                            var dateFrom33 = date33[0] + "/" +  date33[1] + "/" +  date33[2]
+                                            $("#popupDatepickercustom3").val(dateFrom33);
+                                         }
+                                         else{
+                                        var dates = date[1] + "/" +  date[2] + "/" +  date[0]
+                                        $("#popupDatepickercustom3").val(dates);
+                                        }}
+                                        catch (error) {
+                                            //console.log('There was an error:', error);
+                                    }
+                                        });
+                              
+                                }catch (error) {
+                                        //console.log('There was an error:', error);
+                                    }
+                                $(function() {
+                                    var calendar = $.calendars.instance('ethiopian','am');
+                                   $('#popupDatepickercustom3').calendarsPicker({calendar: calendar, onSelect: showDate});
+                               });
+                               function showDate(date) {
+                                var rpc = require('web.rpc') 
+                                var basicFields = require('web.basic_fields');
+                                var current_url = window.location.href;
+                                var myArray = current_url.split('model=');
+                                var dd,models, model;
+                                dd = current_url.split('model=')
+                                models = dd[1].toString()
+                                models = models.split('view_type')
+                                model = models[0].substring(0, models[0].length - 1);
+                                var dateObject = $(this).calendarsPicker("getDate")
+                                console.log("dateObject", dateObject)
+                                let pickeddate = {
+                                    "day" : dateObject[0]._day,
+                                    "month" : dateObject[0]._month,
+                                    "year":dateObject[0]._year,
+                                    "current_model": model,
+                                    "url": current_url,
+                                    "pick": 1,
+                                    }
+                                var res = rpc.query({
+                                    model: "update.tire.info",
+                                    method: 'date_convert_and_set',
+                                    args: [pickeddate],
+                                }).then(function (data)
+                                {
+                            }); 
+                        }
+                    }); 
+                </script>
+                <field name="changed_date" groups="EthiopianCalendar.group_gregory"/>
+
+                <field name="is_pagum_from" invisible="1"/>
+                <field name="ethiopian_from" class="oe_read_only" string="Create Date" attrs="{'invisible': ['|', ('is_pagum_from', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                <field name="pagum_from" class="oe_read_only" string="Start Date" style=" float:left" attrs="{'invisible': ['|',('is_pagum_from', '!=',False)  ]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                <input style="margin-top:-22px;margin-left: 165px;margin-right:0px; width:270px;" type="text" id="popupDatepickercustom3" groups="EthiopianCalendar.group_ethio_datepicker"/>
+
+              </xpath>  
+           
+
+        </field>
+    </record>
+    <record id="inherit_update_battery_wizard_form_custom" model="ir.ui.view">
+        <field name="name">update.battery.info.form</field>
+        <field name="model">update.battery.info</field>
+        <field name="inherit_id" ref="fleet_operations.update_battery_info_form_view"/>
+        <field name="arch" type="xml">
+
+            <!-- 
+
+            # Modify the model's name
+
+
+            => as in line 43: "update.engine.info" to get the initial date for your date field model, TO model: your desired model 
+
+            => as in line 88: To get set selected date to your date field record model: "update.engine.info", TO model: your desired model 
+
+
+            # ethiopian CSS date change 
+             Add or change the CSS code to make your design user-friendly. 
+
+            => similar to line 100: css style  
+        -->
+
+
+
+
+            <xpath expr="//field[@name='changed_date']" position="replace">
+                <field name="changed_date" groups="EthiopianCalendar.group_gregory"/>
+                <script>
+                    odoo.define(function(require) {
+                                "use strict";
+                                var rpc = require('web.rpc') 
+                                var basicFields = require('web.basic_fields');
+                                var current_url = window.location.href;
+                                let pickeddate = {
+                                    "pick": 1,
+                                }
+                                try{
+                                    var dd,model;
+                                    dd = current_url.split('model=')
+                                    model = dd[1].toString()
+                                    var res = rpc.query({
+                                        model: "update.battery.info",
+                                        method: 'initial_date',
+                                        args: [pickeddate],
+                                    }).then(function(data)
+                                    {
+                                    console.log("Response", data)
+                                    try{
+                                        var  date = data.toString()
+                                        date = date.split("-")
+                                        if (date[1] === undefined){
+                                            var date44 = data.split("/")
+                                            var dateFrom44 = date44[0] + "/" +  date44[1] + "/" +  date44[2]
+                                            $("#popupDatepickercustom4").val(dateFrom44);
+                                         }
+                                         else{
+                                        var dates = date[1] + "/" +  date[2] + "/" +  date[0]
+                                        $("#popupDatepickercustom4").val(dates);
+                                        }
+                                    }
+                                        catch (error) {
+                                            //console.log('There was an error:', error);
+                                    }
+                                        });
+                              
+                                }catch (error) {
+                                        //console.log('There was an error:', error);
+                                    }
+                                $(function() {
+                                    var calendar = $.calendars.instance('ethiopian','am');
+                                   $('#popupDatepickercustom4').calendarsPicker({calendar: calendar, onSelect: showDate});
+                               });
+                               function showDate(date) {
+                                var rpc = require('web.rpc') 
+                                var basicFields = require('web.basic_fields');
+                                var current_url = window.location.href;
+                                var myArray = current_url.split('model=');
+                                var dd,models, model;
+                                dd = current_url.split('model=')
+                                models = dd[1].toString()
+                                models = models.split('view_type')
+                                model = models[0].substring(0, models[0].length - 1);
+                                var dateObject = $(this).calendarsPicker("getDate")
+                                console.log("dateObject", dateObject)
+                                let pickeddate = {
+                                    "day" : dateObject[0]._day,
+                                    "month" : dateObject[0]._month,
+                                    "year":dateObject[0]._year,
+                                    "current_model": model,
+                                    "url": current_url,
+                                    "pick": 1,
+                                    }
+                                var res = rpc.query({
+                                    model: "update.battery.info",
+                                    method: 'date_convert_and_set',
+                                    args: [pickeddate],
+                                }).then(function (data)
+                                {
+                            }); 
+                        }
+                    }); 
+                </script>
+                <field name="is_pagum_from" invisible="1"/>
+                <field name="ethiopian_from" class="oe_read_only" string="Create Date" attrs="{'invisible': ['|', ('is_pagum_from', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                <input style="margin-top:-22px;margin-left: 165px;margin-right:0px; width:270px;" type="text" id="popupDatepickercustom4" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                <field name="pagum_from" class="oe_read_only" string="Start Date" style=" float:left" attrs="{'invisible': ['|',('is_pagum_from', '!=',False)  ]}" groups="EthiopianCalendar.group_ethio_datepicker"/>  
+            </xpath>
+        </field>
+    </record>
+
+  
+
+        <!-- 
+                    
+                    Adding Ethiopian Calander Date to Time Fream 
+
+                    step 1: Inherit the View of the model to which you wish to add the Ethiopian calendar extension.
+
+                    step 2, xpath your exact location of converting date fields if your date fields are located within a form sheet, use col and colspan to adjust CSS
+                
+                    Ethiopian Date Picker Widget
+
+                    - ethiopian_calander_widget
+                    - ethiopian_calander_widget_two
+                    - ethiopian_calander_widget_three
+                    - ethiopian_calander_widget_four
+                
+                
+                -->
+        <record id="fleet_vehicle_view_form_inherited_second" model="ir.ui.view">
+            <field name="name">fleet.vehicle.form.tree.second</field>
+            <field name="model">fleet.vehicle</field>
+            <field name="inherit_id" ref="fleet.fleet_vehicle_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='engine_history_ids']//tree//field[@name='changed_date']" position="replace">
+                    <field name="ethiopian_five" string="Date" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    <field name="changed_date" string="Date" groups="EthiopianCalendar.group_gregory"/>
+                    <field name="is_pagum_five" invisible="1"/>
+                </xpath>
+                <xpath expr="//field[@name='color_history_ids']//tree//field[@name='changed_date']" position="replace">
+                    <field name="ethiopian_six" string="Date" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    <field name="changed_date" string="Date" groups="EthiopianCalendar.group_gregory"/>
+                    <field name="is_pagum_six" invisible="1"/>
+                </xpath>
+                <xpath expr="//field[@name='tire_history_ids']//tree//field[@name='changed_date']" position="replace">
+                    <field name="ethiopian_three" string="Date" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    <field name="changed_date" string="Date" groups="EthiopianCalendar.group_gregory"/>
+                   
+                    <field name="is_pagum_three" invisible="1"/>
+                </xpath>
+                <xpath expr="//field[@name='battery_history_ids']//tree//field[@name='changed_date']" position="replace">
+                    <field name="ethiopian_four" string="Date" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    <field name="changed_date" string="Date" groups="EthiopianCalendar.group_gregory"/>
+                    
+                    <field name="is_pagum_four" invisible="1"/>
+                </xpath>
+
+            </field>
+        </record>
 </odoo>

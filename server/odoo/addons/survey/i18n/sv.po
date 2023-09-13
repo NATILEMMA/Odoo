@@ -11,6 +11,7 @@
 # Kristoffer Grundström <lovaren@gmail.com>, 2019
 # Martin Trigaux, 2019
 # Martin Wilderoth <martin.wilderoth@linserv.se>, 2019
+# Anders Wallenquist <anders.wallenquist@vertel.se>, 2021
 # 3eec91a23d05c632ffac786ac42b81b8_b6fff7b <8985b7bc57db860af29969457dbb51b3_1018915>, 2021
 # Kim Asplund <kim.asplund@gmail.com>, 2021
 # Victor Ekström, 2021
@@ -18,8 +19,6 @@
 # Mikael Åkerberg <mikael.akerberg@mariaakerberg.com>, 2022
 # Simon S, 2022
 # Robin Calvin, 2022
-# MikaelAtVertel, 2022
-# Anders Wallenquist <anders.wallenquist@vertel.se>, 2022
 # 
 msgid ""
 msgstr ""
@@ -27,7 +26,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-05 12:34+0000\n"
 "PO-Revision-Date: 2019-08-26 09:14+0000\n"
-"Last-Translator: Anders Wallenquist <anders.wallenquist@vertel.se>, 2022\n"
+"Last-Translator: Robin Calvin, 2022\n"
 "Language-Team: Swedish (https://www.transifex.com/odoo/teams/41243/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -252,7 +251,7 @@ msgstr ""
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.result_choice
 msgid "<i class=\"fa fa-list-alt\"/> Data"
-msgstr "<i class=\"fa fa-list-alt\"/> Data"
+msgstr ""
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.result_number
@@ -286,8 +285,6 @@ msgid ""
 "<span attrs=\"{'invisible': [('is_attempts_limited', '=', False)]}\"> "
 "attempts</span>"
 msgstr ""
-"<span attrs=\"{'invisible': [('is_attempts_limited', '=', False)]}\"> försök"
-" </span>"
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_form
@@ -295,8 +292,6 @@ msgid ""
 "<span attrs=\"{'invisible': [('is_time_limited', '=', False)]}\"> "
 "minutes</span>"
 msgstr ""
-"<span attrs=\"{'invisible': [('is_time_limited', '=', False)]}\"> minuter "
-"</span>"
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.result
@@ -360,8 +355,6 @@ msgid ""
 "<span class=\"o_stat_text\" attrs=\"{'invisible': [('certifications_company_count', '&lt;', 2)]}\">Certifications</span>\n"
 "                        <span class=\"o_stat_text\" attrs=\"{'invisible': [('certifications_company_count', '&gt;', 1)]}\">Certification</span>"
 msgstr ""
-"<span class=\"o_stat_text\" attrs=\"{'invisible': [('nbr_certification', '&gt;', 0)]}\">Fullföljda</span>\n"
-"                <span class=\"o_stat_text\" attrs=\"{'invisible': [('nbr_certification', '=', 0)]}\">Examinerade</span>"
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.res_partner_view_form
@@ -369,13 +362,11 @@ msgid ""
 "<span class=\"o_stat_text\" attrs=\"{'invisible': [('certifications_count', '&lt;', 2)]}\">Certifications</span>\n"
 "                        <span class=\"o_stat_text\" attrs=\"{'invisible': [('certifications_count', '&gt;', 1)]}\">Certification</span>"
 msgstr ""
-"<span class=\"o_stat_text\" attrs=\"{'invisible': [('nbr_certification', '&gt;', 0)]}\">Fullföljda</span>\n"
-"                <span class=\"o_stat_text\" attrs=\"{'invisible': [('nbr_certification', '=', 0)]}\">Examinerade</span>"
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_kanban
 msgid "<span class=\"text-muted\">Answers</span>"
-msgstr "<span class=\"text-muted\">Svar </span>"
+msgstr ""
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_kanban
@@ -719,7 +710,7 @@ msgstr ""
 #. module: survey
 #: model:mail.template,report_name:survey.mail_template_certification
 msgid "Certification Document"
-msgstr "Certifikat"
+msgstr ""
 
 #. module: survey
 #: model:ir.model.constraint,message:survey.constraint_survey_survey_give_badge_check
@@ -853,7 +844,7 @@ msgstr "Konferensstol"
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.sfinished
 msgid "Congratulations, you have passed the test!"
-msgstr "Grattis, du klarade testet!"
+msgstr ""
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_question_form
@@ -1352,7 +1343,7 @@ msgstr ""
 #: model:survey.question,comments_message:survey.vendor_certification_page_2_question_3
 #, python-format
 msgid "If other, please specify:"
-msgstr "Om annat, vänligen specificera:"
+msgstr ""
 
 #. module: survey
 #: model:ir.model.fields,help:survey.field_survey_question__questions_selection
@@ -1365,7 +1356,7 @@ msgstr ""
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.sfinished
 msgid "If you wish, you can"
-msgstr "Om du önskar, kan du"
+msgstr ""
 
 #. module: survey
 #: model:survey.label,value:survey.survey_feedback_p2_q1_sug6
@@ -1883,7 +1874,7 @@ msgstr "Utgående e-postserver"
 #: code:addons/survey/static/src/js/survey_result.js:0
 #, python-format
 msgid "Overall Performance %.2f%s"
-msgstr "Totalt resultat %.2f%s"
+msgstr ""
 
 #. module: survey
 #: model:survey.label,value:survey.survey_feedback_p2_q1_sug5
@@ -2305,7 +2296,7 @@ msgstr ""
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_init
 msgid "Start Certification"
-msgstr "Starta din certifikation"
+msgstr ""
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_form
@@ -2568,7 +2559,7 @@ msgstr ""
 #: model:survey.question,validation_error_msg:survey.vendor_certification_page_2_question_3
 #, python-format
 msgid "The answer you entered is not valid."
-msgstr "Ditt svar är inte giltigt"
+msgstr ""
 
 #. module: survey
 #: model:ir.model.constraint,message:survey.constraint_survey_survey_attempts_limit_check
@@ -2839,7 +2830,7 @@ msgstr ""
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.sfinished
 msgid "Unfortunately, you have failed the test."
-msgstr "Tyvärr, du klarade inte testet."
+msgstr ""
 
 #. module: survey
 #: model:survey.label,value:survey.survey_feedback_p2_q1_sug3
@@ -2934,7 +2925,7 @@ msgstr "Bekräfta inmatningen"
 #. module: survey
 #: model:ir.model.fields,field_description:survey.field_survey_question__validation_error_msg
 msgid "Validation Error message"
-msgstr "Valideringsfelmeddelande"
+msgstr ""
 
 #. module: survey
 #: model:survey.label,value:survey.vendor_certification_page_2_question_3_choice_1
@@ -3059,12 +3050,12 @@ msgstr ""
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.sfinished
 msgid "You received the badge"
-msgstr "Du fick emblemet"
+msgstr ""
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.sfinished
 msgid "You scored"
-msgstr "Du uppnådde"
+msgstr ""
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_question_form
@@ -3084,7 +3075,7 @@ msgstr ""
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.sfinished
 msgid "review your answers"
-msgstr "granska dina svar"
+msgstr ""
 
 #. module: survey
 #: model_terms:ir.ui.view,arch_db:survey.survey_expired

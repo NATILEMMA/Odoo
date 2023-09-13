@@ -14,7 +14,7 @@
     """,
     'author': 'Amen mesfin',
 
-    'depends': ['members_custom', 'mail'],
+    'depends': ['member_registration', 'mail'],
     # Data
     'data': [
         'views/sub_payment.xml',
@@ -27,7 +27,6 @@
         'data/subcity_sequence.xml',
         'security/ir.model.access.csv',
         'security/security.xml',
-        'views/report.xml',
     ],
     # Technical
     'installable': True,

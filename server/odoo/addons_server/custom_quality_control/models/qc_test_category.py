@@ -28,7 +28,7 @@ class QcTestTemplateCategory(models.Model):
         comodel_name="qc.test.category", string="Parent category"
     )
     complete_name = fields.Char(
-        compute="_compute_get_complete_name", string="Full name"
+        compute="_compute_get_complete_name", string="Full name", translate=True
     )
     child_ids = fields.One2many(
         comodel_name="qc.test.category",

@@ -1,0 +1,620 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* stock_transfer
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20221005\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-22 07:42+0000\n"
+"PO-Revision-Date: 2023-05-22 07:42+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request__access_warning
+msgid "Access warning"
+msgstr "የመድረሻ ማስጠንቀቂያ"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request__message_needaction
+msgid "Action Needed"
+msgstr "እርምጃ ያስፈልጋል"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request__activity_ids
+msgid "Activities"
+msgstr "እንቅስቃሴዎች"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "ከእንቅስቃሴ የተለየ ማስጌጥ"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request__activity_state
+msgid "Activity State"
+msgstr "የእንቅስቃሴ ሁኔታ"
+
+#. module: stock_transfer
+#: model:ir.model.fields.selection,name:stock_transfer.selection__transfer_request__state__approved
+#: model:ir.model.fields.selection,name:stock_transfer.selection__transfer_request_item__state__approved
+msgid "Approve"
+msgstr "አጽድቅ"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request__approved_id
+msgid "Approved_by"
+msgstr "ያረጋገጠው ሰው"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request__Approver
+msgid "Approver"
+msgstr "አጽዳቂ"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request__message_attachment_count
+msgid "Attachment Count"
+msgstr "አባሪ ብዛት"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request_item__available_in_store
+msgid "Available"
+msgstr "ይገኛል"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request__campaign_id
+msgid "Campaign"
+msgstr "ዘመቻ"
+
+#. module: stock_transfer
+#: model:ir.model.fields.selection,name:stock_transfer.selection__transfer_request__state__cancel
+#: model:ir.model.fields.selection,name:stock_transfer.selection__transfer_request_item__state__cancel
+#: model_terms:ir.ui.view,arch_db:stock_transfer.view_transfer_requester_tree
+msgid "Cancel"
+msgstr "ሰርዝ"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request__canceled_id
+msgid "Canceled_by"
+msgstr "ተሰርዟል"
+
+#. module: stock_transfer
+#: model_terms:ir.ui.view,arch_db:stock_transfer.view_transfer_requester_tree
+msgid "Create Transfer"
+msgstr "ዝውውር ፍጠር"
+
+#. module: stock_transfer
+#: model_terms:ir.actions.act_window,help:stock_transfer.action_transfer_requester
+msgid "Create Your Transfer Request Here!"
+msgstr "የማስተላለፍ ጥያቄህን እዚህ ፍጠር!"
+
+#. module: stock_transfer
+#: model_terms:ir.actions.act_window,help:stock_transfer.action_sprogroup_purchase_request
+#: model_terms:ir.actions.act_window,help:stock_transfer.action_stock_picking_new
+#: model_terms:ir.actions.act_window,help:stock_transfer.action_transfer_request
+msgid "Create a stock request"
+msgstr "የእቃዎች ጥያቄ ፍጠር"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request__create_uid
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request_item__create_uid
+msgid "Created by"
+msgstr "የተፈጠረ"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request__create_date
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request_item__create_date
+msgid "Created on"
+msgstr "በላይ ተፈጠረ"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request__date
+msgid "Creation Date"
+msgstr "የተፈጠረበት ቀን"
+
+#. module: stock_transfer
+#: model:ir.model.fields,help:stock_transfer.field_transfer_request__date
+msgid "Creation Date, usually the time of the order"
+msgstr "የተፈጠረበት ቀን፣ አብዛኛው ጊዜ የትእዛዙ ጊዜ"
+
+#. module: stock_transfer
+#: model:ir.model.fields,help:stock_transfer.field_transfer_request__access_url
+msgid "Customer Portal URL"
+msgstr "የደንበኛ ፖርታል ዩአርኤል"
+
+#. module: stock_transfer
+#: model:ir.model.fields,help:stock_transfer.field_transfer_request__scheduled_date
+msgid "Date at which the transfer has been processed or cancelled."
+msgstr "ዝውውሩ የተካሄደበት ወይም የተሰረዘበት ቀን"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request_item__demand
+msgid "Demand"
+msgstr "ፍላጎት"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request__location_dest_id
+msgid "Destination Location"
+msgstr "መዳረሻ ቦታ"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request__display_name
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request_item__display_name
+msgid "Display Name"
+msgstr "መጠሪያው ስም"
+
+#. module: stock_transfer
+#: model:ir.model.fields.selection,name:stock_transfer.selection__transfer_request__state__draft
+#: model:ir.model.fields.selection,name:stock_transfer.selection__transfer_request_item__state__draft
+msgid "Draft"
+msgstr "ረቂቅ"
+
+#. module: stock_transfer
+#: model_terms:ir.ui.view,arch_db:stock_transfer.view_transfer_requester_tree
+msgid "Effective Date"
+msgstr "የሚሰራበት ቀን"
+
+#. module: stock_transfer
+#: model:ir.model,name:stock_transfer.model_hr_employee
+msgid "Employee"
+msgstr "ሰራተኛ"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request__message_follower_ids
+msgid "Followers"
+msgstr "ተከታዮች"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "ተከታዮች (ሰርጦች)"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "ተከታዮች (አጋሮች)"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request__id
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request_item__id
+msgid "ID"
+msgstr "መታወቂያ"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request__activity_exception_icon
+msgid "Icon"
+msgstr "አዶ"
+
+#. module: stock_transfer
+#: model:ir.model.fields,help:stock_transfer.field_transfer_request__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "ልዩ እንቅስቃሴን ለማመልከት አዶ።"
+
+#. module: stock_transfer
+#: model:ir.model.fields,help:stock_transfer.field_transfer_request__message_needaction
+#: model:ir.model.fields,help:stock_transfer.field_transfer_request__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "ከተመረመሩ አዲስ መልዕክቶች የእርስዎን ትኩረት ይፈልጋሉ።"
+
+#. module: stock_transfer
+#: model:ir.model.fields,help:stock_transfer.field_transfer_request__message_has_error
+#: model:ir.model.fields,help:stock_transfer.field_transfer_request__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "ከተመረመሩ አንዳንድ መልዕክቶች የማድረስ ስህተት አለባቸው።"
+
+#. module: stock_transfer
+#: model:ir.actions.act_window,name:stock_transfer.action_transfer_requester
+#: model:ir.ui.menu,name:stock_transfer.transfer_request_menu
+msgid "Internal Transfer"
+msgstr "የውስጥ ማስተላለፍ"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request__asset
+msgid "Is Asset"
+msgstr "ንብረት ነው"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request__message_is_follower
+msgid "Is Follower"
+msgstr "ተከታይ ነው"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_stock_picking_type__internal
+msgid "Is internal transfer operation"
+msgstr "የውስጥ ማስተላለፍ ሥራ ነው"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request__item_ids
+#: model_terms:ir.ui.view,arch_db:stock_transfer.view_transfer_requester_tree
+msgid "Items"
+msgstr "እቃዎች"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request____last_update
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request_item____last_update
+msgid "Last Modified on"
+msgstr "በመጨረሻ የተሻሻለው በርቷል"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request__write_uid
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request_item__write_uid
+msgid "Last Updated by"
+msgstr "መጨረሻ የዘመነው በ"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request__write_date
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request_item__write_date
+msgid "Last Updated on"
+msgstr "መጨረሻ የዘመነው በ"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "ዋና አባሪ"
+
+#. module: stock_transfer
+#: model_terms:ir.ui.view,arch_db:stock_transfer.view_hr_employee_form_inherit_new
+msgid "Material"
+msgstr "ቁስ"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request__medium_id
+msgid "Medium"
+msgstr "መካከለኛ"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request__message
+msgid "Message"
+msgstr "መልእክት"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request__message_has_error
+msgid "Message Delivery error"
+msgstr "የመልእክት ማስተላለፍ ስህተት"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request__message_ids
+msgid "Messages"
+msgstr "መልእክቶች"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "ቀጣይ የእንቅስቃሴ ገደብ"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request__activity_summary
+msgid "Next Activity Summary"
+msgstr "ቀጣይ የእንቅስቃሴ ማጠቃለያ"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request__activity_type_id
+msgid "Next Activity Type"
+msgstr "ቀጣይ የእንቅስቃሴ አይነት"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request__note
+#: model_terms:ir.ui.view,arch_db:stock_transfer.view_transfer_requester_tree
+msgid "Notes"
+msgstr "ማስታወሻዎች"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request_item__number
+msgid "Number"
+msgstr "ቁጥር"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request__message_needaction_counter
+msgid "Number of Actions"
+msgstr "የተግባር ብዛት"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request__message_has_error_counter
+msgid "Number of errors"
+msgstr "የስህተቶች ብዛት"
+
+#. module: stock_transfer
+#: model:ir.model.fields,help:stock_transfer.field_transfer_request__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "አንድ እርምጃ የሚያስፈልገው የመልእክት ብዛት"
+
+#. module: stock_transfer
+#: model:ir.model.fields,help:stock_transfer.field_transfer_request__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "ማድረስ ስህተት ያለባቸው መልዕክቶች ብዛት"
+
+#. module: stock_transfer
+#: model:ir.model.fields,help:stock_transfer.field_transfer_request__message_unread_counter
+msgid "Number of unread messages"
+msgstr "ያልተነበቡ መልዕክቶች ብዛት"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request__picking_type_id
+msgid "Operation Type"
+msgstr "የአሰራር አይነት"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request__pr
+msgid "PR"
+msgstr "PR"
+
+#. module: stock_transfer
+#: model:ir.model,name:stock_transfer.model_stock_picking_type
+msgid "Picking Type"
+msgstr "የመልቀሚያ ዓይነት"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request__access_url
+msgid "Portal Access URL"
+msgstr "ፖርታል መዳረሻ URL"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request_item__product_id
+msgid "Product"
+msgstr "ምርት"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request_item__provide
+msgid "Provide"
+msgstr "አቅርቡ"
+
+#. module: stock_transfer
+#: code:addons/stock_transfer/models/main.py:0
+#: model_terms:ir.ui.view,arch_db:stock_transfer.view_transfer_requester_tree
+#, python-format
+msgid "Purchase Request"
+msgstr "የግዢ ጥያቄ"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request__received_id
+msgid "Received by"
+msgstr "የተቀበለው በ"
+
+#. module: stock_transfer
+#: model:ir.model.fields.selection,name:stock_transfer.selection__transfer_request__state__done
+#: model:ir.model.fields.selection,name:stock_transfer.selection__transfer_request_item__state__done
+msgid "Recieved"
+msgstr "ተቀበል"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request__name
+msgid "Reference"
+msgstr "ማጣቀሻ"
+
+#. module: stock_transfer
+#: model_terms:ir.actions.act_window,help:stock_transfer.action_sprogroup_purchase_request
+#: model_terms:ir.actions.act_window,help:stock_transfer.action_stock_picking_new
+#: model_terms:ir.actions.act_window,help:stock_transfer.action_transfer_request
+msgid "Register stock transfer"
+msgstr "የእቃዎች ማስተላለፍ ይመዝገቡ"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request_item__transfer_request_id
+#: model_terms:ir.ui.view,arch_db:stock_transfer.view_transfer_requester_tree
+msgid "Request"
+msgstr "ጥያቄ"
+
+#. module: stock_transfer
+#: model_terms:ir.ui.view,arch_db:stock_transfer.view_transfer_requester_tree
+msgid "Request Purchase"
+msgstr "ግዢ ጠይቅ"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request__user_id
+msgid "Request_by"
+msgstr "ጥያቄ_በ"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request__activity_user_id
+msgid "Responsible User"
+msgstr "ተጠያቂ ተጠቃሚ"
+
+#. module: stock_transfer
+#: model:ir.model,name:stock_transfer.model_stock_return_picking
+msgid "Return Picking"
+msgstr "ምርጫ መመለስ"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request_item__returned
+#: model:ir.model.fields.selection,name:stock_transfer.selection__transfer_request__state__return
+#: model:ir.model.fields.selection,name:stock_transfer.selection__transfer_request_item__state__return
+msgid "Returned"
+msgstr "ተመለስ"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "ኤስኤምኤስ የማድረስ ስህተት"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request__scheduled_date
+msgid "Scheduled date"
+msgstr "የተያዘለት ቀን"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request__access_token
+msgid "Security Token"
+msgstr "የደህንነት ማስመሰያ"
+
+#. module: stock_transfer
+#: model_terms:ir.ui.view,arch_db:stock_transfer.view_transfer_requester_tree
+msgid "Set to draft"
+msgstr "ወደ ረቂቅ ይመልሱ"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request__source_id
+msgid "Source"
+msgstr "ምንጭ"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request__location_id
+msgid "Source Location"
+msgstr "ምንጭ ቦታ"
+
+#. module: stock_transfer
+#: model:ir.model,name:stock_transfer.model_sprogroup_purchase_request
+msgid "Sprogroup Purchase Request"
+msgstr "የስፕሮግሩፕ ግዢ ጥያቄ"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request__state
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request_item__state
+msgid "Status"
+msgstr "ሁኔታ"
+
+#. module: stock_transfer
+#: model:ir.model.fields,help:stock_transfer.field_transfer_request__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"በእንቅስቃሴ ላይ የተመሰረተ ሁኔታ\n"
+"አልፏል፡ የማለቂያ ቀን አስቀድሞ አልፏል\n"
+"ዛሬ፡ የተግባር ቀን ዛሬ ነው\n"
+"የታቀደው: የወደፊት እንቅስቃሴዎች."
+
+#. module: stock_transfer
+#: model:ir.ui.menu,name:stock_transfer.menu_transfer_request_root
+msgid "Stock  Transfer"
+msgstr "የእቃዎች ማስተላለፍ"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_sprogroup_purchase_request__sr
+msgid "Stock Request"
+msgstr "የእቃዎች ጥያቄ"
+
+#. module: stock_transfer
+#: model:ir.model,name:stock_transfer.model_transfer_request
+msgid "Stock Transfer"
+msgstr "የእቃዎች ማስተላለፍ"
+
+#. module: stock_transfer
+#: model_terms:ir.ui.view,arch_db:stock_transfer.view_sprogroup_purchase_request_sr
+msgid "Stock request"
+msgstr "የእቃዎች ጥያቄ"
+
+#. module: stock_transfer
+#: code:addons/stock_transfer/models/main.py:0
+#, python-format
+msgid "There is no stock transfer picking type"
+msgstr "ምንም የእቃዎች ማስተላለፍ አይነት የለም"
+
+#. module: stock_transfer
+#: model:ir.model.fields,help:stock_transfer.field_transfer_request__campaign_id
+msgid ""
+"This is a name that helps you keep track of your different campaign efforts,"
+" e.g. Fall_Drive, Christmas_Special"
+msgstr ""
+"ይህ የተለያዩ የዘመቻ ጥረቶችዎን ለመከታተል የሚረዳዎት ስም ነው"
+"ለምሳሌ ውድቀት_Drive፣ የገና_ልዩ"
+
+#. module: stock_transfer
+#: model:ir.model.fields,help:stock_transfer.field_transfer_request__medium_id
+msgid "This is the method of delivery, e.g. Postcard, Email, or Banner Ad"
+msgstr "ይህ የማድረሻ ዘዴ ነው፣ ለምሳሌ ፖስትካርድ፣ ኢሜል ወይም ባነር ማስታወቂያ"
+
+#. module: stock_transfer
+#: model:ir.model.fields,help:stock_transfer.field_transfer_request__source_id
+msgid ""
+"This is the source of the link, e.g. Search Engine, another domain, or name "
+"of email list"
+msgstr ""
+"ይህ የአገናኙ ምንጭ ነው፣ ለምሳሌ የፍለጋ ሞተር፣ ሌላ ጎራ ወይም ስም"
+"የኢሜል ዝርዝር"
+
+#. module: stock_transfer
+#: model:ir.model,name:stock_transfer.model_stock_picking
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request__stock_picking
+#: model_terms:ir.ui.view,arch_db:stock_transfer.view_transfer_requester_tree
+msgid "Transfer"
+msgstr "ማስተላለፍ"
+
+#. module: stock_transfer
+#: model_terms:ir.ui.view,arch_db:stock_transfer.view_transfer_requester_tree
+msgid "Transfer Items"
+msgstr "እቃዎችን ያስተላልፉ"
+
+#. module: stock_transfer
+#: model:ir.actions.act_window,name:stock_transfer.action_transfer_request
+msgid "Transfer Request"
+msgstr "የዝውውር ጥያቄ"
+
+#. module: stock_transfer
+#: model:ir.model,name:stock_transfer.model_transfer_request_item
+msgid "Transfer Request item"
+msgstr "የማስተላለፍ ጥያቄ ንጥል"
+
+#. module: stock_transfer
+#: model_terms:ir.ui.view,arch_db:stock_transfer.view_transfer_requester_tree
+msgid "Transfers"
+msgstr "ማስተላለፎች"
+
+#. module: stock_transfer
+#: model:ir.model.fields,help:stock_transfer.field_transfer_request__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "በመዝገብ ላይ ያለ ልዩ እንቅስቃሴ አይነት።"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request_item__product_uom
+msgid "Unit of Measure"
+msgstr "የመለኪያ ክፍል"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request__message_unread
+msgid "Unread Messages"
+msgstr "ያልተነበቡ መልዕክቶች"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "ያልተነበቡ መልዕክቶች ቆጣሪ"
+
+#. module: stock_transfer
+#: model:ir.model.fields.selection,name:stock_transfer.selection__transfer_request__state__waiting
+#: model:ir.model.fields.selection,name:stock_transfer.selection__transfer_request_item__state__waiting
+msgid "Waiting For Approval"
+msgstr "ማጽደቅን በመጠባበቅ ላይ"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request__website_message_ids
+msgid "Website Messages"
+msgstr "የድር ጣቢያ መልዕክቶች"
+
+#. module: stock_transfer
+#: model:ir.model.fields,help:stock_transfer.field_transfer_request__website_message_ids
+msgid "Website communication history"
+msgstr "የድር ጣቢያ ግንኙነት ታሪክ"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_hr_employee__invoice_count_3
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request__invoice_count_3
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request__invoice_count_4
+msgid "expanse Count"
+msgstr "የተስፋፋ ቁጥር"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_transfer_request_item__pr
+msgid "purchase request"
+msgstr "የግዢ ጥያቄ"
+
+#. module: stock_transfer
+#: model:ir.actions.act_window,name:stock_transfer.action_sprogroup_purchase_request
+msgid "sprogroup purchase request"
+msgstr "የቡድን ግዢ ጥያቄ"
+
+#. module: stock_transfer
+#: model:ir.actions.act_window,name:stock_transfer.action_stock_picking_new
+msgid "stock picking"
+msgstr "እቃዎች መምረጥ"
+
+#. module: stock_transfer
+#: model:ir.model.fields,field_description:stock_transfer.field_stock_picking__stock_request
+msgid "stock request"
+msgstr "የእቃዎች ጥያቄ"

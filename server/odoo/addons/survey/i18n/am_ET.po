@@ -1,0 +1,2546 @@
+# Date created: 2023-07-31 16:46:24 by dichthuatphuongdong.com
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-07-31 03:13:39+0000"
+"MIME-Version: 1.0"
+"Content-Type: text/plain; charset=UTF-8"
+"Content-Transfer-Encoding: 8bit"
+"Plural-Forms: nplurals=1; plural=0;"
+"X-Generator: GlotPress/3.0.0-alpha.2"
+"Language: en_GB"
+"Project-Id-Version: PO File 5.8.1"
+
+#. module: survey
+#: code:addons/survey/models/survey_survey.py:0
+msgid "%s (copy)"
+msgstr "%s (ኮፒ)"
+
+#. module: survey
+#: code:addons/survey/models/survey_survey.py:0
+msgid "%s challenge certificate"
+msgstr "%s የውድድር የምስክር ወረቀት"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.page
+msgid "&amp;times;"
+msgstr "& ጊዜያት;"
+
+#. module: survey
+#: model:ir.actions.report,print_report_name:survey.certification_report
+msgid "Certification - %s\' % (object.survey_id.display_name)"
+msgstr "የእውቅና ማረጋገጫ - %s \' % (object.survey_id.display_name)"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_header
+msgid "00:00"
+msgstr ""
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.403
+msgid "403: Forbidden"
+msgstr "403 የተከለከለ"
+
+#. module: survey
+#: model:mail.template,body_html:survey.mail_template_certification
+msgid ""
+"<?xml version=\"1.0\"?>"
+"<div style=\"background:#F0F0F0;color:#515166;padding:10px 0px;font-family:Arial,Helvetica,sans-serif;font-size:14px;\">"
+"                    <table style=\"width:600px;margin:5px auto;\">"
+"                        <tbody>"
+"                            <tr><td>"
+"                                <!-- We use the logo of the company that created the survey (to handle multi company cases) -->"
+"                                <a href=\"/\"><img src=\"/logo.png?company=${object.survey_id.create_uid.company_id.id}\" style=\"vertical-align:baseline;max-width:100px;\"/></a>"
+"                            </td><td style=\"text-align:right;vertical-align:middle;\">"
+"                                    Certification: ${object.survey_id.display_name}"
+"                            </td></tr>"
+"                        </tbody>"
+"                    </table>"
+"                    <table style=\"width:600px;margin:0px auto;background:white;border:1px solid #e1e1e1;\">"
+"                        <tbody>"
+"                            <tr><td style=\"padding:15px 20px 10px 20px;\">"
+"                                <p>Dear <span>${object.partner_id.name or \'participant\'}</span></p>"
+"                                <p>"
+"                                    Here is, in attachment, your certification document for"
+"                                        <strong>${object.survey_id.display_name}</strong>"
+"                                </p>"
+"                                <p>Congratulations for succeeding the test!</p>"
+"                            </td></tr>"
+"                        </tbody>"
+"                    </table>"
+"                </div>"
+"            "
+msgstr ""
+"<?xml ስሪት=\"1.0\"?>"
+"<div style=\"ዳራ፡#F0F0F0;color:#515166;padding:10px 0px;font-family:Arial,Helvetica,sans-serif;font-size:14px;\">"
+" <table style=\"width:600px;margin:5px auto;\">"
+" <tbody>"
+" <td>"
+" <!-- የዳሰሳ ጥናቱን የፈጠረው የኩባንያውን አርማ እንጠቀማለን (የብዙ ኩባንያ ጉዳዮችን ለማስተናገድ) -->"
+" <a href=\"/\"><img src=\"/logo.png?company=${object.survey_id.create_uid.company_id.id}\" style=\"vertical-align:baseline;max- ስፋት፡100 ፒክስል፤\"/></a>"
+" </td><td style=\"text-align:right;vertical-align:middle;\">"
+" የእውቅና ማረጋገጫ፡ ${object.survey_id.display_name}"
+" </td></tr>"
+" </tbody>"
+" </ጠረጴዛ>"
+" <table style=\"width:600px;margin:0px auto;background:white; border:1px solid #e1e1e1;\">"
+" <tbody>"
+" <tr><td style=\" padding:15px 20px 10px 20px;\">"
+" <p>ውድ <span>${object.partner_id.name ወይም \'ተሳታፊ\'}</span></p>"
+" <p>"
+"እነሆ፣ ከዚህ ጋር ተያይዞ፣ የማረጋገጫ ሰነድዎ ለ"
+" <strong>${object.survey_id.display_name}</strong>"
+"</p>"
+" <p>ፈተናውን ስለተሳካላችሁ እንኳን ደስ አላችሁ!</p>"
+" </td></tr>"
+" </tbody>"
+" </ጠረጴዛ>"
+" </div>"
+"            "
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.result
+msgid "<b>Question </b>"
+msgstr "<b>ጥያቄ </b>"
+
+#. module: survey
+#: model:mail.template,body_html:survey.mail_template_user_input_invite
+msgid ""
+"<div style=\"margin: 0px; padding: 0px; font-size: 13px;\">"
+"    <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">"
+"        Dear ${object.partner_id.name or \'participant\'}<br/><br/>"
+"        % if object.survey_id.certificate:"
+"            You have been invited to take a new certification."
+"        % else:"
+"            We are conducting a survey and your response would be appreciated."
+"        % endif"
+"        <div style=\"margin: 16px 0px 16px 0px;\">"
+"            <a href=\"${(\'%s?answer_token=%s\' % (object.survey_id.public_url, object.token)) | safe}\" style=\"background-color: #875A7B; padding: 8px 16px 8px 16px; text-decoration: none; color: #fff; border-radius: 5px; font-size:13px;\">"
+"                % if object.survey_id.certificate:"
+"                    Start Certification"
+"                % else:"
+"                    Start Survey"
+"                % endif"
+"            </a>"
+"        </div>"
+"        % if object.deadline:"
+"            Please answer the survey for ${format_date(object.deadline)}.<br/><br/>"
+"        % endif"
+"        Thank you for your participation."
+"    </p>"
+"</div>"
+"            "
+msgstr ""
+"<div style=\"ህዳግ፡ 0px; ንጣፍ: 0 ፒክስል; የቅርጸ-ቁምፊ መጠን፡ 13 ፒክስል;\">"
+" <p style=\"ህዳግ፡ 0px; ንጣፍ: 0 ፒክስል; የቅርጸ-ቁምፊ መጠን፡ 13 ፒክስል;\">"
+" ውድ ${object.partner_id.name ወይም \'ተሳታፊ\'}<br/><br/>"
+" % object.survey_id.certificate ከሆነ፡"
+"አዲስ የምስክር ወረቀት እንድትወስድ ተጋብዘሃል።"
+"% ሌላ:"
+"የዳሰሳ ጥናት እያደረግን ነው እና ምላሽዎ እናመሰግናለን."
+"% መጨረሻ"
+" <div style=\"ህዳግ፡ 16px 0px 16px 0px;\">"
+" <a href=\"${(\'%s?answer_token=%s\' % (object.survey_id.public_url, object.token)) | safe}\" style=\"ዳራ-ቀለም፡ # 875A7B; ንጣፍ: 8 ፒክስል 16 ፒክስል 8 ፒክስል 16 ፒክስል; ጽሑፍ-ማጌጫ: የለም; ቀለም፡ #fff; ድንበር-ራዲየስ: 5 ፒክስል; የቅርጸ-ቁምፊ መጠን፡13 ፒክስል;\">"
+" % object.survey_id.certificate ከሆነ፡"
+"የእውቅና ማረጋገጫ ጀምር"
+"% ሌላ:"
+"ዳሰሳ ጀምር"
+"% መጨረሻ"
+"</a>"
+" </div>"
+" % እቃ ከሆነ. የመጨረሻ ገደብ:"
+"እባክዎ ለ${format_date(object.deadline)} ዳሰሳውን ይመልሱ።<br/><br/>"
+"% መጨረሻ"
+"ለተሳትፎዎ እናመሰግናለን።"
+"</p>"
+"</div>"
+"            "
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_question_form
+msgid "<i class=\"fa fa-2x\" role=\"img\" aria-label=\"Numeric\" title=\"Numeric\">123..</i>"
+msgstr "<i class=\"fa fa-2x\" role=\"img\" aria-label=\"Numeric\" title=\"Numeric\">123..</i>"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_question_form
+msgid "<i class=\"fa fa-align-justify fa-4x\" role=\"img\" aria-label=\"Multiple lines\" title=\"Multiple Lines\"/>"
+msgstr "<i class=\"fa fa-align-justify fa-4x\" role=\"img\" aria-label=\"በርካታ መስመሮች\" title=\"Multiple Lines\"/>"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.result_matrix
+msgid ""
+"<i class=\"fa fa-bar-chart\"/>"
+"                    Graph"
+msgstr ""
+"<i class=\"fa fa-bar-chart\"/>"
+"                     ግራፍ"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.result_choice
+msgid "<i class=\"fa fa-bar-chart-o\"/> Graph"
+msgstr "<i class=\"fa fa-bar-chart-o\"/> ግራፍ"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.result_choice
+msgid "<i class=\"fa fa-bar-chart-o\"/> Pie Chart"
+msgstr "<i class=\"fa fa-bar-chart-o\"/> የፓይ ገበታ"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_question_form
+msgid "<i class=\"fa fa-check-square-o fa-lg\"/> answer"
+msgstr "<i class=\"fa fa-check-square-o fa-lg\"/> መልስ"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_question_form
+msgid "<i class=\"fa fa-circle-o  fa-lg\"/> answer"
+msgstr "<i class=\"fa fa-circle-o fa-lg\"/> መልስ"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_question_form
+msgid "<i class=\"fa fa-circle-o fa-lg\" role=\"img\" aria-label=\"Not checked\" title=\"Not checked\"/>"
+msgstr "<i class=\"fa fa-circle-o fa-lg\" role=\"img\" aria-label=\"አልተረጋገጠም\" title=\"አልተረጋገጠም\"/>"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_question_form
+msgid "<i class=\"fa fa-dot-circle-o fa-lg\" role=\"img\" aria-label=\"Checked\" title=\"Checked\"/>"
+msgstr "<i class=\"fa fa-dot-circle-o fa-lg\" role=\"img\" aria-label=\"Checked\" title=\"ተፈተሸ\"/>"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_question_form
+msgid "<i class=\"fa fa-dot-circle-o fa-lg\"/> answer"
+msgstr "<i class=\"fa fa-dot-circle-o fa-lg\"/> መልስ"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.sfinished
+msgid ""
+"<i class=\"fa fa-fw fa-trophy\" role=\"img\" aria-label=\"Download certification\" title=\"Download certification\"/>"
+"                                                Download certification"
+msgstr "<i class=\"fa fa-fw fa-trophy\" role=\"img\" aria-label=\" አውርድ ሰርተፍኬት\" title=\"የማውረድ ማረጋገጫ/>"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.result_number
+msgid ""
+"<i class=\"fa fa-list-alt\"/>"
+"                    All Data"
+msgstr "የምስክር ወረቀት አውርድ\""
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.result_matrix
+msgid ""
+"<i class=\"fa fa-list-alt\"/>"
+"                    Data"
+msgstr ""
+"<i class=\"fa fa-list-alt\"/>"
+"                     ሁሉም ውሂብ"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.result_choice
+msgid "<i class=\"fa fa-list-alt\"/> Data"
+msgstr ""
+"<i class=\"fa fa-list-alt\"/> ውሂብ
+"
+""
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.result_number
+msgid ""
+"<i class=\"fa fa-list-ol\"/>"
+"                    Most Common"
+msgstr ""
+"\"<i class=\"\"fa fa-list-ol\"/>
+"
+"                     በጣም የተለመደ\""
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_question_form
+msgid "<i class=\"fa fa-minus fa-4x\" role=\"img\" aria-label=\"Single Line\" title=\"Single Line\"/>"
+msgstr "<i class=\"fa fa-minus fa-4x\" role=\"img\" aria-label=\"ነጠላ መስመር\" title=\"ነጠላ መስመር\"/>"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_question_form
+msgid "<i class=\"fa fa-square-o fa-lg\"/> answer"
+msgstr "<i class=\"fa fa-square-o fa-lg\"/> መልስ"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.result
+msgid "<i class=\"fa fa-times\"/> Clear All Filters"
+msgstr "<i class=\"fa fa-times\"/> ሁሉንም ማጣሪያዎች አጽዳ"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_form
+msgid "<span attrs=\"{\'invisible\': [(\'is_attempts_limited\', \'=\', False)]}\"> attempts</span>"
+msgstr "<span attrs=\"{\'invisible\': [(\'is_attempts_limited\', \'=\', False)]}\"> ሙከራዎች</span>"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_form
+msgid "<span attrs=\"{\'invisible\': [(\'is_time_limited\', \'=\', False)]}\"> minutes</span>"
+msgstr "<span attrs=\"{\'invisible\': [(\'is_time_limited\', \'=\', False)]}\">ደቂቃዎች</span>"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.result
+msgid "<span class=\"badge badge-primary only_left_radius filter-all\">All surveys</span><span class=\"badge badge-secondary only_right_radius filter-finished\">Finished surveys</span>"
+msgstr "<span class=\"badge badge-primary only_left_radius filter-all\">ሁሉም የዳሰሳ ጥናቶች</span><span class=\"badge badge-secondary only_right_radius filter-finished\">የተጠናቀቁ የዳሰሳ ጥናቶች</span>"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.result
+msgid "<span class=\"badge badge-primary only_left_radius\"><i class=\"fa fa-filter\" role=\"img\" aria-label=\"Filter\" title=\"Filter\"/></span>"
+msgstr "<span class=\"badge badge-primary only_left_radius\"><i class=\"fa fa-filter\" role=\"img\" aria-label=\"Filter\" title=\"ማጣሪያ\"/></span>"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.result
+msgid "<span class=\"badge badge-secondary only_left_radius filter-all\">All surveys</span><span class=\"badge badge-primary only_right_radius filter-finished\">Finished surveys</span>"
+msgstr "<span class=\"badge badge-secondary only_left_radius filter-all\">ሁሉም የዳሰሳ ጥናቶች</span><span class=\"badge badge-primary only_right_radius filter-finished\">የተጠናቀቁ የዳሰሳ ጥናቶች</span>"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.result_number
+msgid "<span class=\"badge badge-secondary only_left_radius\">Average </span>"
+msgstr "<span class=\"badge badge-secondary only_left_radius\">አማካይ </span>"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.result_number
+msgid "<span class=\"badge badge-secondary only_left_radius\">Maximum </span>"
+msgstr "<span class=\"badge badge-secondary only_left_radius\">ከፍተኛው </span>"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.result_number
+msgid "<span class=\"badge badge-secondary only_left_radius\">Minimum </span>"
+msgstr "<span class=\"badge badge-secondary only_left_radius\">ቢያንስ </span>"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.result_number
+msgid "<span class=\"badge badge-secondary only_left_radius\">Sum </span>"
+msgstr "<span class=\"badge badge-secondary only_left_radius\">ድምር </span>"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.result
+msgid "<span class=\"fa fa-filter\"/>  Filters"
+msgstr "<span class=\"fa fa-filter\"/> ማጣሪያዎች"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.res_partner_view_form
+msgid ""
+"<span class=\"o_stat_text\" attrs=\"{\'invisible\': [(\'certifications_company_count\', \'&lt;\', 2)]}\">Certifications</span>"
+"                        <span class=\"o_stat_text\" attrs=\"{\'invisible\': [(\'certifications_company_count\', \'&gt;\', 1)]}\">Certification</span>"
+msgstr ""
+"\"<span class=\"\"o_stat_text\"\" attrs=\"\"{\'invisible\': [(\'certifications_company_count\', \'&lt;\', 2)]\"\">የእውቅና ማረጋገጫዎች</span>"
+"                         <span class=\"\"o_stat_text\"\" attrs=\"\"{\'invisible\': [(\'certifications_company_count\', \'&gt;\', 1)]\"\">የእውቅና ማረጋገጫ</span>\""
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.res_partner_view_form
+msgid ""
+"<span class=\"o_stat_text\" attrs=\"{\'invisible\': [(\'certifications_count\', \'&lt;\', 2)]}\">Certifications</span>"
+"                        <span class=\"o_stat_text\" attrs=\"{\'invisible\': [(\'certifications_count\', \'&gt;\', 1)]}\">Certification</span>"
+msgstr ""
+"\"<span class=\"\"o_stat_text\"\" attrs=\"\"{\'invisible\': [(\'certifications_count\', \'&lt;\', 2)]}\"\">የእውቅና ማረጋገጫዎች</span>
+"
+"                         <span class=\"\"o_stat_text\"\" attrs=\"\"{\'invisible\': [(\'certifications_count\', \'&gt;\', 1)]}\"\">የእውቅና ማረጋገጫ</span>\""
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_kanban
+msgid "<span class=\"text-muted\">Answers</span>"
+msgstr "<span class=\"text-muted\">መልሶች</span>"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_kanban
+msgid "<span class=\"text-muted\">Success</span>"
+msgstr "<span class=\"text-muted\">ስኬት</span>"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.result
+msgid "<span>Correct answer</span>:"
+msgstr "<span>ትክክለኛ መልስ</span>፡-"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.result
+msgid "<span>Correct answers</span>:"
+msgstr "<span>ትክክለኛ መልሶች</span>፡-"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.retake_survey_button
+msgid "<span>Number of attemps left</span>:"
+msgstr "<span>የቀሩ ሙከራዎች ብዛት</span>፡-"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_init
+msgid "<span>Time limit for this survey: </span>"
+msgstr "<span>ለዚህ የዳሰሳ ጥናት የጊዜ ገደብ፡ </span>"
+
+#. module: survey
+#: code:addons/survey/models/survey_question.py:0
+msgid "A label must be attached to only one question."
+msgstr "መለያ ከአንድ ጥያቄ ጋር ብቻ መያያዝ አለበት።"
+
+#. module: survey
+#: model:ir.model.constraint,message:survey.constraint_survey_question_positive_len_max
+#: model:ir.model.constraint,message:survey.constraint_survey_question_positive_len_min
+msgid "A length must be positive!"
+msgstr "አንድ ርዝመት አዎንታዊ መሆን አለበት!"
+
+#. module: survey
+#: model:ir.model.fields,help:survey.field_survey_label__answer_score
+msgid "A positive score indicates a correct choice; a negative or null score indicates a wrong answer"
+msgstr "አወንታዊ ውጤት ትክክለኛውን ምርጫ ያሳያል; አሉታዊ ወይም ባዶ ነጥብ የተሳሳተ መልስ ያሳያል"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.page
+msgid "A problem has occured"
+msgstr "ችግር ተፈጥሯል።"
+
+#. module: survey
+#: model:ir.model.constraint,message:survey.constraint_survey_user_input_unique_token
+msgid "A token must be unique!"
+msgstr "ማስመሰያ ልዩ መሆን አለበት!"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_invite__survey_access_mode
+#: model:ir.model.fields,field_description:survey.field_survey_survey__access_mode
+msgid "Access Mode"
+msgstr "የመዳረሻ ሁነታ"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey__access_token
+msgid "Access Token"
+msgstr "የመዳረሻ ማስመሰያ"
+
+#. module: survey
+#: model:ir.model.constraint,message:survey.constraint_survey_survey_access_token_unique
+msgid "Access token should be unique"
+msgstr "የመዳረሻ ማስመሰያ ልዩ መሆን አለበት።"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey__message_needaction
+msgid "Action Needed"
+msgstr "እርምጃ ያስፈልጋል"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey__active
+msgid "Active"
+msgstr "ንቁ"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey__activity_ids
+msgid "Activities"
+msgstr "ተግባራት"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "የእንቅስቃሴ ልዩ ማስጌጥ"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey__activity_state
+msgid "Activity State"
+msgstr "የእንቅስቃሴ ሁኔታ"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_invite_view_form
+msgid "Add a list of email of recipients (will not be converted into contacts). Separated by commas, semicolons or newline..."
+msgstr "የተቀባዮች ኢሜይል ዝርዝር ያክሉ (ወደ እውቂያዎች አይቀየርም)። በነጠላ ሰረዞች፣ ሴሚኮሎን ወይም አዲስ መስመር ይለያል..."
+
+#. module: survey
+#: model_terms:ir.actions.act_window,help:survey.action_survey_form
+msgid "Add a new survey"
+msgstr "አዲስ የዳሰሳ ጥናት ያክሉ"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_form
+msgid "Add a question"
+msgstr "ጥያቄ ጨምር"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_form
+msgid "Add a section"
+msgstr "ክፍል ጨምር"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_invite_view_form
+msgid "Add existing contacts..."
+msgstr "ያሉትን እውቂያዎች አክል..."
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_invite__emails
+msgid "Additional emails"
+msgstr "ተጨማሪ ኢሜይሎች"
+
+#. module: survey
+#: model:res.groups,name:survey.group_survey_manager
+msgid "Administrator"
+msgstr "አስተዳዳሪ"
+
+#. module: survey
+#: model:ir.model.fields.selection,name:survey.selection__survey_survey__questions_selection__all
+msgid "All questions"
+msgstr "ሁሉም ጥያቄዎች"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_question_form
+msgid "Allow Comments"
+msgstr "አስተያየቶችን ፍቀድ"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.result_choice
+msgid "Answer Choices"
+msgstr "ምርጫዎችን ይመልሱ"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.result_choice
+msgid "Answer Score"
+msgstr "ነጥብ መልስ"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_user_input__input_type
+#: model:ir.model.fields,field_description:survey.field_survey_user_input_line__answer_type
+msgid "Answer Type"
+msgstr "የመልስ አይነት"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_invite__deadline
+msgid "Answer deadline"
+msgstr "የጊዜ ገደብ መልስ"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.result
+msgid "Answered"
+msgstr "ብለው መለሱ"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_question__user_input_line_ids
+#: model:ir.model.fields,field_description:survey.field_survey_user_input__user_input_line_ids
+#: model_terms:ir.ui.view,arch_db:survey.survey_form
+#: model_terms:ir.ui.view,arch_db:survey.survey_question_form
+msgid "Answers"
+msgstr "መልሶች"
+
+#. module: survey
+#: model:ir.model.fields.selection,name:survey.selection__survey_survey__access_mode__public
+msgid "Anyone with the link"
+msgstr "አገናኙ ያለው ማንኛውም ሰው"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_gamification_challenge__category
+msgid "Appears in"
+msgstr "ውስጥ ይታያል"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_form
+#: model_terms:ir.ui.view,arch_db:survey.survey_survey_view_search
+msgid "Archived"
+msgstr "በማህደር የተቀመጠ"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey__message_attachment_count
+msgid "Attachment Count"
+msgstr "የአባሪ ብዛት"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_invite__attachment_ids
+msgid "Attachments"
+msgstr "አባሪዎች"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_user_input__attempt_number
+#: model_terms:ir.ui.view,arch_db:survey.survey_user_input_view_form
+msgid "Attempt n°"
+msgstr "ሙከራ n °"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey__answer_done_count
+msgid "Attempts"
+msgstr "ሙከራዎች"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_form
+msgid "Attempts Limit"
+msgstr "ሙከራዎች ገደብ"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_invite__author_id
+msgid "Author"
+msgstr "ደራሲ"
+
+#. module: survey
+#: model:ir.model.fields,help:survey.field_survey_invite__author_id
+msgid "Author of the message."
+msgstr "የመልእክቱ ደራሲ።"
+
+#. module: survey
+#: model:ir.model.fields,help:survey.field_survey_survey__certification_mail_template_id
+msgid "Automated email sent to the user when he succeeds the certification, containing his certification document."
+msgstr "ሰርተፊኬት ለተጠቃሚው የተላከው የእውቅና ማረጋገጫው ሲሳካለት የእውቅና ማረጋገጫ ሰነዱን የያዘ ነው።"
+
+#. module: survey
+#: model:ir.model,name:survey.model_ir_autovacuum
+msgid "Automatic Vacuum"
+msgstr "ራስ-ሰር ቫክዩም"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey__answer_score_avg
+msgid "Avg Score %"
+msgstr "አማካይ ነጥብ %"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_form
+msgid "Back Button"
+msgstr "ተመለስ አዝራር"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.gamification_badge_form_view_simplified
+msgid "Badge"
+msgstr "ባጅ"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.gamification_badge_form_view_simplified
+msgid "Badge Description"
+msgstr "ባጅ መግለጫ"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.gamification_badge_form_view_simplified
+msgid "Badge Name"
+msgstr "ባጅ ስም"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_invite_view_form
+msgid "Cancel"
+msgstr "ሰርዝ"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_form
+msgid "Candidates"
+msgstr "እጩዎች"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey__category
+#: model_terms:ir.ui.view,arch_db:survey.survey_survey_view_search
+msgid "Category"
+msgstr "ምድብ"
+
+#. module: survey
+#: model:ir.model.fields,help:survey.field_survey_survey__category
+msgid "Category is used to know in which context the survey is used. Various apps may define their own categories when they use survey like jobs recruitment or employee appraisal surveys."
+msgstr "ምድብ ጥናቱ በየትኛው አውድ ውስጥ ጥቅም ላይ እንደሚውል ለማወቅ ይጠቅማል። እንደ የስራ ቅጥር ወይም የሰራተኛ ግምገማ ዳሰሳ ጥናቶችን ሲጠቀሙ የተለያዩ መተግበሪያዎች የራሳቸውን ምድቦች ሊገልጹ ይችላሉ።"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey__certificate
+#: model_terms:ir.ui.view,arch_db:survey.survey_tree
+msgid "Certificate"
+msgstr "የምስክር ወረቀት"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_survey_view_search
+msgid "Certification"
+msgstr "ማረጋገጫ"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey__certification_badge_id
+msgid "Certification Badge"
+msgstr "የማረጋገጫ ባጅ"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey__certification_badge_id_dummy
+msgid "Certification Badge "
+msgstr "የማረጋገጫ ባጅ"
+
+#. module: survey
+#: model:mail.template,report_name:survey.mail_template_certification
+msgid "Certification Document"
+msgstr "የማረጋገጫ ሰነድ"
+
+#. module: survey
+#: model:ir.model.constraint,message:survey.constraint_survey_survey_give_badge_check
+msgid "Certification badge must be configured if Give Badge is set."
+msgstr "የመስጠት ባጅ ከተዋቀረ የእውቅና ማረጋገጫ ባጅ መዋቀር አለበት።"
+
+#. module: survey
+#: model:mail.template,subject:survey.mail_template_certification
+msgid "Certification: ${object.survey_id.display_name}"
+msgstr "የእውቅና ማረጋገጫ፡ ${object.survey_id.display_name}"
+
+#. module: survey
+#: model:ir.actions.report,name:survey.certification_report
+#: model:ir.model.fields.selection,name:survey.selection__gamification_challenge__category__certification
+msgid "Certifications"
+msgstr "የምስክር ወረቀቶች"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_res_partner__certifications_count
+#: model:ir.model.fields,field_description:survey.field_res_users__certifications_count
+msgid "Certifications Count"
+msgstr "የእውቅና ማረጋገጫዎች ብዛት"
+
+#. module: survey
+#: model:ir.actions.act_window,name:survey.res_partner_action_certifications
+msgid "Certifications Succeeded"
+msgstr "ማረጋገጫዎች ተሳክተዋል።"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_form
+#: model_terms:ir.ui.view,arch_db:survey.survey_kanban
+msgid "Certified"
+msgstr "የተረጋገጠ"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.certification_report_view
+msgid "Certifies that"
+msgstr "መሆኑን ያረጋግጣል"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.result
+msgid "Chart"
+msgstr "ገበታ"
+
+#. module: survey
+#: model:ir.model.fields,help:survey.field_survey_survey__is_attempts_limited
+#: model:ir.model.fields,help:survey.field_survey_user_input__is_attempts_limited
+msgid "Check this option if you want to limit the number of attempts per user"
+msgstr "በአንድ ተጠቃሚ የተደረጉ ሙከራዎችን ብዛት ለመገደብ ከፈለጉ ይህንን አማራጭ ያረጋግጡ"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_question_form
+msgid "Choices"
+msgstr "ምርጫዎች"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.simple_choice
+msgid "Choose..."
+msgstr "ይምረጡ..."
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.back
+#: model_terms:ir.ui.view,arch_db:survey.page
+#: model_terms:ir.ui.view,arch_db:survey.survey_form
+msgid "Close"
+msgstr "ዝጋ"
+
+#. module: survey
+#: model:ir.model.fields.selection,name:survey.selection__survey_survey__state__closed
+msgid "Closed"
+msgstr "ዝግ"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_kanban
+msgid "Color"
+msgstr "ቀለም"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey__color
+msgid "Color Index"
+msgstr "የቀለም መረጃ ጠቋሚ"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_question_form
+msgid "Columns of the Matrix"
+msgstr "የማትሪክስ አምዶች"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.result_comments
+msgid "Comment"
+msgstr "አስተያየት"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_question__comment_count_as_answer
+msgid "Comment Field is an Answer Choice"
+msgstr "የአስተያየት መስክ የመልስ ምርጫ ነው።"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_question__comments_message
+msgid "Comment Message"
+msgstr "የአስተያየት መልእክት"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_res_partner__certifications_company_count
+#: model:ir.model.fields,field_description:survey.field_res_users__certifications_company_count
+msgid "Company Certifications Count"
+msgstr "የኩባንያ ማረጋገጫዎች ብዛት"
+
+#. module: survey
+#: model:ir.model.fields.selection,name:survey.selection__survey_user_input__state__done
+#: model_terms:ir.ui.view,arch_db:survey.survey_user_input_view_search
+msgid "Completed"
+msgstr "ተጠናቀቀ"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_invite_view_form
+msgid "Compose Email"
+msgstr "ኢሜል ይጻፉ"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.sfinished
+msgid "Congratulations, you have passed the test!"
+msgstr "እንኳን ደስ ያለዎት ፈተናውን አልፈዋል!"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_question_form
+msgid "Constraints"
+msgstr "ገደቦች"
+
+#. module: survey
+#: model:ir.model,name:survey.model_res_partner
+msgid "Contact"
+msgstr "ተገናኝ"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_invite__body
+msgid "Contents"
+msgstr "ይዘቶች"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_user_input_line__answer_is_correct
+msgid "Correct"
+msgstr "ትክክል"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_invite__create_uid
+#: model:ir.model.fields,field_description:survey.field_survey_label__create_uid
+#: model:ir.model.fields,field_description:survey.field_survey_question__create_uid
+#: model:ir.model.fields,field_description:survey.field_survey_survey__create_uid
+#: model:ir.model.fields,field_description:survey.field_survey_user_input__create_uid
+#: model:ir.model.fields,field_description:survey.field_survey_user_input_line__create_uid
+msgid "Created by"
+msgstr "የተፈጠረ"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_invite__create_date
+#: model:ir.model.fields,field_description:survey.field_survey_label__create_date
+#: model:ir.model.fields,field_description:survey.field_survey_question__create_date
+#: model:ir.model.fields,field_description:survey.field_survey_survey__create_date
+#: model:ir.model.fields,field_description:survey.field_survey_user_input__create_date
+#: model:ir.model.fields,field_description:survey.field_survey_user_input_line__create_date
+msgid "Created on"
+msgstr "ላይ ተፈጠረ"
+
+#. module: survey
+#: code:addons/survey/models/survey_survey.py:0
+msgid "Creating test token is not allowed for you."
+msgstr "የሙከራ ማስመሰያ መፍጠር ለእርስዎ አይፈቀድም።"
+
+#. module: survey
+#: code:addons/survey/models/survey_survey.py:0
+msgid "Creating token for anybody else than employees is not allowed for internal surveys."
+msgstr "ከሰራተኞች በስተቀር ለማንም ሰው ማስመሰያ መፍጠር ለውስጣዊ ዳሰሳ አይፈቀድም።"
+
+#. module: survey
+#: code:addons/survey/models/survey_survey.py:0
+msgid "Creating token for archived surveys is not allowed."
+msgstr "በማህደር ለተቀመጡ የዳሰሳ ጥናቶች ማስመሰያ መፍጠር አይፈቀድም።"
+
+#. module: survey
+#: code:addons/survey/models/survey_survey.py:0
+msgid "Creating token for closed surveys is not allowed."
+msgstr "ለተዘጉ የዳሰሳ ጥናቶች ማስመሰያ መፍጠር አይፈቀድም።"
+
+#. module: survey
+#: code:addons/survey/models/survey_survey.py:0
+#: code:addons/survey/models/survey_survey.py:0
+msgid "Creating token for external people is not allowed for surveys requesting authentication."
+msgstr "ማረጋገጫ ለሚጠይቁ የዳሰሳ ጥናቶች ለውጭ ሰዎች ማስመሰያ መፍጠር አይፈቀድም።"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_invite_view_form
+msgid "Customers will receive a new token and be able to completely retake the survey."
+msgstr "ደንበኞች አዲስ ቶከን ይቀበላሉ እና የዳሰሳ ጥናቱን ሙሉ በሙሉ እንደገና መውሰድ ይችላሉ።"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_invite_view_form
+msgid "Customers will receive the same token."
+msgstr "ደንበኞች ተመሳሳይ ምልክት ይቀበላሉ."
+
+#. module: survey
+#: model:ir.model.fields.selection,name:survey.selection__survey_question__question_type__date
+#: model:ir.model.fields.selection,name:survey.selection__survey_user_input_line__answer_type__date
+msgid "Date"
+msgstr "ቀን"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_user_input_line__value_date
+msgid "Date answer"
+msgstr "የቀን መልስ"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.certification_report_view
+msgid "Date of Certification:"
+msgstr "የማረጋገጫ ቀን፡-"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.certification_report_view
+msgid "Date of Failure:"
+msgstr "ያልተሳካበት ቀን፡-"
+
+#. module: survey
+#: model:ir.model.fields.selection,name:survey.selection__survey_question__question_type__datetime
+#: model:ir.model.fields.selection,name:survey.selection__survey_user_input_line__answer_type__datetime
+msgid "Datetime"
+msgstr "የቀን ሰዓት"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_user_input_line__value_datetime
+msgid "Datetime answer"
+msgstr "የቀን መልስ"
+
+#. module: survey
+#: model:ir.model.fields,help:survey.field_survey_user_input__deadline
+msgid "Datetime until customer can open the survey and submit answers"
+msgstr "ደንበኛው የዳሰሳ ጥናቱን ከፍቶ መልሶቹን ማስገባት እስኪችል ድረስ ያለው ቀን"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_user_input__deadline
+msgid "Deadline"
+msgstr "ማለቂያ ሰአት"
+
+#. module: survey
+#: model:ir.model.fields,help:survey.field_gamification_challenge__category
+msgid "Define the visibility of the challenge through menus"
+msgstr "የፈተናውን ታይነት በምናሌዎች ይግለጹ"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_kanban
+msgid "Delete"
+msgstr "ሰርዝ"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_question__description
+#: model:ir.model.fields,field_description:survey.field_survey_survey__description
+#: model_terms:ir.ui.view,arch_db:survey.survey_form
+msgid "Description"
+msgstr "መግለጫ"
+
+#. module: survey
+#: model_terms:ir.actions.act_window,help:survey.action_survey_form
+msgid "Design easily your survey, send invitations and analyze answers."
+msgstr "የዳሰሳ ጥናትዎን በቀላሉ ይንደፉ፣ ግብዣዎችን ይላኩ እና መልሶችን ይተንትኑ።"
+
+#. module: survey
+#: model:ir.actions.act_window,name:survey.action_survey_user_input_line
+#: model:ir.ui.menu,name:survey.menu_survey_response_line_form
+msgid "Detailed Answers"
+msgstr "ዝርዝር መልሶች"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_question__display_mode
+msgid "Display Mode"
+msgstr "የማሳያ ሁነታ"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_invite__display_name
+#: model:ir.model.fields,field_description:survey.field_survey_label__display_name
+#: model:ir.model.fields,field_description:survey.field_survey_question__display_name
+#: model:ir.model.fields,field_description:survey.field_survey_survey__display_name
+#: model:ir.model.fields,field_description:survey.field_survey_user_input__display_name
+#: model:ir.model.fields,field_description:survey.field_survey_user_input_line__display_name
+msgid "Display Name"
+msgstr "መጠሪያው ስም"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_question_form
+msgid "Display mode"
+msgstr "የማሳያ ሁነታ"
+
+#. module: survey
+#: model:ir.model.fields,help:survey.field_survey_question__display_mode
+msgid "Display mode of simple choice questions."
+msgstr "ቀላል ምርጫ ጥያቄዎች አሳይ ሁነታ."
+
+#. module: survey
+#: model:ir.model.fields.selection,name:survey.selection__survey_survey__state__draft
+msgid "Draft"
+msgstr "ረቂቅ"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_kanban
+msgid "Dropdown menu"
+msgstr "ተቆልቋይ ምናሌ"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_user_input__email
+msgid "E-mail"
+msgstr "ኢ-ሜይል"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_kanban
+msgid "Edit Survey"
+msgstr "የዳሰሳ ጥናት ያርትዑ"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.back
+msgid "Edit Survey."
+msgstr "የዳሰሳ ጥናት ያርትዑ።"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_void
+msgid "Edit in backend"
+msgstr "በጀርባ ውስጥ ያርትዑ"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_user_input_view_search
+msgid "Email"
+msgstr "ኢሜይል"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey__certification_mail_template_id
+msgid "Email Template"
+msgstr "የኢሜል አብነት"
+
+#. module: survey
+#: model:ir.model.fields,help:survey.field_survey_invite__email_from
+msgid "Email address of the sender."
+msgstr "የላኪው ኢሜይል አድራሻ።"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_question__constr_error_msg
+msgid "Error message"
+msgstr "የተሳሳተ መልእክት"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_user_input_view_search
+msgid "Except Test Entries"
+msgstr "የሙከራ ግቤቶች በስተቀር"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_invite__existing_partner_ids
+msgid "Existing Partner"
+msgstr "ነባር አጋር"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_invite__existing_emails
+msgid "Existing emails"
+msgstr "ነባር ኢሜይሎች"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.result_choice
+msgid "Filter question"
+msgstr "ጥያቄ አጣራ"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey__message_follower_ids
+msgid "Followers"
+msgstr "ተከታዮች"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "ተከታዮች (ሰርጦች)"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "ተከታዮች (አጋሮች)"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_question_form
+msgid "Format"
+msgstr "ቅርጸት"
+
+#. module: survey
+#: model:ir.model.fields.selection,name:survey.selection__survey_user_input_line__answer_type__free_text
+msgid "Free Text"
+msgstr "ነፃ ጽሑፍ"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_user_input_line__value_free_text
+msgid "Free Text answer"
+msgstr "ነፃ የጽሑፍ መልስ"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_invite__email_from
+msgid "From"
+msgstr "ከ"
+
+#. module: survey
+#: model:ir.model,name:survey.model_gamification_badge
+msgid "Gamification Badge"
+msgstr "Gamification ባጅ"
+
+#. module: survey
+#: model:ir.model,name:survey.model_gamification_challenge
+msgid "Gamification Challenge"
+msgstr "የግማሽ ውድድር"
+
+#. module: survey
+#: model:ir.model.fields.selection,name:survey.selection__survey_survey__category__default
+msgid "Generic Survey"
+msgstr "አጠቃላይ የዳሰሳ ጥናት"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey__certification_give_badge
+msgid "Give Badge"
+msgstr "ባጅ ይስጡ"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_question_search
+#: model_terms:ir.ui.view,arch_db:survey.survey_response_line_search
+#: model_terms:ir.ui.view,arch_db:survey.survey_survey_view_search
+#: model_terms:ir.ui.view,arch_db:survey.survey_user_input_view_search
+msgid "Group By"
+msgstr "ቡድን በ"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_invite__existing_mode
+#: model_terms:ir.ui.view,arch_db:survey.survey_invite_view_form
+msgid "Handle existing"
+msgstr "ያለውን ይያዙ"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_invite__id
+#: model:ir.model.fields,field_description:survey.field_survey_label__id
+#: model:ir.model.fields,field_description:survey.field_survey_question__id
+#: model:ir.model.fields,field_description:survey.field_survey_survey__id
+#: model:ir.model.fields,field_description:survey.field_survey_user_input__id
+#: model:ir.model.fields,field_description:survey.field_survey_user_input_line__id
+msgid "ID"
+msgstr "መታወቂያ"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey__activity_exception_icon
+msgid "Icon"
+msgstr "አዶ"
+
+#. module: survey
+#: model:ir.model.fields,help:survey.field_survey_survey__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "ልዩ እንቅስቃሴን ለማመልከት አዶ።"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_user_input__token
+msgid "Identification token"
+msgstr "መለያ ምልክት"
+
+#. module: survey
+#: model:ir.model.fields,help:survey.field_survey_survey__message_needaction
+#: model:ir.model.fields,help:survey.field_survey_survey__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "ምልክት ካደረጉ፣ አዲስ መልዕክቶች የእርስዎን ትኩረት ይፈልጋሉ።"
+
+#. module: survey
+#: model:ir.model.fields,help:survey.field_survey_survey__message_has_error
+#: model:ir.model.fields,help:survey.field_survey_survey__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "ምልክት ካደረጉ፣ አንዳንድ መልዕክቶች የማድረስ ስህተት አለባቸው።"
+
+#. module: survey
+#: model:ir.model.fields,help:survey.field_survey_survey__users_can_go_back
+msgid "If checked, users can go back to previous pages."
+msgstr "ምልክት ካደረጉ ተጠቃሚዎች ወደ ቀደሙት ገፆች መመለስ ይችላሉ።"
+
+#. module: survey
+#: model:ir.model.fields,help:survey.field_survey_invite__survey_users_login_required
+#: model:ir.model.fields,help:survey.field_survey_survey__users_login_required
+msgid "If checked, users have to login before answering even with a valid token."
+msgstr "ምልክት ካደረጉ ተጠቃሚዎች ትክክለኛ በሆነ ቶከን እንኳን መልስ ከመስጠትዎ በፊት መግባት አለባቸው።"
+
+#. module: survey
+#: code:addons/survey/models/survey_question.py:0
+msgid "If other, please specify:"
+msgstr "ሌላ ከሆነ እባክዎን ይግለጹ፡-"
+
+#. module: survey
+#: model:ir.model.fields,help:survey.field_survey_question__questions_selection
+#: model:ir.model.fields,help:survey.field_survey_survey__questions_selection
+msgid "If randomized is selected, add the number of random questions next to the section."
+msgstr "በዘፈቀደ ከተመረጠ፣ ከክፍሉ ቀጥሎ የዘፈቀደ ጥያቄዎችን ቁጥር ይጨምሩ።"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.sfinished
+msgid "If you wish, you can"
+msgstr "ከፈለጉ, ይችላሉ"
+
+#. module: survey
+#: model:ir.model.fields.selection,name:survey.selection__survey_survey__state__open
+msgid "In Progress"
+msgstr "በሂደት ላይ"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_question__validation_email
+msgid "Input must be an email"
+msgstr "ግቤት ኢሜል መሆን አለበት።"
+
+#. module: survey
+#: code:addons/survey/models/survey_survey.py:0
+msgid "Invalid performance computation"
+msgstr "ልክ ያልሆነ የአፈጻጸም ስሌት"
+
+#. module: survey
+#: model:ir.model.fields.selection,name:survey.selection__survey_user_input__input_type__link
+msgid "Invitation"
+msgstr "ግብዣ"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_user_input_view_search
+msgid "Invite"
+msgstr "ጋብዝ"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_user_input__invite_token
+msgid "Invite token"
+msgstr "ማስመሰያ ይጋብዙ"
+
+#. module: survey
+#: model:ir.model.fields.selection,name:survey.selection__survey_survey__access_mode__token
+msgid "Invited people only"
+msgstr "የተጋበዙ ሰዎች ብቻ"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey__message_is_follower
+msgid "Is Follower"
+msgstr "ተከታይ ነው።"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_label__is_correct
+msgid "Is a correct answer"
+msgstr "ትክክለኛ መልስ ነው።"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_question__is_page
+msgid "Is a page?"
+msgstr "ገጽ ነው?"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_user_input__is_time_limit_reached
+msgid "Is time limit reached?"
+msgstr "የጊዜ ገደብ ላይ ደርሷል?"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_label__sequence
+msgid "Label Sequence order"
+msgstr "የመለያ ቅደም ተከተል"
+
+#. module: survey
+#: model:ir.model.fields,help:survey.field_survey_question__labels_ids_2
+msgid "Labels used for proposed choices: rows of matrix"
+msgstr "ለታቀዱ ምርጫዎች የሚያገለግሉ መለያዎች፡ የማትሪክስ ረድፎች"
+
+#. module: survey
+#: model:ir.model.fields,help:survey.field_survey_question__labels_ids
+msgid "Labels used for proposed choices: simple choice, multiple choice and columns of matrix"
+msgstr "ለታቀዱት ምርጫዎች የሚያገለግሉ መለያዎች፡ ቀላል ምርጫ፣ ብዙ ምርጫ እና የማትሪክስ አምዶች"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_invite____last_update
+#: model:ir.model.fields,field_description:survey.field_survey_label____last_update
+#: model:ir.model.fields,field_description:survey.field_survey_question____last_update
+#: model:ir.model.fields,field_description:survey.field_survey_survey____last_update
+#: model:ir.model.fields,field_description:survey.field_survey_user_input____last_update
+#: model:ir.model.fields,field_description:survey.field_survey_user_input_line____last_update
+msgid "Last Modified on"
+msgstr "መጨረሻ የተሻሻለው በርቷል።"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_invite__write_uid
+#: model:ir.model.fields,field_description:survey.field_survey_label__write_uid
+#: model:ir.model.fields,field_description:survey.field_survey_question__write_uid
+#: model:ir.model.fields,field_description:survey.field_survey_survey__write_uid
+#: model:ir.model.fields,field_description:survey.field_survey_user_input__write_uid
+#: model:ir.model.fields,field_description:survey.field_survey_user_input_line__write_uid
+msgid "Last Updated by"
+msgstr "መጨረሻ የዘመነው በ"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_invite__write_date
+#: model:ir.model.fields,field_description:survey.field_survey_label__write_date
+#: model:ir.model.fields,field_description:survey.field_survey_question__write_date
+#: model:ir.model.fields,field_description:survey.field_survey_survey__write_date
+#: model:ir.model.fields,field_description:survey.field_survey_user_input__write_date
+#: model:ir.model.fields,field_description:survey.field_survey_user_input_line__write_date
+msgid "Last Updated on"
+msgstr "መጨረሻ የዘመነው በርቷል።"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_user_input__last_displayed_page_id
+msgid "Last displayed question/page"
+msgstr "መጨረሻ የታየ ጥያቄ/ገጽ"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_survey_view_search
+msgid "Late Activities"
+msgstr "ዘግይተው የሚደረጉ እንቅስቃሴዎች"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey__questions_layout
+msgid "Layout"
+msgstr "አቀማመጥ"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey__is_attempts_limited
+#: model:ir.model.fields,field_description:survey.field_survey_user_input__is_attempts_limited
+msgid "Limited number of attempts"
+msgstr "የተወሰኑ ሙከራዎች ብዛት"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_invite__survey_users_login_required
+#: model:ir.model.fields,field_description:survey.field_survey_survey__users_login_required
+msgid "Login Required"
+msgstr "መግባት ያስፈልጋል"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.auth_required
+msgid "Login required"
+msgstr "መግባት ያስፈልጋል"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "ዋና አባሪ"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_question__constr_mandatory
+#: model_terms:ir.ui.view,arch_db:survey.survey_question_form
+msgid "Mandatory Answer"
+msgstr "የግዴታ መልስ"
+
+#. module: survey
+#: model:ir.model.fields.selection,name:survey.selection__survey_user_input__input_type__manually
+msgid "Manual"
+msgstr "መመሪያ"
+
+#. module: survey
+#: model:ir.model.fields.selection,name:survey.selection__survey_question__question_type__matrix
+msgid "Matrix"
+msgstr "ማትሪክስ"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_question__matrix_subtype
+msgid "Matrix Type"
+msgstr "የማትሪክስ ዓይነት"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.result
+msgid "Matrix:"
+msgstr "ማትሪክስ፡"
+
+#. module: survey
+#: model:ir.model.constraint,message:survey.constraint_survey_question_validation_date
+msgid "Max date cannot be smaller than min date!"
+msgstr "ከፍተኛው ቀን ከደቂቃ ቀን ያነሰ ሊሆን አይችልም!"
+
+#. module: survey
+#: model:ir.model.constraint,message:survey.constraint_survey_question_validation_datetime
+msgid "Max datetime cannot be smaller than min datetime!"
+msgstr "ከፍተኛው የቀን ሰዓት ከደቂቃ የቀን ጊዜ ያነሰ ሊሆን አይችልም!"
+
+#. module: survey
+#: model:ir.model.constraint,message:survey.constraint_survey_question_validation_length
+msgid "Max length cannot be smaller than min length!"
+msgstr "ከፍተኛው ርዝመት ከደቂቃ ያነሰ ሊሆን አይችልም!"
+
+#. module: survey
+#: model:ir.model.constraint,message:survey.constraint_survey_question_validation_float
+msgid "Max value cannot be smaller than min value!"
+msgstr "ከፍተኛው ዋጋ ከደቂቃ ዋጋ ያነሰ ሊሆን አይችልም!"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_question__validation_max_date
+msgid "Maximum Date"
+msgstr "ከፍተኛው ቀን"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_question__validation_max_datetime
+msgid "Maximum Datetime"
+msgstr "ከፍተኛው የቀን ሰዓት"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_question__validation_length_max
+msgid "Maximum Text Length"
+msgstr "ከፍተኛው የጽሑፍ ርዝመት"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_question__validation_max_float_value
+msgid "Maximum value"
+msgstr "ከፍተኛው እሴት"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.403
+msgid "Maybe you were looking for"
+msgstr "ምናልባት ፈልገህ ሊሆን ይችላል።"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey__message_has_error
+msgid "Message Delivery error"
+msgstr "የመልእክት ማቅረቢያ ስህተት"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey__message_ids
+msgid "Messages"
+msgstr "መልዕክቶች"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_question__validation_min_date
+msgid "Minimum Date"
+msgstr "ዝቅተኛው ቀን"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_question__validation_min_datetime
+msgid "Minimum Datetime"
+msgstr "ዝቅተኛው የቀን ጊዜ"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_question__validation_length_min
+msgid "Minimum Text Length"
+msgstr "ዝቅተኛው የጽሑፍ ርዝመት"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_question__validation_min_float_value
+msgid "Minimum value"
+msgstr "ዝቅተኛው እሴት"
+
+#. module: survey
+#: code:addons/survey/controllers/main.py:0
+msgid "Missed"
+msgstr "አምልጦታል።"
+
+#. module: survey
+#: model:ir.model.fields.selection,name:survey.selection__survey_question__question_type__free_text
+msgid "Multiple Lines Text Box"
+msgstr "ባለብዙ መስመር የጽሑፍ ሳጥን"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_question_form
+msgid "Multiple choice with multiple answers"
+msgstr "ከበርካታ መልሶች ጋር ብዙ ምርጫ"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_question_form
+msgid "Multiple choice with one answer"
+msgstr "ከአንድ መልስ ጋር ብዙ ምርጫ"
+
+#. module: survey
+#: model:ir.model.fields.selection,name:survey.selection__survey_question__question_type__multiple_choice
+msgid "Multiple choice: multiple answers allowed"
+msgstr "ብዙ ምርጫ፡ ብዙ መልሶች ተፈቅደዋል"
+
+#. module: survey
+#: model:ir.model.fields.selection,name:survey.selection__survey_question__question_type__simple_choice
+msgid "Multiple choice: only one answer"
+msgstr "ብዙ ምርጫ፡ አንድ መልስ ብቻ"
+
+#. module: survey
+#: model:ir.model.fields.selection,name:survey.selection__survey_question__matrix_subtype__multiple
+msgid "Multiple choices per row"
+msgstr "ብዙ ምርጫዎች በአንድ ረድፍ"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_user_input_view_search
+msgid "New"
+msgstr "አዲስ"
+
+#. module: survey
+#: model:ir.model.fields.selection,name:survey.selection__survey_invite__existing_mode__new
+msgid "New invite"
+msgstr "አዲስ ግብዣ"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "ቀጣይ የእንቅስቃሴ ገደብ"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey__activity_summary
+msgid "Next Activity Summary"
+msgstr "ቀጣይ የእንቅስቃሴ ማጠቃለያ"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey__activity_type_id
+msgid "Next Activity Type"
+msgstr "ቀጣይ የእንቅስቃሴ አይነት"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.page
+msgid "Next page"
+msgstr "ቀጣይ ገጽ"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.page
+msgid "Next question"
+msgstr "ቀጣይ ጥያቄ"
+
+#. module: survey
+#: code:addons/survey/models/survey_survey.py:0
+msgid "No attempts left."
+msgstr "ምንም ሙከራዎች አልቀሩም።"
+
+#. module: survey
+#: model_terms:ir.actions.act_window,help:survey.action_survey_question_form
+msgid "No questions found"
+msgstr "ምንም ጥያቄዎች አልተገኙም።"
+
+#. module: survey
+#: model:ir.model.fields.selection,name:survey.selection__survey_survey__scoring_type__no_scoring
+msgid "No scoring"
+msgstr "ነጥብ ማስቆጠር የለም።"
+
+#. module: survey
+#: model_terms:ir.actions.act_window,help:survey.action_survey_label_form
+msgid "No survey labels found"
+msgstr "ምንም የዳሰሳ ጥናት መለያዎች አልተገኙም።"
+
+#. module: survey
+#: model_terms:ir.actions.act_window,help:survey.action_survey_user_input_line
+msgid "No user input lines found"
+msgstr "ምንም የተጠቃሚ ግቤት መስመሮች አልተገኙም።"
+
+#. module: survey
+#: model_terms:ir.actions.act_window,help:survey.action_survey_user_input
+msgid "Nobody has replied to your surveys yet"
+msgstr "እስካሁን ማንም ሰው ለዳሰሳ ጥናቶችዎ ምላሽ አልሰጠም።"
+
+#. module: survey
+#: model:ir.model.fields.selection,name:survey.selection__survey_user_input__state__new
+msgid "Not started yet"
+msgstr "ገና አልተጀመረም።"
+
+#. module: survey
+#: model:ir.model.fields.selection,name:survey.selection__survey_user_input_line__answer_type__number
+msgid "Number"
+msgstr "ቁጥር"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey__message_needaction_counter
+msgid "Number of Actions"
+msgstr "የተግባሮች ብዛት"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey__attempts_limit
+#: model:ir.model.fields,field_description:survey.field_survey_user_input__attempts_limit
+msgid "Number of attempts"
+msgstr "ሙከራዎች ብዛት"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_question__column_nb
+#: model_terms:ir.ui.view,arch_db:survey.survey_question_form
+msgid "Number of columns"
+msgstr "የአምዶች ብዛት"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey__message_has_error_counter
+msgid "Number of errors"
+msgstr "የስህተት ብዛት"
+
+#. module: survey
+#: model:ir.model.fields,help:survey.field_survey_survey__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "እርምጃ የሚያስፈልገው የመልእክት ብዛት"
+
+#. module: survey
+#: model:ir.model.fields,help:survey.field_survey_survey__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "የማድረስ ስህተት ያለባቸው መልዕክቶች ብዛት"
+
+#. module: survey
+#: model:ir.model.fields,help:survey.field_survey_survey__message_unread_counter
+msgid "Number of unread messages"
+msgstr "ያልተነበቡ መልዕክቶች ብዛት"
+
+#. module: survey
+#: model:ir.model.fields.selection,name:survey.selection__survey_question__question_type__numerical_box
+msgid "Numerical Value"
+msgstr "የቁጥር እሴት"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_user_input_line__value_number
+msgid "Numerical answer"
+msgstr "የቁጥር መልስ"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.result_number
+msgid "Occurence"
+msgstr "መከሰት"
+
+#. module: survey
+#: model:ir.model.fields.selection,name:survey.selection__survey_question__matrix_subtype__simple
+msgid "One choice per row"
+msgstr "በአንድ ረድፍ አንድ ምርጫ"
+
+#. module: survey
+#: model:ir.model.fields.selection,name:survey.selection__survey_survey__questions_layout__page_per_question
+msgid "One page per question"
+msgstr "በጥያቄ አንድ ገጽ"
+
+#. module: survey
+#: model:ir.model.fields.selection,name:survey.selection__survey_survey__questions_layout__page_per_section
+msgid "One page per section"
+msgstr "በክፍል አንድ ገጽ"
+
+#. module: survey
+#: model:ir.model.fields.selection,name:survey.selection__survey_survey__questions_layout__one_page
+msgid "One page with all the questions"
+msgstr "አንድ ገጽ ከሁሉም ጥያቄዎች ጋር"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_form
+#: model_terms:ir.ui.view,arch_db:survey.survey_question_form
+msgid "Options"
+msgstr "አማራጮች"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_invite__mail_server_id
+msgid "Outgoing mail server"
+msgstr "ወጪ የፖስታ አገልጋይ"
+
+#. module: survey
+#. openerp-web
+#: code:addons/survey/static/src/js/survey_result.js:0
+msgid "Overall Performance %.2f%s"
+msgstr "አጠቃላይ አፈጻጸም %2f%s"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_question__page_id
+msgid "Page"
+msgstr "ገጽ"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey__page_ids
+msgid "Pages"
+msgstr "ገፆች"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_user_input_view_search
+msgid "Partially Completed"
+msgstr "በከፊል ተጠናቀቀ"
+
+#. module: survey
+#: model:ir.model.fields.selection,name:survey.selection__survey_user_input__state__skip
+msgid "Partially completed"
+msgstr "በከፊል ተጠናቅቋል"
+
+#. module: survey
+#: model:mail.template,subject:survey.mail_template_user_input_invite
+msgid "Participate to ${object.survey_id.title} survey"
+msgstr "በ${object.survey_id.title} ዳሰሳ ላይ ይሳተፉ"
+
+#. module: survey
+#: model:ir.actions.act_window,name:survey.action_survey_user_input
+#: model:ir.ui.menu,name:survey.menu_survey_type_form1
+#: model:ir.ui.menu,name:survey.survey_menu_user_inputs
+msgid "Participations"
+msgstr "ተሳትፎ"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_user_input__partner_id
+#: model_terms:ir.ui.view,arch_db:survey.survey_user_input_view_search
+msgid "Partner"
+msgstr "አጋር"
+
+#. module: survey
+#: code:addons/survey/controllers/main.py:0
+#: model_terms:ir.ui.view,arch_db:survey.survey_kanban
+msgid "Passed"
+msgstr "አለፈ"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey__passing_score
+msgid "Passing score (%)"
+msgstr "የማለፍ ነጥብ (%)"
+
+#. module: survey
+#: code:addons/survey/wizard/survey_invite.py:0
+msgid "Please enter at least one valid recipient."
+msgstr "እባክዎ ቢያንስ አንድ የሚሰራ ተቀባይ ያስገቡ።"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_void
+msgid "Please make sure you have at least one question in your survey. You also need at least one section if you chose the \"Page per section\" layout.<br/>"
+msgstr "እባክዎ በዳሰሳ ጥናትዎ ውስጥ ቢያንስ አንድ ጥያቄ እንዳለዎት ያረጋግጡ። እንዲሁም \"ገጽ በክፍል\" አቀማመጥን ከመረጡ ቢያንስ አንድ ክፍል ያስፈልግዎታል።<br/>"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_user_input__question_ids
+msgid "Predefined Questions"
+msgstr "አስቀድሞ የተገለጹ ጥያቄዎች"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.page
+msgid "Previous page"
+msgstr "ያለፈው ገጽ"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.page
+msgid "Previous question"
+msgstr "ያለፈው ጥያቄ"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_form
+#: model_terms:ir.ui.view,arch_db:survey.survey_user_input_view_form
+msgid "Print"
+msgstr "አትም"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_invite__survey_url
+#: model:ir.model.fields,field_description:survey.field_survey_survey__public_url
+msgid "Public link"
+msgstr "የህዝብ ግንኙነት"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_label__question_id
+#: model:ir.model.fields,field_description:survey.field_survey_question__question
+#: model:ir.model.fields,field_description:survey.field_survey_user_input_line__question_id
+#: model_terms:ir.ui.view,arch_db:survey.survey_label_search
+#: model_terms:ir.ui.view,arch_db:survey.survey_question_form
+#: model_terms:ir.ui.view,arch_db:survey.survey_question_search
+msgid "Question"
+msgstr "ጥያቄ"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_label__question_id_2
+msgid "Question 2"
+msgstr "ጥያቄ 2"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_question__question_type
+msgid "Question Type"
+msgstr "የጥያቄ አይነት"
+
+#. module: survey
+#: model:ir.actions.act_window,name:survey.action_survey_question_form
+#: model:ir.model.fields,field_description:survey.field_survey_question__question_ids
+#: model:ir.model.fields,field_description:survey.field_survey_survey__question_ids
+#: model:ir.ui.menu,name:survey.menu_survey_question_form1
+#: model:ir.ui.menu,name:survey.survey_menu_questions
+#: model_terms:ir.ui.view,arch_db:survey.survey_form
+msgid "Questions"
+msgstr "ጥያቄዎች"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_user_input__quizz_passed
+msgid "Quizz Passed"
+msgstr "ጥያቄ አልፏል"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_user_input_view_search
+msgid "Quizz passed"
+msgstr "ጥያቄ አለፈ"
+
+#. module: survey
+#: model:ir.model.fields.selection,name:survey.selection__survey_question__display_mode__columns
+msgid "Radio Buttons"
+msgstr "የሬዲዮ አዝራሮች"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_question__random_questions_count
+msgid "Random questions count"
+msgstr "የዘፈቀደ ጥያቄዎች ይቆጠራሉ።"
+
+#. module: survey
+#: model:ir.model.fields.selection,name:survey.selection__survey_survey__questions_selection__random
+msgid "Randomized per section"
+msgstr "በዘፈቀደ በየክፍል"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_invite__partner_ids
+msgid "Recipients"
+msgstr "ተቀባዮች"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey__answer_count
+#: model_terms:ir.ui.view,arch_db:survey.survey_form
+msgid "Registered"
+msgstr "ተመዝግቧል"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_invite__existing_text
+msgid "Resend Comment"
+msgstr "አስተያየት እንደገና ላክ"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_user_input_view_form
+msgid "Resend Invitation"
+msgstr "ግብዣን እንደገና ላክ"
+
+#. module: survey
+#: model:ir.model.fields.selection,name:survey.selection__survey_invite__existing_mode__resend
+msgid "Resend invite"
+msgstr "ግብዣ እንደገና ላክ"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey__activity_user_id
+msgid "Responsible User"
+msgstr "ኃላፊነት የሚሰማው ተጠቃሚ"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.result
+msgid "Results Overview"
+msgstr "የውጤቶች አጠቃላይ እይታ"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.retake_survey_button
+msgid "Retry"
+msgstr "እንደገና ይሞክሩ"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.gamification_badge_form_view_simplified
+msgid "Rewards for challenges"
+msgstr "ለችግሮች ሽልማቶች"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_user_input_line__value_suggested_row
+msgid "Row answer"
+msgstr "የረድፍ መልስ"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_question_form
+msgid "Row1"
+msgstr "ረድፍ 1"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_question_form
+msgid "Row2"
+msgstr "ረድፍ 2"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_question_form
+msgid "Row3"
+msgstr "ረድፍ 3"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_question_form
+msgid "Rows"
+msgstr "ረድፎች"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_question__labels_ids_2
+msgid "Rows of the Matrix"
+msgstr "የማትሪክስ ረድፎች"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "የኤስኤምኤስ አቅርቦት ስህተት"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_user_input_line__answer_score
+msgid "Score"
+msgstr "ነጥብ"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_user_input__quizz_score
+msgid "Score (%)"
+msgstr "ነጥብ (%)"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_label__answer_score
+msgid "Score for this choice"
+msgstr "ለዚህ ምርጫ ነጥብ"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey__scoring_type
+#: model:ir.model.fields,field_description:survey.field_survey_user_input__scoring_type
+#: model_terms:ir.ui.view,arch_db:survey.survey_form
+msgid "Scoring"
+msgstr "ነጥብ ማስቆጠር"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_question__scoring_type
+msgid "Scoring Type"
+msgstr "የውጤት አሰጣጥ አይነት"
+
+#. module: survey
+#: model:ir.model.fields.selection,name:survey.selection__survey_survey__scoring_type__scoring_with_answers
+msgid "Scoring with answers at the end"
+msgstr "መጨረሻ ላይ ከመልሶች ጋር ነጥብ ማስመዝገብ"
+
+#. module: survey
+#: model:ir.model.fields.selection,name:survey.selection__survey_survey__scoring_type__scoring_without_answers
+msgid "Scoring without answers at the end"
+msgstr "መጨረሻ ላይ ያለ መልስ ነጥብ ማስቆጠር"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_label_search
+msgid "Search Label"
+msgstr "የፍለጋ መለያ"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_question_search
+msgid "Search Question"
+msgstr "ጥያቄ ፈልግ"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_user_input_view_search
+msgid "Search Survey"
+msgstr "የፍለጋ ዳሰሳ"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_response_line_search
+msgid "Search User input lines"
+msgstr "የተጠቃሚ ግቤት መስመሮችን ይፈልጉ"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_user_input_line__page_id
+#: model_terms:ir.ui.view,arch_db:survey.survey_question_form
+msgid "Section"
+msgstr "ክፍል"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey__question_and_page_ids
+msgid "Sections and Questions"
+msgstr "ክፍሎች እና ጥያቄዎች"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_form
+msgid "See results"
+msgstr "ውጤቶችን ተመልከት"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_question__questions_selection
+#: model:ir.model.fields,field_description:survey.field_survey_survey__questions_selection
+msgid "Selection"
+msgstr "ምርጫ"
+
+#. module: survey
+#: model:ir.model.fields.selection,name:survey.selection__survey_question__display_mode__dropdown
+msgid "Selection Box"
+msgstr "የምርጫ ሳጥን"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_invite_view_form
+msgid "Send"
+msgstr "ላክ"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_question__sequence
+#: model:ir.model.fields,field_description:survey.field_survey_user_input_line__question_sequence
+msgid "Sequence"
+msgstr "ቅደም ተከተል"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_form
+msgid "Set to draft"
+msgstr "ወደ ረቂቅ አዘጋጅ"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_form
+#: model_terms:ir.ui.view,arch_db:survey.survey_kanban
+msgid "Share"
+msgstr "አጋራ"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_question__comments_allowed
+msgid "Show Comments Field"
+msgstr "የአስተያየቶች መስክ አሳይ"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_survey_view_search
+msgid "Show all records which has next action date is before today"
+msgstr "የሚቀጥለው የድርጊት ቀን ከዛሬ በፊት ያለውን ሁሉንም መዝገቦች አሳይ"
+
+#. module: survey
+#: model:ir.model.fields.selection,name:survey.selection__survey_question__question_type__textbox
+msgid "Single Line Text Box"
+msgstr "ነጠላ መስመር ጽሑፍ ሳጥን"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_user_input_line__skipped
+#: model_terms:ir.ui.view,arch_db:survey.result
+msgid "Skipped"
+msgstr "ተዘለለ"
+
+#. module: survey
+#: code:addons/survey/wizard/survey_invite.py:0
+msgid "Some emails you just entered are incorrect: %s"
+msgstr "አሁን ያስገቧቸው አንዳንድ ኢሜይሎች የተሳሳቱ ናቸው፡ %s"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.page
+msgid "Something went wrong while contacting survey server. <strong class=\"text-danger\">Your answers have probably not been recorded.</strong> Try refreshing."
+msgstr "የዳሰሳ ጥናት አገልጋይን በማነጋገር ላይ ሳለ የሆነ ችግር ተፈጥሯል። <strong class=\"text-danger\">የእርስዎ መልሶች አልተመዘገቡም።</strong>ለማደስ ይሞክሩ።"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.result
+msgid "Sorry, No one answered this question."
+msgstr "ይቅርታ፣ ይህንን ጥያቄ ማንም አልመለሰም።"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.result
+msgid "Sorry, no one answered this survey yet."
+msgstr "ይቅርታ፣ ይህንን ጥናት ማንም እስካሁን አልመለሰም።"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_init
+msgid "Start Certification"
+msgstr "የምስክር ወረቀት ጀምር"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_form
+#: model_terms:ir.ui.view,arch_db:survey.survey_init
+msgid "Start Survey"
+msgstr "የዳሰሳ ጥናት ይጀምሩ"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_user_input__start_datetime
+msgid "Start date and time"
+msgstr "የመጀመሪያ ቀን እና ሰዓት"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_survey_view_search
+msgid "State"
+msgstr "ግዛት"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_user_input__state
+msgid "Status"
+msgstr "ሁኔታ"
+
+#. module: survey
+#: model:ir.model.fields,help:survey.field_survey_survey__activity_state
+msgid ""
+"Status based on activities"
+"Overdue: Due date is already passed"
+"Today: Activity date is today"
+"Planned: Future activities."
+msgstr ""
+"\"በእንቅስቃሴዎች ላይ የተመሰረተ ሁኔታ
+"
+"ጊዜው ያለፈበት፡ የማብቂያ ቀን አስቀድሞ አልፏል
+"
+"ዛሬ፡ የእንቅስቃሴ ቀን ዛሬ ነው።
+"
+"የታቀደ: የወደፊት እንቅስቃሴዎች.\""
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_invite__subject
+msgid "Subject"
+msgstr "ርዕሰ ጉዳይ"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_invite_view_form
+msgid "Subject..."
+msgstr "ርዕሰ ጉዳይ..."
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.page
+msgid "Submit Survey"
+msgstr "የዳሰሳ ጥናት አስገባ"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey__success_count
+msgid "Success"
+msgstr "ስኬት"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey__success_ratio
+msgid "Success Ratio"
+msgstr "የስኬት ሬሾ"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.result
+msgid "Success rate:"
+msgstr "የስኬት መጠን፡-"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.certification_report_view
+msgid "Successfully achieved"
+msgstr "በተሳካ ሁኔታ ተገኝቷል"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.certification_report_view
+msgid "Successfully failed"
+msgstr "በተሳካ ሁኔታ አልተሳካም።"
+
+#. module: survey
+#: model:ir.actions.act_window,name:survey.action_survey_label_form
+#: model:ir.ui.menu,name:survey.menu_survey_label_form1
+msgid "Suggested Values"
+msgstr "የተጠቆሙ እሴቶች"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_user_input_line__value_suggested
+msgid "Suggested answer"
+msgstr "የተጠቆመ መልስ"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_label__value
+msgid "Suggested value"
+msgstr "የተጠቆመ ዋጋ"
+
+#. module: survey
+#: model:ir.model.fields.selection,name:survey.selection__survey_user_input_line__answer_type__suggestion
+msgid "Suggestion"
+msgstr "ጥቆማ"
+
+#. module: survey
+#: model:ir.model,name:survey.model_survey_survey
+#: model:ir.model.fields,field_description:survey.field_gamification_badge__survey_id
+#: model:ir.model.fields,field_description:survey.field_survey_invite__survey_id
+#: model:ir.model.fields,field_description:survey.field_survey_question__survey_id
+#: model:ir.model.fields,field_description:survey.field_survey_user_input__survey_id
+#: model:ir.model.fields,field_description:survey.field_survey_user_input_line__survey_id
+#: model_terms:ir.ui.view,arch_db:survey.survey_form
+#: model_terms:ir.ui.view,arch_db:survey.survey_question_search
+#: model_terms:ir.ui.view,arch_db:survey.survey_response_line_search
+#: model_terms:ir.ui.view,arch_db:survey.survey_survey_view_search
+#: model_terms:ir.ui.view,arch_db:survey.survey_tree
+#: model_terms:ir.ui.view,arch_db:survey.survey_user_input_view_search
+msgid "Survey"
+msgstr "የዳሰሳ ጥናት"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_response_line_tree
+msgid "Survey Answer Line"
+msgstr "የዳሰሳ መልስ መስመር"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_gamification_badge__survey_ids
+msgid "Survey Ids"
+msgstr "የዳሰሳ መታወቂያዎች"
+
+#. module: survey
+#: model:ir.model,name:survey.model_survey_invite
+msgid "Survey Invitation Wizard"
+msgstr "የዳሰሳ ግብዣ አዋቂ"
+
+#. module: survey
+#: model:ir.model,name:survey.model_survey_label
+#: model_terms:ir.ui.view,arch_db:survey.survey_label_tree
+msgid "Survey Label"
+msgstr "የዳሰሳ መለያ"
+
+#. module: survey
+#: model:ir.model,name:survey.model_survey_question
+#: model_terms:ir.ui.view,arch_db:survey.survey_question_form
+#: model_terms:ir.ui.view,arch_db:survey.survey_question_tree
+msgid "Survey Question"
+msgstr "የዳሰሳ ጥያቄ"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey__state
+msgid "Survey Stage"
+msgstr "የዳሰሳ ጥናት ደረጃ"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey__title
+msgid "Survey Title"
+msgstr "የዳሰሳ ጥናት ርዕስ"
+
+#. module: survey
+#: model:ir.model,name:survey.model_survey_user_input
+msgid "Survey User Input"
+msgstr "የዳሰሳ የተጠቃሚ ግቤት"
+
+#. module: survey
+#: model:ir.model,name:survey.model_survey_user_input_line
+msgid "Survey User Input Line"
+msgstr "የዳሰሳ ጥናት የተጠቃሚ ግቤት መስመር"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_user_input_view_form
+#: model_terms:ir.ui.view,arch_db:survey.survey_user_input_view_tree
+msgid "Survey User inputs"
+msgstr "የዳሰሳ የተጠቃሚ ግብዓቶች"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.result_matrix
+msgid "Survey filter"
+msgstr "የዳሰሳ ማጣሪያ"
+
+#. module: survey
+#: model:ir.actions.server,name:survey.survey_action_server_clean_test_answers
+msgid "Survey: Clean test answers"
+msgstr "የዳሰሳ ጥናት፡ ንጹህ የሙከራ መልሶች"
+
+#. module: survey
+#: model:ir.actions.act_window,name:survey.action_survey_form
+#: model:ir.ui.menu,name:survey.menu_survey_form
+#: model:ir.ui.menu,name:survey.menu_surveys
+msgid "Surveys"
+msgstr "የዳሰሳ ጥናቶች"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_form
+msgid "Test"
+msgstr "ሙከራ"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_user_input_view_search
+msgid "Test Entries"
+msgstr "የሙከራ ግቤቶች"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_user_input__test_entry
+msgid "Test Entry"
+msgstr "የመግቢያ ሙከራ"
+
+#. module: survey
+#: model:ir.model.fields.selection,name:survey.selection__survey_user_input_line__answer_type__text
+msgid "Text"
+msgstr "ጽሑፍ"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_user_input_line__value_text
+msgid "Text answer"
+msgstr "የጽሑፍ መልስ"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.sfinished
+msgid "Thank you!"
+msgstr "አመሰግናለሁ!"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey__thank_you_message
+msgid "Thanks Message"
+msgstr "የምስጋና መልእክት"
+
+#. module: survey
+#: code:addons/survey/models/survey_user.py:0
+msgid "The answer must be in the right type"
+msgstr "መልሱ በትክክለኛው ዓይነት መሆን አለበት"
+
+#. module: survey
+#: code:addons/survey/models/survey_question.py:0
+msgid "The answer you entered is not valid."
+msgstr "ያስገቡት መልስ ልክ አይደለም።"
+
+#. module: survey
+#: model:ir.model.constraint,message:survey.constraint_survey_survey_attempts_limit_check
+msgid "The attempts limit needs to be a positive number if the survey has a limited number of attempts."
+msgstr "የዳሰሳ ጥናቱ የተወሰነ ቁጥር ያለው ከሆነ የሙከራ ገደቡ አወንታዊ ቁጥር መሆን አለበት።"
+
+#. module: survey
+#: model:ir.model.constraint,message:survey.constraint_survey_survey_badge_uniq
+msgid "The badge for each survey should be unique!"
+msgstr "ለእያንዳንዱ የዳሰሳ ጥናት ባጅ ልዩ መሆን አለበት!"
+
+#. module: survey
+#. openerp-web
+#: code:addons/survey/static/src/js/survey.js:0
+msgid "The date you selected is greater than the maximum date: "
+msgstr "የመረጡት ቀን ከከፍተኛው ቀን ይበልጣል፡-"
+
+#. module: survey
+#. openerp-web
+#: code:addons/survey/static/src/js/survey.js:0
+msgid "The date you selected is lower than the minimum date: "
+msgstr "የመረጡት ቀን ከዝቅተኛው ቀን ያነሰ ነው፡-"
+
+#. module: survey
+#: model:ir.model.fields,help:survey.field_survey_survey__description
+msgid "The description will be displayed on the home page of the survey. You can use this to give the purpose and guidelines to your candidates before they start it."
+msgstr "መግለጫው በዳሰሳ ጥናቱ መነሻ ገጽ ላይ ይታያል። ይህንን ከመጀመራቸው በፊት አላማውን እና መመሪያውን ለእጩዎ ለመስጠት ሊጠቀሙበት ይችላሉ።"
+
+#. module: survey
+#: code:addons/survey/wizard/survey_invite.py:0
+msgid "The following customers have already received an invite"
+msgstr "የሚከተሉት ደንበኞች አስቀድመው ግብዣ ተቀብለዋል።"
+
+#. module: survey
+#: code:addons/survey/wizard/survey_invite.py:0
+msgid "The following emails have already received an invite"
+msgstr "የሚከተሉት ኢሜይሎች አስቀድመው ግብዣ ተቀብለዋል።"
+
+#. module: survey
+#: code:addons/survey/wizard/survey_invite.py:0
+msgid "The following recipients have no user account: %s. You should create user accounts for them or allow external signup in configuration."
+msgstr "የሚከተሉት ተቀባዮች የተጠቃሚ መለያ የላቸውም፡ %s። ለእነሱ የተጠቃሚ መለያዎችን መፍጠር ወይም በውቅር ውስጥ የውጭ ምዝገባን መፍቀድ አለብዎት።"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.403
+msgid "The page you were looking for could not be authorized."
+msgstr "ሲፈልጉት የነበረው ገጽ ሊፈቀድለት አልቻለም።"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey__is_time_limited
+msgid "The survey is limited in time"
+msgstr "የዳሰሳ ጥናቱ በጊዜ የተገደበ ነው።"
+
+#. module: survey
+#: model:ir.model.constraint,message:survey.constraint_survey_survey_time_limit_check
+msgid "The time limit needs to be a positive number if the survey is time limited."
+msgstr "የዳሰሳ ጥናቱ የተወሰነ ጊዜ ከሆነ የጊዜ ገደቡ አዎንታዊ ቁጥር መሆን አለበት።"
+
+#. module: survey
+#: code:addons/survey/controllers/main.py:0
+msgid "The user has not succeeded the certification"
+msgstr "ተጠቃሚው የእውቅና ማረጋገጫውን አልተሳካለትም።"
+
+#. module: survey
+#: model:ir.model.fields,help:survey.field_survey_question__column_nb
+msgid "These options refer to col-xx-[12|6|4|3|2] classes in Bootstrap for dropdown-based simple and multiple choice questions."
+msgstr "እነዚህ አማራጮች col-xx-[12|6|4|3|2] በ Bootstrap ውስጥ ያሉትን ተቆልቋይ ላይ ለተመሠረቱ ቀላል እና ብዙ ምርጫ ጥያቄዎችን ያመለክታሉ።"
+
+#. module: survey
+#: code:addons/survey/models/survey_question.py:0
+#: code:addons/survey/tests/test_survey.py:0
+msgid "This answer must be an email address"
+msgstr "ይህ መልስ የኢሜይል አድራሻ መሆን አለበት።"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.back
+msgid "This is a test survey."
+msgstr "ይህ የዳሰሳ ጥናት ነው።"
+
+#. module: survey
+#: code:addons/survey/models/survey_question.py:0
+#: code:addons/survey/tests/test_survey.py:0
+msgid "This is not a date"
+msgstr "ይህ ቀን አይደለም"
+
+#. module: survey
+#: code:addons/survey/models/survey_question.py:0
+#: code:addons/survey/tests/test_survey.py:0
+msgid "This is not a number"
+msgstr "ይህ ቁጥር አይደለም"
+
+#. module: survey
+#: model:ir.model.fields,help:survey.field_survey_invite__emails
+msgid "This list of emails of recipients will not be converted in contacts.        Emails must be separated by commas, semicolons or newline."
+msgstr "ይህ የተቀባይ ኢሜይሎች ዝርዝር በእውቂያዎች ውስጥ አይቀየርም። ኢሜይሎች በነጠላ ሰረዞች፣ ሴሚኮሎን ወይም አዲስ መስመር መለያየት አለባቸው።"
+
+#. module: survey
+#: model:ir.model.fields,help:survey.field_survey_survey__thank_you_message
+msgid "This message will be displayed when survey is completed"
+msgstr "ይህ መልእክት የዳሰሳ ጥናት ሲጠናቀቅ ይታያል"
+
+#. module: survey
+#: code:addons/survey/models/survey_user.py:0
+msgid "This question cannot be unanswered or skipped."
+msgstr "ይህ ጥያቄ ሊመለስ ወይም ሊዘለል አይችልም።"
+
+#. module: survey
+#: code:addons/survey/models/survey_question.py:0
+msgid "This question requires an answer."
+msgstr "ይህ ጥያቄ መልስ ያስፈልገዋል።"
+
+#. module: survey
+#: code:addons/survey/wizard/survey_invite.py:0
+msgid "This survey does not allow external people to participate. You should create user accounts or update survey access mode accordingly."
+msgstr "ይህ የዳሰሳ ጥናት የውጭ ሰዎች እንዲሳተፉ አይፈቅድም። በዚሁ መሰረት የተጠቃሚ መለያዎችን መፍጠር ወይም የዳሰሳ ጥናት መዳረሻ ሁነታን ማዘመን አለብህ።"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_expired
+msgid "This survey is now closed. Thank you for your interest !"
+msgstr "ይህ ዳሰሳ አሁን ተዘግቷል። ለፍላጎትዎ እናመሰግናለን!"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.auth_required
+msgid "This survey is open only to registered people. Please"
+msgstr "ይህ የዳሰሳ ጥናት ለተመዘገቡ ሰዎች ብቻ ክፍት ነው። አባክሽን"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_form
+msgid "Time Limit"
+msgstr "የጊዜ ገደብ"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey__time_limit
+msgid "Time limit (minutes)"
+msgstr "የጊዜ ገደብ (ደቂቃዎች)"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_question__title
+msgid "Title"
+msgstr "ርዕስ"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_survey_view_search
+msgid "Today Activities"
+msgstr "የዛሬ ተግባራት"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_question_search
+msgid "Type"
+msgstr "ዓይነት"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_question_form
+msgid "Type of answers"
+msgstr "የመልሶች አይነት"
+
+#. module: survey
+#: model:ir.model.fields,help:survey.field_survey_survey__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "በመዝገብ ላይ ያለ ልዩ እንቅስቃሴ አይነት።"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_question__labels_ids
+msgid "Types of answers"
+msgstr "የመልሶች ዓይነቶች"
+
+#. module: survey
+#: code:addons/survey/wizard/survey_invite.py:0
+msgid "Unable to post message, please configure the sender\'s email address."
+msgstr "መልዕክት መለጠፍ አልተቻለም፣ እባክዎ የላኪውን ኢሜይል አድራሻ ያዋቅሩ።"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.sfinished
+msgid "Unfortunately, you have failed the test."
+msgstr "እንደ አለመታደል ሆኖ ፈተናውን ወድቀዋል።"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey__message_unread
+msgid "Unread Messages"
+msgstr "ያልተነበቡ መልእክቶች"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "ያልተነበቡ መልዕክቶች ቆጣሪ"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_survey_view_search
+msgid "Upcoming Activities"
+msgstr "መጪ ተግባራት"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_invite__template_id
+msgid "Use template"
+msgstr "አብነት ይጠቀሙ"
+
+#. module: survey
+#: model:ir.model.fields,help:survey.field_survey_question__description
+msgid "Use this field to add additional explanations about your question"
+msgstr "ስለጥያቄዎ ተጨማሪ ማብራሪያዎችን ለመጨመር ይህንን መስክ ይጠቀሙ"
+
+#. module: survey
+#: model:ir.model.fields,help:survey.field_survey_question__random_questions_count
+msgid "Used on randomized sections to take X random questions from all the questions of that section."
+msgstr "በዘፈቀደ ክፍሎች ላይ የ X የዘፈቀደ ጥያቄዎችን ከሁሉም የዚያ ክፍል ጥያቄዎች ለመውሰድ ጥቅም ላይ ይውላል።"
+
+#. module: survey
+#: model:res.groups,name:survey.group_survey_user
+msgid "User"
+msgstr "ተጠቃሚ"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_user_input_line__user_input_id
+#: model_terms:ir.ui.view,arch_db:survey.survey_response_line_search
+msgid "User Input"
+msgstr "የተጠቃሚ ግቤት"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.result_choice
+#: model_terms:ir.ui.view,arch_db:survey.result_number
+#: model_terms:ir.ui.view,arch_db:survey.result_text
+msgid "User Responses"
+msgstr "የተጠቃሚ ምላሾች"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_user_input_line_form
+msgid "User input line details"
+msgstr "የተጠቃሚ ግቤት መስመር ዝርዝሮች"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey__user_input_ids
+msgid "User responses"
+msgstr "የተጠቃሚ ምላሾች"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey__users_can_go_back
+msgid "Users can go back"
+msgstr "ተጠቃሚዎች ወደ ኋላ መመለስ ይችላሉ"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey__users_can_signup
+msgid "Users can signup"
+msgstr "ተጠቃሚዎች መመዝገብ ይችላሉ።"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_question__validation_required
+msgid "Validate entry"
+msgstr "ግቤትን ያረጋግጡ"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_question__validation_error_msg
+msgid "Validation Error message"
+msgstr "የማረጋገጫ ስህተት መልእክት"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.result_choice
+msgid "Vote"
+msgstr "ድምጽ ይስጡ"
+
+#. module: survey
+#: model:ir.model.fields,field_description:survey.field_survey_survey__website_message_ids
+msgid "Website Messages"
+msgstr "የድር ጣቢያ መልዕክቶች"
+
+#. module: survey
+#: model:ir.model.fields,help:survey.field_survey_survey__website_message_ids
+msgid "Website communication history"
+msgstr "የድር ጣቢያ የግንኙነት ታሪክ"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_question_form
+msgid ""
+"YYYY-MM-DD"
+"                                        <i class=\"fa fa-calendar fa-2x\" role=\"img\" aria-label=\"Calendar\" title=\"Calendar\"/>"
+msgstr ""
+"አአአአ-ወወ-ዲ"
+"                                         <i class=\"fa fa-calendar fa-2x\" role=\"img\" aria-label=\"Calendar\" title=\"Calendar\"/>"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_question_form
+msgid ""
+"YYYY-MM-DD hh:mm:ss"
+"                                        <i class=\"fa fa-calendar fa-2x\" role=\"img\" aria-label=\"Calendar\" title=\"Calendar\"/>"
+msgstr ""
+"አአአ-ወወ-DD hh:mm:ss"
+"                                         <i class=\"fa fa-calendar fa-2x\" role=\"img\" aria-label=\"Calendar\" title=\"Calendar\"/>"
+
+#. module: survey
+#: model_terms:ir.actions.act_window,help:survey.action_survey_form
+msgid ""
+ "You can create surveys for different purposes: customer opinion, services feedback, recruitment interviews, "
+"employee\'s periodical evaluations, marketing campaigns, etc."
+msgstr ""
+ "ለተለያዩ ዓላማዎች የዳሰሳ ጥናቶችን መፍጠር ይችላሉ፡ የደንበኛ አስተያየት፣ የአገልግሎቶች"
+" አስተያየት፣ የምልመላ ቃለመጠይቆች፣ የሰራተኞች ወቅታዊ ግምገማዎች፣ የግብይት ዘመቻዎች፣ ወዘተ."
+
+#. module: survey
+#: model:ir.model.constraint,message:survey.constraint_survey_survey_certificate_check
+msgid "You can only create certifications for surveys that have a scoring mechanism."
+msgstr "የውጤት አሰጣጥ ዘዴ ላላቸው የዳሰሳ ጥናቶች ብቻ የእውቅና ማረጋገጫዎችን መፍጠር ይችላሉ።"
+
+#. module: survey
+#: code:addons/survey/models/survey_survey.py:0
+msgid "You cannot send an invitation for a \"One page per section\" survey if the survey has no sections."
+msgstr "የዳሰሳ ጥናቱ ምንም ክፍል ከሌለው ለ«አንድ ገጽ በክፍል» የዳሰሳ ጥናት ግብዣ መላክ አይችሉም።"
+
+#. module: survey
+#: code:addons/survey/models/survey_survey.py:0
+msgid "You cannot send an invitation for a \"One page per section\" survey if the survey only contains empty sections."
+msgstr "የዳሰሳ ጥናቱ ባዶ ክፍሎችን ብቻ የያዘ ከሆነ ለ«አንድ ገጽ በክፍል» የዳሰሳ ጥናት ግብዣ መላክ አይችሉም።"
+
+#. module: survey
+#: code:addons/survey/models/survey_survey.py:0
+msgid "You cannot send an invitation for a survey that has no questions."
+msgstr "ጥያቄ ለሌለው የዳሰሳ ጥናት ግብዣ መላክ አይችሉም።"
+
+#. module: survey
+#: code:addons/survey/models/survey_survey.py:0
+msgid "You cannot send invitations for closed surveys."
+msgstr "ለተዘጉ የዳሰሳ ጥናቶች ግብዣ መላክ አይችሉም።"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.sfinished
+msgid "You received the badge"
+msgstr "ባጁን ተቀብለዋል።"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.sfinished
+msgid "You scored"
+msgstr "ነጥብ አስቆጥረዋል።"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_question_form
+msgid "ans"
+msgstr "መልስ"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_form
+msgid "e.g. Satisfaction Survey"
+msgstr "ለምሳሌ. የእርካታ ጥናት"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.auth_required
+msgid "log in"
+msgstr "ግባ"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.sfinished
+msgid "review your answers"
+msgstr "መልሶችዎን ይገምግሙ"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_expired
+msgid "survey expired"
+msgstr "የዳሰሳ ጥናት ጊዜው አልፎበታል።"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.survey_void
+msgid "survey is void"
+msgstr "የዳሰሳ ጥናት ባዶ ነው።"
+
+#. module: survey
+#: model_terms:ir.ui.view,arch_db:survey.403
+msgid "this page"
+msgstr "ይህ ገጽ"

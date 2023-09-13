@@ -124,7 +124,7 @@ class CustomerPortal(CustomerPortal):
         }
         searchbar_groupby = {
             'none': {'input': 'none', 'label': _('None')},
-            'project': {'input': 'project', 'label': _('Project')},
+            'project': {'input': 'project', 'label': _('Planning')},
         }
 
         # extends filterby criteria with project the customer has access to

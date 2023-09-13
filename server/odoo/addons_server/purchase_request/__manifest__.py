@@ -22,7 +22,7 @@ Use Purchase Request module for requesting product.
         'views/purchase_order.xml',
         'views/config.xml',
         'views/p_o.xml',
-        'views/report.xml'
+        'views/tender.xml',
     ],
     'depends': ['base','mail','purchase_requisition','hr','hr_expense'],
     'installable': True,

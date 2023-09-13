@@ -27,11 +27,11 @@
                     <header>
                         <button name='send' string="Send Request" type="object" class='oe_highlight' states="draft"/>
                         <button name='approve' string="Approve" type="object" class='oe_highlight'
-                                states="waiting" groups="hr.group_hr_manager,hr.group_hr_user"/>
-                        <button name='reject' string="Reject" type="object" states="waiting" groups="hr.group_hr_manager,hr.group_hr_user"/>
+                                states="waiting" groups="fleet.fleet_group_manager"/>
+                        <button name='reject' string="Reject" type="object" states="waiting" groups="fleet.fleet_group_manager"/>
                         <button name='cancel' string="Cancel" type="object" states="draft,waiting"/>
                         <button name='returned' string="Return" type="object" class='oe_highlight'
-                                states="confirm" groups="hr.group_hr_manager,hr.group_hr_user"/>
+                                states="confirm" groups="fleet.fleet_group_manager"/>
                         <field name="state" widget="statusbar" statusbar_visible="draft,waiting,confirm,return"/>
                     </header>
                     <sheet>
@@ -48,14 +48,14 @@
                             </group>
                             <group>
                                 <field name="req_date"/>
-                                <field name="fleet"/>
+                                <field name="fleet" readonly="1" force_save="1"/>
                                 <field name="purpose"/>
                                 <field name="checklist_template" attrs="{'readonly':[('state','in',('confirm','return'))]}"/>
                             </group>
                         </group>
                         <notebook>
                         <page string="Initial Checklist" >
-                             <field name="checklist" attrs="{'readonly':[('state','in',('draft','confirm','return'))]}">
+                             <field name="checklist" attrs="{'readonly':[('state','in',('draft','confirm','return'))]}" force_save="1">
                                  <tree editable="top">
                                      <field name="id"/>
                                      <field name="checklist_id"/>
@@ -68,7 +68,7 @@
                              </field>
                         </page>
                         <page string="Final Checklist" >
-                             <field name="checklist_2" attrs="{'readonly':[('state','in',('draft','return'))]}">
+                             <field name="checklist_2" attrs="{'readonly':[('state','in',('draft','return'))]}" force_save="1">
                                  <tree editable="top">
                                      <field name="id"/>
                                      <field name="checklist_id"/>
@@ -143,15 +143,15 @@
             </field>
         </record>
 
-        <menuitem id="employee_fleet_menu"
-                  name="Vehicle Transfer"
-                  parent="fleet.menu_root"
-                  sequence="4"
-                  groups="hr.group_hr_manager"/>
-        <menuitem id="employee_fleet_sub_menu"
-                  name="Vehicle Transfer"
-                  parent="employee_fleet_menu"
-                  sequence="1"
-                  groups="hr.group_hr_manager"
-                  action="action_employee_fleet"/>
+<!--        <menuitem id="employee_fleet_menu"-->
+<!--                  name="Vehicle Transfer"-->
+<!--                  parent="fleet.menu_root"-->
+<!--                  sequence="4"-->
+<!--                  groups="fleet.fleet_group_manager"/>-->
+<!--        <menuitem id="employee_fleet_sub_menu"-->
+<!--                  name="Vehicle Transfer"-->
+<!--                  parent="employee_fleet_menu"-->
+<!--                  sequence="1"-->
+<!--                  groups="fleet.fleet_group_manager"-->
+<!--                  action="action_employee_fleet"/>-->
 </odoo>

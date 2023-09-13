@@ -9,13 +9,23 @@ from odoo.exceptions import UserError, ValidationError
 class FinancialOpening(models.TransientModel):
     _name = "financial.opening"
 
+
     journal_id = fields.Many2one('account.journal', 'Journal', required=True)
-    date = fields.Date('Current Date', required=True)
-    debit = fields.Many2many('account.account.type', string="Debit Account group", required=True)
-    credit = fields.Many2many('account.account.type', 'write_date', string="Credit Account group", required=True)
-    diff = fields.Many2one('account.account', string="difference", required=True)
+    date = fields.Date('Current Date')
+    debit = fields.Many2many('account.account.type', string="Debit Account group")
+    credit = fields.Many2many('account.account.type','write_date', string="Credit Account group")
+    diff = fields.Many2one('account.account', string="difference")
+    state = fields.Selection([
+        ('draft', 'New'),
+        ('post', 'Post')], default='draft', string="Status")
+
+
 
     def open_year(self):
+        year = self.env['fiscal.year'].search([("state", "=", 'active')])
+        if year:
+            raise ValidationError(_(
+                'There is already active fiscal year'))
         active_id = self.env.context.get('active_ids', [])
         id = active_id[0]
         date = self.date
@@ -31,6 +41,7 @@ class FinancialOpening(models.TransientModel):
             raise ValidationError(_(
                 'please set Time frame for the journal'))
         # for line in account_2:
+
 
         move_vals = {
             'date': date,
@@ -117,3 +128,5 @@ class FinancialOpening(models.TransientModel):
         # print(move_vals)
         move = self.env['account.move'].sudo().create(move_vals)
         year.open = move.id
+        self.state = 'post'
+        return

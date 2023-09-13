@@ -7,7 +7,11 @@
         <field name="type">form</field>
         <field name="arch" type="xml">
             <form string="Financial Closing">
-
+                 <header>
+                  <field name="state" widget="statusbar" statusbar_visible="draft,post"/>
+                  <button name="close_year" string="close Year" states="draft"  groups="account.group_account_manager" type="object" class="btn-primary"/>
+                </header>
+                 <sheet>
                     <group>
                           <field name="journal_id" force_save="1"/>
                           <field name="date" force_save="1"/>
@@ -16,11 +20,7 @@
                           <field name="profit" force_save="1"/>
 
                     </group>
-
-                <footer>
-                    <button name="close_year" string="Close Year" type="object" class="btn-primary"/>
-                    <button special="cancel" string="Cancel" class="btn-default"/>
-                </footer>
+                 </sheet>
             </form>
         </field>
     </record>

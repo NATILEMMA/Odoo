@@ -17,7 +17,7 @@ class Inventory(models.Model):
     name = fields.Char(
         'Inventory Reference', default="Inventory",
         readonly=True, required=True,
-        states={'draft': [('readonly', False)]})
+        states={'draft': [('readonly', False)]}, translate=True)
     date = fields.Datetime(
         'Inventory Date',
         readonly=True, required=True,

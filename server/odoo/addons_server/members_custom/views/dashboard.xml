@@ -2,7 +2,7 @@
 <odoo>
 
   <record id="action_gender_graph" model="ir.actions.act_window">
-    <field name="name">action.gender.in.city.graph</field>
+    <field name="name">Gender with City</field>
     <field name="res_model">res.partner</field>
     <field name="view_mode">graph</field>
     <field name="view_id" ref="members_custom.graphics_for_gender_subcity"/>
@@ -10,7 +10,7 @@
   </record>
 
   <record id="action_gender_with_ed_level_graph" model="ir.actions.act_window">
-    <field name="name">action.gender.with.ed.level.graph</field>
+    <field name="name">Gender with Education</field>
     <field name="res_model">res.partner</field>
     <field name="view_mode">graph</field>
     <field name="view_id" ref="members_custom.graphics_for_gender_education"/>
@@ -18,7 +18,7 @@
   </record>
 
   <record id="action_age_gender" model="ir.actions.act_window">
-    <field name="name">action.age.gender</field>
+    <field name="name">Gender with Age</field>
     <field name="res_model">res.partner</field>
     <field name="view_mode">graph</field>
     <field name="view_id" ref="members_custom.graphics_for_age_gender"/>
@@ -27,7 +27,7 @@
 
 
   <record id="action_membership_start_gender" model="ir.actions.act_window">
-    <field name="name">action.membership.start.gender</field>
+    <field name="name">Gender with Membership Start</field>
     <field name="res_model">res.partner</field>
     <field name="view_mode">graph</field>
     <field name="view_id" ref="members_custom.graphics_for_gender_membership_start"/>
@@ -72,8 +72,8 @@
    <menuitem id="dashboard_reports"
              name="Graphic Reporting"
              parent="menu_report_membership"
-             sequence="3"
-             groups="members_custom.member_group_manager"
+             sequence="4"
+             groups="members_custom.member_group_city_admin"
              action="member_dashboard"/>
 
 </odoo>

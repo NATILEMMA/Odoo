@@ -1,0 +1,112 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* web_tour
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20221005\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-22 13:41+0000\n"
+"PO-Revision-Date: 2023-05-22 13:41+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: web_tour
+#. openerp-web
+#: code:addons/web_tour/static/src/js/tour_manager.js:0
+#, python-format
+msgid "Click on the <i>Home icon</i> to navigate across apps."
+msgstr "በመተግበሪያዎች ላይ ለማሰስ የ<i>መነሻ አዶ</i>ን ጠቅ ያድርጉ።"
+
+#. module: web_tour
+#: model:ir.model.fields,field_description:web_tour.field_web_tour_tour__user_id
+msgid "Consumed by"
+msgstr "የተበላው"
+
+#. module: web_tour
+#. openerp-web
+#: code:addons/web_tour/static/src/xml/debug_manager.xml:0
+#, python-format
+msgid "Disable Tours"
+msgstr "ጉብኝቶችን አሰናክል"
+
+#. module: web_tour
+#: model:ir.model.fields,field_description:web_tour.field_web_tour_tour__display_name
+msgid "Display Name"
+msgstr "መጠሪያው ስም"
+
+#. module: web_tour
+#: model:ir.model,name:web_tour.model_ir_http
+msgid "HTTP Routing"
+msgstr "HTTP ማዘዣ"
+
+#. module: web_tour
+#: model:ir.model.fields,field_description:web_tour.field_web_tour_tour__id
+msgid "ID"
+msgstr "መታወቂያ"
+
+#. module: web_tour
+#: model:ir.model.fields,field_description:web_tour.field_web_tour_tour____last_update
+msgid "Last Modified on"
+msgstr "በመጨረሻ የተሻሻለው በርቷል"
+
+#. module: web_tour
+#: model_terms:ir.ui.view,arch_db:web_tour.edit_tour_list
+msgid "Menu"
+msgstr "ምናሌ"
+
+#. module: web_tour
+#. openerp-web
+#: code:addons/web_tour/static/src/xml/debug_manager.xml:0
+#, python-format
+msgid "Name"
+msgstr "ስም"
+
+#. module: web_tour
+#. openerp-web
+#: code:addons/web_tour/static/src/xml/debug_manager.xml:0
+#, python-format
+msgid "Path"
+msgstr "መንገድ"
+
+#. module: web_tour
+#. openerp-web
+#: code:addons/web_tour/static/src/js/tour_manager.js:0
+#, python-format
+msgid "Skip tour"
+msgstr "ጉብኝት ዝለል"
+
+#. module: web_tour
+#. openerp-web
+#: code:addons/web_tour/static/src/xml/debug_manager.xml:0
+#, python-format
+msgid "Start Tour"
+msgstr "ጉብኝት ጀምር"
+
+#. module: web_tour
+#: model_terms:ir.ui.view,arch_db:web_tour.edit_tour_search
+msgid "Tip"
+msgstr "ጠቃሚ ምክር"
+
+#. module: web_tour
+#. openerp-web
+#: code:addons/web_tour/static/src/xml/debug_manager.xml:0
+#, python-format
+msgid "Tour"
+msgstr "ጉብኝት"
+
+#. module: web_tour
+#: model:ir.model.fields,field_description:web_tour.field_web_tour_tour__name
+msgid "Tour name"
+msgstr "የጉብኝት ስም"
+
+#. module: web_tour
+#: model:ir.actions.act_window,name:web_tour.edit_tour_action
+#: model:ir.model,name:web_tour.model_web_tour_tour
+#: model:ir.ui.menu,name:web_tour.menu_tour_action
+msgid "Tours"
+msgstr "ጉብኝቶች"

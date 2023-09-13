@@ -8,4 +8,4 @@ class ProjectRiskCategory(models.Model):
     _name = "project.risk.category"
     _description = "Project Risks Categories"
 
-    name = fields.Char(required=True)
+    name = fields.Char(required=True,translate=True)

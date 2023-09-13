@@ -22,8 +22,8 @@ class Payment_request(models.Model):
     pr = fields.Many2one('sprogroup.purchase.request', "PR")
     name = fields.Char(
         'Reference', default='/',
-        copy=False, index=True, readonly=True)
-    note = fields.Text('Notes')
+        copy=False, index=True, readonly=True,translate=True)
+    note = fields.Text('Notes',translate=True)
     state = fields.Selection([
         ('draft', 'Draft'),
         ('waiting', 'Waiting For Approval'),
@@ -73,7 +73,7 @@ class Payment_request(models.Model):
                                domain=lambda self: [("groups_id", "=", self.env.ref("stock.group_stock_manager").id)],
                                required=True)
 
-    message = fields.Char("Message")
+    message = fields.Char("Message",translate=True)
     asset = fields.Boolean("Is Asset")
     invoice_count_3 = fields.Integer(
         compute="_compute_count_invoice_3", string="expanse Count")
@@ -128,8 +128,14 @@ class Payment_request(models.Model):
             line.state = 'waiting'
 
     def action_confirm(self):
+        if self.Approver.id != self.env.user.id:
+            raise ValidationError(
+                _("Your not selected as approver."))
         stock_quant = self.env['stock.picking.type'].search([("internal", "=", True)], limit=1)
-
+        stock = self.env['stock.picking'].search([("stock_request", "=", self.id), ("state", "!=" , "done")], limit=1)
+        if len(stock) != 0:
+            raise ValidationError(
+                _("There is already draft stock transfer."))
         if not stock_quant:
             raise ValidationError(
                 _("There is no stock transfer picking type"))
@@ -148,16 +154,19 @@ class Payment_request(models.Model):
         }
         move_ids = []
         for line in self.item_ids:
+          if line.demand - line.provide != 0:
             if line.available_in_store == True:
                 operation_line_data = {
-                    "product_uom_qty": line.demand,
+                    "product_uom_qty": line.demand - line.provide,
                     "name": line.product_id.display_name,
                     "product_id": line.product_id.id,
                     "product_uom": line.product_id.uom_id.id
                 }
                 operation_line = (0, 0, operation_line_data)
                 move_ids.append(operation_line)
-
+        if not move_ids:
+            raise ValidationError(
+                _("All demand are provide"))
         vals['move_lines'] = move_ids
         stock_picking = self.env['stock.picking'].create(vals)
         self.state = 'approved'
@@ -295,19 +304,26 @@ class PickingType(models.Model):
     internal = fields.Boolean(
         'Is internal transfer operation', default=False)
 
+    @api.onchange('internal')
+    def onchange_product_internal(self):
+         print("internal")
+         self.code = 'internal'
+
+
+
+
 
 class Employee(models.Model):
     _inherit = "hr.employee"
 
     invoice_count_3 = fields.Integer(
         compute="_compute_count_invoice_3", string="expanse Count")
-    Employee_material_count = fields.Integer(String="employee material count",help="field for graph view")
+
 
     def _compute_count_invoice_3(self):
         obj = self.env['transfer.request']
         for serv in self:
             serv.invoice_count_3 = obj.search_count([('received_id', '=', self.id),('asset','=', True)])
-            serv.Employee_material_count = serv.invoice_count_3
         print("serv.invoice_count", serv.invoice_count_3)
 
 

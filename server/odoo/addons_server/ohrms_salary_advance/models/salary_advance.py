@@ -11,10 +11,10 @@ class SalaryAdvancePayment(models.Model):
     _name = "salary.advance"
     _inherit = ['mail.thread', 'mail.activity.mixin']
 
-    name = fields.Char(string='Name', readonly=True, default=lambda self: 'Adv/')
+    name = fields.Char(string='Name', readonly=True, default=lambda self: 'Adv/',translate=True)
     employee_id = fields.Many2one('hr.employee', string='Employee', required=True, help="Employee")
     date = fields.Date(string='Date', required=True, default=lambda self: fields.Date.today(), help="Submit date")
-    reason = fields.Text(string='Reason', help="Reason")
+    reason = fields.Text(string='Reason', help="Reason",translate=True)
     currency_id = fields.Many2one('res.currency', string='Currency', required=True,
                                   default=lambda self: self.env.user.company_id.currency_id)
     company_id = fields.Many2one('res.company', string='Company', required=True,
@@ -35,6 +35,7 @@ class SalaryAdvancePayment(models.Model):
     credit = fields.Many2one('account.account', string='Credit Account')
     journal = fields.Many2one('account.journal', string='Journal')
     employee_contract_id = fields.Many2one('hr.contract', string='Contract')
+    move_id = fields.Many2one('account.move', string="Journal Entery")
 
     @api.onchange('employee_id')
     def onchange_employee_id(self):
@@ -109,7 +110,7 @@ class SalaryAdvancePayment(models.Model):
             raise except_orm('Error!', 'Set Salary advance rule')
         percent = (avr.percent* amt)/100
         if adv > percent:
-                raise except_orm('Error!', 'Advance amount is greater than '+str(avr.percent)+ '% of the wage of employee')
+                raise except_orm('Error!', 'Advance amount is greater than '+str(30)+ '% of the wage of employee')
         if not self.advance:
             raise except_orm('Warning', 'You must Enter the Salary Advance amount')
         payslip_obj = self.env['hr.payslip'].search([('employee_id', '=', self.employee_id.id),
@@ -175,6 +176,7 @@ class SalaryAdvancePayment(models.Model):
                 'date': timenow,
                 'fiscal_year': fiscal_year,
                 'time_frame': time_frame,
+                'partner_id': self.employee_id.address_home_id.id,
             }
 
             debit_account_id = request.debit.id
@@ -184,6 +186,7 @@ class SalaryAdvancePayment(models.Model):
                 debit_line = (0, 0, {
                     'name': request_name,
                     'account_id': debit_account_id,
+                    'partner_id': self.employee_id.address_home_id.id,
                     'journal_id': journal_id,
                     'date': timenow,
                     'debit': amount > 0.0 and amount or 0.0,
@@ -196,6 +199,7 @@ class SalaryAdvancePayment(models.Model):
                 credit_line = (0, 0, {
                     'name': request_name,
                     'account_id': credit_account_id,
+                    'partner_id': self.employee_id.address_home_id.id,
                     'journal_id': journal_id,
                     'date': timenow,
                     'debit': amount < 0.0 and -amount or 0.0,
@@ -206,17 +210,15 @@ class SalaryAdvancePayment(models.Model):
             move.update({'line_ids': line_ids})
             print("move.update({'line_ids': line_ids})", move.update({'invoice_line_ids': line_ids}))
             draft = move_obj.create(move)
-            draft.post()
+            self.move_id = draft.id
             self.state = 'post'
             return True
 class HrEmployeePrivate(models.Model):
     _inherit = "hr.employee"
     salary_advance_ids = fields.One2many("salary.advance","employee_id",string="Salary Advance")
     salary_advance_request_count = fields.Integer(compute='_compute_advance_count', string='Request Count')
-    employee_salary_advance_request_count = fields.Integer(string='Request Count')
 
     @api.depends('salary_advance_ids')
     def _compute_advance_count(self):
         for request in self:
             request.salary_advance_request_count = len(request.salary_advance_ids)
-            request.employee_salary_advance_request_count = len(request.salary_advance_ids)

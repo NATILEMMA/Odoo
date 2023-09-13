@@ -15,7 +15,7 @@ class ProjectType(models.Model):
     )
     name = fields.Char(string="Name", required=True, translate=True)
     complete_name = fields.Char(
-        string="Complete Name", compute="_compute_complete_name", store=True
+        string="Complete Name", compute="_compute_complete_name", store=True,translate=True
     )
     description = fields.Text(translate=True)
     project_ok = fields.Boolean(string="Can be applied for projects", default=True)

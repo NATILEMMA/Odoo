@@ -136,7 +136,7 @@
 
   <!-- This record tree_view will deal with transfering of members -->
   <record id="member_transfer_tree" model="ir.ui.view">
-    <field name="name">Transfer Members</field>
+    <field name="name">Transfer</field>
     <field name="model">members.transfer</field>
     <field name="arch" type="xml">
       <tree duplicate="false" create="false" edit="false">
@@ -152,50 +152,69 @@
 
   <!--This record will hold the transfered members -->
   <record id="member_transfer_form" model="ir.ui.view">
-    <field name="name">Transfer Members</field>
+    <field name="name">Transfer</field>
     <field name="model">members.transfer</field>
     <field name="arch" type="xml">
-      <form duplicate="false" create="false" edit="false">
+      <form duplicate="false">
         <header>
           <field name="wereda_id" invisible="1"/>
           <field name="correct_user" invisible="1"/>
+          <field name="for_woreda" invisible="1"/>
+          <field name="for_subcity" invisible="1"/>
+          <field name="for_city" invisible="1"/>
+          <field name="for_main" invisible="1"/>
+          <field name="for_cell" invisible="1"/>
+          <button name="review" states="waiting for approval" string="Review" type="object" class="oe_highlight" confirm="Are you sure you want to Review the transfer?"/>
+          <button name="waiting_for_approval" states="draft" string="Send For Approval" type="object" class="oe_highlight" confirm="Are you sure you want to send the transfer for approval?"/>
+          <button name="approve_transfer" string="Approve" type="object" class="oe_highlight" attrs="{'invisible': ['|', ('state', '!=', 'review'), ('correct_user', '=', False)]}" confirm="Are you sure you want to Approve the transfer?"/>
+          <button name="reject_transfer" string="Reject" type="object" class="oe_highlight" attrs="{'invisible': ['|', ('state', '!=', 'review'), ('correct_user', '=', False)]}" confirm="Are you sure you want to Reject the transfer?"/>
           <field name="state" widget="statusbar" statusbar_visible="draft,waiting for approval,approved,rejected"/>
         </header>
         <sheet>
+          <h1>
+              <field name="name"/>
+          </h1>
           <group>
             <group>
               <separator string="Member Current Place"/>
               <field name="is_league" invisible="1"/>
               <field name="is_leader" invisible="1"/>
               <field name="is_member" invisible="1"/>
+              <field name="city_id" invisible="1"/>
+              <field name="subcity_id" invisible="1"/>
               <field name="wereda_id" invisible="1"/>
-              <field name="partner_id" string="Member"/>
-              <field name="transfer_as_a_league_or_member" string="Transfer As" attrs="{'invisible': [('is_league', '=', False)]}"/>
-              <field name="transfer_as_a_leader_or_member" string="Transfer As" attrs="{'invisible': [('is_leader', '=', False)]}"/>
+              <field name="main_office_id" invisible="1"/>
+              <field name="cell_id" invisible="1"/>
+              <field name="x_css" force_save="1" nolabel="1" invisible="1"/>
+              <field name="partner_id" string="Member" context="{'form_view_ref': 'members_custom.membership_view_partner_form'}" required="1" options="{'no_create': True, 'no_create_edit': True}"/>
+              <field name="transfer_as_a_league_or_member" string="Transfer As" attrs="{'invisible': [('is_leader', '=', True)], 'required': [('is_member', '=', True)]}"/>
+              <field name="transfer_as_a_leader_or_member" string="Transfer As" attrs="{'invisible': [('is_leader', '=', False)], 'required': [('is_leader', '=', True)]}"/>
               <separator string="Transfer From"/>
               <field name="from_subcity_id" string="From Subcity" force_save="1"/>
               <field name="from_wereda_id" string="From Woreda" force_save="1"/>
-              <field name="from_main_office" string="From Main Office" force_save="1"/>
-              <field name="from_member_cells" string="From Cell" force_save="1"/>
+              <field name="from_main_office" string="From Main Office" force_save="1" attrs="{'invisible': ['|', ('transfer_as_a_leader_or_member', '=', 'league'), ('transfer_as_a_league_or_member', '=', 'league')]}"/>
+              <field name="from_member_cells" string="From Cell" force_save="1" attrs="{'invisible': ['|', ('transfer_as_a_leader_or_member', '=', 'league'), ('transfer_as_a_league_or_member', '=', 'league')]}"/>
+              <field name="from_league_main_office" string="From League Main Office" force_save="1" attrs="{'invisible': ['|', '|', ('transfer_as_a_leader_or_member', '=', 'leader'), ('transfer_as_a_leader_or_member', '=', 'member'), ('transfer_as_a_league_or_member', '=', 'member')]}"/>
+              <field name="from_league_member_cells" string="From League Cell" force_save="1" attrs="{'invisible': ['|', '|', ('transfer_as_a_leader_or_member', '=', 'leader'), ('transfer_as_a_leader_or_member', '=', 'member'), ('transfer_as_a_league_or_member', '=', 'member')]}"/>
             </group>
             <group>
               <separator string="Experience and Work"/>
               <field name="place_of_work" force_save="1"/>
               <field name="responsibility_in_gov" force_save="1"/>
               <separator string="Tranfer To"/>
-              <field name="transfer_membership_org" attrs="{'invisible': ['|', '|', ('is_member', '=', False), ('transfer_as_a_league_or_member', '=', 'league'), ('transfer_as_a_leader_or_member', '=', 'leader')]}"/>
-              <field name="transfer_league_org" attrs="{'invisible': ['|', ('is_league', '=', False), ('transfer_as_a_league_or_member', '=', 'member')]}"/>
-              <field name="transfer_league_responsibility" string="To League Responsibility" attrs="{'invisible': [('transfer_as_a_league_or_member', '=', 'member')]}"/>
-              <field name="transfer_responsibility_member" string="To Member Responsibility" attrs="{'invisible': ['|', ('transfer_as_a_league_or_member', '=', 'league'), ('is_member', '=', False)]}"/>
-              <field name="transfer_responsibility_leader" string="To Leader Responsibility" attrs="{'invisible': ['|', ('transfer_as_a_league_or_member', '=', 'league'), ('is_leader', '=', False)]}"/>
-              <field name="transfer_subcity_id" string="To Subcity"/>
-              <field name="transfer_wereda_id" string="To Woreda"/>
-              <field name="transfer_main_office" string="To Main Office" attrs="{'invisible': ['|', ('transfer_as_a_league_or_member', '=', 'league'), '&amp;', ('transfer_as_a_league_or_member', '=', 'member'), ('transfer_as_a_leader_or_member', '=', 'leader')]}"/>
-              <field name="transfer_member_cells" string="To Cell" attrs="{'invisible': ['|', ('transfer_as_a_league_or_member', '=', 'league'), '&amp;', ('transfer_as_a_league_or_member', '=', 'member'), ('transfer_as_a_leader_or_member', '=', 'leader')]}"/>
-              <field name="transfer_league_main_office" string="To League Main Office" attrs="{'invisible': [('transfer_as_a_league_or_member', '=', 'member')]}"/>
-              <field name="transfer_league_member_cells" string="To League Cell" attrs="{'invisible': [('transfer_as_a_league_or_member', '=', 'member')]}"/>  
+              <field name="transfer_membership_org" options="{'no_create': True, 'no_create_edit': True}" attrs="{'required': ['|', ('transfer_as_a_leader_or_member', '=', 'member'), ('transfer_as_a_league_or_member', '=', 'member')], 'invisible': ['|', '|', ('transfer_as_a_league_or_member', '=', 'league'), ('transfer_as_a_leader_or_member', '=', 'league'), ('transfer_as_a_leader_or_member', '=', 'leader')]}"/>
+              <field name="transfer_league_organization" attrs="{'required': ['|', ('transfer_as_a_leader_or_member', '=', 'league'), ('transfer_as_a_league_or_member', '=', 'league')], 'invisible': ['|', '|', ('transfer_as_a_leader_or_member', '=', 'leader'), ('transfer_as_a_leader_or_member', '=', 'member'), ('transfer_as_a_league_or_member', '=', 'member')]}"/>
+              <field name="transfer_league_responsibility" options="{'no_create': True, 'no_create_edit': True}" string="To League Responsibility" attrs="{'required': ['|', ('transfer_as_a_leader_or_member', '=', 'league'), ('transfer_as_a_league_or_member', '=', 'league')], 'invisible': ['|', '|', ('transfer_as_a_leader_or_member', '=', 'leader'), ('transfer_as_a_leader_or_member', '=', 'member'), ('transfer_as_a_league_or_member', '=', 'member')]}"/>
+              <field name="transfer_responsibility_member" options="{'no_create': True, 'no_create_edit': True}" string="To Member Responsibility" attrs="{'required': ['|', ('transfer_as_a_leader_or_member', '=', 'member'), ('transfer_as_a_league_or_member', '=', 'member')], 'invisible': ['|', '|', ('transfer_as_a_leader_or_member', '=', 'leader'), ('transfer_as_a_leader_or_member', '=', 'league'), ('transfer_as_a_league_or_member', '=', 'league')]}"/>
+              <field name="transfer_responsibility_leader" options="{'no_create': True, 'no_create_edit': True}" string="To Leader Responsibility" attrs="{'invisible': ['|', '|', '|', ('transfer_as_a_leader_or_member', '=', 'league'), ('transfer_as_a_leader_or_member', '=', 'member'), ('transfer_as_a_league_or_member', '=', 'league'), ('transfer_as_a_league_or_member', '=', 'member')], 'required': [('transfer_as_a_leader_or_member', '=', 'leader')]}"/>
+              <field name="transfer_subcity_id" options="{'no_create': True, 'no_create_edit': True}" string="To Subcity" attrs="{'required': ['|', '|', '|', ('for_subcity', '=', True), ('for_woreda', '=', True), ('for_main', '=', True), ('for_cell', '=', True)],'invisible': ['&amp;', '&amp;', ('is_leader', '=', True), ('transfer_as_a_leader_or_member', '=', 'leader'), ('for_city', '=', True)]}"/>
+              <field name="transfer_wereda_id" options="{'no_create': True, 'no_create_edit': True}" string="To Woreda" attrs="{'required': ['|', '|', ('for_woreda', '=', True), ('for_main', '=', True), ('for_cell', '=', True)], 'invisible': ['&amp;', '&amp;', ('is_leader', '=', True), ('transfer_as_a_leader_or_member', '=', 'leader'), '|', ('for_city', '=', True), ('for_woreda', '=', False)]}"/>
+              <field name="transfer_main_office" options="{'no_create': True, 'no_create_edit': True}" string="To Main Office" attrs="{'invisible': ['|', '|', ('transfer_as_a_leader_or_member', '=', 'league'), ('transfer_as_a_league_or_member', '=', 'league'),  ('transfer_as_a_leader_or_member', '=', 'leader')], 'required': ['|', ('transfer_as_a_leader_or_member', '=', 'member'), ('transfer_as_a_league_or_member', '=', 'member')]}"/>
+              <field name="transfer_member_cells" options="{'no_create': True, 'no_create_edit': True}" string="To Cell" attrs="{'invisible': ['|', '|', ('transfer_as_a_leader_or_member', '=', 'league'), ('transfer_as_a_league_or_member', '=', 'league'), ('transfer_as_a_leader_or_member', '=', 'leader')], 'required': ['|', ('transfer_as_a_leader_or_member', '=', 'member'), ('transfer_as_a_league_or_member', '=', 'member')]}"/>
+              <field name="transfer_league_main_office" options="{'no_create': True, 'no_create_edit': True}" string="To League Main Office" attrs="{'invisible': ['|', '|', ('transfer_as_a_leader_or_member', '=', 'leader'), ('transfer_as_a_leader_or_member', '=', 'member'), ('transfer_as_a_league_or_member', '=', 'member')], 'required': ['|', ('transfer_as_a_leader_or_member', '=', 'league'), ('transfer_as_a_league_or_member', '=', 'league')]}"/>
+              <field name="transfer_league_member_cells" options="{'no_create': True, 'no_create_edit': True}" string="To League Cell" attrs="{'invisible': ['|', '|', ('transfer_as_a_leader_or_member', '=', 'leader'), ('transfer_as_a_leader_or_member', '=', 'member'), ('transfer_as_a_league_or_member', '=', 'member')], 'required': ['|', ('transfer_as_a_leader_or_member', '=', 'league'), ('transfer_as_a_league_or_member', '=', 'league')]}"/>  
               <field name="responsibility_state"/>
-              <field name="receiving_manager" string="Receiving Manager"/>
+              <field name="receiving_manager" string="Receiving Leader" force_save="1"/>
             </group>
           </group>
           <notebook>
@@ -220,7 +239,7 @@
               <group>
                 <group>
                   <separator string="Current League Information"/>
-                    <field name="league_org" force_save="1"/>
+                    <field name="league_organization" force_save="1"/>
                     <field name="league_responsibility_in_org" string="Responsibility in Organization" force_save="1"/>
                     <field name="league_fee" force_save="1"/>
                 </group>
@@ -252,13 +271,18 @@
             </page>
           </notebook>
         </sheet>
+        <div class="oe_chatter">
+            <field name="message_follower_ids" widget="mail_followers"/>
+            <field name="activity_ids" widget="mail_activity"/>
+            <field name="message_ids" widget="mail_thread"/>
+        </div>
       </form>
     </field>
   </record>
 
   <!-- This record will handle transfers -->
   <record id="member_transfer" model="ir.actions.act_window">
-    <field name="name">Member Transfer</field>
+    <field name="name">Transfer</field>
     <field name="res_model">members.transfer</field>
     <field name="view_mode">tree,form,pivot,graph</field>
     <field name="domain">[('partner_id', '=', active_id)]</field>
@@ -281,7 +305,7 @@
 
   <!-- This record will display types of complaints -->
   <record id="member_complaint_tree" model="ir.ui.view">
-    <field name="name">complaint.form.tree</field>
+    <field name="name">Complaint</field>
     <field name="model">member.complaint</field>
     <field name="arch" type="xml">
       <tree create="false" edit="false" delete="false" decoration-danger="state == 'rejected'" decoration-success="state == 'resolved'" decoration-info="state == 'waiting for approval' or state == 'transferred' or state == 'transferred to city'">
@@ -296,7 +320,7 @@
 
   <!-- This record will hold the new form for complaint -->
   <record id="member_complaint_form" model="ir.ui.view">
-    <field name="name">Member Complaint</field>
+    <field name="name">Complaint</field>
     <field name="model">member.complaint</field>
     <field name="arch" type="xml">
       <form create="false" duplicate="false" edit="false">
@@ -416,8 +440,9 @@
         <field name="phone" string="Phone" filter_domain="[('phone', 'ilike', self)]"/>
         <group expand="0" string="Group By" colspan="10" col="8">
           <filter name="leadership_status" string="Status" context="{'group_by': 'leadership_status'}"/>
-          <filter name="grade" string="Grade" context="{'group_by': 'grade'}"/>
+          <filter name="leader_responsibility" string="Member Responsibility" context="{'group_by': 'leader_responsibility'}"/>
           <filter name="start_of_membership" string="Start of Membership" context="{'group_by': 'start_of_membership'}"/>
+          <filter name="membership_org" string="Member Organization" context="{'group_by': 'membership_org'}"/>
         </group>
       </search>
     </field>
@@ -432,9 +457,9 @@
         <field name="name" string="Names" filter_domain="[('name', 'ilike', self)]"/>
         <field name="phone" string="Phone" filter_domain="[('phone', 'ilike', self)]"/>
         <group expand="0" string="Group By" colspan="10" col="8">
-          <filter name="grade" string="Grade" context="{'group_by': 'grade'}"/>
+          <filter name="member_responsibility" string="Member Responsibility" context="{'group_by': 'member_responsibility'}"/>
           <filter name="start_of_membership" string="Start of Membership" context="{'group_by': 'start_of_membership'}"/>
-          <filter name="stock" string="Stock" context="{'group_by': 'stock'}"/>
+          <filter name="membership_org" string="Member Organization" context="{'group_by': 'membership_org'}"/>
         </group>
       </search>
     </field>
@@ -450,10 +475,9 @@
         <field name="phone" string="Phone" filter_domain="[('phone', 'ilike', self)]"/>
         <group expand="0" string="Group By" colspan="10" col="8">
           <filter name="league_responsibility" string="Status" context="{'group_by': 'league_responsibility'}"/>
-          <filter name="grade" string="Grade" context="{'group_by': 'grade'}"/>
           <filter name="start_of_membership" string="Start of Membership" context="{'group_by': 'start_of_membership'}"/>
           <filter name="league_type" string="Type" context="{'group_by': 'league_type'}"/>
-          <filter name="league_org" string="League Organization" context="{'group_by': 'league_org'}"/>
+          <filter name="membership_org" string="League Organization" context="{'group_by': 'league_organization'}"/>
         </group>
       </search>
     </field>
@@ -483,6 +507,19 @@
     </field>
   </record>
 
+
+  <!-- <record id="res_partner_tree_view_inheirt" model="ir.ui.view">
+    <field name="name">Members</field>
+    <field name="model">res.partner</field>
+    <field name="inherit_id" ref="res_partner_tree_view"/>
+    <field name="arch" type="xml">
+      <xpath expr="//button[@class='o_list_button_add']" position="attributes">                
+          <attribute name="invisible">1</attribute>
+      </xpath>
+    </field>
+  </record> -->
+
+
   <!-- This record will hold tree view for leader -->
   <record id="res_partner_leader_tree_view" model="ir.ui.view">
     <field name="name">Leaders</field>
@@ -508,6 +545,7 @@
     </field>
   </record>
 
+
   <!-- This record will hold tree view for leagues -->
   <record id="res_partner_league_tree_view" model="ir.ui.view">
     <field name="name">Leagues</field>
@@ -521,7 +559,7 @@
         <field name="ethnic_group"/>
         <field name="education_level"/>
         <field name="start_of_membership"  optional="hidden"/>
-        <field name="league_org"  optional="hidden"/>
+        <field name="membership_org"  optional="hidden"/>
         <field name="league_type"/>
         <field name="league_responsibility"/>
         <field name="subcity_id"/>
@@ -530,6 +568,7 @@
       </tree>
     </field>
   </record>
+
 
   <!-- This record will add new fields to the res_partner views -->
   <record id="res_partner_kanban_view_copied" model="ir.ui.view">
@@ -578,6 +617,11 @@
                                       <li t-if="record.name.raw_value or record.age.raw_value">
                                         <t t-if="record.name.raw_value"><field name="name"/><t t-if="record.age.raw_value">, <field name="age"/></t></t>
                                       </li>
+                                      <t t-if="record.is_leader.raw_value">
+                                        <li>
+                                          <field name="leader_sub_responsibility" widget="many2many_tags" options="{'color_field': 'color'}"/>
+                                        </li>
+                                      </t>
                                     </ul>
                                   </strong>
                               </div>
@@ -616,7 +660,7 @@
     <field name="name">membership.form</field>
     <field name="model">res.partner</field>
     <field name="arch" type="xml">
-      <form create="false" duplicate="false">
+      <form duplicate="false" create="false">
         <field name="appropriate_age" invisible="1"/>
         <field name="has_user_name" invisible="1"/>
         <button type="object" name="action_portal_reset_member_password" string="Reset Member Password" class="fa fa-key" icon="fa-key-o" attrs="{'invisible': [('has_user_name', '=', False)]}" confirm="Are you sure you want to reset password for member?"/>
@@ -636,15 +680,12 @@
             <button class="oe_stat_button" name="%(member_trainings)d" type="action" icon="fa-keyboard-o" attrs="{'invisible': [('is_leader', '=', False)]}">
               <field name="training_counter" string="Trainings" widget="statinfo" attrs="{'invisible': [('is_leader', '=', False)]}"/>
             </button>
-            <button class="oe_stat_button" name="%(member_evaluation)d" string="Evaluations" type="action" icon="fa-list-alt" attrs="{'invisible': [('is_leader', '=', False)]}"/>
+            <button class="oe_stat_button" name="%(member_evaluation)d" string="Evaluations" type="action" icon="fa-list-alt"/>
             <button class="oe_stat_button" name="%(member_transfer)d" type="action" icon="fa-plane" attrs="{'invisible': ['&amp;', '&amp;', ('is_league', '=', False), ('is_member', '=', False), ('is_leader', '=', False)]}">
               <field name="pending_transfer_amount" string="Transfers" widget="statinfo" attrs="{'invisible': ['&amp;', '&amp;', ('is_league', '=', False), ('is_member', '=', False), ('is_leader', '=', False)]}"/>
             </button>
             <button class="oe_stat_button" name="%(member_complaints)d" type="action" icon="fa-frown-o" attrs="{'invisible': ['&amp;', '&amp;', ('is_league', '=', False), ('is_member', '=', False), ('is_leader', '=', False)]}">
               <field name="complaint_amount" string="Complaints" widget="statinfo" attrs="{'invisible': ['&amp;', '&amp;', ('is_league', '=', False), ('is_member', '=', False), ('is_leader', '=', False)]}"/>
-            </button>
-            <button class="oe_stat_button" name="%(base.action_attachment)d" type="action" icon="fa-files-o" attrs="{'invisible': ['&amp;', '&amp;', ('is_league', '=', False), ('is_member', '=', False), ('is_leader', '=', False)]}">
-              <field name="attachment_amount" string="Attachments" widget="statinfo" attrs="{'invisible': ['&amp;', '&amp;', ('is_league', '=', False), ('is_member', '=', False), ('is_leader', '=', False)]}"/>
             </button>
             <button name="print_id" string="Print ID" type="object" icon="fa-outdent" confirm="Are you sure you want to print membership ID?" attrs="{'invisible': ['&amp;', '&amp;', ('is_league', '=', False), ('is_member', '=', False), ('is_leader', '=', False)]}"/>
             <button name="print_certificate" string="Print Certificate" type="object" icon="fa-certificate" confirm="Are you sure you want to print a member Certificate?" attrs="{'invisible': ['&amp;', '&amp;', ('is_league', '=', False), ('is_member', '=', False), ('is_leader', '=', False)]}"/>
@@ -674,34 +715,43 @@
               <field name="is_woman" invisible="1"/>
               <field name="active" invisible="1"/>
               <field name="demote" invisible="1"/>
+              <field name="click_counter" invisible="1"/>
+              <field name="subcity_admin" invisible="1"/>
+              <field name="city_admin" invisible="1"/>
               <separator string="Personal Informations"/>
-                <field name="gender" string="Gender" attrs="{'readonly': ['|', '|', ('is_member', '=', True), ('is_leader', '=', True), ('is_league', '=', True)]}" force_save="1"/>
-                <field name="date" attrs="{'readonly': ['|', '|', ('is_member', '=', True), ('is_leader', '=', True), ('is_league', '=', True)]}" force_save="1"/>
-                <field name="age" string="Age"  force_save="1"/>
-                <field name="ethnic_group" string="Ethnic Group" options="{'no_create': True, 'no_create_edit': True}" attrs="{'readonly': ['|', '|', ('is_member', '=', True), ('is_leader', '=', True), ('is_league', '=', True)]}" force_save="1"/>
+              <field name="first_name" placeholder="Eg. John" attrs="{'invisible': ['|', '|', ('is_member', '=', True), ('is_leader', '=', True), ('is_league', '=', True)]}" force_save="1"/>
+              <field name="father_name" placeholder="Eg. Smith" attrs="{'invisible': ['|', '|', ('is_member', '=', True), ('is_leader', '=', True), ('is_league', '=', True)]}" force_save="1"/>
+              <field name="grand_father_name" placeholder="Eg. Willam" attrs="{'invisible': ['|', '|', ('is_member', '=', True), ('is_leader', '=', True), ('is_league', '=', True)]}" force_save="1"/>
+              <field name="gender" string="Gender" attrs="{'readonly': ['|', '|', ('is_member', '=', True), ('is_leader', '=', True), ('is_league', '=', True)]}" force_save="1"/>
+              <field name="date" attrs="{'readonly': ['|', '|', ('is_member', '=', True), ('is_leader', '=', True), ('is_league', '=', True)]}" force_save="1"/>
+              <field name="age" string="Age"  force_save="1"/>
+              <field name="ethnic_group" string="Ethnic Group" options="{'no_create': True, 'no_create_edit': True}" attrs="{'readonly': ['|', '|', ('is_member', '=', True), ('is_leader', '=', True), ('is_league', '=', True)]}" force_save="1"/>
               <separator string="Educational Background"/>
                 <field name="education_level" string="Education Level" options="{'no_create': True, 'no_create_edit': True}"/>
                 <field name="field_of_study_id" string="Field of Study" options="{'no_create': True, 'no_create_edit': True}"/>
                 <field name="is_user_input" invisible="1"/>
                 <field name="user_input" attrs="{'invisible': [('is_user_input', '=', False)]}" string="Other Field"/>
               <separator string="Additional Information"/>
+                <field name="subcity_id" string="Working Subcity" attrs="{'readonly': ['|', '|', ('is_member', '=', True), ('is_leader', '=', True), ('is_league', '=', True)], 'invisible': [('city_admin', '=', True)]}" options="{'no_create': True, 'no_create_edit': True}" force_save="1"/>
+                <field name="wereda_id" string="Working Woreda" attrs="{'readonly': ['|', '|', ('is_member', '=', True), ('is_leader', '=', True), ('is_league', '=', True)], 'invisible': ['|', ('subcity_admin', '=', True), ('city_admin', '=', True)]}" options="{'no_create': True, 'no_create_edit': True}" force_save="1"/>
                 <field name="candidate_id" string="Candidate" attrs="{'invisible': [('was_candidate', '=', False)]}"/>
                 <field name="supporter_id" string="Supporter" attrs="{'invisible': [('was_candidate', '=', False)]}"/>  
                 <field name="user_name" force_save="1" attrs="{'invisible': ['&amp;', '&amp;', ('is_league', '=', False), ('is_member', '=', False), ('is_leader', '=', False)]}"/>
                 <field name="national_id" string="National ID" force_save="1" attrs="{'invisible': ['&amp;', ('is_member', '=', False), ('is_leader', '=', False)]}"/>
-                <field name="member_ids" readonly="1" string="Member ID" force_save="1" attrs="{'invisible': ['&amp;', ('is_member', '=', False), ('is_leader', '=', False)]}"/>     
+                <field name="member_ids" readonly="1" string="Member ID" force_save="1"/>     
             </group>
             <group>
               <separator string="Place of Birth"/>
-                <field name="region_of_birth" string="Birth Place Region" options="{'no_create': True, 'no_create_edit': True}" attrs="{'readonly': ['|', '|', ('is_member', '=', True), ('is_leader', '=', True), ('is_league', '=', True)]}"/>
-                <field name="zone_city_of_birth" attrs="{'readonly': ['|', '|', ('is_member', '=', True), ('is_leader', '=', True), ('is_league', '=', True)]}"/>
-                <field name="wereda_of_birth" string="Birth Place Woreda" attrs="{'readonly': ['|', '|', ('is_member', '=', True), ('is_leader', '=', True), ('is_league', '=', True)]}"/>
+                <field name="region_of_birth" options="{'no_create': True, 'no_create_edit': True}"/>
+                <field name="city_of_birth" options="{'no_create': True, 'no_create_edit': True}"/>
+                <field name="zone_city_of_birth"/>
+                <field name="wereda_of_birth" string="Birth Place Woreda"/>
               <separator string="Current Address"/>
-                <field name="region" string="Region" options="{'no_create': True, 'no_create_edit': True}" attrs="{'readonly': ['|', '|', ('is_member', '=', True), ('is_leader', '=', True), ('is_league', '=', True)]}"/>
-                <field name="subcity_id" string="Subcity" attrs="{'readonly': ['|', '|', ('is_member', '=', True), ('is_leader', '=', True), ('is_league', '=', True)]}" options="{'no_create': True, 'no_create_edit': True}" force_save="1"/>
-                <field name="wereda_id" string="Woreda" attrs="{'readonly': ['|', '|', ('is_member', '=', True), ('is_leader', '=', True), ('is_league', '=', True)]}" options="{'no_create': True, 'no_create_edit': True}" force_save="1"/>
+                <field name="region" options="{'no_create': True, 'no_create_edit': True}" attrs="{'readonly': ['|', '|', ('is_member', '=', True), ('is_leader', '=', True), ('is_league', '=', True)]}"/>
+                <field name="residential_subcity" string="Residential Subcity"/>
+                <field name="residential_wereda" string="Residential Woreda"/>
                 <field name="kebele" string="Kebele"/>
-                <field name="phone"/>
+                <field name="phone" required="1"/>
                 <field name="email_address"/>
                 <field name="was_supporter" invisible="1"/>
                 <field name="was_candidate" invisible="1"/>
@@ -722,6 +772,7 @@
                   <field name="member_cells" force_save="1"/>
                   <field name="membership_org" string="Membership Organization" options="{'no_create': True, 'no_create_edit': True}" attrs="{'required': ['|', ('is_member', '=', True), ('is_leader', '=', True)]}"/>
                   <field name="member_responsibility" options="{'no_create': True, 'no_create_edit': True}"/>
+                  <field name="member_sub_responsibility" options="{'no_create': True, 'no_create_edit': True}"/>
                   <field name="stock" attrs="{'invisible': [('is_member', '=', False)]}"/>
                 </group>
                 <group>
@@ -741,17 +792,16 @@
                   <field name="main_office" force_save="1"/>
                   <field name="member_cells" force_save="1"/>              
                   <field name="membership_org" string="Membership Organization" options="{'no_create': True, 'no_create_edit': True}" attrs="{'required': ['|', ('is_member', '=', True), ('is_leader', '=', True)]}"/>
-                  <field name="leader_responsibility" options="{'no_create': True, 'no_create_edit': True}"/>
-                  <field name="experience" string="Leader Experience"/>
-                  <field name="leadership_status" string="Leadership Status"/>
+                  <field name="leader_responsibility" options="{'no_create': True, 'no_create_edit': True}" attrs="{'required': [('is_leader', '=', True)]}"/>
+                  <field name="leader_sub_responsibility" options="{'color_field': 'color', 'no_create_edit': True}" widget="many2many_tags" attrs="{'required': [('is_leader', '=', True)]}"/>
                 </group>
                 <group>
                   <separator string="Leader"/>
+                  <field name="experience" string="Leader Experience"/>
+                  <field name="leadership_status" string="Leadership Status"/>
                   <field name="start_of_membership" string="Start of Membership" attrs="{'required': ['|', ('is_member', '=', True), ('is_leader', '=', True)]}"/>
                   <field name="gov_responsibility"/>
                   <field name="leader_stock"/>
-                  <!-- <separator string="Demote To Member only"/>
-                  <field name="demote_to_member" string="Demote"/> -->
                 </group>
               </group>
             </page>
@@ -763,8 +813,9 @@
                   <field name="league_main_office" force_save="1"/>
                   <field name="league_member_cells" force_save="1"/>              
                   <field name="league_type" string="League Type"/>
-                  <field name="league_org" string="League Organization" attrs="{'required': [('is_league', '=', True)]}"/>
+                  <field name="league_organization" string="League Organization" attrs="{'required': [('is_league', '=', True)]}"/>
                   <field name="league_responsibility" string="League Responsibility" options="{'no_create': True, 'no_create_edit': True}"/>
+                  <field name="league_sub_responsibility" options="{'no_create': True, 'no_create_edit': True}"/>
                 </group>
                 <group>
                   <separator string="League"/>
@@ -782,7 +833,7 @@
                 <group>
                   <separator string="Membership Fee"/>
                   <field name="payment_method" widget="radio" options="{'horizontal': true}"/>
-                  <field name="income" string="Income" force_save="1" attrs="{'invisible': [('payment_method', '=', 'cash')]}"/>
+                  <field name="income" string="Monthly Income" force_save="1" attrs="{'invisible': [('payment_method', '=', 'cash')]}"/>
                   <label for="membership_monthly_fee_percent" string="Monthly Fee Percent" attrs="{'invisible': [('payment_method', '=', 'cash')]}"/>
                     <div>
                       <field name="membership_monthly_fee_percent" class="oe_inline" string="Monthly Fee Percent" attrs="{'invisible': [('payment_method', '=', 'cash')]}" force_save="1"/>
@@ -819,7 +870,7 @@
                 <group>
                   <separator string="Membership Fee"/>
                   <field name="payment_method" widget="radio" options="{'horizontal': true}"/>
-                  <field name="income" string="Income" force_save="1" attrs="{'invisible': [('payment_method', '=', 'cash')]}"/>
+                  <field name="income" string="Monthly Income" force_save="1" attrs="{'invisible': [('payment_method', '=', 'cash')]}"/>
                   <label for="membership_monthly_fee_percent" string="Monthly Fee Percent" attrs="{'invisible': [('payment_method', '=', 'cash')]}"/>
                     <div>
                       <field name="membership_monthly_fee_percent" class="oe_inline" string="Monthly Fee Percent" attrs="{'invisible': [('payment_method', '=', 'cash')]}" force_save="1"/>
@@ -913,10 +964,6 @@
                 </form>
               </field>
             </page>
-
-            <page string="Attachment" attrs="{'invisible': ['&amp;', '&amp;', ('is_league', '=', False), ('is_member', '=', False), ('is_leader', '=', False)]}">
-              <button name="add_attachment" string="Attachment" type="object" class="oe_highlight fa fa-paperclip"/>
-            </page>
             <page name="archive" string="Archives" attrs="{'invisible': ['&amp;', ('demote', '=', False), ('active', '=', True)]}">
                 <field name="archive_ids" readonly="1">
                     <tree>
@@ -929,6 +976,11 @@
             </page>
           </notebook>   
         </sheet>
+        <div class="oe_chatter">
+            <field name="message_follower_ids" widget="mail_followers"/>
+            <field name="activity_ids" widget="mail_activity"/>
+            <field name="message_ids" widget="mail_thread"/>
+        </div>
       </form>
     </field>
   </record>
@@ -940,25 +992,9 @@
     <field name="type">ir.actions.act_window</field>
     <field name="limit">20</field>
     <field name="view_mode">tree,form,kanban,pivot,graph</field>
-    <!-- <field name="view_id" ref="res_partner_tree_view"/> -->
     <field name="search_view_id" ref="member_view_search"/>
     <field name="context">{}</field>
-    <field name="domain">['|', '&amp;', '&amp;', ('is_league', '=', True), ('is_leader', '=', True), ('is_member', '=', True), '|', '|', '|', ('subcity_id.parent_manager.id', '=', uid), ('subcity_id.city_id.city_manager', 'in', [uid]), ('subcity_id.city_id.transfer_handler', '=', uid), ('subcity_id.city_id.responsible_id.system_admin', '=', uid)]</field>
-  </record>
-
-  <!-- This record will hold tree view for members -->
-  <record id="res_partner_tree_view_inherit" model="ir.ui.view">
-    <field name="name">Members</field>
-    <field name="model">res.partner</field>
-    <field name="inherit_id" ref="res_partner_tree_view"/>
-    <field name="arch" type="xml">
-      <xpath expr="//tree" position="attributes">
-        <attribute name="create">false</attribute>
-        <attribute name="delete">false</attribute>
-        <attribute name="duplicate">false</attribute>
-        <attribute name="edit">false</attribute>
-      </xpath>
-    </field>
+    <field name="domain">['|', '&amp;', '&amp;', ('is_league', '=', True), ('is_leader', '=', True), ('is_member', '=', True), '|', '|', '|', ('subcity_id.parent_manager.id', '=', uid), ('subcity_id.city_id.city_manager', 'in', [uid]), ('subcity_id.city_id.transfer_handler', '=', uid), ('subcity_id.city_id.responsible_id.system_admin', 'in', [uid])]</field>
   </record>
 
   <!-- This record will add new fields to the res_partner views -->
@@ -977,7 +1013,7 @@
   <record model="ir.actions.act_window.view" id="membership_view_partner_tree_id">
       <field name="sequence" eval="1"/>
       <field name="view_mode">tree</field>
-      <field name="view_id" ref="res_partner_tree_view_inherit"/>
+      <field name="view_id" ref="res_partner_tree_view"/>
       <field name="act_window_id" ref="membership_members"/>
   </record>
 
@@ -1002,13 +1038,19 @@
     <field name="view_mode">tree,form,kanban,pivot,graph</field>
     <field name="limit">20</field>
     <field name="search_view_id" ref="leader_view_search"/>
-    <field name="domain">['&amp;', ('is_leader', '=', True), '|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|',
+    <field name="domain">['&amp;', ('is_leader', '=', True), '|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|',
                                                             ('member_cells.cell_admin', '=', uid),
                                                             ('member_cells.cell_finance', '=', uid),
                                                             ('member_cells.cell_assembler', '=', uid),
                                                             ('main_office.main_admin', '=', uid),
                                                             ('main_office.main_finance', '=', uid),
                                                             ('main_office.main_assembler', '=', uid),  
+                                                            ('league_member_cells.cell_admin', '=', uid),
+                                                            ('league_member_cells.cell_finance', '=', uid),
+                                                            ('league_member_cells.cell_assembler', '=', uid),
+                                                            ('league_main_office.main_admin', '=', uid),
+                                                            ('league_main_office.main_finance', '=', uid),
+                                                            ('league_main_office.main_assembler', '=', uid), 
                                                             ('wereda_id.branch_manager', '=', uid),
                                                             ('wereda_id.complaint_handler', '=', uid),
                                                             ('subcity_id.parent_manager', '=', uid),
@@ -1016,7 +1058,7 @@
                                                             ('subcity_id.city_id.city_manager', 'in', [uid]),
                                                             ('subcity_id.city_id.complaint_handler', '=', uid),
                                                             ('subcity_id.city_id.transfer_handler', '=', uid),
-                                                            ('subcity_id.city_id.responsible_id.system_admin', '=', uid)]</field>
+                                                            ('subcity_id.city_id.responsible_id.system_admin', 'in', [uid])]</field>
   </record>
 
   <record model="ir.actions.act_window.view" id="leader_view_partner_tree_id">
@@ -1047,13 +1089,19 @@
     <field name="view_mode">tree,form,kanban,pivot,graph</field>
     <field name="limit">20</field>
     <field name="search_view_id" ref="league_view_search"/>
-    <field name="domain">['&amp;', ('is_league', '=', True), '|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|',
+    <field name="domain">['&amp;', ('is_league', '=', True), '|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|',
+                                                            ('member_cells.cell_admin', '=', uid),
+                                                            ('member_cells.cell_finance', '=', uid),
+                                                            ('member_cells.cell_assembler', '=', uid),
+                                                            ('main_office.main_admin', '=', uid),
+                                                            ('main_office.main_finance', '=', uid),
+                                                            ('main_office.main_assembler', '=', uid),
                                                             ('league_member_cells.cell_admin', '=', uid),
                                                             ('league_member_cells.cell_finance', '=', uid),
                                                             ('league_member_cells.cell_assembler', '=', uid),
                                                             ('league_main_office.main_admin', '=', uid),
                                                             ('league_main_office.main_finance', '=', uid),
-                                                            ('league_main_office.main_assembler', '=', uid),  
+                                                            ('league_main_office.main_assembler', '=', uid), 
                                                             ('wereda_id.branch_manager', '=', uid),
                                                             ('wereda_id.complaint_handler', '=', uid),
                                                             ('subcity_id.parent_manager', '=', uid),
@@ -1061,7 +1109,7 @@
                                                             ('subcity_id.city_id.city_manager', 'in', [uid]),
                                                             ('subcity_id.city_id.complaint_handler', '=', uid),
                                                             ('subcity_id.city_id.transfer_handler', '=', uid),
-                                                            ('subcity_id.city_id.responsible_id.system_admin', '=', uid)]</field>
+                                                            ('subcity_id.city_id.responsible_id.system_admin', 'in', [uid])]</field>
   </record>
 
   <record model="ir.actions.act_window.view" id="league_view_partner_tree_id">
@@ -1093,13 +1141,19 @@
     <field name="view_mode">tree,form,kanban,pivot,graph</field>
     <field name="limit">20</field>
     <field name="search_view_id" ref="member_view_search"/>
-    <field name="domain">['&amp;', ('is_member', '=', True), '|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|',
+    <field name="domain">['&amp;', '|', ('is_member', '=', True), ('is_leader', '=', True), '|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|',
                                                             ('member_cells.cell_admin', '=', uid),
                                                             ('member_cells.cell_finance', '=', uid),
                                                             ('member_cells.cell_assembler', '=', uid),
                                                             ('main_office.main_admin', '=', uid),
                                                             ('main_office.main_finance', '=', uid),
-                                                            ('main_office.main_assembler', '=', uid),                                                           
+                                                            ('main_office.main_assembler', '=', uid),  
+                                                            ('league_member_cells.cell_admin', '=', uid),
+                                                            ('league_member_cells.cell_finance', '=', uid),
+                                                            ('league_member_cells.cell_assembler', '=', uid),
+                                                            ('league_main_office.main_admin', '=', uid),
+                                                            ('league_main_office.main_finance', '=', uid),
+                                                            ('league_main_office.main_assembler', '=', uid),                                                          
                                                             ('wereda_id.branch_manager', '=', uid),
                                                             ('wereda_id.complaint_handler', '=', uid),
                                                             ('subcity_id.parent_manager', '=', uid),
@@ -1107,7 +1161,7 @@
                                                             ('subcity_id.city_id.city_manager', 'in', [uid]),
                                                             ('subcity_id.city_id.complaint_handler', '=', uid),
                                                             ('subcity_id.city_id.transfer_handler', '=', uid),
-                                                            ('subcity_id.city_id.responsible_id.system_admin', '=', uid)]</field>
+                                                            ('subcity_id.city_id.responsible_id.system_admin', 'in', [uid])]</field>
     <field name="context">{"default_free_member": True}</field>
   </record>
 
@@ -1210,14 +1264,13 @@
     </field>
   </record>
 
-  <menuitem name="Members Management"
+  <menuitem name="Members"
             id="menu_association"
             sequence="15"
             web_icon="members_custom,static/description/icon1.png"
-            groups="members_custom.member_group_complaint_management,members_custom.member_group_cell_manager,members_custom.member_group_assembler,members_custom.member_group_finance,members_custom.member_group_agent"
-            action="members_custom.default_filter_modification"/>
+            groups="members_custom.member_group_city_transfer_handler,members_custom.member_group_complaint_management,members_custom.member_group_cell_manager,members_custom.member_group_assembler,members_custom.member_group_finance,members_custom.member_group_agent"/>
 
-  <menuitem name="Members"
+  <menuitem name="Member Information"
             id="menu_membership"
             sequence="0"
             parent="menu_association"/>
@@ -1232,7 +1285,7 @@
             name="Members"
             parent="menu_membership"
             sequence="2"
-            groups="members_custom.member_group_complaint_management,members_custom.member_group_cell_manager,members_custom.member_group_assembler,members_custom.member_group_finance,members_custom.member_group_agent"
+            groups="members_custom.member_group_city_transfer_handler,members_custom.member_group_cell_manager,members_custom.member_group_assembler,members_custom.member_group_finance,members_custom.member_group_agent"
             action="members_custom.default_filter_modification"/>
 
    <menuitem id="submenu_all_members"
@@ -1246,35 +1299,35 @@
             name="Leaders"
             parent="menu_membership"
             sequence="3"
-            groups="members_custom.member_group_complaint_management,members_custom.member_group_cell_manager,members_custom.member_group_assembler,members_custom.member_group_finance,members_custom.member_group_agent"
+            groups="members_custom.member_group_city_transfer_handler,members_custom.member_group_cell_manager,members_custom.member_group_assembler,members_custom.member_group_finance,members_custom.member_group_agent"
             action="leaders_menu"/>
 
   <menuitem id="league_views"
             name="Leagues"
             parent="menu_membership"
             sequence="4"
-            groups="members_custom.member_group_complaint_management,members_custom.member_group_cell_manager,members_custom.member_group_assembler,members_custom.member_group_finance,members_custom.member_group_agent"
+            groups="members_custom.member_group_city_transfer_handler,members_custom.member_group_cell_manager,members_custom.member_group_assembler,members_custom.member_group_finance,members_custom.member_group_agent"
             action="leagues_menu"/>
 
   <menuitem name="Configuration"
             id="menu_marketing_config_association"
             parent="menu_association"
             sequence="100"
-            groups="members_custom.member_group_cell_manager,members_custom.member_group_assembler,members_custom.member_group_finance"/>
+            groups="members_custom.member_group_city_transfer_handler,members_custom.member_group_cell_manager,members_custom.member_group_assembler,members_custom.member_group_finance"/>
 
 
-  <menuitem id="minor_menus"
-            name="Minor Configurations"
-            parent="menu_marketing_config_association"
-            sequence="9"
-            groups="members_custom.member_group_city_admin"/>
+  <menuitem id="system_admin_menus"
+            name="System Configurations"
+            parent="menu_association"
+            sequence="110"
+            groups="members_custom.member_group_user_admin"/>
 
-  <delete model="ir.ui.menu" id="membership.menu_report_membership"/>
+  <!-- <delete model="ir.ui.menu" id="membership.menu_report_membership"/>
   <delete model="ir.ui.menu" id="membership.menu_marketing_config_association"/>
   <delete model="ir.ui.menu" id="member_education"/>
   <delete model="ir.ui.menu" id="member_experience"/>
   <delete model="ir.ui.menu" id="membership.menu_association"/>
-  <delete model="ir.ui.menu" id="membership.menu_membership"/>
+  <delete model="ir.ui.menu" id="membership.menu_membership"/> -->
 
 
 </odoo>

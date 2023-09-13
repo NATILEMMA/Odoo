@@ -11,12 +11,12 @@ class HrPersonalEquipment(models.Model):
     _description = "Adds personal equipment information and allocation"
     _inherit = ["mail.thread", "mail.activity.mixin"]
 
-    name = fields.Char(compute="_compute_name")
-    description = fields.Text(String="Discription")
-    pin = fields.Char(String = "PIN")
-    serial_part_number = fields.Char(String = "Serial/Part No")
-    remark = fields.Char("Remark")
-    signature = fields.Char(String = "Signature of User")
+    name = fields.Char(compute="_compute_name", translate=True)
+    description = fields.Text(String="Discription", translate=True)
+    pin = fields.Char(String = "PIN", translate=True)
+    serial_part_number = fields.Char(String = "Serial/Part No", translate=True)
+    remark = fields.Char("Remark", translate=True)
+    signature = fields.Char(String = "Signature of User", translate=True)
     
     product_id = fields.Many2one(
         comodel_name="product.product",
@@ -49,8 +49,8 @@ class HrPersonalEquipment(models.Model):
     quantity = fields.Integer(default=1)
     product_uom_id = fields.Many2one("uom.uom", "Unit of Measure")
 
-    product_uom_name = fields.Char(related='product_uom_id.name')
-    product_name = fields.Char(related="product_id.name")
+    product_uom_name = fields.Char(related='product_uom_id.name', translate=True)
+    product_name = fields.Char(related="product_id.name", translate=True)
 
     @api.onchange("product_id")
     def _onchange_uom_id(self):

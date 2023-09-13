@@ -119,7 +119,7 @@ class CountryState(models.Model):
 
     country_id = fields.Many2one('res.country', string='Country', required=True)
     name = fields.Char(string='State Name', required=True,
-               help='Administrative divisions of a country. E.g. Fed. State, Departement, Canton')
+               help='Administrative divisions of a country. E.g. Fed. State, Departement, Canton', translate=True)
     code = fields.Char(string='State Code', help='The state code.', required=True)
 
     _sql_constraints = [

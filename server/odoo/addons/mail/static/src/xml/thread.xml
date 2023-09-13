@@ -308,11 +308,11 @@
                             t-attf-class="o_thread_author #{message.shouldRedirectToAuthor() ? 'o_mail_redirect' : ''}">
                         <t t-esc="message.getDisplayedAuthor()"/>
                     </strong>
-                    <strong t-elif="message.hasEmailFrom()">
+                    <!-- <strong t-elif="message.hasEmailFrom()">
                         <a class="text-muted" t-attf-href="mailto:#{message.getEmailFrom()}?subject=Re: #{message.hasSubject() ? message.getSubject() : ''}">
                             <t t-esc="message.getEmailFrom()"/>
                         </a>
-                    </strong>
+                    </strong> -->
                     <strong t-else="" class="o_thread_author">
                         <t t-esc="message.getDisplayedAuthor()"/>
                     </strong>

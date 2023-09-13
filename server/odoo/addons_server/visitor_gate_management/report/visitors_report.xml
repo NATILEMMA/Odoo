@@ -33,7 +33,7 @@
                             <t t-if="o.visit_with == 'employee'">
                                 <h4 style="margin-left:50px"><b>Visit With</b></h4>
                                 <table width="100%" style="margin-left:50px;margin-top:5px;border: None solid black;">
-                                    <t t-foreach="o.visiting_person" t-as="employee">
+                                    <t t-foreach="o.visiting_employee" t-as="employee">
                                         <tr class="tr2">
                                             <!-- <td style="width:50px;height:25px;" ><span>Meeting With Individual</span><span t-att-style="style"/></td> -->
                                             <td style="width:50px;height:25px;" ><span>Employee :   </span><span t-att-style="style" t-esc="employee.name"/></td>
@@ -46,7 +46,7 @@
                                 <table width="100%" style="margin-left:50px;margin-top:5px;border: None solid black;">
                                     <tr class="tr2">
                                         <td style="width:50px;height:25px;" ><span>Visit With Department: </span><span t-att-style="style" t-esc="o.department.name"/></td>
-                                        <t t-foreach="o.visiting_person" t-as="employee">
+                                        <t t-foreach="o.visiting_employee" t-as="employee">
                                             <td style="width:50px;height:25px;" ><span>Employee   : </span><span t-att-style="style" t-esc="employee.name"/></td>
                                         </t>
                                     </tr>
@@ -54,8 +54,7 @@
                             </t>
                             <t t-else="">
                                 <tr class="tr2">
-                                    <t t-if ="o.visiting_person"><td style="width:50px;height:25px;" ><span>Meeting With     : </span><span t-att-style="style" t-esc="o.visiting_person.name"/></td></t>
-                                    <t t-if ="o.visiting_employee"><td style="width:50px;height:25px;" ><span>Department    : </span><span t-att-style="style" t-esc="o.department.name"/></td></t>
+                                    <t t-if ="o.visiting_employee"><td style="width:50px;height:25px;" ><span>Meeting With     : </span><span t-att-style="style" t-esc="o.visiting_employee.name"/></td></t>
                                 </tr>
                             </t>
                              <br/>

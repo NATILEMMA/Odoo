@@ -96,34 +96,34 @@ msgstr "የማግበር ወጪ"
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__active
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__active
 msgid "Active"
-msgstr "ንቁ"
+msgstr "በሰራ ላይ ያለ"
 
 #. module: fleet
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__activity_ids
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__activity_ids
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel__activity_ids
 msgid "Activities"
-msgstr "እንቅስቃሴዎች"
+msgstr "ክንውንዎች"
 
 #. module: fleet
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__activity_exception_decoration
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__activity_exception_decoration
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel__activity_exception_decoration
 msgid "Activity Exception Decoration"
-msgstr "የእንቅስቃሴ ልዩ ማስጌጥ"
+msgstr "የክንውን ልዩ ማስጌጥ"
 
 #. module: fleet
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__activity_state
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__activity_state
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel__activity_state
 msgid "Activity State"
-msgstr "የእንቅስቃሴ ሁኔታ"
+msgstr "የክንውን ሁኔታ"
 
 #. module: fleet
 #: model:ir.actions.act_window,name:fleet.mail_activity_type_action_config_fleet
 #: model:ir.ui.menu,name:fleet.fleet_menu_config_activity_type
 msgid "Activity Types"
-msgstr "የእንቅስቃሴ ዓይነቶች"
+msgstr "የክንውን ዓይነቶች"
 
 #. module: fleet
 #: model:fleet.vehicle.model.brand,name:fleet.brand_acura
@@ -259,14 +259,14 @@ msgstr ""
 #. module: fleet
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__brand_id
 msgid "Brand"
-msgstr "የምርት ስም"
+msgstr "የእቃ ስም"
 
 #. module: fleet
 #: model:ir.model,name:fleet.model_fleet_vehicle_model_brand
 #: model:ir.model.fields,help:fleet.field_fleet_vehicle__brand_id
 #: model:ir.model.fields,help:fleet.field_fleet_vehicle_model__brand_id
 msgid "Brand of the vehicle"
-msgstr "የተሽከርካሪው የምርት ስም"
+msgstr "የተሽከርካሪው የእቃ ስም"
 
 #. module: fleet
 #: model:fleet.vehicle.model.brand,name:fleet.brand_bugatti
@@ -353,7 +353,7 @@ msgstr "ውሉ አሁንም የሚሰራ መሆኑን ወይም አለመሆኑ�
 #: model:ir.model.fields,help:fleet.field_fleet_service_type__category
 msgid ""
 "Choose whether the service refer to contracts, vehicle services or both"
-msgstr "አገልግሎቱ ኮንትራቶችን፣ የተሽከርካሪ አገልግሎቶችን ወይም ሁለቱንም የሚያመለክት መሆኑን ይምረጡ"
+msgstr "አገልግሎቱ ውሎችን፣ የተሽከርካሪ ሰርቪሶችን ወይም ሁለቱንም የሚያመለክት መሆኑን ይምረጡ"
 
 #. module: fleet
 #: model:fleet.vehicle.model.brand,name:fleet.brand_chrysler
@@ -575,7 +575,7 @@ msgstr "ውል(ዎች)"
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__log_contracts
 #: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_form
 msgid "Contracts"
-msgstr "ኮንትራቶች"
+msgstr "ውሎች"
 
 #. module: fleet
 #: model:fleet.vehicle.model.brand,name:fleet.brand_corre_la_licorne
@@ -768,7 +768,7 @@ msgstr "የተሽከርካሪው ወቅታዊ ሁኔታ"
 #: model:ir.actions.act_window,name:fleet.fleet_vehicle_log_services_action
 #: model:ir.ui.menu,name:fleet.fleet_vehicle_log_services_menu
 msgid "Customer Services"
-msgstr "የደንበኛ አገልግሎቶች"
+msgstr "የተሽከርካሪ ሰርቪስ መዝገቦች"
 
 #. module: fleet
 #: model:fleet.vehicle.model.brand,name:fleet.brand_daewoo
@@ -895,12 +895,12 @@ msgid ""
 "Each contract (e.g.: leasing) may include several services\n"
 "            (reparation, insurances, periodic maintenance)."
 msgstr ""
-"እያንዳንዱ ውል (ለምሳሌ፡ ኪራይ) ብዙ አገልግሎቶችን ሊያካትት ይችላል\n"
+"እያንዳንዱ ውል (ለምሳሌ፡ ኪራይ) ብዙ ሰርቪሶችን ሊያካትት ይችላል\n"
 " (ማካካሻ, ኢንሹራንስ, ወቅታዊ ጥገና)."
 #. module: fleet
 #: model_terms:ir.actions.act_window,help:fleet.fleet_vehicle_service_types_action
 msgid "Each service can used in contracts, as a standalone service or both."
-msgstr "እያንዳንዱ አገልግሎት እንደ ገለልተኛ አገልግሎት ወይም ሁለቱንም በኮንትራቶች ውስጥ ሊያገለግል ይችላል።"
+msgstr "እያንዳንዱ አገልግሎት እንደ ገለልተኛ አገልግሎት ወይም ሁለቱንም በውሎች ውስጥ ሊያገለግል ይችላል።"
 
 #. module: fleet
 #: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_costs_view_search
@@ -975,30 +975,30 @@ msgstr "የመጀመሪያ ውል ቀን"
 #: model:ir.ui.menu,name:fleet.menu_root
 #: model_terms:ir.ui.view,arch_db:fleet.res_config_settings_view_form
 msgid "Fleet"
-msgstr "ፍሊት"
+msgstr "ተሽከርካሪ"
 
 #. module: fleet
 #: model_terms:ir.ui.view,arch_db:fleet.res_config_settings_view_form
 msgid "Fleet Management"
-msgstr "ፍሊት አስተዳደር"
+msgstr "የተሽከርካሪ አስተዳደር"
 
 #. module: fleet
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__manager_id
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_model__manager_id
 msgid "Fleet Manager"
-msgstr "ፍሊት አስተዳዳሪ"
+msgstr "የተሽከርካሪ አስተዳዳሪ"
 
 #. module: fleet
 #: model:ir.model,name:fleet.model_fleet_service_type
 msgid "Fleet Service Type"
-msgstr "ፍሊት አገልግሎት ዓይነት"
+msgstr "የተሽከርካሪ አገልግሎት ዓይነት"
 
 #. module: fleet
 #: model:ir.actions.server,name:fleet.ir_cron_contract_costs_generator_ir_actions_server
 #: model:ir.cron,cron_name:fleet.ir_cron_contract_costs_generator
 #: model:ir.cron,name:fleet.ir_cron_contract_costs_generator
 msgid "Fleet: Generate contracts costs based on costs frequency"
-msgstr "ፍሊት፡- በወጪ ድግግሞሽ ላይ በመመስረት የኮንትራት ወጪዎችን መፍጠር"
+msgstr "ተሽከርካሪ፡- በወጪ ድግግሞሽ ላይ በመመስረት የኮንትራት ወጪዎችን መፍጠር"
 
 #. module: fleet
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__message_follower_ids
@@ -1181,7 +1181,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_state__id
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_tag__id
 msgid "ID"
-msgstr "መታወቂያ"
+msgstr "መለያ"
 
 #. module: fleet
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__activity_exception_icon
@@ -1195,7 +1195,7 @@ msgstr "አዶ"
 #: model:ir.model.fields,help:fleet.field_fleet_vehicle_log_contract__activity_exception_icon
 #: model:ir.model.fields,help:fleet.field_fleet_vehicle_log_fuel__activity_exception_icon
 msgid "Icon to indicate an exception activity."
-msgstr "ልዩ እንቅስቃሴን ለማመልከት አዶ"
+msgstr "ልዩ ክንውንን ለማመልከት አዶ"
 
 #. module: fleet
 #: model:ir.model.fields,help:fleet.field_fleet_vehicle__message_needaction
@@ -1240,7 +1240,7 @@ msgstr "በሂደት ላይ"
 #: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_contract_view_form
 #: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_services_view_form
 msgid "Included Services"
-msgstr "የተካተቱ አገልግሎቶች"
+msgstr "የተካተቱ ሰርቪሶች"
 
 #. module: fleet
 #: model:ir.model.fields.selection,name:fleet.selection__fleet_vehicle_log_contract__state__futur
@@ -1425,7 +1425,7 @@ msgstr "መጨረሻ የዘመነው በ"
 #. module: fleet
 #: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_contract_view_search
 msgid "Late Activities"
-msgstr "ዘግይተው የሚደረጉ እንቅስቃሴዎች"
+msgstr "ዘግይተው የሚደረጉ ክንውንዎች"
 
 #. module: fleet
 #: model:fleet.vehicle.model.brand,name:fleet.brand_lexus
@@ -1551,7 +1551,7 @@ msgstr "ዋና ዓይነት"
 #: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_model_view_search
 #: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_search
 msgid "Make"
-msgstr "አድርግ"
+msgstr "ስሪት"
 
 #. module: fleet
 #: model_terms:ir.actions.act_window,help:fleet.fleet_vehicle_log_contract_action
@@ -1560,9 +1560,9 @@ msgid ""
 "            their related services, costs. Odoo will automatically warn\n"
 "            you when some contracts have to be renewed."
 msgstr ""
-"ሁሉንም ኮንትራቶችህን (ኪራይ፣ ኢንሹራንስ፣ ወዘተ) አስተዳድር\n"
+"ሁሉንም ውሎችህን (ኪራይ፣ ኢንሹራንስ፣ ወዘተ) አስተዳድር\n"
 "በ ተዛማጅ አገልግሎቶቻቸው፣ ወጪዎች። ኦዱ በራስሰር ያስጠነቅቃል\n"
-"አንዳንድ ኮንትራቶች መታደስ ሲኖርብዎት።"
+"አንዳንድ ውሎች መታደስ ሲኖርብዎት።"
 #. module: fleet
 #: model_terms:ir.actions.act_window,help:fleet.fleet_vehicle_costs_action
 msgid ""
@@ -1570,11 +1570,11 @@ msgid ""
 "                Costs are created automatically from services, contracts and fuel logs."
 msgstr ""
 "ለተለያዩ ተሽከርካሪዎችዎ ወጪዎችን ያስተዳድሩ።\n"
-" ወጪዎች ከአገልግሎቶች, ኮንትራቶች እና የነዳጅ ምዝግብ ማስታወሻዎች በራስ-ሰር ይፈጠራሉ."
+" ወጪዎች ከሰርቪሶች, ውሎች እና የነዳጅ ምዝግብ ማስታወሻዎች በራስ-ሰር ይፈጠራሉ."
 #. module: fleet
 #: model:ir.model.fields.selection,name:fleet.selection__fleet_vehicle__transmission__manual
 msgid "Manual"
-msgstr "መመሪያ"
+msgstr "ማኗል"
 
 #. module: fleet
 #: model:fleet.vehicle.model.brand,name:fleet.brand_maserati
@@ -1653,7 +1653,7 @@ msgstr "ሞዴል"
 #: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_model_brand_view_form
 #: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_model_brand_view_tree
 msgid "Model Brand"
-msgstr "ሞዴል የምርት ስም"
+msgstr "ሞዴል የእቃ ስም"
 
 #. module: fleet
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__model_year
@@ -1721,21 +1721,21 @@ msgstr "አዲስ ጥያቄ"
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__activity_date_deadline
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel__activity_date_deadline
 msgid "Next Activity Deadline"
-msgstr "ቀጣይ የእንቅስቃሴ ገደብ"
+msgstr "ቀጣይ የክንውን ገደብ"
 
 #. module: fleet
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__activity_summary
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__activity_summary
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel__activity_summary
 msgid "Next Activity Summary"
-msgstr "ቀጣይ የእንቅስቃሴ ማጠቃለያ"
+msgstr "ቀጣይ የክንውን ማጠቃለያ"
 
 #. module: fleet
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__activity_type_id
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__activity_type_id
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel__activity_type_id
 msgid "Next Activity Type"
-msgstr "ቀጣይ የእንቅስቃሴ አይነት"
+msgstr "ቀጣይ የክንውን አይነት"
 
 #. module: fleet
 #: model:ir.model.fields,help:fleet.field_fleet_vehicle__future_driver_id
@@ -1777,7 +1777,7 @@ msgstr "ተሽከርካሪ ያልሆነ"
 #. module: fleet
 #: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_search
 msgid "Non-Write-Off"
-msgstr "የማይጻፍ-ጠፍቷል"
+msgstr "አገልግሎት እየሰጡ ያሉ"
 
 #. module: fleet
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_fuel__notes
@@ -1906,7 +1906,7 @@ msgid ""
 "          Costs are generally created from services and contract and appears here."
 msgstr ""
 "Odoo ለተለያዩ ተሽከርካሪዎችዎ ወጪዎችን እንዲያስተዳድሩ ያግዝዎታል\n"
-" ወጪዎች በአጠቃላይ ከአገልግሎቶች እና ኮንትራቶች የተፈጠሩ እና እዚህ ይታያሉ."
+" ወጪዎች በአጠቃላይ ከሰርቪሶች እና ውሎች የተፈጠሩ እና እዚህ ይታያሉ."
 #. module: fleet
 #: model:fleet.vehicle.model.brand,name:fleet.brand_oldsmobile
 msgid "Oldsmobile"
@@ -1934,7 +1934,7 @@ msgid ""
 "            on your vehicle.Services can be of many type: occasional\n"
 "            repair, fixed maintenance, etc."
 msgstr ""
-"ERP ክፈት ሁሉንም የተከናወኑ አገልግሎቶችን እንዲከታተሉ ያግዝዎታል\n"
+"ERP ክፈት ሁሉንም የተከናወኑ ሰርቪሶችን እንዲከታተሉ ያግዝዎታል\n"
 "በተሽከርካሪዎ ላይ። አገልግሎቶቹ ብዙ አይነት ሊሆኑ ይችላሉ፡ አልፎ አልፎ\n"
 "ጥገና, ቋሚ ጥገና, ወዘተ."
 #. module: fleet
@@ -1943,7 +1943,7 @@ msgid ""
 "OpenERP will warn you when services or contract have to be\n"
 "            renewed."
 msgstr ""
-"ክፈት ERP አገልግሎቶች ወይም ውል መሆን ሲኖርባቸው ያስጠነቅቀዎታል\n"
+"ክፈት ERP ሰርቪሶች ወይም ውል መሆን ሲኖርባቸው ያስጠነቅቀዎታል\n"
 " ታድሷል።"
 #. module: fleet
 #: model:ir.model.fields.selection,name:fleet.selection__fleet_vehicle_cost__cost_type__other
@@ -2079,7 +2079,7 @@ msgstr "የምዝገባ ግዛት"
 #. module: fleet
 #: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_search
 msgid "Released"
-msgstr "ተለቋል"
+msgstr "ከሰርቪስ የወጣ"
 
 #. module: fleet
 #: model:fleet.vehicle.model.brand,name:fleet.brand_renault
@@ -2219,19 +2219,19 @@ msgstr "የአገልግሎት ዓይነት"
 #: model:ir.actions.act_window,name:fleet.fleet_vehicle_service_types_action
 #: model:ir.ui.menu,name:fleet.fleet_vehicle_service_types_menu
 msgid "Service Types"
-msgstr "የአገልግሎት ዓይነቶች"
+msgstr "የሰርቪስ አይነቶች"
 
 #. module: fleet
 #: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_service_types_view_tree
 msgid "Service types"
-msgstr "የአገልግሎት ዓይነቶች"
+msgstr "የሰርቪስ አይነቶች"
 
 #. module: fleet
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__service_count
 #: model:ir.model.fields.selection,name:fleet.selection__fleet_vehicle_cost__cost_type__services
 #: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_form
 msgid "Services"
-msgstr "አገልግሎቶች"
+msgstr "ሰርቪሶች"
 
 #. module: fleet
 #: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_services_view_graph
@@ -2241,7 +2241,7 @@ msgstr "የአገልግሎት ወጪዎች በወር"
 #. module: fleet
 #: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_services_view_form
 msgid "Services Details"
-msgstr "የአገልግሎቶች ዝርዝሮች"
+msgstr "የሰርቪሶች ዝርዝሮች"
 
 #. module: fleet
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__log_services
@@ -2253,7 +2253,7 @@ msgstr "የአገልግሎት ምዝግብ ማስታወሻዎች"
 #. module: fleet
 #: model:ir.model,name:fleet.model_fleet_vehicle_log_services
 msgid "Services for vehicles"
-msgstr "ለተሽከርካሪዎች አገልግሎቶች"
+msgstr "ለተሽከርካሪዎች ሰርቪሶች"
 
 #. module: fleet
 #: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_contract_view_form
@@ -2319,10 +2319,10 @@ msgid ""
 "Today: Activity date is today\n"
 "Planned: Future activities."
 msgstr ""
-"በእንቅስቃሴ ላይ የተመሰረተ ሁኔታ\n"
+"በክንውን ላይ የተመሰረተ ሁኔታ\n"
 "አልፏል፡ የማለቂያ ቀን አስቀድሞ አልፏል\n"
 "ዛሬ፡ የተግባር ቀን ዛሬ ነው\n"
-"የታቀደው: የወደፊት እንቅስቃሴዎች."
+"የታቀደው: የወደፊት ክንውንዎች."
 #. module: fleet
 #: model:fleet.vehicle.model.brand,name:fleet.brand_steyr
 msgid "Steyr"
@@ -2456,7 +2456,7 @@ msgstr ""
 #. module: fleet
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__transmission
 msgid "Transmission"
-msgstr "መተላለፍ"
+msgstr "የማርሽ አይነት"
 
 #. module: fleet
 #: model:ir.model.fields,help:fleet.field_fleet_vehicle__transmission
@@ -2476,7 +2476,7 @@ msgstr "ዓይነት"
 #: model:ir.model.fields,help:fleet.field_fleet_vehicle_log_contract__activity_exception_decoration
 #: model:ir.model.fields,help:fleet.field_fleet_vehicle_log_fuel__activity_exception_decoration
 msgid "Type of the exception activity on record."
-msgstr "በመዝገብ ላይ ያለ ልዩ እንቅስቃሴ አይነት።"
+msgstr "በመዝገብ ላይ ያለ ልዩ ክንውን አይነት።"
 
 #. module: fleet
 #: model:ir.model.fields,help:fleet.field_fleet_vehicle__vin_sn
@@ -2580,7 +2580,7 @@ msgstr "የተሽከርካሪ ነዳጅ መዝገብ"
 #. module: fleet
 #: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_search
 msgid "Vehicle ID"
-msgstr "የተሽከርካሪ መታወቂያ"
+msgstr "የተሽከርካሪ መለያ"
 
 #. module: fleet
 #: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_contract_view_form
@@ -2633,7 +2633,7 @@ msgstr "የተሽከርካሪ ወጪዎች"
 #. module: fleet
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__name
 msgid "Vehicle-ID"
-msgstr "ተሽከርካሪ-መታወቂያ"
+msgstr "ተሽከርካሪ-መለያ"
 
 #. module: fleet
 #: model:ir.ui.menu,name:fleet.fleet_vehicles
@@ -2647,7 +2647,7 @@ msgstr "ተሽከርካሪዎች"
 #: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_contract_view_activity
 #: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_log_contract_view_search
 msgid "Vehicles Contracts"
-msgstr "የተሽከርካሪዎች ኮንትራቶች"
+msgstr "የተሽከርካሪዎች ውሎች"
 
 #. module: fleet
 #: model:ir.actions.act_window,name:fleet.fleet_vehicle_costs_action
@@ -2765,7 +2765,7 @@ msgstr "ከተጠናቀቀው አገልግሎት ጋር የተያያዘ ሌላ �
 #. module: fleet
 #: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_search
 msgid "Write-Off"
-msgstr "ሰረዘ"
+msgstr "የማያገለግሉ"
 
 #. module: fleet
 #: model:ir.model.fields,help:fleet.field_fleet_vehicle__model_year
@@ -2775,7 +2775,7 @@ msgstr "የአምሳያው አመት"
 #. module: fleet
 #: model:ir.model.fields.selection,name:fleet.selection__fleet_vehicle_log_contract__cost_frequency__yearly
 msgid "Yearly"
-msgstr "Yearly"
+msgstr "ዓመታዊ"
 
 #. module: fleet
 #: model_terms:ir.actions.act_window,help:fleet.fleet_vehicle_odometer_action
@@ -2811,7 +2811,7 @@ msgid ""
 "            fuel logs associated to each vehicle."
 msgstr ""
 "የእርስዎን መርከቦች በመከታተል ማስተዳደር ይችላሉ\n"
-"ኮንትራቶች፣ አገልግሎቶች፣ ቋሚ እና ተደጋጋሚ ወጪዎች፣ odometers እና\n"
+"ውሎች፣ ሰርቪሶች፣ ቋሚ እና ተደጋጋሚ ወጪዎች፣ odometers እና\n"
 "ከእያንዳንዱ ተሽከርካሪ ጋር የተያያዙ የነዳጅ ምዝግብ ማስታወሻዎች."
 #. module: fleet
 #: model:fleet.vehicle.model,name:fleet.model_zafira

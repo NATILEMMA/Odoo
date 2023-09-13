@@ -42,7 +42,7 @@ var WebsiteRoot = publicRootData.PublicRoot.extend({
         }
 
         // Enable magnify on zommable img
-        this.$('.zoomable img[data-zoom]').zoomOdoo();
+        // this.$('.zoomable img[data-zoom]').zoomOdoo();
 
         return this._super.apply(this, arguments);
     },

@@ -46,7 +46,13 @@
                             <div>
                               Dear ${ object.victim_id.name },<br/><br/>
                               The complaint that you submitted on ${ object.create_date.strftime('%b %d, %Y') } has been received!<br/>
-                              It will be reviewed with in ${ object.duration_of_remedy } days.<br/>
+                              % if object.transfer_3 and not object.transfer_1
+                                It will be reviewed with in ${ object.duration_of_remedy } days.<br/>
+                              % if object.transfer_1 and not object.transfer_2
+                                It will be reviewed with in ${ object.duration_of_remedy_subcity } days.<br/>
+                              % if object.transfer_2
+                                It will be reviewed with in ${ object.duration_of_remedy_city } days.<br/>
+                              % endif
                               Your reviewer will be ${ user.name }.<br/><br/>
                               If you don't receive an email, in regards to the outcome of your complaint,<br/>
                               from us in ${ object.duration_of_remedy } days, please feel free to contact<br/>
@@ -375,29 +381,29 @@
                             <td valign="top" style="font-size: 13px;">
                               <div>
                                 Dear ${ object.victim_id.name },<br/><br/>
-                                % if (not object.transfer_1) and (not object.transfer_2):
-                                This is ${ object.wereda_handler.name }. I am the complaint handler.<br/>
-                                % elif (object.transfer_1) and (not object.transfer_2):
-                                This is ${ object.subcity_handler.name }. I am the complaint handler.<br/>
-                                % elif (not object.transfer_1) and (object.transfer_2):
-                                This is ${ object.city_handler.name }. I am the complaint handler.<br/>
+                                % if object.transfer_3 and not object.transfer_1
+                                  This is ${ object.wereda_handler.name }. I am the complaint handler.<br/>
+                                % if object.transfer_1 and not object.transfer_2
+                                  This is ${ object.subcity_handler.name }. I am the complaint handler.<br/>
+                                % if object.transfer_2
+                                  This is ${ object.city_handler.name }. I am the complaint handler.<br/>
                                 % endif
                                 The complaint that you submitted on ${ object.create_date.strftime('%b %d, %Y') } has been reviewed!<br/>
                                 Below you will find the report that I have submitted.<br/><br/>
-                                % if (not object.transfer_1) and (not object.transfer_2):
-                                Please request an appeal by transferring the complaint,<br/><br/>
-                                if you have any concerns regarding the review.<br/>
-                                % elif (object.transfer_1) and (not object.transfer_2):
-                                Please request an appeal by transferring the complaint,<br/><br/>
-                                if you have any concerns regarding the review.<br/>
+                                % if object.transfer_3 and not object.transfer_1
+                                  Please request an appeal by transferring the complaint,<br/><br/>
+                                  if you have any concerns regarding the review.<br/>
+                                % if object.transfer_1 and not object.transfer_2
+                                  Please request an appeal by transferring the complaint,<br/><br/>
+                                  if you have any concerns regarding the review.<br/>
                                 % endif
                                 Sincerely,<br/>
-                                % if (not object.transfer_1) and (not object.transfer_2):
-                                ${ object.wereda_handler.name }<br/><br/><br/><br/>
-                                % elif (object.transfer_1) and (not object.transfer_2):
-                                ${ object.subcity_handler.name }<br/><br/><br/><br/>
-                                % elif (not object.transfer_1) and (object.transfer_2):
-                                ${ object.city_handler.name }<br/><br/><br/><br/>
+                                % if object.transfer_3 and not object.transfer_1
+                                  ${ object.wereda_handler.name }<br/><br/><br/><br/>
+                                % if object.transfer_1 and not object.transfer_2
+                                  ${ object.subcity_handler.name }<br/><br/><br/><br/>
+                                % if object.transfer_2
+                                  ${ object.city_handler.name }<br/><br/><br/><br/>
                                 % endif
                                 <table class="table" style="border: 3px solid black">
                                   <tr>
@@ -424,15 +430,15 @@
                                     <td>
                                       <span> ${ object.state }</span>
                                     </td>
-                                    % if (not object.transfer_1) and (not object.transfer_2):
+                                    % if object.transfer_3 and not object.transfer_1
                                       <td>
                                         <span> ${ object.date_of_remedy.strftime('%m/%d/%Y') }</span>
                                       </td>
-                                    % elif (object.transfer_1) and (not object.transfer_2):
+                                    % if object.transfer_1 and not object.transfer_2
                                       <td>
                                         <span> ${ object.date_of_remedy_subcity.strftime('%m/%d/%Y') }</span>
                                       </td>
-                                    % elif (not object.transfer_1) and (object.transfer_2):
+                                    % if object.transfer_2
                                       <td>
                                         <span> ${ object.date_of_remedy_city.strftime('%m/%d/%Y') }</span>
                                       </td>
@@ -447,17 +453,17 @@
                                       <span><strong>Victim :- </strong></span>
                                       <span> ${ object.victim_id.name }</span>
                                     </td>
-                                    % if (not object.transfer_1) and (not object.transfer_2):
+                                    % if object.transfer_3 and not object.transfer_1
                                       <td>
                                         <span><strong>Woreda Complaint Handler :- </strong></span>
                                         <span> ${ object.wereda_handler.name }</span>
                                       </td>
-                                    % elif (object.transfer_1) and (not object.transfer_2):
+                                    % if object.transfer_1 and not object.transfer_2
                                       <td>
                                         <span><strong>Sub City Complaint Handler :- </strong></span>
                                         <span> ${ object.subcity_handler.name }</span>
                                       </td>
-                                    % elif (not object.transfer_1) and (object.transfer_2):
+                                    % if object.transfer_2
                                       <td>
                                         <span><strong>City Complaint Handler :- </strong></span>
                                         <span> ${ object.city_handler.name }</span>
@@ -469,17 +475,17 @@
                                   <strong>Member Complaint</strong><br/><br/>
                                   <span>${ object.circumstances }</span>
                                 </div>
-                                % if (not object.transfer_1) and (not object.transfer_2):
+                                % if object.transfer_3 and not object.transfer_1
                                   <div class="conclusion">
                                     <strong>Woreda Handler Conclusion</strong><br/><br/>
                                     <span>${ object.conclusion_report_wereda }</span>
                                   </div>
-                                % elif (object.transfer_1) and (not object.transfer_2):
+                                % if object.transfer_1 and not object.transfer_2
                                   <div class="conclusion">
                                     <strong>Subcity Handler Conclusion</strong><br/><br/>
                                     <span>${ object.conclusion_report_subcity }</span>
                                   </div>
-                                % elif (not object.transfer_1) and (object.transfer_2):
+                                % if object.transfer_2
                                   <div class="conclusion">
                                     <strong>City Handler Conclusion</strong><br/><br/>
                                     <span>${ object.conclusion_report_city }</span>

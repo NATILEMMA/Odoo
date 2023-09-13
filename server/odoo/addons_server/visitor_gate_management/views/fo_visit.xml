@@ -7,15 +7,19 @@
             <field name="arch" type="xml">
                 <form string="Visits" duplicate="false">
                     <field name="done" invisible="1"/>
+                    <field name="started" invisible="1"/>
                     <header>
                         <button name="action_check_in" string="Check In" type="object" states="approved" class="oe_highlight" groups="visitor_gate_management.group_receptionist" confirm="Are you sure you want to Check In?"/>
                         <button name="action_approve" string="Approve" type="object" attrs="{'invisible': ['|', ('state', '!=', 'draft'), ('disappear_approve', '=', True)]}" class="oe_highlight" groups="visitor_gate_management.group_receptionist" confirm="Are you sure you want to Approve?"/>
                         <button name="action_approve_employee" string="Approve" type="object" attrs="{'invisible': ['&amp;', ('state', '!=', 'draft')]}" class="oe_highlight" groups="visitor_gate_management.group_employees" confirm="Are you sure you want to Approve?"/>
                         <button name="action_send_to_approve" string="Send to Approve" type="object" attrs="{'invisible': ['|', ('state', '!=', 'draft'), ('disappear_approve', '=', False)]}" class="oe_highlight" groups="visitor_gate_management.group_receptionist" confirm="Are you sure you want to Send to Approve?"/>
                         <button name="action_reschedule" string="Reschedule" type="object" states="draft" class="oe_highlight" groups="visitor_gate_management.group_employees" confirm="Are you sure you want to Reschedule?"/>
+                        <button name="action_start" string="Start Visit" type="object" attrs="{'invisible': ['|', ('state', '!=', 'check_in'), ('started', '=', True)]}" class="oe_highlight" groups="visitor_gate_management.group_employees" confirm="Are you sure you want to Start Meeting?"/>
+                        <button name="action_reschedule" string="Reschedule" type="object" attrs="{'invisible': ['|', ('state', '!=', 'check_in'), ('started', '=', True)]}" class="oe_highlight" groups="visitor_gate_management.group_employees" confirm="Are you sure you want to Reschedule?"/>
+                        <button name="action_after_check_in_reschedule" string="Reschedule" type="object" attrs="{'invisible': ['|', ('state', '!=', 'check_in'), ('started', '=', False)]}" class="oe_highlight" groups="visitor_gate_management.group_employees" confirm="Are you sure you want to Reschedule?"/>
                         <button name="action_check_out" string="Check Out" type="object" states="check_in" class="oe_highlight" confirm="Make Sure You Have Ticked All The Items That Are Going Out?" groups="visitor_gate_management.group_receptionist"/>
                         <button name="accept_id" string="Accept IDs" type="object" attrs="{'invisible': ['|', ('done', '=', True), ('state', '!=', 'check_out')]}" class="oe_highlight" confirm="Please Accept All The Visitor IDs From This Visit?"/>
-                        <button name="action_cancel" string="Cancel" type="object" states="draft" confirm="Are you sure you want to Cancel?"/>
+                        <button name="action_cancel" string="Cancel" type="object" confirm="Are you sure you want to Cancel?"/>
                         <field name="state" widget="statusbar" statusbar_visible="draft,approved,check_in,check_out,cancel"/>
                     </header>
                     <sheet>
@@ -28,34 +32,39 @@
                         </div>
                         <group>
                             <group string="Visitors">
-                                <field name="visitor" widget="many2many_tags" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="creator" invisible="1"/>
+                                <field name="from_portal" invisible="1"/>
+                                <field name="all_visitor" invisible="1"/>
+                                <field name="visitor" widget="many2many_tags" attrs="{'readonly': [('state', '!=', 'draft')]}" force_save="1"/>
                                 <field name="no_visiters" invisible="1"/>
                                 <field name="disappear_approve" invisible="1"/>
                                 <field name="resource_calendar_id" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
-                                <field name="phone" attrs="{'invisible': [('no_visiters', '=', False)], 'required': [('no_visiters', '=', True)], 'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="phone" attrs="{'invisible': [('no_visiters', '=', False)], 'readonly': [('state', '!=', 'draft')]}"/>
                                 <field name="email" attrs="{'invisible': [('no_visiters', '=', False)], 'readonly': [('state', '!=', 'draft')]}"/>
                             </group>
                             <group string="Check In/Out Details">
                                 <field name="x_css" force_save="1" nolabel="1" invisible="1"/>
                                 <field name="rescheduled" invisible="1"/>
                                 <field name="date" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
-                                <field name="check_in_float" widget="float_time" attrs="{'invisible': ['|', ('state', 'not in', ['draft', 'cancel']), ('disappear_approve', '=', False)], 'required': [('disappear_approve', '=', True)]}"/>
-                                <field name="duration_in_float" widget="float_time" attrs="{'invisible': ['|', ('state', 'not in', ['draft', 'cancel']), ('disappear_approve', '=', False)], 'required': [('disappear_approve', '=', True)]}"/>
-                                <field name="check_out_float" widget="float_time" force_save="1" attrs="{'invisible': ['|', ('state', 'not in', ['draft', 'cancel']), ('disappear_approve', '=', False)]}"/>
-                                <field name="check_in_time" readonly="1" attrs="{'invisible': [('state', 'not in', ['approved', 'check_in', 'check_out'])]}"/>
-                                <field name="check_out_time" readonly="1" attrs="{'invisible': [('state', 'not in', ['approved', 'check_in', 'check_out'])]}"/>
+                                <field name="check_in_float" widget="float_time" attrs="{'invisible': ['|', ('state', 'not in', ['draft', 'approved', 'cancel']), ('disappear_approve', '=', False)], 'required': [('disappear_approve', '=', True)], 'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="duration_in_float" widget="float_time" attrs="{'invisible': ['|', ('state', 'not in', ['draft', 'approved',  'cancel']), ('disappear_approve', '=', False)], 'required': [('disappear_approve', '=', True)], 'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="check_out_float" widget="float_time" force_save="1" attrs="{'invisible': ['|', ('state', 'not in', ['draft', 'approved', 'cancel']), ('disappear_approve', '=', False)]}"/>
+                                <field name="check_in_time" readonly="1" attrs="{'invisible': [('state', 'not in', ['check_in', 'check_out'])]}"/>
+                                <field name="start_time" readonly="1" attrs="{'invisible': ['&amp;', ('started', '=', False), ('state', 'not in', ['check_in', 'check_out'])]}"/>
+                                <field name="check_out_time" readonly="1" attrs="{'invisible': [('state', 'not in', ['check_in', 'check_out'])]}"/>
                                 
                             </group>
                         </group>
                         <group>
                             <group string="Visit With" attrs="{'invisible': [('disappear_approve', '=', False)]}">
+                                <field name="employee" invisible="1"/>
                                 <field name="visit_with" attrs="{'invisible': [('disappear_approve', '=', False)], 'readonly': [('state', '!=', 'draft')]}"/>
-                                <field name="visiting_person" attrs="{'invisible': ['|', ('disappear_approve', '=', False), ('visit_with', '=', 'department')], 'required': [('visit_with', '=', 'employee')], 'readonly': [('state', '!=', 'draft')]}" widget="many2many_tags"/>
                                 <field name="department" attrs="{'invisible': ['|', ('disappear_approve', '=', False), ('visit_with', '=', 'employee')], 'required': [('visit_with', '=', 'department')], 'readonly': [('state', '!=', 'draft')]}"/>
-                                <field name="visiting_employee" string="Secretary" attrs="{'invisible': ['|', ('disappear_approve', '=', False), ('visit_with', '=', 'employee')], 'required': [('visit_with', '=', 'department')], 'readonly': [('state', '!=', 'draft')]}" widget="many2many_tags"/>
+                                <field name="visiting_employee" string="Employee" attrs="{'invisible': ['|', ('disappear_approve', '=', False),('visit_with', '=', 'department') ], 'required': [('visit_with', '=', 'employee')], 'readonly': [('state', '!=', 'draft')]}" widget="many2many_tags" force_save="1"/>
+                                <field name="visiting_employee" string="Secretary" attrs="{'invisible': ['|', ('disappear_approve', '=', False), ('visit_with', '=', 'employee')], 'required': [('visit_with', '=', 'department')], 'readonly': ['|', ('visit_with', '=', 'department'), ('state', '!=', 'draft')]}" widget="many2many_tags" force_save="1"/>
                             </group>
                             <group string="Purpose of Visits">
-                                <field name="reason" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="reason" attrs="{'readonly': [('state', '!=', 'draft')]}" required="1"/>
                             </group>
                         </group>
                          <notebook>
@@ -64,12 +73,13 @@
                                     <tree decoration-success="permission == '0' or permission == '2'" decoration-danger="permission == '1'" string="Items" editable="bottom">
                                         <field name="check_out" attrs="{'column_invisible': [('parent.state', '!=', 'check_in')]}"/>
                                         <field name="number"/>
-                                        <field name="visitor_id" attrs="{'column_invisible': [('parent.no_visiters', '=', True)], 'readonly': [('in_or_out', '=', 'in')]}" domain="[('id', '=', parent.visitor)]"/>
+                                        <field name="visitor_id" attrs="{'column_invisible': [('parent.no_visiters', '=', True)], 'readonly': [('in_or_out', '=', 'in')]}" domain="[('id', '=', parent.visitor)]" options="{'no_create': True, 'no_create_edit': True}"/>
                                         <field name="phone" force_save="1" attrs="{'column_invisible': [('parent.no_visiters', '=', True)]}"/>
                                         <field name="property_name" required="1" attrs="{'readonly': [('in_or_out', '=', 'in')]}"/>
                                         <field name="permission" attrs="{'readonly': [('in_or_out', '=', 'in')]}"/>
                                         <field name="property_description" required="1" attrs="{'readonly': [('in_or_out', '=', 'in')]}"/>
                                         <field name="property_count" required="1" attrs="{'readonly': [('in_or_out', '=', 'in')]}"/>
+                                        <field name="reference_no" attrs="{'readonly': [('in_or_out', '=', 'in')]}"/>
                                         <field name="locker_number" attrs="{'invisible': [('permission', '!=', '1')], 'required': [('permission', '=', '1')]}"/>
                                         <field name="visitor_id_number"/>
                                         <field name="in_or_out"/>
@@ -99,7 +109,7 @@
                                     </form>
                                 </field>
                             </page>
-                            <page string="Meeting Minute" attrs="{'invisible': [('state', 'in', ['draft', 'cancel'])]}">
+                            <page string="Meeting Minute" attrs="{'invisible': ['|', ('state', 'in', ['draft', 'cancel']), ('started', '=', False)]}">
                                 <field name="meeting_minute" widget="html" options="{'safe': True}"/>
                             </page>
                          </notebook>
@@ -121,7 +131,7 @@
                 <tree string="Visits" decoration-success="state == 'check_in'" decoration-muted="state == 'check_out'">
                     <field name="visitor"/>
                     <field name="reason"/>
-                    <field name="visiting_person"/>
+                    <field name="visiting_employee"/>
                     <field name="state"/>
                 </tree>
             </field>
@@ -137,8 +147,8 @@
                     <filter string="Draft or Check-in visitor" name="state" domain="[('state', 'in', ['draft','check-in'])]"/>
                     <filter name="date" string="Today" domain="[('date','=',current_date)]"/>
                     <group expand="1" string="Group By">
-                        <filter string="Visiting Person" name="visiting_person" context="{'group_by':'visiting_person'}"/>
-                        <filter string="State of visitor" name="state" context="{'group_by':'state'}"/>
+                        <filter string="Visiting Employee" name="employee" context="{'group_by':'employee'}"/>
+                        <filter string="Visitors" name="visitor" context="{'group_by':'all_visitor'}"/>
                     </group>
                 </search>
             </field>
@@ -151,7 +161,7 @@
             <field name="limit">20</field>
             <field name="search_view_id" ref="view_visits_search"/>
             <field name="context">{'search_default_date': 1}</field>    
-            <field name="domain">['|', ('visiting_person.user_id', 'in', [uid]), ('visiting_employee.user_id', 'in', [uid])]</field>     
+            <field name="domain">[('visiting_employee.user_id', 'in', [uid])]</field>     
             <!-- <field name="domain">[]</field> -->
             <field name="help" type="html">
                 <p class="oe_view_nocontent_create">Create  Visits.
@@ -170,7 +180,7 @@
             <field name="name">Visits</field>
             <field name="res_model">fo.visit</field>
             <field name="view_mode">tree,form,pivot,graph</field>
-            <field name="domain">[('visitor', 'in', [active_id])]</field>
+            <field name="domain">[('visiting_employee.user_id', 'in', [uid]), ('visitor', 'in', [active_id])]</field>
             <field name="limit">20</field>           
             <field name="help" type="html">
                 <p class="oe_view_nocontent_create">Create  Visits.
@@ -183,6 +193,25 @@
                 </p>
             </field>
         </record>
+
+
+        <record id="fo_today_visit_employee_graph" model="ir.ui.view">
+            <field name="name">Visits</field>
+            <field name="model">fo.visit</field>
+            <field name="arch" type="xml">
+                <graph string="Visits">
+                    <field name="employee"/>
+                    <field name="state"/>
+                </graph>
+            </field>
+        </record>
+
+        <record id="fo_today_visit_employee_graph_action" model="ir.actions.act_window">
+            <field name="name">Visits</field>
+            <field name="res_model">fo.visit</field>
+            <field name="view_mode">graph</field>
+        </record>
+
 
          <record id="fo_today_visit_action" model="ir.actions.act_window">
             <field name="name">Today's Visits</field>
@@ -220,42 +249,6 @@
                 </form>
             </field>
         </record>
-        <!--Proof Form view-->
-         <record model="ir.ui.view" id="fo_id_proof_form_view">
-            <field name="name">ID Proof</field>
-            <field name="model">id.proof</field>
-            <field name="arch" type="xml">
-                <form string="ID Proof">
-                    <sheet>
-                        <group>
-                            <group>
-                                <field name="id_proof"/>
-                            </group>
-                        </group>
-                    </sheet>
-                </form>
-            </field>
-        </record>
 
-        <!--visiting purpose view-->
-
-        <record model="ir.ui.view" id="fo_visiting_purpose_form_view">
-            <field name="name">Visiting Purpose</field>
-            <field name="model">fo.purpose</field>
-            <field name="arch" type="xml">
-                <form string="Visiting Purpose">
-                    <sheet>
-                        <group>
-                            <group>
-                                <field name="name"/>
-                            </group>
-                            <group>
-                                <field name="description"/>
-                            </group>
-                        </group>
-                    </sheet>
-                </form>
-            </field>
-        </record>
     </data>
 </odoo>

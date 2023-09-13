@@ -14,7 +14,7 @@ class AccountReconcileModel(models.Model):
     _order = 'sequence, id'
 
     # Base fields.
-    name = fields.Char(string='Name', required=True)
+    name = fields.Char(string='Name', required=True, translate=True)
     sequence = fields.Integer(required=True, default=10)
     company_id = fields.Many2one('res.company', string='Company', required=True, default=lambda self: self.env.company)
 
@@ -56,7 +56,7 @@ class AccountReconcileModel(models.Model):
         * Contains: The proposition label must contains this string (case insensitive).
         * Not Contains: Negation of "Contains".
         * Match Regex: Define your own regular expression.''')
-    match_label_param = fields.Char(string='Label Parameter')
+    match_label_param = fields.Char(string='Label Parameter', translate=True)
     match_note = fields.Selection(selection=[
         ('contains', 'Contains'),
         ('not_contains', 'Not Contains'),
@@ -65,7 +65,7 @@ class AccountReconcileModel(models.Model):
         * Contains: The proposition note must contains this string (case insensitive).
         * Not Contains: Negation of "Contains".
         * Match Regex: Define your own regular expression.''')
-    match_note_param = fields.Char(string='Note Parameter')
+    match_note_param = fields.Char(string='Note Parameter', translate=True)
     match_transaction_type = fields.Selection(selection=[
         ('contains', 'Contains'),
         ('not_contains', 'Not Contains'),
@@ -74,7 +74,7 @@ class AccountReconcileModel(models.Model):
         * Contains: The proposition transaction type must contains this string (case insensitive).
         * Not Contains: Negation of "Contains".
         * Match Regex: Define your own regular expression.''')
-    match_transaction_type_param = fields.Char(string='Transaction Type Parameter')
+    match_transaction_type_param = fields.Char(string='Transaction Type Parameter', translate=True)
     match_same_currency = fields.Boolean(string='Same Currency Matching', default=True,
         help='Restrict to propositions having the same currency as the statement line.')
     match_total_amount = fields.Boolean(string='Amount Matching', default=True,
@@ -92,7 +92,7 @@ class AccountReconcileModel(models.Model):
     # First part fields.
     account_id = fields.Many2one('account.account', string='Account', ondelete='cascade', domain="[('deprecated', '=', False), ('company_id', '=', company_id)]")
     journal_id = fields.Many2one('account.journal', string='Journal', ondelete='cascade', help="This field is ignored in a bank statement reconciliation.", domain="[('company_id', '=', company_id)]")
-    label = fields.Char(string='Journal Item Label')
+    label = fields.Char(string='Journal Item Label', translate=True)
     amount_type = fields.Selection([
         ('fixed', 'Fixed'),
         ('percentage', 'Percentage of balance'),
@@ -102,8 +102,8 @@ class AccountReconcileModel(models.Model):
     force_tax_included = fields.Boolean(string='Tax Included in Price',
         help='Force the tax to be managed as a price included tax.')
     amount = fields.Float(string='Write-off Amount', digits=0, required=True, default=100.0, help="Fixed amount will count as a debit if it is negative, as a credit if it is positive.")
-    amount_from_label_regex = fields.Char(string="Amount from Label (regex)", default=r"([\d\.,]+)", help="There is no need for regex delimiter, only the regex is needed. For instance if you want to extract the amount from\nR:9672938 10/07 AX 9415126318 T:5L:NA BRT: 3358,07 C:\nYou could enter\nBRT: ([\d,]+)")
-    decimal_separator = fields.Char(default=lambda self: self.env['res.lang']._lang_get(self.env.user.lang).decimal_point, help="Every character that is nor a digit nor this separator will be removed from the matching string")
+    amount_from_label_regex = fields.Char( translate=True, string="Amount from Label (regex)", default=r"([\d\.,]+)", help="There is no need for regex delimiter, only the regex is needed. For instance if you want to extract the amount from\nR:9672938 10/07 AX 9415126318 T:5L:NA BRT: 3358,07 C:\nYou could enter\nBRT: ([\d,]+)")
+    decimal_separator = fields.Char(translate=True,default=lambda self: self.env['res.lang']._lang_get(self.env.user.lang).decimal_point, help="Every character that is nor a digit nor this separator will be removed from the matching string")
     tax_ids = fields.Many2many('account.tax', string='Taxes', ondelete='restrict')
     analytic_account_id = fields.Many2one('account.analytic.account', string='Analytic Account', ondelete='set null')
     analytic_tag_ids = fields.Many2many('account.analytic.tag', string='Analytic Tags', domain="['|', ('company_id', '=', company_id), ('company_id', '=', False)]",
@@ -112,7 +112,7 @@ class AccountReconcileModel(models.Model):
     has_second_line = fields.Boolean(string='Add a second line', default=False)
     second_account_id = fields.Many2one('account.account', string='Second Account', ondelete='cascade', domain="[('deprecated', '=', False), ('company_id', '=', company_id)]")
     second_journal_id = fields.Many2one('account.journal', string='Second Journal', ondelete='cascade', help="This field is ignored in a bank statement reconciliation.", domain="[('company_id', '=', company_id)]")
-    second_label = fields.Char(string='Second Journal Item Label')
+    second_label = fields.Char(string='Second Journal Item Label', translate=True)
     second_amount_type = fields.Selection([
         ('fixed', 'Fixed'),
         ('percentage', 'Percentage of balance'),
@@ -122,7 +122,7 @@ class AccountReconcileModel(models.Model):
     force_second_tax_included = fields.Boolean(string='Second Tax Included in Price',
         help='Force the second tax to be managed as a price included tax.')
     second_amount = fields.Float(string='Second Write-off Amount', digits=0, required=True, default=100.0, help="Fixed amount will count as a debit if it is negative, as a credit if it is positive.")
-    second_amount_from_label_regex = fields.Char(string="Second Amount from Label (regex)", default=r"([\d\.,]+)")
+    second_amount_from_label_regex = fields.Char(string="Second Amount from Label (regex)", default=r"([\d\.,]+)", translate=True)
     second_tax_ids = fields.Many2many('account.tax', relation='account_reconcile_model_account_tax_bis_rel', string='Second Taxes', ondelete='restrict')
     second_analytic_account_id = fields.Many2one('account.analytic.account', string='Second Analytic Account', ondelete='set null')
     second_analytic_tag_ids = fields.Many2many('account.analytic.tag', string='Second Analytic Tags', domain="['|', ('company_id', '=', company_id), ('company_id', '=', False)]",

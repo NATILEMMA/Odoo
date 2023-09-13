@@ -17,13 +17,13 @@ _logger = logging.getLogger(__name__)
 class HrAttendance(models.Model):
     _inherit = 'hr.attendance'
 
-    device_id = fields.Char(string='Biometric Device ID')
+    device_id = fields.Char(string='Biometric Device ID', translate=True)
 
 
 class ZkMachine(models.Model):
     _name = 'zk.machine'
     
-    name = fields.Char(string='Machine IP', required=True)
+    name = fields.Char(string='Machine IP', required=True, translate=True)
     port_no = fields.Integer(string='Port No', required=True)
     address_id = fields.Many2one('res.partner', string='Working Address')
     company_id = fields.Many2one('res.company', string='Company', default=lambda self: self.env.user.company_id.id)

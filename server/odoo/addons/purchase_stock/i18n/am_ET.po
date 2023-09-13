@@ -1,0 +1,400 @@
+# Date created: 2023-07-04 14:38:14 by dichthuatphuongdong.com
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-07-04 03:13:39+0000"
+"MIME-Version: 1.0"
+"Content-Type: text/plain; charset=UTF-8"
+"Content-Transfer-Encoding: 8bit"
+"Plural-Forms: nplurals=1; plural=0;"
+"X-Generator: GlotPress/3.0.0-alpha.2"
+"Language: en_GB"
+"Project-Id-Version: PO File 5.8.1"
+
+#. module: purchase_stock
+#: model_terms:ir.ui.view,arch_db:purchase_stock.res_config_settings_view_form_stock
+msgid "<span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-specific.\" groups=\"base.group_multi_company\"/>"
+msgstr "<span class=\"fa fa-lg fa-building-o\" title=\"እዚህ የተቀመጡት እሴቶች ኩባንያ-ተኮር ናቸው።\" groups=\"base.group_multi_company\"/>"
+
+#. module: purchase_stock
+#: model_terms:ir.ui.view,arch_db:purchase_stock.stock_production_lot_view_form
+msgid "<span class=\"o_stat_text\">Purchases</span>"
+msgstr "<span class=\"o_stat_text\">ግዢዎች</span>"
+
+#. module: purchase_stock
+#: model_terms:ir.ui.view,arch_db:purchase_stock.report_purchaseorder_document
+#: model_terms:ir.ui.view,arch_db:purchase_stock.report_purchasequotation_document
+msgid "<strong>Shipping address:</strong>"
+msgstr "<strong>የመላኪያ አድራሻ፡</strong>"
+
+#. module: purchase_stock
+#: model:ir.model.fields,help:purchase_stock.field_purchase_order_line__qty_received_method
+msgid ""
+"According to product configuration, the recieved quantity can be automatically computed by mechanism :"
+"  - Manual: the quantity is set manually on the line"
+"  - Stock Moves: the quantity comes from confirmed pickings"
+""
+msgstr ""
+"ሊከማች በሚችል እቃ፣ዕቃ ወይም ንብረት ውቅር መሠረት የተቀበልንው የዕቃ ብዛት አውቶማቲካሊ በሚከተለው መንገድ ሊሰላ ይችላል-"
+"  - ማኑዋል(በሰው)-የዕቃው ብዛት በእጅ የሚሰራው በእጅ ማኑዋሊ ይሆናል"
+"  - የክምችት እንቅስቃሴዎች(ስቶክ ሙቭ)-ብዛቱ አውቶማቲካሊ ከተረጋገጠ የይቀበሉ አገልግሎት ይመጣል"
+""
+
+#. module: purchase_stock
+#: model:ir.model.fields,field_description:purchase_stock.field_stock_rule__action
+msgid "Action"
+msgstr "ድርጊት"
+
+#. module: purchase_stock
+#: model:ir.model,name:purchase_stock.model_product_template
+msgid "Adding is asset field"
+msgstr "መጨመር የንብረት መስክ ነው።"
+
+#. module: purchase_stock
+#: code:addons/purchase_stock/models/stock.py:0
+#: model:ir.model.fields.selection,name:purchase_stock.selection__stock_rule__action__buy
+#: model_terms:ir.ui.view,arch_db:purchase_stock.purchase_report_stock_rule
+#: model:stock.location.route,name:purchase_stock.route_warehouse0_buy
+msgid "Buy"
+msgstr "ይግዙ"
+
+#. module: purchase_stock
+#: model:ir.model.fields,field_description:purchase_stock.field_stock_warehouse__buy_pull_id
+msgid "Buy rule"
+msgstr "ደንብ ይግዙ"
+
+#. module: purchase_stock
+#: model:ir.model.fields,field_description:purchase_stock.field_stock_warehouse__buy_to_resupply
+msgid "Buy to Resupply"
+msgstr "እንደገና ለማቅረብ ይግዙ"
+
+#. module: purchase_stock
+#: model:ir.model,name:purchase_stock.model_res_config_settings
+msgid "Config Settings"
+msgstr "ቅንብሮችን ያዋቅሩ"
+
+#. module: purchase_stock
+#: model:ir.model.fields,field_description:purchase_stock.field_stock_move__created_purchase_line_id
+msgid "Created Purchase Order Line"
+msgstr "የግዢ ትዕዛዝ መስመር ተፈጠረ"
+
+#. module: purchase_stock
+#: model:ir.model.fields,field_description:purchase_stock.field_purchase_order__picking_type_id
+msgid "Deliver To"
+msgstr "ማድረስ ለ"
+
+#. module: purchase_stock
+#: model:ir.model.fields,help:purchase_stock.field_product_product__route_ids
+#: model:ir.model.fields,help:purchase_stock.field_product_template__route_ids
+msgid "Depending on the modules installed, this will allow you to define the route of the product: whether it will be bought, manufactured, replenished on order, etc."
+msgstr "በተጫነ ሞጁሎች ላይ በመመርኮዝ, ይህ መንገዱን እንዲገልጹ ያስችልዎታልየምርቱ ፍሬ: ቢገዛ, የተሰራ, የተተገበረ ነውትዕዛዝ, ወዘተ."
+
+#. module: purchase_stock
+#: model:ir.model.fields,field_description:purchase_stock.field_purchase_order__default_location_dest_id_usage
+msgid "Destination Location Type"
+msgstr "የመድረሻ ቦታ አይነት"
+
+#. module: purchase_stock
+#: model:ir.model.fields,field_description:purchase_stock.field_purchase_order_line__move_dest_ids
+msgid "Downstream Moves"
+msgstr "የታችኛው ተፋሰስ እንቅስቃሴዎች"
+
+#. module: purchase_stock
+#: model:ir.model.fields,field_description:purchase_stock.field_res_config_settings__module_stock_dropshipping
+msgid "Dropshipping"
+msgstr "መጣል"
+
+#. module: purchase_stock
+#: model_terms:ir.ui.view,arch_db:purchase_stock.exception_on_po
+msgid "Exception(s) occurred on the purchase order(s):"
+msgstr "ልዩ(ዎች) በግዢ ትዕዛዝ(ቶች) ላይ ተከስቷል፡-"
+
+#. module: purchase_stock
+#: model_terms:ir.ui.view,arch_db:purchase_stock.exception_on_po
+msgid "Exception(s):"
+msgstr "ልዩ(ዎች)"
+
+#. module: purchase_stock
+#: model_terms:ir.ui.view,arch_db:purchase_stock.purchase_order_view_form_inherit
+msgid "Incoming Shipments"
+msgstr "ገቢ መላኪያዎች"
+
+#. module: purchase_stock
+#: model:ir.model.fields,field_description:purchase_stock.field_purchase_order__incoterm_id
+msgid "Incoterm"
+msgstr "ኢንኮተርም"
+
+#. module: purchase_stock
+#: model:ir.model.fields,help:purchase_stock.field_purchase_order__incoterm_id
+msgid "International Commercial Terms are a series of predefined commercial terms used in international transactions."
+msgstr "አለምአቀፍ የንግድ ውሎች በአለም አቀፍ ግብይቶች ውስጥ ጥቅም ላይ የሚውሉ ተከታታይ ቀድሞ የተገለጹ የንግድ ቃላት ናቸው።"
+
+#. module: purchase_stock
+#: model:ir.model.fields,field_description:purchase_stock.field_purchase_order__is_shipped
+msgid "Is Shipped"
+msgstr "ተልኳል።"
+
+#. module: purchase_stock
+#: model:ir.model.fields,field_description:purchase_stock.field_res_config_settings__is_installed_sale
+msgid "Is the Sale Module Installed"
+msgstr "የሽያጭ ሞዱል ተጭኗል"
+
+#. module: purchase_stock
+#: model:ir.model,name:purchase_stock.model_account_move
+msgid "Journal Entries"
+msgstr "ጆርናል ግቤቶች"
+
+#. module: purchase_stock
+#: model_terms:ir.ui.view,arch_db:purchase_stock.res_config_settings_view_form_purchase
+msgid "Logistics"
+msgstr "ሎጂስቲክስ"
+
+#. module: purchase_stock
+#: model:ir.model,name:purchase_stock.model_stock_production_lot
+msgid "Lot/Serial"
+msgstr "ሎጥ / ተከታታይ"
+
+#. module: purchase_stock
+#: model_terms:ir.ui.view,arch_db:purchase_stock.exception_on_po
+msgid "Manual actions may be needed."
+msgstr "በእጅ የሚደረጉ እርምጃዎች ያስፈልጉ ይሆናል።"
+
+#. module: purchase_stock
+#: model_terms:ir.ui.view,arch_db:purchase_stock.res_config_settings_view_form_stock
+msgid "Margin of error for vendor lead times. When the system generates Purchase Orders for reordering products,they will be scheduled that many days earlier to cope with unexpected vendor delays."
+msgstr "ለሻጭ መሪ ጊዜዎች የስህተት ህዳግ። ስርዓቱ እቃዎችን እንደገና ለመደርደር የግዢ ትዕዛዞችን ሲያመነጭ፣ ያልተጠበቁ የሻጭ መዘግየቶችን ለመቋቋም ከብዙ ቀናት በፊት ቀጠሮ ይያዝላቸዋል።"
+
+#. module: purchase_stock
+#: model:ir.model,name:purchase_stock.model_stock_warehouse_orderpoint
+msgid "Minimum Inventory Rule"
+msgstr "ዝቅተኛው የእቃ ዝርዝር ደንብ"
+
+#. module: purchase_stock
+#: model_terms:ir.ui.view,arch_db:purchase_stock.res_config_settings_view_form_stock
+msgid "Move forward expected delivery dates by"
+msgstr "የሚጠበቁ የመላኪያ ቀኖችን ወደፊት አንቀሳቅስ"
+
+#. module: purchase_stock
+#: model_terms:ir.ui.view,arch_db:purchase_stock.exception_on_po
+msgid "Next transfer(s) impacted:"
+msgstr "የሚቀጥለው ሽግግር(ዎች) ተጽዕኖ አሳድሯል፡-"
+
+#. module: purchase_stock
+#: code:addons/purchase_stock/models/stock.py:0
+msgid "Odoo is not able to generate the anglo saxon entries. The total valuation of %s is zero."
+msgstr "ኦዱ የአንግሎ ሳክሰን ግቤቶችን መፍጠር አልቻለም። የ%s አጠቃላይ ግምገማ ዜሮ ነው።"
+
+#. module: purchase_stock
+#: model:ir.model.fields,field_description:purchase_stock.field_purchase_order_line__orderpoint_id
+msgid "Orderpoint"
+msgstr "የትዕዛዝ ነጥብ"
+
+#. module: purchase_stock
+#: model:ir.model.fields,field_description:purchase_stock.field_purchase_order__picking_count
+msgid "Picking count"
+msgstr "የመልቀሚያ ብዛት"
+
+#. module: purchase_stock
+#: model:ir.model.fields,field_description:purchase_stock.field_purchase_order__group_id
+msgid "Procurement Group"
+msgstr "የግዥ ቡድን"
+
+#. module: purchase_stock
+#: model:ir.model.fields,field_description:purchase_stock.field_purchase_order_line__propagate_date
+msgid "Propagate Rescheduling"
+msgstr "ማባዛት እንደገና መርሐግብር"
+
+#. module: purchase_stock
+#: model:ir.model.fields,field_description:purchase_stock.field_purchase_order_line__propagate_cancel
+msgid "Propagate cancellation"
+msgstr "ፕሮፓጋንዳ ስረዛ"
+
+#. module: purchase_stock
+#: model:ir.model,name:purchase_stock.model_purchase_order
+msgid "Purchase Order"
+msgstr "ትእዛዝዎን ይግዙ"
+
+#. module: purchase_stock
+#: model:ir.model,name:purchase_stock.model_purchase_order_line
+#: model:ir.model.fields,field_description:purchase_stock.field_stock_move__purchase_line_id
+msgid "Purchase Order Line"
+msgstr "የግዢ ትዕዛዝ መስመር"
+
+#. module: purchase_stock
+#: model:ir.model.fields,field_description:purchase_stock.field_stock_picking__purchase_id
+#: model:ir.model.fields,field_description:purchase_stock.field_stock_production_lot__purchase_order_ids
+#: model_terms:ir.ui.view,arch_db:purchase_stock.stock_production_lot_view_form
+msgid "Purchase Orders"
+msgstr "የግዢ ትዕዛዞች"
+
+#. module: purchase_stock
+#: model:ir.model,name:purchase_stock.model_purchase_report
+msgid "Purchase Report"
+msgstr "የግዢ ሪፖርት"
+
+#. module: purchase_stock
+#: model:ir.model.fields,field_description:purchase_stock.field_stock_production_lot__purchase_order_count
+msgid "Purchase order count"
+msgstr "የግዢ ብዛት"
+
+#. module: purchase_stock
+#: model_terms:ir.ui.view,arch_db:purchase_stock.purchase_order_view_form_inherit
+msgid "Receipt"
+msgstr "ደረሰኝ"
+
+#. module: purchase_stock
+#: model_terms:ir.ui.view,arch_db:purchase_stock.purchase_order_view_form_inherit
+msgid "Receive Products"
+msgstr "እቃዎችን ተቀበል"
+
+#. module: purchase_stock
+#: model:ir.model.fields,field_description:purchase_stock.field_purchase_order_line__qty_received_method
+msgid "Received Qty Method"
+msgstr "የQty ዘዴ ተቀብሏል።"
+
+#. module: purchase_stock
+#: model:ir.actions.act_window,name:purchase_stock.purchase_open_picking
+#: model:ir.model.fields,field_description:purchase_stock.field_purchase_order__picking_ids
+msgid "Receptions"
+msgstr "አቀባበል"
+
+#. module: purchase_stock
+#: model_terms:ir.ui.view,arch_db:purchase_stock.res_config_settings_view_form_purchase
+msgid "Request your vendors to deliver to your customers"
+msgstr "ለደንበኞችዎ እንዲያደርሱ ሻጮችዎን ይጠይቁ"
+
+#. module: purchase_stock
+#: model:ir.model.fields,field_description:purchase_stock.field_purchase_order_line__propagate_date_minimum_delta
+msgid "Reschedule if Higher Than"
+msgstr "በላይ ከሆነ ለሌላ ጊዜ ያውጡ"
+
+#. module: purchase_stock
+#: model:ir.model.fields,field_description:purchase_stock.field_purchase_order_line__move_ids
+msgid "Reservation"
+msgstr "ቦታ ማስያዝ"
+
+#. module: purchase_stock
+#: model:ir.model,name:purchase_stock.model_stock_return_picking
+msgid "Return Picking"
+msgstr "መልቀም መመለስ"
+
+#. module: purchase_stock
+#: model:ir.model.fields,field_description:purchase_stock.field_product_product__route_ids
+#: model:ir.model.fields,field_description:purchase_stock.field_product_template__route_ids
+msgid "Routes"
+msgstr "መንገዶች"
+
+#. module: purchase_stock
+#: model_terms:ir.ui.view,arch_db:purchase_stock.res_config_settings_view_form_stock
+msgid "Schedule receivings earlier to avoid delays"
+msgstr "መዘግየቶችን ለማስቀረት መቀበልን ቀደም ብለው ያቅዱ"
+
+#. module: purchase_stock
+#: model:ir.model,name:purchase_stock.model_stock_move
+msgid "Stock Move"
+msgstr "የንብረት እንቅስቃሴ"
+
+#. module: purchase_stock
+#: model:ir.model.fields.selection,name:purchase_stock.selection__purchase_order_line__qty_received_method__stock_moves
+#: model_terms:ir.ui.view,arch_db:purchase_stock.purchase_order_line_view_form_inherit
+msgid "Stock Moves"
+msgstr "የንብረት እንቅስቃሴዎች"
+
+#. module: purchase_stock
+#: model:ir.model,name:purchase_stock.model_stock_rule
+msgid "Stock Rule"
+msgstr "የንብረት ደንብ"
+
+#. module: purchase_stock
+#: model:ir.model,name:purchase_stock.model_report_stock_report_stock_rule
+msgid "Stock rule report"
+msgstr "የንብረት ደንብ ሪፖርት"
+
+#. module: purchase_stock
+#: model:ir.model.fields,help:purchase_stock.field_purchase_order__default_location_dest_id_usage
+msgid "Technical field used to display the Drop Ship Address"
+msgstr "የመርከብ አድራሻውን ለማሳየት የሚያገለግል የቴክኒክ መስክ"
+
+#. module: purchase_stock
+#: model:ir.model.fields,help:purchase_stock.field_purchase_order_line__propagate_date_minimum_delta
+msgid "The change must be higher than this value to be propagated"
+msgstr "ለውጡ ለመሰራጨት ከዚህ ዋጋ ከፍ ያለ መሆን አለበት።"
+
+#. module: purchase_stock
+#: code:addons/purchase_stock/models/purchase.py:0
+msgid "The quantities on your purchase order indicate less than billed. You should ask for a refund. "
+msgstr "በግዢ ትዕዛዝዎ ላይ ያሉት መጠኖች ከክፍያ ያነሰ ያመለክታሉ። ተመላሽ ገንዘብ መጠየቅ አለቦት።"
+
+#. module: purchase_stock
+#: model:ir.model.fields,help:purchase_stock.field_purchase_order_line__propagate_date
+msgid "The rescheduling is propagated to the next move."
+msgstr "ዳግም መርሐ ግብሩ ወደሚቀጥለው እንቅስቃሴ ተሰራጭቷል።"
+
+#. module: purchase_stock
+#: code:addons/purchase_stock/models/stock_rule.py:0
+msgid "There is no matching vendor price to generate the purchase order for product %s (no vendor defined, minimum quantity not reached, dates not valid, ...). Go on the product form and complete the list of vendors."
+msgstr "ለእቃ %s የግዢ ትዕዛዙን ለማመንጨት ምንም ተዛማጅ የአቅራቢ ዋጋ የለም (አቅራቢ አልተገለጸም፣ ዝቅተኛው መጠን አልተደረሰም፣ ቀናት የማይሰራ፣...)። በእቃ ቅጹ ላይ ይሂዱ እና የአቅራቢዎችን ዝርዝር ይሙሉ."
+
+#. module: purchase_stock
+#: model_terms:ir.ui.view,arch_db:purchase_stock.res_config_settings_view_form_purchase
+msgid "This adds a dropshipping route to apply on products in order to request your vendors to deliver to your customers. A product to dropship will generate a purchase request for quotation once the sales order confirmed. This is a on-demand flow. The requested delivery address will be the customer delivery address and not your warehouse."
+msgstr "ይህ አቅራቢዎችዎ ለደንበኞችዎ እንዲያደርሱ ለመጠየቅ በእቃዎች ላይ የሚተገበር የመውረጃ መንገድን ይጨምራል። የሚወርድ እቃ የሽያጩ ትዕዛዙ ከተረጋገጠ በኋላ የዋጋ ጥያቄን ይፈጥራል። ይህ በፍላጎት ላይ ያለ ፍሰት ነው። የተጠየቀው የመላኪያ አድራሻ የደንበኛ ማቅረቢያ አድራሻ እንጂ የእርስዎ መጋዘን አይሆንም።"
+
+#. module: purchase_stock
+#: model:ir.model.fields,help:purchase_stock.field_purchase_order__picking_type_id
+msgid "This will determine operation type of incoming shipment"
+msgstr "ይህ የገቢ ጭነት አይነትን ይወስናል"
+
+#. module: purchase_stock
+#: model:ir.model,name:purchase_stock.model_stock_picking
+msgid "Transfer"
+msgstr "ማስተላለፍ"
+
+#. module: purchase_stock
+#: code:addons/purchase_stock/models/purchase.py:0
+msgid "Unable to cancel purchase order %s as some receptions have already been done."
+msgstr "አንዳንድ መስተንግዶዎች ስለተደረጉ የግዢ ትዕዛዝ %s መሰረዝ አልተቻለም።"
+
+#. module: purchase_stock
+#: model:ir.model,name:purchase_stock.model_stock_warehouse
+#: model:ir.model.fields,field_description:purchase_stock.field_purchase_report__picking_type_id
+msgid "Warehouse"
+msgstr "መጋዘን"
+
+#. module: purchase_stock
+#: model:ir.model.fields,help:purchase_stock.field_stock_warehouse__buy_to_resupply
+msgid "When products are bought, they can be delivered to this warehouse"
+msgstr "እቃዎች ሲገዙ ወደዚህ መጋዘን ሊደርሱ ይችላሉ"
+
+#. module: purchase_stock
+#: code:addons/purchase_stock/models/stock_rule.py:0
+msgid "When products are needed in <b>%s</b>, <br/> a request for quotation is created to fulfill the need."
+msgstr "በ<b>%s</b> ውስጥ እቃዎች በሚፈለጉበት ጊዜ፣ ፍላጎቱን ለማሟላት <br/>የጥቅስ ጥያቄ ይፈጠራል።"
+
+#. module: purchase_stock
+#: code:addons/purchase_stock/models/purchase.py:0
+msgid ""
+"You cannot decrease the ordered quantity below the received quantity."
+"Create a return first."
+msgstr ""
+"የታዘዘውን መጠን ከተቀበሉት መጠን በታች መቀነስ አይችሉም።"
+"መጀመሪያ መመለሻ ይፍጠሩ"
+
+#. module: purchase_stock
+#: code:addons/purchase_stock/models/purchase.py:0
+msgid "You must set a Vendor Location for this partner %s"
+msgstr "ለዚህ አጋር %s የአቅራቢ ቦታ ማዘጋጀት አለቦት"
+
+#. module: purchase_stock
+#: model_terms:ir.ui.view,arch_db:purchase_stock.res_config_settings_view_form_stock
+msgid "days"
+msgstr "ቀናት"
+
+#. module: purchase_stock
+#: model_terms:ir.ui.view,arch_db:purchase_stock.exception_on_po
+msgid "of"
+msgstr "የ"
+
+#. module: purchase_stock
+#: model_terms:ir.ui.view,arch_db:purchase_stock.exception_on_po
+msgid "ordered instead of"
+msgstr "በምትኩ አዝዟል"

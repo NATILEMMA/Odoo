@@ -20,6 +20,21 @@
                 
                 -->
 
+        <record id="meeting_cell_tree_inherited_view" model="ir.ui.view">
+            <field name="name">Meeting Cells</field>
+            <field name="model">meeting.cells</field>
+            <field name="inherit_id" ref="members_custom.meeting_cell_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date_of_meeting']" position="replace">
+                    <field name="is_pagum_from" invisible="1"/>
+                    <field  name="date_of_meeting" groups="EthiopianCalendar.group_gregory"/>
+                    <field  name="ethiopian_from" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    <field  name="pagum_from" groups="EthiopianCalendar.group_ethio_datepicker" optional="hidden"/>
+                </xpath>
+            </field>
+        </record>
+
+
         <record id="meeting_cells_inherited_view" model="ir.ui.view">
            <field name="name">Meeting Cells</field>
              <field name="model">meeting.cells</field>
@@ -50,6 +65,19 @@
             </field>
         </record> 
 
+    <record id="meeting_eachother_tree_main_inherited_view" model="ir.ui.view">
+            <field name="name">Meeting Eachother</field>
+            <field name="model">meeting.each.other.main</field>
+            <field name="inherit_id" ref="members_custom.meeting_eachother_tree_main"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date_of_meeting']" position="replace">
+                    <field name="is_pagum_from" invisible="1"/>
+                    <field  name="date_of_meeting" groups="EthiopianCalendar.group_gregory"/>
+                    <field  name="ethiopian_from" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    <field  name="pagum_from" groups="EthiopianCalendar.group_ethio_datepicker" optional="hidden"/>
+                </xpath>
+            </field>
+        </record>
 
         <record id="meeting_eachother_form_main_inherited_view" model="ir.ui.view">
            <field name="name">Meeting Eachother</field>
@@ -80,6 +108,20 @@
                 </xpath>
             </field>
         </record> 
+
+        <record id="meeting_eachother_tree_cell_inherited_view" model="ir.ui.view">
+            <field name="name">Meeting Eachother</field>
+            <field name="model">meeting.each.other</field>
+            <field name="inherit_id" ref="members_custom.meeting_eachother_tree_cell"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date_of_meeting']" position="replace">
+                    <field name="is_pagum_from" invisible="1"/>
+                    <field  name="date_of_meeting" groups="EthiopianCalendar.group_gregory"/>
+                    <field  name="ethiopian_from" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    <field  name="pagum_from" groups="EthiopianCalendar.group_ethio_datepicker" optional="hidden"/>
+                </xpath>
+            </field>
+        </record>
 
 
         <record id="meeting_eachother_form_cell_inherited_view" model="ir.ui.view">

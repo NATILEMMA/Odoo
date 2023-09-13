@@ -207,6 +207,9 @@ odoo.define('dashboard_member12.transfer', function (require) {
         read_events: {
             'change select[name="transfer_membership_org"]': '_mainChange',
             'change select[name="transfer_wereda_id"]': '_mainChange',
+            'change select[name="transfer_as_a_leader_or_member"]': '_mainChange',
+            'change select[name="transfer_as_a_league_or_member"]': '_mainChange',
+            
         },
 
          start: function () {
@@ -218,16 +221,34 @@ odoo.define('dashboard_member12.transfer', function (require) {
          },
 
          _orgChange: function() {
-            var $wereda = this.$('select[name="transfer_wereda_id"]');
-             var $org = this.$('select[name="transfer_membership_org"]');
-             var weredaID = ($wereda.val() || 0);
-             var orgID = ($org.val() || 0);
-             console.log(orgID)
-             console.log(this.$mainOptions)
-             this.$mainOptions.detach();
-             var $displayedState = this.$mainOptions.filter('[data-wereda_id=' + weredaID  + ']').filter('[data-memb-org_id=' + orgID  + ']');
-             var nb = $displayedState.appendTo(this.$main).show().length;
-             console.log($displayedState)
+            var $transferLeague = this.$('select[name="transfer_as_a_league_or_member"]');
+            var $transferLeader = this.$('select[name="transfer_as_a_leader_or_member"]');
+            var transferValueLeader = ($transferLeader.val() || 0);
+            var transferValueLeague = ($transferLeague.val() || 0);
+            if (transferValueLeague === 'member') {
+                var $wereda = this.$('select[name="transfer_wereda_id"]');
+                var $org = this.$('select[name="transfer_membership_org"]');
+                var weredaID = ($wereda.val() || 0);
+                var orgID = ($org.val() || 0);
+                console.log(orgID)
+                console.log(this.$mainOptions)
+                this.$mainOptions.detach();
+                var $displayedState = this.$mainOptions.filter('[data-wereda_id=' + weredaID  + ']').filter('[data-memb-org_id=' + orgID  + ']').filter('[data-member_type=' + String(transferValueLeague)  + ']');
+                var nb = $displayedState.appendTo(this.$main).show().length;
+                console.log($displayedState)
+            }
+            if (transferValueLeader === 'member') {
+                var $wereda = this.$('select[name="transfer_wereda_id"]');
+                var $org = this.$('select[name="transfer_membership_org"]');
+                var weredaID = ($wereda.val() || 0);
+                var orgID = ($org.val() || 0);
+                console.log(orgID)
+                console.log(this.$mainOptions)
+                this.$mainOptions.detach();
+                var $displayedState = this.$mainOptions.filter('[data-wereda_id=' + weredaID  + ']').filter('[data-memb-org_id=' + orgID  + ']').filter('[data-member_type=' + String(transferValueLeader)  + ']');
+                var nb = $displayedState.appendTo(this.$main).show().length;
+                console.log($displayedState)
+            }
          },
 
          _mainChange: function() {
@@ -268,7 +289,9 @@ odoo.define('dashboard_member12.transfer', function (require) {
         selector: '.o_transfer_details',
         read_events: {
             'change select[name="transfer_wereda_id"]': '_weredaChange',
-            'change select[name="transfer_league_org"]': '_weredaChange',
+            'change select[name="transfer_league_organization"]': '_weredaChange',
+            'change select[name="transfer_as_a_leader_or_member"]': '_weredaChange',
+            'change select[name="transfer_as_a_league_or_member"]': '_weredaChange',
         },
 
          start: function () {
@@ -280,17 +303,34 @@ odoo.define('dashboard_member12.transfer', function (require) {
          },
 
          _mainChange: function() {
-             var $wereda = this.$('select[name="transfer_wereda_id"]');
-             var $leagueorg = this.$('select[name="transfer_league_org"]');
-             var weredaID = ($wereda.val() || 0);
-             var $leagueID = ($leagueorg.val() || 0);
-             console.log($leagueID)
-             this.$mainOptions.detach();
-             console.log(this.$mainOptions)
-             var $displayedState = this.$mainOptions.filter('[data-wereda_id=' + weredaID  + ']').filter('[data-org_id=' + String($leagueID)  + ']');
-            //  $displayedState.filter('[data-org_id=' + leagueID  + ']');
-             console.log($displayedState)
-             var nb = $displayedState.appendTo(this.$main).show().length;
+            var $transferLeague = this.$('select[name="transfer_as_a_league_or_member"]');
+            var $transferLeader = this.$('select[name="transfer_as_a_leader_or_member"]');
+            var transferValueLeader = ($transferLeader.val() || 0);
+            var transferValueLeague = ($transferLeague.val() || 0);
+            if (transferValueLeague === 'league') {
+                var $wereda = this.$('select[name="transfer_wereda_id"]');
+                var $leagueorg = this.$('select[name="transfer_league_organization"]');
+                var weredaID = ($wereda.val() || 0);
+                var leagueID = ($leagueorg.val() || 0);
+                this.$mainOptions.detach();
+                console.log(this.$mainOptions)
+                var $displayedState = this.$mainOptions.filter('[data-wereda_id=' + weredaID  + ']').filter('[data-org_id=' + leagueID  + ']').filter('[data-league_type=' + String(transferValueLeague)  + ']');
+                //  $displayedState.filter('[data-org_id=' + leagueID  + ']');
+                console.log($displayedState)
+                var nb = $displayedState.appendTo(this.$main).show().length;
+            }
+            if (transferValueLeader === 'league') {
+                var $wereda = this.$('select[name="transfer_wereda_id"]');
+                var $leagueorg = this.$('select[name="transfer_league_organization"]');
+                var weredaID = ($wereda.val() || 0);
+                var leagueID = ($leagueorg.val() || 0);
+                this.$mainOptions.detach();
+                console.log(this.$mainOptions)
+                var $displayedState = this.$mainOptions.filter('[data-wereda_id=' + weredaID  + ']').filter('[data-org_id=' + leagueID  + ']').filter('[data-league_type=' + String(transferValueLeader)  + ']');
+                //  $displayedState.filter('[data-org_id=' + leagueID  + ']');
+                console.log($displayedState)
+                var nb = $displayedState.appendTo(this.$main).show().length;
+            }
          },
 
          _weredaChange: function() {
@@ -327,4 +367,41 @@ odoo.define('dashboard_member12.transfer', function (require) {
              this._cellChange();
          },
     });
+
+    publicWidget.registry.transferLeader = publicWidget.Widget.extend({
+
+        selector: '.o_transfer_details',
+        read_events: {
+            'change select[name="transfer_responsibility_leader"]': '_leaderChange',
+        },
+
+        start: function () {
+            var def = this._super.apply(this, arguments);
+            return def;
+        },
+
+
+         _leaderChange: function() {
+            var $responsiblity = this.$('select[name="transfer_responsibility_leader"]');
+            var resValue = ($responsiblity.val() || 0);
+            var subcity = document.getElementById('subcity')
+            var woreda = document.getElementById('woreda')
+            console.log(resValue)
+            if (resValue == 1) {
+                console.log(resValue)
+                subcity.style.display = 'block';
+                woreda.style.display = 'block';
+            } else if (resValue == 2) {
+                console.log(resValue)
+                subcity.style.display = 'block';
+                woreda.style.display = 'none';
+            } else if (resValue == 3) {
+                console.log(resValue)
+                subcity.style.display = 'none';
+                woreda.style.display = 'none';
+            }
+         },
+    });
+
+
 });

@@ -16,7 +16,7 @@
                 <field name="sequence" widget="handle" />
                 <field name="name" />
                 <field name="project_id" />
-                <field name="target_date" />
+                <!-- <field name="target_date" /> -->
                 <field name="project_task_ids" />
                 <field name="progress" widget="progressbar" />
             </tree>
@@ -27,30 +27,192 @@
         <field name="name">Planning Quarters Form</field>
         <field name="model">project.milestone</field>
         <field name="arch" type="xml">
+
             <form string="Quarters Form">
                 <sheet>
                     <div class="oe_title">
-                        <label for="name" class="oe_edit_only" string="Name" />
+                        <label for="name" class="oe_edit_only" string="name" />
                         <h1>
-                            <field name="name" />
+                            <field name="name" width="100%"/>
                         </h1>
                     </div>
                     <group>
-                        <field name="target_date" />
-                        <field name="progress" widget="progressbar" />
-                        <field name="project_id" />
+                        <group class="col-6">
+                        <field name="start_date" readonly="1"/>
+                        <!-- </group> 
+                        <group class="col-6"> -->
+                        <field name="end_date" readonly="1"/>
+                        <!-- <field name="target_date" /> -->
+                        </group>  
+                        <group class="col-6">
+                    <field name="project_id" string="Planning"/>
+                    <field name="progress" class="oe_inline oe_input_align" widget="progressbar" />
+
+                        </group>
+                        <h1>
+                        </h1>
+                       
                         <field
                             name="project_task_ids"
                             context="{'default_project_id': project_id,
-                                         'default_date_end': target_date,
                                          'default_milestone_id': active_id}"
                         />
                         <field name="fold" />
                     </group>
                 </sheet>
             </form>
+           
+        </field>
+        
+    </record>
+
+    <!-- Planning Quarter Tree and form views -->
+     <!-- List View-->
+    <record id="quarter_type_view_list" model="ir.ui.view">
+        <field name="name">Planning Quarters Type</field>
+        <field name="model">planning.quarter</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="start_date" />
+                <field name="end_date" />
+                <field name="fiscal_year"/>
+            </tree>
         </field>
     </record>
+    <!-- Form View -->
+    <record id="quarter_type_view_form" model="ir.ui.view">
+        <field name="name">Planning Quarters Type Form</field>
+        <field name="model">planning.quarter</field>
+        <field name="arch" type="xml">
+
+            <form string="Quarter Type">
+                <sheet>
+               
+                    <div class="oe_title">
+                        <label for="name" class="oe_edit_only" string="Fiscal Year" />
+                        <h1>
+                            <field name="fiscal_year" />
+                        </h1>
+                    </div>
+                    <group>
+                        <group class="col-6">
+                            <field name="name" />
+                        </group> 
+                        <group class="col-6">
+                        <field name="start_date" />
+                        <field name="end_date" />
+                        </group>  
+                    </group>
+                    <group>
+                    </group>
+                </sheet>
+            </form>
+           
+        </field>
+        
+    </record>
+
+    <!-- Planning Gaol Setup Tree and form views -->
+     <!-- List View-->
+    <record id="planning_goal_view_list" model="ir.ui.view">
+        <field name="name">Planning Goal Type</field>
+        <field name="model">planning.goal</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="target_area"/>
+                <field name="quarter_type" />
+                <field name="fiscal_year"/>
+            </tree>
+        </field>
+    </record>
+    <!-- Form View -->
+    <record id="planning_goal_view_form" model="ir.ui.view">
+        <field name="name">Planning Goal Type Form</field>
+        <field name="model">planning.goal</field>
+        <field name="arch" type="xml">
+
+            <form string="Planning Goal">
+                <sheet>
+                 <group class="col-6">
+                    <field name="planning_id" string="Planning"/>
+                </group>
+                <group class="col-6">
+                 <field name="target_area" string="Target Area" />
+                </group>
+              
+              
+                    
+                    <div class="oe_title">
+                        <group class="col-9">
+
+                        <label for="name" class="oe_edit_only" string="Name" />
+                        <h1>
+                            <field name="name" />
+                        </h1>
+                    </group>
+                    <group class="col-3">
+                        <label for="weight" class="oe_edit_only" string="Weight" />
+                        <h1>
+                        <field name="weight" string="Weight" />
+                        </h1>
+                    </group>
+                    </div>
+                    <group>
+                        <group class="col-6">
+                        <field name="quarter_type" />
+                        <field name="fiscal_year" />
+                       
+                        </group> 
+                        <group class="col-6">
+                        <field name="start_date" />
+                        <field name="end_date" />
+                        </group>  
+                    </group>
+                    <group>
+                    </group>
+                </sheet>
+            </form>
+           
+        </field>
+        
+    </record>
+
+     <!-- Planning Gaol Setup Tree and form views -->
+     <!-- List View-->
+    <record id="planning_goal_target_view_list" model="ir.ui.view">
+        <field name="name">Planning Target Area</field>
+        <field name="model">planning.goal.target</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+    <!-- Form View -->
+    <record id="planning_goal_target_view_form" model="ir.ui.view">
+        <field name="name">Planning Goal Type Form</field>
+        <field name="model">planning.goal</field>
+        <field name="arch" type="xml">
+
+            <form string="Planning Goal">
+                <sheet>
+               
+                    <div class="oe_title">
+                        <label for="name" class="oe_edit_only" string="Name" />
+                        <h1>
+                            <field name="name" />
+                        </h1>
+                    </div>
+                    
+                </sheet>
+            </form>
+           
+        </field>
+        
+    </record>
+
     <!-- Search View -->
     <record id="project_milestone_view_search" model="ir.ui.view">
         <field name="name">Planning Quarters Search</field>
@@ -59,11 +221,19 @@
             <search>
                 <field name="name" />
                 <field name="project_id" />
+                <field name="start_date" />
+                <field name="end_date" />
+
                 <group expand="1" string="Group By">
                     <filter
                         string="Planning"
                         name="group_by_project"
                         context="{'group_by':'project_id'}"
+                    />
+                     <filter
+                        string="Target Date"
+                        name="group_by_target_date"
+                        context="{'group_by':'target_date'}"
                     />
                 </group>
             </search>
@@ -76,12 +246,56 @@
         <field name="context">{'group_by': 'project_id'}</field>
         <field name="view_mode">tree,form</field>
     </record>
+
+       <record id="quarter_type_action" model="ir.actions.act_window">
+        <field name="name">Quarter Type</field>
+        <field name="res_model">planning.quarter</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+      <record id="planning_goal_action" model="ir.actions.act_window">
+        <field name="name">Planning Goals</field>
+        <field name="res_model">planning.goal</field>
+        <field name="context">{'group_by': 'planning_id'}</field>
+
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="planning_goal_target_action" model="ir.actions.act_window">
+        <field name="name">Planning Target Area </field>
+        <field name="res_model">planning.goal.target</field>
+        <field name="view_mode">tree,form</field>
+    </record>
     <!-- Menu Items -->
     <menuitem
-        name="All Quarters"
+        name="Quarters"
         id="milestone_configuration_menu"
         parent="project.menu_project_config"
         sequence="19"
         action="project_milestone_action"
     />
+
+      <menuitem
+        name="Quarter Type"
+        id="quarter_type_configuration_menu"
+        parent="project.menu_project_config"
+        sequence="18"
+        action="quarter_type_action"
+    />
+
+    <menuitem
+        name="Goals Setup"
+        id="planning_goal_configuration_menu"
+        parent="project.menu_project_config"
+        sequence="21"
+        action="planning_goal_action"
+    />
+
+    <menuitem
+        name="Goals Target Area"
+        id="planning_goal_target_configuration_menu"
+        parent="project.menu_project_config"
+        sequence="22"
+        action="planning_goal_target_action"
+    />
+
 </odoo>

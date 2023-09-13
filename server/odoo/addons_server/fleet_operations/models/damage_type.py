@@ -12,7 +12,7 @@ class DamageTypes(models.Model):
     _description = 'Damage Types'
 
     name = fields.Char(string='Name', traslate=True)
-    code = fields.Char(string='Code')
+    code = fields.Char(string='Code', translate=True)
 
     @api.constrains('name')
     def _check_duplicate_damage_type(self):

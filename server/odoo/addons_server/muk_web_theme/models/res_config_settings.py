@@ -74,22 +74,22 @@ class ResConfigSettings(models.TransientModel):
         readonly=False)
     
     theme_color_brand = fields.Char(
-        string="Theme Brand Color")
+        string="Theme Brand Color",translate=True)
     
     theme_color_primary = fields.Char(
-        string="Theme Primary Color")
+        string="Theme Primary Color",translate=True)
     
     theme_color_required = fields.Char(
         string="Theme Required Color")
     
     theme_color_menu = fields.Char(
-        string="Theme Menu Color")
+        string="Theme Menu Color",translate=True)
     
     theme_color_appbar_color = fields.Char(
-        string="Theme AppBar Color")
+        string="Theme AppBar Color",translate=True)
     
     theme_color_appbar_background = fields.Char(
-        string="Theme AppBar Background")
+        string="Theme AppBar Background",translate=True)
     
     #----------------------------------------------------------
     # Functions

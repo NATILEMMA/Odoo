@@ -11,18 +11,23 @@ class Meeting(models.Model):
 
     def change_attendee_status(self, status):
         res = super(Meeting, self).change_attendee_status(status)
+        appointment = self.env['s2u.appointment.registration'].search([('event_id', '=', self.id)])
         visit = self.env['fo.visit'].search([('event_id', '=', self.id)])
         if self.attendee_status == 'declined':
+            if appointment.state == 'pending' or appointment.state == 'valid':
+                appointment.state = 'cancel'
             if visit.state == 'draft':
                 visit.state = 'cancel'
-                for visitor in visit.visitor:
-                    mail_temp = self.env.ref('s2u_online_appointment.appointment_denied_in')
-                    mail_temp.send_mail(visit.id)
-                self.active = False
+                mail_temp = self.env.ref('visitor_gate_management.appointment_denied_in')
+                mail_temp.send_mail(visit.id)
+                visit.deactivate_activity(visit)
+            self.active = False
         if self.attendee_status == 'accepted':
+            if appointment.state == 'pending':
+                appointment.state = 'valid'
             if visit.state == 'draft':
                 visit.state = 'approved'
-                for visitor in visit.visitor:
-                    mail_temp = self.env.ref('s2u_online_appointment.appointment_accepted_in')
-                    mail_temp.send_mail(visit.id)
+                mail_temp = self.env.ref('visitor_gate_management.appointment_accepted_in')
+                mail_temp.send_mail(visit.id)
+                visit.deactivate_activity(visit)
         return res
