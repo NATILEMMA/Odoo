@@ -33,7 +33,7 @@ class HrEmployee(models.Model):
     _inherit = 'hr.employee'
 
     certificates = fields.Boolean(default=True, string="Certificates")
-    program_id = fields.Many2one('employee.training')
+    program_id = fields.Many2one('employee.training', required=True)
 
 
 class EmployeeTraining(models.Model):
@@ -47,8 +47,8 @@ class EmployeeTraining(models.Model):
     program_convener = fields.Many2one('res.users', string='Responsible User', size=32, required=True)
     training_id = fields.One2many('hr.employee','program_id', string='Employee Details')
     note_id = fields.Text('Description', translate=True)
-    date_from = fields.Datetime(string="Date From")
-    date_to = fields.Datetime(string="Date To")
+    date_from = fields.Date(string="Date From")
+    date_to = fields.Date(string="Date To")
     user_id = fields.Many2one('res.users', string='users', default=lambda self: self.env.user)
     company_id = fields.Many2one('res.company', string='Company', required=True,
                                  default=lambda self: self.env.user.company_id)

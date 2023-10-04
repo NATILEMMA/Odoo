@@ -8,4 +8,5 @@ from . import hr_leave
 from . import hr_loan
 from . import recruitment_request
 from . import salary_advance
+from . import hr_expence
 

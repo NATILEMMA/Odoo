@@ -393,7 +393,7 @@ class FleetVehicleLogServices(models.Model):
         self.seq = sequence
         self.name = sequence
         self.state = 'confirm'
-        print("self.seq",self.seq)
+        self.vehicle_id.state = 'in_progress'
         return
 
     def action_cancel(self):

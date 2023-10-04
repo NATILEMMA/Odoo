@@ -49,9 +49,18 @@
                                     console.log("Response", data)
                                     try{
                                         var  date = data.toString()
-                                        date = date.split("-")
+                                        date = date.split("-") 
+                                        console.log("DDDDDDDDD-----DDDDDDDDD", date)
+                                        if (date[1] === undefined){
+                                            var date11 = data.split("/")
+                                            var dateFrom11 = date11[0] + "/" +  date11[1] + "/" +  date11[2]
+                                            $("#popupDatepickercustom").val(dateFrom11);
+                                         }
+                                         else{
+
                                         var dates = date[1] + "/" +  date[2] + "/" +  date[0]
                                         $("#popupDatepickercustom").val(dates);
+                                         }
                                         }
                                         catch (error) {
                                             //console.log('There was an error:', error);
@@ -98,7 +107,7 @@
                 <field name="is_pagum_from" invisible="1"/>
                 <field  name="ethiopian_from" class="oe_read_only" string="Create Date" attrs="{'invisible': ['|', ('is_pagum_from', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
                 <field  name="pagum_from" class="oe_read_only"  string="Start Date" style=" float:left"  attrs="{'invisible': ['|',('is_pagum_from', '!=',False)  ]}"  groups="EthiopianCalendar.group_ethio_datepicker"/>
-                <input style="margin-top:2px;margin-left: -565px;margin-right:0px; width:125px;" type="text" id="popupDatepickercustom" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                <input style="margin-top:2px;margin-left: -530px;margin-right:0px; width:110px;" type="text" id="popupDatepickercustom" groups="EthiopianCalendar.group_ethio_datepicker"/>
             </xpath>
             
           
@@ -135,9 +144,17 @@
                                     try{
                                         var  date = data.toString()
                                         date = date.split("-")
+                                        if (date[1] === undefined){
+                                            var date22 = data.split("/")
+                                            var dateFrom22 = date22[0] + "/" +  date22[1] + "/" +  date22[2]
+                                            $("#popupDatepickercustom2").val(dateFrom22);
+                                         }
+                                         else{
+
                                         var dates = date[1] + "/" +  date[2] + "/" +  date[0]
                                         $("#popupDatepickercustom2").val(dates);
                                         }
+                                    }
                                         catch (error) {
                                             //console.log('There was an error:', error);
                                     }
@@ -183,7 +200,7 @@
                 <field name="is_pagum_from" invisible="1"/>
                 <field name="ethiopian_from" class="oe_read_only" string="Create Date" attrs="{'invisible': ['|', ('is_pagum_from', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
                 <field name="pagum_from" class="oe_read_only" string="Start Date" style=" float:left" attrs="{'invisible': ['|',('is_pagum_from', '!=',False)  ]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
-                <input style="margin-top:2px;margin-left: -594px;margin-right:0px; width:140px;" type="text" id="popupDatepickercustom2" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                <input style="margin-top:2px;margin-left: -545px;margin-right:0px; width:115px; width:140px;" type="text" id="popupDatepickercustom2" groups="EthiopianCalendar.group_ethio_datepicker"/>
             </xpath>
         </field>
     </record>
@@ -238,9 +255,15 @@
                                     try{
                                         var  date = data.toString()
                                         date = date.split("-")
+                                        if (date[1] === undefined){
+                                            var date33 = data.split("/")
+                                            var dateFrom33 = date33[0] + "/" +  date33[1] + "/" +  date33[2]
+                                            $("#popupDatepickercustom3").val(dateFrom33);
+                                         }
+                                         else{
                                         var dates = date[1] + "/" +  date[2] + "/" +  date[0]
                                         $("#popupDatepickercustom3").val(dates);
-                                        }
+                                        }}
                                         catch (error) {
                                             //console.log('There was an error:', error);
                                     }
@@ -288,7 +311,7 @@
                 <field name="is_pagum_from" invisible="1"/>
                 <field name="ethiopian_from" class="oe_read_only" string="Create Date" attrs="{'invisible': ['|', ('is_pagum_from', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
                 <field name="pagum_from" class="oe_read_only" string="Start Date" style=" float:left" attrs="{'invisible': ['|',('is_pagum_from', '!=',False)  ]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
-                <input style="margin-top:-22px;margin-left: 165px;margin-right:0px; width:270px;" type="text" id="popupDatepickercustom3" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                <input style="margin-top:-22px;margin-left: 160px;margin-right:0px; width:270px;" type="text" id="popupDatepickercustom3" groups="EthiopianCalendar.group_ethio_datepicker"/>
 
               </xpath>  
            
@@ -345,9 +368,16 @@
                                     try{
                                         var  date = data.toString()
                                         date = date.split("-")
+                                        if (date[1] === undefined){
+                                            var date44 = data.split("/")
+                                            var dateFrom44 = date44[0] + "/" +  date44[1] + "/" +  date44[2]
+                                            $("#popupDatepickercustom4").val(dateFrom44);
+                                         }
+                                         else{
                                         var dates = date[1] + "/" +  date[2] + "/" +  date[0]
                                         $("#popupDatepickercustom4").val(dates);
                                         }
+                                    }
                                         catch (error) {
                                             //console.log('There was an error:', error);
                                     }
@@ -392,7 +422,7 @@
                 </script>
                 <field name="is_pagum_from" invisible="1"/>
                 <field name="ethiopian_from" class="oe_read_only" string="Create Date" attrs="{'invisible': ['|', ('is_pagum_from', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
-                <input style="margin-top:-22px;margin-left: 165px;margin-right:0px; width:270px;" type="text" id="popupDatepickercustom4" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                <input style="margin-top:-25px;margin-left: 160px;margin-right:0px; width:270px;" type="text" id="popupDatepickercustom4" groups="EthiopianCalendar.group_ethio_datepicker"/>
                 <field name="pagum_from" class="oe_read_only" string="Start Date" style=" float:left" attrs="{'invisible': ['|',('is_pagum_from', '!=',False)  ]}" groups="EthiopianCalendar.group_ethio_datepicker"/>  
             </xpath>
         </field>

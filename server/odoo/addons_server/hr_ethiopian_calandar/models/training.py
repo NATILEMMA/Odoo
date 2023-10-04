@@ -14,28 +14,30 @@ pick3 = []
 pick4 = []
 
 
-class EmployeeInherited(models.Model):
-    _inherit = 'hr.employee'
+class Training(models.Model):
+    _inherit = 'employee.training'
 
-    
 
-    ethiopian_from = fields.Date(string="in ethiopian date")
     ethiopian_to = fields.Date(string="in ethiopian date")
-    
+    ethiopian_from = fields.Date(string="in ethiopian date")
     
 
-    pagum_from = fields.Char(string="in ethiopian date")
-    pagum_to = fields.Char(string="in ethiopian date")
-    
+    pagum_from = fields.Char(string="in ethiopian date", translate=True)
+    pagum_to = fields.Char(string="in ethiopian date", translate=True)
+   
     
     is_pagum_from = fields.Boolean(default='True')
-    is_pagum_to =  fields.Boolean(default='True')
-   
-  
-
+    is_pagum_to = fields.Boolean(default='True',string="in ethiopian date")
+    
+ 
+    _sql_constraints = [
+    ('date_check', 'CHECK ( (ethiopian_from <= ethiopian_to) )', 'The start date must be before to the end date.')
+]
 
     @api.model
     def create(self, vals):
+
+        
 
         for i in range(0, len(pick1)):
   
@@ -44,18 +46,18 @@ class EmployeeInherited(models.Model):
                 Edate1 = EthiopianDateConverter.to_ethiopian(date1.year,date1.month,date1.day)
             
                 if pick1[i]['pick'] == 1:
-                    if type(Edate1) == str:
+                    if type(Edate1) ==   str:
                         vals['ethiopian_from'] = None
-                        vals['birthday'] = date1
+                        vals['date_from'] = date1
                         vals['pagum_from'] = Edate1
                         vals['is_pagum_from'] = False
 
                         pick1.clear()
                     if type(Edate1) ==   date:
-                        vals['birthday'] = date1
+                        vals['date_from'] = date1
                         vals['ethiopian_from'] = Edate1
                         pick1.clear()
-
+                
         for i in range(0, len(pick2)):
         
             if i == (len(pick2)-1):
@@ -66,20 +68,16 @@ class EmployeeInherited(models.Model):
                 if pick2[i]['pick'] == 2:
                     if type(Edate2) ==   str:
                         vals['ethiopian_to'] = None
-                        vals['visa_expire'] = date2
+                        vals['date_to'] = date2
                         vals['pagum_to'] = Edate2
                         vals['is_pagum_to'] = False
-                        pick2.clear()
 
+                        pick2.clear()
                     if type(Edate2) ==   date:
-                        vals['visa_expire'] = date2
+                        vals['date_to'] = date2
                         vals['ethiopian_to'] = Edate2
                         pick2.clear()
        
-                
-       
-      
-        
         try:
 
             if vals['ethiopian_to'] is not None:
@@ -89,7 +87,7 @@ class EmployeeInherited(models.Model):
                 date_gr_from = EthiopianDateConverter.to_gregorian(int(date_time_obj[0]),int(date_time_obj[1]),int(date_time_obj[2]))
                 Edate1 = EthiopianDateConverter.to_ethiopian(date_gr_from.year,date_gr_from.month,date_gr_from.day)
 
-                vals['visa_expire'] = date_gr_from
+                vals['date_to'] = date_gr_from
               
                 if type(Edate1) == date :
                     vals['ethiopian_to'] = Edate1
@@ -104,36 +102,9 @@ class EmployeeInherited(models.Model):
         except:
             pass
 
-
         try:
-
-            if vals['ethiopian_from'] is not None:
-                print(vals['ethiopian_from'],'val ethiopian from')
-                date1 = vals['ethiopian_from']
-                date_time_obj = date1.split('-')
-              
-                date_gr_from = EthiopianDateConverter.to_gregorian(int(date_time_obj[0]),int(date_time_obj[1]),int(date_time_obj[2]))
-                Edate1 = EthiopianDateConverter.to_ethiopian(date_gr_from.year,date_gr_from.month,date_gr_from.day)
-
-                vals['birthday'] = date_gr_from
-              
-                if type(Edate1) == date :
-                    vals['ethiopian_from'] = Edate1
-                    vals['is_pagum_to'] = False
-
-                elif type(Edate1) ==   str :
-                    vals['pagum_from'] = Edate1    
-                    vals['is_pagum_from'] = False
-
-                else:
-                    pass
-        except:
-            pass
-
-       
-        try:
-            if vals['birthday'] is not None :
-                date1 = vals['birthday']
+            if vals['date_from'] is not None :
+                date1 = vals['date_from']
                 
                 date_time_obj = date1.split('-')
 
@@ -150,75 +121,10 @@ class EmployeeInherited(models.Model):
                     pass
         except:
             pass
-
-        try:
-            if vals['requested_date'] is not None :
-                date1 = vals['requested_date']
-                
-                date_time_obj = date1.split('-')
-
-                Edate1 = EthiopianDateConverter.to_ethiopian(int(date_time_obj[0]),int(date_time_obj[1]),int(date_time_obj[2]))
-                
-                if type(Edate1) ==   date :
-                    vals['ethiopian_to'] = Edate1
-                 
-                elif type(Edate1) ==   str :
-                    vals['pagum_to'] = Edate1       
-                    vals['is_pagum_to'] = False
-
-                else:
-                    pass
-        except:
-            pass
-
        
-   
-
-        return super(EmployeeInherited, self).create(vals)
+        return super(Training, self).create(vals)
 
     def write(self, vals):
-  
-        for i in range(0, len(pick1)):
-    
-                if i == (len(pick1)-1):
-                    date1 = EthiopianDateConverter.to_gregorian(pick1[i]['year'],pick1[i]['month'],pick1[i]['day'])
-                    Edate1 = EthiopianDateConverter.to_ethiopian(date1.year,date1.month,date1.day)
-                
-                    if pick1[i]['pick'] == 1:
-                        if type(Edate1) == str:
-                            vals['ethiopian_from'] = None
-                            vals['birthday'] = date1
-                            vals['pagum_from'] = Edate1
-                            vals['is_pagum_from'] = False
-
-                            pick1.clear()
-                        if type(Edate1) ==   date:
-                            vals['birthday'] = date1
-                            vals['ethiopian_from'] = Edate1
-                            pick1.clear()
-
-        for i in range(0, len(pick2)):
-        
-            if i == (len(pick2)-1):
-                date2 = EthiopianDateConverter.to_gregorian(pick2[i]['year'],pick2[i]['month'],pick2[i]['day'])
-                Edate2 = EthiopianDateConverter.to_ethiopian(date2.year,date2.month,date2.day)
-    
-
-                if pick2[i]['pick'] == 2:
-                    if type(Edate2) ==   str:
-                        vals['ethiopian_to'] = None
-                        vals['visa_expire'] = date2
-                        vals['pagum_to'] = Edate2
-                        vals['is_pagum_to'] = False
-                        pick2.clear()
-
-                    if type(Edate2) ==   date:
-                        vals['visa_expire'] = date2
-                        vals['ethiopian_to'] = Edate2
-                        pick2.clear()
-       
-                
-     
     
         try:
             if vals['ethiopian_from'] is not None:
@@ -226,12 +132,12 @@ class EmployeeInherited(models.Model):
                 date_time_obj = date_str.split('-')
                 date_gr = EthiopianDateConverter.to_gregorian(int(date_time_obj[0]),int(date_time_obj[1]),int(date_time_obj[2]))
                 Edate1 = EthiopianDateConverter.to_ethiopian(date_gr.year,date_gr.month,date_gr.day)
-                vals['birthday'] = date_gr
+                vals['date_from'] = date_gr
                 if type(Edate1) ==   str:
                     vals['ethiopian_from'] = None
                     vals['pagum_from'] = Edate1
                     vals['is_pagum_from'] = False
-                if type(Edate1) == date:
+                if type(Edate1) ==   date:
                     vals['ethiopian_from'] = Edate1
                     vals['pagum_from'] = None
                     vals['is_pagum_from'] = True
@@ -245,7 +151,7 @@ class EmployeeInherited(models.Model):
                 date_time_obj = date_str.split('-')
                 date_gr = EthiopianDateConverter.to_gregorian(int(date_time_obj[0]),int(date_time_obj[1]),int(date_time_obj[2]))
                 Edate1 = EthiopianDateConverter.to_ethiopian(date_gr.year,date_gr.month,date_gr.day)
-                vals['visa_expire'] = date_gr
+                vals['date_to'] = date_gr
                 if type(Edate1) ==   str:
                         vals['ethiopian_to'] = None
                         vals['pagum_to'] = Edate1
@@ -257,13 +163,14 @@ class EmployeeInherited(models.Model):
         except:
             pass
 
-
-     
+       
+        
         try:
-            if vals['birthday'] is not None:
-                date_str = vals['birthday']
+            if vals['date_from'] is not None:
+                date_str = vals['date_from']
                 date_time_obj = date_str.split('-')
                 Edate = EthiopianDateConverter.to_ethiopian(int(date_time_obj[0]),int(date_time_obj[1]),int(date_time_obj[2]))
+
 
 
                 if type(Edate) ==   str:
@@ -278,9 +185,9 @@ class EmployeeInherited(models.Model):
             pass
        
         try:
-            if vals['visa_expire'] is not None:
+            if vals['date_to'] is not None:
                 
-                date_str = vals['visa_expire']
+                date_str = vals['date_to']
                 date_time_obj = date_str.split('-')
                 Edate = EthiopianDateConverter.to_ethiopian(int(date_time_obj[0]),int(date_time_obj[1]),int(date_time_obj[2]))
                 if type(Edate) ==   str:
@@ -290,27 +197,26 @@ class EmployeeInherited(models.Model):
                 elif type(Edate) == date:
                     vals['ethiopian_to'] = Edate
                     vals['is_pagum_to'] = True
-                    vals['pagum_to'] = ' '
+                    vals['pagum_to'] = None
         except:
             pass
 
-        
-
-        return super(EmployeeInherited, self).write(vals)
+       
+        return super(Training, self).write(vals)
 
 
     @api.model
     def initial_date(self, data):
-       
+        
+
         dd = data['url'].split('id=')
         id = str(dd[1]).split('&')
         m = data['url'].split('model=')
         mm = m[1].split('&')
-       
         if len(id[0]) <= 0:
             date = datetime.now()
             date = EthiopianDateConverter.to_ethiopian(date.year,date.month,date.day)
-            return {'from': date,'to':date}
+            return date
         else:
             
             models = mm[0]
@@ -344,20 +250,45 @@ class EmployeeInherited(models.Model):
                 today = EthiopianDateConverter.to_ethiopian(today.year,today.month,today.day)
                 to.append(today)
 
-          
+            # # For initial date to widget Three
+
+            # if search.ethiopian_three != False and search.pagum_three == False:
+            #     three.append(search.ethiopian_three)
+            # if search.ethiopian_three == False and search.pagum_three != False:
+            #     date_to_str = str(search.pagum_three).split('/')
+            #     date_to = date_to_str[2] +'-'+date_to_str[0]+'-'+date_to_str[1]
+            #     three.append(date_to)
+            # if search.ethiopian_three == False and search.pagum_three == False:
+            #     today = datetime.now()
+            #     today = EthiopianDateConverter.to_ethiopian(today.year,today.month,today.day)
+            #     three.append(today)
+
+            # # For initial date to widget Four
+
+            # if search.ethiopian_four != False and search.pagum_four == False:
+            #     four.append(search.ethiopian_four)
+            # if search.ethiopian_four == False and search.pagum_four != False:
+            #     date_to_str = str(search.pagum_four).split('/')
+            #     date_to = date_to_str[2] +'-'+date_to_str[0]+'-'+date_to_str[1]
+            #     four.append(date_to)
+            # if search.ethiopian_four == False and search.pagum_four == False:
+            #     today = datetime.now()
+            #     today = EthiopianDateConverter.to_ethiopian(today.year,today.month,today.day)
+            #     four.append(today)
+
+
             try:
                 data = {
                     'from': From[0],
                     'to': to[0],
-                   
+                  
                 }
             except:
-                   data = {
+                data = {
                     'from': From,
                     'to': to,
-                 
-                }
-           
+                }     
+
            
             return data
     
@@ -384,7 +315,6 @@ class EmployeeInherited(models.Model):
             pick3.append(data)
         if picked_date['pick'] == 4:
             pick3.append(data)
-
 
 
 

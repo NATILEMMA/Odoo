@@ -7,60 +7,60 @@ import re
 
 class loan(models.Model):
   
-  _inherit="hr.loan"
-  
-  _description="This class will add field validation for document"  
-  
-
-  
-  
-  
-  def validate_integer(self, integer_field):
-      for record in self:
-          if isinstance(integer_field, float):
-              if integer_field < 0.0:
-                  raise ValidationError(_("The field must be non-negative"))
-          else:
-              if integer_field < 0:
-                  raise ValidationError(_("The field must be non-negative"))
+    _inherit="hr.loan"
+    
+    _description="This class will add field validation for document"  
+    
 
     
+    
   
-  @api.onchange("loan_amount")
-  def on_change_loan_amount(self):
-      self.validate_integer(self.loan_amount)
+ 
+    def validate_integer(self, integer_field,field_name):
+        for record in self:
+            if isinstance(integer_field, float):
+                if integer_field < 0.0:
+                    raise ValidationError(_("The {} field must be non-negative".format(field_name)))
+            else:
+                if integer_field < 0:
+                     raise ValidationError(_("The {} field must be non-negative".format(field_name)))
+    
+  
+    @api.onchange("loan_amount")
+    def on_change_loan_amount(self):
+        self.validate_integer(self.loan_amount,(_("loan amount")))
 
-  
-  @api.onchange("installment")
-  def on_change_installment(self):
-      for rec in self:
-        self.validate_integer(self.installment)
+    
+    @api.onchange("installment")
+    def on_change_installment(self):
+        for rec in self:
+            self.validate_integer(self.installment,(_("number of installments")))
       
 
 class loanconfig(models.Model):
   
-  _inherit="loan.advance.conf"
-  
-  _description="This class will add field validation for for loan config"  
-  
-  
-
-  def validate_integer(self, integer_field):
-      for record in self:
-        
-          if isinstance(integer_field, float):
-              if integer_field < 0.0:
-                  raise ValidationError(_("The field must be non-negative"))
-          else:
-              if integer_field < 0:
-                  raise ValidationError(_("The field must be non-negative"))
-
-  
-  @api.onchange("percent")
-  def on_change_loan_amount(self):
-      for rec in self: 
-        if rec.percent:
-          rec.validate_integer(rec.percent)
+    _inherit="loan.advance.conf"
+    
+    _description="This class will add field validation for for loan config"  
+    
     
 
- 
+    def validate_integer(self, integer_field,field_name):
+            for record in self:
+                if isinstance(integer_field, float):
+                    if integer_field < 0.0:
+                        raise ValidationError(_("The {} field must be non-negative".format(field_name)))
+                else:
+                    if integer_field < 0:
+                        raise ValidationError(_("The {} field must be non-negative".format(field_name)))
+        
+    
+  
+    @api.onchange("percent")
+    def on_change_percent(self):
+        for  rec in self: 
+            if rec.percent:
+                rec.validate_integer(rec.percent,(_("Amount loan in terms of monthly income")))
+        
+
+    
