@@ -7,7 +7,7 @@
     <field name="name">Imports</field>
     <field name="model">importation.module</field>
     <field name="arch" type="xml">
-      <tree decoration-warning="is_supporter == True" decoration-danger="is_candidate == True" decoration-success="new_member == True">
+      <tree decoration-warning="is_supporter == True" decoration-info="is_candidate == True" decoration-success="new_member == True" decoration-danger="state in ('duplicate_data', 'duplicate_phone', 'duplicate_email', 'duplicate_national_id')">
         <field name="first_name"/>
         <field name="father_name"/>
         <field name="grand_father_name"/>
@@ -16,6 +16,7 @@
         <field name="ethnic_group" string="Ethnic Group"/>
         <field name="subcity_id" string="Subcity"/>
         <field name="wereda_id" string="Woreda"/>
+        <field name="state"/>
         <field name="is_supporter" invisible="1"/>
         <field name="is_candidate" invisible="1"/>
         <field name="is_league" invisible="1"/>
@@ -40,6 +41,10 @@
             <field name="is_league" invisible="1"/>
             <field name="is_member" invisible="1"/>
             <field name="is_leader" invisible="1"/>
+            <field name="member_system_admin" invisible="1"/>
+            <field name="leader_system_admin" invisible="1"/>
+            <field name="league_system_admin" invisible="1"/>
+            <field name="state" widget="statusbar"/>
         </header>
         <sheet>
           <group>
@@ -303,6 +308,7 @@ if records:
             name="Member Importation"
             parent="member_minor_configuration.system_admin_menus"
             sequence="0"           
-            action="importaion_module_action"/>
+            action="importaion_module_action"
+            groups="member_minor_configuration.member_group_user_admin,member_minor_configuration.member_group_admin"/>
 
 </odoo>

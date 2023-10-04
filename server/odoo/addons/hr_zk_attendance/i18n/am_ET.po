@@ -1,0 +1,317 @@
+# Date created: 2023-06-17 14:59:50 by dichthuatphuongdong.com
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-06-17 03:13:39+0000"
+"MIME-Version: 1.0"
+"Content-Type: text/plain; charset=UTF-8"
+"Content-Transfer-Encoding: 8bit"
+"Plural-Forms: nplurals=1; plural=0;"
+"X-Generator: GlotPress/3.0.0-alpha.2"
+"Language: en_GB"
+"Project-Id-Version: PO File 5.8.1"
+
+#. module: hr_zk_attendance
+#: model_terms:ir.ui.view,arch_db:hr_zk_attendance.view_zk_machine_form
+msgid "Are you sure you want to do this?"
+msgstr "እርግጠኛ ነዎት ይህን ማድረግ ይፈልጋሉ?"
+
+#. module: hr_zk_attendance
+#: model:ir.model,name:hr_zk_attendance.model_hr_attendance
+#: model_terms:ir.ui.view,arch_db:hr_zk_attendance.view_zk_report_daily_attendance_tree
+msgid "Attendance"
+msgstr "መገኘት"
+
+#. module: hr_zk_attendance
+#: model:ir.actions.act_window,name:hr_zk_attendance.action_zk_report_daily_attendance
+msgid "Attendance Analysis"
+msgstr "የመገኘት ትንተና"
+
+#. module: hr_zk_attendance
+#: model:ir.ui.menu,name:hr_zk_attendance.menu_zk_attendance_view
+msgid "Attendance log"
+msgstr "የመገኘት መዝገብ"
+
+#. module: hr_zk_attendance
+#: model:ir.actions.act_window,name:hr_zk_attendance.zk_machine_action
+msgid "Attendances"
+msgstr "ተሰብሳቢዎች"
+
+#. module: hr_zk_attendance
+#: model_terms:ir.ui.view,arch_db:hr_zk_attendance.view_zk_machine_form
+msgid "Biometric Device"
+msgstr "ባዮሜትሪክ መሳሪያ"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_hr_attendance__device_id
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_hr_employee__device_id
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance__device_id
+msgid "Biometric Device ID"
+msgstr "የባዮሜትሪክ መሣሪያ መታወቂያ"
+
+#. module: hr_zk_attendance
+#: model_terms:ir.ui.view,arch_db:hr_zk_attendance.view_zk_machine_tree
+msgid "Biometric Machine"
+msgstr "ባዮሜትሪክ ማሽን"
+
+#. module: hr_zk_attendance
+#: model:ir.ui.menu,name:hr_zk_attendance.zk_machine_menu
+msgid "Biometric Manager"
+msgstr "ባዮሜትሪክ አስተዳዳሪ"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields.selection,name:hr_zk_attendance.selection__zk_machine_attendance__punch_type__3
+#: model:ir.model.fields.selection,name:hr_zk_attendance.selection__zk_report_daily_attendance__punch_type__3
+msgid "Break In"
+msgstr "በሃይል መግባት"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields.selection,name:hr_zk_attendance.selection__zk_machine_attendance__punch_type__2
+#: model:ir.model.fields.selection,name:hr_zk_attendance.selection__zk_report_daily_attendance__punch_type__2
+msgid "Break Out"
+msgstr "በሃይል መውጣት"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields.selection,name:hr_zk_attendance.selection__zk_machine_attendance__attendance_type__4
+#: model:ir.model.fields.selection,name:hr_zk_attendance.selection__zk_report_daily_attendance__attendance_type__4
+msgid "Card"
+msgstr "ካርድ"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance__attendance_type
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_report_daily_attendance__attendance_type
+msgid "Category"
+msgstr "ምድብ"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance__check_in
+#: model:ir.model.fields.selection,name:hr_zk_attendance.selection__zk_machine_attendance__punch_type__0
+#: model:ir.model.fields.selection,name:hr_zk_attendance.selection__zk_report_daily_attendance__punch_type__0
+msgid "Check In"
+msgstr "ያረጋግጡ"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance__check_out
+#: model:ir.model.fields.selection,name:hr_zk_attendance.selection__zk_machine_attendance__punch_type__1
+#: model:ir.model.fields.selection,name:hr_zk_attendance.selection__zk_report_daily_attendance__punch_type__1
+msgid "Check Out"
+msgstr "ጨርሰህ ውጣ"
+
+#. module: hr_zk_attendance
+#: model_terms:ir.ui.view,arch_db:hr_zk_attendance.view_zk_machine_form
+msgid "Clear Data"
+msgstr "ውሂብ አጽዳ"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine__company_id
+msgid "Company"
+msgstr "ኩባንያ"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine__create_uid
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance__create_uid
+msgid "Created by"
+msgstr "የተፈጠረ"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine__create_date
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance__create_date
+msgid "Created on"
+msgstr "ላይ ተፈጠረ"
+
+#. module: hr_zk_attendance
+#: model_terms:ir.ui.view,arch_db:hr_zk_attendance.view_zk_report_daily_attendance_search
+msgid "Current Month"
+msgstr "የአሁኑ ወር"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_report_daily_attendance__punching_day
+#: model_terms:ir.ui.view,arch_db:hr_zk_attendance.inherited_hr_attendance_view_filter
+msgid "Date"
+msgstr "ቀን"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance__department_id
+msgid "Department"
+msgstr "መምሪያ"
+
+#. module: hr_zk_attendance
+#: model:ir.ui.menu,name:hr_zk_attendance.zk_machine_sub_menu
+msgid "Device Configuration"
+msgstr "የመሣሪያ ውቅር"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine__display_name
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance__display_name
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_report_daily_attendance__display_name
+msgid "Display Name"
+msgstr "መጠሪያው ስም"
+
+#. module: hr_zk_attendance
+#: model:ir.actions.server,name:hr_zk_attendance.cron_download_data_ir_actions_server
+#: model:ir.cron,cron_name:hr_zk_attendance.cron_download_data
+#: model:ir.cron,name:hr_zk_attendance.cron_download_data
+#: model_terms:ir.ui.view,arch_db:hr_zk_attendance.view_zk_machine_form
+msgid "Download Data"
+msgstr "ውሂብ አውርድ"
+
+#. module: hr_zk_attendance
+#: model:ir.model,name:hr_zk_attendance.model_hr_employee
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance__employee_id
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_report_daily_attendance__name
+msgid "Employee"
+msgstr "ሰራተኛ"
+
+#. module: hr_zk_attendance
+#: model_terms:ir.ui.view,arch_db:hr_zk_attendance.inherited_view_attendance_tree
+msgid "Employee attendances"
+msgstr "የሰራተኞች መገኘት"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields.selection,name:hr_zk_attendance.selection__zk_machine_attendance__attendance_type__15
+#: model:ir.model.fields.selection,name:hr_zk_attendance.selection__zk_report_daily_attendance__attendance_type__15
+msgid "Face"
+msgstr "ፊት"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields.selection,name:hr_zk_attendance.selection__zk_machine_attendance__attendance_type__1
+#: model:ir.model.fields.selection,name:hr_zk_attendance.selection__zk_report_daily_attendance__attendance_type__1
+msgid "Finger"
+msgstr "ጣት"
+
+#. module: hr_zk_attendance
+#: model_terms:ir.ui.view,arch_db:hr_zk_attendance.inherited_hr_attendance_view_filter
+msgid "Group By"
+msgstr "ቡድን በ"
+
+#. module: hr_zk_attendance
+#: model_terms:ir.ui.view,arch_db:hr_zk_attendance.inherited_hr_attendance_view_filter
+#: model_terms:ir.ui.view,arch_db:hr_zk_attendance.view_zk_report_daily_attendance_search
+msgid "Hr Attendance Search"
+msgstr "Hr የመገኘት ፍለጋ"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine__id
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance__id
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_report_daily_attendance__id
+msgid "ID"
+msgstr "መታወቂያ"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine____last_update
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance____last_update
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_report_daily_attendance____last_update
+msgid "Last Modified on"
+msgstr "መጨረሻ የተሻሻለው በርቷል።"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine__write_uid
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance__write_uid
+msgid "Last Updated by"
+msgstr "መጨረሻ የዘመነው በ"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine__write_date
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance__write_date
+msgid "Last Updated on"
+msgstr "መጨረሻ የዘመነው በርቷል።"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine__name
+#: model_terms:ir.ui.view,arch_db:hr_zk_attendance.view_zk_machine_form
+msgid "Machine IP"
+msgstr "ማሽን IP"
+
+#. module: hr_zk_attendance
+#: model_terms:ir.ui.view,arch_db:hr_zk_attendance.view_zk_report_daily_attendance_search
+msgid "My Attendance"
+msgstr "የእኔ ተሳትፎ"
+
+#. module: hr_zk_attendance
+#: model_terms:ir.ui.view,arch_db:hr_zk_attendance.view_zk_report_daily_attendance_search
+msgid "Name"
+msgstr "ስም"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields.selection,name:hr_zk_attendance.selection__zk_machine_attendance__punch_type__4
+#: model:ir.model.fields.selection,name:hr_zk_attendance.selection__zk_report_daily_attendance__punch_type__4
+msgid "Overtime In"
+msgstr "የትርፍ ሰዓት መግቢያ"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields.selection,name:hr_zk_attendance.selection__zk_machine_attendance__punch_type__5
+#: model:ir.model.fields.selection,name:hr_zk_attendance.selection__zk_report_daily_attendance__punch_type__5
+msgid "Overtime Out"
+msgstr "የትርፍ ሰዓት መውጫ"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields.selection,name:hr_zk_attendance.selection__zk_machine_attendance__attendance_type__3
+#: model:ir.model.fields.selection,name:hr_zk_attendance.selection__zk_report_daily_attendance__attendance_type__3
+msgid "Password"
+msgstr "የይለፍ ቃል"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine__port_no
+msgid "Port No"
+msgstr "ወደብ ቁጥር"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance__punching_time
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_report_daily_attendance__punching_time
+msgid "Punching Time"
+msgstr "የጡጫ ጊዜ"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance__punch_type
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_report_daily_attendance__punch_type
+msgid "Punching Type"
+msgstr "የጡጫ አይነት"
+
+#. module: hr_zk_attendance
+#: model_terms:ir.ui.view,arch_db:hr_zk_attendance.view_zk_report_daily_attendance_search
+msgid "Today"
+msgstr "ዛሬ"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields.selection,name:hr_zk_attendance.selection__zk_machine_attendance__attendance_type__2
+#: model:ir.model.fields.selection,name:hr_zk_attendance.selection__zk_report_daily_attendance__attendance_type__2
+msgid "Type_2"
+msgstr "ዓይነት_2"
+
+#. module: hr_zk_attendance
+#: code:addons/hr_zk_attendance/models/zk_machine.py:0
+#: code:addons/hr_zk_attendance/models/zk_machine.py:0
+msgid "Unable to connect, please check the parameters and network connections."
+msgstr "መገናኘት አልተቻለም፣ እባክዎ መለኪያዎችን እና የአውታረ መረብ ግንኙነቶቹን ያረጋግጡ።"
+
+#. module: hr_zk_attendance
+#: code:addons/hr_zk_attendance/models/zk_machine.py:0
+#: code:addons/hr_zk_attendance/models/zk_machine.py:0
+msgid "Unable to get the attendance log, please try again later."
+msgstr "የመገኘት መዝገብ ማግኘት አልተቻለም፣ እባክዎ ቆይተው እንደገና ይሞክሩ።"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance__worked_hours
+msgid "Worked Hours"
+msgstr "የስራ ሰዓታት"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine__address_id
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance__address_id
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_report_daily_attendance__address_id
+msgid "Working Address"
+msgstr "የሚደራጅበት ክፍለ ከተማ /ወረዳ "
+
+#. module: hr_zk_attendance
+#: model:ir.model,name:hr_zk_attendance.model_zk_machine
+msgid "zk.machine"
+msgstr "zk.ማሽን"
+
+#. module: hr_zk_attendance
+#: model:ir.model,name:hr_zk_attendance.model_zk_machine_attendance
+msgid "zk.machine.attendance"
+msgstr "zk.ማሽን.መገኘት"
+
+#. module: hr_zk_attendance
+#: model:ir.model,name:hr_zk_attendance.model_zk_report_daily_attendance
+msgid "zk.report.daily.attendance"
+msgstr "zk.report.ዕለታዊ.መገኘት"

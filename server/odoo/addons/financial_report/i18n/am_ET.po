@@ -1,0 +1,103 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* financial_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20221005\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-22 07:23+0000\n"
+"PO-Revision-Date: 2023-05-22 07:23+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: financial_report
+#: model:ir.model,name:financial_report.model_account_report_partner_ledger
+msgid "Account Partner Ledger"
+msgstr "አካውንት አጋር ደብተር"
+
+#. module: financial_report
+#: model:ir.model,name:financial_report.model_account_print_journal
+msgid "Account Print Journal"
+msgstr "አካውንት ህትመት ጆርናል"
+
+#. module: financial_report
+#: model:ir.model,name:financial_report.model_cash_flow_report
+msgid "Cash Flow Report"
+msgstr "የገንዘብ ፍሰት ሪፖርት"
+
+#. module: financial_report
+#: model:ir.model.fields,field_description:financial_report.field_account_balance_report__date_to
+#: model:ir.model.fields,field_description:financial_report.field_account_print_journal__date_to
+#: model:ir.model.fields,field_description:financial_report.field_account_report_general_ledger__date_to
+#: model:ir.model.fields,field_description:financial_report.field_account_report_partner_ledger__date_to
+#: model:ir.model.fields,field_description:financial_report.field_account_tax_report__date_to
+#: model:ir.model.fields,field_description:financial_report.field_cash_flow_report__date_to
+msgid "Date End"
+msgstr "የመጨረሻ ቀን"
+
+#. module: financial_report
+#: model:ir.model.fields,field_description:financial_report.field_account_balance_report__date_from
+#: model:ir.model.fields,field_description:financial_report.field_account_print_journal__date_from
+#: model:ir.model.fields,field_description:financial_report.field_account_report_general_ledger__date_from
+#: model:ir.model.fields,field_description:financial_report.field_account_report_partner_ledger__date_from
+#: model:ir.model.fields,field_description:financial_report.field_account_tax_report__date_from
+#: model:ir.model.fields,field_description:financial_report.field_cash_flow_report__date_from
+msgid "Date Start"
+msgstr "የሚጀምርበት ቀን"
+
+#. module: financial_report
+#: model:ir.model.fields,field_description:financial_report.field_financial_report__date_to
+msgid "End Date"
+msgstr "የመጨረሻ ቀን"
+
+#. module: financial_report
+#: model:ir.model,name:financial_report.model_financial_report
+msgid "Financial Reports"
+msgstr "የፋይናንስ ሪፖርት"
+
+#. module: financial_report
+#: model:ir.model.fields,field_description:financial_report.field_account_balance_report__fiscal_year
+#: model:ir.model.fields,field_description:financial_report.field_account_print_journal__fiscal_year
+#: model:ir.model.fields,field_description:financial_report.field_account_report_general_ledger__fiscal_year
+#: model:ir.model.fields,field_description:financial_report.field_account_report_partner_ledger__fiscal_year
+#: model:ir.model.fields,field_description:financial_report.field_account_tax_report__fiscal_year
+#: model:ir.model.fields,field_description:financial_report.field_cash_flow_report__fiscal_year
+#: model:ir.model.fields,field_description:financial_report.field_financial_report__fiscal_year
+msgid "Fiscal Year"
+msgstr ""
+
+#. module: financial_report
+#: model:ir.model,name:financial_report.model_account_report_general_ledger
+msgid "General Ledger Report"
+msgstr "አጠቃላይ መዝገብ ሪፖርት"
+
+#. module: financial_report
+#: model:ir.model.fields,field_description:financial_report.field_account_balance_report__period
+#: model:ir.model.fields,field_description:financial_report.field_account_print_journal__period
+#: model:ir.model.fields,field_description:financial_report.field_account_report_general_ledger__period
+#: model:ir.model.fields,field_description:financial_report.field_account_report_partner_ledger__period
+#: model:ir.model.fields,field_description:financial_report.field_account_tax_report__period
+#: model:ir.model.fields,field_description:financial_report.field_cash_flow_report__period
+#: model:ir.model.fields,field_description:financial_report.field_financial_report__period
+msgid "Period"
+msgstr ""
+
+#. module: financial_report
+#: model:ir.model.fields,field_description:financial_report.field_financial_report__date_from
+msgid "Start Date"
+msgstr "የመጀመሪያ ቀን"
+
+#. module: financial_report
+#: model:ir.model,name:financial_report.model_account_tax_report
+msgid "Tax Report"
+msgstr "የግብር ሪፖርት"
+
+#. module: financial_report
+#: model:ir.model,name:financial_report.model_account_balance_report
+msgid "Trial Balance Report"
+msgstr "የሙከራ ባላብስ ሪፖርት"

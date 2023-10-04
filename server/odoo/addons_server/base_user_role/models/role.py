@@ -4,7 +4,7 @@ import datetime
 import logging
 
 from odoo import SUPERUSER_ID, _, api, fields, models
-from odoo.exceptions import ValidationError
+from odoo.exceptions import ValidationError, UserError
 
 _logger = logging.getLogger(__name__)
 
@@ -35,6 +35,51 @@ class ResUsersRole(models.Model):
         readonly=False,
     )
     comment = fields.Html(string="Internal Notes",)
+    is_general = fields.Boolean(default=False)
+
+
+    @api.onchange('implied_ids')
+    def _prevent_duplication(self):
+        """This function will check if there is duplication"""
+        for record in self:
+            if record.implied_ids:
+                print(record.implied_ids)
+                role_city = self.env['res.users.role'].search([('implied_ids', 'in', [self.env.ref('member_minor_configuration.member_group_city_admin').id])])
+                role_subcity = self.env['res.users.role'].search([('implied_ids', 'in', [self.env.ref('member_minor_configuration.member_group_admin').id])])
+                role_woreda = self.env['res.users.role'].search([('implied_ids', 'in', [self.env.ref('member_minor_configuration.member_group_manager').id])])
+                role_basic_manager = self.env['res.users.role'].search([('implied_ids', 'in', [self.env.ref('member_minor_configuration.member_group_main_manager').id])])
+                role_basic_assembler = self.env['res.users.role'].search([('implied_ids', 'in', [self.env.ref('member_minor_configuration.member_group_main_assembler').id])])
+                role_basic_finance = self.env['res.users.role'].search([('implied_ids', 'in', [self.env.ref('member_minor_configuration.member_group_main_finance').id])])
+                role_cell_admin = self.env['res.users.role'].search([('implied_ids', 'in', [self.env.ref('member_minor_configuration.member_group_cell_manager').id])])
+                role_cell_assembler = self.env['res.users.role'].search([('implied_ids', 'in', [self.env.ref('member_minor_configuration.member_group_assembler').id])])
+                role_cell_finance = self.env['res.users.role'].search([('implied_ids', 'in', [self.env.ref('member_minor_configuration.member_group_finance').id])])
+                role_portal = self.env['res.users.role'].search([('implied_ids', 'in', [self.env.ref('base.group_portal').id])])
+                role_internal = self.env['res.users.role'].search([('implied_ids', 'in', [self.env.ref('base.group_user').id])])
+                if self.env.ref('member_minor_configuration.member_group_city_admin').id in record.implied_ids._origin.ids and role_city:
+                    raise UserError(_("Member City Administrator has a Role in %s") % (role_city.name))
+                if self.env.ref('member_minor_configuration.member_group_admin').id in record.implied_ids._origin.ids and role_subcity:
+                    raise UserError(_("Member Sub City Administrator has a Role in %s") % (role_subcity.name))
+                if self.env.ref('member_minor_configuration.member_group_manager').id in record.implied_ids._origin.ids and role_woreda:
+                    raise UserError(_("Member Woreda Administrator has a Role in %s") % (role_woreda.name))
+
+                if self.env.ref('member_minor_configuration.member_group_main_manager').id in record.implied_ids._origin.ids and role_basic_manager:
+                    raise UserError(_("Member Basic Organization Administrator has a Role in %s") % (role_basic_manager.name))
+                if self.env.ref('member_minor_configuration.member_group_main_assembler').id in record.implied_ids._origin.ids and role_basic_assembler:
+                    raise UserError(_("Member Basic Organization Assembler has a Role in %s") % (role_basic_assembler.name))
+                if self.env.ref('member_minor_configuration.member_group_main_finance').id in record.implied_ids._origin.ids and role_basic_finance:
+                    raise UserError(_("Member Basic Organization Finance has a Role in %s") % (role_basic_finance.name))
+
+                if self.env.ref('member_minor_configuration.member_group_cell_manager').id in record.implied_ids._origin.ids and role_cell_admin:
+                    raise UserError(_("Member Cell Administrator has a Role in %s") % (role_cell_admin.name))
+                if self.env.ref('member_minor_configuration.member_group_assembler').id in record.implied_ids._origin.ids and role_cell_assembler:
+                    raise UserError(_("Member Cell Assembler has a Role in %s") % (role_cell_assembler.name))
+                if self.env.ref('member_minor_configuration.member_group_finance').id in record.implied_ids._origin.ids and role_cell_finance:
+                    raise UserError(_("Member Cell Finance has a Role in %s") % (role_cell_finance.name))
+
+                if self.env.ref('base.group_portal').id in record.implied_ids._origin.ids and role_portal:
+                    raise UserError(_("Portal User has a Role in %s") % (role_portal.name))
+                if self.env.ref('base.group_user').id in record.implied_ids._origin.ids and role_internal:
+                    raise UserError(_("Internal User has a Role in %s") % (role_internal.name))
 
     @api.depends("line_ids.user_id")
     def _compute_user_ids(self):
@@ -54,6 +99,32 @@ class ResUsersRole(models.Model):
 
     def unlink(self):
         users = self.mapped("user_ids")
+        for record in self:
+            if self.env.ref('member_minor_configuration.member_group_city_admin').id in record.implied_ids._origin.ids:
+                raise UserError(_("Member City Administrator has a Role Can't Be Deleted"))
+            if self.env.ref('member_minor_configuration.member_group_admin').id in record.implied_ids._origin.ids:
+                raise UserError(_("Member Sub City Administrator has a Role Can't Be Deleted"))
+            if self.env.ref('member_minor_configuration.member_group_manager').id in record.implied_ids._origin.ids:
+                raise UserError(_("Member Woreda Administrator has a Role Can't Be Deleted"))
+
+            if self.env.ref('member_minor_configuration.member_group_main_manager').id in record.implied_ids._origin.ids:
+                raise UserError(_("Member Basic Organization Administrator has a Role Can't Be Deleted"))
+            if self.env.ref('member_minor_configuration.member_group_main_assembler').id in record.implied_ids._origin.ids:
+                raise UserError(_("Member Basic Organization Assembler has a Role Can't Be Deleted"))
+            if self.env.ref('member_minor_configuration.member_group_main_finance').id in record.implied_ids._origin.ids:
+                raise UserError(_("Member Basic Organization Finance has a Role Can't Be Deleted"))
+
+            if self.env.ref('member_minor_configuration.member_group_cell_manager').id in record.implied_ids._origin.ids:
+                raise UserError(_("Member Cell Administrator has a Role Can't Be Deleted"))
+            if self.env.ref('member_minor_configuration.member_group_assembler').id in record.implied_ids._origin.ids:
+                raise UserError(_("Member Cell Assembler has a Role Can't Be Deleted"))
+            if self.env.ref('member_minor_configuration.member_group_finance').id in record.implied_ids._origin.ids:
+                raise UserError(_("Member Cell Finance has a Role Can't Be Deleted"))
+
+            if self.env.ref('base.group_portal').id in record.implied_ids._origin.ids:
+                raise UserError(_("Portal User has a Role Can't Be Deleted"))
+            if self.env.ref('base.group_user').id in record.implied_ids._origin.ids:
+                raise UserError(_("Internal User has a Role Can't Be Deleted"))
         res = super(ResUsersRole, self).unlink()
         users.set_groups_from_roles(force=True)
         return res

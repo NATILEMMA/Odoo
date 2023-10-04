@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+
+     <record id="project_project_view_form_simplified" model="ir.ui.view">
+        <field name="name">project.project.form</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.project_project_view_form_simplified" />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="parent_id" />
+                
+            </field>
+        
+        </field>
+    </record>
+    <record id="edit_project" model="ir.ui.view">
+        <field name="name">project.project.form</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project" />
+        <field name="arch" type="xml">
+            <field name="user_id" position="after">
+                <field name="parent_id" />
+                <field name="is_parent" />
+                <field name="parent_path2" />
+                
+            </field>
+            <div name="button_box" position="inside">
+                <button
+                    name="action_open_child_project"
+                    class="oe_stat_button"
+                    type="object"
+                    icon="fa-tasks"
+                >
+                    <field
+                        string="Child Planning"
+                        name="child_ids_count"
+                        widget="statinfo"
+                    />
+                </button>
+            </div>
+        </field>
+    </record>
+    <record id="view_project" model="ir.ui.view">
+        <field name="name">project.project.tree</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.view_project" />
+        <field name="arch" type="xml">
+            <field name="partner_id" position="after">
+                <field name="parent_id" />
+                <field name="is_parent" />
+                <field name="parent_path2" />
+                
+                
+            </field>
+        </field>
+    </record>
+    <record id="view_project_kanban" model="ir.ui.view">
+        <field name="name">project.project.kanban.inherited</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.view_project_kanban" />
+        <field name="arch" type="xml">
+            <field name="rating_status" position="after">
+                <field name="parent_id" />
+                
+                <field name="parent_path2" />
+                
+            </field>
+            <xpath
+                expr="//div[hasclass('o_project_kanban_main')]/div[last()]"
+                position="after"
+            >
+                <!-- <div class="o_primary">
+                    <span>
+                        <t t-esc="record.parent_id.value" />
+                    </span>
+                </div> -->
+                <div class="o_primary">
+                    <span>
+                        <t t-esc="record.parent_path2.value" />
+                    </span>
+                </div>
+            </xpath>
+        </field>
+    </record>
+    <record id="view_project_project_filter" model="ir.ui.view">
+        <field name="name">project.project.filter</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.view_project_project_filter" />
+        <field name="type">search</field>
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="parent_id" />
+            </field>
+        </field>
+    </record>
+
+    <record id="open_view_project_all" model="ir.actions.act_window">
+        <field name="name">All Plannings</field>
+        <field name="res_model">project.project</field>
+        <field name="view_mode">kanban,form</field>
+        <field name="domain">['&amp;',('task_count','!=',0),('parent_id','!=',False)]</field>
+        <field name="view_id" ref="view_project_kanban"/>
+        <field name="search_view_id" ref="view_project_project_filter"/>
+        <field name="target">main</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new Planning
+            </p>
+            <!-- <p>
+                Or <a type="action" name="%(project.ir_actions_server_project_sample)d" tabindex="-1">activate a sample Planning</a> to play with.
+            </p> -->
+        </field>
+    </record>
+
+
+
+
+     <record id="act_project_child" model="ir.actions.act_window">
+            <field name="name">Child Planning</field>
+            <field name="res_model">project.project</field>
+             <field name="context">{
+                 'search_default_parent_id': [active_id],
+                'default_parent_id': active_id,
+            }</field>
+            <field name="view_mode">kanban,form</field>
+            <field name="view_id" ref="view_project_kanban"/>
+            <field name="search_view_id" ref="view_project_project_filter"/>
+            <field name="target">main</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new Planning
+                </p>
+                <!-- <p>
+                    Or <a type="action" name="%(project.ir_actions_server_project_sample)d" tabindex="-1">activate a sample Planning</a> to play with.
+                </p> -->
+            </field>
+        </record>
+
+      <record id="parent_middel_view_project_all1" model="ir.actions.act_window">
+            <field name="name">Parent Planning</field>
+            <field name="res_model">project.project</field>
+            <field name="context">{
+                 'search_default_parent_id': [active_id],
+                'default_parent_id': active_id,
+            }</field>
+            <field name="domain">['|',('parent_id','!=',False),('user_ids','=',uid)]</field>
+            <field name="view_mode">kanban,form</field>
+            <field name="view_id" ref="project.view_project_kanban"/>
+            <field name="search_view_id" ref="view_project_project_filter"/>
+            <field name="target">main</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                   No Planning Package created!
+                </p><p>
+                    add parent for your Planning.
+                </p>
+            </field>
+        </record>
+
+
+    
+
+     
+ <record model="ir.ui.view" id="view_parent_project_kanban">
+            <field name="name">project.project.kanban</field>
+            <field name="model">project.project</field>
+            <field name="arch" type="xml">
+                <kanban class="oe_background_grey o_kanban_dashboard o_project_kanban o_emphasize_colors" create="false">
+                    <field name="name"/>
+                    <field name="partner_id"/>
+                    <field name="color"/>
+                    <field name="task_count"/>
+                    <field name="label_tasks"/>
+                    <field name="alias_id"/>
+                    <field name="alias_name"/>
+                    <field name="alias_domain"/>
+                    <field name="is_favorite"/>
+                    <field name="rating_percentage_satisfaction"/>
+                    <field name="rating_status"/>
+                    <field name="analytic_account_id"/>
+                    <field name="parent_id"/>
+                    <field name="is_parent"/>
+                    
+                    
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="#{kanban_color(record.color.raw_value)} oe_kanban_global_click o_has_icon">
+                                <div class="o_project_kanban_main">
+                                    <div class="o_kanban_card_content">
+                                        <div class="o_kanban_primary_left">
+                                           <div class="o_primary">
+                                                <span><t t-esc="record.name.value"/></span>
+                                                <span t-if="record.partner_id.value">
+                                                    <strong><t t-esc="record.partner_id.value"/></strong>
+                                                </span>
+                                            </div>
+                                            <div t-if="record.alias_name.value and record.alias_domain.value">
+                                                <span><i class="fa fa-envelope" role="img" aria-label="Domain Alias" title="Domain Alias"></i> <t t-esc="record.alias_id.value"/></span>
+                                            </div>
+                                            <div t-if="record.rating_status.raw_value != 'no'" class="mt8 text-primary" title="Percentage of happy ratings over the past 30 days. Get rating details from the More menu." groups="project.group_project_rating">
+                                                <b>
+                                                    <t t-if="record.rating_percentage_satisfaction.value == -1">
+                                                        <i class="fa fa-smile-o"/> No rating yet
+                                                    </t>
+                                                    <t t-if="record.rating_percentage_satisfaction.value != -1">
+                                                        <a name="action_view_all_rating" type="object" context="{'search_default_rating_last_30_days':1}">
+                                                            <i class="fa fa-smile-o" role="img" aria-label="Percentage of satisfaction" title="Percentage of satisfaction"/> <t t-esc="record.rating_percentage_satisfaction.value"/>%
+                                                        </a>
+                                                    </t>
+                                                </b>
+                                            </div>
+                                            <span t-if="record.parent_id.value">
+                                                    <strong><t t-esc="record.parent_id.value"/></strong>
+                                                </span>
+                                        </div>
+                                    </div>
+                                    <div class="o_kanban_card_manage_pane dropdown-menu" groups="project.group_project_manager" role="menu">
+                                        <div class="o_kanban_card_manage_section o_kanban_manage_reports">
+                                            <div role="menuitem">
+                                                <a name="%(portal.portal_share_action)d" type="action">Share</a>
+                                            </div>
+                                            <div role="menuitem">
+                                                <a type="edit">Edit</a>
+                                            </div>
+                                            <div role="menuitem" t-if="record.rating_status.raw_value != 'no'">
+                                                <a name="action_view_all_rating" type="object">Customer Ratings</a>
+                                            </div>
+                                        </div>
+                                        <div role="menuitem" aria-haspopup="true" class="o_no_padding_kanban_colorpicker">
+                                            <ul class="oe_kanban_colorpicker" data-field="color" role="popup"/>
+                                        </div>
+                                    </div>
+                                    <a class="o_kanban_manage_toggle_button o_left" href="#" groups="project.group_project_manager"><i class="fa fa-ellipsis-v" role="img" aria-label="Manage" title="Manage"/></a>
+                                    <span class="o_right"><field name="is_favorite" widget="boolean_favorite" nolabel="1" force_save="1" /></span>
+                                </div>
+
+                                <div class="o_project_kanban_boxes">
+                                <span t-if="record.is_parent.raw_value">
+                                     <a class="o_project_kanban_box" name="%(parent_middel_view_project_all)d" type="action">
+                                        <div>
+                                              
+                                        <span>
+                                        <field name="parent_path2"/>
+                                            <!-- <t t-esc="record.parent_path2.value" /> -->
+                                        </span><br/>
+                                            <span class="o_value"><t t-esc="record.task_count.value"/></span>
+                                            <span class="o_label"><t t-esc="record.label_tasks.value"/></span>
+                                        </div>
+                                    </a>
+                                               
+                                    </span>
+                                    <span t-else="">
+                                                         <span>
+                                        <field name="parent_path2"/>
+                                            <!-- <t t-esc="record.parent_path2.value" /> -->
+                                        </span><br/>
+                                        <a class="o_project_kanban_box" name="%(project.act_project_project_2_project_task_all)d" type="action">
+                                                                            <div>
+                                                                                <span class="o_value"><t t-esc="record.task_count.value"/></span>
+                                                                                <span class="o_label"><t t-esc="record.label_tasks.value"/></span>
+                                                                            </div>
+                                                                        </a>
+                                    </span>
+                                     <span>
+                       
+                    </span>
+                                    <a t-if="record.analytic_account_id.raw_value" class="o_project_kanban_box o_project_timesheet_box" name="action_view_account_analytic_line" type="object" groups="analytic.group_analytic_accounting">
+                                        <div>
+                                            <span class="o_label">Profitability</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+    
+
+  
+        <record id="parent_middel_view_project_all" model="ir.actions.act_window">
+            <field name="name">Parent Planning</field>
+            <field name="res_model">project.project</field>
+            <field name="context">{
+                 'search_default_parent_id': [active_id],
+                'default_parent_id': active_id,
+            }</field>
+            <field name="domain">['|',('parent_id','!=',False),('user_ids','=',uid)]</field>
+            <field name="view_mode">kanban,form</field>
+            <field name="view_id" ref="view_parent_project_kanban"/>
+            <field name="search_view_id" ref="view_project_project_filter"/>
+            <field name="target">main</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new Planning
+                </p>
+                <!-- <p>
+                    Or <a type="action" name="%(project.ir_actions_server_project_sample)d" tabindex="-1">activate a sample Planning</a> to play with.
+                </p> -->
+            </field>
+        </record>  
+ 
+      
+
+
+          <!-- <record id="open_view_project_all2" model="ir.actions.act_window">
+            <field name="name">Planning</field>
+            <field name="res_model">project.project</field>
+            <field name="domain">[]</field>
+            <field name="view_mode">kanban,form</field>
+            <field name="view_id" ref="view_project_kanban"/>
+            <field name="search_view_id" ref="view_project_project_filter"/>
+            <field name="target">main</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new project
+                </p><p>
+                    Or <a type="action" name="%(project.ir_actions_server_project_sample)d" tabindex="-1">activate a sample project</a> to play with.
+                </p>
+            </field>
+        </record>
+
+    <menuitem action="open_view_project_all2" id="menu_projects_dep_head" name="Planning" 
+        parent="project.menu_main_pm" sequence="1" groups="group_project_department"/> -->
+
+
+
+    <record id="open_view_project_all_user" model="ir.actions.act_window">
+            <field name="name">My Planning</field>
+            <field name="res_model">project.project</field>
+            <field name="domain">['&amp;',('create_uid','=',uid),('parent_path2','!=','/')]</field>
+
+            <field name="view_mode">kanban,form</field>
+            <field name="view_id" ref="view_project_kanban"/>
+            <field name="search_view_id" ref="view_project_project_filter"/>
+            <field name="target">main</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new Planning
+                </p>
+                <!-- <p>
+                    Or <a type="action" name="%(project.ir_actions_server_project_sample)d" tabindex="-1">activate a sample Planning</a> to play with.
+                </p> -->
+            </field>
+        </record>
+        <menuitem name="Planning"
+            id="menu_main_project"
+            groups="project.group_project_manager,project.group_project_user"
+            web_icon="project,static/description/icon.png"
+            sequence="0"
+            parent="project.menu_main_pm"/>
+        
+        <menuitem action="open_view_project_all_user" id="menu_projects_user" 
+        name="My Planning" 
+        parent="menu_main_project" sequence="1" 
+        groups="project.group_project_user"/>
+
+        <record id="open_view_project_requested_view" model="ir.actions.act_window">
+            <field name="name">Requested Planning</field>
+            <field name="res_model">project.project</field>
+            <field name="domain">[]</field>
+            <field name="view_mode">kanban,form,tree</field>
+            <field name="domain">[('state','=','requested')]</field> <field name="view_ids" eval="[(5, 0, 0),
+            (0, 0, {'view_mode': 'tree', 'view_id': ref('view_project')}),
+            (0, 0, {'view_mode': 'kanban', 'view_id': ref('project.project_view_kanban')})]"/>
+        <field name="search_view_id" ref="view_project_project_filter"/>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_empty_folder">
+                Create a new Planning
+            </p><p>
+                Organize your activities (plan tasks, track issues, invoice timesheets) for internal, personal or customer projects.
+            </p>
+        </field>
+        </record>
+
+
+        <menuitem action="open_view_project_requested_view" id="menu_requested_planning_view" 
+            name="Requested Planning" 
+            parent="menu_main_project" sequence="6" 
+            groups="project.group_planning_manager_approval"/>
+            <!-- <menuitem action="open_view_project_requested" id="menu_requested_planning" name="Requested Planning" parent="project_parent.menu_main_project" sequence="2" groups="project.group_planning_manager_approval"/> -->
+
+
+        <record id="open_view_project_all_user_assign" model="ir.actions.act_window">
+            <field name="name">Assigned Planning</field>
+            <field name="res_model">project.project</field>
+            <field name="domain">['&amp;',('parent_path2','!=','/'),('user_ids','in',[uid])]</field>
+            <field name="view_mode">kanban,form</field>
+            <field name="view_id" ref="project.view_project_kanban"/>
+            <field name="search_view_id" ref="project.view_project_project_filter"/>
+            <field name="target">main</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new Planning
+                </p>
+                <!-- <p>
+                    Or <a type="action" name="%(project.ir_actions_server_project_sample)d" tabindex="-1">activate a sample Planning</a> to play with.
+                </p> -->
+            </field>
+        </record>
+        <menuitem action="open_view_project_all_user_assign" id="menu_projects_user_assign" 
+        name="Assigned Planning" 
+        parent="menu_main_project" sequence="2" 
+        groups="project.group_project_user"/>
+
+
+        <record id="open_view_project_department_head" model="ir.actions.act_window">
+            <field name="name">Team Planning</field>
+            <field name="res_model">project.project</field>
+            <field name="domain">[('team_id.user_id','=',uid)]</field>
+            <field name="view_mode">kanban,form</field>
+            <field name="view_id" ref="project.view_project_kanban"/>
+            <field name="search_view_id" ref="project.view_project_project_filter"/>
+            <field name="target">main</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new Planning
+                </p>
+                <!-- <p>
+                    Or <a type="action" name="%(project.ir_actions_server_project_sample)d" tabindex="-1">activate a sample Planning</a> to play with.
+                </p> -->
+            </field>
+        </record>
+        <!-- <menuitem action="open_view_project_department_head" 
+        id="menu_projects_dep_head_team" 
+        name="My Team Planning" 
+        parent="menu_main_project" sequence="3" 
+        groups="group_project_department"/> -->
+
+   <record id="parent_view_project_all" model="ir.actions.act_window">
+            <field name="name">Packages</field>
+            <field name="res_model">project.project</field>
+            <field name="domain">['|',('user_ids','=',uid),('create_uid','=',uid),('task_count','=',0),('parent_id','=',False)]</field>
+            <field name="view_mode">kanban,form</field>
+            <field name="view_id" ref="view_parent_project_kanban"/>
+            <field name="search_view_id" ref="view_project_project_filter"/>
+            <field name="target">main</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new Planning
+                </p>
+                <!-- <p>
+                    Or <a type="action" name="%(project.ir_actions_server_project_sample)d" tabindex="-1">activate a sample Planning</a> to play with.
+                </p> -->
+            </field>
+        </record>
+          <menuitem name="Packages"
+            id="menu_parent_pr"
+            parent ="project.menu_main_pm"
+            groups="project.group_project_manager,project.group_Planning_requester"
+            action="parent_view_project_all"
+            sequence="-10"/>
+
+        <menuitem action="open_view_project_all" id="all_child_projcet" 
+        name="All Planning" parent="menu_main_project" sequence="55"  
+        groups="project.group_project_manager"/>
+
+        <!-- <menuitem action="open_view_project_requested" id="menu_requested_planning" name="Requested Planning" parent="menu_main_project" sequence="2" groups="project.group_planning_manager_approval"/> -->
+
+         
+         
+        <record id="action_view_my_task" model="ir.actions.act_window">
+            <field name="name">My Tasks</field>
+            <field name="res_model">project.task</field>
+            <field name="view_mode">kanban,tree,form,calendar,pivot,graph,activity</field>
+            <field name="domain">[('user_id','=',uid)]</field>
+            <field name="search_view_id" ref="project.view_task_search_form"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new task
+                </p><p>
+                    Odoo's Planning management allows you to manage the pipeline of your tasks efficiently.<br/>
+                    You can track progress, discuss on tasks, attach documents, etc.
+                </p>
+            </field>
+        </record>
+        <menuitem name="My Tasks" id="menu_my_task" 
+        parent="project.menu_project_tasks"
+        action="action_view_my_task" sequence="1" />
+</odoo>

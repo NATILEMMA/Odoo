@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- 	project stage form view inherited-->
+    <record id="project_task_type_form_view_inherit" model="ir.ui.view">
+        <field name="name">project.task.type.inherit</field>
+        <field name="model">project.task.type</field>
+        <field name="inherit_id" ref="project.task_type_edit" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='mail_template_id']" position="after">
+                <field name="stage_progress" />
+                <field name="exclude" />
+            </xpath>
+        </field>
+    </record>
+
+    <!-- 	project stage tree view inherited-->
+    <record id="project_tasks_tree_view_inherited" model="ir.ui.view">
+        <field name="name">project.task.type.tree.view.inherit</field>
+        <field name="model">project.task.type</field>
+        <field name="inherit_id" ref="project.task_type_tree" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='description']" position="after">
+                <field name="stage_progress" />
+                <field name="exclude" />
+            </xpath>
+        </field>
+    </record>
+
+    <!-- 	project.project form view inherited-->
+    <record id="project_project_form_view_inherit" model="ir.ui.view">
+        <field name="name">project.project.inherit</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project" />
+        <field name="arch" type="xml">
+            <xpath expr="//form/sheet/div[2]" position="after">
+                <div>
+                    <label for="expectation_progress" class="oe_inline" string="Expectation Progress(%) :" style="font-size:18px; font-style:bold;"/>
+                    <field name="expectation_progress" class="oe_inline oe_input_align" widget="progressbar" />
+                    <field name="progress" class="oe_inline oe_input_align" widget="progressbar" style="float:right; "/>
+                    <label for="progress" class="oe_inline" string="Actual Progress(%) :"  style="float:right; font-size:18px; font-style:bold;"/>
+                </div><br></br>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- 	project.project kanban view inherited-->
+    <record id="project_kanban_view_inherit" model="ir.ui.view">
+        <field name="name">project.kanban.inherit</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.view_project_kanban" />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="total" />
+                <field name="progress" />
+            </field>
+            <xpath expr="//div[hasclass('o_primary')]" position="after">
+                <div class="oe_kanban_bottom_left" style="height: 90px; width: 120px; margin-left: 70px;">
+                    <field name="progress" widget="gauge" style="width: 120px; height: 90px; position: relative; display: inline-block;" options="{'max_field': 'total', 'style': 'width:120px; height: 90px;'}" />
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+        <!-- 	Parent project.project kanban view inherited-->
+    <record id="project_parent_kanban_view_inherit" model="ir.ui.view">
+        <field name="name">project.kanban.inherit</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project_parent.view_parent_project_kanban" />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="total" />
+                <field name="progress" />
+            </field>
+            
+              <xpath expr="//div[hasclass('o_primary')]" position="after">
+              <span t-if="record.is_parent.raw_value">
+                <div class="oe_kanban_bottom_left" style="height: 90px; width: 120px; margin-left: 70px;">
+                    <field name="progress" widget="gauge" style="width: 120px; height: 90px; position: relative; display: inline-block;" options="{'max_field': 'total', 'style': 'width:120px; height: 90px;'}" />
+                </div>
+                </span>
+                 <span t-else="">
+                  <div class="oe_kanban_bottom_left" style="height: 90px; width: 120px; margin-left: 70px;">
+                    <field name="progress" widget="gauge" style="width: 120px; height: 90px; position: relative; display: inline-block;" options="{'max_field': 'total', 'style': 'width:120px; height: 90px;'}" />
+                </div>
+                 </span>
+            </xpath>
+          
+          
+        </field>
+    </record>
+
+
+    <!-- 	project.task form view inherited-->
+    <record id="project_task_form_view_inherit" model="ir.ui.view">
+        <field name="name">project.task.inherit</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='user_id']" position="after">
+                <field name="task_progress" class="oe_inline oe_input_align" widget="progressbar" />
+            </xpath>
+        </field>
+    </record>
+
+    <!-- 	project.task tree view inherited-->
+    <record id="project_task_tree_view_inherit" model="ir.ui.view">
+        <field name="name">project.task.inherit</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_tree2" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='company_id']" position="after">
+                <field name="task_progress" class="oe_inline oe_input_align" widget="progressbar" />
+            </xpath>
+        </field>
+    </record>
+
+    <!-- 	project.task kanban view inherited-->
+    <record id="project_tasks_kanban_view_inherited" model="ir.ui.view">
+        <field name="name">project.task.kanban.inherit</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_kanban" />
+        <field name="arch" type="xml">
+            <field name="partner_id" position="after">
+                <field name="task_total" />
+                <field name="task_progress" />
+            </field>
+            <xpath expr="//div[hasclass('o_kanban_record_body')]" position="before">
+                <div class="oe_kanban_bottom_left" style="height: 15px; width: 150px; margin-left: 60px;">
+                    <div>
+                        <field
+                            name="task_progress"
+                            class="oe_inline oe_input_align"
+                            widget="progressbar"
+                            style="width: 70px; height: 50px; position: relative; display: inline-block;"
+                            options="{'max_field': 'task_total', 'style': 'width:70px; height: 50px;'}"
+                        />
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

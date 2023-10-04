@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+   <data>
+       <record id="sprogroup_purchase_request_datepicker" model="ir.ui.view">
+            <field name="name">sprogroup.purchase.request.datepicker</field>
+            <field name="model">sprogroup.purchase.request</field>
+            <field name="inherit_id" ref="purchase_request.view_sprogroup_purchase_request_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='purchase_type']" position="after">
+                  <field  name="ethiopian_from"  class="oe_read_only" string="Date" style=" float:left;" attrs="{'invisible': ['|', ('is_pagum_from', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                  <field  name="date"   groups="EthiopianCalendar.group_gregory" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                  <field  name="pagum_from" class="oe_read_only"  string="Date " style=" float:left"  attrs="{'invisible': ['|',('is_pagum_from', '!=',False)  ]}"  groups="EthiopianCalendar.group_ethio_datepicker"/>
+                  <field name="is_pagum_from" invisible="1"/>
+                   <div>
+                   </div>
+                  <div style="margin-bottom:40px;margin-top:-22px; width: 40%;margin-left:5px;margin-right:0px">
+                  <widget name="ethiopian_calander_widget"  style=" float:left;width:226px;" class="oe_edit_only"
+                          groups="EthiopianCalendar.group_ethio_datepicker" attrs="{'invisible': [('state', '!=', 'draft')]}"/>
+                  </div>
+                </xpath>
+            </field>
+        </record>
+
+
+
+  </data>
+
+</odoo>

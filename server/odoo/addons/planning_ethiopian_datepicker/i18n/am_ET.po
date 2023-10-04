@@ -1,0 +1,140 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* planning_ethiopian_datepicker
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-10 13:19+0000\n"
+"PO-Revision-Date: 2023-08-10 13:19+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: planning_ethiopian_datepicker
+#: model_terms:ir.ui.view,arch_db:planning_ethiopian_datepicker.view_planning_project_form_inherit_local
+msgid "Actual Ending Date"
+msgstr "ትክክለኛው የማለቂያ ቀን"
+
+#. module: planning_ethiopian_datepicker
+#: model_terms:ir.ui.view,arch_db:planning_ethiopian_datepicker.view_planning_project_form_inherit_local
+msgid "Actual Starting Date"
+msgstr "ትክክለኛው የመነሻ ቀን"
+
+#. module: planning_ethiopian_datepicker
+#: model_terms:ir.ui.view,arch_db:planning_ethiopian_datepicker.view_planning_goal_form_inherit_local
+#: model_terms:ir.ui.view,arch_db:planning_ethiopian_datepicker.view_planning_quarter_form_inherit_local
+#: model_terms:ir.ui.view,arch_db:planning_ethiopian_datepicker.view_project_milestone_setting_form_inherit_local
+msgid "Date From"
+msgstr "ከ ቀን"
+
+#. module: planning_ethiopian_datepicker
+#: model_terms:ir.ui.view,arch_db:planning_ethiopian_datepicker.view_planning_goal_form_inherit_local
+#: model_terms:ir.ui.view,arch_db:planning_ethiopian_datepicker.view_planning_quarter_form_inherit_local
+#: model_terms:ir.ui.view,arch_db:planning_ethiopian_datepicker.view_project_milestone_setting_form_inherit_local
+msgid "Date TO"
+msgstr "እስከ"
+
+#. module: planning_ethiopian_datepicker
+#: model_terms:ir.ui.view,arch_db:planning_ethiopian_datepicker.view_planning_goal_form_inherit_local
+#: model_terms:ir.ui.view,arch_db:planning_ethiopian_datepicker.view_planning_quarter_form_inherit_local
+#: model_terms:ir.ui.view,arch_db:planning_ethiopian_datepicker.view_project_milestone_setting_form_inherit_local
+msgid "Date To"
+msgstr "እስከ"
+
+#. module: planning_ethiopian_datepicker
+#: model_terms:ir.ui.view,arch_db:planning_ethiopian_datepicker.view_planning_task_form_inherit_local
+msgid "Deadline"
+msgstr "የመጨረሻው ቀን"
+
+#. module: planning_ethiopian_datepicker
+#: model_terms:ir.ui.view,arch_db:planning_ethiopian_datepicker.view_planning_project_form_inherit_local
+msgid "End Date"
+msgstr "የመጨረሻ ቀን"
+
+#. module: planning_ethiopian_datepicker
+#: model:ir.model.fields,field_description:planning_ethiopian_datepicker.field_project_project__is_pagum_four
+msgid "Is Pagum Four"
+msgstr "ጳጉሜ ከ"
+
+#. module: planning_ethiopian_datepicker
+#: model:ir.model.fields,field_description:planning_ethiopian_datepicker.field_planning_goal__is_pagum_from
+#: model:ir.model.fields,field_description:planning_ethiopian_datepicker.field_planning_quarter__is_pagum_from
+#: model:ir.model.fields,field_description:planning_ethiopian_datepicker.field_project_milestone__is_pagum_from
+#: model:ir.model.fields,field_description:planning_ethiopian_datepicker.field_project_project__is_pagum_from
+#: model:ir.model.fields,field_description:planning_ethiopian_datepicker.field_project_task__is_pagum_from
+msgid "Is Pagum From"
+msgstr "ጳጉሜ ከ"
+
+#. module: planning_ethiopian_datepicker
+#: model:ir.model,name:planning_ethiopian_datepicker.model_project_project
+msgid "Planning"
+msgstr "እቅድ"
+
+#. module: planning_ethiopian_datepicker
+#: model:ir.model,name:planning_ethiopian_datepicker.model_project_milestone
+msgid "Project Milestone"
+msgstr "የፕሮጀክት ምዕራፍ"
+
+#. module: planning_ethiopian_datepicker
+#: model_terms:ir.ui.view,arch_db:planning_ethiopian_datepicker.view_planning_project_form_inherit_local
+msgid "Start Date"
+msgstr "የመጀመሪያ ቀን"
+
+#. module: planning_ethiopian_datepicker
+#: model_terms:ir.ui.view,arch_db:planning_ethiopian_datepicker.view_planning_task_form_inherit_local
+msgid "Starting Date"
+msgstr "የመጀመሪያ ቀን"
+
+#. module: planning_ethiopian_datepicker
+#: model:ir.model,name:planning_ethiopian_datepicker.model_project_task
+msgid "Task"
+msgstr "ተግባር"
+
+#. module: planning_ethiopian_datepicker
+#: model:ir.model.fields,field_description:planning_ethiopian_datepicker.field_planning_goal__ethiopian_from
+#: model:ir.model.fields,field_description:planning_ethiopian_datepicker.field_planning_goal__ethiopian_to
+#: model:ir.model.fields,field_description:planning_ethiopian_datepicker.field_planning_goal__is_pagum_to
+#: model:ir.model.fields,field_description:planning_ethiopian_datepicker.field_planning_goal__pagum_from
+#: model:ir.model.fields,field_description:planning_ethiopian_datepicker.field_planning_goal__pagum_to
+#: model:ir.model.fields,field_description:planning_ethiopian_datepicker.field_planning_quarter__ethiopian_from
+#: model:ir.model.fields,field_description:planning_ethiopian_datepicker.field_planning_quarter__ethiopian_to
+#: model:ir.model.fields,field_description:planning_ethiopian_datepicker.field_planning_quarter__is_pagum_to
+#: model:ir.model.fields,field_description:planning_ethiopian_datepicker.field_planning_quarter__pagum_from
+#: model:ir.model.fields,field_description:planning_ethiopian_datepicker.field_planning_quarter__pagum_to
+#: model:ir.model.fields,field_description:planning_ethiopian_datepicker.field_project_milestone__ethiopian_from
+#: model:ir.model.fields,field_description:planning_ethiopian_datepicker.field_project_milestone__ethiopian_to
+#: model:ir.model.fields,field_description:planning_ethiopian_datepicker.field_project_milestone__is_pagum_to
+#: model:ir.model.fields,field_description:planning_ethiopian_datepicker.field_project_milestone__pagum_from
+#: model:ir.model.fields,field_description:planning_ethiopian_datepicker.field_project_milestone__pagum_to
+#: model:ir.model.fields,field_description:planning_ethiopian_datepicker.field_project_project__ethiopian_four
+#: model:ir.model.fields,field_description:planning_ethiopian_datepicker.field_project_project__ethiopian_from
+#: model:ir.model.fields,field_description:planning_ethiopian_datepicker.field_project_project__ethiopian_three
+#: model:ir.model.fields,field_description:planning_ethiopian_datepicker.field_project_project__ethiopian_to
+#: model:ir.model.fields,field_description:planning_ethiopian_datepicker.field_project_project__is_pagum_three
+#: model:ir.model.fields,field_description:planning_ethiopian_datepicker.field_project_project__is_pagum_to
+#: model:ir.model.fields,field_description:planning_ethiopian_datepicker.field_project_project__pagum_four
+#: model:ir.model.fields,field_description:planning_ethiopian_datepicker.field_project_project__pagum_from
+#: model:ir.model.fields,field_description:planning_ethiopian_datepicker.field_project_project__pagum_three
+#: model:ir.model.fields,field_description:planning_ethiopian_datepicker.field_project_project__pagum_to
+#: model:ir.model.fields,field_description:planning_ethiopian_datepicker.field_project_task__ethiopian_from
+#: model:ir.model.fields,field_description:planning_ethiopian_datepicker.field_project_task__ethiopian_to
+#: model:ir.model.fields,field_description:planning_ethiopian_datepicker.field_project_task__is_pagum_to
+#: model:ir.model.fields,field_description:planning_ethiopian_datepicker.field_project_task__pagum_from
+#: model:ir.model.fields,field_description:planning_ethiopian_datepicker.field_project_task__pagum_to
+msgid "in ethiopian date"
+msgstr "በኢትዮጵያ ቀን"
+
+#. module: planning_ethiopian_datepicker
+#: model:ir.model,name:planning_ethiopian_datepicker.model_planning_goal
+msgid "planning.goal"
+msgstr "እቅድ ማውጣት.ግብ"
+
+#. module: planning_ethiopian_datepicker
+#: model:ir.model,name:planning_ethiopian_datepicker.model_planning_quarter
+msgid "planning.quarter"
+msgstr "እቅድ ማውጣት.ሩብ አመት"

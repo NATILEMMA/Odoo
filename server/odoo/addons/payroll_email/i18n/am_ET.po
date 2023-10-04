@@ -1,0 +1,131 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* payroll_email
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20221005\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-22 10:26+0000\n"
+"PO-Revision-Date: 2023-05-22 10:26+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: payroll_email
+#: model:mail.template,body_html:payroll_email.email_template_for_my_payroll
+msgid ""
+"\n"
+"                    <p>Hi,</p>\n"
+"                    <p>Here by attaching payslip details of this month</p>\n"
+"                    \n"
+""
+msgstr ""
+"\n"
+"                    <p>ሃይ,</p>\n"
+"                    <p>የዚህ ወር የክፍያ ዝርዝር ዝርዝሮችን በማያያዝ እዚህ ጋር</p>\n"
+"                    \n"
+""
+
+#. module: payroll_email
+#: model:mail.template,subject:payroll_email.email_template_for_my_payroll
+msgid "${object.company_id.name}:  ${object.name})"
+msgstr ""
+
+#. module: payroll_email
+#: model_terms:ir.ui.view,arch_db:payroll_email.view_payroll_mass_mail
+msgid "Close"
+msgstr "ዝጋ"
+
+#. module: payroll_email
+#: model:ir.model.fields,field_description:payroll_email.field_payroll_mass_mail__create_uid
+msgid "Created by"
+msgstr "የተፈጠረ"
+
+#. module: payroll_email
+#: model:ir.model.fields,field_description:payroll_email.field_payroll_mass_mail__create_date
+msgid "Created on"
+msgstr "ላይ ተፈጠረ"
+
+#. module: payroll_email
+#: model:ir.model.fields,field_description:payroll_email.field_hr_payslip__user_id
+msgid "Current User"
+msgstr "የአሁኑ ተጠቃሚ"
+
+#. module: payroll_email
+#: model:ir.model.fields,field_description:payroll_email.field_payroll_mass_mail__display_name
+msgid "Display Name"
+msgstr "መጠሪያው ስም"
+
+#. module: payroll_email
+#: model:ir.model.fields,field_description:payroll_email.field_hr_payslip__flag
+msgid "Flag"
+msgstr "ባንዲራ"
+
+#. module: payroll_email
+#: model:ir.model.fields,field_description:payroll_email.field_payroll_mass_mail__id
+msgid "ID"
+msgstr "መታወቂያ"
+
+#. module: payroll_email
+#: model:ir.model.fields,field_description:payroll_email.field_payroll_mass_mail____last_update
+msgid "Last Modified on"
+msgstr "መጨረሻ የተሻሻለው በ"
+
+#. module: payroll_email
+#: model:ir.model.fields,field_description:payroll_email.field_payroll_mass_mail__write_uid
+msgid "Last Updated by"
+msgstr "መጨረሻ የዘመነው በ"
+
+#. module: payroll_email
+#: model:ir.model.fields,field_description:payroll_email.field_payroll_mass_mail__write_date
+msgid "Last Updated on"
+msgstr "መጨረሻ የዘመነው በ"
+
+#. module: payroll_email
+#: model:ir.model,name:payroll_email.model_hr_payslip
+msgid "Pay Slip"
+msgstr "የክፍያ ደረሰኝ"
+
+#. module: payroll_email
+#: model:ir.actions.act_window,name:payroll_email.action_payroll_mass_mail
+msgid "Payroll Mass Mail"
+msgstr "የደመወዝ ክፍያ መልእክት"
+
+#. module: payroll_email
+#: model:mail.template,report_name:payroll_email.email_template_for_my_payroll
+msgid "Payslip_${(object.name or '')}"
+msgstr "የክፍያ ደብተር_${(object.name or '')}"
+
+#. module: payroll_email
+#: model:ir.model.fields,field_description:payroll_email.field_payroll_mass_mail__payslip_ids
+msgid "Payslips"
+msgstr "የመክፈያ ደረሰኝ"
+
+#. module: payroll_email
+#: model_terms:ir.ui.view,arch_db:payroll_email.view_payslip_my_form_inherit
+msgid "Send By Email"
+msgstr "በኢሜል ላክ"
+
+#. module: payroll_email
+#: model_terms:ir.ui.view,arch_db:payroll_email.view_payroll_mass_mail
+msgid "Send Mail"
+msgstr "ደብዳቤ ላክ"
+
+#. module: payroll_email
+#: model:ir.actions.server,name:payroll_email.payroll_action_mass_mail
+msgid "Send Payroll by Mail"
+msgstr "ደሞዝ በፖስታ ላክ"
+
+#. module: payroll_email
+#: model_terms:ir.ui.view,arch_db:payroll_email.view_payroll_mass_mail
+msgid "or"
+msgstr "ወይም"
+
+#. module: payroll_email
+#: model:ir.model,name:payroll_email.model_payroll_mass_mail
+msgid "payroll.mass.mail"
+msgstr ""

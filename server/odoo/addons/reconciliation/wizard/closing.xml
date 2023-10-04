@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="view_account_financial_closing" model="ir.ui.view">
+        <field name="name">financial closing</field>
+        <field name="model">financial.closing</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Financial Closing">
+                 <header>
+                  <field name="state" widget="statusbar" statusbar_visible="draft,post"/>
+                  <button name="close_year" string="close Year" states="draft"  groups="account.group_account_manager" type="object" class="btn-primary"/>
+                </header>
+                 <sheet>
+                    <group>
+                          <field name="journal_id" force_save="1"/>
+                          <field name="date" force_save="1"/>
+                          <field name="debit" force_save="1" widget="many2many_tags"/>
+                          <field name="credit" force_save="1" widget="many2many_tags"/>
+                          <field name="profit" force_save="1"/>
+
+                    </group>
+                 </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_credit_payment_financial_closing" model="ir.actions.act_window">
+        <field name="name">Closing</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">financial.closing</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+</odoo>

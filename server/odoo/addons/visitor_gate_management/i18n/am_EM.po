@@ -1,0 +1,2495 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* visitor_gate_management
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20220525\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-12 17:54+0000\n"
+"PO-Revision-Date: 2023-07-12 17:54+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visitor__visit_count
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.fo_visitor_form_view
+msgid "# Visits"
+msgstr "# ጉብኝት"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.report_property_label
+msgid "<b>Employee Report</b>"
+msgstr "<b>የሰራተኛ ሪፖርት</b>"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.report_property_label
+msgid "<b>Employee</b>"
+msgstr "<b>ሰራተኛ</b>"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.report_property_label
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.report_visitor_report
+msgid "<b>In/Out Details</b>"
+msgstr "<b>የመግብያ/መውጫ ዝርዝሮች</b>"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.meeting_minute_visitor_report
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.report_visitor_report
+msgid "<b>Meeting Minutes</b>"
+msgstr "<b>አጀንዳ</b>"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.report_property_label
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.report_visitor_report
+msgid "<b>Personal Belongings</b>"
+msgstr "<b>የግል ንብረቶች</b>"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.report_visitor_report
+msgid "<b>Purpose</b>"
+msgstr "<b>ዓላማው</b>"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.report_visitor_report
+msgid "<b>Visit With</b>"
+msgstr "<b>ጉብኝቱ ከ</b>"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.report_visitor_report
+msgid "<b>Visitor Report</b>"
+msgstr "<b>የጎብኚ ሪፖርት</b>"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.report_visitor_report
+msgid "<b>Visitors</b>"
+msgstr "<b>ጎብኚዎች</b>"
+
+#. module: visitor_gate_management
+#: code:addons/visitor_gate_management/models/fo_visit.py:0
+#, python-format
+msgid "<h4>Approval Sent</h4>"
+msgstr "<h4>ለማጽደቅ ተልኳል</h4>"
+
+#. module: visitor_gate_management
+#: code:addons/visitor_gate_management/models/fo_visit.py:0
+#, python-format
+msgid "<h4>Visit Approval</h4>"
+msgstr "<h4>ጉብኝት ማጽደቅያ</h4>"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.report_property_label
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.report_visitor_report
+msgid "<span style=\"font-size:16px;\">In and Out</span>"
+msgstr "<span style=\"font-size:16px;\">የገባ እና የወጣ</span>"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.report_property_label
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.report_visitor_report
+msgid "<span style=\"font-size:16px;\">In</span>"
+msgstr "<span style=\"font-size:16px;\">የገባ</span>"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.report_property_label
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.report_visitor_report
+msgid "<span style=\"font-size:16px;\">Out</span>"
+msgstr "<span style=\"font-size:16px;\">የወጣ</span>"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.report_property_label
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.report_visitor_report
+msgid "<span>Check In  : </span>"
+msgstr "<span>የመግብያ ሰዓት፡ </span>"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.report_property_label
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.report_visitor_report
+msgid "<span>Check Out : </span>"
+msgstr "<span>የመውጫ ሰዓት : </span>"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.report_property_label
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.report_visitor_report
+msgid "<span>Date  : </span>"
+msgstr "<span>ቀን  ፡ </span>"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.report_property_label
+msgid "<span>Department: </span>"
+msgstr "<span>ክፍል፡ </span>"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.report_visitor_report
+msgid "<span>Email: </span>"
+msgstr "<span>ኢሜል፡ </span>"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.report_visitor_report
+msgid "<span>Employee   : </span>"
+msgstr "<span>ሰራተኛ፡ </span>"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.report_visitor_report
+msgid "<span>Employee :   </span>"
+msgstr "<span>ሰራተኛ፡ </span>"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.report_property_label
+msgid "<span>Employee: </span>"
+msgstr "<span>ሰራተኛ፡ </span>"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.report_visitor_report
+msgid "<span>Meeting With     : </span>"
+msgstr "<span>ስብሰባው ከ: </span>"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.report_visitor_report
+msgid "<span>Purpose  : </span>"
+msgstr "<span>ዓላማው፡ </span>"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.report_visitor_report
+msgid "<span>Visit With Department: </span>"
+msgstr "<span>ጉብኝቱ ከክፍል፡ </span>"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.report_visitor_report
+msgid "<span>Visitor: </span>"
+msgstr "<span>ጎብኚ፡ </span>"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.report_visitor_report
+msgid "<span>phone: </span>"
+msgstr "<span>ስልክ፡ </span>"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.report_visitor_label
+msgid "<strong>Department : </strong>"
+msgstr "<strong>ክፍል፡ </strong>"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.report_visitor_label
+msgid "<strong>Meeting With : </strong>"
+msgstr "<strong>ስብሰባው ከ: </strong>"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.report_visitor_label
+msgid "<strong>Phone: </strong>"
+msgstr "<strong>ስልክ፡ </strong>"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.report_visitor_label
+msgid "<strong>Visitor ID: </strong>"
+msgstr "<strong>የጎብኝ መታወቂያ፡ </strong>"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.report_visitor_label
+msgid "<strong>VisitorID: </strong>"
+msgstr "<strong>የጎብኝ መታወቂያ፡ </strong>"
+
+#. module: visitor_gate_management
+#: model:mail.template,body_html:visitor_gate_management.appointment_accepted_in
+msgid ""
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"padding-top: 16px; background-color: #F1F1F1; font-family:Verdana, Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;\">        <tr>\n"
+"            <td align=\"center\">\n"
+"              <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"padding: 16px; background-color: white; color: #454748; border-collapse:separate;\">\n"
+"                <tbody>\n"
+"                <!-- HEADER -->\n"
+"                  <tr>\n"
+"                    <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                      <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                        <tr>\n"
+"                          <td valign=\"middle\">\n"
+"                            <span style=\"font-size: 20px; font-weight: bold;\">\n"
+"                              Visit For: ${ object.reason.name }\n"
+"                            </span>\n"
+"                          </td>\n"
+"                          <td valign=\"middle\" align=\"right\">\n"
+"                            <img src=\"/logo.png?company=${user.company_id.id}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${user.company_id.name}\"/>\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                        <tr>\n"
+"                          <td colspan=\"2\" style=\"text-align:center;\">\n"
+"                            <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                      </table>\n"
+"                    </td>\n"
+"                  </tr>\n"
+"                <!-- CONTENT -->\n"
+"                  <tr>\n"
+"                    <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                      <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                        <tr>\n"
+"                          <td valign=\"top\" style=\"font-size: 13px;\">\n"
+"                            <div>\n"
+"                              Dear Client,<br/><br/>\n"
+"                              The ${ object.reason.name } that you have scheduled on ${ object.date } has been approved.<br/>\n"
+"                              Please be at the meeting place 15 minutes earlier to check-in.<br/>\n"
+"                              Thank you for scheduling with us,<br/>\n"
+"                              % if user.signature:\n"
+"                                <br/>\n"
+"                                ${user.signature | safe}\n"
+"                              % endif\n"
+"                            </div>\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                        <tr>\n"
+"                          <td style=\"text-align:center;\">\n"
+"                            <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                      </table>\n"
+"                    </td>\n"
+"                  </tr>\n"
+"                <!-- FOOTER -->\n"
+"                  <tr>\n"
+"                    <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                      <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; font-size: 11px; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                        <tr>\n"
+"                          <td valign=\"middle\" align=\"left\">\n"
+"                            ${user.company_id.name}\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                        <tr>\n"
+"                          <td valign=\"middle\" align=\"left\" style=\"opacity: 0.7;\">\n"
+"                            ${user.company_id.phone}\n"
+"                            % if user.company_id.email\n"
+"                              | <a href=\"'mailto:%s' % ${user.company_id.email}\" style=\"text-decoration:none; color: #454748;\">${user.company_id.email}</a>\n"
+"                            % endif\n"
+"                            % if user.company_id.website\n"
+"                              | <a href=\"'%s' % ${user.company_id.website}\" style=\"text-decoration:none; color: #454748;\">\n"
+"                                  ${user.company_id.website}\n"
+"                                </a>\n"
+"                            % endif\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                      </table>\n"
+"                    </td>\n"
+"                  </tr>\n"
+"                </tbody>\n"
+"              </table>\n"
+"            </td>\n"
+"          </tr>\n"
+"                <!-- POWERED BY -->\n"
+"                  <tr>\n"
+"                    <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                      <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: #F1F1F1; color: #454748; padding: 8px; border-collapse:separate;\">\n"
+"                        <tr>\n"
+"                          <td style=\"text-align: center; font-size: 13px;\">\n"
+"                            Powered by <a target=\"_blank\" href=\"https://www.odoo.com?utm_source=db&amp;utm_medium=auth\" style=\"color: #875A7B;\">Odoo</a>\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                      </table>\n"
+"                    </td>\n"
+"                  </tr>\n"
+"          </table>\n"
+"        "
+msgstr ""
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"padding-top: 16px; background-color: #F1F1F1; font-family:Verdana, Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;\">        <tr>\n"
+"            <td align=\"center\">\n"
+"              <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"padding: 16px; background-color: white; color: #454748; border-collapse:separate;\">\n"
+"                <tbody>\n"
+"                <!-- HEADER -->\n"
+"                  <tr>\n"
+"                    <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                      <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                        <tr>\n"
+"                          <td valign=\"middle\">\n"
+"                            <span style=\"font-size: 20px; font-weight: bold;\">\n"
+"                              ለ: ${ object.reason.name } ጉብኝት\n"
+"                            </span>\n"
+"                          </td>\n"
+"                          <td valign=\"middle\" align=\"right\">\n"
+"                            <img src=\"/logo.png?company=${user.company_id.id}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${user.company_id.name}\"/>\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                        <tr>\n"
+"                          <td colspan=\"2\" style=\"text-align:center;\">\n"
+"                            <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                      </table>\n"
+"                    </td>\n"
+"                  </tr>\n"
+"                <!-- CONTENT -->\n"
+"                  <tr>\n"
+"                    <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                      <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                        <tr>\n"
+"                          <td valign=\"top\" style=\"font-size: 13px;\">\n"
+"                            <div>\n"
+"                              ውድ ደንበኛ፣<br/><br/>\n"
+"                              በ${ object.date } ያቀዱት ${ object.reason.name } ተፈቅዷል።<br/>\n"
+"                              እባክዎ ለመግባት ከ15 ደቂቃ በፊት በስብሰባው ቦታ ይገኙ።<br/>\n"
+"                              ከእኛ ጋር ቀጠሮ ስለያዙ እናመሰግናለን፣<br/>\n"
+"                              % if user.signature:\n"
+"                                <br/>\n"
+"                                ${user.signature | safe}\n"
+"                              % endif\n"
+"                            </div>\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                        <tr>\n"
+"                          <td style=\"text-align:center;\">\n"
+"                            <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                      </table>\n"
+"                    </td>\n"
+"                  </tr>\n"
+"                <!-- FOOTER -->\n"
+"                  <tr>\n"
+"                    <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                      <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; font-size: 11px; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                        <tr>\n"
+"                          <td valign=\"middle\" align=\"left\">\n"
+"                            ${user.company_id.name}\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                        <tr>\n"
+"                          <td valign=\"middle\" align=\"left\" style=\"opacity: 0.7;\">\n"
+"                            ${user.company_id.phone}\n"
+"                            % if user.company_id.email\n"
+"                              | <a href=\"'mailto:%s' % ${user.company_id.email}\" style=\"text-decoration:none; color: #454748;\">${user.company_id.email}</a>\n"
+"                            % endif\n"
+"                            % if user.company_id.website\n"
+"                              | <a href=\"'%s' % ${user.company_id.website}\" style=\"text-decoration:none; color: #454748;\">\n"
+"                                  ${user.company_id.website}\n"
+"                                </a>\n"
+"                            % endif\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                      </table>\n"
+"                    </td>\n"
+"                  </tr>\n"
+"                </tbody>\n"
+"              </table>\n"
+"            </td>\n"
+"          </tr>\n"
+"                <!-- POWERED BY -->\n"
+"                  <tr>\n"
+"                    <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                      <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: #F1F1F1; color: #454748; padding: 8px; border-collapse:separate;\">\n"
+"                        <tr>\n"
+"                          <td style=\"text-align: center; font-size: 13px;\">\n"
+"                            Powered by <a target=\"_blank\" href=\"https://www.odoo.com?utm_source=db&amp;utm_medium=auth\" style=\"color: #875A7B;\">Odoo</a>\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                      </table>\n"
+"                    </td>\n"
+"                  </tr>\n"
+"          </table>\n"
+"        "
+
+#. module: visitor_gate_management
+#: model:mail.template,body_html:visitor_gate_management.appointment_denied_in
+msgid ""
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"padding-top: 16px; background-color: #F1F1F1; font-family:Verdana, Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;\">        <tr>\n"
+"            <td align=\"center\">\n"
+"              <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"padding: 16px; background-color: white; color: #454748; border-collapse:separate;\">\n"
+"                <tbody>\n"
+"                <!-- HEADER -->\n"
+"                  <tr>\n"
+"                    <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                      <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                        <tr>\n"
+"                          <td valign=\"middle\">\n"
+"                            <span style=\"font-size: 20px; font-weight: bold;\">\n"
+"                              Visit For: ${ object.reason.name }\n"
+"                            </span>\n"
+"                          </td>\n"
+"                          <td valign=\"middle\" align=\"right\">\n"
+"                            <img src=\"/logo.png?company=${user.company_id.id}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${user.company_id.name}\"/>\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                        <tr>\n"
+"                          <td colspan=\"2\" style=\"text-align:center;\">\n"
+"                            <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                      </table>\n"
+"                    </td>\n"
+"                  </tr>\n"
+"                <!-- CONTENT -->\n"
+"                  <tr>\n"
+"                    <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                      <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                        <tr>\n"
+"                          <td valign=\"top\" style=\"font-size: 13px;\">\n"
+"                            <div>\n"
+"                              Dear Client,<br/><br/>\n"
+"                              The ${ object.reason.name } that you have scheduled on ${ object.date } has been denied.<br/>\n"
+"                              Please set another visit with us for another day.<br/>\n"
+"                              Thank you,<br/>\n"
+"                              % if user.signature:\n"
+"                                <br/>\n"
+"                                ${user.signature | safe}\n"
+"                              % endif\n"
+"                            </div>\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                        <tr>\n"
+"                          <td style=\"text-align:center;\">\n"
+"                            <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                      </table>\n"
+"                    </td>\n"
+"                  </tr>\n"
+"                <!-- FOOTER -->\n"
+"                  <tr>\n"
+"                    <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                      <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; font-size: 11px; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                        <tr>\n"
+"                          <td valign=\"middle\" align=\"left\">\n"
+"                            ${user.company_id.name}\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                        <tr>\n"
+"                          <td valign=\"middle\" align=\"left\" style=\"opacity: 0.7;\">\n"
+"                            ${user.company_id.phone}\n"
+"                            % if user.company_id.email\n"
+"                              | <a href=\"'mailto:%s' % ${user.company_id.email}\" style=\"text-decoration:none; color: #454748;\">${user.company_id.email}</a>\n"
+"                            % endif\n"
+"                            % if user.company_id.website\n"
+"                              | <a href=\"'%s' % ${user.company_id.website}\" style=\"text-decoration:none; color: #454748;\">\n"
+"                                  ${user.company_id.website}\n"
+"                                </a>\n"
+"                            % endif\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                      </table>\n"
+"                    </td>\n"
+"                  </tr>\n"
+"                </tbody>\n"
+"              </table>\n"
+"            </td>\n"
+"          </tr>\n"
+"                <!-- POWERED BY -->\n"
+"                  <tr>\n"
+"                    <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                      <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: #F1F1F1; color: #454748; padding: 8px; border-collapse:separate;\">\n"
+"                        <tr>\n"
+"                          <td style=\"text-align: center; font-size: 13px;\">\n"
+"                            Powered by <a target=\"_blank\" href=\"https://www.odoo.com?utm_source=db&amp;utm_medium=auth\" style=\"color: #875A7B;\">Odoo</a>\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                      </table>\n"
+"                    </td>\n"
+"                  </tr>\n"
+"          </table>\n"
+"        "
+msgstr ""
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"padding-top: 16px; background-color: #F1F1F1; font-family:Verdana, Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;\">        <tr>\n"
+"            <td align=\"center\">\n"
+"              <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"padding: 16px; background-color: white; color: #454748; border-collapse:separate;\">\n"
+"                <tbody>\n"
+"                <!-- HEADER -->\n"
+"                  <tr>\n"
+"                    <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                      <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                        <tr>\n"
+"                          <td valign=\"middle\">\n"
+"                            <span style=\"font-size: 20px; font-weight: bold;\">\n"
+"                              ለ: ${ object.reason.name } ጉብኝት\n"
+"                            </span>\n"
+"                          </td>\n"
+"                          <td valign=\"middle\" align=\"right\">\n"
+"                            <img src=\"/logo.png?company=${user.company_id.id}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${user.company_id.name}\"/>\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                        <tr>\n"
+"                          <td colspan=\"2\" style=\"text-align:center;\">\n"
+"                            <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                      </table>\n"
+"                    </td>\n"
+"                  </tr>\n"
+"                <!-- CONTENT -->\n"
+"                  <tr>\n"
+"                    <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                      <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                        <tr>\n"
+"                          <td valign=\"top\" style=\"font-size: 13px;\">\n"
+"                            <div>\n"
+"                              ውድ ደንበኛ፣<br/><br/>\n"
+"                              በ${ object.date } ያቀዱት ${ object.reason.name} ውድቅ ተደርጓል። <br/>\n"
+"                              እባክዎን ለሌላ ቀን ከእኛ ጋር ሌላ ጉብኝት ያዘጋጁ።<br/>\n"
+"                              እናመሰግናለን፣<br/>\n"
+"                              % if user.signature:\n"
+"                                <br/>\n"
+"                                ${user.signature | safe}\n"
+"                              % endif\n"
+"                            </div>\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                        <tr>\n"
+"                          <td style=\"text-align:center;\">\n"
+"                            <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                      </table>\n"
+"                    </td>\n"
+"                  </tr>\n"
+"                <!-- FOOTER -->\n"
+"                  <tr>\n"
+"                    <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                      <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; font-size: 11px; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                        <tr>\n"
+"                          <td valign=\"middle\" align=\"left\">\n"
+"                            ${user.company_id.name}\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                        <tr>\n"
+"                          <td valign=\"middle\" align=\"left\" style=\"opacity: 0.7;\">\n"
+"                            ${user.company_id.phone}\n"
+"                            % if user.company_id.email\n"
+"                              | <a href=\"'mailto:%s' % ${user.company_id.email}\" style=\"text-decoration:none; color: #454748;\">${user.company_id.email}</a>\n"
+"                            % endif\n"
+"                            % if user.company_id.website\n"
+"                              | <a href=\"'%s' % ${user.company_id.website}\" style=\"text-decoration:none; color: #454748;\">\n"
+"                                  ${user.company_id.website}\n"
+"                                </a>\n"
+"                            % endif\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                      </table>\n"
+"                    </td>\n"
+"                  </tr>\n"
+"                </tbody>\n"
+"              </table>\n"
+"            </td>\n"
+"          </tr>\n"
+"                <!-- POWERED BY -->\n"
+"                  <tr>\n"
+"                    <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                      <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: #F1F1F1; color: #454748; padding: 8px; border-collapse:separate;\">\n"
+"                        <tr>\n"
+"                          <td style=\"text-align: center; font-size: 13px;\">\n"
+"                            Powered by <a target=\"_blank\" href=\"https://www.odoo.com?utm_source=db&amp;utm_medium=auth\" style=\"color: #875A7B;\">Odoo</a>\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                      </table>\n"
+"                    </td>\n"
+"                  </tr>\n"
+"          </table>\n"
+"        "
+
+#. module: visitor_gate_management
+#: model:mail.template,body_html:visitor_gate_management.appointment_rescheduled_in
+msgid ""
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"padding-top: 16px; background-color: #F1F1F1; font-family:Verdana, Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;\">        <tr>\n"
+"            <td align=\"center\">\n"
+"              <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"padding: 16px; background-color: white; color: #454748; border-collapse:separate;\">\n"
+"                <tbody>\n"
+"                <!-- HEADER -->\n"
+"                  <tr>\n"
+"                    <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                      <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                        <tr>\n"
+"                          <td valign=\"middle\">\n"
+"                            <span style=\"font-size: 20px; font-weight: bold;\">\n"
+"                              Visit For: ${ object.reason.name }\n"
+"                            </span>\n"
+"                          </td>\n"
+"                          <td valign=\"middle\" align=\"right\">\n"
+"                            <img src=\"/logo.png?company=${user.company_id.id}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${user.company_id.name}\"/>\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                        <tr>\n"
+"                          <td colspan=\"2\" style=\"text-align:center;\">\n"
+"                            <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                      </table>\n"
+"                    </td>\n"
+"                  </tr>\n"
+"                <!-- CONTENT -->\n"
+"                  <tr>\n"
+"                    <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                      <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                        <tr>\n"
+"                          <td valign=\"top\" style=\"font-size: 13px;\">\n"
+"                            <div>\n"
+"                              Dear Client,<br/><br/>\n"
+"                              The visit you scheduled for ${ object.reason.name }<br/>\n"
+"                              has been rescheduled to ${ object.date } at ${object.check_in_float}.<br/>\n"
+"                              Please be at the meeting place 15 minutes earlier to check-in.<br/>\n"
+"                              Thank you for scheduling with us,<br/>\n"
+"                              % if user.signature:\n"
+"                                <br/>\n"
+"                                ${user.signature | safe}\n"
+"                              % endif\n"
+"                            </div>\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                        <tr>\n"
+"                          <td style=\"text-align:center;\">\n"
+"                            <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                      </table>\n"
+"                    </td>\n"
+"                  </tr>\n"
+"                <!-- FOOTER -->\n"
+"                  <tr>\n"
+"                    <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                      <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; font-size: 11px; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                        <tr>\n"
+"                          <td valign=\"middle\" align=\"left\">\n"
+"                            ${user.company_id.name}\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                        <tr>\n"
+"                          <td valign=\"middle\" align=\"left\" style=\"opacity: 0.7;\">\n"
+"                            ${user.company_id.phone}\n"
+"                            % if user.company_id.email\n"
+"                              | <a href=\"'mailto:%s' % ${user.company_id.email}\" style=\"text-decoration:none; color: #454748;\">${user.company_id.email}</a>\n"
+"                            % endif\n"
+"                            % if user.company_id.website\n"
+"                              | <a href=\"'%s' % ${user.company_id.website}\" style=\"text-decoration:none; color: #454748;\">\n"
+"                                  ${user.company_id.website}\n"
+"                                </a>\n"
+"                            % endif\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                      </table>\n"
+"                    </td>\n"
+"                  </tr>\n"
+"                </tbody>\n"
+"              </table>\n"
+"            </td>\n"
+"          </tr>\n"
+"                <!-- POWERED BY -->\n"
+"                  <tr>\n"
+"                    <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                      <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: #F1F1F1; color: #454748; padding: 8px; border-collapse:separate;\">\n"
+"                        <tr>\n"
+"                          <td style=\"text-align: center; font-size: 13px;\">\n"
+"                            Powered by <a target=\"_blank\" href=\"https://www.odoo.com?utm_source=db&amp;utm_medium=auth\" style=\"color: #875A7B;\">Odoo</a>\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                      </table>\n"
+"                    </td>\n"
+"                  </tr>\n"
+"          </table>\n"
+"        "
+msgstr ""
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"padding-top: 16px; background-color: #F1F1F1; font-family:Verdana, Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;\">        <tr>\n"
+"            <td align=\"center\">\n"
+"              <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"padding: 16px; background-color: white; color: #454748; border-collapse:separate;\">\n"
+"                <tbody>\n"
+"                <!-- HEADER -->\n"
+"                  <tr>\n"
+"                    <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                      <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                        <tr>\n"
+"                          <td valign=\"middle\">\n"
+"                            <span style=\"font-size: 20px; font-weight: bold;\">\n"
+"                              ለ: ${ object.reason.name } ጉብኝት\n"
+"                            </span>\n"
+"                          </td>\n"
+"                          <td valign=\"middle\" align=\"right\">\n"
+"                            <img src=\"/logo.png?company=${user.company_id.id}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${user.company_id.name}\"/>\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                        <tr>\n"
+"                          <td colspan=\"2\" style=\"text-align:center;\">\n"
+"                            <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                      </table>\n"
+"                    </td>\n"
+"                  </tr>\n"
+"                <!-- CONTENT -->\n"
+"                  <tr>\n"
+"                    <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                      <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                        <tr>\n"
+"                          <td valign=\"top\" style=\"font-size: 13px;\">\n"
+"                            <div>\n"
+"                              ውድ ደንበኛ፣<br/><br/>\n"
+"                              ለ${ object.reason.name } ያቀዱት ጉብኝት ወደ ${ object.date }<br/>\n"
+"                              ቀን በ${object.check_in_float} ሰአት ተቀይሯል።<br/>\n"
+"                              እባክዎ ለመግባት ከ15 ደቂቃ በፊት በስብሰባው ቦታ ይሁኑ።<br/>\n"
+"                              ከእኛ ጋር ቀጠሮ ስለያዙ እናመሰግናለን፣<br/>\n"
+"                              % if user.signature:\n"
+"                                <br/>\n"
+"                                ${user.signature | safe}\n"
+"                              % endif\n"
+"                            </div>\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                        <tr>\n"
+"                          <td style=\"text-align:center;\">\n"
+"                            <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                      </table>\n"
+"                    </td>\n"
+"                  </tr>\n"
+"                <!-- FOOTER -->\n"
+"                  <tr>\n"
+"                    <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                      <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; font-size: 11px; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                        <tr>\n"
+"                          <td valign=\"middle\" align=\"left\">\n"
+"                            ${user.company_id.name}\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                        <tr>\n"
+"                          <td valign=\"middle\" align=\"left\" style=\"opacity: 0.7;\">\n"
+"                            ${user.company_id.phone}\n"
+"                            % if user.company_id.email\n"
+"                              | <a href=\"'mailto:%s' % ${user.company_id.email}\" style=\"text-decoration:none; color: #454748;\">${user.company_id.email}</a>\n"
+"                            % endif\n"
+"                            % if user.company_id.website\n"
+"                              | <a href=\"'%s' % ${user.company_id.website}\" style=\"text-decoration:none; color: #454748;\">\n"
+"                                  ${user.company_id.website}\n"
+"                                </a>\n"
+"                            % endif\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                      </table>\n"
+"                    </td>\n"
+"                  </tr>\n"
+"                </tbody>\n"
+"              </table>\n"
+"            </td>\n"
+"          </tr>\n"
+"                <!-- POWERED BY -->\n"
+"                  <tr>\n"
+"                    <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                      <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: #F1F1F1; color: #454748; padding: 8px; border-collapse:separate;\">\n"
+"                        <tr>\n"
+"                          <td style=\"text-align: center; font-size: 13px;\">\n"
+"                            Powered by <a target=\"_blank\" href=\"https://www.odoo.com?utm_source=db&amp;utm_medium=auth\" style=\"color: #875A7B;\">Odoo</a>\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                      </table>\n"
+"                    </td>\n"
+"                  </tr>\n"
+"          </table>\n"
+"        "
+
+#. module: visitor_gate_management
+#: code:addons/visitor_gate_management/models/fo_visitor.py:0
+#, python-format
+msgid "A Valid Email Address has '@' and '.'"
+msgstr "ኢሜይል አድራሻ '@' እና '.' አለው።"
+
+#. module: visitor_gate_management
+#: code:addons/visitor_gate_management/models/fo_visit.py:0
+#: code:addons/visitor_gate_management/models/fo_visitor.py:0
+#, python-format
+msgid "A Valid Phone Number Has 10 Digits"
+msgstr "ስልክ ቁጥር 10 አሃዞች አሉት"
+
+#. module: visitor_gate_management
+#: code:addons/visitor_gate_management/models/fo_visit.py:0
+#: code:addons/visitor_gate_management/models/fo_visitor.py:0
+#, python-format
+msgid "A Valid Phone Number Starts With 0"
+msgstr "ስልክ ቁጥር በ0 ይጀምራል"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.fo_visit_form_view
+msgid "Accept IDs"
+msgstr "መታወቂያዎችን ተቀበል"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_property_counter__access_warning
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__access_warning
+msgid "Access warning"
+msgstr "የመዳረሻ ማስጠንቀቂያ"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_property_counter__message_needaction
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__message_needaction
+msgid "Action Needed"
+msgstr "እርምጃ ያስፈልጋል"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_property_counter__activity_ids
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__activity_ids
+msgid "Activities"
+msgstr "እንቅስቃሴዎች"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_property_counter__activity_exception_decoration
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "የእንቅስቃሴ ልዩ ማስጌጥ"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_property_counter__activity_state
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__activity_state
+msgid "Activity State"
+msgstr "የእንቅስቃሴ ሁኔታ"
+
+#. module: visitor_gate_management
+#: code:addons/visitor_gate_management/models/fo_visit.py:0
+#: code:addons/visitor_gate_management/wizard/reschedule.py:0
+#, python-format
+msgid "Add Visitor ID"
+msgstr "የጎብኝ መታወቂያ ያስገቡ"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,help:visitor_gate_management.field_fo_visit__visitor_belongings
+msgid "Add the belongings details here."
+msgstr "የንብረቱን ዝርዝሮች እዚህ ያክሉ።"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.fo_visitor_form_view
+msgid "Address"
+msgstr "አድራሻ"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields.selection,name:visitor_gate_management.selection__fo_belongings__permission__0
+msgid "Allowed"
+msgstr "ተፈቅዷል"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields.selection,name:visitor_gate_management.selection__fo_belongings__permission__2
+msgid "Allowed With Permission"
+msgstr "በፍቃድ የተፈቀደ"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_belongings__property_count
+msgid "Amount"
+msgstr "ብዛት"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,help:visitor_gate_management.field_fo_belongings__property_count
+msgid "Amount of property"
+msgstr "የንብረት ብዛት"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.appointment_option_form_view
+msgid "Appointment Option"
+msgstr "የቀጠሮ አማራጭ"
+
+#. module: visitor_gate_management
+#: model:ir.actions.act_window,name:visitor_gate_management.appointment_option_action
+#: model:ir.ui.menu,name:visitor_gate_management.menu_appointment_option
+msgid "Appointment Options"
+msgstr "የቀጠሮ አማራጮች"
+
+#. module: visitor_gate_management
+#: model:ir.model,name:visitor_gate_management.model_s2u_appointment_slot
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.appointment_slot_form_view
+msgid "Appointment Slot"
+msgstr "የቀጠሮ ጊዜ ገደብ"
+
+#. module: visitor_gate_management
+#: model:ir.actions.act_window,name:visitor_gate_management.appointment_slot_action
+#: model:ir.ui.menu,name:visitor_gate_management.menu_appointment_slot
+msgid "Appointment Slots"
+msgstr "የቀጠሮ ጊዜ ገደብ"
+
+#. module: visitor_gate_management
+#: model:ir.model,name:visitor_gate_management.model_s2u_appointment_option
+#: model:ir.model.fields,field_description:visitor_gate_management.field_s2u_appointment_option__name
+msgid "Appointment option"
+msgstr "የቀጠሮ አማራጭ"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.appointment_option_tree_view
+msgid "Appointment options"
+msgstr "የቀጠሮ አማራጮች"
+
+#. module: visitor_gate_management
+#: code:addons/visitor_gate_management/models/fo_visit.py:0
+#, python-format
+msgid "Approval Has Been Sent Successfully"
+msgstr "ማጽደቅያ በተሳካ ሁኔታ ተልኳል"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.fo_visit_form_view
+msgid "Approve"
+msgstr "አጽድቅ"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.appointment_option_form_view
+msgid "Approve Option"
+msgstr "አማራጭን አጽድቅ"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields.selection,name:visitor_gate_management.selection__fo_visit__state__approved
+#: model:ir.model.fields.selection,name:visitor_gate_management.selection__s2u_appointment_option__state__approved
+msgid "Approved"
+msgstr "ጸድቋል"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.appointment_slot_form_view
+msgid "Are You Sure You Want To Make More Slots"
+msgstr "እርግጠኛ ነዎት ተጨማሪ የጊዜ ገደብ መስራት ይፈልጋሉ?"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.appointment_option_form_view
+msgid "Are you sure you want to Approve the Appointment Option?"
+msgstr "እርግጠኛ ነዎት የቀጠሮ ምርጫውን ማጽደቅ ይፈልጋሉ?"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.fo_visit_form_view
+msgid "Are you sure you want to Approve?"
+msgstr "እርግጠኛ ነዎት ማጽደቅ ይፈልጋሉ?"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.fo_property_counter_form_view
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.fo_visit_form_view
+msgid "Are you sure you want to Cancel?"
+msgstr "እርግጠኛ ነዎት መሰረዝ ይፈልጋሉ?"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.fo_property_counter_form_view
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.fo_visit_form_view
+msgid "Are you sure you want to Check In?"
+msgstr "እርግጠኛ ነዎት ማስገባት ይፈልጋሉ?"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.fo_visit_form_view
+msgid "Are you sure you want to Reschedule?"
+msgstr "እርግጠኛ ነዎት ለ ሌላ ቀን ቀጠሮ ማስያዝ ይፈልጋሉ?"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.appointment_option_form_view
+msgid "Are you sure you want to Send Appointment Option for Approval?"
+msgstr "እርግጠኛ ነዎት የቀጠሮ አማራጭ ለማጽደቅ መላክ ይፈልጋሉ?"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.fo_visit_form_view
+msgid "Are you sure you want to Send to Approve?"
+msgstr "እርግጠኛ ነዎት ለማጽደቅ መላክ ይፈልጋሉ?"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.appointment_option_form_view
+msgid "Are you sure you want to Set back to Draft?"
+msgstr "እርግጠኛ ነዎት ወደ ንድፍ መመለስ ትፈልጋለህ?"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.fo_visit_form_view
+msgid "Are you sure you want to Start Meeting?"
+msgstr "እርግጠኛ ነዎት ስብሰባ መጀመር ይፈልጋሉ?"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_property_counter__message_attachment_count
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__message_attachment_count
+msgid "Attachment Count"
+msgstr "የተያያዥ ብዛት"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_belongings__belongings_id_fov_employee
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_belongings__belongings_id_fov_visitor
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.fo_belongings_form_view
+msgid "Belongings"
+msgstr "ንብረቶች"
+
+#. module: visitor_gate_management
+#: model:ir.model,name:visitor_gate_management.model_calendar_event
+msgid "Calendar Event"
+msgstr "የቀን መቁጠሪያ ክስተት"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_property_counter__campaign_id
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__campaign_id
+msgid "Campaign"
+msgstr "ዘመቻ"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.fo_property_counter_form_view
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.fo_visit_form_view
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.reschedule_visits_form
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.visitor_id_form
+msgid "Cancel"
+msgstr "ሰርዝ"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields.selection,name:visitor_gate_management.selection__fo_property_counter__state__cancel
+#: model:ir.model.fields.selection,name:visitor_gate_management.selection__fo_visit__state__cancel
+msgid "Cancelled"
+msgstr "ተሰርዟል"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields.selection,name:visitor_gate_management.selection__fo_property_counter__state__prop_in
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.fo_property_counter_form_view
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.fo_visit_form_view
+msgid "Check In"
+msgstr "ግባ"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_property_counter__check_in_time
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_property_counter__check_in_time_admin
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__check_in_float
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__check_in_time
+#: model:ir.model.fields,field_description:visitor_gate_management.field_reschedule_visit__check_in_float
+#: model:ir.model.fields,field_description:visitor_gate_management.field_rescheduled_time__check_in_float
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.reschedule_visits_form
+msgid "Check In Time"
+msgstr "የመግብያ ሰዓት"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.fo_visit_form_view
+msgid "Check In/Out Details"
+msgstr "የመግቢያ/መውጫ ማብራርያ"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_belongings__check_out
+#: model:ir.model.fields.selection,name:visitor_gate_management.selection__fo_property_counter__state__prop_out
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.fo_property_counter_form_view
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.fo_visit_form_view
+msgid "Check Out"
+msgstr "ውጣ"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_property_counter__check_out_time
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_property_counter__check_out_time_admin
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__check_out_float
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__check_out_time
+#: model:ir.model.fields,field_description:visitor_gate_management.field_reschedule_visit__check_out_float
+#: model:ir.model.fields,field_description:visitor_gate_management.field_rescheduled_time__check_out_float
+msgid "Check Out Time"
+msgstr "የመውጫ ሰዓት"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields.selection,name:visitor_gate_management.selection__fo_visit__state__check_in
+msgid "Checked In"
+msgstr "ገብተዋል"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields.selection,name:visitor_gate_management.selection__fo_visit__state__check_out
+msgid "Checked Out"
+msgstr "ወጠተዋል"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visitor__city
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.fo_visitor_form_view
+msgid "City"
+msgstr "ከተማ"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.fo_visitor_kanban_view
+msgid "City:"
+msgstr "ከተማ:"
+
+#. module: visitor_gate_management
+#: model_terms:ir.actions.act_window,help:visitor_gate_management.fo_visitor_action
+msgid "Click to Create New Visitor."
+msgstr "አዲስ ጎብኝ ለመፍጠር"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__company_id
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visitor__company_info
+msgid "Company"
+msgstr "ድርጅት"
+
+#. module: visitor_gate_management
+#: model:ir.ui.menu,name:visitor_gate_management.fo_configuration
+msgid "Configuration"
+msgstr "ማዋቀርያ"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.report_property_label
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.report_visitor_report
+msgid "Count"
+msgstr "ቁጠር"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visitor__country_id
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.fo_visitor_form_view
+msgid "Country"
+msgstr "አገር"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.fo_visitor_kanban_view
+msgid "Country:"
+msgstr "አገር:"
+
+#. module: visitor_gate_management
+#: model_terms:ir.actions.act_window,help:visitor_gate_management.fo_visit_action
+#: model_terms:ir.actions.act_window,help:visitor_gate_management.fo_visit_action_visitor
+msgid "Create  Visits."
+msgstr "ጉብኝትን ይፍጠሩ"
+
+#. module: visitor_gate_management
+#: code:addons/visitor_gate_management/models/appointment_slot.py:0
+#, python-format
+msgid "Create Slots Wizard"
+msgstr "የቀጠሮ የጊዜ ገደብ ፍጠር"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_duration__create_uid
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_belongings__create_uid
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_property_counter__create_uid
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_purpose__create_uid
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__create_uid
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visitor__create_uid
+#: model:ir.model.fields,field_description:visitor_gate_management.field_id_proof__create_uid
+#: model:ir.model.fields,field_description:visitor_gate_management.field_locker_name__create_uid
+#: model:ir.model.fields,field_description:visitor_gate_management.field_properties__create_uid
+#: model:ir.model.fields,field_description:visitor_gate_management.field_reschedule_visit__create_uid
+#: model:ir.model.fields,field_description:visitor_gate_management.field_rescheduled_time__create_uid
+#: model:ir.model.fields,field_description:visitor_gate_management.field_s2u_appointment_option__create_uid
+#: model:ir.model.fields,field_description:visitor_gate_management.field_s2u_appointment_slot__create_uid
+#: model:ir.model.fields,field_description:visitor_gate_management.field_times__create_uid
+#: model:ir.model.fields,field_description:visitor_gate_management.field_visitor_id_widget__create_uid
+#: model:ir.model.fields,field_description:visitor_gate_management.field_visitor_number__create_uid
+msgid "Created by"
+msgstr "የተፈጠረው በ"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_duration__create_date
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_belongings__create_date
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_property_counter__create_date
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_purpose__create_date
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__create_date
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visitor__create_date
+#: model:ir.model.fields,field_description:visitor_gate_management.field_id_proof__create_date
+#: model:ir.model.fields,field_description:visitor_gate_management.field_locker_name__create_date
+#: model:ir.model.fields,field_description:visitor_gate_management.field_properties__create_date
+#: model:ir.model.fields,field_description:visitor_gate_management.field_reschedule_visit__create_date
+#: model:ir.model.fields,field_description:visitor_gate_management.field_rescheduled_time__create_date
+#: model:ir.model.fields,field_description:visitor_gate_management.field_s2u_appointment_option__create_date
+#: model:ir.model.fields,field_description:visitor_gate_management.field_s2u_appointment_slot__create_date
+#: model:ir.model.fields,field_description:visitor_gate_management.field_times__create_date
+#: model:ir.model.fields,field_description:visitor_gate_management.field_visitor_id_widget__create_date
+#: model:ir.model.fields,field_description:visitor_gate_management.field_visitor_number__create_date
+msgid "Created on"
+msgstr "የተፈጠረበት ቀን"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__creator
+msgid "Creator"
+msgstr "የፈጠረው ሰው"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,help:visitor_gate_management.field_fo_property_counter__access_url
+#: model:ir.model.fields,help:visitor_gate_management.field_fo_visit__access_url
+msgid "Customer Portal URL"
+msgstr "የደንበኛ ፖርታል URL"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_property_counter__date
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__date
+#: model:ir.model.fields,field_description:visitor_gate_management.field_reschedule_visit__date
+#: model:ir.model.fields,field_description:visitor_gate_management.field_rescheduled_time__date
+msgid "Date"
+msgstr "ቀን"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_s2u_appointment_slot__day
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.appointment_slot_search
+msgid "Day"
+msgstr "ቀን"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__department
+#: model:ir.model.fields.selection,name:visitor_gate_management.selection__fo_visit__visit_with__department
+msgid "Department"
+msgstr "ክፍል"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_belongings__property_description
+msgid "Description"
+msgstr "ማብራርያ"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_purpose__description
+msgid "Description Of Purpose"
+msgstr "የዓላማው ማብራርያ"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,help:visitor_gate_management.field_fo_purpose__description
+msgid "Description for the Purpose."
+msgstr "ለዓላማው ማብራርያ"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__disappear_approve
+msgid "Disappear Approve"
+msgstr "ማጽደቅ ጠፍቷል"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_duration__display_name
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_belongings__display_name
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_property_counter__display_name
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_purpose__display_name
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__display_name
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visitor__display_name
+#: model:ir.model.fields,field_description:visitor_gate_management.field_id_proof__display_name
+#: model:ir.model.fields,field_description:visitor_gate_management.field_locker_name__display_name
+#: model:ir.model.fields,field_description:visitor_gate_management.field_properties__display_name
+#: model:ir.model.fields,field_description:visitor_gate_management.field_reschedule_visit__display_name
+#: model:ir.model.fields,field_description:visitor_gate_management.field_rescheduled_time__display_name
+#: model:ir.model.fields,field_description:visitor_gate_management.field_s2u_appointment_option__display_name
+#: model:ir.model.fields,field_description:visitor_gate_management.field_s2u_appointment_slot__display_name
+#: model:ir.model.fields,field_description:visitor_gate_management.field_times__display_name
+#: model:ir.model.fields,field_description:visitor_gate_management.field_visitor_id_widget__display_name
+#: model:ir.model.fields,field_description:visitor_gate_management.field_visitor_number__display_name
+msgid "Display Name"
+msgstr "ስም"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__done
+msgid "Done"
+msgstr "አልቋል"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields.selection,name:visitor_gate_management.selection__fo_property_counter__state__draft
+#: model:ir.model.fields.selection,name:visitor_gate_management.selection__fo_visit__state__draft
+#: model:ir.model.fields.selection,name:visitor_gate_management.selection__s2u_appointment_option__state__draft
+msgid "Draft"
+msgstr "ንድፍ"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.view_visits_search
+msgid "Draft or Check-in visitor"
+msgstr "ንድፍ ወይም የገቡ"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_s2u_appointment_option__duration
+msgid "Duration of Appointment"
+msgstr "የቀጠሮ ቆይታ"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.reschedule_visits_form
+msgid "Duration of the Meeting"
+msgstr "የስብሰባው ቆይታ"
+
+#. module: visitor_gate_management
+#: model:ir.model.constraint,message:visitor_gate_management.constraint_id_proof_Check
+#: on name
+msgid "Each ID Proof should be Unique"
+msgstr "እያንዳንዱ የመታወቂያ ማረጋገጫ ልዩ መሆን አለበት።"
+
+#. module: visitor_gate_management
+#: model:ir.model.constraint,message:visitor_gate_management.constraint_locker_name_Check
+#: on name
+msgid "Each Locker Name should be Unique"
+msgstr "እያንዳንዱ የሎከር ስም ልዩ መሆን አለበት።"
+
+#. module: visitor_gate_management
+#: model:ir.model.constraint,message:visitor_gate_management.constraint_properties_Check
+#: on name
+msgid "Each Property should be Unique"
+msgstr "እያንዳንዱ የንብረት ስም ልዩ መሆን አለበት"
+
+#. module: visitor_gate_management
+#: model:ir.model.constraint,message:visitor_gate_management.constraint_fo_purpose_Check
+#: on name
+msgid "Each Purpose should be Unique"
+msgstr "እያንዳንዱ የዓላማ ዓይነት ልዩ መሆን አለበት"
+
+#. module: visitor_gate_management
+#: model:ir.model.constraint,message:visitor_gate_management.constraint_visitor_number_Check
+#: on name
+msgid "Each Visitor ID should be Unique"
+msgstr "እያንዳንዱ የጎብኚ መታወቂያ ልዩ መሆን አለበት።"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__email
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visitor__email
+msgid "Email"
+msgstr "ኢሜይል"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_property_counter__employee
+#: model:ir.model.fields.selection,name:visitor_gate_management.selection__fo_visit__visit_with__employee
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.fo_visit_form_view
+msgid "Employee"
+msgstr "ሰራተኛ"
+
+#. module: visitor_gate_management
+#: model:ir.actions.act_window,name:visitor_gate_management.fo_property_counter_action
+#: model:ir.ui.menu,name:visitor_gate_management.fo_property_counter_menu
+msgid "Employee Management"
+msgstr "የሰራተኞች አስተዳደር"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,help:visitor_gate_management.field_fo_belongings__property_name
+msgid "Employee belongings name"
+msgstr "የሰራተኛ እቃዎች ስም"
+
+#. module: visitor_gate_management
+#: model:ir.actions.report,name:visitor_gate_management.action_print_property_label
+msgid "Employeee Report"
+msgstr "የንብረት መለያ"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__all_visitor
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__employee
+#: model:res.groups,name:visitor_gate_management.group_employees
+msgid "Employees"
+msgstr "ሰራተኞች"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,help:visitor_gate_management.field_fo_visit__reason
+msgid "Enter the reason for visit"
+msgstr "የጉብኝቱን ምክንያት አስገባ"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__duration_in_float
+#: model:ir.model.fields,field_description:visitor_gate_management.field_reschedule_visit__duration_in_float
+#: model:ir.model.fields,field_description:visitor_gate_management.field_rescheduled_time__duration_in_float
+msgid "Estimated Duration of Meeting"
+msgstr "የተገመተው የስብሰባ ቆይታ"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__event_id
+msgid "Event"
+msgstr "ክስተት"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_property_counter__message_follower_ids
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__message_follower_ids
+msgid "Followers"
+msgstr "ተከታዮች"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_property_counter__message_channel_ids
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "ተከታዮች (ሰርጦች)"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_property_counter__message_partner_ids
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "ተከታዮች (አጋሮች)"
+
+#. module: visitor_gate_management
+#: code:addons/visitor_gate_management/models/appointment_slot.py:0
+#, python-format
+msgid "Friday"
+msgstr "አርብ"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.fo_visitor_form_view
+msgid "FullName"
+msgstr "ሙሉ ስም"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.fo_property_counter_search_view
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.view_visits_search
+msgid "Group By"
+msgstr "ቡድን በ"
+
+#. module: visitor_gate_management
+#: model:ir.model,name:visitor_gate_management.model_hr_department
+msgid "HR Department"
+msgstr "የሰው ሃይል ክፍል"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_duration__id
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_belongings__id
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_property_counter__id
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_purpose__id
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__id
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visitor__id
+#: model:ir.model.fields,field_description:visitor_gate_management.field_id_proof__id
+#: model:ir.model.fields,field_description:visitor_gate_management.field_locker_name__id
+#: model:ir.model.fields,field_description:visitor_gate_management.field_properties__id
+#: model:ir.model.fields,field_description:visitor_gate_management.field_reschedule_visit__id
+#: model:ir.model.fields,field_description:visitor_gate_management.field_rescheduled_time__id
+#: model:ir.model.fields,field_description:visitor_gate_management.field_s2u_appointment_option__id
+#: model:ir.model.fields,field_description:visitor_gate_management.field_s2u_appointment_slot__id
+#: model:ir.model.fields,field_description:visitor_gate_management.field_times__id
+#: model:ir.model.fields,field_description:visitor_gate_management.field_visitor_id_widget__id
+#: model:ir.model.fields,field_description:visitor_gate_management.field_visitor_number__id
+msgid "ID"
+msgstr "መታወቂያ"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visitor__id_proof_no
+msgid "ID Number"
+msgstr "የመታወቂያ ቁጥር"
+
+#. module: visitor_gate_management
+#: model:ir.actions.act_window,name:visitor_gate_management.fo_id_proof_action
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visitor__id_proof
+#: model:ir.ui.menu,name:visitor_gate_management.id_proof_action
+msgid "ID Proof"
+msgstr "የመታወቂያ ማረጋገጫ"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_property_counter__activity_exception_icon
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__activity_exception_icon
+msgid "Icon"
+msgstr "አዶ"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,help:visitor_gate_management.field_fo_property_counter__activity_exception_icon
+#: model:ir.model.fields,help:visitor_gate_management.field_fo_visit__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "ልዩ እንቅስቃሴን ለማመልከት አዶ።"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,help:visitor_gate_management.field_fo_visitor__id_proof_no
+msgid "Id proof number"
+msgstr "የመታወቂያ ቁጥር ማረጋገጫ"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,help:visitor_gate_management.field_fo_property_counter__message_needaction
+#: model:ir.model.fields,help:visitor_gate_management.field_fo_property_counter__message_unread
+#: model:ir.model.fields,help:visitor_gate_management.field_fo_visit__message_needaction
+#: model:ir.model.fields,help:visitor_gate_management.field_fo_visit__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "ምልክት ካደረጉ፣ አዲስ መልዕክቶች የእርስዎን ትኩረት ይፈልጋሉ።"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,help:visitor_gate_management.field_fo_property_counter__message_has_error
+#: model:ir.model.fields,help:visitor_gate_management.field_fo_property_counter__message_has_sms_error
+#: model:ir.model.fields,help:visitor_gate_management.field_fo_visit__message_has_error
+#: model:ir.model.fields,help:visitor_gate_management.field_fo_visit__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "ምልክት ካደረጉ፣ አንዳንድ መልዕክቶች የማድረስ ስህተት አለባቸው።"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,help:visitor_gate_management.field_fo_property_counter__state
+msgid ""
+"If the employee taken the belongings to the company change state to "
+"\"\"Taken In\"\"when he/she leave office change the state to \"\"Taken "
+"out\"\""
+msgstr ""
+"ሰራተኛው ንብረቱን ወደ ድርጅቱ ሲገባ ወደ አስገባ ሁኔታ ቀይር፣ ቢሮውን ለቆ ሲወጣ ወደ ተወሰደበት ሁኔታ ቀይር::"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visitor__visitor_image
+msgid "Image"
+msgstr "ምስል"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields.selection,name:visitor_gate_management.selection__fo_belongings__in_or_out__in
+msgid "In"
+msgstr "የገባ"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_belongings__in_or_out
+msgid "In Or Out"
+msgstr "የገባ ወይም የወጣ"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields.selection,name:visitor_gate_management.selection__fo_belongings__in_or_out__in_out
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.report_property_label
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.report_visitor_report
+msgid "In/Out"
+msgstr "የገባ/የወጣ"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_property_counter__message_is_follower
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__message_is_follower
+msgid "Is Follower"
+msgstr "ተከታይ ነው?"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.fo_property_counter_form_view
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.fo_visit_form_view
+msgid "Items"
+msgstr "እቃዎች"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_duration____last_update
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_belongings____last_update
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_property_counter____last_update
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_purpose____last_update
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit____last_update
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visitor____last_update
+#: model:ir.model.fields,field_description:visitor_gate_management.field_id_proof____last_update
+#: model:ir.model.fields,field_description:visitor_gate_management.field_locker_name____last_update
+#: model:ir.model.fields,field_description:visitor_gate_management.field_properties____last_update
+#: model:ir.model.fields,field_description:visitor_gate_management.field_reschedule_visit____last_update
+#: model:ir.model.fields,field_description:visitor_gate_management.field_rescheduled_time____last_update
+#: model:ir.model.fields,field_description:visitor_gate_management.field_s2u_appointment_option____last_update
+#: model:ir.model.fields,field_description:visitor_gate_management.field_s2u_appointment_slot____last_update
+#: model:ir.model.fields,field_description:visitor_gate_management.field_times____last_update
+#: model:ir.model.fields,field_description:visitor_gate_management.field_visitor_id_widget____last_update
+#: model:ir.model.fields,field_description:visitor_gate_management.field_visitor_number____last_update
+msgid "Last Modified on"
+msgstr "መጨረሻ የተሻሻለበት ቀን"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_duration__write_uid
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_belongings__write_uid
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_property_counter__write_uid
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_purpose__write_uid
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__write_uid
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visitor__write_uid
+#: model:ir.model.fields,field_description:visitor_gate_management.field_id_proof__write_uid
+#: model:ir.model.fields,field_description:visitor_gate_management.field_locker_name__write_uid
+#: model:ir.model.fields,field_description:visitor_gate_management.field_properties__write_uid
+#: model:ir.model.fields,field_description:visitor_gate_management.field_reschedule_visit__write_uid
+#: model:ir.model.fields,field_description:visitor_gate_management.field_rescheduled_time__write_uid
+#: model:ir.model.fields,field_description:visitor_gate_management.field_s2u_appointment_option__write_uid
+#: model:ir.model.fields,field_description:visitor_gate_management.field_s2u_appointment_slot__write_uid
+#: model:ir.model.fields,field_description:visitor_gate_management.field_times__write_uid
+#: model:ir.model.fields,field_description:visitor_gate_management.field_visitor_id_widget__write_uid
+#: model:ir.model.fields,field_description:visitor_gate_management.field_visitor_number__write_uid
+msgid "Last Updated by"
+msgstr "መጨረሻ የተሻሻለው በ"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_duration__write_date
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_belongings__write_date
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_property_counter__write_date
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_purpose__write_date
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__write_date
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visitor__write_date
+#: model:ir.model.fields,field_description:visitor_gate_management.field_id_proof__write_date
+#: model:ir.model.fields,field_description:visitor_gate_management.field_locker_name__write_date
+#: model:ir.model.fields,field_description:visitor_gate_management.field_properties__write_date
+#: model:ir.model.fields,field_description:visitor_gate_management.field_reschedule_visit__write_date
+#: model:ir.model.fields,field_description:visitor_gate_management.field_rescheduled_time__write_date
+#: model:ir.model.fields,field_description:visitor_gate_management.field_s2u_appointment_option__write_date
+#: model:ir.model.fields,field_description:visitor_gate_management.field_s2u_appointment_slot__write_date
+#: model:ir.model.fields,field_description:visitor_gate_management.field_times__write_date
+#: model:ir.model.fields,field_description:visitor_gate_management.field_visitor_id_widget__write_date
+#: model:ir.model.fields,field_description:visitor_gate_management.field_visitor_number__write_date
+msgid "Last Updated on"
+msgstr "መጨረሻ የተሻሻለበት ቀን"
+
+#. module: visitor_gate_management
+#: model:ir.actions.act_window,name:visitor_gate_management.fo_locker_name_action
+#: model:ir.ui.menu,name:visitor_gate_management.locker_action
+msgid "Locker Name"
+msgstr "የሎከር ስም"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_belongings__locker_number
+msgid "Locker Number"
+msgstr "የሎከር ቁጥር"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.report_visitor_label
+msgid "Logo"
+msgstr "አርማ"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_property_counter__message_main_attachment_id
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "ዋና ተያያዥ"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.appointment_slot_form_view
+msgid "Make More Slots"
+msgstr "ተጨማሪ የጊዜ ገደብ አስገባ"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.fo_property_counter_form_view
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.fo_visit_form_view
+msgid "Make Sure You Have Ticked All The Items That Are Going Out?"
+msgstr "የሚወጡትን ሁሉንም እቃዎች ምልክት እንዳደረጉ ያረጋግጡ?"
+
+#. module: visitor_gate_management
+#: model:res.groups,name:visitor_gate_management.group_managers
+msgid "Managers"
+msgstr "አስተዳዳሪዎች"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_property_counter__medium_id
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__medium_id
+msgid "Medium"
+msgstr "መካከለኛ"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__meeting_minute
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.fo_visit_form_view
+msgid "Meeting Minute"
+msgstr "አጀንዳ"
+
+#. module: visitor_gate_management
+#: model:ir.actions.report,name:visitor_gate_management.meeting_minute_report
+msgid "Meeting Minutes"
+msgstr "አጀንዳዎች"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__visiting_employee
+msgid "Meeting With"
+msgstr "ስብሰባው ከ"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,help:visitor_gate_management.field_fo_purpose__name
+msgid "Meeting purpose in short term.eg:Meeting."
+msgstr "የስብሰባ ዓላማ በአጭር ስም ለምሳሌ፡ ስብሰባ"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_property_counter__message_has_error
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__message_has_error
+msgid "Message Delivery error"
+msgstr "የመልእክት ማቅረቢያ ስህተት"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_property_counter__message_ids
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__message_ids
+msgid "Messages"
+msgstr "መልዕክቶች"
+
+#. module: visitor_gate_management
+#: code:addons/visitor_gate_management/models/appointment_slot.py:0
+#, python-format
+msgid "Monday"
+msgstr "ሰኞ"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_duration__name
+#: model:ir.model.fields,field_description:visitor_gate_management.field_id_proof__name
+#: model:ir.model.fields,field_description:visitor_gate_management.field_locker_name__name
+#: model:ir.model.fields,field_description:visitor_gate_management.field_properties__name
+#: model:ir.model.fields,field_description:visitor_gate_management.field_times__name
+#: model:ir.model.fields,field_description:visitor_gate_management.field_visitor_number__name
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.report_property_label
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.report_visitor_report
+msgid "Name"
+msgstr "ስም"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.fo_visitor_kanban_view
+msgid "Name:"
+msgstr "ስም:"
+
+#. module: visitor_gate_management
+#: code:addons/visitor_gate_management/models/fo_visit.py:0
+#: code:addons/visitor_gate_management/models/fo_visit.py:0
+#, python-format
+msgid "New"
+msgstr "አዲስ"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_property_counter__activity_date_deadline
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "ቀጣይ የእንቅስቃሴ ማለቅያ ቀን"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_property_counter__activity_summary
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__activity_summary
+msgid "Next Activity Summary"
+msgstr "ቀጣይ የእንቅስቃሴ ማጠቃለያ"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_property_counter__activity_type_id
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__activity_type_id
+msgid "Next Activity Type"
+msgstr "ቀጣይ የእንቅስቃሴ አይነት"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__no_visiters
+msgid "No Visiters"
+msgstr "ምንም ጎብኝዎች የሉም"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields.selection,name:visitor_gate_management.selection__fo_belongings__permission__1
+msgid "Not Allowed"
+msgstr "አይፈቀድም"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_property_counter__message_needaction_counter
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__message_needaction_counter
+msgid "Number of Actions"
+msgstr "የእርምጃ ብዛት"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_property_counter__message_has_error_counter
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__message_has_error_counter
+msgid "Number of errors"
+msgstr "የስህተት ብዛት"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,help:visitor_gate_management.field_fo_property_counter__message_needaction_counter
+#: model:ir.model.fields,help:visitor_gate_management.field_fo_visit__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "እርምጃ የሚያስፈልገው የመልእክት ብዛት"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,help:visitor_gate_management.field_fo_property_counter__message_has_error_counter
+#: model:ir.model.fields,help:visitor_gate_management.field_fo_visit__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "የማድረስ ስህተት ያለባቸው መልዕክቶች ብዛት"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,help:visitor_gate_management.field_fo_property_counter__message_unread_counter
+#: model:ir.model.fields,help:visitor_gate_management.field_fo_visit__message_unread_counter
+msgid "Number of unread messages"
+msgstr "ያልተነበቡ መልዕክቶች ብዛት"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_visitor_number__occupied
+msgid "Occupied"
+msgstr "ተይዟል"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields.selection,name:visitor_gate_management.selection__s2u_appointment_option__adjusted_for__organization
+msgid "Organization"
+msgstr "የድርጅት"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields.selection,name:visitor_gate_management.selection__fo_belongings__in_or_out__out
+msgid "Out"
+msgstr "የወጣ"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_belongings__permission
+msgid "Permission"
+msgstr "ፍቃድ"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_property_counter__visitor_belongings
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__visitor_belongings
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.fo_visit_form_view
+msgid "Personal Belongings"
+msgstr "የግል ዕቃዎች"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.fo_property_counter_form_view
+msgid "Personal belongings"
+msgstr "የግል ዕቃዎች"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_belongings__phone
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__phone
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visitor__phone
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.report_visitor_report
+msgid "Phone"
+msgstr "ስልክ"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.fo_visitor_kanban_view
+msgid "Phone:"
+msgstr "ስልክ:"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.fo_visit_form_view
+msgid "Please Accept All The Visitor IDs From This Visit?"
+msgstr "እባክዎ ከዚህ ጉብኝት ሁሉንም የጎብኚ መታወቂያዎች ይቀበሉ?"
+
+#. module: visitor_gate_management
+#: code:addons/visitor_gate_management/models/fo_property_counter.py:0
+#: code:addons/visitor_gate_management/models/fo_visit.py:0
+#, python-format
+msgid "Please Add A Date After Today"
+msgstr "እባክዎ ከዛሬ ቀን በኋላ ቀን ይምረጡ"
+
+#. module: visitor_gate_management
+#: code:addons/visitor_gate_management/models/fo_property_counter.py:0
+#, python-format
+msgid "Please Add A Date First"
+msgstr "እባክዎ መጀመሪያ ቀን ያክሉ"
+
+#. module: visitor_gate_management
+#: code:addons/visitor_gate_management/models/fo_visit.py:0
+#: code:addons/visitor_gate_management/models/fo_visit.py:0
+#, python-format
+msgid "Please Add Check In Time and Duration of Visit"
+msgstr "እባክዎን የመግቢያ ሰአት እና የጉብኝቱን ቆይታ ይጨምሩ"
+
+#. module: visitor_gate_management
+#: code:addons/visitor_gate_management/models/fo_visit.py:0
+#: code:addons/visitor_gate_management/models/fo_visit.py:0
+#, python-format
+msgid "Please Add Meeting Minute For This Visit"
+msgstr "እባክዎ ለዚህ ጉብኝት አጀንዳ ያስገቡ"
+
+#. module: visitor_gate_management
+#: code:addons/visitor_gate_management/models/fo_property_counter.py:0
+#: code:addons/visitor_gate_management/models/fo_property_counter.py:0
+#: code:addons/visitor_gate_management/models/fo_property_counter.py:0
+#: code:addons/visitor_gate_management/models/fo_visit.py:0
+#: code:addons/visitor_gate_management/models/fo_visit.py:0
+#, python-format
+msgid "Please Add The Amount."
+msgstr "እባክዎ መጠኑን ይጨምሩ።"
+
+#. module: visitor_gate_management
+#: code:addons/visitor_gate_management/models/fo_property_counter.py:0
+#: code:addons/visitor_gate_management/models/fo_visit.py:0
+#, python-format
+msgid "Please Add Working Days First"
+msgstr "እባክዎ መጀመሪያ የስራ ቀናትን ይጨምሩ"
+
+#. module: visitor_gate_management
+#: code:addons/visitor_gate_management/wizard/reschedule.py:0
+#, python-format
+msgid "Please Fill In All The Given Fields"
+msgstr "እባክዎ ሁሉንም የተሰጡትን መስኮች ይሙሉ"
+
+#. module: visitor_gate_management
+#: code:addons/visitor_gate_management/wizard/reschedule.py:0
+#, python-format
+msgid "Please Fill In The Required Fields"
+msgstr "እባክዎ የሚፈለጉትን መስኮች ይሙሉ"
+
+#. module: visitor_gate_management
+#: model:ir.model.constraint,message:visitor_gate_management.constraint_fo_visitor_field_uniq_email_and_id_proof
+msgid "Please make sure ID Proof, Email or Phone is unique !"
+msgstr "እባክዎ የመታወቂያ ማረጋገጫ፣ ኢሜል ወይም ስልክ ልዩ መሆናቸውን ያረጋግጡ!"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_property_counter__access_url
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__access_url
+msgid "Portal Access URL"
+msgstr "ፖርታል መዳረሻ URL"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields.selection,name:visitor_gate_management.selection__s2u_appointment_option__adjusted_for__private
+msgid "Private"
+msgstr "የግል"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_belongings__property_name
+msgid "Property"
+msgstr "ንብረት"
+
+#. module: visitor_gate_management
+#: model:ir.model,name:visitor_gate_management.model_fo_property_counter
+msgid "Property Details"
+msgstr "የንብረት ዝርዝሮች"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_purpose__name
+msgid "Purpose"
+msgstr "ዓላማ"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__reason
+msgid "Purpose Of Visit"
+msgstr "የጉብኝት ዓላማ"
+
+#. module: visitor_gate_management
+#: model:ir.actions.act_window,name:visitor_gate_management.fo_purpose_action
+#: model:ir.ui.menu,name:visitor_gate_management.purpose_action
+msgid "Purpose of Visit"
+msgstr "የጉብኝት ዓላማ"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.fo_visit_form_view
+msgid "Purpose of Visits"
+msgstr "የጉብኝቶች ዓላማ"
+
+#. module: visitor_gate_management
+#: model:ir.module.category,name:visitor_gate_management.module_fo_front_office
+msgid "Reception"
+msgstr "መቀበያ"
+
+#. module: visitor_gate_management
+#: model:res.groups,name:visitor_gate_management.group_receptionist
+msgid "Receptionist"
+msgstr "እንግዳ ተቀባይ"
+
+#. module: visitor_gate_management
+#: model_terms:ir.actions.act_window,help:visitor_gate_management.fo_property_counter_action
+msgid "Record Personal Belongings."
+msgstr "የግል ንብረቶችን ይመዝግቡ።"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_belongings__reference_no
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.report_property_label
+msgid "Reference Number"
+msgstr "መለያ ቁጥር"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.fo_visit_form_view
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.reschedule_visits_form
+msgid "Reschedule"
+msgstr "እንደገና ቀጠሮ አስይዝ"
+
+#. module: visitor_gate_management
+#: code:addons/visitor_gate_management/models/fo_visit.py:0
+#: code:addons/visitor_gate_management/models/fo_visit.py:0
+#, python-format
+msgid "Reschedule Visits"
+msgstr "ጉብኝቶችን ለሌላ ጊዜ አስያዝ"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__rescheduled
+msgid "Rescheduled"
+msgstr "ለሌላ ጊዜ ቀጠሮ ተይዟል።"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.reschedule_visits_form
+msgid "Rescheduled Date"
+msgstr "የተያዘለት ቀን"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__rescheduled_visits_ids
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.fo_visit_form_view
+msgid "Rescheduled Visits"
+msgstr "እንደገና ቀጠሮ የተያዘላቸው ጉብኝቶች"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_property_counter__activity_user_id
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__activity_user_id
+msgid "Responsible User"
+msgstr "ኃላፊነት ያለው ተጠቃሚ"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields.selection,name:visitor_gate_management.selection__fo_property_counter__state__revise
+msgid "Revise"
+msgstr "አድስ"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields.selection,name:visitor_gate_management.selection__fo_visit__state__revise
+msgid "Revised"
+msgstr "የተሻሻለ"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_property_counter__message_has_sms_error
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "ኤስኤምኤስ የማድረስ ስህተት"
+
+#. module: visitor_gate_management
+#: code:addons/visitor_gate_management/models/appointment_slot.py:0
+#, python-format
+msgid "Saturday"
+msgstr "ቅዳሜ"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.visitor_id_form
+msgid "Save"
+msgstr "መዝግብ"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_hr_department__secretary_ids
+msgid "Secretary"
+msgstr "ጸሐፊ"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_property_counter__access_token
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__access_token
+msgid "Security Token"
+msgstr "የደህንነት ማስመሰያ"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.appointment_option_form_view
+msgid "Send Appointment Option for Approval"
+msgstr "የቀጠሮ አማራጭ ለማጽደቅ ላክ"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.fo_visit_form_view
+msgid "Send to Approve"
+msgstr "ለማጽደቅ ላክ"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.appointment_option_form_view
+msgid "Set to Draft"
+msgstr "ወደ ንድፍ መልስ"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_belongings__number
+msgid "Sl"
+msgstr "ተራ ቁጥር"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_s2u_appointment_slot__slot
+msgid "Slot"
+msgstr "የጊዜ ገደብ"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_s2u_appointment_option__adjusted_for
+msgid "Slot Created For"
+msgstr "የጊዜ ገደቦች የተፈጠረው ለ"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.appointment_slot_tree_view
+msgid "Slots"
+msgstr "የጊዜ ገደቦች"
+
+#. module: visitor_gate_management
+#: code:addons/visitor_gate_management/models/fo_visit.py:0
+#: code:addons/visitor_gate_management/wizard/reschedule.py:0
+#, python-format
+msgid "Sorry, This Time is Out Of The Range of Regular Working Hours"
+msgstr "ይቅርታ፣ ይህ ጊዜ ከመደበኛ የስራ ሰዓታት ክልል ውጭ ነው።"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_property_counter__source_id
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__source_id
+msgid "Source"
+msgstr "ምንጭ"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.fo_visit_form_view
+msgid "Start Visit"
+msgstr "ጉብኝት ይጀምሩ"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__started
+msgid "Started"
+msgstr "ተጀምሯል"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_property_counter__state
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__state
+#: model:ir.model.fields,field_description:visitor_gate_management.field_s2u_appointment_option__state
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.fo_property_counter_search_view
+msgid "State"
+msgstr "ሁኔታ"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,help:visitor_gate_management.field_fo_property_counter__activity_state
+#: model:ir.model.fields,help:visitor_gate_management.field_fo_visit__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"በእንቅስቃሴዎች ላይ የተመሰረተ ሁኔታ\n"
+"ጊዜው ያለፈበት፡ የማብቂያ ቀን አስቀድሞ አልፏል\n"
+"ዛሬ፡ የእንቅስቃሴ ቀን ዛሬ ነው።\n"
+"የታቀደ: የወደፊት እንቅስቃሴዎች."
+
+#. module: visitor_gate_management
+#: code:addons/visitor_gate_management/models/appointment_slot.py:0
+#, python-format
+msgid "Sunday"
+msgstr "እሁድ"
+
+#. module: visitor_gate_management
+#: code:addons/visitor_gate_management/models/fo_property_counter.py:0
+#: code:addons/visitor_gate_management/models/fo_property_counter.py:0
+#: code:addons/visitor_gate_management/models/fo_visit.py:0
+#: code:addons/visitor_gate_management/wizard/reschedule.py:0
+#, python-format
+msgid "The Date You Picked Is A Holiday"
+msgstr "የመረጡት ቀን የበዓል ቀን ነው።"
+
+#. module: visitor_gate_management
+#: code:addons/visitor_gate_management/models/fo_property_counter.py:0
+#: code:addons/visitor_gate_management/models/fo_property_counter.py:0
+#: code:addons/visitor_gate_management/models/fo_visit.py:0
+#: code:addons/visitor_gate_management/wizard/reschedule.py:0
+#, python-format
+msgid "The Date You Picked Isn't Apart of Your Working Days"
+msgstr "የመረጡት ቀን ከስራ ቀኖ የተለየ ነው።"
+
+#. module: visitor_gate_management
+#: model_terms:ir.actions.act_window,help:visitor_gate_management.fo_visit_action
+#: model_terms:ir.actions.act_window,help:visitor_gate_management.fo_visit_action_visitor
+msgid ""
+"The check in time will be automatically filled when the visitor check in to "
+"the office."
+msgstr "ጎብኚው ወደ ቢሮው ሲገባ የቼክ መግቢያው ሰዓት በራሱ ይሞላል።"
+
+#. module: visitor_gate_management
+#: model_terms:ir.actions.act_window,help:visitor_gate_management.fo_visit_action
+#: model_terms:ir.actions.act_window,help:visitor_gate_management.fo_visit_action_visitor
+msgid ""
+"The check out time automatically filled when the visitor check out from "
+"office."
+msgstr "ጎብኚው ከቢሮ ሲወጣ የቼክ መውጫ ጊዜ በራሱ ይሞላል።"
+
+#. module: visitor_gate_management
+#: code:addons/visitor_gate_management/models/appointment_option.py:0
+#, python-format
+msgid "The duration value must be between 0:05 and 8:00!"
+msgstr "የቆይታ ዋጋው በ0፡05 እና 8፡00 መካከል መሆን አለበት!"
+
+#. module: visitor_gate_management
+#: code:addons/visitor_gate_management/models/appointment_slot.py:0
+#, python-format
+msgid "The slot value must be between 0:00 and 12:00!"
+msgstr "የጊዜ ገደብ በ0:00 እና 12:00 መካከል መሆን አለበት!"
+
+#. module: visitor_gate_management
+#: code:addons/visitor_gate_management/models/fo_property_counter.py:0
+#: code:addons/visitor_gate_management/models/fo_property_counter.py:0
+#: code:addons/visitor_gate_management/models/fo_visit.py:0
+#: code:addons/visitor_gate_management/models/fo_visit.py:0
+#, python-format
+msgid "There is an item that is not checked out and hasn't been checked in."
+msgstr "ያልወጣ እና ያልገባ እቃ አለ።"
+
+#. module: visitor_gate_management
+#: model:ir.model,name:visitor_gate_management.model_id_proof
+msgid "This Model will handle ID proofs"
+msgstr "ይህ ሞዴል የመታወቂያ ማረጋገጫዎችን ይይዛል"
+
+#. module: visitor_gate_management
+#: code:addons/visitor_gate_management/models/fo_visit.py:0
+#, python-format
+msgid "This check is only used when checking out"
+msgstr "ይህ ቼክ ሲፈተሽ ብቻ ጥቅም ላይ ይውላል"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,help:visitor_gate_management.field_fo_property_counter__campaign_id
+#: model:ir.model.fields,help:visitor_gate_management.field_fo_visit__campaign_id
+msgid ""
+"This is a name that helps you keep track of your different campaign efforts,"
+" e.g. Fall_Drive, Christmas_Special"
+msgstr "ይህ የተለያዩ የዘመቻ ጥረቶችዎን እንዲከታተሉ የሚያግዝዎ ስም ነው:: ለምሳሌ. ልዩ_የገና"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,help:visitor_gate_management.field_fo_property_counter__medium_id
+#: model:ir.model.fields,help:visitor_gate_management.field_fo_visit__medium_id
+msgid "This is the method of delivery, e.g. Postcard, Email, or Banner Ad"
+msgstr "ይህ የማስረከቢያ ዘዴ ነው, ለምሳሌ. ፖስትካርድ፣ ኢሜል ወይም ባነር ማስታወቂያ"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,help:visitor_gate_management.field_fo_property_counter__source_id
+#: model:ir.model.fields,help:visitor_gate_management.field_fo_visit__source_id
+msgid ""
+"This is the source of the link, e.g. Search Engine, another domain, or name "
+"of email list"
+msgstr "ይህ የግንኙነት ምንጭ ነው:: ለምሳሌ. የፍለጋ ሞተር፣ ሌላ ጎራ ወይም የኢሜይል ዝርዝር ስም"
+
+#. module: visitor_gate_management
+#: model:ir.model,name:visitor_gate_management.model_locker_name
+msgid "This model will create a locker name"
+msgstr "ይህ ሞዴል የሎከር ስም ይፈጥራል"
+
+#. module: visitor_gate_management
+#: model:ir.model,name:visitor_gate_management.model_visitor_number
+msgid "This model will create a visitor ids"
+msgstr "ይህ ሞዴል የጎብኝ መታወቂያዎችን ይፈጥራል"
+
+#. module: visitor_gate_management
+#: model:ir.model,name:visitor_gate_management.model_properties
+msgid "This model will create belongings"
+msgstr "ይህ ሞዴል እቃዎችን ይፈጥራል"
+
+#. module: visitor_gate_management
+#: model:ir.model,name:visitor_gate_management.model_duration
+msgid "This model will create duration time"
+msgstr "ይህ ሞዴል የቆይታ ጊዜን ይፈጥራል"
+
+#. module: visitor_gate_management
+#: model:ir.model,name:visitor_gate_management.model_times
+msgid "This model will create times"
+msgstr "ይህ ሞዴል ጊዜን ይፈጥራል"
+
+#. module: visitor_gate_management
+#: model:ir.model,name:visitor_gate_management.model_fo_belongings
+msgid "This model will handle Belongings of the Visitors"
+msgstr "ይህ ሞዴል የጎብኝዎች ንብረቶችን ይይዛል"
+
+#. module: visitor_gate_management
+#: model:ir.model,name:visitor_gate_management.model_fo_purpose
+msgid "This model will handle Purpose of Visits"
+msgstr "ይህ ሞዴል የጉብኝቶችን ዓላማ ያስተናግዳል።"
+
+#. module: visitor_gate_management
+#: model:ir.model,name:visitor_gate_management.model_reschedule_visit
+msgid "This model will handle the archiving members"
+msgstr "ይህ ሞዴል የማህደር አባላቱን ያስተናግዳል።"
+
+#. module: visitor_gate_management
+#: model:ir.model,name:visitor_gate_management.model_rescheduled_time
+msgid "This model will reschedule a visit"
+msgstr "ይህ ሞዴል ጉብኝትን እንደገና ያስቀምጣል።"
+
+#. module: visitor_gate_management
+#: model:ir.model,name:visitor_gate_management.model_visitor_id_widget
+msgid "This will create widgets for the visitors"
+msgstr "ይህ ለጎብኚዎች መግብሮችን ይፈጥራል"
+
+#. module: visitor_gate_management
+#: code:addons/visitor_gate_management/models/appointment_slot.py:0
+#, python-format
+msgid "Thursday"
+msgstr "ሐሙስ"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_duration__time
+#: model:ir.model.fields,field_description:visitor_gate_management.field_times__time
+msgid "Time"
+msgstr "ጊዜ"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.fo_property_counter_search_view
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.view_visits_search
+msgid "Today"
+msgstr "የዛሬ"
+
+#. module: visitor_gate_management
+#: model:ir.actions.act_window,name:visitor_gate_management.fo_today_visit_action
+#: model:ir.ui.menu,name:visitor_gate_management.fo_today_visit_menu
+msgid "Today's Visits"
+msgstr "የዛሬ ጉብኝቶች"
+
+#. module: visitor_gate_management
+#: code:addons/visitor_gate_management/models/appointment_slot.py:0
+#, python-format
+msgid "Tuesday"
+msgstr "ማክሰኞ"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,help:visitor_gate_management.field_fo_property_counter__activity_exception_decoration
+#: model:ir.model.fields,help:visitor_gate_management.field_fo_visit__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "በመዝገብ ላይ ያለ ልዩ እንቅስቃሴ ዓይነት።"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_property_counter__message_unread
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__message_unread
+msgid "Unread Messages"
+msgstr "ያልተነበቡ መልእክቶች"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_property_counter__message_unread_counter
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "ያልተነበቡ መልዕክቶች ቆጣሪ"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_s2u_appointment_slot__user_id
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.appointment_slot_search
+msgid "User"
+msgstr "ተጠቃሚ"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_s2u_appointment_option__user_specific
+msgid "User specific"
+msgstr "ልዩ ተጠቃሚ"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_s2u_appointment_option__users_allowed
+msgid "Users Allowed"
+msgstr "የተፈቀደላቸው ተጠቃሚዎች"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_visitor_id_widget__visit
+msgid "Visit"
+msgstr "ጉብኝት"
+
+#. module: visitor_gate_management
+#: model:mail.template,subject:visitor_gate_management.appointment_accepted_in
+msgid "Visit Accepted"
+msgstr "ጉብኝት ተቀባይነት አግኝቷል"
+
+#. module: visitor_gate_management
+#: model:mail.template,subject:visitor_gate_management.appointment_denied_in
+msgid "Visit Denied"
+msgstr "ጉብኝት ተከልክሏል"
+
+#. module: visitor_gate_management
+#: model:mail.template,subject:visitor_gate_management.appointment_rescheduled_in
+msgid "Visit Rescheduled"
+msgstr "ጉብኝት ለሌላ ጊዜ ቀጠሮ ተይዟል"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__start_time
+msgid "Visit Start Time"
+msgstr "የጉብኝት መጀመርያ ሰዓት"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__visit_with
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.fo_visit_form_view
+msgid "Visit With"
+msgstr "ጉብኝት ከ"
+
+#. module: visitor_gate_management
+#: model:ir.model,name:visitor_gate_management.model_fo_visit
+msgid "Visit record handler"
+msgstr "የመዝገብ ተቆጣጣሪን ይጎብኙ"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.view_visits_search
+msgid "Visiting Employee"
+msgstr "ሰራተኛ"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,help:visitor_gate_management.field_fo_visitor__company_info
+msgid "Visiting persons company details"
+msgstr "የጎብኝ ሰዎች ኩባንያ ዝርዝሮች"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_belongings__visitor_id
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visitor__name
+#: model:ir.model.fields,field_description:visitor_gate_management.field_visitor_id_widget__visitor_id
+#: model:ir.ui.menu,name:visitor_gate_management.visitor_menu
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.fo_visitor_graph
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.report_visitor_report
+msgid "Visitor"
+msgstr "ጎብኚ"
+
+#. module: visitor_gate_management
+#: model:mail.activity.type,name:visitor_gate_management.visitor_appproval
+msgid "Visitor Approval"
+msgstr "የጎብኚዎች ማረጋገጫ"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_visitor_id_widget__visitor_id_number
+#: model:ir.ui.menu,name:visitor_gate_management.visitor_action
+msgid "Visitor ID"
+msgstr "የጉብኝት መታወቂያ"
+
+#. module: visitor_gate_management
+#: model:ir.actions.act_window,name:visitor_gate_management.fo_visitor_number_action
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_belongings__visitor_id_number
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visitor__visitor_id_number
+msgid "Visitor ID Number"
+msgstr "የጉብኝት መታወቂያ ቁጥር"
+
+#. module: visitor_gate_management
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.view_visits_search
+msgid "Visitor List"
+msgstr "የጎብኝዎች ዝርዝር"
+
+#. module: visitor_gate_management
+#: model:ir.ui.menu,name:visitor_gate_management.visitor_mgmnt_menu
+msgid "Visitor Management"
+msgstr "የጎብኚዎች አስተዳደር"
+
+#. module: visitor_gate_management
+#: model:ir.actions.act_window,name:visitor_gate_management.fo_visitor_action
+#: model:ir.actions.act_window,name:visitor_gate_management.fo_visitor_graph_action
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__visitor
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.fo_visit_form_view
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.fo_visitor_form_view
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.fo_visitor_tree_view
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.view_visits_search
+msgid "Visitors"
+msgstr "ጎብኝዎች"
+
+#. module: visitor_gate_management
+#: model:ir.actions.report,name:visitor_gate_management.action_print_visit_report
+msgid "Visitors Report"
+msgstr "የጎብኚዎች ሪፖርት"
+
+#. module: visitor_gate_management
+#: model:ir.actions.act_window,name:visitor_gate_management.fo_today_visit_employee_graph_action
+#: model:ir.actions.act_window,name:visitor_gate_management.fo_visit_action
+#: model:ir.actions.act_window,name:visitor_gate_management.fo_visit_action_visitor
+#: model:ir.model.fields,field_description:visitor_gate_management.field_reschedule_visit__visits_id
+#: model:ir.model.fields,field_description:visitor_gate_management.field_rescheduled_time__visits_id
+#: model:ir.ui.menu,name:visitor_gate_management.fo_visit_menu
+#: model:ir.ui.menu,name:visitor_gate_management.gate_visitor_mgmnt_main
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.fo_property_counter_form_view
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.fo_property_counter_tree_view
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.fo_today_visit_employee_graph
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.fo_visit_form_view
+#: model_terms:ir.ui.view,arch_db:visitor_gate_management.fo_visit_tree_view
+msgid "Visits"
+msgstr "ጉብኝቶች"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields.selection,name:visitor_gate_management.selection__s2u_appointment_option__state__waiting_for_approval
+msgid "Waiting For Approval"
+msgstr "በመጠባበቅ ላይ"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_property_counter__website_message_ids
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__website_message_ids
+msgid "Website Messages"
+msgstr "የድር ጣቢያ መልዕክቶች"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,help:visitor_gate_management.field_fo_property_counter__website_message_ids
+#: model:ir.model.fields,help:visitor_gate_management.field_fo_visit__website_message_ids
+msgid "Website communication history"
+msgstr "የድር ጣቢያ የግንኙነት ታሪክ"
+
+#. module: visitor_gate_management
+#: code:addons/visitor_gate_management/models/appointment_slot.py:0
+#, python-format
+msgid "Wednesday"
+msgstr "እሮብ"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_property_counter__resource_calendar_id
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__resource_calendar_id
+msgid "Working Hours"
+msgstr "የስራ ሰዓት"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_property_counter__x_css
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__x_css
+#: model:ir.model.fields,field_description:visitor_gate_management.field_s2u_appointment_option__x_css
+msgid "X Css"
+msgstr ""
+
+#. module: visitor_gate_management
+#: code:addons/visitor_gate_management/models/fo_property_counter.py:0
+#, python-format
+msgid "You Can Only Delete Entries that are in Draft State"
+msgstr "በንድፍ ሁኔታ ውስጥ ያሉ ግቤቶችን ብቻ መሰረዝ ይችላሉ።"
+
+#. module: visitor_gate_management
+#: code:addons/visitor_gate_management/models/appointment_option.py:0
+#, python-format
+msgid "You Can Only Delete Options in Draft State"
+msgstr "በንድፍ ሁኔታ ውስጥ ያሉትን አማራጮች ብቻ መሰረዝ ይችላሉ።"
+
+#. module: visitor_gate_management
+#: code:addons/visitor_gate_management/models/fo_visit.py:0
+#, python-format
+msgid "You Can Only Delete Visits in Draft State"
+msgstr "ጉብኝቶችን መሰረዝ የሚችሉት በንድፍ ሁኔታ ውስጥ ያለ ብቻ ነው።"
+
+#. module: visitor_gate_management
+#: code:addons/visitor_gate_management/models/fo_visit.py:0
+#, python-format
+msgid "You Can't Create Visits for Other Employees"
+msgstr "ለሌሎች ሰራተኞች ጉብኝቶችን መፍጠር አይችሉም"
+
+#. module: visitor_gate_management
+#: code:addons/visitor_gate_management/models/fo_visitor.py:0
+#, python-format
+msgid "You Can't Delete A Visitor Whose Visitor ID Hasn't Been Returned"
+msgstr "የጎብኝ መታወቂያው ያልተመለሰ ጎብኝን መሰረዝ አይችሉም"
+
+#. module: visitor_gate_management
+#: code:addons/visitor_gate_management/models/appointment_option.py:0
+#, python-format
+msgid "You Can't Have A Digit in Appointment Option"
+msgstr "በቀጠሮ ምርጫ ውስጥ አሃዝ ሊኖርዎት አይችልም።"
+
+#. module: visitor_gate_management
+#: code:addons/visitor_gate_management/models/fo_visitor.py:0
+#, python-format
+msgid "You Can't Have A Digit in City Name"
+msgstr "በከተማ ስም አሃዝ ሊኖር አይችልም።"
+
+#. module: visitor_gate_management
+#: code:addons/visitor_gate_management/models/fo_visitor.py:0
+#, python-format
+msgid "You Can't Have A Digit in ID Proof"
+msgstr "በመታወቂያ ማረጋገጫ አሃዝ ሊኖርዎት አይችልም።"
+
+#. module: visitor_gate_management
+#: code:addons/visitor_gate_management/models/fo_visitor.py:0
+#, python-format
+msgid "You Can't Have A Digit in Name"
+msgstr "በስም አሃዝ ሊኖር አይችልም።"
+
+#. module: visitor_gate_management
+#: code:addons/visitor_gate_management/models/fo_visit.py:0
+#, python-format
+msgid "You Can't Have A Digit in Property Name"
+msgstr "በንብረት ስም አሃዝ ሊኖርዎት አይችልም።"
+
+#. module: visitor_gate_management
+#: code:addons/visitor_gate_management/models/fo_visit.py:0
+#, python-format
+msgid "You Can't Have A Digit in Purpose of Visit"
+msgstr "ለጉብኝት ዓላማ አሃዝ ሊኖርዎት አይችልም።"
+
+#. module: visitor_gate_management
+#: code:addons/visitor_gate_management/models/fo_visit.py:0
+#: code:addons/visitor_gate_management/models/fo_visitor.py:0
+#, python-format
+msgid "You Can't Have Characters in a Phone Number"
+msgstr "በስልክ ቁጥር ውስጥ ፊደላት ሊኖሩዎት አይችሉም"
+
+#. module: visitor_gate_management
+#: code:addons/visitor_gate_management/models/fo_visit.py:0
+#, python-format
+msgid "You Have Visitors Who Have An Appointment on %s at %s"
+msgstr "በ%s በ%s ቀጠሮ ያላቸው ጎብኚዎች አሉዎት"
+
+#. module: visitor_gate_management
+#: model:ir.model.fields,field_description:visitor_gate_management.field_fo_visit__name
+msgid "sequence"
+msgstr "ቅደም ተከተል"
+
+#. module: visitor_gate_management
+#: model:ir.model,name:visitor_gate_management.model_fo_visitor
+msgid "visitor profile detail information"
+msgstr "የጎብኚዎች መገለጫ ዝርዝር መረጃ"

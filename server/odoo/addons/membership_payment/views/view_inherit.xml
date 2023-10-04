@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<odoo>
+<data>
+<!--        <record model="ir.ui.view" id="membership_handlers_parent_inherit">-->
+<!--            <field name="name">membership.handlers.parent.inherit</field>-->
+<!--            <field name="model">membership.handlers.parent</field>-->
+<!--            <field name="inherit_id" ref="members_handlers_annual_plans.membership_handlers_parent_form_view"/>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <xpath expr="//div[@name='button_box']" position="before">-->
+<!--                    <button name="update_teanslation_parent" class="oe_highlight" string="Update Translation" type="object"/>-->
+<!--                </xpath>-->
+<!--            </field>-->
+<!--&lt;!&ndash;        </record>&ndash;&gt;-->
+<!--        <record model="ir.ui.view" id="membership_handlers_branch_view">-->
+<!--            <field name="name">membership.handlers.branch.inherit</field>-->
+<!--            <field name="model">membership.handlers.branch</field>-->
+<!--            <field name="inherit_id" ref="members_handlers_annual_plans.membership_handlers_branch_form_view"/>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <xpath expr="//div[@name='button_box']" position="before">-->
+<!--                    <button name="update_teanslation_branch" class="oe_highlight" string="Update Translation" type="object"/>-->
+<!--                </xpath>-->
+<!--            </field>-->
+<!--        </record>-->
+
+
+<!--    <record model="ir.ui.view" id="membership_main_office_view">-->
+<!--            <field name="name">main.office.branch.inherit</field>-->
+<!--            <field name="model">main.office</field>-->
+<!--            <field name="inherit_id" ref="members_handlers_annual_plans.member_office_form"/>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <xpath expr="//div[@name='button_box']" position="before">-->
+<!--                    <button name="update_teanslation_main" class="oe_highlight" string="Update Translation" type="object"/>-->
+<!--                </xpath>-->
+<!--            </field>-->
+<!--    </record>-->
+<!--    <record model="ir.ui.view" id="member_cells_view">-->
+<!--            <field name="name">member.cells.inherit</field>-->
+<!--            <field name="model">member.cells</field>-->
+<!--            <field name="inherit_id" ref="members_handlers_annual_plans.member_cell_form"/>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <xpath expr="//div[@name='button_box']" position="before">-->
+<!--                    <button name="update_teanslation_cells" class="oe_highlight" string="Update Translation" type="object"/>-->
+<!--                </xpath>-->
+<!--            </field>-->
+<!--    </record>-->
+    <record model="ir.actions.server" id="action_update_translation_parent">
+            <field name="name">Update Translation</field>
+            <field name="model_id" ref="members_handlers_annual_plans.model_membership_handlers_parent"/>
+            <field name="binding_model_id" ref="members_handlers_annual_plans.model_membership_handlers_parent" />
+            <field name="state">code</field>
+            <field name="code">
+                action = records.update_translation_parent()
+            </field>
+        </record>
+    <record model="ir.actions.server" id="action_update_translation_branch">
+            <field name="name">Update Translation</field>
+            <field name="model_id" ref="members_handlers_annual_plans.model_membership_handlers_branch"/>
+            <field name="binding_model_id" ref="members_handlers_annual_plans.model_membership_handlers_branch"/>
+            <field name="state">code</field>
+            <field name="code">
+                action = records.update_translation_branch()
+            </field>
+    </record>
+    <record model="ir.actions.server" id="action_update_translation_main_office">
+            <field name="name">Update Translation</field>
+            <field name="model_id" ref="members_handlers_annual_plans.model_main_office"/>
+            <field name="binding_model_id" ref="members_handlers_annual_plans.model_main_office"/>
+            <field name="state">code</field>
+            <field name="code">
+                action = records.update_translation_branch()
+            </field>
+    </record>
+    <record model="ir.actions.server" id="action_update_translation_main_office">
+            <field name="name">Update Translation</field>
+            <field name="model_id" ref="members_handlers_annual_plans.model_main_office"/>
+            <field name="binding_model_id" ref="members_handlers_annual_plans.model_main_office"/>
+            <field name="state">code</field>
+            <field name="code">
+                action = records.update_translation_main_office()
+            </field>
+    </record>
+    <record model="ir.actions.server" id="action_update_translation_member_cells">
+            <field name="name">Update Translation</field>
+            <field name="model_id" ref="members_handlers_annual_plans.model_member_cells"/>
+            <field name="binding_model_id" ref="members_handlers_annual_plans.model_member_cells"/>
+            <field name="state">code</field>
+            <field name="code">
+                action = records.update_translation_member_cells()
+            </field>
+    </record>
+
+
+</data>
+</odoo>

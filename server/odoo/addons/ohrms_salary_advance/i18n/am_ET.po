@@ -1,0 +1,456 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ohrms_salary_advance
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20221005\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-29 05:29+0000\n"
+"PO-Revision-Date: 2023-03-29 05:29+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields,field_description:ohrms_salary_advance.field_salary_advance__message_needaction
+msgid "Action Needed"
+msgstr "እርምጃ ያስፈልጋል"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields,field_description:ohrms_salary_advance.field_salary_advance__activity_ids
+msgid "Activities"
+msgstr "ተግባራት"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields,field_description:ohrms_salary_advance.field_salary_advance__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "የክንውን ልዩ ማስጌጥ"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields,field_description:ohrms_salary_advance.field_salary_advance__activity_state
+msgid "Activity State"
+msgstr "የክንውን ሁኔታ"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields,field_description:ohrms_salary_advance.field_salary_advance__advance
+#: model:ir.ui.menu,name:ohrms_salary_advance.parent_menu_salary_advance
+msgid "Advance"
+msgstr "ቅድመ ክፍያ"
+
+#. module: ohrms_salary_advance
+#: model:hr.salary.rule,name:ohrms_salary_advance.hr_payslip_rule_advance
+msgid "Advance Salary"
+msgstr "ቅድሚያ ደመወዝ"
+
+#. module: ohrms_salary_advance
+#: model_terms:ir.ui.view,arch_db:ohrms_salary_advance.view_salary_advance_form
+msgid "Approve"
+msgstr "አጽድቅ"
+
+#. module: ohrms_salary_advance
+#: model:ir.actions.act_window,name:ohrms_salary_advance.action_salary_advance_to_approve_rule
+msgid "Salary rule Advance"
+msgstr "ቅድመ የደመወዝ ደንብ"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields.selection,name:ohrms_salary_advance.selection__salary_advance__state__approve
+#: model_terms:ir.ui.view,arch_db:ohrms_salary_advance.view_salary_advance_filter
+msgid "Approved"
+msgstr "ጸድቋል"
+
+#. module: ohrms_salary_advance
+#: model_terms:ir.ui.view,arch_db:ohrms_salary_advance.view_salary_advance_filter
+msgid "Approved Requests"
+msgstr "የጸደቁ ጥያቄዎች"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields,field_description:ohrms_salary_advance.field_salary_advance__message_attachment_count
+msgid "Attachment Count"
+msgstr "የአባሪ ብዛት"
+
+#. module: ohrms_salary_advance
+#: model_terms:ir.ui.view,arch_db:ohrms_salary_advance.view_salary_advance_form
+msgid "Cancel"
+msgstr "ሰርዝ"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields.selection,name:ohrms_salary_advance.selection__salary_advance__state__cancel
+msgid "Cancelled"
+msgstr "ተሰርዟል"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields,field_description:ohrms_salary_advance.field_salary_advance__company_id
+msgid "Company"
+msgstr "ኩባንያ"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields,field_description:ohrms_salary_advance.field_salary_advance__employee_contract_id
+msgid "Contract"
+msgstr "ውል"
+
+#. module: ohrms_salary_advance
+#: model_terms:ir.actions.act_window,help:ohrms_salary_advance.action_my_salary_advance
+#: model_terms:ir.actions.act_window,help:ohrms_salary_advance.action_my_salary_advance_request_approved
+#: model_terms:ir.actions.act_window,help:ohrms_salary_advance.action_salary_advance_to_approve
+msgid "Create Requests."
+msgstr "ጥያቄዎችን ይፍጠሩ"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields,field_description:ohrms_salary_advance.field_salary_advance__create_uid
+msgid "Created by"
+msgstr "ጠያቂ"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields,field_description:ohrms_salary_advance.field_salary_advance__create_date
+msgid "Created on"
+msgstr "የተጠየቀው"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields,field_description:ohrms_salary_advance.field_salary_advance__credit
+msgid "Credit Account"
+msgstr "የብድር መለያ"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields,field_description:ohrms_salary_advance.field_salary_advance__currency_id
+msgid "Currency"
+msgstr "ምንዛሪ"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields,field_description:ohrms_salary_advance.field_salary_advance__date
+#: model_terms:ir.ui.view,arch_db:ohrms_salary_advance.view_salary_advance_filter
+msgid "Date"
+msgstr "ቀን"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields,field_description:ohrms_salary_advance.field_salary_advance__debit
+msgid "Debit Account"
+msgstr "ዕዳ ሒሳብ"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields,field_description:ohrms_salary_advance.field_salary_advance__department
+msgid "Department"
+msgstr "መምሪያ"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields,field_description:ohrms_salary_advance.field_salary_advance__display_name
+msgid "Display Name"
+msgstr "መጠሪያው ስም"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields.selection,name:ohrms_salary_advance.selection__salary_advance__state__draft
+msgid "Draft"
+msgstr "ረቂቅ"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields,field_description:ohrms_salary_advance.field_salary_advance__employee_id
+#: model:ir.model.fields,help:ohrms_salary_advance.field_salary_advance__employee_id
+#: model_terms:ir.ui.view,arch_db:ohrms_salary_advance.view_salary_advance_filter
+msgid "Employee"
+msgstr "ሰራተኛ"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields,field_description:ohrms_salary_advance.field_salary_advance__exceed_condition
+msgid "Exceed than Maximum"
+msgstr "ከከፍተኛው ይበልጣል"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields,field_description:ohrms_salary_advance.field_salary_advance__message_follower_ids
+msgid "Followers"
+msgstr "ተከታዮች"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields,field_description:ohrms_salary_advance.field_salary_advance__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "ተከታዮች (የመገናኛ መስመሮች)"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields,field_description:ohrms_salary_advance.field_salary_advance__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "ተከታዮች (አጋሮች)"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields,field_description:ohrms_salary_advance.field_salary_advance__id
+msgid "ID"
+msgstr "መታወቂያ"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields,field_description:ohrms_salary_advance.field_salary_advance__activity_exception_icon
+msgid "Icon"
+msgstr "አዶ"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields,help:ohrms_salary_advance.field_salary_advance__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "ልዩ ክንውንን ለማመልከት አዶ።"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields,help:ohrms_salary_advance.field_salary_advance__message_needaction
+#: model:ir.model.fields,help:ohrms_salary_advance.field_salary_advance__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "ምልክት ካደረጉ፣ አዲስ መልዕክቶች የእርስዎን ትኩረት ይፈልጋሉ።"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields,help:ohrms_salary_advance.field_salary_advance__message_has_error
+#: model:ir.model.fields,help:ohrms_salary_advance.field_salary_advance__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "ምልክት ካደረጉ፣ አንዳንድ መልዕክቶች የማድረስ ስህተት አለባቸው።"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields,field_description:ohrms_salary_advance.field_salary_advance__message_is_follower
+msgid "Is Follower"
+msgstr "ተከታይ ነው።"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields,field_description:ohrms_salary_advance.field_salary_advance__journal
+msgid "Journal"
+msgstr "መጽሔት"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields,field_description:ohrms_salary_advance.field_salary_advance____last_update
+msgid "Last Modified on"
+msgstr "ለመጨረሻ ጊዜ የተሻሻለው በቀን"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields,field_description:ohrms_salary_advance.field_salary_advance__write_uid
+msgid "Last Updated by"
+msgstr "መጨረሻ የዘመነው በ"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields,field_description:ohrms_salary_advance.field_salary_advance__write_date
+msgid "Last Updated on"
+msgstr "ለመጨረሻ ጊዜ የዘመነው በቀን"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields,field_description:ohrms_salary_advance.field_salary_advance__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "ዋና አባሪ"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields,field_description:ohrms_salary_advance.field_salary_advance__message_has_error
+msgid "Message Delivery error"
+msgstr "የመልእክት ማቅረቢያ ስህተት"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields,field_description:ohrms_salary_advance.field_salary_advance__message_ids
+msgid "Messages"
+msgstr "መልዕክቶች"
+
+#. module: ohrms_salary_advance
+#: model:ir.ui.menu,name:ohrms_salary_advance.menu_my_salary_advance_approved
+msgid "My Approved Salary Advance"
+msgstr "የተፈቀደልኝ የደመወዝ ቅድመ ክፍያ"
+
+#. module: ohrms_salary_advance
+#: model_terms:ir.ui.view,arch_db:ohrms_salary_advance.view_salary_advance_filter
+msgid "My Requests"
+msgstr "የእኔ ጥያቄዎች"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields,field_description:ohrms_salary_advance.field_salary_advance__name
+msgid "Name"
+msgstr "ስም"
+
+#. module: ohrms_salary_advance
+#: model_terms:ir.ui.view,arch_db:ohrms_salary_advance.view_salary_advance_filter
+msgid "New Requests"
+msgstr "አዲስ ጥያቄዎች"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields,field_description:ohrms_salary_advance.field_salary_advance__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "የቀጣይ ክንውን ገደብ"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields,field_description:ohrms_salary_advance.field_salary_advance__activity_summary
+msgid "Next Activity Summary"
+msgstr "የቀጣይ ክንውን ማጠቃለያ"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields,field_description:ohrms_salary_advance.field_salary_advance__activity_type_id
+msgid "Next Activity Type"
+msgstr "የቀጣይ ክንውን አይነት"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields,field_description:ohrms_salary_advance.field_salary_advance__message_needaction_counter
+msgid "Number of Actions"
+msgstr "የተግባሮች ብዛት"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields,field_description:ohrms_salary_advance.field_salary_advance__message_has_error_counter
+msgid "Number of errors"
+msgstr "የስህተት ብዛት"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields,help:ohrms_salary_advance.field_salary_advance__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "እርምጃ የሚፈልጉ መልእክቶች ብዛት"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields,help:ohrms_salary_advance.field_salary_advance__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "የማድረስ ስህተት ያለባቸው መልዕክቶች ብዛት"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields,help:ohrms_salary_advance.field_salary_advance__message_unread_counter
+msgid "Number of unread messages"
+msgstr "ያልተነበቡ መልዕክቶች ብዛት"
+
+#. module: ohrms_salary_advance
+#: model:ir.model,name:ohrms_salary_advance.model_hr_payslip
+msgid "Pay Slip"
+msgstr "የክፍያ ደረሰኝ"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields,field_description:ohrms_salary_advance.field_salary_advance__payment_method
+msgid "Payment Method"
+msgstr "የመክፈያ ዘዴ"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields,field_description:ohrms_salary_advance.field_salary_advance__reason
+#: model:ir.model.fields,help:ohrms_salary_advance.field_salary_advance__reason
+msgid "Reason"
+msgstr "ምክንያት"
+
+#. module: ohrms_salary_advance
+#: model_terms:ir.ui.view,arch_db:ohrms_salary_advance.view_salary_advance_form
+msgid "Reject"
+msgstr "ከልክል"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields.selection,name:ohrms_salary_advance.selection__salary_advance__state__reject
+msgid "Rejected"
+msgstr "ውድቅ ተደርጓል"
+
+#. module: ohrms_salary_advance
+#: model:ir.ui.menu,name:ohrms_salary_advance.menu_my_salary_advance
+msgid "Request Salary Advance"
+msgstr "የደመወዝ ቅድመ ክፍያ ይጠይቁ"
+
+#. module: ohrms_salary_advance
+#: code:addons/ohrms_salary_advance/models/salary_advance.py:0
+#, python-format
+msgid "Request can be done after \"%s\" Days From prevoius month salary"
+msgstr "ጥያቄው ካለፈው ወር ደመወዝ ከ\"%s\" በሗላ ሊከናወን ይችላል"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields,field_description:ohrms_salary_advance.field_salary_advance__activity_user_id
+msgid "Responsible User"
+msgstr "ኃላፊነት ያለበት ተጠቃሚ"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields,field_description:ohrms_salary_advance.field_salary_advance__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "የኤስኤምኤስ አቅርቦት ስህተት"
+
+#. module: ohrms_salary_advance
+#: model:ir.actions.act_window,name:ohrms_salary_advance.action_my_salary_advance
+#: model:ir.actions.act_window,name:ohrms_salary_advance.action_my_salary_advance_request_approved
+#: model:ir.actions.act_window,name:ohrms_salary_advance.action_salary_advance_to_approve
+#: model_terms:ir.ui.view,arch_db:ohrms_salary_advance.view_salary_advance_filter
+#: model_terms:ir.ui.view,arch_db:ohrms_salary_advance.view_salary_advance_form
+#: model_terms:ir.ui.view,arch_db:ohrms_salary_advance.view_salary_advance_tree
+msgid "Salary Advance"
+msgstr "የደመወዝ ቅድመ ክፍያ"
+
+#. module: ohrms_salary_advance
+#: model:ir.ui.menu,name:ohrms_salary_advance.menu_salary_advance
+msgid "Salary Advance To Approve"
+msgstr "የደመወዝ ቅድመ ክፍያ ለማጽደቅ"
+
+#. module: ohrms_salary_advance
+#: model_terms:ir.ui.view,arch_db:ohrms_salary_advance.view_salary_advance_filter
+msgid "Search"
+msgstr "ፈልግ"
+
+#. module: ohrms_salary_advance
+#: model_terms:ir.ui.view,arch_db:ohrms_salary_advance.view_salary_advance_filter
+msgid "State"
+msgstr "ሁኔታ"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields,field_description:ohrms_salary_advance.field_salary_advance__state
+msgid "Status"
+msgstr "ሁኔታ"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields,help:ohrms_salary_advance.field_salary_advance__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: ohrms_salary_advance
+#: model_terms:ir.ui.view,arch_db:ohrms_salary_advance.view_salary_advance_form
+msgid "Submit"
+msgstr "አስገባ"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields,help:ohrms_salary_advance.field_salary_advance__date
+msgid "Submit date"
+msgstr "የማስረከቢያ ቀን"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields.selection,name:ohrms_salary_advance.selection__salary_advance__state__submit
+msgid "Submitted"
+msgstr "ገብቷል።"
+
+#. module: ohrms_salary_advance
+#: model_terms:ir.ui.view,arch_db:ohrms_salary_advance.view_salary_advance_filter
+msgid "Submitted Requests"
+msgstr "የቀረቡ ጥያቄዎች"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields,help:ohrms_salary_advance.field_salary_advance__exceed_condition
+msgid "The Advance is greater than the maximum percentage in salary structure"
+msgstr "ቅድመ ክፍያው በደመወዝ መዋቅር ውስጥ ካለው ከፍተኛው መቶኛ ይበልጣል"
+
+#. module: ohrms_salary_advance
+#: model_terms:ir.ui.view,arch_db:ohrms_salary_advance.view_salary_advance_filter
+msgid "To Approve"
+msgstr "ለማጽደቅ"
+
+#. module: ohrms_salary_advance
+#: model_terms:ir.ui.view,arch_db:ohrms_salary_advance.view_salary_advance_filter
+msgid "To Submit"
+msgstr "ለማስገባት"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields,help:ohrms_salary_advance.field_salary_advance__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "በመዝገብ ላይ ያለ ልዩ ክንውን ዓይነት።"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields,field_description:ohrms_salary_advance.field_salary_advance__message_unread
+msgid "Unread Messages"
+msgstr "ያልተነበቡ መልእክቶች"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields,field_description:ohrms_salary_advance.field_salary_advance__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "ያልተነበቡ መልዕክቶች ቆጣሪ"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields.selection,name:ohrms_salary_advance.selection__salary_advance__state__waiting_approval
+msgid "Waiting Approval"
+msgstr "ማጽደቅን በመጠበቅ ላይ"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields,field_description:ohrms_salary_advance.field_salary_advance__website_message_ids
+msgid "Website Messages"
+msgstr "የድህረገፅ መልዕክቶች"
+
+#. module: ohrms_salary_advance
+#: model:ir.model.fields,help:ohrms_salary_advance.field_salary_advance__website_message_ids
+msgid "Website communication history"
+msgstr "የድህረገፅ የግንኙነት ታሪክ"
+
+#. module: ohrms_salary_advance
+#: model:ir.model,name:ohrms_salary_advance.model_salary_advance
+msgid "salary.advance"
+msgstr "ቅድመ ደሞዝ"

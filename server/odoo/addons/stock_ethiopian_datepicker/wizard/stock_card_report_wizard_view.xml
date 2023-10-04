@@ -1,0 +1,42 @@
+<odoo>
+
+    <record id="inherit_stock_card_report_wizard_form" model="ir.ui.view">
+        <field name="name">stock.card.report.wizard.form</field>
+        <field name="model">stock.card.report.wizard</field>
+        <field name="inherit_id" ref="stock_card_report.stock_card_report_wizard_form"/>
+        <field name="arch" type="xml">
+
+        
+            <xpath expr="//field[@name='date_from']" position="replace">
+                    <field name="is_pagum_from" invisible="1"/>
+                    <field name="is_pagum_to" invisible="1"/>
+                    <field  name="date_from"  class="col-50" colspan="3" groups="EthiopianCalendar.group_gregory"/>
+                    <field  name="ethiopian_from" class="oe_read_only" string="Start Date" style=" float:left" attrs="{'invisible': ['|', ('is_pagum_from', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    <field  name="pagum_from" class="oe_read_only"  string="Start Date" style=" float:left"  attrs="{'invisible': ['|',('is_pagum_from', '!=',False)  ]}"  groups="EthiopianCalendar.group_ethio_datepicker"/>
+
+                     <div>
+                     </div>
+                    <div style="margin-bottom:40px;margin-top:-22px;margin-left:10px;margin-right:0px">
+                    <widget name="ethiopian_calander_widget"  style=" float:left;width:200px;" class="oe_edit_only"  groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    </div>
+               
+            </xpath>
+            <xpath expr="//field[@name='date_to']" position="replace">
+                <field  name="date_to"  class="col-50" colspan="3" groups="EthiopianCalendar.group_gregory"/>
+                <field  name="ethiopian_to" class="oe_read_only" string="End Date" style=" float:left"   attrs="{'invisible': ['|', ('is_pagum_to', '=',False) ]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                <field  name="pagum_to" class="oe_read_only" string="End Date" style=" float:left"  attrs="{'invisible': ['|',('is_pagum_to', '!=',False) ]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                
+                <div>
+                </div>
+                <div style="margin-bottom:40px;margin-top:-22px;margin-left:10px;margin-right:0px">
+                <widget name="ethiopian_calander_widget_two"  style=" float:left;width:200px;" class="oe_edit_only" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                </div>
+        
+            </xpath>
+          
+        </field>
+    </record>
+
+ 
+
+</odoo>

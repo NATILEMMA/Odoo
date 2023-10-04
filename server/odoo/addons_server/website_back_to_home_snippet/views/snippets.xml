@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="homeback" name="Home Back snippet">
+        <section data-snippetHTML="" data-snippetHTMLOld="">     
+        <div style="
+        .vertical-button {
+            border: none;
+            outline: none;
+            background-color: #333;
+            color: #fff;
+            padding: 0.5rem;
+            height: 10rem;
+            width: 2rem;
+            text-align: center;
+            position: fixed;
+            overflow: hidden;
+            cursor: pointer;
+            z-index:1000000;
+            border-top-left-radius: 0.5rem;
+            border-bottom-left-radius: 0.5rem;
+          }
+          
+          .vertical-text {
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+            transform: rotate(180deg);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            color:#fff;
+            transform-origin: center center;
+            transform: translate(-50%, -50%);
+          }
+
+            ">
+     
+        <button class="vertical-button" style="border: none;
+        outline: none;
+        background-color: #333;
+        color: #fff;
+        padding: 0.5rem;
+        height: 10rem;
+        width: 2rem;
+        text-align: center;
+        position: fixed;
+        overflow: hidden;
+        cursor: pointer;
+        z-index:1000000;
+        border-top-left-radius: 0.5rem;
+        border-bottom-left-radius: 0.5rem;">
+            <a href="/web" class="vertical-text" style="  writing-mode: vertical-rl;
+            text-orientation: upright;
+            transform: rotate(180deg);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            color:#fff;
+            transform-origin: center center;
+            transform: translate(-50%, -50%);">back home</a>
+        </button>
+
+            
+    </div>
+        </section>
+    </template>
+
+    <template id="snippets" inherit_id="website.snippets">
+        <xpath expr="//div[@id='snippet_structure']/div[hasclass('o_panel_body')]">
+            <t t-snippet="website_back_to_home_snippet.homeback"
+               t-thumbnail="/website_back_to_home_snippet/static/description/icon.png"/>
+        </xpath>
+    </template>
+
+
+</odoo>

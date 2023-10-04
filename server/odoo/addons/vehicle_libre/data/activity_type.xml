@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<odoo>
+
+    <data noupdate="1">
+         <record id="mail_act_libra_remainder_mail" model="mail.activity.type">
+            <field name="name">Libray update mail</field>
+            <field name="icon">fa-sun-o</field>
+            <field name="res_model_id" ref="vehicle_libre.model_vehicle_libre"/>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<odoo>
+
+  <record id="action_gender_graph" model="ir.actions.act_window">
+    <field name="name">Gender with City</field>
+    <field name="res_model">res.partner</field>
+    <field name="view_mode">graph</field>
+    <field name="view_id" ref="members_custom.graphics_for_gender_subcity"/>
+    <field name="domain">['|', ('is_member', '=', True), ('is_leader', '=', True)]</field>
+  </record>
+
+  <record id="action_gender_with_ed_level_graph" model="ir.actions.act_window">
+    <field name="name">Gender with Education</field>
+    <field name="res_model">res.partner</field>
+    <field name="view_mode">graph</field>
+    <field name="view_id" ref="members_custom.graphics_for_gender_education"/>
+    <field name="domain">['|', ('is_member', '=', True), ('is_leader', '=', True)]</field>
+  </record>
+
+  <record id="action_age_gender" model="ir.actions.act_window">
+    <field name="name">Gender with Age</field>
+    <field name="res_model">res.partner</field>
+    <field name="view_mode">graph</field>
+    <field name="view_id" ref="members_custom.graphics_for_age_gender"/>
+    <field name="domain">['|', ('is_member', '=', True), ('is_leader', '=', True)]</field>
+  </record>
+
+
+  <record id="action_membership_start_gender" model="ir.actions.act_window">
+    <field name="name">Gender with Membership Start</field>
+    <field name="res_model">res.partner</field>
+    <field name="view_mode">graph</field>
+    <field name="view_id" ref="members_custom.graphics_for_gender_membership_start"/>
+    <field name="domain">['|', ('is_member', '=', True), ('is_leader', '=', True)]</field>
+  </record>  
+
+
+  <record id="dashboard_views" model="ir.ui.view">
+    <field name="name">Dashboard Views</field>
+    <field name="model">board.board</field>
+    <field name="type">form</field>
+    <field name="arch" type="xml">
+      <form string="Dashboard">
+        <board style="1-1">
+          <column>
+            <action string="Gender Reports"
+                    name="%(action_gender_graph)d"/>
+            <action string="Gender Reports with Education Level"
+                    name="%(action_gender_with_ed_level_graph)d"/>               
+          </column>
+          <column>
+            <action string="Gender Reports with Age"
+                    name="%(action_age_gender)d"/>
+            <action string="Gender Reports with Start of Membership"
+                    name="%(action_membership_start_gender)d"/>  
+          </column>
+        </board>
+      </form>
+    </field>
+  </record>
+
+  <record id="member_dashboard" model="ir.actions.act_window">
+    <field name="name">Graphic Reporting</field>
+    <field name="res_model">board.board</field>
+    <field name="view_mode">form</field>
+    <field name="usage">menu</field>
+    <field name="view_id" ref="dashboard_views"/>
+  </record>
+  
+
+
+   <menuitem id="dashboard_reports"
+             name="Graphic Reporting"
+             parent="menu_report_membership"
+             sequence="4"
+             groups="members_custom.member_group_city_admin"
+             action="member_dashboard"/>
+
+</odoo>

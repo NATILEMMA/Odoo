@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="appointment_option_search">
+            <field name="model">s2u.appointment.option</field>
+            <field name="arch" type="xml">
+                <search>
+                       <field name="name"/>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="appointment_option_form_view">
+            <field name="model">s2u.appointment.option</field>
+            <field name="arch" type="xml">
+                <form string="Appointment Option">
+                    <header>
+                        <button name="approve_options" string="Approve Option" type="object" class="btn btn-primary" groups="visitor_gate_management.group_managers" states='waiting for approval' confirm="Are you sure you want to Approve the Appointment Option?"/>
+                        <button name="send_for_approval" string="Send Appointment Option for Approval" class="btn btn-success" type="object" groups="visitor_gate_management.group_receptionist" states="draft" confirm="Are you sure you want to Send Appointment Option for Approval?"/>
+                        <button name="set_to_draft" string="Set to Draft" type="object" groups="visitor_gate_management.group_receptionist" class="btn btn-primary" states="approved" confirm="Are you sure you want to Set back to Draft?"/>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="x_css" invisible="1"/>
+                                <field name="name" attrs="{'readonly': [('state', '=', 'approved')]}"/>
+                                <field name="duration" widget="float_time" attrs="{'readonly': [('state', '=', 'approved')]}"/>
+                                <field name="adjusted_for" attrs="{'readonly': [('state', '=', 'approved')]}"/>
+                            </group>
+                            <group>
+                                <field name="user_specific" attrs="{'readonly': [('state', '=', 'approved')]}"/>
+                                <field name="users_allowed" widget="many2many_tags" attrs="{'required': [('user_specific', '==', True)], 'invisible': [('user_specific', '!=', True)], 'readonly': [('state', '=', 'approved')]}" options="{'no_create': True, 'no_create_edit': True}"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="appointment_option_tree_view">
+            <field name="model">s2u.appointment.option</field>
+            <field name="arch" type="xml">
+                <tree string="Appointment options">
+                    <field name="name"/>
+                    <field name="duration" widget="float_time"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="appointment_option_action">
+            <field name="name">Appointment Options</field>
+            <field name="res_model">s2u.appointment.option</field>
+            <field name="view_mode">tree,form,pivot,graph</field>
+        </record>
+
+    </data>
+</odoo>

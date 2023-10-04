@@ -1,0 +1,663 @@
+<?xml version="1.0"?>
+
+<odoo>
+
+    <record id="each_member_payment_tree" model="ir.ui.view">
+        <field name="name">Members' Payment</field>
+        <field name="model">each.member.payment</field>
+        <field name="arch" type="xml">
+            <tree editable="top">
+                <field name="wereda_id" invisible="1"/>
+                <field name="members_payment_id" invisible="1"/>
+                <field name="member_id" attrs="{'readonly': [('state', '=', 'paid')]}" force_save="1"/>
+                <field name="year" invisible="1"/>
+                <field name="month" attrs="{'readonly': [('state', '=', 'paid')]}" force_save="1"/>
+                <field name="cell_payment_id" invisible="1"/>
+                <field name="fee_amount" force_save="1"/>
+                <field name="amount_paid" attrs="{'readonly': [('state', '=', 'paid')]}" force_save="1"/>
+                <field name="amount_remaining" force_save="1"/>
+                <field name="traced_member_payment" readonly="1" force_save="1"/>
+                <field name="paid" invisible="1"/>
+                <field name="id_payment"/>
+                <field name="state"/>
+                <button name="print_payslip" string="Pay Slip" type="object" icon="fa-download" attrs="{'invisible': [('state', '=', 'not payed')]}" confirm="Are you sure you want to print payslips?"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="each_member_payment_form" model="ir.ui.view">
+        <field name="name">Members' Payment</field>
+        <field name="model">each.member.payment</field>
+        <field name="arch" type="xml">
+            <form duplicate="false" create="false">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="wereda_id" invisible="1"/>
+                            <field name="month" readonly="1"/>
+                            <field name="year" readonly="1"/>
+                            <field name="member_id" readonly="1" context="{'form_view_ref': 'member_registration.membership_view_partner_form'}"/>
+                            <field name="fee_amount" force_save="1"/>
+                            <field name="members_payment_id" invisible="1"/>
+                        </group>
+                        <group>
+                            <field name="amount_paid" readonly="1"/>
+                            <field name="amount_remaining" force_save="1"/>
+                            <field name="id_payment" readonly="1"/>
+                            <field name="traced_member_payment" readonly="1"/>
+                            <field name="state" readonly="1"/>
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="each_member_payment_search" model="ir.ui.view">
+        <field name="name">Members' Payment</field>
+        <field name="model">each.member.payment</field>
+        <field name="arch" type="xml">
+            <search string="Members' Payment">
+                <group expand="0" string="Group By" colspan="10" col="8">
+                    <filter string="Month" name="month" context="{'group_by': 'month'}"/>
+                    <filter string="Year" name="year" context="{'group_by': 'year'}"/>
+                    <filter string="Name" name="name" context="{'group_by': 'member_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="each_member_payment_tree_report" model="ir.ui.view">
+        <field name="name">Members' Payment</field>
+        <field name="model">each.member.payment</field>
+        <field name="arch" type="xml">
+            <tree create="false" edit="false" delete="false" duplicate="false">
+                <field name="member_id"/>
+                <field name="year" invisible="1"/>
+                <field name="month"/>
+                <field name="cell_payment_id" invisible="1"/>
+                <field name="fee_amount"/>
+                <field name="amount_paid"/>
+                <field name="amount_remaining"/>
+                <field name="id_payment"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="each_member_payment_menu" model="ir.actions.act_window">
+        <field name="name">Members' Payment</field>
+        <field name="res_model">each.member.payment</field>
+        <field name="view_mode">tree,pivot,graph</field>
+        <field name="search_view_id" ref="each_member_payment_search"/>
+        <field name="view_id" ref="each_member_payment_tree_report"/>
+        <field name="domain">['|', '|', '|', '|', '|', '|', '|',
+                                ('wereda_id.branch_manager', 'in', [uid]),
+                                ('wereda_id.ict_manager', '=', uid),
+                                ('subcity_id.parent_manager', 'in', [uid]),
+                                ('subcity_id.ict_manager', '=', uid),
+                                ('subcity_id.city_id.city_manager', 'in', [uid]),
+                                ('subcity_id.city_id.ict_manager', '=', uid),
+                                ('subcity_id.city_id.transfer_handler', '=', uid),
+                                ('subcity_id.city_id.responsible_id.system_admin', 'in', [uid])]</field>
+    </record>
+
+    <record id="each_member_attachment_menu" model="ir.actions.act_window">
+        <field name="name">Members' Payment</field>
+        <field name="res_model">each.member.payment</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="each_member_payment_form"/>
+    </record>
+
+
+    <record id="each_league_payment_tree" model="ir.ui.view">
+        <field name="name">Leagues' Payments</field>
+        <field name="model">each.league.payment</field>
+        <field name="arch" type="xml">
+            <tree editable="top">
+                <field name="wereda_id" invisible="1"/>
+                <field name="members_payment_id" invisible="1"/>
+                <field name="league_id" attrs="{'readonly': [('state', '=', 'paid')]}" force_save="1"/>
+                <field name="year" invisible="1"/>
+                <field name="month" attrs="{'readonly': [('state', '=', 'paid')]}" force_save="1"/>
+                <field name="cell_payment_id" invisible="1"/>
+                <field name="fee_amount" force_save="1"/>
+                <field name="amount_paid" attrs="{'readonly': [('state', '=', 'paid')]}" force_save="1"/>
+                <field name="amount_remaining" force_save="1"/>
+                <field name="traced_league_payment" readonly="1" force_save="1"/>
+                <field name="id_payment"/>
+                <field name="paid" invisible="1"/>
+                <field name="state"/>
+                <button name="print_league_payslip" string="Pay Slip" type="object" icon="fa-download" attrs="{'invisible': [('state', '=', 'not payed')]}" confirm="Are you sure you want to print payslips?"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="each_league_payment_form" model="ir.ui.view">
+        <field name="name">Leagues' Payment</field>
+        <field name="model">each.league.payment</field>
+        <field name="arch" type="xml">
+            <form duplicate="false">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="wereda_id" invisible="1"/>
+                            <field name="month" readonly="1"/>
+                            <field name="year" readonly="1"/>
+                            <field name="league_id" readonly="1" context="{'form_view_ref': 'member_registration.membership_view_partner_form'}"/>
+                            <field name="fee_amount" force_save="1"/>
+                            <field name="members_payment_id" invisible="1"/>
+                        </group>
+                        <group>
+                            <field name="amount_paid" readonly="1"/>
+                            <field name="amount_remaining" force_save="1"/>
+                            <field name="id_payment" readonly="1"/>
+                            <field name="traced_league_payment" readonly="1"/>
+                            <field name="state" readonly="1"/>
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="each_league_payment_search" model="ir.ui.view">
+        <field name="name">Leagues' Payment</field>
+        <field name="model">each.league.payment</field>
+        <field name="arch" type="xml">
+            <search string="Leagues' Payment">
+                <group expand="0" string="Group By" colspan="10" col="8">
+                    <filter string="Month" name="month" context="{'group_by': 'month'}"/>
+                    <filter string="Year" name="year" context="{'group_by': 'year'}"/>
+                    <filter string="Name" name="name" context="{'group_by': 'league_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="each_league_payment_tree_report" model="ir.ui.view">
+        <field name="name">Leagues' Payment</field>
+        <field name="model">each.league.payment</field>
+        <field name="arch" type="xml">
+            <tree create="false" edit="false" delete="false" duplicate="false">
+                <field name="league_id"/>
+                <field name="year"/>
+                <field name="month"/>
+                <field name="cell_payment_id" invisible="1"/>
+                <field name="fee_amount"/>
+                <field name="amount_paid"/>
+                <field name="amount_remaining"/>
+                <field name="id_payment"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="each_league_payment_menu" model="ir.actions.act_window">
+        <field name="name">Leagues' Payment</field>
+        <field name="res_model">each.league.payment</field>
+        <field name="view_mode">tree,pivot,graph</field>
+        <field name="search_view_id" ref="each_league_payment_search"/>
+        <field name="view_id" ref="each_league_payment_tree_report"/>
+        <field name="domain">['|', '|', '|', '|', '|', '|', '|',
+                            ('wereda_id.branch_manager', 'in', [uid]),
+                            ('wereda_id.ict_manager', '=', uid),
+                            ('subcity_id.parent_manager', 'in', [uid]),
+                            ('subcity_id.ict_manager', '=', uid),
+                            ('subcity_id.city_id.city_manager', 'in', [uid]),
+                            ('subcity_id.city_id.ict_manager', '=', uid),
+                            ('subcity_id.city_id.transfer_handler', '=', uid),
+                            ('subcity_id.city_id.responsible_id.system_admin', 'in', [uid])]</field>
+    </record>
+
+    <record id="each_league_attachment_menu" model="ir.actions.act_window">
+        <field name="name">Leagues' Payment</field>
+        <field name="res_model">each.league.payment</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="each_member_payment_form"/>
+    </record>
+
+    <record id="donation_payment_tree" model="ir.ui.view">
+        <field name="name">Donors Payment</field>
+        <field name="model">donation.payment</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="user_id" invisible="1"/>
+                <field name="year"/>
+                <field name="month"/>
+                <field name="amount"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="donation_payment_form" model="ir.ui.view">
+        <field name="name">Donors Payment</field>
+        <field name="model">donation.payment</field>
+        <field name="arch" type="xml">
+            <form duplicate="false">
+                <header>
+                    <button name="draft_button" string="Go Back To Draft" states="submit" type="object" class="oe_highlight" confirm="Are you sure you want to go back to draft?"/>
+                    <button name="submit_button" string="Submit" type="object" states="draft" class="oe_highlight" confirm="Are you sure you want to submit payments?"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,submit,registered"/>
+                </header>
+                <sheet>
+                    <h1>
+                        <field name="name"/>
+                    </h1>
+                    <field name="x_css" invisible="1"/>
+                    <group>
+                        <group>
+                            <field name="user_id" invisible="1"/>
+                            <field name="year" attrs="{'readonly': [('state', 'not in', 'draft')]}" options="{'no_create': True, 'no_create_edit': True}"/>
+                            <field name="month" attrs="{'readonly': [('state', 'not in', 'draft')]}" options="{'no_create': True, 'no_create_edit': True}"/>
+                            <field name="for_donor_or_supporter"/>
+                            <field name="product_cash" attrs="{'readonly': [('state', 'not in', 'draft')]}"/>
+                            <field name="amount" force_save="1" attrs="{'readonly': [('product_cash', '=', 'product')]}"/>
+                        </group>
+                        <group>
+                            <field name="payment_for"/>
+                            <field name="city" attrs="{'readonly': [('state', 'not in', 'draft')]}" required="1" options="{'no_create': True, 'no_create_edit': True}"/>
+                            <field name="subcity_id" attrs="{'invisible': [('payment_for', '=', 'city')], 'readonly': [('state', 'not in', 'draft')], 'required': [('payment_for', '!=', 'city')]}" options="{'no_create': True, 'no_create_edit': True}"/>
+                            <field name="wereda_id" attrs="{'invisible': [('payment_for', 'in', ['city', 'subcity'])], 'readonly': [('state', 'not in', 'draft')], 'required': [('payment_for', 'not in', ['city', 'subcity'])]}" options="{'no_create': True, 'no_create_edit': True}"/>
+                            <button name="print_donor_payslip" string="Pay Slip" class="btn-info" type="object" icon="fa-download" attrs="{'invisible': [('state', '!=', 'submit')]}" confirm="Are you sure you want to print payslips?"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Products" name="product_ids" attrs="{'invisible': [('product_cash', '=', 'cash')]}">
+                            <field name="product_ids">
+                                <tree editable="bottom" delete="true">
+                                    <field name="product_id"/>
+                                    <field name="cost" force_save="1"/>
+                                    <field name="amount"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Reason for Donation" name="reason">
+                            <field name="reason"/>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="donor_payment_action" model="ir.actions.act_window">
+        <field name="name">Donors Payment</field>
+        <field name="res_model">donation.payment</field>
+        <field name="view_mode">tree,form,pivot,graph</field>
+        <field name="domain">['|', '|', '|', '|', '|', '|',
+                            ('wereda_id.branch_manager', 'in', [uid]),
+                            ('wereda_id.ict_manager', '=', uid),
+                            ('subcity_id.parent_manager', 'in', [uid]),
+                            ('subcity_id.ict_manager', '=', uid),
+                            ('subcity_id.city_id.city_manager', 'in', [uid]),
+                            ('subcity_id.city_id.ict_manager', '=', uid),
+                            ('city.responsible_id.system_admin', 'in', [uid])]</field>
+    </record>
+
+
+    <record id="membership_cell_payment_tree" model="ir.ui.view">
+        <field name="name">Members' Cell Payment</field>
+        <field name="model">membership.cell.payment</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="user_id" invisible="1"/>
+                <field name="main_office_payment" invisible="1"/>
+                <field name="year"/>
+                <field name="month"/>
+                <field name="member_cell"/>
+                <field name="wereda_id"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="membership_cell_payment_form" model="ir.ui.view">
+        <field name="name">Members' Cell Payment</field>
+        <field name="model">membership.cell.payment</field>
+        <field name="arch" type="xml">
+            <form duplicate="false">
+                <header>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,pending payments,submit,registered"/>
+                </header>
+                <sheet>
+                    <h1>
+                        <field name="name"/>
+                    </h1>
+                    <field name="x_css" invisible="1"/>
+                    <group>
+                        <group>
+                            <field name="user_id" invisible="1"/>
+                            <field name="main_office_payment" invisible="1"/>
+                            <field name="year" attrs="{'readonly': [('state', 'not in', 'draft')]}" options="{'no_create': True, 'no_create_edit': True}"/>
+                            <field name="month" attrs="{'readonly': [('state', 'not in', 'draft')]}" options="{'no_create': True, 'no_create_edit': True}"/>
+                            <field name="payment_for_league_member" string="League or Member" attrs="{'readonly': [('state', 'not in', 'draft')]}"/>
+                        </group>
+                        <group>
+                            <field name="subcity_id" attrs="{'readonly': [('state', 'not in', 'draft')]}" options="{'no_create': True, 'no_create_edit': True}"/>
+                            <field name="wereda_id" attrs="{'readonly': [('state', 'not in', 'draft')]}" options="{'no_create': True, 'no_create_edit': True}"/>
+                            <field name="main_office" attrs="{'readonly': [('state', 'not in', 'draft')]}" options="{'no_create': True, 'no_create_edit': True}"/>
+                            <field name="member_cell" attrs="{'readonly': [('state', 'not in', 'draft')]}" options="{'no_create': True, 'no_create_edit': True}"/>
+                            <field name="amount" attrs="{'readonly': [('state', 'not in', ['draft', 'pending payments'])]}"/>
+                            <field name="estimated_amount_remaining" force_save="1"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Members" name="members_ids" attrs="{'invisible': ['|', ('payment_for_league_member', '=', 'league'), ('state', '=', 'draft')], 'readonly': [('state', '=', 'submit')]}">
+                            <field name="member_ids" attrs="{'readonly': [('state', '=', 'submit')]}">
+                                <tree editable="top" delete="false">
+                                    <field name="wereda_id" invisible="1"/>
+                                    <field name="members_payment_id" invisible="1"/>
+                                    <field name="member_id" attrs="{'readonly': [('state', '=', 'paid')]}" force_save="1" domain="[('member_cells', '=', parent.member_cell)]"  options="{'no_create': True, 'no_create_edit': True}"/>
+                                    <field name="year" invisible="1"/>
+                                    <field name="month" attrs="{'readonly': [('state', '=', 'paid')]}" force_save="1" options="{'no_create': True, 'no_create_edit': True}"/>
+                                    <field name="fee_amount" force_save="1"/>
+                                    <field name="amount_paid" attrs="{'readonly': [('state', '=', 'paid')]}" force_save="1"/>
+                                    <field name="amount_remaining" force_save="1"/>
+                                    <field name="traced_member_payment" readonly="1" force_save="1"/>
+                                    <field name="id_payment"/>
+                                    <field name="state" readonly="1" force_save="1"/>
+                                    <button name="print_payslip" string="Pay Slip" type="object" icon="fa-download" attrs="{'column_invisible': [('parent.state', 'in', ['draft'])]}" confirm="Are you sure you want to print payslips?"/>
+                                </tree>
+                            </field>
+                            <group class="oe_subtotal_footer oe_right" attrs="{'invisible': ['|', ('payment_for_league_member', '=', 'league'), ('state', '=', 'draft')]}">
+                                <field name="total_estimated_for_members" widget="monetary" force_save="1"/>
+                                <field name="total_remaining_for_members" widget="monetary" force_save="1"/>
+                                <field name="total_paid_for_members" widget="monetary" force_save="1"/>
+                                <field name="total_id_payments_members" widget="monetary" force_save="1"/>
+                            </group>
+                        </page>
+                        <page string="Leagues" name="league_ids" attrs="{'invisible': ['|', ('payment_for_league_member', '=', 'member'), ('state', '=', 'draft')], 'readonly': [('state', '=', 'submit')]}">
+                            <field name="league_ids" attrs="{'readonly': [('state', '=', 'submit')]}">
+                                <tree editable="top" delete="false">
+                                    <field name="wereda_id" invisible="1"/>
+                                    <field name="members_payment_id" invisible="1"/>
+                                    <field name="league_id" attrs="{'readonly': [('state', '=', 'paid')]}" force_save="1" domain="[('league_member_cells', '=', parent.member_cell)]"/>
+                                    <field name="year" invisible="1"/>
+                                    <field name="month" attrs="{'readonly': [('state', '=', 'paid')]}" force_save="1" options="{'no_create': True, 'no_create_edit': True}"/>
+                                    <field name="fee_amount" force_save="1"/>
+                                    <field name="amount_paid" attrs="{'readonly': [('state', '=', 'paid')]}" force_save="1"/>
+                                    <field name="amount_remaining" force_save="1"/>
+                                    <field name="traced_league_payment" readonly="1" force_save="1"/>
+                                    <field name="id_payment"/>
+                                    <field name="state" readonly="1" force_save="1"/>
+                                    <button name="print_league_payslip" string="Pay Slip" type="object" icon="fa-download" attrs="{'column_invisible': [('parent.state', 'in', ['draft'])]}" confirm="Are you sure you want to print payslips?"/>
+                                </tree>
+                            </field>
+                            <group class="oe_subtotal_footer oe_right" attrs="{'invisible': ['|', ('payment_for_league_member', '=', 'member'), ('state', '=', 'draft')]}">
+                                <field name="total_estimated_for_leagues" widget="monetary" force_save="1"/>
+                                <field name="total_remaining_for_leagues" widget="monetary" force_save="1"/>
+                                <field name="total_paid_for_leagues" widget="monetary" force_save="1"/>
+                                <field name="total_id_payments_leagues" widget="monetary" force_save="1"/>                 
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="membership_cell_payment_graph" model="ir.ui.view">
+        <field name="name">Cell Payment</field>
+        <field name="model">membership.cell.payment</field>
+        <field name="arch" type="xml">
+            <graph string="Cell Payment">
+                <field name="month"/>
+                <field name="amount" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="membership_cell_payment_action" model="ir.actions.act_window">
+        <field name="name">Members' Cell Payment</field>
+        <field name="res_model">membership.cell.payment</field>
+        <field name="view_mode">tree,form,pivot,graph</field>
+        <field name="domain">['|', '|', '|', '|', '|', '|', '|', '|', '|',
+                            ('member_cell.cell_finance', '=', uid),
+                            ('main_office.main_finance', '=', uid),
+                            ('wereda_id.branch_manager', 'in', [uid]),
+                            ('wereda_id.ict_manager', '=', uid),
+                            ('subcity_id.parent_manager', 'in', [uid]),
+                            ('subcity_id.ict_manager', '=', uid),
+                            ('subcity_id.city_id.city_manager', 'in', [uid]),
+                            ('subcity_id.city_id.ict_manager', '=', uid),
+                            ('subcity_id.city_id.transfer_handler', '=', uid), 
+                            ('subcity_id.city_id.responsible_id.system_admin', 'in', [uid])]</field>
+    </record>
+
+
+    <record id="membership_payment_tree" model="ir.ui.view">
+        <field name="name">Members' Payment</field>
+        <field name="model">membership.payment</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="user_id" invisible="1"/>
+                <field name="year"/>
+                <field name="month"/>
+                <field name="main_office"/>
+                <field name="wereda_id"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="membership_payment_form" model="ir.ui.view">
+        <field name="name">Members' Payment</field>
+        <field name="model">membership.payment</field>
+        <field name="arch" type="xml">
+            <form duplicate="false">
+                <header>
+                    <button name="start_button" string="Start Payments" states="draft" type="object" class="oe_highlight" confirm="Are you sure you want to Start Payments?"/>
+                    <button name="draft_button" string="Go Back To Draft" states="submit" type="object" class="oe_highlight" confirm="Are you sure you want to go Back to Draft?"/>
+                    <button name="submit_button" string="Submit" type="object" states="pending payments" class="oe_highlight" confirm="Are you sure you want to Submit Payments?"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,pending payments,submit,registered"/>
+                </header>
+                <sheet>
+                    <h1>
+                        <field name="name"/>
+                    </h1>
+                    <field name="x_css" invisible="1"/>
+                    <group>
+                        <group>
+                            <field name="user_id" invisible="1"/>
+                            <field name="year" attrs="{'readonly': [('state', '!=', 'draft')]}" options="{'no_create': True, 'no_create_edit': True}"/>
+                            <field name="month" attrs="{'readonly': [('state', '!=', 'draft')]}" options="{'no_create': True, 'no_create_edit': True}"/>
+                            <field name="payment_for_league_member" string="League or Member" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                        </group>
+                        <group>
+                            <field name="subcity_id" attrs="{'readonly': [('state', '!=', 'draft')]}" options="{'no_create': True, 'no_create_edit': True}"/>
+                            <field name="wereda_id" attrs="{'readonly': [('state', '!=', 'draft')]}" options="{'no_create': True, 'no_create_edit': True}"/>
+                            <field name="main_office" attrs="{'readonly': [('state', '!=', 'draft')]}" options="{'no_create': True, 'no_create_edit': True}"/>
+                            <field name="amount_collected" force_save="1"/>
+                            <field name="amount" attrs="{'readonly': [('state', 'not in', ['draft', 'pending payments'])]}"/>
+                            <field name="estimated_amount_remaining" force_save="1"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Cells" name="cell_payment_ids" attrs="{'invisible': [('state', '=', 'draft')]}">
+                            <field name="cell_payment_ids" readonly="1">
+                                <tree delete="false">
+                                    <field name="name"/>
+                                    <field name="year"/>
+                                    <field name="month"/>
+                                    <field name="amount"/>
+                                </tree>
+                            </field>
+                            <group class="oe_subtotal_footer oe_right" attrs="{'invisible': [('state', '=', 'draft')]}">
+                                <field name="total_estimated_for_cells" widget="monetary" force_save="1"/>
+                                <field name="total_remaining_for_cells" widget="monetary" force_save="1"/>
+                                <field name="total_paid_for_cells" widget="monetary" force_save="1"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="membership_payment_action" model="ir.actions.act_window">
+        <field name="name">Members' Payment</field>
+        <field name="res_model">membership.payment</field>
+        <field name="view_mode">tree,form,pivot,graph</field>
+        <field name="domain">['|', '|', '|', '|', '|', '|', '|', '|',
+                            ('main_office.main_finance', '=', uid),
+                            ('wereda_id.branch_manager', 'in', [uid]),
+                            ('wereda_id.ict_manager', '=', uid),
+                            ('subcity_id.parent_manager', 'in', [uid]),
+                            ('subcity_id.ict_manager', '=', uid),
+                            ('subcity_id.city_id.city_manager', 'in', [uid]),
+                            ('subcity_id.city_id.ict_manager', '=', uid),
+                            ('subcity_id.city_id.transfer_handler', '=', uid), 
+                            ('subcity_id.city_id.responsible_id.system_admin', 'in', [uid])]</field>
+    </record>
+
+    <record id="main_office_payment_graph" model="ir.ui.view">
+        <field name="name">Main Office Payment</field>
+        <field name="model">membership.payment</field>
+        <field name="arch" type="xml">
+            <graph string="Main Office Payment">
+                <field name="month"/>
+                <field name="main_office"/>
+                <field name="amount" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="donation_payment_search_report" model="ir.ui.view">
+        <field name="name">Donors Payment</field>
+        <field name="model">donation.payment</field>
+        <field name="arch" type="xml">
+            <search string="Donors Payment">
+                <group expand="0" string="Group By" colspan="10" col="8">
+                    <filter string="Month" name="month" context="{'group_by': 'month'}"/>
+                    <filter string="Year" name="year" context="{'group_by': 'year'}"/>
+                    <filter string="Supporters or Donors" name="supporter" context="{'group_by': 'for_donor_or_supporter'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="donor_payment_graph" model="ir.ui.view">
+        <field name="name">Donor Payment</field>
+        <field name="model">donation.payment</field>
+        <field name="arch" type="xml">
+            <graph string="Donor Payment">
+                <field name="month"/>
+                <field name="amount" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="donation_payment_tree_report" model="ir.ui.view">
+        <field name="name">Donors Payment</field>
+        <field name="model">donation.payment</field>
+        <field name="arch" type="xml">
+            <tree create="false" edit="false" delete="false" duplicate="false">
+                <field name="name" readonly="1"/>
+                <field name="user_id" invisible="1"/>
+                <field name="year" readonly="1"/>
+                <field name="month" readonly="1"/>
+                <field name="amount" readonly="1"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="donation_payment_report_action" model="ir.actions.act_window">
+        <field name="name">Donors Payment</field>
+        <field name="res_model">donation.payment</field>
+        <field name="view_mode">tree,pivot,graph</field>
+        <field name="search_view_id" ref="donation_payment_search_report"/>
+        <field name="view_id" ref="donation_payment_tree_report"/>
+        <field name="context">{"search_default_supporter": 1}</field>
+        <field name="domain">['|', '|', '|', '|', '|', '|',
+                            ('wereda_id.branch_manager', 'in', [uid]),
+                            ('wereda_id.ict_manager', '=', uid),
+                            ('subcity_id.parent_manager', 'in', [uid]),
+                            ('subcity_id.ict_manager', '=', uid),
+                            ('subcity_id.city_id.city_manager', 'in', [uid]),
+                            ('subcity_id.city_id.ict_manager', '=', uid),
+                            ('subcity_id.city_id.responsible_id.system_admin', 'in', [uid])]</field>
+    </record>
+
+    <menuitem id="membership_payment_menu"
+              name="Payment"
+              parent="member_minor_configuration.menu_association"
+              sequence="70"
+              groups="member_minor_configuration.member_group_city_transfer_handler,member_minor_configuration.member_group_finance"/>
+
+    <menuitem id="donation_payment_menu"
+              name="Donors Payment"
+              parent="membership_payment_menu"
+              action="donor_payment_action"
+              sequence="0"/>
+
+    <menuitem id="membership_cell_payment_menu"
+              name="Cell Payment"
+              parent="membership_payment_menu"
+              action="membership_cell_payment_action"
+              sequence="1"
+              groups="member_minor_configuration.member_group_city_transfer_handler,member_minor_configuration.member_group_finance"/>
+
+    <menuitem id="membership_wereda_menu"
+              name="Basic Organization Payment"
+              parent="membership_payment_menu"
+              action="membership_payment_action"
+              groups="member_minor_configuration.member_group_city_transfer_handler,member_minor_configuration.member_group_main_finance"
+              sequence="2"/>
+
+    <menuitem id="payment_reporting"
+              name="All Payment Reporting"
+              parent="member_minor_configuration.menu_report_membership"
+              groups="member_minor_configuration.member_group_admin"
+              sequence="6"/>
+
+    <menuitem id="membership_payment_detail_menu"
+              name="Members' Payment"
+              parent="payment_reporting"
+              action="each_member_payment_menu"
+              sequence="1"/>
+
+    <menuitem id="donor_payment_detail_menu"
+              name="Donors Payment"
+              parent="payment_reporting"
+              action="donation_payment_report_action"
+              sequence="2"/>
+
+    <menuitem id="league_payment_detail_menu"
+              name="Leagues' Payment"
+              parent="payment_reporting"
+              action="each_league_payment_menu"
+              sequence="3"/>
+
+
+</odoo>

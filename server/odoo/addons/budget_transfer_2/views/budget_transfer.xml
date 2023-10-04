@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+   <data>
+    <record id="view_account_account_form_inherit_local" model="ir.ui.view">
+      <field name="name">account.account.form.inherit.local</field>
+      <field name="model">account.account</field>
+      <field name="inherit_id" ref="account.view_account_form"/>
+      <field name="arch" type="xml">
+       
+          <xpath expr="//field[@name='deprecated']" position="after">
+            <field name="is_transfer_account"/>
+           
+          </xpath>
+
+
+          
+      </field>
+    </record>
+
+    <!-- <record id = "account_move_line_delivery" model = "ir.ui.view" > 
+      <field name = "name" >account.move.form.inherit</field> 
+      <field name = "model" >account.move </field> 
+      <field name = "inherit_id" ref = "account.view_move_form" /> 
+      <field name = "arch" type = "xml" > 
+          <xpath expr = "//field[@name='invoice_line_ids']/tree/field[@name ='analytic_account_id']" position = "before" > 
+              <field name = "budget_line_code" /> 
+          </xpath> 
+      </field> 
+  </record>  -->
+
+    <record id="account_move_line_delivery" model="ir.ui.view">
+      <field name="name">account.move.form.inherit</field>
+      <field name="model">account.move</field>
+      <field name="inherit_id" ref="account.view_move_form"/>
+      <field name="arch" type="xml">
+        <!-- <xpath expr = "//field[@name ='ref']" position = "after" > 
+          <field name="is_budget_transfer_journal"/>
+          <field name ="budget_line_code" invisible="context.get('is_budget_transfer_journal', True)"  attrs="{'invisible': [('is_budget_transfer_journal', '=', True)]}"/> 
+      </xpath>  -->
+        <xpath expr = "//field[@name='ref']" position = "after" > 
+          <field name="is_budget_transfer_journal" invisible="1"/>
+        </xpath> 
+        <xpath expr = "//field[@name ='line_ids']/tree/field[@name='credit']" position = "replace" > 
+          <field name="credit" sum="Balance"  attrs="{'column_invisible': [('parent.is_budget_transfer_journal', '!=', False)]}" />
+       </xpath> 
+      <xpath expr = "//field[@name ='line_ids']/tree/field[@name='debit']" position = "replace" > 
+        <field name="debit" sum="Balance"  attrs="{'column_invisible': [('parent.is_budget_transfer_journal', '!=', False)]}" />
+      </xpath>
+      <xpath expr = "//field[@name ='line_ids']/tree/field[@name='analytic_account_id']" position = "after" > 
+        <field name ="budget_line_code" string="Budget Line" attrs="{'column_invisible': [('parent.is_budget_transfer_journal', '=', False)]}"/> 
+      </xpath>  
+        <xpath expr = "//field[@name ='line_ids']/tree/field[@name='credit']" position = "after" > 
+          <field name="amount" string="Balance"  attrs="{'column_invisible': [('parent.is_budget_transfer_journal', '=', False)]}"/>
+      </xpath>  
+      </field>
+    </record>
+
+    <record id="view_budget_transfer_tree_view" model="ir.ui.view">
+        <field name="name">budget.transfer.tree</field>
+        <field name="model">budget.transfer</field>
+        <field name="arch" type="xml">
+            <tree string="Budget Transfer">
+                <field name="squ"/>
+                <!-- <field name="date" /> -->
+
+                <field  name="date"   groups="EthiopianCalendar.group_gregory"/>
+                <field  name="ethiopian_from"  string="Date From" attrs="{'invisible': ['|', ('is_pagum_from', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                <field name="is_pagum_from" invisible="1"/>
+            </tree>
+        </field>
+    </record>
+    <record id="view_budget_transfer_form" model="ir.ui.view">
+      
+        <field name="name">budget.transfer.form</field>
+        <field name="model">budget.transfer</field>
+        <field name="arch" type="xml">
+        <form string="Budget Transfer">
+          <div style="background:#f2f2f2; width:100%;height:650px;">
+          <sheet>
+
+            <header>
+                <button name="action_request"  class="oe_highlight"       groups="budget.group_requester"
+                type="object" states="draft" string="Request"/>
+                <button name="action_reset" states="canceled" string="Reset" class="btn btn-primary" groups="budget.group_financial_approval" type="object" confirm="Are you sure you want to do this?"/>
+                <button name="action_transfer_cancel" states="request" string="Cancel" class="btn btn-danger" groups="budget.group_financial_approval" type="object" confirm="Are you sure you want to do this?"/>
+                 <button name="action_approve" states="requested" string="Approved" class="oe_highlight" groups="budget.group_financial_approval" type="object" />
+                 <!-- <button name="action_reject" states="requested" string="Reject Request" class="btn btn-danger" groups="budget.group_financial_approval" type="object"/> -->
+                 <button name="%(budget_transfer_2.budget_transfer_refuse_wizard_action)d" states="requested"  class="btn btn-danger" string="Reject Request" type="action" groups="budget.group_financial_approval,budget.group_departmental_approval" />
+
+                 <field name="state" widget="statusbar"/>
+              </header>
+           <div style="padding-left:5%;padding-right:5%; box-sizing: border-box;  ">
+           <div style="background:white;padding:2%; box-shadow: 1px 1px 10px 1px;">
+            
+            <!-- <div class="container"> border-style: inset;
+                <div class="row">
+                  <div class="col-12">
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th rowspan="2">Number</th>
+                          <th rowspan="2">Budget Type</th>
+                           <th colspan="2" style="text-align:center;">Budget Code</th>
+                           <th colspan="2" style="text-align:center;">Transfer Amount</th>
+                           <th colspan="2" style="text-align:center;">Approved Amount</th>
+                          
+                        </tr>
+                     
+                         <tr>
+                          
+                          <th>From</th>
+                          <th>To</th>
+                           
+                          <th>Birr</th>
+                          <th>Cent</th>
+                           
+                            <th>Birr</th>
+                          <th>Cent</th>
+                        </tr>
+                      </thead>
+                      <tbody id="rows">
+                        <tr>
+                          <td>
+                            One
+                          </td>
+                          <td>
+                           <field name="name"/>
+                          </td>
+                       
+                          <td>
+                            <field name="from_budget_code"/>
+                          </td>
+                          <td>
+                            <field name="to_budget_code"/>
+                          </td>
+                          <td>
+                            <field name="transfer_amount"/>
+                          </td>
+                           <td>
+                            
+
+                          </td>
+                          <td>
+                            <field name="approved_amount"/>
+
+                          </td>
+                          <td>
+                            Seven
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div> -->
+              <!-- <group> -->
+                <div class="oe_title">
+                    <h1>
+                        <field name="squ" string="Reference"/>
+                    </h1>
+                </div>
+              <group class="col-6">
+                    <field name="date" attrs="{'readonly': [('state', 'in', ['requested','approved'])]}"/>
+                     <!-- <field  name="date"   groups="EthiopianCalendar.group_gregory"/>
+                        <field  name="ethiopian_from" class="oe_read_only" string="Date From" style=" float:left" attrs="{'invisible': ['|', ('is_pagum_from', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                        <field  name="pagum_from" class="oe_read_only"  string="Date From" style=" float:left"  attrs="{'invisible': ['|',('is_pagum_from', '!=',False)  ]}"  groups="EthiopianCalendar.group_ethio_datepicker"/>
+                        <field name="is_pagum_from" invisible="1"/>
+                         <div>
+                         </div>
+                        <div style="margin-bottom:40px;margin-top:-22px; width: 50%;margin-left:10px;margin-right:0px">
+                        <widget name="ethiopian_calander_widget"  style=" float:left;width:226px;" class="oe_edit_only"  groups="EthiopianCalendar.group_ethio_datepicker"/>
+                        </div> -->
+                        
+                    <field name="move_id" readonly="1"/>
+
+              </group>
+              <group class="col-6">
+                    <field name="journal_id" attrs="{'readonly': [('state', 'in', ['requested','approved'])]}"/>
+                 
+                    <field name="time_frame" readonly='1'  />
+                  
+                    <field name="fiscal_year" readonly='1' />
+              </group>
+            <newline />
+                <notebook>
+                    <page string="Budget Transfer">
+               
+                     <field name="budget_line">
+                         <tree
+                                editable="bottom"
+                            >
+                                <control>
+                                    <create name="add_product_control" string="Add Transfer"/>
+                                   
+                                </control>
+                                <!-- <field name="budget_type"/> -->
+                                <field name="from_budget_code" />
+                                <field name="from_budgetary" string="Budgetary Line"/>
+                                <field name="account_from" />
+                                <field name="span" string="  " style="marign-left:50px;" readonly="1"/>
+                                <field name="to_budget_code" />
+                                <field name="to_budgetary" string="Budgetary Line"/>
+                                <field name="account_to"/>
+                                <field name="transfer_amount"   string="Planed Amount"/>
+                                <field name="approved_amount" string="Approved Amount" groups="budget.group_financial_approval"/>
+                                
+
+                        </tree>
+
+                        <form>
+                            <group class="col-6">
+                              <field name="from_budget_code" />
+                              <field name="from_budgetary"/>
+                              <field name="account_from" attrs="{'invisible': [('from_budgetary', '=', False)]}"/>
+                            </group>
+                            <group class="col-6">
+                              <field name="to_budget_code" />
+                              <field name="to_budgetary"/>
+                              <field name="account_to" attrs="{'invisible': [('to_budgetary', '=', False)]}"/>
+                            </group>
+                            <group>
+                                <field name="transfer_amount" string="Planed Amount"/>
+                                <field name="approved_amount" string="Approved Amount" groups="budget.group_financial_approval"/>
+                            </group>
+                            
+                        </form>
+                    </field>
+                        <group style="marign-left:20px;" class="col-6" attrs="{'readonly': [('state', 'in', ['requested','approved'])]}">
+                            <field name="prepare_signed_by" string="Requested by" attrs="{'readonly': [('state', 'in', ['requested','approved'])]}"/>
+                            <field name="prepare_signed_on" attrs="{'readonly': [('state', 'in', ['requested','approved'])]}"/>
+                            <field name="prepare_signature" widget="image" width="100px" height="10px" attrs="{'readonly': [('state', 'in', ['requested','approved'])]}"/>
+                        </group>
+                        <group style="marign-left:20px;" class="col-6" attrs="{'readonly': [('state', '=', 'approved')],'invisible': [('state', 'in', ['draft'])]}">
+                        
+                            <field name="approver_signed_by" string="Approved by" attrs="{'readonly': [('state', 'in', ['approved'])]}"/>
+                            <field name="approver_signed_on" attrs="{'readonly': [('state', 'in', ['approved'])]}"/>
+                            <field name="approver_signature" widget="image" width="100px" height="10px"  attrs="{'readonly': [('state', 'in', ['approved'])]}"/>
+                        </group>
+                    
+                    </page>
+            </notebook> 
+            </div>
+            </div>
+          </sheet>
+          </div>
+          
+          <div class="oe_chatter">
+            <field name="message_follower_ids" widget="mail_followers"/>
+            <field name="activity_ids" widget="mail_activity"/>
+            <field name="message_ids" widget="mail_thread"/>
+        </div>
+        
+        </form>
+         </field>
+        
+    </record>
+    <menuitem name="Budget Transfer"
+    id="budget_transfer_2.menu_root"
+    web_icon="budget_transfer_2,static/description/icon.png"
+    groups="budget.group_requester,budget.group_departmental_approval,budget.group_financial_approval"
+    sequence="25"/>
+   
+  </data>
+
+</odoo>

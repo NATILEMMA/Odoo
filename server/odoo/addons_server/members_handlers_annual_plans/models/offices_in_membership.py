@@ -19,12 +19,13 @@ class MainOffice(models.Model):
         """This function will set a default value to wereda"""
         return self.env['membership.handlers.branch'].search([('branch_manager', '=', self.env.user.id)], limit=1).parent_id.id
 
-    name = fields.Char(required=True, translate=True, track_visibility='onchange', size=128)
+    name = fields.Char(store=True, translate=True)
+    name_2 = fields.Char(required=True, translate=True, track_visibility='onchange', size=128, store=True, string="Name 2")
     user_id = fields.Many2one('res.users', default=lambda self: self.env.user)
     subcity_id = fields.Many2one('membership.handlers.parent', string="Subcity", required=True, default=_default_subcity, track_visibility='onchange')
     wereda_id = fields.Many2one('membership.handlers.branch', string="Woreda", required=True, default=_default_wereda, domain="[('parent_id', '=', subcity_id)]", track_visibility='onchange')
     for_which_members = fields.Selection(selection=[('member', 'Member'), ('league', 'League')], default='member', required=True, track_visibility='onchange', string="League or Member")
-    league_type = fields.Selection(selection=[('young', 'Youngster'), ('women', 'Woman')], track_visibility='onchange', readonly=True)
+    league_type = fields.Selection(selection=[('young', 'Youngster'), ('women', 'Woman')], track_visibility='onchange')
     member_main_type_id = fields.Many2one('membership.organization', track_visibility='onchange', required=True, string="Organization")
     cell_ids = fields.One2many('member.cells', 'main_office', readonly=True, track_visibility='onchange')
     total_cell = fields.Integer(compute="_calculate_cells", store=True)
@@ -47,37 +48,128 @@ class MainOffice(models.Model):
     pending_meetings = fields.Integer(compute="_get_total")
     duplicate = fields.Boolean(default=False)
     main_office_id = fields.Many2one('main.office', readonly=True)
+    saved = fields.Boolean(default=False)
+    click_counter = fields.Integer()
      
 
     @api.model
     def create(self, vals):
         """This function will create main office and confim config is set"""
+        subcity = self.env['membership.handlers.parent'].search([('id', '=', vals['subcity_id'])])
+        woreda = self.env['membership.handlers.branch'].search([('id', '=', vals['wereda_id'])])
+        cell_type = self.env['membership.organization'].search([('id', '=', vals['member_main_type_id'])])
+
+        if subcity.id != woreda.parent_id.id:
+            raise UserError(_("The Woreda Selected %s Doesn't Belong In The Subcity %s") % (woreda.name, subcity.name))
+        if vals.get('for_which_members') == 'league' and not vals.get('league_type'):
+            raise UserError(_("Please Add League Type for League Main Office %s") % (vals['name_2']))
+
+        naming = ''
+        naming_amh = ''
+
+        if vals['for_which_members'] == 'league' and vals['league_type'] == 'young':
+            naming = woreda.with_context(lang='en_US').name + '/' + cell_type.with_context(lang='en_US').name + '/Youngster/' + vals['name_2']
+            naming_amh = woreda.with_context(lang='am_ET').name + '/' + cell_type.with_context(lang='am_ET').name + '/ወጣት ሊግ/' + vals['name_2']
+        if vals['for_which_members'] == 'league' and vals['league_type'] == 'women':
+            naming = woreda.with_context(lang='en_US').name + '/' + cell_type.with_context(lang='en_US').name + '/Woman/' + vals['name_2']
+            naming_amh = woreda.with_context(lang='am_ET').name + '/' + cell_type.with_context(lang='am_ET').name + '/ሴት ሊግ/' + vals['name_2']
+        if vals['for_which_members'] == 'member':
+            naming = woreda.with_context(lang='en_US').name + '/' + cell_type.with_context(lang='en_US').name + '/Member/' + vals['name_2']
+            naming_amh = woreda.with_context(lang='am_ET').name + '/' + cell_type.with_context(lang='am_ET').name + '/አባል/' + vals['name_2']
+
+
+        current_lang = self.env.context.get('lang')
+        if current_lang == 'am_ET':
+            test = self.env['main.office'].with_context(lang='am_ET').search([('name', '=', naming_amh)])
+            if test:
+                raise UserError(_("A Main Office With Name %s Organization %s Woreda %s Already Exists") % (vals['name_2'], cell_type.name, woreda.name))
+
+        if current_lang == 'en_US':
+            test = self.env['main.office'].with_context(lang='en_US').search([('name', '=', naming)])
+            if test:
+                raise UserError(_("A Main Office With This Name Already Exists %s") % (vals['name_2']))
+
         res = super(MainOffice, self).create(vals)
 
+
+        res.saved = True
         if res.for_which_members == 'league':
             for record in res:
                 main_office = res.with_context().copy({
-                    'name': res.name + '/Member/',
+                    'name': res.name_2 + '/Member/',
                     'for_which_members': 'member',
                     'duplicate': True,
                     'main_office_id': res.id
                 })
                 res.main_office_id = main_office.id
 
-        name = res.name
-        if res.for_which_members == 'league':
-            res.name = res.subcity_id.unique_representation_code+ '/' + res.wereda_id.unique_representation_code + '/' + res.member_main_type_id.name + '/League/' + name
-        if res.for_which_members == 'member':
-            res.name = res.subcity_id.unique_representation_code + '/' + res.wereda_id.unique_representation_code + '/' + res.member_main_type_id.name + '/' + name
+        name = res.name_2
+        if res.for_which_members == 'league' and res.league_type == 'young':
+            res.with_context(lang='en_US').name = res.wereda_id.with_context(lang='en_US').name + '/' + res.member_main_type_id.with_context(lang='en_US').name + '/Youngster/' + name
+            res.with_context(lang='am_ET').name = res.wereda_id.with_context(lang='am_ET').name + '/' + res.member_main_type_id.with_context(lang='am_ET').name + '/ወጣት ሊግ/' + name
+        if res.for_which_members == 'league' and res.league_type == 'women':
+            res.with_context(lang='en_US').name = res.wereda_id.with_context(lang='en_US').name + '/' + res.member_main_type_id.with_context(lang='en_US').name + '/Woman/' + name
+            res.with_context(lang='am_ET').name = res.wereda_id.with_context(lang='am_ET').name + '/' + res.member_main_type_id.with_context(lang='am_ET').name + '/ሴት ሊግ/' + name
+        if res.for_which_members == 'member' and not res.duplicate:
+            res.with_context(lang='en_US').name = res.wereda_id.with_context(lang='en_US').name + '/' + res.member_main_type_id.with_context(lang='en_US').name + '/Member/' + name
+            res.with_context(lang='am_ET').name = res.wereda_id.with_context(lang='am_ET').name + '/' + res.member_main_type_id.with_context(lang='am_ET').name + '/አባል/' + name
+        if res.for_which_members == 'member' and res.duplicate:
+            if res.league_type == 'young':
+                res.with_context(lang='en_US').name = res.wereda_id.with_context(lang='en_US').name + '/' + res.member_main_type_id.with_context(lang='en_US').name + '/Member/' + 'Youngster/' + name
+                res.with_context(lang='am_ET').name = res.wereda_id.with_context(lang='am_ET').name + '/' + res.member_main_type_id.with_context(lang='am_ET').name + '/አባል/' + 'ወጣት ሊግ/' + name
+            if res.league_type == 'women':
+                res.with_context(lang='en_US').name = res.wereda_id.with_context(lang='en_US').name + '/' + res.member_main_type_id.with_context(lang='en_US').name + '/Member/' + 'Woman/' + name
+                res.with_context(lang='am_ET').name = res.wereda_id.with_context(lang='am_ET').name + '/' + res.member_main_type_id.with_context(lang='am_ET').name + '/አባል/' + 'ሴት ሊግ/' + name
 
-        if res.subcity_id != res.wereda_id.parent_id:
-            raise UserError(_("The Woreda Selected %s Doesn't Belong In The Subcity %s") % (res.wereda_id.name, res.subcity.name))
+
         config = self.env['main.office.configuration'].search([('for_members_or_leagues', '=', res.for_which_members)])
         if not config:
             raise UserError(_("Please Configure The Number of Cells Allowed In A Single Basic Organization"))
 
         return res
 
+
+    @api.onchange('name_2', 'subcity_id', 'wereda_id', 'for_which_members', 'member_main_type_id', 'league_type')
+    def _change_name(self):
+        """This function will change name"""
+        for record in self:
+            if record.name_2 and record.subcity_id and record.wereda_id and record.member_main_type_id:
+                name = record.name_2
+                if record.for_which_members == 'league' and record.league_type == 'young':
+                    record.main_office_id.write({
+                        'subcity_id': record.subcity_id.id,
+                        'wereda_id': record.wereda_id.id,
+                        'for_which_members': record.for_which_members,
+                        'member_main_type_id': record.member_main_type_id.id,
+                    })
+                    record.main_office_id.with_context(lang='en_US').name = record.wereda_id.with_context(lang='en_US').name + '/' + record.member_main_type_id.with_context(lang='en_US').name + '/Member/' + record.name_2
+                    record.main_office_id.with_context(lang='am_ET').name = record.wereda_id.with_context(lang='am_ET').name + '/' + record.member_main_type_id.with_context(lang='am_ET').name + '/አባል/' + record.name_2
+                    record.with_context(lang='en_US').name = record.wereda_id.with_context(lang='en_US').name + '/' + record.member_main_type_id.with_context(lang='en_US').name + '/Youngster/' + record.name_2
+                    record.with_context(lang='am_ET').name = record.wereda_id.with_context(lang='am_ET').name + '/' + record.member_main_type_id.with_context(lang='am_ET').name + '/ወጣት ሊግ/' + record.name_2
+                if record.for_which_members == 'league' and record.league_type == 'women':
+                    record.main_office_id.write({
+                        'subcity_id': record.subcity_id.id,
+                        'wereda_id': record.wereda_id.id,
+                        'for_which_members': record.for_which_members,
+                        'member_main_type_id': record.member_main_type_id.id,
+                    })
+                    record.main_office_id.with_context(lang='en_US').name = record.wereda_id.with_context(lang='en_US').name + '/' + record.member_main_type_id.with_context(lang='en_US').name + '/Member/' + record.name_2
+                    record.main_office_id.with_context(lang='am_ET').name = record.wereda_id.with_context(lang='am_ET').name + '/' + record.member_main_type_id.with_context(lang='am_ET').name + '/አባል/' + record.name_2
+                    record.with_context(lang='en_US').name = record.wereda_id.with_context(lang='en_US').name + '/' + record.member_main_type_id.with_context(lang='en_US').name + '/Woman/' + record.name_2
+                    record.with_context(lang='am_ET').name = record.wereda_id.with_context(lang='am_ET').name + '/' + record.member_main_type_id.with_context(lang='am_ET').name + '/ሴት ሊግ/' + record.name_2
+                if record.for_which_members == 'member' and not record.duplicate:
+                    record.with_context(lang='en_US').name = record.wereda_id.with_context(lang='en_US').name + '/' + record.member_main_type_id.with_context(lang='en_US').name + '/Member/' + record.name_2
+                    record.with_context(lang='am_ET').name = record.wereda_id.with_context(lang='am_ET').name + '/' + record.member_main_type_id.with_context(lang='am_ET').name + '/አባል/' + record.name_2
+                if record.for_which_members == 'member' and record.duplicate:
+                    if record.league_type == 'young':
+                        record.with_context(lang='en_US').name = record.wereda_id.with_context(lang='en_US').name + '/' + record.member_main_type_id.with_context(lang='en_US').name + '/Member/' + 'Youngster/' + record.name_2
+                        record.with_context(lang='am_ET').name = record.wereda_id.with_context(lang='am_ET').name + '/' + record.member_main_type_id.with_context(lang='am_ET').name + '/አባል/' + 'ወጣት ሊግ/' + record.name_2
+                    if record.league_type == 'women':
+                        record.with_context(lang='en_US').name = record.wereda_id.with_context(lang='en_US').name + '/' + record.member_main_type_id.with_context(lang='en_US').name + '/Member/' + 'Woman/' + record.name_2
+                        record.with_context(lang='am_ET').name = record.wereda_id.with_context(lang='am_ET').name + '/' + record.member_main_type_id.with_context(lang='am_ET').name + '/አባል/' + 'ሴት ሊግ/' + record.name_2
+
+
+                record.saved = True
 
     @api.onchange('subcity_id')
     def _change_all_field(self):
@@ -238,6 +330,16 @@ class MainOffice(models.Model):
             else:
                 record.pending_meetings = 0
 
+    def update_name(self):
+        """This function will update name of basic organization"""
+        for record in self:
+            if record.click_counter == 0:
+                record.click_counter = 1
+                record.saved = False
+            else:
+                record.click_counter = 0
+                record.saved = True
+
 
 class Cells(models.Model):
     _name="member.cells"
@@ -257,12 +359,13 @@ class Cells(models.Model):
         """This function will set a default value to wereda"""
         return self.env['main.office'].search([('main_admin', '=', self.env.user.id)], limit=1).subcity_id.id   
 
-    name = fields.Char(required=True, translate=True, track_visibility='onchange', size=128)
+    name = fields.Char(store=True, translate=True)
+    name_2 = fields.Char(required=True, translate=True, track_visibility='onchange', size=128, store=True)
     user_id = fields.Many2one('res.users', default=lambda self: self.env.user)
     subcity_id = fields.Many2one('membership.handlers.parent', string="Subcity", required=True, default=_default_subcity, track_visibility='onchange', store=True)
     wereda_id = fields.Many2one('membership.handlers.branch', string="Woreda", required=True, default=_default_wereda, domain="[('parent_id', '=', subcity_id)]", track_visibility='onchange', store=True)
     for_which_members = fields.Selection(selection=[('member', 'Member'), ('league', 'League')], default='member', required=True, track_visibility='onchange', string="League or Member", store=True)
-    league_type = fields.Selection(selection=[('young', 'Youngster'), ('women', 'Woman')], track_visibility='onchange', readonly=True)
+    league_type = fields.Selection(selection=[('young', 'Youngster'), ('women', 'Woman')], track_visibility='onchange')
     member_cell_type_id = fields.Many2one('membership.organization', track_visibility='onchange', store=True, string="Organization")
     main_office = fields.Many2one('main.office', 'main_office_rel', track_visibility='onchange', store=True, default=_default_main_office, domain="[('league_type', '=', league_type), ('for_which_members', '=', for_which_members), ('member_main_type_id', '=', member_cell_type_id), ('wereda_id', '=', wereda_id)]")
     main_office_mixed = fields.Many2one('main.office', track_visibility='onchange', store=True, default=_default_main_office, domain="[('league_type', '=', league_type), ('for_which_members', '=', for_which_members), ('wereda_id', '=', wereda_id)]", string="Basic Organization")
@@ -295,17 +398,64 @@ class Cells(models.Model):
     activate_cell = fields.Boolean(default=False)
     duplicate = fields.Boolean(default=False)
     cell_id = fields.Many2one('member.cells', readonly=True)
+    saved = fields.Boolean(default=False)
+    click_counter = fields.Integer()
 
 
     @api.model
     def create(self, vals):
         """This function will check if the numbers added are what is estimated"""  
+        subcity = self.env['membership.handlers.parent'].search([('id', '=', vals['subcity_id'])])
+        woreda = self.env['membership.handlers.branch'].search([('id', '=', vals['wereda_id'])])
+        main_office = self.env['main.office'].search([('id', '=', vals['main_office'])])
+        cell_type = self.env['membership.organization'].search([('id', '=', vals['member_cell_type_id'])])
+
+
+        if subcity.id != main_office.subcity_id.id:
+            raise UserError(_("The Subcity Selected %s is not of Subcity of the Basic Organization %s") % (subcity.name, main_office.subcity_id.name))
+        if woreda.id != main_office.wereda_id.id:
+            raise UserError(_("The Woreda Selected %s is not of Woreda of the Basic Organization %s") % (woreda.name, main_office.wereda_id.name))
+        if cell_type.id != main_office.member_main_type_id.id:
+            raise UserError(_("The Type of Organization selected %s is not of The Type of Organization of the Basic Organization %s") % (cell_type.name, main_office.member_main_type_id.name))
+        if vals['for_which_members'] != main_office.for_which_members:
+            raise UserError(_("The Type selected %s is not of The Type of Basic Organization %s") % (vals['for_which_members'], main_office.for_which_members))
+        if vals.get('for_which_members') == 'league' and not vals.get('league_type'):
+            raise UserError(_("Please Add League Type for League Main Office %s") % (vals['name_2']))
+        if vals.get('for_which_members') == 'league':
+            if vals['league_type'] != main_office.league_type:
+                raise UserError(_("The Type of League selected %s is not of The Type of League Basic Organization %s") % (vals['league_type'], main_office.league_type))
+
+        naming = ''
+        naming_amh = ''
+
+        if vals['for_which_members'] == 'league' and vals['league_type'] == 'young':
+            naming = woreda.with_context(lang='en_US').name + '/' + cell_type.with_context(lang='en_US').name + '/Youngster/' + main_office.with_context(lang='en_US').name_2 + '/' + vals['name_2']
+            naming_amh = woreda.with_context(lang='am_ET').name + '/' + cell_type.with_context(lang='am_ET').name + '/ወጣት ሊግ/' + main_office.with_context(lang='am_ET').name_2 + '/' + vals['name_2']
+        if vals['for_which_members'] == 'league' and vals['league_type'] == 'women':
+            naming = woreda.with_context(lang='en_US').name + '/' + cell_type.with_context(lang='en_US').name + '/Woman/' + main_office.with_context(lang='en_US').name_2 + '/' + vals['name_2']
+            naming_amh = woreda.with_context(lang='am_ET').name + '/' + cell_type.with_context(lang='am_ET').name + '/ሴት ሊግ/' + main_office.with_context(lang='am_ET').name_2 + '/' + vals['name_2']
+        if vals['for_which_members'] == 'member':
+            naming = woreda.with_context(lang='en_US').name + '/' + cell_type.with_context(lang='en_US').name + '/Member/' + main_office.with_context(lang='en_US').name_2 + '/' + vals['name_2']
+            naming_amh = woreda.with_context(lang='am_ET').name + '/' + cell_type.with_context(lang='am_ET').name + '/አባል/' + main_office.with_context(lang='am_ET').name_2 + '/' + vals['name_2']
+
+
+        current_lang = self.env.context.get('lang')
+        if current_lang == 'am_ET':
+            test =self.env['member.cells'].with_context(lang='am_ET').search([('name', '=', naming_amh)])
+            if test:
+                raise UserError(_("A Cell With This Name Already Exists %s") %  (vals['name_2']))
+        if current_lang == 'en_US':
+            test =self.env['member.cells'].with_context(lang='en_US').search([('name', '=', naming)])
+            if test:
+                raise UserError(_("A Cell With This Name Already Exists %s") %  (vals['name_2']))
+
         res = super(Cells, self).create(vals)
 
+        res.saved = True
         if res.for_which_members == 'league':
             for record in res:
                 cell = res.with_context().copy({
-                    'name': res.name + '/Member/',
+                    'name': '/Member/' + res.name_2,
                     'for_which_members': 'member',
                     'duplicate': True,
                     'cell_id': res.id,
@@ -314,11 +464,23 @@ class Cells(models.Model):
                 })
                 res.cell_id = cell.id
 
-        name = res.name
-        if res.for_which_members == 'league':
-            res.name = res.subcity_id.unique_representation_code + '/' + res.wereda_id.unique_representation_code + '/' + res.member_cell_type_id.name + '/League/' + name
-        if res.for_which_members == 'member':
-            res.name = res.subcity_id.unique_representation_code + '/' + res.wereda_id.unique_representation_code + '/' + res.member_cell_type_id.name + '/' + name
+        name = res.name_2
+        if res.for_which_members == 'league' and res.league_type == 'young':
+            res.with_context(lang='en_US').name = res.wereda_id.with_context(lang='en_US').name + '/' + res.member_cell_type_id.with_context(lang='en_US').name + '/Youngster/' +res.main_office.with_context(lang='en_US').name_2 + '/' + name
+            res.with_context(lang='am_ET').name = res.wereda_id.with_context(lang='am_ET').name + '/' + res.member_cell_type_id.with_context(lang='am_ET').name + '/ወጣት ሊግ/' + res.main_office.with_context(lang='am_ET').name_2 + '/' + name
+        if res.for_which_members == 'league' and res.league_type == 'women':
+            res.with_context(lang='en_US').name = res.wereda_id.with_context(lang='en_US').name + '/' + res.member_cell_type_id.with_context(lang='en_US').name + '/Woman/' + res.main_office.with_context(lang='en_US').name_2 + '/' + name
+            res.with_context(lang='am_ET').name = res.wereda_id.with_context(lang='am_ET').name + '/' + res.member_cell_type_id.with_context(lang='am_ET').name + '/ሴት ሊግ/' + res.main_office.with_context(lang='am_ET').name_2 + '/' + name
+        if res.for_which_members == 'member' and not res.duplicate:
+            res.with_context(lang='en_US').name = res.wereda_id.with_context(lang='en_US').name + '/' + res.member_cell_type_id.with_context(lang='en_US').name + '/Member/' + res.main_office.with_context(lang='en_US').name_2 + '/' + name
+            res.with_context(lang='am_ET').name = res.wereda_id.with_context(lang='am_ET').name + '/' + res.member_cell_type_id.with_context(lang='am_ET').name + '/አባል/' + res.main_office.with_context(lang='am_ET').name_2 + '/' + name
+        if res.for_which_members == 'member' and res.duplicate:
+            if res.league_type == 'young':
+                res.with_context(lang='en_US').name = res.wereda_id.with_context(lang='en_US').name + '/' + res.member_cell_type_id.with_context(lang='en_US').name + '/Member/Youngster/' + res.main_office.with_context(lang='en_US').name_2 + '/' + name
+                res.with_context(lang='am_ET').name = res.wereda_id.with_context(lang='am_ET').name + '/' + res.member_cell_type_id.with_context(lang='am_ET').name + '/አባል/ወጣት ሊግ/' + res.main_office.with_context(lang='am_ET').name_2 + '/' + name
+            if res.league_type == 'women':
+                res.with_context(lang='en_US').name = res.wereda_id.with_context(lang='en_US').name + '/' + res.member_cell_type_id.with_context(lang='en_US').name + '/Member/Youngster/' + res.main_office.with_context(lang='en_US').name_2 + '/' +name
+                res.with_context(lang='am_ET').name = res.wereda_id.with_context(lang='am_ET').name + '/' + res.member_cell_type_id.with_context(lang='am_ET').name + '/አባል/ሴት ሊግ/' + res.main_office.with_context(lang='am_ET').name_2 + '/' + name
 
 
         # user = self.env.user
@@ -340,16 +502,11 @@ class Cells(models.Model):
         #             user.notify_warning(message, title, True) 
         # else:
         #     raise UserError(_("Please Configure The Number of Members Allowed In A Single Cell"))
-        # if res.for_which_members != res.main_office.for_which_members:
-        #     raise UserError(_("The Type selected %s is not of The Type of Basic Organization %s") % (res.for_which_members, res.main_office.for_which_members))
-        if res.member_cell_type_id.id != res.main_office.member_main_type_id.id:
-            raise UserError(_("The Type of Organization selected %s is not of The Type of Organization of the Basic Organization %s") % (res.member_cell_type_id.name, res.main_office.member_main_type_id.name))
-        if res.wereda_id.id != res.main_office.wereda_id.id:
-            raise UserError(_("The Woreda Selected %s is not of Woreda of the Basic Organization %s") % (res.wereda_id.name, res.main_office.wereda_id.name))
-        if res.subcity_id.id != res.main_office.subcity_id.id:
-            raise UserError(_("The Subcity Selected %s is not of Subcity of the Basic Organization %s") % (res.subcity_id.name, res.main_office.subcity_id.name))
+
+
 
         return res
+
 
 
     def unlink(self):
@@ -402,6 +559,50 @@ class Cells(models.Model):
     #                                 }
     #                     }
 
+
+    @api.onchange('name_2', 'subcity_id', 'wereda_id', 'for_which_members', 'member_cell_type_id', 'league_type', 'main_office')
+    def _change_name(self):
+        """This function will change name"""
+        for record in self:
+            if record.name_2 and record.subcity_id and record.wereda_id and record.member_cell_type_id and record.main_office:
+                wereda = record.with_context(lang='am_ET').wereda_id.name
+                main_type = record.with_context(lang='am_ET').member_cell_type_id.name
+                main_office = record.with_context(lang='am_ET').main_office.name_2
+                name = record.name_2
+                if record.for_which_members == 'league' and record.league_type == 'young':
+                    record.cell_id.write({
+                        'subcity_id': record.subcity_id.id,
+                        'wereda_id': record.wereda_id.id,
+                        'for_which_members': record.for_which_members,
+                        'member_cell_type_id': record.member_cell_type_id.id,
+                    })
+                    record.cell_id.with_context(lang='am_ET').name =  record.wereda_id.with_context(lang='am_ET').name + '/' + record.member_cell_type_id.with_context(lang='am_ET').name + '/አባል/' + record.main_office.with_context(lang='am_ET').name_2 + '/' + record.name_2
+                    record.cell_id.with_context(lang='en_US').name = record.wereda_id.with_context(lang='en_US').name + '/' + record.member_cell_type_id.with_context(lang='en_US').name + '/Member/' + record.main_office.with_context(lang='en_US').name_2 + '/' + record.name_2
+                    record.with_context(lang='en_US').name = record.wereda_id.with_context(lang='en_US').name + '/' + record.member_cell_type_id.with_context(lang='en_US').name + '/Youngster/' + record.main_office.with_context(lang='en_US').name_2 + '/' + record.name_2
+                    record.with_context(lang='am_ET').name = record.wereda_id.with_context(lang='am_ET').name + '/' + record.member_cell_type_id.with_context(lang='am_ET').name + '/ወጣት ሊግ/' + record.main_office.with_context(lang='am_ET').name_2 + '/' + record.name_2
+                if record.for_which_members == 'league' and record.league_type == 'women':
+                    record.cell_id.write({
+                        'subcity_id': record.subcity_id.id,
+                        'wereda_id': record.wereda_id.id,
+                        'for_which_members': record.for_which_members,
+                        'member_cell_type_id': record.member_cell_type_id.id,
+                    })
+                    record.cell_id.with_context(lang='am_ET').name = record.wereda_id.with_context(lang='am_ET').name + '/' + record.member_cell_type_id.with_context(lang='am_ET').name + '/አባል/' + record.main_office.with_context(lang='am_ET').name_2 + '/' + record.name_2
+                    record.cell_id.with_context(lang='en_US').name = record.wereda_id.with_context(lang='en_US').name + '/' + record.member_cell_type_id.with_context(lang='en_US').name + '/Member/' + record.main_office.with_context(lang='en_US').name_2 + '/' + record.name_2
+                    record.with_context(lang='en_US').name = record.wereda_id.with_context(lang='en_US').name + '/' + record.member_cell_type_id.with_context(lang='en_US').name + '/Woman/' + record.main_office.with_context(lang='en_US').name_2 + '/' + record.name_2
+                    record.with_context(lang='am_ET').name = record.wereda_id.with_context(lang='am_ET').name + '/' + record.member_cell_type_id.with_context(lang='am_ET').name + '/ሴት ሊግ/' + record.main_office.with_context(lang='am_ET').name_2 + '/' + record.name_2
+                if record.for_which_members == 'member' and not record.duplicate:
+                    record.with_context(lang='am_ET').name = record.wereda_id.with_context(lang='am_ET').name + '/' + record.member_cell_type_id.with_context(lang='am_ET').name + '/አባል/' + record.main_office.with_context(lang='am_ET').name_2 + '/' + record.name_2
+                    record.with_context(lang='en_US').name = record.wereda_id.with_context(lang='en_US').name + '/' + record.member_cell_type_id.with_context(lang='en_US').name + '/Member/' + record.main_office.with_context(lang='en_US').name_2 + '/' + record.name_2
+                if record.for_which_members == 'member' and record.duplicate:
+                    if record.league_type == 'young':
+                        record.with_context(lang='en_US').name = record.wereda_id.with_context(lang='en_US').name + '/' + record.member_cell_type_id.with_context(lang='en_US').name + '/Member/Youngster/' + record.main_office.with_context(lang='en_US').name_2 + '/' + record.name_2
+                        record.with_context(lang='am_ET').name = record.wereda_id.with_context(lang='am_ET').name + '/' + record.member_cell_type_id.with_context(lang='am_ET').name + '/አባል/ወጣት ሊግ/' + record.main_office.with_context(lang='am_ET').name_2 + '/' + record.name_2
+                    if record.league_type == 'women':
+                        record.with_context(lang='en_US').name = record.wereda_id.with_context(lang='en_US').name + '/' + record.member_cell_type_id.with_context(lang='en_US').name + '/Member/Youngster/' + record.main_office.with_context(lang='en_US').name_2 + '/' + record.name_2
+                        record.with_context(lang='am_ET').name = record.wereda_id.with_context(lang='am_ET').name + '/' + record.member_cell_type_id.with_context(lang='am_ET').name + '/አባል/ሴት ሊግ/' + record.main_office.with_context(lang='am_ET').name_2 + '/' + record.name_2
+
+                record.saved = True
 
 
     @api.onchange('subcity_id')
@@ -697,3 +898,14 @@ class Cells(models.Model):
                     'league_member_cells': record.id
                 })
             record.state = 'active'
+
+
+    def update_name(self):
+        """This function will update name of basic organization"""
+        for record in self:
+            if record.click_counter == 0:
+                record.click_counter = 1
+                record.saved = False
+            else:
+                record.click_counter = 0
+                record.saved = True

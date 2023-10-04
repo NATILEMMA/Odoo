@@ -1,0 +1,3149 @@
+# Date created: 2023-06-21 20:44:01 by dichthuatphuongdong.com
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-06-21 03:13:39+0000"
+"MIME-Version: 1.0"
+"Content-Type: text/plain; charset=UTF-8"
+"Content-Transfer-Encoding: 8bit"
+"Plural-Forms: nplurals=1; plural=0;"
+"X-Generator: GlotPress/3.0.0-alpha.2"
+"Language: en_GB"
+"Project-Id-Version: PO File 5.8.1"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_report_project_task_user__delay_endings_days
+msgid "# Days to Deadline"
+msgstr "የመጨረሻው ቀን # ቀናት ይቀራሉ"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_res_partner__task_count
+#: model:ir.model.fields,field_description:project.field_res_users__task_count
+msgid "# Tasks"
+msgstr "# ተግባራት"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_report_project_task_user__working_days_open
+msgid "# Working Days to Assign"
+msgstr "ለመመደብ # የስራ ቀናት"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_report_project_task_user__working_days_close
+msgid "# Working Days to Close"
+msgstr "# የሚዘጋው የስራ ቀናት"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_report_project_task_user__nbr
+msgid "# of Tasks"
+msgstr "# ተግባራት"
+
+#. module: project
+#: model:mail.template,subject:project.rating_project_request_email_template
+msgid "${object.project_id.company_id.name}: Satisfaction Survey"
+msgstr "${object.project_id.company_id.name}፡ የእርካታ ዳሰሳ"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.edit_project
+msgid "% On"
+msgstr "% በርቷል"
+
+#. module: project
+#: code:addons/project/models/project.py:0
+#: code:addons/project/models/project.py:0
+msgid "%s (copy)"
+msgstr "%s (ኮፒ)"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_res_config_settings__group_project_rating
+msgid "Planning"
+msgstr "እቅድ ማውጣት"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/tours/project.js:0
+msgid "<b>Assign the task</b> to someone. <i>You can create and invite a new user on the fly.</i>"
+msgstr "ለአንድ ሰው <b>ተግባሩን መድቡ</b>። <i>በበረራ ላይ አዲስ ተጠቃሚ መፍጠር እና መጋበዝ ትችላለህ።</i>"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/tours/project.js:0
+msgid "<b>Click the save button</b> to apply your changes to the task."
+msgstr "ለውጦችዎን በስራው ላይ ለመተግበር <b>አስቀምጥ የሚለውን ቁልፍ ጠቅ ያድርጉ።"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/tours/project.js:0
+msgid "<b>Star tasks</b> to mark team priorities."
+msgstr "የቡድን ቅድሚያ የሚሰጣቸውን ነገሮች ምልክት ለማድረግ <b>የኮከብ ተግባራት</b>።"
+
+#. module: project
+#: model:mail.template,body_html:project.rating_project_request_email_template
+msgid ""
+"<div>"
+"    % set access_token = object.rating_get_access_token()"
+"    % set partner = object.rating_get_partner_id()"
+"    <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"width:100%; margin:0px auto;\">"
+"    <tbody>"
+"        <tr><td valign=\"top\" style=\"font-size: 13px;\">"
+"            % if partner.name:"
+"                Hello ${partner.name},<br/><br/>"
+"            % else:"
+"                Hello,<br/><br/>"
+"            % endif"
+"            Please take a moment to rate our services related to the task \"<strong>${object.name}</strong>\""
+"            % if object.rating_get_rated_partner_id().name:"
+"                assigned to <strong>${object.rating_get_rated_partner_id().name}</strong>.<br/>"
+"            % else:"
+"                .<br/>"
+"            % endif"
+"        </td></tr>"
+"        <tr><td style=\"text-align: center;\">"
+"            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" summary=\"o_mail_notification\" style=\"width:100%; margin: 32px 0px 32px 0px;\">"
+"                <tr><td style=\"font-size: 13px;\">"
+"                    <strong>Tell us how you feel about our service</strong><br/>"
+"                    <span style=\"text-color: #888888\">(click on one of these smileys)</span>"
+"                </td></tr>"
+"                <tr><td style=\"font-size: 13px;\">"
+"                    <table style=\"width:100%;text-align:center;\">"
+"                        <tr>"
+"                            <td>"
+"                                <a href=\"/rating/${access_token}/10\">"
+"                                    <img alt=\"Satisfied\" src=\"/rating/static/src/img/rating_10.png\" title=\"Satisfied\"/>"
+"                                </a>"
+"                            </td>"
+"                            <td>"
+"                                <a href=\"/rating/${access_token}/5\">"
+"                                    <img alt=\"Not satisfied\" src=\"/rating/static/src/img/rating_5.png\" title=\"Not satisfied\"/>"
+"                                </a>"
+"                            </td>"
+"                            <td>"
+"                                <a href=\"/rating/${access_token}/1\">"
+"                                    <img alt=\"Highly Dissatisfied\" src=\"/rating/static/src/img/rating_1.png\" title=\"Highly Dissatisfied\"/>"
+"                                </a>"
+"                            </td>"
+"                        </tr>"
+"                    </table>"
+"                </td></tr>"
+"            </table>"
+"        </td></tr>"
+"        <tr><td valign=\"top\" style=\"font-size: 13px;\">"
+"            We appreciate your feedback. It helps us to improve continuously."
+"            % if object.project_id.rating_status == \'stage\':"
+"                <br/><span style=\"margin: 0px 0px 0px 0px; font-size: 12px; opacity: 0.5; color: #454748;\">This customer survey has been sent because your task has been moved to the stage <b>${object.stage_id.name}</b></span>"
+"            % endif"
+"            % if object.project_id.rating_status == \'periodic\':"
+"                <br/><span style=\"margin: 0px 0px 0px 0px; font-size: 12px; opacity: 0.5; color: #454748;\">This customer survey is sent <b>${object.project_id.rating_status_period}</b> as long as the task is in the <b>${object.stage_id.name}</b> stage.</span>"
+"            % endif"
+"        </td></tr>"
+"    </tbody>"
+"    </table>"
+"</div>"
+"            "
+msgstr ""
+"\"<div>
+"
+"     % አዘጋጅ access_token = object.rating_get_access_token()
+"
+"     % አጋር አዘጋጅ = object.rating_get_partner_id()
+"
+"     <table border=\"\"0\"\" cellpadding=\"\"0\"\" cellpacing=\"\"0\"\" width=\"\"590\" style=\"\"ወርድ:100%; ህዳግ:0 ፒክስል ራስ;\"\">
+"
+"     <tbody>
+"
+"         <tr><td valign=\"\"top\"\" style=\"\"font-size: 13px;\"\">
+"
+"             አጋር ከሆነ %፡
+"
+"                 ሰላም ${partner.name}፣<br/><br/>
+"
+"             % ሌላ፡
+"
+"                 ሰላም፣<br/><br/>
+"
+"             % መጨረሻ
+"
+"             እባክዎን ከ\"<strong>${object.name}</strong>\" ተግባር ጋር የተያያዙ አገልግሎቶቻችንን ደረጃ ለመስጠት ትንሽ ጊዜ ይውሰዱ።
+"
+"             % ከሆነ object.rating_get_rated_partner_id() ስም፡
+"
+"                 ለ<strong>${object.rating_get_rated_partner_id() ስም}</strong> ተመድቧል።<br/>
+"
+"             % ሌላ፡
+"
+"                 .<br/>
+"
+"             % መጨረሻ
+"
+"         </td></tr>
+"
+"         <tr><td style=\"\"text-align: center;\">
+"
+"             <table border=\"\"0\"\" cellpadding=\"\"0\"\" cellpacing=\"\"0\"\" width=\"\"590\"\" ማጠቃለያ=\"\"o_mail_notification\"\" style=\"\"ወርድ:100%; ህዳግ፡ 32 ፒክስል 0 ፒክስል 32 ፒክስል 0 ፒክስል፤\"\">
+"
+"                 <tr><td style=\"\"font-size: 13px;\"\">
+"
+"                     ስለአገልግሎታችን ያለዎትን ስሜት</strong><br/>ይንገሩን።
+"
+"                     <span style=\"\"text-color: #888888\"\">(ከእነዚህ ፈገግታዎች አንዱን ጠቅ ያድርጉ)</span>
+"
+"                 </td></tr>
+"
+"                 <tr><td style=\"\"font-size: 13px;\"\">
+"
+"                     <table style=\"\"width:100%;text-align:center;\"\">
+"
+"                         <tr>
+"
+"                             <td>
+"
+"                                 <a href=\"\"/rating/${access_token}/10\"\">
+"
+"                                     <img alt=\"\"ረክቻለሁ\"\" src=\"\"/rating/static/src/img/rating_10.png\"\" title=\"\"ረክቻለሁ\"/>
+"
+"                                 </a>
+"
+"                             </td>
+"
+"                             <td>
+"
+"                                 <a href=\"\"/rating/${access_token}/5\"\">
+"
+"                                     <img alt=\"\"አልረካም\"\" src=\"\"/rating/static/src/img/rating_5.png\"\" title=\"\"አልረካም\"/>
+"
+"                                 </a>
+"
+"                             </td>
+"
+"                             <td>
+"
+"                                 <a href=\"\"/rating/${access_token}/1\"\">
+"
+"                                     <img alt=\"\"በጣም አልረካሁም\"\" src=\"\"/rating/static/src/img/rating_1.png\"\" title=\"\"በጣም አልረካሁም\"\"/>
+"
+"                                 </a>
+"
+"                             </td>
+"
+"                         </tr>
+"
+"                     </ሠንጠረዥ>
+"
+"                 </td></tr>
+"
+"             </ሠንጠረዥ>
+"
+"         </td></tr>
+"
+"         <tr><td valign=\"\"top\"\" style=\"\"font-size: 13px;\"\">
+"
+"             የእርስዎን አስተያየት እናመሰግናለን። ያለማቋረጥ እንድንሻሻል ይረዳናል።
+"
+"             % object.project_id.rating_status == \'ደረጃ\' ከሆነ፡
+"
+"                 <br/><span style=\"\"ህዳግ: 0px 0px 0px 0px; የቅርጸ-ቁምፊ መጠን: 12 ፒክስል; ግልጽነት: 0.5; color: #454748;\"\">ይህ የደንበኛ ዳሰሳ የተላከው የእርስዎ ተግባር ወደ ደረጃ <b>${object.stage_id.name}</b></span> ስለተዘዋወረ ነው።
+"
+"             % መጨረሻ
+"
+"             % object.project_id.rating_status == \'በየጊዜው\' ከሆነ፡
+"
+"                 <br/><span style=\"\"ህዳግ: 0px 0px 0px 0px; የቅርጸ-ቁምፊ መጠን: 12 ፒክስል; ግልጽነት: 0.5; color: #454748;\"\">ይህ የደንበኛ ዳሰሳ ተልኳል <b>${object.project_id.rating_status_period}</b> ተግባሩ በ<b>${object.stage_id.name}</b ውስጥ እስካለ ድረስ > ደረጃ።</span>
+"
+"             % መጨረሻ
+"
+"         </td></tr>
+"
+"     </tbody>
+"
+"     </ሠንጠረዥ>
+"
+"</div>
+"
+"             \""
+
+#. module: project
+#: model:mail.template,body_html:project.mail_template_data_project_task
+msgid ""
+"<div>"
+"    Dear ${object.partner_id.name or \'customer\'},<br/>"
+"    Thank you for your enquiry.<br/>"
+"    If you have any questions, please let us know."
+"    <br/><br/>"
+"    Thank you,"
+"    <br/>"
+"</div>"
+"        "
+msgstr ""
+"<div>"
+"     ውድ ${object.partner_id.name ወይም \'customer\'}፣<br/>"
+"     ለጥያቄዎ እናመሰግናለን።<br/>"
+"     ማንኛውም ጥያቄ ካለዎት እባክዎ ያሳውቁን."
+"     <br/><br/>"
+"     አመሰግናለሁ,"
+"     <br/>"
+"</div>"
+"         "
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.rating_index
+msgid "<i class=\"fa fa-arrow-circle-right \"/> See the feedbacks"
+msgstr "<i class=\"fa fa-arrow-circle-right \"/> አስተያየቶቹን ይመልከቱ"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.rating_index
+msgid "<i class=\"fa fa-calendar\"/> End date :"
+msgstr "<i class=\"fa fa-calendar\"/> ማብቂያ ቀን፡-"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.view_task_kanban
+msgid "<i class=\"fa fa-comments\" role=\"img\" aria-label=\"Unread Messages\"/>"
+msgstr "<i class=\"fa fa-comments\" role=\"img\" aria-label=\"ያልተነበቡ መልዕክቶች\"/>"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.view_project_kanban
+msgid "<i class=\"fa fa-ellipsis-v\" role=\"img\" aria-label=\"Manage\" title=\"Manage\"/>"
+msgstr "<i class=\"fa fa-ellipsis-v\" role=\"img\" aria-label=\"አስተዳድር\" title=\"አስተዳደር\"/>"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.view_project_kanban
+msgid "<i class=\"fa fa-envelope\" role=\"img\" aria-label=\"Domain Alias\" title=\"Domain Alias\"/>"
+msgstr "<i class=\"fa fa-envelope\" role=\"img\" aria-label=\"Domain Alias\" title=\"የጎራ ተለዋጭ ስም\"/>"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.rating_index
+msgid "<i class=\"fa fa-envelope\"/> Email :"
+msgstr "<i class=\"fa fa-envelope\"/> ኢሜል፡-"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.view_project_kanban
+msgid "<i class=\"fa fa-smile-o\" role=\"img\" aria-label=\"Percentage of satisfaction\" title=\"Percentage of satisfaction\"/>"
+msgstr "<i class=\"fa fa-smile-o\" role=\"img\" aria-label=\"የእርካታ መቶኛ\" title=\"የእርካታ መቶኛ\"/>"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.view_project_kanban
+msgid "<i class=\"fa fa-smile-o\"/> No rating yet"
+msgstr "<i class=\"fa fa-smile-o\"/> እስካሁን የተሰጠ ደረጃ የለም።"
+
+#. module: project
+#: code:addons/project/models/project.py:0
+msgid ""
+"<p class=\"o_view_nocontent_smiling_face\">"
+"                    Create a new project</p>"
+msgstr ""
+"<p class=\"o_view_nocontent_smiling_face\">"
+"                     አዲስ ፕሮጀክት ይፍጠሩ</p>"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/tours/project.js:0
+msgid "<p>Once your task is ready, you can save it.</p>"
+msgstr "<p>አንድ ጊዜ ተግባርዎ ዝግጁ ከሆነ፣ ማስቀመጥ ይችላሉ።</p>"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.portal_my_project
+msgid "<small class=\"text-muted\">Project - </small>"
+msgstr "<small class=\"text-muted\">ፕሮጀክት - </small>"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.portal_my_task
+msgid "<small class=\"text-right\">Status:</small>"
+msgstr "<small class=\"text-right\">ሁኔታ፡</small>"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.portal_my_project
+msgid "<span class=\"fa fa-tasks\" role=\"img\" aria-label=\"Tasks\" title=\"Tasks\"/>"
+msgstr "<span class=\"fa fa-tasks\" role=\"img\" aria-label=\"Tasks\" title=\"Tasks\"/>"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.view_project_kanban
+msgid "<span class=\"o_label\">Profitability</span>"
+msgstr "<span class=\"o_label\">ትርፋማነት</span>"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.portal_my_task
+msgid "<strong class=\"d-block mb-2\">Attachments</strong>"
+msgstr "<strong class=\"d-block mb-2\">አባሪዎች</strong>"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.portal_my_task
+msgid "<strong class=\"d-block mb-2\">Description</strong>"
+msgstr "<strong class=\"d-block mb-2\">መግለጫ</strong>"
+
+#. module: project
+#: model_terms:digest.tip,tip_description:project.digest_tip_project_0
+msgid "<strong style=\"font-size: 16px;\">Try the mail gateway</strong>"
+msgstr "<strong style=\"font-size: 16px;\">የደብዳቤ መግቢያ መንገዱን ይሞክሩ</strong>"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.portal_my_task
+msgid "<strong>Assigned to</strong>"
+msgstr "ለ</strong> ተመድቧል"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.portal_my_task
+msgid "<strong>Date:</strong>"
+msgstr "<strong>ቀን፡</strong>"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.portal_my_task
+msgid "<strong>Deadline:</strong>"
+msgstr "<strong>የመጨረሻ ጊዜ፡</strong>"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.portal_my_task
+msgid "<strong>Message and communication history</strong>"
+msgstr "<strong>የመልእክት እና የግንኙነት ታሪክ</strong>"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.portal_my_task
+msgid "<strong>Project:</strong>"
+msgstr "<strong>ፕሮጀክት፡</strong>"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.portal_project_rating_popover
+msgid "<strong>Rated by: </strong>"
+msgstr "<strong>በ</strong> ደረጃ የተሰጠው"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.portal_my_task
+msgid "<strong>Reported by</strong>"
+msgstr "በ</strong> የተዘገበው"
+
+#. module: project
+#: model:ir.model.fields,help:project.field_project_project__alias_defaults
+msgid "A Python dictionary that will be evaluated to provide default values when creating new records for this alias."
+msgstr "ለዚህ ተለዋጭ ስም አዳዲስ መዝገቦችን ሲፈጥሩ ነባሪ እሴቶችን ለማቅረብ የሚገመገም የፓይዘን መዝገበ ቃላት።"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.edit_project
+msgid "Accept Emails From"
+msgstr "ከ ኢሜይሎችን ተቀበል"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__access_warning
+#: model:ir.model.fields,field_description:project.field_project_task__access_warning
+msgid "Access warning"
+msgstr "የመዳረሻ ማስጠንቀቂያ"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__message_needaction
+#: model:ir.model.fields,field_description:project.field_project_task__message_needaction
+msgid "Action Needed"
+msgstr "እርምጃ ያስፈልጋል"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__active
+#: model:ir.model.fields,field_description:project.field_project_task__active
+msgid "Active"
+msgstr "ንቁ"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_task__activity_ids
+msgid "Activities"
+msgstr "እንቅስቃሴዎች"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_task__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "የእንቅስቃሴ ልዩ ማስጌጥ"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_task__activity_state
+msgid "Activity State"
+msgstr "የእንቅስቃሴ ሁኔታ"
+
+#. module: project
+#: model:ir.actions.act_window,name:project.mail_activity_type_action_config_project_types
+#: model:ir.ui.menu,name:project.project_menu_config_activity_type
+msgid "Activity Types"
+msgstr "የእንቅስቃሴ ዓይነቶች"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.task_type_edit
+msgid "Add a description..."
+msgstr "ማብራሪያ ጨምር..."
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/tours/project.js:0
+#: code:addons/project/static/src/js/tours/project.js:0
+msgid "Add columns to configure <b>stages for your tasks</b>.<br/><i>e.g. New - In Progress - Done</i>"
+msgstr "ለተግባርህ <b>ደረጃዎች</b>ን ለማዋቀር ዓምዶችን ጨምር።<br/><i>ለምሳሌ፡ አዲስ - በሂደት ላይ - ተከናውኗል</i>"
+
+#. module: project
+#: model:res.groups,name:project.group_project_manager
+msgid "Administrator"
+msgstr "አስተዳዳሪ"
+
+#. module: project
+#: model:project.task.type,name:project.project_stage_data_2
+msgid "Advanced"
+msgstr "የላቀ"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+msgid "Agile"
+msgstr "ቀልጣፋ"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__alias_id
+msgid "Alias"
+msgstr "ተለዋጭ ስም"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__alias_contact
+msgid "Alias Contact Security"
+msgstr "ተለዋጭ የእውቂያ ደህንነት"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__alias_name
+msgid "Alias Name"
+msgstr "ተለዋጭ ስም"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__alias_domain
+msgid "Alias domain"
+msgstr "ተለዋጭ ስም ጎራ"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__alias_model_id
+msgid "Aliased Model"
+msgstr "ተለዋጭ ሞዴል"
+
+#. module: project
+#: code:addons/project/controllers/portal.py:0
+msgid "All"
+msgstr "ሁሉም"
+
+#. module: project
+#: model:ir.actions.act_window,name:project.action_view_task_all
+#: model:ir.ui.menu,name:project.menu_project_management_task
+#: model:ir.ui.menu,name:project.menu_project_management_tasks
+msgid "All Tasks"
+msgstr "ሁሉም ተግባራት"
+
+#. module: project
+#: model:ir.model.fields.selection,name:project.selection__project_project__privacy_visibility__employees
+msgid "All internal users"
+msgstr "ሁሉም የውስጥ ተጠቃሚዎች"
+
+#. module: project
+#: model:res.groups,name:project.group_planning_manager_approval
+msgid "Allow to  Manager Approval"
+msgstr "ለአስተዳዳሪ ማጽደቅ ፍቀድ"
+
+#. module: project
+#: model:res.groups,name:project.group_Planning_requester
+msgid "Allow to request planning"
+msgstr "እቅድ ለመጠየቅ ፍቀድ"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+msgid "Analysis"
+msgstr "ትንተና"
+
+#. module: project
+#: model:ir.model,name:project.model_account_analytic_account
+#: model:ir.model.fields,field_description:project.field_project_project__analytic_account_id
+msgid "Analytic Account"
+msgstr "የበጀት መለያ"
+
+#. module: project
+#: model:ir.model.fields,help:project.field_project_project__analytic_account_id
+msgid "Analytic account to which this project is linked for financial management. Use an analytic account to record cost and revenue on your project."
+msgstr "ይህ ፕሮጀክት ከፋይናንሺያል አስተዳደር ጋር የተገናኘበት የበጀት መለያ። በፕሮጀክትዎ ላይ ወጪን እና ገቢን ለመመዝገብ የበጀት መለያ ይጠቀሙ።"
+
+#. module: project
+#: model:ir.model.fields.selection,name:project.selection__report_project_task_user__month__4
+msgid "April"
+msgstr "ሚያዚያ"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.edit_project
+#: model_terms:ir.ui.view,arch_db:project.view_project_project_filter
+#: model_terms:ir.ui.view,arch_db:project.view_task_form2
+#: model_terms:ir.ui.view,arch_db:project.view_task_search_form
+msgid "Archived"
+msgstr "በማህደር የተቀመጠ"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.view_task_form2
+msgid "Assign to Me"
+msgstr "ለእኔ መድቡ"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_report_project_task_user__date_assign
+#: model_terms:ir.ui.view,arch_db:project.view_task_project_user_search
+msgid "Assignation Date"
+msgstr "የምደባ ቀን"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+msgid "Assigned"
+msgstr "ተመድቧል"
+
+#. module: project
+#: model:ir.actions.act_window,name:project.act_res_users_2_project_task_opened
+msgid "Assigned Tasks"
+msgstr "የተመደቡ ተግባራት"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_report_project_task_user__user_id
+msgid "Assigned To"
+msgstr "የተመደበው ለ"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__user_ids
+#: model:ir.model.fields,field_description:project.field_project_task__user_id
+#: model_terms:ir.ui.view,arch_db:project.view_task_project_user_search
+#: model_terms:ir.ui.view,arch_db:project.view_task_search_form
+msgid "Assigned to"
+msgstr "ተመድቧል"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_task__date_assign
+msgid "Assigning Date"
+msgstr "የምደባ ቀን"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.task_type_edit
+msgid ""
+"At each stage employees can block or make task/issue ready for next stage."
+"                                You can define here labels that will be displayed for the state instead"
+"                                of the default labels."
+msgstr ""
+"\"በእያንዳንዱ ደረጃ ላይ ሰራተኞች ማገድ ወይም ተግባር/ጉዳዩን ለቀጣይ ደረጃ ማዘጋጀት ይችላሉ።
+"
+"                                 በምትኩ ለግዛቱ የሚታዩ መለያዎችን እዚህ መግለፅ ትችላለህ
+"
+"                                 የነባሪ መለያዎች.\""
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__message_attachment_count
+#: model:ir.model.fields,field_description:project.field_project_task__message_attachment_count
+msgid "Attachment Count"
+msgstr "የአባሪ ብዛት"
+
+#. module: project
+#: model:ir.model.fields,help:project.field_project_task__attachment_ids
+msgid "Attachment that don\'t come from message."
+msgstr "ከመልእክት ያልመጣ አባሪ።"
+
+#. module: project
+#: model:ir.model.fields.selection,name:project.selection__report_project_task_user__month__8
+msgid "August"
+msgstr "ነሐሴ"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_task_type__auto_validation_kanban_state
+msgid "Automatic kanban status"
+msgstr "ራስ-ሰር የካንባን ሁኔታ"
+
+#. module: project
+#: model:ir.model.fields,help:project.field_project_task_type__auto_validation_kanban_state
+msgid ""
+"Automatically modify the kanban state when the customer replies to the feedback for this stage."
+" * A good feedback from the customer will update the kanban state to \'ready for the new stage\' (green bullet)."
+" * A medium or a bad feedback will set the kanban state to \'blocked\' (red bullet)."
+""
+msgstr ""
+"\"ደንበኛው ለዚህ ደረጃ ግብረ መልስ ሲሰጥ የካንባን ሁኔታን በራስ-ሰር ያሻሽሉ።
+"
+"  * ከደንበኛው ጥሩ አስተያየት የካንባን ግዛትን \'ለአዲሱ ደረጃ ዝግጁ\' (አረንጓዴ ጥይት) ያዘምነዋል።
+"
+"  * መካከለኛ ወይም መጥፎ ግብረመልስ የካንባን ሁኔታ ወደ \'ታገደ\' (ቀይ ጥይት) ያዘጋጃል።
+"
+"\""
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.portal_project_rating_progressbar
+msgid "Average"
+msgstr "አማካኝ"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+msgid "Backlog"
+msgstr "የኋላ መዝገብ"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.portal_project_rating_progressbar
+msgid "Bad"
+msgstr "መጥፎ"
+
+#. module: project
+#: model:project.task.type,name:project.project_stage_data_1
+msgid "Basic"
+msgstr "መሰረታዊ"
+
+#. module: project
+#: code:addons/project/models/project.py:0
+#: model:ir.model.fields.selection,name:project.selection__report_project_task_user__state__blocked
+#: model:project.task,legend_blocked:project.project_task_data_0
+#: model:project.task,legend_blocked:project.project_task_data_1
+#: model:project.task,legend_blocked:project.project_task_data_11
+#: model:project.task,legend_blocked:project.project_task_data_12
+#: model:project.task,legend_blocked:project.project_task_data_13
+#: model:project.task,legend_blocked:project.project_task_data_14
+#: model:project.task,legend_blocked:project.project_task_data_2
+#: model:project.task,legend_blocked:project.project_task_data_4
+#: model:project.task,legend_blocked:project.project_task_data_5
+#: model:project.task,legend_blocked:project.project_task_data_6
+#: model:project.task,legend_blocked:project.project_task_data_7
+#: model:project.task,legend_blocked:project.project_task_data_9
+#: model:project.task.type,legend_blocked:project.project_stage_data_0
+#: model:project.task.type,legend_blocked:project.project_stage_data_1
+#: model:project.task.type,legend_blocked:project.project_stage_data_2
+msgid "Blocked"
+msgstr "ታግዷል"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+msgid "Brainstorm"
+msgstr "የአዕምሮ ማዕበል"
+
+#. module: project
+#: model:ir.filters,name:project.filter_task_report_responsible
+msgid "By Responsible"
+msgstr "በኃላፊነት"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/tours/project.js:0
+msgid "Choose a <b>project name</b>. (e.g. Website Launch, Product Development, Office Party, etc.)"
+msgstr "<b>የፕሮጀክት ስም</b>ን ይምረጡ። (ለምሳሌ የድር ጣቢያ ማስጀመሪያ፣ የምርት ልማት፣ የቢሮ ፓርቲ፣ ወዘተ.)"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/tours/project.js:0
+msgid "Choose a <b>task name</b>. (e.g. Website Design, Purchase Goods etc.)"
+msgstr "<b>የተግባር ስም</b> ይምረጡ። (ለምሳሌ የድረ-ገጽ ንድፍ፣ ዕቃ ግዥ ወዘተ)"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.project_project_view_form_simplified
+msgid "Choose a Project Email"
+msgstr "የፕሮጀክት ኢሜል ይምረጡ"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_task__partner_city
+msgid "City"
+msgstr "ከተማ"
+
+#. module: project
+#: model_terms:ir.actions.act_window,help:project.act_project_project_2_project_task_all
+msgid "Click <i>Create</i> to start a new task."
+msgstr "አዲስ ተግባር ለመጀመር <i>ፍጠር</i>ን ጠቅ ያድርጉ።"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/tours/project.js:0
+msgid "Click on the card to write more information about it and collaborate with your coworkers."
+msgstr "ስለሱ የበለጠ መረጃ ለመጻፍ እና ከስራ ባልደረቦችዎ ጋር ለመተባበር ካርዱ ላይ ጠቅ ያድርጉ።"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/tours/project.js:0
+msgid "Click on this button to modify the task."
+msgstr "ተግባሩን ለመቀየር በዚህ ቁልፍ ላይ ጠቅ ያድርጉ።"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__color
+#: model:ir.model.fields,field_description:project.field_project_tags__color
+#: model:ir.model.fields,field_description:project.field_project_task__color
+msgid "Color Index"
+msgstr "የቀለም መረጃ ጠቋሚ"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+msgid "Communicate with customers on the task using the email gateway. Attach logo designs to the task, so that information flow from designers to the workers who print the t-shirt. Organize priorities amongst orders %s using the icon."
+msgstr "የኢሜል መግቢያን በመጠቀም በስራው ላይ ከደንበኞች ጋር ይገናኙ ። ከዲዛይነሮች ቲሸርቱን ወደሚያትሙ ሰራተኞች መረጃ እንዲፈስስ የአርማ ንድፎችን ከተግባሩ ጋር አያይዝ። አዶውን በመጠቀም ከ%s መካከል ቅድሚያ የሚሰጣቸውን ነገሮች ያደራጁ።"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__company_id
+#: model:ir.model.fields,field_description:project.field_project_task__company_id
+#: model:ir.model.fields,field_description:project.field_report_project_task_user__company_id
+#: model_terms:ir.ui.view,arch_db:project.view_task_project_user_search
+#: model_terms:ir.ui.view,arch_db:project.view_task_search_form
+msgid "Company"
+msgstr "ኩባንያ"
+
+#. module: project
+#: model:ir.model.fields,help:project.field_project_task__subtask_planned_hours
+msgid "Computed using sum of hours planned of all subtasks created from main task. Usually these hours are less or equal to the Planned Hours (of main task)."
+msgstr "ከዋና ሥራው የተፈጠሩትን ሁሉንም ንዑስ ተግባራት የታቀዱ የሰዓታት ድምርን በመጠቀም ይሰላል። አብዛኛውን ጊዜ እነዚህ ሰዓቶች ከታቀዱት ሰዓቶች (ዋና ሥራ) ያነሱ ወይም እኩል ናቸው."
+
+#. module: project
+#: model:ir.model,name:project.model_res_config_settings
+msgid "Config Settings"
+msgstr "ቅንብሮችን ያዋቅሩ"
+
+#. module: project
+#: model:ir.ui.menu,name:project.menu_project_config
+msgid "Configuration"
+msgstr "ማዋቀር"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+msgid "Consulting"
+msgstr "ማማከር"
+
+#. module: project
+#: model:ir.model,name:project.model_res_partner
+#: model_terms:ir.ui.view,arch_db:project.portal_my_project
+#: model_terms:ir.ui.view,arch_db:project.portal_my_task
+#: model_terms:ir.ui.view,arch_db:project.project_view_kanban
+#: model_terms:ir.ui.view,arch_db:project.view_project
+msgid "Contact"
+msgstr "ተገናኝ"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+msgid "Copywriting"
+msgstr "የቅጅ ጽሑፍ"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_task__displayed_image_id
+msgid "Cover Image"
+msgstr "የሽፋን ምስል"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.project_project_view_form_simplified_footer
+msgid "Create"
+msgstr "ፍጠር"
+
+#. module: project
+#: model:ir.actions.act_window,name:project.open_create_project
+msgid "Create a Project"
+msgstr "እቅድ ፍጠር"
+
+#. module: project
+#: model_terms:ir.actions.act_window,help:project.open_view_project_all_packages
+msgid "Create a new Packages"
+msgstr "አዲስ ፓኬጆችን ይፍጠሩ"
+
+#. module: project
+#: model_terms:ir.actions.act_window,help:project.open_view_project_requested
+msgid "Create a new Planning"
+msgstr "አዲስ እቅድ ይፍጠሩ"
+
+#. module: project
+#: model_terms:ir.actions.act_window,help:project.open_view_project_all
+#: model_terms:ir.actions.act_window,help:project.open_view_project_all_config
+msgid "Create a new project"
+msgstr "አዲስ ፕሮጀክት ፍጠር"
+
+#. module: project
+#: model_terms:ir.actions.act_window,help:project.open_task_type_form
+msgid "Create a new stage in the task pipeline"
+msgstr "በተግባሩ መስመር ውስጥ አዲስ ደረጃ ይፍጠሩ"
+
+#. module: project
+#: model_terms:ir.actions.act_window,help:project.project_tags_action
+msgid "Create a new tag"
+msgstr "አዲስ መለያ ይፍጠሩ"
+
+#. module: project
+#: model_terms:ir.actions.act_window,help:project.action_view_task
+#: model_terms:ir.actions.act_window,help:project.action_view_task_all
+msgid "Create a new task"
+msgstr "አዲስ ተግባር ፍጠር"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_task__create_date
+msgid "Created On"
+msgstr "ላይ ተፈጠረ"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__create_uid
+#: model:ir.model.fields,field_description:project.field_project_tags__create_uid
+#: model:ir.model.fields,field_description:project.field_project_task__create_uid
+#: model:ir.model.fields,field_description:project.field_project_task_type__create_uid
+msgid "Created by"
+msgstr "የተፈጠረው"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__create_date
+#: model:ir.model.fields,field_description:project.field_project_tags__create_date
+#: model:ir.model.fields,field_description:project.field_project_task_type__create_date
+msgid "Created on"
+msgstr "ላይ ተፈጠረ"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.view_task_search_form
+msgid "Creation Date"
+msgstr "የተፈጠረበት ቀን"
+
+#. module: project
+#: model:ir.filters,name:project.filter_task_report_cumulative_flow
+msgid "Cumulative Flow"
+msgstr "ድምር ፍሰት"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__currency_id
+msgid "Currency"
+msgstr "ምንዛሪ"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.portal_my_tasks
+msgid "Current stage of the task"
+msgstr "የተግባሩ ወቅታዊ ደረጃ"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.portal_my_task
+msgid "Current stage of this task"
+msgstr "የዚህ ተግባር ወቅታዊ ደረጃ"
+
+#. module: project
+#: code:addons/project/models/project.py:0
+#: model:ir.model.fields,field_description:project.field_project_project__partner_id
+#: model:ir.model.fields,field_description:project.field_project_task__partner_id
+#: model:ir.model.fields,field_description:project.field_report_project_task_user__partner_id
+#: model_terms:ir.ui.view,arch_db:project.edit_project
+#: model_terms:ir.ui.view,arch_db:project.portal_my_project
+#: model_terms:ir.ui.view,arch_db:project.view_project_project_filter
+msgid "Customer"
+msgstr "ደንበኛ"
+
+#. module: project
+#: code:addons/project/models/project.py:0
+#: code:addons/project/models/project.py:0
+msgid "Customer Email"
+msgstr "የደንበኛ ኢሜይል"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+msgid "Customer Feedback"
+msgstr "የደንበኛ ግብረመልስ"
+
+#. module: project
+#: model:ir.model.fields,help:project.field_project_project__access_url
+#: model:ir.model.fields,help:project.field_project_task__access_url
+msgid "Customer Portal URL"
+msgstr "የደንበኛ ፖርታል URL"
+
+#. module: project
+#: model:ir.actions.act_window,name:project.rating_rating_action_project_report
+#: model:ir.actions.act_window,name:project.rating_rating_action_task
+#: model:ir.ui.menu,name:project.rating_rating_menu_project
+#: model_terms:ir.ui.view,arch_db:project.rating_project_rating_page
+#: model_terms:ir.ui.view,arch_db:project.view_project_kanban
+msgid "Customer Ratings"
+msgstr "የደንበኛ ደረጃዎች"
+
+#. module: project
+#: model_terms:ir.actions.act_window,help:project.rating_rating_action_project_report
+#: model_terms:ir.actions.act_window,help:project.rating_rating_action_task
+msgid "Customer ratings on tasks. If you have no rating, change your project Settings to activate it."
+msgstr "በተግባሮች ላይ የደንበኛ ደረጃዎች. ምንም ደረጃ ከሌልዎት እሱን ለማግበር የፕሮጀክትዎን ቅንብሮች ይለውጡ።"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__rating_status
+msgid "Customer(s) Ratings"
+msgstr "የደንበኛ(ዎች) ደረጃዎች"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+msgid "Customers propose feedbacks by email; Odoo creates tasks automatically, and you can communicate on the task directly. Your managers decide which feedback is accepted %s and which feedback is moved to the \"Refused\" column."
+msgstr "ደንበኞች አስተያየቶችን በኢሜል ያቀርባሉ; ኦዱ ስራዎችን በራስ ሰር ይፈጥራል, እና በተግባሩ ላይ በቀጥታ መገናኘት ይችላሉ. የእርስዎ አስተዳዳሪዎች የትኛው ግብረመልስ %s እንደሚቀበል እና የትኛው ግብረመልስ ወደ \"እምቢ\" አምድ እንደሚወሰድ ይወስናሉ።"
+
+#. module: project
+#: model:ir.model.fields.selection,name:project.selection__project_project__rating_status_period__daily
+msgid "Daily"
+msgstr "በየቀኑ"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_task__date_deadline_formatted
+msgid "Date Deadline Formatted"
+msgstr "ቀነ ገደብ ተቀርጿል።"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.view_task_form2
+msgid "Days"
+msgstr "ቀናት"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_task__date_deadline
+#: model:ir.model.fields,field_description:project.field_report_project_task_user__date_deadline
+msgid "Deadline"
+msgstr "ማለቂያ ሰአት"
+
+#. module: project
+#: model:ir.model.fields.selection,name:project.selection__report_project_task_user__month__12
+msgid "December"
+msgstr "ታህሳስ"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__alias_defaults
+msgid "Default Values"
+msgstr "ነባሪ እሴቶች"
+
+#. module: project
+#: model_terms:ir.actions.act_window,help:project.open_task_type_form
+msgid ""
+"Define the steps that will be used in the project from the"
+"                creation of the task, up to the closing of the task or issue."
+"                You will use these stages in order to track the progress in"
+"                solving a task or an issue."
+msgstr ""
+"በፕሮጀክቱ ውስጥ ጥቅም ላይ የሚውሉትን ደረጃዎች ከ"
+"                 ተግባሩን መፍጠር, ተግባሩን ወይም ጉዳዩን እስኪዘጋ ድረስ."
+"                 የሂደቱን ሂደት ለመከታተል እነዚህን ደረጃዎች ይጠቀማሉ"
+"                 አንድን ሥራ ወይም ጉዳይ መፍታት."
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.view_task_kanban
+msgid "Delete"
+msgstr "ሰርዝ"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+msgid "Delivered"
+msgstr "ደረሰ"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__department_id
+msgid "Department"
+msgstr "መምሪያ"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_task__description
+#: model:ir.model.fields,field_description:project.field_project_task_type__description
+#: model_terms:ir.ui.view,arch_db:project.view_task_form2
+msgid "Description"
+msgstr "መግለጫ"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+msgid "Design"
+msgstr "ንድፍ"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+msgid "Development"
+msgstr "ልማት"
+
+#. module: project
+#: model:ir.model,name:project.model_digest_digest
+msgid "Digest"
+msgstr "መፍጨት"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+msgid "Digital Marketing"
+msgstr "ዲጂታል ግብይት"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.project_project_view_form_simplified_footer
+msgid "Discard"
+msgstr "አስወግድ"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__display_name
+#: model:ir.model.fields,field_description:project.field_project_tags__display_name
+#: model:ir.model.fields,field_description:project.field_project_task__display_name
+#: model:ir.model.fields,field_description:project.field_project_task_type__display_name
+#: model:ir.model.fields,field_description:project.field_report_project_task_user__display_name
+msgid "Display Name"
+msgstr "መጠሪያው ስም"
+
+#. module: project
+#: code:addons/project/models/digest.py:0
+msgid "Do not have access, skip this data for user\'s digest email"
+msgstr "መዳረሻ የለዎትም፣ ይህን ውሂብ ለተጠቃሚው ዳይጀስት ኢሜል ይዝለሉት።"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.edit_project
+msgid "Documents"
+msgstr "ሰነዶች"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+msgid "Done"
+msgstr "ተከናውኗል"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+msgid "Draft"
+msgstr "ረቂቅ"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.view_task_kanban
+msgid "Dropdown menu"
+msgstr "ተቆልቋይ ምናሌ"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.view_project_kanban
+msgid "Edit"
+msgstr "አስተካክል "
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.view_task_kanban
+msgid "Edit Task"
+msgstr "ተግባር አስተካክል "
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.edit_project
+msgid "Edit project\'s stages and set an email template on the stages on which you want to activate the rating."
+msgstr "የፕሮጀክት ደረጃዎችን ያርትዑ እና ደረጃውን ለማግበር በሚፈልጉት ደረጃዎች ላይ የኢሜል አብነት ያዘጋጁ።"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+msgid "Editing"
+msgstr "ማረም"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_task__email_from
+msgid "Email"
+msgstr "ኢሜይል"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.edit_project
+msgid "Email Alias"
+msgstr "ኢሜል ተለዋጭ ስም"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_task_type__mail_template_id
+msgid "Email Template"
+msgstr "የኢሜል አብነት"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_task__email_cc
+msgid "Email cc"
+msgstr "ኢሜል ሲሲ"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.edit_project
+msgid "Emails"
+msgstr "ኢሜይሎች"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__date
+msgid "End Date"
+msgstr "የመጨረሻ ቀን"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_task__date_end
+#: model:ir.model.fields,field_description:project.field_report_project_task_user__date_end
+msgid "Ending Date"
+msgstr "የሚያበቃበት ቀን"
+
+#. module: project
+#: code:addons/project/models/project.py:0
+msgid "Error! You cannot create recursive hierarchy of task(s)."
+msgstr "ስህተት! ተደጋጋሚ የተግባር ተዋረድ መፍጠር አይችሉም።"
+
+#. module: project
+#: model:ir.model.constraint,message:project.constraint_project_project_project_date_greater
+msgid "Error! project start-date must be lower than project end-date."
+msgstr "ስህተት! የፕሮጀክት ጅምር ቀን ከፕሮጀክት ማብቂያ ቀን ያነሰ መሆን አለበት።"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+msgid "Everyone can propose ideas, and the Editor marks the best ones as %s. Attach all documents or links to the task directly, to have all information about a research centralized."
+msgstr "ሁሉም ሰው ሃሳቦችን ማቅረብ ይችላል፣ እና አርታዒው ምርጦቹን እንደ %s ምልክት ያደርጋል። ስለ ምርምር የተማከለ እንዲሆን ሁሉንም ሰነዶች ወይም አገናኞች በቀጥታ ወደ ተግባሩ ያያይዙ።"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.view_task_project_user_search
+msgid "Extended Filters"
+msgstr "የተራዘሙ ማጣሪያዎች"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.view_task_form2
+msgid "Extra Info"
+msgstr "ተጨማሪ መረጃ"
+
+#. module: project
+#: model:ir.model.fields.selection,name:project.selection__report_project_task_user__month__2
+msgid "February"
+msgstr "የካቲት"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+msgid "Fill your Inbox easily with the email gateway. Periodically review your Inbox and schedule tasks by moving them to others columns. Every day, you review the \"This Week\" column to move important tasks \"Today\". Every Monday, you review the \"This Month\" column."
+msgstr "የገቢ መልእክት ሳጥንዎን በቀላሉ በኢሜል መግቢያ መንገድ ይሙሉ። የእርስዎን የገቢ መልእክት ሳጥን በየጊዜው ይገምግሙ እና ወደ ሌሎች አምዶች በመውሰድ ተግባሮችን ያቅዱ። በየቀኑ፣ አስፈላጊ ተግባራትን \"ዛሬ\" ለማንቀሳቀስ የ\"ይህ ሳምንት\" አምድ ይገመግማሉ። በየሳምንቱ ሰኞ፣ የ\"ይህ ወር\" አምድ ይገመግማሉ።"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+msgid "Final Document"
+msgstr "የመጨረሻ ሰነድ"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_task_type__fold
+msgid "Folded in Kanban"
+msgstr "በካንባን ውስጥ የታጠፈ"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.edit_project
+msgid "Follow this project to automatically track the events associated to tasks and issues of this project."
+msgstr "ከዚህ ፕሮጀክት ተግባራት እና ጉዳዮች ጋር የተያያዙ ክስተቶችን በራስ ሰር ለመከታተል ይህን ፕሮጀክት ይከተሉ።"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.view_project_project_filter
+msgid "Followed"
+msgstr "ተከታትሏል።"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.view_task_search_form
+msgid "Followed Tasks"
+msgstr "የተከተሉት ተግባራት"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__message_follower_ids
+#: model:ir.model.fields,field_description:project.field_project_task__message_follower_ids
+msgid "Followers"
+msgstr "ተከታዮች"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__message_channel_ids
+#: model:ir.model.fields,field_description:project.field_project_task__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "ተከታዮች (ሰርጦች)"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__message_partner_ids
+#: model:ir.model.fields,field_description:project.field_project_task__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "ተከታዮች (አጋሮች)"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_res_config_settings__module_project_forecast
+msgid "Forecasts"
+msgstr "ትንበያዎች"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.view_task_search_form
+msgid "Future Activities"
+msgstr "የወደፊት ተግባራት"
+
+#. module: project
+#: model:ir.ui.menu,name:project.menu_tasks_config
+msgid "GTD"
+msgstr "ጂቲዲ"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.edit_project
+msgid "Get customer feedback"
+msgstr "የደንበኛ አስተያየት ያግኙ"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+msgid "Getting Things Done (GTD)"
+msgstr "ነገሮችን በማግኘት ላይ (GTD)"
+
+#. module: project
+#: model:ir.model.fields,help:project.field_project_project__sequence
+msgid "Gives the sequence order when displaying a list of Projects."
+msgstr "የፕሮጀክቶችን ዝርዝር ሲያሳዩ ቅደም ተከተሎችን ይሰጣል."
+
+#. module: project
+#: model:ir.model.fields,help:project.field_project_task__sequence
+msgid "Gives the sequence order when displaying a list of tasks."
+msgstr "የተግባሮችን ዝርዝር ሲያሳይ ቅደም ተከተል ይሰጣል።"
+
+#. module: project
+#: model:ir.model.fields.selection,name:project.selection__project_task__kanban_state__done
+msgid "Green"
+msgstr "አረንጓዴ"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_task_type__legend_done
+msgid "Green Kanban Label"
+msgstr "አረንጓዴ የካንባን መለያ"
+
+#. module: project
+#: model:ir.model.fields.selection,name:project.selection__project_task__kanban_state__normal
+msgid "Grey"
+msgstr "ግራጫ"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_task_type__legend_normal
+msgid "Grey Kanban Label"
+msgstr "ግራጫ ካንባን መለያ"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.view_project_project_filter
+#: model_terms:ir.ui.view,arch_db:project.view_task_project_user_search
+#: model_terms:ir.ui.view,arch_db:project.view_task_search_form
+msgid "Group By"
+msgstr "ቡድን በ"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+msgid "Handle your idea gathering within Tasks of your new Project and discuss them in the chatter of the tasks. Use the %s and %s to signalize what is the current status of your Idea"
+msgstr "በአዲሱ ፕሮጀክትዎ ተግባራት ውስጥ የሃሳብ መሰብሰብዎን ይያዙ እና በተግባሮቹ ውይይት ውስጥ ይወያዩዋቸው። የሃሳብዎ ወቅታዊ ሁኔታ ምን እንደሆነ ለማመልከት %s እና %s ይጠቀሙ"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.portal_project_rating_progressbar
+msgid "Happy"
+msgstr "ደስተኛ"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.portal_project_rating_partner_stat
+#: model_terms:ir.ui.view,arch_db:project.view_task_kanban
+msgid "Happy face"
+msgstr "ደስተኛ ፊት"
+
+#. module: project
+#: model:ir.module.category,description:project.module_category_operations_planning
+msgid "Helps you manage your projects and tasks by tracking them, generating plannings, etc..."
+msgstr "ፕሮጀክቶችዎን እና ተግባሮችዎን በመከታተል፣ ዕቅዶችን በማመንጨት፣ ወዘተ... እንዲያስተዳድሩ ያግዝዎታል።"
+
+#. module: project
+#: model:ir.model.fields.selection,name:project.selection__report_project_task_user__priority__2
+msgid "High"
+msgstr "ከፍተኛ"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.view_task_form2
+msgid "Hours"
+msgstr "ሰዓታት"
+
+#. module: project
+#: model:ir.model.fields,help:project.field_project_project__rating_status
+msgid ""
+"How to get customer feedback?"
+"- Rating when changing stage: an email will be sent when a task is pulled in another stage."
+"- Periodical Rating: email will be sent periodically."
+""
+"Don\'t forget to set up the mail templates on the stages for which you want to get the customer\'s feedbacks."
+msgstr ""
+"\"የደንበኛ ግብረመልስ እንዴት ማግኘት ይቻላል?
+"
+"ደረጃን ሲቀይሩ ደረጃ መስጠት፡ አንድ ተግባር በሌላ ደረጃ ሲጎተት ኢሜይል ይላካል።
+"
+"- ወቅታዊ ደረጃ: ኢሜል በየጊዜው ይላካል.
+"
+"
+"
+"የደንበኛውን አስተያየት ለማግኘት በሚፈልጉበት ደረጃዎች ላይ የደብዳቤ አብነቶችን ማዘጋጀትዎን አይርሱ።"
+
+#. module: project
+#: code:addons/project/models/project.py:0
+msgid "I take it"
+msgstr "እወስደዋለሁ"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__id
+#: model:ir.model.fields,field_description:project.field_project_tags__id
+#: model:ir.model.fields,field_description:project.field_project_task__id
+#: model:ir.model.fields,field_description:project.field_project_task_type__id
+#: model:ir.model.fields,field_description:project.field_report_project_task_user__id
+msgid "ID"
+msgstr "መታወቂያ"
+
+#. module: project
+#: model:ir.model.fields,help:project.field_project_project__alias_parent_thread_id
+msgid "ID of the parent record holding the alias (example: project holding the task creation alias)"
+msgstr "ተለዋጭ ስም የያዘው የወላጅ መዝገብ መታወቂያ (ለምሳሌ፡ የተግባር ፈጠራን ስም የያዘ ፕሮጀክት)"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_task__activity_exception_icon
+msgid "Icon"
+msgstr "አዶ"
+
+#. module: project
+#: model:ir.model.fields,help:project.field_project_task__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "ልዩ እንቅስቃሴን ለማመልከት አዶ።"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+msgid "Ideas"
+msgstr "ሀሳቦች"
+
+#. module: project
+#: model:ir.model.fields,help:project.field_project_project__message_needaction
+#: model:ir.model.fields,help:project.field_project_project__message_unread
+#: model:ir.model.fields,help:project.field_project_task__message_needaction
+#: model:ir.model.fields,help:project.field_project_task__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "ምልክት ካደረጉ፣ አዲስ መልዕክቶች የእርስዎን ትኩረት ይፈልጋሉ።"
+
+#. module: project
+#: model:ir.model.fields,help:project.field_project_project__message_has_error
+#: model:ir.model.fields,help:project.field_project_project__message_has_sms_error
+#: model:ir.model.fields,help:project.field_project_task__message_has_error
+#: model:ir.model.fields,help:project.field_project_task__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "ምልክት ካደረጉ፣ አንዳንድ መልዕክቶች የማድረስ ስህተት አለባቸው።"
+
+#. module: project
+#: model:ir.model.fields,help:project.field_project_task_type__mail_template_id
+msgid "If set an email will be sent to the customer when the task or issue reaches this step."
+msgstr "ከተዋቀረ ተግባር ወይም ጉዳይ እዚህ ደረጃ ላይ ሲደርስ ኢሜይል ለደንበኛው ይላካል።"
+
+#. module: project
+#: model:ir.model.fields,help:project.field_project_task_type__rating_template_id
+msgid "If set and if the project\'s rating configuration is \'Rating when changing stage\', then an email will be sent to the customer when the task reaches this step."
+msgstr ""
+
+#. module: project
+#: model:ir.model.fields,help:project.field_project_project__active
+msgid "If the active field is set to False, it will allow you to hide the project without removing it."
+msgstr "ንቁው መስክ ወደ ሐሰት ከተዋቀረ ፕሮጀክቱን ሳያስወግዱት እንዲደብቁ ያስችልዎታል."
+
+#. module: project
+#: model:ir.model.fields.selection,name:project.selection__project_task__priority__1
+msgid "Important"
+msgstr "አስፈላጊ"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/models/project.py:0
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+#: model:ir.model.fields.selection,name:project.selection__report_project_task_user__state__normal
+#: model:project.task,legend_normal:project.project_task_data_0
+#: model:project.task,legend_normal:project.project_task_data_1
+#: model:project.task,legend_normal:project.project_task_data_11
+#: model:project.task,legend_normal:project.project_task_data_12
+#: model:project.task,legend_normal:project.project_task_data_13
+#: model:project.task,legend_normal:project.project_task_data_14
+#: model:project.task,legend_normal:project.project_task_data_2
+#: model:project.task,legend_normal:project.project_task_data_4
+#: model:project.task,legend_normal:project.project_task_data_5
+#: model:project.task,legend_normal:project.project_task_data_6
+#: model:project.task,legend_normal:project.project_task_data_7
+#: model:project.task,legend_normal:project.project_task_data_9
+#: model:project.task.type,legend_normal:project.project_stage_data_0
+#: model:project.task.type,legend_normal:project.project_stage_data_1
+#: model:project.task.type,legend_normal:project.project_stage_data_2
+msgid "In Progress"
+msgstr "በሂደት ላይ"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+msgid "In development"
+msgstr "በልማት ውስጥ"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+msgid "Inbox"
+msgstr "የገቢ መልእክት ሳጥን"
+
+#. module: project
+#: model:ir.model.fields,help:project.field_project_project__alias_id
+msgid "Internal email associated with this project. Incoming emails are automatically synchronized with Tasks (or optionally Issues if the Issue Tracker module is installed)."
+msgstr "ከዚህ ፕሮጀክት ጋር የተያያዘ የውስጥ ኢሜይል። ገቢ ኢሜይሎች በራስ-ሰር ከተግባሮች ጋር ይመሳሰላሉ (ወይም እንደ አማራጭ የችግር መከታተያ ሞጁል ከተጫነ ችግሮች)።"
+
+#. module: project
+#: model:ir.model.fields.selection,name:project.selection__project_project__privacy_visibility__followers
+msgid "Invited internal users"
+msgstr "የተጋበዙ የውስጥ ተጠቃሚዎች"
+
+#. module: project
+#: model:ir.model.fields.selection,name:project.selection__project_project__privacy_visibility__portal
+msgid "Invited portal users and all internal users"
+msgstr "የተጋበዙ ፖርታል ተጠቃሚዎች እና ሁሉም የውስጥ ተጠቃሚዎች"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__message_is_follower
+#: model:ir.model.fields,field_description:project.field_project_task__message_is_follower
+msgid "Is Follower"
+msgstr "ተከታይ ነው።"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.project_tags_search_view
+msgid "Issue Version"
+msgstr "እትም እትም"
+
+#. module: project
+#: model:ir.model.fields,help:project.field_project_task__planned_hours
+msgid "It is the time planned to achieve the task. If this document has sub-tasks, it means the time needed to achieve this tasks and its childs."
+msgstr "ስራውን ለማሳካት የታቀደው ጊዜ ነው. ይህ ሰነድ ንዑስ ተግባራት ካሉት, ይህንን ተግባራት እና ልጆቹን ለማሳካት የሚያስፈልገው ጊዜ ማለት ነው."
+
+#. module: project
+#: model:ir.model.fields.selection,name:project.selection__report_project_task_user__month__1
+msgid "January"
+msgstr "ጥር"
+
+#. module: project
+#: model:ir.model.fields.selection,name:project.selection__report_project_task_user__month__7
+msgid "July"
+msgstr "ሀምሌ"
+
+#. module: project
+#: model:ir.model.fields.selection,name:project.selection__report_project_task_user__month__6
+msgid "June"
+msgstr "ሰኔ"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_task__legend_blocked
+msgid "Kanban Blocked Explanation"
+msgstr "ካንባን የታገደ ማብራሪያ"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_task__legend_normal
+msgid "Kanban Ongoing Explanation"
+msgstr "የካንባን ቀጣይ ማብራሪያ"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_task__kanban_state
+#: model:ir.model.fields,field_description:project.field_report_project_task_user__state
+msgid "Kanban State"
+msgstr "የካንባን ግዛት"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_task__kanban_state_label
+msgid "Kanban State Label"
+msgstr "የካንባን ግዛት መለያ"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_task__legend_done
+msgid "Kanban Valid Explanation"
+msgstr "የካንባን ትክክለኛ ማብራሪያ"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_digest_digest__kpi_project_task_opened_value
+msgid "Kpi Project Task Opened Value"
+msgstr "የKpi ፕሮጀክት ተግባር የተከፈተ እሴት"
+
+#. module: project
+#: model:ir.model.fields,help:project.field_project_project__label_tasks
+msgid "Label used for the tasks of the project."
+msgstr "ለፕሮጀክቱ ተግባራት የሚያገለግል መለያ።"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.rating_project_rating_page
+msgid "Last 3 months"
+msgstr "ያለፉት 3 ወራት"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.rating_rating_view_search_project
+msgid "Last 30 Days"
+msgstr "ያለፉት 30 ቀናት"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.rating_project_rating_page
+msgid "Last 30 days"
+msgstr "ያለፉት 30 ቀናት"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.rating_project_rating_page
+msgid "Last 7 days"
+msgstr "ያለፉት 7 ቀናት"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project____last_update
+#: model:ir.model.fields,field_description:project.field_project_tags____last_update
+#: model:ir.model.fields,field_description:project.field_project_task____last_update
+#: model:ir.model.fields,field_description:project.field_project_task_type____last_update
+#: model:ir.model.fields,field_description:project.field_report_project_task_user____last_update
+msgid "Last Modified on"
+msgstr "መጨረሻ የተሻሻለው በ"
+
+#. module: project
+#: code:addons/project/controllers/portal.py:0
+#: model:ir.model.fields,field_description:project.field_project_task__date_last_stage_update
+#: model:ir.model.fields,field_description:project.field_report_project_task_user__date_last_stage_update
+msgid "Last Stage Update"
+msgstr "የመጨረሻው ደረጃ ዝማኔ"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_task__write_date
+msgid "Last Updated On"
+msgstr "ለመጨረሻ ጊዜ የዘመነው በ"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__write_uid
+#: model:ir.model.fields,field_description:project.field_project_tags__write_uid
+#: model:ir.model.fields,field_description:project.field_project_task__write_uid
+#: model:ir.model.fields,field_description:project.field_project_task_type__write_uid
+msgid "Last Updated by"
+msgstr "መጨረሻ የዘመነው በ"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__write_date
+#: model:ir.model.fields,field_description:project.field_project_tags__write_date
+#: model:ir.model.fields,field_description:project.field_project_task_type__write_date
+msgid "Last Updated on"
+msgstr "መጨረሻ የዘመነው በ"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.view_task_search_form
+msgid "Late Activities"
+msgstr "ዘግይተው የሚደረጉ እንቅስቃሴዎች"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.view_task_kanban
+msgid "Latest Rating: Higly Dissatisfied"
+msgstr "የቅርብ ጊዜ ደረጃ፡ በጣም አልረካም።"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.view_task_kanban
+msgid "Latest Rating: Not Satisfied"
+msgstr "የቅርብ ጊዜ ደረጃ፡ አልረካም።"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.view_task_kanban
+msgid "Latest Rating: Satisfied"
+msgstr "የቅርብ ጊዜ ደረጃ፡ ረክቻለሁ"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/tours/project.js:0
+msgid "Let\'s create your first project."
+msgstr "የመጀመሪያውን ፕሮጀክትህን እንፍጠር።"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/tours/project.js:0
+msgid "Let\'s create your first task."
+msgstr "የመጀመሪያ ስራህን እንፍጠር።"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.res_config_settings_view_form
+msgid "Lets the company customize which Pad installation should be used to link to new pads (for example: http://etherpad.com/)."
+msgstr "ኩባንያው ከአዲስ ፓድ ጋር ለማገናኘት የትኛውን የፔድ ጭነት መጠቀም እንዳለበት እንዲያስተካክል ያስችለዋል (ለምሳሌ፡ http://etherpad.com/)።"
+
+#. module: project
+#: model:ir.model.fields,help:project.field_project_task__email_cc
+msgid "List of cc from incoming emails."
+msgstr "ከገቢ ኢሜይሎች የሲሲ ዝርዝር።"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+msgid "Live"
+msgstr "ቀጥታ"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.res_config_settings_view_form
+msgid "Log time on tasks"
+msgstr "በተግባሮች ላይ ጊዜ ይመዝገቡ"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+msgid "Logo Design"
+msgstr "አርማ ንድፍ"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+msgid "Long Term"
+msgstr "ረዥም ጊዜ"
+
+#. module: project
+#: model:ir.model.fields.selection,name:project.selection__report_project_task_user__priority__0
+msgid "Low"
+msgstr "ዝቅተኛ"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__message_main_attachment_id
+#: model:ir.model.fields,field_description:project.field_project_task__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "ዋና አባሪ"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_task__attachment_ids
+msgid "Main Attachments"
+msgstr "ዋና ዓባሪዎች"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+msgid "Manage the lifecycle of your project using the kanban view. Add newly acquired project, assign them and use the %s and %s to define if the project is ready for the next step."
+msgstr "የካንባን እይታን በመጠቀም የፕሮጀክትዎን የህይወት ኡደት ያስተዳድሩ። አዲስ የተገኘውን ፕሮጀክት ያክሉ፣ ይመድቧቸው እና ፕሮጀክቱ ለቀጣዩ ደረጃ ዝግጁ መሆኑን ለመወሰን %s እና %s ይጠቀሙ።"
+
+#. module: project
+#: model:ir.model.fields.selection,name:project.selection__report_project_task_user__month__3
+msgid "March"
+msgstr "መጋቢት"
+
+#. module: project
+#: model:ir.model.fields.selection,name:project.selection__report_project_task_user__month__5
+msgid "May"
+msgstr "ግንቦት"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__favorite_user_ids
+msgid "Members"
+msgstr "አባላት"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__message_has_error
+#: model:ir.model.fields,field_description:project.field_project_task__message_has_error
+msgid "Message Delivery error"
+msgstr "የመልእክት ማቅረቢያ ስህተት"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__message_ids
+#: model:ir.model.fields,field_description:project.field_project_task__message_ids
+msgid "Messages"
+msgstr "መልዕክቶች"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_report_project_task_user__month
+msgid "Month"
+msgstr "ወር"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.view_task_project_user_search
+msgid "Months"
+msgstr "ወራት"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.view_project_project_filter
+msgid "My Favorites"
+msgstr "የእኔ ተወዳጆች"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.view_task_search_form
+msgid "My Tasks"
+msgstr "የእኔ ተግባራት"
+
+#. module: project
+#: code:addons/project/controllers/portal.py:0
+#: model:ir.model.fields,field_description:project.field_project_project__name
+#: model:ir.model.fields,field_description:project.field_project_task__name
+#: model_terms:ir.ui.view,arch_db:project.portal_my_tasks
+msgid "Name"
+msgstr "ስም"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.edit_project
+msgid "Name of the tasks :"
+msgstr "የተግባሮቹ ስም፡-"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.portal_project_rating_partner_stat
+#: model_terms:ir.ui.view,arch_db:project.view_task_kanban
+msgid "Neutral face"
+msgstr "ገለልተኛ ፊት"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+#: model_terms:ir.ui.view,arch_db:project.view_task_project_user_search
+#: model:project.task.type,name:project.project_stage_data_0
+msgid "New"
+msgstr "አዲስ"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+msgid "New Orders"
+msgstr "አዲስ ትዕዛዞች"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+msgid "New Projects"
+msgstr "አዳዲስ ፕሮጀክቶች"
+
+#. module: project
+#: model_terms:digest.tip,tip_description:project.digest_tip_project_0
+msgid "New tasks can be generated from incoming emails. You just need to set email aliases on your projects.<br>"
+msgstr "አዲስ ተግባራት ከገቢ ኢሜይሎች ሊፈጠሩ ይችላሉ። በፕሮጀክቶችዎ ላይ የኢሜይል ተለዋጭ ስሞችን ማዘጋጀት ብቻ ያስፈልግዎታል።<br>"
+
+#. module: project
+#: code:addons/project/controllers/portal.py:0
+#: code:addons/project/controllers/portal.py:0
+msgid "Newest"
+msgstr "አዲሱ"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.project_task_view_tree_activity
+msgid "Next Activities"
+msgstr "ቀጣይ እንቅስቃሴዎች"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_task__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "ቀጣይ የእንቅስቃሴ ገደብ"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_task__activity_summary
+msgid "Next Activity Summary"
+msgstr "ቀጣይ የእንቅስቃሴ ማጠቃለያ"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_task__activity_type_id
+msgid "Next Activity Type"
+msgstr "ቀጣይ የእንቅስቃሴ አይነት"
+
+#. module: project
+#: code:addons/project/models/project.py:0
+msgid "No Subject"
+msgstr "ምንም እርሰ ጉዳይ"
+
+#. module: project
+#: model_terms:ir.actions.act_window,help:project.rating_rating_action_project_report
+#: model_terms:ir.actions.act_window,help:project.rating_rating_action_task
+msgid "No customer ratings yet"
+msgstr "እስካሁን ምንም የደንበኛ ደረጃ የለም።"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.rating_index
+msgid "No project rating published for now."
+msgstr "ለአሁን ምንም የፕሮጀክት ደረጃ አልታተመም።"
+
+#. module: project
+#: model:ir.model.fields.selection,name:project.selection__project_project__rating_status__no
+msgid "No rating"
+msgstr "ደረጃ የለውም"
+
+#. module: project
+#: code:addons/project/controllers/portal.py:0
+msgid "None"
+msgstr "ምንም"
+
+#. module: project
+#: model:ir.model.fields.selection,name:project.selection__project_task__priority__0
+#: model:ir.model.fields.selection,name:project.selection__report_project_task_user__priority__1
+msgid "Normal"
+msgstr "መደበኛ"
+
+#. module: project
+#: model:ir.model.fields.selection,name:project.selection__report_project_task_user__month__11
+msgid "November"
+msgstr "ህዳር"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__message_needaction_counter
+#: model:ir.model.fields,field_description:project.field_project_task__message_needaction_counter
+msgid "Number of Actions"
+msgstr "የተግባሮች ብዛት"
+
+#. module: project
+#: model:ir.model.fields,help:project.field_report_project_task_user__working_days_open
+msgid "Number of Working Days to Open the task"
+msgstr "ስራውን ለመክፈት የስራ ቀናት ብዛት"
+
+#. module: project
+#: model:ir.model.fields,help:project.field_report_project_task_user__working_days_close
+msgid "Number of Working Days to close the task"
+msgstr "ተግባሩን ለመዝጋት የስራ ቀናት ብዛት"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__doc_count
+msgid "Number of documents attached"
+msgstr "የተያያዙ ሰነዶች ብዛት"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__message_has_error_counter
+#: model:ir.model.fields,field_description:project.field_project_task__message_has_error_counter
+msgid "Number of errors"
+msgstr "የስህተት ብዛት"
+
+#. module: project
+#: model:ir.model.fields,help:project.field_project_project__message_needaction_counter
+#: model:ir.model.fields,help:project.field_project_task__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "እርምጃ የሚያስፈልገው የመልእክት ብዛት"
+
+#. module: project
+#: model:ir.model.fields,help:project.field_project_project__message_has_error_counter
+#: model:ir.model.fields,help:project.field_project_task__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "የማድረስ ስህተት ያለባቸው መልዕክቶች ብዛት"
+
+#. module: project
+#: model:ir.model.fields,help:project.field_project_project__message_unread_counter
+#: model:ir.model.fields,help:project.field_project_task__message_unread_counter
+msgid "Number of unread messages"
+msgstr "ያልተነበቡ መልዕክቶች ብዛት"
+
+#. module: project
+#: model:ir.model.fields.selection,name:project.selection__report_project_task_user__month__10
+msgid "October"
+msgstr "ጥቅምት"
+
+#. module: project
+#: model_terms:ir.actions.act_window,help:project.action_view_task
+#: model_terms:ir.actions.act_window,help:project.action_view_task_all
+msgid ""
+"Odoo\'s project management allows you to manage the pipeline of your tasks efficiently.<br>"
+"                    You can track progress, discuss on tasks, attach documents, etc."
+msgstr "የኦዱ የፕሮጀክት አስተዳደር የተግባርዎን የቧንቧ መስመር በብቃት እንዲቆጣጠሩ ያስችልዎታል።<br>                     ሂደቱን መከታተል፣ በተግባሮች ላይ መወያየት፣ ሰነዶችን ማያያዝ፣ ወዘተ."
+
+#. module: project
+#: model:ir.model.fields.selection,name:project.selection__project_project__rating_status_period__monthly
+msgid "Once a Month"
+msgstr "በወር አንዴ"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_digest_digest__kpi_project_task_opened
+msgid "Open Tasks"
+msgstr "ተግባራትን ክፈት"
+
+#. module: project
+#: model:ir.model.fields,help:project.field_project_project__alias_force_thread_id
+msgid "Optional ID of a thread (record) to which all incoming messages will be attached, even if they did not reply to it. If set, this will disable the creation of new records completely."
+msgstr "ምንም እንኳን ምላሽ ባይሰጡም ሁሉም ገቢ መልዕክቶች የሚታሰሩበት የክር (መዝገብ) አማራጭ መታወቂያ። ከተዋቀረ ይህ አዲስ መዝገቦችን መፍጠርን ሙሉ በሙሉ ያሰናክላል።"
+
+#. module: project
+#: model_terms:ir.actions.act_window,help:project.open_view_project_all
+#: model_terms:ir.actions.act_window,help:project.open_view_project_all_packages
+msgid "Or"
+msgstr "ወይም"
+
+#. module: project
+#: model_terms:ir.actions.act_window,help:project.open_view_project_all_config
+msgid "Organize your activities (plan tasks, track issues, invoice timesheets) for internal, personal or customer Plannings."
+msgstr "ለውስጣዊ፣ ለግል ወይም ለደንበኛ ፕሮጀክቶች እንቅስቃሴዎችዎን ያደራጁ (ተግባራትን ያቅዱ፣ ጉዳዮችን ይከታተሉ፣ የክፍያ መጠየቂያ ጊዜ ሉሆች)።"
+
+#. module: project
+#: model_terms:ir.actions.act_window,help:project.open_view_project_requested
+msgid "Organize your activities (plan tasks, track issues, invoice timesheets) for internal, personal or customer projects."
+msgstr "ለውስጣዊ፣ ለግል ወይም ለደንበኛ ፕሮጀክቶች እንቅስቃሴዎችዎን ያደራጁ (ተግባራትን ያቅዱ፣ ጉዳዮችን ይከታተሉ፣ የክፍያ መጠየቂያ ጊዜ ሉሆች)።"
+
+#. module: project
+#: code:addons/project/controllers/portal.py:0
+msgid "Others"
+msgstr "ሌሎች"
+
+#. module: project
+#: model:ir.actions.act_window,name:project.action_view_task_overpassed_draft
+msgid "Overpassed Tasks"
+msgstr "ከመጠን ያለፈ ተግባራት"
+
+#. module: project
+#: model:ir.model.fields,help:project.field_project_task__legend_blocked
+#: model:ir.model.fields,help:project.field_project_task_type__legend_blocked
+msgid "Override the default value displayed for the blocked state for kanban selection, when the task or issue is in that stage."
+msgstr "ለታገደው ግዛት ለካንባን ምርጫ የሚታየውን ነባሪ እሴት ይሽሩ፣ ተግባሩ ወይም ጉዳዩ በዚያ ደረጃ ላይ ሲሆን።"
+
+#. module: project
+#: model:ir.model.fields,help:project.field_project_task__legend_done
+#: model:ir.model.fields,help:project.field_project_task_type__legend_done
+msgid "Override the default value displayed for the done state for kanban selection, when the task or issue is in that stage."
+msgstr "ስራው ወይም ጉዳዩ በዚያ ደረጃ ላይ ሲሆን ለካንባን ምርጫ የሚታየውን ነባሪ እሴት ይሽሩት።"
+
+#. module: project
+#: model:ir.model.fields,help:project.field_project_task__legend_normal
+#: model:ir.model.fields,help:project.field_project_task_type__legend_normal
+msgid "Override the default value displayed for the normal state for kanban selection, when the task or issue is in that stage."
+msgstr "ተግባሩ ወይም ጉዳዩ በዚያ ደረጃ ላይ ሲሆን ለካንባን ምርጫ ለመደበኛ ሁኔታ የሚታየውን ነባሪ እሴት ይሽሩ።"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__alias_user_id
+msgid "Owner"
+msgstr "ባለቤት"
+
+#. module: project
+#: model:ir.actions.act_window,name:project.open_view_project_all_packages
+#: model:ir.ui.menu,name:project.menu_projects_packages
+msgid "Packages"
+msgstr "ጥቅሎች"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+msgid "Page Ideas"
+msgstr "የገጽ ሐሳቦች"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__alias_parent_model_id
+msgid "Parent Model"
+msgstr "የወላጅ ሞዴል"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__alias_parent_thread_id
+msgid "Parent Record Thread ID"
+msgstr "የወላጅ መዝገብ ክር መታወቂያ"
+
+#. module: project
+#: code:addons/project/models/project.py:0
+#: model:ir.model.fields,field_description:project.field_project_task__parent_id
+#: model_terms:ir.ui.view,arch_db:project.view_task_form2
+msgid "Parent Task"
+msgstr "የወላጅ ተግባር"
+
+#. module: project
+#: model:ir.model.fields,help:project.field_project_project__alias_parent_model_id
+msgid "Parent model holding the alias. The model holding the alias reference is not necessarily the model given by alias_model_id (example: project (parent_model) and task (model))"
+msgstr "የወላጅ ሞዴል ተለዋጭ ስም የያዘ። ቅጽል ማመሳከሪያውን የያዘው ሞዴል የግድ በአሊያስ_ሞዴል_id የተሰጠው ሞዴል አይደለም (ለምሳሌ፡ ፕሮጀክት (የወላጅ_ሞዴል) እና ተግባር (ሞዴል))"
+
+#. module: project
+#: model:ir.model.fields,help:project.field_project_project__privacy_visibility
+msgid ""
+"People to whom this project and its tasks will be visible."
+""
+"- Invited internal users: when following a project, internal users will get access to all of its tasks without distinction. Otherwise, they will only get access to the specific tasks they are following."
+" A user with the project > administrator access right level can still access this project and its tasks, even if they are not explicitly part of the followers."
+""
+"- All internal users: all internal users can access the project and all of its tasks without distinction."
+""
+"- Invited portal users and all internal users: all internal users can access the project and all of its tasks without distinction."
+"When following a project, portal users will get access to all of its tasks without distinction. Otherwise, they will only get access to the specific tasks they are following."
+""
+"In any case, an internal user with no project access rights can still access a task, provided that they are given the corresponding URL (and that they are part of the followers if the project is private)."
+msgstr ""
+"\"ይህ ፕሮጀክት እና ተግባሮቹ የሚታዩባቸው ሰዎች።
+"
+"
+"
+"- የተጋበዙ የውስጥ ተጠቃሚዎች፡- አንድን ፕሮጀክት በሚከተሉበት ጊዜ የውስጥ ተጠቃሚዎች ያለ ልዩነት ሁሉንም ተግባራቶቹን ያገኛሉ። ያለበለዚያ እነሱ የሚከተሏቸውን ልዩ ተግባራት ብቻ ያገኛሉ ።
+"
+"  የፕሮጀክት> አስተዳዳሪ ያለው ትክክለኛ ደረጃ ያለው ተጠቃሚ አሁንም ይህንን ፕሮጀክት እና ተግባራቶቹን ማግኘት ይችላል፣ ምንም እንኳን በግልጽ የተከታዮቹ አካል ባይሆኑም።
+"
+"
+"
+"- ሁሉም የውስጥ ተጠቃሚዎች: ሁሉም የውስጥ ተጠቃሚዎች ፕሮጀክቱን እና ሁሉንም ተግባራቶቹን ያለ ልዩነት መድረስ ይችላሉ.
+"
+"
+"
+"- የተጋበዙ ፖርታል ተጠቃሚዎች እና ሁሉም የውስጥ ተጠቃሚዎች፡ ሁሉም የውስጥ ተጠቃሚዎች ፕሮጀክቱን እና ሁሉንም ተግባራቶቹን ያለ ልዩነት መድረስ ይችላሉ።
+"
+"አንድን ፕሮጀክት በሚከተሉበት ጊዜ የፖርታል ተጠቃሚዎች ያለምንም ልዩነት ሁሉንም ተግባሮቹን ያገኛሉ። ያለበለዚያ እነሱ የሚከተሏቸውን ልዩ ተግባራት ብቻ ያገኛሉ ።
+"
+"
+"
+"ለማንኛውም የፕሮጀክት መዳረሻ መብት የሌለው የውስጥ ተጠቃሚ ተጓዳኝ ዩአርኤል ከተሰጣቸው (እና ፕሮጀክቱ የግል ከሆነ የተከታዮቹ አካል ከሆኑ) አሁንም አንድን ተግባር ማግኘት ይችላል።"
+
+#. module: project
+#: model:ir.model.fields,help:project.field_project_project__rating_percentage_satisfaction
+msgid "Percentage of happy ratings"
+msgstr "የደስታ ደረጃዎች መቶኛ"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.view_project_kanban
+msgid "Percentage of happy ratings over the past 30 days. Get rating details from the More menu."
+msgstr "ላለፉት 30 ቀናት የደስታ ደረጃዎች መቶኛ። የደረጃ ዝርዝሮችን ከተጨማሪ ምናሌ ያግኙ።"
+
+#. module: project
+#: model:ir.model.fields.selection,name:project.selection__project_project__rating_status__periodic
+msgid "Periodical Rating"
+msgstr "ወቅታዊ ደረጃ አሰጣጥ"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.portal_project_rating_partner_stat
+#: model_terms:ir.ui.view,arch_db:project.portal_project_rating_popover
+msgid "Placeholder"
+msgstr "ቦታ ያዥ"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_task__planned_hours
+msgid "Planned Hours"
+msgstr "የታቀዱ ሰዓቶች"
+
+#. module: project
+#: code:addons/project/controllers/portal.py:0
+#: model:ir.model,name:project.model_project_project
+#: model:ir.model.fields,field_description:project.field_project_task__project_id
+#: model:ir.model.fields,field_description:project.field_report_project_task_user__project_id
+#: model:ir.module.category,name:project.module_category_operations_planning
+#: model:ir.ui.menu,name:project.menu_main_pm
+#: model_terms:ir.ui.view,arch_db:project.digest_digest_view_form
+#: model_terms:ir.ui.view,arch_db:project.edit_project
+#: model_terms:ir.ui.view,arch_db:project.project_project_view_form_simplified
+#: model_terms:ir.ui.view,arch_db:project.rating_rating_view_search_project
+#: model_terms:ir.ui.view,arch_db:project.res_config_settings_view_form
+#: model_terms:ir.ui.view,arch_db:project.view_project_project_filter
+#: model_terms:ir.ui.view,arch_db:project.view_task_project_user_search
+#: model_terms:ir.ui.view,arch_db:project.view_task_search_form
+msgid "Planning"
+msgstr "እቅድ"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_account_analytic_account__project_count
+msgid "Planning Count"
+msgstr "የእቅድ ብዛት"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__user_id
+#: model:ir.model.fields,field_description:project.field_project_task__manager_id
+#: model_terms:ir.ui.view,arch_db:project.edit_project
+#: model_terms:ir.ui.view,arch_db:project.project_view_kanban
+#: model_terms:ir.ui.view,arch_db:project.view_project
+#: model_terms:ir.ui.view,arch_db:project.view_project_project_filter
+msgid "Planning Manager"
+msgstr "የእቅድ አስተዳዳሪ"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.edit_project
+msgid "Planning Members"
+msgstr "የእቅድ አባላት"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.edit_project
+#: model_terms:ir.ui.view,arch_db:project.project_project_view_form_simplified
+#: model_terms:ir.ui.view,arch_db:project.project_view_kanban
+#: model_terms:ir.ui.view,arch_db:project.view_project
+msgid "Planning Name"
+msgstr "የእቅድ ስም"
+
+#. module: project
+#: model:ir.module.category,description:project.module_category_project_planning_request
+#: model:ir.module.category,name:project.module_category_project_planning_request
+msgid "Planning Setting"
+msgstr "የእቅድ ዝግጅት"
+
+#. module: project
+#: model:ir.model,name:project.model_project_tags
+msgid "Planning Tags"
+msgstr "የእቅድ መለያዎች"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.project_task_view_activity
+#: model_terms:ir.ui.view,arch_db:project.view_project_task_graph
+#: model_terms:ir.ui.view,arch_db:project.view_project_task_pivot
+msgid "Planning Tasks"
+msgstr "የዕቅድ ተግባራት"
+
+#. module: project
+#: model:ir.model.fields,help:project.field_project_project__subtask_project_id
+#: model:ir.model.fields,help:project.field_project_task__subtask_project_id
+msgid "Planning in which sub-tasks of the current project will be created. It can be the current project itself."
+msgstr "የአሁኑ ፕሮጀክት የትኛዎቹ ንዑስ ተግባራት እንደሚፈጠሩ ማቀድ። የአሁኑ ፕሮጀክት ራሱ ሊሆን ይችላል."
+
+#. module: project
+#: model:ir.actions.act_window,name:project.open_view_project_all
+#: model:ir.actions.act_window,name:project.open_view_project_all_config
+#: model:ir.model.fields,field_description:project.field_account_analytic_account__project_ids
+#: model:ir.model.fields,field_description:project.field_project_task_type__project_ids
+#: model:ir.ui.menu,name:project.menu_projects_config
+#: model_terms:ir.ui.view,arch_db:project.account_analytic_account_view_form_inherit
+#: model_terms:ir.ui.view,arch_db:project.view_project
+msgid "Plannings"
+msgstr "እቅድ"
+
+#. module: project
+#: code:addons/project/models/analytic_account.py:0
+msgid "Please remove existing tasks in the project linked to the accounts you want to delete."
+msgstr "እባክዎን ሊሰርዟቸው ከሚፈልጉት መለያዎች ጋር በተገናኘ በፕሮጄክት ውስጥ ያሉትን ተግባራት ያስወግዱ።"
+
+#. module: project
+#: model:ir.model.fields,help:project.field_project_project__alias_contact
+msgid ""
+"Policy to post a message on the document using the mailgateway."
+"- everyone: everyone can post"
+"- partners: only authenticated partners"
+"- followers: only followers of the related document or members of following channels"
+""
+msgstr ""
+"\"የመልእክት ጌትዌይን በመጠቀም በሰነዱ ላይ መልእክት ለመለጠፍ መመሪያ።
+"
+"- ሁሉም: ሁሉም ሰው መለጠፍ ይችላል
+"
+"- አጋሮች: ብቻ የተረጋገጡ አጋሮች
+"
+"ተከታዮች: ተዛማጅ ሰነድ ተከታዮች ወይም የሚከተሉት ቻናሎች አባላት ብቻ
+"
+"\""
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__access_url
+#: model:ir.model.fields,field_description:project.field_project_task__access_url
+msgid "Portal Access URL"
+msgstr "ፖርታል መዳረሻ URL"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+msgid "Prioritize Tasks by using the %s icon.%s Use the %s button to signalize to your colleagues that a task is ready for the next stage.%s Use the %s to signalize a problem or a need for discussion on a task."
+msgstr "የ%s አዶን በመጠቀም ለተግባራት ቅድሚያ ይስጧቸው።%s አንድ ተግባር ለቀጣይ ደረጃ ዝግጁ መሆኑን ለባልደረባዎችዎ ለማመልከት የ%s አዝራሩን ይጠቀሙ።"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_task__priority
+#: model:ir.model.fields,field_description:project.field_report_project_task_user__priority
+msgid "Priority"
+msgstr "ቅድሚያ"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.portal_my_project
+msgid "Project Manager"
+msgstr "የፕሮጀክት አስተዳዳሪ"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.rating_index
+msgid "Project Satisfaction"
+msgstr "የፕሮጀክት እርካታ"
+
+#. module: project
+#: model:ir.actions.act_window,name:project.dblc_proj
+msgid "Project\'s tasks"
+msgstr "የዕቅድ ተግባራት"
+
+#. module: project
+#: model:ir.actions.server,name:project.ir_actions_server_project_sample
+msgid "Project: Activate Sample Project"
+msgstr "እቅድ ማውጣት፡ የናሙና እቅድ ማውጣትን ያንቁ"
+
+#. module: project
+#: model:ir.actions.server,name:project.ir_cron_rating_project_ir_actions_server
+#: model:ir.cron,cron_name:project.ir_cron_rating_project
+#: model:ir.cron,name:project.ir_cron_rating_project
+msgid "Project: Send rating"
+msgstr "ፕሮጀክት፡ ደረጃ አሰጣጥን ላክ"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.portal_layout
+#: model_terms:ir.ui.view,arch_db:project.portal_my_home
+#: model_terms:ir.ui.view,arch_db:project.portal_my_projects
+#: model_terms:ir.ui.view,arch_db:project.rating_index
+msgid "Projects"
+msgstr "ፕሮጀክቶች"
+
+#. module: project
+#: model:ir.model.fields.selection,name:project.selection__project_project__rating_status_period__quarterly
+msgid "Quarterly"
+msgstr "በየሩብ ዓመቱ"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_report_project_task_user__milestone_id
+#: model_terms:ir.ui.view,arch_db:project.view_task_project_user_search
+msgid "Quarters"
+msgstr "ሩብ"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.portal_project_rating_partner_stat
+#: model_terms:ir.ui.view,arch_db:project.portal_project_rating_popover
+msgid "Rated partner"
+msgstr "ደረጃ የተሰጠው አጋር"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.view_task_search_form
+msgid "Rated tasks"
+msgstr "ደረጃ የተሰጣቸው ተግባራት"
+
+#. module: project
+#: model:ir.actions.act_window,name:project.rating_rating_action_view_project_rating
+#: model:ir.model.fields,field_description:project.field_project_task__rating_ids
+#: model_terms:ir.ui.view,arch_db:project.view_task_form2
+msgid "Rating"
+msgstr "ደረጃ መስጠት"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_task__rating_avg
+msgid "Rating Average"
+msgstr "አማካኝ ደረጃ"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_task_type__rating_template_id
+msgid "Rating Email Template"
+msgstr "የኢሜል አብነት ደረጃ አሰጣጥ"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__rating_status_period
+msgid "Rating Frequency"
+msgstr "የደረጃ አሰጣጥ ድግግሞሽ"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_task__rating_last_feedback
+msgid "Rating Last Feedback"
+msgstr "የመጨረሻውን ግብረመልስ ደረጃ መስጠት"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_task__rating_last_image
+msgid "Rating Last Image"
+msgstr "የመጨረሻው ምስል ደረጃ መስጠት"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_task__rating_last_value
+msgid "Rating Last Value"
+msgstr "የመጨረሻው እሴት ደረጃ መስጠት"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__rating_request_deadline
+msgid "Rating Request Deadline"
+msgstr "የደረጃ አሰጣጥ ጥያቄ የመጨረሻ ቀን"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__rating_percentage_satisfaction
+msgid "Rating Satisfaction"
+msgstr "የደረጃ እርካታ"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_task__rating_count
+msgid "Rating count"
+msgstr "የደረጃ አሰጣጥ ብዛት"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__portal_show_rating
+msgid "Rating visible publicly"
+msgstr "ደረጃ መስጠት በይፋ ይታያል"
+
+#. module: project
+#: model:ir.model.fields.selection,name:project.selection__project_project__rating_status__stage
+msgid "Rating when changing stage"
+msgstr "ደረጃ ሲቀይሩ ደረጃ መስጠት"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__rating_ids
+#: model:mail.message.subtype,description:project.mt_task_rating
+msgid "Ratings"
+msgstr "ደረጃ አሰጣጦች"
+
+#. module: project
+#: code:addons/project/models/project.py:0
+msgid "Ratings of %s"
+msgstr "የ%s ደረጃዎች"
+
+#. module: project
+#: code:addons/project/models/project.py:0
+#: model:project.task,legend_done:project.project_task_data_0
+#: model:project.task,legend_done:project.project_task_data_1
+#: model:project.task,legend_done:project.project_task_data_11
+#: model:project.task,legend_done:project.project_task_data_12
+#: model:project.task,legend_done:project.project_task_data_13
+#: model:project.task,legend_done:project.project_task_data_14
+#: model:project.task,legend_done:project.project_task_data_2
+#: model:project.task,legend_done:project.project_task_data_4
+#: model:project.task,legend_done:project.project_task_data_5
+#: model:project.task,legend_done:project.project_task_data_6
+#: model:project.task,legend_done:project.project_task_data_7
+#: model:project.task,legend_done:project.project_task_data_9
+#: model:project.task.type,legend_done:project.project_stage_data_0
+#: model:project.task.type,legend_done:project.project_stage_data_1
+#: model:project.task.type,legend_done:project.project_stage_data_2
+msgid "Ready for Next Stage"
+msgstr "ለቀጣይ ደረጃ ዝግጁ"
+
+#. module: project
+#: model:ir.model.fields.selection,name:project.selection__report_project_task_user__state__done
+msgid "Ready for next stage"
+msgstr "ለሚቀጥለው ደረጃ ዝግጁ"
+
+#. module: project
+#: model:ir.model.fields,help:project.field_project_task__rating_last_feedback
+msgid "Reason of the rating"
+msgstr "የደረጃ አሰጣጡ ምክንያት"
+
+#. module: project
+#: model:mail.template,subject:project.mail_template_data_project_task
+msgid "Reception of ${object.name}"
+msgstr "የ${object.name} አቀባበል"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__alias_force_thread_id
+msgid "Record Thread ID"
+msgstr "የክርክር መታወቂያ"
+
+#. module: project
+#: model:ir.model.fields.selection,name:project.selection__project_task__kanban_state__blocked
+msgid "Red"
+msgstr "ቀይ"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_task_type__legend_blocked
+msgid "Red Kanban Label"
+msgstr "ቀይ የካንባን መለያ"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.portal_my_tasks
+msgid "Ref"
+msgstr "ማጣቀሻ"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+msgid "Refused"
+msgstr "እምቢ አለ።"
+
+#. module: project
+#: model:ir.ui.menu,name:project.menu_project_report
+msgid "Reporting"
+msgstr "ሪፖርት ማድረግ"
+
+#. module: project
+#: model:ir.actions.act_window,name:project.open_view_project_requested
+msgid "Requested Planning"
+msgstr "የተጠየቀ እቅድ"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+msgid "Research"
+msgstr "ምርምር"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+msgid "Research Project"
+msgstr "የምርምር ፕሮጀክት"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+msgid "Researching"
+msgstr "ምርምር ማድረግ"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+msgid "Resources Allocation"
+msgstr "የሀብት ምደባ"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_task__activity_user_id
+msgid "Responsible User"
+msgstr "ኃላፊነት የሚሰማው ተጠቃሚ"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__message_has_sms_error
+#: model:ir.model.fields,field_description:project.field_project_task__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "የኤስኤምኤስ የማድረስ ስህተት"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.portal_project_rating_partner_stat
+#: model_terms:ir.ui.view,arch_db:project.view_task_kanban
+msgid "Sad face"
+msgstr "ያዘነ ፊት"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.res_config_settings_view_form
+msgid "Schedule your teams across projects and estimate deadlines more accurately."
+msgstr "ቡድኖችዎን በፕሮጀክቶች ውስጥ ያቅዱ እና የጊዜ ገደቦችን በበለጠ በትክክል ይገምቱ።"
+
+#. module: project
+#: code:addons/project/controllers/portal.py:0
+msgid "Search <span class=\"nolabel\"> (in Content)</span>"
+msgstr "<span class=\"nolabel\">(በይዘት)</span> ይፈልጉ"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.view_project_project_filter
+msgid "Search Planning"
+msgstr "የፍለጋ እቅድ ማውጣት"
+
+#. module: project
+#: code:addons/project/controllers/portal.py:0
+msgid "Search in All"
+msgstr "በሁሉም ውስጥ ይፈልጉ"
+
+#. module: project
+#: code:addons/project/controllers/portal.py:0
+msgid "Search in Customer"
+msgstr "በደንበኛው ውስጥ ይፈልጉ"
+
+#. module: project
+#: code:addons/project/controllers/portal.py:0
+msgid "Search in Messages"
+msgstr "በመልእክቶች ውስጥ ይፈልጉ"
+
+#. module: project
+#: code:addons/project/controllers/portal.py:0
+msgid "Search in Stages"
+msgstr "በደረጃዎች ውስጥ ይፈልጉ"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__access_token
+#: model:ir.model.fields,field_description:project.field_project_task__access_token
+msgid "Security Token"
+msgstr "የደህንነት ማስመሰያ"
+
+#. module: project
+#: model:ir.model.fields.selection,name:project.selection__report_project_task_user__month__9
+msgid "September"
+msgstr "መስከረም"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__sequence
+#: model:ir.model.fields,field_description:project.field_project_task__sequence
+#: model:ir.model.fields,field_description:project.field_project_task_type__sequence
+msgid "Sequence"
+msgstr "ቅደም ተከተል"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.view_task_kanban
+msgid "Set Cover Image"
+msgstr "የሽፋን ምስል አዘጋጅ"
+
+#. module: project
+#: model_terms:digest.tip,tip_description:project.digest_tip_project_0
+msgid "Set Email Aliases"
+msgstr "የኢሜል ተለዋጭ ስሞችን ያዘጋጁ"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.res_config_settings_view_form
+msgid "Set Email Template to Stages"
+msgstr "የኢሜል አብነት ወደ ደረጃዎች ያቀናብሩ"
+
+#. module: project
+#: model:ir.actions.act_window,name:project.project_config_settings_action
+#: model:ir.ui.menu,name:project.project_config_settings_menu_action
+#: model_terms:ir.ui.view,arch_db:project.edit_project
+msgid "Settings"
+msgstr "ቅንብሮች"
+
+#. module: project
+#: model:ir.actions.act_window,name:project.portal_share_action
+#: model_terms:ir.ui.view,arch_db:project.edit_project
+#: model_terms:ir.ui.view,arch_db:project.view_project_kanban
+#: model_terms:ir.ui.view,arch_db:project.view_task_kanban
+msgid "Share"
+msgstr "አጋራ"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__is_favorite
+msgid "Show Project on dashboard"
+msgstr "ፕሮጄክትን በዳሽቦርድ ላይ አሳይ"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.view_task_search_form
+msgid "Show all records which has next action date is before today"
+msgstr "የሚቀጥለው የድርጊት ቀን ከዛሬ በፊት ያለውን ሁሉንም መዝገቦች አሳይ"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+msgid "Software Development"
+msgstr "የሶፍትዌር ልማት"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+msgid "Specifications"
+msgstr "ዝርዝሮች"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.res_config_settings_view_form
+msgid "Split your tasks to organize your work into sub-milestones"
+msgstr "ስራዎን በንዑስ ምእራፎች ለማደራጀት ተግባሮችዎን ይከፋፍሏቸው"
+
+#. module: project
+#: code:addons/project/controllers/portal.py:0
+#: model:ir.model.fields,field_description:project.field_project_task__stage_id
+#: model:ir.model.fields,field_description:project.field_report_project_task_user__stage_id
+#: model_terms:ir.ui.view,arch_db:project.portal_my_tasks
+#: model_terms:ir.ui.view,arch_db:project.view_task_project_user_search
+#: model_terms:ir.ui.view,arch_db:project.view_task_search_form
+msgid "Stage"
+msgstr "ደረጃ"
+
+#. module: project
+#: model:mail.message.subtype,name:project.mt_task_stage
+msgid "Stage Changed"
+msgstr "ደረጃ ተቀይሯል።"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.task_type_edit
+msgid "Stage Description and Tooltips"
+msgstr "የመድረክ መግለጫ እና ጠቃሚ ምክሮች"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_task_type__name
+msgid "Stage Name"
+msgstr "የመድረክ ስም"
+
+#. module: project
+#: model:mail.message.subtype,description:project.mt_task_stage
+msgid "Stage changed"
+msgstr "ደረጃ ተቀይሯል።"
+
+#. module: project
+#: model:ir.actions.act_window,name:project.open_task_type_form
+#: model:ir.ui.menu,name:project.menu_project_config_project
+msgid "Stages"
+msgstr "ደረጃዎች"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.view_task_search_form
+msgid "Starred"
+msgstr "ኮከብ የተደረገበት"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__date_start
+msgid "Start Date"
+msgstr "የመጀመሪያ ቀን"
+
+#. module: project
+#: model:ir.model.fields,help:project.field_project_task__activity_state
+msgid ""
+"Status based on activities"
+"Overdue: Due date is already passed"
+"Today: Activity date is today"
+"Planned: Future activities."
+msgstr ""
+"በእንቅስቃሴዎች ላይ የተመሰረተ ሁኔታ"
+"ጊዜው ያለፈበት፡ የማብቂያ ቀን አስቀድሞ አልፏል"
+"ዛሬ፡ የእንቅስቃሴ ቀን ዛሬ ነው።"
+"የታቀደ: የወደፊት እንቅስቃሴዎች."
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__subtask_project_id
+#: model:ir.model.fields,field_description:project.field_project_task__subtask_project_id
+msgid "Sub-task Project"
+msgstr "ንዑስ ተግባር ፕሮጀክት"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_task__subtask_count
+msgid "Sub-task count"
+msgstr "የንዑስ ተግባር ብዛት"
+
+#. module: project
+#: model:ir.actions.act_window,name:project.project_task_action_sub_task
+#: model:ir.model.fields,field_description:project.field_project_task__child_ids
+#: model:ir.model.fields,field_description:project.field_res_config_settings__group_subtask_project
+#: model_terms:ir.ui.view,arch_db:project.view_task_form2
+msgid "Sub-tasks"
+msgstr "ንዑስ ተግባራት"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_task__subtask_planned_hours
+msgid "Subtasks"
+msgstr "ንዑስ ተግባራት"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+msgid "T-shirt Printing"
+msgstr "ቲሸርት ማተም"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_tags__name
+msgid "Tag Name"
+msgstr "የመለያ ስም"
+
+#. module: project
+#: model:ir.model.constraint,message:project.constraint_project_tags_name_uniq
+msgid "Tag name already exists!"
+msgstr "የመለያ ስም አስቀድሞ አለ!"
+
+#. module: project
+#: model:ir.actions.act_window,name:project.project_tags_action
+#: model:ir.model.fields,field_description:project.field_project_task__tag_ids
+#: model:ir.ui.menu,name:project.menu_project_tags_act
+#: model_terms:ir.ui.view,arch_db:project.project_tags_form_view
+#: model_terms:ir.ui.view,arch_db:project.project_tags_tree_view
+msgid "Tags"
+msgstr "መለያዎች"
+
+#. module: project
+#: model:ir.model,name:project.model_project_task
+#: model_terms:ir.ui.view,arch_db:project.view_task_form2
+#: model_terms:ir.ui.view,arch_db:project.view_task_search_form
+msgid "Task"
+msgstr "ተግባር"
+
+#. module: project
+#: code:addons/project/models/project.py:0
+msgid "Task %s cannot have several subtask levels."
+msgstr "ተግባር %s በርካታ ንዑስ ተግባር ደረጃዎች ሊኖሩት አይችልም።"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__tasks
+msgid "Task Activities"
+msgstr "የተግባር ተግባራት"
+
+#. module: project
+#: model:mail.message.subtype,name:project.mt_project_task_blocked
+#: model:mail.message.subtype,name:project.mt_task_blocked
+msgid "Task Blocked"
+msgstr "ተግባር ታግዷል"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__task_count
+msgid "Task Count"
+msgstr "የተግባር ብዛት"
+
+#. module: project
+#: model:mail.message.subtype,description:project.mt_task_new
+#: model:mail.message.subtype,name:project.mt_project_task_new
+#: model:mail.message.subtype,name:project.mt_task_new
+msgid "Task Created"
+msgstr "ተግባር ተፈጠረ"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_res_config_settings__module_hr_timesheet
+msgid "Task Logs"
+msgstr "የተግባር ምዝግብ ማስታወሻዎች"
+
+#. module: project
+#: model:ir.filters,name:project.filter_task_report_task_pipe
+msgid "Task Pipe"
+msgstr "ተግባር ቧንቧ"
+
+#. module: project
+#: model:mail.message.subtype,name:project.mt_project_task_rating
+#: model:mail.message.subtype,name:project.mt_task_rating
+msgid "Task Rating"
+msgstr "የተግባር ደረጃ"
+
+#. module: project
+#: model:mail.message.subtype,name:project.mt_project_task_ready
+#: model:mail.message.subtype,name:project.mt_task_ready
+msgid "Task Ready"
+msgstr "ተግባር ዝግጁ"
+
+#. module: project
+#: model:ir.model,name:project.model_project_task_type
+#: model_terms:ir.ui.view,arch_db:project.task_type_edit
+#: model_terms:ir.ui.view,arch_db:project.task_type_tree
+msgid "Task Stage"
+msgstr "የተግባር ደረጃ"
+
+#. module: project
+#: model:mail.message.subtype,name:project.mt_project_task_stage
+msgid "Task Stage Changed"
+msgstr "የተግባር ደረጃ ተቀይሯል።"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_report_project_task_user__name
+#: model_terms:ir.ui.view,arch_db:project.quick_create_task_form
+msgid "Task Title"
+msgstr "የተግባር ርዕስ"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.view_task_form2
+msgid "Task Title..."
+msgstr "የተግባር ርዕስ..."
+
+#. module: project
+#: model:mail.message.subtype,description:project.mt_task_blocked
+msgid "Task blocked"
+msgstr "ተግባር ታግዷል"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.task_type_edit
+msgid "Task in progress. Click to block or set as done."
+msgstr "ተግባር በሂደት ላይ ነው። ለማገድ ጠቅ ያድርጉ ወይም እንደተከናወነ ያቀናብሩ።"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.task_type_edit
+msgid "Task is blocked. Click to unblock or set as done."
+msgstr "ተግባር ታግዷል። እገዳን ለማንሳት ጠቅ ያድርጉ ወይም እንደተከናወነ ያቀናብሩ።"
+
+#. module: project
+#: model:mail.message.subtype,description:project.mt_task_ready
+msgid "Task ready for Next Stage"
+msgstr "ተግባር ለቀጣይ ደረጃ ዝግጁ ነው።"
+
+#. module: project
+#: model:ir.actions.act_window,name:project.act_project_project_2_project_task_all
+#: model:ir.actions.act_window,name:project.action_view_task
+#: model:ir.actions.act_window,name:project.project_task_action_from_partner
+#: model:ir.model.fields,field_description:project.field_project_project__task_ids
+#: model:ir.model.fields,field_description:project.field_res_partner__task_ids
+#: model:ir.model.fields,field_description:project.field_res_users__task_ids
+#: model:ir.ui.menu,name:project.menu_project_tasks
+#: model_terms:ir.ui.view,arch_db:project.edit_project
+#: model_terms:ir.ui.view,arch_db:project.portal_layout
+#: model_terms:ir.ui.view,arch_db:project.portal_my_home
+#: model_terms:ir.ui.view,arch_db:project.portal_my_tasks
+#: model_terms:ir.ui.view,arch_db:project.view_task_calendar
+#: model_terms:ir.ui.view,arch_db:project.view_task_partner_info_form
+#: model_terms:ir.ui.view,arch_db:project.view_task_project_user_search
+#: model_terms:ir.ui.view,arch_db:project.view_task_search_form
+#: model_terms:ir.ui.view,arch_db:project.view_task_tree2
+#: model:project.project,label_tasks:project.project_project_data
+msgid "Tasks"
+msgstr "ተግባራት"
+
+#. module: project
+#: model:ir.actions.act_window,name:project.action_project_task_user_tree
+#: model:ir.model,name:project.model_report_project_task_user
+#: model:ir.ui.menu,name:project.menu_project_report_task_analysis
+#: model_terms:ir.ui.view,arch_db:project.view_task_project_user_graph
+#: model_terms:ir.ui.view,arch_db:project.view_task_project_user_pivot
+#: model_terms:ir.ui.view,arch_db:project.view_task_project_user_search
+msgid "Tasks Analysis"
+msgstr "ተግባራት ትንተና"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.res_config_settings_view_form
+msgid "Tasks Management"
+msgstr "ተግባራት አስተዳደር"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__type_ids
+#: model_terms:ir.ui.view,arch_db:project.task_type_search
+msgid "Tasks Stages"
+msgstr "የተግባር ደረጃዎች"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+msgid "Testing"
+msgstr "በመሞከር ላይ"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+msgid "Tests"
+msgstr "ሙከራዎች"
+
+#. module: project
+#: model:ir.model.fields,help:project.field_project_project__alias_model_id
+msgid "The model (Odoo Document Kind) to which this alias corresponds. Any incoming email that does not reply to an existing record will cause the creation of a new record of this model (e.g. a Project Task)"
+msgstr " ይህ ተለዋጭ ስም የሚስማማበት ሞዴል (ኦዱ ሰነድ ዓይነት)። ለነባር መዝገብ የማይመልስ ማንኛውም ገቢ ኢሜይል የዚህ ሞዴል አዲስ መዝገብ እንዲፈጠር ያደርገዋል (ለምሳሌ የፕሮጀክት ተግባር)"
+
+#. module: project
+#: model:ir.model.fields,help:project.field_project_project__alias_name
+msgid "The name of the email alias, e.g. \'jobs\' if you want to catch emails for <jobs@example.odoo.com>"
+msgstr "የኢሜል ተለዋጭ ስም ፣ ለምሳሌ ለ<jobs@example.odoo.com> ኢሜይሎችን ማግኘት ከፈለጉ \'ስራዎች\'"
+
+#. module: project
+#: model:ir.model.fields,help:project.field_project_project__alias_user_id
+msgid "The owner of records created upon receiving emails on this alias. If this field is not set the system will attempt to find the right owner based on the sender (From) address, or will use the Administrator account if no system user is found for that address."
+msgstr " በዚህ ቅጽል ስም ኢሜይሎችን ሲቀበሉ የተፈጠሩ የመዝገቦች ባለቤት። ይህ መስክ ካልተዋቀረ ስርዓቱ በላኪው (ከ) አድራሻ ላይ በመመስረት ትክክለኛውን ባለቤት ለማግኘት ይሞክራል ወይም ለዚያ አድራሻ ምንም የስርዓት ተጠቃሚ ካልተገኘ የአስተዳዳሪ መለያውን ይጠቀማል።"
+
+#. module: project
+#: code:addons/project/models/project.py:0
+msgid "The project cannot be shared with the recipient(s) because the privacy of the project is too restricted. Set the privacy to \'Visible by following customers\' in order to make it accessible by the recipient(s)."
+msgstr "የፕሮጀክቱ ግላዊነት በጣም የተገደበ ስለሆነ ፕሮጀክቱ ለተቀባዩ(ዎች) መጋራት አይቻልም። ግላዊነትን በተቀባዩ(ዎች) ተደራሽ ለማድረግ \'ደንበኞችን በመከተል የሚታይ\' እንዲሆን ያቀናብሩት።"
+
+#. module: project
+#: code:addons/project/models/project.py:0
+msgid "The task cannot be shared with the recipient(s) because the privacy of the project is too restricted. Set the privacy of the project to \'Visible by following customers\' in order to make it accessible by the recipient(s)."
+msgstr "የፕሮጀክቱ ግላዊነት በጣም የተገደበ ስለሆነ ስራውን ለተቀባዩ(ዎች) ማጋራት አይቻልም። የፕሮጀክቱን ግላዊነት በተቀባዩ(ዎች) ተደራሽ ለማድረግ \'ደንበኞችን በመከተል የሚታይ\' እንዲሆን ያድርጉት።"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.portal_my_projects
+msgid "There are no projects."
+msgstr "ምንም ፕሮጀክቶች የሉም."
+
+#. module: project
+#: model_terms:ir.actions.act_window,help:project.rating_rating_action_view_project_rating
+msgid "There are no ratings for this object at the moment"
+msgstr "በአሁኑ ጊዜ ለዚህ ነገር ምንም ደረጃዎች የሉም"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.portal_my_tasks
+msgid "There are no tasks."
+msgstr "ምንም ተግባራት የሉም."
+
+#. module: project
+#: model:ir.model.fields,help:project.field_project_task__email_from
+msgid "These people will receive email."
+msgstr "እነዚህ ሰዎች ኢሜይል ይደርሳቸዋል።"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+msgid "This Month"
+msgstr "በዚህ ወር"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+msgid "This Week"
+msgstr "በዚህ ሳምንት"
+
+#. module: project
+#: model_terms:ir.actions.act_window,help:project.action_project_task_user_tree
+msgid "This report allows you to analyse the performance of your projects and users. You can analyse the quantities of tasks, the hours spent compared to the planned hours, the average number of days to open or close a task, etc."
+msgstr "ይህ ሪፖርት የፕሮጀክቶችዎን እና የተጠቃሚዎችን አፈፃፀም እንዲተነትኑ ያስችልዎታል። የተግባሮችን ብዛት፣ከታቀዱት ሰዓቶች ጋር ሲነጻጸር ያሳለፉትን ሰዓቶች፣አንድን ተግባር ለመክፈት ወይም ለመዝጋት አማካይ የቀናት ብዛት፣ወዘተ መተንተን ይችላሉ።"
+
+#. module: project
+#: model:ir.model.fields,help:project.field_project_task_type__fold
+msgid "This stage is folded in the kanban view when there are no records in that stage to display."
+msgstr "ይህ ደረጃ በካንባን እይታ ውስጥ የሚታጠፈው በዚያ ደረጃ ላይ ምንም መዛግብት በማይኖርበት ጊዜ ነው።"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.task_type_edit
+msgid "This step is done. Click to block or set in progress."
+msgstr "ይህ እርምጃ ተከናውኗል. ለማገድ ወይም በሂደት ላይ ለማቀናበር ጠቅ ያድርጉ።"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/tours/project.js:0
+msgid "This will create a new project and redirect us to its stages."
+msgstr "ይህ አዲስ ፕሮጀክት ይፈጥራል እና ወደ ደረጃው ይመራናል።"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.res_config_settings_view_form
+msgid "Time Management"
+msgstr "የጊዜ አጠቃቀም"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.edit_project
+msgid "Time Scheduling"
+msgstr "የጊዜ መርሐግብር"
+
+#. module: project
+#: model:ir.model.fields,help:project.field_project_project__resource_calendar_id
+msgid "Timetable working hours to adjust the gantt diagram report"
+msgstr "የጋንት ዲያግራም ዘገባን ለማስተካከል የጊዜ ሰሌዳ የስራ ሰዓት"
+
+#. module: project
+#: code:addons/project/controllers/portal.py:0
+msgid "Title"
+msgstr "ርዕስ"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+msgid "To Print"
+msgstr "ለማተም"
+
+#. module: project
+#: model_terms:ir.actions.act_window,help:project.act_project_project_2_project_task_all
+msgid ""
+"To get things done, use activities and status on tasks.<br>"
+"                    Chat in real time or by email to collaborate efficiently."
+msgstr "ነገሮችን ለማከናወን ተግባሮችን እና ሁኔታዎችን በተግባሮች ላይ ተጠቀም።<br>                     በብቃት ለመተባበር በእውነተኛ ጊዜ ወይም በኢሜል ይወያዩ።"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+msgid "Today"
+msgstr "ዛሬ"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.view_task_search_form
+msgid "Today Activities"
+msgstr "የዛሬ ተግባራት"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.portal_project_rating_partner_stat
+msgid "Top 5 partner ratings of last 15 days."
+msgstr "ያለፉት 15 ቀናት 5 ከፍተኛ የአጋር ደረጃዎች።"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.res_config_settings_view_form
+msgid "Track customer satisfaction on tasks"
+msgstr "በተግባሮች ላይ የደንበኞችን እርካታ ይከታተሉ"
+
+#. module: project
+#: model:ir.model.fields.selection,name:project.selection__project_project__rating_status_period__bimonthly
+msgid "Twice a Month"
+msgstr "በወር ሁለት ጊዜ"
+
+#. module: project
+#: model:ir.model.fields,help:project.field_project_task__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "በመዝገብ ላይ ያለ ልዩ እንቅስቃሴ አይነት።"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.view_task_project_user_search
+#: model_terms:ir.ui.view,arch_db:project.view_task_search_form
+msgid "Unassigned"
+msgstr "ያልተመደበ"
+
+#. module: project
+#: code:addons/project/models/project.py:0
+msgid "Unknown Analytic Account"
+msgstr "ያልታወቀ የበጀት መለያ"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__message_unread
+#: model:ir.model.fields,field_description:project.field_project_task__message_unread
+#: model_terms:ir.ui.view,arch_db:project.view_task_kanban
+#: model_terms:ir.ui.view,arch_db:project.view_task_search_form
+msgid "Unread Messages"
+msgstr "ያልተነበቡ መልእክቶች"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__message_unread_counter
+#: model:ir.model.fields,field_description:project.field_project_task__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "ያልተነበቡ መልዕክቶች ቆጣሪ"
+
+#. module: project
+#: model:res.groups,name:project.group_project_rating
+msgid "Use Rating on Planning"
+msgstr "በፕሮጀክት ላይ ደረጃ አሰጣጥን ተጠቀም"
+
+#. module: project
+#: model:res.groups,name:project.group_subtask_project
+msgid "Use Subtasks"
+msgstr "ንዑስ ተግባራትን ተጠቀም"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__label_tasks
+msgid "Use Tasks as"
+msgstr "ተግባሮችን እንደ ተጠቀም"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.res_config_settings_view_form
+msgid "Use collaborative rich text pads on tasks"
+msgstr "በተግባሮች ላይ በትብብር የበለጸጉ የጽሑፍ ፓዶችን ይጠቀሙ"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/tours/project.js:0
+msgid "Use the breadcrumbs to <b>go back to your tasks pipeline</b>."
+msgstr "<b>ወደ ተግባርህ ቧንቧ ለመመለስ</b>የዳቦ ፍርፋሪውን ተጠቀም።"
+
+#. module: project
+#: model:res.groups,name:project.group_project_user
+msgid "User"
+msgstr "ተጠቃሚ"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_task__user_email
+msgid "User Email"
+msgstr "የተጠቃሚ ኢሜይል"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__privacy_visibility
+msgid "Visibility"
+msgstr "ታይነት"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+msgid "Waiting for the next stage: use %s and %s bullets."
+msgstr "የሚቀጥለውን ደረጃ በመጠበቅ ላይ፡ %s እና %s ጥይቶችን ይጠቀሙ።"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/tours/project.js:0
+#: code:addons/project/static/src/js/tours/project.js:0
+msgid "Want a better way to <b>manage your projects</b>? <i>It starts here.</i>"
+msgstr "<b>ፕሮጀክቶችዎን ለማስተዳደር</b> የተሻለ መንገድ ይፈልጋሉ? <i>እዚህ ይጀምራል።</i>"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__website_message_ids
+#: model:ir.model.fields,field_description:project.field_project_task__website_message_ids
+msgid "Website Messages"
+msgstr "የድር ጣቢያ መልዕክቶች"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+msgid "Website Redesign"
+msgstr "የድር ጣቢያ እንደገና ዲዛይን"
+
+#. module: project
+#: model:ir.model.fields,help:project.field_project_project__website_message_ids
+#: model:ir.model.fields,help:project.field_project_task__website_message_ids
+msgid "Website communication history"
+msgstr "የድር ጣቢያ የግንኙነት ታሪክ"
+
+#. module: project
+#: model:ir.model.fields.selection,name:project.selection__project_project__rating_status_period__weekly
+msgid "Weekly"
+msgstr "በየሳምንቱ"
+
+#. module: project
+#: model:ir.model.fields,help:project.field_project_project__is_favorite
+msgid "Whether this project should be displayed on your dashboard."
+msgstr "ይህ ፕሮጀክት በእርስዎ ዳሽቦርድ ላይ መታየት አለበት ወይ?"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_project__resource_calendar_id
+msgid "Working Time"
+msgstr "የስራ ጊዜ"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.view_task_form2
+msgid "Working Time to Assign"
+msgstr "ለመመደብ የስራ ጊዜ"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.view_task_form2
+msgid "Working Time to Close"
+msgstr "የሚዘጋበት የስራ ጊዜ"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_task__working_days_open
+msgid "Working days to assign"
+msgstr "ለመመደብ የስራ ቀናት"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_task__working_days_close
+msgid "Working days to close"
+msgstr "ለመዘጋት የስራ ቀናት"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_task__working_hours_open
+msgid "Working hours to assign"
+msgstr "ለመመደብ የስራ ሰዓታት"
+
+#. module: project
+#: model:ir.model.fields,field_description:project.field_project_task__working_hours_close
+msgid "Working hours to close"
+msgstr "ለመዝጋት የስራ ሰዓታት"
+
+#. module: project
+#: model:ir.filters,name:project.filter_task_report_workload
+msgid "Workload"
+msgstr "የሥራ ጫና"
+
+#. module: project
+#. openerp-web
+#: code:addons/project/static/src/js/project_task_kanban_examples.js:0
+msgid "Writing"
+msgstr "መጻፍ"
+
+#. module: project
+#: model:ir.model.fields.selection,name:project.selection__project_project__rating_status_period__yearly
+msgid "Yearly"
+msgstr "በየአመቱ"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.task_type_edit
+msgid "You can also add a description to help your coworkers understand the meaning and purpose of the stage."
+msgstr "እንዲሁም የስራ ባልደረቦችዎ የመድረኩን ትርጉም እና አላማ እንዲረዱ ለማገዝ መግለጫ ማከል ይችላሉ።"
+
+#. module: project
+#: code:addons/project/models/analytic_account.py:0
+msgid "You cannot change the company of an analytical account if it is related to a project."
+msgstr "ከፕሮጀክት ጋር የተያያዘ ከሆነ የበጀት መለያውን ኩባንያ መቀየር አይችሉም።"
+
+#. module: project
+#: code:addons/project/models/project.py:0
+msgid "You cannot delete a project containing tasks. You can either archive it or first delete all of its tasks."
+msgstr "ተግባራትን የያዘ ፕሮጀክት መሰረዝ አይችሉም። እሱን በማህደር ማስቀመጥ ወይም በመጀመሪያ ሁሉንም ተግባሮቹን መሰረዝ ይችላሉ።"
+
+#. module: project
+#: model_terms:ir.actions.act_window,help:project.open_view_project_all_packages
+msgid "activate a sample Planning"
+msgstr "የናሙና እቅድ ማውጣት"
+
+#. module: project
+#: model_terms:ir.actions.act_window,help:project.open_view_project_all
+msgid "activate a sample project"
+msgstr "የናሙና ፕሮጀክት ማግበር"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.portal_project_rating_partner_stat
+msgid "average"
+msgstr "አማካይ"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.portal_project_rating_partner_stat
+msgid "bad"
+msgstr "መጥፎ"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.project_project_view_form_simplified
+msgid "e.g. Office Party"
+msgstr "ለምሳሌ. የቢሮ ፓርቲ"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.portal_my_tasks
+msgid "for project:"
+msgstr "ለፕሮጀክት፡-"
+
+#. module: project
+#: model_terms:ir.ui.view,arch_db:project.portal_project_rating_partner_stat
+msgid "happy"
+msgstr "ደስተኛ"
+
+#. module: project
+#: code:addons/project/models/project.py:0
+msgid "task"
+msgstr "ተግባር"
+
+#. module: project
+#: model_terms:ir.actions.act_window,help:project.open_view_project_all
+#: model_terms:ir.actions.act_window,help:project.open_view_project_all_packages
+msgid "to play with."
+msgstr "ጋር መጫወት."

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem name="Approve Requests" id="all_employee_Aprrove" web_icon="request_approval_menu,static/img/43716.png"
+    groups="hr.group_user_custom,hr_disciplinary_tracking.group_employee_disciplinary_committee,hr_disciplinary_tracking.group_department_disciplinary_committee,hr_disciplinary_tracking.group_company_disciplinary_committee"/>
+   
+
+    <!-- postition or salary request approval menu from module Hr_request_position  -->
+    <record id="hr_request_position.menu_to_approve_postition_salary_request" model="ir.ui.menu">    
+        <field name="parent_id" ref="hr_menu_organizer.hr_employee_activities_menu"/>
+    </record>
+
+    <record id="hr_recruitment_request.menu_to_approve_recruitment_requests" model="ir.ui.menu">
+        <!-- recruitment request approval menu from hr_recruitment_request module for records with status not equal to draft  -->
+        <field name="parent_id" ref="hr_menu_organizer.hr_employee_activities_menu"/>
+    </record>
+</odoo>
+
+
+
+
+

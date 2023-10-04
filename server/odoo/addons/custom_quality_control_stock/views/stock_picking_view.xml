@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright 2018 Simone Rubino - Agile Business Group
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="action_qc_inspection_per_picking" model="ir.actions.act_window">
+        <field name="name">Quality inspections from picking</field>
+        <field name="res_model">qc.inspection</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('picking_id', '=', active_id)]</field>
+    </record>
+    <record id="action_qc_inspection_per_picking_done" model="ir.actions.act_window">
+        <field name="name">Quality inspection from picking done</field>
+        <field name="res_model">qc.inspection</field>
+        <field name="view_mode">tree,form</field>
+        <field
+            name="domain"
+        >[('picking_id', '=', active_id), ('state', 'not in', ['draft', 'waiting'])]</field>
+    </record>
+    <record id="action_qc_inspection_per_picking_passed" model="ir.actions.act_window">
+        <field name="name">Quality inspection from picking passed</field>
+        <field name="res_model">qc.inspection</field>
+        <field name="view_mode">tree,form</field>
+        <field
+            name="domain"
+        >[('picking_id', '=', active_id), ('state', '=', 'success')]</field>
+    </record>
+    <record id="action_qc_inspection_per_picking_failed" model="ir.actions.act_window">
+        <field name="name">Quality inspections from picking failed</field>
+        <field name="res_model">qc.inspection</field>
+        <field name="view_mode">tree,form</field>
+        <field
+            name="domain"
+        >[('picking_id', '=', active_id), ('state', '=', 'failed')]</field>
+    </record>
+    <record model="ir.ui.view" id="stock_picking_qc_view">
+        <field name="name">stock.picking.qc.view</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form" />
+        <field
+            name="groups_id"
+            eval="[(4, ref('custom_quality_control.group_quality_control_user'))]"
+        />
+
+        <field name="arch" type="xml">
+            <div name="button_box" position="inside">
+                <button
+                    class="oe_inline oe_stat_button"
+                    type="action"
+                    name="%(action_qc_inspection_per_picking)d"
+                    icon="fa-list"
+                >
+                    <field
+                        name="created_inspections"
+                        widget="statinfo"
+                        string="inspections"
+                    />
+                </button>
+                <button
+                    class="oe_inline oe_stat_button"
+                    type="action"
+                    name="%(action_qc_inspection_per_picking_done)d"
+                    icon="fa-pencil"
+                >
+                    <field name="done_inspections" widget="statinfo" />
+                </button>
+                <button
+                    class="oe_inline oe_stat_button"
+                    type="action"
+                    name="%(action_qc_inspection_per_picking_passed)d"
+                    icon="fa-thumbs-o-up"
+                >
+                    <field name="passed_inspections" widget="statinfo" />
+                </button>
+                <button
+                    class="oe_inline oe_stat_button"
+                    type="action"
+                    name="%(action_qc_inspection_per_picking_failed)d"
+                    icon="fa-thumbs-o-down"
+                >
+                    <field name="failed_inspections" widget="statinfo" />
+                </button>
+            </div>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="stock_picking_form_view_inherit_view">
+    <field name="name">stock.picking.form.inherit</field>
+    <field name="model">stock.picking</field>
+    <field name="inherit_id" ref="stock.view_picking_form" />
+    <field name="arch" type="xml">
+        <xpath expr="//header/button[1]" position="after">
+            <button name="action_inspection"
+                    string="Assign to inspections"
+                    class="oe_highlight"  
+                    attrs="{'invisible': ['|', ('state', 'in', ('draft','confirmed','done')), ('is_insepction_needed', '=', False)]}" 
+                    type="object"/>
+        </xpath>
+         <field name="origin" position="after">
+            <field name="is_insepction_needed" string="Need for inspections"/>
+            <field name="is_assigned" invisible="1"/>
+        </field>
+        <xpath expr = "//field[@name ='move_ids_without_package']/tree/field[@name='product_uom_qty']" position = "after" > 
+          <field name="inspection_failed_qty" attrs="{'column_invisible': [('parent.is_assigned', '=', False)]}" />
+       </xpath> 
+        <xpath expr = "//field[@name ='move_ids_without_package']/tree/field[@name='product_uom_qty']" position = "after" > 
+          <field name="inspection_success_qty" attrs="{'column_invisible': [('parent.is_assigned', '=', False)]}" />
+       </xpath> 
+         
+       
+    </field>
+</record>
+
+
+    <record id="view_stock_move_operations_inherit" model="ir.ui.view">
+    <field name="name">stock.move.operations.form</field>
+    <field name="model">stock.move</field>
+    <field name="priority">1000</field>
+    <field name="inherit_id" ref="stock.view_stock_move_operations" />
+    <field name="arch" type="xml">
+       
+        <field name="next_serial" position="before">
+            <!-- <div class="o_row"> -->
+                <field name="is_insepction_needed" invisible="1"/>
+                <field name="inspection_success_qty"  string="Inspection Success" attrs="{'invisible': [('is_insepction_needed', '=', False)]}" readonly="1" />
+                <field name="inspection_failed_qty" string="Inspection Failed" attrs="{'invisible': [('is_insepction_needed', '=', False)]}" readonly="1" />
+            <!-- </div> --> 
+        </field>
+        <!-- </field> -->
+    </field>
+    </record>
+
+      <!-- <record id="view_stock_move_line_inherit" model="ir.ui.view">
+    <field name="name">stock.move.line.form.inherit</field>
+    <field name="model">stock.move</field>
+    <field name="priority">1000</field>
+        <field name="inherit_id" ref="stock.view_move_line_form" />
+        <field name="arch" type="xml">
+        <xpath expr = "//field[@name='lot_name']" position = "after" > 
+          <field name="purchase_ref" />
+       </xpath> 
+        
+  
+    </field>
+    </record> -->
+
+ <record id="view_product_lot_tree_inherit" model="ir.ui.view">
+    <field name="name">stock.production.lot.tree</field>
+    <field name="model">stock.production.lot</field>
+    <field name="inherit_id" ref="stock.view_production_lot_tree" />
+            <field name="arch" type="xml">
+                <xpath expr="//tree" position="replace">
+                    <tree decoration-success="product_qty == 0">
+                         <field name="name"/>
+                        <field name="ref" optional="show"/>
+                        <field name="product_qty" optional="show"/>
+
+                        <field name="purchase_ref" string="Purchase Referance"/>
+                        <field name="product_id" readonly="1"/>
+                        <field name="create_date" optional="show"/>
+                        <field name="company_id" groups="base.group_multi_company"/>
+                    </tree>
+                </xpath>
+            </field>
+        </record>
+
+
+    <record id="view_product_catgory_code_inherit" model="ir.ui.view">
+    <field name="name">product.category.form.inherit</field>
+    <field name="model">product.category</field>
+        <field name="inherit_id" ref="product.product_category_form_view" />
+        <field name="arch" type="xml">
+        <xpath expr = "//field[@name='parent_id']" position = "after" > 
+             <!-- <group col="2"> -->
+                 <field name="cat_code" placeholder="e.g. Fur001" style="width: 200px;"/>
+            <!-- </group> -->
+           
+       </xpath> 
+        
+  
+    </field>
+    </record>
+
+
+   
+
+</odoo>

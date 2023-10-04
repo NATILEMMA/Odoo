@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="fed_state_ethiopia_tree" model="ir.ui.view">
+        <field name="name">Sub Cities</field>
+        <field name="model">res.state.subcity</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="name"/>
+                <field name="code"/>
+                <field name="state_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="fed_state_ethiopia_form" model="ir.ui.view">
+        <field name="name">Sub Cities</field>
+        <field name="model">res.state.subcity</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                        <field name="name"/>
+                        <field name="code"/>
+                        <field name="state_id"/>
+                    </group>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="fed_state_ethiopia_action" model="ir.actions.act_window">
+        <field name="name">Sub Cities</field>
+        <field name="res_model">res.state.subcity</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Sub Cities"
+              id="fed_state_ethiopia_menu"
+              sequence="5"
+              action="fed_state_ethiopia_action"
+              parent="contacts.menu_localisation"/>
+
+</odoo>

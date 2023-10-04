@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="visitor_number_tree">
+            <field name="name">Visitor Number</field>
+            <field name="model">visitor.number</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="visitor_number_form">
+            <field name="name">Visitor Number</field>
+            <field name="model">visitor.number</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <field name="name"/>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="fo_visitor_form_view">
+            <field name="name">Visitors</field>
+            <field name="model">res.partner</field>
+            <field name="arch" type="xml">
+                <form string="Visitors" duplicate="false">
+                    <sheet>
+                        <div class="oe_right oe_button_box" name="button_box">
+                            <!-- <button class="oe_inline oe_stat_button" name="%(visitor_gate_management.fo_visit_action_visitor)d" type="action" icon="fa-arrows-v"
+                               context="{'default_visitor': [active_id],'search_default_visitor': [active_id]}"> -->
+                            <button class="oe_inline oe_stat_button" name="%(visitor_gate_management.fo_visit_action_visitor)d" type="action" icon="fa-arrows-v">
+                                <field name="visit_count" widget="statinfo" string="# Visits" style="margin-right:50px" force_save="1"/>
+                            </button>
+                        </div>
+                        <field name="image_1920" widget="image" class="oe_avatar" style="margin-right:50px"/>
+                        <div name="title_name" class="oe_title">
+                            <h1>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <field name="name"
+                                                placeholder="FullName"
+                                                style="padding-right:10px" required="1"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <label for="street" string="Address"/>
+                                <div class="o_address_format">
+                                    <field name="country_id" placeholder="Country" class="o_address_country" options='{"no_open": True, "no_create": True}' required="1"/>
+                                    <field name="city_id" placeholder="Region/City Administrator" class="o_address_city" options='{"no_open": True, "no_create": True}' required="1"/>
+                                    <field name="subcity" placeholder="Sub City" options='{"no_open": True, "no_create": True}' required="1"/>
+                                    <field name="woreda_id" placeholder="Woreda" required="1"/>
+                                </div>
+                                <field name="company_info"/>
+                                <field name="visitor_id_number" readonly="1"/>
+                            </group>
+                            <group>
+                                <field name="phone"/>
+                                <field name="email"/>
+                                <field name="id_proof" required="1"/>
+                                <field name="id_proof_no" required="1"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="fo_visitor_kanban_view" model="ir.ui.view">
+            <field name="name">Visitor</field>
+            <field name="model">res.partner</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <field name="id"/>
+                    <field name="image_1920"/>
+                    <field name="name"/>
+                    <field name="phone"/>
+                    <field name="city_id"/>
+                    <field name="subcity"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_global_click">
+                                <div class="o_kanban_image">
+                                    <img t-att-src="kanban_image('res.partner', 'image_1920', record.id.value)"/>
+                                </div>
+                                <div class="oe_kanban_details">
+                                    <strong>
+                                        <ul>
+                                            <li>Name: <field name="name"/></li>
+                                            <li>Phone: <field name="phone"/></li>
+                                            <li>City: <field name="city_id"/></li>
+                                            <li>Sub City: <field name="subcity"/></li>
+                                        </ul>
+                                    </strong>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+        
+
+        <record model="ir.ui.view" id="fo_visitor_tree_view">
+            <field name="name">Visitors</field>
+            <field name="model">res.partner</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string='Visitors'>
+                    <field name="name"/>
+                    <field name="phone"/>
+                    <field name="company_info"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="fo_visitor_graph">
+            <field name="name">Visitors</field>
+            <field name="model">res.partner</field>
+            <field name="arch" type="xml">
+                <graph string="Visitor">
+                    <field name="name"/>
+                    <field name="visit_count"/>
+                </graph>
+            </field>
+        </record>
+
+        <record id="fo_visitor_graph_action" model="ir.actions.act_window">
+            <field name="name">Visitors</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_mode">graph</field>
+        </record>
+
+        <record id="fo_visitor_action" model="ir.actions.act_window">
+            <field name="name">Visitors</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_mode">kanban,tree,form,pivot,graph</field>
+            <field name="view_id" ref="fo_visitor_kanban_view"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to Create New Visitor.
+                </p>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="visitor_kanban_id">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">kanban</field>
+            <field name="view_id" ref="fo_visitor_kanban_view"/>
+            <field name="act_window_id" ref="fo_visitor_action"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="visitor_tree_id">
+            <field name="sequence" eval="2"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="fo_visitor_tree_view"/>
+            <field name="act_window_id" ref="fo_visitor_action"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="visitor_form_id">
+            <field name="sequence" eval="3"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="fo_visitor_form_view"/>
+            <field name="act_window_id" ref="fo_visitor_action"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="visitor_graph_id">
+            <field name="sequence" eval="4"/>
+            <field name="view_mode">graph</field>
+            <field name="view_id" ref="fo_visitor_graph"/>
+            <field name="act_window_id" ref="fo_visitor_action"/>
+        </record>
+
+        <record id="locker_name_tree" model="ir.ui.view">
+            <field name="name">Locker Name</field>
+            <field name="model">locker.name</field>
+            <field name="arch" type="xml">
+                <tree editable="top">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="fo_locker_name_action" model="ir.actions.act_window">
+            <field name="name">Locker Name</field>
+            <field name="res_model">locker.name</field>
+            <field name="view_mode">tree</field>
+        </record>
+
+        <record id="visitor_number_tree" model="ir.ui.view">
+            <field name="name">Visitor ID Number</field>
+            <field name="model">visitor.number</field>
+            <field name="arch" type="xml">
+                <tree editable="top">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="fo_visitor_number_action" model="ir.actions.act_window">
+            <field name="name">Visitor ID Number</field>
+            <field name="res_model">visitor.number</field>
+            <field name="view_mode">tree</field>
+        </record>
+
+        <record id="id_proof_tree" model="ir.ui.view">
+            <field name="name">ID Proof</field>
+            <field name="model">id.proof</field>
+            <field name="arch" type="xml">
+                <tree editable="top">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="fo_id_proof_action" model="ir.actions.act_window">
+            <field name="name">ID Proof</field>
+            <field name="res_model">id.proof</field>
+            <field name="view_mode">tree</field>
+        </record>
+
+        <record id="fo_purpose_tree" model="ir.ui.view">
+            <field name="name">Purpose of Visit</field>
+            <field name="model">fo.purpose</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="fo_purpose_form" model="ir.ui.view">
+            <field name="name">Purpose of Visit</field>
+            <field name="model">fo.purpose</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                            </group>
+                            <group>
+                                <field name="description"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="fo_purpose_action" model="ir.actions.act_window">
+            <field name="name">Purpose of Visit</field>
+            <field name="res_model">fo.purpose</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- <menuitem id="visits_report_tab"
+                  name="Visits"
+                  parent="report.all_module_report"
+                  sequence="10"/>
+
+        <menuitem id="visitor_report_tab"
+                  name="Visitors"
+                  parent="visits_report_tab"
+                  sequence="1"
+                  action="fo_visitor_graph_action"/>
+
+        <menuitem id="employee_visit_tab"
+                  name="Employee Report"
+                  parent="visits_report_tab"
+                  sequence="3"
+                  action="fo_today_visit_employee_graph_action"/> -->
+
+        <menuitem id="gate_visitor_mgmnt_main"
+                  name="Visits"
+                  sequence="2"
+                  web_icon="visitor_gate_management,static/description/reception-desk.png"
+                  groups="visitor_gate_management.group_receptionist,visitor_gate_management.group_employees,visitor_gate_management.group_managers"/>
+
+        <menuitem id="visitor_mgmnt_menu"
+                  name="Visitor Management"
+                  parent="gate_visitor_mgmnt_main"
+                  sequence="1"/>
+
+        <menuitem id="visitor_menu"
+                  name="Visitor"
+                  parent="visitor_mgmnt_menu"
+                  action="fo_visitor_action"
+                  groups="visitor_gate_management.group_employees,visitor_gate_management.group_receptionist,visitor_gate_management.group_managers"
+                  sequence="1"/>
+
+        <menuitem id="fo_visit_menu"
+                  name="Visits"
+                  parent="visitor_mgmnt_menu"
+                  action="fo_visit_action"
+                  groups="visitor_gate_management.group_employees,visitor_gate_management.group_receptionist,visitor_gate_management.group_managers"
+                  sequence="2"/>
+
+        <menuitem id="fo_today_visit_menu"
+                  name="Today's Visits"
+                  parent="gate_visitor_mgmnt_main"
+                  action="fo_today_visit_action"
+                  groups="visitor_gate_management.group_receptionist"
+                  sequence="2"/>
+
+        <menuitem id="fo_configuration"
+                  name="Configuration"
+                  parent="gate_visitor_mgmnt_main"
+                  groups="visitor_gate_management.group_receptionist,visitor_gate_management.group_managers,visitor_gate_management.group_employees"
+                  sequence="5"/>
+
+        <menuitem id="locker_action"
+                  name="Locker Name"
+                  parent="fo_configuration"
+                  action="fo_locker_name_action"
+                  groups="visitor_gate_management.group_receptionist,visitor_gate_management.group_managers"
+                  sequence="1"/>
+
+        <menuitem id="visitor_action"
+                  name="Visitor ID"
+                  parent="fo_configuration"
+                  action="fo_visitor_number_action"
+                  groups="visitor_gate_management.group_receptionist,visitor_gate_management.group_managers"
+                  sequence="2"/>
+
+        <menuitem id="id_proof_action"
+                  name="ID Proof"
+                  parent="fo_configuration"
+                  action="fo_id_proof_action"
+                  groups="visitor_gate_management.group_receptionist,visitor_gate_management.group_managers"
+                  sequence="3"/>
+
+        <menuitem id="purpose_action"
+                  name="Purpose of Visit"
+                  parent="fo_configuration"
+                  action="fo_purpose_action"
+                  groups="visitor_gate_management.group_receptionist,visitor_gate_management.group_managers"
+                  sequence="4"/>
+
+        <menuitem id="menu_appointment_option"
+                  name="Appointment Options"
+                  parent="fo_configuration"
+                  action="appointment_option_action"
+                  groups="visitor_gate_management.group_managers,visitor_gate_management.group_receptionist"
+                  sequence="5"/>
+
+        <menuitem name="Appointment Slots"
+                  id="menu_appointment_slot"
+                  parent="fo_configuration"
+                  action="appointment_slot_action"
+                  groups="visitor_gate_management.group_managers,visitor_gate_management.group_employees"
+                  sequence="6"/>
+
+    </data>
+</odoo>

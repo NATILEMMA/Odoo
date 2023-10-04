@@ -1,0 +1,224 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_asset_depreciation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20191109\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-28 21:36+0000\n"
+"PO-Revision-Date: 2020-06-28 21:36+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: account_asset_depreciation
+#: model_terms:ir.ui.view,arch_db:account_asset_depreciation.depreciation_report_pdf
+msgid ""
+")\n"
+"                        <br/>\n"
+"                        <strong>Asset categories:</strong>"
+msgstr ""
+
+#. module: account_asset_depreciation
+#: model_terms:ir.ui.view,arch_db:account_asset_depreciation.depreciation_report_pdf
+msgid "Accumulated on last years"
+msgstr "Acumulado años anteriores"
+
+#. module: account_asset_depreciation
+#: model_terms:ir.ui.view,arch_db:account_asset_depreciation.depreciation_report_pdf
+msgid "Annual percentage"
+msgstr "Porcentage anual"
+
+#. module: account_asset_depreciation
+#: model_terms:ir.ui.view,arch_db:account_asset_depreciation.depreciation_report_pdf
+msgid "Asset"
+msgstr "Activo"
+
+#. module: account_asset_depreciation
+#: model_terms:ir.ui.view,arch_db:account_asset_depreciation.depreciation_report_pdf
+msgid "Asset account"
+msgstr "Cuenta del activo"
+
+#. module: account_asset_depreciation
+#: model:ir.actions.report,name:account_asset_depreciation.depreciation_report
+#: model:ir.model,name:account_asset_depreciation.model_asset_depreciation_report_wizard
+#: model:ir.ui.menu,name:account_asset_depreciation.menu_asset_depreciation_report
+msgid "Asset depreciation report"
+msgstr "Reporte de depreciación de activos"
+
+#. module: account_asset_depreciation
+#: model:ir.model,name:account_asset_depreciation.model_account_asset_asset
+msgid "Asset/Revenue Recognition"
+msgstr ""
+
+#. module: account_asset_depreciation
+#: model_terms:ir.ui.view,arch_db:account_asset_depreciation.depreciation_report_pdf
+msgid "Assets depreciation report"
+msgstr "Reporte de depreciación de activos"
+
+#. module: account_asset_depreciation
+#: model_terms:ir.ui.view,arch_db:account_asset_depreciation.depreciation_report_pdf
+msgid "At starting year"
+msgstr "Desde el inicio del año"
+
+#. module: account_asset_depreciation
+#: model:ir.model.fields,field_description:account_asset_depreciation.field_account_asset_asset__c_year_amount
+msgid "C Year Amount"
+msgstr "Monto año actual"
+
+#. module: account_asset_depreciation
+#: model_terms:ir.ui.view,arch_db:account_asset_depreciation.asset_depreciation_report_view
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: account_asset_depreciation
+#: model:ir.model.fields,field_description:account_asset_depreciation.field_asset_depreciation_report_wizard__category
+msgid "Category"
+msgstr "Categoría"
+
+#. module: account_asset_depreciation
+#: model:ir.model.fields,field_description:account_asset_depreciation.field_asset_depreciation_report_wizard__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: account_asset_depreciation
+#: model:ir.model.fields,field_description:account_asset_depreciation.field_asset_depreciation_report_wizard__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: account_asset_depreciation
+#: model_terms:ir.ui.view,arch_db:account_asset_depreciation.depreciation_report_pdf
+msgid "Date"
+msgstr "Fecha"
+
+#. module: account_asset_depreciation
+#: model:ir.model.fields,field_description:account_asset_depreciation.field_asset_depreciation_report_wizard__date_from
+msgid "Date from"
+msgstr "Desde"
+
+#. module: account_asset_depreciation
+#: model:ir.model.fields,field_description:account_asset_depreciation.field_asset_depreciation_report_wizard__date_to
+msgid "Date to"
+msgstr "Hasta"
+
+#. module: account_asset_depreciation
+#: model:ir.actions.act_window,name:account_asset_depreciation.action_depreciation_report_menu
+msgid "Depreciation Report"
+msgstr "Reporte de depreciación"
+
+#. module: account_asset_depreciation
+#: model:ir.model.fields,field_description:account_asset_depreciation.field_asset_depreciation_report_wizard__display_name
+#: model:ir.model.fields,field_description:account_asset_depreciation.field_report_account_asset_depreciation_depreciation_report_pdf__display_name
+msgid "Display Name"
+msgstr "Mostrar nombre"
+
+#. module: account_asset_depreciation
+#: code:addons/account_asset_depreciation/models/asset_depreciation_report.py:0
+#, python-format
+msgid "Form content is missing, this report cannot be printed."
+msgstr "Información faltante, este reporte no se puede generar"
+
+#. module: account_asset_depreciation
+#: model_terms:ir.ui.view,arch_db:account_asset_depreciation.asset_depreciation_report_view
+msgid "Generate Report"
+msgstr "Generar reporte"
+
+#. module: account_asset_depreciation
+#: model_terms:ir.ui.view,arch_db:account_asset_depreciation.depreciation_report_pdf
+msgid "Gross Value"
+msgstr "Precio de compra"
+
+#. module: account_asset_depreciation
+#: model:ir.model.fields,field_description:account_asset_depreciation.field_asset_depreciation_report_wizard__id
+#: model:ir.model.fields,field_description:account_asset_depreciation.field_report_account_asset_depreciation_depreciation_report_pdf__id
+msgid "ID"
+msgstr ""
+
+#. module: account_asset_depreciation
+#: model:ir.model.fields,field_description:account_asset_depreciation.field_asset_depreciation_report_wizard____last_update
+#: model:ir.model.fields,field_description:account_asset_depreciation.field_report_account_asset_depreciation_depreciation_report_pdf____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: account_asset_depreciation
+#: model:ir.model.fields,field_description:account_asset_depreciation.field_asset_depreciation_report_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Última modificación el"
+
+#. module: account_asset_depreciation
+#: model:ir.model.fields,field_description:account_asset_depreciation.field_asset_depreciation_report_wizard__write_date
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: account_asset_depreciation
+#: model_terms:ir.ui.view,arch_db:account_asset_depreciation.depreciation_report_pdf
+msgid "Logo"
+msgstr ""
+
+#. module: account_asset_depreciation
+#: model:ir.model.fields,field_description:account_asset_depreciation.field_asset_depreciation_report_wizard__lst_end_year
+msgid "Lst End Year"
+msgstr "Final año anterior"
+
+#. module: account_asset_depreciation
+#: model:ir.model.fields,field_description:account_asset_depreciation.field_account_asset_asset__lst_year_amount
+msgid "Lst Year Amount"
+msgstr ""
+
+#. module: account_asset_depreciation
+#: model:ir.model.fields,field_description:account_asset_depreciation.field_account_asset_asset__monthly_depreciation
+msgid "Monthly Depreciation"
+msgstr "Depreciación mensual"
+
+#. module: account_asset_depreciation
+#: model_terms:ir.ui.view,arch_db:account_asset_depreciation.depreciation_report_pdf
+msgid "Monthly depreciation"
+msgstr "Depreciación mensual"
+
+#. module: account_asset_depreciation
+#: model:ir.model.fields,field_description:account_asset_depreciation.field_account_asset_asset__months
+msgid "Months"
+msgstr "Meses"
+
+#. module: account_asset_depreciation
+#: model_terms:ir.ui.view,arch_db:account_asset_depreciation.depreciation_report_pdf
+msgid ""
+"Page\n"
+"                            <span class=\"page\"/>\n"
+"                        of\n"
+"                            <span class=\"topage\"/>"
+msgstr ""
+
+#. module: account_asset_depreciation
+#: model:ir.model.fields,field_description:account_asset_depreciation.field_account_asset_asset__peryear_depreciation
+msgid "Peryear Depreciation"
+msgstr "Depreciación por año"
+
+#. module: account_asset_depreciation
+#: model_terms:ir.ui.view,arch_db:account_asset_depreciation.depreciation_report_pdf
+msgid "Reference"
+msgstr "Referencia"
+
+#. module: account_asset_depreciation
+#: model_terms:ir.ui.view,arch_db:account_asset_depreciation.depreciation_report_pdf
+msgid "Term (months)"
+msgstr "Término (meses)"
+
+#. module: account_asset_depreciation
+#: model_terms:ir.ui.view,arch_db:account_asset_depreciation.depreciation_report_pdf
+msgid "Value Residual"
+msgstr "Valor residual"
+
+#. module: account_asset_depreciation
+#: model:ir.model,name:account_asset_depreciation.model_report_account_asset_depreciation_depreciation_report_pdf
+msgid "report.account_asset_depreciation.depreciation_report_pdf"
+msgstr ""
+
+#. module: account_asset_depreciation
+#: model_terms:ir.ui.view,arch_db:account_asset_depreciation.depreciation_report_pdf
+msgid "to"
+msgstr "a"

@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<odoo>
+
+
+    <record id="hr_leave_allocation_view_form_manager_inherited_view" model="ir.ui.view">
+        <field name="name">hr.leave.allocation.view.form.manager</field>
+        <field name="model">hr.leave.allocation</field>
+        <field name="inherit_id" ref="hr_holidays.hr_leave_allocation_view_form_manager"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='date_to']" position="replace">
+                <field name="date_to" help="If no value set, runs indefinitely" class="ml-2" colspan="3" groups="EthiopianCalendar.group_gregory"/>
+                <div style="margin-bottom:40px;margin-top:-15px;margin-left:10px;margin-right:0px">
+                    <widget name="ethiopian_calander_widget_two"  style=" float:left;width:226px;" class="oe_edit_only" groups="EthiopianCalendar.group_ethio_datepicker" attrs="{'invisible': [('state', 'not in', ['draft', 'confirm'])]}"/>
+                </div>
+                <field name="is_pagum_to" invisible="1" force_save="1"/>
+                <div class="o_row">
+                    <field  name="ethiopian_to" class="oe_read_only ml-2" id="ethiopianCalendar_1" style="float:left" attrs="{'invisible': ['|', ('is_pagum_to', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker" force_save="1"/>
+                </div>
+                <div class="o_row">
+                    <field  name="pagum_to" class="oe_read_only ml-2" style="float:left"  attrs="{'invisible': ['|',('is_pagum_to', '!=',False)  ]}"  groups="EthiopianCalendar.group_ethio_datepicker" force_save="1"/>
+                </div>
+            </xpath>
+            <xpath expr="//field[@name='expired_date']" position="replace">
+                <field name="expired_date" force_save="1" readonly="1" attrs="{'invisible': ['|', ('for_annual_leave_allowed', '=', False), ('holiday_type', '!=', 'employee')]}" groups="EthiopianCalendar.group_gregory"/>
+                <field name="is_pagum_three" invisible="1" force_save="1"/>
+                <field  name="ethiopian_three" readonly="1" id="ethiopianCalendar_1" style="float:left" attrs="{'invisible': ['|', '|', ('for_annual_leave_allowed', '=', False), ('holiday_type', '!=', 'employee'), ('is_pagum_three', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker" force_save="1"/>
+                <field  name="pagum_three" readonly="1" style="float:left"  attrs="{'invisible': ['|', '|', ('for_annual_leave_allowed', '=', False), ('holiday_type', '!=', 'employee'), ('is_pagum_three', '!=',False)]}"  groups="EthiopianCalendar.group_ethio_datepicker" force_save="1"/>
+            </xpath>
+            <xpath expr="//field[@name='end_of_year_reminder']" position="replace">
+                <field name="end_of_year_reminder" readonly="1" force_save="1" attrs="{'invisible': ['|', ('for_annual_leave_allowed', '=', False), ('holiday_type', '!=', 'employee')]}" groups="EthiopianCalendar.group_gregory"/>
+                <field name="is_pagum_four" invisible="1" force_save="1"/>
+                <field  name="ethiopian_four" readonly="1" id="ethiopianCalendar_1" style="float:left" attrs="{'invisible': ['|', '|', ('for_annual_leave_allowed', '=', False), ('holiday_type', '!=', 'employee'), ('is_pagum_four', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker" force_save="1"/>
+                <field  name="pagum_four" readonly="1" style="float:left"  attrs="{'invisible': ['|', '|', ('for_annual_leave_allowed', '=', False), ('holiday_type', '!=', 'employee'), ('is_pagum_four', '!=',False)]}"  groups="EthiopianCalendar.group_ethio_datepicker" force_save="1"/>
+            </xpath>
+        </field>
+    </record> 
+
+</odoo>

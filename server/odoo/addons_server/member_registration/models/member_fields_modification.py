@@ -32,7 +32,6 @@ class Partner(models.Model):
     date = fields.Date(string="Date of Birth", store=True)
     ethnic_group = fields.Many2one('ethnic.groups', store=True)
     region = fields.Many2one('res.country.state', domain="[('country_id', '=', 69)]", string="Region/City Administrations")
-    city_of_birth = fields.Many2one('res.state.subcity', domain="[('state_id', '=', region_of_birth)]", string="Subcity/City", store=True)
     region_of_birth = fields.Many2one('res.country.state', domain="[('country_id', '=', 69)]", string="Birth Place Region/City Administrations", store=True)
     zone_city_of_birth = fields.Char(translate=True, string="Zone/City of Birth", store=True, size=64)
     wereda_of_birth = fields.Char(translate=True, string="Woreda of Birth", store=True, size=64)
@@ -52,8 +51,6 @@ class Partner(models.Model):
     attachment_amount = fields.Integer(compute="_count_attachments")
     subcity_id = fields.Many2one('membership.handlers.parent', string="Subcity", required=True, store=True, track_visibility='onchange')
     wereda_id = fields.Many2one('membership.handlers.branch', string="Woreda", domain="[('parent_id', '=', subcity_id)]", required=True, store=True, track_visibility='onchange')
-    residential_subcity_id = fields.Many2one('membership.handlers.parent', string="Residential Subcity", required=True, store=True, track_visibility='onchange')
-    residential_wereda_id = fields.Many2one('membership.handlers.branch', string="Residential Woreda", domain="[('parent_id', '=', residential_subcity_id)]", required=True, store=True, track_visibility='onchange')
     residential_subcity = fields.Char(string="Residential Subcity", required=True, store=True)
     residential_wereda = fields.Char(string="Residential Woreda", required=True)
     kebele = fields.Char(translate=True, size=64)
@@ -98,7 +95,8 @@ class Partner(models.Model):
     decision = fields.Text(string="Decision", translate=True)
     evaluated = fields.Boolean(default=False)
     leadership_status = fields.Selection(selection=[('active', 'Active'), ('inactive', 'Inactive')], default='inactive')
-    experience = fields.Char(translate=True, string="Experience Year", size=64)
+    experience = fields.Char(translate=True, string="Leadership Experience Year", size=64)
+    work_experience = fields.Char(translate=True, string="Work Experience Year", size=64)
     pay_for_league = fields.Boolean(default=False)
     league_payment = fields.Float(store=True, track_visibility='onchange')
     track_member_fee = fields.Float(store=True, readonly="1")
@@ -117,8 +115,8 @@ class Partner(models.Model):
     member_password_verfiy =  fields.Boolean(string="Verfiy User", default=False)
     assembly_counter = fields.Integer(compute="total_assembly")
     demote = fields.Boolean(default=False)
-    leader_sub_responsibility = fields.Many2many('leaders.sub.responsibility', domain="[('leaders_responsibility','in', [leader_responsibility])]", string="Leader's Sub Responsibility", readonly=True)
-    member_sub_responsibility = fields.Many2one('member.sub.responsibility', string="Member's Sub Responsibility")
+    leader_sub_responsibility = fields.Many2many('leaders.sub.responsibility', string="Leader's Sub Responsibility", readonly=True)
+    member_sub_responsibility = fields.Many2one('member.sub.responsibility', string="Member's Sub Responsibility", readonly=True)
     subcity_admin = fields.Boolean(default=False)
     city_admin = fields.Boolean(default=False)
     click_counter = fields.Integer()
@@ -156,6 +154,18 @@ class Partner(models.Model):
                     raise UserError(_("A Valid Email Address has '@' and '.'"))
 
 
+    @api.onchange("leader_responsibility")
+    def _chnage_domain_sub_responsibility(self):
+        """This function will chnage the sub responsibility based on leader responsibility"""
+        for record in self:
+            if record.leader_responsibility and record.leader_responsibility.id == 1:
+                return {'domain': {'leader_sub_responsibility': [('total_in_woreda', '>', 0)]}}
+            if record.leader_responsibility and record.leader_responsibility.id == 2:
+                return {'domain': {'leader_sub_responsibility': [('total_in_subcity', '>', 0)]}}
+            if record.leader_responsibility and record.leader_responsibility.id == 3:
+                return {'domain': {'leader_sub_responsibility': [('total_in_city', '>', 0)]}}
+
+
     def action_portal_reset_member_password(self):
         for record in self:
             res = self.env['res.users'].search([('partner_id','=', record.id)], limit=1)
@@ -175,7 +185,7 @@ class Partner(models.Model):
                 message = _("The User Name For %s Is %s, password is 12345678. Please Advise The Member To Change This Password After They Login.") % (str(record.name), str(record.email_address))
             title = _("<h4>User Name</h4>")
             user.notify_success(message, title, True)
-            mail_temp = self.env.ref('email_reset_password')
+            mail_temp = self.env.ref('member_registration.email_reset_password')
             mail_temp.send_mail(record.id)
 
 
@@ -296,13 +306,13 @@ class Partner(models.Model):
                 if record.subcity_id.id != record.wereda_id.parent_id.id:
                     record.wereda_id = False
 
-    @api.onchange('residential_subcity_id')
-    def _change_all_residential_field_for_partner(self):
-        """This function will make all fields False when subcity changes"""
-        for record in self:
-            if record.residential_subcity_id:
-                if record.residential_subcity_id.id != record.residential_wereda_id.parent_id.id:
-                    record.residential_wereda_id = False
+    # @api.onchange('residential_subcity_id')
+    # def _change_all_residential_field_for_partner(self):
+    #     """This function will make all fields False when subcity changes"""
+    #     for record in self:
+    #         if record.residential_subcity_id:
+    #             if record.residential_subcity_id.id != record.residential_wereda_id.parent_id.id:
+    #                 record.residential_wereda_id = False
 
     @api.onchange('field_of_study_id')
     def _get_user_input(self):
@@ -631,12 +641,12 @@ class Partner(models.Model):
     def print_id(self):
         """This will print ID of a member"""
         for record in self:
-            return self.env.ref('create_member_id').report_action(record._origin.id)
+            return self.env.ref('member_registration.create_member_id').report_action(record._origin.id)
 
     def print_certificate(self):
         """This will print Certificate of a member"""
         for record in self:
-            return self.env.ref('create_certificate').report_action(record._origin.id)        
+            return self.env.ref('member_registration.create_certificate').report_action(record._origin.id)        
 
 
     def total_complaint_amount(self):

@@ -183,7 +183,7 @@ class Partner(models.Model):
 
     def write(self, vals):
         try:
-            print("vals in partner" , vals['member_cells'])
+            print("vals in partner", vals['member_cells'])
             # if vals['member_cells']:
             print("if val")
             cell = self.env['membership.structure'].sudo().search([('cell', '=', vals['member_cells'])])
@@ -214,40 +214,37 @@ class Cells(models.Model):
     struc = fields.Many2one('membership.structure', string="Structure", store=True)
     struc_2 = fields.Many2one('league.structure', string="Structure", store=True)
 
-
     def update_translation_member_cells(self):
-        current_lang = self.env.context.get('lang')
-        self = self.with_context(lang='en_US')
-        eng_name = self.name
-        self.struc.name = eng_name
-        self.struc_2.name = eng_name
-        self = self.with_context(lang='am_ET')
-        amh_name = self.name
-        self.struc.name = amh_name
-        self.struc_2.name = amh_name
-        self = self.with_context(lang='current_lang')
+        for rec in self:
+            current_lang = self.env.context.get('lang')
+            rec = rec.with_context(lang='en_US')
+            eng_name = rec.name_2
+            rec.struc.name = eng_name
+            rec.struc_2.name = eng_name
+            rec= rec.with_context(lang='am_ET')
+            amh_name = rec.name_2
+            rec.struc.name = amh_name
+            rec.struc_2.name = amh_name
+            rec = rec.with_context(lang='current_lang')
 
     @api.model
     def create(self, vals):
-        test =self.env['member.cells'].sudo().search([('name', '=', vals['name'])])
-        if test:
-             raise UserError(_("Please change cell name there a name duplication"))                                 
+        wereda = super(Cells, self).create(vals)
         if vals['for_which_members'] == 'member':
-            sub = self.env['main.office'].sudo().search([('id', '=', vals['main_office'])], limit=1)
+            sub = self.env['main.office'].sudo().search([('id', '=', wereda.main_office.id)], limit=1)
             sub_2 = False
         else:
-            sub_2 = self.env['main.office'].sudo().search([('id', '=', vals['main_office'])], limit=1)
+            sub_2 = self.env['main.office'].sudo().search([('id', '=', wereda.main_office.id)], limit=1)
             sub = False
-        name = self.env['main.office'].sudo().search([('name', '=', vals['name'])])
-        if name:
-            raise UserError(_("There is main office called " + str(vals['name'])))
         if sub:
-            par_1 = self.env['membership.structure'].sudo().search([('name', '=', vals['name']), ('main_office', '=', sub.id)])
+            par_1 = self.env['membership.structure'].sudo().search(
+                [('name', '=', wereda.name_2), ('main_office', '=', sub.id)])
         if sub_2:
-            par_1 = self.env['membership.structure'].sudo().search([('name', '=', vals['name']), ('main_office', '=', sub_2.id)])
-        wereda = super(Cells, self).create(vals)
+            par_1 = self.env['membership.structure'].sudo().search(
+                [('name', '=', wereda.name_2), ('main_office', '=', sub_2.id)])
         user = self.env.user
-        config = self.env['cell.configuration'].sudo().search([('for_members_or_leagues', '=', wereda.for_which_members)])
+        config = self.env['cell.configuration'].sudo().search(
+            [('for_members_or_leagues', '=', wereda.for_which_members)])
         if config:
             if wereda.total < config.minimum_number:
                 warning_message = "The Added Numbers Of Members Is " + str(wereda.total) + " Which Is Less Than " + str(
@@ -308,9 +305,13 @@ class Cells(models.Model):
             mo = wereda.main_office
         if not par_1:
             if sub:
-                par = self.env['membership.structure'].sudo().search([('main_office', '=', sub.id),('name','=', sub.name)], limit=1)
+                par = self.env['membership.structure'].sudo().search(
+                    [('main_office', '=', sub.id), ('name', '=', sub.struc.name)], limit=1)
+                if not par:
+                    par = self.env['league.structure'].sudo().search(
+                    [('main_office', '=', sub.id), ('name', '=', sub.struc_2.name)], limit=1)
                 val = {
-                    'name': wereda.name,
+                    'name': wereda.name_2,
                     'parent_id_2': par.id,
                     'main_office': mo.id,
                     'sub_city': vals['subcity_id'],
@@ -322,9 +323,10 @@ class Cells(models.Model):
 
                 }
             if sub_2:
-                par_2 = self.env['league.structure'].sudo().search([('main_office', '=', sub_2.id),('name','=', sub_2.name)], limit=1)
+                par_2 = self.env['league.structure'].sudo().search(
+                    [('main_office', '=', sub_2.id), ('name', '=', sub_2.struc_2.name)], limit=1)
                 val_3 = {
-                    'name': wereda.name,
+                    'name': wereda.name_2,
                     'parent_id_2': par_2.id,
                     'main_office': mo.id,
                     'sub_city': vals['subcity_id'],
@@ -337,23 +339,24 @@ class Cells(models.Model):
                 }
 
             if wereda.for_which_members == 'member':
-                res = self.env['membership.structure'].sudo().create(val)
-                for line in wereda.members_ids:
-                    line.struc = res.id
-                    res.name = res.sub_city.unique_representation_code + '/' + res.wereda.unique_representation_code + '/' + res.main_office.member_main_type_id.name + '/' + res.name
-                wereda.struc = res.id
+                if not wereda.struc:
+                    res = self.env['membership.structure'].sudo().create(val)
+                    res.name = wereda.name_2
+                    for line in wereda.members_ids:
+                        line.struc = res.id
+                    wereda.struc = res.id
 
             else:
-                res_3 = self.env['league.structure'].sudo().create(val_3)
-                for line in wereda.members_ids:
-                    line.struc = res_3.id
-
-                wereda.struc_2 = res_3.id
+                if not wereda.struc_2:
+                    res_3 = self.env['league.structure'].sudo().create(val_3)
+                    res_3.name = wereda.name_2
+                    for line in wereda.members_ids:
+                        line.struc = res_3.id
+                    wereda.struc_2 = res_3.id
 
         return wereda
 
     def write(self, vals):
-        print("write cells",vals)
         try:
             old_set = set(vals['members_ids'][0][2])
             new_set = set(self.members_ids.ids)
@@ -361,15 +364,14 @@ class Cells(models.Model):
             records = self.env['res.partner'].search([('id', 'in', list(removed_elements))])
             for i in records:
                 i.member_cells = False
-                print("i.woreda_id.struc.id", i.wereda_id.struc.id, i.struc)
                 i.struc = i.wereda_id.struc.id
                 i.struc_2 = i.wereda_id.struc_2.id
         except:
             pass
         try:
-            if vals['name']:
-                self.struc.write({'name': vals['name']})
-                self.struc_2.write({'name': vals['name']})
+            if vals['name_2']:
+                self.struc.write({'name': vals['name_2']})
+                self.struc_2.write({'name': vals['name_2']})
         except:
             pass
         try:
@@ -381,9 +383,20 @@ class Cells(models.Model):
                 self.struc_2.write({'parent_id_2': par_2})
         except:
             pass
-
-
-        return super(Cells, self).write(vals)
+        res = super(Cells, self).write(vals)
+        if vals.get("main_office"):
+            sub = self.env['main.office'].sudo().search([('id', '=', vals['main_office'])], limit=1)
+            if sub.struc.id:
+                self.struc.parent_id_2 = sub.struc.id
+                self.struc.main_office = sub.id
+                self.struc.sub_city = sub.subcity_id.id
+                self.struc.wereda = sub.wereda_id.id
+            if sub.struc_2.id:
+                self.struc_2.parent_id_2 = sub.struc_2.id
+                self.struc.main_office = sub.id
+                self.struc.sub_city = sub.subcity_id.id
+                self.struc.wereda = sub.wereda_id.id
+        return res
 
     def unlink(self):
         for rec in self:
@@ -393,6 +406,10 @@ class Cells(models.Model):
                     par.unlink()
                 else:
                     if rec.struc_2:
+                        par = self.env['league.structure'].sudo().search([('id', '=', rec.struc_2.id)])
+                        par.unlink() 
+            else:
+                if rec.struc_2:
                         par = self.env['league.structure'].sudo().search([('id', '=', rec.struc_2.id)])
                         par.unlink()
         return super(Cells, self).unlink()
@@ -406,28 +423,26 @@ class MembershipHandlersParent(models.Model):
     struc_2 = fields.Many2one('league.structure', string="Structure", store=True)
 
     def update_translation_parent(self):
-        print("change_langue", self)
-        current_lang = self.env.context.get('lang')
-        self = self.with_context(lang='en_US')
-        eng_name = self.name
-        self.struc.name = eng_name
-        self.struc_2.name = eng_name
-        self.struc_3.name = eng_name
-        self = self.with_context(lang='am_ET')
-        amh_name = self.name
-        self.struc.name = amh_name
-        # self.struc_2.name = amh_name
-        # self.struc_3.name = amh_name
-        self = self.with_context(lang='current_lang')
-        print("translation", amh_name, eng_name)
+        for line in self:
+            current_lang = line.env.context.get('lang')
+            line = line.with_context(lang='en_US')
+            eng_name = line.name
+            line.struc.name = eng_name
+            line.struc_2.name = eng_name
+            line.struc_3.name = eng_name
+            line = line.with_context(lang='am_ET')
+            amh_name = line.name
+            line.struc.name = amh_name
+            line = self.with_context(lang='current_lang')
+            print("translation", amh_name, eng_name)
         return
 
     @api.model
     def create(self, vals):
-        test =self.env['membership.handlers.parent'].sudo().search([('name', '=', vals['name'])])
+        test = self.env['membership.handlers.parent'].sudo().search([('name', '=', vals['name'])])
         res = self.env['responsible.bodies'].sudo().search([])
         if test:
-             raise UserError(_("Please change your Subcity name there a name duplication."))
+            raise UserError(_("Please change your Subcity name there a name duplication."))
         par_1 = self.env['membership.structure'].sudo().search([('name', '=', vals['name'])])
         wereda = super(MembershipHandlersParent, self).create(vals)
         user = []
@@ -481,6 +496,7 @@ class MembershipHandlersParent(models.Model):
             self.struc_2.write({'name': vals['name']})
             self.struc_3.write({'name': vals['name']})
         if vals.get("parent_manager"):
+          if vals['parent_manager'][0] != (5, 0, 0):  
             parent_manager = []
             for line in self.parent_manager:
                 parent_manager.append(line.id)
@@ -543,7 +559,6 @@ class MembershipHandlersParent(models.Model):
                 str.users = [(6, 0, user)]
         return super(MembershipHandlersParent, self).write(vals)
 
-
     def unlink(self):
         for rec in self:
             if rec.struc:
@@ -568,23 +583,24 @@ class MembershipHandlersChild(models.Model):
     struc_2 = fields.Many2one('league.structure', string="Structure", store=True)
 
     def update_translation_branch(self):
-        current_lang = self.env.context.get('lang')
-        self = self.with_context(lang='en_US')
-        eng_name = self.name
-        self.struc.name = eng_name
-        self = self.with_context(lang='am_ET')
-        amh_name = self.name
-        self.struc.name = amh_name
-        self = self.with_context(lang='current_lang')
+        for line in self:
+            current_lang = line.env.context.get('lang')
+            line = line.with_context(lang='en_US')
+            eng_name = line.name
+            line.struc.name = eng_name
+            line = line.with_context(lang='am_ET')
+            amh_name = line.name
+            line.struc.name = amh_name
+            line = line.with_context(lang='current_lang')
 
     @api.model
     def create(self, vals):
-        test =self.env['membership.handlers.branch'].sudo().search([('name', '=', vals['name'])])
+        test = self.env['membership.handlers.branch'].sudo().search([('name', '=', vals['name'])])
         if test:
-             raise UserError(_("Please change your Wereda name there a name duplication"))
+            raise UserError(_("Please change your Wereda name there a name duplication"))
         name = self.env['membership.handlers.parent'].sudo().search([('name', '=', vals['name'])], limit=1)
         if name:
-            raise UserError(_("There is subcity called "+ str(vals['name'])))
+            raise UserError(_("There is subcity called " + str(vals['name'])))
         sub = self.env['membership.handlers.parent'].sudo().search([('id', '=', vals['parent_id'])], limit=1)
         par_1 = self.env['membership.structure'].sudo().search([('name', '=', vals['name']), ('sub_city', '=', sub.id)])
         wereda = super(MembershipHandlersChild, self).create(vals)
@@ -609,7 +625,7 @@ class MembershipHandlersChild(models.Model):
             for line in wereda.branch_manager.ids:
                 arr.append(line)
             arr.append(wereda.ict_manager.id)
-            print("arr",arr)
+            print("arr", arr)
             par.users = [(6, 0, arr)]
             par_2.users = [(6, 0, arr)]
             par_3.users = [(6, 0, arr)]
@@ -681,7 +697,7 @@ class MembershipHandlersChild(models.Model):
                 user = []
                 user.append(vals['ict_manager'])
                 for id in str.users:
-                    print("od",id.id, self.ict_manager)
+                    print("od", id.id, self.ict_manager)
                     if id.id not in self.branch_manager.ids and id.id != self.ict_manager.id:
                         user.append(id.id)
                 str.users = [(6, 0, user)]
@@ -713,7 +729,7 @@ class MembershipHandlersChild(models.Model):
                     for usr in self.parent_id.struc_2.users.ids:
                         if usr not in self.branch_manager.ids and usr != self.ict_manager.id:
                             arr_2.append(usr)
-                    for usr in self.parent_id.struc_3.users.ids :
+                    for usr in self.parent_id.struc_3.users.ids:
                         if usr not in self.branch_manager.ids and usr != self.ict_manager.id:
                             arr_3.append(usr)
                     self.parent_id.struc.users = [(6, 0, arr)]
@@ -761,28 +777,28 @@ class MembershipHandlersChild(models.Model):
                         user.append(id.id)
                 str.users = [(6, 0, user)]
             if difference not in self.parent_id.city_id.city_manager.ids:
-                    arr = []
-                    arr_2 = []
-                    arr_3 = []
-                    for line in vals['branch_manager'][0][2]:
-                        arr.append(line)
-                        arr_2.append(line)
-                        arr_3.append(line)
-                    for usr in self.parent_id.struc.users.ids:
-                        print("usr", usr)
-                        print("difference", difference)
-                        if usr not in difference:
-                            print("True")
-                            arr.append(usr)
-                    for usr in self.parent_id.struc_2.users.ids:
-                        if usr not in difference:
-                            arr_2.append(usr)
-                    for usr in self.parent_id.struc_3.users.ids:
-                        if usr not in difference:
-                            arr_3.append(usr)
-                    self.parent_id.struc.users = [(6, 0, arr)]
-                    self.parent_id.struc_2.users = [(6, 0, arr_2)]
-                    self.parent_id.struc_3.users = [(6, 0, arr_3)]
+                arr = []
+                arr_2 = []
+                arr_3 = []
+                for line in vals['branch_manager'][0][2]:
+                    arr.append(line)
+                    arr_2.append(line)
+                    arr_3.append(line)
+                for usr in self.parent_id.struc.users.ids:
+                    print("usr", usr)
+                    print("difference", difference)
+                    if usr not in difference:
+                        print("True")
+                        arr.append(usr)
+                for usr in self.parent_id.struc_2.users.ids:
+                    if usr not in difference:
+                        arr_2.append(usr)
+                for usr in self.parent_id.struc_3.users.ids:
+                    if usr not in difference:
+                        arr_3.append(usr)
+                self.parent_id.struc.users = [(6, 0, arr)]
+                self.parent_id.struc_2.users = [(6, 0, arr_2)]
+                self.parent_id.struc_3.users = [(6, 0, arr_3)]
         return super(MembershipHandlersChild, self).write(vals)
 
     def unlink(self):
@@ -808,38 +824,55 @@ class MainOffice(models.Model):
     struc_2 = fields.Many2one('league.structure', string="Structure", store=True)
 
     def update_translation_main_office(self):
-        current_lang = self.env.context.get('lang')
-        self = self.with_context(lang='en_US')
-        eng_name = self.name
-        self.struc.name = eng_name
-        self.struc_2.name = eng_name
-        self = self.with_context(lang='am_ET')
-        amh_name = self.name
-        self.struc.name = amh_name
-        self.struc_2.name = amh_name
-        self = self.with_context(lang='current_lang')
+         for rec in self:
+            if rec.for_which_members == 'member':
+                if rec.for_which_members == 'member':
+                    if rec.duplicate:
+                        if rec.main_office_id.league_type == 'young':
+                            rec.struc.with_context(lang='en_US').name = rec.member_main_type_id.with_context(
+                                lang='en_US').name + '/Youngster/' + rec.with_context(lang='en_US').name_2
+                            rec.struc.with_context(lang='am_ET').name = rec.member_main_type_id.with_context(
+                                lang='am_ET').name + '/ወጣት ሊግ/' + rec.with_context(lang='am_ET').name_2
+                        else:
+                            rec.struc.name = rec.member_main_type_id.with_context(
+                                lang='en_US').name + '/Woman/' + rec.with_context(lang='en_US').name_2
+                            rec.struc.with_context(lang='am_ET').name = rec.with_context(
+                                lang='am_ET').member_main_type_id.name + '/ሴት ሊግ/' + rec.with_context(lang='am_ET').name_2
+                    else:
+                        rec.struc.with_context(lang='en_US').name = rec.member_main_type_id.with_context(
+                            lang='en_US').name + '/Member/' + rec.with_context(lang='en_US').name_2
+                        rec.struc.with_context(lang='am_ET').name = rec.member_main_type_id.with_context(
+                            lang='am_ET').name + '/አባል/' + rec.with_context(lang='am_ET').name_2
+            else:
+                if not rec.struc_2:
+                    if rec.for_which_members == 'league' and rec.league_type == 'young':
+                        rec.struc_2.with_context(lang='en_US').name = rec.member_main_type_id.with_context(
+                            lang='en_US').name + '/Youngster/' + rec.with_context(lang='en_US').name_2
+                        rec.struc_2.with_context(lang='am_ET').name = rec.member_main_type_id.with_context(
+                            lang='am_ET').name + '/ወጣት ሊግ/' + rec.with_context(lang='am_ET').name_2
+                    if rec.for_which_members == 'league' and rec.league_type == 'women':
+                        rec.struc_2.with_context(lang='en_US').name = rec.member_main_type_id.with_context(
+                            lang='en_US').name + '/Woman/' + rec.with_context(lang='en_US').name_2
+                        rec.struc_2.with_context(lang='am_ET').name = rec.member_main_type_id.with_context(
+                            lang='am_ET').name + '/ሴት ሊግ/' + rec.with_context(lang='am_ET').name_2
 
     def unlink(self):
         for rec in self:
-            if rec.for_which_members == 'member':
-                if rec.struc:
-                    par = self.env['membership.structure'].sudo().search([('id', '=', rec.struc.id)])
+            if rec.struc:
+                par = self.env['membership.structure'].sudo().search([('id', '=', rec.struc.id)])
+                par.unlink()
+            else:
+                if rec.struc_2:
+                    par = self.env['league.structure'].sudo().search([('id', '=', rec.struc_2.id)])
                     par.unlink()
-                else:
-                    if rec.struc_2:
-                        par = self.env['league.structure'].sudo().search([('id', '=', rec.struc_2.id)])
-                        par.unlink()
         return super(MainOffice, self).unlink()
 
     @api.model
     def create(self, vals):
         print("str create", vals)
-        test =self.env['main.office'].sudo().search([('name', '=', vals['name'])])
-        if test:
-             raise UserError(_("Please change your basic organization name there a name duplication"))
         sub = self.env['membership.handlers.branch'].sudo().search([('id', '=', vals['wereda_id'])], limit=1)
-        par_1 = self.env['membership.structure'].sudo().search([('name', '=', vals['name']), ('wereda', '=', sub.id)])
         wereda = super(MainOffice, self).create(vals)
+        par_1 = self.env['membership.structure'].sudo().search([('name', '=', wereda.name), ('wereda', '=', sub.id)])
         print("worda", sub.id, vals['wereda_id'])
         user = []
         res = self.env['responsible.bodies'].sudo().search([])
@@ -870,7 +903,7 @@ class MainOffice(models.Model):
             par = self.env['membership.structure'].sudo().search([('name', '=', sub.name)], limit=1)
             par_2 = self.env['league.structure'].sudo().search([('name', '=', sub.name)], limit=1)
             val = {
-                'name': vals['name'],
+                'name': wereda.name,
                 'parent_id_2': par.id,
                 'wereda': vals['wereda_id'],
                 'sub_city': vals['subcity_id'],
@@ -882,7 +915,7 @@ class MainOffice(models.Model):
 
             }
             val_3 = {
-                'name': vals['name'],
+                'name': wereda.name,
                 'parent_id_2': par_2.id,
                 'main_office': wereda.id,
                 'wereda': vals['wereda_id'],
@@ -893,42 +926,125 @@ class MainOffice(models.Model):
                 'users': [(6, 0, user)],
 
             }
-            print("vals['for_which_members']", vals['for_which_members'])
             if vals['for_which_members'] == 'member':
-                print("val", val)
                 res = self.env['membership.structure'].sudo().create(val)
-                res.name = res.sub_city.unique_representation_code + '/' + res.wereda.unique_representation_code + '/' + res.main_office.member_main_type_id.name + '/' + res.name
+                if wereda.for_which_members == 'member':
+                    if wereda.duplicate:
+                        if wereda.main_office_id.league_type == 'young':
+                            res.with_context(lang='en_US').name = wereda.member_main_type_id.with_context(
+                                lang='en_US').name + '/Youngster/' + wereda.name_2
+                            res.with_context(lang='am_ET').name = wereda.member_main_type_id.with_context(
+                                lang='am_ET').name + '/ወጣት ሊግ/' + wereda.name_2
+                        else:
+                            res.name = wereda.member_main_type_id.with_context(
+                                lang='en_US').name + '/Woman/' + wereda.name_2
+                            res.with_context(lang='am_ET').name = wereda.with_context(
+                                lang='am_ET').member_main_type_id.name + '/ሴት ሊግ/' + wereda.name_2
+                    else:
+                        res.with_context(lang='en_US').name = wereda.member_main_type_id.with_context(
+                            lang='en_US').name + '/Member/' + wereda.name_2
+                        res.with_context(lang='am_ET').name = wereda.member_main_type_id.with_context(
+                            lang='am_ET').name + '/አባል/' + wereda.name_2
                 wereda.struc = res.id
             else:
-                print("val_3", val_3)
-                res_3 = self.env['league.structure'].sudo().create(val_3)
-                res_3.name = res_3.sub_city.unique_representation_code + '/' + res_3.wereda.unique_representation_code + '/' + res_3.main_office.member_main_type_id.name + '/League/' + res_3.name
-                wereda.struc_2 = res_3.id
+                if not wereda.struc_2:
+                    res = self.env['league.structure'].sudo().create(val_3)
+                    if wereda.for_which_members == 'league' and wereda.league_type == 'young':
+                        res.with_context(lang='en_US').name = wereda.member_main_type_id.with_context(
+                            lang='en_US').name + '/Youngster/' + wereda.name_2
+                        res.with_context(lang='am_ET').name = wereda.member_main_type_id.with_context(
+                            lang='am_ET').name + '/ወጣት ሊግ/' + wereda.name_2
+                    if wereda.for_which_members == 'league' and wereda.league_type == 'women':
+                        res.with_context(lang='en_US').name = wereda.member_main_type_id.with_context(
+                            lang='en_US').name + '/Woman/' + wereda.name_2
+                        res.with_context(lang='am_ET').name = wereda.member_main_type_id.with_context(
+                            lang='am_ET').name + '/ሴት ሊግ/' + wereda.name_2
+                    wereda.struc_2 = res.id
 
         return wereda
 
     def write(self, vals):
-        if vals.get("name"):
-                self.struc.write({'name': vals['name']})
-                self.struc_2.write({'name': vals['name']})
+        if vals.get("name_2"):
+            if self.for_which_members == 'member':
+                if self.for_which_members == 'member':
+                    if self.duplicate:
+                        if self.main_office_id.league_type == 'young':
+                            self.struc.with_context(lang='en_US').name = self.member_main_type_id.with_context(
+                                lang='en_US').name + '/Youngster/' + vals['name_2']
+                            self.struc.with_context(lang='am_ET').name = self.member_main_type_id.with_context(
+                                lang='am_ET').name + '/ወጣት ሊግ/' + vals['name_2']
+                        else:
+                            self.struc.name = self.member_main_type_id.with_context(
+                                lang='en_US').name + '/Woman/' + vals['name_2']
+                            self.struc.with_context(lang='am_ET').name = self.with_context(
+                                lang='am_ET').member_main_type_id.name + '/ሴት ሊግ/' + vals['name_2']
+                    else:
+                        self.struc.with_context(lang='en_US').name = self.member_main_type_id.with_context(
+                            lang='en_US').name + '/Member/' + vals['name_2']
+                        self.struc.with_context(lang='am_ET').name = self.member_main_type_id.with_context(
+                            lang='am_ET').name + '/አባል/' + vals['name_2']
+            else:
+                if not self.struc_2:
+                    if self.for_which_members == 'league' and self.league_type == 'young':
+                        self.struc_2.with_context(lang='en_US').name = self.member_main_type_id.with_context(
+                            lang='en_US').name + '/Youngster/' + vals['name_2']
+                        self.struc_2.with_context(lang='am_ET').name = self.member_main_type_id.with_context(
+                            lang='am_ET').name + '/ወጣት ሊግ/' + vals['name_2']
+                    if self.for_which_members == 'league' and self.league_type == 'women':
+                        self.struc_2.with_context(lang='en_US').name = self.member_main_type_id.with_context(
+                            lang='en_US').name + '/Woman/' + vals['name_2']
+                        self.struc_2.with_context(lang='am_ET').name = self.member_main_type_id.with_context(
+                            lang='am_ET').name + '/ሴት ሊግ/' + vals['name_2']
+        if vals.get("member_main_type_id"):
+            org = self.env['membership.organization'].sudo().search([('id', '=', vals['member_main_type_id'])])
+            if self.for_which_members == 'member':
+                if self.for_which_members == 'member':
+                    if self.duplicate:
+                        if self.main_office_id.league_type == 'young':
+                            self.struc.with_context(lang='en_US').name = org.with_context(
+                            lang='en_US').name + '/Youngster/' + self.name_2
+                            self.struc.with_context(lang='am_ET').name = org.with_context(
+                            lang='en_US').name + '/ወጣት ሊግ/' + self.name_2
+                        else:
+                            self.struc.name = org.with_context(
+                                lang='en_US').name + '/Woman/' + self.name_2
+                            self.struc.with_context(lang='am_ET').name = org.with_context(
+                                lang='am_ET').member_main_type_id.name + '/ሴት ሊግ/' + self.name_2
+                    else:
+                        self.struc.with_context(lang='en_US').name = org.with_context(
+                            lang='en_US').name + '/Member/' + self.name_2
+                        self.struc.with_context(lang='am_ET').name = org.with_context(
+                            lang='am_ET').name + '/አባል/' + self.name_2
+            else:
+                if not self.struc_2:
+                    if self.for_which_members == 'league' and self.league_type == 'young':
+                        self.struc_2.with_context(lang='en_US').name = org.with_context(
+                            lang='en_US').name + '/Youngster/' + self.name_2
+                        self.struc_2.with_context(lang='am_ET').name = org.with_context(
+                            lang='am_ET').name + '/ወጣት ሊግ/' + self.name_2
+                    if self.for_which_members == 'league' and self.league_type == 'women':
+                        self.struc_2.with_context(lang='en_US').name = org.with_context(
+                            lang='en_US').name + '/Woman/' + self.name_2
+                        self.struc_2.with_context(lang='am_ET').name = org.with_context(
+                            lang='am_ET').name + '/ሴት ሊግ/' + self.name_2
         if vals.get("woreda_id"):
-                sun = self.env['membership.handlers.branch'].sudo().search([('id', '=', vals['woreda_id'])])
-                par = self.env['membership.structure'].sudo().search([('name', '=', sun.name)])
-                par_2 = self.env['league.structure'].sudo().search([('name', '=', sun.name)])
-                if self.struc:
-                    self.struc.write({'parent_id_2': par})
-                if self.struc_2:
-                    self.struc_2.write({'parent_id_2': par_2})
-        if vals.get("for_which_members"):
+            sun = self.env['membership.handlers.branch'].sudo().search([('id', '=', vals['woreda_id'])])
+            par = self.env['membership.structure'].sudo().search([('name', '=', sun.name)])
+            par_2 = self.env['league.structure'].sudo().search([('name', '=', sun.name)])
+            if self.struc:
+                self.struc.write({'parent_id_2': par})
+            if self.struc_2:
+                self.struc_2.write({'parent_id_2': par_2})
+            if vals.get("for_which_members"):
                 if vals['for_which_members'] == 'member':
-                        sun = self.env['membership.handlers.branch'].sudo().search([('id', '=', vals['woreda_id'])])
-                        par = self.env['membership.structure'].sudo().search([('name', '=', sun.name)])
-                        self.struc.write({'parent_id_2': par})
+                    sun = self.env['membership.handlers.branch'].sudo().search([('id', '=', vals['wereda_id'])])
+                    par = self.env['membership.structure'].sudo().search([('name', '=', sun.name)])
+                    self.struc.write({'parent_id_2': par})
                 else:
-                        sun = self.env['membership.handlers.branch'].sudo().search([('id', '=', vals['woreda_id'])])
-                        par = self.env['league.structure'].sudo().search([('name', '=', sun.name)])
-                        self.struc.write({'parent_id_2': par})
-
+                    sun = self.env['membership.handlers.branch'].sudo().search([('id', '=', vals['wereda_id'])])
+                    par = self.env['league.structure'].sudo().search([('name', '=', sun.name)])
+                    self.struc.write({'parent_id_2': par})
+        #
         return super(MainOffice, self).write(vals)
 
 
@@ -1007,71 +1123,71 @@ class MembershipCityHandlers(models.Model):
 
 
 class ResponsibleBodies(models.Model):
-   _inherit ="responsible.bodies"
+    _inherit = "responsible.bodies"
 
-   def write(self, vals):
-       if vals['system_admin']:
-           before = set(self.system_admin.ids)
-           after = set(vals['system_admin'][0][2])
-           diff1 = after.difference(before)
-           diff2 = before.difference(after)
-           if diff2:
-               memb = self.env['membership.structure'].sudo().search([])
-               legues = self.env['league.structure'].sudo().search([])
-               suppo = self.env['supporter.structure'].sudo().search([])
-               for line in memb:
-                   for id in diff2:
-                       if id in line.sub_city.parent_manager.ids or id in line.wereda.branch_manager.ids:
-                           print("ok")
-                       else:
-                           arr = []
-                           for us in line.users:
-                               if id != us.id:
-                                   arr.append(us.id)
-                           # line.users = [(6,0,[])]
-                           print("before", line.users)
-                           line.users = [(6, 0, arr)]
-                           print("after", line.users)
-               for line in legues:
-                   for id in diff2:
-                       if id in line.sub_city.parent_manager.ids or id in line.wereda.branch_manager.ids:
-                           print("ok")
-                       else:
-                           arr = []
-                           for us in line.users:
-                               if id != us.id:
-                                   arr.append(us.id)
-                           # line.users = [(6,0,[])]
-                           line.users = [(6, 0, arr)]
-               for line in suppo:
-                   for id in diff2:
-                       if id in line.sub_city.parent_manager.ids or id in line.wereda.branch_manager.ids:
-                           print("ok")
-                       else:
-                           arr = []
-                           for us in line.users:
-                               if id != us.id:
-                                   arr.append(us.id)
-                           # line.users = [(6,0,[])]
-                           line.users = [(6, 0, arr)]
-           if diff1:
-               memb = self.env['membership.structure'].sudo().search([])
-               legues = self.env['league.structure'].sudo().search([])
-               suppo = self.env['supporter.structure'].sudo().search([])
-           for id in diff1:
-               for line in memb:
-                   new_arr = line.users.ids
-                   print("new_arr", type(new_arr), id)
-                   new_arr.append(id)
-                   print("new_arr_2", new_arr)
-                   line.users = [(6, 0, new_arr)]
-               for line in legues:
-                   new_arr = line.users.ids
-                   new_arr.append(id)
-                   line.users = [(6, 0, new_arr)]
-               for line in suppo:
-                   new_arr = line.users.ids
-                   new_arr.append(id)
-                   line.users = [(6, 0, new_arr)]
+    def write(self, vals):
+        if vals['system_admin']:
+            before = set(self.system_admin.ids)
+            after = set(vals['system_admin'][0][2])
+            diff1 = after.difference(before)
+            diff2 = before.difference(after)
+            if diff2:
+                memb = self.env['membership.structure'].sudo().search([])
+                legues = self.env['league.structure'].sudo().search([])
+                suppo = self.env['supporter.structure'].sudo().search([])
+                for line in memb:
+                    for id in diff2:
+                        if id in line.sub_city.parent_manager.ids or id in line.wereda.branch_manager.ids:
+                            print("ok")
+                        else:
+                            arr = []
+                            for us in line.users:
+                                if id != us.id:
+                                    arr.append(us.id)
+                            # line.users = [(6,0,[])]
+                            print("before", line.users)
+                            line.users = [(6, 0, arr)]
+                            print("after", line.users)
+                for line in legues:
+                    for id in diff2:
+                        if id in line.sub_city.parent_manager.ids or id in line.wereda.branch_manager.ids:
+                            print("ok")
+                        else:
+                            arr = []
+                            for us in line.users:
+                                if id != us.id:
+                                    arr.append(us.id)
+                            # line.users = [(6,0,[])]
+                            line.users = [(6, 0, arr)]
+                for line in suppo:
+                    for id in diff2:
+                        if id in line.sub_city.parent_manager.ids or id in line.wereda.branch_manager.ids:
+                            print("ok")
+                        else:
+                            arr = []
+                            for us in line.users:
+                                if id != us.id:
+                                    arr.append(us.id)
+                            # line.users = [(6,0,[])]
+                            line.users = [(6, 0, arr)]
+            if diff1:
+                memb = self.env['membership.structure'].sudo().search([])
+                legues = self.env['league.structure'].sudo().search([])
+                suppo = self.env['supporter.structure'].sudo().search([])
+            for id in diff1:
+                for line in memb:
+                    new_arr = line.users.ids
+                    print("new_arr", type(new_arr), id)
+                    new_arr.append(id)
+                    print("new_arr_2", new_arr)
+                    line.users = [(6, 0, new_arr)]
+                for line in legues:
+                    new_arr = line.users.ids
+                    new_arr.append(id)
+                    line.users = [(6, 0, new_arr)]
+                for line in suppo:
+                    new_arr = line.users.ids
+                    new_arr.append(id)
+                    line.users = [(6, 0, new_arr)]
 
-       return super(ResponsibleBodies, self).write(vals)
+        return super(ResponsibleBodies, self).write(vals)

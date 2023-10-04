@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record model="ir.actions.act_window" id="sprogroup_purchase_request_form_action_report">
+        <field name="name">Purchase Requests</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sprogroup.purchase.request</field>
+        <field name="view_mode">graph</field>
+    </record>
+
+    <menuitem id="Purchase_all_module_report_tab"
+              name="Purchase"
+              parent="report.all_module_report"
+              groups="purchase_request.group_purchase_request_user"/>
+
+    <menuitem name="Purchase order Report" id="Purchase_order_all_module_report_tab"
+              parent="Purchase_all_module_report_tab"
+              action="purchase.action_purchase_order_report_all"
+               />
+    <menuitem name="Purchase request Report" id="Purchase_request_all_module_report_tab"
+              parent="Purchase_all_module_report_tab"
+              action="sprogroup_purchase_request_form_action_report"
+    />
+
+
+</odoo>

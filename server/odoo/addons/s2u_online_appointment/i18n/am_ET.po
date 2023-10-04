@@ -1,0 +1,1052 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* s2u_online_appointment
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20220525\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-19 09:14+0000\n"
+"PO-Revision-Date: 2023-08-19 09:14+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: s2u_online_appointment
+#: model:mail.template,body_html:s2u_online_appointment.appointment_accepted
+msgid ""
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"padding-top: 16px; background-color: #F1F1F1; font-family:Verdana, Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;\">        <tr>\n"
+"            <td align=\"center\">\n"
+"              <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"padding: 16px; background-color: white; color: #454748; border-collapse:separate;\">\n"
+"                <tbody>\n"
+"                <!-- HEADER -->\n"
+"                  <tr>\n"
+"                    <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                      <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                        <tr>\n"
+"                          <td valign=\"middle\">\n"
+"                            <span style=\"font-size: 20px; font-weight: bold;\">\n"
+"                              Appointment For: ${ object.name }\n"
+"                            </span>\n"
+"                          </td>\n"
+"                          <td valign=\"middle\" align=\"right\">\n"
+"                            <img src=\"/logo.png?company=${user.company_id.id}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${user.company_id.name}\"/>\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                        <tr>\n"
+"                          <td colspan=\"2\" style=\"text-align:center;\">\n"
+"                            <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                      </table>\n"
+"                    </td>\n"
+"                  </tr>\n"
+"                <!-- CONTENT -->\n"
+"                  <tr>\n"
+"                    <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                      <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                        <tr>\n"
+"                          <td valign=\"top\" style=\"font-size: 13px;\">\n"
+"                            <div>\n"
+"                              Dear Client,<br/><br/>\n"
+"                              The appointment that you have scheduled on ${ object.start } has been approved.<br/>\n"
+"                              Please be at the meeting place 15 minutes earlier to check-in.<br/>\n"
+"                              Thank you for scheduling with us,<br/>\n"
+"                              % if user.signature:\n"
+"                                <br/>\n"
+"                                ${user.signature | safe}\n"
+"                              % endif\n"
+"                            </div>\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                        <tr>\n"
+"                          <td style=\"text-align:center;\">\n"
+"                            <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                      </table>\n"
+"                    </td>\n"
+"                  </tr>\n"
+"                <!-- FOOTER -->\n"
+"                  <tr>\n"
+"                    <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                      <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; font-size: 11px; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                        <tr>\n"
+"                          <td valign=\"middle\" align=\"left\">\n"
+"                            ${user.company_id.name}\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                        <tr>\n"
+"                          <td valign=\"middle\" align=\"left\" style=\"opacity: 0.7;\">\n"
+"                            ${user.company_id.phone}\n"
+"                            % if user.company_id.email\n"
+"                              | <a href=\"'mailto:%s' % ${user.company_id.email}\" style=\"text-decoration:none; color: #454748;\">${user.company_id.email}</a>\n"
+"                            % endif\n"
+"                            % if user.company_id.website\n"
+"                              | <a href=\"'%s' % ${user.company_id.website}\" style=\"text-decoration:none; color: #454748;\">\n"
+"                                  ${user.company_id.website}\n"
+"                                </a>\n"
+"                            % endif\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                      </table>\n"
+"                    </td>\n"
+"                  </tr>\n"
+"                </tbody>\n"
+"              </table>\n"
+"            </td>\n"
+"          </tr>\n"
+"                <!-- POWERED BY -->\n"
+"                  <tr>\n"
+"                    <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                      <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: #F1F1F1; color: #454748; padding: 8px; border-collapse:separate;\">\n"
+"                        <tr>\n"
+"                          <td style=\"text-align: center; font-size: 13px;\">\n"
+"                            Powered by <a target=\"_blank\" href=\"https://www.odoo.com?utm_source=db&amp;utm_medium=auth\" style=\"color: #875A7B;\">Odoo</a>\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                      </table>\n"
+"                    </td>\n"
+"                  </tr>\n"
+"          </table>\n"
+"        "
+msgstr ""
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"padding-top: 16px; background-color: #F1F1F1; font-family:Verdana, Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;\">        <tr>\n"
+"            <td align=\"center\">\n"
+"              <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"padding: 16px; background-color: white; color: #454748; border-collapse:separate;\">\n"
+"                <tbody>\n"
+"                <!-- HEADER -->\n"
+"                  <tr>\n"
+"                    <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                      <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                        <tr>\n"
+"                          <td valign=\"middle\">\n"
+"                            <span style=\"font-size: 20px; font-weight: bold;\">\n"
+"                              Appointment For: ${ object.name }\n"
+"                            </span>\n"
+"                          </td>\n"
+"                          <td valign=\"middle\" align=\"right\">\n"
+"                            <img src=\"/logo.png?company=${user.company_id.id}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${user.company_id.name}\"/>\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                        <tr>\n"
+"                          <td colspan=\"2\" style=\"text-align:center;\">\n"
+"                            <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                      </table>\n"
+"                    </td>\n"
+"                  </tr>\n"
+"                <!-- CONTENT -->\n"
+"                  <tr>\n"
+"                    <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                      <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                        <tr>\n"
+"                          <td valign=\"top\" style=\"font-size: 13px;\">\n"
+"                            <div>\n"
+"                              ውድ ደንበኛ፣<br/><br/>\n"
+"                              በ${ object.start } ላይ ያቅዱት ቀጠሮ ጸድቋል።<br/>\n"
+"                              እባክዎ ከ15 ደቂቃ በፊት በስብሰባው ቦታ ይገኙ።<br/>\n"
+"                              ከእኛ ጋር ቀጠሮ ስለያዙ እናመሰግናለን፣<br/>\n"
+"                              % if user.signature:\n"
+"                                <br/>\n"
+"                                ${user.signature | safe}\n"
+"                              % endif\n"
+"                            </div>\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                        <tr>\n"
+"                          <td style=\"text-align:center;\">\n"
+"                            <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                      </table>\n"
+"                    </td>\n"
+"                  </tr>\n"
+"                <!-- FOOTER -->\n"
+"                  <tr>\n"
+"                    <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                      <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; font-size: 11px; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                        <tr>\n"
+"                          <td valign=\"middle\" align=\"left\">\n"
+"                            ${user.company_id.name}\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                        <tr>\n"
+"                          <td valign=\"middle\" align=\"left\" style=\"opacity: 0.7;\">\n"
+"                            ${user.company_id.phone}\n"
+"                            % if user.company_id.email\n"
+"                              | <a href=\"'mailto:%s' % ${user.company_id.email}\" style=\"text-decoration:none; color: #454748;\">${user.company_id.email}</a>\n"
+"                            % endif\n"
+"                            % if user.company_id.website\n"
+"                              | <a href=\"'%s' % ${user.company_id.website}\" style=\"text-decoration:none; color: #454748;\">\n"
+"                                  ${user.company_id.website}\n"
+"                                </a>\n"
+"                            % endif\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                      </table>\n"
+"                    </td>\n"
+"                  </tr>\n"
+"                </tbody>\n"
+"              </table>\n"
+"            </td>\n"
+"          </tr>\n"
+"                <!-- POWERED BY -->\n"
+"                  <tr>\n"
+"                    <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                      <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: #F1F1F1; color: #454748; padding: 8px; border-collapse:separate;\">\n"
+"                        <tr>\n"
+"                          <td style=\"text-align: center; font-size: 13px;\">\n"
+"                            Powered by <a target=\"_blank\" href=\"https://www.odoo.com?utm_source=db&amp;utm_medium=auth\" style=\"color: #875A7B;\">Odoo</a>\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                      </table>\n"
+"                    </td>\n"
+"                  </tr>\n"
+"          </table>\n"
+"        "
+
+#. module: s2u_online_appointment
+#: model:mail.template,body_html:s2u_online_appointment.appointment_denied
+msgid ""
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"padding-top: 16px; background-color: #F1F1F1; font-family:Verdana, Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;\">        <tr>\n"
+"            <td align=\"center\">\n"
+"              <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"padding: 16px; background-color: white; color: #454748; border-collapse:separate;\">\n"
+"                <tbody>\n"
+"                <!-- HEADER -->\n"
+"                  <tr>\n"
+"                    <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                      <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                        <tr>\n"
+"                          <td valign=\"middle\">\n"
+"                            <span style=\"font-size: 20px; font-weight: bold;\">\n"
+"                              Appointment For: ${ object.name }\n"
+"                            </span>\n"
+"                          </td>\n"
+"                          <td valign=\"middle\" align=\"right\">\n"
+"                            <img src=\"/logo.png?company=${user.company_id.id}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${user.company_id.name}\"/>\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                        <tr>\n"
+"                          <td colspan=\"2\" style=\"text-align:center;\">\n"
+"                            <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                      </table>\n"
+"                    </td>\n"
+"                  </tr>\n"
+"                <!-- CONTENT -->\n"
+"                  <tr>\n"
+"                    <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                      <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                        <tr>\n"
+"                          <td valign=\"top\" style=\"font-size: 13px;\">\n"
+"                            <div>\n"
+"                              Dear Client,<br/><br/>\n"
+"                              The appointment that you have scheduled on ${ object.start } has been denied.<br/>\n"
+"                              Please set an appointment with us for another day.<br/>\n"
+"                              Thank you,<br/>\n"
+"                              % if user.signature:\n"
+"                                <br/>\n"
+"                                ${user.signature | safe}\n"
+"                              % endif\n"
+"                            </div>\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                        <tr>\n"
+"                          <td style=\"text-align:center;\">\n"
+"                            <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                      </table>\n"
+"                    </td>\n"
+"                  </tr>\n"
+"                <!-- FOOTER -->\n"
+"                  <tr>\n"
+"                    <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                      <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; font-size: 11px; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                        <tr>\n"
+"                          <td valign=\"middle\" align=\"left\">\n"
+"                            ${user.company_id.name}\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                        <tr>\n"
+"                          <td valign=\"middle\" align=\"left\" style=\"opacity: 0.7;\">\n"
+"                            ${user.company_id.phone}\n"
+"                            % if user.company_id.email\n"
+"                              | <a href=\"'mailto:%s' % ${user.company_id.email}\" style=\"text-decoration:none; color: #454748;\">${user.company_id.email}</a>\n"
+"                            % endif\n"
+"                            % if user.company_id.website\n"
+"                              | <a href=\"'%s' % ${user.company_id.website}\" style=\"text-decoration:none; color: #454748;\">\n"
+"                                  ${user.company_id.website}\n"
+"                                </a>\n"
+"                            % endif\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                      </table>\n"
+"                    </td>\n"
+"                  </tr>\n"
+"                </tbody>\n"
+"              </table>\n"
+"            </td>\n"
+"          </tr>\n"
+"                <!-- POWERED BY -->\n"
+"                  <tr>\n"
+"                    <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                      <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: #F1F1F1; color: #454748; padding: 8px; border-collapse:separate;\">\n"
+"                        <tr>\n"
+"                          <td style=\"text-align: center; font-size: 13px;\">\n"
+"                            Powered by <a target=\"_blank\" href=\"https://www.odoo.com?utm_source=db&amp;utm_medium=auth\" style=\"color: #875A7B;\">Odoo</a>\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                      </table>\n"
+"                    </td>\n"
+"                  </tr>\n"
+"          </table>\n"
+"        "
+msgstr ""
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"padding-top: 16px; background-color: #F1F1F1; font-family:Verdana, Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;\">        <tr>\n"
+"            <td align=\"center\">\n"
+"              <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"padding: 16px; background-color: white; color: #454748; border-collapse:separate;\">\n"
+"                <tbody>\n"
+"                <!-- HEADER -->\n"
+"                  <tr>\n"
+"                    <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                      <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                        <tr>\n"
+"                          <td valign=\"middle\">\n"
+"                            <span style=\"font-size: 20px; font-weight: bold;\">\n"
+"                              Appointment For: ${ object.name }\n"
+"                            </span>\n"
+"                          </td>\n"
+"                          <td valign=\"middle\" align=\"right\">\n"
+"                            <img src=\"/logo.png?company=${user.company_id.id}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${user.company_id.name}\"/>\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                        <tr>\n"
+"                          <td colspan=\"2\" style=\"text-align:center;\">\n"
+"                            <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                      </table>\n"
+"                    </td>\n"
+"                  </tr>\n"
+"                <!-- CONTENT -->\n"
+"                  <tr>\n"
+"                    <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                      <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                        <tr>\n"
+"                          <td valign=\"top\" style=\"font-size: 13px;\">\n"
+"                            <div>\n"
+"                              ውድ ደንበኛ፣<br/><br/>\n"
+"                              በ${ object.start} ላይ ያቀዱት ቀጠሮ ተሰርዟል።<br/>\n"
+"                              እባክዎን ለሌላ ቀን ከእኛ ጋር ቀጠሮ ያስይዙ።<br/>\n"
+"                              እናመሰግናለን፣<br/>\n"
+"                              % if user.signature:\n"
+"                                <br/>\n"
+"                                ${user.signature | safe}\n"
+"                              % endif\n"
+"                            </div>\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                        <tr>\n"
+"                          <td style=\"text-align:center;\">\n"
+"                            <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                      </table>\n"
+"                    </td>\n"
+"                  </tr>\n"
+"                <!-- FOOTER -->\n"
+"                  <tr>\n"
+"                    <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                      <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; font-size: 11px; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                        <tr>\n"
+"                          <td valign=\"middle\" align=\"left\">\n"
+"                            ${user.company_id.name}\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                        <tr>\n"
+"                          <td valign=\"middle\" align=\"left\" style=\"opacity: 0.7;\">\n"
+"                            ${user.company_id.phone}\n"
+"                            % if user.company_id.email\n"
+"                              | <a href=\"'mailto:%s' % ${user.company_id.email}\" style=\"text-decoration:none; color: #454748;\">${user.company_id.email}</a>\n"
+"                            % endif\n"
+"                            % if user.company_id.website\n"
+"                              | <a href=\"'%s' % ${user.company_id.website}\" style=\"text-decoration:none; color: #454748;\">\n"
+"                                  ${user.company_id.website}\n"
+"                                </a>\n"
+"                            % endif\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                      </table>\n"
+"                    </td>\n"
+"                  </tr>\n"
+"                </tbody>\n"
+"              </table>\n"
+"            </td>\n"
+"          </tr>\n"
+"                <!-- POWERED BY -->\n"
+"                  <tr>\n"
+"                    <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                      <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: #F1F1F1; color: #454748; padding: 8px; border-collapse:separate;\">\n"
+"                        <tr>\n"
+"                          <td style=\"text-align: center; font-size: 13px;\">\n"
+"                            Powered by <a target=\"_blank\" href=\"https://www.odoo.com?utm_source=db&amp;utm_medium=auth\" style=\"color: #875A7B;\">Odoo</a>\n"
+"                          </td>\n"
+"                        </tr>\n"
+"                      </table>\n"
+"                    </td>\n"
+"                  </tr>\n"
+"          </table>\n"
+"        "
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_registration__access_warning
+msgid "Access warning"
+msgstr "የመዳረሻ ማስጠንቀቂያ"
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_registration__message_needaction
+msgid "Action Needed"
+msgstr "እርምጃ ያስፈልጋል"
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_registration__activity_ids
+msgid "Activities"
+msgstr "እንቅስቃሴዎች"
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_registration__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "የእንቅስቃሴ ልዩ ማስጌጥ"
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_registration__activity_state
+msgid "Activity State"
+msgstr "የእንቅስቃሴ ሁኔታ"
+
+#. module: s2u_online_appointment
+#: code:addons/s2u_online_appointment/controllers/portal.py:0
+#, python-format
+msgid "All"
+msgstr "ሁሉም"
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_registration__appointee_id
+msgid "Appointee"
+msgstr "ተሿሚ"
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_registration__appointee_interaction
+msgid "Appointee interaction"
+msgstr "የተሾመ መስተጋብር"
+
+#. module: s2u_online_appointment
+#: model:ir.ui.menu,name:s2u_online_appointment.menu_appointment
+#: model:website.menu,name:s2u_online_appointment.appointment_menu
+msgid "Appointment"
+msgstr "ቀጠሮ"
+
+#. module: s2u_online_appointment
+#: model:mail.template,subject:s2u_online_appointment.appointment_accepted
+msgid "Appointment Accepted"
+msgstr "ቀጠሮ ተቀባይነት አግኝቷል"
+
+#. module: s2u_online_appointment
+#: model:mail.template,subject:s2u_online_appointment.appointment_denied
+msgid "Appointment Denied"
+msgstr "ቀጠሮ ተከልክሏል"
+
+#. module: s2u_online_appointment
+#: model:ir.model,name:s2u_online_appointment.model_s2u_appointment_registration
+msgid "Appointment Registration"
+msgstr "የቀጠሮ ምዝገባ"
+
+#. module: s2u_online_appointment
+#: model:ir.model,name:s2u_online_appointment.model_s2u_appointment_slot
+msgid "Appointment Slot"
+msgstr "የቀጠሮ ጊዜ ገደብ"
+
+#. module: s2u_online_appointment
+#: code:addons/s2u_online_appointment/controllers/main.py:0
+#: code:addons/s2u_online_appointment/controllers/main.py:0
+#, python-format
+msgid "Appointment not found."
+msgstr "ቀጠሮ አልተገኘም"
+
+#. module: s2u_online_appointment
+#: model:ir.model,name:s2u_online_appointment.model_s2u_appointment_option
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_option__name
+msgid "Appointment option"
+msgstr "የቀጠሮ አማራጭ"
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_registration__message_attachment_count
+msgid "Attachment Count"
+msgstr "ተያያዥ ብዛት"
+
+#. module: s2u_online_appointment
+#: model_terms:ir.ui.view,arch_db:s2u_online_appointment.make_more_slot_form
+msgid "Cancel"
+msgstr "ሰርዝ"
+
+#. module: s2u_online_appointment
+#: code:addons/s2u_online_appointment/controllers/portal.py:0
+#: code:addons/s2u_online_appointment/models/appointment_registration.py:0
+#: model:ir.model.fields.selection,name:s2u_online_appointment.selection__s2u_appointment_registration__state__cancel
+#, python-format
+msgid "Canceled"
+msgstr "ተሰርዟል"
+
+#. module: s2u_online_appointment
+#: code:addons/s2u_online_appointment/controllers/portal.py:0
+#, python-format
+msgid "Confirmed"
+msgstr "ተረጋግጧል"
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_registration__partner_id
+msgid "Contact"
+msgstr "ኮንታክት"
+
+#. module: s2u_online_appointment
+#: model_terms:ir.ui.view,arch_db:s2u_online_appointment.make_more_slot_form
+msgid "Create Slots"
+msgstr "የቀጠሮ የጊዜ ገደብ ፍጠር"
+
+#. module: s2u_online_appointment
+#: code:addons/s2u_online_appointment/models/appointment_slot.py:0
+#, python-format
+msgid "Create Slots Wizard"
+msgstr "የቀጠሮ የጊዜ ገደብ ፍጠር"
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_duration__create_uid
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_make_more_slot__create_uid
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_option__create_uid
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_registration__create_uid
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_slot__create_uid
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_times__create_uid
+msgid "Created by"
+msgstr "የተፈጠረው በ"
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_duration__create_date
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_make_more_slot__create_date
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_option__create_date
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_registration__create_date
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_slot__create_date
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_times__create_date
+msgid "Created on"
+msgstr "የተፈጠረበት ቀን"
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,help:s2u_online_appointment.field_s2u_appointment_registration__access_url
+msgid "Customer Portal URL"
+msgstr "የደንበኛ ፖርታል URL"
+
+#. module: s2u_online_appointment
+#: code:addons/s2u_online_appointment/controllers/portal.py:0
+#, python-format
+msgid "Date ↑"
+msgstr "ቀን ↑"
+
+#. module: s2u_online_appointment
+#: code:addons/s2u_online_appointment/controllers/portal.py:0
+#, python-format
+msgid "Date ↓"
+msgstr "ቀን ↓"
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_make_more_slot__day
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_slot__day
+msgid "Day"
+msgstr "ቀን"
+
+#. module: s2u_online_appointment
+#: model_terms:ir.ui.view,arch_db:s2u_online_appointment.make_more_slot_form
+msgid "Days"
+msgstr "ቀናት"
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_duration__display_name
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_make_more_slot__display_name
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_option__display_name
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_registration__display_name
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_slot__display_name
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_times__display_name
+msgid "Display Name"
+msgstr "ስም"
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_option__duration
+msgid "Duration of Appointment"
+msgstr "የቀጠሮ ቆይታ"
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_registration__email_cc
+msgid "Email cc"
+msgstr "ኢሜል ሲሲ"
+
+#. module: s2u_online_appointment
+#: code:addons/s2u_online_appointment/models/appointment_registration.py:0
+#: model:ir.model.fields.selection,name:s2u_online_appointment.selection__s2u_appointment_registration__state__ended
+#, python-format
+msgid "Ended"
+msgstr "ያለቀ"
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_registration__event_id
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_registration__name
+msgid "Event"
+msgstr "ክስተት"
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_registration__appointment_end
+msgid "Event End Date"
+msgstr "የክስተት ማብቂያ ቀን"
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_registration__appointment_begin
+msgid "Event Start Date"
+msgstr "የክስተት መጀመሪያ ቀን"
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_registration__message_follower_ids
+msgid "Followers"
+msgstr "ተከታዮች"
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_registration__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "ተከታዮች (ቻናሎች)"
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_registration__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "ተከታዮች (አጋሮች)"
+
+#. module: s2u_online_appointment
+#: code:addons/s2u_online_appointment/models/appointment_slot.py:0
+#: code:addons/s2u_online_appointment/wizard/make_more_slots.py:0
+#, python-format
+msgid "Friday"
+msgstr "አርብ"
+
+#. module: s2u_online_appointment
+#: model_terms:ir.ui.view,arch_db:s2u_online_appointment.make_more_slot_form
+msgid "I can be available on...?"
+msgstr "በእዚ ሰዓት ልገኝ እችላለሁ?"
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_duration__id
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_make_more_slot__id
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_option__id
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_registration__id
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_slot__id
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_times__id
+msgid "ID"
+msgstr "መታወቂያ"
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_registration__activity_exception_icon
+msgid "Icon"
+msgstr "አዶ"
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,help:s2u_online_appointment.field_s2u_appointment_registration__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "ልዩ እንቅስቃሴን ለማመልከት አዶ።"
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,help:s2u_online_appointment.field_s2u_appointment_registration__message_needaction
+#: model:ir.model.fields,help:s2u_online_appointment.field_s2u_appointment_registration__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "ምልክት ካደረጉ፣ አዲስ መልዕክቶች የእርስዎን ትኩረት ይፈልጋሉ።"
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,help:s2u_online_appointment.field_s2u_appointment_registration__message_has_error
+#: model:ir.model.fields,help:s2u_online_appointment.field_s2u_appointment_registration__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "ምልክት ካደረጉ፣ አንዳንድ መልዕክቶች የማድረስ ስህተት አለባቸው።"
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_registration__message_is_follower
+msgid "Is Follower"
+msgstr "ተከታይ ነው"
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_duration____last_update
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_make_more_slot____last_update
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_option____last_update
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_registration____last_update
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_slot____last_update
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_times____last_update
+msgid "Last Modified on"
+msgstr "መጨረሻ የተሻሻለበት ቀን"
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_duration__write_uid
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_make_more_slot__write_uid
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_option__write_uid
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_registration__write_uid
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_slot__write_uid
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_times__write_uid
+msgid "Last Updated by"
+msgstr "መጨረሻ የተሻሻለው በ"
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_duration__write_date
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_make_more_slot__write_date
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_option__write_date
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_registration__write_date
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_slot__write_date
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_times__write_date
+msgid "Last Updated on"
+msgstr "መጨረሻ የተሻሻለበት ቀን"
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,help:s2u_online_appointment.field_s2u_appointment_registration__email_cc
+msgid "List of cc from incoming emails."
+msgstr "ከገቢ ኢሜይሎች የሲሲ ዝርዝር"
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_registration__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "ዋና ተያያዥ"
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_registration__meeting_minute
+msgid "Meeting Minute"
+msgstr "አጀንዳ"
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_registration__message_has_error
+msgid "Message Delivery error"
+msgstr "የመልእክት ማቅረቢያ ስህተት"
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_registration__message_ids
+msgid "Messages"
+msgstr "መልዕክቶች"
+
+#. module: s2u_online_appointment
+#: code:addons/s2u_online_appointment/models/appointment_slot.py:0
+#: code:addons/s2u_online_appointment/wizard/make_more_slots.py:0
+#, python-format
+msgid "Monday"
+msgstr "ሰኞ"
+
+#. module: s2u_online_appointment
+#: code:addons/s2u_online_appointment/controllers/portal.py:0
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_duration__name
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_times__name
+#, python-format
+msgid "Name"
+msgstr "ስም"
+
+#. module: s2u_online_appointment
+#: code:addons/s2u_online_appointment/controllers/portal.py:0
+#, python-format
+msgid "Newest"
+msgstr "አዲሱ"
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_registration__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "ቀጣይ የእንቅስቃሴ ገደብ"
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_registration__activity_summary
+msgid "Next Activity Summary"
+msgstr "ቀጣይ የእንቅስቃሴ ማጠቃለያ"
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_registration__activity_type_id
+msgid "Next Activity Type"
+msgstr "ቀጣይ የእንቅስቃሴ አይነት"
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_registration__message_needaction_counter
+msgid "Number of Actions"
+msgstr "የእርምጃ ብዛት"
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_registration__message_has_error_counter
+msgid "Number of errors"
+msgstr "የስህተት ብዛት"
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,help:s2u_online_appointment.field_s2u_appointment_registration__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "እርምጃ የሚያስፈልገው የመልእክት ብዛት"
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,help:s2u_online_appointment.field_s2u_appointment_registration__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "የማድረስ ስህተት ያለባቸው መልዕክቶች ብዛት"
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,help:s2u_online_appointment.field_s2u_appointment_registration__message_unread_counter
+msgid "Number of unread messages"
+msgstr "ያልተነበቡ መልዕክቶች ብዛት"
+
+#. module: s2u_online_appointment
+#: code:addons/s2u_online_appointment/controllers/portal.py:0
+#: code:addons/s2u_online_appointment/models/appointment_registration.py:0
+#: model:ir.model.fields.selection,name:s2u_online_appointment.selection__s2u_appointment_registration__state__pending
+#, python-format
+msgid "Pending"
+msgstr "በመጠባበቅ ላይ"
+
+#. module: s2u_online_appointment
+#: code:addons/s2u_online_appointment/controllers/main.py:0
+#, python-format
+msgid "Please enter a valid email address."
+msgstr "እባክህን ትክክለኛ ኢሜል አስገባ"
+
+#. module: s2u_online_appointment
+#: code:addons/s2u_online_appointment/controllers/main.py:0
+#, python-format
+msgid "Please enter your City address."
+msgstr "እባክዎ የከተማዎን አድራሻ ያስገቡ።"
+
+#. module: s2u_online_appointment
+#: code:addons/s2u_online_appointment/controllers/main.py:0
+#, python-format
+msgid "Please enter your Sub City address."
+msgstr "እባክዎን የክፍለ ከተማ አድራሻዎን ያስገቡ"
+
+#. module: s2u_online_appointment
+#: code:addons/s2u_online_appointment/controllers/main.py:0
+#, python-format
+msgid "Please enter your email address."
+msgstr "እባክህን ኢሜል አስገባ"
+
+#. module: s2u_online_appointment
+#: code:addons/s2u_online_appointment/controllers/main.py:0
+#, python-format
+msgid "Please enter your name."
+msgstr "እባክህ ስምህን አስገባ።"
+
+#. module: s2u_online_appointment
+#: code:addons/s2u_online_appointment/controllers/main.py:0
+#, python-format
+msgid "Please enter your phonenumber."
+msgstr "እባክዎን ስልክ ቁጥርዎን ያስገቡ።"
+
+#. module: s2u_online_appointment
+#: code:addons/s2u_online_appointment/controllers/main.py:0
+#, python-format
+msgid "Please select a valid appointee."
+msgstr "እባክዎ ትክክለኛ ተሿሚ ይምረጡ።"
+
+#. module: s2u_online_appointment
+#: code:addons/s2u_online_appointment/controllers/main.py:0
+#, python-format
+msgid "Please select a valid date."
+msgstr "እባክዎ ትክክለኛ ቀን ይምረጡ።"
+
+#. module: s2u_online_appointment
+#: code:addons/s2u_online_appointment/controllers/main.py:0
+#, python-format
+msgid "Please select a valid subject."
+msgstr "እባክዎ ትክክለኛ ርዕሰ ጉዳይ ይምረጡ።"
+
+#. module: s2u_online_appointment
+#: code:addons/s2u_online_appointment/controllers/main.py:0
+#, python-format
+msgid "Please select a valid timeslot."
+msgstr "እባክዎ የሚሰራ የጊዜ ገደብ ይምረጡ።"
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_registration__access_url
+msgid "Portal Access URL"
+msgstr "ፖርታል መዳረሻ URL"
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_registration__activity_user_id
+msgid "Responsible User"
+msgstr "ኃላፊነት ያለው ተጠቃሚ"
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_registration__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "የኤስኤምኤስ የማድረስ ስህተት"
+
+#. module: s2u_online_appointment
+#: code:addons/s2u_online_appointment/models/appointment_slot.py:0
+#: code:addons/s2u_online_appointment/wizard/make_more_slots.py:0
+#, python-format
+msgid "Saturday"
+msgstr "ቅዳሜ"
+
+#. module: s2u_online_appointment
+#: code:addons/s2u_online_appointment/models/appointment_registration.py:0
+#: model:ir.model.fields.selection,name:s2u_online_appointment.selection__s2u_appointment_registration__state__valid
+#, python-format
+msgid "Scheduled"
+msgstr "መርሐግብር ተይዞለታል"
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_registration__access_token
+msgid "Security Token"
+msgstr "የደህንነት ማስመሰያ"
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_make_more_slot__slot_ids
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_slot__slot
+msgid "Slot"
+msgstr "የጊዜ ገደብ"
+
+#. module: s2u_online_appointment
+#: code:addons/s2u_online_appointment/controllers/main.py:0
+#, python-format
+msgid "Slot is already occupied, please choose another slot."
+msgstr "የጊዜ ገደብ አስቀድሞ ተይዟል, እባክዎ ሌላ ይምረጡ::"
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,help:s2u_online_appointment.field_s2u_appointment_registration__appointment_begin
+msgid "Start date of an event, without time for full days events"
+msgstr "የዝግጅቱ መጀመሪያ ቀን፣ ለሙሉ ቀናት ዝግጅቶች ጊዜ ሳይሰጥ"
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_registration__state
+msgid "Status"
+msgstr "ሁኔታ"
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,help:s2u_online_appointment.field_s2u_appointment_registration__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"በእንቅስቃሴዎች ላይ የተመሰረተ ሁኔታ\n"
+"ጊዜው ያለፈበት፡ የማብቂያ ቀን አስቀድሞ አልፏል\n"
+"ዛሬ፡ የእንቅስቃሴ ቀን ዛሬ ነው።\n"
+"የታቀደ: የወደፊት እንቅስቃሴዎች."
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,help:s2u_online_appointment.field_s2u_appointment_registration__appointment_end
+msgid "Stop date of an event, without time for full days events"
+msgstr "የአንድ ክስተት ማቆሚያ ቀን፣ ለሙሉ ቀናት ዝግጅቶች ጊዜ ሳይሰጥ"
+
+#. module: s2u_online_appointment
+#: code:addons/s2u_online_appointment/models/appointment_slot.py:0
+#: code:addons/s2u_online_appointment/wizard/make_more_slots.py:0
+#, python-format
+msgid "Sunday"
+msgstr "እሁድ"
+
+#. module: s2u_online_appointment
+#: model:website.menu,name:s2u_online_appointment.registration_menu
+msgid "Supporter Registation Form"
+msgstr "የደጋፊዎች ምዝገባ ቅጽ"
+
+#. module: s2u_online_appointment
+#: code:addons/s2u_online_appointment/models/appointment_option.py:0
+#, python-format
+msgid "The duration value must be between 0:05 and 8:00!"
+msgstr "የቆይታ ዋጋው በ0፡05 እና 8፡00 መካከል መሆን አለበት!"
+
+#. module: s2u_online_appointment
+#: code:addons/s2u_online_appointment/models/appointment_slot.py:0
+#, python-format
+msgid "The slot value must be between 0:00 and 12:00!"
+msgstr "የጊዜ ገደብ በ0:00 እና 12:00 መካከል መሆን አለበት!"
+
+#. module: s2u_online_appointment
+#: model:ir.model,name:s2u_online_appointment.model_duration
+msgid "This model will create duration time"
+msgstr "ይህ ሞዴል የቆይታ ጊዜን ይፈጥራል"
+
+#. module: s2u_online_appointment
+#: model:ir.model,name:s2u_online_appointment.model_make_more_slot
+msgid "This model will create more slots"
+msgstr "ይህ ሞዴል የጊዜ ገደብ ይፈጥራል"
+
+#. module: s2u_online_appointment
+#: model:ir.model,name:s2u_online_appointment.model_times
+msgid "This model will create times"
+msgstr "ይህ ሞዴል ጊዜን ይፈጥራል"
+
+#. module: s2u_online_appointment
+#: code:addons/s2u_online_appointment/models/appointment_slot.py:0
+#: code:addons/s2u_online_appointment/wizard/make_more_slots.py:0
+#, python-format
+msgid "Thursday"
+msgstr "ሐሙስ"
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_duration__time
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_times__time
+msgid "Time"
+msgstr "ጊዜ"
+
+#. module: s2u_online_appointment
+#: code:addons/s2u_online_appointment/models/appointment_slot.py:0
+#: code:addons/s2u_online_appointment/wizard/make_more_slots.py:0
+#, python-format
+msgid "Tuesday"
+msgstr "ማክሰኞ"
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,help:s2u_online_appointment.field_s2u_appointment_registration__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "በመዝገብ ላይ ያለ ልዩ የእንቅስቃሴ ዓይነት።"
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_registration__message_unread
+msgid "Unread Messages"
+msgstr "ያልተነበቡ መልእክቶች"
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_registration__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "ያልተነበቡ መልዕክቶች ቆጣሪ"
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_make_more_slot__user_id
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_slot__user_id
+msgid "User"
+msgstr "ተጠቃሚ"
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_option__user_specific
+msgid "User specific"
+msgstr "ልዩ ተጠቃሚ"
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_option__users_allowed
+msgid "Users Allowed"
+msgstr "የተፈቀደላቸው ተጠቃሚዎች"
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,field_description:s2u_online_appointment.field_s2u_appointment_registration__website_message_ids
+msgid "Website Messages"
+msgstr "የድር ጣቢያ መልዕክቶች"
+
+#. module: s2u_online_appointment
+#: model:ir.model.fields,help:s2u_online_appointment.field_s2u_appointment_registration__website_message_ids
+msgid "Website communication history"
+msgstr "የድር ጣቢያ የግንኙነት ታሪክ"
+
+#. module: s2u_online_appointment
+#: code:addons/s2u_online_appointment/models/appointment_slot.py:0
+#: code:addons/s2u_online_appointment/wizard/make_more_slots.py:0
+#, python-format
+msgid "Wednesday"
+msgstr "እሮብ"
+
+#. module: s2u_online_appointment
+#: code:addons/s2u_online_appointment/models/appointment_option.py:0
+#, python-format
+msgid "You Can't Have A Digit in Appointment Option"
+msgstr "በቀጠሮ ምርጫ ውስጥ አሃዝ ሊኖርዎት አይችልም።"

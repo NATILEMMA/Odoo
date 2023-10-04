@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <record id="view_salary_advance_form_2" model="ir.ui.view">
+            <field name="name">salary.advance.conf.form</field>
+            <field name="model">salary.advance.conf</field>
+            <field name="arch" type="xml">
+                <form string="Salary Advance Rule">
+                    <sheet>
+                		<group>
+	                		<group>
+	                        	<field name="percent"/>
+		                    </group>
+                    	</group>
+		            </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_salary_advance_tree_2">
+            <field name="name">salary.advance.conf.tree</field>
+            <field name="model">salary.advance.conf</field>
+            <field name="arch" type="xml">
+                <tree string="Salary Advance Rule">
+                    <field name="percent"/>
+                </tree>
+            </field>
+        </record>
+
+
+
+
+         <record id="action_salary_advance_to_approve_rule" model="ir.actions.act_window">
+            <field name="name">Salary rule Advance</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">salary.advance.conf</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain"></field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create salary advance rule
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="parent_menu_salary_advance_rule"  name="Salary Advance Rule"  action="action_salary_advance_to_approve_rule" parent="parent_menu_salary_advance"/>
+    </data>
+</odoo>

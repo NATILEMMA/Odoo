@@ -1,0 +1,282 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <!-- This record will create tree view for annual planning -->
+    <record id="annual_planning_city_graph_action" model="ir.actions.act_window">
+        <field name="name">Annual Planning</field>
+        <field name="res_model">annual.plans</field>
+        <field name="view_mode">graph,pivot,tree</field>
+        <field name="domain">[('city_id.city_manager', 'in', [uid])]</field>
+    </record>
+
+    <!-- This record will create tree view for annual planning -->
+    <record id="annual_planning_sub_city_graph_action" model="ir.actions.act_window">
+        <field name="name">Annual Planning Subcity</field>
+        <field name="res_model">annual.plans.subcity</field>
+        <field name="view_mode">graph,pivot,tree</field>
+        <field name="domain">['|', ('subcity_id.parent_manager', '=', uid), ('subcity_id.city_id.city_manager', 'in', [uid])]</field>
+    </record>
+
+    <!-- This record will create tree view for annual planning -->
+    <record id="annual_planning_wereda_graph_action" model="ir.actions.act_window">
+        <field name="name">Annual Planning Woreda</field>
+        <field name="res_model">annual.plans.wereda</field>
+        <field name="view_mode">graph,pivot,tree</field>
+        <field name="domain">['|', '|', ('wereda_id.branch_manager', '=', uid), ('wereda_id.parent_id.parent_manager', '=', uid), ('wereda_id.parent_id.city_id.city_manager', 'in', [uid])]</field>
+    </record>
+
+    <!-- This record will create an action for the membership handlers parent model reporting -->
+    <record id="cell_dashboard_reporting_action" model="ir.actions.act_window">
+        <field name="name">Cell Reporting</field>
+        <field name="res_model">member.cells</field>
+        <field name="view_mode">graph,pivot,tree</field>
+        <field name="domain">['|', '|', '|', '|', '|', '|', '|', '|', '|', '|',
+                            ('cell_admin', '=', uid),
+                            ('cell_assembler', '=', uid),
+                            ('cell_finance', '=', uid),
+                            ('main_office.main_assembler', '=', uid),
+                            ('main_office.main_admin', '=', uid),
+                            ('main_office.main_finance', '=', uid),
+                            ('wereda_id.branch_manager', '=', uid),
+                            ('subcity_id.parent_manager', '=', uid),
+                            ('subcity_id.city_id.city_manager', 'in', [uid]),
+                            ('subcity_id.city_id.transfer_handler', '=', uid),
+                            ('subcity_id.city_id.responsible_id.system_admin', 'in', [uid])]</field>
+    </record>
+
+    <record id="donor_payment_dashboard_action" model="ir.actions.act_window">
+        <field name="name">Donor Payment</field>
+        <field name="res_model">donation.payment</field>
+        <field name="view_mode">graph,pivot,tree</field>
+        <field name="domain">['|', '|', '|', '|', '|', '|', '|',
+                            ('member_cell.cell_admin', '=', uid),
+                            ('member_cell.cell_finance', '=', uid),
+                            ('main_office.main_admin', '=', uid),
+                            ('main_office.main_finance', '=', uid),
+                            ('wereda_id.branch_manager', '=', uid),
+                            ('subcity_id.parent_manager.id', '=', uid),
+                            ('city.city_manager', 'in', [uid]),
+                            ('city.responsible_id.system_admin', 'in', [uid])]</field>
+    </record>
+
+    <record id="membership_cell_payment_dashboard_action" model="ir.actions.act_window">
+        <field name="name">Cell Payment</field>
+        <field name="res_model">membership.cell.payment</field>
+        <field name="view_mode">graph,pivot,tree</field>
+        <field name="domain">['|', '|', '|', '|', '|', '|', '|', '|',
+                            ('member_cell.cell_admin', '=', uid),
+                            ('member_cell.cell_finance', '=', uid),                           
+                            ('main_office.main_admin', '=', uid),
+                            ('main_office.main_finance', '=', uid),
+                            ('wereda_id.branch_manager', '=', uid),
+                            ('subcity_id.parent_manager.id', '=', uid),
+                            ('subcity_id.city_id.city_manager', 'in', [uid]),
+                            ('subcity_id.city_id.transfer_handler', '=', uid), 
+                            ('subcity_id.city_id.responsible_id.system_admin', 'in', [uid])]</field>
+    </record> 
+
+    <record id="main_office_payment_action" model="ir.actions.act_window">
+        <field name="name">Main Office Payment</field>
+        <field name="res_model">membership.payment</field>
+        <field name="view_mode">graph,pivot,tree</field>
+        <field name="domain">['|', '|', '|', '|', '|', '|',
+                            ('main_office.main_admin', '=', uid),
+                            ('main_office.main_finance', '=', uid),
+                            ('wereda_id.branch_manager', '=', uid),
+                            ('subcity_id.parent_manager.id', '=', uid),
+                            ('subcity_id.city_id.city_manager', 'in', [uid]),
+                            ('subcity_id.city_id.transfer_handler', '=', uid), 
+                            ('subcity_id.city_id.responsible_id.system_admin', 'in', [uid])]</field>
+    </record>
+
+    <!--This record will create the action of assembly -->
+    <record id="complaint_report_action" model="ir.actions.act_window">
+        <field name="name">Complaint</field>
+        <field name="res_model">member.complaint</field>
+        <field name="view_mode">graph,pivot,tree</field>
+        <field name="domain">['|', '|',
+                          ('wereda_id.branch_manager', '=', uid),
+                          ('wereda_id.parent_id.parent_manager', '=', uid),
+                          ('wereda_id.parent_id.city_id.city_manager', 'in', [uid])]</field>
+    </record>
+
+    <!--This record will create the action of assembly -->
+    <record model="ir.actions.act_window.view" id="complaint_report_id">
+        <field name="sequence" eval="1"/>
+        <field name="view_mode">graph</field>
+        <field name="view_id" ref="status_graph"/>
+        <field name="act_window_id" ref="complaint_report_action"/>
+    </record>
+
+    <!--This record will create the action of assembly -->
+    <record id="assembly_round_action" model="ir.actions.act_window">
+        <field name="name">Assembly</field>
+        <field name="res_model">assembly</field>
+        <field name="view_mode">graph,pivot,tree</field>
+    </record>
+
+    <!--This record will create the action of assembly -->
+    <record model="ir.actions.act_window.view" id="member_graph_round_id">
+        <field name="sequence" eval="1"/>
+        <field name="view_mode">graph</field>
+        <field name="view_id" ref="assembly_round_dashboard"/>
+        <field name="act_window_id" ref="assembly_round_action"/>
+    </record>
+
+    <!--This record will create the action of assembly -->
+    <record id="assembly_year_action" model="ir.actions.act_window">
+        <field name="name">Assembly</field>
+        <field name="res_model">assembly</field>
+        <field name="view_mode">graph,pivot,tree</field>
+    </record>
+
+    <!--This record will create the action of assembly -->
+    <record model="ir.actions.act_window.view" id="member_graph_year_id">
+        <field name="sequence" eval="1"/>
+        <field name="view_mode">graph</field>
+        <field name="view_id" ref="assembly_year_dashboard"/>
+        <field name="act_window_id" ref="assembly_year_action"/>
+    </record>
+
+
+    <!-- This record will create tree view for annual planning -->
+    <record id="annual_planning_city_graph_action" model="ir.actions.act_window">
+        <field name="name">Annual Planning</field>
+        <field name="res_model">annual.plans</field>
+        <field name="view_mode">graph,pivot,tree</field>
+        <field name="domain">[('city_id.city_manager', 'in', [uid])]</field>
+    </record>
+
+    <!-- This record will create tree view for annual planning -->
+    <record id="annual_planning_sub_city_graph" model="ir.actions.act_window">
+        <field name="name">Annual Planning Subcity</field>
+        <field name="res_model">annual.plans.subcity</field>
+        <field name="view_mode">graph,pivot,tree</field>
+        <field name="domain">['|', ('subcity_id.parent_manager', '=', uid), ('city_id.city_manager', 'in', [uid])]</field>
+    </record>
+
+    <!-- This record will create tree view for annual planning -->
+    <record id="annual_planning_wereda_graph" model="ir.actions.act_window">
+        <field name="name">Annual Planning Woreda</field>
+        <field name="res_model">annual.plans.wereda</field>
+        <field name="view_mode">graph,pivot,tree</field>
+        <field name="domain">['|', '|', ('wereda_id.branch_manager', '=', uid), ('subcity_id.parent_manager', '=', uid), ('city_id.city_manager', 'in', [uid])]</field>
+    </record>
+
+    <menuitem id="membership_all_module_report_tab"
+              name="Membership"
+              parent="report.all_module_report"
+              sequence="6"
+              groups="members_custom.member_group_cell_manager,members_custom.member_group_finance,members_custom.member_group_assembler"/>
+
+    <menuitem name="All Members"
+              id="all_members_report"
+              parent="membership_all_module_report_tab"
+              groups="members_custom.member_group_admin"/>
+
+
+   <menuitem id="submenu_all_members_report"
+            name="All Members"
+            parent="all_members_report"
+            action="members_custom.membership_members"/>
+
+
+    <menuitem name="Annual Planning"
+              id="annual_plan_menu"
+              parent="membership_all_module_report_tab"
+              groups="members_custom.member_group_manager"/>
+
+    <menuitem id="annual_city_plan_report_menu"
+              name="Annual City Plan Report"
+              parent="annual_plan_menu"
+              action="annual_planning_city_graph_action"
+              groups="members_custom.member_group_city_admin"
+              sequence="1"/> 
+
+    <menuitem id="annual_sub_city_plan_report_menu"
+              name="Annual Sub City Plan Report"
+              parent="annual_plan_menu"
+              action="annual_planning_sub_city_graph_action"
+              groups="members_custom.member_group_admin"
+              sequence="2"/> 
+
+    <menuitem id="annual_wereda_plan_report_menu"
+              name="Annual Woreda Plan Report"
+              parent="annual_plan_menu"
+              action="annual_planning_wereda_graph_action"
+              groups="members_custom.member_group_manager"
+              sequence="3"/> 
+
+    <menuitem name="Membership Organization"
+              id="membership_organization_menu"
+              parent="membership_all_module_report_tab"
+              groups="members_custom.member_group_cell_manager,members_custom.member_group_finance,members_custom.member_group_assembler"/>
+
+    <menuitem id="cell_report_menu"
+              name="Cell Report"
+              parent="membership_organization_menu"
+              action="cell_dashboard_reporting_action"
+              groups="members_custom.member_group_cell_manager,members_custom.member_group_finance,members_custom.member_group_assembler"
+              sequence="1"/> 
+
+    <menuitem name="Membership Payment"
+              id="membership_payment_all_module_report"
+              parent="membership_all_module_report_tab"
+              groups="members_custom.member_group_finance"/>
+
+    <menuitem id="donor_payment_report_menu"
+              name="Donor Payment Report"
+              parent="membership_payment_all_module_report"
+              action="donor_payment_dashboard_action"
+              sequence="1"/> 
+
+    <menuitem id="cell_payment_report_menu"
+              name="Cell Payment Report"
+              parent="membership_payment_all_module_report"
+              action="membership_cell_payment_dashboard_action"
+              sequence="2"/> 
+
+    <menuitem id="main_office_payment_report_menu"
+              name="Main Office Payment Report"
+              parent="membership_payment_all_module_report"
+              action="main_office_payment_action"
+              sequence="3"/>  
+
+    <menuitem id="complaint_report_menu"
+              name="Complaint Report"
+              parent="membership_all_module_report_tab"
+              groups="members_custom.member_group_manager"/> 
+
+    <menuitem id="complaint_state_report_menu"
+              name="Complaint State Report"
+              parent="complaint_report_menu"
+              action="complaint_report_action"/> 
+
+    <menuitem id="assembly_report_menu"
+              name="Assembly Report"
+              parent="membership_all_module_report_tab"
+              groups="members_custom.member_group_city_admin"/>    
+
+    <menuitem id="assembly_year_menu"
+              name="Assembly by Year"
+              parent="assembly_report_menu"
+              action="assembly_year_action"/>
+
+    <menuitem id="assembly_round_menu"
+              name="Assembly by Round"
+              parent="assembly_report_menu"
+              action="assembly_round_action"/>
+
+
+    <menuitem id="training_report_menu_dos"
+              name="Training Report"
+              parent="membership_all_module_report_tab"
+              groups="members_custom.member_group_manager"/>
+
+
+    <menuitem id="training_report_submenu_dos"
+              name="Training Report"
+              parent="training_report_menu_dos"
+              action="members_custom.member_training_report_action"/>
+
+</odoo>

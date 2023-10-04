@@ -1,0 +1,151 @@
+# Date created: 2023-06-17 12:44:58 by dichthuatphuongdong.com
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-06-17 03:13:39+0000"
+"MIME-Version: 1.0"
+"Content-Type: text/plain; charset=UTF-8"
+"Content-Transfer-Encoding: 8bit"
+"Plural-Forms: nplurals=1; plural=0;"
+"X-Generator: GlotPress/3.0.0-alpha.2"
+"Language: en_GB"
+"Project-Id-Version: PO File 5.8.1"
+
+#. module: hr_expense_advance_clearing
+#: code:addons/hr_expense_advance_clearing/wizard/hr_expense_sheet_register_payment.py:0
+msgid "A remaining advance return of %s %s with the reference <a href=\'/mail/view?%s\'>%s</a> related to your expense %s has been made."
+msgstr "ቀሪ የ%s %s ከወጪዎ %s ጋር በተገናኘ ከማጣቀሻ <a href=\'/mail/view?%s\'>%s</a> ጋር ተሠርቷል።"
+
+#. module: hr_expense_advance_clearing
+#: model_terms:ir.ui.view,arch_db:hr_expense_advance_clearing.hr_expense_sheet_view_search
+msgid "Advance"
+msgstr "ቀዳሚ"
+
+#. module: hr_expense_advance_clearing
+#: model_terms:ir.ui.view,arch_db:hr_expense_advance_clearing.hr_expense_sheet_view_search
+msgid "Advance (not cleared)"
+msgstr "የቅድሚያ (ያልጸዳ)"
+
+#. module: hr_expense_advance_clearing
+#: model:ir.actions.act_window,name:hr_expense_advance_clearing.action_hr_expense_sheet_advance_clearing
+msgid "Advance Clearing"
+msgstr "የቅድሚያ ማጽዳት"
+
+#. module: hr_expense_advance_clearing
+#: model:ir.model.fields,field_description:hr_expense_advance_clearing.field_hr_expense_sheet__advance_sheet_residual
+msgid "Advance Remaining"
+msgstr "ቅድሚያ የቀረው"
+
+#. module: hr_expense_advance_clearing
+#: code:addons/hr_expense_advance_clearing/models/hr_expense_sheet.py:0
+msgid "Advance clearing must not contain any advance expense line"
+msgstr "የቅድሚያ ማጽዳት ምንም አይነት የቅድሚያ ወጪ መስመር መያዝ የለበትም"
+
+#. module: hr_expense_advance_clearing
+#: code:addons/hr_expense_advance_clearing/models/hr_expense_sheet.py:0
+msgid "Advance must contain only 1 advance expense line"
+msgstr "የቅድሚያ 1 የቅድሚያ ወጪ መስመር ብቻ መያዝ አለበት።"
+
+#. module: hr_expense_advance_clearing
+#: code:addons/hr_expense_advance_clearing/models/hr_expense.py:0
+msgid "Advance: %s has no amount to clear"
+msgstr "ቅድሚያ፡ %s ለማጽዳት ምንም መጠን የለውም"
+
+#. module: hr_expense_advance_clearing
+#: model:ir.model.fields,field_description:hr_expense_advance_clearing.field_hr_expense_sheet__clearing_residual
+msgid "Amount to clear"
+msgstr "የሚጸዳው መጠን"
+
+#. module: hr_expense_advance_clearing
+#: model:ir.model.fields,help:hr_expense_advance_clearing.field_hr_expense_sheet__clearing_residual
+msgid "Amount to clear of this expense sheet in company currency"
+msgstr "ከዚህ የወጪ ሉህ በኩባንያው ምንዛሬ የሚጸዳው መጠን"
+
+#. module: hr_expense_advance_clearing
+#: model:ir.model.fields,field_description:hr_expense_advance_clearing.field_hr_expense_sheet__advance_sheet_id
+#: model_terms:ir.ui.view,arch_db:hr_expense_advance_clearing.view_hr_expense_sheet_form
+msgid "Clear Advance"
+msgstr "የቅድሚያ አጽዳ"
+
+#. module: hr_expense_advance_clearing
+#: model_terms:ir.ui.view,arch_db:hr_expense_advance_clearing.hr_expense_sheet_view_search
+msgid "Clearing"
+msgstr "በማጽዳት ላይ"
+
+#. module: hr_expense_advance_clearing
+#: model_terms:ir.actions.act_window,help:hr_expense_advance_clearing.action_hr_expense_sheet_advance_clearing
+msgid "Create a new expense report"
+msgstr "አዲስ የወጪ ሪፖርት ይፍጠሩ"
+
+#. module: hr_expense_advance_clearing
+#: model:ir.model.fields,field_description:hr_expense_advance_clearing.field_hr_expense__advance
+#: model:ir.model.fields,field_description:hr_expense_advance_clearing.field_hr_expense_sheet__advance
+#: model:product.product,name:hr_expense_advance_clearing.product_emp_advance
+#: model:product.template,name:hr_expense_advance_clearing.product_emp_advance_product_template
+msgid "Employee Advance"
+msgstr "የሰራተኛ እድገት"
+
+#. module: hr_expense_advance_clearing
+#: code:addons/hr_expense_advance_clearing/models/hr_expense.py:0
+msgid "Employee advance product has no payable account"
+msgstr "የሰራተኛ የቅድሚያ ምርት ምንም የሚከፈልበት ሂሳብ የለውም"
+
+#. module: hr_expense_advance_clearing
+#: code:addons/hr_expense_advance_clearing/models/hr_expense.py:0
+msgid "Employee advance, all taxes must be removed"
+msgstr "የሰራተኛ ቅድመ ክፍያ፣ ሁሉም ግብሮች መወገድ አለባቸው"
+
+#. module: hr_expense_advance_clearing
+#: code:addons/hr_expense_advance_clearing/models/hr_expense.py:0
+msgid "Employee advance, selected product is not valid"
+msgstr "የሰራተኛ እድገት ፣ የተመረጠው ምርት ልክ አይደለም።"
+
+#. module: hr_expense_advance_clearing
+#: model:ir.model,name:hr_expense_advance_clearing.model_hr_expense
+msgid "Expense"
+msgstr "ወጪ"
+
+#. module: hr_expense_advance_clearing
+#: model:ir.model,name:hr_expense_advance_clearing.model_hr_expense_sheet_register_payment_wizard
+msgid "Expense Register Payment Wizard"
+msgstr "የወጪ መመዝገቢያ ክፍያ አዋቂ"
+
+#. module: hr_expense_advance_clearing
+#: model:ir.model,name:hr_expense_advance_clearing.model_hr_expense_sheet
+msgid "Expense Report"
+msgstr "የወጪ ሪፖርት"
+
+#. module: hr_expense_advance_clearing
+#: model:ir.model.fields,help:hr_expense_advance_clearing.field_hr_expense_sheet__amount_payable
+msgid "Final regiter payment amount even after advance clearing"
+msgstr "የመጨረሻው የሬጅስተር የክፍያ መጠን በቅድሚያ ከተጣራ በኋላም ቢሆን"
+
+#. module: hr_expense_advance_clearing
+#: model_terms:ir.actions.act_window,help:hr_expense_advance_clearing.action_hr_expense_sheet_advance_clearing
+msgid "Once you have created your expense, submit it to your manager who will validate it."
+msgstr "አንዴ ወጪዎን ከፈጠሩ በኋላ የሚያረጋግጠውን ለስራ አስኪያጅዎ ያቅርቡ።"
+
+#. module: hr_expense_advance_clearing
+#: model:ir.model.fields,field_description:hr_expense_advance_clearing.field_hr_expense_sheet__amount_payable
+msgid "Payable Amount"
+msgstr "የሚከፈልበት መጠን"
+
+#. module: hr_expense_advance_clearing
+#: model:ir.model.fields,help:hr_expense_advance_clearing.field_hr_expense_sheet__advance_sheet_residual
+msgid "Remaining amount to clear the selected advance sheet"
+msgstr "የተመረጠውን የቅድሚያ ሉህ ለማጽዳት የቀረው መጠን"
+
+#. module: hr_expense_advance_clearing
+#: model_terms:ir.ui.view,arch_db:hr_expense_advance_clearing.view_hr_expense_sheet_form
+msgid "Return Advance"
+msgstr "የቅድሚያ መመለስ"
+
+#. module: hr_expense_advance_clearing
+#: model:ir.model.fields,help:hr_expense_advance_clearing.field_hr_expense_sheet__advance_sheet_id
+msgid "Show remaining advance of this employee"
+msgstr "የዚህን ሰራተኛ ቀሪ እድገት አሳይ"
+
+#. module: hr_expense_advance_clearing
+#: model:product.product,uom_name:hr_expense_advance_clearing.product_emp_advance
+#: model:product.template,uom_name:hr_expense_advance_clearing.product_emp_advance_product_template
+msgid "Units"
+msgstr "ክፍሎች"

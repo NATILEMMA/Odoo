@@ -41,12 +41,24 @@ class ResUsers(models.Model):
     @api.model
     def create(self, vals):
         res = super(ResUsers, self).create(vals)
-        self.env.cr.execute("INSERT INTO calendar_event_res_partner_rel(res_partner_id ,calendar_event_id ) select %s,id from calendar_event where is_generated_date = True"%(res.partner_id.id))
-        self.env.cr.commit()
-        gro_groups = self.env['res.groups'].search([('name', '=', 'Gregory Datepicker')], limit=1)
-        res.write({
-            'groups_id': [(4, gro_groups.id)]
-        })
+        if vals.get('sel_groups_1_8_9') == 1:
+            self.env.cr.execute("INSERT INTO calendar_event_res_partner_rel(res_partner_id ,calendar_event_id ) select %s,id from calendar_event where is_generated_date = True"%(res.partner_id.id))
+            self.env.cr.commit()
+            get_default_role = self.env['res.users.role'].sudo().search([('is_general','=',True)])
+            roles= []
+            for role in get_default_role:
+                if role.name == 'Ethiopian datepicker role':
+                    roles.append((0, 0, {
+                                'role_id': role.id,
+                                'is_enabled': False
+                                }))
+                else:
+                    roles.append((0, 0, {
+                                'role_id': role.id,
+                                'is_enabled': True
+                                }))
+            res.role_line_ids = roles
+            # self.env.cr.commit()
         return res
     
 

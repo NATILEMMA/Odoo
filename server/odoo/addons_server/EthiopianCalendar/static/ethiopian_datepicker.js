@@ -17,8 +17,8 @@ odoo.define("EthiopianCalendar.EthiopianCalendarWidget", function(require){
     var session = require('web.session');
     var rpc = require('web.rpc')
     let clicked_val = 0
-   
-    
+
+
     var EthiopianCalendarWidget = Widget.extend({
                 template: 'ethiopian_calander_widget',
                 

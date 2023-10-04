@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <record id="view_loan_advance_form_2" model="ir.ui.view">
+            <field name="name">loan.advance.conf.form</field>
+            <field name="model">loan.advance.conf</field>
+            <field name="arch" type="xml">
+                <form string="Loan Rule">
+                    <sheet>
+                		<group>
+	                		<group>
+	                        	<field name="percent"/>
+		                    </group>
+                    	</group>
+		            </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_loan_advance_conf_tree_2">
+            <field name="name">loan.advance.conf.tree</field>
+            <field name="model">loan.advance.conf</field>
+            <field name="arch" type="xml">
+                <tree string="Loan Rule">
+                    <field name="percent"/>
+                </tree>
+            </field>
+        </record>
+
+
+
+
+         <record id="action_loan_approve_rule" model="ir.actions.act_window">
+            <field name="name">Loan rule</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">loan.advance.conf</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain"></field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create Loan rule
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="parent_menu_loan_advance_rule"  name="Loan Company Rule"  action="action_loan_approve_rule" parent="hr_menu_organizer.hr_employee_status_menu"/>
+    </data>
+</odoo>

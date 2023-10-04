@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record id="all_employees_unused_annual_leaves_tree_view" model="ir.ui.view">
+        <field name="name">Unused Annual Leaves</field>
+        <field name="model">hr.employee</field>
+        <field name="arch" type="xml">
+            <tree delete="false">
+                <field name="name"/>
+                <field name="remaining_leaves" string="Remaining Leaves" sum="Remaining Days"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="all_employees_unused_annual_leaves_search_view" model="ir.ui.view">
+        <field name="name">Unused Annual Leaves</field>
+        <field name="model">hr.employee</field>
+        <field name="arch" type="xml">
+            <search string="Unused Annual Leaves">
+                <group expand="0" string="Group By" colspan="10" col="8">
+                    <filter string="Department" name="department" context="{'group_by': 'department_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="all_employees_unused_annual_leaves" model="ir.actions.act_window">
+        <field name="name">Unused Annual Leaves</field>
+        <field name="res_model">hr.employee</field>
+        <field name="view_mode">tree</field>
+        <field name="search_view_id" ref="all_employees_unused_annual_leaves_search_view"/>
+        <field name="view_id" ref="all_employees_unused_annual_leaves_tree_view"/>
+        <field name="context">{'search_default_department': 1}</field>
+    </record>
+
+    <menuitem
+        id="unused_annual_allocated"
+        name="By Unused Annual Allocated"
+        parent="hr_holidays.menu_hr_holidays_report"
+        action="all_employees_unused_annual_leaves"
+        sequence="5"/>
+
+</odoo>

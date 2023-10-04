@@ -1,0 +1,201 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* muk_utils
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20221005\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-22 09:45+0000\n"
+"PO-Revision-Date: 2023-05-22 09:45+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: muk_utils
+#: model_terms:ir.ui.view,arch_db:muk_utils.view_attachment_search
+msgid "All Data"
+msgstr "ሁሉም ውሂብ"
+
+#. module: muk_utils
+#: model_terms:ir.ui.view,arch_db:muk_utils.view_attachment_search
+msgid "Attached Document Field"
+msgstr "የተያያዘ የሰነድ መስክ"
+
+#. module: muk_utils
+#: model_terms:ir.ui.view,arch_db:muk_utils.view_attachment_search
+msgid "Attached Document Model"
+msgstr "የተያያዘ ሰነድ ሞዴል"
+
+#. module: muk_utils
+#: model:ir.model,name:muk_utils.model_ir_attachment
+msgid "Attachment"
+msgstr "አባሪ"
+
+#. module: muk_utils
+#: model_terms:ir.ui.view,arch_db:muk_utils.res_config_settings_view_form
+msgid "Attachment storage location"
+msgstr "አባሪ ማከማቻ ቦታ"
+
+#. module: muk_utils
+#: model:ir.model.fields,help:muk_utils.field_res_config_settings__attachment_location
+msgid "Attachment storage location."
+msgstr "አባሪ ማከማቻ ቦታ።"
+
+#. module: muk_utils
+#: model_terms:ir.ui.view,arch_db:muk_utils.view_attachment_search
+msgid "Attachments"
+msgstr "አባሪዎች"
+
+#. module: muk_utils
+#: model:ir.model,name:muk_utils.model_base
+msgid "Base"
+msgstr "መሰረት"
+
+#. module: muk_utils
+#: model:ir.model.fields,field_description:muk_utils.field_muk_utils_mixins_groups__child_groups
+#: model_terms:ir.ui.view,arch_db:muk_utils.view_mixins_groups_form
+msgid "Child Groups"
+msgstr "የልጆች ቡድኖች"
+
+#. module: muk_utils
+#: model:ir.model,name:muk_utils.model_res_config_settings
+msgid "Config Settings"
+msgstr "የማስተካያዎች ማዋቀሪያ"
+
+#. module: muk_utils
+#: model:ir.model.fields,field_description:muk_utils.field_muk_utils_mixins_groups__display_name
+#: model:ir.model.fields,field_description:muk_utils.field_muk_utils_mixins_hierarchy__display_name
+#: model:ir.model.fields,field_description:muk_utils.field_muk_utils_scss_editor__display_name
+msgid "Display Name"
+msgstr "መጠሪያው ስም"
+
+#. module: muk_utils
+#: model:ir.model.fields,field_description:muk_utils.field_muk_utils_mixins_groups__explicit_users
+#: model_terms:ir.ui.view,arch_db:muk_utils.view_mixins_groups_form
+msgid "Explicit Users"
+msgstr "ግልጽ ተጠቃሚዎች"
+
+#. module: muk_utils
+#: model_terms:ir.ui.view,arch_db:muk_utils.view_attachment_search
+msgid "Field Data"
+msgstr "የመስክ ውሂብ"
+
+#. module: muk_utils
+#: model_terms:ir.ui.view,arch_db:muk_utils.res_config_settings_view_form
+msgid "Force Storage Migration"
+msgstr "የኃይል ማከማቻ ፍልሰት"
+
+#. module: muk_utils
+#: model_terms:ir.ui.view,arch_db:muk_utils.view_mixins_groups_form
+msgid "Group"
+msgstr "ቡድን"
+
+#. module: muk_utils
+#: model:ir.model,name:muk_utils.model_muk_utils_mixins_groups
+msgid "Group Mixin"
+msgstr "Group Mixin"
+
+#. module: muk_utils
+#: model:ir.model.fields,field_description:muk_utils.field_muk_utils_mixins_groups__name
+msgid "Group Name"
+msgstr "የቡድን ስም"
+
+#. module: muk_utils
+#: model:ir.model.fields,field_description:muk_utils.field_muk_utils_mixins_groups__users
+msgid "Group Users"
+msgstr "የቡድን ተጠቃሚዎች"
+
+#. module: muk_utils
+#: model:ir.model.fields,field_description:muk_utils.field_muk_utils_mixins_groups__groups
+#: model_terms:ir.ui.view,arch_db:muk_utils.view_mixins_groups_form
+#: model_terms:ir.ui.view,arch_db:muk_utils.view_mixins_groups_search
+#: model_terms:ir.ui.view,arch_db:muk_utils.view_mixins_groups_tree
+msgid "Groups"
+msgstr "ቡድኖች"
+
+#. module: muk_utils
+#: model:ir.model,name:muk_utils.model_muk_utils_mixins_hierarchy
+msgid "Hierarchy Mixin"
+msgstr "Hierarchy Mixin"
+
+#. module: muk_utils
+#: model:ir.model.fields,field_description:muk_utils.field_muk_utils_mixins_groups__id
+#: model:ir.model.fields,field_description:muk_utils.field_muk_utils_mixins_hierarchy__id
+#: model:ir.model.fields,field_description:muk_utils.field_muk_utils_scss_editor__id
+msgid "ID"
+msgstr "መታወቂያ"
+
+#. module: muk_utils
+#: model:ir.model.fields,field_description:muk_utils.field_muk_utils_mixins_groups____last_update
+#: model:ir.model.fields,field_description:muk_utils.field_muk_utils_mixins_hierarchy____last_update
+#: model:ir.model.fields,field_description:muk_utils.field_muk_utils_scss_editor____last_update
+msgid "Last Modified on"
+msgstr "በመጨረሻ የተሻሻለው በርቷል"
+
+#. module: muk_utils
+#: model:ir.actions.server,name:muk_utils.action_attachment_migrate
+msgid "Migrate"
+msgstr "መሰደድ"
+
+#. module: muk_utils
+#: code:addons/muk_utils/models/ir_attachment.py:0
+#, python-format
+msgid "Only administrators can execute this action."
+msgstr "ይህን እርምጃ መፈጸም የሚችሉት አስተዳዳሪዎች ብቻ ናቸው።"
+
+#. module: muk_utils
+#: model:ir.model.fields,field_description:muk_utils.field_muk_utils_mixins_groups__parent_group
+msgid "Parent Group"
+msgstr "የወላጅ ቡድን"
+
+#. module: muk_utils
+#: model:ir.model.fields,field_description:muk_utils.field_muk_utils_mixins_groups__parent_path
+#: model:ir.model.fields,field_description:muk_utils.field_muk_utils_mixins_hierarchy__parent_path
+msgid "Parent Path"
+msgstr "የወላጅ መንገድ"
+
+#. module: muk_utils
+#: model:ir.model.fields,field_description:muk_utils.field_muk_utils_mixins_hierarchy__parent_path_json
+msgid "Path Json"
+msgstr "Path Json"
+
+#. module: muk_utils
+#: model:ir.model.fields,field_description:muk_utils.field_muk_utils_mixins_hierarchy__parent_path_names
+msgid "Path Names"
+msgstr "የመንገድ ስሞች"
+
+#. module: muk_utils
+#: model:ir.model,name:muk_utils.model_muk_utils_scss_editor
+msgid "Scss Editor"
+msgstr "Scss አርታዒ"
+
+#. module: muk_utils
+#: model_terms:ir.ui.view,arch_db:muk_utils.res_config_settings_view_form
+#: model_terms:ir.ui.view,arch_db:muk_utils.view_attachment_form
+msgid "Storage"
+msgstr "ማከማቻ"
+
+#. module: muk_utils
+#: model:ir.model.fields,field_description:muk_utils.field_res_config_settings__attachment_location
+msgid "Storage Location"
+msgstr "የማከማቻ ቦታ"
+
+#. module: muk_utils
+#: model:ir.model,name:muk_utils.model_ir_config_parameter
+msgid "System Parameter"
+msgstr "የስርዓት መለኪያ"
+
+#. module: muk_utils
+#: model:ir.model.constraint,message:muk_utils.constraint_muk_utils_mixins_groups_name_uniq
+msgid "The name of the group must be unique!"
+msgstr "የቡድኑ ስም ልዩ መሆን አለበት!"
+
+#. module: muk_utils
+#: model:ir.model.fields,field_description:muk_utils.field_muk_utils_mixins_groups__count_users
+#: model_terms:ir.ui.view,arch_db:muk_utils.view_mixins_groups_form
+msgid "Users"
+msgstr "ተጠቃሚዎች"

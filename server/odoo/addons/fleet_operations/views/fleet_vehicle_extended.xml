@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+   <record id='fleet_vehicle_log_services_view_form_inherited' model='ir.ui.view'>
+        <field name="name">fleet.vehicle.log.services.form.inherited</field>
+        <field name="model">fleet.vehicle.log.services</field>
+        <field name="inherit_id" ref="fleet.fleet_vehicle_log_services_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='amount']" position="after">
+                <field name="covered_by"/>
+            </xpath>
+        </field>
+    </record>
+   <record id="hr_expense_view_form_inherited" model="ir.ui.view">
+        <field name="name">hr.expense.view.form,inherited</field>
+        <field name="model">hr.expense</field>
+        <field name="inherit_id" ref="hr_expense.hr_expense_view_form"/>
+        <field name="arch" type="xml">
+        <xpath expr="//field[@name='total_amount']" position="after">
+            <field name="covered_by"/>
+        </xpath>
+        </field>
+    </record>
+</odoo>
+
+

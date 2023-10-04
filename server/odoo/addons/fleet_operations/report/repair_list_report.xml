@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="report_repair_list">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="web.external_layout">
+                        <div class="page">
+
+
+                            <h2 class="mt16">
+                                <strong>Repair list</strong>
+                            </h2>
+
+                            <div class="row mt32 mb32" id="informations">
+                                <div class="col-auto mw-100 mb-2">
+                                    <strong>Vehicle:</strong>
+                                    <span t-field="o.fmp_id"/>
+                                </div>
+                                <div class="col-auto mw-100 mb-2">
+                                    <strong>Reported Date:</strong>
+                                    <p class="m-0" t-field="o.date"/>
+                                </div>
+                                 <div class="col-auto mw-100 mb-2">
+                                    <strong>next service Date:</strong>
+                                    <p class="m-0" t-field="o.next_service_date"/>
+                                </div>
+                                 <div class="col-auto mw-100 mb-2">
+                                    <strong>Next odometer:</strong>
+                                    <p class="m-0" t-field="o.next_service_odometer" />
+                                </div>
+
+                                 <div class="col-auto mw-100 mb-6">
+                                    <strong>Unpaid Amount:</strong>
+                                    <p class="m-0" t-field="o.additional_payment"/>
+                                </div>
+                            </div>
+
+
+
+                            <table class="table table-sm o_main_table">
+                                <thead>
+                                    <tr>
+                                        <th  class="text-left">Repair type</th>
+                                        <th  class="text-left">Vehicle condition</th>
+                                        <th  class="text-left">Operation</th>
+                                        <th  class="text-left">completed</th>
+                                        <th  class="text-left">Price</th>
+                                        <th  class="text-left">Mechanic</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody class="sale_tbody">
+                                    <t t-foreach="o.repair_line_ids" t-as="line">
+                                        <tr t-att-class="'bg-200 font-weight-bold o_line_section' ">
+                                            <td name="td_name"><span t-field="line.repair_type_id" style="font-size:12px"/></td>
+                                            <td name="td_name"><span t-field="line.condition" style="font-size:12px"/></td>
+                                            <td name="td_name"><span t-field="line.type" style="font-size:12px"/></td>
+                                            <t t-if="line.complete">
+                                            <td name="td_name"><i class="fa fa-check" aria-hidden="true" style="font-size:12px"/></td>
+                                            </t>
+                                            <t t-if="not line.complete">
+                                            <td name="td_name"><i class="icon-check-empty" aria-hidden="true" style="font-size:12px"/></td>
+                                            </t>>
+                                            <td name="td_name"><span t-field="line.price" style="font-size:12px"/></td>
+                                            <td name="td_name"><span t-field="line.mechanic" style="font-size:12px"/></td>
+
+
+                                        </tr>
+                                    </t>
+                                </tbody>
+                            </table>
+                                <div class="row mt32 mb32" >
+                                 <div class="col-10">
+                                  </div>
+                                  <div class="col-2">
+                                    <strong>Total services charge:</strong>
+                                    <p class="m-0" t-field="o.amount2"/>
+                                   </div>
+                                   </div>
+
+
+                              <table class="table table-sm o_main_table">
+                                <thead>
+                                    <tr>
+                                        <th  class="text-left">Part Number</th>
+                                        <th  class="text-left">Quantity</th>
+                                        <th  class="text-left">Uom</th>
+                                        <th  class="text-left">Unit cost</th>
+                                        <th  class="text-left">Total cost</th>
+
+                                    </tr>
+                                </thead>
+
+                                <tbody class="sale_tbody">
+                                    <t t-foreach="o.parts_ids" t-as="parts_id">
+                                        <tr t-att-class="'bg-200 font-weight-bold o_line_section' ">
+                                            <td name="td_name"><span t-field="parts_id.product_id" style="font-size:12px"/></td>
+                                            <td name="td_name"><span t-field="parts_id.qty" style="font-size:12px"/></td>
+                                            <td name="td_name"><span t-field="parts_id.product_uom" style="font-size:12px"/></td>
+                                            <td name="td_name"><span t-field="parts_id.price_unit" style="font-size:12px"/></td>
+                                            <td name="td_name"><span t-field="parts_id.price_unit" style="font-size:12px"/></td>
+
+                                        </tr>
+                                    </t>
+                                </tbody>
+                            </table>
+                               <div class="row mt32 mb32" >
+                                 <div class="col-10">
+                                  </div>
+                                   <div class="col-2">
+                                    <strong>Total parts amount:</strong>
+                                    <p class="m-0" t-field="o.sub_total"/>
+                                    </div>
+                                   </div>
+                               <div class="row mt32 mb32" >
+                                 <div class="col-10">
+                                  </div>
+                                       <div class="col-2">
+                                    <strong>Total Amount:</strong>
+                                    <p class="m-0" t-field="o.service_amount"/>
+                                </div>
+                                   </div>
+
+                          </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+
+
+
+    </data>
+
+</odoo>

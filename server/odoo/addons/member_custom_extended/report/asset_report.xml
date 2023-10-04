@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data >
+        <report
+            id="print_pack_certificates"
+            model="account.asset"
+            string="Asset report"
+            report_type="qweb-pdf"
+            name="asset_custom_report.report_assets_template"
+            file="asset_custom_report.report_assets_template"
+        />
+    </data>
+</odoo>
+
+
+

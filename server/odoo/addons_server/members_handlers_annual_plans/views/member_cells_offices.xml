@@ -24,8 +24,7 @@
        <field name="res_model">member.cells</field>
        <field name="view_mode">tree,form,pivot,graph</field>
        <field name="search_view_id" ref="member_cell_action_search"/>
-       <field name="domain">[]</field>
-       <field name="domain">['|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|',
+       <field name="domain">[('duplicate', '=', False), '|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|', '|',
                             ('cell_admin', '=', uid),
                             ('cell_assembler', '=', uid),
                             ('cell_finance', '=', uid),
@@ -40,7 +39,7 @@
                             ('subcity_id.city_id.ict_manager', '=', uid),
                             ('subcity_id.city_id.transfer_handler', '=', uid),
                             ('subcity_id.city_id.responsible_id.system_admin', 'in', [uid])]</field>
-         <field name="context">{'search_default_office': 1}</field>
+         <field name="context">{'search_default_subcity': 1, 'search_default_woreda': 2, 'search_default_member_org': 3, 'search_default_office': 4}</field>
    </record>
 
    <record id="member_cell_tree" model="ir.ui.view">
@@ -67,9 +66,11 @@
            <form duplicate="false">
                 <header>
                     <field name="activate_cell" invisible="1"/>
+                    <field name="saved" invisible="1"/>
                     <field name="total" force_save="1" invisible="1"/>
                     <button name="activate_cell_now" string="Activate" type="object" confirm="Are you sure you want to Activate the Cell?" class="btn btn-success" attrs="{'invisible': ['|', ('state', '=', 'active'), ('activate_cell', '=', False)]}" groups="member_minor_configuration.member_group_cell_manager"/>
                     <field name="state" widget="statusbar"/>
+                    <button name="update_name" type="object" string="Update Name" confirm="Are you sure you want to Update the Cell Name?" class="btn btn-primary"/>
                 </header>
                 <sheet>
                     <div class="oe_button_box" name="button_box">
@@ -78,7 +79,8 @@
                         </button>
                     </div>
                     <h1>
-                    <field name="name" placeholder="Eg. Selam Cell"/>
+                    <field name="name" placeholder="Eg. Selam Cell" attrs="{'invisible': [('saved', '=', False)]}" force_save="1" readonly="1"/>
+                    <field name="name_2" placeholder="Eg. Selam Cell" attrs="{'invisible': [('saved', '=', True)]}" force_save="1"/>
                     </h1>
                     <div>
                         <group col="3">
@@ -174,7 +176,7 @@
        <field name="res_model">main.office</field>
        <field name="view_mode">tree,form,pivot,graph</field>
        <field name="search_view_id" ref="main_office_action_search"/>
-       <field name="domain">['|', '|', '|', '|', '|', '|', '|', '|', '|', '|',
+       <field name="domain">[('duplicate', '=', False), '|', '|', '|', '|', '|', '|', '|', '|', '|', '|',
                             ('main_admin', '=', uid),
                             ('main_assembler', '=', uid),
                             ('main_finance', '=', uid),
@@ -187,7 +189,7 @@
                             ('subcity_id.city_id.transfer_handler', '=', uid),
                             ('subcity_id.city_id.responsible_id.system_admin', 'in', [uid])]</field>
 
-        <field name="context">{'search_default_woreda': 1}</field>
+        <field name="context">{'search_default_subcity': 1, 'search_default_woreda': 2, 'search_default_member_org': 3}</field>
    </record>
 
    <record id="member_office_tree" model="ir.ui.view">
@@ -211,7 +213,11 @@
        <field name="model">main.office</field>
        <field name="arch" type="xml">
            <form duplicate="false">
+                <header>
+                    <button name="update_name" type="object" string="Update Name" confirm="Are you sure you want to Update the Basic Organization Name?" class="btn btn-primary"/>
+                </header>
                 <sheet>
+                    <field name="saved" invisible="1"/>
                     <div class="oe_button_box" name="button_box">
                         <button class="oe_stat_button" name="%(meeting_eachother_action_main)d" type="action" icon="fa-users">
                             <field name="pending_meetings" string="Pending Meetings" widget="statinfo"/>
@@ -221,7 +227,8 @@
                         </button>
                     </div>
                     <h1>
-                        <field name="name" placeholder="Eg. Medemer Main Office"/>
+                        <field name="name" placeholder="Eg. Medemer Basic Organization" attrs="{'invisible': [('saved', '=', False)]}" readonly="1" force_save="1"/>
+                        <field name="name_2" placeholder="Eg. Selam Cell" attrs="{'invisible': [('saved', '=', True)]}" force_save="1"/>
                     </h1>
                     <group col="3">
                         <group>

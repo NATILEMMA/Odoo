@@ -71,12 +71,22 @@ var EthiopianCalendarWidgetTwo = Widget.extend({
                       //console.log("**** Both True")
                       var  date2 = data['to'].toString()
                       date2 = data['to'].split("-")
+
+                      if (date2[1] === undefined){
+                        var date22 = data['to'].split("/")
+                        var dateTo = date22[0] + "/" +  date22[1] + "/" +  date22[2]
+                        var dateTo = date22[0] + "/" + date22[1] + "/" +  date22[2]
+                        localStorage.setItem('myFlag1', dateTo);
+                        $("#DatepickerTwo").val(dateTo);
+                     }else{
+
                       var dateTo = date2[1] + "/" +  date2[2] + "/" +  date2[0]
                       //console.log(" From GGGGGG date:",date1)
                       // $("#popupDatepicker").val(dateFrom);
                       localStorage.setItem('myFlag1', data['to']);
 //                                     localStorage.setItem('myFlag', dateTo);
                       $("#DatepickerTwo").val(dateTo);
+                     }
                   }else{
                           //console.log("--- Both False")
                           var  date = data.toString()
@@ -151,7 +161,7 @@ var EthiopianCalendarWidgetTwo = Widget.extend({
             changes: {'ethiopian_to': value},
           }
         var myFlag1 = localStorage.getItem('myFlag1');
-          console.log('flag..', myFlag1,value);
+          console.log('flag..1111', myFlag1,value);
           if (myFlag1 != value){
                  console.log('has differncr',myFlag,value);
                  localStorage.setItem('myFlag', value);

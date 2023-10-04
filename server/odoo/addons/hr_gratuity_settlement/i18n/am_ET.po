@@ -1,0 +1,1089 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_gratuity_settlement
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20221005\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-27 07:48+0000\n"
+"PO-Revision-Date: 2023-03-27 07:48+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_gratuity_settlement
+#: model_terms:ir.ui.view,arch_db:hr_gratuity_settlement.employee_gratuity_form
+msgid ""
+"<span attrs=\"{'invisible': [('wage_type', '=', 'hourly')]}\">/ month</span>\n"
+"                                    <span attrs=\"{'invisible': [('wage_type', '!=', 'hourly')]}\">/ hour</span>"
+msgstr ""
+"<span attrs=\"{'invisible': [('wage_type', '=', 'hourly')]}\">/ ወር</span>\n"
+"                                    <span attrs=\"{'invisible': [('wage_type', '!=', 'hourly')]}\">/  ሰዓት</span>"
+
+#. module: hr_gratuity_settlement
+#: model_terms:ir.ui.view,arch_db:hr_gratuity_settlement.gratuity_configuration_form_view
+msgid "<span class=\"oe_inline\">-days gratuity pay.</span>"
+msgstr "<span class=\"oe_inline\">-ቱ የስራ ቀናት ለስንብት ክፍያ የማግኘት መብት አለው::</span>"
+
+#. module: hr_gratuity_settlement
+#: model_terms:ir.ui.view,arch_db:hr_gratuity_settlement.gratuity_configuration_form_view
+msgid "<span class=\"oe_inline\">Employee is entitled to</span>"
+msgstr "<span class=\"oe_inline\">ሰራተኛው የ</span>"
+
+#. module: hr_gratuity_settlement
+#: model_terms:ir.ui.view,arch_db:hr_gratuity_settlement.gratuity_configuration_form_view
+msgid "<span class=\"oe_inline\">of the</span>"
+msgstr "<span class=\"oe_inline\">እጥፍ ከ</span>"
+
+#. module: hr_gratuity_settlement
+#: model_terms:ir.ui.view,arch_db:hr_gratuity_settlement.employee_gratuity_form
+msgid "<span> Days </span>"
+msgstr "<span> ቀናት </span>"
+
+#. module: hr_gratuity_settlement
+#: model_terms:ir.ui.view,arch_db:hr_gratuity_settlement.employee_gratuity_form
+msgid "<span> Days</span>"
+msgstr "<span> ቀናት</span>"
+
+#. module: hr_gratuity_settlement
+#: model_terms:ir.ui.view,arch_db:hr_gratuity_settlement.employee_gratuity_form
+msgid "<span> Months </span>"
+msgstr "<span> ወራት </span>"
+
+#. module: hr_gratuity_settlement
+#: model_terms:ir.ui.view,arch_db:hr_gratuity_settlement.employee_gratuity_form
+msgid "<span> Years </span>"
+msgstr "<span> ዓመታት </span>"
+
+#. module: hr_gratuity_settlement
+#: model_terms:ir.ui.view,arch_db:hr_gratuity_settlement.employee_gratuity_form
+msgid "<span> years</span>"
+msgstr "<span> ዓመታት</span>"
+
+#. module: hr_gratuity_settlement
+#: model_terms:ir.ui.view,arch_db:hr_gratuity_settlement.hr_contract_form_inherit_wage
+msgid "<span>/ hour</span>"
+msgstr "<span>/ ሰዓት</span>"
+
+#. module: hr_gratuity_settlement
+#: code:addons/hr_gratuity_settlement/models/employee_gratuity.py:0
+#: code:addons/hr_gratuity_settlement/models/other_settlements.py:0
+#, python-format
+msgid "A Settlement request is already processed for this employee"
+msgstr "ለዚህ ሰራተኛ የማቋቋሚያ ጥያቄ አስቀድሞ ተዘጋጅቷል።"
+
+#. module: hr_gratuity_settlement
+#: model_terms:ir.ui.view,arch_db:hr_gratuity_settlement.view_hr_gratuity_accounting_configuration_form
+msgid "Accounting Configuration Menu"
+msgstr "ሂሳብ አያያዝ ማቀዋርያ"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_gratuity_configuration__message_needaction
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity__message_needaction
+msgid "Action Needed"
+msgstr "እርምጃ ያስፈልጋል"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_gratuity_configuration__active
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity_accounting_configuration__active
+msgid "Active"
+msgstr "እየሰራ ያለ"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_gratuity_configuration__activity_ids
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity__activity_ids
+msgid "Activities"
+msgstr "ተግባራት"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_gratuity_configuration__activity_exception_decoration
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "የእንቅስቃሴ ልዩ ማስጌጥ"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_gratuity_configuration__activity_state
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity__activity_state
+msgid "Activity State"
+msgstr "የእንቅስቃሴ ሁኔታ"
+
+#. module: hr_gratuity_settlement
+#: code:addons/hr_gratuity_settlement/models/hr_gratuity_expense_generation.py:0
+#, python-format
+msgid "Add Analytic Account"
+msgstr "የትንታኔ አካውንት ያስገቡ"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity_accounting_configuration__add_to_base
+msgid "Add To The Basic Severance Pay?"
+msgstr "ወደ መሰረታዊ የስንብት ክፍያ ይጨመር?"
+
+#. module: hr_gratuity_settlement
+#: model_terms:ir.ui.view,arch_db:hr_gratuity_settlement.hr_contract_form_inherit_wage
+msgid "Advantages..."
+msgstr "ጥቅሞች..."
+
+#. module: hr_gratuity_settlement
+#: code:addons/hr_gratuity_settlement/models/employee_gratuity.py:0
+#: code:addons/hr_gratuity_settlement/models/other_settlements.py:0
+#, python-format
+msgid "Allowance value should be numeric !!"
+msgstr "የአበል ዋጋ ቁጥር መሆን አለበት!!"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_analytic_account_wizard__analytic_id
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity__analytic_id
+msgid "Analytic"
+msgstr "ትንታኔ"
+
+#. module: hr_gratuity_settlement
+#: model_terms:ir.ui.view,arch_db:hr_gratuity_settlement.gratuity_analytic_account
+msgid "Analytic Account"
+msgstr "የትንታኔ አካውንት"
+
+#. module: hr_gratuity_settlement
+#: model:ir.ui.menu,name:hr_gratuity_settlement.menu_hr_employee
+msgid "Approvals"
+msgstr "ማጽደቂያዎች"
+
+#. module: hr_gratuity_settlement
+#: model_terms:ir.ui.view,arch_db:hr_gratuity_settlement.employee_gratuity_form
+#: model_terms:ir.ui.view,arch_db:hr_gratuity_settlement.view_priority
+msgid "Approve"
+msgstr "አጽድቅ"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields.selection,name:hr_gratuity_settlement.selection__hr_gratuity__state__approve
+msgid "Approved"
+msgstr "ጸድቋል"
+
+#. module: hr_gratuity_settlement
+#: model_terms:ir.ui.view,arch_db:hr_gratuity_settlement.hr_gratuity_accounting_configuration_filter_view
+msgid "Archived"
+msgstr "ወደ ተሰረዙ ማህደር አስገባ"
+
+#. module: hr_gratuity_settlement
+#: model_terms:ir.ui.view,arch_db:hr_gratuity_settlement.hr_gratuity_accounting_configuration_filter_view
+msgid "Archived Gratuity Configuration"
+msgstr "የተሰረዙ ስንብት ማቀዋርያ"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_gratuity_configuration__message_attachment_count
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity__message_attachment_count
+msgid "Attachment Count"
+msgstr "የተያያዥ ብዛት"
+
+#. module: hr_gratuity_settlement
+#: model:hr.gratuity.accounting.configuration,name:hr_gratuity_settlement.6
+msgid "Bad Working Environment"
+msgstr "መጥፎ የሥራ አከባቢ"
+
+#. module: hr_gratuity_settlement
+#: model:hr.gratuity.accounting.configuration,name:hr_gratuity_settlement.1
+msgid "Basic"
+msgstr "መሰረታዊ"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity__basic_gratuity
+msgid "Basic Gratuity"
+msgstr "መሰረታዊ ስንብት"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity__employee_basic_salary
+#: model_terms:ir.ui.view,arch_db:hr_gratuity_settlement.employee_gratuity_form
+msgid "Basic Salary"
+msgstr "መሰረታዊ ደመወዝ"
+
+#. module: hr_gratuity_settlement
+#: model_terms:ir.ui.view,arch_db:hr_gratuity_settlement.employee_gratuity_form
+#: model_terms:ir.ui.view,arch_db:hr_gratuity_settlement.gratuity_analytic_account
+msgid "Cancel"
+msgstr "ሰርዝ"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields.selection,name:hr_gratuity_settlement.selection__hr_contract__state__cancel
+#: model:ir.model.fields.selection,name:hr_gratuity_settlement.selection__hr_gratuity__state__cancel
+msgid "Cancelled"
+msgstr "ተሰርዟል"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,help:hr_gratuity_settlement.field_hr_gratuity__employee_contract_type
+msgid ""
+"Choose the contract type.if contract type is limited then during gratuity "
+"settlement if you have not specify the end date for contract, gratuity "
+"configration of limited type will be taken orif contract type is Unlimited "
+"then during gratuity settlement if you have specify the end date for "
+"contract, gratuity configration of limited type will be taken."
+msgstr ""
+"የውል አይነት ይምረጡ። የውል ዓይነት የተገደበ ከሆነ፣ የስንብት አገልግሎት ሲሰራ የውል ማብቂያ ቀንን ካልገለፁ "
+"፣የተገደበ የውል አይነት ይወሰዳል ወይም የውል ዓይነት ያልተገደበ ከሆነ የውል የመጨረሻ ቀንን ከገለፁ ፣ የስንብት "
+"አገልግሎት ሲሰራ የተገደበ የውል አይነት ይወሰዳል::"
+
+#. module: hr_gratuity_settlement
+#: model:hr.gratuity.accounting.configuration,name:hr_gratuity_settlement.9
+msgid "Chronic Debilitating Illness"
+msgstr "ሥር የሰደደ ሕመም"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_gratuity_configuration__company_id
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity__company_id
+#: model:ir.model.fields,help:hr_gratuity_settlement.field_gratuity_configuration__company_id
+#: model:ir.model.fields,help:hr_gratuity_settlement.field_hr_gratuity__company_id
+msgid "Company"
+msgstr "ድርጅት"
+
+#. module: hr_gratuity_settlement
+#: model:hr.gratuity.accounting.configuration,name:hr_gratuity_settlement.4
+msgid "Company Issues(Bankruptcy, Reducing Workforce)"
+msgstr "የድርጅቱ ጉዳዮች (ኪሳራ፣ የሰው ኃይል መቀነስ)"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_contract__company_country_id
+msgid "Company country"
+msgstr "የድርጅት ሀገር"
+
+#. module: hr_gratuity_settlement
+#: model_terms:ir.ui.view,arch_db:hr_gratuity_settlement.gratuity_configuration_form_view
+msgid "Computations Details"
+msgstr "የስሌት ማብራርያ"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity__employee_gratuity_duration
+msgid "Configuration Line"
+msgstr "የማዋቀርያ መስመር"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity__employee_contract_type
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity_accounting_configuration__config_contract_type
+msgid "Contract Type"
+msgstr "የውል ዓይነት"
+
+#. module: hr_gratuity_settlement
+#: model:ir.actions.act_window,name:hr_gratuity_settlement.action_contract_approvals
+msgid "Contracts For Approvals"
+msgstr "ለማጽደቅ የተዘጋጁ ውሎች"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity__corrected_employee_gratuity_amount
+msgid "Corrected Gratuity Payment"
+msgstr "የተስተካከለ የስንብት ክፍያ"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity__correction_amount_flag
+msgid "Correction Amount Flag"
+msgstr "የማስተካከያ መጠን"
+
+#. module: hr_gratuity_settlement
+#: model_terms:ir.ui.view,arch_db:hr_gratuity_settlement.employee_gratuity_form
+msgid "Create an Expense"
+msgstr "ወጪ ፍጠር"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_analytic_account_wizard__create_uid
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_gratuity_configuration__create_uid
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity__create_uid
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity_accounting_configuration__create_uid
+msgid "Created by"
+msgstr "የተፈጠረው በ"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_analytic_account_wizard__create_date
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_gratuity_configuration__create_date
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity__create_date
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity_accounting_configuration__create_date
+msgid "Created on"
+msgstr "የተፈጠረበት ቀን"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity__currency_id
+#: model:ir.model.fields,help:hr_gratuity_settlement.field_hr_gratuity__currency_id
+msgid "Currency"
+msgstr "ገንዘብ"
+
+#. module: hr_gratuity_settlement
+#: model:hr.gratuity.accounting.configuration,name:hr_gratuity_settlement.8
+msgid "Death"
+msgstr "ሞት"
+
+#. module: hr_gratuity_settlement
+#: model:hr.gratuity.accounting.configuration,name:hr_gratuity_settlement.7
+msgid "Disability"
+msgstr "አካል ጉዳተኝነት"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_analytic_account_wizard__display_name
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_gratuity_configuration__display_name
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity__display_name
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity_accounting_configuration__display_name
+msgid "Display Name"
+msgstr "ስም"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields.selection,name:hr_gratuity_settlement.selection__hr_gratuity__state__draft
+msgid "Draft"
+msgstr "ንድፍ"
+
+#. module: hr_gratuity_settlement
+#: model_terms:ir.ui.view,arch_db:hr_gratuity_settlement.gratuity_configuration_form_view
+msgid "Duration Configuration"
+msgstr "ዓመታት"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity__employee_id
+#: model:ir.model.fields,help:hr_gratuity_settlement.field_hr_gratuity__employee_id
+#: model_terms:ir.ui.view,arch_db:hr_gratuity_settlement.employee_gratuity_form
+msgid "Employee"
+msgstr "ሰራተኛ"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model,name:hr_gratuity_settlement.model_hr_contract
+msgid "Employee Contract"
+msgstr "የሰራተኛ ውል"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_gratuity_configuration__employee_daily_wage_days
+msgid "Employee Daily Wage Days"
+msgstr "የሰራተኛ ዕለታዊ ደሞዝ"
+
+#. module: hr_gratuity_settlement
+#: model_terms:ir.ui.view,arch_db:hr_gratuity_settlement.employee_gratuity_form
+msgid "Employee Details"
+msgstr "የሰራተኛ ማብራርያ"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model,name:hr_gratuity_settlement.model_hr_gratuity
+#: model_terms:ir.ui.view,arch_db:hr_gratuity_settlement.employee_gratuity_form
+#: model_terms:ir.ui.view,arch_db:hr_gratuity_settlement.employee_gratuity_tree
+msgid "Employee Gratuity"
+msgstr "የሰራተኛ ስንብት"
+
+#. module: hr_gratuity_settlement
+#: model_terms:ir.ui.view,arch_db:hr_gratuity_settlement.employee_gratuity_form
+msgid "Employee Name"
+msgstr "የሰራተኛ ስም"
+
+#. module: hr_gratuity_settlement
+#: model_terms:ir.ui.view,arch_db:hr_gratuity_settlement.employee_gratuity_form
+msgid "Employee Working Details"
+msgstr "የሰራተኛ የስራ ማብራርያ"
+
+#. module: hr_gratuity_settlement
+#: code:addons/hr_gratuity_settlement/models/other_settlements.py:0
+#, python-format
+msgid "Employee Working Period is less than 1 Year"
+msgstr "ሰራተኛው የሰራው ከ 1 ዓመት በታች ነው"
+
+#. module: hr_gratuity_settlement
+#: code:addons/hr_gratuity_settlement/models/employee_gratuity.py:0
+#, python-format
+msgid "Employee Working Period is less than 5 Year"
+msgstr "ሰራተኛው የሰራው ከ 5 ዓመት በታች ነው"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,help:hr_gratuity_settlement.field_hr_gratuity__employee_gratuity_years
+msgid "Employee gratuity years"
+msgstr "የሰራተኛ የስንብት ዓመታት"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,help:hr_gratuity_settlement.field_hr_gratuity__employee_joining_date
+msgid "Employee joining date"
+msgstr "የሰራተኛ መቀላቀያ ቀን"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,help:hr_gratuity_settlement.field_hr_gratuity__employee_probation_years
+msgid "Employee probation years"
+msgstr "የሰራተኞች የሙከራ ዓመታት"
+
+#. module: hr_gratuity_settlement
+#: code:addons/hr_gratuity_settlement/models/hr_gratuity.py:0
+#, python-format
+msgid "Employee wage days is not configured in the gratuity configuration..!"
+msgstr "የሰራተኛ ደሞዝ ቀናት በስንብት ውቅር ውስጥ አልተዋቀሩም ..!"
+
+#. module: hr_gratuity_settlement
+#: code:addons/hr_gratuity_settlement/models/hr_gratuity.py:0
+#, python-format
+msgid ""
+"Employee working days is not configured in the gratuity configuration..!"
+msgstr "የሰራተኛ የስራ ቀናት በስንብት ውቅር ውስጥ አልተዋቀሩም ..!"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,help:hr_gratuity_settlement.field_hr_gratuity__employee_basic_salary
+msgid "Employee's basic salary."
+msgstr "የሰራተኛ ደመወዝ"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,help:hr_gratuity_settlement.field_hr_contract__hourly_wage
+msgid "Employee's hourly gross wage."
+msgstr "የሰራተኛው ጠቅላላ የሰዓት ደመወዝ።"
+
+#. module: hr_gratuity_settlement
+#: model:ir.ui.menu,name:hr_gratuity_settlement.main_menu_hr_resignation
+msgid "End of Service"
+msgstr "የአገልግሎት መጨረሻ"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model,name:hr_gratuity_settlement.model_hr_expense
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity__expense_id
+msgid "Expense"
+msgstr "ወጪ"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields.selection,name:hr_gratuity_settlement.selection__hr_gratuity__state__expensed
+msgid "Expensed"
+msgstr "ወጪ"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields.selection,name:hr_gratuity_settlement.selection__hr_contract__state__close
+msgid "Expired"
+msgstr "ጊዜው ያለፈበት"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity__extra_severance
+msgid "Extra Severance"
+msgstr "ተጨማሪ የስንብት ክፍያ"
+
+#. module: hr_gratuity_settlement
+#: model:hr.gratuity.accounting.configuration,name:hr_gratuity_settlement.3
+msgid "Fired"
+msgstr "መባረር"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_gratuity_configuration__message_follower_ids
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity__message_follower_ids
+msgid "Followers"
+msgstr "ተከታዮች"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_gratuity_configuration__message_channel_ids
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "ተከታዮች (ቻናል)"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_gratuity_configuration__message_partner_ids
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "ተከታዮች (አጋሮች)"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_gratuity_configuration__from_year
+msgid "From Year"
+msgstr "ከ"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_analytic_account_wizard__gratuity_id
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_expense__gratuity_id
+#: model:product.product,name:hr_gratuity_settlement.grtexp
+#: model:product.template,name:hr_gratuity_settlement.grtexp_product_template
+msgid "Gratuity"
+msgstr "ስንብት"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model,name:hr_gratuity_settlement.model_hr_gratuity_accounting_configuration
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_gratuity_configuration__gratuity_accounting_configuration_id
+#: model_terms:ir.ui.view,arch_db:hr_gratuity_settlement.view_hr_gratuity_accounting_configuration_tree
+msgid "Gratuity Accounting Configuration"
+msgstr "የስንብት አካውንት ማዋቀርያ"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity__employee_gratuity_years
+msgid "Gratuity Calculation Years"
+msgstr "የስንብት ስሌት ዓመታት"
+
+#. module: hr_gratuity_settlement
+#: model:ir.actions.act_window,name:hr_gratuity_settlement.action_view_hr_gratuity_accounting_configuration
+#: model:ir.model,name:hr_gratuity_settlement.model_gratuity_configuration
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity__employee_gratuity_configuration
+#: model:ir.ui.menu,name:hr_gratuity_settlement.menu_action_hr_gratuity_account_config
+#: model_terms:ir.ui.view,arch_db:hr_gratuity_settlement.view_hr_gratuity_accounting_configuration_form
+msgid "Gratuity Configuration"
+msgstr "የስንብት ማዋቀርያ"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity_accounting_configuration__gratuity_configuration_table
+msgid "Gratuity Configuration Table"
+msgstr "የስንብት ማዋቀርያ ሰሌዳ"
+
+#. module: hr_gratuity_settlement
+#: model_terms:ir.ui.view,arch_db:hr_gratuity_settlement.employee_gratuity_form
+msgid "Gratuity Details"
+msgstr "የስንብት ማብራርያ"
+
+#. module: hr_gratuity_settlement
+#: model_terms:ir.ui.view,arch_db:hr_gratuity_settlement.gratuity_configuration_form_view
+#: model_terms:ir.ui.view,arch_db:hr_gratuity_settlement.gratuity_configuration_tree_view
+msgid "Gratuity Duration"
+msgstr "የስንብት ቆይታ"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity__employee_gratuity_amount
+msgid "Gratuity Payment"
+msgstr "የስንብት ክፍያ"
+
+#. module: hr_gratuity_settlement
+#: model:ir.actions.act_window,name:hr_gratuity_settlement.action_employee_gratuity
+#: model:ir.ui.menu,name:hr_gratuity_settlement.menu_hr_gratuity
+msgid "Gratuity Settlement"
+msgstr "የስንብት ስምምነት"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,help:hr_gratuity_settlement.field_hr_gratuity__employee_gratuity_amount
+msgid ""
+"Gratuity amount for the employee. \\it is calculated If the wage type is "
+"hourly then gratuity payment is calculated as employee basic salary * "
+"Employee Daily Wage Days * gratuity configration rule percentage * gratuity "
+"calculation years.orIf the wage type is monthly then gratuity payment is "
+"calculated as employee basic salary * (Working Days/Employee Daily Wage "
+"Days) * gratuity configration rule percentage * gratuity calculation years."
+msgstr ""
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.constraint,message:hr_gratuity_settlement.constraint_hr_gratuity_accounting_configuration_name_uniq
+msgid "Gratuity configuration name should be unique!"
+msgstr "የስንብት ውቅር ስም ልዩ መሆን አለበት!"
+
+#. module: hr_gratuity_settlement
+#: model_terms:ir.ui.view,arch_db:hr_gratuity_settlement.hr_contract_form_inherit_wage
+msgid "Hourly Advantages in Cash"
+msgstr "የሰዓት ጥቅሞች በጥሬ ገንዘብ"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_contract__hourly_wage
+#: model:ir.model.fields.selection,name:hr_gratuity_settlement.selection__hr_contract__wage_type__hourly
+#: model:ir.model.fields.selection,name:hr_gratuity_settlement.selection__hr_gratuity__wage_type__hourly
+msgid "Hourly Wage"
+msgstr "የሰዓት ደመወዝ"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_analytic_account_wizard__id
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_gratuity_configuration__id
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity__id
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity_accounting_configuration__id
+msgid "ID"
+msgstr "መለያ ቁጥር"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_gratuity_configuration__activity_exception_icon
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity__activity_exception_icon
+msgid "Icon"
+msgstr "አዶ"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,help:hr_gratuity_settlement.field_gratuity_configuration__activity_exception_icon
+#: model:ir.model.fields,help:hr_gratuity_settlement.field_hr_gratuity__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "ልዩ እንቅስቃሴን ለማመልከት አዶ።"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,help:hr_gratuity_settlement.field_gratuity_configuration__message_needaction
+#: model:ir.model.fields,help:hr_gratuity_settlement.field_gratuity_configuration__message_unread
+#: model:ir.model.fields,help:hr_gratuity_settlement.field_hr_gratuity__message_needaction
+#: model:ir.model.fields,help:hr_gratuity_settlement.field_hr_gratuity__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "ምልክት ካላችው፣ አዲስ መልዕክቶች የእርስዎን ትኩረት ይፈልጋሉ።"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,help:hr_gratuity_settlement.field_gratuity_configuration__message_has_error
+#: model:ir.model.fields,help:hr_gratuity_settlement.field_gratuity_configuration__message_has_sms_error
+#: model:ir.model.fields,help:hr_gratuity_settlement.field_hr_gratuity__message_has_error
+#: model:ir.model.fields,help:hr_gratuity_settlement.field_hr_gratuity__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "ምልክት ካላችው፣ አንዳንድ መልዕክቶች የማድረስ ስህተት አለባቸው።"
+
+#. module: hr_gratuity_settlement
+#: code:addons/hr_gratuity_settlement/models/gratuity_configuration.py:0
+#, python-format
+msgid "Invalid year configuration!"
+msgstr "ልክ ያልሆነ የአመት ውቅር!"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_contract__is_approve
+msgid "Is Approve"
+msgstr "ጸድቋል?"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_gratuity_configuration__message_is_follower
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity__message_is_follower
+msgid "Is Follower"
+msgstr "ተከታይ ነው?"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity__employee_joining_date
+msgid "Joining Date"
+msgstr "ቀን"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_analytic_account_wizard____last_update
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_gratuity_configuration____last_update
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity____last_update
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity_accounting_configuration____last_update
+msgid "Last Modified on"
+msgstr "መጨረሻ የተሻሻለበት ቀን"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_analytic_account_wizard__write_uid
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_gratuity_configuration__write_uid
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity__write_uid
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity_accounting_configuration__write_uid
+msgid "Last Updated by"
+msgstr "መጨረሻ የተሻሻለው በ"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_analytic_account_wizard__write_date
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_gratuity_configuration__write_date
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity__write_date
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity_accounting_configuration__write_date
+msgid "Last Updated on"
+msgstr "መጨረሻ የተሻሻለበት ቀን"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity__employee_probation_years
+msgid "Leaves Taken(Years)"
+msgstr "የተወሰዱ ዕረፍቶች(ዓመታት)"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields.selection,name:hr_gratuity_settlement.selection__hr_gratuity__employee_contract_type__limited
+#: model:ir.model.fields.selection,name:hr_gratuity_settlement.selection__hr_gratuity_accounting_configuration__config_contract_type__limited
+msgid "Limited"
+msgstr "የተወሰነ"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_gratuity_configuration__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "ዋና ተያያዥ"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_gratuity_configuration__message_has_error
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity__message_has_error
+msgid "Message Delivery error"
+msgstr "የመልእክት ማቅረቢያ ስህተት"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_gratuity_configuration__message_ids
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity__message_ids
+msgid "Messages"
+msgstr "መልዕክቶች"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields.selection,name:hr_gratuity_settlement.selection__hr_contract__wage_type__monthly
+#: model:ir.model.fields.selection,name:hr_gratuity_settlement.selection__hr_gratuity__wage_type__monthly
+msgid "Monthly Fixed Wage"
+msgstr "ወርሃዊ ቋሚ ደመወዝ"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_gratuity_configuration__name
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity_accounting_configuration__name
+msgid "Name"
+msgstr "ስም"
+
+#. module: hr_gratuity_settlement
+#: code:addons/hr_gratuity_settlement/models/employee_gratuity.py:0
+#: code:addons/hr_gratuity_settlement/models/hr_gratuity.py:0
+#: code:addons/hr_gratuity_settlement/models/other_settlements.py:0
+#: model:ir.model.fields.selection,name:hr_gratuity_settlement.selection__hr_contract__state__draft
+#, python-format
+msgid "New"
+msgstr "አዲስ"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_gratuity_configuration__activity_date_deadline
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "የቀጣይ እንቅስቃሴ ማለቅያ ቀን"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_gratuity_configuration__activity_summary
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity__activity_summary
+msgid "Next Activity Summary"
+msgstr "የቀጣይ እንቅስቃሴ ማጠቃለያ"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_gratuity_configuration__activity_type_id
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity__activity_type_id
+msgid "Next Activity Type"
+msgstr "የቀጣይ እንቅስቃሴ ዓይነት"
+
+#. module: hr_gratuity_settlement
+#: code:addons/hr_gratuity_settlement/models/hr_gratuity.py:0
+#, python-format
+msgid ""
+"No contracts found for the selected employee...!\n"
+"Employee must have at least one contract to compute gratuity settelement."
+msgstr ""
+"ለተመረጠው ሰራተኛ ምንም ውል አልተገኘም...!\n"
+"የስንብት ስምምነት ክፍያን ለማስላት ተቀጣሪው ቢያንስ አንድ ውል ሊኖረው ይገባል።"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_gratuity_configuration__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity__message_needaction_counter
+msgid "Number of Actions"
+msgstr "የተግባሮች ብዛት"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_gratuity_configuration__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity__message_has_error_counter
+msgid "Number of errors"
+msgstr "የስህተት ብዛት"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,help:hr_gratuity_settlement.field_gratuity_configuration__message_needaction_counter
+#: model:ir.model.fields,help:hr_gratuity_settlement.field_hr_gratuity__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "እርምጃ የሚያስፈልገው የመልእክት ብዛት"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,help:hr_gratuity_settlement.field_gratuity_configuration__message_has_error_counter
+#: model:ir.model.fields,help:hr_gratuity_settlement.field_hr_gratuity__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "የማድረስ ስህተት ያለባቸው መልዕክቶች ብዛት"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,help:hr_gratuity_settlement.field_gratuity_configuration__message_unread_counter
+#: model:ir.model.fields,help:hr_gratuity_settlement.field_hr_gratuity__message_unread_counter
+msgid "Number of unread messages"
+msgstr "ያልተነበቡ መልዕክቶች ብዛት"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,help:hr_gratuity_settlement.field_gratuity_configuration__employee_working_days
+msgid "Number of working days per month"
+msgstr "በወር የስራ ቀናት ብዛት"
+
+#. module: hr_gratuity_settlement
+#: code:addons/hr_gratuity_settlement/models/other_settlements.py:0
+#, python-format
+msgid ""
+"Only an Employee with minimum 1 years of working, will get the Settlement "
+"advantage"
+msgstr "ቢያንስ 1 አመት የሰራ ሰራተኛ ብቻ የስምምነት ክፍያ ያገኛል::"
+
+#. module: hr_gratuity_settlement
+#: code:addons/hr_gratuity_settlement/models/employee_gratuity.py:0
+#, python-format
+msgid ""
+"Only an Employee with minimum 5 years of working, will get the Gratuity"
+msgstr "ቢያንስ 5 ዓመት የሰራ ሰራተኛ ብቻ የስንብት ስምምነት ያገኛል::"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_gratuity_configuration__percentage
+msgid "Percentage"
+msgstr "መቶኛ"
+
+#. module: hr_gratuity_settlement
+#: code:addons/hr_gratuity_settlement/models/hr_gratuity.py:0
+#, python-format
+msgid "Please Add A Termination Date To Your Employee's Contract!"
+msgstr "እባኮትን የማቋረጫ ቀን ወደ ሰራተኛዎ ውል ይጨምሩ!"
+
+#. module: hr_gratuity_settlement
+#: code:addons/hr_gratuity_settlement/models/gratuity_accounting_configuration.py:0
+#, python-format
+msgid "Please Add, To The Base Severance Named 'Basic', One Rule"
+msgstr "እባኮትን፣ 'መሰረታዊ' ወደሚባለው መሰረታዊ የስንብት ስምምነት፣ አንድ ደንብ ጨምሩበት::"
+
+#. module: hr_gratuity_settlement
+#: code:addons/hr_gratuity_settlement/wizard/archive.py:0
+#, python-format
+msgid "Please Fill The Required Field"
+msgstr "እባክዎን አስፈላጊውን መረጃ ይሙሉ"
+
+#. module: hr_gratuity_settlement
+#: code:addons/hr_gratuity_settlement/models/hr_gratuity.py:0
+#, python-format
+msgid "Please Make This Configuration To Only Have 1 Rule"
+msgstr "እባክዎ ይህን ውቅር 1 ደንብ ብቻ እንዲኖረው ያድርጉ::"
+
+#. module: hr_gratuity_settlement
+#: code:addons/hr_gratuity_settlement/models/hr_gratuity.py:0
+#, python-format
+msgid "Please Make This Configuration To Only Have 2 Rules"
+msgstr "እባክዎ ይህን ውቅር 2 ደንብ ብቻ እንዲኖረው ያድርጉ::"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields.selection,name:hr_gratuity_settlement.selection__hr_contract__state__probation
+msgid "Probation"
+msgstr "የሙከራ ጊዜ"
+
+#. module: hr_gratuity_settlement
+#: model_terms:ir.ui.view,arch_db:hr_gratuity_settlement.view_priority
+msgid "Probationary Details"
+msgstr "የሙከራ ዝርዝሮች"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_contract__training_info
+msgid "Probationary Info"
+msgstr "የሙከራ መረጃ"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity__name
+msgid "Reference"
+msgstr "ማጣቀሻ"
+
+#. module: hr_gratuity_settlement
+#: model_terms:ir.ui.view,arch_db:hr_gratuity_settlement.view_hr_gratuity_accounting_configuration_form
+msgid "Relation to Basic Gratuity"
+msgstr "ከመሠረታዊ የስንብት ስምምነት ጋር ያለው ግንኙነት"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity__employee_remaining_leaves
+msgid "Remaining Leaves"
+msgstr "የቀሩት ዕረፍቶች"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity__payment_for_leaves
+msgid "Remaining Leaves Payments"
+msgstr "የቀሩት ዕረፍቶች ክፍያዎች"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_gratuity_configuration__activity_user_id
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity__activity_user_id
+msgid "Responsible User"
+msgstr "ኃላፊነት የተሰጠውተጠቃሚ"
+
+#. module: hr_gratuity_settlement
+#: model:hr.gratuity.accounting.configuration,name:hr_gratuity_settlement.2
+msgid "Retired"
+msgstr "ጡረታ"
+
+#. module: hr_gratuity_settlement
+#: model_terms:ir.ui.view,arch_db:hr_gratuity_settlement.view_hr_gratuity_accounting_configuration_form
+msgid "Rules"
+msgstr "ደንቦች"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields.selection,name:hr_gratuity_settlement.selection__hr_contract__state__open
+msgid "Running"
+msgstr "ክፍት"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_gratuity_configuration__message_has_sms_error
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "የኤስኤምኤስ የማድረስ ስህተት"
+
+#. module: hr_gratuity_settlement
+#: model_terms:ir.ui.view,arch_db:hr_gratuity_settlement.hr_contract_form_inherit_wage
+msgid "Salary Information"
+msgstr "የደመወዝ መረጃ"
+
+#. module: hr_gratuity_settlement
+#: model_terms:ir.ui.view,arch_db:hr_gratuity_settlement.gratuity_analytic_account
+msgid "Save"
+msgstr "መዝግብ"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,help:hr_gratuity_settlement.field_hr_gratuity__wage_type
+msgid "Select the wage type monthly or hourly"
+msgstr "የደመወዝ አይነት በየወሩ ወይም በየሰዓቱ"
+
+#. module: hr_gratuity_settlement
+#: code:addons/hr_gratuity_settlement/models/hr_gratuity.py:0
+#, python-format
+msgid ""
+"Selected Employee Has Been Working For Less Than 5 Years And Is Not Eligible"
+" For Retirement Settlement"
+msgstr "የተመረጠ ሰራተኛ ከ5 አመት ላላነሰ ጊዜ የሰራ ነው እና ለጡረታ ብቁ አይደለም"
+
+#. module: hr_gratuity_settlement
+#: code:addons/hr_gratuity_settlement/models/hr_gratuity.py:0
+#, python-format
+msgid "Selected employee have multiple or no running contracts!"
+msgstr "የተመረጠ ሰራተኛ ብዙ ወይም ምንም የስራ ውል የለውም!"
+
+#. module: hr_gratuity_settlement
+#: model_terms:ir.ui.view,arch_db:hr_gratuity_settlement.employee_gratuity_form
+msgid "Set to draft"
+msgstr "ወደ ንድፍ መልስ"
+
+#. module: hr_gratuity_settlement
+#: model:hr.gratuity.accounting.configuration,name:hr_gratuity_settlement.5
+msgid "Sexual Harrassment(No Measure Taken)"
+msgstr "ጾታዊ ትንኮሳ (ምንም እርምጃ ያልተወሰደበት)"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity__state
+msgid "State"
+msgstr "ሁነት"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_contract__state
+msgid "Status"
+msgstr "ሁኔታው"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,help:hr_gratuity_settlement.field_gratuity_configuration__activity_state
+#: model:ir.model.fields,help:hr_gratuity_settlement.field_hr_gratuity__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"በእንቅስቃሴዎች ላይ የተመሰረተ ሁኔታ\n"
+"ጊዜው ያለፈበት፡ የማብቂያ ቀን አስቀድሞ አልፏል\n"
+"ዛሬ፡ የእንቅስቃሴ ቀን ዛሬ ነው።\n"
+"የታቀደ: የወደፊት እንቅስቃሴዎች."
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,help:hr_gratuity_settlement.field_hr_contract__state
+msgid "Status of the contract"
+msgstr "የውል ሁኔታ"
+
+#. module: hr_gratuity_settlement
+#: model_terms:ir.ui.view,arch_db:hr_gratuity_settlement.employee_gratuity_form
+msgid "Submit"
+msgstr "አስገባ"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields.selection,name:hr_gratuity_settlement.selection__hr_gratuity__state__submit
+msgid "Submitted"
+msgstr "ገብቷል"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model,name:hr_gratuity_settlement.model_analytic_account_wizard
+msgid "This model will handle the analytic count adding"
+msgstr "ይህ ሞዴል የትንታኔ ብዛት መጨመርን ይቆጣጠራል"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_gratuity_configuration__to_year
+msgid "To Year"
+msgstr "ለ"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity__total_working_days
+msgid "Total Days Remaining"
+msgstr "የቀሩት አጠቃላይ ቀናት"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity__total_working_months
+msgid "Total Months Remaining"
+msgstr "የቀሩት አጠቃላይ ወራት"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,help:hr_gratuity_settlement.field_hr_gratuity__total_working_days
+msgid "Total Remaining Days"
+msgstr "የቀሩት አጠቃላይ ቀናት"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,help:hr_gratuity_settlement.field_hr_gratuity__total_working_months
+msgid "Total Remaining Months"
+msgstr "የቀሩት አጠቃላይ ወራት"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity__total_working_years
+msgid "Total Years Worked"
+msgstr "አጠቃላይ የስራ ዓመታት"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,help:hr_gratuity_settlement.field_gratuity_configuration__employee_daily_wage_days
+msgid "Total number of employee wage days"
+msgstr "አጠቃላይ የሰራተኞች የደመወዝ ቀናት ብዛት"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,help:hr_gratuity_settlement.field_hr_gratuity__employee_remaining_leaves
+msgid ""
+"Total number of paid time off allocated to this employee, change this value "
+"to create allocation/time off request. Total based on all the time off types"
+" without overriding limit."
+msgstr ""
+"ለዚህ ሰራተኛ የተመደበው ጠቅላላ የተከፈለበት የእረፍት ጊዜ፣ የምደባ/የእረፍት ጊዜ ጥያቄን ለመፍጠር ይህንን እሴት "
+"ይለውጡ። ጠቅላላ ያለገደብ በሁሉም የእረፍት ጊዜ ዓይነቶች ላይ የተመሰረተ።"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,help:hr_gratuity_settlement.field_hr_gratuity__total_working_years
+msgid "Total working years"
+msgstr "ጠቅላላ የሥራ ዓመታት"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_contract__training_amount
+msgid "Training Amount"
+msgstr "የሥልጠና መጠን"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,help:hr_gratuity_settlement.field_gratuity_configuration__activity_exception_decoration
+#: model:ir.model.fields,help:hr_gratuity_settlement.field_hr_gratuity__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "በመዝገብ ላይ ያለ ልዩ እንቅስቃሴ ዓይነት።"
+
+#. module: hr_gratuity_settlement
+#: model:product.product,uom_name:hr_gratuity_settlement.grtexp
+#: model:product.template,uom_name:hr_gratuity_settlement.grtexp_product_template
+msgid "Units"
+msgstr "መጠኖች"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields.selection,name:hr_gratuity_settlement.selection__hr_gratuity__employee_contract_type__unlimited
+#: model:ir.model.fields.selection,name:hr_gratuity_settlement.selection__hr_gratuity_accounting_configuration__config_contract_type__unlimited
+msgid "Unlimited"
+msgstr "ያልተገደበ"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_gratuity_configuration__message_unread
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity__message_unread
+msgid "Unread Messages"
+msgstr "ያልተነበቡ መልእክቶች"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_gratuity_configuration__message_unread_counter
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "ያልተነበቡ መልዕክቶች ቆጣሪ"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_contract__wage_type
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity__wage_type
+msgid "Wage Type"
+msgstr "የደመወዝ አይነት"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_contract__waiting_for_approval
+msgid "Waiting For Approval"
+msgstr "ማጽደቅን በመጠበቅ ላይ"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_gratuity_configuration__website_message_ids
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_hr_gratuity__website_message_ids
+msgid "Website Messages"
+msgstr "የድረገጽ መልዕክቶች"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,help:hr_gratuity_settlement.field_gratuity_configuration__website_message_ids
+#: model:ir.model.fields,help:hr_gratuity_settlement.field_hr_gratuity__website_message_ids
+msgid "Website communication history"
+msgstr "የድረገጽ የግንኙነት ታሪክ"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_gratuity_configuration__employee_working_days
+msgid "Working Days"
+msgstr "የስራ ቀናት"
+
+#. module: hr_gratuity_settlement
+#: code:addons/hr_gratuity_settlement/models/hr_contract.py:0
+#, python-format
+msgid "You cannot change the status of non-approved Contracts"
+msgstr "ያልተፈቀዱ ውሎችን ሁኔታ መቀየር አይችሉም"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_gratuity_configuration__yr_from_flag
+msgid "Yr From Flag"
+msgstr "ከ"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,field_description:hr_gratuity_settlement.field_gratuity_configuration__yr_to_flag
+msgid "Yr To Flag"
+msgstr "ለ"
+
+#. module: hr_gratuity_settlement
+#: model:ir.model.fields,help:hr_gratuity_settlement.field_hr_contract__training_amount
+msgid "amount for the employee during training"
+msgstr "በስልጠና ወቅት ለሠራተኛው መጠን"
+
+#. module: hr_gratuity_settlement
+#: model_terms:ir.ui.view,arch_db:hr_gratuity_settlement.view_hr_gratuity_accounting_configuration_form
+msgid "e.g. Configuration Limited"
+msgstr "ለምሳሌ. የተወሰነ ውቅር"

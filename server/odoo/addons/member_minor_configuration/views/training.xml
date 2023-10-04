@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <!-- This record will create tree view for training Type -->
+    <record id="training_type_tree" model="ir.ui.view">
+        <field name="name">Training Type</field>
+        <field name="model">training.type</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- This record will create tree view for training Type -->
+    <record id="training_type_form" model="ir.ui.view">
+        <field name="name">Training Type</field>
+        <field name="model">training.type</field>
+        <field name="arch" type="xml">
+            <form duplicate="false">
+                <sheet>
+                    <field name="name"/>
+                </sheet>
+            </form>
+        </field>
+    </record>  
+
+</odoo>

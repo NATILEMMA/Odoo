@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<odoo>
+
+ <record model="ir.actions.act_window" id="action_budget_lines_view">
+        <field name="name">Budgets</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">budget.lines</field>
+        <field name="view_mode">graph</field>
+    </record>
+
+   <record id="budget_planning_graph_action" model="ir.actions.act_window">
+        <field name="name">Budgets</field>
+        <field name="res_model">budget.budget</field>
+        <field name="view_mode">graph</field>
+        <field name="domain">[]</field>
+    </record>
+
+
+    <menuitem id="budget_module_report_tab"
+              name="Budget and  Fund"
+              parent="report.all_module_report"
+              sequence="6"
+             groups="budget.group_departmental_approval,budget.group_financial_approval" />
+            
+      <menuitem name="Budget managment"
+              id="budget_planing_menu"
+              parent="budget_module_report_tab"
+               groups="budget.group_departmental_approval,budget.group_financial_approval" />
+
+
+    <menuitem id="budget_planning_report_menu"
+              name="Budget report"
+              parent="budget_planing_menu"
+              action="budget_planning_graph_action"
+              groups="budget.group_departmental_approval,budget.group_financial_approval"
+              sequence="5"/> 
+
+
+
+
+
+   <record id="fund_fund_collection_graph_action" model="ir.actions.act_window">
+        <field name="name">Fund</field>
+        <field name="res_model">fund.collection</field>
+        <field name="view_mode">graph</field>
+        <field name="domain">[]</field>
+    </record>
+
+   <menuitem name="Fund managment"
+              id="fund_fund_collection_report_menu"
+              parent="budget_module_report_tab"
+              groups="fund_management.group_distribution_group,fund_management.group_controller_group"
+              sequence="5"/> 
+    
+
+
+    <menuitem id="fund_collection_report_menu12"
+              name="Fund report"
+              parent="budget_planing_menu"
+              action="fund_fund_collection_graph_action"
+               groups="fund_management.group_distribution_group,fund_management.group_controller_group"
+              sequence="5"/> 
+              
+
+</odoo>

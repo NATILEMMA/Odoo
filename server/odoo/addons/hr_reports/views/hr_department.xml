@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="hr_department_report_graph">
+            <field name="name">hr.department.report.graph</field>
+            <field name="model">hr.department</field>
+            <field name="arch" type="xml">
+                <graph string="hr department analysis">
+                    <field name="name" type="row"/>
+                    <field name="total_employee_for_department" type = "measure"/>
+                </graph>
+            </field>
+        </record>
+
+        <record id="hr_department_model_view_form" model="ir.ui.view">
+            <field name="name">hr.departmen.form.inherit</field>
+            <field name="model">hr.department</field>
+            <field name="inherit_id" ref="hr.view_department_form"/>
+            <field name="arch" type="xml">
+                <!-- find field description and add the field
+                    new_field after it -->
+                <xpath expr="//sheet//group" position="inside">
+                <field name="total_employee_for_department"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="hr.open_module_tree_department" model="ir.actions.act_window">
+            <field name="view_mode">kanban,tree,form,graph</field>
+        </record>
+
+        <record id="department_report_graph_action" model="ir.actions.act_window">
+            <field name="name">Department report</field>
+            <field name="res_model">hr.department</field>
+            <field name="view_mode">graph</field>
+        </record>
+
+
+        <menuitem
+                id="hr_report_root"
+                name="Hr reports"
+                parent="report.all_module_report"
+                sequence="0"
+                groups="hr.group_hr_user"
+            />
+            <menuitem
+                id="hr_department_graph_report_menu"
+                name="Department"
+                parent="hr_report_root"
+                action="department_report_graph_action"
+                sequence="0"
+            />
+    </data>
+</odoo>

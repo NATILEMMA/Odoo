@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+  <!-- This record will create the form view of complaints -->
+  <record id="view_complaint_form_inherit" model="ir.ui.view">
+    <field name="name">view.complaint.form</field>
+    <field name="model">member.complaint</field>
+    <field name="inherit_id" ref="members_features.view_complaint_form"/>
+    <field name="arch" type="xml">
+        <xpath expr="//form/sheet/group/group" position="inside">
+            <field name="victim_id" string="Members" required="1" force_save="1" attrs="{'readonly': [('state', '!=', 'draft')]}" options="{'no_create': True, 'no_create_edit': True, 'no_open': True}"/>
+        </xpath>
+    </field>
+  </record>
+
+
+  <!-- This record will hold the new form for complaint -->
+  <record id="member_complaint_form_inherit" model="ir.ui.view">
+    <field name="name">Complaint</field>
+    <field name="model">member.complaint</field>
+    <field name="inherit_id" ref="members_features.member_complaint_form"/>
+    <field name="arch" type="xml">
+        <xpath expr="//form/sheet/group/group/field[@name='subject']" position="after">
+            <field name="victim_id" string="Members" required="1" force_save="1" attrs="{'readonly': [('state', '!=', 'draft')]}" options="{'no_create': True, 'no_create_edit': True, 'no_open': True}"/>
+        </xpath>
+    </field>
+  </record>
+
+
+  <record id="member_complaint_form_inherit" model="ir.ui.view">
+    <field name="name">Complaint</field>
+    <field name="model">member.complaint</field>
+    <field name="inherit_id" ref="member_registration.member_complaint_form"/>
+    <field name="arch" type="xml">
+        <xpath expr="//form/sheet/group/group/field[@name='subject']" position="after">
+            <field name="victim_id" string="Members" required="1" force_save="1" attrs="{'readonly': [('state', '!=', 'draft')]}" options="{'no_create': True, 'no_create_edit': True, 'no_open': True}"/>
+        </xpath>
+    </field>
+  </record>
+
+
+  <record id="member_registration.member_complaints" model="ir.actions.act_window">
+    <field name="name">Complaints</field>
+    <field name="res_model">member.complaint</field>
+    <field name="domain">[('victim_id', '=', active_id)]</field>
+  </record>
+
+</odoo>

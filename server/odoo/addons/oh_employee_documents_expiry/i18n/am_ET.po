@@ -1,0 +1,293 @@
+# Date created: 2023-06-17 15:03:57 by dichthuatphuongdong.com
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-06-17 03:13:39+0000"
+"MIME-Version: 1.0"
+"Content-Type: text/plain; charset=UTF-8"
+"Content-Transfer-Encoding: 8bit"
+"Plural-Forms: nplurals=1; plural=0;"
+"X-Generator: GlotPress/3.0.0-alpha.2"
+"Language: en_GB"
+"Project-Id-Version: PO File 5.8.1"
+
+#. module: oh_employee_documents_expiry
+#: model:ir.model.fields,help:oh_employee_documents_expiry.field_hr_employee_document__notification_type
+msgid ""
+"Notification on expiry date: You will get notification only on expiry date."
+" Notification before few days: You will get notification in 2 days.On expiry date and number of days before date."
+" Everyday till expiry date: You will get notification from number of days till the expiry date of the document."
+" Notification on and after expiry: You will get notification on the expiry date and continues upto Days."
+" If you did\'t select any then you will get notification before 7 days of document expiry."
+msgstr ""
+"በሚያበቃበት ቀን ማሳወቂያ፡ ማሳወቂያ የሚደርሰው በሚያበቃበት ቀን ብቻ ነው።"
+" ከጥቂት ቀናት በፊት ማስታወቂያ፡ በ2 ቀናት ውስጥ ማሳወቂያ ይደርሰዎታል።በሚያበቃበት ቀን እና ከቀኑ በፊት ባሉት የቀኖች ብዛት።"
+" በየቀኑ እስከ ጊዜው የሚያበቃበት ቀን፡ ከቀናት ብዛት እስከ ሰነዱ ማብቂያ ቀን ድረስ ማሳወቂያ ይደርስዎታል።"
+" ጊዜው ካለፈበት እና በኋላ ማሳወቂያ፡ ጊዜው የሚያበቃበት ቀን ላይ ማሳወቂያ ይደርስዎታል እና እስከ ቀናት ድረስ ይቀጥላል።"
+" የትኛውንም ካልመረጥክ ሰነዱ ከማለፉ 7 ቀናት በፊት ማሳወቂያ ይደርስሃል።"
+""
+
+#. module: oh_employee_documents_expiry
+#: model:ir.model.fields,field_description:oh_employee_documents_expiry.field_hr_employee__document_count
+msgid "# Documents"
+msgstr "# ሰነዶች"
+
+#. module: oh_employee_documents_expiry
+#: code:addons/oh_employee_documents_expiry/models/employee_documents.py:0
+msgid ""
+"<p class=\"oe_view_nocontent_create\">"
+" Click to Create for New Documents"
+" </p>"
+msgstr "<p class=\"\"oe_view_nocontent_create\"\">ለአዲስ ሰነዶች ለመፍጠር ጠቅ ያድርጉ</p>"
+
+#. module: oh_employee_documents_expiry
+#: model:ir.model,name:oh_employee_documents_expiry.model_ir_attachment
+#: model:ir.model.fields,field_description:oh_employee_documents_expiry.field_hr_document__attach_id
+#: model:ir.model.fields,field_description:oh_employee_documents_expiry.field_hr_employee_document__doc_attachment_id
+#: model:ir.model.fields,field_description:oh_employee_documents_expiry.field_ir_attachment__attach_rel
+#: model:ir.model.fields,field_description:oh_employee_documents_expiry.field_ir_attachment__doc_attach_rel
+msgid "Attachment"
+msgstr "አባሪ"
+
+#. module: oh_employee_documents_expiry
+#: model_terms:ir.actions.act_window,help:oh_employee_documents_expiry.hr_document_template_action
+msgid "Create First Document Template"
+msgstr "የመጀመሪያ ሰነድ አብነት ይፍጠሩ"
+
+#. module: oh_employee_documents_expiry
+#: model:ir.model.fields,field_description:oh_employee_documents_expiry.field_document_type__create_uid
+#: model:ir.model.fields,field_description:oh_employee_documents_expiry.field_hr_document__create_uid
+#: model:ir.model.fields,field_description:oh_employee_documents_expiry.field_hr_employee_document__create_uid
+msgid "Created by"
+msgstr "የተፈጠረ በ"
+
+#. module: oh_employee_documents_expiry
+#: model:ir.model.fields,field_description:oh_employee_documents_expiry.field_document_type__create_date
+#: model:ir.model.fields,field_description:oh_employee_documents_expiry.field_hr_document__create_date
+#: model:ir.model.fields,field_description:oh_employee_documents_expiry.field_hr_employee_document__create_date
+msgid "Created on"
+msgstr "ላይ ተፈጠረ"
+
+#. module: oh_employee_documents_expiry
+#: model:ir.model.fields,help:oh_employee_documents_expiry.field_hr_employee_document__expiry_date
+msgid "Date of expiry"
+msgstr "ከጥቅም ውጪ የሚሆንበት ጊዜ"
+
+#. module: oh_employee_documents_expiry
+#: model:ir.model.fields,help:oh_employee_documents_expiry.field_hr_employee_document__issue_date
+msgid "Date of issue"
+msgstr "የተሰጠበት ቀን"
+
+#. module: oh_employee_documents_expiry
+#: model:ir.model.fields,field_description:oh_employee_documents_expiry.field_hr_employee_document__before_days
+msgid "Days"
+msgstr "ቀናት"
+
+#. module: oh_employee_documents_expiry
+#: model:ir.model.fields,field_description:oh_employee_documents_expiry.field_hr_employee_document__description
+#: model:ir.model.fields,help:oh_employee_documents_expiry.field_hr_employee_document__description
+#: model_terms:ir.ui.view,arch_db:oh_employee_documents_expiry.employee_document_form_view
+msgid "Description"
+msgstr "መግለጫ"
+
+#. module: oh_employee_documents_expiry
+#: model:ir.model.fields,field_description:oh_employee_documents_expiry.field_document_type__display_name
+#: model:ir.model.fields,field_description:oh_employee_documents_expiry.field_hr_document__display_name
+#: model:ir.model.fields,field_description:oh_employee_documents_expiry.field_hr_employee_document__display_name
+msgid "Display Name"
+msgstr "መጠሪያው ስም"
+
+#. module: oh_employee_documents_expiry
+#: model:ir.model.fields,field_description:oh_employee_documents_expiry.field_hr_document__name
+msgid "Document Name"
+msgstr "የሰነድ ስም"
+
+#. module: oh_employee_documents_expiry
+#: model:ir.model.fields,field_description:oh_employee_documents_expiry.field_hr_employee_document__name
+msgid "Document Number"
+msgstr "የሰነድ ቁጥር"
+
+#. module: oh_employee_documents_expiry
+#: model:ir.actions.act_window,name:oh_employee_documents_expiry.hr_document_template_action
+#: model:ir.ui.menu,name:oh_employee_documents_expiry.hr_document_template_menuitem
+msgid "Document Templates"
+msgstr "የሰነድ አብነቶች"
+
+#. module: oh_employee_documents_expiry
+#: model:ir.model.fields,field_description:oh_employee_documents_expiry.field_hr_employee_document__document_type
+msgid "Document Type"
+msgstr "የሰነድ አይነት"
+
+#. module: oh_employee_documents_expiry
+#: model:ir.model.fields,help:oh_employee_documents_expiry.field_hr_employee_document__document_type
+msgid "Document type"
+msgstr "የሰነድ አይነት"
+
+#. module: oh_employee_documents_expiry
+#: code:addons/oh_employee_documents_expiry/models/employee_documents.py:0
+#: code:addons/oh_employee_documents_expiry/models/employee_documents.py:0
+#: code:addons/oh_employee_documents_expiry/models/employee_documents.py:0
+#: code:addons/oh_employee_documents_expiry/models/employee_documents.py:0
+#: code:addons/oh_employee_documents_expiry/models/employee_documents.py:0
+msgid "Document-%s Expired On %s"
+msgstr "ሰነድ-%s በ%s ላይ ጊዜው አልፎበታል።"
+
+#. module: oh_employee_documents_expiry
+#: code:addons/oh_employee_documents_expiry/models/employee_documents.py:0
+#: model:ir.ui.menu,name:oh_employee_documents_expiry.employe_document_menuitem
+#: model_terms:ir.ui.view,arch_db:oh_employee_documents_expiry.hr_employee_document_inherit_form_view
+msgid "Documents"
+msgstr "ሰነዶች"
+
+#. module: oh_employee_documents_expiry
+#: model:ir.model,name:oh_employee_documents_expiry.model_hr_document
+msgid "Documents Template"
+msgstr "የሰነዶች አብነት"
+
+#. module: oh_employee_documents_expiry
+#: model:ir.model,name:oh_employee_documents_expiry.model_hr_employee
+#: model_terms:ir.ui.view,arch_db:oh_employee_documents_expiry.employee_document_form_view
+#: model_terms:ir.ui.view,arch_db:oh_employee_documents_expiry.employee_documents_tree_view
+#: model_terms:ir.ui.view,arch_db:oh_employee_documents_expiry.search_employee_documents
+msgid "Employee"
+msgstr "ሰራተኛ"
+
+#. module: oh_employee_documents_expiry
+#: model:ir.actions.server,name:oh_employee_documents_expiry.employee_data_reminder_ir_actions_server
+#: model:ir.cron,cron_name:oh_employee_documents_expiry.employee_data_reminder
+#: model:ir.cron,name:oh_employee_documents_expiry.employee_data_reminder
+msgid "Employee Document Expiration"
+msgstr "የሰራተኛ ሰነድ ማብቂያ ጊዜ"
+
+#. module: oh_employee_documents_expiry
+#: model:ir.actions.act_window,name:oh_employee_documents_expiry.hr_employee_document_type_action
+#: model:ir.ui.menu,name:oh_employee_documents_expiry.document_types_menuitem
+msgid "Employee Document Types"
+msgstr "የሰራተኛ ሰነድ ዓይነቶች"
+
+#. module: oh_employee_documents_expiry
+#: model:ir.actions.act_window,name:oh_employee_documents_expiry.hr_employee_document_action
+#: model_terms:ir.ui.view,arch_db:oh_employee_documents_expiry.search_employee_documents
+msgid "Employee Documents"
+msgstr "የሰራተኛ ሰነዶች"
+
+#. module: oh_employee_documents_expiry
+#: model:ir.model.fields,field_description:oh_employee_documents_expiry.field_hr_employee_document__employee_ref
+msgid "Employee Ref"
+msgstr "የሰራተኛ ማጣቀሻ"
+
+#. module: oh_employee_documents_expiry
+#: model_terms:ir.ui.view,arch_db:oh_employee_documents_expiry.view_employee_category_form2
+msgid "Employee Tags"
+msgstr "የሰራተኛ መለያዎች"
+
+#. module: oh_employee_documents_expiry
+#: model:ir.model.fields.selection,name:oh_employee_documents_expiry.selection__hr_employee_document__notification_type__everyday
+msgid "Everyday till expiry date"
+msgstr "በየቀኑ  ጊዜው እስከሚያበቃበት ቀን"
+
+#. module: oh_employee_documents_expiry
+#: model:ir.model.fields,field_description:oh_employee_documents_expiry.field_hr_employee_document__expiry_date
+msgid "Expiry Date"
+msgstr "የአገልግሎት ማብቂያ ጊዜ"
+
+#. module: oh_employee_documents_expiry
+#: model_terms:ir.ui.view,arch_db:oh_employee_documents_expiry.search_employee_documents
+msgid "Group By"
+msgstr "ቡድን በ"
+
+#. module: oh_employee_documents_expiry
+#: model:ir.model,name:oh_employee_documents_expiry.model_hr_employee_document
+msgid "HR Employee Documents"
+msgstr "የሰው ኃይል ሰራተኞች ሰነዶች"
+
+#. module: oh_employee_documents_expiry
+#: model:ir.model.fields,help:oh_employee_documents_expiry.field_hr_employee_document__before_days
+msgid "How many number of days before to get the notification email"
+msgstr "የማሳወቂያ ኢሜይሉን ከማግኘትዎ በፊት ስንት ቀናት "
+
+#. module: oh_employee_documents_expiry
+#: model:ir.model.fields,field_description:oh_employee_documents_expiry.field_document_type__id
+#: model:ir.model.fields,field_description:oh_employee_documents_expiry.field_hr_document__id
+#: model:ir.model.fields,field_description:oh_employee_documents_expiry.field_hr_employee_document__id
+msgid "ID"
+msgstr "መታወቂያ"
+
+#. module: oh_employee_documents_expiry
+#: model:ir.model.fields,field_description:oh_employee_documents_expiry.field_hr_employee_document__issue_date
+msgid "Issue Date"
+msgstr "የተሰጠበት ቀን"
+
+#. module: oh_employee_documents_expiry
+#: model:ir.model.fields,field_description:oh_employee_documents_expiry.field_document_type____last_update
+#: model:ir.model.fields,field_description:oh_employee_documents_expiry.field_hr_document____last_update
+#: model:ir.model.fields,field_description:oh_employee_documents_expiry.field_hr_employee_document____last_update
+msgid "Last Modified on"
+msgstr "መጨረሻ የተሻሻለው።"
+
+#. module: oh_employee_documents_expiry
+#: model:ir.model.fields,field_description:oh_employee_documents_expiry.field_document_type__write_uid
+#: model:ir.model.fields,field_description:oh_employee_documents_expiry.field_hr_document__write_uid
+#: model:ir.model.fields,field_description:oh_employee_documents_expiry.field_hr_employee_document__write_uid
+msgid "Last Updated by"
+msgstr "መጨረሻ የዘመነው በ"
+
+#. module: oh_employee_documents_expiry
+#: model:ir.model.fields,field_description:oh_employee_documents_expiry.field_document_type__write_date
+#: model:ir.model.fields,field_description:oh_employee_documents_expiry.field_hr_document__write_date
+#: model:ir.model.fields,field_description:oh_employee_documents_expiry.field_hr_employee_document__write_date
+msgid "Last Updated on"
+msgstr "መጨረሻ የዘመነው "
+
+#. module: oh_employee_documents_expiry
+#: model:ir.model.fields,field_description:oh_employee_documents_expiry.field_document_type__name
+#: model:ir.model.fields,help:oh_employee_documents_expiry.field_document_type__name
+msgid "Name"
+msgstr "ስም"
+
+#. module: oh_employee_documents_expiry
+#: model:ir.model.fields,field_description:oh_employee_documents_expiry.field_hr_document__note
+#: model:ir.model.fields,help:oh_employee_documents_expiry.field_hr_document__note
+#: model_terms:ir.ui.view,arch_db:oh_employee_documents_expiry.hr_document_template_tree_view
+msgid "Note"
+msgstr "ማስታወሻ"
+
+#. module: oh_employee_documents_expiry
+#: model:ir.model.fields,field_description:oh_employee_documents_expiry.field_hr_employee_document__notification_type
+msgid "Notification Type"
+msgstr "የማሳወቂያ አይነት"
+
+#. module: oh_employee_documents_expiry
+#: model:ir.model.fields.selection,name:oh_employee_documents_expiry.selection__hr_employee_document__notification_type__multi
+msgid "Notification before few days"
+msgstr "ከጥቂት ቀናት በፊት ማሳወቂያ"
+
+#. module: oh_employee_documents_expiry
+#: model:ir.model.fields.selection,name:oh_employee_documents_expiry.selection__hr_employee_document__notification_type__everyday_after
+msgid "Notification on and after expiry"
+msgstr "ጊዜው ካለፈበት እና በኋላ ማሳወቂያ"
+
+#. module: oh_employee_documents_expiry
+#: model:ir.model.fields.selection,name:oh_employee_documents_expiry.selection__hr_employee_document__notification_type__single
+msgid "Notification on expiry date"
+msgstr "ጊዜው የሚያበቃበት ቀን ላይ ማሳወቂያ"
+
+#. module: oh_employee_documents_expiry
+#: model:ir.model.fields,help:oh_employee_documents_expiry.field_hr_document__attach_id
+#: model:ir.model.fields,help:oh_employee_documents_expiry.field_hr_employee_document__doc_attachment_id
+msgid "You can attach the copy of your document"
+msgstr "የሰነድዎን ቅጂ ማያያዝ ይችላሉ"
+
+#. module: oh_employee_documents_expiry
+#: model:ir.model.fields,help:oh_employee_documents_expiry.field_hr_document__name
+msgid "You can give yourDocument name here."
+msgstr "የሰነድ ስምዎን እዚህ መስጠት ይችላሉ።"
+
+#. module: oh_employee_documents_expiry
+#: model:ir.model.fields,help:oh_employee_documents_expiry.field_hr_employee_document__name
+msgid "You can give yourDocument number."
+msgstr "የሰነድ ቁጥርዎን መስጠት ይችላሉ።"
+
+#. module: oh_employee_documents_expiry
+#: model:ir.model,name:oh_employee_documents_expiry.model_document_type
+msgid "document.type"
+msgstr "document.type"

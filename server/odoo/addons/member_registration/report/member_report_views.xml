@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<odoo>
+
+  <!-- This record holds the action for report -->
+  <report id="create_member_id"
+          string="Member ID"
+          model="res.partner" 
+          report_type="qweb-pdf"
+          file="member_registration.member_report_templates"
+          name="member_registration.member_report_templates"
+          menu="False"/>
+
+  <!-- This record will hold the action to create certificate details -->
+  <report id="create_certificate"
+          string="Certificate"
+          model="res.partner" 
+          report_type="qweb-pdf"
+          file="member_registration.certificate_template"
+          name="member_registration.certificate_template"
+          menu="False"/>
+
+
+</odoo>

@@ -1,0 +1,184 @@
+ <table class="table report_border">
+                        
+                        <!-- getting values from model in QWEB--> 
+                        <tr>
+                           <th style="width: 25%; font-size:18px;">Name</th>
+                           <td style="font-size:20px;">
+                              <span t-field="data.name" />
+                           </td>
+                        </tr>
+
+                        <!-- how to define conditional statements in QWEB -->
+                        <tr>
+                           <th style="width: 25%; vertical-align: top; font-size:18px;">Personal</th>
+                           <td>
+                              <table class="table report_border">
+                                 <tr>
+                                    <t t-if="data.contact_number1 == False">
+                                       <td style="font-size:17px;">
+                                          <b>Contact No :</b>
+                                          <span t-field="data.contact_number2" />
+                                       </td>
+                                    </t>
+                                    <t t-if="data.contact_number2 == False">
+                                       <td style="font-size:17px;">
+                                          <b>Contact No :</b>
+                                          <span t-field="data.contact_number1" />
+                                       </td>
+                                    </t>
+                                    <t t-if="data.contact_number1 and data.contact_number2 != False">
+                                       <td style="font-size:17px;">
+                                          <b>Contact No:</b>
+                                          <li style="list-style-type: none;">
+                                             <span t-field="data.contact_number1" />
+                                             <br />
+                                          </li>
+                                          <li style="list-style-type: none;">
+                                             <span t-field="data.contact_number2" />
+                                          </li>
+                                       </td>
+                                    </t>
+                                 </tr>
+                              </table>
+                           </td>
+                        </tr>
+
+                        <!-- getting one2many relational fields in QWEb-->
+                        <!-- how to use nested loops in QWEb-->
+                        <tr>
+                           <th style="width: 25%; vertical-align: top; font-size:18px;">Experience</th>
+                           <td style="font-size:17px;">
+                              <table class="table report_border">
+                                 <th style="width: 10%;">Duration</th>
+                                 <th style="width: 10%;">Job Title</th>
+                                 <th style="width: 10%;">Institution</th>
+                                 <tbody>
+                                    <t t-foreach="data" t-as="experience">
+                                       <t t-foreach="experience.one2many_field" t-as="duration">
+                                          <tr>
+                                             <td>
+                                                <p>
+                                                   <t t-if="duration.curr_work == False">
+                                                      <span t-field="duration.date_from" t-field-options='{"format": "d-MMM-y"}' />
+                                                      to
+                                                      <span t-field="duration.date_to" t-field-options='{"format": "d-MMM-y"}' />
+                                                      <br />
+                                                   </t>
+                                                   <t t-if="duration.curr_work == True">
+                                                      <span t-field="duration.date_from" t-field-options='{"format": "d-MMM-y"}' />
+                                                      To Present
+                                                   </t>
+                                                </p>
+                                             </td>
+                                          </tr>
+                                       </t>
+                                    </t>
+                                 </tbody>
+                              </table>
+                           </td>
+                        </tr>
+                         
+                        <!-- how to show data in ordered list in QWEB--> 
+                        <tr>
+                           <th style="width: 25%; vertical-align: top; font-size:18px;">Ordered List</th>
+                           <td style="font-size:17px;">
+                              <t t-foreach="data.one2many_field" t-as="honor">
+                                 <li style="list-style-type: none;">
+                                    <p t-field="honor.name" />
+                                 </li>
+                              </t>
+                           </td>
+                        </tr>
+                         
+                        <!-- create table inside table row in QWEB--> 
+                        <tr>
+                           <th style="width: 25%; vertical-align: top; font-size:18px;">Supervision</th>
+                           <td style="font-size:17px;">
+                              <table class="table report_border">
+                                 <th style="width: 10%;">Year</th>
+                                 <th style="width: 10%;">Degree</th>
+                                 <th style="width: 10%;">Name</th>
+                                 <tbody>
+                                    <t t-foreach="data" t-as="supervision">
+                                       <t t-foreach="supervision.one2many_field" t-as="year">
+                                          <tr>
+                                             <td>
+                                                <p t-esc="year.year" />
+                                             </td>
+                                             <td>
+                                                <p t-esc="year.degree" />
+                                             </td>
+                                             <td>
+                                                <p t-esc="year.name" />
+                                             </td>
+                                          </tr>
+                                       </t>
+                                    </t>
+                                 </tbody>
+                              </table>
+                           </td>
+                        </tr>
+                     </table>
+                  </div>
+               </div>
+            </t>
+         </t>
+                <div class="page">
+                    <h2><span t-esc="env.company.name"/>: Trial Balance</h2>
+
+                    <div class="row mt32">
+                        <div class="col-4">
+                            <strong>Display Account:</strong>
+                            <p>
+                                <span t-if="data['display_account'] == 'all'">All accounts</span>
+                                <span t-if="data['display_account'] == 'movement'">With movements</span>
+                                <span t-if="data['display_account'] == 'not_zero'">With balance not equal to zero</span>
+                            </p>
+                        </div>
+                        <div class="col-4">
+                            <p>
+                                <t t-if="data['date_from']"><strong>Date from :</strong> <span t-esc="data['date_from']"/><br/></t>
+                                <t t-if="data['date_to']"><strong>Date to :</strong> <span t-esc="data['date_to']"/></t>
+                            </p>
+                        </div>
+                        <div class="col-4">
+                            <strong>Target Moves:</strong>
+                            <p>
+                                <span t-if="data['target_move'] == 'all'">All Entries</span>
+                                <span t-if="data['target_move'] == 'posted'">All Posted Entries</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <table class="table table-sm table-reports">
+                        <thead>
+                            <tr>
+                                <th>Code</th>
+                                <th>Account</th>
+                                <th class="text-right">Debit</th>
+                                <th class="text-right">Credit</th>
+                                <th class="text-right">Balance</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr t-foreach="Accounts" t-as="account">
+                                <td>
+                                    <span t-att-style="style" t-esc="account['code']"/>
+                                </td>
+                                <td>
+                                    <span style="color: white;" t-esc="'..'"/>
+                                    <span t-att-style="style" t-esc="account['name']"/>
+                                </td>
+                                <td class="text-right">
+                                     <span t-att-style="style" t-esc="account['debit']" t-options="{'widget': 'monetary', 'display_currency': env.company.currency_id}"/>
+                                </td>
+                                <td class="text-right">
+                                    <span t-att-style="style" t-esc="account['credit']" t-options="{'widget': 'monetary', 'display_currency': env.company.currency_id}"/>
+                                </td>
+                                <td class="text-right">
+                                    <span t-att-style="style" t-esc="account['balance']" t-options="{'widget': 'monetary', 'display_currency': env.company.currency_id}"/>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>

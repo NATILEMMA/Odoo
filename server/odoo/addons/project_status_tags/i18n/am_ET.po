@@ -1,0 +1,448 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* project_status_tags
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-05 08:38+0000\n"
+"PO-Revision-Date: 2023-07-05 08:38+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: project_status_tags
+#: code:addons/project_status_tags/models/project.py:0
+#, python-format
+msgid "1Deadline cannot be lesser than the starting date"
+msgstr "1 ቀነ ገደብ ከመጀመሪያው ቀን ያነሰ ሊሆን አይችልም"
+
+#. module: project_status_tags
+#: model:ir.model.fields,field_description:project_status_tags.field_project_project__actual_date_end
+#: model:ir.model.fields,field_description:project_status_tags.field_project_task__actual_date_end
+msgid "Actual Ending Date"
+msgstr "ትክክለኛው የማለቂያ ቀን"
+
+#. module: project_status_tags
+#: model:ir.model.fields,field_description:project_status_tags.field_project_project__actual_date_start
+#: model:ir.model.fields,field_description:project_status_tags.field_project_task__actual_date_start
+msgid "Actual Starting Date"
+msgstr "ትክክለኛው የመነሻ ቀን"
+
+#. module: project_status_tags
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_project_project_form
+msgid "Approve Planning"
+msgstr "እቅድ ማውጣትን ማጽደቅ"
+
+#. module: project_status_tags
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_project__state__approved
+msgid "Approved"
+msgstr "ጸድቋል"
+
+#. module: project_status_tags
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_project__project_status__at_risk
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_task__task_status__at_risk
+msgid "At Risk"
+msgstr "አደጋ ላይ"
+
+#. module: project_status_tags
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_project_project_form
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_task_form_inherit
+msgid "At-Risk"
+msgstr "አደጋ ላይ"
+
+#. module: project_status_tags
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_task_form_inherit
+msgid "Back to Inprogress"
+msgstr "ወደ መሻሻል ተመለስ"
+
+#. module: project_status_tags
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_project_project_form
+msgid "Cancel Planning"
+msgstr "እቅድ ማውጣትን ሰርዝ"
+
+#. module: project_status_tags
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_task_form_inherit
+msgid "Cancel Task"
+msgstr "ተግባር ሰርዝ"
+
+#. module: project_status_tags
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_project__project_status__cancelled
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_project__state__cancelled
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_task__state__cancelled
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_task__task_status__cancelled
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_task_type__state__cancelled
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_project_project_form
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_task_form_inherit
+msgid "Cancelled"
+msgstr "ተሰርዟል።"
+
+#. module: project_status_tags
+#: model:ir.model.fields,field_description:project_status_tags.field_project_project__status_color
+#: model:ir.model.fields,field_description:project_status_tags.field_project_task__status_color
+msgid "Colour"
+msgstr "ቀለም"
+
+#. module: project_status_tags
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_project_project_form
+msgid "Complete Planning"
+msgstr "የተሟላ እቅድ ማውጣት"
+
+#. module: project_status_tags
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_task_form_inherit
+msgid "Complete Task"
+msgstr "ተግባርን አጠናቅቅ"
+
+#. module: project_status_tags
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_project__project_status__done
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_project__state__close
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_task__state__done
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_task__task_status__done
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_project_project_form
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_task_form_inherit
+msgid "Completed"
+msgstr "ተጠናቀቀ"
+
+#. module: project_status_tags
+#: model:ir.model.fields,field_description:project_status_tags.field_project_task__date_deadline
+msgid "Deadline"
+msgstr "ማለቂያ ሰአት"
+
+#. module: project_status_tags
+#: code:addons/project_status_tags/models/project.py:0
+#: code:addons/project_status_tags/models/project.py:0
+#, python-format
+msgid "Deadline cannot be greater than the project end date %s"
+msgstr "የመጨረሻው ቀን ከፕሮጀክቱ ማብቂያ ቀን %s መብለጥ አይችልም።"
+
+#. module: project_status_tags
+#: code:addons/project_status_tags/models/project.py:0
+#, python-format
+msgid "Deadline cannot be lesser than the starting date"
+msgstr "የመጨረሻው ቀን ከመጀመሪያው ቀን ያነሰ ሊሆን አይችልም"
+
+#. module: project_status_tags
+#: code:addons/project_status_tags/models/project.py:0
+#, python-format
+msgid "Deadline cannot be lesser than the starting date %s"
+msgstr "የመጨረሻው ቀን ከ%s መነሻ ቀን ያነሰ ሊሆን አይችልም።"
+
+#. module: project_status_tags
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_project__project_status__off_track
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_task__task_status__off_track
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_project_project_form
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_task_form_inherit
+msgid "Delayed"
+msgstr "ዘግይቷል"
+
+#. module: project_status_tags
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_task_type__state__done
+msgid "Done"
+msgstr "ተከናውኗል"
+
+#. module: project_status_tags
+#: model:ir.model.fields,field_description:project_status_tags.field_project_project__date
+msgid "End Date"
+msgstr "የመጨረሻ ቀን"
+
+#. module: project_status_tags
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_task__task_status__future
+msgid "Future"
+msgstr "ወደፊት"
+
+#. module: project_status_tags
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_project__state__open
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_task__state__open
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_task_type__state__open
+msgid "In Progress"
+msgstr "በሂደት ላይ"
+
+#. module: project_status_tags
+#: code:addons/project_status_tags/models/project.py:0
+#, python-format
+msgid "Kindly Fill the Planning End Date"
+msgstr "የእቅድ ማብቂያ ቀንን በደግነት ይሙሉ"
+
+#. module: project_status_tags
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_project__state__draft
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_task__state__draft
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_task__task_status__new
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_task_type__state__draft
+msgid "New"
+msgstr "አዲስ"
+
+#. module: project_status_tags
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_project__project_status__not_active
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_task__task_status__not_active
+msgid "Not Active"
+msgstr "ገቢር አይደለም"
+
+#. module: project_status_tags
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_project_project_form
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_task_form_inherit
+msgid "Not-Active"
+msgstr "ንቁ ያልሆነ"
+
+#. module: project_status_tags
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_project__project_status__onhold
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_task__task_status__onhold
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_project_project_form
+msgid "On Hold"
+msgstr "በተጠንቀቅ"
+
+#. module: project_status_tags
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_project__project_status__on_track
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_task__task_status__on_track
+msgid "On Track"
+msgstr "ትራክ ላይ"
+
+#. module: project_status_tags
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_task_form_inherit
+msgid "On-Hold"
+msgstr "በተጠንቀቅ"
+
+#. module: project_status_tags
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_project_project_form
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_task_form_inherit
+msgid "On-Track"
+msgstr "ትራክ ላይ"
+
+#. module: project_status_tags
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_project_project_form
+msgid "Other Info"
+msgstr "ሌላ መረጃ"
+
+#. module: project_status_tags
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_project__state__pending
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_task__state__pending
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_task_type__state__pending
+msgid "Pending"
+msgstr "በመጠባበቅ ላይ"
+
+#. module: project_status_tags
+#: model:ir.model.fields,field_description:project_status_tags.field_project_project__planned_hours
+msgid "Planned Time"
+msgstr "የታቀደ ጊዜ"
+
+#. module: project_status_tags
+#: model:ir.model,name:project_status_tags.model_project_project
+msgid "Planning"
+msgstr "እቅድ ማውጣት"
+
+#. module: project_status_tags
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_project_project_form
+msgid "Planning Stages"
+msgstr "የእቅድ ደረጃዎች"
+
+#. module: project_status_tags
+#: model:ir.model.fields,field_description:project_status_tags.field_project_project__project_status
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_project_search_inherit
+msgid "Planning Status"
+msgstr "የእቅድ ሁኔታ"
+
+#. module: project_status_tags
+#: model:ir.model.fields,field_description:project_status_tags.field_project_project__progress_rate
+msgid "Progress"
+msgstr "እድገት"
+
+#. module: project_status_tags
+#: model:ir.model.fields,field_description:project_status_tags.field_project_task__progress_status
+msgid "Progress Status"
+msgstr "የሂደት ሁኔታ"
+
+#. module: project_status_tags
+#: model:ir.model.fields,field_description:project_status_tags.field_project_project__projected_date_end
+#: model:ir.model.fields,field_description:project_status_tags.field_project_task__projected_date_end
+msgid "Projected End Date"
+msgstr "የታቀደ የመጨረሻ ቀን"
+
+#. module: project_status_tags
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_project_project_form
+msgid "Reject"
+msgstr "እምቢ"
+
+#. module: project_status_tags
+#: model:ir.model.fields,field_description:project_status_tags.field_project_task_type__state
+msgid "Related Status"
+msgstr "ተዛማጅ ሁኔታ"
+
+#. module: project_status_tags
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_project_project_form
+msgid "Request Planning"
+msgstr "እቅድ ማውጣትን ይጠይቁ"
+
+#. module: project_status_tags
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_project__project_status__requested
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_project__state__requested
+#: model:ir.model.fields.selection,name:project_status_tags.selection__project_task__task_status__requested
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_project_project_form
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_task_form_inherit
+msgid "Requested"
+msgstr "ተጠይቋል"
+
+#. module: project_status_tags
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_project_project_form
+msgid "Resume"
+msgstr "እንደ ገና መጀመር"
+
+#. module: project_status_tags
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_project_project_form
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_task_form_inherit
+msgid "Set To Pending"
+msgstr "በመጠባበቅ ላይ አዘጋጅ"
+
+#. module: project_status_tags
+#: model:ir.model.fields,field_description:project_status_tags.field_project_task__stage_id
+msgid "Stage"
+msgstr "ደረጃ"
+
+#. module: project_status_tags
+#: model:ir.model.fields,field_description:project_status_tags.field_project_project__date_start
+msgid "Start Date"
+msgstr "የመጀመሪያ ቀን"
+
+#. module: project_status_tags
+#: code:addons/project_status_tags/models/project.py:0
+#, python-format
+msgid "Start Date cannot be lesser than End Date"
+msgstr "የመጀመሪያ ቀን ከማብቂያ ቀን ያነሰ ሊሆን አይችልም።"
+
+#. module: project_status_tags
+#: code:addons/project_status_tags/models/project.py:0
+#, python-format
+msgid "Start Date cannot be lesser than deadline"
+msgstr "የመጀመሪያ ቀን ከማለቂያው ቀን ያነሰ ሊሆን አይችልም።"
+
+#. module: project_status_tags
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_project_project_form
+msgid "Start Planning"
+msgstr "እቅድ ማውጣት ይጀምሩ"
+
+#. module: project_status_tags
+#: model_terms:ir.ui.view,arch_db:project_status_tags.view_task_form_inherit
+msgid "Start Task"
+msgstr "ተግባር ጀምር"
+
+#. module: project_status_tags
+#: model:ir.model.fields,field_description:project_status_tags.field_project_task__date_start
+msgid "Starting Date"
+msgstr "መነሻ ቀን"
+
+#. module: project_status_tags
+#: model:ir.model.fields,field_description:project_status_tags.field_project_project__state
+#: model:ir.model.fields,field_description:project_status_tags.field_project_task__state
+msgid "Status"
+msgstr "ሁኔታ"
+
+#. module: project_status_tags
+#: model:ir.model,name:project_status_tags.model_project_task
+msgid "Task"
+msgstr "ተግባር"
+
+#. module: project_status_tags
+#: model:ir.model,name:project_status_tags.model_project_task_type
+msgid "Task Stage"
+msgstr "የተግባር ደረጃ"
+
+#. module: project_status_tags
+#: model:ir.model.fields,field_description:project_status_tags.field_project_task__task_status
+msgid "Task Status"
+msgstr "ግብ ሁኔታ"
+
+#. module: project_status_tags
+#: code:addons/project_status_tags/models/project.py:0
+#: code:addons/project_status_tags/models/project.py:0
+#, python-format
+msgid "Task start date cannot be greater than the project starting date %s"
+msgstr "የተግባር መጀመሪያ ቀን ከፕሮጄክቱ የሚጀምርበት ቀን %s መብለጥ አይችልም።"
+
+#. module: project_status_tags
+#: model:ir.model.fields,help:project_status_tags.field_project_task__state
+msgid ""
+"The status is set to 'Draft', when a case is created.                      "
+"If the case is in progress the status is set to 'Open'."
+"                      When the case is over, the status is set to 'Done'."
+"                      If the case needs to be reviewed then the status is"
+"                       set to 'Pending'."
+msgstr ""
+"ጉዳይ ሲፈጠር ሁኔታው ​​ወደ 'ረቂቅ' ተቀናብሯል።ጉዳዩ በሂደት ላይ ከሆነ ሁኔታው ​​ወደ 'ክፍት' ተቀናብሯል. ጉዳዩ "
+"ሲያልቅ ሁኔታው ​​ወደ 'ተከናውኗል' ተቀናብሯል.ጉዳዩ መከለስ ካለበት ሁኔታው ​​ነው ወደ 'በመጠባበቅ ላይ' "
+"ተቀናብሯል."
+
+#. module: project_status_tags
+#: model:ir.model.fields,field_description:project_status_tags.field_project_project__effective_hours
+msgid "Time Spent"
+msgstr "ጊዜ ያሳለፈው"
+
+#. module: project_status_tags
+#: model:ir.model.fields,field_description:project_status_tags.field_project_project__total_hours
+msgid "Total Time"
+msgstr "ጠቅላላ ጊዜ"
+
+#. module: project_status_tags
+#: code:addons/project_status_tags/models/project.py:0
+#, python-format
+msgid ""
+"Warning! \n"
+" Task - %s is currently in the  %s state You cannot complete, cancel, or put this project on hold until the tasks associated with it are completed or cancelled."
+msgstr ""
+"ማስጠንቀቂያ! \n"
+" ተግባር - %s በአሁኑ ጊዜ በ%s ግዛት ውስጥ ነው ይህን ፕሮጀክት ከሱ ጋር የተያያዙ ተግባራት እስኪጠናቀቁ ወይም እስኪሰረዙ ድረስ ማጠናቀቅ፣ መሰረዝ ወይም ማቆየት አይችሉም።"
+#. module: project_status_tags
+#: code:addons/project_status_tags/models/project.py:0
+#, python-format
+msgid ""
+"Warning! \n"
+" Your %s  is in draft state,  so you cannot move this task.\n"
+" Please activate your planning first"
+msgstr ""
+"ማስጠንቀቂያ! \n"
+" የእርስዎ %s በረቂቅ ሁኔታ ላይ ነው፣ ስለዚህ ይህን ተግባር ማንቀሳቀስ አይችሉም።\n"
+"እባክዎ መጀመሪያ እቅድዎን ያግብሩ"
+#. module: project_status_tags
+#: code:addons/project_status_tags/models/project.py:0
+#, python-format
+msgid ""
+"Warning! \n"
+" Your %s  is in draft state,  so you cannot start this task.\n"
+" Please activate your planning first"
+msgstr ""
+"ማስጠንቀቂያ! \n"
+" የእርስዎ %s በረቂቅ ሁኔታ ላይ ነው፣ ስለዚህ ይህን ተግባር መጀመር አይችሉም።\n"
+"እባክዎ መጀመሪያ እቅድዎን ያግብሩ"
+#. module: project_status_tags
+#: code:addons/project_status_tags/models/project.py:0
+#, python-format
+msgid "Warning! You cannot delete a created task"
+msgstr "ማስጠንቀቂያ! የተፈጠረ ተግባር መሰረዝ አይችሉም"
+
+#. module: project_status_tags
+#: code:addons/project_status_tags/models/project.py:0
+#, python-format
+msgid "You cannot completed the task if the task has not been started"
+msgstr "ስራው ካልተጀመረ ስራውን ማጠናቀቅ አይችሉም"
+
+#. module: project_status_tags
+#: code:addons/project_status_tags/models/project.py:0
+#, python-format
+msgid "You cannot modify the task which is Done"
+msgstr "የተከናወነውን ተግባር መቀየር አይችሉም"
+
+#. module: project_status_tags
+#: code:addons/project_status_tags/models/project.py:0
+#, python-format
+msgid "You cannot modify the task which is cancelled"
+msgstr "የተሰረዘውን ተግባር መቀየር አትችልም።"
+
+#. module: project_status_tags
+#: code:addons/project_status_tags/models/project.py:0
+#, python-format
+msgid ""
+"You cannot move the task until the parent planning is in the Start state. "
+"Please start your planning first."
+msgstr ""
+"የወላጅ እቅድ በጀምር ሁኔታ ውስጥ እስኪሆን ድረስ ስራውን ማንቀሳቀስ አይችሉም። እባክዎ መጀመሪያ እቅድዎን ይጀምሩ።"

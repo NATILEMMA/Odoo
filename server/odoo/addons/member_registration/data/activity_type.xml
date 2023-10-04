@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+<odoo>
+
+    <data noupdate="1">
+
+        <record id="mail_act_supporter_appproval" model="mail.activity.type">
+            <field name="name">Supporter Approval</field>
+            <field name="icon">fa-sun-o</field>
+            <field name="res_model_id" ref="model_supporter_members"/>
+        </record>
+
+        <record id="mail_act_candidate_appproval" model="mail.activity.type">
+            <field name="name">Candidate Approval</field>
+            <field name="icon">fa-sun-o</field>
+            <field name="res_model_id" ref="model_candidate_members"/>
+        </record>
+
+    </data>
+</odoo>

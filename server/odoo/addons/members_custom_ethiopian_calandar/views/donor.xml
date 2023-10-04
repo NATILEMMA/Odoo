@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+     
+                <!-- 
+                    
+                    Adding Ethiopian Calander Date to Time Fream 
+
+                    step 1: Inherit the View of the model to which you wish to add the Ethiopian calendar extension.
+
+                    step 2, xpath your exact location of converting date fields if your date fields are located within a form sheet, use col and colspan to adjust CSS
+                
+                    Ethiopian Date Picker Widget
+
+                    - ethiopian_calander_widget
+                    - ethiopian_calander_widget_two
+                    - ethiopian_calander_widget_three
+                    - ethiopian_calander_widget_four
+                
+                
+                -->
+
+        <record id="donor_form_view_inherited_view" model="ir.ui.view">
+            <field name="name">Donor Form View</field>
+            <field name="model">donors</field>
+            <field name="inherit_id" ref="members_custom.donor_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date']" position="replace">
+                    <field name="is_pagum_from" invisible="1"/>
+                    <field  name="ethiopian_from" style="float:left" attrs="{'invisible': ['|', ('is_pagum_from', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker" force_save="1" readonly="1"/>
+                    <field  name="pagum_from" style="float:left"  attrs="{'invisible': ['|',('is_pagum_from', '!=',False)]}"  groups="EthiopianCalendar.group_ethio_datepicker" force_save="1" readonly="1"/>
+                        <div>
+                        </div>
+                    <div style="margin-bottom:40px;margin-top:-20px;margin-left:10px;margin-right:0px">
+                    <widget name="ethiopian_calander_widget"  style="float:left;width:226px;" class="oe_edit_only" groups="EthiopianCalendar.group_ethio_datepicker" attrs="{'invisible': ['|', ('type_of_supporter', '=', 'company'), ('saved', '=', True)]}"/>
+                    </div>
+                    <field  name="date" attrs="{'invisible': [('type_of_supporter', '=', 'company')], 'readonly': [('saved', '=', True)]}" force_save="1" class="col-50" colspan="3" groups="EthiopianCalendar.group_gregory"/>
+                </xpath>
+                <xpath expr="//page[1]/field[@name='archive_ids']/tree/field[@name='date_from']" position="replace">
+                    <field name="is_pagum_from" invisible="1"/>
+                    <field  name="ethiopian_from" attrs="{'invisible': [('is_pagum_from', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    <field  name="pagum_from" attrs="{'invisible': [('is_pagum_from', '!=',False)]}"  groups="EthiopianCalendar.group_ethio_datepicker" optional="hidden"/>
+                    <field name="date_from" string="Date From" groups="EthiopianCalendar.group_gregory"/>
+                </xpath>
+                <xpath expr="//page[1]/field[@name='archive_ids']/tree/field[@name='date_to']" position="replace">
+                    <field name="is_pagum_to" invisible="1"/>
+                    <field  name="ethiopian_to" attrs="{'invisible': [('is_pagum_to', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    <field  name="pagum_to" attrs="{'invisible': [('is_pagum_to', '!=',False)]}"  groups="EthiopianCalendar.group_ethio_datepicker" optional="hidden"/>
+                    <field name="date_to" string="Date To" groups="EthiopianCalendar.group_gregory"/>
+                </xpath>
+
+            </field>
+        </record> 
+        
+    </data>
+</odoo>

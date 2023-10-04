@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="view_financial_sr">
+        <field name="name">financial.report.add.sr</field>
+        <field name="model">financial.report</field>
+        <field name="inherit_id" ref="base_accounting_kit.financial_report_wiz_modified"/>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+        <xpath expr="//field[@name='date_to']" position="after">
+                  <field name="fiscal_year"/>
+                  <field name="period"/>
+        </xpath>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_flow_report_sr">
+        <field name="name">cash.flow.report.add.sr</field>
+        <field name="model">cash.flow.report</field>
+        <field name="inherit_id" ref="account.account_common_report_view"/>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+        <xpath expr="//field[@name='date_to']" position="after">
+                  <field name="fiscal_year"/>
+                  <field name="period"/>
+        </xpath>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_partner_ledger_report_sr">
+        <field name="name">account.report.partner.ledger.add.sr</field>
+        <field name="model">account.report.partner.ledger</field>
+        <field name="inherit_id" ref="account.account_common_report_view"/>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+        <xpath expr="//field[@name='date_to']" position="after">
+                  <field name="fiscal_year"/>
+                  <field name="period"/>
+        </xpath>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_general_ledger_report_sr">
+        <field name="name">account.report.general.ledger.add.sr</field>
+        <field name="model">account.report.general.ledger</field>
+        <field name="inherit_id" ref="account.account_common_report_view"/>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+        <xpath expr="//field[@name='date_to']" position="after">
+                  <field name="fiscal_year"/>
+                  <field name="period"/>
+        </xpath>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_account_balance_report_sr">
+        <field name="name">account.balance.report.add.sr</field>
+        <field name="model">account.balance.report</field>
+        <field name="inherit_id" ref="account.account_common_report_view"/>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+        <xpath expr="//field[@name='date_to']" position="after">
+                  <field name="fiscal_year"/>
+                  <field name="period"/>
+        </xpath>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_account_tax_report_report_sr">
+        <field name="name">account.tax.report.add.sr</field>
+        <field name="model">account.tax.report</field>
+        <field name="inherit_id" ref="account.account_common_report_view"/>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+        <xpath expr="//field[@name='date_to']" position="after">
+                  <field name="fiscal_year"/>
+                  <field name="period"/>
+        </xpath>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_account_print_journal_sr">
+        <field name="name">account.print.journal.add.sr</field>
+        <field name="model">account.print.journal</field>
+        <field name="inherit_id" ref="account.account_common_report_view"/>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+        <xpath expr="//field[@name='date_to']" position="after">
+                  <field name="fiscal_year"/>
+                  <field name="period"/>
+        </xpath>
+        </field>
+    </record>
+
+</odoo>

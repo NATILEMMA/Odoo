@@ -1,0 +1,288 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_menu_organizer_version_2
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20221005\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-04 05:54+0000\n"
+"PO-Revision-Date: 2023-04-04 05:54+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_menu_organizer_version_2
+#: model_terms:ir.ui.view,arch_db:hr_menu_organizer_version_2.hr_kanban_view_employees_custom
+msgid ""
+"<span class=\"fa fa-circle text-danger\" role=\"img\" aria-label=\"Absent\" "
+"title=\"Absent\" name=\"presence_absent\"/>"
+msgstr ""
+
+#. module: hr_menu_organizer_version_2
+#: model_terms:ir.ui.view,arch_db:hr_menu_organizer_version_2.hr_kanban_view_employees_custom
+msgid ""
+"<span class=\"fa fa-circle text-success\" role=\"img\" aria-"
+"label=\"Present\" title=\"Present\" name=\"presence_present\"/>"
+msgstr ""
+
+#. module: hr_menu_organizer_version_2
+#: model_terms:ir.ui.view,arch_db:hr_menu_organizer_version_2.hr_kanban_view_employees_custom
+msgid ""
+"<span class=\"fa fa-circle text-warning\" role=\"img\" aria-label=\"To "
+"define\" title=\"To define\" name=\"presence_to_define\"/>"
+msgstr ""
+
+#. module: hr_menu_organizer_version_2
+#: model_terms:ir.ui.view,arch_db:hr_menu_organizer_version_2.view_employee_form_custom
+msgid ""
+"<span class=\"o_stat_text\">\n"
+"                                        Not Connected\n"
+"                                    </span>"
+msgstr ""
+"<span class=\"o_stat_text\">\n"
+"                                        አልተገናኘም\n"
+"                                    </span>"
+
+#. module: hr_menu_organizer_version_2
+#: model_terms:ir.ui.view,arch_db:hr_menu_organizer_version_2.view_employee_form_custom
+msgid "<span class=\"o_stat_text\">Present Since</span>"
+msgstr "<span class=\"o_stat_text\">አሁን ጀምሮ</span>"
+
+#. module: hr_menu_organizer_version_2
+#: model:ir.model.fields.selection,name:hr_menu_organizer_version_2.selection__hr_employee__hr_presence_state__absent
+msgid "Absent"
+msgstr "መቅረት"
+
+#. module: hr_menu_organizer_version_2
+#: model_terms:ir.actions.act_window,help:hr_menu_organizer_version_2.open_view_employee_custom_list_my
+msgid "Add a new employee"
+msgstr "አዲስ ሠራተኛ ያክሉ"
+
+#. module: hr_menu_organizer_version_2
+#: model_terms:ir.ui.view,arch_db:hr_menu_organizer_version_2.view_employee_form_custom
+msgid "Archived"
+msgstr "በማህደር የተቀመጠ"
+
+#. module: hr_menu_organizer_version_2
+#: model_terms:ir.ui.view,arch_db:hr_menu_organizer_version_2.view_employee_form_custom
+msgid "Attendance"
+msgstr "አቴንዳንስ"
+
+#. module: hr_menu_organizer_version_2
+#: model_terms:ir.ui.view,arch_db:hr_menu_organizer_version_2.view_employee_form_custom
+msgid "Available"
+msgstr "ይገኛል"
+
+#. module: hr_menu_organizer_version_2
+#: model_terms:ir.ui.view,arch_db:hr_menu_organizer_version_2.view_employee_form_custom
+msgid "Away"
+msgstr "የራቀ"
+
+#. module: hr_menu_organizer_version_2
+#: model:ir.model.fields,field_description:hr_menu_organizer_version_2.field_hr_employee__barcode
+msgid "Badge ID"
+msgstr "ባጅ መታወቂያ"
+
+#. module: hr_menu_organizer_version_2
+#: model_terms:ir.ui.view,arch_db:hr_menu_organizer_version_2.view_employee_form_custom
+msgid "Chat"
+msgstr "ውይይት"
+
+#. module: hr_menu_organizer_version_2
+#: model_terms:ir.ui.view,arch_db:hr_menu_organizer_version_2.view_employee_form_custom
+msgid "Citizenship"
+msgstr "ዜግነት"
+
+#. module: hr_menu_organizer_version_2
+#: model_terms:ir.ui.view,arch_db:hr_menu_organizer_version_2.view_employee_form_custom
+msgid "Departure"
+msgstr "መነሳት"
+
+#. module: hr_menu_organizer_version_2
+#: model_terms:ir.ui.view,arch_db:hr_menu_organizer_version_2.view_employee_form_custom
+msgid "Dependant"
+msgstr "ጥገኛ"
+
+#. module: hr_menu_organizer_version_2
+#: model_terms:ir.ui.view,arch_db:hr_menu_organizer_version_2.view_employee_form_custom
+msgid "Education"
+msgstr "ትምህርት"
+
+#. module: hr_menu_organizer_version_2
+#: model_terms:ir.ui.view,arch_db:hr_menu_organizer_version_2.view_employee_form_custom
+msgid "Email"
+msgstr "ኢሜል"
+
+#. module: hr_menu_organizer_version_2
+#: model_terms:ir.ui.view,arch_db:hr_menu_organizer_version_2.view_employee_form_custom
+msgid "Emergency"
+msgstr "ድንገተኛ ሁኔታ"
+
+#. module: hr_menu_organizer_version_2
+#: model:ir.actions.act_window,name:hr_menu_organizer_version_2.open_view_employee_custom_list_my
+#: model:ir.model,name:hr_menu_organizer_version_2.model_hr_employee
+#: model_terms:ir.ui.view,arch_db:hr_menu_organizer_version_2.view_employee_form_custom
+msgid "Employee"
+msgstr "ሰራተኛ"
+
+#. module: hr_menu_organizer_version_2
+#: model:ir.ui.menu,name:hr_menu_organizer_version_2.menu_hr_employee_directory_custom
+msgid "Employee Directory"
+msgstr "የሰራተኞች ማውጫ"
+
+#. module: hr_menu_organizer_version_2
+#: model_terms:ir.ui.view,arch_db:hr_menu_organizer_version_2.hr_kanban_view_employees_custom
+#: model_terms:ir.ui.view,arch_db:hr_menu_organizer_version_2.view_employee_form_custom
+msgid "Employee's Name"
+msgstr "የሰራተኛ ስም"
+
+#. module: hr_menu_organizer_version_2
+#: model:ir.ui.menu,name:hr_menu_organizer_version_2.menu_hr_employee_user
+msgid "Employees"
+msgstr "ሰራተኞች"
+
+#. module: hr_menu_organizer_version_2
+#: model_terms:ir.ui.view,arch_db:hr_menu_organizer_version_2.view_employee_form_custom
+msgid "Generate"
+msgstr "ማመንጨት"
+
+#. module: hr_menu_organizer_version_2
+#: model_terms:ir.ui.view,arch_db:hr_menu_organizer_version_2.view_employee_form_custom
+msgid "HR Settings"
+msgstr "የ የሰው ሀይል መቼቶች"
+
+#. module: hr_menu_organizer_version_2
+#: model:ir.model.fields,field_description:hr_menu_organizer_version_2.field_hr_employee__hr_presence_state
+msgid "Hr Presence State"
+msgstr "የሰው ሀይል መኖር ሁኔታ"
+
+#. module: hr_menu_organizer_version_2
+#: model:ir.model.fields,help:hr_menu_organizer_version_2.field_hr_employee__barcode
+msgid "ID used for employee identification."
+msgstr "ለሠራተኛው መለያ ጥቅም ላይ የዋለው መታወቂያ"
+
+#. module: hr_menu_organizer_version_2
+#: model:ir.model.fields,field_description:hr_menu_organizer_version_2.field_hr_employee__image_128
+msgid "Image 128"
+msgstr "ምስል 128"
+
+#. module: hr_menu_organizer_version_2
+#: model_terms:ir.ui.view,arch_db:hr_menu_organizer_version_2.view_employee_form_custom
+msgid "Job Position"
+msgstr "የሥራ መደብ"
+
+#. module: hr_menu_organizer_version_2
+#: model:ir.model.fields,field_description:hr_menu_organizer_version_2.field_hr_employee__job_title
+msgid "Job Title"
+msgstr "የስራ መደቡ መጠሪያ"
+
+#. module: hr_menu_organizer_version_2
+#: model_terms:ir.ui.view,arch_db:hr_menu_organizer_version_2.view_employee_form_custom
+msgid "Location"
+msgstr "ቦታ"
+
+#. module: hr_menu_organizer_version_2
+#: model_terms:ir.ui.view,arch_db:hr_menu_organizer_version_2.view_employee_form_custom
+msgid "Marital Status"
+msgstr "የጋብቻ ሁኔታ"
+
+#. module: hr_menu_organizer_version_2
+#: model_terms:ir.ui.view,arch_db:hr_menu_organizer_version_2.view_employee_form_custom
+msgid "Not available"
+msgstr "አይገኝም"
+
+#. module: hr_menu_organizer_version_2
+#: model_terms:ir.ui.view,arch_db:hr_menu_organizer_version_2.view_employee_form_custom
+msgid "PIN Code"
+msgstr "ፒን ኮድ"
+
+#. module: hr_menu_organizer_version_2
+#: model_terms:ir.ui.view,arch_db:hr_menu_organizer_version_2.view_employee_form_custom
+msgid "Phone"
+msgstr "ስልክ"
+
+#. module: hr_menu_organizer_version_2
+#: model:ir.model.fields.selection,name:hr_menu_organizer_version_2.selection__hr_employee__hr_presence_state__present
+msgid "Present"
+msgstr "አሁን"
+
+#. module: hr_menu_organizer_version_2
+#: model_terms:ir.ui.view,arch_db:hr_menu_organizer_version_2.view_employee_form_custom
+msgid "Print Badge"
+msgstr "ባጅ ያትሙ"
+
+#. module: hr_menu_organizer_version_2
+#: model_terms:ir.ui.view,arch_db:hr_menu_organizer_version_2.view_employee_form_custom
+msgid "Private Contact"
+msgstr "የግል ግንኙነት"
+
+#. module: hr_menu_organizer_version_2
+#: model_terms:ir.ui.view,arch_db:hr_menu_organizer_version_2.view_employee_form_custom
+msgid "Private Information"
+msgstr "የግል መረጃ"
+
+#. module: hr_menu_organizer_version_2
+#: model_terms:ir.ui.view,arch_db:hr_menu_organizer_version_2.view_employee_form_custom
+msgid "Related User"
+msgstr "ተዛማጅ ተጠቃሚ"
+
+#. module: hr_menu_organizer_version_2
+#: model_terms:ir.ui.view,arch_db:hr_menu_organizer_version_2.view_employee_form_custom
+msgid "Responsibles"
+msgstr "ኃላፊነት ያላቸው ሰዎች"
+
+#. module: hr_menu_organizer_version_2
+#: model_terms:ir.ui.view,arch_db:hr_menu_organizer_version_2.view_employee_form_custom
+msgid "Schedule"
+msgstr "መርሃግብር"
+
+#. module: hr_menu_organizer_version_2
+#: model_terms:ir.ui.view,arch_db:hr_menu_organizer_version_2.view_employee_form_custom
+msgid "Status"
+msgstr "ሁኔታ"
+
+#. module: hr_menu_organizer_version_2
+#: model_terms:ir.ui.view,arch_db:hr_menu_organizer_version_2.view_employee_form_custom
+msgid "Tags"
+msgstr "መለያዎች"
+
+#. module: hr_menu_organizer_version_2
+#: model:ir.model.fields.selection,name:hr_menu_organizer_version_2.selection__hr_employee__hr_presence_state__to_define
+msgid "To Define"
+msgstr "ለመግለጽ"
+
+#. module: hr_menu_organizer_version_2
+#: model_terms:ir.actions.act_window,help:hr_menu_organizer_version_2.open_view_employee_custom_list_my
+msgid ""
+"With just a quick glance on the Odoo employee screen, you\n"
+"               can easily find all the information you need for each person;\n"
+"               contact data, job position, availability, etc."
+msgstr ""
+
+"በ OODO የሰራተኛ ማያ ገጽ ላይ በፍጥነት በጨረፍታ, እርስዎ\n"
+"               ለእያንዳንዱ ሰው የሚፈልጉትን መረጃ በቀላሉ ማግኘት ይችላል;\n"
+"               ውሂብ, የሥራ ቦታ, ተገኝነትን ያነጋግሩ, ወዘተ."
+
+#. module: hr_menu_organizer_version_2
+#: model_terms:ir.ui.view,arch_db:hr_menu_organizer_version_2.view_employee_form_custom
+msgid "Work Information"
+msgstr "የሥራ መረጃ"
+
+#. module: hr_menu_organizer_version_2
+#: model_terms:ir.ui.view,arch_db:hr_menu_organizer_version_2.view_employee_form_custom
+msgid "Wየሥራ ፈቃድ"
+msgstr "Work Permit"
+
+#. module: hr_menu_organizer_version_2
+#: model:ir.model.fields,field_description:hr_menu_organizer_version_2.field_hr_employee__work_phone
+msgid "Work Phone"
+msgstr "የስራ ስልክ"
+
+#. module: hr_menu_organizer_version_2
+#: model:ir.model.fields,field_description:hr_menu_organizer_version_2.field_hr_employee__work_email
+msgid "Work email"
+msgstr "የሥራ ኢሜይል"

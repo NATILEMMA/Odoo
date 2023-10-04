@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="product_product_product_form" model="ir.ui.view">
+        <field name="name">product.pro.inherited.custom</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_normal_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='options']" position="inside">
+              <div modifiers="{}">
+                <field name="is_coupon" modifiers="{}"/>
+                <label for="is_coupon" modifiers="{}"/>
+				      </div>
+            </xpath>
+            <xpath expr="//field[@name='is_part']" position="before">
+                <field name="amount_liter" attrs="{'invisible':[('is_coupon','=',False)]}" readonly="1" force_save="1"/>
+            </xpath>
+
+
+        </field>
+    </record>
+</odoo>

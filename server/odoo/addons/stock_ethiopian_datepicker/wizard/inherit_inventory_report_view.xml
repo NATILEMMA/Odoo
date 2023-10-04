@@ -1,0 +1,107 @@
+<odoo>
+
+    <record id="inherit_stock_quantity_update_wizard_form" model="ir.ui.view">
+        <field name="name">stock.quantity.history.form</field>
+        <field name="model">stock.quantity.history</field>
+        <field name="inherit_id" ref="stock.view_stock_quantity_history"/>
+        <field name="arch" type="xml">
+
+        <!-- 
+
+            # Modify the model's name
+
+
+            => as in line 43: "update.engine.info" to get the initial date for your date field model, TO model: your desired model 
+
+            => as in line 88: To get set selected date to your date field record model: "update.engine.info", TO model: your desired model 
+
+
+            # ethiopian CSS date change 
+             Add or change the CSS code to make your design user-friendly. 
+
+            => similar to line 100: css style  
+        -->
+
+            
+
+      
+            <xpath expr="//field[@name='inventory_datetime']" position="replace">
+                <script>
+                    odoo.define(function(require) {
+                                "use strict";
+                                var rpc = require('web.rpc') 
+                                var basicFields = require('web.basic_fields');
+                                var current_url = window.location.href;
+                                let pickeddate = {
+                                    "pick": 1,
+                                }
+                                try{
+                                    var dd,model;
+                                    dd = current_url.split('model=')
+                                    model = dd[1].toString()
+                                    var res = rpc.query({
+                                        model: "update.engine.info",
+                                        method: 'initial_date',
+                                        args: [pickeddate],
+                                    }).then(function(data)
+                                    {
+                                    console.log("Response", data)
+                                    try{
+                                        var  date = data.toString()
+                                        date = date.split("-")
+                                        var dates = date[1] + "/" +  date[2] + "/" +  date[0]
+                                        $("#popupDatepicker").val(dates);
+                                        }
+                                        catch (error) {
+                                            //console.log('There was an error:', error);
+                                    }
+                                        });
+                              
+                                }catch (error) {
+                                        //console.log('There was an error:', error);
+                                    }
+                                $(function() {
+                                    var calendar = $.calendars.instance('ethiopian','am');
+                                   $('#popupDatepicker').calendarsPicker({calendar: calendar, onSelect: showDate});
+                               });
+                               function showDate(date) {
+                                var rpc = require('web.rpc') 
+                                var basicFields = require('web.basic_fields');
+                                var current_url = window.location.href;
+                                var myArray = current_url.split('model=');
+                                var dd,models, model;
+                                dd = current_url.split('model=')
+                                models = dd[1].toString()
+                                models = models.split('view_type')
+                                model = models[0].substring(0, models[0].length - 1);
+                                var dateObject = $(this).calendarsPicker("getDate")
+                                console.log("dateObject", dateObject)
+                                let pickeddate = {
+                                    "day" : dateObject[0]._day,
+                                    "month" : dateObject[0]._month,
+                                    "year":dateObject[0]._year,
+                                    "current_model": model,
+                                    "url": current_url,
+                                    "pick": 1,
+                                    }
+                                var res = rpc.query({
+                                    model: "update.engine.info",
+                                    method: 'date_convert_and_set',
+                                    args: [pickeddate],
+                                }).then(function (data)
+                                {
+                            }); 
+                        }
+                    }); 
+                </script>
+                <field  name="inventory_datetime"  groups="EthiopianCalendar.group_gregory"/>
+
+                <field name="is_pagum_from" invisible="1"/>
+                <field  name="ethiopian_from" class="oe_read_only" string="Create Date" attrs="{'invisible': ['|', ('is_pagum_from', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                <field  name="pagum_from" class="oe_read_only"  string="Start Date" style=" float:left"  attrs="{'invisible': ['|',('is_pagum_from', '!=',False)  ]}"  groups="EthiopianCalendar.group_ethio_datepicker"/>
+                <input style="margin-top:-20px;margin-left: 75px;margin-right:0px; width:95px;" type="text" id="popupDatepicker" groups="EthiopianCalendar.group_ethio_datepicker"/>
+            </xpath>
+         
+        </field>
+    </record>
+</odoo>

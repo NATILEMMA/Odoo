@@ -68,10 +68,24 @@ odoo.define(function(require){
                                      console.log("**** Both True")
                                      var  date1 = data['from'].toString()
                                      date1 = data['from'].split("-")
-                                     var dateFrom = date1[1] + "/" +  date1[2] + "/" +  date1[0]
-                                     //console.log(" From GGGGGG date:",date1)
-                                     $("#popupDatepicker").val(dateFrom);
-                                     localStorage.setItem('myFlag', data['from']);
+                                     console.log(" date1 ---- date:",date1[1])
+                                     if (date1[1] === undefined){
+                                        var date11 = data['from'].split("/")
+                                        var dateFrom = date11[0] + "/" +  date11[1] + "/" +  date11[2]
+                                        var dateFrom2 = date11[0] + "/" + date11[1] + "/" +  date11[2]
+                                        $("#popupDatepicker").val(dateFrom);
+                                        localStorage.setItem('myFlag', dateFrom);
+                                     }
+                                     else{
+                                        var dateFrom = date1[1] + "/" +  date1[2] + "/" +  date1[0]
+                                        var dateFrom2 = date1[1] + "/" + date1[2] + "/" +  date1[0]
+
+                                        console.log(" From ---- date:",dateFrom2)
+                                        $("#popupDatepicker").val(dateFrom);
+                                        localStorage.setItem('myFlag', data['from']);
+                                     }
+
+                                     
                                  }else{
                                          //console.log("--- Both False")
                                          var  date = data.toString()

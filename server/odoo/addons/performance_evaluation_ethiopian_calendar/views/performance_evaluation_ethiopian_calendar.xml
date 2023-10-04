@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<odoo>
+
+
+        <record id="performance_evaluation_program_view_list_inherited_views" model="ir.ui.view">
+            <field name="name">performance.evaluation.program.list</field>
+            <field name="model">performance.evaluation.program</field>
+            <field name="inherit_id" ref="performance_evaluation.performance_evaluation_program_view_list"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date_from']" position="replace">
+                    <field name="date_from" groups="EthiopianCalendar.group_gregory"/>
+                    <field name="is_pagum_from" invisible="1"/>
+                    <field  name="ethiopian_from" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    <field  name="pagum_from" groups="EthiopianCalendar.group_ethio_datepicker" optional="hidden"/>
+                </xpath>
+                <xpath expr="//field[@name='date_to']" position="replace">
+                    <field name="date_to" groups="EthiopianCalendar.group_gregory"/>
+                    <field name="is_pagum_to" invisible="1"/>
+                    <field  name="ethiopian_to" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    <field  name="pagum_to" groups="EthiopianCalendar.group_ethio_datepicker" optional="hidden"/>
+                </xpath>
+                <xpath expr="//field[@name='date_of_evaluation']" position="replace">
+                    <field name="date_of_evaluation" groups="EthiopianCalendar.group_gregory"/>
+                    <field name="is_pagum_three" invisible="1"/>
+                    <field  name="ethiopian_three" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    <field  name="pagum_three" groups="EthiopianCalendar.group_ethio_datepicker" optional="hidden"/>
+                </xpath>
+            </field>
+        </record>
+
+
+        <record id="performance_evaluation_program_view_form_inherited_view" model="ir.ui.view">
+            <field name="name">sperformance.evaluation.program.form</field>
+            <field name="model">performance.evaluation.program</field>
+            <field name="inherit_id" ref="performance_evaluation.performance_evaluation_program_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date_from']" position="replace">
+                    <field name="date_from" class="col-50" colspan="3"  attrs="{'readonly':[('state','!=','draft')]}" groups="EthiopianCalendar.group_gregory" force_save="1"/>
+                    <field name="is_pagum_from" invisible="1"/>
+                    <field  name="ethiopian_from" class="oe_read_only" id="ethiopianCalendar_1" style="float:left" attrs="{'invisible': ['|', ('is_pagum_from', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker" force_save="1"/>
+                    <field  name="pagum_from" class="oe_read_only" style="float:left"  attrs="{'invisible': ['|',('is_pagum_from', '!=',False)  ]}"  groups="EthiopianCalendar.group_ethio_datepicker" force_save="1"/>
+                        <div>
+                        </div>
+                    <div style="margin-bottom:40px;margin-top:-15px;margin-left:10px;margin-right:0px">
+                        <widget name="ethiopian_calander_widget"  style="float:left;width:226px;" class="oe_edit_only" groups="EthiopianCalendar.group_ethio_datepicker" attrs="{'invisible':[('state','!=','draft')]}"/>
+                    </div>
+                </xpath>
+                <xpath expr="//field[@name='date_to']" position="replace">
+                    <field name="date_to" class="col-50" colspan="3"  attrs="{'readonly':[('state','!=','draft')]}" groups="EthiopianCalendar.group_gregory" force_save="1"/>
+                    <field name="is_pagum_to" invisible="1"/>
+                    <field  name="ethiopian_to" class="oe_read_only" id="ethiopianCalendar_1" style="float:left" attrs="{'invisible': ['|', ('is_pagum_to', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker" force_save="1"/>
+                    <field  name="pagum_to" class="oe_read_only" style="float:left"  attrs="{'invisible': ['|',('is_pagum_to', '!=',False)  ]}"  groups="EthiopianCalendar.group_ethio_datepicker" force_save="1"/>
+                        <div>
+                        </div>
+                    <div style="margin-bottom:40px;margin-top:-15px;margin-left:10px;margin-right:0px">
+                        <widget name="ethiopian_calander_widget_two"  style="float:left;width:226px;" class="oe_edit_only" groups="EthiopianCalendar.group_ethio_datepicker" attrs="{'invisible':[('state','!=','draft')]}"/>
+                    </div>
+                </xpath>
+                <xpath expr="//field[@name='date_of_evaluation']" position="replace">
+                    <field name="date_of_evaluation" class="col-50" colspan="3"  attrs="{'invisible':[('template_id','=',False)]}" groups="EthiopianCalendar.group_gregory" force_save="1" readonly="1"/>
+                    <field name="is_pagum_three" invisible="1"/>
+                    <field  name="ethiopian_three" readonly="1" id="ethiopianCalendar_1" style="float:left" attrs="{'invisible': ['|', ('is_pagum_three', '=',False), ('template_id','=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker" force_save="1"/>
+                    <field  name="pagum_three" readonly="1" style="float:left"  attrs="{'invisible': ['|',('is_pagum_three', '!=',False), ('template_id','=',False)]}"  groups="EthiopianCalendar.group_ethio_datepicker" force_save="1"/>
+                </xpath>
+            </field>
+        </record>
+
+</odoo>

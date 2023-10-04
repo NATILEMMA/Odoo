@@ -1,0 +1,111 @@
+# Date created: 2023-06-17 19:40:56 by dichthuatphuongdong.com
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-06-17 03:13:39+0000"
+"MIME-Version: 1.0"
+"Content-Type: text/plain; charset=UTF-8"
+"Content-Transfer-Encoding: 8bit"
+"Plural-Forms: nplurals=1; plural=0;"
+"X-Generator: GlotPress/3.0.0-alpha.2"
+"Language: en_GB"
+"Project-Id-Version: PO File 5.8.1"
+
+#. module: report_xlsx_helper
+#: code:addons/report_xlsx_helper/models/ir_actions_report.py:0
+msgid "%s model was not found"
+msgstr "%s ሞዴል አልተገኘም።"
+
+#. module: report_xlsx_helper
+#: code:addons/report_xlsx_helper/report/report_xlsx_abstract.py:0
+msgid "%s, _write_line : programming error detected while processing col_specs_section %s, column %s"
+msgstr "%s፣ _write_line፡ የፕሮግራም አወጣጥ ስህተት ተገኝቷል col_specs_section %s፣ column %s"
+
+#. module: report_xlsx_helper
+#: code:addons/report_xlsx_helper/report/report_xlsx_abstract.py:0
+msgid ", cellvalue %s"
+msgstr "፣ የሴል ዋጋ %s"
+
+#. module: report_xlsx_helper
+#: model:ir.model,name:report_xlsx_helper.model_report_report_xlsx_abstract
+msgid "Abstract XLSX Report"
+msgstr "ረቂቅ XLSX ሪፖርት"
+
+#. module: report_xlsx_helper
+#: model:ir.model.fields,field_description:report_xlsx_helper.field_report_report_xlsx_helper_test_partner_xlsx__display_name
+msgid "Display Name"
+msgstr "መጠሪያው ስም"
+
+#. module: report_xlsx_helper
+#: model:ir.model.fields,field_description:report_xlsx_helper.field_report_report_xlsx_helper_test_partner_xlsx__id
+msgid "ID"
+msgstr "መታወቂያ"
+
+#. module: report_xlsx_helper
+#: model:ir.model.fields,field_description:report_xlsx_helper.field_report_report_xlsx_helper_test_partner_xlsx____last_update
+msgid "Last Modified on"
+msgstr "መጨረሻ የተሻሻለው በቀን"
+
+#. module: report_xlsx_helper
+#: code:addons/report_xlsx_helper/report/report_xlsx_abstract.py:0
+msgid ""
+"Programming Error:"
+""
+"Excel Sheet name \'%s\' contains unsupported special characters: \'%s\'."
+msgstr ""
+"የፕሮግራም ስህተት;"
+""
+"የ Excel Sheet ስም \'%s\' የማይደገፉ ልዩ ምልክቶችን ይዟል፡ \'%s\'።"
+
+#. module: report_xlsx_helper
+#: code:addons/report_xlsx_helper/report/report_xlsx_abstract.py:0
+msgid ""
+"Programming Error:"
+""
+"Excel Sheet name \'%s\' should not exceed %s characters."
+msgstr ""
+"የፕሮግራም ስህተት;"
+""
+"የ Excel sheet ስም \'%s\' ከ%s ምልክቶች መብለጥ የለበትም።"
+
+#. module: report_xlsx_helper
+#: code:addons/report_xlsx_helper/report/report_xlsx_abstract.py:0
+msgid ""
+"Programming Error:"
+""
+"The \'%s\' column is not defined in the worksheet column specifications."
+msgstr ""
+"የፕሮግራም ስህተት;"
+""
+"የ%s አምድ በስራ አምድ ዝርዝር ውስጥ አልተገለጸም።"
+
+#. module: report_xlsx_helper
+#: code:addons/report_xlsx_helper/report/report_xlsx_abstract.py:0
+msgid ""
+"Programming Error:"
+""
+"The \'%s\' column is not defined the worksheet column specifications."
+msgstr ""
+"የፕሮግራም ስህተት;"
+""
+"የ%s አምድ በስራ አምድ ዝርዝር አልተገለጸም።"
+
+#. module: report_xlsx_helper
+#: code:addons/report_xlsx_helper/report/report_xlsx_abstract.py:0
+msgid ""
+"Programming Error:"
+""
+"The \'title\' parameter is mandatory when calling the \'_write_ws_title\' method."
+msgstr ""
+"የፕሮግራም ስህተት;"
+""
+"የ\'_write_ws_title\' ዘዴ ሲጠቀሙ የ\'ርዕስ\' መለኪያው ግዴታ ነው።"
+
+#. module: report_xlsx_helper
+#: model:ir.model,name:report_xlsx_helper.model_ir_actions_report
+msgid "Report Action"
+msgstr "ድርጊት ሪፖርት አድርግ"
+
+#. module: report_xlsx_helper
+#: model:ir.model,name:report_xlsx_helper.model_report_report_xlsx_helper_test_partner_xlsx
+msgid "Test Partner XLSX Report"
+msgstr "የሙከራ አጋር XLSX ሪፖርት"

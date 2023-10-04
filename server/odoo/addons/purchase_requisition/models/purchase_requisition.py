@@ -11,7 +11,6 @@ PURCHASE_REQUISITION_STATES = [
     ('ongoing', 'Ongoing'),
     ('in_progress', 'Confirmed'),
     ('open', 'Bid Selection'),
-    ('financial', 'Financial approve'),
     ('done', 'Closed'),
     ('cancel', 'Cancelled')
 ]
@@ -46,14 +45,14 @@ class PurchaseRequisition(models.Model):
     def _get_type_id(self):
         return self.env['purchase.requisition.type'].search([], limit=1)
 
-    name = fields.Char(string='Reference', required=True, copy=False, default='New', readonly=True, translate=True)
-    origin = fields.Char(string='Source Document', translate=True)
+    name = fields.Char(string='Reference', required=True, copy=False, default='New', readonly=True,translate=True)
+    origin = fields.Char(string='Source Document',translate=True)
     order_count = fields.Integer(compute='_compute_orders_number', string='Number of Orders')
     vendor_id = fields.Many2one('res.partner', string="Vendor", domain="['|', ('company_id', '=', False), ('company_id', '=', company_id)]")
     type_id = fields.Many2one('purchase.requisition.type', string="Agreement Type", required=True, default=_get_type_id)
-    ordering_date = fields.Date(string="Ordering Date", tracking=True, default=lambda self: fields.Date.today())
-    date_end = fields.Datetime(string='Agreement Deadline', tracking=True, default=lambda self: fields.Date.today())
-    schedule_date = fields.Date(string='Delivery Date', index=True, help="The expected and scheduled delivery date where all the products are received", tracking=True, default=lambda self: fields.Date.today())
+    ordering_date = fields.Date(string="Ordering Date", tracking=True)
+    date_end = fields.Datetime(string='Agreement Deadline', tracking=True)
+    schedule_date = fields.Date(string='Delivery Date', index=True, help="The expected and scheduled delivery date where all the products are received", tracking=True)
     user_id = fields.Many2one(
         'res.users', string='Purchase Representative',
         default=lambda self: self.env.user, check_company=True)

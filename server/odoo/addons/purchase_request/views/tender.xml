@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record model="ir.ui.view" id="purchase_tender_limit_tree">
+          <field name="name">Tender Limit Tree</field>
+          <field name="model">tender.limit</field>
+          <field name="arch" type="xml">
+              <tree>
+                  <field name="limit_by"/>
+                  <field name="max_amount"/>
+                  <field name="max_amount_2"/>
+                  <field name="fianicial_amount"/>
+                  <field name="techinical_amount"/>
+              </tree>
+          </field>
+    </record>
+    <record model="ir.ui.view" id="purchase_tender_limit_form">
+      <field name="name">Tender Limit Form</field>
+      <field name="model">tender.limit</field>
+      <field name="arch" type="xml">
+      <form string="Tender limit">
+        <sheet>
+            <group>
+                <field name="limit_by" required="True"/>
+            </group>
+            <group>
+                <group>
+                    <field name="max_amount" required="True" attrs="{'invisible':[('limit_by','!=', 'limit')]}"/>
+                    <field name="max_amount_2" required="True" attrs="{'invisible':[('limit_by','=', 'limit')]}"/>
+                </group>
+                <group>
+                    <field name="fianicial_amount" required="True"/>
+                    <field name="techinical_amount" required="True"/>
+                 </group>
+            </group>
+        </sheet>
+        </form>
+      </field>
+    </record>
+   <record id="action_tender_limit_frame" model="ir.actions.act_window">
+        <field name="name">Tender Limit</field>
+        <field name="res_model">tender.limit</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new Tender Limit
+            </p>
+        </field>
+    </record>
+
+
+     <menuitem id="menu_approval_form_tender_list" sequence="5" parent="purchase.menu_purchase_config" action="action_tender_limit_frame" />
+
+   </odoo>

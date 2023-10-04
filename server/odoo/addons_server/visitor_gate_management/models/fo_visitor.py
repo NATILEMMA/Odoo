@@ -37,7 +37,7 @@ class VisitorDetails(models.Model):
     company_info = fields.Many2one('res.partner', string="Company", help='Visiting persons company details', domain="[('is_company', '=', True)]")
 
 
-class ResPartner(models.Model):
+class Partner(models.Model):
     _inherit = 'res.partner'
     _description = 'visitor profile detail information'
 
@@ -73,7 +73,7 @@ class ResPartner(models.Model):
         for record in self:
             if record.visitor_id_number:
                 raise UserError(_("You Can't Delete A Visitor Whose Visitor ID Hasn't Been Returned"))
-        return super(VisitorDetails, self).unlink()
+        return super(Partner, self).unlink()
 
     def compute_visit_count(self):
         for record in self:

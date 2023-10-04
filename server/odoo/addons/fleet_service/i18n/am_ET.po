@@ -1,0 +1,124 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* fleet_service
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20221005\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-22 07:27+0000\n"
+"PO-Revision-Date: 2023-05-22 07:27+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: fleet_service
+#: model:ir.model.fields,field_description:fleet_service.field_fleet_vehicle_log_services__analytic
+msgid "Analytic Account"
+msgstr "በጀት መለያ"
+
+#. module: fleet_service
+#: model_terms:ir.ui.view,arch_db:fleet_service.view_fleet_vehicle_log_services
+msgid "Create Payment"
+msgstr "ክፍያ ፍጠር"
+
+#. module: fleet_service
+#: model:ir.model.fields,field_description:fleet_service.field_fleet_service__create_uid
+msgid "Created by"
+msgstr "የተፈጠረ"
+
+#. module: fleet_service
+#: model:ir.model.fields,field_description:fleet_service.field_fleet_service__create_date
+msgid "Created on"
+msgstr "ላይ ተፈጠረ"
+
+#. module: fleet_service
+#: model:ir.model.fields,field_description:fleet_service.field_fleet_service__display_name
+msgid "Display Name"
+msgstr "መጠሪያው ስም"
+
+#. module: fleet_service
+#: model:ir.model,name:fleet_service.model_hr_expense
+msgid "Expense"
+msgstr "ወጪ"
+
+#. module: fleet_service
+#: model:ir.model.fields,field_description:fleet_service.field_fleet_service__id
+msgid "ID"
+msgstr "መለያ"
+
+#. module: fleet_service
+#: model:ir.model.fields,field_description:fleet_service.field_hr_expense__is_vehicle_service
+msgid "Is Vehicle Service"
+msgstr "የተሽከርካሪ አገልግሎት ነው"
+
+#. module: fleet_service
+#: model:ir.model.fields,field_description:fleet_service.field_fleet_service____last_update
+msgid "Last Modified on"
+msgstr "በመጨረሻ የተሻሻለው በ"
+
+#. module: fleet_service
+#: model:ir.model.fields,field_description:fleet_service.field_fleet_service__write_uid
+msgid "Last Updated by"
+msgstr "መጨረሻ የዘመነው በ"
+
+#. module: fleet_service
+#: model:ir.model.fields,field_description:fleet_service.field_fleet_service__write_date
+msgid "Last Updated on"
+msgstr "መጨረሻ የዘመነው በ"
+
+#. module: fleet_service
+#: model:ir.model.fields,field_description:fleet_service.field_fleet_vehicle_log_services__payment_count
+#: model_terms:ir.ui.view,arch_db:fleet_service.view_fleet_vehicle_log_services
+msgid "Payment Count"
+msgstr "የክፍያ ብዛት"
+
+#. module: fleet_service
+#: model:ir.model,name:fleet_service.model_purchase_order_line
+msgid "Purchase Order Line"
+msgstr "የግዢ ትዕዛዝ መስመር"
+
+#. module: fleet_service
+ #: model:ir.model.fields,field_description:fleet_service.field_hr_expense__vehicle_select
+msgid "Select Vehicle"
+msgstr "ተሽከርካሪ ምረጥ"
+
+#. module: fleet_service
+#: model:ir.model,name:fleet_service.model_fleet_vehicle_log_services
+msgid "Services for vehicles"
+msgstr "የተሽከርካሪዎች ሰርቪሶች"
+
+#. module: fleet_service
+#: model:ir.model.fields,field_description:fleet_service.field_hr_expense__vehicle_id
+#: model:ir.model.fields,field_description:fleet_service.field_purchase_order_line__vehicle_id
+msgid "Vehicle"
+msgstr "ተሽከርካሪ"
+
+#. module: fleet_service
+#: model:ir.model.fields,field_description:fleet_service.field_fleet_vehicle_log_services__invoice_count
+msgid "expanse Count"
+msgstr "ሰፊ ቁጥር"
+
+#. module: fleet_service
+#: model:ir.model,name:fleet_service.model_fleet_service
+msgid "vehicles service"
+msgstr "የተሽከርካሪዎች አገልግሎት"
+
+#. module: fleet_service
+#: model:ir.model.fields,field_description:fleet_service.field_hr_expense__is_services
+msgid "is_services"
+msgstr "አገልግሎት ነው"
+
+
+#. module: fleet_service
+#: model:ir.model.fields,field_description:fleet_service.field_fleet_vehicle_log_services__invoice_count_2
+msgid "purchase Count"
+msgstr "ግዢ ብዛት"
+
+#. module: fleet_service
+#: model:ir.model.fields,field_description:fleet_service.field_hr_expense__services
+msgid "services"
+msgstr "ሰርቪሶች"

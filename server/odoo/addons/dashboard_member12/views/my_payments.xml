@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<template id="dashboard_record_sidebar" name="My Portal Record Sidebar">
+    <div t-attf-class="#{classes}">
+        <div class="card bg-white mb-4 sticky-top" id="sidebar_content">
+            <div t-if="title" class="card-body text-center pb-2 pt-3">
+                <t t-raw="title"/>
+            </div>
+            <t t-if="entries" t-raw="entries"/>
+            <!-- <div class="card-footer small text-center text-muted border-top-0 pt-1 pb-1 d-none d-lg-block">
+                Powered by <a target="_blank" href="http://www.odoo.com?utm_source=db&amp;utm_medium=portal" title="odoo"><img src="/web/static/src/img/logo.png" alt="Odoo Logo" height="15"/></a>
+            </div> -->
+        </div>
+    </div>
+</template>
+
+<!-- My Payments -->
+<template id="member_payments">
+    <t t-call="website.layout">
+    <t t-call="dashboard_member12.css_assets"/>    
+      <body>
+        <div class="loader"></div>
+        <div id="app">
+          <div class="main-wrapper main-wrapper-1">
+            <div class="navbar-bg"></div>
+            <nav class="navbar navbar-expand-lg main-navbar sticky">
+              <div class="form-inline mr-auto">
+                <ul class="navbar-nav mr-3">
+                  <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg
+                        collapse-btn"> <i data-feather="align-justify"></i></a></li>
+                  <li><a href="#" class="nav-link nav-link-lg fullscreen-btn">
+                      <i data-feather="maximize"></i>
+                    </a>
+                  </li>
+                  <li>
+                  
+                  </li>
+                </ul>
+              </div>
+            </nav>
+            <div class="main-sidebar sidebar-style-2">
+            <t t-call="dashboard_member12.asidebar"/>    
+            </div>
+            <!-- Main Content -->
+            <div class="main-content">
+             
+                     <div class="main-panel" id="payment_per_year" style="background-color: #eee;">
+
+                        <div t-attf-class="form-group col-xl-4" style="display:none">
+                            <label class="col-form-label" id="league" for="league">League</label>
+                            <input type="text" name="league" t-attf-class="form-control" t-att-value="league" />
+                        </div>
+                        <div t-attf-class="form-group col-xl-4" style="display:none">
+                            <label class="col-form-label" id="member" for="member">Member</label>
+                            <input type="text" name="member" t-attf-class="form-control" t-att-value="member" />
+                        </div>
+                        <div t-attf-class="form-group col-xl-4" style="display:none">
+                            <label class="col-form-label" id="leader" for="leader">Leader</label>
+                            <input type="text" name="leader" t-attf-class="form-control" t-att-value="leader"/>
+                        </div>
+                          <br/>
+                          <br/>
+                          <h3>Payments</h3>
+                          <br/>
+                          <br/>
+                          <div t-attf-class="form-group col-xl-3">
+                            <label class="col-form-label" for="years">Year</label>
+                            <select name="years" id="payment_years" t-attf-class="form-control">
+                            <option value="">Years...</option>
+                              <t t-foreach="years" t-as="year">
+                                <option t-att-value="year.id">
+                                  <t t-esc="year.name"/>                                                                                  
+                              </option>
+                              </t>
+                            </select>
+                          </div>
+                          <br/>
+                          <br/>
+                        
+                        <!-- <t t-if="not payments">
+                            <div class="alert alert-warning mt8" role="alert">
+                                There are no payments.
+                            </div>
+                        </t>
+                        <t t-else=""> -->
+                          <table class="table table-striped">
+                            <thead id="thead">
+                              <tr><strong>
+                                <th>Member</th>
+                                <th>Year</th>
+                                <th>Month</th>
+                                <th>Membership Fee</th>
+                                <th>Amount Remaining</th>
+                                <th>Amount Paid</th>
+                                <th>Traced Payment</th>
+                                <th>ID payment</th>
+                                <th>State</th>
+                                <th></th>
+                              </strong></tr>
+                            </thead>
+                            <tbody id="payment_member_body">
+                            </tbody>
+                          </table>
+                          <br/>
+                          <br/>
+                          <table class="table table-striped">
+                            <thead id="thead">
+                              <tr><strong>
+                                <th>League</th>
+                                <th>Year</th>
+                                <th>Month</th>
+                                <th>League Fee</th>
+                                <th>Amount Remaining</th>
+                                <th>Amount Paid</th>
+                                <th>Traced Payment</th>
+                                <th>ID payment</th>
+                                <th>State</th>
+                                <th></th>
+                              </strong></tr>
+                            </thead>
+                              <tbody id="payment_league_body">
+                              </tbody>
+                          </table>
+                </div>
+              
+            </div>
+             <t t-call="dashboard_member12.seeting_feature"/> 
+          </div>
+        </div>
+      
+      </body>
+    <t t-call="dashboard_member12.js_assets"/>    
+
+  </t>
+</template>
+
+<template id="league_report" name="League Report">
+  <t t-call="website.layout">
+    <t t-call="dashboard_member12.css_assets"/>    
+    <body>
+      <div class="loader"></div>
+      <div id="app">
+        <div class="main-wrapper main-wrapper-1">
+          <div class="navbar-bg"></div>
+            <nav class="navbar navbar-expand-lg main-navbar sticky">
+              <div class="form-inline mr-auto">
+                <ul class="navbar-nav mr-3">
+                  <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg collapse-btn"> <i data-feather="align-justify"></i></a></li>
+                  <li><a href="#" class="nav-link nav-link-lg fullscreen-btn"><i data-feather="maximize"></i></a></li>
+                  <li>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+            <div class="main-sidebar sidebar-style-2">
+              <t t-call="dashboard_member12.asidebar"/>    
+            </div>
+            <!-- Main Content -->
+            <div class="main-content">
+
+              <div class="row mt16">
+                  <!-- Sidebar -->
+                  <t t-call="dashboard_member12.dashboard_record_sidebar">
+                      <t t-set="classes" t-value="'col-lg-auto d-print-none'"/>
+                      <t t-set="title">
+                          <h2 class="mb-0">
+                              <b t-if="payment.amount_paid > 0" t-field="payment.amount_paid"/>
+                              <b t-else="1" t-field="payment.amount_paid"/>
+                          </h2>
+                          <div class="small" t-if="payment.state != 'paid' and payment.cell_payment_id.state == 'pending payments'"><i class="fa fa-clock-o"/><span>Payment started on </span><span class="o_portal_sidebar_timeago ml4" t-att-datetime="payment.create_date"/></div>
+                      </t>
+
+                      <t t-set="entries">
+                          <ul class="list-group list-group-flush flex-wrap flex-row flex-lg-column">
+                              <li class="list-group-item flex-grow-1">
+                                  <div class="o_download_pdf btn-toolbar flex-sm-nowrap">
+                                      <div class="btn-group  flex-grow-1 mr-1 mb-1">
+                                          <a class="btn btn-secondary btn-block o_download_btn" t-attf-href="/report/pdf/members_custom.league_payment_report/#{payment.id}" title="Download"><i class="fa fa-download"/> Download</a>
+                                      </div>
+                                  </div>
+                              </li>
+                          </ul>
+                      </t>
+                  </t>
+              </div>
+              <div class="row">
+                <t t-call="dashboard_member12.portal_record_layout">
+                  <t t-set="card_header">
+                    <h5 class="mb-0">
+                        <span t-field="payment.subcity_id"/>, <span t-field="payment.wereda_id"/>, <span t-field="payment.main_office_id"/>
+                    </h5>
+                  </t>
+                  <t t-set="card_body">
+                    <div class="row">
+                      <div class="col-12 col-md-6">
+                          <h6>League Name:</h6>
+                          <div class="row">
+                              <div class="col pl-sm-0">
+                                  <div class="col flex-grow-1 pr-3"><b><span t-field="payment.league_id"/></b></div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <h6>League Fee Amount:</h6>
+                          <div class="row">
+                              <div class="col pl-sm-0">
+                                  <div class="col flex-grow-1 pr-3"><b><span t-field="payment.fee_amount"/></b></div>
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <h6>Reason For Payment:</h6>
+                            <div class="row">
+                                <div class="col flex-grow-1 pr-3"><b><span>Monthly League Payment</span></b></div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <h6>Method of Payment:</h6>
+                            <div class="row">
+                                <div class="col flex-grow-1 pr-3"><b><span t-field="payment.type_of_payment"/></b></div>
+                            </div>
+                        </div>
+                    </div>
+                  </t>
+                </t>
+              </div>
+
+              <div id="payment_communication" class="mt-4">
+                  <h2>History</h2>
+                  <t t-call="portal.message_thread">
+                      <t t-set="object" t-value="payment"/>
+                  </t>
+              </div>
+
+            </div>
+            <t t-call="dashboard_member12.seeting_feature"/> 
+        </div>
+      </div>
+    </body>
+    <t t-call="dashboard_member12.js_assets"/>    
+
+  </t>
+</template>
+
+
+<template id="member_report" name="Member Report">
+  <t t-call="website.layout">
+    <t t-call="dashboard_member12.css_assets"/>    
+    <body>
+      <div class="loader"></div>
+      <div id="app">
+        <div class="main-wrapper main-wrapper-1">
+          <div class="navbar-bg"></div>
+            <nav class="navbar navbar-expand-lg main-navbar sticky">
+              <div class="form-inline mr-auto">
+                <ul class="navbar-nav mr-3">
+                  <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg collapse-btn"> <i data-feather="align-justify"></i></a></li>
+                  <li><a href="#" class="nav-link nav-link-lg fullscreen-btn"><i data-feather="maximize"></i></a></li>
+                  <li>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+            <div class="main-sidebar sidebar-style-2">
+              <t t-call="dashboard_member12.asidebar"/>    
+            </div>
+            <!-- Main Content -->
+            <div class="main-content">
+
+              <div class="row mt16">
+                  <!-- Sidebar -->
+                  <t t-call="dashboard_member12.dashboard_record_sidebar">
+                      <t t-set="classes" t-value="'col-lg-auto d-print-none'"/>
+                      <t t-set="title">
+                          <h2 class="mb-0">
+                              <b t-if="payment.amount_paid > 0" t-field="payment.amount_paid"/>
+                              <b t-else="1" t-field="payment.amount_paid"/>
+                          </h2>
+                          <div class="small" t-if="payment.state != 'paid' and payment.cell_payment_id.state == 'pending payments'"><i class="fa fa-clock-o"/><span class="o_portal_sidebar_timeago ml4" t-att-datetime="payment.create_date"/></div>
+                      </t>
+
+                      <t t-set="entries">
+                          <ul class="list-group list-group-flush flex-wrap flex-row flex-lg-column">
+                              <li class="list-group-item flex-grow-1">
+                                  <div class="o_download_pdf btn-toolbar flex-sm-nowrap">
+                                      <div class="btn-group  flex-grow-1 mr-1 mb-1">
+                                          <a class="btn btn-secondary btn-block o_download_btn" t-attf-href="/report/pdf/members_custom.member_payment_report/#{payment.id}" title="Download"><i class="fa fa-download"/> Download</a>
+                                      </div>
+                                  </div>
+                              </li>
+                          </ul>
+                      </t>
+                  </t>
+              </div>
+              <div class="row">
+                <t t-call="dashboard_member12.portal_record_layout">
+                  <t t-set="card_header">
+                    <h5 class="mb-0">
+                        <span t-field="payment.subcity_id"/>, <span t-field="payment.wereda_id"/>, <span t-field="payment.main_office_id"/>
+                    </h5>
+                  </t>
+                  <t t-set="card_body">
+                    <div class="row">
+                      <div class="col-12 col-md-6">
+                          <h6>Member Name:</h6>
+                          <div class="row">
+                              <div class="col pl-sm-0">
+                                  <div class="col flex-grow-1 pr-3"><b><span t-field="payment.member_id"/></b></div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6">
+                          <h6>Membership Fee Amount:</h6>
+                          <div class="row">
+                              <div class="col pl-sm-0">
+                                  <div class="col flex-grow-1 pr-3"><b><span t-field="payment.fee_amount"/></b></div>
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <h6>Reason For Payment:</h6>
+                            <div class="row">
+                                <div class="col flex-grow-1 pr-3"><b><span>Monthly Membership Payment</span></b></div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <h6>Method of Payment:</h6>
+                            <div class="row">
+                                <div class="col flex-grow-1 pr-3"><b><span t-field="payment.type_of_payment"/></b></div>
+                            </div>
+                        </div>
+                    </div>
+                  </t>
+                </t>
+              </div>
+
+              <div id="payment_communication" class="mt-4">
+                  <h2>History</h2>
+                  <t t-call="portal.message_thread">
+                      <t t-set="object" t-value="payment"/>
+                  </t>
+              </div>
+
+            </div>
+            <t t-call="dashboard_member12.seeting_feature"/> 
+        </div>
+      </div>
+    </body>
+    <t t-call="dashboard_member12.js_assets"/>    
+
+  </t>
+</template>
+
+<template id="assets_frontend_my_payments" name="my_payments_js" inherit_id="website.assets_frontend">
+  <xpath expr="." position="inside">
+      <script type="text/javascript" src="/dashboard_member12/static/src/js/payment.js"></script>
+  </xpath>
+</template>
+
+</odoo>

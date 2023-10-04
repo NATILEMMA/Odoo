@@ -1,0 +1,240 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ohrms_loan_accounting
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20221005\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-21 09:16+0000\n"
+"PO-Revision-Date: 2023-07-21 09:16+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ohrms_loan_accounting
+#: model:ir.model.fields,field_description:ohrms_loan_accounting.field_res_config_settings__loan_approve
+msgid "Approval from Accounting Department"
+msgstr "ከሂሳብ ክፍል ማጽደቅ"
+
+#. module: ohrms_loan_accounting
+#: model_terms:ir.ui.view,arch_db:ohrms_loan_accounting.hr_loan_inherited
+msgid "Approve"
+msgstr "አጽድቅ"
+
+#. module: ohrms_loan_accounting
+#: model:ir.model.fields.selection,name:ohrms_loan_accounting.selection__hr_loan__state__approve
+msgid "Approved"
+msgstr "ጸድቋል"
+
+#. module: ohrms_loan_accounting
+#: model_terms:ir.ui.view,arch_db:ohrms_loan_accounting.hr_loan_inherited
+msgid "Cancel"
+msgstr "ሰርዝ"
+
+#. module: ohrms_loan_accounting
+#: model:ir.model.fields.selection,name:ohrms_loan_accounting.selection__hr_loan__state__cancel
+msgid "Canceled"
+msgstr "ተሰርዟል።"
+
+#. module: ohrms_loan_accounting
+#: model_terms:ir.ui.view,arch_db:ohrms_loan_accounting.hr_loan_inherited
+msgid "Compute Installment"
+msgstr "ክፍያ አስሉ"
+
+#. module: ohrms_loan_accounting
+#: model:ir.model,name:ohrms_loan_accounting.model_res_config_settings
+msgid "Config Settings"
+msgstr "ቅንብሮችን ያዋቅሩ"
+
+#. module: ohrms_loan_accounting
+#: model_terms:ir.actions.act_window,help:ohrms_loan_accounting.action_loan_approve_rule
+msgid "Create Loan rule"
+msgstr ""
+
+#. module: ohrms_loan_accounting
+#: model:ir.model.fields,field_description:ohrms_loan_accounting.field_loan_advance_conf__create_uid
+msgid "Created by"
+msgstr "የተፈጠረ"
+
+#. module: ohrms_loan_accounting
+#: model:ir.model.fields,field_description:ohrms_loan_accounting.field_loan_advance_conf__create_date
+msgid "Created on"
+msgstr "ላይ ተፈጠረ"
+
+#. module: ohrms_loan_accounting
+#: model:ir.model.fields,field_description:ohrms_loan_accounting.field_loan_advance_conf__display_name
+msgid "Display Name"
+msgstr "መጠሪያው ስም"
+
+#. module: ohrms_loan_accounting
+#: model:ir.model.fields.selection,name:ohrms_loan_accounting.selection__hr_loan__state__draft
+msgid "Draft"
+msgstr "ረቂቅ"
+
+#. module: ohrms_loan_accounting
+#: model:ir.model.fields,field_description:ohrms_loan_accounting.field_loan_advance_conf__id
+msgid "ID"
+msgstr "መታወቂያ"
+
+#. module: ohrms_loan_accounting
+#: model:ir.model,name:ohrms_loan_accounting.model_hr_loan_line
+msgid "Installment Line"
+msgstr "የመጫኛ መስመር"
+
+#. module: ohrms_loan_accounting
+#: model:ir.model.fields,field_description:ohrms_loan_accounting.field_hr_loan__journal_id
+msgid "Journal"
+msgstr ""
+
+#. module: ohrms_loan_accounting
+#: model:ir.model.fields,field_description:ohrms_loan_accounting.field_hr_loan__move_id
+msgid "Journal Entery"
+msgstr ""
+
+#. module: ohrms_loan_accounting
+#: model:ir.model,name:ohrms_loan_accounting.model_account_move_line
+msgid "Journal Item"
+msgstr "መዝገብ ኣይተም"
+
+#. module: ohrms_loan_accounting
+#: model:ir.model.fields,field_description:ohrms_loan_accounting.field_loan_advance_conf____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: ohrms_loan_accounting
+#: model:ir.model.fields,field_description:ohrms_loan_accounting.field_loan_advance_conf__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: ohrms_loan_accounting
+#: model:ir.model.fields,field_description:ohrms_loan_accounting.field_loan_advance_conf__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: ohrms_loan_accounting
+#: model:ir.model.fields,field_description:ohrms_loan_accounting.field_hr_loan__employee_account_id
+msgid "Loan Account"
+msgstr ""
+
+#. module: ohrms_loan_accounting
+#: model_terms:ir.ui.view,arch_db:ohrms_loan_accounting.view_account_config_inherit
+msgid "Loan Approval"
+msgstr "የብድር ማረጋገጫ"
+
+#. module: ohrms_loan_accounting
+#: model:ir.model.fields,help:ohrms_loan_accounting.field_res_config_settings__loan_approve
+#: model_terms:ir.ui.view,arch_db:ohrms_loan_accounting.view_account_config_inherit
+msgid "Loan Approval from account manager"
+msgstr "የብድር ማረጋገጫ ከመለያ አስተዳዳሪ"
+
+#. module: ohrms_loan_accounting
+#: model:ir.ui.menu,name:ohrms_loan_accounting.parent_menu_loan_advance_rule
+msgid "Loan Company Rule"
+msgstr "የድርጅቱ የብድር ደንብ"
+
+#. module: ohrms_loan_accounting
+#: model:ir.model.fields,field_description:ohrms_loan_accounting.field_account_move_line__loan_id
+msgid "Loan Id"
+msgstr ""
+
+#. module: ohrms_loan_accounting
+#: model:ir.model,name:ohrms_loan_accounting.model_hr_loan
+msgid "Loan Request"
+msgstr "የብድር ጥያቄ"
+
+#. module: ohrms_loan_accounting
+#: model_terms:ir.ui.view,arch_db:ohrms_loan_accounting.view_loan_advance_conf_tree_2
+#: model_terms:ir.ui.view,arch_db:ohrms_loan_accounting.view_loan_advance_form_2
+msgid "Loan Rule"
+msgstr "የብድር ደንብ"
+
+#. module: ohrms_loan_accounting
+#: model:ir.actions.act_window,name:ohrms_loan_accounting.action_loan_approve_rule
+msgid "Loan rule"
+msgstr ""
+
+#. module: ohrms_loan_accounting
+#: model:ir.model,name:ohrms_loan_accounting.model_hr_payslip
+msgid "Pay Slip"
+msgstr "የክፍያ ደረሰኝ"
+
+#. module: ohrms_loan_accounting
+#: model_terms:ir.ui.view,arch_db:ohrms_loan_accounting.hr_loan_inherited
+msgid "Refuse"
+msgstr "ከልክል"
+
+#. module: ohrms_loan_accounting
+#: model:ir.model.fields.selection,name:ohrms_loan_accounting.selection__hr_loan__state__refuse
+msgid "Refused"
+msgstr "ተከልክሏል"
+
+#. module: ohrms_loan_accounting
+#: model:ir.model.fields,field_description:ohrms_loan_accounting.field_hr_loan__state
+msgid "State"
+msgstr "ግዛት"
+
+#. module: ohrms_loan_accounting
+#: model_terms:ir.ui.view,arch_db:ohrms_loan_accounting.hr_loan_inherited
+msgid "Submit"
+msgstr "አስገባ"
+
+#. module: ohrms_loan_accounting
+#: model:ir.model.fields.selection,name:ohrms_loan_accounting.selection__hr_loan__state__waiting_approval_1
+msgid "Submitted"
+msgstr "ገብቷል።"
+
+#. module: ohrms_loan_accounting
+#: code:addons/ohrms_loan_accounting/models/hr_loan_acc.py:0
+#, python-format
+msgid "The amount exceed loan rule for a company"
+msgstr "መጠኑ ለአንድ ኩባንያ ከብድር ደንብ ይበልጣል"
+
+#. module: ohrms_loan_accounting
+#: model:ir.model.fields,field_description:ohrms_loan_accounting.field_hr_loan__treasury_account_id
+msgid "Treasury Account"
+msgstr "የግምጃ ቤት ሂሳብ"
+
+#. module: ohrms_loan_accounting
+#: model:ir.model.fields.selection,name:ohrms_loan_accounting.selection__hr_loan__state__waiting_approval_2
+msgid "Waiting Approval"
+msgstr "ማጽደቅን በመጠበቅ ላይ"
+
+#. module: ohrms_loan_accounting
+#: code:addons/ohrms_loan_accounting/models/loan_rule.py:0
+#, python-format
+msgid "You can not create two company loan rule"
+msgstr "ሁለት የድርጅት ብድር ደንብ መፍጠር አይችሉም"
+
+#. module: ohrms_loan_accounting
+#: model:ir.model.fields,field_description:ohrms_loan_accounting.field_loan_advance_conf__percent
+msgid "amount loan in terms of monthly income"
+msgstr "ከወርሃዊ ገቢ አንጻር የብድር መጠን"
+
+#. module: ohrms_loan_accounting
+#: model:ir.model,name:ohrms_loan_accounting.model_loan_advance_conf
+msgid "loan.advance.conf"
+msgstr ""
+
+#. module: ohrms_loan_accounting
+#: code:addons/ohrms_loan_accounting/models/hr_loan_acc.py:0
+#: code:addons/ohrms_loan_accounting/models/hr_loan_acc.py:0
+#, python-format
+msgid "please set Active fiscal year for the journal"
+msgstr "እባክዎ የጆርናል ንቁ በጀት ዓመት ያዘጋጁ"
+
+#. module: ohrms_loan_accounting
+#: code:addons/ohrms_loan_accounting/models/hr_loan_acc.py:0
+#: code:addons/ohrms_loan_accounting/models/hr_loan_acc.py:0
+#, python-format
+msgid "please set Time frame for the journal"
+msgstr "እባክዎ ጆርናል የጊዜ እርከን ያዘጋጁ"
+
+#. module: ohrms_loan_accounting
+#: code:addons/ohrms_loan_accounting/models/hr_loan_acc.py:0
+#, python-format
+msgid "set loan rule for a company"
+msgstr "ለአንድ ኩባንያ የብድር ደንብ ያዘጋጁ"

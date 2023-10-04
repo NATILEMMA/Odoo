@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<!-- My Compliant List -->
+<template id="all_tranfer_member" name="My Transfer">
+
+    <t t-call="website.layout">
+    <t t-call="dashboard_member12.css_assets"/>    
+      <body>
+        <div class="loader"></div>
+        <div id="app">
+          <div class="main-wrapper main-wrapper-1">
+            <div class="navbar-bg"></div>
+            <nav class="navbar navbar-expand-lg main-navbar sticky">
+              <div class="form-inline mr-auto">
+                <ul class="navbar-nav mr-3">
+                  <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg
+                        collapse-btn"> <i data-feather="align-justify"></i></a></li>
+                  <li><a href="#" class="nav-link nav-link-lg fullscreen-btn">
+                      <i data-feather="maximize"></i>
+                    </a>
+                  </li>
+                  <li>
+                  
+                  </li>
+                </ul>
+              </div>
+            </nav>
+            <div class="main-sidebar sidebar-style-2">
+            <t t-call="dashboard_member12.asidebar"/>    
+            </div>
+            <!-- Main Content -->
+            <div class="main-content">
+               <div class="card-body p-0">
+                  <div class="table-responsive">
+                    <table class="table table-striped">
+                      <thead id="thead">
+                        <tr>
+                          <th>Date of Request</th>
+                          <th>To Subcity</th>
+                           <th>To Woreda</th>
+                           <th>To Main Office</th>
+                           <th>To Cell</th>
+                           <th>State</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <t t-foreach="transfers" t-as="transfer">
+                          <t t-if="transfer.is_league == True">
+                            <t t-if="transfer.transfer_as_a_league_or_member == 'member'">
+                              <t t-if="transfer.state == 'draft'">
+                                <tr>
+                                  <td><span t-esc="transfer.create_date.strftime('%b %d, %Y')"/></td>
+                                  <td><span t-esc="transfer.transfer_subcity_id.name"/></td>
+                                  <td><span t-esc="transfer.transfer_wereda_id.name"/></td>
+                                  <td><span t-esc="transfer.transfer_main_office.name"/></td>
+                                  <td><span t-esc="transfer.transfer_member_cells.name"/></td>
+                                  <td><span t-esc="transfer.state"/></td>
+                                  <td>
+                                    <!-- <a t-attf-href="/transfer/#{transfer.id}/edit">
+                                      <button class="fa fa-edit btn btn-sm btn-primary">Edit</button>
+                                    </a> -->
+                                    <a t-attf-href="/transfer/#{transfer.id}/delete">
+                                      <button class="fa fa-trash-o btn btn-sm btn-primary">Delete</button>
+                                    </a>
+                                  </td>
+                                </tr>
+                              </t>
+                              <t t-elif="transfer.state == 'waiting for approval'">
+                                <tr style="color: gray;">
+                                  <td><span t-esc="transfer.create_date.strftime('%b %d, %Y')"/></td>
+                                  <td><span t-esc="transfer.transfer_subcity_id.name"/></td>
+                                  <td><span t-esc="transfer.transfer_wereda_id.name"/></td>
+                                  <td><span t-esc="transfer.transfer_main_office.name"/></td>
+                                  <td><span t-esc="transfer.transfer_member_cells.name"/></td>
+                                  <td><span t-esc="transfer.state"/></td>
+                                </tr>
+                              </t>
+                              <t t-elif="transfer.state == 'approved'">
+                                <tr style="color: green;">
+                                  <td><span t-esc="transfer.create_date.strftime('%b %d, %Y')"/></td>
+                                  <td><span t-esc="transfer.transfer_subcity_id.name"/></td>
+                                  <td><span t-esc="transfer.transfer_wereda_id.name"/></td>
+                                  <td><span t-esc="transfer.transfer_main_office.name"/></td>
+                                  <td><span t-esc="transfer.transfer_member_cells.name"/></td>
+                                  <td><span t-esc="transfer.state"/></td>
+                                </tr>
+                              </t>
+                              <t t-elif="transfer.state == 'rejected'">
+                                <tr style="color: red;">
+                                  <td><span t-esc="transfer.create_date.strftime('%b %d, %Y')"/></td>
+                                  <td><span t-esc="transfer.transfer_subcity_id.name"/></td>
+                                  <td><span t-esc="transfer.transfer_wereda_id.name"/></td>
+                                  <td><span t-esc="transfer.transfer_main_office.name"/></td>
+                                  <td><span t-esc="transfer.transfer_member_cells.name"/></td>
+                                  <td><span t-esc="transfer.state"/></td>
+                                </tr>
+                              </t>
+                            </t>  
+                            <t t-if="transfer.transfer_as_a_league_or_member == 'league'">
+                              <t t-if="transfer.state == 'draft'">
+                                <tr>
+                                  <td><span t-esc="transfer.create_date.strftime('%b %d, %Y')"/></td>
+                                  <td><span t-esc="transfer.transfer_subcity_id.name"/></td>
+                                  <td><span t-esc="transfer.transfer_wereda_id.name"/></td>
+                                  <td><span t-esc="transfer.transfer_league_main_office.name"/></td>
+                                  <td><span t-esc="transfer.transfer_league_member_cells.name"/></td>
+                                  <td><span t-esc="transfer.state"/></td>
+                                  <td>
+                                    <!-- <a t-attf-href="/transfer/#{transfer.id}/edit">
+                                      <button class="fa fa-edit btn btn-sm btn-primary">Edit</button>
+                                    </a> -->
+                                    <a t-attf-href="/transfer/#{transfer.id}/delete">
+                                      <button class="fa fa-trash-o btn btn-sm btn-primary">Delete</button>
+                                    </a>
+                                  </td>
+                                </tr>
+                              </t>
+                              <t t-elif="transfer.state == 'waiting for approval'">
+                                <tr style="color: gray;">
+                                  <td><span t-esc="transfer.create_date.strftime('%b %d, %Y')"/></td>
+                                  <td><span t-esc="transfer.transfer_subcity_id.name"/></td>
+                                  <td><span t-esc="transfer.transfer_wereda_id.name"/></td>
+                                  <td><span t-esc="transfer.transfer_league_main_office.name"/></td>
+                                  <td><span t-esc="transfer.transfer_league_member_cells.name"/></td>
+                                  <td><span t-esc="transfer.state"/></td>
+                                </tr>
+                              </t>
+                              <t t-elif="transfer.state == 'approved'">
+                                <tr style="color: green;">
+                                  <td><span t-esc="transfer.create_date.strftime('%b %d, %Y')"/></td>
+                                  <td><span t-esc="transfer.transfer_subcity_id.name"/></td>
+                                  <td><span t-esc="transfer.transfer_wereda_id.name"/></td>
+                                  <td><span t-esc="transfer.transfer_league_main_office.name"/></td>
+                                  <td><span t-esc="transfer.transfer_league_member_cells.name"/></td>
+                                  <td><span t-esc="transfer.state"/></td>
+                                </tr>
+                              </t>
+                              <t t-elif="transfer.state == 'rejected'">
+                                <tr style="color: red;">
+                                  <td><span t-esc="transfer.create_date.strftime('%b %d, %Y')"/></td>
+                                  <td><span t-esc="transfer.transfer_subcity_id.name"/></td>
+                                  <td><span t-esc="transfer.transfer_wereda_id.name"/></td>
+                                  <td><span t-esc="transfer.transfer_league_main_office.name"/></td>
+                                  <td><span t-esc="transfer.transfer_league_member_cells.name"/></td>
+                                  <td><span t-esc="transfer.state"/></td>
+                                </tr>
+                              </t>
+                            </t>
+                          </t>
+                          <t t-if="transfer.is_member == True">
+                            <t t-if="transfer.transfer_as_a_league_or_member == 'member'">
+                              <t t-if="transfer.state == 'draft'">
+                                <tr>
+                                  <td><span t-esc="transfer.create_date.strftime('%b %d, %Y')"/></td>
+                                  <td><span t-esc="transfer.transfer_subcity_id.name"/></td>
+                                  <td><span t-esc="transfer.transfer_wereda_id.name"/></td>
+                                  <td><span t-esc="transfer.transfer_main_office.name"/></td>
+                                  <td><span t-esc="transfer.transfer_member_cells.name"/></td>
+                                  <td><span t-esc="transfer.state"/></td>
+                                  <td>
+                                    <!-- <a t-attf-href="/transfer/#{transfer.id}/edit">
+                                      <button class="fa fa-edit btn btn-sm btn-primary">Edit</button>
+                                    </a> -->
+                                    <a t-attf-href="/transfer/#{transfer.id}/delete">
+                                      <button class="fa fa-trash-o btn btn-sm btn-primary">Delete</button>
+                                    </a>
+                                  </td>
+                                </tr>
+                              </t>
+                              <t t-elif="transfer.state == 'waiting for approval'">
+                                <tr style="color: gray;">
+                                  <td><span t-esc="transfer.create_date.strftime('%b %d, %Y')"/></td>
+                                  <td><span t-esc="transfer.transfer_subcity_id.name"/></td>
+                                  <td><span t-esc="transfer.transfer_wereda_id.name"/></td>
+                                  <td><span t-esc="transfer.transfer_main_office.name"/></td>
+                                  <td><span t-esc="transfer.transfer_member_cells.name"/></td>
+                                  <td><span t-esc="transfer.state"/></td>
+                                </tr>
+                              </t>
+                              <t t-elif="transfer.state == 'approved'">
+                                <tr style="color: green;">
+                                  <td><span t-esc="transfer.create_date.strftime('%b %d, %Y')"/></td>
+                                  <td><span t-esc="transfer.transfer_subcity_id.name"/></td>
+                                  <td><span t-esc="transfer.transfer_wereda_id.name"/></td>
+                                  <td><span t-esc="transfer.transfer_main_office.name"/></td>
+                                  <td><span t-esc="transfer.transfer_member_cells.name"/></td>
+                                  <td><span t-esc="transfer.state"/></td>
+                                </tr>
+                              </t>
+                              <t t-elif="transfer.state == 'rejected'">
+                                <tr style="color: red;">
+                                  <td><span t-esc="transfer.create_date.strftime('%b %d, %Y')"/></td>
+                                  <td><span t-esc="transfer.transfer_subcity_id.name"/></td>
+                                  <td><span t-esc="transfer.transfer_wereda_id.name"/></td>
+                                  <td><span t-esc="transfer.transfer_main_office.name"/></td>
+                                  <td><span t-esc="transfer.transfer_member_cells.name"/></td>
+                                  <td><span t-esc="transfer.state"/></td>
+                                </tr>
+                              </t>
+                            </t>  
+                            <t t-if="transfer.transfer_as_a_league_or_member == 'league'">
+                              <t t-if="transfer.state == 'draft'">
+                                <tr>
+                                  <td><span t-esc="transfer.create_date.strftime('%b %d, %Y')"/></td>
+                                  <td><span t-esc="transfer.transfer_subcity_id.name"/></td>
+                                  <td><span t-esc="transfer.transfer_wereda_id.name"/></td>
+                                  <td><span t-esc="transfer.transfer_league_main_office.name"/></td>
+                                  <td><span t-esc="transfer.transfer_league_member_cells.name"/></td>
+                                  <td><span t-esc="transfer.state"/></td>
+                                  <td>
+                                    <!-- <a t-attf-href="/transfer/#{transfer.id}/edit">
+                                      <button class="fa fa-edit btn btn-sm btn-primary">Edit</button>
+                                    </a> -->
+                                    <a t-attf-href="/transfer/#{transfer.id}/delete">
+                                      <button class="fa fa-trash-o btn btn-sm btn-primary">Delete</button>
+                                    </a>
+                                  </td>
+                                </tr>
+                              </t>
+                              <t t-elif="transfer.state == 'waiting for approval'">
+                                <tr style="color: gray;">
+                                  <td><span t-esc="transfer.create_date.strftime('%b %d, %Y')"/></td>
+                                  <td><span t-esc="transfer.transfer_subcity_id.name"/></td>
+                                  <td><span t-esc="transfer.transfer_wereda_id.name"/></td>
+                                  <td><span t-esc="transfer.transfer_league_main_office.name"/></td>
+                                  <td><span t-esc="transfer.transfer_league_member_cells.name"/></td>
+                                  <td><span t-esc="transfer.state"/></td>
+                                </tr>
+                              </t>
+                              <t t-elif="transfer.state == 'approved'">
+                                <tr style="color: green;">
+                                  <td><span t-esc="transfer.create_date.strftime('%b %d, %Y')"/></td>
+                                  <td><span t-esc="transfer.transfer_subcity_id.name"/></td>
+                                  <td><span t-esc="transfer.transfer_wereda_id.name"/></td>
+                                  <td><span t-esc="transfer.transfer_league_main_office.name"/></td>
+                                  <td><span t-esc="transfer.transfer_league_member_cells.name"/></td>
+                                  <td><span t-esc="transfer.state"/></td>
+                                </tr>
+                              </t>
+                              <t t-elif="transfer.state == 'rejected'">
+                                <tr style="color: red;">
+                                  <td><span t-esc="transfer.create_date.strftime('%b %d, %Y')"/></td>
+                                  <td><span t-esc="transfer.transfer_subcity_id.name"/></td>
+                                  <td><span t-esc="transfer.transfer_wereda_id.name"/></td>
+                                  <td><span t-esc="transfer.transfer_league_main_office.name"/></td>
+                                  <td><span t-esc="transfer.transfer_league_member_cells.name"/></td>
+                                  <td><span t-esc="transfer.state"/></td>
+                                </tr>
+                              </t>
+                            </t>
+                          </t>
+                          <t t-if="transfer.is_leader == True">
+                            <t t-if="transfer.transfer_as_a_leader_or_member == 'leader'">
+                              <t t-if="transfer.state == 'draft'">
+                                <tr>
+                                  <td><span t-esc="transfer.create_date.strftime('%b %d, %Y')"/></td>
+                                  <td><span t-esc="transfer.transfer_subcity_id.name"/></td>
+                                  <td><span t-esc="transfer.transfer_wereda_id.name"/></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td><span t-esc="transfer.state"/></td>
+                                  <td>
+                                    <!-- <a t-attf-href="/transfer/#{transfer.id}/edit">
+                                      <button class="fa fa-edit btn btn-sm btn-primary">Edit</button>
+                                    </a> -->
+                                    <a t-attf-href="/transfer/#{transfer.id}/delete">
+                                      <button class="fa fa-trash-o btn btn-sm btn-primary">Delete</button>
+                                    </a>
+                                  </td>
+                                </tr>
+                              </t>
+                              <t t-elif="transfer.state == 'waiting for approval'">
+                                <tr style="color: gray;">
+                                  <td><span t-esc="transfer.create_date.strftime('%b %d, %Y')"/></td>
+                                  <td><span t-esc="transfer.transfer_subcity_id.name"/></td>
+                                  <td><span t-esc="transfer.transfer_wereda_id.name"/></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td><span t-esc="transfer.state"/></td>
+                                </tr>
+                              </t>
+                              <t t-elif="transfer.state == 'approved'">
+                                <tr style="color: green;">
+                                  <td><span t-esc="transfer.create_date.strftime('%b %d, %Y')"/></td>
+                                  <td><span t-esc="transfer.transfer_subcity_id.name"/></td>
+                                  <td><span t-esc="transfer.transfer_wereda_id.name"/></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td><span t-esc="transfer.state"/></td>
+                                </tr>
+                              </t>
+                              <t t-elif="transfer.state == 'rejected'">
+                                <tr style="color: red;">
+                                  <td><span t-esc="transfer.create_date.strftime('%b %d, %Y')"/></td>
+                                  <td><span t-esc="transfer.transfer_subcity_id.name"/></td>
+                                  <td><span t-esc="transfer.transfer_wereda_id.name"/></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td><span t-esc="transfer.state"/></td>
+                                </tr>
+                              </t>
+                            </t>
+                            <t t-if="transfer.transfer_as_a_leader_or_member == 'member'">
+                              <t t-if="transfer.state == 'draft'">
+                                <tr>
+                                  <td><span t-esc="transfer.create_date.strftime('%b %d, %Y')"/></td>
+                                  <td><span t-esc="transfer.transfer_subcity_id.name"/></td>
+                                  <td><span t-esc="transfer.transfer_wereda_id.name"/></td>
+                                  <td><span t-esc="transfer.transfer_main_office.name"/></td>
+                                  <td><span t-esc="transfer.transfer_member_cells.name"/></td>
+                                  <td><span t-esc="transfer.state"/></td>
+                                  <td>
+                                    <!-- <a t-attf-href="/transfer/#{transfer.id}/edit">
+                                      <button class="fa fa-edit btn btn-sm btn-primary">Edit</button>
+                                    </a> -->
+                                    <a t-attf-href="/transfer/#{transfer.id}/delete">
+                                      <button class="fa fa-trash-o btn btn-sm btn-primary">Delete</button>
+                                    </a>
+                                  </td>
+                                </tr>
+                              </t>
+                              <t t-elif="transfer.state == 'waiting for approval'">
+                                <tr style="color: gray;">
+                                  <td><span t-esc="transfer.create_date.strftime('%b %d, %Y')"/></td>
+                                  <td><span t-esc="transfer.transfer_subcity_id.name"/></td>
+                                  <td><span t-esc="transfer.transfer_wereda_id.name"/></td>
+                                  <td><span t-esc="transfer.transfer_main_office.name"/></td>
+                                  <td><span t-esc="transfer.transfer_member_cells.name"/></td>
+                                  <td><span t-esc="transfer.state"/></td>
+                                </tr>
+                              </t>
+                              <t t-elif="transfer.state == 'approved'">
+                                <tr style="color: green;">
+                                  <td><span t-esc="transfer.create_date.strftime('%b %d, %Y')"/></td>
+                                  <td><span t-esc="transfer.transfer_subcity_id.name"/></td>
+                                  <td><span t-esc="transfer.transfer_wereda_id.name"/></td>
+                                  <td><span t-esc="transfer.transfer_main_office.name"/></td>
+                                  <td><span t-esc="transfer.transfer_member_cells.name"/></td>
+                                  <td><span t-esc="transfer.state"/></td>
+                                </tr>
+                              </t>
+                              <t t-elif="transfer.state == 'rejected'">
+                                <tr style="color: red;">
+                                  <td><span t-esc="transfer.create_date.strftime('%b %d, %Y')"/></td>
+                                  <td><span t-esc="transfer.transfer_subcity_id.name"/></td>
+                                  <td><span t-esc="transfer.transfer_wereda_id.name"/></td>
+                                  <td><span t-esc="transfer.transfer_main_office.name"/></td>
+                                  <td><span t-esc="transfer.transfer_member_cells.name"/></td>
+                                  <td><span t-esc="transfer.state"/></td>
+                                </tr>
+                              </t>
+                            </t>
+                            <t t-if="transfer.transfer_as_a_leader_or_member == 'league'">
+                              <t t-if="transfer.state == 'draft'">
+                                <tr>
+                                  <td><span t-esc="transfer.create_date.strftime('%b %d, %Y')"/></td>
+                                  <td><span t-esc="transfer.transfer_subcity_id.name"/></td>
+                                  <td><span t-esc="transfer.transfer_wereda_id.name"/></td>
+                                  <td><span t-esc="transfer.transfer_league_main_office.name"/></td>
+                                  <td><span t-esc="transfer.transfer_league_member_cells.name"/></td>
+                                  <td><span t-esc="transfer.state"/></td>
+                                  <td>
+                                    <!-- <a t-attf-href="/transfer/#{transfer.id}/edit">
+                                      <button class="fa fa-edit btn btn-sm btn-primary">Edit</button>
+                                    </a> -->
+                                    <a t-attf-href="/transfer/#{transfer.id}/delete">
+                                      <button class="fa fa-trash-o btn btn-sm btn-primary">Delete</button>
+                                    </a>
+                                  </td>
+                                </tr>
+                              </t>
+                              <t t-elif="transfer.state == 'waiting for approval'">
+                                <tr style="color: gray;">
+                                  <td><span t-esc="transfer.create_date.strftime('%b %d, %Y')"/></td>
+                                  <td><span t-esc="transfer.transfer_subcity_id.name"/></td>
+                                  <td><span t-esc="transfer.transfer_wereda_id.name"/></td>
+                                  <td><span t-esc="transfer.transfer_league_main_office.name"/></td>
+                                  <td><span t-esc="transfer.transfer_league_member_cells.name"/></td>
+                                  <td><span t-esc="transfer.state"/></td>
+                                </tr>
+                              </t>
+                              <t t-elif="transfer.state == 'approved'">
+                                <tr style="color: green;">
+                                  <td><span t-esc="transfer.create_date.strftime('%b %d, %Y')"/></td>
+                                  <td><span t-esc="transfer.transfer_subcity_id.name"/></td>
+                                  <td><span t-esc="transfer.transfer_wereda_id.name"/></td>
+                                  <td><span t-esc="transfer.transfer_league_main_office.name"/></td>
+                                  <td><span t-esc="transfer.transfer_league_member_cells.name"/></td>
+                                  <td><span t-esc="transfer.state"/></td>
+                                </tr>
+                              </t>
+                              <t t-elif="transfer.state == 'rejected'">
+                                <tr style="color: red;">
+                                  <td><span t-esc="transfer.create_date.strftime('%b %d, %Y')"/></td>
+                                  <td><span t-esc="transfer.transfer_subcity_id.name"/></td>
+                                  <td><span t-esc="transfer.transfer_wereda_id.name"/></td>
+                                  <td><span t-esc="transfer.transfer_league_main_office.name"/></td>
+                                  <td><span t-esc="transfer.transfer_league_member_cells.name"/></td>
+                                  <td><span t-esc="transfer.state"/></td>
+                                </tr>
+                              </t>
+                            </t>
+                          </t>
+                        </t>
+                      </tbody>
+                    </table> 
+                    </div>
+                  </div>
+            </div>
+          <t t-call="dashboard_member12.seeting_feature"/>    
+          </div>
+        </div>
+      
+      </body>
+    <t t-call="dashboard_member12.js_assets"/>    
+
+  </t>
+</template>
+
+
+</odoo>

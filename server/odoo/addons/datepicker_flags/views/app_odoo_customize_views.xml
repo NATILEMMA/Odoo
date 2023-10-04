@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+        <template id="assets_backend" name="app_odoo_customize assets" inherit_id="web.assets_backend">
+       
+            <xpath expr="script[last()]" position="after">
+                <script type="text/javascript" src="/app_odoo_customize/static/src/js/datepicker_flags_setting.js"></script>
+            </xpath>
+        </template>
+
+    
+</odoo>

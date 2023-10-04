@@ -1,0 +1,562 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <!-- This record will crate a view for Age Range -->
+    <record id="age_range_tree_view" model="ir.ui.view">
+        <field name="name">Age Range Estimation</field>
+        <field name="model">age.range</field>
+        <field name="arch" type="xml">
+            <tree editable="top">
+                <field name="for_which_stage" string="For Which Stage"/>
+                <field name="minimum_age_allowed" string="Minimum Age"/>
+                <field name="maximum_age_allowed" string="Maximum Age"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- This record will hold the menu for cell and main office member counting -->
+    <record id="age_range_action" model="ir.actions.act_window">
+        <field name="name">Age Range Estimation</field>
+        <field name="res_model">age.range</field>
+        <field name="view_mode">tree</field>
+    </record> 
+    
+    
+    <!-- This record will crate a view for main office member counting -->
+    <record id="cell_tree_view" model="ir.ui.view">
+        <field name="name">Cells Member Estimation</field>
+        <field name="model">cell.configuration</field>
+        <field name="arch" type="xml">
+            <tree editable="top">
+                <field name="for_members_or_leagues" string="For Members or Leagues"/>
+                <field name="minimum_number" string="Minimum Members"/>
+                <field name="maximum_number" string="Maximum Members"/>
+                <field name="reject" string="Reject"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- This record will hold the menu for cell and main office member counting -->
+    <record id="cell_action" model="ir.actions.act_window">
+        <field name="name">Cells Member Estimation</field>
+        <field name="res_model">cell.configuration</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+
+    <!-- This record will crate a view for user input -->
+    <record id="user_input_tree_view" model="ir.ui.view">
+        <field name="name">User Input</field>
+        <field name="model">user.input</field>
+        <field name="arch" type="xml">
+            <tree editable="top" create="false" edit="false">
+                <field name="create_date" string="Created On"/>
+                <field name="model" string="Model"/>
+                <field name="user_input" string="Input"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- This record will hold the menu for cell member counting -->
+    <record id="user_input_action" model="ir.actions.act_window">
+        <field name="name">User Input</field>
+        <field name="res_model">user.input</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+
+    <!-- This record will crate a view for cell member counting -->
+    <record id="main_office_tree_view" model="ir.ui.view">
+        <field name="name">Main Office Member Estimation</field>
+        <field name="model">main.office.configuration</field>
+        <field name="arch" type="xml">
+            <tree editable="top">
+                <field name="for_members_or_leagues" string="For Members or Leagues"/>
+                <field name="maximum_cell" string="Cells"/>
+                <field name="reject" string="Reject"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- This record will hold the menu for cell member counting -->
+    <record id="main_office_action" model="ir.actions.act_window">
+        <field name="name">Main Office Member Estimation</field>
+        <field name="res_model">main.office.configuration</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <!-- This record will crate a view for main office member counting -->
+    <record id="cell_tree_view" model="ir.ui.view">
+        <field name="name">Cells Member Estimation</field>
+        <field name="model">cell.configuration</field>
+        <field name="arch" type="xml">
+            <tree editable="top">
+                <field name="for_members_or_leagues" string="For Members or Leagues"/>
+                <field name="minimum_number" string="Minimum Members"/>
+                <field name="maximum_number" string="Maximum Members"/>
+                <field name="reject" string="Reject"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- This record will hold the menu for cell and main office member counting -->
+    <record id="cell_action" model="ir.actions.act_window">
+        <field name="name">Cells Member Estimation</field>
+        <field name="res_model">cell.configuration</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+
+    <!-- This record will create view for training centers -->
+    <record id="training_center_tree_view" model="ir.ui.view">
+        <field name="name">Training Centers</field>
+        <field name="model">training.centers</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- This record will create an action for training center -->
+    <record id="training_center_action" model="ir.actions.act_window">
+        <field name="name">Training Centers</field>
+        <field name="res_model">training.centers</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <!-- This record will create view for education level -->
+    <record id="res_ed_level_tree_view" model="ir.ui.view">
+        <field name="name">Education Level</field>
+        <field name="model">res.edlevel</field>
+        <field name="arch" type="xml">
+            <tree editable="top">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- This record will create view for education level -->
+    <record id="res_ed_level_form_view" model="ir.ui.view">
+        <field name="name">Education Level</field>
+        <field name="model">res.edlevel</field>
+        <field name="arch" type="xml">
+            <form duplicate="false">
+                <group>
+                    <field name="name"/>
+                    <field name="active" invisible="1"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <!-- This record will create an action for education level -->
+    <record id="res_ed_level_action" model="ir.actions.act_window">
+        <field name="name">Education Level</field>
+        <field name="res_model">res.edlevel</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!-- This record will create view for field of study -->
+    <record id="field_study_tree_view" model="ir.ui.view">
+        <field name="name">Field of Study</field>
+        <field name="model">field.study</field>
+        <field name="arch" type="xml">
+            <tree editable="top">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- This record will create view for field of study -->
+    <record id="field_study_form_view" model="ir.ui.view">
+        <field name="name">Field of Study</field>
+        <field name="model">field.study</field>
+        <field name="arch" type="xml">
+            <form duplicate="false">
+                <group>
+                    <field name="name"/>
+                    <field name="active" invisible="1"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <!-- This record will create an action for field of study -->
+    <record id="field_study_action" model="ir.actions.act_window">
+        <field name="name">Field of Study</field>
+        <field name="res_model">field.study</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This record will create view for education level -->
+    <record id="ethnic_group_tree_view" model="ir.ui.view">
+        <field name="name">Ethnic Groups</field>
+        <field name="model">ethnic.groups</field>
+        <field name="arch" type="xml">
+            <tree editable="top" >
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- This record will create view for education level -->
+    <record id="ethnic_group_form_view" model="ir.ui.view">
+        <field name="name">Ethnic Groups</field>
+        <field name="model">ethnic.groups</field>
+        <field name="arch" type="xml">
+            <form duplicate="false">
+                <group>
+                    <field name="name"/>
+                    <field name="active" invisible="1"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <!-- This record will create an action for education level -->
+    <record id="ethnic_group_action" model="ir.actions.act_window">
+        <field name="name">Ethnic Groups</field>
+        <field name="res_model">ethnic.groups</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This record will create view for Interpersonal Skills -->
+    <record id="interpersonal_skills_tree_view" model="ir.ui.view">
+        <field name="name">Interpersonal Skills</field>
+        <field name="model">interpersonal.skills</field>
+        <field name="arch" type="xml">
+            <tree editable="top">
+                <field name="name"/>
+                <field name="positive"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- This record will create view for Interpersonal Skills -->
+    <record id="interpersonal_skills_form_view" model="ir.ui.view">
+        <field name="name">Interpersonal Skills</field>
+        <field name="model">interpersonal.skills</field>
+        <field name="arch" type="xml">
+            <form duplicate="false">
+                <group>
+                    <field name="name"/>
+                    <field name="positive"/>
+                    <field name="active" invisible="1"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <!-- This record will create an action for Interpersonal Skills -->
+    <record id="interpersonal_skills_action" model="ir.actions.act_window">
+        <field name="name">Interpersonal Skills</field>
+        <field name="res_model">interpersonal.skills</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This record will create view for Member Responsibility -->
+    <record id="league_responsibility_tree_view" model="ir.ui.view">
+        <field name="name">League Responsibility</field>
+        <field name="model">league.responsibility</field>
+        <field name="arch" type="xml">
+            <tree editable="top">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- This record will create view for Member Responsibility -->
+    <record id="league_responsibility_form_view" model="ir.ui.view">
+        <field name="name">League Responsibility</field>
+        <field name="model">league.responsibility</field>
+        <field name="arch" type="xml">
+            <form duplicate="false">
+                <group>
+                    <field name="name"/>
+                    <field name="active" invisible="1"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <!-- This record will create an action for Member Responsibility -->
+    <record id="league_responsibility_action" model="ir.actions.act_window">
+        <field name="name">League Responsibility</field>
+        <field name="res_model">league.responsibility</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This record will create view for Member Responsibility -->
+    <record id="members_responsibility_tree_view" model="ir.ui.view">
+        <field name="name">Member Responsibility</field>
+        <field name="model">members.responsibility</field>
+        <field name="arch" type="xml">
+            <tree editable="top">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- This record will create view for Member Responsibility -->
+    <record id="members_responsibility_form_view" model="ir.ui.view">
+        <field name="name">Member Responsibility</field>
+        <field name="model">members.responsibility</field>
+        <field name="arch" type="xml">
+            <form duplicate="false">
+                <group>
+                    <field name="name"/>
+                    <field name="active" invisible="1"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <!-- This record will create an action for Member Responsibility -->
+    <record id="members_responsibility_action" model="ir.actions.act_window">
+        <field name="name">Member Responsibility</field>
+        <field name="res_model">members.responsibility</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This record will create view for Leader Responsibility -->
+    <record id="leaders_responsibility_tree_view" model="ir.ui.view">
+        <field name="name">Leader Responsibility</field>
+        <field name="model">leaders.responsibility</field>
+        <field name="arch" type="xml">
+            <tree editable="top">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- This record will create view for Leader Responsibility -->
+    <record id="leaders_responsibility_form_view" model="ir.ui.view">
+        <field name="name">Leader Responsibility</field>
+        <field name="model">leaders.responsibility</field>
+        <field name="arch" type="xml">
+            <form duplicate="false">
+                <group>
+                    <field name="name"/>
+                    <field name="active" invisible="1"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <!-- This record will create an action for Leader Responsibility -->
+    <record id="leaders_responsibility_action" model="ir.actions.act_window">
+        <field name="name">Leader Responsibility</field>
+        <field name="res_model">leaders.responsibility</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This record will create view for Leader Responsibility -->
+    <record id="leaders_sub_responsibility_tree_view" model="ir.ui.view">
+        <field name="name">Leader's Sub Responsibility</field>
+        <field name="model">leaders.sub.responsibility</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="name"/>
+                <field name="total_in_woreda"/>
+                <field name="total_in_subcity"/>
+                <field name="total_in_city"/>
+                <!-- <field name="leaders_responsibility" widget="many2many_tags" options="{'no_create': True, 'no_create_edit': True}"/> -->
+                <field name="color"/>
+                <field name="active" invisible="1"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- This record will create view for Leader Responsibility -->
+    <record id="leaders_sub_responsibility_form_view" model="ir.ui.view">
+        <field name="name">Leader's Sub Responsibility</field>
+        <field name="model">leaders.sub.responsibility</field>
+        <field name="arch" type="xml">
+            <form duplicate="false">
+                <group>
+                    <group>
+                        <field name="name"/>
+                        <field name="color"/>
+                    </group>
+                    <group>
+                        <field name="total_in_woreda"/>
+                        <field name="total_in_subcity"/>
+                        <field name="total_in_city"/>
+                    </group>
+                    <field name="active" invisible="1"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <!-- This record will create an action for Leader Responsibility -->
+    <record id="leaders_sub_responsibility_action" model="ir.actions.act_window">
+        <field name="name">Leader's Sub Responsibility</field>
+        <field name="res_model">leaders.sub.responsibility</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+
+    <!-- This record will create view for Member sub Responsibility -->
+    <record id="member_sub_responsibility_tree_view" model="ir.ui.view">
+        <field name="name">Member's Sub Responsibility</field>
+        <field name="model">member.sub.responsibility</field>
+        <field name="arch" type="xml">
+            <tree editable="top">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- This record will create view for Member sub Responsibility -->
+    <record id="member_sub_responsibility_form_view" model="ir.ui.view">
+        <field name="name">Member's Sub Responsibility</field>
+        <field name="model">member.sub.responsibility</field>
+        <field name="arch" type="xml">
+            <form duplicate="false">
+                <group>
+                    <field name="name"/>
+                    <field name="active" invisible="1"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <!-- This record will create an action for Member Sub Responsibility -->
+    <record id="member_sub_responsibility_action" model="ir.actions.act_window">
+        <field name="name">Member's Sub Responsibility</field>
+        <field name="res_model">member.sub.responsibility</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This record will create view for Membership Organization -->
+    <record id="membership_organization_tree_view" model="ir.ui.view">
+        <field name="name">Membership Organization</field>
+        <field name="model">membership.organization</field>
+        <field name="arch" type="xml">
+            <tree editable="top">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- This record will create view for Membership Organization -->
+    <record id="membership_organization_form_view" model="ir.ui.view">
+        <field name="name">Membership Organization</field>
+        <field name="model">membership.organization</field>
+        <field name="arch" type="xml">
+            <form duplicate="false">
+                <group>
+                    <field name="name"/>
+                    <field name="active" invisible="1"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <!-- This record will create an action for Membership Organization -->
+    <record id="membership_organization_action" model="ir.actions.act_window">
+        <field name="name">Membership Organization</field>
+        <field name="res_model">membership.organization</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <menuitem id="minor_menus"
+                name="Minor Configurations"
+                parent="system_admin_menus"
+                sequence="2"/>
+
+    <menuitem id="res_ed_level_menu"
+              name="Education Level Configuration"
+              parent="members_custom.minor_menus"
+              sequence="1"
+              action="res_ed_level_action"/>
+
+    <menuitem id="field_study_menu"
+              name="Field of Study Configuration"
+              parent="minor_menus"
+              sequence="2"
+              action="field_study_action"/>
+
+    <menuitem id="ethnic_group_menu"
+              name="Ethnic Groups Configuration"
+              parent="minor_menus"
+              sequence="3"
+              action="ethnic_group_action"/>
+
+    <menuitem id="user_input_menu"
+              name="User Input Configuration"
+              parent="minor_menus"
+              sequence="4"
+              action="user_input_action"/>
+
+    <menuitem id="interpersonal_skills_menu"
+              name="Interpersonal Skills Configuration"
+              parent="members_custom.minor_menus"
+              sequence="6"
+              action="interpersonal_skills_action"/>
+
+    <menuitem id="organization_menu_for_members"
+            name="Membership Organization Configuration"
+            parent="members_custom.minor_menus"
+            sequence="7"
+            action="membership_organization_action"/>
+
+    <menuitem id="members_responsibility_menu"
+            name="Member's Responsibility Configuration"
+            parent="members_custom.minor_menus"
+            sequence="8"
+            action="members_responsibility_action"/>
+
+    <menuitem id="leaders_responsibility_menu"
+            name="Leader's Responsibility Configuration"
+            parent="members_custom.minor_menus"
+            sequence="9"
+            action="leaders_responsibility_action"/>
+
+    <menuitem id="member_sub_responsibility_menu"
+            name="Member's Sub Responsibility Configuration"
+            parent="members_custom.minor_menus"
+            sequence="10"
+            action="member_sub_responsibility_action"/>
+
+    <menuitem id="leaders_sub_responsibility_menu"
+            name="Leader's Sub Responsibility Configuration"
+            parent="members_custom.minor_menus"
+            sequence="11"
+            action="leaders_sub_responsibility_action"/>
+
+    <menuitem id="leagues_responsibility_menu"
+            name="League's Responsibility Configuration"
+            parent="members_custom.minor_menus"
+            sequence="12"
+            action="league_responsibility_action"/>
+
+    <menuitem id="main_office_cell_menu"
+            name="Members Estimation Configuration"
+            parent="members_custom.system_admin_menus"
+            sequence="3"/>
+
+    <menuitem id="main_office_estimation_menu"
+            name="Main Office Members Estimation Configuration"
+            parent="main_office_cell_menu"
+            sequence="1"
+            action="main_office_action"/>
+
+    <menuitem id="cell_estimation_menu"
+            name="Cells Members Estimation Configuration"
+            parent="main_office_cell_menu"
+            sequence="2"
+            action="cell_action"/>
+
+a    <menuitem id="age_range_menu"
+            name="Age Range Estimation Configuration"
+            parent="members_custom.system_admin_menus"
+            sequence="4"
+            action="age_range_action"/>
+
+
+</odoo>

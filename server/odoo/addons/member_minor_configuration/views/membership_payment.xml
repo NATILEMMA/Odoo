@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+
+<odoo>
+
+    <record id="payment_fee_configuration_tree" model="ir.ui.view">
+        <field name="name">Members' Fee</field>
+        <field name="model">payment.fee.configuration</field>
+        <field name="arch" type="xml">
+            <tree editable="top">
+                <field name="sequence" widget="handle"/>
+                <field name="id"/>
+                <field name="minimum_wage"/>
+                <field name="maximum_wage"/>
+                <field name="fee_in_percent"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="payment_fee_configuration_action" model="ir.actions.act_window">
+        <field name="name">Members' Fee</field>
+        <field name="res_model">payment.fee.configuration</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <menuitem id="payment_fee_configuration_menu"
+              name="Payment Fee Configuration"
+              parent="minor_menus"
+              action="payment_fee_configuration_action"
+              sequence="5"/>
+
+</odoo>

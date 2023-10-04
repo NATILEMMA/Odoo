@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+    
+<odoo>
+    <record id="website.group_website_publisher" model="res.groups">
+        <field name="name">User</field>
+    </record>
+    <record id="website.group_website_designer" model="res.groups">
+        <field name="name">Administrator</field>
+    </record>
+</odoo>

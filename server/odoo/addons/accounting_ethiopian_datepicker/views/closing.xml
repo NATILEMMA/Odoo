@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="view_financial_sr">
+        <field name="name">financial.opening.new</field>
+        <field name="model">financial.opening</field>
+        <field name="inherit_id" ref="reconciliation.view_account_financial_opening"/>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+        <xpath expr="//field[@name='date']" position="replace">
+                  <field  name="ethiopian_from"  class="oe_read_only" string="Date" style=" float:left;" attrs="{'invisible': ['|', ('is_pagum_from', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                  <field  name="date"   groups="EthiopianCalendar.group_gregory"/>
+                  <field  name="pagum_from" class="oe_read_only"  string="Date " style=" float:left"  attrs="{'invisible': ['|',('is_pagum_from', '!=',False)  ]}"  groups="EthiopianCalendar.group_ethio_datepicker"/>
+                  <field name="is_pagum_from" invisible="1"/>
+                   <div>
+                   </div>
+                  <div style="margin-bottom:40px;margin-top:-15x; width: 40%;margin-left:5px;margin-right:0px">
+                  <widget name="ethiopian_calander_widget"  style=" float:left;width:500px;" class="oe_edit_only"
+                          groups="EthiopianCalendar.group_ethio_datepicker" />
+                  </div>
+                </xpath>
+        </field>
+    </record>
+</odoo>

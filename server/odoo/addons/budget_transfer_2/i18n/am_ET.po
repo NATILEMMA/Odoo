@@ -1,0 +1,634 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* budget_transfer_2
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-12 11:44+0000\n"
+"PO-Revision-Date: 2023-07-12 11:44+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer__access_warning
+msgid "Access warning"
+msgstr ""
+
+#. module: budget_transfer_2
+#: model:ir.model,name:budget_transfer_2.model_account_account
+msgid "Account"
+msgstr "መለያ"
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer_line__account_from
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer_line__account_to
+msgid "Account code"
+msgstr "መለያ ኮድ"
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer__move_id
+msgid "Accounting Entry"
+msgstr "የሂሳብ ግቤት"
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: budget_transfer_2
+#: model_terms:ir.ui.view,arch_db:budget_transfer_2.view_budget_transfer_form
+msgid "Add Transfer"
+msgstr "የማስተላለፊያ መስመርን ያክሉ"
+
+#. module: budget_transfer_2
+#: model:ir.model.fields.selection,name:budget_transfer_2.selection__budget_transfer__state__approved
+#: model_terms:ir.ui.view,arch_db:budget_transfer_2.view_budget_transfer_form
+msgid "Approved"
+msgstr "ጸድቋል"
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer_line__approved_amount
+#: model_terms:ir.ui.view,arch_db:budget_transfer_2.view_budget_transfer_form
+msgid "Approved Amount"
+msgstr "የተፈቀደው መጠን"
+
+#. module: budget_transfer_2
+#: model_terms:ir.ui.view,arch_db:budget_transfer_2.view_budget_transfer_form
+msgid "Approved by"
+msgstr "ያረጋገጠው ሰው"
+
+#. module: budget_transfer_2
+#: model_terms:ir.ui.view,arch_db:budget_transfer_2.view_budget_transfer_form
+msgid "Are you sure you want to do this?"
+msgstr "እርግጠኛ ነዎት ይህን ማድረግ ይፈልጋሉ?"
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: budget_transfer_2
+#: model_terms:ir.ui.view,arch_db:budget_transfer_2.account_move_line_delivery
+msgid "Balance"
+msgstr "መጠን"
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer_refuse_wizard__budget_ids
+msgid "Budget"
+msgstr "በጀት"
+
+#. module: budget_transfer_2
+#: model_terms:ir.ui.view,arch_db:budget_transfer_2.account_move_line_delivery
+msgid "Budget Line"
+msgstr "የበጀት መስመር"
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer__budget_line
+msgid "Budget Lines"
+msgstr "የበጀት መስመሮች"
+
+#. module: budget_transfer_2
+#: model:ir.actions.act_window,name:budget_transfer_2.act_budget_transfer
+#: model:ir.model,name:budget_transfer_2.model_budget_transfer
+#: model:ir.ui.menu,name:budget_transfer_2.menu_act_budget_transfer_view
+#: model:ir.ui.menu,name:budget_transfer_2.menu_root
+#: model_terms:ir.ui.view,arch_db:budget_transfer_2.view_budget_transfer_form
+#: model_terms:ir.ui.view,arch_db:budget_transfer_2.view_budget_transfer_tree_view
+msgid "Budget Transfer"
+msgstr "በጀት ማስተላለፍ"
+
+#. module: budget_transfer_2
+#: model:ir.model,name:budget_transfer_2.model_budget_transfer_line
+msgid "Budget Transfer Line"
+msgstr "የበጀት ማስተላለፊያ መስመር"
+
+#. module: budget_transfer_2
+#: model:ir.model,name:budget_transfer_2.model_budget_transfer_refuse_wizard
+msgid "Budget Transfer Refuse Reason Wizard"
+msgstr "የበጀት ማስተላለፍ ውድቅ ምክንያት"
+
+#. module: budget_transfer_2
+#: model_terms:ir.ui.view,arch_db:budget_transfer_2.budget_transfer_refuse_wizard_view_form
+msgid "Budget Transfer planning refuse reason"
+msgstr "የበጀት ማስተላለፍ ውድቅ ምክንያት"
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer_line__budget_type
+msgid "Budget Type"
+msgstr "የበጀት አይነት"
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer_line__from_budgetary
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer_line__to_budgetary
+msgid "Budgetary"
+msgstr "በጀት"
+
+#. module: budget_transfer_2
+#: model_terms:ir.ui.view,arch_db:budget_transfer_2.view_budget_transfer_form
+msgid "Budgetary Line"
+msgstr "የበጀት መስመር"
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer__campaign_id
+msgid "Campaign"
+msgstr "ዘመቻ"
+
+#. module: budget_transfer_2
+#: model:ir.model.fields.selection,name:budget_transfer_2.selection__budget_transfer__state__canceled
+#: model_terms:ir.ui.view,arch_db:budget_transfer_2.budget_transfer_refuse_wizard_view_form
+#: model_terms:ir.ui.view,arch_db:budget_transfer_2.view_budget_transfer_form
+msgid "Cancel"
+msgstr "ሰርዝ"
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer__create_uid
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer_line__create_uid
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer_refuse_wizard__create_uid
+msgid "Created by"
+msgstr "የተፈጠረ"
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer__create_date
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer_line__create_date
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer_refuse_wizard__create_date
+msgid "Created on"
+msgstr "ላይ ተፈጠረ"
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,help:budget_transfer_2.field_budget_transfer__access_url
+msgid "Customer Portal URL"
+msgstr ""
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer__date
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer_line__date
+msgid "Date"
+msgstr "ቀን"
+
+#. module: budget_transfer_2
+#: model_terms:ir.ui.view,arch_db:budget_transfer_2.view_budget_transfer_form
+#: model_terms:ir.ui.view,arch_db:budget_transfer_2.view_budget_transfer_tree_view
+msgid "Date From"
+msgstr "ቀን ከ"
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,help:budget_transfer_2.field_budget_transfer__approver_signed_on
+#: model:ir.model.fields,help:budget_transfer_2.field_budget_transfer__prepare_signed_on
+msgid "Date of the signature."
+msgstr "የፊርማው ቀን"
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer__display_name
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer_line__display_name
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer_refuse_wizard__display_name
+msgid "Display Name"
+msgstr "መጠሪያው ስም"
+
+#. module: budget_transfer_2
+#: model:ir.model.fields.selection,name:budget_transfer_2.selection__budget_transfer__state__draft
+msgid "Draft"
+msgstr "ረቂቅ"
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer__fiscal_year
+msgid "Fiscal Year"
+msgstr "በጀት ዓመት"
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer__message_follower_ids
+msgid "Followers"
+msgstr "ተከታዮች"
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "ተከታዮች (ሰርጦች)"
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "ተከታዮች (አጋሮች)"
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer_line__from_budget_code
+msgid "From Budget"
+msgstr "ከበጀት"
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer__id
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer_line__id
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer_refuse_wizard__id
+msgid "ID"
+msgstr "መታወቂያ"
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,help:budget_transfer_2.field_budget_transfer__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,help:budget_transfer_2.field_budget_transfer__message_needaction
+#: model:ir.model.fields,help:budget_transfer_2.field_budget_transfer__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,help:budget_transfer_2.field_budget_transfer__message_has_error
+#: model:ir.model.fields,help:budget_transfer_2.field_budget_transfer__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer__message_is_follower
+msgid "Is Follower"
+msgstr "ተከታይ ነው"
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer__is_pagum_from
+msgid "Is Pagum From"
+msgstr "ጳጉሜን ከ"
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer__is_refused
+msgid "Is Refused"
+msgstr "ውድቅ ተደርጓል"
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer__journal_id
+msgid "Journal"
+msgstr "ጆርናል"
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer____last_update
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer_line____last_update
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer_refuse_wizard____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer__write_uid
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer_line__write_uid
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer_refuse_wizard__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer__write_date
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer_line__write_date
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer_refuse_wizard__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer__medium_id
+msgid "Medium"
+msgstr ""
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer__name
+msgid "Name"
+msgstr "ስም"
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,help:budget_transfer_2.field_budget_transfer__approver_signed_by
+#: model:ir.model.fields,help:budget_transfer_2.field_budget_transfer__prepare_signed_by
+msgid "Name of the person that signed the SO."
+msgstr ""
+
+#. module: budget_transfer_2
+#: code:addons/budget_transfer_2/models/budget_transfer.py:0
+#: code:addons/budget_transfer_2/models/budget_transfer.py:0
+#: code:addons/budget_transfer_2/models/budget_transfer.py:0
+#, python-format
+msgid "New"
+msgstr "አዲስ"
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: budget_transfer_2
+#: model_terms:ir.actions.act_window,help:budget_transfer_2.act_budget_transfer
+msgid "No Budget Transfer"
+msgstr "የበጀት ማስተላለፍ የለም።"
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,help:budget_transfer_2.field_budget_transfer__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,help:budget_transfer_2.field_budget_transfer__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,help:budget_transfer_2.field_budget_transfer__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: budget_transfer_2
+#: model_terms:ir.ui.view,arch_db:budget_transfer_2.view_budget_transfer_form
+msgid "Planed Amount"
+msgstr "የታቀደ መጠን"
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer__access_url
+msgid "Portal Access URL"
+msgstr ""
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer_refuse_wizard__reason
+msgid "Reason"
+msgstr "ምክንያት"
+
+#. module: budget_transfer_2
+#: model_terms:ir.ui.view,arch_db:budget_transfer_2.budget_transfer_template_refuse_reason
+msgid "Reason :"
+msgstr "ምክንያት :"
+
+#. module: budget_transfer_2
+#: model_terms:ir.ui.view,arch_db:budget_transfer_2.budget_transfer_refuse_wizard_view_form
+msgid "Reason to refuse Budget Transfer"
+msgstr "የበጀት ማስተላለፍን ውድቅ ለማድረግ ምክንያት"
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer__squ
+#: model_terms:ir.ui.view,arch_db:budget_transfer_2.view_budget_transfer_form
+msgid "Reference"
+msgstr "ማጣቀሻ"
+
+#. module: budget_transfer_2
+#: model_terms:ir.ui.view,arch_db:budget_transfer_2.budget_transfer_refuse_wizard_view_form
+msgid "Refuse"
+msgstr "እምቢ"
+
+#. module: budget_transfer_2
+#: model:ir.actions.act_window,name:budget_transfer_2.budget_transfer_refuse_wizard_action
+msgid "Refuse Budget"
+msgstr "በጀት እምቢ"
+
+#. module: budget_transfer_2
+#: model_terms:ir.ui.view,arch_db:budget_transfer_2.view_budget_transfer_form
+msgid "Reject Request"
+msgstr "ጥያቄን ውድቅ አድርግ"
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer_line__budget_id
+msgid "Releation"
+msgstr "መለቀቅ"
+
+#. module: budget_transfer_2
+#: model_terms:ir.ui.view,arch_db:budget_transfer_2.view_budget_transfer_form
+msgid "Request"
+msgstr "ጥያቄ"
+
+#. module: budget_transfer_2
+#: model:ir.model.fields.selection,name:budget_transfer_2.selection__budget_transfer__state__requested
+msgid "Requested"
+msgstr "ተጠይቋል"
+
+#. module: budget_transfer_2
+#: model_terms:ir.ui.view,arch_db:budget_transfer_2.view_budget_transfer_form
+msgid "Requested by"
+msgstr "የተጠየቀው በ"
+
+#. module: budget_transfer_2
+#: model_terms:ir.ui.view,arch_db:budget_transfer_2.view_budget_transfer_form
+msgid "Reset"
+msgstr "ወደ ረቂቅ ዳግም አስጀምር"
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer__activity_user_id
+msgid "Responsible User"
+msgstr "ኃላፊነት የሚሰማው ተጠቃሚ"
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer__access_token
+msgid "Security Token"
+msgstr ""
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer__approver_signature
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer__prepare_signature
+msgid "Signature"
+msgstr "ፊርማ"
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,help:budget_transfer_2.field_budget_transfer__approver_signature
+#: model:ir.model.fields,help:budget_transfer_2.field_budget_transfer__prepare_signature
+msgid "Signature received through the portal."
+msgstr "ፊርማ በቦርዱ በኩል ተቀበለ"
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer__approver_signed_by
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer__prepare_signed_by
+msgid "Signed By"
+msgstr "የተፈረመ"
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer__approver_signed_on
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer__prepare_signed_on
+msgid "Signed On"
+msgstr "ተፈርሟል"
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer__source_id
+msgid "Source"
+msgstr ""
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer__state
+msgid "Status"
+msgstr "ሁኔታ"
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,help:budget_transfer_2.field_budget_transfer__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: budget_transfer_2
+#: code:addons/budget_transfer_2/models/budget_transfer.py:0
+#, python-format
+msgid "The approved amount fields are required for budget transfer approval."
+msgstr "ለበጀት ማስተላለፍ ማጽደቅ የጸደቀው ብር መጠን ያስፈልጋለ።"
+
+#. module: budget_transfer_2
+#: code:addons/budget_transfer_2/models/budget_transfer.py:0
+#, python-format
+msgid ""
+"The approved amount is greater than the budget code amount. Please check "
+"your approved amount;  it must be less than the transfer budget code amount."
+msgstr "የተፈቀደው መጠን ከበጀት ኮድ መጠን ይበልጣል። እባክዎ ይህን ያረጋግጡ"
+"የእርስዎ የተፈቀደው መጠን፣ ከዝውውር የበጀት ኮድ መጠን ያነሰ መሆን አለበት።"
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,help:budget_transfer_2.field_budget_transfer__campaign_id
+msgid ""
+"This is a name that helps you keep track of your different campaign efforts,"
+" e.g. Fall_Drive, Christmas_Special"
+msgstr ""
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,help:budget_transfer_2.field_budget_transfer__medium_id
+msgid "This is the method of delivery, e.g. Postcard, Email, or Banner Ad"
+msgstr ""
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,help:budget_transfer_2.field_budget_transfer__source_id
+msgid ""
+"This is the source of the link, e.g. Search Engine, another domain, or name "
+"of email list"
+msgstr ""
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer__time_frame
+msgid "Time Frame"
+msgstr "የጊዜ ገደብ"
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer_line__to_budget_code
+msgid "To Budget"
+msgstr "ወደ በጀት"
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_account_account__is_transfer_account
+msgid "Transfer Account"
+msgstr "የዝውውር መጠን"
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer_line__transfer_amount
+msgid "Transfer Amount"
+msgstr "የዝውውር መጠን"
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,help:budget_transfer_2.field_budget_transfer__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,help:budget_transfer_2.field_budget_transfer__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: budget_transfer_2
+#: code:addons/budget_transfer_2/models/budget_transfer.py:0
+#, python-format
+msgid "You cannot delete a budget transfer request that has been %s"
+msgstr "%s የነበረውን የበጀት ማስተላለፍ ጥያቄ መሰረዝ አይችሉም"
+
+#. module: budget_transfer_2
+#: code:addons/budget_transfer_2/models/budget_transfer.py:0
+#, python-format
+msgid ""
+"You cannot transfer from the budget code %s because it is a non-transferable"
+" budget code."
+msgstr "በጀት ኮድ %s ማስተላለፍ አይችሉም ምክንያቱም የማይተላለፍ የበጀት ኮድ ነው"
+
+#. module: budget_transfer_2
+#: model_terms:ir.ui.view,arch_db:budget_transfer_2.budget_transfer_template_refuse_reason
+msgid "Your budget transfer request"
+msgstr "የበጀት ማስተላለፍ ጥያቄዎ"
+
+#. module: budget_transfer_2
+#: model_terms:ir.ui.view,arch_db:budget_transfer_2.budget_transfer_template_refuse_reason
+msgid "has been refused"
+msgstr "ውድቅ ተደርጓል"
+
+#. module: budget_transfer_2
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer__ethiopian_from
+#: model:ir.model.fields,field_description:budget_transfer_2.field_budget_transfer__pagum_from
+msgid "in ethiopian date"
+msgstr "ቀን"
+
+#. module: budget_transfer_2
+#: code:addons/budget_transfer_2/models/budget_transfer.py:0
+#, python-format
+msgid "please set Time frame for the journal"
+msgstr "እባክዎ መዝገብ የጊዜ እርከን ያዘጋጁ"

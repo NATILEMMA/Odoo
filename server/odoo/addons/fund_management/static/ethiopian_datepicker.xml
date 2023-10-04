@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template id="template_view" xml:space="preserve">
+    <t t-name='widget_three'>
+        <div class="o_datepicker">
+            <input type="text"
+                class="o_datepicker_input o_input oe_simple_date oe_datepicker_master"
+                t-att-name="widget.name"
+                id="DatepickerThree"
+                t-att-placeholder="placeholder"/>
+            <span class="o_datepicker_button"/>
+        </div>
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/fund_management/static/src/js/ethiopian_datepicker3.js"></script>
+        </xpath>
+    </t>
+</template>

@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+
+<odoo>
+
+    <!-- This record will handle the member assembly -->
+    <record id="member_assembly_cell_meeting_tree" model="ir.ui.view">
+        <field name="name">Members in Meeting</field>
+        <field name="model">member.assembly</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom" create="false" duplicate="false">
+                <field name="partner_id" readonly="1"/>
+                <!-- <field name="wereda_id" readonly="1"/> -->
+                <field name="assembly_presence" string="Presence" required="1"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="member_assembly_cell_with_main_meeting_action" model="ir.actions.act_window">
+        <field name="name">Members in Meeting</field>
+        <field name="res_model">member.assembly</field>
+        <field name="view_mode">tree,pivot,graph</field>
+        <field name="limit">40</field>
+        <field name="view_id" ref="member_assembly_cell_meeting_tree"/>
+        <field name="domain">[('meeting_cell_with_main_office_id', '=', active_id)]</field>
+    </record>
+
+    <record id="member_assembly_cell_meeting_action" model="ir.actions.act_window">
+        <field name="name">Members in Meeting</field>
+        <field name="res_model">member.assembly</field>
+        <field name="view_mode">tree,pivot,graph</field>
+        <field name="limit">40</field>
+        <field name="view_id" ref="member_assembly_cell_meeting_tree"/>
+        <field name="domain">[('meeting_cell_together_id', '=', active_id)]</field>
+    </record>
+
+
+
+    <record id="meeting_cell_form_inherit" model="ir.ui.view">
+        <field name="name">Meeting Cells</field>
+        <field name="model">meeting.cells</field>
+        <field name="inherit_id" ref="members_handlers_annual_plans.meeting_cell_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form/header" position="inside">
+                <button name="start_meeting" string="Start" states="pending" type="object" groups="member_minor_configuration.member_group_main_assembler" class="btn btn-success"  confirm="Are you sure you want to Start the Meeting?"/>
+            </xpath>
+            <xpath expr="//form/sheet" position="inside">
+                <div class="oe_button_box" name="button_box">
+                    <button class="oe_stat_button" name="%(member_assembly_cell_with_main_meeting_action)d" type="action" icon="fa-users" attrs="{'invisible': [('state', 'not in', ['started', 'finished'])]}">
+                        <field name="participant_counter" string="Participants" widget="statinfo" attrs="{'invisible': [('state', 'not in', ['started', 'finished'])]}"/>
+                    </button>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+
+    <record id="meeting_eachother_form_cell_inherit" model="ir.ui.view">
+        <field name="name">Meeting Eachother</field>
+        <field name="model">meeting.each.other</field>
+        <field name="inherit_id" ref="members_handlers_annual_plans.meeting_eachother_form_cell"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form/header" position="inside">
+                <button name="start_meeting" string="Start" type="object" states="pending" groups="members_custom.member_group_assembler" class="btn btn-success" confirm="Are you sure you want to Start the Meeting?"/>
+            </xpath>
+            <xpath expr="//form/sheet" position="inside">
+                <div class="oe_button_box" name="button_box">
+                    <button class="oe_stat_button" name="%(member_assembly_cell_meeting_action)d" type="action" icon="fa-users" attrs="{'invisible': [('state', 'not in', ['started', 'finished'])]}">
+                        <field name="participant_counter" string="Participants" widget="statinfo" attrs="{'invisible': [('state', 'not in', ['started', 'finished'])]}"/>
+                    </button>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

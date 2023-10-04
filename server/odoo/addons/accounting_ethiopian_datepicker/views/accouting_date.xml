@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="account_move_ethiopian_form" model="ir.ui.view">
+        <field name="name">account.move.ethiopian.form</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form" />
+        <field name="arch" type="xml">
+             <field name='date' position="replace">
+                        <field name="is_pagum_from" invisible="1"/>
+                        <field  name="date"  class="col-50" colspan="3" groups="EthiopianCalendar.group_gregory"
+                        attrs="{'readonly':[('state', '!=','draft')]}"/>
+                        <field  name="ethiopian_from" class="oe_read_only" string="Accounting Date" style=" float:left" attrs="{'invisible': ['|', ('is_pagum_from', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                        <field  name="pagum_from" class="oe_read_only"  string="Accounting Date" style=" float:left"  attrs="{'invisible': ['|',('is_pagum_from', '!=',False)]}"  groups="EthiopianCalendar.group_ethio_datepicker"/>
+
+                         <div>
+                         </div>
+                        <div style="margin-bottom:40px;margin-top:-15px;margin-left:10px;margin-right:0px">
+                        <widget name="ethiopian_calander_widget"  style=" float:left;width:226px;" class="oe_edit_only"  groups="EthiopianCalendar.group_ethio_datepicker"
+                             attrs="{'invisible': ['|',('state', '!=','draft')]}"/>
+                        </div>
+
+            </field>
+<!--             <xpath expr="//label[@for='invoice_date']']" position="attributes">-->
+<!--                           <attribute name="invisible">1</attribute>-->
+<!--              </xpath>-->
+            <field name='invoice_date' position="replace">
+<!--                        <div style="margin-bottom:38px;margin-top:0px;margin-left:0px;margin-right:0px" attrs="{'invisible': [('type', 'not in', ('out_invoice', 'out_refund', 'in_invoice', 'in_refund', 'out_receipt', 'in_receipt'))]}">-->
+<!--                        <field name="is_pagum_three" invisible="1"/>-->
+<!--                        <field  name="invoice_date"  class="col-50" colspan="3" groups="EthiopianCalendar.group_gregory"/>-->
+<!--                        <field  name="ethiopian_three" readonly="1" string="invoice_date" style="float:left" attrs="{'invisible': ['|',('type', 'not in', ('out_invoice', 'out_refund', 'in_invoice', 'in_refund', 'out_receipt', 'in_receipt')),('is_pagum_three', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker"/>-->
+<!--                        <field  name="pagum_three" readonly="1"  string="Date From" style=" float:left"  attrs="{'invisible': ['|',('is_pagum_three', '!=',False)  ]}"  groups="EthiopianCalendar.group_ethio_datepicker"/>-->
+<!--                        </div>-->
+<!--                         <div>-->
+<!--                         </div>-->
+<!--                        <div style="margin-bottom:40px;margin-top:-35px;margin-left:10px;margin-right:0px">-->
+<!--                        <widget name="ethiopian_calander_widget_three"  style=" float:left;width:226px;" class="oe_edit_only"  groups="EthiopianCalendar.group_ethio_datepicker"-->
+<!--                             attrs="{'invisible': ['|',('state', '!=','draft'),('type', 'not in', ('out_invoice', 'out_refund', 'in_invoice', 'in_refund', 'out_receipt', 'in_receipt'))]}"/>-->
+<!--                        </div>-->
+
+            </field>
+                  <field name='invoice_date_due' position="replace">
+<!--                        <field name="is_pagum_to" invisible="1"/>-->
+<!--                        <field  name="invoice_date_due"  class="col-50" colspan="3" groups="EthiopianCalendar.group_gregory"  attrs="{'invisible': [('type', 'not in', ('in_invoice','out_invoice', 'out_refund', 'in_refund', 'out_receipt', 'in_receipt'))]}"/>-->
+<!--                        <field  name="ethiopian_to" readonly="1" string="Date From" style=" float:left" attrs="{'invisible': ['|', ('is_pagum_to', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker"/>-->
+<!--                        <field  name="pagum_to" readonly="1"  string="Date From" style=" float:left"  attrs="{'invisible': ['|',('is_pagum_to', '!=',False)  ]}"  groups="EthiopianCalendar.group_ethio_datepicker"/>-->
+
+<!--                         <div>-->
+<!--                         </div>-->
+<!--                        <div style="margin-bottom:40px;margin-top:0px;margin-left:10px;margin-right:0px">-->
+<!--                        <widget name="ethiopian_calander_widget_two"  style=" float:left;width:116px;" class="oe_edit_only"  groups="EthiopianCalendar.group_ethio_datepicker"-->
+<!--                            attrs="{'invisible': ['|',('state', '!=','draft'),('type', 'not in', ('out_invoice', 'out_refund', 'in_invoice', 'in_refund', 'out_receipt', 'in_receipt'))]}"/>-->
+<!--                        </div>-->
+
+            </field>
+        </field>
+    </record>
+<!--        <record model="ir.ui.view" id="account_move_tree_inherit_13">-->
+<!--            <field name="name">account.move.tree.inherit</field>-->
+<!--            <field name="model">account.move</field>-->
+<!--            <field name="inherit_id" ref="account.view_invoice_tree"/>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <xpath expr="//field[@name='invoice_date']" position="replace">-->
+<!--                     <field name="is_pagum_to" invisible="1"/>-->
+<!--                    <field  name="invoice_date"   groups="EthiopianCalendar.group_gregory"/>-->
+<!--                    <field  name="ethiopian_to"  string="Date"   attrs="{'invisible': ['|', ('is_pagum_to', '=',False) ]}" groups="EthiopianCalendar.group_ethio_datepicker"/>-->
+<!--                   <field  name="pagum_to"  string="Date"  optional="True" groups="EthiopianCalendar.group_ethio_datepicker"/>-->
+<!--                </xpath>-->
+<!--                <xpath expr="//field[@name='invoice_date_due']" position="replace">-->
+<!--                     <field name="is_pagum_three" invisible="1"/>-->
+<!--                    <field  name="invoice_date_due"   groups="EthiopianCalendar.group_gregory"/>-->
+<!--                    <field  name="ethiopian_three"  string="Date"   attrs="{'invisible': ['|', ('is_pagum_to', '=',False) ]}" groups="EthiopianCalendar.group_ethio_datepicker"/>-->
+<!--                   <field  name="pagum_three"  string="Date"  optional="True" groups="EthiopianCalendar.group_ethio_datepicker"/>-->
+<!--                </xpath>-->
+<!--            </field>-->
+<!--        </record>-->
+         <record model="ir.ui.view" id="account_move_tree_inherit_12">
+            <field name="name">account.move.tree.inherit</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_move_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date']" position="replace">
+                        <field name="is_pagum_from" invisible="1"/>
+                        <field  name="date"   groups="EthiopianCalendar.group_gregory"/>
+                        <field  name="ethiopian_from"  string="Due Date" attrs="{'invisible': ['|', ('is_pagum_from', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                       <field  name="pagum_from"  string="Due Date"   optional="True"  groups="EthiopianCalendar.group_ethio_datepicker"/>
+                </xpath>
+            </field>
+        </record>
+
+</odoo>

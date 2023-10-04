@@ -1,0 +1,392 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* members_custom_ethiopian_calandar
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20220525\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-22 04:56+0000\n"
+"PO-Revision-Date: 2023-08-22 04:56+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: members_custom_ethiopian_calandar
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_annual_plans__ethiopian_from
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_annual_plans__is_pagum_from
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_annual_plans__pagum_from
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_annual_plans_subcity__ethiopian_from
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_annual_plans_subcity__is_pagum_from
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_annual_plans_subcity__pagum_from
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_annual_plans_wereda__ethiopian_from
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_annual_plans_wereda__is_pagum_from
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_annual_plans_wereda__pagum_from
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_revised_plan_history__ethiopian_from
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_revised_plan_history__is_pagum_from
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_revised_plan_history__pagum_from
+msgid "Approved Date"
+msgstr "የጸደቀበት ቀን"
+
+#. module: members_custom_ethiopian_calandar
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_supporter_members__ethiopian_to
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_supporter_members__is_pagum_to
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_supporter_members__pagum_to
+msgid "Becomes A Candidate On"
+msgstr "እጩ የሚሆነው በ"
+
+#. module: members_custom_ethiopian_calandar
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_candidate_members__ethiopian_to
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_candidate_members__is_pagum_to
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_candidate_members__pagum_to
+msgid "Becomes A Member On"
+msgstr "አባል የሚሆነው በ"
+
+#. module: members_custom_ethiopian_calandar
+#: model:ir.model,name:members_custom_ethiopian_calandar.model_candidate_members
+msgid "Candidate Approval"
+msgstr "እጩ ማጽደቅያ"
+
+#. module: members_custom_ethiopian_calandar
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_annual_plan_report__ethiopian_from
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_annual_plan_report__is_pagum_from
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_annual_plan_report__pagum_from
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_archived_information__ethiopian_from
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_archived_information__is_pagum_from
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_archived_information__pagum_from
+#: model_terms:ir.ui.view,arch_db:members_custom_ethiopian_calandar.candidates_members_inherited_view
+#: model_terms:ir.ui.view,arch_db:members_custom_ethiopian_calandar.donor_form_view_inherited_view
+#: model_terms:ir.ui.view,arch_db:members_custom_ethiopian_calandar.membership_view_partner_form_inherited_view
+#: model_terms:ir.ui.view,arch_db:members_custom_ethiopian_calandar.supporter_members_inherited_view
+msgid "Date From"
+msgstr "ከ ቀን"
+
+#. module: members_custom_ethiopian_calandar
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_annual_plan_report__ethiopian_to
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_annual_plan_report__is_pagum_to
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_annual_plan_report__pagum_to
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_archived_information__ethiopian_to
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_archived_information__is_pagum_to
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_archived_information__pagum_to
+#: model_terms:ir.ui.view,arch_db:members_custom_ethiopian_calandar.candidates_members_inherited_view
+#: model_terms:ir.ui.view,arch_db:members_custom_ethiopian_calandar.donor_form_view_inherited_view
+#: model_terms:ir.ui.view,arch_db:members_custom_ethiopian_calandar.membership_view_partner_form_inherited_view
+#: model_terms:ir.ui.view,arch_db:members_custom_ethiopian_calandar.supporter_members_inherited_view
+msgid "Date To"
+msgstr "እስከ ቀን"
+
+#. module: members_custom_ethiopian_calandar
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_candidate_members__ethiopian_from
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_candidate_members__is_pagum_from
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_candidate_members__pagum_from
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_donors__ethiopian_from
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_donors__is_pagum_from
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_donors__pagum_from
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_register_members__ethiopian_from
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_register_members__is_pagum_from
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_register_members__pagum_from
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_res_partner__ethiopian_from
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_res_partner__is_pagum_from
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_res_partner__pagum_from
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_res_users__ethiopian_from
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_res_users__is_pagum_from
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_res_users__pagum_from
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_supporter_members__ethiopian_from
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_supporter_members__is_pagum_from
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_supporter_members__pagum_from
+msgid "Date of Birth"
+msgstr "የተወለደበት ቀን"
+
+#. module: members_custom_ethiopian_calandar
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_meeting_cells__ethiopian_from
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_meeting_cells__is_pagum_from
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_meeting_cells__pagum_from
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_meeting_each_other__ethiopian_from
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_meeting_each_other__is_pagum_from
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_meeting_each_other__pagum_from
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_meeting_each_other_main__ethiopian_from
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_meeting_each_other_main__is_pagum_from
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_meeting_each_other_main__pagum_from
+msgid "Date of Meeting"
+msgstr "የስብሰባ ቀን"
+
+#. module: members_custom_ethiopian_calandar
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_member_complaint__ethiopian_from
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_member_complaint__is_pagum_from
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_member_complaint__pagum_from
+msgid "Date of remedy"
+msgstr "መፍትሄ የሚሰጥበት ቀን"
+
+#. module: members_custom_ethiopian_calandar
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_member_complaint__ethiopian_three
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_member_complaint__is_pagum_three
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_member_complaint__pagum_three
+msgid "Date of remedy for City"
+msgstr "የከተማ መፍትሄ የሚሰጥበት ቀን"
+
+#. module: members_custom_ethiopian_calandar
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_member_complaint__ethiopian_to
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_member_complaint__is_pagum_to
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_member_complaint__pagum_to
+msgid "Date of remedy for Subcity"
+msgstr "የክፍለ ከተማ መፍትሄ የሚሰጥበት ቀን"
+
+#. module: members_custom_ethiopian_calandar
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_assembly__ethiopian_to
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_assembly__is_pagum_to
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_assembly__pagum_to
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_member_training__ethiopian_to
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_member_training__is_pagum_to
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_member_training__pagum_to
+msgid "End Date"
+msgstr "የመጨረሻ ቀን"
+
+#. module: members_custom_ethiopian_calandar
+#: model:ir.model,name:members_custom_ethiopian_calandar.model_member_complaint
+msgid "Member Complaints"
+msgstr "የአባል ቅሬታዎች"
+
+#. module: members_custom_ethiopian_calandar
+#: model:ir.model,name:members_custom_ethiopian_calandar.model_member_training
+msgid "Member Training"
+msgstr "የአባላት ስልጠና"
+
+#. module: members_custom_ethiopian_calandar
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_meeting_cells__ethiopian_to
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_meeting_cells__is_pagum_to
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_meeting_cells__pagum_to
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_meeting_each_other__ethiopian_to
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_meeting_each_other__is_pagum_to
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_meeting_each_other__pagum_to
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_meeting_each_other_main__ethiopian_to
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_meeting_each_other_main__is_pagum_to
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_meeting_each_other_main__pagum_to
+msgid "Next Date of Meeting"
+msgstr "የሚቀጥለውን የስብሰባ ቀን"
+
+#. module: members_custom_ethiopian_calandar
+#: code:addons/members_custom_ethiopian_calandar/models/complaint.py:0
+#: code:addons/members_custom_ethiopian_calandar/models/complaint.py:0
+#: code:addons/members_custom_ethiopian_calandar/models/complaint.py:0
+#, python-format
+msgid "Pick A Date After The Date It Was Created"
+msgstr "ቅሬታው ከቀረበበት ቀን በኃላ ያሉት ቀናት ይምረጡ።"
+
+#. module: members_custom_ethiopian_calandar
+#: code:addons/members_custom_ethiopian_calandar/models/meeting.py:0
+#: code:addons/members_custom_ethiopian_calandar/models/meeting.py:0
+#: code:addons/members_custom_ethiopian_calandar/models/meeting.py:0
+#: code:addons/members_custom_ethiopian_calandar/models/meeting.py:0
+#: code:addons/members_custom_ethiopian_calandar/models/meeting.py:0
+#: code:addons/members_custom_ethiopian_calandar/models/meeting.py:0
+#: code:addons/members_custom_ethiopian_calandar/models/meeting.py:0
+#: code:addons/members_custom_ethiopian_calandar/models/meeting.py:0
+#: code:addons/members_custom_ethiopian_calandar/models/meeting.py:0
+#, python-format
+msgid "Please A Date After The Current Meeting Date"
+msgstr "እባክዎን ከአሁኑ የስብሰባ ቀን በኋላ ቀን ይምረጡ"
+
+#. module: members_custom_ethiopian_calandar
+#: code:addons/members_custom_ethiopian_calandar/models/meeting.py:0
+#: code:addons/members_custom_ethiopian_calandar/models/meeting.py:0
+#: code:addons/members_custom_ethiopian_calandar/models/meeting.py:0
+#: code:addons/members_custom_ethiopian_calandar/models/meeting.py:0
+#: code:addons/members_custom_ethiopian_calandar/models/meeting.py:0
+#: code:addons/members_custom_ethiopian_calandar/models/meeting.py:0
+#, python-format
+msgid "Please A Date After Today"
+msgstr "እባክዎ ከዛሬ በኋላ ቀን ይምረጡ"
+
+#. module: members_custom_ethiopian_calandar
+#: code:addons/members_custom_ethiopian_calandar/models/candidate.py:0
+#, python-format
+msgid "Please Add The Appropriate Age Of The Candidate"
+msgstr "እባክዎን የእጩውን ተገቢ ዕድሜ ይጨምሩ"
+
+#. module: members_custom_ethiopian_calandar
+#: code:addons/members_custom_ethiopian_calandar/models/donor.py:0
+#, python-format
+msgid "Please Add The Appropriate Age Of The Donor"
+msgstr "እባክዎን የለጋሹን ተገቢውን ዕድሜ ይጨምሩ"
+
+#. module: members_custom_ethiopian_calandar
+#: code:addons/members_custom_ethiopian_calandar/models/registered.py:0
+#: code:addons/members_custom_ethiopian_calandar/models/registered.py:0
+#, python-format
+msgid "Please Add The Appropriate Age for The Registree"
+msgstr "እባኮትን ለተመዝጋቢው ተገቢውን እድሜ ይጨምሩ"
+
+#. module: members_custom_ethiopian_calandar
+#: code:addons/members_custom_ethiopian_calandar/models/supporter.py:0
+#, python-format
+msgid "Please Set Age Limit for Supporter in the Configuration"
+msgstr "እባክዎን በማዋቀርያ ውስጥ ለደጋፊ የዕድሜ ገደብ ያዘጋጁ"
+
+#. module: members_custom_ethiopian_calandar
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_revised_plan_history__ethiopian_to
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_revised_plan_history__is_pagum_to
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_revised_plan_history__pagum_to
+msgid "Revised Date"
+msgstr "የተሻሻለበት ቀን"
+
+#. module: members_custom_ethiopian_calandar
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_assembly__ethiopian_from
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_assembly__is_pagum_from
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_assembly__pagum_from
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_member_training__ethiopian_from
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_member_training__is_pagum_from
+#: model:ir.model.fields,field_description:members_custom_ethiopian_calandar.field_member_training__pagum_from
+msgid "Start Date"
+msgstr "የመጀመሪያ ቀን"
+
+#. module: members_custom_ethiopian_calandar
+#: model:ir.model,name:members_custom_ethiopian_calandar.model_supporter_members
+msgid "Supporter Approval"
+msgstr "ደጋፊ ማፅደቅ"
+
+#. module: members_custom_ethiopian_calandar
+#: code:addons/members_custom_ethiopian_calandar/models/candidate.py:0
+#, python-format
+msgid "The Candidate's Age Must Be Above 15"
+msgstr "የእጩው ዕድሜ ከ15 በላይ መሆን አለበት።"
+
+#. module: members_custom_ethiopian_calandar
+#: code:addons/members_custom_ethiopian_calandar/models/donor.py:0
+#, python-format
+msgid "The Donor's Age Must Be Above 15"
+msgstr "የለጋሹ ዕድሜ ከ15 በላይ መሆን አለበት።"
+
+#. module: members_custom_ethiopian_calandar
+#: code:addons/members_custom_ethiopian_calandar/models/registered.py:0
+#: code:addons/members_custom_ethiopian_calandar/models/registered.py:0
+#, python-format
+msgid "The Registree's Age Must Be Above 15"
+msgstr "የተመዝጋቢው ዕድሜ ከ15 በላይ መሆን አለበት።"
+
+#. module: members_custom_ethiopian_calandar
+#: code:addons/members_custom_ethiopian_calandar/models/supporter.py:0
+#: code:addons/members_custom_ethiopian_calandar/models/supporter.py:0
+#: code:addons/members_custom_ethiopian_calandar/models/supporter.py:0
+#, python-format
+msgid "This Age isn't within the Age Limit Range given for Supporter"
+msgstr "ይህ እድሜ ለደጋፊ በተሰጠው የዕድሜ ገደብ ውስጥ አይደለም።"
+
+#. module: members_custom_ethiopian_calandar
+#: model:ir.model,name:members_custom_ethiopian_calandar.model_revised_plan_history
+msgid "This model will contain the history of the planned annual"
+msgstr "ይህ ሞዴል የታቀደውን ዓመታዊ ታሪክ ይይዛል"
+
+#. module: members_custom_ethiopian_calandar
+#: model:ir.model,name:members_custom_ethiopian_calandar.model_register_members
+msgid ""
+"This model will create registration of members beform they become leagues or"
+" leaders"
+msgstr "ይህ ሞዴል ሊግ ወይም መሪዎች በሚሆኑበት መልኩ የአባላት ምዝገባን ይፈጥራል"
+
+#. module: members_custom_ethiopian_calandar
+#: model:ir.model,name:members_custom_ethiopian_calandar.model_donors
+msgid "This model will handle Donors members"
+msgstr "ይህ ሞዴል ለጋሾች ይፈጥራል::"
+
+#. module: members_custom_ethiopian_calandar
+#: model:ir.model,name:members_custom_ethiopian_calandar.model_meeting_each_other_main
+msgid "This model will handle meeting of Basic Organization with itself"
+msgstr "ይህ ሞዴል የመሠረታዊ ድርጅትን ስብሰባ ከራሱ ጋር ይይዛል።"
+
+#. module: members_custom_ethiopian_calandar
+#: model:ir.model,name:members_custom_ethiopian_calandar.model_meeting_cells
+msgid "This model will handle meeting of Cells with Basic Organization"
+msgstr "ይህ ሞዴል የሕዋሶችን ከመሠረታዊ ድርጅት ጋር መገናኘትን ይቆጣጠራል"
+
+#. module: members_custom_ethiopian_calandar
+#: model:ir.model,name:members_custom_ethiopian_calandar.model_meeting_each_other
+msgid "This model will handle meeting of Cells with Members"
+msgstr "ይህ ሞዴል ሕዋሶችን ከአባላት ጋር ስብሰባን ያስተናግዳል::"
+
+#. module: members_custom_ethiopian_calandar
+#: model:ir.model,name:members_custom_ethiopian_calandar.model_annual_plans
+msgid "This model will handle the annual members estimation planning"
+msgstr "ይህ ሞዴል ዓመታዊ የአባላት ግምት ዕቅድ ይፈጥራል::"
+
+#. module: members_custom_ethiopian_calandar
+#: model:ir.model,name:members_custom_ethiopian_calandar.model_annual_plans_subcity
+msgid ""
+"This model will handle the annual members estimation planning in subcity"
+msgstr "ይህ ሞዴል ዓመታዊ የክፍለ ከተማ የአባላት ግምት እቅድ ማውጣት ይፈጥራል::"
+
+#. module: members_custom_ethiopian_calandar
+#: model:ir.model,name:members_custom_ethiopian_calandar.model_annual_plans_wereda
+msgid ""
+"This model will handle the annual members estimation planning in wereda"
+msgstr "ይህ ሞዴል ዓመታዊ የወረዳ የአባላት ግምት እቅድ ማውጣት ይፈጥራል::"
+
+#. module: members_custom_ethiopian_calandar
+#: model:ir.model,name:members_custom_ethiopian_calandar.model_annual_plan_report
+msgid "This model will handle the reporting of Annual Plannings"
+msgstr "ይህ ሞዴል ዓመታዊ ዕቅዶችን ሪፖርት ማድረግን ይፈጥራል::"
+
+#. module: members_custom_ethiopian_calandar
+#: model:ir.model,name:members_custom_ethiopian_calandar.model_archived_information
+msgid "This will handle archiving_information"
+msgstr "ይህ የማህደር መረጃን ያስተናግዳል።"
+
+#. module: members_custom_ethiopian_calandar
+#: model:ir.model,name:members_custom_ethiopian_calandar.model_assembly
+msgid "This will handle the creation of Assemblies"
+msgstr "ይህ ስብሰባዎችን መፍጠርን ይቆጣጠራል"
+
+#. module: members_custom_ethiopian_calandar
+#: code:addons/members_custom_ethiopian_calandar/models/donor.py:0
+#: code:addons/members_custom_ethiopian_calandar/models/donor.py:0
+#: code:addons/members_custom_ethiopian_calandar/models/registered.py:0
+#: code:addons/members_custom_ethiopian_calandar/models/registered.py:0
+#: code:addons/members_custom_ethiopian_calandar/models/registered.py:0
+#: code:addons/members_custom_ethiopian_calandar/models/registered.py:0
+#: code:addons/members_custom_ethiopian_calandar/models/supporter.py:0
+#: code:addons/members_custom_ethiopian_calandar/models/supporter.py:0
+#, python-format
+msgid "You Have To Pick A Date Before Today."
+msgstr "ከዛሬ ቀን በፊት መምረጥ አለቦት።"
+
+#. module: members_custom_ethiopian_calandar
+#: code:addons/members_custom_ethiopian_calandar/models/meeting.py:0
+#: code:addons/members_custom_ethiopian_calandar/models/meeting.py:0
+#: code:addons/members_custom_ethiopian_calandar/models/meeting.py:0
+#, python-format
+msgid "You Have To Pick A Date for Meeting"
+msgstr "ለስብሰባ ቀን መምረጥ አለቦት"
+
+#. module: members_custom_ethiopian_calandar
+#: code:addons/members_custom_ethiopian_calandar/models/meeting.py:0
+#: code:addons/members_custom_ethiopian_calandar/models/meeting.py:0
+#: code:addons/members_custom_ethiopian_calandar/models/meeting.py:0
+#, python-format
+msgid "You Have To Pick A Date for Next Meeting"
+msgstr "ለቀጣይ ስብሰባ ቀን መምረጥ አለቦት"
+
+#. module: members_custom_ethiopian_calandar
+#: code:addons/members_custom_ethiopian_calandar/models/donor.py:0
+#, python-format
+msgid "You Have To Pick A Date to set Age of the Donor"
+msgstr "የለጋሹን ዕድሜ ለመወሰን ቀን መምረጥ አለብዎት"
+
+#. module: members_custom_ethiopian_calandar
+#: code:addons/members_custom_ethiopian_calandar/models/registered.py:0
+#: code:addons/members_custom_ethiopian_calandar/models/registered.py:0
+#, python-format
+msgid "You Have To Pick A Date to set Age of the Registree"
+msgstr "የተመዝጋቢውን ዕድሜ ለመወሰን ቀን መምረጥ አለብዎት"
+
+#. module: members_custom_ethiopian_calandar
+#: code:addons/members_custom_ethiopian_calandar/models/supporter.py:0
+#, python-format
+msgid "You Have To Pick A Date to set Age of the Supporter"
+msgstr "የደጋፊን ዕድሜ ለመወሰን ቀን መምረጥ አለብዎት"
+
+#. module: members_custom_ethiopian_calandar
+#: model:ir.model,name:members_custom_ethiopian_calandar.model_res_partner
+msgid "visitor profile detail information"
+msgstr "የጎብኚዎች መገለጫ ዝርዝር መረጃ"

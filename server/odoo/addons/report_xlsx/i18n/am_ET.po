@@ -1,0 +1,76 @@
+# Date created: 2023-06-17 02:34:38 by dichthuatphuongdong.com
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-06-17 03:13:39+0000"
+"MIME-Version: 1.0"
+"Content-Type: text/plain; charset=UTF-8"
+"Content-Transfer-Encoding: 8bit"
+"Plural-Forms: nplurals=1; plural=0;"
+"X-Generator: GlotPress/3.0.0-alpha.2"
+"Language: en_GB"
+"Project-Id-Version: PO File 5.8.1"
+
+#. module: report_xlsx
+#: code:addons/report_xlsx/models/ir_report.py:0
+msgid "%s model was not found"
+msgstr "%s ሞዴል አልተገኘም።"
+
+#. module: report_xlsx
+#. openerp-web
+#: code:addons/report_xlsx/static/src/js/report/action_manager_report.js:0
+msgid "A popup window with your report was blocked. You may need to change your browser settings to allow popup windows for this page."
+msgstr "ከሪፖርትዎ ጋር ብቅ ባይ መስኮት ታግዷል። ለዚህ ገጽ ብቅ-ባይ መስኮቶችን ለመፍቀድ የአሳሽዎን ቅንብሮች መለወጥ ሊኖርብዎ ይችላል።"
+
+#. module: report_xlsx
+#: model:ir.model,name:report_xlsx.model_report_report_xlsx_abstract
+msgid "Abstract XLSX Report"
+msgstr "አብስትራክት ኤክስኤልኤስኤክስ ሪፖርት"
+
+#. module: report_xlsx
+#: model:ir.model.fields,field_description:report_xlsx.field_report_report_xlsx_abstract__display_name
+#: model:ir.model.fields,field_description:report_xlsx.field_report_report_xlsx_partner_xlsx__display_name
+msgid "Display Name"
+msgstr "መጠሪያው ስም"
+
+#. module: report_xlsx
+#: model:ir.model.fields,field_description:report_xlsx.field_report_report_xlsx_abstract__id
+#: model:ir.model.fields,field_description:report_xlsx.field_report_report_xlsx_partner_xlsx__id
+msgid "ID"
+msgstr "መታወቂያ"
+
+#. module: report_xlsx
+#: model:ir.model.fields,field_description:report_xlsx.field_report_report_xlsx_abstract____last_update
+#: model:ir.model.fields,field_description:report_xlsx.field_report_report_xlsx_partner_xlsx____last_update
+msgid "Last Modified on"
+msgstr "መጨረሻ የተሻሻለበት ቀን"
+
+#. module: report_xlsx
+#: model:ir.model,name:report_xlsx.model_report_report_xlsx_partner_xlsx
+msgid "Partner XLSX Report"
+msgstr "አጋር ኤክስኤልኤስኤክስ ሪፖርት"
+
+#. module: report_xlsx
+#: model:ir.model,name:report_xlsx.model_ir_actions_report
+msgid "Report Action"
+msgstr "ድርጊት ሪፖርት አድርግ"
+
+#. module: report_xlsx
+#: model:ir.model.fields,field_description:report_xlsx.field_ir_actions_report__report_type
+msgid "Report Type"
+msgstr "የሪፖርት አይነት"
+
+#. module: report_xlsx
+#: model:ir.model.fields,help:report_xlsx.field_ir_actions_report__report_type
+msgid "The type of the report that will be rendered, each one having its own rendering method. HTML means the report will be opened directly in your browser PDF means the report will be rendered using Wkhtmltopdf and downloaded by the user."
+msgstr "የሚቀርበው የሪፖርት ዓይነት፣ እያንዳንዱ የራሱ የአተረጓጎም ዘዴ አለው። ኤችቲኤምኤል ማለት ሪፖርቱ በቀጥታ በአሳሽዎ ውስጥ ይከፈታል ፒዲኤፍ ማለት ሪፖርቱ የሚቀርበው Wkhtmltopdf በመጠቀም ነው ከዛ በተጠቃሚው ይወርዳል ማለት ነው።"
+
+#. module: report_xlsx
+#. openerp-web
+#: code:addons/report_xlsx/static/src/js/report/action_manager_report.js:0
+msgid "Warning"
+msgstr "ማስጠንቀቂያ"
+
+#. module: report_xlsx
+#: model:ir.model.fields.selection,name:report_xlsx.selection__ir_actions_report__report_type__xlsx
+msgid "XLSX"
+msgstr "ኤክስኤልኤስኤክስ"

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_bank_payroll">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="data">
+                <t t-call="web.internal_layout">
+                    <div class="page">
+                        <table class="table table-condensed">
+                            <p style="text-align: center;"><t t-esc="docs.name"/></p>
+
+                                <thead>
+                                    <tr>
+                                        <th style="border: 1px solid">SI.No</th>
+                                        <th style="border: 1px solid">Employee Name</th>
+                                        <th style="border: 1px solid">Bank Account No.</th>
+                                        <th style="border: 1px solid">Net Pay</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-set="SN" t-value="0"/>
+                                    <t t-set="total_amount" t-value="0"/>
+                                    <tr t-foreach="data.slip_ids" t-as="o">
+                                        <td style="border: 1px solid">
+                                            <t t-set="SN"
+                                               t-value="SN + 1"/>
+                                            <span t-esc="SN"/>
+                                        </td>
+
+                                        <td style="border: 1px solid">
+                                            <span t-esc="o.employee_id.name"/>
+                                        </td>
+                                        <td style="border: 1px solid">
+                                            <span t-esc="o.employee_id.emp_acc"/>
+                                        </td>
+                                        <t t-foreach="o.line_ids" t-as="net_amount">
+                                            <t t-if="net_amount.category_id.name=='Net'">
+                                                <td class="text-right" style="border: 1px solid">
+                                                    <span t-esc="net_amount.total"/>
+                                                    <t t-set="total_amount"
+                                                       t-value="total_amount+net_amount.total"/>
+                                                </td>
+                                            </t>
+                                        </t>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3" style="border: 1px solid;text-align:center">
+                                            <strong>Total</strong>
+                                        </td>
+                                        <td class="text-right" style="border: 1px solid">
+                                            <strong t-esc="'{0:,.0f}'.format(total_amount)"/>
+                                        </td>
+
+                                    </tr>
+                                </tbody>
+                        </table>
+                        <br/>
+                        <span>Prepared by:</span>
+                        <span style="margin-left:250px ;">Checked by:</span>
+                        <span style="margin-left:250px;">Approved by:</span>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

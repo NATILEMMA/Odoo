@@ -1,0 +1,445 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* vehicle_transfer
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20221005\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-22 12:13+0000\n"
+"PO-Revision-Date: 2023-05-22 12:13+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: vehicle_transfer
+#: code:addons/vehicle_transfer/models/employee_fleet.py:0
+#: code:addons/vehicle_transfer/models/employee_fleet.py:0
+#, python-format
+msgid "%s: Approved"
+msgstr "%s: ጸድቋል"
+
+#. module: vehicle_transfer
+#: model:ir.model.fields,field_description:vehicle_transfer.field_employee_fleet__message_needaction
+msgid "Action Needed"
+msgstr "እርምጃ ያስፈልጋል"
+
+#. module: vehicle_transfer
+#: model:ir.model.fields,field_description:vehicle_transfer.field_employee_fleet__purpose
+msgid "Additional Note"
+msgstr "ተጨማሪ ማስታወሻ"
+
+#. module: vehicle_transfer
+#: model_terms:ir.ui.view,arch_db:vehicle_transfer.employee_fleet_form_view
+msgid "Approve"
+msgstr "አጽድቅ"
+
+#. module: vehicle_transfer
+#: model:ir.model.fields.selection,name:vehicle_transfer.selection__employee_fleet__state__confirm
+msgid "Approved"
+msgstr "ጸድቋል"
+
+#. module: vehicle_transfer
+#: model:ir.model.fields,field_description:vehicle_transfer.field_employee_fleet__message_attachment_count
+msgid "Attachment Count"
+msgstr "አባሪ ብዛት"
+
+#. module: vehicle_transfer
+#: model:ir.model.fields,field_description:vehicle_transfer.field_employee_fleet__battery_water
+msgid "Battrey Water"
+msgstr "የባትሪ ውሃ"
+
+#. module: vehicle_transfer
+#: model:ir.model.fields,field_description:vehicle_transfer.field_employee_fleet__brake_fluid
+msgid "Brake Fluid"
+msgstr "የፍሬን ዘይት"
+
+#. module: vehicle_transfer
+#: model:ir.model.fields.selection,name:vehicle_transfer.selection__employee_fleet__state__cancel
+#: model_terms:ir.ui.view,arch_db:vehicle_transfer.employee_fleet_form_view
+msgid "Cancel"
+msgstr "ሰርዝ"
+
+#. module: vehicle_transfer
+#: model:ir.model.fields,field_description:vehicle_transfer.field_fleet_vehicle__check_availability
+msgid "Check Availability"
+msgstr "መኖሩን ያረጋግጡ"
+
+#. module: vehicle_transfer
+#: model:ir.model.fields,field_description:vehicle_transfer.field_employee_fleet__checklist
+#: model:ir.model.fields,field_description:vehicle_transfer.field_employee_fleet__checklist_2
+msgid "Checklist Lines"
+msgstr "የቼክ ዝርዝር መስመሮች"
+
+#. module: vehicle_transfer
+#: model:ir.model.fields,field_description:vehicle_transfer.field_employee_fleet__checklist_template
+msgid "Checklist Template"
+msgstr "የፍተሻ ዝርዝር አብነት"
+
+#. module: vehicle_transfer
+#: model_terms:ir.actions.act_window,help:vehicle_transfer.action_employee_fleet
+msgid "Click to create a New Vehicle Transfer."
+msgstr "አዲስ የተሽከርካሪ ማዛዎሪያ ለመፍጠር ጠቅ ያድርጉ።"
+
+#. module: vehicle_transfer
+#: model:ir.model.fields,field_description:vehicle_transfer.field_employee_fleet__create_uid
+#: model:ir.model.fields,field_description:vehicle_transfer.field_fleet_reserved__create_uid
+msgid "Created by"
+msgstr "የተፈጠረ"
+
+#. module: vehicle_transfer
+#: model:ir.model.fields,field_description:vehicle_transfer.field_employee_fleet__create_date
+#: model:ir.model.fields,field_description:vehicle_transfer.field_fleet_reserved__create_date
+msgid "Created on"
+msgstr "በላይ ተፈጠረ"
+
+#. module: vehicle_transfer
+#: model_terms:ir.ui.view,arch_db:vehicle_transfer.employee_fleet_search_view
+msgid "Custody"
+msgstr "መያዣ"
+
+#. module: vehicle_transfer
+#: model:ir.model.fields,field_description:vehicle_transfer.field_employee_fleet__display_name
+#: model:ir.model.fields,field_description:vehicle_transfer.field_fleet_reserved__display_name
+msgid "Display Name"
+msgstr "መጠሪያው ስም"
+
+#. module: vehicle_transfer
+#: model:ir.model.fields.selection,name:vehicle_transfer.selection__employee_fleet__state__draft
+msgid "Draft"
+msgstr "ረቂቅ"
+
+#. module: vehicle_transfer
+#: model:ir.model.fields,field_description:vehicle_transfer.field_employee_fleet__employee
+msgid "Driver"
+msgstr "ሹፌር"
+
+#. module: vehicle_transfer
+#: model:ir.model.fields,field_description:vehicle_transfer.field_fleet_reserved__employee
+#: model_terms:ir.ui.view,arch_db:vehicle_transfer.employee_fleet_search_view
+msgid "Employee"
+msgstr "ሰራተኛ"
+
+#. module: vehicle_transfer
+#: model_terms:ir.ui.view,arch_db:vehicle_transfer.employee_fleet_form_view
+msgid "Employee Fleet Request"
+msgstr "የሰራተኛ ተሽከርካሪ ጥያቄ"
+
+#. module: vehicle_transfer
+#: model:ir.model,name:vehicle_transfer.model_employee_fleet
+msgid "Employee Vehicle Request"
+msgstr "የሰራተኛ ተሽከርካሪ ጥያቄ"
+
+#. module: vehicle_transfer
+#: model:ir.model.fields,field_description:vehicle_transfer.field_employee_fleet__engine_oil
+msgid "Engine Oil"
+msgstr "የሞተር ዘይት"
+
+#. module: vehicle_transfer
+#: model:ir.model.fields.selection,name:vehicle_transfer.selection__employee_fleet__battery_water__fail
+#: model:ir.model.fields.selection,name:vehicle_transfer.selection__employee_fleet__brake_fluid__fail
+#: model:ir.model.fields.selection,name:vehicle_transfer.selection__employee_fleet__engine_oil__fail
+#: model:ir.model.fields.selection,name:vehicle_transfer.selection__employee_fleet__fuel_level__fail
+#: model:ir.model.fields.selection,name:vehicle_transfer.selection__employee_fleet__radiator_fluid__fail
+#: model:ir.model.fields.selection,name:vehicle_transfer.selection__employee_fleet__window__fail
+msgid "Failed"
+msgstr " አልተሳካም "
+
+#. module: vehicle_transfer
+#: model_terms:ir.ui.view,arch_db:vehicle_transfer.employee_fleet_form_view
+msgid "Final Checklist"
+msgstr "የመጨረሻ ማረጋገጫ ዝርዝር"
+
+#. module: vehicle_transfer
+#: model:ir.model.fields,field_description:vehicle_transfer.field_employee_fleet__message_follower_ids
+msgid "Followers"
+msgstr "ተከታዮች"
+
+#. module: vehicle_transfer
+#: model:ir.model.fields,field_description:vehicle_transfer.field_employee_fleet__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "ተከታዮች (ሰርጦች)"
+
+#. module: vehicle_transfer
+#: model:ir.model.fields,field_description:vehicle_transfer.field_employee_fleet__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "ተከታዮች (አጋሮች)"
+
+#. module: vehicle_transfer
+#: model:ir.model.fields,field_description:vehicle_transfer.field_employee_fleet__date_from
+msgid "From"
+msgstr "ከ"
+
+#. module: vehicle_transfer
+#: model:ir.model.fields,field_description:vehicle_transfer.field_employee_fleet__fuel_level
+msgid "Fuel Level"
+msgstr "የነዳጅ ደረጃ"
+
+#. module: vehicle_transfer
+#: model_terms:ir.ui.view,arch_db:vehicle_transfer.employee_fleet_search_view
+msgid "Group By"
+msgstr "ቡድን በ"
+
+#. module: vehicle_transfer
+#: code:addons/vehicle_transfer/models/employee_fleet.py:0
+#, python-format
+msgid ""
+"Hi %s,<br>Sorry, Your vehicle request for the reference %s is Rejected."
+msgstr ""
+"ሠላም %s፣<br>ይቅርታ፣ የ%s የተሽከርካሪ ጥያቄዎ ተቀባይነት አላገኘም።"
+
+#. module: vehicle_transfer
+#: code:addons/vehicle_transfer/models/employee_fleet.py:0
+#, python-format
+msgid "Hi %s,<br>Your vehicle request for the reference %s is approved."
+msgstr "ሠላም %s፣<br>የተሽከርካሪዎ የማጣቀሻ %s ጥያቄ ጸድቋል።"
+
+#. module: vehicle_transfer
+#: model:ir.model.fields,field_description:vehicle_transfer.field_employee_fleet__id
+#: model:ir.model.fields,field_description:vehicle_transfer.field_fleet_reserved__id
+msgid "ID"
+msgstr "መታወቂያ"
+
+#. module: vehicle_transfer
+#: model:ir.model.fields,help:vehicle_transfer.field_employee_fleet__message_needaction
+#: model:ir.model.fields,help:vehicle_transfer.field_employee_fleet__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "ከተመረመሩ አዲስ መልዕክቶች የእርስዎን ትኩረት ይፈልጋሉ።"
+
+#. module: vehicle_transfer
+#: model:ir.model.fields,help:vehicle_transfer.field_employee_fleet__message_has_error
+#: model:ir.model.fields,help:vehicle_transfer.field_employee_fleet__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "ከተመረመሩ አንዳንድ መልዕክቶች የማድረስ ስህተት አለባቸው።"
+
+#. module: vehicle_transfer
+#: model_terms:ir.ui.view,arch_db:vehicle_transfer.employee_fleet_form_view
+msgid "Initial Checklist"
+msgstr "የመጀመሪያ ማረጋገጫ ዝርዝር"
+
+#. module: vehicle_transfer
+#: model:ir.model.fields,field_description:vehicle_transfer.field_employee_fleet__message_is_follower
+msgid "Is Follower"
+msgstr "ተከታይ ነው"
+
+#. module: vehicle_transfer
+#: model:ir.model.fields,field_description:vehicle_transfer.field_employee_fleet____last_update
+#: model:ir.model.fields,field_description:vehicle_transfer.field_fleet_reserved____last_update
+msgid "Last Modified on"
+msgstr "በመጨረሻ የተሻሻለው በርቷል"
+
+#. module: vehicle_transfer
+#: model:ir.model.fields,field_description:vehicle_transfer.field_employee_fleet__write_uid
+#: model:ir.model.fields,field_description:vehicle_transfer.field_fleet_reserved__write_uid
+msgid "Last Updated by"
+msgstr "መጨረሻ የዘመነው በ"
+
+#. module: vehicle_transfer
+#: model:ir.model.fields,field_description:vehicle_transfer.field_employee_fleet__write_date
+#: model:ir.model.fields,field_description:vehicle_transfer.field_fleet_reserved__write_date
+msgid "Last Updated on"
+msgstr "መጨረሻ የዘመነው በ"
+
+#. module: vehicle_transfer
+#: model:ir.model.fields,field_description:vehicle_transfer.field_employee_fleet__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "ዋና አባሪ"
+
+#. module: vehicle_transfer
+#: model:ir.model.fields,field_description:vehicle_transfer.field_employee_fleet__message_has_error
+msgid "Message Delivery error"
+msgstr "የመልእክት ማስተላለፍ ስህተት"
+
+#. module: vehicle_transfer
+#: model:ir.model.fields,field_description:vehicle_transfer.field_employee_fleet__message_ids
+msgid "Messages"
+msgstr "መልእክቶች"
+
+#. module: vehicle_transfer
+#: model:ir.model.fields,field_description:vehicle_transfer.field_employee_fleet__message_needaction_counter
+msgid "Number of Actions"
+msgstr "የተግባር ብዛት"
+
+#. module: vehicle_transfer
+#: model:ir.model.fields,field_description:vehicle_transfer.field_employee_fleet__message_has_error_counter
+msgid "Number of errors"
+msgstr "የስህተቶች ብዛት"
+
+#. module: vehicle_transfer
+#: model:ir.model.fields,help:vehicle_transfer.field_employee_fleet__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "አንድ እርምጃ የሚያስፈልገው የመልእክት ብዛት"
+
+#. module: vehicle_transfer
+#: model:ir.model.fields,help:vehicle_transfer.field_employee_fleet__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "ማድረስ ስህተት ያለባቸው መልዕክቶች ብዛት"
+
+#. module: vehicle_transfer
+#: model:ir.model.fields,help:vehicle_transfer.field_employee_fleet__message_unread_counter
+msgid "Number of unread messages"
+msgstr "ያልተነበቡ መልዕክቶች ብዛት"
+
+#. module: vehicle_transfer
+#: model:ir.model.fields.selection,name:vehicle_transfer.selection__employee_fleet__battery_water__pass
+#: model:ir.model.fields.selection,name:vehicle_transfer.selection__employee_fleet__brake_fluid__pass
+#: model:ir.model.fields.selection,name:vehicle_transfer.selection__employee_fleet__engine_oil__pass
+#: model:ir.model.fields.selection,name:vehicle_transfer.selection__employee_fleet__fuel_level__pass
+#: model:ir.model.fields.selection,name:vehicle_transfer.selection__employee_fleet__radiator_fluid__pass
+#: model:ir.model.fields.selection,name:vehicle_transfer.selection__employee_fleet__window__pass
+msgid "Pass"
+msgstr "ይለፍ"
+
+#. module: vehicle_transfer
+#: model:ir.model.fields,help:vehicle_transfer.field_employee_fleet__purpose
+msgid "Purpose"
+msgstr "ዓላማ"
+
+#. module: vehicle_transfer
+#: model:ir.model.fields,field_description:vehicle_transfer.field_employee_fleet__radiator_fluid
+msgid "Radiator Fluid"
+msgstr "የራዲያተር ፈሳሽ"
+
+#. module: vehicle_transfer
+#: model_terms:ir.ui.view,arch_db:vehicle_transfer.employee_fleet_form_view
+msgid "Reject"
+msgstr "አይቀበልም"
+
+#. module: vehicle_transfer
+#: model:ir.model.fields.selection,name:vehicle_transfer.selection__employee_fleet__state__reject
+msgid "Rejected"
+msgstr "ውድቅ ተደርጓል"
+
+#. module: vehicle_transfer
+#: model:ir.model.fields,field_description:vehicle_transfer.field_employee_fleet__name
+msgid "Request Number"
+msgstr "የጥያቄ ቁጥር"
+
+#. module: vehicle_transfer
+#: model:ir.model.fields,field_description:vehicle_transfer.field_employee_fleet__req_date
+#: model:ir.model.fields,help:vehicle_transfer.field_employee_fleet__req_date
+msgid "Requested Date"
+msgstr "የተጠየቀው ቀን"
+
+#. module: vehicle_transfer
+#: model:ir.model.fields,field_description:vehicle_transfer.field_fleet_reserved__date_from
+msgid "Reserved Date From"
+msgstr "የተያዘለት ቀን ከ"
+
+#. module: vehicle_transfer
+#: model:ir.model.fields,field_description:vehicle_transfer.field_fleet_reserved__date_to
+msgid "Reserved Date To"
+msgstr "የተያዘለት ቀን ወደ"
+
+#. module: vehicle_transfer
+#: model:ir.model.fields,field_description:vehicle_transfer.field_employee_fleet__reserved_fleet_id
+msgid "Reserved Fleet"
+msgstr "የተያዙ መርከቦች"
+
+#. module: vehicle_transfer
+#: model:ir.model.fields,field_description:vehicle_transfer.field_fleet_reserved__reserved_obj
+msgid "Reserved Obj"
+msgstr "የተያዘ Obj"
+
+#. module: vehicle_transfer
+#: model:ir.model,name:vehicle_transfer.model_fleet_reserved
+#: model:ir.model.fields,field_description:vehicle_transfer.field_fleet_vehicle__reserved_time
+msgid "Reserved Time"
+msgstr "የተያዘለት ጊዜ"
+
+#. module: vehicle_transfer
+#: model_terms:ir.ui.view,arch_db:vehicle_transfer.employee_fleet_form_view
+msgid "Return"
+msgstr "ተመለስ"
+
+#. module: vehicle_transfer
+#: model:ir.model.fields.selection,name:vehicle_transfer.selection__employee_fleet__state__return
+msgid "Returned"
+msgstr "ተመለስ"
+
+#. module: vehicle_transfer
+#: model:ir.model.fields,field_description:vehicle_transfer.field_employee_fleet__returned_date
+msgid "Returned Date"
+msgstr "የተመለሰበት ቀን"
+
+#. module: vehicle_transfer
+#: model:ir.model.fields,field_description:vehicle_transfer.field_employee_fleet__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "ኤስኤምኤስ የማድረስ ስህተት"
+
+#. module: vehicle_transfer
+#: model_terms:ir.ui.view,arch_db:vehicle_transfer.employee_fleet_form_view
+msgid "Send Request"
+msgstr "ጥያቄ ላክ"
+
+#. module: vehicle_transfer
+#: model:ir.model.fields,field_description:vehicle_transfer.field_employee_fleet__state
+msgid "State"
+msgstr "ግዛት"
+
+#. module: vehicle_transfer
+#: model_terms:ir.ui.view,arch_db:vehicle_transfer.employee_fleet_search_view
+msgid "Status"
+msgstr "ሁኔታ"
+
+#. module: vehicle_transfer
+#: model:ir.model.fields,field_description:vehicle_transfer.field_employee_fleet__date_to
+msgid "To"
+msgstr "ለ"
+
+#. module: vehicle_transfer
+#: model:ir.model.fields,field_description:vehicle_transfer.field_employee_fleet__message_unread
+msgid "Unread Messages"
+msgstr "ያልተነበቡ መልዕክቶች"
+
+#. module: vehicle_transfer
+#: model:ir.model.fields,field_description:vehicle_transfer.field_employee_fleet__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "ያልተነበቡ መልዕክቶች ቆጣሪ"
+
+#. module: vehicle_transfer
+#: model:ir.model,name:vehicle_transfer.model_fleet_vehicle
+#: model:ir.model.fields,field_description:vehicle_transfer.field_employee_fleet__fleet
+#: model_terms:ir.ui.view,arch_db:vehicle_transfer.employee_fleet_search_view
+msgid "Vehicle"
+msgstr "ተሽከርካሪ"
+
+#. module: vehicle_transfer
+#: model:ir.actions.act_window,name:vehicle_transfer.action_employee_fleet
+#: model:ir.ui.menu,name:vehicle_transfer.employee_fleet_menu
+#: model:ir.ui.menu,name:vehicle_transfer.employee_fleet_sub_menu
+msgid "Vehicle Transfer"
+msgstr "የተሽከርካሪ ማዛዎሪያ"
+
+#. module: vehicle_transfer
+#: model:ir.model.fields.selection,name:vehicle_transfer.selection__employee_fleet__state__waiting
+msgid "Waiting for Approval"
+msgstr "ማጽደቅን በመጠባበቅ ላይ"
+
+#. module: vehicle_transfer
+#: model:ir.model.fields,field_description:vehicle_transfer.field_employee_fleet__website_message_ids
+msgid "Website Messages"
+msgstr "የድር ጣቢያ መልዕክቶች"
+
+#. module: vehicle_transfer
+#: model:ir.model.fields,help:vehicle_transfer.field_employee_fleet__website_message_ids
+msgid "Website communication history"
+msgstr "የድር ጣቢያ ግንኙነት ታሪክ"
+
+#. module: vehicle_transfer
+#: model:ir.model.fields,field_description:vehicle_transfer.field_employee_fleet__window
+msgid "Windows"
+msgstr "ዊንዶውስ"
+
+#. module: vehicle_transfer
+#: model:ir.model,name:vehicle_transfer.model_fleet_checklistevaluate
+msgid "checklist category"
+msgstr "የማረጋገጫ ዝርዝር ምድብ"
+
+#. module: vehicle_transfer
+#: model:ir.model.fields,field_description:vehicle_transfer.field_fleet_checklistevaluate__employee
+msgid "reverse"
+msgstr "ተገላቢጦሽ"

@@ -1,0 +1,102 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_contract_types
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20221005\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-22 09:20+0000\n"
+"PO-Revision-Date: 2023-05-22 09:20+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_contract_types
+#: model:ir.model,name:hr_contract_types.model_hr_contract_type
+#: model:ir.model.fields,field_description:hr_contract_types.field_hr_contract_type__name
+#: model_terms:ir.ui.view,arch_db:hr_contract_types.hr_contract_type_view_form
+#: model_terms:ir.ui.view,arch_db:hr_contract_types.hr_contract_type_view_search
+#: model_terms:ir.ui.view,arch_db:hr_contract_types.hr_contract_type_view_tree
+msgid "Contract Type"
+msgstr "የውል ዓይነት"
+
+#. module: hr_contract_types
+#: model:ir.actions.act_window,name:hr_contract_types.action_hr_contract_type
+#: model:ir.ui.menu,name:hr_contract_types.hr_menu_contract_type
+msgid "Contract Types"
+msgstr "የኮንትራት ዓይነቶች"
+
+#. module: hr_contract_types
+#: model:ir.model.fields,field_description:hr_contract_types.field_hr_contract_type__create_uid
+msgid "Created by"
+msgstr "የተፈጠረ"
+
+#. module: hr_contract_types
+#: model:ir.model.fields,field_description:hr_contract_types.field_hr_contract_type__create_date
+msgid "Created on"
+msgstr "ላይ ተፈጠረ"
+
+#. module: hr_contract_types
+#: model:ir.model.fields,field_description:hr_contract_types.field_hr_contract_type__display_name
+msgid "Display Name"
+msgstr "መጠሪያው ስም"
+
+#. module: hr_contract_types
+#: model:ir.model.fields,field_description:hr_contract_types.field_hr_contract__type_id
+msgid "Employee Category"
+msgstr "የሰራተኛ ምድብ"
+
+#. module: hr_contract_types
+#: model:ir.model,name:hr_contract_types.model_hr_contract
+msgid "Employee Contract"
+msgstr "የሰራተኛ ውል"
+
+#. module: hr_contract_types
+#: model:ir.model.fields,help:hr_contract_types.field_hr_contract__type_id
+msgid "Employee category"
+msgstr "የሰራተኛ ምድብ"
+
+#. module: hr_contract_types
+#: model:ir.model.fields,help:hr_contract_types.field_hr_contract_type__sequence
+msgid "Gives the sequence when displaying a list of Contract."
+msgstr "የኮንትራት ዝርዝር ሲታዩ ቅደም ተከተል ይሰጣል."
+
+#. module: hr_contract_types
+#: model:ir.model.fields,field_description:hr_contract_types.field_hr_contract_type__id
+msgid "ID"
+msgstr "መታወቂያ"
+
+#. module: hr_contract_types
+#: model:ir.model.fields,field_description:hr_contract_types.field_hr_contract_type____last_update
+msgid "Last Modified on"
+msgstr "መጨረሻ የተሻሻለው በ"
+
+#. module: hr_contract_types
+#: model:ir.model.fields,field_description:hr_contract_types.field_hr_contract_type__write_uid
+msgid "Last Updated by"
+msgstr "መጨረሻ የዘመነው በ"
+
+#. module: hr_contract_types
+#: model:ir.model.fields,field_description:hr_contract_types.field_hr_contract_type__write_date
+msgid "Last Updated on"
+msgstr "መጨረሻ የዘመነው በ"
+
+#. module: hr_contract_types
+#: model:ir.model.fields,help:hr_contract_types.field_hr_contract_type__name
+msgid "Name"
+msgstr "ስም"
+
+#. module: hr_contract_types
+#: model_terms:ir.ui.view,arch_db:hr_contract_types.hr_contract_type_view_search
+msgid "Search Contract Type"
+msgstr "የኮንትራት አይነት ይፈልጉ"
+
+#. module: hr_contract_types
+#: model:ir.model.fields,field_description:hr_contract_types.field_hr_contract_type__sequence
+#: model_terms:ir.ui.view,archs_db:hr_contract_types.hr_contract_type_view_search
+msgid "Sequence"
+msgstr "ቅደም ተከተል"

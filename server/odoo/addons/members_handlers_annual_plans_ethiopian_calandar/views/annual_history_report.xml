@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data> 
+     
+                <!-- 
+                    
+                    Adding Ethiopian Calander Date to Time Fream 
+
+                    step 1: Inherit the View of the model to which you wish to add the Ethiopian calendar extension.
+
+                    step 2, xpath your exact location of converting date fields if your date fields are located within a form sheet, use col and colspan to adjust CSS
+                
+                    Ethiopian Date Picker Widget
+
+                    - ethiopian_calander_widget
+                    - ethiopian_calander_widget_two
+                    - ethiopian_calander_widget_three
+                    - ethiopian_calander_widget_four
+                
+                
+                -->
+
+
+        <record id="history_log_city_tree_inherited_view" model="ir.ui.view">
+           <field name="name">History Log City</field>
+             <field name="model">revised.plan.history</field>
+            <field name="inherit_id" ref="members_handlers_annual_plans.history_log_city_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='approved_date']" position="replace">
+                    <field name="is_pagum_from" invisible="1"/>
+                    <field  name="approved_date" groups="EthiopianCalendar.group_gregory"/>
+                    <field  name="ethiopian_from" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    <field  name="pagum_from" groups="EthiopianCalendar.group_ethio_datepicker" optional="hidden"/>
+                </xpath>
+                <xpath expr="//field[@name='revised_date']" position="replace">
+                    <field name="is_pagum_to" invisible="1"/>
+                    <field  name="revised_date" groups="EthiopianCalendar.group_gregory"/>
+                    <field  name="ethiopian_to" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    <field  name="pagum_to" groups="EthiopianCalendar.group_ethio_datepicker" optional="hidden"/>
+                </xpath>
+            </field>
+        </record> 
+
+        <record id="history_log_city_form_inherited_view" model="ir.ui.view">
+           <field name="name">History Log City</field>
+             <field name="model">revised.plan.history</field>
+            <field name="inherit_id" ref="members_handlers_annual_plans.history_log_city_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='approved_date']" position="replace">
+                    <field name="is_pagum_from" invisible="1"/>
+                    <field  name="approved_date" groups="EthiopianCalendar.group_gregory"/>
+                    <field  name="ethiopian_from" groups="EthiopianCalendar.group_ethio_datepicker" attrs="{'invisible': ['|',('is_pagum_from', '=',False)]}"/>
+                    <field  name="pagum_from" attrs="{'invisible': ['|',('is_pagum_from', '!=',False)]}"  groups="EthiopianCalendar.group_ethio_datepicker"/>
+                </xpath>
+                <xpath expr="//field[@name='revised_date']" position="replace">
+                    <field name="is_pagum_to" invisible="1"/>
+                    <field  name="revised_date" groups="EthiopianCalendar.group_gregory"/>
+                    <field  name="ethiopian_to" groups="EthiopianCalendar.group_ethio_datepicker" attrs="{'invisible': ['|',('is_pagum_to', '=',False)]}"/>
+                    <field  name="pagum_to" attrs="{'invisible': ['|',('is_pagum_to', '!=',False)]}"  groups="EthiopianCalendar.group_ethio_datepicker"/>
+                </xpath>
+            </field>
+        </record> 
+
+        <record id="history_log_subcity_tree_inherited_view" model="ir.ui.view">
+           <field name="name">History Log Subcity</field>
+             <field name="model">revised.plan.history</field>
+            <field name="inherit_id" ref="members_handlers_annual_plans.history_log_subcity_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='approved_date']" position="replace">
+                    <field name="is_pagum_from" invisible="1"/>
+                    <field  name="approved_date" groups="EthiopianCalendar.group_gregory"/>
+                    <field  name="ethiopian_from" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    <field  name="pagum_from" groups="EthiopianCalendar.group_ethio_datepicker" optional="hidden"/>
+                </xpath>
+                <xpath expr="//field[@name='revised_date']" position="replace">
+                    <field name="is_pagum_to" invisible="1"/>
+                    <field  name="revised_date" groups="EthiopianCalendar.group_gregory"/>
+                    <field  name="ethiopian_to" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    <field  name="pagum_to" groups="EthiopianCalendar.group_ethio_datepicker" optional="hidden"/>
+                </xpath>
+            </field>
+        </record> 
+
+        <record id="history_log_subcity_form_inherited_view" model="ir.ui.view">
+           <field name="name">History Log Subcity</field>
+             <field name="model">revised.plan.history</field>
+            <field name="inherit_id" ref="members_handlers_annual_plans.history_log_subcity_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='approved_date']" position="replace">
+                    <field name="is_pagum_from" invisible="1"/>
+                    <field  name="approved_date" groups="EthiopianCalendar.group_gregory"/>
+                    <field  name="ethiopian_from" groups="EthiopianCalendar.group_ethio_datepicker" attrs="{'invisible': ['|',('is_pagum_from', '=',False)]}"/>
+                    <field  name="pagum_from" attrs="{'invisible': ['|',('is_pagum_from', '!=',False)]}"  groups="EthiopianCalendar.group_ethio_datepicker"/>
+                </xpath>
+                <xpath expr="//field[@name='revised_date']" position="replace">
+                    <field name="is_pagum_to" invisible="1"/>
+                    <field  name="revised_date" groups="EthiopianCalendar.group_gregory"/>
+                    <field  name="ethiopian_to" groups="EthiopianCalendar.group_ethio_datepicker" attrs="{'invisible': ['|',('is_pagum_to', '=',False)]}"/>
+                    <field  name="pagum_to" attrs="{'invisible': ['|',('is_pagum_to', '!=',False)]}"  groups="EthiopianCalendar.group_ethio_datepicker"/>
+                </xpath>
+            </field>
+        </record> 
+
+        <record id="history_log_wereda_tree_inherited_view" model="ir.ui.view">
+           <field name="name">History Log Woreda</field>
+             <field name="model">revised.plan.history</field>
+            <field name="inherit_id" ref="members_handlers_annual_plans.history_log_wereda_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='approved_date']" position="replace">
+                    <field name="is_pagum_from" invisible="1"/>
+                    <field  name="approved_date" groups="EthiopianCalendar.group_gregory"/>
+                    <field  name="ethiopian_from" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    <field  name="pagum_from" groups="EthiopianCalendar.group_ethio_datepicker" optional="hidden"/>
+                </xpath>
+                <xpath expr="//field[@name='revised_date']" position="replace">
+                    <field name="is_pagum_to" invisible="1"/>
+                    <field  name="revised_date" groups="EthiopianCalendar.group_gregory"/>
+                    <field  name="ethiopian_to" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    <field  name="pagum_to" groups="EthiopianCalendar.group_ethio_datepicker" optional="hidden"/>
+                </xpath>
+            </field>
+        </record> 
+
+
+        <record id="history_log_wereda_form_inherited_view" model="ir.ui.view">
+           <field name="name">History Log Woreda</field>
+             <field name="model">revised.plan.history</field>
+            <field name="inherit_id" ref="members_handlers_annual_plans.history_log_wereda_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='approved_date']" position="replace">
+                    <field name="is_pagum_from" invisible="1"/>
+                    <field  name="approved_date" groups="EthiopianCalendar.group_gregory"/>
+                    <field  name="ethiopian_from" groups="EthiopianCalendar.group_ethio_datepicker" attrs="{'invisible': ['|',('is_pagum_from', '=',False)]}"/>
+                    <field  name="pagum_from" attrs="{'invisible': ['|',('is_pagum_from', '!=',False)]}"  groups="EthiopianCalendar.group_ethio_datepicker"/>
+                </xpath>
+                <xpath expr="//field[@name='revised_date']" position="replace">
+                    <field name="is_pagum_to" invisible="1"/>
+                    <field  name="revised_date" groups="EthiopianCalendar.group_gregory"/>
+                    <field  name="ethiopian_to" groups="EthiopianCalendar.group_ethio_datepicker" attrs="{'invisible': ['|',('is_pagum_to', '=',False)]}"/>
+                    <field  name="pagum_to" attrs="{'invisible': ['|',('is_pagum_to', '!=',False)]}"  groups="EthiopianCalendar.group_ethio_datepicker"/>
+                </xpath>
+            </field>
+        </record> 
+        
+        <record id="annual_planning_report_city_tree_inherited_view" model="ir.ui.view">
+           <field name="name">Annual Plan Report</field>
+             <field name="model">annual.plan.report</field>
+            <field name="inherit_id" ref="members_handlers_annual_plans.annual_planning_report_city_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date_from']" position="replace">
+                    <field name="is_pagum_from" invisible="1"/>
+                    <field  name="date_from" groups="EthiopianCalendar.group_gregory"/>
+                    <field  name="ethiopian_from" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    <field  name="pagum_from" groups="EthiopianCalendar.group_ethio_datepicker" optional="hidden"/>
+                </xpath>
+                <xpath expr="//field[@name='date_to']" position="replace">
+                    <field name="is_pagum_to" invisible="1"/>
+                    <field  name="date_to" groups="EthiopianCalendar.group_gregory"/>
+                    <field  name="ethiopian_to" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    <field  name="pagum_to" groups="EthiopianCalendar.group_ethio_datepicker" optional="hidden"/>
+                </xpath>
+            </field>
+        </record> 
+
+        <record id="annual_planning_report_city_form_inherited_view" model="ir.ui.view">
+           <field name="name">Annual Plan Report</field>
+             <field name="model">annual.plan.report</field>
+            <field name="inherit_id" ref="members_handlers_annual_plans.annual_planning_report_city_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date_from']" position="replace">
+                    <field name="is_pagum_from" invisible="1"/>
+                    <field  name="date_from" groups="EthiopianCalendar.group_gregory"/>
+                    <field  name="ethiopian_from" groups="EthiopianCalendar.group_ethio_datepicker" attrs="{'invisible': ['|',('is_pagum_from', '=',False)]}" />
+                    <field  name="pagum_from" attrs="{'invisible': ['|',('is_pagum_from', '!=',False)]}"  groups="EthiopianCalendar.group_ethio_datepicker"/>
+                </xpath>
+                <xpath expr="//field[@name='date_to']" position="replace">
+                    <field name="is_pagum_to" invisible="1"/>
+                    <field  name="date_to" groups="EthiopianCalendar.group_gregory"/>
+                    <field  name="ethiopian_to" groups="EthiopianCalendar.group_ethio_datepicker" attrs="{'invisible': ['|',('is_pagum_to', '=',False)]}"/>
+                    <field  name="pagum_to" attrs="{'invisible': ['|',('is_pagum_to', '!=',False)]}"  groups="EthiopianCalendar.group_ethio_datepicker"/>
+                </xpath>
+            </field>
+        </record> 
+        
+        <record id="annual_planning_report_subcity_tree_inherited_view" model="ir.ui.view">
+           <field name="name">Annual Plan Subcity Report</field>
+             <field name="model">annual.plan.report</field>
+            <field name="inherit_id" ref="members_handlers_annual_plans.annual_planning_report_subcity_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date_from']" position="replace">
+                    <field name="is_pagum_from" invisible="1"/>
+                    <field  name="date_from" groups="EthiopianCalendar.group_gregory"/>
+                    <field  name="ethiopian_from" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    <field  name="pagum_from" groups="EthiopianCalendar.group_ethio_datepicker" optional="hidden"/>
+                </xpath>
+                <xpath expr="//field[@name='date_to']" position="replace">
+                    <field name="is_pagum_to" invisible="1"/>
+                    <field  name="date_to" groups="EthiopianCalendar.group_gregory"/>
+                    <field  name="ethiopian_to" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    <field  name="pagum_to" groups="EthiopianCalendar.group_ethio_datepicker" optional="hidden"/>
+                </xpath>
+            </field>
+        </record> 
+
+        <record id="annual_planning_report_subcity_form_inherited_view" model="ir.ui.view">
+           <field name="name">Annual Plan Subcity Report</field>
+             <field name="model">annual.plan.report</field>
+            <field name="inherit_id" ref="members_handlers_annual_plans.annual_planning_report_subcity_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date_from']" position="replace">
+                    <field name="is_pagum_from" invisible="1"/>
+                    <field  name="date_from" groups="EthiopianCalendar.group_gregory"/>
+                    <field  name="ethiopian_from" attrs="{'invisible': ['|',('is_pagum_from', '=',False)]}"  groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    <field  name="pagum_from" attrs="{'invisible': ['|',('is_pagum_from', '!=',False)]}"  groups="EthiopianCalendar.group_ethio_datepicker"/>
+                </xpath>
+                <xpath expr="//field[@name='date_to']" position="replace">
+                    <field name="is_pagum_to" invisible="1"/>
+                    <field  name="date_to" groups="EthiopianCalendar.group_gregory"/>
+                    <field  name="ethiopian_to" groups="EthiopianCalendar.group_ethio_datepicker" attrs="{'invisible': ['|',('is_pagum_to', '=',False)]}"/>
+                    <field  name="pagum_to" attrs="{'invisible': ['|',('is_pagum_to', '!=',False)]}"  groups="EthiopianCalendar.group_ethio_datepicker"/>
+                </xpath>
+            </field>
+        </record> 
+        
+        <record id="annual_planning_report_wereda_tree_inherited_view" model="ir.ui.view">
+           <field name="name">Annual Plan Woreda Reporting</field>
+             <field name="model">annual.plan.report</field>
+            <field name="inherit_id" ref="members_handlers_annual_plans.annual_planning_report_wereda_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date_from']" position="replace">
+                    <field name="is_pagum_from" invisible="1"/>
+                    <field  name="date_from" groups="EthiopianCalendar.group_gregory"/>
+                    <field  name="ethiopian_from" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    <field  name="pagum_from" groups="EthiopianCalendar.group_ethio_datepicker" optional="hidden"/>
+                </xpath>
+                <xpath expr="//field[@name='date_to']" position="replace">
+                    <field name="is_pagum_to" invisible="1"/>
+                    <field  name="date_to" groups="EthiopianCalendar.group_gregory"/>
+                    <field  name="ethiopian_to" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    <field  name="pagum_to" groups="EthiopianCalendar.group_ethio_datepicker" optional="hidden"/>
+                </xpath>
+            </field>
+        </record> 
+
+        <record id="annual_planning_report_wereda_form_inherited_view" model="ir.ui.view">
+           <field name="name">Annual Plan Woreda Reporting</field>
+             <field name="model">annual.plan.report</field>
+            <field name="inherit_id" ref="members_handlers_annual_plans.annual_planning_report_wereda_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date_from']" position="replace">
+                    <field name="is_pagum_from" invisible="1"/>
+                    <field  name="date_from" groups="EthiopianCalendar.group_gregory"/>
+                    <field  name="ethiopian_from" attrs="{'invisible': ['|', ('is_pagum_from', '=',False)]}"  groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    <field  name="pagum_from" attrs="{'invisible': ['|',('is_pagum_from', '!=',False)  ]}"  groups="EthiopianCalendar.group_ethio_datepicker"/>
+                </xpath>
+                <xpath expr="//field[@name='date_to']" position="replace">
+                    <field name="is_pagum_to" invisible="1"/>
+                    <field  name="date_to" groups="EthiopianCalendar.group_gregory"/>
+                    <field  name="ethiopian_to" attrs="{'invisible': ['|',('is_pagum_to', '=',False)  ]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                    <field  name="pagum_to" attrs="{'invisible': ['|',('is_pagum_to', '!=',False)  ]}"  groups="EthiopianCalendar.group_ethio_datepicker"/>
+                </xpath>
+            </field>
+        </record> 
+
+
+    </data>
+</odoo>

@@ -1,0 +1,209 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ps_dynamic_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20221005\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-22 11:05+0000\n"
+"PO-Revision-Date: 2023-05-22 11:05+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ps_dynamic_report
+#: model_terms:ir.ui.view,arch_db:ps_dynamic_report.dynamic_report_configure_tree_view
+msgid "Configuration"
+msgstr "ማዋቀር"
+
+#. module: ps_dynamic_report
+#: model_terms:ir.ui.view,arch_db:ps_dynamic_report.dynamic_report_configure_form_view
+msgid "Create Action"
+msgstr "ተግባር ይፍጠሩ"
+
+#. module: ps_dynamic_report
+#: model:ir.model.fields,field_description:ps_dynamic_report.field_dynamic_report_configure__create_uid
+#: model:ir.model.fields,field_description:ps_dynamic_report.field_dynamic_report_field__create_uid
+msgid "Created by"
+msgstr "የተፈጠረ በ"
+
+#. module: ps_dynamic_report
+#: model:ir.model.fields,field_description:ps_dynamic_report.field_dynamic_report_configure__create_date
+#: model:ir.model.fields,field_description:ps_dynamic_report.field_dynamic_report_field__create_date
+msgid "Created on"
+msgstr "ላይ ተፈጠረ"
+
+#. module: ps_dynamic_report
+#: model:ir.model.fields,field_description:ps_dynamic_report.field_dynamic_report_configure__display_name
+#: model:ir.model.fields,field_description:ps_dynamic_report.field_dynamic_report_field__display_name
+msgid "Display Name"
+msgstr "መጠሪያው ስም"
+
+#. module: ps_dynamic_report
+#: model:ir.model.fields,field_description:ps_dynamic_report.field_dynamic_report_configure__dynamic_field_id
+#: model_terms:ir.ui.view,arch_db:ps_dynamic_report.dynamic_report_configure_form_view
+msgid "Dynamic Field"
+msgstr "ተለዋዋጭ መስክ"
+
+#. module: ps_dynamic_report
+#: model:ir.model.fields,field_description:ps_dynamic_report.field_ir_actions_server__dynamic_report_id
+#: model:ir.model.fields,field_description:ps_dynamic_report.field_ir_cron__dynamic_report_id
+msgid "Dynamic Reference"
+msgstr "ተለዋዋጭ ማጣቀሻ"
+
+#. module: ps_dynamic_report
+#: model:ir.actions.act_window,name:ps_dynamic_report.action_dynamic_report_configure
+#: model:ir.ui.menu,name:ps_dynamic_report.menu_dynamic_report_configure
+msgid "Dynamic Report"
+msgstr "ተለዋዋጭ ሪፖርት"
+
+#. module: ps_dynamic_report
+#: model_terms:ir.ui.view,arch_db:ps_dynamic_report.dynamic_report_configure_form_view
+msgid "Dynamic Report Configure"
+msgstr "ተለዋዋጭ ሪፖርት ማዋቀር"
+
+#. module: ps_dynamic_report
+#: model:ir.model.fields,field_description:ps_dynamic_report.field_dynamic_report_field__field_id
+msgid "Field"
+msgstr "መስክ"
+
+#. module: ps_dynamic_report
+#: model_terms:ir.ui.view,arch_db:ps_dynamic_report.dynamic_report_configure_form_view
+msgid "Field Name"
+msgstr "የመስክ ስም"
+
+#. module: ps_dynamic_report
+#: model:ir.model.fields,field_description:ps_dynamic_report.field_dynamic_report_field__field_type
+#: model_terms:ir.ui.view,arch_db:ps_dynamic_report.dynamic_report_configure_form_view
+msgid "Field Type"
+msgstr "የመስክ አይነት"
+
+#. module: ps_dynamic_report
+#: model:ir.model.fields,help:ps_dynamic_report.field_dynamic_report_field__sequence
+msgid "Gives the sequence order when displaying a list O2m."
+msgstr "ዝርዝር O2m ሲያሳይ ቅደም ተከተል ይሰጣል።"
+
+#. module: ps_dynamic_report
+#: model:ir.model.fields,field_description:ps_dynamic_report.field_dynamic_report_configure__id
+#: model:ir.model.fields,field_description:ps_dynamic_report.field_dynamic_report_field__id
+msgid "ID"
+msgstr "መታወቂያ"
+
+#. module: ps_dynamic_report
+#: model:ir.model.fields,field_description:ps_dynamic_report.field_dynamic_report_configure__is_action_created
+msgid "Is Created?"
+msgstr "የተፈጠረ ነው?"
+
+#. module: ps_dynamic_report
+#: model:ir.model.fields,field_description:ps_dynamic_report.field_dynamic_report_configure____last_update
+#: model:ir.model.fields,field_description:ps_dynamic_report.field_dynamic_report_field____last_update
+msgid "Last Modified on"
+msgstr "ለመጨረሻ ጊዘ የተሻሻለው"
+
+#. module: ps_dynamic_report
+#: model:ir.model.fields,field_description:ps_dynamic_report.field_dynamic_report_configure__write_uid
+#: model:ir.model.fields,field_description:ps_dynamic_report.field_dynamic_report_field__write_uid
+msgid "Last Updated by"
+msgstr "መጨረሻ የዘመነው በ"
+
+#. module: ps_dynamic_report
+#: model:ir.model.fields,field_description:ps_dynamic_report.field_dynamic_report_configure__write_date
+#: model:ir.model.fields,field_description:ps_dynamic_report.field_dynamic_report_field__write_date
+msgid "Last Updated on"
+msgstr "ለመጨረሻ ጊዘ የዘመነው"
+
+#. module: ps_dynamic_report
+#: model:ir.model.fields,field_description:ps_dynamic_report.field_dynamic_report_configure__model_id
+msgid "Model"
+msgstr "ሞዴል"
+
+#. module: ps_dynamic_report
+#: model_terms:ir.ui.view,arch_db:ps_dynamic_report.dynamic_report_configure_tree_view
+msgid "Model Name"
+msgstr "የሞዴሉ ስም"
+
+#. module: ps_dynamic_report
+#: model:ir.model.fields,field_description:ps_dynamic_report.field_dynamic_report_configure__name
+#: model_terms:ir.ui.view,arch_db:ps_dynamic_report.dynamic_report_configure_tree_view
+msgid "Name"
+msgstr "ስም"
+
+#. module: ps_dynamic_report
+#: model:ir.model.fields.selection,name:ps_dynamic_report.selection__dynamic_report_configure__report_type__pdf
+msgid "PDF"
+msgstr "ፒዲኤፍ"
+
+#. module: ps_dynamic_report
+#: code:addons/ps_dynamic_report/models/dynamic_report_configure.py:0
+#, python-format
+msgid "Please Select few Fields!!"
+msgstr "እባክዎ ጥቂት መስኮችን ይምረጡ!"
+
+#. module: ps_dynamic_report
+#: model:ir.model.fields,field_description:ps_dynamic_report.field_dynamic_report_field__dynamic_configure_id
+msgid "Reference"
+msgstr "ማጣቀሻ"
+
+#. module: ps_dynamic_report
+#: model_terms:ir.ui.view,arch_db:ps_dynamic_report.dynamic_report_configure_form_view
+msgid "Remove Action"
+msgstr "ድርጊትን አስወግድ"
+
+#. module: ps_dynamic_report
+#: model:ir.actions.report,name:ps_dynamic_report.action_dynamic_report_print
+msgid "Report"
+msgstr "ሪፖርት አድርግ"
+
+#. module: ps_dynamic_report
+#: model:ir.model.fields,field_description:ps_dynamic_report.field_dynamic_report_configure__report_type
+msgid "Report Type"
+msgstr "የሪፖርት አይነት"
+
+#. module: ps_dynamic_report
+#: model:ir.model,name:ps_dynamic_report.model_ir_actions_server
+msgid "Server Action"
+msgstr "የሰርቨሩ ድርጊት"
+
+#. module: ps_dynamic_report
+#: model:ir.model.fields,field_description:ps_dynamic_report.field_dynamic_report_configure__server_action_id
+msgid "Server id"
+msgstr "የሰርቨሩ መታወቂያ"
+
+#. module: ps_dynamic_report
+#: model:ir.model.fields,field_description:ps_dynamic_report.field_dynamic_report_field__is_sum_calc
+msgid "Sum"
+msgstr "ድምር"
+
+#. module: ps_dynamic_report
+#: model:ir.model.fields,field_description:ps_dynamic_report.field_dynamic_report_field__field_name_id
+msgid "Target Model Name"
+msgstr "የዒላማ ሞዴል ስም"
+
+#. module: ps_dynamic_report
+#: model_terms:ir.ui.view,arch_db:ps_dynamic_report.dynamic_report_configure_form_view
+msgid "Technical Name"
+msgstr "ቴክኒካዊ ስም"
+
+#. module: ps_dynamic_report
+#: model_terms:ir.ui.view,arch_db:ps_dynamic_report.dynamic_report_configure_form_view
+msgid "Technical name"
+msgstr "ቴክኒካዊ ስም"
+
+#. module: ps_dynamic_report
+#: model:ir.model.fields.selection,name:ps_dynamic_report.selection__dynamic_report_configure__report_type__xls
+msgid "XLS"
+msgstr "XLS"
+
+#. module: ps_dynamic_report
+#: model:ir.model,name:ps_dynamic_report.model_dynamic_report_configure
+msgid "dynamic.report.configure"
+msgstr "dynamic.report.configure"
+
+#. module: ps_dynamic_report
+#: model:ir.model,name:ps_dynamic_report.model_dynamic_report_field
+msgid "dynamic.report.field"
+msgstr "dynamic.report.field"

@@ -625,7 +625,6 @@
             <group>
               <separator string="Place of Birth"/>
                 <field name="region_of_birth" options="{'no_create': True, 'no_create_edit': True}"/>
-                <field name="city_of_birth" options="{'no_create': True, 'no_create_edit': True}"/>
                 <field name="zone_city_of_birth"/>
                 <field name="wereda_of_birth" string="Birth Place Woreda"/>
               <separator string="Current Address"/>
@@ -661,6 +660,7 @@
                   <separator string="Membership"/>
                   <field name="start_of_membership" string="Start of Membership" attrs="{'required': ['|', ('is_member', '=', True), ('is_leader', '=', True)]}"/>
                   <field name="grade" string="Grade"/>
+                  <field name="work_experience"/>
                   <field name="key_strength" string="Key Strength" widget="many2many_tags" options="{'no_create': True, 'no_create_edit': True}" attrs="{'invisible': [('is_leader', '=', True)]}"/>
                   <field name="key_weakness" string="Key Weakness" widget="many2many_tags" options="{'no_create': True, 'no_create_edit': True}" attrs="{'invisible': [('is_leader', '=', True)]}"/>
                 </group>
@@ -679,7 +679,8 @@
                 </group>
                 <group>
                   <separator string="Leader"/>
-                  <field name="experience" string="Leader Experience"/>
+                  <field name="experience"/>
+                  <field name="work_experience"/>
                   <field name="leadership_status" string="Leadership Status"/>
                   <field name="start_of_membership" string="Start of Membership" attrs="{'required': ['|', ('is_member', '=', True), ('is_leader', '=', True)]}"/>
                   <field name="gov_responsibility"/>
@@ -873,8 +874,18 @@
     <field name="view_mode">tree,form,kanban,pivot,graph</field>
     <field name="search_view_id" ref="member_view_search"/>
     <field name="context">{}</field>
-    <field name="domain">['|', '&amp;', '&amp;', ('is_league', '=', True), ('is_leader', '=', True), ('is_member', '=', True), '|', '|', '|', ('subcity_id.parent_manager.id', '=', uid), ('subcity_id.city_id.city_manager', 'in', [uid]), ('subcity_id.city_id.transfer_handler', '=', uid), ('subcity_id.city_id.responsible_id.system_admin', 'in', [uid])]</field>
-  </record>
+    <field name="domain">['&amp;',
+                          ('is_member', '=', True),
+                          '|', '|', '|', '|', '|', '|', '|',
+                          ('wereda_id.branch_manager', 'in', [uid]),
+                          ('wereda_id.ict_manager', '=', uid),
+                          ('subcity_id.parent_manager', 'in', [uid]),
+                          ('subcity_id.ict_manager', '=', uid),
+                          ('subcity_id.city_id.city_manager', 'in', [uid]),
+                          ('subcity_id.city_id.ict_manager', '=', uid),
+                          ('subcity_id.city_id.transfer_handler', '=', uid),
+                          ('subcity_id.city_id.responsible_id.system_admin', 'in', [uid])]</field>  </record>
+
 
   <!-- This record will add new fields to the res_partner views -->
   <record id="membership_view_partner_form_inherit" model="ir.ui.view">
@@ -910,6 +921,52 @@
       <field name="act_window_id" ref="membership_members"/>
   </record>
 
+
+  <!-- This record will limit membership view to admins -->
+  <record id="membership_members_report" model="ir.actions.act_window">
+    <field name="name">Members</field>
+    <field name="res_model">res.partner</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="limit">20</field>
+    <field name="view_mode">tree,form,kanban,pivot,graph</field>
+    <field name="search_view_id" ref="member_view_search"/>
+    <field name="context">{}</field>
+    <field name="domain">['|', '&amp;', '&amp;',
+                          ('is_member', '=', True),
+                          ('is_leader', '=', True),
+                          ('is_league', '=', True),
+                          '|', '|', '|', '|', '|', '|', '|',
+                          ('wereda_id.branch_manager', 'in', [uid]),
+                          ('wereda_id.ict_manager', '=', uid),
+                          ('subcity_id.parent_manager', 'in', [uid]),
+                          ('subcity_id.ict_manager', '=', uid),
+                          ('subcity_id.city_id.city_manager', 'in', [uid]),
+                          ('subcity_id.city_id.ict_manager', '=', uid),
+                          ('subcity_id.city_id.transfer_handler', '=', uid),
+                          ('subcity_id.city_id.responsible_id.system_admin', 'in', [uid])]</field>  </record>
+
+
+  <record model="ir.actions.act_window.view" id="membership_view_partner_tree_report_id">
+      <field name="sequence" eval="1"/>
+      <field name="view_mode">tree</field>
+      <field name="view_id" ref="res_partner_tree_view"/>
+      <field name="act_window_id" ref="membership_members_report"/>
+  </record>
+
+  <record model="ir.actions.act_window.view" id="membership_view_partner_form_report_id">
+      <field name="sequence" eval="2"/>
+      <field name="view_mode">form</field>
+      <field name="view_id" ref="membership_view_partner_form_inherit"/>
+      <field name="act_window_id" ref="membership_members_report"/>
+  </record>
+
+  <record model="ir.actions.act_window.view" id="membership_view_partner_kanban_report_id">
+      <field name="sequence" eval="3"/>
+      <field name="view_mode">kanban</field>
+      <field name="view_id" ref="res_partner_kanban_view_copied"/>
+      <field name="act_window_id" ref="membership_members_report"/>
+  </record>
+
   <record id="leaders_menu" model="ir.actions.act_window">
     <field name="name">Leaders</field>
     <field name="res_model">res.partner</field>
@@ -930,12 +987,12 @@
                                                             ('league_main_office.main_admin', '=', uid),
                                                             ('league_main_office.main_finance', '=', uid),
                                                             ('league_main_office.main_assembler', '=', uid), 
-                                                            ('wereda_id.branch_manager', '=', uid),
-                                                            ('wereda_id.complaint_handler', '=', uid),
-                                                            ('subcity_id.parent_manager', '=', uid),
-                                                            ('subcity_id.complaint_handler', '=', uid),
+                                                            ('wereda_id.branch_manager', 'in', [uid]),
+                                                            ('wereda_id.ict_manager', '=', uid),
+                                                            ('subcity_id.parent_manager', 'in', [uid]),
+                                                            ('subcity_id.ict_manager', '=', uid),
                                                             ('subcity_id.city_id.city_manager', 'in', [uid]),
-                                                            ('subcity_id.city_id.complaint_handler', '=', uid),
+                                                            ('subcity_id.city_id.ict_manager', '=', uid),
                                                             ('subcity_id.city_id.transfer_handler', '=', uid),
                                                             ('subcity_id.city_id.responsible_id.system_admin', 'in', [uid])]</field>
   </record>
@@ -981,12 +1038,12 @@
                                                             ('league_main_office.main_admin', '=', uid),
                                                             ('league_main_office.main_finance', '=', uid),
                                                             ('league_main_office.main_assembler', '=', uid), 
-                                                            ('wereda_id.branch_manager', '=', uid),
-                                                            ('wereda_id.complaint_handler', '=', uid),
-                                                            ('subcity_id.parent_manager', '=', uid),
-                                                            ('subcity_id.complaint_handler', '=', uid),
+                                                            ('wereda_id.branch_manager', 'in', [uid]),
+                                                            ('wereda_id.ict_manager', '=', uid),
+                                                            ('subcity_id.parent_manager', 'in', [uid]),
+                                                            ('subcity_id.ict_manager', '=', uid),
                                                             ('subcity_id.city_id.city_manager', 'in', [uid]),
-                                                            ('subcity_id.city_id.complaint_handler', '=', uid),
+                                                            ('subcity_id.city_id.ict_manager', '=', uid),
                                                             ('subcity_id.city_id.transfer_handler', '=', uid),
                                                             ('subcity_id.city_id.responsible_id.system_admin', 'in', [uid])]</field>
   </record>
@@ -1033,12 +1090,12 @@
                                                             ('league_main_office.main_admin', '=', uid),
                                                             ('league_main_office.main_finance', '=', uid),
                                                             ('league_main_office.main_assembler', '=', uid),                                                          
-                                                            ('wereda_id.branch_manager', '=', uid),
-                                                            ('wereda_id.complaint_handler', '=', uid),
-                                                            ('subcity_id.parent_manager', '=', uid),
-                                                            ('subcity_id.complaint_handler', '=', uid),
+                                                            ('wereda_id.branch_manager', 'in', [uid]),
+                                                            ('wereda_id.ict_manager', '=', uid),
+                                                            ('subcity_id.parent_manager', 'in', [uid]),
+                                                            ('subcity_id.ict_manager', '=', uid),
                                                             ('subcity_id.city_id.city_manager', 'in', [uid]),
-                                                            ('subcity_id.city_id.complaint_handler', '=', uid),
+                                                            ('subcity_id.city_id.ict_manager', '=', uid),
                                                             ('subcity_id.city_id.transfer_handler', '=', uid),
                                                             ('subcity_id.city_id.responsible_id.system_admin', 'in', [uid])]</field>
     <field name="context">{"default_free_member": True}</field>
@@ -1168,7 +1225,7 @@
             action="leagues_menu"/>
 
 
-    <menuitem name="All Members"
+    <!-- <menuitem name="All Members"
               id="all_members_report"
               parent="member_minor_configuration.membership_all_module_report_tab"
               groups="member_minor_configuration.member_group_admin"
@@ -1178,6 +1235,6 @@
    <menuitem id="submenu_all_members_report"
             name="All Members"
             parent="all_members_report"
-            action="membership_members"/>
+            action="membership_members"/> -->
 
 </odoo>

@@ -127,7 +127,7 @@
                 <button name="action_done" states="open,ongoing" string="Close" type="object" class="btn-primary"/>
                 <button name="action_draft" states="cancel" string="Reset to Draft" type="object"/>
                 <button name="action_cancel" states="draft,in_progress,ongoing" string="Cancel" type="object"/>
-                <field name="state" widget="statusbar" statusbar_visible="draft,in_progress,open,financial,done" attrs="{'invisible': [('is_quantity_copy', '=', 'none')]}"/>
+                <field name="state" widget="statusbar" statusbar_visible="draft,in_progress,open,done" attrs="{'invisible': [('is_quantity_copy', '=', 'none')]}"/>
                 <field name="state_blanket_order" widget="statusbar" statusbar_visible="draft,ongoing,done" attrs="{'invisible': [('is_quantity_copy', '!=', 'none')]}"/>
             </header>
             <sheet>
@@ -194,23 +194,23 @@
                         <separator string="Terms and Conditions"/>
                         <field name="description" attrs="{'readonly': [('state','not in',('draft','in_progress','open'))]}"/>
                     </page>
-<!--                       <page string="Products list">-->
-<!--                        <field name="line_id_2">-->
-<!--                            <tree string="Products List" editable="bottom" create="false">-->
-<!--                                <field name="name" readonly="1"/>-->
-<!--                                <field name="product_id" readonly="1"/>-->
-<!--                                <field name="product_qty" readonly="1"/>-->
-<!--                                <field name="price_unit" readonly="1"/>-->
-<!--                                <field name="taxes_id" widget="many2many_tags" readonly="1"/>-->
-<!--                                <field name="price_subtotal" readonly="1"/>-->
-<!--                                <field name="partner_id" readonly="1"/>-->
-<!--                                <field name="order_line" invisible="1"/>-->
-<!--                                <field name="selection"/>-->
-<!--                                <field name="reason"/>-->
+                       <page string="Products list">
+                        <field name="line_id_2">
+                            <tree string="Products List" editable="bottom" create="false">
+                                <field name="name" readonly="1"/>
+                                <field name="product_id" readonly="1"/>
+                                <field name="product_qty" readonly="1"/>
+                                <field name="price_unit" readonly="1"/>
+                                <field name="taxes_id" widget="many2many_tags" readonly="1"/>
+                                <field name="price_subtotal" readonly="1"/>
+                                <field name="partner_id" readonly="1"/>
+                                <field name="order_line" invisible="1"/>
+                                <field name="selection"/>
+                                <field name="reason"/>
 
-<!--                            </tree>-->
-<!--                        </field>-->
-<!--                    </page>-->
+                            </tree>
+                        </field>
+                    </page>
                 </notebook>
             </sheet>
             <div class="oe_chatter">

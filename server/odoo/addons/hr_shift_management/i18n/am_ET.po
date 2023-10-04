@@ -1,0 +1,156 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_shift_management
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0-20220525\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-24 20:07+0000\n"
+"PO-Revision-Date: 2023-03-24 20:07+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_shift_management
+#: model:ir.model.fields.selection,name:hr_shift_management.selection__hr_employee_shift__state__closed
+#: model:ir.model.fields.selection,name:hr_shift_management.selection__hr_shift_management__state__closed
+msgid "Closed"
+msgstr "የተዘጋ"
+
+#. module: hr_shift_management
+#: model:ir.model.fields,field_description:hr_shift_management.field_hr_employee_shift__create_uid
+#: model:ir.model.fields,field_description:hr_shift_management.field_hr_shift_management__create_uid
+msgid "Created by"
+msgstr "የተፈጠረው በ"
+
+#. module: hr_shift_management
+#: model:ir.model.fields,field_description:hr_shift_management.field_hr_employee_shift__create_date
+#: model:ir.model.fields,field_description:hr_shift_management.field_hr_shift_management__create_date
+msgid "Created on"
+msgstr "የተፈጠረው ቀን"
+
+#. module: hr_shift_management
+#: model:ir.model.fields,field_description:hr_shift_management.field_hr_employee_shift__display_name
+#: model:ir.model.fields,field_description:hr_shift_management.field_hr_shift_management__display_name
+msgid "Display Name"
+msgstr "ስም"
+
+#. module: hr_shift_management
+#: model:ir.model,name:hr_shift_management.model_hr_employee
+#: model:ir.model.fields,field_description:hr_shift_management.field_hr_employee_shift__employee_id
+#: model:ir.model.fields,field_description:hr_shift_management.field_hr_shift_management__employee_ids
+msgid "Employee"
+msgstr "ሰራተኛ"
+
+#. module: hr_shift_management
+#: model:ir.model.fields,field_description:hr_shift_management.field_hr_shift_management__end_date
+msgid "End Date"
+msgstr "የመጨረሻ ቀን"
+
+#. module: hr_shift_management
+#: model:ir.model.fields,field_description:hr_shift_management.field_hr_employee_shift__id
+#: model:ir.model.fields,field_description:hr_shift_management.field_hr_shift_management__id
+msgid "ID"
+msgstr "መታወቂያ"
+
+#. module: hr_shift_management
+#: model:ir.model.fields,field_description:hr_shift_management.field_hr_employee_shift____last_update
+#: model:ir.model.fields,field_description:hr_shift_management.field_hr_shift_management____last_update
+msgid "Last Modified on"
+msgstr "መጨረሻ የተሻሻለው ቀን"
+
+#. module: hr_shift_management
+#: model:ir.model.fields,field_description:hr_shift_management.field_hr_employee_shift__write_uid
+#: model:ir.model.fields,field_description:hr_shift_management.field_hr_shift_management__write_uid
+msgid "Last Updated by"
+msgstr "መጨረሻ የተሻሻለው በ"
+
+#. module: hr_shift_management
+#: model:ir.model.fields,field_description:hr_shift_management.field_hr_employee_shift__write_date
+#: model:ir.model.fields,field_description:hr_shift_management.field_hr_shift_management__write_date
+msgid "Last Updated on"
+msgstr "መጨረሻ የተሻሻለው ቀን"
+
+#. module: hr_shift_management
+#: model:ir.model.fields,field_description:hr_shift_management.field_hr_employee_shift__name
+msgid "Name"
+msgstr "ስም"
+
+#. module: hr_shift_management
+#: model:ir.model.fields.selection,name:hr_shift_management.selection__hr_employee_shift__state__open
+#: model:ir.model.fields.selection,name:hr_shift_management.selection__hr_shift_management__state__open
+msgid "Open"
+msgstr "ክፍት"
+
+#. module: hr_shift_management
+#: model:ir.model.fields,field_description:hr_shift_management.field_hr_shift_management__name
+msgid "Reference"
+msgstr "ማጣቀሻ"
+
+#. module: hr_shift_management
+#: model_terms:ir.ui.view,arch_db:hr_shift_management.hr_shift_management_search
+msgid "Resource Calendar"
+msgstr "የቀን መቁጠሪያ"
+
+#. module: hr_shift_management
+#: model:ir.model.fields,field_description:hr_shift_management.field_hr_employee__shift_ids
+msgid "Shift"
+msgstr "ፈረቃ"
+
+#. module: hr_shift_management
+#: model:ir.model.fields,field_description:hr_shift_management.field_hr_employee_shift__end_date
+msgid "Shift End Date"
+msgstr "የፈረቃ ማብቂያ ቀን"
+
+#. module: hr_shift_management
+#: model:ir.actions.act_window,name:hr_shift_management.hr_shift_management_action
+#: model:ir.ui.menu,name:hr_shift_management.hr_shift_management
+msgid "Shift Management"
+msgstr "የፈረቃ መቆጣጠርያ"
+
+#. module: hr_shift_management
+#: model:ir.model.fields,field_description:hr_shift_management.field_hr_employee_shift__start_date
+msgid "Shift Start Date"
+msgstr "የፈረቃ መጀመሪያ ቀን"
+
+#. module: hr_shift_management
+#: model_terms:ir.ui.view,arch_db:hr_shift_management.view_employee_form_inherit
+msgid "Shifts"
+msgstr "ፈረቃ"
+
+#. module: hr_shift_management
+#: model:ir.model.fields,field_description:hr_shift_management.field_hr_shift_management__start_date
+msgid "Start Date"
+msgstr "የመጀመሪያ ቀን"
+
+#. module: hr_shift_management
+#: model:ir.model.fields,field_description:hr_shift_management.field_hr_employee_shift__state
+#: model:ir.model.fields,field_description:hr_shift_management.field_hr_shift_management__state
+#: model_terms:ir.ui.view,arch_db:hr_shift_management.hr_shift_management_search
+msgid "State"
+msgstr "ሁኔታ"
+
+#. module: hr_shift_management
+#: model:ir.model,name:hr_shift_management.model_hr_employee_shift
+msgid "This class will create shifts for each employees"
+msgstr "ይህ ክፍል ለእያንዳንዱ ሰራተኛ ፈረቃ ይፈጥራል::"
+
+#. module: hr_shift_management
+#: model:ir.model,name:hr_shift_management.model_hr_shift_management
+msgid "This class will handle the shift managements"
+msgstr "ይህ ክፍል የፈረቃ መቆጣጠርያ ያስተናግዳል።"
+
+#. module: hr_shift_management
+#: model:ir.model.fields,field_description:hr_shift_management.field_hr_employee_shift__resource_calendar_id
+#: model:ir.model.fields,field_description:hr_shift_management.field_hr_shift_management__resource_calendar_id
+msgid "Working Schedule"
+msgstr "የሥራ መርሃ ግብር"
+
+#. module: hr_shift_management
+#: model:ir.actions.act_window,name:hr_shift_management.hr_employee_shift_action
+msgid "hr.employee.shift.action"
+msgstr "hr.employee.shift.action"

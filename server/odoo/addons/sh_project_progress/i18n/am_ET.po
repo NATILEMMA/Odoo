@@ -1,0 +1,75 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sh_project_progress
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-06-30 11:55+0000\n"
+"PO-Revision-Date: 2023-06-30 11:55+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sh_project_progress
+#: model_terms:ir.ui.view,arch_db:sh_project_progress.project_project_form_view_inherit
+msgid "Actual Progress(%) :"
+msgstr "ትክክለኛ እድገት (%)"
+
+#. module: sh_project_progress
+#: model:ir.model.fields,field_description:sh_project_progress.field_project_task_type__exclude
+msgid "Exclude From Progress Calculation"
+msgstr "ከሂደት ስሌት አግልል"
+
+#. module: sh_project_progress
+#: model_terms:ir.ui.view,arch_db:sh_project_progress.project_project_form_view_inherit
+msgid "Expectation Progress(%) :"
+msgstr "የሚጠበቀው እድገት (%)"
+
+#. module: sh_project_progress
+#: model:ir.model.fields,field_description:sh_project_progress.field_project_project__expectation_total
+msgid "Expectation Total"
+msgstr "የሚጠበቀው ጠቅላላ"
+
+#. module: sh_project_progress
+#: model:ir.model,name:sh_project_progress.model_project_project
+msgid "Planning"
+msgstr "እቅድ ማውጣት"
+
+#. module: sh_project_progress
+#: code:addons/sh_project_progress/models/project_progress.py:0
+#, python-format
+msgid "Progress must be 100% OR under 100%."
+msgstr "ግስጋሴው 100% ወይም ከ 100% በታች መሆን አለበት."
+
+#. module: sh_project_progress
+#: model:ir.model.fields,field_description:sh_project_progress.field_project_project__expectation_progress
+#: model:ir.model.fields,field_description:sh_project_progress.field_project_project__progress
+#: model:ir.model.fields,field_description:sh_project_progress.field_project_task__task_progress
+#: model:ir.model.fields,field_description:sh_project_progress.field_project_task_type__stage_progress
+msgid "Progress(%)"
+msgstr "እድገት (%)"
+
+#. module: sh_project_progress
+#: model:ir.model,name:sh_project_progress.model_project_task
+msgid "Task"
+msgstr "ተግባር"
+
+#. module: sh_project_progress
+#: model:ir.model,name:sh_project_progress.model_project_task_type
+msgid "Task Stage"
+msgstr "የተግባር ደረጃ"
+
+#. module: sh_project_progress
+#: model:ir.model.fields,field_description:sh_project_progress.field_project_task__task_total
+msgid "Task total"
+msgstr "ጠቅላላ ተግባር"
+
+#. module: sh_project_progress
+#: model:ir.model.fields,field_description:sh_project_progress.field_project_project__total
+msgid "Total"
+msgstr "Total"

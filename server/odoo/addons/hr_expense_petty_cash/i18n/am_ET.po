@@ -1,0 +1,226 @@
+# Date created: 2023-06-17 13:11:05 by dichthuatphuongdong.com
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-06-17 03:13:39+0000"
+"MIME-Version: 1.0"
+"Content-Type: text/plain; charset=UTF-8"
+"Content-Transfer-Encoding: 8bit"
+"Plural-Forms: nplurals=1; plural=0;"
+"X-Generator: GlotPress/3.0.0-alpha.2"
+"Language: en_GB"
+"Project-Id-Version: PO File 5.8.1"
+
+#. module: hr_expense_petty_cash
+#: code:addons/hr_expense_petty_cash/models/account_move.py:0
+msgid "%s is not a petty cash holder"
+msgstr "%s ትንሽ ገንዘብ ያዥ አይደለም።"
+
+#. module: hr_expense_petty_cash
+#: code:addons/hr_expense_petty_cash/models/account_move.py:0
+msgid "Account on invoice line should be {}."
+msgstr "በክፍያ መጠየቂያ መስመር ላይ ያለው መለያ {} መሆን አለበት።"
+
+#. module: hr_expense_petty_cash
+#: model:ir.model.fields,field_description:hr_expense_petty_cash.field_petty_cash__active
+msgid "Active"
+msgstr "ንቁ"
+
+#. module: hr_expense_petty_cash
+#: model_terms:ir.ui.view,arch_db:hr_expense_petty_cash.view_petty_cash_form
+#: model_terms:ir.ui.view,arch_db:hr_expense_petty_cash.view_petty_cash_search
+msgid "Archived"
+msgstr "በማህደር የተቀመጠ"
+
+#. module: hr_expense_petty_cash
+#: model:ir.model.fields,field_description:hr_expense_petty_cash.field_petty_cash__petty_cash_balance
+#: model_terms:ir.ui.view,arch_db:hr_expense_petty_cash.view_petty_cash_list
+msgid "Balance"
+msgstr "ሚዛን"
+
+#. module: hr_expense_petty_cash
+#: model_terms:ir.actions.act_window,help:hr_expense_petty_cash.action_petty_cash
+msgid "Create a new petty cash holder"
+msgstr "አዲስ ትንሽ ገንዘብ መያዣ ይፍጠሩ"
+
+#. module: hr_expense_petty_cash
+#: model:ir.model.fields,field_description:hr_expense_petty_cash.field_petty_cash__create_uid
+msgid "Created by"
+msgstr "የተፈጠረ"
+
+#. module: hr_expense_petty_cash
+#: model:ir.model.fields,field_description:hr_expense_petty_cash.field_petty_cash__create_date
+msgid "Created on"
+msgstr "ላይ ተፈጠረ"
+
+#. module: hr_expense_petty_cash
+#: model:ir.model.fields,field_description:hr_expense_petty_cash.field_petty_cash__display_name
+msgid "Display Name"
+msgstr "መጠሪያው ስም"
+
+#. module: hr_expense_petty_cash
+#: model:ir.model,name:hr_expense_petty_cash.model_hr_expense
+msgid "Expense"
+msgstr "ወጪ"
+
+#. module: hr_expense_petty_cash
+#: model:ir.model.fields,field_description:hr_expense_petty_cash.field_hr_expense_sheet__journal_id
+msgid "Expense Journal"
+msgstr "የወጪ ጆርናል"
+
+#. module: hr_expense_petty_cash
+#: model:ir.model,name:hr_expense_petty_cash.model_hr_expense_sheet
+msgid "Expense Report"
+msgstr "የወጪ ሪፖርት"
+
+#. module: hr_expense_petty_cash
+#: model_terms:ir.ui.view,arch_db:hr_expense_petty_cash.view_petty_cash_search
+msgid "Group By"
+msgstr "ቡድን በ"
+
+#. module: hr_expense_petty_cash
+#: model:ir.model.fields,field_description:hr_expense_petty_cash.field_petty_cash__id
+msgid "ID"
+msgstr "መታወቂያ"
+
+#. module: hr_expense_petty_cash
+#: model:ir.model.fields,field_description:hr_expense_petty_cash.field_petty_cash__journal_id
+#: model_terms:ir.ui.view,arch_db:hr_expense_petty_cash.view_petty_cash_search
+msgid "Journal"
+msgstr "ጆርናል"
+
+#. module: hr_expense_petty_cash
+#: model:ir.model,name:hr_expense_petty_cash.model_account_move
+msgid "Journal Entries"
+msgstr "ጆርናል ግቤቶች"
+
+#. module: hr_expense_petty_cash
+#: model:ir.model.fields,field_description:hr_expense_petty_cash.field_petty_cash____last_update
+msgid "Last Modified on"
+msgstr "መጨረሻ የተሻሻለው በርቷል።"
+
+#. module: hr_expense_petty_cash
+#: model:ir.model.fields,field_description:hr_expense_petty_cash.field_petty_cash__write_uid
+msgid "Last Updated by"
+msgstr "መጨረሻ የዘመነው በ"
+
+#. module: hr_expense_petty_cash
+#: model:ir.model.fields,field_description:hr_expense_petty_cash.field_petty_cash__write_date
+msgid "Last Updated on"
+msgstr "መጨረሻ የዘመነው በርቷል።"
+
+#. module: hr_expense_petty_cash
+#: model_terms:ir.ui.view,arch_db:hr_expense_petty_cash.view_petty_cash_list
+msgid "Limit"
+msgstr "ገደብ"
+
+#. module: hr_expense_petty_cash
+#: model:ir.model.fields,field_description:hr_expense_petty_cash.field_petty_cash__petty_cash_limit
+msgid "Max Limit"
+msgstr "ከፍተኛ ገደብ"
+
+#. module: hr_expense_petty_cash
+#: code:addons/hr_expense_petty_cash/models/hr_expense_sheet.py:0
+msgid ""
+"Not enough money in petty cash holder."
+"You are requesting %s%s, but the balance is %s%s."
+msgstr ""
+"በጥቃቅን ገንዘብ መያዣ ውስጥ በቂ ገንዘብ የለም."
+"እርስዎ %s%s እየጠየቁ ነው፣ ነገር ግን ሒሳቡ %s%s ነው።"
+
+#. module: hr_expense_petty_cash
+#: model:ir.model.fields,field_description:hr_expense_petty_cash.field_hr_expense__payment_mode
+msgid "Paid By"
+msgstr "የሚከፈለው በ"
+
+#. module: hr_expense_petty_cash
+#: model:ir.actions.act_window,name:hr_expense_petty_cash.action_petty_cash
+#: model:ir.model,name:hr_expense_petty_cash.model_petty_cash
+#: model:ir.model.fields,field_description:hr_expense_petty_cash.field_account_move__is_petty_cash
+#: model:ir.model.fields.selection,name:hr_expense_petty_cash.selection__hr_expense__payment_mode__petty_cash
+#: model:ir.ui.menu,name:hr_expense_petty_cash.menu_petty_cash
+#: model_terms:ir.ui.view,arch_db:hr_expense_petty_cash.hr_expense_sheet_view_search_inherit
+#: model_terms:ir.ui.view,arch_db:hr_expense_petty_cash.hr_expense_view_search_inherit
+#: model_terms:ir.ui.view,arch_db:hr_expense_petty_cash.view_petty_cash_form
+#: model_terms:ir.ui.view,arch_db:hr_expense_petty_cash.view_petty_cash_list
+#: model_terms:ir.ui.view,arch_db:hr_expense_petty_cash.view_petty_cash_search
+msgid "Petty Cash"
+msgstr "ጥቃቅን ጥሬ ገንዘብ"
+
+#. module: hr_expense_petty_cash
+#: model:ir.model.fields,field_description:hr_expense_petty_cash.field_petty_cash__account_id
+#: model_terms:ir.ui.view,arch_db:hr_expense_petty_cash.view_petty_cash_search
+msgid "Petty Cash Account"
+msgstr "ጥቃቅን ጥሬ ገንዘብ መለያ"
+
+#. module: hr_expense_petty_cash
+#: model:ir.model.fields,field_description:hr_expense_petty_cash.field_petty_cash__partner_id
+#: model_terms:ir.ui.view,arch_db:hr_expense_petty_cash.hr_expense_sheet_view_search_inherit
+#: model_terms:ir.ui.view,arch_db:hr_expense_petty_cash.hr_expense_view_search_inherit
+#: model_terms:ir.ui.view,arch_db:hr_expense_petty_cash.view_petty_cash_search
+msgid "Petty Cash Holder"
+msgstr "ትንሽ ገንዘብ ያዥ"
+
+#. module: hr_expense_petty_cash
+#: model:ir.model.constraint,message:hr_expense_petty_cash.constraint_petty_cash_partner_uniq
+msgid "Petty Cash Holder must be unique!"
+msgstr "ትንሽ ገንዘብ ያዥ ልዩ መሆን አለበት!"
+
+#. module: hr_expense_petty_cash
+#: code:addons/hr_expense_petty_cash/models/account_move.py:0
+msgid ""
+"Petty Cash balance is %s %s."
+"Max amount to add is %s %s."
+msgstr ""
+"የጥቃቅን ጥሬ ገንዘብ ሒሳብ %s %s ነው።"
+"የሚጨመርበት ከፍተኛው መጠን %s %s ነው።"
+
+#. module: hr_expense_petty_cash
+#: model:ir.model.fields,field_description:hr_expense_petty_cash.field_hr_expense__petty_cash_id
+#: model:ir.model.fields,field_description:hr_expense_petty_cash.field_hr_expense_sheet__petty_cash_id
+msgid "Petty cash holder"
+msgstr "ትንሽ ገንዘብ ያዥ"
+
+#. module: hr_expense_petty_cash
+#: code:addons/hr_expense_petty_cash/models/account_move.py:0
+msgid "Please check Petty Cash on {}."
+msgstr "እባክዎን በ{} ላይ ትንሽ ገንዘብ ያረጋግጡ።"
+
+#. module: hr_expense_petty_cash
+#: code:addons/hr_expense_petty_cash/models/account_move.py:0
+msgid "Please select petty cash holder"
+msgstr "እባክዎን ትንሽ ገንዘብ ያዥ ይምረጡ"
+
+#. module: hr_expense_petty_cash
+#: model:ir.model.fields,help:hr_expense_petty_cash.field_hr_expense_sheet__journal_id
+msgid "The journal used when the expense is done."
+msgstr "ወጪው ሲጠናቀቅ ጥቅም ላይ የዋለው መጽሔት."
+
+#. module: hr_expense_petty_cash
+#: code:addons/hr_expense_petty_cash/models/hr_expense.py:0
+msgid "You can not create report without product."
+msgstr "ያለ ምርት ሪፖርት መፍጠር አይችሉም።"
+
+#. module: hr_expense_petty_cash
+#: code:addons/hr_expense_petty_cash/models/hr_expense_sheet.py:0
+msgid "You cannot create report from many petty cash holders."
+msgstr "ከብዙ ጥቃቅን ገንዘብ ባለቤቶች ሪፖርት መፍጠር አይችሉም።"
+
+#. module: hr_expense_petty_cash
+#: code:addons/hr_expense_petty_cash/models/hr_expense.py:0
+msgid "You cannot create report from many petty cash mode and other."
+msgstr "ከብዙ ጥቃቅን የገንዘብ ሁነታ እና ሌሎች ሪፖርት መፍጠር አይችሉም።"
+
+#. module: hr_expense_petty_cash
+#: code:addons/hr_expense_petty_cash/models/hr_expense.py:0
+msgid "You cannot report expenses for different employees in the same report."
+msgstr "ለተለያዩ ሰራተኞች ወጪዎችን በተመሳሳይ ሪፖርት ሪፖርት ማድረግ አይችሉም።"
+
+#. module: hr_expense_petty_cash
+#: code:addons/hr_expense_petty_cash/models/hr_expense.py:0
+msgid "You cannot report twice the same line!"
+msgstr "በተመሳሳይ መስመር ሁለት ጊዜ ሪፖርት ማድረግ አይችሉም!"
+
+#. module: hr_expense_petty_cash
+#: code:addons/hr_expense_petty_cash/models/account_move.py:0
+msgid "{} with petty cash checked must contain only 1 line."
+msgstr "{} በጥሬ ገንዘብ የተፈተሸ 1 መስመር ብቻ መያዝ አለበት።"

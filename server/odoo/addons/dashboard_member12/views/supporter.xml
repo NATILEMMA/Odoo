@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="registration_more_studies" name="Check Studies Again">
+        <t t-call="website.layout">
+            <div id="wrap">
+                <div class="oe_structure">
+                    <body>
+                          <div class="main-panel" style="background-color: #eee;">
+
+                            <div class="container">
+                              <h1>Warning</h1>
+                              <div class="row">
+                                <div class="col-lg-8">
+                                  <div class="alert alert-warning">
+                                    Please Make Sure You Have Checked All The Field of Studies
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                      </body>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="registration_form" name="Membership Registration Form">
+        <t t-call="website.layout">
+            <div id="wrap">
+              <xpath expr="." position="inside">
+                <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+                <link rel="stylesheet" href="/dashboard_member12/static/css/redmond.calendars.picker.css"/>
+                <script src="/dashboard_member12/static/js/custom.js"></script>
+                <script src="/dashboard_member12/static/js/jquery.plugin.js"></script>
+                <script src="/dashboard_member12/static/js/jquery.calendars.js"></script>
+                <script src="/dashboard_member12/static/js/jquery.calendars.plus.js"></script>
+                <script src="/dashboard_member12/static/js/jquery.calendars.picker.js"></script>
+                <script src="/dashboard_member12/static/js/jquery.calendars.ethiopian.js"></script>
+                <script src="/dashboard_member12/static/js/jquery.calendars.ethiopian-am.js"></script>
+                <!-- <script type="text/javascript"  src="/dashboard_member12/static/js/jquery.calendars.picker-am.js"></script> -->
+              </xpath>
+
+                <div class="oe_structure">
+                    <body>
+                      <br/>
+                      <br/>
+                      <p style="text-align: center;">This Will Help People Register For Supporter For Prosperity Party.</p>
+                       <p style="text-align: center;">Please Fill In The Information And Submit.</p>
+                       <p style="text-align: center;">The Fields With Asterisk Are Mandatory.</p>
+                       <br/>
+                  
+                      <div class="col d-flex justify-content-center">
+                        <div class="card m-5 w-50">
+                          <h5 class="card-header">Registration Form</h5>
+                          <div class="card-body">
+                            <form id="validation" role="form" action="/registrations" enctype="multipart/form-data" method="POST">
+                              <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                              <div class="row registration_details">
+                                <div class="col-lg-12">
+                                  <div class="row">
+                                    <div class="col-lg-12" id="s2u_portal_avatar">
+                                      <input type="file" class="d-none s2u_portal_avatar_upload" name="image_1920" accept="image/*"/>
+                                      <img class="mb-3 s2u_portal_avatar_img" t-att-src="'/web/static/src/img/placeholder.png'" style="object-fit: cover; border-radius: 50%; width: 128px; height: 128px;"/>
+                                      <div class="text-left">
+                                        <a href="#" class="btn btn-primary s2u_portal_avatar_edit" aria-label="Edit">
+                                          <i class="fa fa-pencil fa-1g float-sm-none float-md-left" title="Edit"></i>
+                                        </a>
+                                        <a href="#" title="Clear" aria-label="Clear" class="btn border-primary s2u_portal_avatar_clear">
+                                          <i class="fa fa-trash-o float-sm-none float-md-right"></i>
+                                        </a>
+                                      </div>
+                                    </div>
+                                    <div t-attf-class="form-group  col-xl-6">
+                                      <label class="col-form-label" for="first_name">First Name <span style="color: red;">*</span></label>
+                                      <input type="text" name="first_name" t-attf-class="form-control" required="required"/>
+                                    </div>
+                                    <div t-attf-class="form-group  col-xl-6">
+                                      <label class="col-form-label" for="father_name">Father's Name <span style="color: red;">*</span></label>
+                                      <input type="text" name="father_name" t-attf-class="form-control" required="required"/>
+                                    </div>
+                                    <div class="clearfix" />
+                                    <div t-attf-class="form-group  col-xl-6">
+                                      <label class="col-form-label" for="grand_father_name">Grand Father's Name <span style="color: red;">*</span></label>
+                                      <input type="text" name="grand_father_name" t-attf-class="form-control" required="required"/>
+                                    </div>
+                                    <div t-attf-class="form-group  col-xl-6">
+                                      <label class="col-form-label">Birth Date <span style="color: red;">*</span></label>
+                                      <input class="form-control" type="text" id="Date" placeholder="MM/DD/YYY"  name="ethiopian_from" />
+                                      <!-- <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="text"/> -->
+                                    </div>
+                                    <!-- <div t-attf-class="form-group  col-xl-6">
+                                      <label class="col-form-label" for="age">Age <span style="color: red;">*</span></label>
+                                      <input type="number" name="age" t-attf-class="form-control" required="required"/>
+                                    </div> -->
+                                    <div class="clearfix" />
+                                    <div t-attf-class="form-group col-xl-6">
+                                      <label class="col-form-label" for="gender">Gender <span style="color: red;">*</span></label>
+                                      <select name="gender" t-attf-class="form-control" required="required">
+                                        <option value="">Select a gender</option>
+                                        <option value="Male">M</option>
+                                        <option value="Female">F</option>
+                                      </select>
+                                    </div>
+                                    <div t-attf-class="form-group col-xl-6">
+                                      <label class="col-form-label" for="ethnic_group">Ethnic Group <span style="color: red;">*</span></label>
+                                      <select name="ethnic_group" t-attf-class="form-control" required="required">
+                                        <option value="">Ethnic...</option>
+                                        <t t-foreach="ethnicity" t-as="eth">
+                                          <option t-att-value="eth.id">
+                                            <t t-esc="eth.name"/>
+                                          </option>
+                                        </t>
+                                      </select>
+                                    </div>
+                                    <div class="clearfix" />
+                                    <div t-attf-class="form-group col-xl-6">
+                                      <label class="col-form-label" for="education_level">Education Level <span style="color: red;">*</span></label>
+                                      <select name="education_level" t-attf-class="form-control" required="required">
+                                        <option value="">Education Level....</option>
+                                        <t t-foreach="ed_levels" t-as="ed">
+                                          <option t-att-value="ed.id">
+                                            <t t-esc="ed.name"/>
+                                          </option>
+                                        </t>
+                                      </select>
+                                    </div>
+                                    <div class="clearfix" />
+                                    <div t-attf-class="form-group col-xl-6">
+                                      <label class="col-form-label" for="field_of_study_id">Field of Study</label>
+                                      <select name="field_of_study_id" t-attf-class="form-control">
+                                        <option value="">Field of Study....</option>
+                                        <t t-foreach="studies" t-as="study">
+                                          <option t-att-value="study.id">
+                                            <t t-esc="study.name"/>
+                                          </option>
+                                        </t>
+                                      </select>
+                                    </div>
+                                    <div t-attf-class="form-group  col-xl-6" id="userinput" style="display: none;">
+                                      <label class="col-form-label" for="user_input">Other Type of Study</label>
+                                      <input type="text" name="user_input" id="user_input" t-attf-class="form-control"/>
+                                    </div>                                    
+                                    <div class="clearfix" />
+                                    <div t-attf-class="form-group col-xl-6">
+                                      <label class="col-form-label" for="livelihood">Source of Livelihood <span style="color: red;">*</span></label>
+                                      <select name="livelihood" t-attf-class="form-control" required="required">
+                                        <option value="">Select a livelihood</option>
+                                        <option value="governmental">Governmental</option>
+                                        <option value="private">Private</option>
+                                        <option value="individual">Individual</option>
+                                        <option value="stay at home">Stay At Home</option>
+                                      </select>
+                                    </div>
+                                    <div class="clearfix" />
+                                    <div t-attf-class="form-group col-xl-6" id="livelihood" style="display: none;">
+                                      <label class="col-form-label" for="company_name">Company Name</label>
+                                      <input type="text" name="company_name" t-attf-class="form-control"/>
+                                    </div>
+                                    <div t-attf-class="form-group col-xl-6" id="livelihood1" style="display: none;">
+                                      <label class="col-form-label" for="position">Job Position</label>
+                                      <input type="text" name="position" t-attf-class="form-control"/>
+                                    </div>
+                                    <div class="clearfix" />
+                                    <div t-attf-class="form-group col-xl-6">
+                                      <label class="col-form-label" for="residential_subcity_id">Subcity <span style="color: red;">*</span></label>
+                                      <select name="residential_subcity_id" t-attf-class="form-control" required="required">
+                                        <option value="">Subcity...</option>
+                                        <t t-foreach="subcities" t-as="subcity">
+                                          <option t-att-value="subcity.id">
+                                            <t t-esc="subcity.name"/>
+                                          </option>
+                                        </t>
+                                      </select>
+                                    </div>
+                                    <div t-attf-class="form-group col-xl-6">
+                                      <label class="col-form-label label-optional" for="residential_wereda_id">Woreda <span style="color: red;">*</span></label>
+                                      <select name="residential_wereda_id" t-attf-class="form-control" required="required">
+                                        <option value="">Select your Woreda..</option>
+                                        <t t-foreach="weredas" t-as="wereda">
+                                          <option t-att-value="wereda.id" style="display:none;" t-att-data-parent_id="wereda.parent_id.id">
+                                            <t t-esc="wereda.name"/>
+                                          </option>
+                                        </t>
+                                      </select>
+                                    </div>
+
+                                    <div class="clearfix" />
+                                    <!-- <div class="row o_phone_number_validation"> -->
+                                    <div t-attf-class="form-group col-xl-6">
+                                      <label class="col-form-label" for="phone">Phone <span style="color: red;">*</span></label>
+                                      <input type="tel" name="phone" id="phone" t-attf-class="form-control" required="required"/>
+                                      <div style="background:orange;font-style:bold; text-align:center;" id="errorDiv"></div><br/>
+                                    </div>
+                                    <!-- </div> -->
+                                    <div class="clearfix" />
+                                  </div>
+
+                                  <div class="clearfix">
+                                      <button type="submit" class="btn btn-primary" onclick="validatePhone()">Submit</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+
+                      </body>
+                </div>
+            </div>
+        </t>
+
+  <script>
+  function validatePhone() {
+    console.log("**********")
+
+    const phoneNumber = document.getElementById('phone').value;
+    console.log("HHHHHHHHHHHHH",phoneNumber)
+    if (phoneNumber.length === 10) {
+      // passwords match, compute the password and submit the form
+    const errorDiv = document.getElementById('errorDiv');
+      console.log("TTTTTTTTTTTTTT")
+      return true; // allow the form to be submitted
+    }
+    else if (phoneNumber[0] === '0') {
+      // passwords match, compute the password and submit the form
+    const errorDiv = document.getElementById('errorDiv');
+      console.log("TTTTTTTTTTTTTT")
+      return true; // allow the form to be submitted
+    }
+    else {
+      // passwords do not match, display an error message and do not submit the form
+      document.getElementById('errorDiv').innerHTML = '<h style="color:red;">A valid phone number should have 10 digits and start with 0</h>';
+     const errorDiv = document.getElementById('errorDiv');
+     console.log("FFFFFFFFFFFFF")
+
+   errorDiv.innerHTML = 'A valid phone number should have 10 digits and start with 0';
+      return false; // prevent the form from being submitted
+    }
+  }
+
+  
+  document.getElementById('validation').addEventListener('submit', function(event) {
+    event.preventDefault(); // prevent the form from submitting
+  
+    if (validatePhone()) {
+      // passwords match, allow the form to be submitted
+      this.submit();
+      setTimeout(function() {
+    location.reload();
+  }, 2000);
+    } else {
+      // passwords do not match, do not submit the form
+      console.error('Passwords do not match');
+    }
+  });
+    </script>
+    </template>
+    <!-- <template id="assets_frontend_custom_js" name="phone_custom_js" inherit_id="website.assets_frontend">
+      <xpath expr="." position="inside">
+          <script type="text/javascript" src="/dashboard_member12/static/js/custom.js"></script>
+      </xpath>
+    </template> -->
+
+
+
+ <template id="assets_frontend_supporter" name="supporter_form_js" inherit_id="website.assets_frontend">
+   <xpath expr="." position="inside">
+     <script type="text/javascript" src="/dashboard_member12/static/src/js/product_new.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <!-- Include Date Range Picker -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+
+    <!-- <script>
+        $(document).ready(function(){
+            var date_input=$('input[name="date"]'); //our date input has the name "date"
+            var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+            date_input.datepicker({
+                format: 'mm/dd/yyyy',
+                container: container,
+                todayHighlight: true,
+                autoclose: true,
+            })
+        })
+    </script> -->
+   </xpath>
+ </template>
+
+
+</odoo>
