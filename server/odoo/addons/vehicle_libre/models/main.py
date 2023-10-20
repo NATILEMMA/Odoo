@@ -127,10 +127,10 @@ class VehicleLibre(models.Model):
                                   ('electric', 'Electric'),
                                   ('hybrid', 'Hybrid')], string='Fuel Type')
     engine_horse_power = fields.Char("Engine Horse Power",translate=True)
-    total_weight = fields.Char("Total Weight",translate=True)
-    items_weight = fields.Char('Single Weight',translate=True)
+    total_weight = fields.Integer("Total Weight",translate=True)
+    items_weight = fields.Integer('Single Weight',translate=True)
     cc = fields.Char("CC",translate=True)
-    slender_amount = fields.Char("Number of Cylinders",translate=True)
+    cylinder_amount = fields.Integer("Number of Cylinders",translate=True)
     allowed_work_type = fields.Char("Allowed Services Type",translate=True)
     state = fields.Selection([
         ('draft', 'Draft'),

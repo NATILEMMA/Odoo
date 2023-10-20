@@ -128,7 +128,7 @@ class UpdateEngineInfo(models.TransientModel):
 
     def set_new_engine_info(self):
         """Method set new engine info."""
-        _logger.info("***************pick1 %s",pick1)
+
         vehicle_obj = self.env['fleet.vehicle']
 
         engine_history_obj = self.env['engine.history']
@@ -137,29 +137,41 @@ class UpdateEngineInfo(models.TransientModel):
             if i == (len(pick1)-1):
                 date1 = EthiopianDateConverter.to_gregorian(pick1[i]['year'],pick1[i]['month'],pick1[i]['day'])
                 Edate1 = EthiopianDateConverter.to_ethiopian(date1.year,date1.month,date1.day)
+                
+               
                 if pick1[i]['pick'] == 1:
                     for wiz_data in self:
                         if type(Edate1) ==   str:
-                            ethiopian_from = Edate1
+                            wiz_data.pagum_from = Edate1
                             pick1.clear()
                         if type(Edate1) ==   date:
-                            ethiopian_from = Edate1
-
-                            pick1.clear()
+                            wiz_data.ethiopian_from = Edate1
+               
+                    
+                pick1.clear()
         if self._context.get('active_id', False):
             vehicle = vehicle_obj.browse(self._context['active_id'])
             for wiz_data in self:
-                _logger.info("********ethiopian_from*******%s",ethiopian_from)
-                _logger.info("********changed_date*******%s",wiz_data.changed_date)
 
                 vehicle.write({'engine_no': wiz_data.new_engine_no or ""})
-                if wiz_data.ethiopian_from is not False:
+                if wiz_data.pagum_from == False:
                     engine_history_obj.create({
                         'previous_engine_no': wiz_data.previous_engine_no or "",
                         'new_engine_no': wiz_data.new_engine_no or "",
                         'note': wiz_data.note or '',
                         'changed_date': wiz_data.changed_date,
                         'ethiopian_five': wiz_data.ethiopian_from,
+                        'workorder_id': wiz_data.workorder_id and
+                        wiz_data.workorder_id.id or False,
+                        'vehicle_id': vehicle.id})
+                else:
+                    engine_history_obj.create({
+                        'previous_engine_no': wiz_data.previous_engine_no or "",
+                        'new_engine_no': wiz_data.new_engine_no or "",
+                        'note': wiz_data.note or '',
+                        'changed_date': wiz_data.changed_date,
+                        'pagum_five': wiz_data.pagum_from,
+                        'is_pagum_five': False,
                         'workorder_id': wiz_data.workorder_id and
                         wiz_data.workorder_id.id or False,
                         'vehicle_id': vehicle.id})
@@ -215,11 +227,10 @@ class UpdateColorInfo(models.TransientModel):
                 if pick1[i]['pick'] == 1:
                     for wiz_data in self:
                         if type(Edate1) ==   str:
-                            wiz_data.ethiopian_from = Edate1
+                            wiz_data.pagum_from = Edate1
                             pick1.clear()
                         if type(Edate1) ==   date:
                             wiz_data.ethiopian_from = Edate1
-
                             pick1.clear()
                         
         """Method set new color info."""
@@ -232,14 +243,28 @@ class UpdateColorInfo(models.TransientModel):
                     'vehical_color_id': wiz_data.current_color_id and
                     wiz_data.current_color_id.id or False
                 })
-                color_history_obj.create({
+                if wiz_data.pagum_from == False:
+                    color_history_obj.create({
+                        'previous_color_id': wiz_data.previous_color_id and
+                        wiz_data.previous_color_id.id or False,
+                        'current_color_id': wiz_data.current_color_id and
+                        wiz_data.current_color_id.id or False,
+                        'note': wiz_data.note or '',
+                        'changed_date': wiz_data.changed_date,
+                        'ethiopian_six': wiz_data.ethiopian_from,
+                        'workorder_id': wiz_data.workorder_id and
+                        wiz_data.workorder_id.id or False,
+                        'vehicle_id': vehicle.id})
+                else: 
+                    color_history_obj.create({
                     'previous_color_id': wiz_data.previous_color_id and
                     wiz_data.previous_color_id.id or False,
                     'current_color_id': wiz_data.current_color_id and
                     wiz_data.current_color_id.id or False,
                     'note': wiz_data.note or '',
                     'changed_date': wiz_data.changed_date,
-                    'ethiopian_six': wiz_data.ethiopian_from,
+                    'pagum_six': wiz_data.pagum_from,
+                    'is_pagum_six': False,
                     'workorder_id': wiz_data.workorder_id and
                     wiz_data.workorder_id.id or False,
                     'vehicle_id': vehicle.id})
@@ -293,7 +318,7 @@ class UpdateTireInfo(models.TransientModel):
                 if pick1[i]['pick'] == 1:
                     for wiz_data in self:
                         if type(Edate1) ==   str:
-                            wiz_data.ethiopian_from = Edate1
+                            wiz_data.pagum_from = Edate1
                             pick1.clear()
                         if type(Edate1) ==   date:
                             wiz_data.ethiopian_from = Edate1
@@ -305,25 +330,47 @@ class UpdateTireInfo(models.TransientModel):
         if self._context.get('active_id', False):
             vehicle = vehicle_obj.browse(self._context['active_id'])
             for wiz_data in self:
-                vehicle.write({
-                    'tire_size': wiz_data.new_tire_size or "",
-                    'tire_srno': wiz_data.new_tire_sn or "",
-                    'tire_issuance_date': wiz_data.new_tire_issue_date})
-                tire_history_obj.create({
-                    'previous_tire_size': wiz_data.previous_tire_size or "",
-                    'new_tire_size': wiz_data.new_tire_size or "",
-                    'previous_tire_sn': wiz_data.previous_tire_sn or "",
-                    'new_tire_sn': wiz_data.new_tire_sn or "",
-                    'previous_tire_issue_date':
-                    wiz_data.previous_tire_issue_date or False,
-                    'new_tire_issue_date':
-                    wiz_data.new_tire_issue_date or False,
-                    'note': wiz_data.note or '',
-                    'changed_date': wiz_data.changed_date,
-                    'ethiopian_three': wiz_data.ethiopian_from,
-                    'workorder_id': wiz_data.workorder_id and
-                    wiz_data.workorder_id.id or False,
-                    'vehicle_id': vehicle.id})
+                if wiz_data.pagum_from == False:
+                    vehicle.write({
+                        'tire_size': wiz_data.new_tire_size or "",
+                        'tire_srno': wiz_data.new_tire_sn or "",
+                        'tire_issuance_date': wiz_data.new_tire_issue_date})
+                    tire_history_obj.create({
+                        'previous_tire_size': wiz_data.previous_tire_size or "",
+                        'new_tire_size': wiz_data.new_tire_size or "",
+                        'previous_tire_sn': wiz_data.previous_tire_sn or "",
+                        'new_tire_sn': wiz_data.new_tire_sn or "",
+                        'previous_tire_issue_date':
+                        wiz_data.previous_tire_issue_date or False,
+                        'new_tire_issue_date': 
+                        wiz_data.new_tire_issue_date or False,
+                        'note': wiz_data.note or '',
+                        'changed_date': wiz_data.changed_date,
+                        'ethiopian_three': wiz_data.ethiopian_from,
+                        'workorder_id': wiz_data.workorder_id and
+                        wiz_data.workorder_id.id or False,
+                        'vehicle_id': vehicle.id})
+                else:
+                    vehicle.write({
+                        'tire_size': wiz_data.new_tire_size or "",
+                        'tire_srno': wiz_data.new_tire_sn or "",
+                        'tire_issuance_date': wiz_data.new_tire_issue_date})
+                    tire_history_obj.create({
+                        'previous_tire_size': wiz_data.previous_tire_size or "",
+                        'new_tire_size': wiz_data.new_tire_size or "",
+                        'previous_tire_sn': wiz_data.previous_tire_sn or "",
+                        'new_tire_sn': wiz_data.new_tire_sn or "",
+                        'previous_tire_issue_date':
+                        wiz_data.previous_tire_issue_date or False,
+                        'new_tire_issue_date':
+                        wiz_data.new_tire_issue_date or False,
+                        'note': wiz_data.note or '',
+                        'changed_date': wiz_data.changed_date,
+                        'pagum_three': wiz_data.pagum_from,
+                        'is_pagum_three': False,
+                        'workorder_id': wiz_data.workorder_id and
+                        wiz_data.workorder_id.id or False,
+                        'vehicle_id': vehicle.id})
         return True
 
 
@@ -379,7 +426,7 @@ class UpdateBatteryInfo(models.TransientModel):
                 if pick1[i]['pick'] == 1:
                     for wiz_data in self:
                         if type(Edate1) ==   str:
-                            wiz_data.ethiopian_from = Edate1
+                            wiz_data.pagum_from = Edate1
                             pick1.clear()
                         if type(Edate1) ==   date:
                             wiz_data.ethiopian_from = Edate1
@@ -391,7 +438,29 @@ class UpdateBatteryInfo(models.TransientModel):
         if self._context.get('active_id', False):
             vehicle = vehicle_obj.browse(self._context['active_id'])
             for wiz_data in self:
-                vehicle.write({
+                if wiz_data.pagum_from == False:
+                    vehicle.write({
+                        'battery_size': wiz_data.new_battery_size or "",
+                        'battery_srno': wiz_data.new_battery_sn or "",
+                        'battery_issuance_date': wiz_data.new_battery_issue_date})
+                    battery_history_obj.create({
+                        'previous_battery_size':
+                        wiz_data.previous_battery_size or "",
+                        'new_battery_size': wiz_data.new_battery_size or "",
+                        'previous_battery_sn': wiz_data.previous_battery_sn or "",
+                        'new_battery_sn': wiz_data.new_battery_sn or "",
+                        'previous_battery_issue_date':
+                        wiz_data.previous_battery_issue_date or False,
+                        'new_battery_issue_date':
+                        wiz_data.new_battery_issue_date or False,
+                        'note': wiz_data.note or '',
+                        'changed_date': wiz_data.changed_date,
+                        'ethiopian_four': wiz_data.ethiopian_from,
+                        'workorder_id': wiz_data.workorder_id and
+                        wiz_data.workorder_id.id or False,
+                        'vehicle_id': vehicle.id})
+                else:
+                     vehicle.write({
                     'battery_size': wiz_data.new_battery_size or "",
                     'battery_srno': wiz_data.new_battery_sn or "",
                     'battery_issuance_date': wiz_data.new_battery_issue_date})
@@ -407,7 +476,8 @@ class UpdateBatteryInfo(models.TransientModel):
                     wiz_data.new_battery_issue_date or False,
                     'note': wiz_data.note or '',
                     'changed_date': wiz_data.changed_date,
-                    'ethiopian_four': wiz_data.ethiopian_from,
+                    'pagume_four': wiz_data.pagum_from,
+                    'is_pagume_four': False,
                     'workorder_id': wiz_data.workorder_id and
                     wiz_data.workorder_id.id or False,
                     'vehicle_id': vehicle.id})

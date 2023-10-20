@@ -8,7 +8,7 @@
         <field name="inherit_id" ref="hr_holidays.edit_holiday_status_form"/>
         <field name="arch" type="xml">
             <xpath expr="//field[@name='validity_start']" position="replace">
-                <field name="is_pagum_from" invisible="1" force_save="1"/>
+                <field  name="is_pagum_from" invisible="1" force_save="1"/>
                 <field  name="validity_start"  class="col-50" colspan="3" groups="EthiopianCalendar.group_gregory" force_save="1"/>
                 <field  name="ethiopian_from" class="oe_read_only" id="ethiopianCalendar_1" style="float:left" attrs="{'invisible': ['|', ('is_pagum_to', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker" force_save="1"/>
                 <field  name="pagum_from" class="oe_read_only" style="float:left"  attrs="{'invisible': ['|',('is_pagum_to', '!=',False)  ]}"  groups="EthiopianCalendar.group_ethio_datepicker" force_save="1"/>

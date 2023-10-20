@@ -12,7 +12,7 @@
       'views/hr_employee_eth_calendar.xml',
       'views/hr_leave_allocation_eth_calendar.xml',
       'views/hr_leave_type_eth_calendar.xml',
-      'views/hr_leave_eth_calendar.xml',
+      'wizard/hr_leave_request.xml',
   ],
   'installable': True,
   'auto_install': False,

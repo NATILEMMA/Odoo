@@ -6,4 +6,5 @@ from . import hr_employee_medical_examination
 from . import training
 
 from . import hr_timesheet_line_tree
+from . import hr_salary_advance
 

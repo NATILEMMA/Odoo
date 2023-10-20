@@ -17,32 +17,36 @@ class Employee(models.Model):
         ('to_define', 'To Define')], default='to_define')
     
 
-    @api.onchange('work_phone')
-    def _work_phone_number(self):
-        """This function will check if phone is of proper format"""
-        for record in self:
-            if record.work_phone:
-                for st in record.work_phone:
-                    if not st.isdigit():
-                        raise UserError(_("You Can't Have Characters in a Phone Number"))
-                if record.work_phone[0] != '0':
-                    raise UserError(_("A Valid Phone Number Starts With 0"))
-                if len(record.work_phone) != 10:
-                    raise UserError(_("A Valid Phone Number Has 10 Digits"))
+  
+    
+    def validate_phone(self, phone_number):
+        plus_found = False
+        counter = 0
+        for record in self:  
+            
+            for st in phone_number:
+                print(st.isdigit())
+                if  not st.isdigit():
+                    if str(st) != '+':
+                        raise UserError(_("You Can not Have Characters in a mobile Number except '+'"))
+                    if str(st) == '+' and plus_found == True:
+                        raise UserError(_("You Can not use multilple '+' in phone number"))
+                    if str(st) == '+' and plus_found == False:
+                        plus_found = True
+                    if str(st) == '+' and counter != 0:
+                       raise UserError(_("Invalid position of '+' in phone number"))
+                if st.isdigit():
+                    print('st', st)
+        
+                    if phone_number[0] != '0':
+                        if str(phone_number[0]) != '+':
+                            raise UserError(_("A Valid mobile Number Starts With 0 or +"))
+                    if len(phone_number) != 10:
+                        if len(phone_number) != 13:
+                            raise UserError(_("A Valid mobile Number Has 10 Digits"))
+                counter+=1
                 
-    @api.onchange('mobile_phone')
-    def _proper_phone_number(self):
-        """This function will check if phone is of proper format"""
-        for record in self:
-            if record.mobile_phone:
-                for st in record.mobile_phone:
-                    if not st.isdigit():
-                        raise UserError(_("You Can't Have Characters in a Phone Number"))
-                if record.mobile_phone[0] != '0':
-                    raise UserError(_("A Valid Phone Number Starts With 0"))
-                if len(record.mobile_phone) != 10:
-                    raise UserError(_("A Valid Phone Number Has 10 Digits"))
-
+ 
     
     @api.onchange('work_email')
     def _validate_email_address(self):
@@ -52,4 +56,15 @@ class Employee(models.Model):
             if record.work_email:
                 if '@' not in record.work_email or '.' not in record.work_email:
                     raise UserError(_("A Valid Email Address has '@' and '.'"))
-                        
+    
+        
+    @api.onchange('work_phone')
+    def on_change_phone_number(self):
+        self.validate_phone(self.work_phone)
+    
+            
+    @api.onchange('mobile_phone')
+    def on_change_mobile_phone(self):
+        self.validate_phone(self.mobile_phone)
+    
+    

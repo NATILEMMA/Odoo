@@ -35,6 +35,13 @@
                    <div style="margin-bottom:40px;margin-top:-15px;margin-left:10px;margin-right:0px">
                         <widget name="ethiopian_calander_widget" style=" float:left;width:226px;" class="oe_edit_only" groups="EthiopianCalendar.group_ethio_datepicker"/>
                     </div>
+                    <script>
+                    $(function() {
+                      var calendar = $.calendars.instance('ethiopian', 'am');
+                      $('#popupDatepicker').calendarsPicker({calendar: calendar});
+                     
+                    });
+                    </script>
                 </xpath>
                 <xpath expr="//field[@name='visa_expire']" position="replace">
                     <field name="ethiopian_to" class="oe_read_only" string="Visa Expire date" style=" float:left;" attrs="{'invisible': ['|', ('is_pagum_from', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
@@ -46,8 +53,17 @@
                     <div style="margin-bottom:40px;margin-top:-15px;margin-left:10px;margin-right:0px">
                         <widget name="ethiopian_calander_widget_two" style=" float:left;width:226px;" class="oe_edit_only" groups="EthiopianCalendar.group_ethio_datepicker"/>
                     </div>
+                    <script>
+                    $(function() {
+                      var calendar = $.calendars.instance('ethiopian', 'am');
+                      $('#DatepickerTwo').calendarsPicker({calendar: calendar});
+                     
+                    });
+                    </script>
                 </xpath>
+              
 
+               
                 
             </field>
         </record>    

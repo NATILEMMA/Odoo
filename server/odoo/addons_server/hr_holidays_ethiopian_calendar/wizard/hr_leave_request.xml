@@ -1,0 +1,190 @@
+<?xml version="1.0"?>
+<odoo>
+   <record id="hr_leave_view_form_inherited_view" model="ir.ui.view">
+        <field name="name">hr.leave.view.form</field>
+        <field name="model">hr.leave</field>
+        <field name="inherit_id" ref="hr_holidays.hr_leave_view_form"/>
+        <field name="arch" type="xml">
+      
+            <xpath expr="//field[@name='request_date_from']" position="replace">
+                <field  name="request_date_from"  groups="EthiopianCalendar.group_gregory"/>
+                <script>
+                    odoo.define(function(require) {
+                                "use strict";
+                                var rpc = require('web.rpc') 
+                                var basicFields = require('web.basic_fields');
+                                var current_url = window.location.href;
+                                let pickeddate = { 
+                                    "url": current_url,
+                                }
+                                try{
+                                    var dd,model;
+                                    dd = current_url.split('model=')
+                                    model = dd[1].toString()
+                                    var res = rpc.query({
+                                        model: "hr.leave",
+                                        method: 'initial_date',
+                                        args: [pickeddate],
+                                    }).then(function(data)
+                                    {
+                                    console.log("Responselllll", data)
+                                    try{
+                                        var  date1 = data['from'].toString()
+                                     date1 = data['from'].split("-")
+                                     console.log(" date1 ---- date:",date1[1])
+                                     if (date1[1] === undefined){
+                                        var date11 = data['from'].split("/")
+                                        var dateFrom = date11[0] + "/" +  date11[1] + "/" +  date11[2]
+                                        var dateFrom2 = date11[0] + "/" + date11[1] + "/" +  date11[2]
+                                        $("#popupDatepickercustom").val(dateFrom);
+                                        localStorage.setItem('myFlag', dateFrom);
+                                     }
+                                     else{
+                                        var dateFrom = date1[1] + "/" +  date1[2] + "/" +  date1[0]
+                                        var dateFrom2 = date1[1] + "/" + date1[2] + "/" +  date1[0]
+
+                                        console.log(" From ---- date:",dateFrom2)
+                                        $("#popupDatepickercustom").val(dateFrom);
+                                        localStorage.setItem('myFlag', data['from']);
+                                     }
+                                       }
+                                        catch (error) {
+                                            //console.log('There was an error:', error);
+                                    }
+                                        });
+                              
+                                }catch (error) {
+                                        //console.log('There was an error:', error);
+                                    }
+                                $(function() {
+                                    var calendar = $.calendars.instance('ethiopian','am');
+                                   $('#popupDatepickercustom').calendarsPicker({calendar: calendar, onSelect: showDate});
+                               });
+                               function showDate(date) {
+                                var rpc = require('web.rpc') 
+                                var basicFields = require('web.basic_fields');
+                                var current_url = window.location.href;
+                                var myArray = current_url.split('model=');
+                                var dd,models, model;
+                                dd = current_url.split('model=')
+                                models = dd[1].toString()
+                                models = models.split('view_type')
+                                model = models[0].substring(0, models[0].length - 1);
+                                var dateObject = $(this).calendarsPicker("getDate")
+                                console.log("dateObject", dateObject)
+                                let pickeddate = {
+                                    "day" : dateObject[0]._day,
+                                    "month" : dateObject[0]._month,
+                                    "year":dateObject[0]._year,
+                                    "current_model": model,
+                                    "url": current_url,
+                                    "pick": 1,
+                                    }
+                                var res = rpc.query({
+                                    model: "hr.leave",
+                                    method: 'date_convert_and_set',
+                                    args: [pickeddate],
+                                }).then(function (data)
+                                {
+                            }); 
+                        }
+                    }); 
+                </script>
+                <field name="is_pagum_from" invisible="1"/>
+                <field  name="ethiopian_from" class="oe_read_only" string="Start Date" attrs="{'invisible': ['|', ('is_pagum_from', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                <field  name="pagum_from" class="oe_read_only"  string="Start Date" style=" float:left"  attrs="{'invisible': ['|',('is_pagum_from', '!=',False)  ]}"  groups="EthiopianCalendar.group_ethio_datepicker"/>
+                <input style="margin-top:2px;
+                margin-bottom:10px; margin-left: 0px;margin-right:0px; width:125px;" class="oe_edit_only oe_field" type="text" id="popupDatepickercustom" groups="EthiopianCalendar.group_ethio_datepicker"/>
+            </xpath>
+
+            <xpath expr="//field[@name='request_date_to']" position="replace">
+                <field name="request_date_to" groups="EthiopianCalendar.group_gregory"/>
+                <script>
+                        odoo.define(function(require) {
+                                    "use strict";
+                                    var rpc = require('web.rpc') 
+                                    var basicFields = require('web.basic_fields');
+                                    var current_url = window.location.href;
+                                    let pickeddate = { 
+                                        "url": current_url,
+                                    }
+                                    try{
+                                        var dd,model;
+                                        dd = current_url.split('model=')
+                                        model = dd[1].toString()
+                                        var res = rpc.query({
+                                            model: "hr.leave",
+                                            method: 'initial_date',
+                                            args: [pickeddate],
+                                        }).then(function(data)
+                                        {
+                                        console.log("Response", data)
+                                        try{
+                                           var  date2 = data['to'].toString()
+                                            date2 = data['to'].split("-")
+
+                                            if (date2[1] === undefined){
+                                                var date22 = data['to'].split("/")
+                                                var dateTo = date22[0] + "/" +  date22[1] + "/" +  date22[2]
+                                                var dateTo = date22[0] + "/" + date22[1] + "/" +  date22[2]
+                                                localStorage.setItem('myFlag1', dateTo);
+                                                $("#popupDatepickercustom2").val(dateTo);
+                                            }else{
+
+                                            var dateTo = date2[1] + "/" +  date2[2] + "/" +  date2[0]
+                                            //console.log(" From GGGGGG date:",date1)
+                                            // $("#popupDatepicker").val(dateFrom);
+                                            localStorage.setItem('myFlag1', data['to']);
+                        //                                     localStorage.setItem('myFlag', dateTo);
+                                            $("#popupDatepickercustom2").val(dateTo);
+                                            }                                           }
+                                            catch (error) {
+                                                //console.log('There was an error:', error);
+                                        }
+                                            });
+                                
+                                    }catch (error) {
+                                            //console.log('There was an error:', error);
+                                        }
+                                    $(function() {
+                                        var calendar = $.calendars.instance('ethiopian','am');
+                                    $('#popupDatepickercustom2').calendarsPicker({calendar: calendar, onSelect: showDate});
+                                });
+                                function showDate(date) {
+                                    var rpc = require('web.rpc') 
+                                    var basicFields = require('web.basic_fields');
+                                    var current_url = window.location.href;
+                                    var myArray = current_url.split('model=');
+                                    var dd,models, model;
+                                    dd = current_url.split('model=')
+                                    models = dd[1].toString()
+                                    models = models.split('view_type')
+                                    model = models[0].substring(0, models[0].length - 1);
+                                    var dateObject = $(this).calendarsPicker("getDate")
+                                    console.log("dateObject", dateObject)
+                                    let pickeddate = {
+                                        "day" : dateObject[0]._day,
+                                        "month" : dateObject[0]._month,
+                                        "year":dateObject[0]._year,
+                                        "current_model": model,
+                                        "url": current_url,
+                                        "pick": 2,
+                                        }
+                                    var res = rpc.query({
+                                        model: "hr.leave",
+                                        method: 'date_convert_and_set',
+                                        args: [pickeddate],
+                                    }).then(function (data)
+                                    {
+                                }); 
+                            }
+                        }); 
+                </script>
+                <field name="is_pagum_to" invisible="1"/>
+                <field name="ethiopian_to" class="oe_read_only" string="End date" attrs="{'invisible': ['|', ('is_pagum_from', '=',False)]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                <field name="pagum_to" class="oe_read_only" string="End date" style=" float:left" attrs="{'invisible': ['|',('is_pagum_from', '!=',False)  ]}" groups="EthiopianCalendar.group_ethio_datepicker"/>
+                <input style="margin-bottom:10px; margin-top:2px;margin-left: 40px;margin-right:0px; width:140px;" type="text" id="popupDatepickercustom2" class="oe_edit_only oe_field" groups="EthiopianCalendar.group_ethio_datepicker"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

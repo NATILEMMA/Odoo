@@ -4,13 +4,14 @@
         <field name="name">Fleet Libre</field>
         <field name="res_model">vehicle.libre</field>
         <field name="view_mode">tree,form</field>
-         <field name="domain">[('vehicle_id','=',active_id)]</field>
+        <field name="domain">[('vehicle_id','=',active_id)]</field>
         <field name="help" type="html">
-          <p class="o_view_nocontent_smiling_face">
+            <p class="o_view_nocontent_smiling_face">
             Create Vehicles Libre
-          </p><p>
+            </p>
+            <p>
             Register Libre.
-          </p>
+            </p>
         </field>
     </record>
     <record id="action_fleet_service_expense_view_new" model="ir.actions.act_window">
@@ -21,14 +22,15 @@
         <field name="domain">[('vehicle_id','=',active_id)]</field>
         <field name="search_view_id" ref="hr_expense.view_expenses_tree"/>
         <field name="help" type="html">
-          <p class="o_view_nocontent_smiling_face">
+            <p class="o_view_nocontent_smiling_face">
             Create a for this payment vehicle
-          </p><p>
+            </p>
+            <p>
             Register payments and keep track of the discussions with your vehicle.
-          </p>
+            </p>
         </field>
     </record>
-    
+
     <record id="action_fleet_service_expense_view_transfer" model="ir.actions.act_window">
         <field name="name">Fleet driver transfer</field>
         <field name="res_model">employee.fleet</field>
@@ -37,14 +39,15 @@
         <field name="domain">[('fleet','=', active_id)]</field>
         <field name="search_view_id" ref="vehicle_transfer.employee_fleet_tree_view"/>
         <field name="help" type="html">
-          <p class="o_view_nocontent_smiling_face">
+            <p class="o_view_nocontent_smiling_face">
             Create a for this transfer vehicle
-          </p><p>
+            </p>
+            <p>
             Register transfer and keep track of the discussions with your vehicle.
-          </p>
+            </p>
         </field>
     </record>
-    
+
     <record id="action_fleet_service_expense_view_pur" model="ir.actions.act_window">
         <field name="name">Fleet Service Purchase</field>
         <field name="res_model">purchase.order.line</field>
@@ -53,11 +56,12 @@
         <field name="domain">[('vehicle_id','=',active_id)]</field>
         <field name="search_view_id" ref="purchase.purchase_order_line_tree"/>
         <field name="help" type="html">
-          <p class="o_view_nocontent_smiling_face">
+            <p class="o_view_nocontent_smiling_face">
             Create a vehicle purchase
-          </p><p>
+            </p>
+            <p>
             Register purchase and keep track of the discussions with your vehicle.
-          </p>
+            </p>
         </field>
     </record>
 
@@ -70,92 +74,56 @@
             <xpath expr="//div[@name='button_box']" position="replace">
                 <div class="oe_button_box" name="button_box">
 
-                    <button 
-                        icon="fa-pencil-square-o" class="oe_stat_button"
-                        name="%(action_fleet_libre_view)d" type="action" groups="fleet.fleet_group_manager">
-                        <field name="vehicle_libre_count" string="Libre Count"
-                                widget="statinfo"/>
+                    <button icon="fa-pencil-square-o" class="oe_stat_button" name="%(action_fleet_libre_view)d" type="action" groups="fleet.fleet_group_manager">
+                        <field name="vehicle_libre_count" string="Libre Count" widget="statinfo"/>
                     </button>
-                    
-                    <button name="%(action_fleet_service_expense_view_transfer)d"
-                        type="action"
-                        class="oe_stat_button"
-                        icon="fa-history"
-                        help="show all the driver history"
-                        groups="fleet.fleet_group_manager">
+
+                    <button name="%(action_fleet_service_expense_view_transfer)d" type="action" class="oe_stat_button" icon="fa-history" help="show all the driver history" groups="fleet.fleet_group_manager">
                         <field name="invoice_count_1" widget="statinfo" string="Drivers History"/>
                     </button>
-                     <button
-                        icon="fa-usd" class="oe_stat_button"
-                        name="%(action_fleet_service_expense_view_new)d" type="action" groups="fleet.fleet_group_manager">
-                        <field name="invoice_count_3" string="Expenses"
-                                widget="statinfo"/>
+                    <button icon="fa-usd" class="oe_stat_button" name="%(action_fleet_service_expense_view_new)d" type="action" groups="fleet.fleet_group_manager">
+                        <field name="invoice_count_3" string="Expenses" widget="statinfo"/>
                     </button>
-                    <button
-                        icon="fa-usd" class="oe_stat_button"
-                        name="%(action_fleet_service_expense_view_pur)d" type="action" groups="fleet.fleet_group_manager">
-                        <field name="invoice_count_2" string="Purchases"
-                                widget="statinfo"/>
+                    <button icon="fa-usd" class="oe_stat_button" name="%(action_fleet_service_expense_view_pur)d" type="action" groups="fleet.fleet_group_manager">
+                        <field name="invoice_count_2" string="Purchases" widget="statinfo"/>
                     </button>
-<!--                    <button name="act_show_log_cost"-->
-<!--                        type="object"-->
-<!--                        class="oe_stat_button"-->
-<!--                        icon="fa-usd"-->
-<!--                        help="show all the costs for this vehicle"-->
-<!--                        groups="fleet.fleet_group_manager">-->
-<!--                        <field name="cost_count" widget="statinfo" string="Costs"/>-->
-<!--                    </button>-->
-                    <button name="return_action_to_open"
-                        type="object"
-                        class="oe_stat_button"
-                        icon="fa-wrench"
-                        context="{'xml_id':'fleet_vehicle_log_services_action'}"
-                        help="show the services logs for this vehicle"
-                    >
+                    <!--                    <button name="act_show_log_cost"-->
+                    <!-- type="object"-->
+                    <!-- class="oe_stat_button"-->
+                    <!-- icon="fa-usd"-->
+                    <!-- help="show all the costs for this vehicle"-->
+                    <!-- groups="fleet.fleet_group_manager">-->
+                    <!--                        <field name="cost_count" widget="statinfo" string="Costs"/>-->
+                    <!--                    </button>-->
+                    <button name="return_action_to_open" type="object" class="oe_stat_button" icon="fa-wrench" context="{'xml_id':'fleet_vehicle_log_services_action'}" help="show the services logs for this vehicle">
                         <field name="service_count" widget="statinfo" string="Services"/>
 
                     </button>
-                    <button name="return_action_to_open"
-                        type="object"
-                        class="oe_stat_button"
-                        icon="fa-flask"
-                        context="{'xml_id':'fleet_vehicle_log_fuel_action'}"
-                        help="show the fuel logs for this vehicle"
-                        attrs="{'invisible':[('fuel_type','=','electric')]}"
-                    >
+                    <button name="return_action_to_open" type="object" class="oe_stat_button" icon="fa-flask" context="{'xml_id':'fleet_vehicle_log_fuel_action'}" help="show the fuel logs for this vehicle" attrs="{'invisible':[('fuel_type','=','electric')]}">
                         <field name="fuel_logs_count" widget="statinfo" string="Fuel"/>
                     </button>
-                    <button name="return_action_to_open"
-                        type="object"
-                        class="oe_stat_button"
-                        icon="fa-tachometer"
-                        context="{'xml_id':'fleet_vehicle_odometer_action'}"
-                        help="show the odometer logs for this vehicle" 
-                        groups="fleet.fleet_group_manager">
+                    <button name="return_action_to_open" type="object" class="oe_stat_button" icon="fa-tachometer" context="{'xml_id':'fleet_vehicle_odometer_action'}" help="show the odometer logs for this vehicle" groups="fleet.fleet_group_manager">
                         <field name="odometer_count" widget="statinfo" string="Odometer"/>
                     </button>
-               </div>
+                </div>
             </xpath>
         </field>
     </record>
 
-   <record id="view_vehicle_libre_tree" model="ir.ui.view">
+    <record id="view_vehicle_libre_tree" model="ir.ui.view">
         <field name="name">vehicle.libre.form</field>
         <field name="model">vehicle.libre</field>
         <field name="arch" type="xml">
-           <form string="Libre">
-               <header>
-                   <button name="set_draft" class="oe_highlight" states="register"
-                             string="Set to draft" type="object" confirm="Are you sure to you want set draft?"/>
-                   <button name="set_register" class="oe_highlight" states="draft"
-                             string="Register" type="object" confirm="Are you sure you want to register Information?"/>
-                   <button name="set_expire" class="oe_highlight" states="register" string="set expired" type="object" confirm="Are you sure you want to expired Libre?"/>
-                   <button name="%(action_view_libre_update_wizard)d" class="oe_highlight" states="register" string="Update Information"
-                           type="action"/>
-                     <field name="state" widget="statusbar" statusbar_visible="draft,register,expired"/>
+            <form string="Libre">
+                <header>
+                    <button name="set_draft" class="oe_highlight" states="register" string="Set to draft" type="object" confirm="Are you sure to you want set draft?"/>
+                    <button name="set_register" class="oe_highlight" states="draft" string="Register" type="object" confirm="Are you sure you want to register Information?"/>
+                    <button name="set_expire" class="oe_highlight" states="register" string="set expired" type="object" confirm="Are you sure you want to expired Libre?"/>
+                    <button name="%(action_view_libre_update_wizard)d" class="oe_highlight" states="register" string="Update Information" type="action"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,register,expired"/>
                 </header>
                 <sheet>
-                     <div class="oe_title">
+                    <div class="oe_title">
                         <h1>
                             <field name="name"/>
                         </h1>
@@ -190,7 +158,7 @@
                             <field name="total_weight" attrs="{'readonly': [('state','in',('register','expired'))]}"/>
                             <field name="items_weight" attrs="{'readonly': [('state','in',('register','expired'))]}"/>
                             <field name="cc" attrs="{'readonly': [('state','in',('register','expired'))]}"/>
-                            <field name="slender_amount" attrs="{'readonly': [('state','in',('register','expired'))]}"/>
+                            <field name="cylinder_amount" attrs="{'readonly': [('state','in',('register','expired'))]}"/>
                             <field name="allowed_work_type" attrs="{'readonly': [('state','in',('register','expired'))]}"/>
                         </group>
                     </group>
@@ -200,17 +168,17 @@
                             <group>
                                 <field name="note"/>
                             </group>
-                         
+
                         </page>
                         <page string="History">
                             <group>
                                 <field name="history">
-                                <tree create="false" edit="false">
-                                    <field name="issue_date"/>
-                                    <field name="sticker_number"/>
-                                   <field name="approver"/>
-                                    <field name="user_id"/>
-                                </tree>
+                                    <tree create="false" edit="false">
+                                        <field name="issue_date"/>
+                                        <field name="sticker_number"/>
+                                        <field name="approver"/>
+                                        <field name="user_id"/>
+                                    </tree>
                                 </field>
                             </group>
 
@@ -218,8 +186,8 @@
 
                     </notebook>
                 </sheet>
-                </form> 
-         
+            </form>
+
         </field>
     </record>
     <record model='ir.ui.view' id='fleet_libre_tree_view'>
@@ -236,36 +204,36 @@
         </field>
     </record>
     <record model="ir.ui.view" id="vehicle_libre_graph">
-            <field name="name">vehicle.libre.graph</field>
-            <field name="model">vehicle.libre</field>
-            <field name="arch" type="xml">
-                <graph string="Main office report">
-                    <field name="vehicle_id"/>
-                    <field name="cc" type="measure"/>
-                </graph>
-            </field>
+        <field name="name">vehicle.libre.graph</field>
+        <field name="model">vehicle.libre</field>
+        <field name="arch" type="xml">
+            <graph string="Main office report">
+                <field name="vehicle_id"/>
+                <field name="cc" type="measure"/>
+            </graph>
+        </field>
     </record>
     <record model="ir.ui.view" id="vehicle_libre_pivot">
-            <field name="name">vehicle.libre.pivot</field>
-            <field name="model">vehicle.libre</field>
-            <field name="arch" type="xml">
-                <pivot string="Vehicle Libre report" display_quantity="True">
-                    <field name="vehicle_id"/>
-                    <field name="cc" type="measure"/>
-                </pivot>
-            </field>
-        </record>
+        <field name="name">vehicle.libre.pivot</field>
+        <field name="model">vehicle.libre</field>
+        <field name="arch" type="xml">
+            <pivot string="Vehicle Libre report" display_quantity="True">
+                <field name="vehicle_id"/>
+                <field name="cc" type="measure"/>
+            </pivot>
+        </field>
+    </record>
     <record id="fleet_vehicle_libre" model="ir.actions.act_window">
         <field name="name">Vehicle Libre</field>
         <field name="res_model">vehicle.libre</field>
         <field name="view_mode">tree,form,graph,pivot</field>
-  
+
     </record>
 
-<!--    <menuitem action="fleet_vehicle_libre" -->
-<!--        string="Vehicle Libre"-->
-<!--        parent="fleet.fleet_vehicles"-->
-<!--        id="fleet_vehicle_libre_menu"-->
-<!--        groups="fleet.fleet_group_manager"-->
-<!--         sequence="7"/>-->
+    <!--    <menuitem action="fleet_vehicle_libre" -->
+    <!-- string="Vehicle Libre"-->
+    <!-- parent="fleet.fleet_vehicles"-->
+    <!-- id="fleet_vehicle_libre_menu"-->
+    <!-- groups="fleet.fleet_group_manager"-->
+    <!-- sequence="7"/>-->
 </odoo>

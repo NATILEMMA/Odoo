@@ -5,7 +5,7 @@
   'description': "This module help to organize several hr related reports in one menu",
   'author': 'Tria -Natnael lemma',
   'depends': [
-    'hr','report', 'oh_hr_lawsuit_management','ohrms_salary_advance' ,'hr_employee_medical_examination', 'hr_disciplinary_tracking', 'request_approval_menu', 'stock_transfer'
+    'hr','report', 'oh_hr_lawsuit_management','ohrms_salary_advance' ,'hr_employee_medical_examination', 'hr_disciplinary_tracking', 'stock_transfer'
   ],
     'data': [
              'views/hr_department.xml',

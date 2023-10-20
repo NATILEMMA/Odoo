@@ -283,6 +283,7 @@ class HolidaysRequest(models.Model):
                   'request_date_from', 'request_date_to',
                   'employee_id')
     def _onchange_request_parameters(self):
+        print("in the hr core leave", self.request_date_from)
         if not self.request_date_from:
             self.date_from = False
             return

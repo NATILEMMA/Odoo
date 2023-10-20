@@ -50,8 +50,6 @@ class Medical(models.Model):
                         vals['date'] = date1
                         vals['ethiopian_from'] = Edate1
                         pick1.clear()
-                
-       
         try:
 
             if vals['ethiopian_from'] is not None:
@@ -142,7 +140,8 @@ class Medical(models.Model):
 
     @api.model
     def initial_date(self, data):
-        
+        print("********************* medical data",data)
+        print("********************* self",self)
 
         dd = data['url'].split('id=')
         id = str(dd[1]).split('&')

@@ -7,7 +7,11 @@ from datetime import datetime, date
 from odoo import api, exceptions, fields, models, _
 from ethiopian_date import EthiopianDateConverter
 import logging
+import psycopg2
+
+
 _logger = logging.getLogger(__name__)
+
 pick1 = []
 pick2 = []
 pick3 = []
@@ -31,8 +35,9 @@ class HolidaysRequest(models.Model):
 
     @api.model
     def create(self, vals):
-
+        print("psycopg version",psycopg2.__version__)
         for i in range(0, len(pick1)):
+            
 
             if i == (len(pick1) - 1):
                 date1 = EthiopianDateConverter.to_gregorian(pick1[i]['year'], pick1[i]['month'], pick1[i]['day'])
@@ -51,11 +56,13 @@ class HolidaysRequest(models.Model):
 
 
         for i in range(0, len(pick2)):
-
+           
+            
             if i == (len(pick2) - 1):
                 date2 = EthiopianDateConverter.to_gregorian(pick2[i]['year'], pick2[i]['month'], pick2[i]['day'])
                 Edate2 = EthiopianDateConverter.to_ethiopian(date2.year, date2.month, date2.day)
-
+                
+       
                 if pick2[i]['pick'] == 2:
                     if type(Edate2) == str:
                         vals['ethiopian_to'] = None
@@ -100,40 +107,38 @@ class HolidaysRequest(models.Model):
 
         except:
             pass
-
+        
+        print(vals.get('ethiopian_from'),vals.get('ethiopian_to') )
+        if vals.get('ethiopian_from') and vals.get('ethiopian_to') and vals.get('ethiopian_from') <= vals.get('ethiopian_to'):
+           print(vals.get('ethiopian_to') - vals.get('ethiopian_from'))
+           vals['number_of_days'] = float((vals.get('ethiopian_to') - vals.get('ethiopian_from')).days)
+        elif not vals.get('is_pagum_from') and not vals.get('is_pagum_to') and vals.get('pagum_from') <= vals.get('pagum_to'):
+            vals['number_of_days'] = float((datetime.strptime(vals.get('pagum_to'), "%Y-%m-%d") - datetime.strptime(vals.get('pagum_from'), "%Y-%m-%d")).days)
+        elif not vals.get('is_pagum_from'):
+            start_date = datetime.strptime(vals.get('pagum_from'), "%Y-%m-%d")
+            
+            if vals.get('ethiopian_to') >= start_date:
+                    vals['number_of_days'] = float((vals.get('ethiopian_to') - start_date).days)
+            else:
+                raise exceptions.ValidationError(_("The start date and end date is not are misplaced causing negative error! 1"))
+        elif not vals.get('is_pagum_to'):
+            end_date = datetime.strptime(vals.get('pagum_to'), "%Y-%m-%d")
+            
+            if vals.get('ethiopian_from') <= end_date:
+                vals['number_of_days'] = float((vals.get('ethiopian_from') - end_date).days)
+            else:
+                raise exceptions.ValidationError(_("The start date and end date is not are misplaced causing negative error! 2"))
+        else:
+            raise exceptions.ValidationError(_("The start date and end date is not are misplaced causing negative error! 3"))
 
         res = super(HolidaysRequest, self).create(vals)
-        try:
-            if res.request_date_to:
-                date2 = res.request_date_to
-                Edate2 = EthiopianDateConverter.to_ethiopian(date2.year,date2.month,date2.day)
-                if type(Edate2) == date:
-                    res.ethiopian_to = Edate2
-                if type(Edate2) == str:
-                    res.pagum_to=  Edate2
-                    res.is_pagum_to = False
+        
 
-        except:
-            pass
-            
-        try:
-            if res.request_date_from:
-                date1 = res.request_date_from
-                Edate1 = EthiopianDateConverter.to_ethiopian(date1.year,date1.month,date1.day)
-                if type(Edate1) == date:
-                    res.ethiopian_from = Edate1
-                if type(Edate1) == str:
-                    res.pagum_from =  Edate1
-                    res.is_pagum_from = False
-        except:
-            pass
+        res._onchange_request_parameters()
         return res
 
 
     def write(self, vals):
-        _logger.info("################# Write %s", vals)
-
-
         try:
             if vals['ethiopian_from'] is not None:
                 date_str = vals['ethiopian_from']
@@ -153,16 +158,12 @@ class HolidaysRequest(models.Model):
 
         except:
             pass
-
         try:
-
             if vals['request_date_from'] is not None:
                 date_str = vals['request_date_from']
                 date_time_obj = date_str.split('-')
                 Edate = EthiopianDateConverter.to_ethiopian(int(date_time_obj[0]), int(date_time_obj[1]),
                                                             int(date_time_obj[2]))
-                _logger.info("######     ############# %s", Edate)
-                _logger.info("######     ############# %s", type(Edate))
 
                 if type(Edate) == str:
                     vals['ethiopian_from'] = None
@@ -177,7 +178,6 @@ class HolidaysRequest(models.Model):
             pass
 
         try:
-
             if vals['ethiopian_to'] is not None:
                 date_str = vals['ethiopian_to']
                 date_time_obj = date_str.split('-')
@@ -216,110 +216,81 @@ class HolidaysRequest(models.Model):
         except:
             pass
 
-        # try:
-        #     print("Both Vals")
-        #     if vals['validity_start'] > vals['validity_stop']:
-        #         raise ValidationError(_("End of validity period should be greater than start of validity period"))
-        # except:
-        #     pass
-
-        # try:
-        #     print("Stop Vals")
-        #     if self.validity_start > vals['validity_stop']:
-        #         raise ValidationError(_("End of validity period should be greater than start of validity period")) 
-        # except:
-        #     pass
-
-        # try:
-        #     print("Start Vals")
-        #     if vals['validity_start'] > self.validity_stop:
-        #         raise ValidationError(_("End of validity period should be greater than start of validity period"))
-        # except:
-        #     pass
-
         return super(HolidaysRequest, self).write(vals)
-
+    
+    
     @api.model
     def initial_date(self, data):
-        _logger.info("################# Initial DATA %s", data)
+        
+        print("@@@@@@@@@@@@@@@@@@@@@@@@@@@",self)
+        print("@@@@@@@@@@@@@@@@@@@@@@@@@@@",data)
 
         dd = data['url'].split('id=')
         id = str(dd[1]).split('&')
         m = data['url'].split('model=')
         mm = m[1].split('&')
+        print(id, "this is id", len(id[0]))
         if len(id[0]) <= 0:
-            _logger.info("################# not fund")
             date = datetime.now()
-            date = EthiopianDateConverter.to_ethiopian(date.year, date.month, date.day)
-            _logger.info("################# d: %s", date)
-
-            return date
+            date = EthiopianDateConverter.to_ethiopian(date.year,date.month,date.day)
+            print("date return", date)
+            data = {
+                    'from': date,
+                    'to': date,
+                 }
+            return data
+        
         else:
-
+            print("in the else")
             models = mm[0]
-            search = self.env[models].search([('id', '=', id[0])])
-            if search.ethiopian_from != False and search.pagum_from == False and search.ethiopian_to != False and search.pagum_to == False:
-                _logger.info("################# Both T")
-                return {'from': search.ethiopian_from, 'to': search.ethiopian_to}
-            elif search.ethiopian_from == False and search.pagum_from != False and search.ethiopian_to == False and search.pagum_to != False:
-                _logger.info("################# Both T")
+            search = self.env[models].search([('id','=',id[0])])
+            From = []
+            to = []
+            three = []
+            four = []
+            print(search)
+
+            # For initial date to widget One
+            if search.ethiopian_from != False and search.pagum_from == False:
+                From.append(search.ethiopian_from)
+            if search.ethiopian_from == False and search.pagum_from != False:
                 date_from_str = str(search.pagum_from).split('/')
+                date_from = date_from_str[2]+'-'+date_from_str[0]+'-'+date_from_str[1]
+                From.append(date_from)
+            if search.ethiopian_from == False and search.pagum_from == False:
+                today = datetime.now()
+                today = EthiopianDateConverter.to_ethiopian(today.year,today.month,today.day)
+                From.append(today)
+
+            # For initial date to widget Two
+            if search.ethiopian_to != False and search.pagum_to == False:
+                to.append(search.ethiopian_to)
+            if search.ethiopian_to == False and search.pagum_to != False:
                 date_to_str = str(search.pagum_to).split('/')
-                date_from = date_from_str[2] + '-' + date_from_str[0] + '-' + date_from_str[1]
-                date_to = date_to_str[2] + '-' + date_to_str[0] + '-' + date_to_str[1]
-                return {'from': date_from, 'to': date_to}
-            elif search.ethiopian_from == False and search.pagum_from == False and search.ethiopian_to != False and search.pagum_to == False:
-                _logger.info("################# From - f  To - true")
+                date_to = date_to_str[2] +'-'+date_to_str[0]+'-'+date_to_str[1]
+                to.append(date_to)
+            if search.ethiopian_to == False and search.pagum_to == False:
                 today = datetime.now()
-                today = EthiopianDateConverter.to_ethiopian(today.year, today.month, today.day)
-                return {'from': today, 'to': search.ethiopian_to}
-            elif search.ethiopian_from == False and search.pagum_from == False and search.ethiopian_to == False and search.pagum_to != False:
-                _logger.info("################# From - f  To - true")
-                date_to_str = str(search.pagum_to).split('/')
-                date_to = date_to_str[2] + '-' + date_to_str[0] + '-' + date_to_str[1]
-                today = datetime.now()
-                today = EthiopianDateConverter.to_ethiopian(today.year, today.month, today.day)
-                return {'from': today, 'to': date_to}
-            elif search.ethiopian_from != False and search.pagum_from == False and search.ethiopian_to == False and search.pagum_to != False:
-                _logger.info("################# From - f  To - true p")
-                date_to_str = str(search.pagum_to).split('/')
-                date_to = date_to_str[2] + '-' + date_to_str[0] + '-' + date_to_str[1]
-                today = datetime.now()
-                today = EthiopianDateConverter.to_ethiopian(today.year, today.month, today.day)
-                return {'from': search.ethiopian_from, 'to': date_to}
-            elif search.ethiopian_from != False and search.pagum_from == False and search.ethiopian_to == False and search.pagum_to == False:
-                _logger.info("################# From - true  To - false")
-                today = datetime.now()
-                today = EthiopianDateConverter.to_ethiopian(today.year, today.month, today.day)
-                return {'from': search.ethiopian_from, 'to': today}
-            elif search.ethiopian_from == False and search.pagum_from != False and search.ethiopian_to == False and search.pagum_to == False:
-                _logger.info("################# From - true  To - false")
-                date_from_str = str(search.pagum_from).split('/')
-                date_from = date_from_str[2] + '-' + date_from_str[0] + '-' + date_from_str[1]
-                today = datetime.now()
-                today = EthiopianDateConverter.to_ethiopian(today.year, today.month, today.day)
-                return {'from': date_from, 'to': today}
-            elif search.ethiopian_from == False and search.pagum_from != False and search.ethiopian_to != False and search.pagum_to == False:
-                _logger.info("################# From - true  To - false pa")
-                date_from_str = str(search.pagum_from).split('/')
-                date_from = date_from_str[2] + '-' + date_from_str[0] + '-' + date_from_str[1]
-                today = datetime.now()
-                today = EthiopianDateConverter.to_ethiopian(today.year, today.month, today.day)
-                return {'from': date_from, 'to': search.ethiopian_to}
-            elif search.ethiopian_from == False and search.pagum_from == False and search.ethiopian_to == False and search.pagum_to == False:
-                _logger.info("################# both- false")
-                today = datetime.now()
-                today = EthiopianDateConverter.to_ethiopian(today.year, today.month, today.day)
-                return {'from': today, 'to': today}
+                today = EthiopianDateConverter.to_ethiopian(today.year,today.month,today.day)
+                to.append(today)
 
-            else:
-                date = datetime.now()
-                date = EthiopianDateConverter.to_ethiopian(date.year, date.month, date.day)
-                _logger.info("################# d: %s", date)
+            data = {
+                'from': From[0],
+                'to': to[0],
+            }
+        
+            print("data ********")
+            print(data)
+            print("data **********")
+           
+            return data
 
-
-                return date
-
+    # @api.model
+    # def initial_date(self, data):
+    #     date = datetime.now()
+    #     data = EthiopianDateConverter.to_ethiopian(date.year,date.month,date.day)
+    #     return data
+    
     @api.model
     def date_convert_and_set(self, picked_date):
         date_gr = EthiopianDateConverter.to_gregorian(picked_date['year'], picked_date['month'], picked_date['day'])

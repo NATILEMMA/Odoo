@@ -27,17 +27,3 @@ class Channel(models.Model):
         return res
 
 
-
-def copy_field_values(model, source_language, target_language):
-
-    field_value_pairs = {}
-
-    for field_name, field in model._fields.items():
-        if field.type == "char" and field_value := getattr(model, field_name):
-            target_field_name = field_name + "_" + target_language
-            target_field = model._fields.get(target_field_name)
-            if target_field and target_field.type == "char":
-                field_value_pairs[target_field_name] = field_value
-
-    if field_value_pairs:
-        model.write(field_value_pairs)

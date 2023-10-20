@@ -200,6 +200,7 @@ class EmployeeInherited(models.Model):
         for i in range(0, len(pick2)):
         
             if i == (len(pick2)-1):
+                
                 date2 = EthiopianDateConverter.to_gregorian(pick2[i]['year'],pick2[i]['month'],pick2[i]['day'])
                 Edate2 = EthiopianDateConverter.to_ethiopian(date2.year,date2.month,date2.day)
     
@@ -357,7 +358,7 @@ class EmployeeInherited(models.Model):
                     'to': to,
                  
                 }
-           
+            print(data,"data of print Employee")
            
             return data
     
