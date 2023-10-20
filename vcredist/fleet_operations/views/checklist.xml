@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+    <record id='checklist_category_form_view' model='ir.ui.view'>
+        <field name="name">checklist.category.form.view</field>
+        <field name="model">checklist.category</field>
+        <field name="arch" type="xml">
+            <form string="Checklist Category">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" required="1"/>
+                            <field name="code"/>
+                        </group>
+                        <group>
+                            <field name="parent_category"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <record id='checklist_category_tree_view' model='ir.ui.view'>
+        <field name="name">checklist.category.tree.view</field>
+        <field name="model">checklist.category</field>
+        <field name="arch" type="xml">
+            <tree string="Checklist Category">
+
+                <field name="name" />
+                <field name="code"/>
+                <field name="parent_category"/>
+                
+
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="checklist_category_action" model="ir.actions.act_window">
+        <field name="name">Checklist Category</field>
+        <field name="res_model">checklist.category</field>
+        <!-- <field name="view_type">form</field> -->
+        <field name="view_mode">tree,form</field>
+    </record>
+
+      
+
+    <menuitem action="checklist_category_action"
+        string="Checklist Category" parent="fleet.fleet_configuration"
+        id="checklist_category_menu" 
+        groups="fleet.fleet_group_manager" sequence="200"/>
+
+
+
+
+    <record id='checklist_form_view' model='ir.ui.view'>
+        <field name="name">checklist.form.view</field>
+        <field name="model">fleet.checklist</field>
+        <field name="arch" type="xml">
+            <form string="Checklist">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" required="1"/>
+                            <field name="category_id"/>
+                        </group>
+                        <!-- <group>
+                            <field name="parent_category"/>
+                        </group> -->
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <record id='checklist_tree_view' model='ir.ui.view'>
+        <field name="name">checklist.tree.view</field>
+        <field name="model">fleet.checklist</field>
+        <field name="arch" type="xml">
+            <tree string="Checklist">
+
+                <field name="name" />
+                <field name="category_id"/>
+                
+
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="checklist_action" model="ir.actions.act_window">
+        <field name="name">Checklist</field>
+        <field name="res_model">fleet.checklist</field>
+        <!-- <field name="view_type">form</field> -->
+        <field name="view_mode">tree,form</field>
+    </record>
+
+      
+
+    <menuitem action="checklist_action"
+        string="Checklist" parent="fleet.fleet_configuration"
+        id="checklist_menu" 
+        groups="fleet.fleet_group_manager" sequence="201"/>
+
+
+
+        <record model='ir.ui.view' id='fleet_vehicle_model_view_form_extend'>
+        <field name="name">vfleet.vehicle.model.extended</field>
+        <field name="model">fleet.vehicle.model</field>
+        <field name="inherit_id" ref="fleet.fleet_vehicle_model_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='brand_id']" position="after">
+                <group><field name="income_acc_id"/>
+                <field name="expence_acc_id"/></group>
+            </xpath>
+           
+            
+        </field>
+    </record>
+    
+</odoo>
